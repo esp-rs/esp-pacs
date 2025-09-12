@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer."]
     #[inline(always)]
-    pub fn in_rst(&mut self) -> IN_RST_W<IN_CONF0_SPEC> {
+    pub fn in_rst(&mut self) -> IN_RST_W<'_, IN_CONF0_SPEC> {
         IN_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - reserved"]
     #[inline(always)]
-    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<IN_CONF0_SPEC> {
+    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<'_, IN_CONF0_SPEC> {
         IN_LOOP_TEST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 reading link descriptor when accessing internal SRAM."]
     #[inline(always)]
-    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<IN_CONF0_SPEC> {
+    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<'_, IN_CONF0_SPEC> {
         INDSCR_BURST_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 receiving data when accessing internal SRAM."]
     #[inline(always)]
-    pub fn in_data_burst_en(&mut self) -> IN_DATA_BURST_EN_W<IN_CONF0_SPEC> {
+    pub fn in_data_burst_en(&mut self) -> IN_DATA_BURST_EN_W<'_, IN_CONF0_SPEC> {
         IN_DATA_BURST_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit 1 to enable automatic transmitting data from memory to memory via DMA."]
     #[inline(always)]
-    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<IN_CONF0_SPEC> {
+    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<'_, IN_CONF0_SPEC> {
         MEM_TRANS_EN_W::new(self, 4)
     }
 }

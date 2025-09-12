@@ -98,45 +98,49 @@ impl W {
     #[inline(always)]
     pub fn hp_active_vdd_spi_pd_en(
         &mut self,
-    ) -> HP_ACTIVE_VDD_SPI_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC> {
+    ) -> HP_ACTIVE_VDD_SPI_PD_EN_W<'_, HP_ACTIVE_DIG_POWER_SPEC> {
         HP_ACTIVE_VDD_SPI_PD_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - need_des"]
     #[inline(always)]
-    pub fn hp_active_hp_mem_dslp(&mut self) -> HP_ACTIVE_HP_MEM_DSLP_W<HP_ACTIVE_DIG_POWER_SPEC> {
+    pub fn hp_active_hp_mem_dslp(
+        &mut self,
+    ) -> HP_ACTIVE_HP_MEM_DSLP_W<'_, HP_ACTIVE_DIG_POWER_SPEC> {
         HP_ACTIVE_HP_MEM_DSLP_W::new(self, 22)
     }
     #[doc = "Bits 23:26 - need_des"]
     #[inline(always)]
     pub fn hp_active_pd_hp_mem_pd_en(
         &mut self,
-    ) -> HP_ACTIVE_PD_HP_MEM_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC> {
+    ) -> HP_ACTIVE_PD_HP_MEM_PD_EN_W<'_, HP_ACTIVE_DIG_POWER_SPEC> {
         HP_ACTIVE_PD_HP_MEM_PD_EN_W::new(self, 23)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
     pub fn hp_active_pd_hp_wifi_pd_en(
         &mut self,
-    ) -> HP_ACTIVE_PD_HP_WIFI_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC> {
+    ) -> HP_ACTIVE_PD_HP_WIFI_PD_EN_W<'_, HP_ACTIVE_DIG_POWER_SPEC> {
         HP_ACTIVE_PD_HP_WIFI_PD_EN_W::new(self, 27)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     pub fn hp_active_pd_hp_cpu_pd_en(
         &mut self,
-    ) -> HP_ACTIVE_PD_HP_CPU_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC> {
+    ) -> HP_ACTIVE_PD_HP_CPU_PD_EN_W<'_, HP_ACTIVE_DIG_POWER_SPEC> {
         HP_ACTIVE_PD_HP_CPU_PD_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     pub fn hp_active_pd_hp_aon_pd_en(
         &mut self,
-    ) -> HP_ACTIVE_PD_HP_AON_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC> {
+    ) -> HP_ACTIVE_PD_HP_AON_PD_EN_W<'_, HP_ACTIVE_DIG_POWER_SPEC> {
         HP_ACTIVE_PD_HP_AON_PD_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn hp_active_pd_top_pd_en(&mut self) -> HP_ACTIVE_PD_TOP_PD_EN_W<HP_ACTIVE_DIG_POWER_SPEC> {
+    pub fn hp_active_pd_top_pd_en(
+        &mut self,
+    ) -> HP_ACTIVE_PD_TOP_PD_EN_W<'_, HP_ACTIVE_DIG_POWER_SPEC> {
         HP_ACTIVE_PD_TOP_PD_EN_W::new(self, 31)
     }
 }

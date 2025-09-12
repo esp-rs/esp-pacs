@@ -17,22 +17,22 @@ impl core::fmt::Debug for crate::generic::Reg<REF_CNT_RST_SPEC> {
 impl W {
     #[doc = "Bit 0 - reg_ref_cnt_rst_ch0."]
     #[inline(always)]
-    pub fn ch0(&mut self) -> CH0_W<REF_CNT_RST_SPEC> {
+    pub fn ch0(&mut self) -> CH0_W<'_, REF_CNT_RST_SPEC> {
         CH0_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_ref_cnt_rst_ch1."]
     #[inline(always)]
-    pub fn ch1(&mut self) -> CH1_W<REF_CNT_RST_SPEC> {
+    pub fn ch1(&mut self) -> CH1_W<'_, REF_CNT_RST_SPEC> {
         CH1_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_ref_cnt_rst_ch2."]
     #[inline(always)]
-    pub fn ch2(&mut self) -> CH2_W<REF_CNT_RST_SPEC> {
+    pub fn ch2(&mut self) -> CH2_W<'_, REF_CNT_RST_SPEC> {
         CH2_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_ref_cnt_rst_ch3."]
     #[inline(always)]
-    pub fn ch3(&mut self) -> CH3_W<REF_CNT_RST_SPEC> {
+    pub fn ch3(&mut self) -> CH3_W<'_, REF_CNT_RST_SPEC> {
         CH3_W::new(self, 3)
     }
 }

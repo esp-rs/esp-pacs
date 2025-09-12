@@ -408,200 +408,208 @@ impl W {
     #[inline(always)]
     pub fn ledc_task_duty_scale_update_ch4_st(
         &mut self,
-    ) -> LEDC_TASK_DUTY_SCALE_UPDATE_CH4_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_DUTY_SCALE_UPDATE_CH4_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_DUTY_SCALE_UPDATE_CH4_ST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Represents LEDC_task_duty_scale_update_ch5 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_duty_scale_update_ch5_st(
         &mut self,
-    ) -> LEDC_TASK_DUTY_SCALE_UPDATE_CH5_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_DUTY_SCALE_UPDATE_CH5_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_DUTY_SCALE_UPDATE_CH5_ST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Represents LEDC_task_duty_scale_update_ch6 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_duty_scale_update_ch6_st(
         &mut self,
-    ) -> LEDC_TASK_DUTY_SCALE_UPDATE_CH6_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_DUTY_SCALE_UPDATE_CH6_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_DUTY_SCALE_UPDATE_CH6_ST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Represents LEDC_task_duty_scale_update_ch7 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_duty_scale_update_ch7_st(
         &mut self,
-    ) -> LEDC_TASK_DUTY_SCALE_UPDATE_CH7_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_DUTY_SCALE_UPDATE_CH7_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_DUTY_SCALE_UPDATE_CH7_ST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Represents LEDC_task_timer0_cap trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ledc_task_timer0_cap_st(&mut self) -> LEDC_TASK_TIMER0_CAP_ST_W<TASK_ST1_SPEC> {
+    pub fn ledc_task_timer0_cap_st(&mut self) -> LEDC_TASK_TIMER0_CAP_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_TIMER0_CAP_ST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Represents LEDC_task_timer1_cap trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ledc_task_timer1_cap_st(&mut self) -> LEDC_TASK_TIMER1_CAP_ST_W<TASK_ST1_SPEC> {
+    pub fn ledc_task_timer1_cap_st(&mut self) -> LEDC_TASK_TIMER1_CAP_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_TIMER1_CAP_ST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Represents LEDC_task_timer2_cap trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ledc_task_timer2_cap_st(&mut self) -> LEDC_TASK_TIMER2_CAP_ST_W<TASK_ST1_SPEC> {
+    pub fn ledc_task_timer2_cap_st(&mut self) -> LEDC_TASK_TIMER2_CAP_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_TIMER2_CAP_ST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Represents LEDC_task_timer3_cap trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ledc_task_timer3_cap_st(&mut self) -> LEDC_TASK_TIMER3_CAP_ST_W<TASK_ST1_SPEC> {
+    pub fn ledc_task_timer3_cap_st(&mut self) -> LEDC_TASK_TIMER3_CAP_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_TIMER3_CAP_ST_W::new(self, 7)
     }
     #[doc = "Bit 8 - Represents LEDC_task_sig_out_dis_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_sig_out_dis_ch0_st(
         &mut self,
-    ) -> LEDC_TASK_SIG_OUT_DIS_CH0_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_SIG_OUT_DIS_CH0_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_SIG_OUT_DIS_CH0_ST_W::new(self, 8)
     }
     #[doc = "Bit 9 - Represents LEDC_task_sig_out_dis_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_sig_out_dis_ch1_st(
         &mut self,
-    ) -> LEDC_TASK_SIG_OUT_DIS_CH1_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_SIG_OUT_DIS_CH1_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_SIG_OUT_DIS_CH1_ST_W::new(self, 9)
     }
     #[doc = "Bit 10 - Represents LEDC_task_sig_out_dis_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_sig_out_dis_ch2_st(
         &mut self,
-    ) -> LEDC_TASK_SIG_OUT_DIS_CH2_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_SIG_OUT_DIS_CH2_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_SIG_OUT_DIS_CH2_ST_W::new(self, 10)
     }
     #[doc = "Bit 11 - Represents LEDC_task_sig_out_dis_ch3 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_sig_out_dis_ch3_st(
         &mut self,
-    ) -> LEDC_TASK_SIG_OUT_DIS_CH3_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_SIG_OUT_DIS_CH3_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_SIG_OUT_DIS_CH3_ST_W::new(self, 11)
     }
     #[doc = "Bit 12 - Represents LEDC_task_sig_out_dis_ch4 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_sig_out_dis_ch4_st(
         &mut self,
-    ) -> LEDC_TASK_SIG_OUT_DIS_CH4_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_SIG_OUT_DIS_CH4_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_SIG_OUT_DIS_CH4_ST_W::new(self, 12)
     }
     #[doc = "Bit 13 - Represents LEDC_task_sig_out_dis_ch5 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_sig_out_dis_ch5_st(
         &mut self,
-    ) -> LEDC_TASK_SIG_OUT_DIS_CH5_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_SIG_OUT_DIS_CH5_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_SIG_OUT_DIS_CH5_ST_W::new(self, 13)
     }
     #[doc = "Bit 14 - Represents LEDC_task_sig_out_dis_ch6 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_sig_out_dis_ch6_st(
         &mut self,
-    ) -> LEDC_TASK_SIG_OUT_DIS_CH6_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_SIG_OUT_DIS_CH6_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_SIG_OUT_DIS_CH6_ST_W::new(self, 14)
     }
     #[doc = "Bit 15 - Represents LEDC_task_sig_out_dis_ch7 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_sig_out_dis_ch7_st(
         &mut self,
-    ) -> LEDC_TASK_SIG_OUT_DIS_CH7_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_SIG_OUT_DIS_CH7_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_SIG_OUT_DIS_CH7_ST_W::new(self, 15)
     }
     #[doc = "Bit 16 - Represents LEDC_task_ovf_cnt_rst_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_ovf_cnt_rst_ch0_st(
         &mut self,
-    ) -> LEDC_TASK_OVF_CNT_RST_CH0_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_OVF_CNT_RST_CH0_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_OVF_CNT_RST_CH0_ST_W::new(self, 16)
     }
     #[doc = "Bit 17 - Represents LEDC_task_ovf_cnt_rst_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_ovf_cnt_rst_ch1_st(
         &mut self,
-    ) -> LEDC_TASK_OVF_CNT_RST_CH1_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_OVF_CNT_RST_CH1_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_OVF_CNT_RST_CH1_ST_W::new(self, 17)
     }
     #[doc = "Bit 18 - Represents LEDC_task_ovf_cnt_rst_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_ovf_cnt_rst_ch2_st(
         &mut self,
-    ) -> LEDC_TASK_OVF_CNT_RST_CH2_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_OVF_CNT_RST_CH2_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_OVF_CNT_RST_CH2_ST_W::new(self, 18)
     }
     #[doc = "Bit 19 - Represents LEDC_task_ovf_cnt_rst_ch3 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_ovf_cnt_rst_ch3_st(
         &mut self,
-    ) -> LEDC_TASK_OVF_CNT_RST_CH3_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_OVF_CNT_RST_CH3_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_OVF_CNT_RST_CH3_ST_W::new(self, 19)
     }
     #[doc = "Bit 20 - Represents LEDC_task_ovf_cnt_rst_ch4 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_ovf_cnt_rst_ch4_st(
         &mut self,
-    ) -> LEDC_TASK_OVF_CNT_RST_CH4_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_OVF_CNT_RST_CH4_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_OVF_CNT_RST_CH4_ST_W::new(self, 20)
     }
     #[doc = "Bit 21 - Represents LEDC_task_ovf_cnt_rst_ch5 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_ovf_cnt_rst_ch5_st(
         &mut self,
-    ) -> LEDC_TASK_OVF_CNT_RST_CH5_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_OVF_CNT_RST_CH5_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_OVF_CNT_RST_CH5_ST_W::new(self, 21)
     }
     #[doc = "Bit 22 - Represents LEDC_task_ovf_cnt_rst_ch6 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_ovf_cnt_rst_ch6_st(
         &mut self,
-    ) -> LEDC_TASK_OVF_CNT_RST_CH6_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_OVF_CNT_RST_CH6_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_OVF_CNT_RST_CH6_ST_W::new(self, 22)
     }
     #[doc = "Bit 23 - Represents LEDC_task_ovf_cnt_rst_ch7 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_ovf_cnt_rst_ch7_st(
         &mut self,
-    ) -> LEDC_TASK_OVF_CNT_RST_CH7_ST_W<TASK_ST1_SPEC> {
+    ) -> LEDC_TASK_OVF_CNT_RST_CH7_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_OVF_CNT_RST_CH7_ST_W::new(self, 23)
     }
     #[doc = "Bit 24 - Represents LEDC_task_timer0_rst trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ledc_task_timer0_rst_st(&mut self) -> LEDC_TASK_TIMER0_RST_ST_W<TASK_ST1_SPEC> {
+    pub fn ledc_task_timer0_rst_st(&mut self) -> LEDC_TASK_TIMER0_RST_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_TIMER0_RST_ST_W::new(self, 24)
     }
     #[doc = "Bit 25 - Represents LEDC_task_timer1_rst trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ledc_task_timer1_rst_st(&mut self) -> LEDC_TASK_TIMER1_RST_ST_W<TASK_ST1_SPEC> {
+    pub fn ledc_task_timer1_rst_st(&mut self) -> LEDC_TASK_TIMER1_RST_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_TIMER1_RST_ST_W::new(self, 25)
     }
     #[doc = "Bit 26 - Represents LEDC_task_timer2_rst trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ledc_task_timer2_rst_st(&mut self) -> LEDC_TASK_TIMER2_RST_ST_W<TASK_ST1_SPEC> {
+    pub fn ledc_task_timer2_rst_st(&mut self) -> LEDC_TASK_TIMER2_RST_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_TIMER2_RST_ST_W::new(self, 26)
     }
     #[doc = "Bit 27 - Represents LEDC_task_timer3_rst trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ledc_task_timer3_rst_st(&mut self) -> LEDC_TASK_TIMER3_RST_ST_W<TASK_ST1_SPEC> {
+    pub fn ledc_task_timer3_rst_st(&mut self) -> LEDC_TASK_TIMER3_RST_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_TIMER3_RST_ST_W::new(self, 27)
     }
     #[doc = "Bit 28 - Represents LEDC_task_timer0_resume trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ledc_task_timer0_resume_st(&mut self) -> LEDC_TASK_TIMER0_RESUME_ST_W<TASK_ST1_SPEC> {
+    pub fn ledc_task_timer0_resume_st(
+        &mut self,
+    ) -> LEDC_TASK_TIMER0_RESUME_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_TIMER0_RESUME_ST_W::new(self, 28)
     }
     #[doc = "Bit 29 - Represents LEDC_task_timer1_resume trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ledc_task_timer1_resume_st(&mut self) -> LEDC_TASK_TIMER1_RESUME_ST_W<TASK_ST1_SPEC> {
+    pub fn ledc_task_timer1_resume_st(
+        &mut self,
+    ) -> LEDC_TASK_TIMER1_RESUME_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_TIMER1_RESUME_ST_W::new(self, 29)
     }
     #[doc = "Bit 30 - Represents LEDC_task_timer2_resume trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ledc_task_timer2_resume_st(&mut self) -> LEDC_TASK_TIMER2_RESUME_ST_W<TASK_ST1_SPEC> {
+    pub fn ledc_task_timer2_resume_st(
+        &mut self,
+    ) -> LEDC_TASK_TIMER2_RESUME_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_TIMER2_RESUME_ST_W::new(self, 30)
     }
     #[doc = "Bit 31 - Represents LEDC_task_timer3_resume trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ledc_task_timer3_resume_st(&mut self) -> LEDC_TASK_TIMER3_RESUME_ST_W<TASK_ST1_SPEC> {
+    pub fn ledc_task_timer3_resume_st(
+        &mut self,
+    ) -> LEDC_TASK_TIMER3_RESUME_ST_W<'_, TASK_ST1_SPEC> {
         LEDC_TASK_TIMER3_RESUME_ST_W::new(self, 31)
     }
 }

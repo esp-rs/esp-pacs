@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Configures the priority of RX channel 1.The larger of the value, the higher of the priority.."]
     #[inline(always)]
-    pub fn rx_pri_ch1(&mut self) -> RX_PRI_CH1_W<IN_PERI_CH1_SPEC> {
+    pub fn rx_pri_ch1(&mut self) -> RX_PRI_CH1_W<'_, IN_PERI_CH1_SPEC> {
         RX_PRI_CH1_W::new(self, 0)
     }
 }

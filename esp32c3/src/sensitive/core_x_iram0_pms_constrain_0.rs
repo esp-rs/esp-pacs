@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core_x_iram0_pms_constrain_lock(
         &mut self,
-    ) -> CORE_X_IRAM0_PMS_CONSTRAIN_LOCK_W<CORE_X_IRAM0_PMS_CONSTRAIN_0_SPEC> {
+    ) -> CORE_X_IRAM0_PMS_CONSTRAIN_LOCK_W<'_, CORE_X_IRAM0_PMS_CONSTRAIN_0_SPEC> {
         CORE_X_IRAM0_PMS_CONSTRAIN_LOCK_W::new(self, 0)
     }
 }

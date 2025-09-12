@@ -184,87 +184,87 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1: Enable the valid data input of I2S RX TDM or PDM channel 0. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    pub fn rx_tdm_pdm_chan0_en(&mut self) -> RX_TDM_PDM_CHAN0_EN_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_pdm_chan0_en(&mut self) -> RX_TDM_PDM_CHAN0_EN_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_PDM_CHAN0_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: Enable the valid data input of I2S RX TDM or PDM channel 1. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    pub fn rx_tdm_pdm_chan1_en(&mut self) -> RX_TDM_PDM_CHAN1_EN_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_pdm_chan1_en(&mut self) -> RX_TDM_PDM_CHAN1_EN_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_PDM_CHAN1_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - 1: Enable the valid data input of I2S RX TDM or PDM channel 2. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    pub fn rx_tdm_pdm_chan2_en(&mut self) -> RX_TDM_PDM_CHAN2_EN_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_pdm_chan2_en(&mut self) -> RX_TDM_PDM_CHAN2_EN_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_PDM_CHAN2_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - 1: Enable the valid data input of I2S RX TDM or PDM channel 3. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    pub fn rx_tdm_pdm_chan3_en(&mut self) -> RX_TDM_PDM_CHAN3_EN_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_pdm_chan3_en(&mut self) -> RX_TDM_PDM_CHAN3_EN_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_PDM_CHAN3_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - 1: Enable the valid data input of I2S RX TDM or PDM channel 4. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    pub fn rx_tdm_pdm_chan4_en(&mut self) -> RX_TDM_PDM_CHAN4_EN_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_pdm_chan4_en(&mut self) -> RX_TDM_PDM_CHAN4_EN_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_PDM_CHAN4_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - 1: Enable the valid data input of I2S RX TDM or PDM channel 5. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    pub fn rx_tdm_pdm_chan5_en(&mut self) -> RX_TDM_PDM_CHAN5_EN_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_pdm_chan5_en(&mut self) -> RX_TDM_PDM_CHAN5_EN_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_PDM_CHAN5_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - 1: Enable the valid data input of I2S RX TDM or PDM channel 6. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    pub fn rx_tdm_pdm_chan6_en(&mut self) -> RX_TDM_PDM_CHAN6_EN_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_pdm_chan6_en(&mut self) -> RX_TDM_PDM_CHAN6_EN_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_PDM_CHAN6_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - 1: Enable the valid data input of I2S RX TDM or PDM channel 7. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    pub fn rx_tdm_pdm_chan7_en(&mut self) -> RX_TDM_PDM_CHAN7_EN_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_pdm_chan7_en(&mut self) -> RX_TDM_PDM_CHAN7_EN_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_PDM_CHAN7_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - 1: Enable the valid data input of I2S RX TDM channel 8. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    pub fn rx_tdm_chan8_en(&mut self) -> RX_TDM_CHAN8_EN_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_chan8_en(&mut self) -> RX_TDM_CHAN8_EN_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_CHAN8_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - 1: Enable the valid data input of I2S RX TDM channel 9. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    pub fn rx_tdm_chan9_en(&mut self) -> RX_TDM_CHAN9_EN_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_chan9_en(&mut self) -> RX_TDM_CHAN9_EN_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_CHAN9_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - 1: Enable the valid data input of I2S RX TDM channel 10. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    pub fn rx_tdm_chan10_en(&mut self) -> RX_TDM_CHAN10_EN_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_chan10_en(&mut self) -> RX_TDM_CHAN10_EN_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_CHAN10_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - 1: Enable the valid data input of I2S RX TDM channel 11. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    pub fn rx_tdm_chan11_en(&mut self) -> RX_TDM_CHAN11_EN_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_chan11_en(&mut self) -> RX_TDM_CHAN11_EN_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_CHAN11_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - 1: Enable the valid data input of I2S RX TDM channel 12. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    pub fn rx_tdm_chan12_en(&mut self) -> RX_TDM_CHAN12_EN_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_chan12_en(&mut self) -> RX_TDM_CHAN12_EN_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_CHAN12_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - 1: Enable the valid data input of I2S RX TDM channel 13. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    pub fn rx_tdm_chan13_en(&mut self) -> RX_TDM_CHAN13_EN_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_chan13_en(&mut self) -> RX_TDM_CHAN13_EN_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_CHAN13_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - 1: Enable the valid data input of I2S RX TDM channel 14. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    pub fn rx_tdm_chan14_en(&mut self) -> RX_TDM_CHAN14_EN_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_chan14_en(&mut self) -> RX_TDM_CHAN14_EN_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_CHAN14_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - 1: Enable the valid data input of I2S RX TDM channel 15. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    pub fn rx_tdm_chan15_en(&mut self) -> RX_TDM_CHAN15_EN_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_chan15_en(&mut self) -> RX_TDM_CHAN15_EN_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_CHAN15_EN_W::new(self, 15)
     }
     #[doc = "Bits 16:19 - The total channel number of I2S TX TDM mode."]
     #[inline(always)]
-    pub fn rx_tdm_tot_chan_num(&mut self) -> RX_TDM_TOT_CHAN_NUM_W<RX_TDM_CTRL_SPEC> {
+    pub fn rx_tdm_tot_chan_num(&mut self) -> RX_TDM_TOT_CHAN_NUM_W<'_, RX_TDM_CTRL_SPEC> {
         RX_TDM_TOT_CHAN_NUM_W::new(self, 16)
     }
 }

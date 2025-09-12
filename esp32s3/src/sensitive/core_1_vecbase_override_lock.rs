@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core_1_vecbase_override_lock(
         &mut self,
-    ) -> CORE_1_VECBASE_OVERRIDE_LOCK_W<CORE_1_VECBASE_OVERRIDE_LOCK_SPEC> {
+    ) -> CORE_1_VECBASE_OVERRIDE_LOCK_W<'_, CORE_1_VECBASE_OVERRIDE_LOCK_SPEC> {
         CORE_1_VECBASE_OVERRIDE_LOCK_W::new(self, 0)
     }
 }

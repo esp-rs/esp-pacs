@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn pro_icache_autoload_sct1_size(
         &mut self,
-    ) -> PRO_ICACHE_AUTOLOAD_SCT1_SIZE_W<PRO_ICACHE_AUTOLOAD_SECTION1_SIZE_SPEC> {
+    ) -> PRO_ICACHE_AUTOLOAD_SCT1_SIZE_W<'_, PRO_ICACHE_AUTOLOAD_SECTION1_SIZE_SPEC> {
         PRO_ICACHE_AUTOLOAD_SCT1_SIZE_W::new(self, 0)
     }
 }

@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - For SPI0 Cache access enable 1: enable 0:disable."]
     #[inline(always)]
-    pub fn cache_req_en(&mut self) -> CACHE_REQ_EN_W<CACHE_FCTRL_SPEC> {
+    pub fn cache_req_en(&mut self) -> CACHE_REQ_EN_W<'_, CACHE_FCTRL_SPEC> {
         CACHE_REQ_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - For SPI0 cache read flash with 4 bytes command 1: enable 0:disable."]
     #[inline(always)]
-    pub fn cache_usr_cmd_4byte(&mut self) -> CACHE_USR_CMD_4BYTE_W<CACHE_FCTRL_SPEC> {
+    pub fn cache_usr_cmd_4byte(&mut self) -> CACHE_USR_CMD_4BYTE_W<'_, CACHE_FCTRL_SPEC> {
         CACHE_USR_CMD_4BYTE_W::new(self, 1)
     }
     #[doc = "Bit 2 - For SPI0 cache read flash for user define command 1: enable 0:disable."]
     #[inline(always)]
-    pub fn cache_flash_usr_cmd(&mut self) -> CACHE_FLASH_USR_CMD_W<CACHE_FCTRL_SPEC> {
+    pub fn cache_flash_usr_cmd(&mut self) -> CACHE_FLASH_USR_CMD_W<'_, CACHE_FCTRL_SPEC> {
         CACHE_FLASH_USR_CMD_W::new(self, 2)
     }
     #[doc = "Bit 3 - For SPI0 spi1 send suspend command before cache read flash 1: enable 0:disable."]
     #[inline(always)]
-    pub fn cache_flash_pes_en(&mut self) -> CACHE_FLASH_PES_EN_W<CACHE_FCTRL_SPEC> {
+    pub fn cache_flash_pes_en(&mut self) -> CACHE_FLASH_PES_EN_W<'_, CACHE_FCTRL_SPEC> {
         CACHE_FLASH_PES_EN_W::new(self, 3)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Configures whether or not to add a turnaround delay of 1 bit before the start bit.\\\\ 0: Not add\\\\ 1: Add\\\\"]
     #[inline(always)]
-    pub fn dl0_en(&mut self) -> DL0_EN_W<DELAY_CONF_SYNC_SPEC> {
+    pub fn dl0_en(&mut self) -> DL0_EN_W<'_, DELAY_CONF_SYNC_SPEC> {
         DL0_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to add a turnaround delay of 1 bit after the stop bit.\\\\ 0: Not add\\\\ 1: Add\\\\"]
     #[inline(always)]
-    pub fn dl1_en(&mut self) -> DL1_EN_W<DELAY_CONF_SYNC_SPEC> {
+    pub fn dl1_en(&mut self) -> DL1_EN_W<'_, DELAY_CONF_SYNC_SPEC> {
         DL1_EN_W::new(self, 2)
     }
 }

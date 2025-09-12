@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks trace function permission control registers."]
     #[inline(always)]
-    pub fn pro_trace_lock(&mut self) -> PRO_TRACE_LOCK_W<PRO_TRACE_0_SPEC> {
+    pub fn pro_trace_lock(&mut self) -> PRO_TRACE_LOCK_W<'_, PRO_TRACE_0_SPEC> {
         PRO_TRACE_LOCK_W::new(self, 0)
     }
 }

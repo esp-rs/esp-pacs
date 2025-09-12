@@ -174,82 +174,82 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn sw_cbc(&mut self) -> SW_CBC_W<FH_CFG0_SPEC> {
+    pub fn sw_cbc(&mut self) -> SW_CBC_W<'_, FH_CFG0_SPEC> {
         SW_CBC_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn f2_cbc(&mut self) -> F2_CBC_W<FH_CFG0_SPEC> {
+    pub fn f2_cbc(&mut self) -> F2_CBC_W<'_, FH_CFG0_SPEC> {
         F2_CBC_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn f1_cbc(&mut self) -> F1_CBC_W<FH_CFG0_SPEC> {
+    pub fn f1_cbc(&mut self) -> F1_CBC_W<'_, FH_CFG0_SPEC> {
         F1_CBC_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn f0_cbc(&mut self) -> F0_CBC_W<FH_CFG0_SPEC> {
+    pub fn f0_cbc(&mut self) -> F0_CBC_W<'_, FH_CFG0_SPEC> {
         F0_CBC_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn sw_ost(&mut self) -> SW_OST_W<FH_CFG0_SPEC> {
+    pub fn sw_ost(&mut self) -> SW_OST_W<'_, FH_CFG0_SPEC> {
         SW_OST_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn f2_ost(&mut self) -> F2_OST_W<FH_CFG0_SPEC> {
+    pub fn f2_ost(&mut self) -> F2_OST_W<'_, FH_CFG0_SPEC> {
         F2_OST_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn f1_ost(&mut self) -> F1_OST_W<FH_CFG0_SPEC> {
+    pub fn f1_ost(&mut self) -> F1_OST_W<'_, FH_CFG0_SPEC> {
         F1_OST_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn f0_ost(&mut self) -> F0_OST_W<FH_CFG0_SPEC> {
+    pub fn f0_ost(&mut self) -> F0_OST_W<'_, FH_CFG0_SPEC> {
         F0_OST_W::new(self, 7)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
-    pub fn a_cbc_d(&mut self) -> A_CBC_D_W<FH_CFG0_SPEC> {
+    pub fn a_cbc_d(&mut self) -> A_CBC_D_W<'_, FH_CFG0_SPEC> {
         A_CBC_D_W::new(self, 8)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
-    pub fn a_cbc_u(&mut self) -> A_CBC_U_W<FH_CFG0_SPEC> {
+    pub fn a_cbc_u(&mut self) -> A_CBC_U_W<'_, FH_CFG0_SPEC> {
         A_CBC_U_W::new(self, 10)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
-    pub fn a_ost_d(&mut self) -> A_OST_D_W<FH_CFG0_SPEC> {
+    pub fn a_ost_d(&mut self) -> A_OST_D_W<'_, FH_CFG0_SPEC> {
         A_OST_D_W::new(self, 12)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
-    pub fn a_ost_u(&mut self) -> A_OST_U_W<FH_CFG0_SPEC> {
+    pub fn a_ost_u(&mut self) -> A_OST_U_W<'_, FH_CFG0_SPEC> {
         A_OST_U_W::new(self, 14)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
-    pub fn b_cbc_d(&mut self) -> B_CBC_D_W<FH_CFG0_SPEC> {
+    pub fn b_cbc_d(&mut self) -> B_CBC_D_W<'_, FH_CFG0_SPEC> {
         B_CBC_D_W::new(self, 16)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
-    pub fn b_cbc_u(&mut self) -> B_CBC_U_W<FH_CFG0_SPEC> {
+    pub fn b_cbc_u(&mut self) -> B_CBC_U_W<'_, FH_CFG0_SPEC> {
         B_CBC_U_W::new(self, 18)
     }
     #[doc = "Bits 20:21"]
     #[inline(always)]
-    pub fn b_ost_d(&mut self) -> B_OST_D_W<FH_CFG0_SPEC> {
+    pub fn b_ost_d(&mut self) -> B_OST_D_W<'_, FH_CFG0_SPEC> {
         B_OST_D_W::new(self, 20)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
-    pub fn b_ost_u(&mut self) -> B_OST_U_W<FH_CFG0_SPEC> {
+    pub fn b_ost_u(&mut self) -> B_OST_U_W<'_, FH_CFG0_SPEC> {
         B_OST_U_W::new(self, 22)
     }
 }

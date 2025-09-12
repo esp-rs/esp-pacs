@@ -87,39 +87,39 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - De-noise resolution: 12/10/8/4 bit"]
     #[inline(always)]
-    pub fn touch_denoise_res(&mut self) -> TOUCH_DENOISE_RES_W<TOUCH_SCAN_CTRL_SPEC> {
+    pub fn touch_denoise_res(&mut self) -> TOUCH_DENOISE_RES_W<'_, TOUCH_SCAN_CTRL_SPEC> {
         TOUCH_DENOISE_RES_W::new(self, 0)
     }
     #[doc = "Bit 2 - touch pad0 will be used to de-noise"]
     #[inline(always)]
-    pub fn touch_denoise_en(&mut self) -> TOUCH_DENOISE_EN_W<TOUCH_SCAN_CTRL_SPEC> {
+    pub fn touch_denoise_en(&mut self) -> TOUCH_DENOISE_EN_W<'_, TOUCH_SCAN_CTRL_SPEC> {
         TOUCH_DENOISE_EN_W::new(self, 2)
     }
     #[doc = "Bit 8 - inactive touch pads connect to 1: gnd 0: HighZ"]
     #[inline(always)]
     pub fn touch_inactive_connection(
         &mut self,
-    ) -> TOUCH_INACTIVE_CONNECTION_W<TOUCH_SCAN_CTRL_SPEC> {
+    ) -> TOUCH_INACTIVE_CONNECTION_W<'_, TOUCH_SCAN_CTRL_SPEC> {
         TOUCH_INACTIVE_CONNECTION_W::new(self, 8)
     }
     #[doc = "Bit 9 - touch pad14 will be used as shield"]
     #[inline(always)]
-    pub fn touch_shield_pad_en(&mut self) -> TOUCH_SHIELD_PAD_EN_W<TOUCH_SCAN_CTRL_SPEC> {
+    pub fn touch_shield_pad_en(&mut self) -> TOUCH_SHIELD_PAD_EN_W<'_, TOUCH_SCAN_CTRL_SPEC> {
         TOUCH_SHIELD_PAD_EN_W::new(self, 9)
     }
     #[doc = "Bits 10:24 - touch scan mode pad enable map"]
     #[inline(always)]
-    pub fn touch_scan_pad_map(&mut self) -> TOUCH_SCAN_PAD_MAP_W<TOUCH_SCAN_CTRL_SPEC> {
+    pub fn touch_scan_pad_map(&mut self) -> TOUCH_SCAN_PAD_MAP_W<'_, TOUCH_SCAN_CTRL_SPEC> {
         TOUCH_SCAN_PAD_MAP_W::new(self, 10)
     }
     #[doc = "Bits 25:27 - touch7 buffer driver strength"]
     #[inline(always)]
-    pub fn touch_bufdrv(&mut self) -> TOUCH_BUFDRV_W<TOUCH_SCAN_CTRL_SPEC> {
+    pub fn touch_bufdrv(&mut self) -> TOUCH_BUFDRV_W<'_, TOUCH_SCAN_CTRL_SPEC> {
         TOUCH_BUFDRV_W::new(self, 25)
     }
     #[doc = "Bits 28:31 - select out ring pad"]
     #[inline(always)]
-    pub fn touch_out_ring(&mut self) -> TOUCH_OUT_RING_W<TOUCH_SCAN_CTRL_SPEC> {
+    pub fn touch_out_ring(&mut self) -> TOUCH_OUT_RING_W<'_, TOUCH_SCAN_CTRL_SPEC> {
         TOUCH_OUT_RING_W::new(self, 28)
     }
 }

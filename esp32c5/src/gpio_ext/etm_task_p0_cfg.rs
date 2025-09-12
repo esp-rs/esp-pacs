@@ -114,52 +114,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Configures to select an ETM task channel for GPIO0.\\\\ 0: Select channel 0\\\\ 1: Select channel 1\\\\ ......\\\\ 7: Select channel 7\\\\%\\label{fielddesc:GPIOSDETMTASKGPIO1EN}- \\[GPIOSD_ETM_TASK_GPIO1_EN\\] Enable bit of GPIO response etm task. %\\label{fielddesc:GPIOSDETMTASKGPIO1SEL}- \\[GPIOSD_ETM_TASK_GPIO1_SEL\\] GPIO choose a etm task channel. %\\label{fielddesc:GPIOSDETMTASKGPIO2EN}- \\[GPIOSD_ETM_TASK_GPIO2_EN\\] Enable bit of GPIO response etm task. %\\label{fielddesc:GPIOSDETMTASKGPIO2SEL}- \\[GPIOSD_ETM_TASK_GPIO2_SEL\\] GPIO choose a etm task channel. %\\label{fielddesc:GPIOSDETMTASKGPIO3EN}\\item \\[GPIOSD_ETM_TASK_GPIO3_EN\\] Enable bit of GPIO response etm task. %\\label{fielddesc:GPIOSDETMTASKGPIO3SEL}\\item \\[GPIOSD_ETM_TASK_GPIO3_SEL\\] GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn etm_task_gpio0_sel(&mut self) -> ETM_TASK_GPIO0_SEL_W<ETM_TASK_P0_CFG_SPEC> {
+    pub fn etm_task_gpio0_sel(&mut self) -> ETM_TASK_GPIO0_SEL_W<'_, ETM_TASK_P0_CFG_SPEC> {
         ETM_TASK_GPIO0_SEL_W::new(self, 0)
     }
     #[doc = "Bit 5 - Configures whether or not to enable GPIO5 to response ETM task.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn etm_task_gpio0_en(&mut self) -> ETM_TASK_GPIO0_EN_W<ETM_TASK_P0_CFG_SPEC> {
+    pub fn etm_task_gpio0_en(&mut self) -> ETM_TASK_GPIO0_EN_W<'_, ETM_TASK_P0_CFG_SPEC> {
         ETM_TASK_GPIO0_EN_W::new(self, 5)
     }
     #[doc = "Bits 6:8 - Configures to select an ETM task channel for GPIO6.\\\\ 0: Select channel 0\\\\ 1: Select channel 1\\\\ ......\\\\ 7: Select channel 7\\\\%\\label{fielddesc:GPIOSDETMTASKGPIO1EN}- \\[GPIOSD_ETM_TASK_GPIO1_EN\\] Enable bit of GPIO response etm task. %\\label{fielddesc:GPIOSDETMTASKGPIO1SEL}- \\[GPIOSD_ETM_TASK_GPIO1_SEL\\] GPIO choose a etm task channel. %\\label{fielddesc:GPIOSDETMTASKGPIO2EN}- \\[GPIOSD_ETM_TASK_GPIO2_EN\\] Enable bit of GPIO response etm task. %\\label{fielddesc:GPIOSDETMTASKGPIO2SEL}- \\[GPIOSD_ETM_TASK_GPIO2_SEL\\] GPIO choose a etm task channel. %\\label{fielddesc:GPIOSDETMTASKGPIO3EN}\\item \\[GPIOSD_ETM_TASK_GPIO3_EN\\] Enable bit of GPIO response etm task. %\\label{fielddesc:GPIOSDETMTASKGPIO3SEL}\\item \\[GPIOSD_ETM_TASK_GPIO3_SEL\\] GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn etm_task_gpio1_sel(&mut self) -> ETM_TASK_GPIO1_SEL_W<ETM_TASK_P0_CFG_SPEC> {
+    pub fn etm_task_gpio1_sel(&mut self) -> ETM_TASK_GPIO1_SEL_W<'_, ETM_TASK_P0_CFG_SPEC> {
         ETM_TASK_GPIO1_SEL_W::new(self, 6)
     }
     #[doc = "Bit 11 - Configures whether or not to enable GPIO11 to response ETM task.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn etm_task_gpio1_en(&mut self) -> ETM_TASK_GPIO1_EN_W<ETM_TASK_P0_CFG_SPEC> {
+    pub fn etm_task_gpio1_en(&mut self) -> ETM_TASK_GPIO1_EN_W<'_, ETM_TASK_P0_CFG_SPEC> {
         ETM_TASK_GPIO1_EN_W::new(self, 11)
     }
     #[doc = "Bits 12:14 - Configures to select an ETM task channel for GPIO12.\\\\ 0: Select channel 0\\\\ 1: Select channel 1\\\\ ......\\\\ 7: Select channel 7\\\\%\\label{fielddesc:GPIOSDETMTASKGPIO1EN}- \\[GPIOSD_ETM_TASK_GPIO1_EN\\] Enable bit of GPIO response etm task. %\\label{fielddesc:GPIOSDETMTASKGPIO1SEL}- \\[GPIOSD_ETM_TASK_GPIO1_SEL\\] GPIO choose a etm task channel. %\\label{fielddesc:GPIOSDETMTASKGPIO2EN}- \\[GPIOSD_ETM_TASK_GPIO2_EN\\] Enable bit of GPIO response etm task. %\\label{fielddesc:GPIOSDETMTASKGPIO2SEL}- \\[GPIOSD_ETM_TASK_GPIO2_SEL\\] GPIO choose a etm task channel. %\\label{fielddesc:GPIOSDETMTASKGPIO3EN}\\item \\[GPIOSD_ETM_TASK_GPIO3_EN\\] Enable bit of GPIO response etm task. %\\label{fielddesc:GPIOSDETMTASKGPIO3SEL}\\item \\[GPIOSD_ETM_TASK_GPIO3_SEL\\] GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn etm_task_gpio2_sel(&mut self) -> ETM_TASK_GPIO2_SEL_W<ETM_TASK_P0_CFG_SPEC> {
+    pub fn etm_task_gpio2_sel(&mut self) -> ETM_TASK_GPIO2_SEL_W<'_, ETM_TASK_P0_CFG_SPEC> {
         ETM_TASK_GPIO2_SEL_W::new(self, 12)
     }
     #[doc = "Bit 17 - Configures whether or not to enable GPIO17 to response ETM task.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn etm_task_gpio2_en(&mut self) -> ETM_TASK_GPIO2_EN_W<ETM_TASK_P0_CFG_SPEC> {
+    pub fn etm_task_gpio2_en(&mut self) -> ETM_TASK_GPIO2_EN_W<'_, ETM_TASK_P0_CFG_SPEC> {
         ETM_TASK_GPIO2_EN_W::new(self, 17)
     }
     #[doc = "Bits 18:20 - Configures to select an ETM task channel for GPIO18.\\\\ 0: Select channel 0\\\\ 1: Select channel 1\\\\ ......\\\\ 7: Select channel 7\\\\%\\label{fielddesc:GPIOSDETMTASKGPIO1EN}- \\[GPIOSD_ETM_TASK_GPIO1_EN\\] Enable bit of GPIO response etm task. %\\label{fielddesc:GPIOSDETMTASKGPIO1SEL}- \\[GPIOSD_ETM_TASK_GPIO1_SEL\\] GPIO choose a etm task channel. %\\label{fielddesc:GPIOSDETMTASKGPIO2EN}- \\[GPIOSD_ETM_TASK_GPIO2_EN\\] Enable bit of GPIO response etm task. %\\label{fielddesc:GPIOSDETMTASKGPIO2SEL}- \\[GPIOSD_ETM_TASK_GPIO2_SEL\\] GPIO choose a etm task channel. %\\label{fielddesc:GPIOSDETMTASKGPIO3EN}\\item \\[GPIOSD_ETM_TASK_GPIO3_EN\\] Enable bit of GPIO response etm task. %\\label{fielddesc:GPIOSDETMTASKGPIO3SEL}\\item \\[GPIOSD_ETM_TASK_GPIO3_SEL\\] GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn etm_task_gpio3_sel(&mut self) -> ETM_TASK_GPIO3_SEL_W<ETM_TASK_P0_CFG_SPEC> {
+    pub fn etm_task_gpio3_sel(&mut self) -> ETM_TASK_GPIO3_SEL_W<'_, ETM_TASK_P0_CFG_SPEC> {
         ETM_TASK_GPIO3_SEL_W::new(self, 18)
     }
     #[doc = "Bit 23 - Configures whether or not to enable GPIO23 to response ETM task.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn etm_task_gpio3_en(&mut self) -> ETM_TASK_GPIO3_EN_W<ETM_TASK_P0_CFG_SPEC> {
+    pub fn etm_task_gpio3_en(&mut self) -> ETM_TASK_GPIO3_EN_W<'_, ETM_TASK_P0_CFG_SPEC> {
         ETM_TASK_GPIO3_EN_W::new(self, 23)
     }
     #[doc = "Bits 24:26 - Configures to select an ETM task channel for GPIO24.\\\\ 0: Select channel 0\\\\ 1: Select channel 1\\\\ ......\\\\ 7: Select channel 7\\\\%\\label{fielddesc:GPIOSDETMTASKGPIO1EN}- \\[GPIOSD_ETM_TASK_GPIO1_EN\\] Enable bit of GPIO response etm task. %\\label{fielddesc:GPIOSDETMTASKGPIO1SEL}- \\[GPIOSD_ETM_TASK_GPIO1_SEL\\] GPIO choose a etm task channel. %\\label{fielddesc:GPIOSDETMTASKGPIO2EN}- \\[GPIOSD_ETM_TASK_GPIO2_EN\\] Enable bit of GPIO response etm task. %\\label{fielddesc:GPIOSDETMTASKGPIO2SEL}- \\[GPIOSD_ETM_TASK_GPIO2_SEL\\] GPIO choose a etm task channel. %\\label{fielddesc:GPIOSDETMTASKGPIO3EN}\\item \\[GPIOSD_ETM_TASK_GPIO3_EN\\] Enable bit of GPIO response etm task. %\\label{fielddesc:GPIOSDETMTASKGPIO3SEL}\\item \\[GPIOSD_ETM_TASK_GPIO3_SEL\\] GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn etm_task_gpio4_sel(&mut self) -> ETM_TASK_GPIO4_SEL_W<ETM_TASK_P0_CFG_SPEC> {
+    pub fn etm_task_gpio4_sel(&mut self) -> ETM_TASK_GPIO4_SEL_W<'_, ETM_TASK_P0_CFG_SPEC> {
         ETM_TASK_GPIO4_SEL_W::new(self, 24)
     }
     #[doc = "Bit 29 - Configures whether or not to enable GPIO29 to response ETM task.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn etm_task_gpio4_en(&mut self) -> ETM_TASK_GPIO4_EN_W<ETM_TASK_P0_CFG_SPEC> {
+    pub fn etm_task_gpio4_en(&mut self) -> ETM_TASK_GPIO4_EN_W<'_, ETM_TASK_P0_CFG_SPEC> {
         ETM_TASK_GPIO4_EN_W::new(self, 29)
     }
 }

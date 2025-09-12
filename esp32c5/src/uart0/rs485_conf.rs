@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable RS485 mode.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn rs485_en(&mut self) -> RS485_EN_W<RS485_CONF_SPEC> {
+    pub fn rs485_en(&mut self) -> RS485_EN_W<'_, RS485_CONF_SPEC> {
         RS485_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to add a turnaround delay of 1 bit before the start bit.\\\\ 0: Not add\\\\ 1: Add\\\\"]
     #[inline(always)]
-    pub fn dl0_en(&mut self) -> DL0_EN_W<RS485_CONF_SPEC> {
+    pub fn dl0_en(&mut self) -> DL0_EN_W<'_, RS485_CONF_SPEC> {
         DL0_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to add a turnaround delay of 1 bit after the stop bit.\\\\ 0: Not add\\\\ 1: Add\\\\"]
     #[inline(always)]
-    pub fn dl1_en(&mut self) -> DL1_EN_W<RS485_CONF_SPEC> {
+    pub fn dl1_en(&mut self) -> DL1_EN_W<'_, RS485_CONF_SPEC> {
         DL1_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to enable the receiver for data reception when the transmitter is transmitting data in RS485 mode.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn rs485tx_rx_en(&mut self) -> RS485TX_RX_EN_W<RS485_CONF_SPEC> {
+    pub fn rs485tx_rx_en(&mut self) -> RS485TX_RX_EN_W<'_, RS485_CONF_SPEC> {
         RS485TX_RX_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether to enable the RS485 transmitter for data transmission when the RS485 receiver is busy.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn rs485rxby_tx_en(&mut self) -> RS485RXBY_TX_EN_W<RS485_CONF_SPEC> {
+    pub fn rs485rxby_tx_en(&mut self) -> RS485RXBY_TX_EN_W<'_, RS485_CONF_SPEC> {
         RS485RXBY_TX_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures the delay of internal data signals in the receiver.\\\\Measurement unit: bit time (the time to transmit 1 bit).."]
     #[inline(always)]
-    pub fn rs485_rx_dly_num(&mut self) -> RS485_RX_DLY_NUM_W<RS485_CONF_SPEC> {
+    pub fn rs485_rx_dly_num(&mut self) -> RS485_RX_DLY_NUM_W<'_, RS485_CONF_SPEC> {
         RS485_RX_DLY_NUM_W::new(self, 5)
     }
     #[doc = "Bits 6:9 - Configures the delay of internal data signals in the transmitter.\\\\Measurement unit: bit time (the time to transmit 1 bit)."]
     #[inline(always)]
-    pub fn rs485_tx_dly_num(&mut self) -> RS485_TX_DLY_NUM_W<RS485_CONF_SPEC> {
+    pub fn rs485_tx_dly_num(&mut self) -> RS485_TX_DLY_NUM_W<'_, RS485_CONF_SPEC> {
         RS485_TX_DLY_NUM_W::new(self, 6)
     }
 }

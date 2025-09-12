@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 20 - Configures the clock source of TWAI1.\\\\ 0 (default): XTAL_CLK\\\\ 1: RC_FAST_CLK\\\\"]
     #[inline(always)]
-    pub fn twai1_func_clk_sel(&mut self) -> TWAI1_FUNC_CLK_SEL_W<TWAI1_FUNC_CLK_CONF_SPEC> {
+    pub fn twai1_func_clk_sel(&mut self) -> TWAI1_FUNC_CLK_SEL_W<'_, TWAI1_FUNC_CLK_CONF_SPEC> {
         TWAI1_FUNC_CLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable twai1 function clock"]
     #[inline(always)]
-    pub fn twai1_func_clk_en(&mut self) -> TWAI1_FUNC_CLK_EN_W<TWAI1_FUNC_CLK_CONF_SPEC> {
+    pub fn twai1_func_clk_en(&mut self) -> TWAI1_FUNC_CLK_EN_W<'_, TWAI1_FUNC_CLK_CONF_SPEC> {
         TWAI1_FUNC_CLK_EN_W::new(self, 22)
     }
 }

@@ -114,52 +114,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Reserved"]
     #[inline(always)]
-    pub fn reg_pad11_drv(&mut self) -> REG_PAD11_DRV_W<PAD11_SPEC> {
+    pub fn reg_pad11_drv(&mut self) -> REG_PAD11_DRV_W<'_, PAD11_SPEC> {
         REG_PAD11_DRV_W::new(self, 0)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    pub fn reg_pad11_rde(&mut self) -> REG_PAD11_RDE_W<PAD11_SPEC> {
+    pub fn reg_pad11_rde(&mut self) -> REG_PAD11_RDE_W<'_, PAD11_SPEC> {
         REG_PAD11_RDE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    pub fn reg_pad11_rue(&mut self) -> REG_PAD11_RUE_W<PAD11_SPEC> {
+    pub fn reg_pad11_rue(&mut self) -> REG_PAD11_RUE_W<'_, PAD11_SPEC> {
         REG_PAD11_RUE_W::new(self, 3)
     }
     #[doc = "Bit 4 - 1:use LP GPIO,0: use digital GPIO"]
     #[inline(always)]
-    pub fn reg_pad11_mux_sel(&mut self) -> REG_PAD11_MUX_SEL_W<PAD11_SPEC> {
+    pub fn reg_pad11_mux_sel(&mut self) -> REG_PAD11_MUX_SEL_W<'_, PAD11_SPEC> {
         REG_PAD11_MUX_SEL_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - function sel"]
     #[inline(always)]
-    pub fn reg_pad11_fun_sel(&mut self) -> REG_PAD11_FUN_SEL_W<PAD11_SPEC> {
+    pub fn reg_pad11_fun_sel(&mut self) -> REG_PAD11_FUN_SEL_W<'_, PAD11_SPEC> {
         REG_PAD11_FUN_SEL_W::new(self, 5)
     }
     #[doc = "Bit 7 - 1: enable sleep mode during sleep,0: no sleep mode"]
     #[inline(always)]
-    pub fn reg_pad11_slp_sel(&mut self) -> REG_PAD11_SLP_SEL_W<PAD11_SPEC> {
+    pub fn reg_pad11_slp_sel(&mut self) -> REG_PAD11_SLP_SEL_W<'_, PAD11_SPEC> {
         REG_PAD11_SLP_SEL_W::new(self, 7)
     }
     #[doc = "Bit 8 - input enable in sleep mode"]
     #[inline(always)]
-    pub fn reg_pad11_slp_ie(&mut self) -> REG_PAD11_SLP_IE_W<PAD11_SPEC> {
+    pub fn reg_pad11_slp_ie(&mut self) -> REG_PAD11_SLP_IE_W<'_, PAD11_SPEC> {
         REG_PAD11_SLP_IE_W::new(self, 8)
     }
     #[doc = "Bit 9 - output enable in sleep mode"]
     #[inline(always)]
-    pub fn reg_pad11_slp_oe(&mut self) -> REG_PAD11_SLP_OE_W<PAD11_SPEC> {
+    pub fn reg_pad11_slp_oe(&mut self) -> REG_PAD11_SLP_OE_W<'_, PAD11_SPEC> {
         REG_PAD11_SLP_OE_W::new(self, 9)
     }
     #[doc = "Bit 10 - input enable in work mode"]
     #[inline(always)]
-    pub fn reg_pad11_fun_ie(&mut self) -> REG_PAD11_FUN_IE_W<PAD11_SPEC> {
+    pub fn reg_pad11_fun_ie(&mut self) -> REG_PAD11_FUN_IE_W<'_, PAD11_SPEC> {
         REG_PAD11_FUN_IE_W::new(self, 10)
     }
     #[doc = "Bit 11 - need des"]
     #[inline(always)]
-    pub fn reg_pad11_filter_en(&mut self) -> REG_PAD11_FILTER_EN_W<PAD11_SPEC> {
+    pub fn reg_pad11_filter_en(&mut self) -> REG_PAD11_FILTER_EN_W<'_, PAD11_SPEC> {
         REG_PAD11_FILTER_EN_W::new(self, 11)
     }
 }

@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn fifo_force_pd(&mut self) -> FIFO_FORCE_PD_W<PD_CONF_SPEC> {
+    pub fn fifo_force_pd(&mut self) -> FIFO_FORCE_PD_W<'_, PD_CONF_SPEC> {
         FIFO_FORCE_PD_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn fifo_force_pu(&mut self) -> FIFO_FORCE_PU_W<PD_CONF_SPEC> {
+    pub fn fifo_force_pu(&mut self) -> FIFO_FORCE_PU_W<'_, PD_CONF_SPEC> {
         FIFO_FORCE_PU_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn plc_mem_force_pd(&mut self) -> PLC_MEM_FORCE_PD_W<PD_CONF_SPEC> {
+    pub fn plc_mem_force_pd(&mut self) -> PLC_MEM_FORCE_PD_W<'_, PD_CONF_SPEC> {
         PLC_MEM_FORCE_PD_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn plc_mem_force_pu(&mut self) -> PLC_MEM_FORCE_PU_W<PD_CONF_SPEC> {
+    pub fn plc_mem_force_pu(&mut self) -> PLC_MEM_FORCE_PU_W<'_, PD_CONF_SPEC> {
         PLC_MEM_FORCE_PU_W::new(self, 3)
     }
 }

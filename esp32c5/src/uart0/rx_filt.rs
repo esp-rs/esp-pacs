@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures the width of a pulse to be filtered.\\\\Measurement unit: UART Core's clock cycle.\\\\Pulses whose width is lower than this value will be ignored."]
     #[inline(always)]
-    pub fn glitch_filt(&mut self) -> GLITCH_FILT_W<RX_FILT_SPEC> {
+    pub fn glitch_filt(&mut self) -> GLITCH_FILT_W<'_, RX_FILT_SPEC> {
         GLITCH_FILT_W::new(self, 0)
     }
     #[doc = "Bit 8 - Configures whether or not to enable RX signal filter.\\\\ 0: Disable\\\\ 1: Enable"]
     #[inline(always)]
-    pub fn glitch_filt_en(&mut self) -> GLITCH_FILT_EN_W<RX_FILT_SPEC> {
+    pub fn glitch_filt_en(&mut self) -> GLITCH_FILT_EN_W<'_, RX_FILT_SPEC> {
         GLITCH_FILT_EN_W::new(self, 8)
     }
 }

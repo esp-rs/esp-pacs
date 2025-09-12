@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - xxxx"]
     #[inline(always)]
-    pub fn clk_adc_inv_phase_ena(&mut self) -> CLK_ADC_INV_PHASE_ENA_W<ADC_INV_PHASE_CONF_SPEC> {
+    pub fn clk_adc_inv_phase_ena(
+        &mut self,
+    ) -> CLK_ADC_INV_PHASE_ENA_W<'_, ADC_INV_PHASE_CONF_SPEC> {
         CLK_ADC_INV_PHASE_ENA_W::new(self, 0)
     }
 }

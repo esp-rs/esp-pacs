@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn wifi_clk_en(&mut self) -> WIFI_CLK_EN_W<WIFI_CLK_EN_SPEC> {
+    pub fn wifi_clk_en(&mut self) -> WIFI_CLK_EN_W<'_, WIFI_CLK_EN_SPEC> {
         WIFI_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    pub fn wifi_clk_wifi_en(&mut self) -> WIFI_CLK_WIFI_EN_W<WIFI_CLK_EN_SPEC> {
+    pub fn wifi_clk_wifi_en(&mut self) -> WIFI_CLK_WIFI_EN_W<'_, WIFI_CLK_EN_SPEC> {
         WIFI_CLK_WIFI_EN_W::new(self, 0)
     }
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn wifi_clk_wifi_bt_common(&mut self) -> WIFI_CLK_WIFI_BT_COMMON_W<WIFI_CLK_EN_SPEC> {
+    pub fn wifi_clk_wifi_bt_common(&mut self) -> WIFI_CLK_WIFI_BT_COMMON_W<'_, WIFI_CLK_EN_SPEC> {
         WIFI_CLK_WIFI_BT_COMMON_W::new(self, 0)
     }
     #[doc = "Bits 11:13"]
     #[inline(always)]
-    pub fn wifi_clk_bt_en(&mut self) -> WIFI_CLK_BT_EN_W<WIFI_CLK_EN_SPEC> {
+    pub fn wifi_clk_bt_en(&mut self) -> WIFI_CLK_BT_EN_W<'_, WIFI_CLK_EN_SPEC> {
         WIFI_CLK_BT_EN_W::new(self, 11)
     }
 }

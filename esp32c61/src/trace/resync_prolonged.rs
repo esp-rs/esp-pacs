@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:23 - Configures the threshold for synchronization counter"]
     #[inline(always)]
-    pub fn resync_prolonged(&mut self) -> RESYNC_PROLONGED_W<RESYNC_PROLONGED_SPEC> {
+    pub fn resync_prolonged(&mut self) -> RESYNC_PROLONGED_W<'_, RESYNC_PROLONGED_SPEC> {
         RESYNC_PROLONGED_W::new(self, 0)
     }
     #[doc = "Bits 24:25 - Configures the synchronization mode: \\\\0: Disable the synchronization counter \\\\1: Invalid \\\\2: Synchronization counter counts by packet \\\\3: Synchronization counter counts by cycle\\\\"]
     #[inline(always)]
-    pub fn resync_mode(&mut self) -> RESYNC_MODE_W<RESYNC_PROLONGED_SPEC> {
+    pub fn resync_mode(&mut self) -> RESYNC_MODE_W<'_, RESYNC_PROLONGED_SPEC> {
         RESYNC_MODE_W::new(self, 24)
     }
 }

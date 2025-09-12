@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Integral I2S clock divider value."]
     #[inline(always)]
-    pub fn clkm_div_num(&mut self) -> CLKM_DIV_NUM_W<CLKM_CONF_SPEC> {
+    pub fn clkm_div_num(&mut self) -> CLKM_DIV_NUM_W<'_, CLKM_CONF_SPEC> {
         CLKM_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:13 - Fractional clock divider numerator value."]
     #[inline(always)]
-    pub fn clkm_div_b(&mut self) -> CLKM_DIV_B_W<CLKM_CONF_SPEC> {
+    pub fn clkm_div_b(&mut self) -> CLKM_DIV_B_W<'_, CLKM_CONF_SPEC> {
         CLKM_DIV_B_W::new(self, 8)
     }
     #[doc = "Bits 14:19 - Fractional clock divider denominator value."]
     #[inline(always)]
-    pub fn clkm_div_a(&mut self) -> CLKM_DIV_A_W<CLKM_CONF_SPEC> {
+    pub fn clkm_div_a(&mut self) -> CLKM_DIV_A_W<'_, CLKM_CONF_SPEC> {
         CLKM_DIV_A_W::new(self, 14)
     }
     #[doc = "Bit 20 - Set this bit to enable clock gate."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CLKM_CONF_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CLKM_CONF_SPEC> {
         CLK_EN_W::new(self, 20)
     }
     #[doc = "Bits 21:22 - Set this bit to select I2S module clock source. 0: No clock. 1: APLL_CLK. 2: PLL_160M_CLK. 3: No clock."]
     #[inline(always)]
-    pub fn clk_sel(&mut self) -> CLK_SEL_W<CLKM_CONF_SPEC> {
+    pub fn clk_sel(&mut self) -> CLK_SEL_W<'_, CLKM_CONF_SPEC> {
         CLK_SEL_W::new(self, 21)
     }
 }

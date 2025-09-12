@@ -72,27 +72,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done. Note that this bit and the other sync-bits (clean_ena, writeback_ena, writeback_invalidate_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
     #[inline(always)]
-    pub fn invalidate_ena(&mut self) -> INVALIDATE_ENA_W<SYNC_CTRL_SPEC> {
+    pub fn invalidate_ena(&mut self) -> INVALIDATE_ENA_W<'_, SYNC_CTRL_SPEC> {
         INVALIDATE_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done. Note that this bit and the other sync-bits (invalidate_ena, writeback_ena, writeback_invalidate_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
     #[inline(always)]
-    pub fn clean_ena(&mut self) -> CLEAN_ENA_W<SYNC_CTRL_SPEC> {
+    pub fn clean_ena(&mut self) -> CLEAN_ENA_W<'_, SYNC_CTRL_SPEC> {
         CLEAN_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to enable writeback operation. It will be cleared by hardware after writeback operation done. Note that this bit and the other sync-bits (invalidate_ena, clean_ena, writeback_invalidate_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
     #[inline(always)]
-    pub fn writeback_ena(&mut self) -> WRITEBACK_ENA_W<SYNC_CTRL_SPEC> {
+    pub fn writeback_ena(&mut self) -> WRITEBACK_ENA_W<'_, SYNC_CTRL_SPEC> {
         WRITEBACK_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - The bit is used to enable writeback-invalidate operation. It will be cleared by hardware after writeback-invalidate operation done. Note that this bit and the other sync-bits (invalidate_ena, clean_ena, writeback_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
     #[inline(always)]
-    pub fn writeback_invalidate_ena(&mut self) -> WRITEBACK_INVALIDATE_ENA_W<SYNC_CTRL_SPEC> {
+    pub fn writeback_invalidate_ena(&mut self) -> WRITEBACK_INVALIDATE_ENA_W<'_, SYNC_CTRL_SPEC> {
         WRITEBACK_INVALIDATE_ENA_W::new(self, 3)
     }
     #[doc = "Bits 5:8 - The bit is used to set the gid of cache sync operation (invalidate, clean, writeback, writeback_invalidate)"]
     #[inline(always)]
-    pub fn sync_rgid(&mut self) -> SYNC_RGID_W<SYNC_CTRL_SPEC> {
+    pub fn sync_rgid(&mut self) -> SYNC_RGID_W<'_, SYNC_CTRL_SPEC> {
         SYNC_RGID_W::new(self, 5)
     }
 }

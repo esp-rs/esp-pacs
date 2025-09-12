@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn clk_coex_fo(&mut self) -> CLK_COEX_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+    pub fn clk_coex_fo(&mut self) -> CLK_COEX_FO_W<'_, CLK_CONF_FORCE_ON_SPEC> {
         CLK_COEX_FO_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn clk_i2c_mst_fo(&mut self) -> CLK_I2C_MST_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+    pub fn clk_i2c_mst_fo(&mut self) -> CLK_I2C_MST_FO_W<'_, CLK_CONF_FORCE_ON_SPEC> {
         CLK_I2C_MST_FO_W::new(self, 2)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn clk_fe_mem_fo(&mut self) -> CLK_FE_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+    pub fn clk_fe_mem_fo(&mut self) -> CLK_FE_MEM_FO_W<'_, CLK_CONF_FORCE_ON_SPEC> {
         CLK_FE_MEM_FO_W::new(self, 5)
     }
 }

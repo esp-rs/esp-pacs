@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn lpcore_dbgm_unavailable(&mut self) -> LPCORE_DBGM_UNAVAILABLE_W<CPU_SPEC> {
+    pub fn lpcore_dbgm_unavailable(&mut self) -> LPCORE_DBGM_UNAVAILABLE_W<'_, CPU_SPEC> {
         LPCORE_DBGM_UNAVAILABLE_W::new(self, 31)
     }
 }

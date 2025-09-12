@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures whether to enable DMA_2 bus access logging.bit\\[0\\]: Configures whether to enable DMA_2 bus access logging. \\\\ 0: Disable \\\\ 1: Enable\\\\ Bit\\[7:1\\]: Reserved"]
     #[inline(always)]
-    pub fn log_dma_2_ena(&mut self) -> LOG_DMA_2_ENA_W<LOG_SETTING1_SPEC> {
+    pub fn log_dma_2_ena(&mut self) -> LOG_DMA_2_ENA_W<'_, LOG_SETTING1_SPEC> {
         LOG_DMA_2_ENA_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Configures whether to enable DMA_3 bus access logging.bit\\[0\\]: Configures whether to enable DMA_3 bus access logging. \\\\ 0: Disable \\\\ 1: Enable\\\\ Bit\\[7:1\\]: Reserved"]
     #[inline(always)]
-    pub fn log_dma_3_ena(&mut self) -> LOG_DMA_3_ENA_W<LOG_SETTING1_SPEC> {
+    pub fn log_dma_3_ena(&mut self) -> LOG_DMA_3_ENA_W<'_, LOG_SETTING1_SPEC> {
         LOG_DMA_3_ENA_W::new(self, 8)
     }
 }

@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor of the uart0 function clock."]
     #[inline(always)]
-    pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<CLK_CONF_SPEC> {
+    pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<'_, CLK_CONF_SPEC> {
         SCLK_DIV_A_W::new(self, 0)
     }
     #[doc = "Bits 6:11 - The numerator of the frequency divider factor of the uart0 function clock."]
     #[inline(always)]
-    pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<CLK_CONF_SPEC> {
+    pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<'_, CLK_CONF_SPEC> {
         SCLK_DIV_B_W::new(self, 6)
     }
     #[doc = "Bits 12:19 - The integral part of the frequency divider factor of the uart0 function clock."]
     #[inline(always)]
-    pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<CLK_CONF_SPEC> {
+    pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<'_, CLK_CONF_SPEC> {
         SCLK_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bits 20:21 - Configures the clock source of UART0.\\\\ 0 (default): XTAL_CLK\\\\ 1: RC_FAST_CLK\\\\ 2: PLL_F80M_CLK\\\\"]
     #[inline(always)]
-    pub fn sclk_sel(&mut self) -> SCLK_SEL_W<CLK_CONF_SPEC> {
+    pub fn sclk_sel(&mut self) -> SCLK_SEL_W<'_, CLK_CONF_SPEC> {
         SCLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable uart0 function clock"]
     #[inline(always)]
-    pub fn sclk_en(&mut self) -> SCLK_EN_W<CLK_CONF_SPEC> {
+    pub fn sclk_en(&mut self) -> SCLK_EN_W<'_, CLK_CONF_SPEC> {
         SCLK_EN_W::new(self, 22)
     }
 }

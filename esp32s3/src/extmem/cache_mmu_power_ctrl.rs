@@ -46,21 +46,21 @@ impl W {
     #[inline(always)]
     pub fn cache_mmu_mem_force_on(
         &mut self,
-    ) -> CACHE_MMU_MEM_FORCE_ON_W<CACHE_MMU_POWER_CTRL_SPEC> {
+    ) -> CACHE_MMU_MEM_FORCE_ON_W<'_, CACHE_MMU_POWER_CTRL_SPEC> {
         CACHE_MMU_MEM_FORCE_ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to power mmu memory down, 0: follow_rtc_lslp_pd, 1: power down"]
     #[inline(always)]
     pub fn cache_mmu_mem_force_pd(
         &mut self,
-    ) -> CACHE_MMU_MEM_FORCE_PD_W<CACHE_MMU_POWER_CTRL_SPEC> {
+    ) -> CACHE_MMU_MEM_FORCE_PD_W<'_, CACHE_MMU_POWER_CTRL_SPEC> {
         CACHE_MMU_MEM_FORCE_PD_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to power mmu memory down, 0: follow_rtc_lslp_pd, 1: power up"]
     #[inline(always)]
     pub fn cache_mmu_mem_force_pu(
         &mut self,
-    ) -> CACHE_MMU_MEM_FORCE_PU_W<CACHE_MMU_POWER_CTRL_SPEC> {
+    ) -> CACHE_MMU_MEM_FORCE_PU_W<'_, CACHE_MMU_POWER_CTRL_SPEC> {
         CACHE_MMU_MEM_FORCE_PU_W::new(self, 2)
     }
 }

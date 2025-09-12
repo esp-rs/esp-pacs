@@ -36,14 +36,14 @@ impl W {
     #[inline(always)]
     pub fn pro_icache_preload_size(
         &mut self,
-    ) -> PRO_ICACHE_PRELOAD_SIZE_W<PRO_ICACHE_PRELOAD_SIZE_SPEC> {
+    ) -> PRO_ICACHE_PRELOAD_SIZE_W<'_, PRO_ICACHE_PRELOAD_SIZE_SPEC> {
         PRO_ICACHE_PRELOAD_SIZE_W::new(self, 0)
     }
     #[doc = "Bit 10 - The bits are used to configure the direction of manual pre-load operation. 1: descending, 0: ascending."]
     #[inline(always)]
     pub fn pro_icache_preload_order(
         &mut self,
-    ) -> PRO_ICACHE_PRELOAD_ORDER_W<PRO_ICACHE_PRELOAD_SIZE_SPEC> {
+    ) -> PRO_ICACHE_PRELOAD_ORDER_W<'_, PRO_ICACHE_PRELOAD_SIZE_SPEC> {
         PRO_ICACHE_PRELOAD_ORDER_W::new(self, 10)
     }
 }

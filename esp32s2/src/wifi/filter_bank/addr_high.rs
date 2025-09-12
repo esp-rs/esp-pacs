@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn addr(&mut self) -> ADDR_W<ADDR_HIGH_SPEC> {
+    pub fn addr(&mut self) -> ADDR_W<'_, ADDR_HIGH_SPEC> {
         ADDR_W::new(self, 0)
     }
 }

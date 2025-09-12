@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 24 - Configures whether or not to enable UART TX clock.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn tx_sclk_en(&mut self) -> TX_SCLK_EN_W<CLK_CONF_SPEC> {
+    pub fn tx_sclk_en(&mut self) -> TX_SCLK_EN_W<'_, CLK_CONF_SPEC> {
         TX_SCLK_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Configures whether or not to enable UART RX clock.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn sclk_en(&mut self) -> SCLK_EN_W<CLK_CONF_SPEC> {
+    pub fn sclk_en(&mut self) -> SCLK_EN_W<'_, CLK_CONF_SPEC> {
         SCLK_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Write 1 and then write 0 to reset UART TX."]
     #[inline(always)]
-    pub fn tx_rst_core(&mut self) -> TX_RST_CORE_W<CLK_CONF_SPEC> {
+    pub fn tx_rst_core(&mut self) -> TX_RST_CORE_W<'_, CLK_CONF_SPEC> {
         TX_RST_CORE_W::new(self, 26)
     }
     #[doc = "Bit 27 - Write 1 and then write 0 to reset UART RX."]
     #[inline(always)]
-    pub fn rst_core(&mut self) -> RST_CORE_W<CLK_CONF_SPEC> {
+    pub fn rst_core(&mut self) -> RST_CORE_W<'_, CLK_CONF_SPEC> {
         RST_CORE_W::new(self, 27)
     }
 }

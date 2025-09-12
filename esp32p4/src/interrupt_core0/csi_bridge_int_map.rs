@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn core0_csi_bridge_int_map(
         &mut self,
-    ) -> CORE0_CSI_BRIDGE_INT_MAP_W<CSI_BRIDGE_INT_MAP_SPEC> {
+    ) -> CORE0_CSI_BRIDGE_INT_MAP_W<'_, CSI_BRIDGE_INT_MAP_SPEC> {
         CORE0_CSI_BRIDGE_INT_MAP_W::new(self, 0)
     }
 }

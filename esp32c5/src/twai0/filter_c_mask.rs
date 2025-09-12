@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:28 - Filter C mask. The identifier format is the same as in IDENTIFIER_W of TXT buffer or RX buffer. If filter A is not present, writes to this register have no effect and read will return all zeroes."]
     #[inline(always)]
-    pub fn bit_mask_c_val(&mut self) -> BIT_MASK_C_VAL_W<FILTER_C_MASK_SPEC> {
+    pub fn bit_mask_c_val(&mut self) -> BIT_MASK_C_VAL_W<'_, FILTER_C_MASK_SPEC> {
         BIT_MASK_C_VAL_W::new(self, 0)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn cis_conf_w7(&mut self) -> CIS_CONF_W7_W<CIS_CONF7_SPEC> {
+    pub fn cis_conf_w7(&mut self) -> CIS_CONF_W7_W<'_, CIS_CONF7_SPEC> {
         CIS_CONF_W7_W::new(self, 0)
     }
 }

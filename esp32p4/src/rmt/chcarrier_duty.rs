@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - This register is used to configure carrier wave 's low level clock period for CHANNEL%s."]
     #[inline(always)]
-    pub fn carrier_low_ch(&mut self) -> CARRIER_LOW_CH_W<CHCARRIER_DUTY_SPEC> {
+    pub fn carrier_low_ch(&mut self) -> CARRIER_LOW_CH_W<'_, CHCARRIER_DUTY_SPEC> {
         CARRIER_LOW_CH_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - This register is used to configure carrier wave 's high level clock period for CHANNEL%s."]
     #[inline(always)]
-    pub fn carrier_high_ch(&mut self) -> CARRIER_HIGH_CH_W<CHCARRIER_DUTY_SPEC> {
+    pub fn carrier_high_ch(&mut self) -> CARRIER_HIGH_CH_W<'_, CHCARRIER_DUTY_SPEC> {
         CARRIER_HIGH_CH_W::new(self, 16)
     }
 }

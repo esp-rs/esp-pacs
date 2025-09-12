@@ -42,14 +42,14 @@ impl W {
     #[inline(always)]
     pub fn dma_apbperi_pms_monitor_violate_clr(
         &mut self,
-    ) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_W<DMA_APBPERI_PMS_MONITOR_1_SPEC> {
+    ) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_W<'_, DMA_APBPERI_PMS_MONITOR_1_SPEC> {
         DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to enable dma pms monitor, if dma access violated permission, will trigger interrupt."]
     #[inline(always)]
     pub fn dma_apbperi_pms_monitor_violate_en(
         &mut self,
-    ) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_W<DMA_APBPERI_PMS_MONITOR_1_SPEC> {
+    ) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_W<'_, DMA_APBPERI_PMS_MONITOR_1_SPEC> {
         DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_W::new(self, 1)
     }
 }

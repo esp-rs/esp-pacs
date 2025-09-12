@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn reg_l2_mem_rdn_eco_high(
         &mut self,
-    ) -> REG_L2_MEM_RDN_ECO_HIGH_W<L2_MEM_RDN_ECO_HIGH_SPEC> {
+    ) -> REG_L2_MEM_RDN_ECO_HIGH_W<'_, L2_MEM_RDN_ECO_HIGH_SPEC> {
         REG_L2_MEM_RDN_ECO_HIGH_W::new(self, 0)
     }
 }

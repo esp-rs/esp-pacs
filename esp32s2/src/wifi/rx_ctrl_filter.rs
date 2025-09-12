@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 23 - Filter Control Wrapper frames"]
     #[inline(always)]
-    pub fn control_wrapper(&mut self) -> CONTROL_WRAPPER_W<RX_CTRL_FILTER_SPEC> {
+    pub fn control_wrapper(&mut self) -> CONTROL_WRAPPER_W<'_, RX_CTRL_FILTER_SPEC> {
         CONTROL_WRAPPER_W::new(self, 23)
     }
     #[doc = "Bit 24 - Filter Block ACK Request frames"]
     #[inline(always)]
-    pub fn block_ack_request(&mut self) -> BLOCK_ACK_REQUEST_W<RX_CTRL_FILTER_SPEC> {
+    pub fn block_ack_request(&mut self) -> BLOCK_ACK_REQUEST_W<'_, RX_CTRL_FILTER_SPEC> {
         BLOCK_ACK_REQUEST_W::new(self, 24)
     }
     #[doc = "Bit 25 - Filter Block ACK frames"]
     #[inline(always)]
-    pub fn block_ack(&mut self) -> BLOCK_ACK_W<RX_CTRL_FILTER_SPEC> {
+    pub fn block_ack(&mut self) -> BLOCK_ACK_W<'_, RX_CTRL_FILTER_SPEC> {
         BLOCK_ACK_W::new(self, 25)
     }
     #[doc = "Bit 26 - Filter PS-Poll frames"]
     #[inline(always)]
-    pub fn ps_poll(&mut self) -> PS_POLL_W<RX_CTRL_FILTER_SPEC> {
+    pub fn ps_poll(&mut self) -> PS_POLL_W<'_, RX_CTRL_FILTER_SPEC> {
         PS_POLL_W::new(self, 26)
     }
     #[doc = "Bit 27 - Filter RTS frames"]
     #[inline(always)]
-    pub fn rts(&mut self) -> RTS_W<RX_CTRL_FILTER_SPEC> {
+    pub fn rts(&mut self) -> RTS_W<'_, RX_CTRL_FILTER_SPEC> {
         RTS_W::new(self, 27)
     }
     #[doc = "Bit 28 - Filter CTS frames"]
     #[inline(always)]
-    pub fn cts(&mut self) -> CTS_W<RX_CTRL_FILTER_SPEC> {
+    pub fn cts(&mut self) -> CTS_W<'_, RX_CTRL_FILTER_SPEC> {
         CTS_W::new(self, 28)
     }
     #[doc = "Bit 29 - Filter ACK frames"]
     #[inline(always)]
-    pub fn ack(&mut self) -> ACK_W<RX_CTRL_FILTER_SPEC> {
+    pub fn ack(&mut self) -> ACK_W<'_, RX_CTRL_FILTER_SPEC> {
         ACK_W::new(self, 29)
     }
     #[doc = "Bit 30 - Filter CF-End frames"]
     #[inline(always)]
-    pub fn cf_end(&mut self) -> CF_END_W<RX_CTRL_FILTER_SPEC> {
+    pub fn cf_end(&mut self) -> CF_END_W<'_, RX_CTRL_FILTER_SPEC> {
         CF_END_W::new(self, 30)
     }
     #[doc = "Bit 31 - Filter CF-End+CF-Ack frames"]
     #[inline(always)]
-    pub fn cf_end_cf_ack(&mut self) -> CF_END_CF_ACK_W<RX_CTRL_FILTER_SPEC> {
+    pub fn cf_end_cf_ack(&mut self) -> CF_END_CF_ACK_W<'_, RX_CTRL_FILTER_SPEC> {
         CF_END_CF_ACK_W::new(self, 31)
     }
 }

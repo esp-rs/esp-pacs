@@ -31,7 +31,7 @@ impl W {
     #[inline(always)]
     pub fn core_1_toomanyexceptions_m_override_lock(
         &mut self,
-    ) -> CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_LOCK_W<CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_0_SPEC>
+    ) -> CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_LOCK_W<'_, CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_0_SPEC>
     {
         CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_LOCK_W::new(self, 0)
     }

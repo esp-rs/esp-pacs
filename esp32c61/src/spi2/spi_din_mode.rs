@@ -96,27 +96,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Configures the input mode for FSPID signal.\\\\ 0: Input without delay\\\\ 1: Input at the (SPI_DIN0_NUM + 1)th falling edge of clk_spi_mst\\\\ 2: Input at the (SPI_DIN0_NUM + 1)th rising edge of clk_hclk plus one clk_spi_mst rising edge cycle\\\\ 3: Input at the (SPI_DIN0_NUM + 1)th rising edge of clk_hclk plus one clk_spi_mst falling edge cycle\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_din0_mode(&mut self) -> SPI_DIN0_MODE_W<SPI_DIN_MODE_SPEC> {
+    pub fn spi_din0_mode(&mut self) -> SPI_DIN0_MODE_W<'_, SPI_DIN_MODE_SPEC> {
         SPI_DIN0_MODE_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Configures the input mode for FSPIQ signal.\\\\ 0: Input without delay\\\\ 1: Input at the (SPI_DIN1_NUM+1)th falling edge of clk_spi_mst\\\\ 2: Input at the (SPI_DIN1_NUM + 1)th rising edge of clk_hclk plus one clk_spi_mst rising edge cycle\\\\ 3: Input at the (SPI_DIN1_NUM + 1)th rising edge of clk_hclk plus one clk_spi_mst falling edge cycle\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_din1_mode(&mut self) -> SPI_DIN1_MODE_W<SPI_DIN_MODE_SPEC> {
+    pub fn spi_din1_mode(&mut self) -> SPI_DIN1_MODE_W<'_, SPI_DIN_MODE_SPEC> {
         SPI_DIN1_MODE_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Configures the input mode for FSPIWP signal.\\\\ 0: Input without delay\\\\ 1: Input at the (SPI_DIN2_NUM + 1)th falling edge of clk_spi_mst\\\\ 2: Input at the (SPI_DIN2_NUM + 1)th rising edge of clk_hclk plus one clk_spi_mst rising edge cycle\\\\ 3: Input at the (SPI_DIN2_NUM + 1)th rising edge of clk_hclk plus one clk_spi_mst falling edge cycle\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_din2_mode(&mut self) -> SPI_DIN2_MODE_W<SPI_DIN_MODE_SPEC> {
+    pub fn spi_din2_mode(&mut self) -> SPI_DIN2_MODE_W<'_, SPI_DIN_MODE_SPEC> {
         SPI_DIN2_MODE_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - Configures the input mode for FSPIHD signal.\\\\ 0: Input without delay\\\\ 1: Input at the (SPI_DIN3_NUM + 1)th falling edge of clk_spi_mst\\\\ 2: Input at the (SPI_DIN3_NUM + 1)th rising edge of clk_hclk plus one clk_spi_mst rising edge cycle\\\\ 3: Input at the (SPI_DIN3_NUM + 1)th rising edge of clk_hclk plus one clk_spi_mst falling edge cycle\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_din3_mode(&mut self) -> SPI_DIN3_MODE_W<SPI_DIN_MODE_SPEC> {
+    pub fn spi_din3_mode(&mut self) -> SPI_DIN3_MODE_W<'_, SPI_DIN_MODE_SPEC> {
         SPI_DIN3_MODE_W::new(self, 6)
     }
     #[doc = "Bit 16 - Configures whether or not to enable HCLK (high-frequency clock) in SPI input timing module.\\\\ 0: Disable\\\\ 1: Enable\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_timing_hclk_active(&mut self) -> SPI_TIMING_HCLK_ACTIVE_W<SPI_DIN_MODE_SPEC> {
+    pub fn spi_timing_hclk_active(&mut self) -> SPI_TIMING_HCLK_ACTIVE_W<'_, SPI_DIN_MODE_SPEC> {
         SPI_TIMING_HCLK_ACTIVE_W::new(self, 16)
     }
 }

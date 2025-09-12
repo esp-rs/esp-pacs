@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn pro_icache_memsync_size(
         &mut self,
-    ) -> PRO_ICACHE_MEMSYNC_SIZE_W<PRO_ICACHE_MEM_SYNC1_SPEC> {
+    ) -> PRO_ICACHE_MEMSYNC_SIZE_W<'_, PRO_ICACHE_MEM_SYNC1_SPEC> {
         PRO_ICACHE_MEMSYNC_SIZE_W::new(self, 0)
     }
 }

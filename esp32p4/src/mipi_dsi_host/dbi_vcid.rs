@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - NA"]
     #[inline(always)]
-    pub fn dbi_vcid(&mut self) -> DBI_VCID_W<DBI_VCID_SPEC> {
+    pub fn dbi_vcid(&mut self) -> DBI_VCID_W<'_, DBI_VCID_SPEC> {
         DBI_VCID_W::new(self, 0)
     }
 }

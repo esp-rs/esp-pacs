@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Need add desc"]
     #[inline(always)]
-    pub fn debug_12m_no_gating(&mut self) -> DEBUG_12M_NO_GATING_W<CNTL_DBG_SEL_SPEC> {
+    pub fn debug_12m_no_gating(&mut self) -> DEBUG_12M_NO_GATING_W<'_, CNTL_DBG_SEL_SPEC> {
         DEBUG_12M_NO_GATING_W::new(self, 1)
     }
     #[doc = "Bits 2:6 - Need add desc"]
     #[inline(always)]
-    pub fn debug_bit_sel(&mut self) -> DEBUG_BIT_SEL_W<CNTL_DBG_SEL_SPEC> {
+    pub fn debug_bit_sel(&mut self) -> DEBUG_BIT_SEL_W<'_, CNTL_DBG_SEL_SPEC> {
         DEBUG_BIT_SEL_W::new(self, 2)
     }
     #[doc = "Bits 7:11 - Need add desc"]
     #[inline(always)]
-    pub fn debug_sel0(&mut self) -> DEBUG_SEL0_W<CNTL_DBG_SEL_SPEC> {
+    pub fn debug_sel0(&mut self) -> DEBUG_SEL0_W<'_, CNTL_DBG_SEL_SPEC> {
         DEBUG_SEL0_W::new(self, 7)
     }
     #[doc = "Bits 12:16 - Need add desc"]
     #[inline(always)]
-    pub fn debug_sel1(&mut self) -> DEBUG_SEL1_W<CNTL_DBG_SEL_SPEC> {
+    pub fn debug_sel1(&mut self) -> DEBUG_SEL1_W<'_, CNTL_DBG_SEL_SPEC> {
         DEBUG_SEL1_W::new(self, 12)
     }
     #[doc = "Bits 17:21 - Need add desc"]
     #[inline(always)]
-    pub fn debug_sel2(&mut self) -> DEBUG_SEL2_W<CNTL_DBG_SEL_SPEC> {
+    pub fn debug_sel2(&mut self) -> DEBUG_SEL2_W<'_, CNTL_DBG_SEL_SPEC> {
         DEBUG_SEL2_W::new(self, 17)
     }
     #[doc = "Bits 22:26 - Need add desc"]
     #[inline(always)]
-    pub fn debug_sel3(&mut self) -> DEBUG_SEL3_W<CNTL_DBG_SEL_SPEC> {
+    pub fn debug_sel3(&mut self) -> DEBUG_SEL3_W<'_, CNTL_DBG_SEL_SPEC> {
         DEBUG_SEL3_W::new(self, 22)
     }
     #[doc = "Bits 27:31 - Need add desc"]
     #[inline(always)]
-    pub fn debug_sel4(&mut self) -> DEBUG_SEL4_W<CNTL_DBG_SEL_SPEC> {
+    pub fn debug_sel4(&mut self) -> DEBUG_SEL4_W<'_, CNTL_DBG_SEL_SPEC> {
         DEBUG_SEL4_W::new(self, 27)
     }
 }

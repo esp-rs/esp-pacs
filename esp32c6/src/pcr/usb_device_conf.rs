@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable usb_device clock"]
     #[inline(always)]
-    pub fn usb_device_clk_en(&mut self) -> USB_DEVICE_CLK_EN_W<USB_DEVICE_CONF_SPEC> {
+    pub fn usb_device_clk_en(&mut self) -> USB_DEVICE_CLK_EN_W<'_, USB_DEVICE_CONF_SPEC> {
         USB_DEVICE_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset usb_device module"]
     #[inline(always)]
-    pub fn usb_device_rst_en(&mut self) -> USB_DEVICE_RST_EN_W<USB_DEVICE_CONF_SPEC> {
+    pub fn usb_device_rst_en(&mut self) -> USB_DEVICE_RST_EN_W<'_, USB_DEVICE_CONF_SPEC> {
         USB_DEVICE_RST_EN_W::new(self, 1)
     }
 }

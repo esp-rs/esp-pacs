@@ -133,63 +133,63 @@ impl W {
     #[inline(always)]
     pub fn lp_aonclkrst_usb_otg20_sleep_mode(
         &mut self,
-    ) -> LP_AONCLKRST_USB_OTG20_SLEEP_MODE_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
+    ) -> LP_AONCLKRST_USB_OTG20_SLEEP_MODE_W<'_, LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
         LP_AONCLKRST_USB_OTG20_SLEEP_MODE_W::new(self, 0)
     }
     #[doc = "Bit 1 - unused."]
     #[inline(always)]
     pub fn lp_aonclkrst_usb_otg20_bk_sys_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_USB_OTG20_BK_SYS_CLK_EN_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
+    ) -> LP_AONCLKRST_USB_OTG20_BK_SYS_CLK_EN_W<'_, LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
         LP_AONCLKRST_USB_OTG20_BK_SYS_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - unused."]
     #[inline(always)]
     pub fn lp_aonclkrst_usb_otg11_sleep_mode(
         &mut self,
-    ) -> LP_AONCLKRST_USB_OTG11_SLEEP_MODE_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
+    ) -> LP_AONCLKRST_USB_OTG11_SLEEP_MODE_W<'_, LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
         LP_AONCLKRST_USB_OTG11_SLEEP_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3 - unused."]
     #[inline(always)]
     pub fn lp_aonclkrst_usb_otg11_bk_sys_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_USB_OTG11_BK_SYS_CLK_EN_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
+    ) -> LP_AONCLKRST_USB_OTG11_BK_SYS_CLK_EN_W<'_, LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
         LP_AONCLKRST_USB_OTG11_BK_SYS_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - usb otg11 fs phy clock enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_usb_otg11_48m_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_USB_OTG11_48M_CLK_EN_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
+    ) -> LP_AONCLKRST_USB_OTG11_48M_CLK_EN_W<'_, LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
         LP_AONCLKRST_USB_OTG11_48M_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - usb device fs phy clock enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_usb_device_48m_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_USB_DEVICE_48M_CLK_EN_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
+    ) -> LP_AONCLKRST_USB_DEVICE_48M_CLK_EN_W<'_, LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
         LP_AONCLKRST_USB_DEVICE_48M_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bits 6:13 - usb 480m to 25m divide number."]
     #[inline(always)]
     pub fn lp_aonclkrst_usb_48m_div_num(
         &mut self,
-    ) -> LP_AONCLKRST_USB_48M_DIV_NUM_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
+    ) -> LP_AONCLKRST_USB_48M_DIV_NUM_W<'_, LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
         LP_AONCLKRST_USB_48M_DIV_NUM_W::new(self, 6)
     }
     #[doc = "Bits 14:21 - usb 500m to 25m divide number."]
     #[inline(always)]
     pub fn lp_aonclkrst_usb_25m_div_num(
         &mut self,
-    ) -> LP_AONCLKRST_USB_25M_DIV_NUM_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
+    ) -> LP_AONCLKRST_USB_25M_DIV_NUM_W<'_, LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
         LP_AONCLKRST_USB_25M_DIV_NUM_W::new(self, 14)
     }
     #[doc = "Bits 22:29 - usb 480m to 12m divide number."]
     #[inline(always)]
     pub fn lp_aonclkrst_usb_12m_div_num(
         &mut self,
-    ) -> LP_AONCLKRST_USB_12M_DIV_NUM_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
+    ) -> LP_AONCLKRST_USB_12M_DIV_NUM_W<'_, LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
         LP_AONCLKRST_USB_12M_DIV_NUM_W::new(self, 22)
     }
 }

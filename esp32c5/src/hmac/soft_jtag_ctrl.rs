@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<SOFT_JTAG_CTRL_SPEC> {
 impl W {
     #[doc = "Bit 0 - Turn on JTAG verification."]
     #[inline(always)]
-    pub fn soft_jtag_ctrl(&mut self) -> SOFT_JTAG_CTRL_W<SOFT_JTAG_CTRL_SPEC> {
+    pub fn soft_jtag_ctrl(&mut self) -> SOFT_JTAG_CTRL_W<'_, SOFT_JTAG_CTRL_SPEC> {
         SOFT_JTAG_CTRL_W::new(self, 0)
     }
 }

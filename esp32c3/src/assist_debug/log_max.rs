@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - reg_log_max"]
     #[inline(always)]
-    pub fn log_max(&mut self) -> LOG_MAX_W<LOG_MAX_SPEC> {
+    pub fn log_max(&mut self) -> LOG_MAX_W<'_, LOG_MAX_SPEC> {
         LOG_MAX_W::new(self, 0)
     }
 }

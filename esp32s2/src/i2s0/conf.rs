@@ -274,132 +274,132 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to reset transmitter."]
     #[inline(always)]
-    pub fn tx_reset(&mut self) -> TX_RESET_W<CONF_SPEC> {
+    pub fn tx_reset(&mut self) -> TX_RESET_W<'_, CONF_SPEC> {
         TX_RESET_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to reset receiver."]
     #[inline(always)]
-    pub fn rx_reset(&mut self) -> RX_RESET_W<CONF_SPEC> {
+    pub fn rx_reset(&mut self) -> RX_RESET_W<'_, CONF_SPEC> {
         RX_RESET_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to reset TX FIFO."]
     #[inline(always)]
-    pub fn tx_fifo_reset(&mut self) -> TX_FIFO_RESET_W<CONF_SPEC> {
+    pub fn tx_fifo_reset(&mut self) -> TX_FIFO_RESET_W<'_, CONF_SPEC> {
         TX_FIFO_RESET_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to reset RX FIFO."]
     #[inline(always)]
-    pub fn rx_fifo_reset(&mut self) -> RX_FIFO_RESET_W<CONF_SPEC> {
+    pub fn rx_fifo_reset(&mut self) -> RX_FIFO_RESET_W<'_, CONF_SPEC> {
         RX_FIFO_RESET_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to start transmitting data."]
     #[inline(always)]
-    pub fn tx_start(&mut self) -> TX_START_W<CONF_SPEC> {
+    pub fn tx_start(&mut self) -> TX_START_W<'_, CONF_SPEC> {
         TX_START_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to start receiving data."]
     #[inline(always)]
-    pub fn rx_start(&mut self) -> RX_START_W<CONF_SPEC> {
+    pub fn rx_start(&mut self) -> RX_START_W<'_, CONF_SPEC> {
         RX_START_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to enable slave transmitter mode."]
     #[inline(always)]
-    pub fn tx_slave_mod(&mut self) -> TX_SLAVE_MOD_W<CONF_SPEC> {
+    pub fn tx_slave_mod(&mut self) -> TX_SLAVE_MOD_W<'_, CONF_SPEC> {
         TX_SLAVE_MOD_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to enable slave receiver mode."]
     #[inline(always)]
-    pub fn rx_slave_mod(&mut self) -> RX_SLAVE_MOD_W<CONF_SPEC> {
+    pub fn rx_slave_mod(&mut self) -> RX_SLAVE_MOD_W<'_, CONF_SPEC> {
         RX_SLAVE_MOD_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to transmit right channel data first."]
     #[inline(always)]
-    pub fn tx_right_first(&mut self) -> TX_RIGHT_FIRST_W<CONF_SPEC> {
+    pub fn tx_right_first(&mut self) -> TX_RIGHT_FIRST_W<'_, CONF_SPEC> {
         TX_RIGHT_FIRST_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set this bit to receive right channel data first."]
     #[inline(always)]
-    pub fn rx_right_first(&mut self) -> RX_RIGHT_FIRST_W<CONF_SPEC> {
+    pub fn rx_right_first(&mut self) -> RX_RIGHT_FIRST_W<'_, CONF_SPEC> {
         RX_RIGHT_FIRST_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to enable transmitter in Phillips standard mode."]
     #[inline(always)]
-    pub fn tx_msb_shift(&mut self) -> TX_MSB_SHIFT_W<CONF_SPEC> {
+    pub fn tx_msb_shift(&mut self) -> TX_MSB_SHIFT_W<'_, CONF_SPEC> {
         TX_MSB_SHIFT_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to enable receiver in Phillips standard mode."]
     #[inline(always)]
-    pub fn rx_msb_shift(&mut self) -> RX_MSB_SHIFT_W<CONF_SPEC> {
+    pub fn rx_msb_shift(&mut self) -> RX_MSB_SHIFT_W<'_, CONF_SPEC> {
         RX_MSB_SHIFT_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set this bit to enable transmitter in PCM standard mode."]
     #[inline(always)]
-    pub fn tx_short_sync(&mut self) -> TX_SHORT_SYNC_W<CONF_SPEC> {
+    pub fn tx_short_sync(&mut self) -> TX_SHORT_SYNC_W<'_, CONF_SPEC> {
         TX_SHORT_SYNC_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set this bit to enable receiver in PCM standard mode."]
     #[inline(always)]
-    pub fn rx_short_sync(&mut self) -> RX_SHORT_SYNC_W<CONF_SPEC> {
+    pub fn rx_short_sync(&mut self) -> RX_SHORT_SYNC_W<'_, CONF_SPEC> {
         RX_SHORT_SYNC_W::new(self, 13)
     }
     #[doc = "Bit 14 - Set this bit to enable transmitter in mono mode."]
     #[inline(always)]
-    pub fn tx_mono(&mut self) -> TX_MONO_W<CONF_SPEC> {
+    pub fn tx_mono(&mut self) -> TX_MONO_W<'_, CONF_SPEC> {
         TX_MONO_W::new(self, 14)
     }
     #[doc = "Bit 15 - Set this bit to enable receiver in mono mode."]
     #[inline(always)]
-    pub fn rx_mono(&mut self) -> RX_MONO_W<CONF_SPEC> {
+    pub fn rx_mono(&mut self) -> RX_MONO_W<'_, CONF_SPEC> {
         RX_MONO_W::new(self, 15)
     }
     #[doc = "Bit 16 - Set this bit to place right channel data at the MSB in TX FIFO."]
     #[inline(always)]
-    pub fn tx_msb_right(&mut self) -> TX_MSB_RIGHT_W<CONF_SPEC> {
+    pub fn tx_msb_right(&mut self) -> TX_MSB_RIGHT_W<'_, CONF_SPEC> {
         TX_MSB_RIGHT_W::new(self, 16)
     }
     #[doc = "Bit 17 - Set this bit to place right channel data at the MSB in RX FIFO."]
     #[inline(always)]
-    pub fn rx_msb_right(&mut self) -> RX_MSB_RIGHT_W<CONF_SPEC> {
+    pub fn rx_msb_right(&mut self) -> RX_MSB_RIGHT_W<'_, CONF_SPEC> {
         RX_MSB_RIGHT_W::new(self, 17)
     }
     #[doc = "Bit 18 - 1:the data in DMA/APB transform from low bits. 0:the data from DMA/APB transform from high bits."]
     #[inline(always)]
-    pub fn tx_lsb_first_dma(&mut self) -> TX_LSB_FIRST_DMA_W<CONF_SPEC> {
+    pub fn tx_lsb_first_dma(&mut self) -> TX_LSB_FIRST_DMA_W<'_, CONF_SPEC> {
         TX_LSB_FIRST_DMA_W::new(self, 18)
     }
     #[doc = "Bit 19 - 1:the data in DMA/APB transform from low bits. 0:the data from DMA/APB transform from high bits."]
     #[inline(always)]
-    pub fn rx_lsb_first_dma(&mut self) -> RX_LSB_FIRST_DMA_W<CONF_SPEC> {
+    pub fn rx_lsb_first_dma(&mut self) -> RX_LSB_FIRST_DMA_W<'_, CONF_SPEC> {
         RX_LSB_FIRST_DMA_W::new(self, 19)
     }
     #[doc = "Bit 20 - Enable signal loopback mode with transmitter module and receiver module sharing the same WS and BCK signals."]
     #[inline(always)]
-    pub fn sig_loopback(&mut self) -> SIG_LOOPBACK_W<CONF_SPEC> {
+    pub fn sig_loopback(&mut self) -> SIG_LOOPBACK_W<'_, CONF_SPEC> {
         SIG_LOOPBACK_W::new(self, 20)
     }
     #[doc = "Bit 24 - 1: Data in left channel is equal to data in right channel. 0: Data in left channel is not equal to data in right channel."]
     #[inline(always)]
-    pub fn tx_dma_equal(&mut self) -> TX_DMA_EQUAL_W<CONF_SPEC> {
+    pub fn tx_dma_equal(&mut self) -> TX_DMA_EQUAL_W<'_, CONF_SPEC> {
         TX_DMA_EQUAL_W::new(self, 24)
     }
     #[doc = "Bit 25 - 1: Data in left channel is equal to data in right channel. 0: Data in left channel is not equal to data in right channel."]
     #[inline(always)]
-    pub fn rx_dma_equal(&mut self) -> RX_DMA_EQUAL_W<CONF_SPEC> {
+    pub fn rx_dma_equal(&mut self) -> RX_DMA_EQUAL_W<'_, CONF_SPEC> {
         RX_DMA_EQUAL_W::new(self, 25)
     }
     #[doc = "Bit 26 - Set this bit to enable I2S to prepare data earlier."]
     #[inline(always)]
-    pub fn pre_req_en(&mut self) -> PRE_REQ_EN_W<CONF_SPEC> {
+    pub fn pre_req_en(&mut self) -> PRE_REQ_EN_W<'_, CONF_SPEC> {
         PRE_REQ_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - I2S TX byte endianness."]
     #[inline(always)]
-    pub fn tx_big_endian(&mut self) -> TX_BIG_ENDIAN_W<CONF_SPEC> {
+    pub fn tx_big_endian(&mut self) -> TX_BIG_ENDIAN_W<'_, CONF_SPEC> {
         TX_BIG_ENDIAN_W::new(self, 27)
     }
     #[doc = "Bit 28 - I2S RX byte endianness."]
     #[inline(always)]
-    pub fn rx_big_endian(&mut self) -> RX_BIG_ENDIAN_W<CONF_SPEC> {
+    pub fn rx_big_endian(&mut self) -> RX_BIG_ENDIAN_W<'_, CONF_SPEC> {
         RX_BIG_ENDIAN_W::new(self, 28)
     }
 }

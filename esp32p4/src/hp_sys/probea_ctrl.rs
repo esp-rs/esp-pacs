@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Tihs field is used to selec probe_group from probe_group0 to probe_group15 for module's probe_out\\[31:0\\] in a mode"]
     #[inline(always)]
-    pub fn reg_probe_a_mod_sel(&mut self) -> REG_PROBE_A_MOD_SEL_W<PROBEA_CTRL_SPEC> {
+    pub fn reg_probe_a_mod_sel(&mut self) -> REG_PROBE_A_MOD_SEL_W<'_, PROBEA_CTRL_SPEC> {
         REG_PROBE_A_MOD_SEL_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - Tihs field is used to selec module's probe_out\\[31:0\\] as probe out in a mode"]
     #[inline(always)]
-    pub fn reg_probe_a_top_sel(&mut self) -> REG_PROBE_A_TOP_SEL_W<PROBEA_CTRL_SPEC> {
+    pub fn reg_probe_a_top_sel(&mut self) -> REG_PROBE_A_TOP_SEL_W<'_, PROBEA_CTRL_SPEC> {
         REG_PROBE_A_TOP_SEL_W::new(self, 16)
     }
     #[doc = "Bits 24:25 - Tihs field is used to selec probe_out\\[31:16\\]"]
     #[inline(always)]
-    pub fn reg_probe_l_sel(&mut self) -> REG_PROBE_L_SEL_W<PROBEA_CTRL_SPEC> {
+    pub fn reg_probe_l_sel(&mut self) -> REG_PROBE_L_SEL_W<'_, PROBEA_CTRL_SPEC> {
         REG_PROBE_L_SEL_W::new(self, 24)
     }
     #[doc = "Bits 26:27 - Tihs field is used to selec probe_out\\[31:16\\]"]
     #[inline(always)]
-    pub fn reg_probe_h_sel(&mut self) -> REG_PROBE_H_SEL_W<PROBEA_CTRL_SPEC> {
+    pub fn reg_probe_h_sel(&mut self) -> REG_PROBE_H_SEL_W<'_, PROBEA_CTRL_SPEC> {
         REG_PROBE_H_SEL_W::new(self, 26)
     }
     #[doc = "Bit 28 - Set this bit to enable global debug probe in hp system."]
     #[inline(always)]
-    pub fn reg_probe_global_en(&mut self) -> REG_PROBE_GLOBAL_EN_W<PROBEA_CTRL_SPEC> {
+    pub fn reg_probe_global_en(&mut self) -> REG_PROBE_GLOBAL_EN_W<'_, PROBEA_CTRL_SPEC> {
         REG_PROBE_GLOBAL_EN_W::new(self, 28)
     }
 }

@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    pub fn xpd_perif_i2c(&mut self) -> XPD_PERIF_I2C_W<RF_PWC_SPEC> {
+    pub fn xpd_perif_i2c(&mut self) -> XPD_PERIF_I2C_W<'_, RF_PWC_SPEC> {
         XPD_PERIF_I2C_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn xpd_rftx_i2c(&mut self) -> XPD_RFTX_I2C_W<RF_PWC_SPEC> {
+    pub fn xpd_rftx_i2c(&mut self) -> XPD_RFTX_I2C_W<'_, RF_PWC_SPEC> {
         XPD_RFTX_I2C_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn xpd_rfrx_i2c(&mut self) -> XPD_RFRX_I2C_W<RF_PWC_SPEC> {
+    pub fn xpd_rfrx_i2c(&mut self) -> XPD_RFRX_I2C_W<'_, RF_PWC_SPEC> {
         XPD_RFRX_I2C_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn xpd_rfpll(&mut self) -> XPD_RFPLL_W<RF_PWC_SPEC> {
+    pub fn xpd_rfpll(&mut self) -> XPD_RFPLL_W<'_, RF_PWC_SPEC> {
         XPD_RFPLL_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn xpd_force_rfpll(&mut self) -> XPD_FORCE_RFPLL_W<RF_PWC_SPEC> {
+    pub fn xpd_force_rfpll(&mut self) -> XPD_FORCE_RFPLL_W<'_, RF_PWC_SPEC> {
         XPD_FORCE_RFPLL_W::new(self, 31)
     }
 }

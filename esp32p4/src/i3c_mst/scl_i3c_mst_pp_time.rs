@@ -42,14 +42,14 @@ impl W {
     #[inline(always)]
     pub fn reg_i3c_mst_pp_low_period(
         &mut self,
-    ) -> REG_I3C_MST_PP_LOW_PERIOD_W<SCL_I3C_MST_PP_TIME_SPEC> {
+    ) -> REG_I3C_MST_PP_LOW_PERIOD_W<'_, SCL_I3C_MST_PP_TIME_SPEC> {
         REG_I3C_MST_PP_LOW_PERIOD_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - NA"]
     #[inline(always)]
     pub fn reg_i3c_mst_pp_high_period(
         &mut self,
-    ) -> REG_I3C_MST_PP_HIGH_PERIOD_W<SCL_I3C_MST_PP_TIME_SPEC> {
+    ) -> REG_I3C_MST_PP_HIGH_PERIOD_W<'_, SCL_I3C_MST_PP_TIME_SPEC> {
         REG_I3C_MST_PP_HIGH_PERIOD_W::new(self, 16)
     }
 }

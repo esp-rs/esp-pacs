@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on."]
     #[inline(always)]
-    pub fn clk_mode(&mut self) -> CLK_MODE_W<CTRL1_SPEC> {
+    pub fn clk_mode(&mut self) -> CLK_MODE_W<'_, CTRL1_SPEC> {
         CLK_MODE_W::new(self, 0)
     }
     #[doc = "Bits 2:11 - After RES/DP/HPM command is sent, SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 512) SPI_CLK cycles."]
     #[inline(always)]
-    pub fn cs_hold_dly_res(&mut self) -> CS_HOLD_DLY_RES_W<CTRL1_SPEC> {
+    pub fn cs_hold_dly_res(&mut self) -> CS_HOLD_DLY_RES_W<'_, CTRL1_SPEC> {
         CS_HOLD_DLY_RES_W::new(self, 2)
     }
 }

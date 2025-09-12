@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:28 - SPI1 flash PMS section %s start address value"]
     #[inline(always)]
-    pub fn s(&mut self) -> S_W<FMEM_PMS_ADDR_SPEC> {
+    pub fn s(&mut self) -> S_W<'_, FMEM_PMS_ADDR_SPEC> {
         S_W::new(self, 0)
     }
 }

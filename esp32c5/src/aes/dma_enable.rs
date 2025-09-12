@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures the working mode of the AES accelerator. \\\\ 0: Typical AES\\\\ 1: DMA-AES\\\\"]
     #[inline(always)]
-    pub fn dma_enable(&mut self) -> DMA_ENABLE_W<DMA_ENABLE_SPEC> {
+    pub fn dma_enable(&mut self) -> DMA_ENABLE_W<'_, DMA_ENABLE_SPEC> {
         DMA_ENABLE_W::new(self, 0)
     }
 }

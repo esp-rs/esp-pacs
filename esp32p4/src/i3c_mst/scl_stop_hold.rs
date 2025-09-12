@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - I2C_SCL_STOP_HOLD_TIME"]
     #[inline(always)]
-    pub fn reg_scl_stop_hold_time(&mut self) -> REG_SCL_STOP_HOLD_TIME_W<SCL_STOP_HOLD_SPEC> {
+    pub fn reg_scl_stop_hold_time(&mut self) -> REG_SCL_STOP_HOLD_TIME_W<'_, SCL_STOP_HOLD_SPEC> {
         REG_SCL_STOP_HOLD_TIME_W::new(self, 0)
     }
 }

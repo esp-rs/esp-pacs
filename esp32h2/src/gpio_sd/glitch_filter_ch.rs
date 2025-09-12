@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Glitch Filter channel enable bit."]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<GLITCH_FILTER_CH_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, GLITCH_FILTER_CH_SPEC> {
         EN_W::new(self, 0)
     }
     #[doc = "Bits 1:6 - Glitch Filter input io number."]
     #[inline(always)]
-    pub fn input_io_num(&mut self) -> INPUT_IO_NUM_W<GLITCH_FILTER_CH_SPEC> {
+    pub fn input_io_num(&mut self) -> INPUT_IO_NUM_W<'_, GLITCH_FILTER_CH_SPEC> {
         INPUT_IO_NUM_W::new(self, 1)
     }
     #[doc = "Bits 7:12 - Glitch Filter window threshold."]
     #[inline(always)]
-    pub fn window_thres(&mut self) -> WINDOW_THRES_W<GLITCH_FILTER_CH_SPEC> {
+    pub fn window_thres(&mut self) -> WINDOW_THRES_W<'_, GLITCH_FILTER_CH_SPEC> {
         WINDOW_THRES_W::new(self, 7)
     }
     #[doc = "Bits 13:18 - Glitch Filter window width."]
     #[inline(always)]
-    pub fn window_width(&mut self) -> WINDOW_WIDTH_W<GLITCH_FILTER_CH_SPEC> {
+    pub fn window_width(&mut self) -> WINDOW_WIDTH_W<'_, GLITCH_FILTER_CH_SPEC> {
         WINDOW_WIDTH_W::new(self, 13)
     }
 }

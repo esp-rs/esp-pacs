@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - needs field desc"]
     #[inline(always)]
-    pub fn pump_clk_div_num(&mut self) -> PUMP_CLK_DIV_NUM_W<CLK_CFG_SPEC> {
+    pub fn pump_clk_div_num(&mut self) -> PUMP_CLK_DIV_NUM_W<'_, CLK_CFG_SPEC> {
         PUMP_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bit 8 - needs field desc"]
     #[inline(always)]
-    pub fn monitor_clk_pvt_en(&mut self) -> MONITOR_CLK_PVT_EN_W<CLK_CFG_SPEC> {
+    pub fn monitor_clk_pvt_en(&mut self) -> MONITOR_CLK_PVT_EN_W<'_, CLK_CFG_SPEC> {
         MONITOR_CLK_PVT_EN_W::new(self, 8)
     }
     #[doc = "Bit 31 - select pvt clk"]
     #[inline(always)]
-    pub fn clk_sel(&mut self) -> CLK_SEL_W<CLK_CFG_SPEC> {
+    pub fn clk_sel(&mut self) -> CLK_SEL_W<'_, CLK_CFG_SPEC> {
         CLK_SEL_W::new(self, 31)
     }
 }

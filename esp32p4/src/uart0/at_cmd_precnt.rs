@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - This register is used to configure the idle duration time before the first at_cmd is received by receiver."]
     #[inline(always)]
-    pub fn pre_idle_num(&mut self) -> PRE_IDLE_NUM_W<AT_CMD_PRECNT_SPEC> {
+    pub fn pre_idle_num(&mut self) -> PRE_IDLE_NUM_W<'_, AT_CMD_PRECNT_SPEC> {
         PRE_IDLE_NUM_W::new(self, 0)
     }
 }

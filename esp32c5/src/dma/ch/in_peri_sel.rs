@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Configures the peripheral connected to RX channel %s.\\\\ 0: Dummy\\\\ 1: SPI2\\\\ 2: UHCI0\\\\ 3: I2S0\\\\ 4: Dummy\\\\ 5: Dummy\\\\ 6: AES\\\\ 7: SHA\\\\ 8: ADC_DAC\\\\ 9: PARL_IO\\\\ 10: Dummy\\\\ 11~15: Dummy\\\\"]
     #[inline(always)]
-    pub fn peri_in_sel(&mut self) -> PERI_IN_SEL_W<IN_PERI_SEL_SPEC> {
+    pub fn peri_in_sel(&mut self) -> PERI_IN_SEL_W<'_, IN_PERI_SEL_SPEC> {
         PERI_IN_SEL_W::new(self, 0)
     }
 }

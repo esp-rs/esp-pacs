@@ -76,37 +76,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 9 - 1: Use XTAL_CLK as the source clock of timer group. 0: Use APB_CLK as the source clock of timer group."]
     #[inline(always)]
-    pub fn t0_use_xtal(&mut self) -> T0_USE_XTAL_W<CONFIG_SPEC> {
+    pub fn t0_use_xtal(&mut self) -> T0_USE_XTAL_W<'_, CONFIG_SPEC> {
         T0_USE_XTAL_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures whether or not to enable the timer 0 alarm function. This bit will be automatically cleared once an alarm occurs.\\\\ 0: Disable \\\\ 1: Enable \\\\"]
     #[inline(always)]
-    pub fn t0_alarm_en(&mut self) -> T0_ALARM_EN_W<CONFIG_SPEC> {
+    pub fn t0_alarm_en(&mut self) -> T0_ALARM_EN_W<'_, CONFIG_SPEC> {
         T0_ALARM_EN_W::new(self, 10)
     }
     #[doc = "Bit 12 - Configures whether or not to reset the timer 0 's clock divider counter. \\\\ 0: No effect \\\\ 1: Reset \\\\"]
     #[inline(always)]
-    pub fn t0_divcnt_rst(&mut self) -> T0_DIVCNT_RST_W<CONFIG_SPEC> {
+    pub fn t0_divcnt_rst(&mut self) -> T0_DIVCNT_RST_W<'_, CONFIG_SPEC> {
         T0_DIVCNT_RST_W::new(self, 12)
     }
     #[doc = "Bits 13:28 - Represents the timer 0 clock (T0_clk) prescaler value."]
     #[inline(always)]
-    pub fn t0_divider(&mut self) -> T0_DIVIDER_W<CONFIG_SPEC> {
+    pub fn t0_divider(&mut self) -> T0_DIVIDER_W<'_, CONFIG_SPEC> {
         T0_DIVIDER_W::new(self, 13)
     }
     #[doc = "Bit 29 - Configures whether or not to enable the timer 0 auto-reload function at the time of alarm. \\\\ 0: No effect \\\\ 1: Enable \\\\"]
     #[inline(always)]
-    pub fn t0_autoreload(&mut self) -> T0_AUTORELOAD_W<CONFIG_SPEC> {
+    pub fn t0_autoreload(&mut self) -> T0_AUTORELOAD_W<'_, CONFIG_SPEC> {
         T0_AUTORELOAD_W::new(self, 29)
     }
     #[doc = "Bit 30 - Configures the counting direction of the timer 0 time-base counter. \\\\ 0: Decrement \\\\ 1: Increment \\\\"]
     #[inline(always)]
-    pub fn t0_increase(&mut self) -> T0_INCREASE_W<CONFIG_SPEC> {
+    pub fn t0_increase(&mut self) -> T0_INCREASE_W<'_, CONFIG_SPEC> {
         T0_INCREASE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Configures whether or not to enable the timer 0 time-base counter. \\\\ 0: Disable \\\\ 1: Enable \\\\"]
     #[inline(always)]
-    pub fn t0_en(&mut self) -> T0_EN_W<CONFIG_SPEC> {
+    pub fn t0_en(&mut self) -> T0_EN_W<'_, CONFIG_SPEC> {
         T0_EN_W::new(self, 31)
     }
 }

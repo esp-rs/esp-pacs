@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - need des"]
     #[inline(always)]
-    pub fn i2c0_scl_pulse_dur(&mut self) -> I2C0_SCL_PULSE_DUR_W<I2C0_CTRL1_SPEC> {
+    pub fn i2c0_scl_pulse_dur(&mut self) -> I2C0_SCL_PULSE_DUR_W<'_, I2C0_CTRL1_SPEC> {
         I2C0_SCL_PULSE_DUR_W::new(self, 0)
     }
     #[doc = "Bits 6:10 - need des"]
     #[inline(always)]
-    pub fn i2c0_sda_side_guard(&mut self) -> I2C0_SDA_SIDE_GUARD_W<I2C0_CTRL1_SPEC> {
+    pub fn i2c0_sda_side_guard(&mut self) -> I2C0_SDA_SIDE_GUARD_W<'_, I2C0_CTRL1_SPEC> {
         I2C0_SDA_SIDE_GUARD_W::new(self, 6)
     }
 }

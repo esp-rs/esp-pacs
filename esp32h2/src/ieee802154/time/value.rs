@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn timer0_value(&mut self) -> TIMER0_VALUE_W<VALUE_SPEC> {
+    pub fn timer0_value(&mut self) -> TIMER0_VALUE_W<'_, VALUE_SPEC> {
         TIMER0_VALUE_W::new(self, 0)
     }
 }

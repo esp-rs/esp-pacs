@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn rx_data_num(&mut self) -> RX_DATA_NUM_W<FIFO_CONF_SPEC> {
+    pub fn rx_data_num(&mut self) -> RX_DATA_NUM_W<'_, FIFO_CONF_SPEC> {
         RX_DATA_NUM_W::new(self, 0)
     }
     #[doc = "Bits 6:11"]
     #[inline(always)]
-    pub fn tx_data_num(&mut self) -> TX_DATA_NUM_W<FIFO_CONF_SPEC> {
+    pub fn tx_data_num(&mut self) -> TX_DATA_NUM_W<'_, FIFO_CONF_SPEC> {
         TX_DATA_NUM_W::new(self, 6)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn dscr_en(&mut self) -> DSCR_EN_W<FIFO_CONF_SPEC> {
+    pub fn dscr_en(&mut self) -> DSCR_EN_W<'_, FIFO_CONF_SPEC> {
         DSCR_EN_W::new(self, 12)
     }
     #[doc = "Bits 13:15"]
     #[inline(always)]
-    pub fn tx_fifo_mod(&mut self) -> TX_FIFO_MOD_W<FIFO_CONF_SPEC> {
+    pub fn tx_fifo_mod(&mut self) -> TX_FIFO_MOD_W<'_, FIFO_CONF_SPEC> {
         TX_FIFO_MOD_W::new(self, 13)
     }
     #[doc = "Bits 16:18"]
     #[inline(always)]
-    pub fn rx_fifo_mod(&mut self) -> RX_FIFO_MOD_W<FIFO_CONF_SPEC> {
+    pub fn rx_fifo_mod(&mut self) -> RX_FIFO_MOD_W<'_, FIFO_CONF_SPEC> {
         RX_FIFO_MOD_W::new(self, 16)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    pub fn tx_fifo_mod_force_en(&mut self) -> TX_FIFO_MOD_FORCE_EN_W<FIFO_CONF_SPEC> {
+    pub fn tx_fifo_mod_force_en(&mut self) -> TX_FIFO_MOD_FORCE_EN_W<'_, FIFO_CONF_SPEC> {
         TX_FIFO_MOD_FORCE_EN_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn rx_fifo_mod_force_en(&mut self) -> RX_FIFO_MOD_FORCE_EN_W<FIFO_CONF_SPEC> {
+    pub fn rx_fifo_mod_force_en(&mut self) -> RX_FIFO_MOD_FORCE_EN_W<'_, FIFO_CONF_SPEC> {
         RX_FIFO_MOD_FORCE_EN_W::new(self, 20)
     }
 }

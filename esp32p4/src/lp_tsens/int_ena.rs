@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Tsens wakeup interrupt enable."]
     #[inline(always)]
-    pub fn cocpu_tsens_wake(&mut self) -> COCPU_TSENS_WAKE_W<INT_ENA_SPEC> {
+    pub fn cocpu_tsens_wake(&mut self) -> COCPU_TSENS_WAKE_W<'_, INT_ENA_SPEC> {
         COCPU_TSENS_WAKE_W::new(self, 0)
     }
 }

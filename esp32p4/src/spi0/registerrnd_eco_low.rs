@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - ECO low register"]
     #[inline(always)]
-    pub fn registerrnd_eco_low(&mut self) -> REGISTERRND_ECO_LOW_W<REGISTERRND_ECO_LOW_SPEC> {
+    pub fn registerrnd_eco_low(&mut self) -> REGISTERRND_ECO_LOW_W<'_, REGISTERRND_ECO_LOW_SPEC> {
         REGISTERRND_ECO_LOW_W::new(self, 0)
     }
 }

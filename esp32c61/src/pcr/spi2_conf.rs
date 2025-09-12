@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable spi2 apb clock"]
     #[inline(always)]
-    pub fn spi2_clk_en(&mut self) -> SPI2_CLK_EN_W<SPI2_CONF_SPEC> {
+    pub fn spi2_clk_en(&mut self) -> SPI2_CLK_EN_W<'_, SPI2_CONF_SPEC> {
         SPI2_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to reset spi2 module"]
     #[inline(always)]
-    pub fn spi2_rst_en(&mut self) -> SPI2_RST_EN_W<SPI2_CONF_SPEC> {
+    pub fn spi2_rst_en(&mut self) -> SPI2_RST_EN_W<'_, SPI2_CONF_SPEC> {
         SPI2_RST_EN_W::new(self, 1)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - ******* Description ***********"]
     #[inline(always)]
-    pub fn retention_disable(&mut self) -> RETENTION_DISABLE_W<RETENTION_CTRL5_SPEC> {
+    pub fn retention_disable(&mut self) -> RETENTION_DISABLE_W<'_, RETENTION_CTRL5_SPEC> {
         RETENTION_DISABLE_W::new(self, 0)
     }
 }

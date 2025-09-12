@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to indicate writing byte data to UART Tx FIFO is done."]
     #[inline(always)]
-    pub fn wr_done(&mut self) -> WR_DONE_W<EP1_CONF_SPEC> {
+    pub fn wr_done(&mut self) -> WR_DONE_W<'_, EP1_CONF_SPEC> {
         WR_DONE_W::new(self, 0)
     }
 }

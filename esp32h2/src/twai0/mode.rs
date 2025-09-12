@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1: reset, detection of a set reset mode bit results in aborting the current transmission/reception of a message and entering the reset mode. 0: normal, on the '1-to-0' transition of the reset mode bit, the TWAI controller returns to the operating mode."]
     #[inline(always)]
-    pub fn reset_mode(&mut self) -> RESET_MODE_W<MODE_SPEC> {
+    pub fn reset_mode(&mut self) -> RESET_MODE_W<'_, MODE_SPEC> {
         RESET_MODE_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: listen only, in this mode the TWAI controller would give no acknowledge to the TWAI-bus, even if a message is received successfully. The error counters are stopped at the current value. 0: normal."]
     #[inline(always)]
-    pub fn listen_only_mode(&mut self) -> LISTEN_ONLY_MODE_W<MODE_SPEC> {
+    pub fn listen_only_mode(&mut self) -> LISTEN_ONLY_MODE_W<'_, MODE_SPEC> {
         LISTEN_ONLY_MODE_W::new(self, 1)
     }
     #[doc = "Bit 2 - 1: self test, in this mode a full node test is possible without any other active node on the bus using the self reception request command. The TWAI controller will perform a successful transmission, even if there is no acknowledge received. 0: normal, an acknowledge is required for successful transmission."]
     #[inline(always)]
-    pub fn self_test_mode(&mut self) -> SELF_TEST_MODE_W<MODE_SPEC> {
+    pub fn self_test_mode(&mut self) -> SELF_TEST_MODE_W<'_, MODE_SPEC> {
         SELF_TEST_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3 - 1:single, the single acceptance filter option is enabled (one filter with the length of 32 bit is active). 0:dual, the dual acceptance filter option is enabled (two filters, each with the length of 16 bit are active)."]
     #[inline(always)]
-    pub fn rx_filter_mode(&mut self) -> RX_FILTER_MODE_W<MODE_SPEC> {
+    pub fn rx_filter_mode(&mut self) -> RX_FILTER_MODE_W<'_, MODE_SPEC> {
         RX_FILTER_MODE_W::new(self, 3)
     }
 }

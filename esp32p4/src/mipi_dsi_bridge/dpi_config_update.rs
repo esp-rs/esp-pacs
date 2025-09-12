@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<DPI_CONFIG_UPDATE_SPEC> {
 impl W {
     #[doc = "Bit 0 - write 1 to this bit to update dpi config register MIPI_DSI_BRG_DPI_*"]
     #[inline(always)]
-    pub fn dpi_config_update(&mut self) -> DPI_CONFIG_UPDATE_W<DPI_CONFIG_UPDATE_SPEC> {
+    pub fn dpi_config_update(&mut self) -> DPI_CONFIG_UPDATE_W<'_, DPI_CONFIG_UPDATE_SPEC> {
         DPI_CONFIG_UPDATE_W::new(self, 0)
     }
 }

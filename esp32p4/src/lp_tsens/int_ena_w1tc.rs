@@ -13,7 +13,7 @@ impl W {
     #[inline(always)]
     pub fn cocpu_tsens_wake_int_ena_w1tc(
         &mut self,
-    ) -> COCPU_TSENS_WAKE_INT_ENA_W1TC_W<INT_ENA_W1TC_SPEC> {
+    ) -> COCPU_TSENS_WAKE_INT_ENA_W1TC_W<'_, INT_ENA_W1TC_SPEC> {
         COCPU_TSENS_WAKE_INT_ENA_W1TC_W::new(self, 0)
     }
 }

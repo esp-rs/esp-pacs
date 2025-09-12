@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<MULT_INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the ecc_calc_done_int interrupt"]
     #[inline(always)]
-    pub fn calc_done(&mut self) -> CALC_DONE_W<MULT_INT_CLR_SPEC> {
+    pub fn calc_done(&mut self) -> CALC_DONE_W<'_, MULT_INT_CLR_SPEC> {
         CALC_DONE_W::new(self, 0)
     }
 }

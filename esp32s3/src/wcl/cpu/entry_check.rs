@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 1:13 - This filed is used to enable entry address check"]
     #[inline(always)]
-    pub fn entry_check(&mut self) -> ENTRY_CHECK_W<ENTRY_CHECK_SPEC> {
+    pub fn entry_check(&mut self) -> ENTRY_CHECK_W<'_, ENTRY_CHECK_SPEC> {
         ENTRY_CHECK_W::new(self, 1)
     }
 }

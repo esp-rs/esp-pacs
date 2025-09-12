@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Controls the SEARCH option. 0: no acceleration(by default). 1: acceleration."]
     #[inline(always)]
-    pub fn search_enable(&mut self) -> SEARCH_ENABLE_W<SEARCH_ENABLE_SPEC> {
+    pub fn search_enable(&mut self) -> SEARCH_ENABLE_W<'_, SEARCH_ENABLE_SPEC> {
         SEARCH_ENABLE_W::new(self, 0)
     }
 }

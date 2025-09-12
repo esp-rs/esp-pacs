@@ -104,7 +104,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 11:31"]
     #[inline(always)]
-    pub fn rd_reserve_0_203(&mut self) -> RD_RESERVE_0_203_W<BLK0_RDATA6_SPEC> {
+    pub fn rd_reserve_0_203(&mut self) -> RD_RESERVE_0_203_W<'_, BLK0_RDATA6_SPEC> {
         RD_RESERVE_0_203_W::new(self, 11)
     }
 }

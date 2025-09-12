@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Configures the data size of a single encryption. 0: 128 bits. 1: 256 bits. 2: 512 bits."]
     #[inline(always)]
-    pub fn linesize(&mut self) -> LINESIZE_W<LINESIZE_SPEC> {
+    pub fn linesize(&mut self) -> LINESIZE_W<'_, LINESIZE_SPEC> {
         LINESIZE_W::new(self, 0)
     }
 }

@@ -26,12 +26,14 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 23 - clear touch slp channel"]
     #[inline(always)]
-    pub fn touch_slp_channel_clr(&mut self) -> TOUCH_SLP_CHANNEL_CLR_W<TOUCH_APPROACH_SPEC> {
+    pub fn touch_slp_channel_clr(&mut self) -> TOUCH_SLP_CHANNEL_CLR_W<'_, TOUCH_APPROACH_SPEC> {
         TOUCH_SLP_CHANNEL_CLR_W::new(self, 23)
     }
     #[doc = "Bits 24:31 - approach pads total meas times"]
     #[inline(always)]
-    pub fn touch_approach_meas_time(&mut self) -> TOUCH_APPROACH_MEAS_TIME_W<TOUCH_APPROACH_SPEC> {
+    pub fn touch_approach_meas_time(
+        &mut self,
+    ) -> TOUCH_APPROACH_MEAS_TIME_W<'_, TOUCH_APPROACH_SPEC> {
         TOUCH_APPROACH_MEAS_TIME_W::new(self, 24)
     }
 }

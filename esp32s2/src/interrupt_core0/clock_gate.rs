@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This bit is used to enable or disable the clock of interrupt matrix. 1: enable the clock. 0: disable the clock."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CLOCK_GATE_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CLOCK_GATE_SPEC> {
         CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - This bit is used to disable all NMI interrupt signals to CPU."]
     #[inline(always)]
-    pub fn pro_nmi_mask_hw(&mut self) -> PRO_NMI_MASK_HW_W<CLOCK_GATE_SPEC> {
+    pub fn pro_nmi_mask_hw(&mut self) -> PRO_NMI_MASK_HW_W<'_, CLOCK_GATE_SPEC> {
         PRO_NMI_MASK_HW_W::new(self, 1)
     }
 }

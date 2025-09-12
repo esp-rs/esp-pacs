@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - GPIO interrupt status register for GPIO32-53"]
     #[inline(always)]
-    pub fn interrupt(&mut self) -> INTERRUPT_W<STATUS1_SPEC> {
+    pub fn interrupt(&mut self) -> INTERRUPT_W<'_, STATUS1_SPEC> {
         INTERRUPT_W::new(self, 0)
     }
 }

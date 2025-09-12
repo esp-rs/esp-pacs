@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - this field is used to read current world of Iram0 bus"]
     #[inline(always)]
-    pub fn world_iram0(&mut self) -> WORLD_IRAM0_W<WORLD_IRAM0_SPEC> {
+    pub fn world_iram0(&mut self) -> WORLD_IRAM0_W<'_, WORLD_IRAM0_SPEC> {
         WORLD_IRAM0_W::new(self, 0)
     }
 }

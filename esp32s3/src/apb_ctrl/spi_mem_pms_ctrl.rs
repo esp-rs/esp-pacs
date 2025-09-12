@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - ******* Description ***********"]
     #[inline(always)]
-    pub fn spi_mem_reject_clr(&mut self) -> SPI_MEM_REJECT_CLR_W<SPI_MEM_PMS_CTRL_SPEC> {
+    pub fn spi_mem_reject_clr(&mut self) -> SPI_MEM_REJECT_CLR_W<'_, SPI_MEM_PMS_CTRL_SPEC> {
         SPI_MEM_REJECT_CLR_W::new(self, 1)
     }
 }

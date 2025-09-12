@@ -46,22 +46,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - this bit configures auto_update enable. when set to 1, will update sum and lum each frame"]
     #[inline(always)]
-    pub fn af_auto_update(&mut self) -> AF_AUTO_UPDATE_W<AF_CTRL0_SPEC> {
+    pub fn af_auto_update(&mut self) -> AF_AUTO_UPDATE_W<'_, AF_CTRL0_SPEC> {
         AF_AUTO_UPDATE_W::new(self, 0)
     }
     #[doc = "Bit 4 - write 1 to this bit will update the sum and lum once"]
     #[inline(always)]
-    pub fn af_manual_update(&mut self) -> AF_MANUAL_UPDATE_W<AF_CTRL0_SPEC> {
+    pub fn af_manual_update(&mut self) -> AF_MANUAL_UPDATE_W<'_, AF_CTRL0_SPEC> {
         AF_MANUAL_UPDATE_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - this field configures env threshold. when both sum and lum changes larger than this value, consider environment changes and need to trigger a new autofocus. 4Bit fractional"]
     #[inline(always)]
-    pub fn af_env_threshold(&mut self) -> AF_ENV_THRESHOLD_W<AF_CTRL0_SPEC> {
+    pub fn af_env_threshold(&mut self) -> AF_ENV_THRESHOLD_W<'_, AF_CTRL0_SPEC> {
         AF_ENV_THRESHOLD_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - this field configures environment changes detection period (frame). When set to 0, disable this function"]
     #[inline(always)]
-    pub fn af_env_period(&mut self) -> AF_ENV_PERIOD_W<AF_CTRL0_SPEC> {
+    pub fn af_env_period(&mut self) -> AF_ENV_PERIOD_W<'_, AF_CTRL0_SPEC> {
         AF_ENV_PERIOD_W::new(self, 16)
     }
 }

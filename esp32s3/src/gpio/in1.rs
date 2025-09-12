@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - GPIO input register for GPIO32-53"]
     #[inline(always)]
-    pub fn data_next(&mut self) -> DATA_NEXT_W<IN1_SPEC> {
+    pub fn data_next(&mut self) -> DATA_NEXT_W<'_, IN1_SPEC> {
         DATA_NEXT_W::new(self, 0)
     }
 }

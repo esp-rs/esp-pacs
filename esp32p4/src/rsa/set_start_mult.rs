@@ -1,6 +1,6 @@
 #[doc = "Register `SET_START_MULT` writer"]
 pub type W = crate::W<SET_START_MULT_SPEC>;
-#[doc = "Field `SET_START_MULT` writer - Configure whether or not to start the multiplication. 0: No effect 1: Start"]
+#[doc = "Field `SET_START_MULT` writer - Configures whether or not to start the multiplication.\\\\ 0: No effect\\\\ 1: Start\\\\"]
 pub type SET_START_MULT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SET_START_MULT_SPEC> {
@@ -9,9 +9,9 @@ impl core::fmt::Debug for crate::generic::Reg<SET_START_MULT_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Configure whether or not to start the multiplication. 0: No effect 1: Start"]
+    #[doc = "Bit 0 - Configures whether or not to start the multiplication.\\\\ 0: No effect\\\\ 1: Start\\\\"]
     #[inline(always)]
-    pub fn set_start_mult(&mut self) -> SET_START_MULT_W<SET_START_MULT_SPEC> {
+    pub fn set_start_mult(&mut self) -> SET_START_MULT_W<'_, SET_START_MULT_SPEC> {
         SET_START_MULT_W::new(self, 0)
     }
 }

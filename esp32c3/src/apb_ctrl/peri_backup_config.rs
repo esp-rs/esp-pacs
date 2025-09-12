@@ -76,32 +76,34 @@ impl W {
     #[inline(always)]
     pub fn peri_backup_burst_limit(
         &mut self,
-    ) -> PERI_BACKUP_BURST_LIMIT_W<PERI_BACKUP_CONFIG_SPEC> {
+    ) -> PERI_BACKUP_BURST_LIMIT_W<'_, PERI_BACKUP_CONFIG_SPEC> {
         PERI_BACKUP_BURST_LIMIT_W::new(self, 4)
     }
     #[doc = "Bits 9:18 - reg_peri_backup_tout_thres"]
     #[inline(always)]
-    pub fn peri_backup_tout_thres(&mut self) -> PERI_BACKUP_TOUT_THRES_W<PERI_BACKUP_CONFIG_SPEC> {
+    pub fn peri_backup_tout_thres(
+        &mut self,
+    ) -> PERI_BACKUP_TOUT_THRES_W<'_, PERI_BACKUP_CONFIG_SPEC> {
         PERI_BACKUP_TOUT_THRES_W::new(self, 9)
     }
     #[doc = "Bits 19:28 - reg_peri_backup_size"]
     #[inline(always)]
-    pub fn peri_backup_size(&mut self) -> PERI_BACKUP_SIZE_W<PERI_BACKUP_CONFIG_SPEC> {
+    pub fn peri_backup_size(&mut self) -> PERI_BACKUP_SIZE_W<'_, PERI_BACKUP_CONFIG_SPEC> {
         PERI_BACKUP_SIZE_W::new(self, 19)
     }
     #[doc = "Bit 29 - reg_peri_backup_start"]
     #[inline(always)]
-    pub fn peri_backup_start(&mut self) -> PERI_BACKUP_START_W<PERI_BACKUP_CONFIG_SPEC> {
+    pub fn peri_backup_start(&mut self) -> PERI_BACKUP_START_W<'_, PERI_BACKUP_CONFIG_SPEC> {
         PERI_BACKUP_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - reg_peri_backup_to_mem"]
     #[inline(always)]
-    pub fn peri_backup_to_mem(&mut self) -> PERI_BACKUP_TO_MEM_W<PERI_BACKUP_CONFIG_SPEC> {
+    pub fn peri_backup_to_mem(&mut self) -> PERI_BACKUP_TO_MEM_W<'_, PERI_BACKUP_CONFIG_SPEC> {
         PERI_BACKUP_TO_MEM_W::new(self, 30)
     }
     #[doc = "Bit 31 - reg_peri_backup_ena"]
     #[inline(always)]
-    pub fn peri_backup_ena(&mut self) -> PERI_BACKUP_ENA_W<PERI_BACKUP_CONFIG_SPEC> {
+    pub fn peri_backup_ena(&mut self) -> PERI_BACKUP_ENA_W<'_, PERI_BACKUP_CONFIG_SPEC> {
         PERI_BACKUP_ENA_W::new(self, 31)
     }
 }

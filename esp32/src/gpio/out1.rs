@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - GPIO32~39 output value"]
     #[inline(always)]
-    pub fn data(&mut self) -> DATA_W<OUT1_SPEC> {
+    pub fn data(&mut self) -> DATA_W<'_, OUT1_SPEC> {
         DATA_W::new(self, 0)
     }
 }

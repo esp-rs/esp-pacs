@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This register is used to configure the UART_ID."]
     #[inline(always)]
-    pub fn id(&mut self) -> ID_W<ID_SPEC> {
+    pub fn id(&mut self) -> ID_W<'_, ID_SPEC> {
         ID_W::new(self, 0)
     }
 }

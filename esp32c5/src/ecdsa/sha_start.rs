@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<SHA_START_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to start the first caculation of SHA Calculator in ECDSA Accelerator. This bit will be self-cleared after configuration."]
     #[inline(always)]
-    pub fn sha_start(&mut self) -> SHA_START_W<SHA_START_SPEC> {
+    pub fn sha_start(&mut self) -> SHA_START_W<'_, SHA_START_SPEC> {
         SHA_START_W::new(self, 0)
     }
 }

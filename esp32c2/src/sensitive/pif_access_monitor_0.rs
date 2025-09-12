@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn pif_access_monitor_lock(
         &mut self,
-    ) -> PIF_ACCESS_MONITOR_LOCK_W<PIF_ACCESS_MONITOR_0_SPEC> {
+    ) -> PIF_ACCESS_MONITOR_LOCK_W<'_, PIF_ACCESS_MONITOR_0_SPEC> {
         PIF_ACCESS_MONITOR_LOCK_W::new(self, 0)
     }
 }

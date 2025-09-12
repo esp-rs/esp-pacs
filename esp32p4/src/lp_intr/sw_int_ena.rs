@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn lp_sw_int_ena(&mut self) -> LP_SW_INT_ENA_W<SW_INT_ENA_SPEC> {
+    pub fn lp_sw_int_ena(&mut self) -> LP_SW_INT_ENA_W<'_, SW_INT_ENA_SPEC> {
         LP_SW_INT_ENA_W::new(self, 31)
     }
 }

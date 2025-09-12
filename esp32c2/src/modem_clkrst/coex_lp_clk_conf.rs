@@ -64,27 +64,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - ."]
     #[inline(always)]
-    pub fn coex_lpclk_sel_rtc_slow(&mut self) -> COEX_LPCLK_SEL_RTC_SLOW_W<COEX_LP_CLK_CONF_SPEC> {
+    pub fn coex_lpclk_sel_rtc_slow(
+        &mut self,
+    ) -> COEX_LPCLK_SEL_RTC_SLOW_W<'_, COEX_LP_CLK_CONF_SPEC> {
         COEX_LPCLK_SEL_RTC_SLOW_W::new(self, 0)
     }
     #[doc = "Bit 1 - ."]
     #[inline(always)]
-    pub fn coex_lpclk_sel_8m(&mut self) -> COEX_LPCLK_SEL_8M_W<COEX_LP_CLK_CONF_SPEC> {
+    pub fn coex_lpclk_sel_8m(&mut self) -> COEX_LPCLK_SEL_8M_W<'_, COEX_LP_CLK_CONF_SPEC> {
         COEX_LPCLK_SEL_8M_W::new(self, 1)
     }
     #[doc = "Bit 2 - ."]
     #[inline(always)]
-    pub fn coex_lpclk_sel_xtal(&mut self) -> COEX_LPCLK_SEL_XTAL_W<COEX_LP_CLK_CONF_SPEC> {
+    pub fn coex_lpclk_sel_xtal(&mut self) -> COEX_LPCLK_SEL_XTAL_W<'_, COEX_LP_CLK_CONF_SPEC> {
         COEX_LPCLK_SEL_XTAL_W::new(self, 2)
     }
     #[doc = "Bit 3 - ."]
     #[inline(always)]
-    pub fn coex_lpclk_sel_xtal32k(&mut self) -> COEX_LPCLK_SEL_XTAL32K_W<COEX_LP_CLK_CONF_SPEC> {
+    pub fn coex_lpclk_sel_xtal32k(
+        &mut self,
+    ) -> COEX_LPCLK_SEL_XTAL32K_W<'_, COEX_LP_CLK_CONF_SPEC> {
         COEX_LPCLK_SEL_XTAL32K_W::new(self, 3)
     }
     #[doc = "Bits 4:11 - ."]
     #[inline(always)]
-    pub fn coex_lpclk_div_num(&mut self) -> COEX_LPCLK_DIV_NUM_W<COEX_LP_CLK_CONF_SPEC> {
+    pub fn coex_lpclk_div_num(&mut self) -> COEX_LPCLK_DIV_NUM_W<'_, COEX_LP_CLK_CONF_SPEC> {
         COEX_LPCLK_DIV_NUM_W::new(self, 4)
     }
 }

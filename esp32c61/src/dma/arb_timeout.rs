@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Configures the time slot. Measurement unit: AHB bus clock cycle."]
     #[inline(always)]
-    pub fn num(&mut self) -> NUM_W<ARB_TIMEOUT_SPEC> {
+    pub fn num(&mut self) -> NUM_W<'_, ARB_TIMEOUT_SPEC> {
         NUM_W::new(self, 0)
     }
 }

@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable ds clock"]
     #[inline(always)]
-    pub fn ds_clk_en(&mut self) -> DS_CLK_EN_W<DS_CONF_SPEC> {
+    pub fn ds_clk_en(&mut self) -> DS_CLK_EN_W<'_, DS_CONF_SPEC> {
         DS_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to reset ds module"]
     #[inline(always)]
-    pub fn ds_rst_en(&mut self) -> DS_RST_EN_W<DS_CONF_SPEC> {
+    pub fn ds_rst_en(&mut self) -> DS_RST_EN_W<'_, DS_CONF_SPEC> {
         DS_RST_EN_W::new(self, 1)
     }
 }

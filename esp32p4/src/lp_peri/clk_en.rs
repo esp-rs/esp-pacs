@@ -174,82 +174,82 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 16 - need_des"]
     #[inline(always)]
-    pub fn ck_en_rng(&mut self) -> CK_EN_RNG_W<CLK_EN_SPEC> {
+    pub fn ck_en_rng(&mut self) -> CK_EN_RNG_W<'_, CLK_EN_SPEC> {
         CK_EN_RNG_W::new(self, 16)
     }
     #[doc = "Bit 17 - need_des"]
     #[inline(always)]
-    pub fn ck_en_lp_tsens(&mut self) -> CK_EN_LP_TSENS_W<CLK_EN_SPEC> {
+    pub fn ck_en_lp_tsens(&mut self) -> CK_EN_LP_TSENS_W<'_, CLK_EN_SPEC> {
         CK_EN_LP_TSENS_W::new(self, 17)
     }
     #[doc = "Bit 18 - need_des"]
     #[inline(always)]
-    pub fn ck_en_lp_pms(&mut self) -> CK_EN_LP_PMS_W<CLK_EN_SPEC> {
+    pub fn ck_en_lp_pms(&mut self) -> CK_EN_LP_PMS_W<'_, CLK_EN_SPEC> {
         CK_EN_LP_PMS_W::new(self, 18)
     }
     #[doc = "Bit 19 - need_des"]
     #[inline(always)]
-    pub fn ck_en_lp_efuse(&mut self) -> CK_EN_LP_EFUSE_W<CLK_EN_SPEC> {
+    pub fn ck_en_lp_efuse(&mut self) -> CK_EN_LP_EFUSE_W<'_, CLK_EN_SPEC> {
         CK_EN_LP_EFUSE_W::new(self, 19)
     }
     #[doc = "Bit 20 - need_des"]
     #[inline(always)]
-    pub fn ck_en_lp_iomux(&mut self) -> CK_EN_LP_IOMUX_W<CLK_EN_SPEC> {
+    pub fn ck_en_lp_iomux(&mut self) -> CK_EN_LP_IOMUX_W<'_, CLK_EN_SPEC> {
         CK_EN_LP_IOMUX_W::new(self, 20)
     }
     #[doc = "Bit 21 - need_des"]
     #[inline(always)]
-    pub fn ck_en_lp_touch(&mut self) -> CK_EN_LP_TOUCH_W<CLK_EN_SPEC> {
+    pub fn ck_en_lp_touch(&mut self) -> CK_EN_LP_TOUCH_W<'_, CLK_EN_SPEC> {
         CK_EN_LP_TOUCH_W::new(self, 21)
     }
     #[doc = "Bit 22 - need_des"]
     #[inline(always)]
-    pub fn ck_en_lp_spi(&mut self) -> CK_EN_LP_SPI_W<CLK_EN_SPEC> {
+    pub fn ck_en_lp_spi(&mut self) -> CK_EN_LP_SPI_W<'_, CLK_EN_SPEC> {
         CK_EN_LP_SPI_W::new(self, 22)
     }
     #[doc = "Bit 23 - need_des"]
     #[inline(always)]
-    pub fn ck_en_lp_adc(&mut self) -> CK_EN_LP_ADC_W<CLK_EN_SPEC> {
+    pub fn ck_en_lp_adc(&mut self) -> CK_EN_LP_ADC_W<'_, CLK_EN_SPEC> {
         CK_EN_LP_ADC_W::new(self, 23)
     }
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
-    pub fn ck_en_lp_i2s_tx(&mut self) -> CK_EN_LP_I2S_TX_W<CLK_EN_SPEC> {
+    pub fn ck_en_lp_i2s_tx(&mut self) -> CK_EN_LP_I2S_TX_W<'_, CLK_EN_SPEC> {
         CK_EN_LP_I2S_TX_W::new(self, 24)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
-    pub fn ck_en_lp_i2s_rx(&mut self) -> CK_EN_LP_I2S_RX_W<CLK_EN_SPEC> {
+    pub fn ck_en_lp_i2s_rx(&mut self) -> CK_EN_LP_I2S_RX_W<'_, CLK_EN_SPEC> {
         CK_EN_LP_I2S_RX_W::new(self, 25)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    pub fn ck_en_lp_i2s(&mut self) -> CK_EN_LP_I2S_W<CLK_EN_SPEC> {
+    pub fn ck_en_lp_i2s(&mut self) -> CK_EN_LP_I2S_W<'_, CLK_EN_SPEC> {
         CK_EN_LP_I2S_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    pub fn ck_en_lp_i2cmst(&mut self) -> CK_EN_LP_I2CMST_W<CLK_EN_SPEC> {
+    pub fn ck_en_lp_i2cmst(&mut self) -> CK_EN_LP_I2CMST_W<'_, CLK_EN_SPEC> {
         CK_EN_LP_I2CMST_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn ck_en_lp_i2c(&mut self) -> CK_EN_LP_I2C_W<CLK_EN_SPEC> {
+    pub fn ck_en_lp_i2c(&mut self) -> CK_EN_LP_I2C_W<'_, CLK_EN_SPEC> {
         CK_EN_LP_I2C_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn ck_en_lp_uart(&mut self) -> CK_EN_LP_UART_W<CLK_EN_SPEC> {
+    pub fn ck_en_lp_uart(&mut self) -> CK_EN_LP_UART_W<'_, CLK_EN_SPEC> {
         CK_EN_LP_UART_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn ck_en_lp_intr(&mut self) -> CK_EN_LP_INTR_W<CLK_EN_SPEC> {
+    pub fn ck_en_lp_intr(&mut self) -> CK_EN_LP_INTR_W<'_, CLK_EN_SPEC> {
         CK_EN_LP_INTR_W::new(self, 30)
     }
     #[doc = "Bit 31 - write 1 to force on lp_core clk"]
     #[inline(always)]
-    pub fn ck_en_lp_core(&mut self) -> CK_EN_LP_CORE_W<CLK_EN_SPEC> {
+    pub fn ck_en_lp_core(&mut self) -> CK_EN_LP_CORE_W<'_, CLK_EN_SPEC> {
         CK_EN_LP_CORE_W::new(self, 31)
     }
 }

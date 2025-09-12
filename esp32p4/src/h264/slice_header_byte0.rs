@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Configures Slice Header low 32 bit"]
     #[inline(always)]
-    pub fn slice_byte_lsb(&mut self) -> SLICE_BYTE_LSB_W<SLICE_HEADER_BYTE0_SPEC> {
+    pub fn slice_byte_lsb(&mut self) -> SLICE_BYTE_LSB_W<'_, SLICE_HEADER_BYTE0_SPEC> {
         SLICE_BYTE_LSB_W::new(self, 0)
     }
 }

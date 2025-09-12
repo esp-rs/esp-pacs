@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - enable bus log. BIT0: hp-cpu, BIT1: lp-cpu, BIT2: DMA."]
     #[inline(always)]
-    pub fn log_ena(&mut self) -> LOG_ENA_W<LOG_SETTING_SPEC> {
+    pub fn log_ena(&mut self) -> LOG_ENA_W<'_, LOG_SETTING_SPEC> {
         LOG_ENA_W::new(self, 0)
     }
     #[doc = "Bits 3:6 - This field must be onehot. 4'b0001 : WR monitor, 4'b0010: WORD monitor, 4'b0100: HALFWORD monitor, 4'b1000: BYTE monitor."]
     #[inline(always)]
-    pub fn log_mode(&mut self) -> LOG_MODE_W<LOG_SETTING_SPEC> {
+    pub fn log_mode(&mut self) -> LOG_MODE_W<'_, LOG_SETTING_SPEC> {
         LOG_MODE_W::new(self, 3)
     }
     #[doc = "Bit 7 - Set 1 enable mem_loop, it will loop write at the range of MEM_START and MEM_END"]
     #[inline(always)]
-    pub fn log_mem_loop_enable(&mut self) -> LOG_MEM_LOOP_ENABLE_W<LOG_SETTING_SPEC> {
+    pub fn log_mem_loop_enable(&mut self) -> LOG_MEM_LOOP_ENABLE_W<'_, LOG_SETTING_SPEC> {
         LOG_MEM_LOOP_ENABLE_W::new(self, 7)
     }
 }

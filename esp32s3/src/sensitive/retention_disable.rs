@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to disable retention function and lock disable state."]
     #[inline(always)]
-    pub fn retention_disable(&mut self) -> RETENTION_DISABLE_W<RETENTION_DISABLE_SPEC> {
+    pub fn retention_disable(&mut self) -> RETENTION_DISABLE_W<'_, RETENTION_DISABLE_SPEC> {
         RETENTION_DISABLE_W::new(self, 0)
     }
 }

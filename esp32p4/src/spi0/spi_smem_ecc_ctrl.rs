@@ -44,17 +44,19 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 17 - Set this bit to calculate the error times of MSPI ECC read when accesses to external RAM."]
     #[inline(always)]
-    pub fn spi_smem_ecc_err_int_en(&mut self) -> SPI_SMEM_ECC_ERR_INT_EN_W<SPI_SMEM_ECC_CTRL_SPEC> {
+    pub fn spi_smem_ecc_err_int_en(
+        &mut self,
+    ) -> SPI_SMEM_ECC_ERR_INT_EN_W<'_, SPI_SMEM_ECC_CTRL_SPEC> {
         SPI_SMEM_ECC_ERR_INT_EN_W::new(self, 17)
     }
     #[doc = "Bits 18:19 - Set the page size of the external RAM accessed by MSPI. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
-    pub fn spi_smem_page_size(&mut self) -> SPI_SMEM_PAGE_SIZE_W<SPI_SMEM_ECC_CTRL_SPEC> {
+    pub fn spi_smem_page_size(&mut self) -> SPI_SMEM_PAGE_SIZE_W<'_, SPI_SMEM_ECC_CTRL_SPEC> {
         SPI_SMEM_PAGE_SIZE_W::new(self, 18)
     }
     #[doc = "Bit 20 - Set this bit to enable MSPI ECC address conversion, no matter MSPI accesses to the ECC region or non-ECC region of external RAM. If there is no ECC region in external RAM, this bit should be 0. Otherwise, this bit should be 1."]
     #[inline(always)]
-    pub fn spi_smem_ecc_addr_en(&mut self) -> SPI_SMEM_ECC_ADDR_EN_W<SPI_SMEM_ECC_CTRL_SPEC> {
+    pub fn spi_smem_ecc_addr_en(&mut self) -> SPI_SMEM_ECC_ADDR_EN_W<'_, SPI_SMEM_ECC_CTRL_SPEC> {
         SPI_SMEM_ECC_ADDR_EN_W::new(self, 20)
     }
 }

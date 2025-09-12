@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:23 - The bits are used to specify the owner of MMU.bit0: icache, bit1: dcache, bit2: dma, bit3: reserved."]
     #[inline(always)]
-    pub fn cache_mmu_owner(&mut self) -> CACHE_MMU_OWNER_W<CACHE_MMU_OWNER_SPEC> {
+    pub fn cache_mmu_owner(&mut self) -> CACHE_MMU_OWNER_W<'_, CACHE_MMU_OWNER_SPEC> {
         CACHE_MMU_OWNER_W::new(self, 0)
     }
 }

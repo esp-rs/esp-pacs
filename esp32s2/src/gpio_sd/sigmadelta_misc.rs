@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - Clock enable bit of sigma delta modulation."]
     #[inline(always)]
-    pub fn function_clk_en(&mut self) -> FUNCTION_CLK_EN_W<SIGMADELTA_MISC_SPEC> {
+    pub fn function_clk_en(&mut self) -> FUNCTION_CLK_EN_W<'_, SIGMADELTA_MISC_SPEC> {
         FUNCTION_CLK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Reserved."]
     #[inline(always)]
-    pub fn spi_swap(&mut self) -> SPI_SWAP_W<SIGMADELTA_MISC_SPEC> {
+    pub fn spi_swap(&mut self) -> SPI_SWAP_W<'_, SIGMADELTA_MISC_SPEC> {
         SPI_SWAP_W::new(self, 31)
     }
 }

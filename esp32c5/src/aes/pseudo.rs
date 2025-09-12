@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This bit decides whether the pseudo round function is enable or not."]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<PSEUDO_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, PSEUDO_SPEC> {
         EN_W::new(self, 0)
     }
     #[doc = "Bits 1:4 - Those bits decides the basic number of pseudo round number."]
     #[inline(always)]
-    pub fn base(&mut self) -> BASE_W<PSEUDO_SPEC> {
+    pub fn base(&mut self) -> BASE_W<'_, PSEUDO_SPEC> {
         BASE_W::new(self, 1)
     }
     #[doc = "Bits 5:6 - Those bits decides the increment number of pseudo round number"]
     #[inline(always)]
-    pub fn inc(&mut self) -> INC_W<PSEUDO_SPEC> {
+    pub fn inc(&mut self) -> INC_W<'_, PSEUDO_SPEC> {
         INC_W::new(self, 5)
     }
     #[doc = "Bits 7:9 - Those bits decides the update frequency of the pseudo-key."]
     #[inline(always)]
-    pub fn rng_cnt(&mut self) -> RNG_CNT_W<PSEUDO_SPEC> {
+    pub fn rng_cnt(&mut self) -> RNG_CNT_W<'_, PSEUDO_SPEC> {
         RNG_CNT_W::new(self, 7)
     }
 }

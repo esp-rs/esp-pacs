@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - 32 bits data buffer 0, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
     #[inline(always)]
-    pub fn buf(&mut self) -> BUF_W<W_SPEC> {
+    pub fn buf(&mut self) -> BUF_W<'_, W_SPEC> {
         BUF_W::new(self, 0)
     }
 }

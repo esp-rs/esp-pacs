@@ -68,28 +68,28 @@ impl W {
     #[inline(always)]
     pub fn sdio_slc0_txdata_burst_len(
         &mut self,
-    ) -> SDIO_SLC0_TXDATA_BURST_LEN_W<SLC_BURST_LEN_SPEC> {
+    ) -> SDIO_SLC0_TXDATA_BURST_LEN_W<'_, SLC_BURST_LEN_SPEC> {
         SDIO_SLC0_TXDATA_BURST_LEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures SLC0 slave to host channel AHB burst type."]
     #[inline(always)]
     pub fn sdio_slc0_rxdata_burst_len(
         &mut self,
-    ) -> SDIO_SLC0_RXDATA_BURST_LEN_W<SLC_BURST_LEN_SPEC> {
+    ) -> SDIO_SLC0_RXDATA_BURST_LEN_W<'_, SLC_BURST_LEN_SPEC> {
         SDIO_SLC0_RXDATA_BURST_LEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures SLC1 host to slave channel AHB burst type."]
     #[inline(always)]
     pub fn sdio_slc1_txdata_burst_len(
         &mut self,
-    ) -> SDIO_SLC1_TXDATA_BURST_LEN_W<SLC_BURST_LEN_SPEC> {
+    ) -> SDIO_SLC1_TXDATA_BURST_LEN_W<'_, SLC_BURST_LEN_SPEC> {
         SDIO_SLC1_TXDATA_BURST_LEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures SLC1 slave to host channel AHB burst type."]
     #[inline(always)]
     pub fn sdio_slc1_rxdata_burst_len(
         &mut self,
-    ) -> SDIO_SLC1_RXDATA_BURST_LEN_W<SLC_BURST_LEN_SPEC> {
+    ) -> SDIO_SLC1_RXDATA_BURST_LEN_W<'_, SLC_BURST_LEN_SPEC> {
         SDIO_SLC1_RXDATA_BURST_LEN_W::new(self, 3)
     }
 }

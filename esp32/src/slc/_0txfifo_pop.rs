@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn slc0_txfifo_pop(&mut self) -> SLC0_TXFIFO_POP_W<_0TXFIFO_POP_SPEC> {
+    pub fn slc0_txfifo_pop(&mut self) -> SLC0_TXFIFO_POP_W<'_, _0TXFIFO_POP_SPEC> {
         SLC0_TXFIFO_POP_W::new(self, 16)
     }
 }

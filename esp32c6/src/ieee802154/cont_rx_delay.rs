@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn cont_rx_delay(&mut self) -> CONT_RX_DELAY_W<CONT_RX_DELAY_SPEC> {
+    pub fn cont_rx_delay(&mut self) -> CONT_RX_DELAY_W<'_, CONT_RX_DELAY_SPEC> {
         CONT_RX_DELAY_W::new(self, 0)
     }
 }

@@ -114,17 +114,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - This register is used to generate the CRYPTO_DMA_INFIFO_FULL_WM_INT interrupt when the byte number is up to the value of the register."]
     #[inline(always)]
-    pub fn infifo_full_thrs(&mut self) -> INFIFO_FULL_THRS_W<CONF1_SPEC> {
+    pub fn infifo_full_thrs(&mut self) -> INFIFO_FULL_THRS_W<'_, CONF1_SPEC> {
         INFIFO_FULL_THRS_W::new(self, 0)
     }
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
-    pub fn check_owner(&mut self) -> CHECK_OWNER_W<CONF1_SPEC> {
+    pub fn check_owner(&mut self) -> CHECK_OWNER_W<'_, CONF1_SPEC> {
         CHECK_OWNER_W::new(self, 12)
     }
     #[doc = "Bits 13:14 - DMA access external memory block size. 0: 16 bytes; 1: 32 bytes; 2: 64 bytes; 3:Reserved."]
     #[inline(always)]
-    pub fn ext_mem_bk_size(&mut self) -> EXT_MEM_BK_SIZE_W<CONF1_SPEC> {
+    pub fn ext_mem_bk_size(&mut self) -> EXT_MEM_BK_SIZE_W<'_, CONF1_SPEC> {
         EXT_MEM_BK_SIZE_W::new(self, 13)
     }
 }

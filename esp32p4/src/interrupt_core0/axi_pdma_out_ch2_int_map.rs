@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core0_axi_pdma_out_ch2_int_map(
         &mut self,
-    ) -> CORE0_AXI_PDMA_OUT_CH2_INT_MAP_W<AXI_PDMA_OUT_CH2_INT_MAP_SPEC> {
+    ) -> CORE0_AXI_PDMA_OUT_CH2_INT_MAP_W<'_, AXI_PDMA_OUT_CH2_INT_MAP_SPEC> {
         CORE0_AXI_PDMA_OUT_CH2_INT_MAP_W::new(self, 0)
     }
 }

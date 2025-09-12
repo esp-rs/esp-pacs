@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - ******* Description ***********"]
     #[inline(always)]
-    pub fn sram_ace2_attr(&mut self) -> SRAM_ACE2_ATTR_W<SRAM_ACE2_ATTR_SPEC> {
+    pub fn sram_ace2_attr(&mut self) -> SRAM_ACE2_ATTR_W<'_, SRAM_ACE2_ATTR_SPEC> {
         SRAM_ACE2_ATTR_W::new(self, 0)
     }
 }

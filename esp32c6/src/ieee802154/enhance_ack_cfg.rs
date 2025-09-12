@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn tx_enh_ack_generate_done_notify(
         &mut self,
-    ) -> TX_ENH_ACK_GENERATE_DONE_NOTIFY_W<ENHANCE_ACK_CFG_SPEC> {
+    ) -> TX_ENH_ACK_GENERATE_DONE_NOTIFY_W<'_, ENHANCE_ACK_CFG_SPEC> {
         TX_ENH_ACK_GENERATE_DONE_NOTIFY_W::new(self, 0)
     }
 }

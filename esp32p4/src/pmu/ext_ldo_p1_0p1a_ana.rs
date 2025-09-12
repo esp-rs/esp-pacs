@@ -54,22 +54,24 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 23:25 - need_des"]
     #[inline(always)]
-    pub fn ana_0p1a_mul_1(&mut self) -> ANA_0P1A_MUL_1_W<EXT_LDO_P1_0P1A_ANA_SPEC> {
+    pub fn ana_0p1a_mul_1(&mut self) -> ANA_0P1A_MUL_1_W<'_, EXT_LDO_P1_0P1A_ANA_SPEC> {
         ANA_0P1A_MUL_1_W::new(self, 23)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    pub fn ana_0p1a_en_vdet_1(&mut self) -> ANA_0P1A_EN_VDET_1_W<EXT_LDO_P1_0P1A_ANA_SPEC> {
+    pub fn ana_0p1a_en_vdet_1(&mut self) -> ANA_0P1A_EN_VDET_1_W<'_, EXT_LDO_P1_0P1A_ANA_SPEC> {
         ANA_0P1A_EN_VDET_1_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    pub fn ana_0p1a_en_cur_lim_1(&mut self) -> ANA_0P1A_EN_CUR_LIM_1_W<EXT_LDO_P1_0P1A_ANA_SPEC> {
+    pub fn ana_0p1a_en_cur_lim_1(
+        &mut self,
+    ) -> ANA_0P1A_EN_CUR_LIM_1_W<'_, EXT_LDO_P1_0P1A_ANA_SPEC> {
         ANA_0P1A_EN_CUR_LIM_1_W::new(self, 27)
     }
     #[doc = "Bits 28:31 - need_des"]
     #[inline(always)]
-    pub fn ana_0p1a_dref_1(&mut self) -> ANA_0P1A_DREF_1_W<EXT_LDO_P1_0P1A_ANA_SPEC> {
+    pub fn ana_0p1a_dref_1(&mut self) -> ANA_0P1A_DREF_1_W<'_, EXT_LDO_P1_0P1A_ANA_SPEC> {
         ANA_0P1A_DREF_1_W::new(self, 28)
     }
 }

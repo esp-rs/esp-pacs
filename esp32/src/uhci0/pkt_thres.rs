@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12 - when the amount of packet payload is greater than this value the process of receiving data is done."]
     #[inline(always)]
-    pub fn pkt_thrs(&mut self) -> PKT_THRS_W<PKT_THRES_SPEC> {
+    pub fn pkt_thrs(&mut self) -> PKT_THRS_W<'_, PKT_THRES_SPEC> {
         PKT_THRS_W::new(self, 0)
     }
 }

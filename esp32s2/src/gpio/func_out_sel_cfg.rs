@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - Selection control for GPIO output n. If a value s (0<=s<256) is written to this field, the peripheral output signal s will be connected to GPIO output n. If a value 256 is written to this field, bit n of GPIO_OUT_REG/GPIO_OUT1_REG and GPIO_ENABLE_REG/GPIO_ENABLE1_REG will be selected as the output value and output enable."]
     #[inline(always)]
-    pub fn out_sel(&mut self) -> OUT_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
+    pub fn out_sel(&mut self) -> OUT_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
         OUT_SEL_W::new(self, 0)
     }
     #[doc = "Bit 9 - 0: Do not invert the output value; 1: Invert the output value."]
     #[inline(always)]
-    pub fn inv_sel(&mut self) -> INV_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
+    pub fn inv_sel(&mut self) -> INV_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
         INV_SEL_W::new(self, 9)
     }
     #[doc = "Bit 10 - 0: Use output enable signal from peripheral; 1: Force the output enable signal to be sourced from bit n of GPIO_ENABLE_REG."]
     #[inline(always)]
-    pub fn oen_sel(&mut self) -> OEN_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
+    pub fn oen_sel(&mut self) -> OEN_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
         OEN_SEL_W::new(self, 10)
     }
     #[doc = "Bit 11 - 0: Do not invert the output enable signal; 1: Invert the output enable signal."]
     #[inline(always)]
-    pub fn oen_inv_sel(&mut self) -> OEN_INV_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
+    pub fn oen_inv_sel(&mut self) -> OEN_INV_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
         OEN_INV_SEL_W::new(self, 11)
     }
 }

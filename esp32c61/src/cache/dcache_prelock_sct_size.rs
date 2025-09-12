@@ -36,14 +36,14 @@ impl W {
     #[inline(always)]
     pub fn cache_prelock_sct0_size(
         &mut self,
-    ) -> CACHE_PRELOCK_SCT0_SIZE_W<DCACHE_PRELOCK_SCT_SIZE_SPEC> {
+    ) -> CACHE_PRELOCK_SCT0_SIZE_W<'_, DCACHE_PRELOCK_SCT_SIZE_SPEC> {
         CACHE_PRELOCK_SCT0_SIZE_W::new(self, 0)
     }
     #[doc = "Bits 16:29 - Those bits are used to configure the size of the second section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT1_ADDR_REG"]
     #[inline(always)]
     pub fn cache_prelock_sct1_size(
         &mut self,
-    ) -> CACHE_PRELOCK_SCT1_SIZE_W<DCACHE_PRELOCK_SCT_SIZE_SPEC> {
+    ) -> CACHE_PRELOCK_SCT1_SIZE_W<'_, DCACHE_PRELOCK_SCT_SIZE_SPEC> {
         CACHE_PRELOCK_SCT1_SIZE_W::new(self, 16)
     }
 }

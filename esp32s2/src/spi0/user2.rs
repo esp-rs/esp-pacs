@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn usr_command_value(&mut self) -> USR_COMMAND_VALUE_W<USER2_SPEC> {
+    pub fn usr_command_value(&mut self) -> USR_COMMAND_VALUE_W<'_, USER2_SPEC> {
         USR_COMMAND_VALUE_W::new(self, 0)
     }
     #[doc = "Bits 28:31"]
     #[inline(always)]
-    pub fn usr_command_bitlen(&mut self) -> USR_COMMAND_BITLEN_W<USER2_SPEC> {
+    pub fn usr_command_bitlen(&mut self) -> USR_COMMAND_BITLEN_W<'_, USER2_SPEC> {
         USR_COMMAND_BITLEN_W::new(self, 28)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Configures the value to be loaded to UNIT0, low 32 bits."]
     #[inline(always)]
-    pub fn load_lo(&mut self) -> LOAD_LO_W<LO_SPEC> {
+    pub fn load_lo(&mut self) -> LOAD_LO_W<'_, LO_SPEC> {
         LOAD_LO_W::new(self, 0)
     }
 }

@@ -25,133 +25,133 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field.</div>"]
     #[inline(always)]
-    pub fn ch_tx_end(&mut self, n: u8) -> CH_TX_END_W<INT_CLR_SPEC> {
+    pub fn ch_tx_end(&mut self, n: u8) -> CH_TX_END_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_TX_END_W::new(self, n)
     }
     #[doc = "Bit 0 - Set this bit to clear theCH0_TX_END_INT interrupt."]
     #[inline(always)]
-    pub fn ch0_tx_end(&mut self) -> CH_TX_END_W<INT_CLR_SPEC> {
+    pub fn ch0_tx_end(&mut self) -> CH_TX_END_W<'_, INT_CLR_SPEC> {
         CH_TX_END_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to clear theCH1_TX_END_INT interrupt."]
     #[inline(always)]
-    pub fn ch1_tx_end(&mut self) -> CH_TX_END_W<INT_CLR_SPEC> {
+    pub fn ch1_tx_end(&mut self) -> CH_TX_END_W<'_, INT_CLR_SPEC> {
         CH_TX_END_W::new(self, 1)
     }
     #[doc = "Set this bit to clear theCH(2-3)_RX_END_INT interrupt."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH2_RX_END` field.</div>"]
     #[inline(always)]
-    pub fn ch_rx_end(&mut self, n: u8) -> CH_RX_END_W<INT_CLR_SPEC> {
+    pub fn ch_rx_end(&mut self, n: u8) -> CH_RX_END_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_RX_END_W::new(self, n + 2)
     }
     #[doc = "Bit 2 - Set this bit to clear theCH2_RX_END_INT interrupt."]
     #[inline(always)]
-    pub fn ch2_rx_end(&mut self) -> CH_RX_END_W<INT_CLR_SPEC> {
+    pub fn ch2_rx_end(&mut self) -> CH_RX_END_W<'_, INT_CLR_SPEC> {
         CH_RX_END_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to clear theCH3_RX_END_INT interrupt."]
     #[inline(always)]
-    pub fn ch3_rx_end(&mut self) -> CH_RX_END_W<INT_CLR_SPEC> {
+    pub fn ch3_rx_end(&mut self) -> CH_RX_END_W<'_, INT_CLR_SPEC> {
         CH_RX_END_W::new(self, 3)
     }
     #[doc = "TODO"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_ERR` field.</div>"]
     #[inline(always)]
-    pub fn ch_tx_err(&mut self, n: u8) -> CH_TX_ERR_W<INT_CLR_SPEC> {
+    pub fn ch_tx_err(&mut self, n: u8) -> CH_TX_ERR_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_TX_ERR_W::new(self, n + 4)
     }
     #[doc = "Bit 4 - TODO"]
     #[inline(always)]
-    pub fn ch0_tx_err(&mut self) -> CH_TX_ERR_W<INT_CLR_SPEC> {
+    pub fn ch0_tx_err(&mut self) -> CH_TX_ERR_W<'_, INT_CLR_SPEC> {
         CH_TX_ERR_W::new(self, 4)
     }
     #[doc = "Bit 5 - TODO"]
     #[inline(always)]
-    pub fn ch1_tx_err(&mut self) -> CH_TX_ERR_W<INT_CLR_SPEC> {
+    pub fn ch1_tx_err(&mut self) -> CH_TX_ERR_W<'_, INT_CLR_SPEC> {
         CH_TX_ERR_W::new(self, 5)
     }
     #[doc = "TODO"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH2_RX_ERR` field.</div>"]
     #[inline(always)]
-    pub fn ch_rx_err(&mut self, n: u8) -> CH_RX_ERR_W<INT_CLR_SPEC> {
+    pub fn ch_rx_err(&mut self, n: u8) -> CH_RX_ERR_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_RX_ERR_W::new(self, n + 6)
     }
     #[doc = "Bit 6 - TODO"]
     #[inline(always)]
-    pub fn ch2_rx_err(&mut self) -> CH_RX_ERR_W<INT_CLR_SPEC> {
+    pub fn ch2_rx_err(&mut self) -> CH_RX_ERR_W<'_, INT_CLR_SPEC> {
         CH_RX_ERR_W::new(self, 6)
     }
     #[doc = "Bit 7 - TODO"]
     #[inline(always)]
-    pub fn ch3_rx_err(&mut self) -> CH_RX_ERR_W<INT_CLR_SPEC> {
+    pub fn ch3_rx_err(&mut self) -> CH_RX_ERR_W<'_, INT_CLR_SPEC> {
         CH_RX_ERR_W::new(self, 7)
     }
     #[doc = "Set this bit to clear theCH(0-1)_TX_THR_EVENT_INT interrupt."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field.</div>"]
     #[inline(always)]
-    pub fn ch_tx_thr_event(&mut self, n: u8) -> CH_TX_THR_EVENT_W<INT_CLR_SPEC> {
+    pub fn ch_tx_thr_event(&mut self, n: u8) -> CH_TX_THR_EVENT_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_TX_THR_EVENT_W::new(self, n + 8)
     }
     #[doc = "Bit 8 - Set this bit to clear theCH0_TX_THR_EVENT_INT interrupt."]
     #[inline(always)]
-    pub fn ch0_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_CLR_SPEC> {
+    pub fn ch0_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<'_, INT_CLR_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set this bit to clear theCH1_TX_THR_EVENT_INT interrupt."]
     #[inline(always)]
-    pub fn ch1_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_CLR_SPEC> {
+    pub fn ch1_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<'_, INT_CLR_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 9)
     }
     #[doc = "Set this bit to clear theCH(2-3)_RX_THR_EVENT_INT interrupt."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH2_RX_THR_EVENT` field.</div>"]
     #[inline(always)]
-    pub fn ch_rx_thr_event(&mut self, n: u8) -> CH_RX_THR_EVENT_W<INT_CLR_SPEC> {
+    pub fn ch_rx_thr_event(&mut self, n: u8) -> CH_RX_THR_EVENT_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_RX_THR_EVENT_W::new(self, n + 10)
     }
     #[doc = "Bit 10 - Set this bit to clear theCH2_RX_THR_EVENT_INT interrupt."]
     #[inline(always)]
-    pub fn ch2_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<INT_CLR_SPEC> {
+    pub fn ch2_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<'_, INT_CLR_SPEC> {
         CH_RX_THR_EVENT_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to clear theCH3_RX_THR_EVENT_INT interrupt."]
     #[inline(always)]
-    pub fn ch3_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<INT_CLR_SPEC> {
+    pub fn ch3_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<'_, INT_CLR_SPEC> {
         CH_RX_THR_EVENT_W::new(self, 11)
     }
     #[doc = "Set this bit to clear theCH(0-1)_TX_LOOP_INT interrupt."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field.</div>"]
     #[inline(always)]
-    pub fn ch_tx_loop(&mut self, n: u8) -> CH_TX_LOOP_W<INT_CLR_SPEC> {
+    pub fn ch_tx_loop(&mut self, n: u8) -> CH_TX_LOOP_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_TX_LOOP_W::new(self, n + 12)
     }
     #[doc = "Bit 12 - Set this bit to clear theCH0_TX_LOOP_INT interrupt."]
     #[inline(always)]
-    pub fn ch0_tx_loop(&mut self) -> CH_TX_LOOP_W<INT_CLR_SPEC> {
+    pub fn ch0_tx_loop(&mut self) -> CH_TX_LOOP_W<'_, INT_CLR_SPEC> {
         CH_TX_LOOP_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set this bit to clear theCH1_TX_LOOP_INT interrupt."]
     #[inline(always)]
-    pub fn ch1_tx_loop(&mut self) -> CH_TX_LOOP_W<INT_CLR_SPEC> {
+    pub fn ch1_tx_loop(&mut self) -> CH_TX_LOOP_W<'_, INT_CLR_SPEC> {
         CH_TX_LOOP_W::new(self, 13)
     }
 }

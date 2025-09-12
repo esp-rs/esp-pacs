@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<ONE_BLOCK_SPEC> {
 impl W {
     #[doc = "Bit 0 - Don't have to do padding."]
     #[inline(always)]
-    pub fn set_one_block(&mut self) -> SET_ONE_BLOCK_W<ONE_BLOCK_SPEC> {
+    pub fn set_one_block(&mut self) -> SET_ONE_BLOCK_W<'_, ONE_BLOCK_SPEC> {
         SET_ONE_BLOCK_W::new(self, 0)
     }
 }

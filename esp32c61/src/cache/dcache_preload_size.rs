@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - Those bits are used to configure the size of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOAD_ADDR_REG"]
     #[inline(always)]
-    pub fn cache_preload_size(&mut self) -> CACHE_PRELOAD_SIZE_W<DCACHE_PRELOAD_SIZE_SPEC> {
+    pub fn cache_preload_size(&mut self) -> CACHE_PRELOAD_SIZE_W<'_, DCACHE_PRELOAD_SIZE_SPEC> {
         CACHE_PRELOAD_SIZE_W::new(self, 0)
     }
 }

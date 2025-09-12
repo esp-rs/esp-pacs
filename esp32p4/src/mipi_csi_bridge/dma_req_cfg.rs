@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - DMA burst length."]
     #[inline(always)]
-    pub fn dma_burst_len(&mut self) -> DMA_BURST_LEN_W<DMA_REQ_CFG_SPEC> {
+    pub fn dma_burst_len(&mut self) -> DMA_BURST_LEN_W<'_, DMA_REQ_CFG_SPEC> {
         DMA_BURST_LEN_W::new(self, 0)
     }
     #[doc = "Bit 12 - 1: reg_dma_burst_len & reg_dma_burst_len will be updated by dma block finish. 0: updated by frame."]
     #[inline(always)]
-    pub fn dma_cfg_upd_by_blk(&mut self) -> DMA_CFG_UPD_BY_BLK_W<DMA_REQ_CFG_SPEC> {
+    pub fn dma_cfg_upd_by_blk(&mut self) -> DMA_CFG_UPD_BY_BLK_W<'_, DMA_REQ_CFG_SPEC> {
         DMA_CFG_UPD_BY_BLK_W::new(self, 12)
     }
     #[doc = "Bit 16 - 1: mask dma request when reading frame info. 0: disable mask."]
     #[inline(always)]
-    pub fn dma_force_rd_status(&mut self) -> DMA_FORCE_RD_STATUS_W<DMA_REQ_CFG_SPEC> {
+    pub fn dma_force_rd_status(&mut self) -> DMA_FORCE_RD_STATUS_W<'_, DMA_REQ_CFG_SPEC> {
         DMA_FORCE_RD_STATUS_W::new(self, 16)
     }
 }

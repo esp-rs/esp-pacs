@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - NA"]
     #[inline(always)]
-    pub fn wr_cmd_size(&mut self) -> WR_CMD_SIZE_W<DBI_CMDSIZE_SPEC> {
+    pub fn wr_cmd_size(&mut self) -> WR_CMD_SIZE_W<'_, DBI_CMDSIZE_SPEC> {
         WR_CMD_SIZE_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - NA"]
     #[inline(always)]
-    pub fn allowed_cmd_size(&mut self) -> ALLOWED_CMD_SIZE_W<DBI_CMDSIZE_SPEC> {
+    pub fn allowed_cmd_size(&mut self) -> ALLOWED_CMD_SIZE_W<'_, DBI_CMDSIZE_SPEC> {
         ALLOWED_CMD_SIZE_W::new(self, 16)
     }
 }

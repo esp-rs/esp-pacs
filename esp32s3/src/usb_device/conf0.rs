@@ -164,77 +164,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Select internal/external PHY"]
     #[inline(always)]
-    pub fn phy_sel(&mut self) -> PHY_SEL_W<CONF0_SPEC> {
+    pub fn phy_sel(&mut self) -> PHY_SEL_W<'_, CONF0_SPEC> {
         PHY_SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable software control USB D+ D- exchange"]
     #[inline(always)]
-    pub fn exchg_pins_override(&mut self) -> EXCHG_PINS_OVERRIDE_W<CONF0_SPEC> {
+    pub fn exchg_pins_override(&mut self) -> EXCHG_PINS_OVERRIDE_W<'_, CONF0_SPEC> {
         EXCHG_PINS_OVERRIDE_W::new(self, 1)
     }
     #[doc = "Bit 2 - USB D+ D- exchange"]
     #[inline(always)]
-    pub fn exchg_pins(&mut self) -> EXCHG_PINS_W<CONF0_SPEC> {
+    pub fn exchg_pins(&mut self) -> EXCHG_PINS_W<'_, CONF0_SPEC> {
         EXCHG_PINS_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - Control single-end input high threshold,1.76V to 2V, step 80mV"]
     #[inline(always)]
-    pub fn vrefh(&mut self) -> VREFH_W<CONF0_SPEC> {
+    pub fn vrefh(&mut self) -> VREFH_W<'_, CONF0_SPEC> {
         VREFH_W::new(self, 3)
     }
     #[doc = "Bits 5:6 - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
     #[inline(always)]
-    pub fn vrefl(&mut self) -> VREFL_W<CONF0_SPEC> {
+    pub fn vrefl(&mut self) -> VREFL_W<'_, CONF0_SPEC> {
         VREFL_W::new(self, 5)
     }
     #[doc = "Bit 7 - Enable software control input threshold"]
     #[inline(always)]
-    pub fn vref_override(&mut self) -> VREF_OVERRIDE_W<CONF0_SPEC> {
+    pub fn vref_override(&mut self) -> VREF_OVERRIDE_W<'_, CONF0_SPEC> {
         VREF_OVERRIDE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Enable software control USB D+ D- pullup pulldown"]
     #[inline(always)]
-    pub fn pad_pull_override(&mut self) -> PAD_PULL_OVERRIDE_W<CONF0_SPEC> {
+    pub fn pad_pull_override(&mut self) -> PAD_PULL_OVERRIDE_W<'_, CONF0_SPEC> {
         PAD_PULL_OVERRIDE_W::new(self, 8)
     }
     #[doc = "Bit 9 - Control USB D+ pull up."]
     #[inline(always)]
-    pub fn dp_pullup(&mut self) -> DP_PULLUP_W<CONF0_SPEC> {
+    pub fn dp_pullup(&mut self) -> DP_PULLUP_W<'_, CONF0_SPEC> {
         DP_PULLUP_W::new(self, 9)
     }
     #[doc = "Bit 10 - Control USB D+ pull down."]
     #[inline(always)]
-    pub fn dp_pulldown(&mut self) -> DP_PULLDOWN_W<CONF0_SPEC> {
+    pub fn dp_pulldown(&mut self) -> DP_PULLDOWN_W<'_, CONF0_SPEC> {
         DP_PULLDOWN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Control USB D- pull up."]
     #[inline(always)]
-    pub fn dm_pullup(&mut self) -> DM_PULLUP_W<CONF0_SPEC> {
+    pub fn dm_pullup(&mut self) -> DM_PULLUP_W<'_, CONF0_SPEC> {
         DM_PULLUP_W::new(self, 11)
     }
     #[doc = "Bit 12 - Control USB D- pull down."]
     #[inline(always)]
-    pub fn dm_pulldown(&mut self) -> DM_PULLDOWN_W<CONF0_SPEC> {
+    pub fn dm_pulldown(&mut self) -> DM_PULLDOWN_W<'_, CONF0_SPEC> {
         DM_PULLDOWN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Control pull up value."]
     #[inline(always)]
-    pub fn pullup_value(&mut self) -> PULLUP_VALUE_W<CONF0_SPEC> {
+    pub fn pullup_value(&mut self) -> PULLUP_VALUE_W<'_, CONF0_SPEC> {
         PULLUP_VALUE_W::new(self, 13)
     }
     #[doc = "Bit 14 - Enable USB pad function."]
     #[inline(always)]
-    pub fn usb_pad_enable(&mut self) -> USB_PAD_ENABLE_W<CONF0_SPEC> {
+    pub fn usb_pad_enable(&mut self) -> USB_PAD_ENABLE_W<'_, CONF0_SPEC> {
         USB_PAD_ENABLE_W::new(self, 14)
     }
     #[doc = "Bit 15 - 0: TX output at clock negedge. 1: Tx output at clock posedge."]
     #[inline(always)]
-    pub fn phy_tx_edge_sel(&mut self) -> PHY_TX_EDGE_SEL_W<CONF0_SPEC> {
+    pub fn phy_tx_edge_sel(&mut self) -> PHY_TX_EDGE_SEL_W<'_, CONF0_SPEC> {
         PHY_TX_EDGE_SEL_W::new(self, 15)
     }
     #[doc = "Bit 16 - Set this bit usb_jtag, the connection between usb_jtag and internal JTAG is disconnected, and MTMS, MTDI, MTCK are output through GPIO Matrix, MTDO is input through GPIO Matrix."]
     #[inline(always)]
-    pub fn usb_jtag_bridge_en(&mut self) -> USB_JTAG_BRIDGE_EN_W<CONF0_SPEC> {
+    pub fn usb_jtag_bridge_en(&mut self) -> USB_JTAG_BRIDGE_EN_W<'_, CONF0_SPEC> {
         USB_JTAG_BRIDGE_EN_W::new(self, 16)
     }
 }

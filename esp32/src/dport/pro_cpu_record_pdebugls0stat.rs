@@ -133,70 +133,70 @@ impl W {
     #[inline(always)]
     pub fn record_pdebugls0stat_type(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_TYPE_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+    ) -> RECORD_PDEBUGLS0STAT_TYPE_W<'_, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
         RECORD_PDEBUGLS0STAT_TYPE_W::new(self, 0)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
     pub fn record_pdebugls0stat_sz(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_SZ_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+    ) -> RECORD_PDEBUGLS0STAT_SZ_W<'_, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
         RECORD_PDEBUGLS0STAT_SZ_W::new(self, 4)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn record_pdebugls0stat_dtlbm(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_DTLBM_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+    ) -> RECORD_PDEBUGLS0STAT_DTLBM_W<'_, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
         RECORD_PDEBUGLS0STAT_DTLBM_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn record_pdebugls0stat_dcm(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_DCM_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+    ) -> RECORD_PDEBUGLS0STAT_DCM_W<'_, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
         RECORD_PDEBUGLS0STAT_DCM_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn record_pdebugls0stat_dch(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_DCH_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+    ) -> RECORD_PDEBUGLS0STAT_DCH_W<'_, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
         RECORD_PDEBUGLS0STAT_DCH_W::new(self, 10)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn record_pdebugls0stat_uc(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_UC_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+    ) -> RECORD_PDEBUGLS0STAT_UC_W<'_, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
         RECORD_PDEBUGLS0STAT_UC_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn record_pdebugls0stat_wb(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_WB_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+    ) -> RECORD_PDEBUGLS0STAT_WB_W<'_, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
         RECORD_PDEBUGLS0STAT_WB_W::new(self, 13)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn record_pdebugls0stat_coh(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_COH_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+    ) -> RECORD_PDEBUGLS0STAT_COH_W<'_, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
         RECORD_PDEBUGLS0STAT_COH_W::new(self, 16)
     }
     #[doc = "Bits 17:18"]
     #[inline(always)]
     pub fn record_pdebugls0stat_stcoh(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_STCOH_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+    ) -> RECORD_PDEBUGLS0STAT_STCOH_W<'_, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
         RECORD_PDEBUGLS0STAT_STCOH_W::new(self, 17)
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]
     pub fn record_pdebugls0stat_tgt(
         &mut self,
-    ) -> RECORD_PDEBUGLS0STAT_TGT_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+    ) -> RECORD_PDEBUGLS0STAT_TGT_W<'_, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
         RECORD_PDEBUGLS0STAT_TGT_W::new(self, 20)
     }
 }

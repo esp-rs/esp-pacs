@@ -204,97 +204,97 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn fdummy_out(&mut self) -> FDUMMY_OUT_W<CTRL_SPEC> {
+    pub fn fdummy_out(&mut self) -> FDUMMY_OUT_W<'_, CTRL_SPEC> {
         FDUMMY_OUT_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn fdout_oct(&mut self) -> FDOUT_OCT_W<CTRL_SPEC> {
+    pub fn fdout_oct(&mut self) -> FDOUT_OCT_W<'_, CTRL_SPEC> {
         FDOUT_OCT_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn fdin_oct(&mut self) -> FDIN_OCT_W<CTRL_SPEC> {
+    pub fn fdin_oct(&mut self) -> FDIN_OCT_W<'_, CTRL_SPEC> {
         FDIN_OCT_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn faddr_oct(&mut self) -> FADDR_OCT_W<CTRL_SPEC> {
+    pub fn faddr_oct(&mut self) -> FADDR_OCT_W<'_, CTRL_SPEC> {
         FADDR_OCT_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn fcmd_dual(&mut self) -> FCMD_DUAL_W<CTRL_SPEC> {
+    pub fn fcmd_dual(&mut self) -> FCMD_DUAL_W<'_, CTRL_SPEC> {
         FCMD_DUAL_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn fcmd_quad(&mut self) -> FCMD_QUAD_W<CTRL_SPEC> {
+    pub fn fcmd_quad(&mut self) -> FCMD_QUAD_W<'_, CTRL_SPEC> {
         FCMD_QUAD_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn fcmd_oct(&mut self) -> FCMD_OCT_W<CTRL_SPEC> {
+    pub fn fcmd_oct(&mut self) -> FCMD_OCT_W<'_, CTRL_SPEC> {
         FCMD_OCT_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn fcs_crc_en(&mut self) -> FCS_CRC_EN_W<CTRL_SPEC> {
+    pub fn fcs_crc_en(&mut self) -> FCS_CRC_EN_W<'_, CTRL_SPEC> {
         FCS_CRC_EN_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn tx_crc_en(&mut self) -> TX_CRC_EN_W<CTRL_SPEC> {
+    pub fn tx_crc_en(&mut self) -> TX_CRC_EN_W<'_, CTRL_SPEC> {
         TX_CRC_EN_W::new(self, 11)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn fastrd_mode(&mut self) -> FASTRD_MODE_W<CTRL_SPEC> {
+    pub fn fastrd_mode(&mut self) -> FASTRD_MODE_W<'_, CTRL_SPEC> {
         FASTRD_MODE_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn fread_dual(&mut self) -> FREAD_DUAL_W<CTRL_SPEC> {
+    pub fn fread_dual(&mut self) -> FREAD_DUAL_W<'_, CTRL_SPEC> {
         FREAD_DUAL_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn resandres(&mut self) -> RESANDRES_W<CTRL_SPEC> {
+    pub fn resandres(&mut self) -> RESANDRES_W<'_, CTRL_SPEC> {
         RESANDRES_W::new(self, 15)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn q_pol(&mut self) -> Q_POL_W<CTRL_SPEC> {
+    pub fn q_pol(&mut self) -> Q_POL_W<'_, CTRL_SPEC> {
         Q_POL_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    pub fn d_pol(&mut self) -> D_POL_W<CTRL_SPEC> {
+    pub fn d_pol(&mut self) -> D_POL_W<'_, CTRL_SPEC> {
         D_POL_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn fread_quad(&mut self) -> FREAD_QUAD_W<CTRL_SPEC> {
+    pub fn fread_quad(&mut self) -> FREAD_QUAD_W<'_, CTRL_SPEC> {
         FREAD_QUAD_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    pub fn wp_reg(&mut self) -> WP_REG_W<CTRL_SPEC> {
+    pub fn wp_reg(&mut self) -> WP_REG_W<'_, CTRL_SPEC> {
         WP_REG_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    pub fn wrsr_2b(&mut self) -> WRSR_2B_W<CTRL_SPEC> {
+    pub fn wrsr_2b(&mut self) -> WRSR_2B_W<'_, CTRL_SPEC> {
         WRSR_2B_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    pub fn fread_dio(&mut self) -> FREAD_DIO_W<CTRL_SPEC> {
+    pub fn fread_dio(&mut self) -> FREAD_DIO_W<'_, CTRL_SPEC> {
         FREAD_DIO_W::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn fread_qio(&mut self) -> FREAD_QIO_W<CTRL_SPEC> {
+    pub fn fread_qio(&mut self) -> FREAD_QIO_W<'_, CTRL_SPEC> {
         FREAD_QIO_W::new(self, 24)
     }
 }

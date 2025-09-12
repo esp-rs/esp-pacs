@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:25 - Configures COMP0 alarm period."]
     #[inline(always)]
-    pub fn period(&mut self) -> PERIOD_W<TARGET_CONF_SPEC> {
+    pub fn period(&mut self) -> PERIOD_W<'_, TARGET_CONF_SPEC> {
         PERIOD_W::new(self, 0)
     }
     #[doc = "Bit 30 - Selects the two alarm modes for COMP0. \\\\ 0: Target mode\\\\ 1: Period mode\\\\"]
     #[inline(always)]
-    pub fn period_mode(&mut self) -> PERIOD_MODE_W<TARGET_CONF_SPEC> {
+    pub fn period_mode(&mut self) -> PERIOD_MODE_W<'_, TARGET_CONF_SPEC> {
         PERIOD_MODE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Chooses the counter value for comparison with COMP0.\\\\ 0: Use the count value from UNIT$0\\\\ 1: Use the count value from UNIT$1\\\\"]
     #[inline(always)]
-    pub fn timer_unit_sel(&mut self) -> TIMER_UNIT_SEL_W<TARGET_CONF_SPEC> {
+    pub fn timer_unit_sel(&mut self) -> TIMER_UNIT_SEL_W<'_, TARGET_CONF_SPEC> {
         TIMER_UNIT_SEL_W::new(self, 31)
     }
 }

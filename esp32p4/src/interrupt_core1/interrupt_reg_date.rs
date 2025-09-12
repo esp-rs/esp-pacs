@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn core1_interrupt_reg_date(
         &mut self,
-    ) -> CORE1_INTERRUPT_REG_DATE_W<INTERRUPT_REG_DATE_SPEC> {
+    ) -> CORE1_INTERRUPT_REG_DATE_W<'_, INTERRUPT_REG_DATE_SPEC> {
         CORE1_INTERRUPT_REG_DATE_W::new(self, 0)
     }
 }

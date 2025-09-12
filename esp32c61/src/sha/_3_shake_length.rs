@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<_3_SHAKE_LENGTH_SPEC> {
 impl W {
     #[doc = "Bits 0:10 - SHAKE output hash word length"]
     #[inline(always)]
-    pub fn _3_shake_length(&mut self) -> _3_SHAKE_LENGTH_W<_3_SHAKE_LENGTH_SPEC> {
+    pub fn _3_shake_length(&mut self) -> _3_SHAKE_LENGTH_W<'_, _3_SHAKE_LENGTH_SPEC> {
         _3_SHAKE_LENGTH_W::new(self, 0)
     }
 }

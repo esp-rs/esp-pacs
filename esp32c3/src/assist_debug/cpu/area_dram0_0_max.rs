@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - reg_core_0_area_dram0_0_max"]
     #[inline(always)]
-    pub fn area_dram0_0_max(&mut self) -> AREA_DRAM0_0_MAX_W<AREA_DRAM0_0_MAX_SPEC> {
+    pub fn area_dram0_0_max(&mut self) -> AREA_DRAM0_0_MAX_W<'_, AREA_DRAM0_0_MAX_SPEC> {
         AREA_DRAM0_0_MAX_W::new(self, 0)
     }
 }

@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - I2S TX PDM Fp"]
     #[inline(always)]
-    pub fn tx_pdm_fp(&mut self) -> TX_PDM_FP_W<TX_PCM2PDM_CONF1_SPEC> {
+    pub fn tx_pdm_fp(&mut self) -> TX_PDM_FP_W<'_, TX_PCM2PDM_CONF1_SPEC> {
         TX_PDM_FP_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - I2S TX PDM Fs"]
     #[inline(always)]
-    pub fn tx_pdm_fs(&mut self) -> TX_PDM_FS_W<TX_PCM2PDM_CONF1_SPEC> {
+    pub fn tx_pdm_fs(&mut self) -> TX_PDM_FS_W<'_, TX_PCM2PDM_CONF1_SPEC> {
         TX_PDM_FS_W::new(self, 10)
     }
     #[doc = "Bits 20:22 - The fourth parameter of PDM TX IIR_HP filter stage 2 is (504 + I2S_TX_IIR_HP_MULT12_5\\[2:0\\])"]
     #[inline(always)]
-    pub fn tx_iir_hp_mult12_5(&mut self) -> TX_IIR_HP_MULT12_5_W<TX_PCM2PDM_CONF1_SPEC> {
+    pub fn tx_iir_hp_mult12_5(&mut self) -> TX_IIR_HP_MULT12_5_W<'_, TX_PCM2PDM_CONF1_SPEC> {
         TX_IIR_HP_MULT12_5_W::new(self, 20)
     }
     #[doc = "Bits 23:25 - The fourth parameter of PDM TX IIR_HP filter stage 1 is (504 + I2S_TX_IIR_HP_MULT12_0\\[2:0\\])"]
     #[inline(always)]
-    pub fn tx_iir_hp_mult12_0(&mut self) -> TX_IIR_HP_MULT12_0_W<TX_PCM2PDM_CONF1_SPEC> {
+    pub fn tx_iir_hp_mult12_0(&mut self) -> TX_IIR_HP_MULT12_0_W<'_, TX_PCM2PDM_CONF1_SPEC> {
         TX_IIR_HP_MULT12_0_W::new(self, 23)
     }
 }

@@ -144,67 +144,67 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
-    pub fn wdt_chip_reset_width(&mut self) -> WDT_CHIP_RESET_WIDTH_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_chip_reset_width(&mut self) -> WDT_CHIP_RESET_WIDTH_W<'_, WDTCONFIG0_SPEC> {
         WDT_CHIP_RESET_WIDTH_W::new(self, 0)
     }
     #[doc = "Bit 8 - need_des"]
     #[inline(always)]
-    pub fn wdt_chip_reset_en(&mut self) -> WDT_CHIP_RESET_EN_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_chip_reset_en(&mut self) -> WDT_CHIP_RESET_EN_W<'_, WDTCONFIG0_SPEC> {
         WDT_CHIP_RESET_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configure whether or not pause RWDT when chip is in sleep mode.\\\\0:Enable \\\\1:Disable"]
     #[inline(always)]
-    pub fn wdt_pause_in_slp(&mut self) -> WDT_PAUSE_IN_SLP_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_pause_in_slp(&mut self) -> WDT_PAUSE_IN_SLP_W<'_, WDTCONFIG0_SPEC> {
         WDT_PAUSE_IN_SLP_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configure whether or not to enable RWDT to reset CPU.\\\\0:Disable \\\\1:Enable"]
     #[inline(always)]
-    pub fn wdt_appcpu_reset_en(&mut self) -> WDT_APPCPU_RESET_EN_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_appcpu_reset_en(&mut self) -> WDT_APPCPU_RESET_EN_W<'_, WDTCONFIG0_SPEC> {
         WDT_APPCPU_RESET_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - need_des"]
     #[inline(always)]
-    pub fn wdt_procpu_reset_en(&mut self) -> WDT_PROCPU_RESET_EN_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_procpu_reset_en(&mut self) -> WDT_PROCPU_RESET_EN_W<'_, WDTCONFIG0_SPEC> {
         WDT_PROCPU_RESET_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Configure whether or not enable RWDT when chip is in SPI boot mode.\\\\0:Disable \\\\1:Enable"]
     #[inline(always)]
-    pub fn wdt_flashboot_mod_en(&mut self) -> WDT_FLASHBOOT_MOD_EN_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_flashboot_mod_en(&mut self) -> WDT_FLASHBOOT_MOD_EN_W<'_, WDTCONFIG0_SPEC> {
         WDT_FLASHBOOT_MOD_EN_W::new(self, 12)
     }
     #[doc = "Bits 13:15 - Configure the HP core reset time.\\\\Measurement unit: LP\\_DYN\\_FAST\\_CLK"]
     #[inline(always)]
-    pub fn wdt_sys_reset_length(&mut self) -> WDT_SYS_RESET_LENGTH_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_sys_reset_length(&mut self) -> WDT_SYS_RESET_LENGTH_W<'_, WDTCONFIG0_SPEC> {
         WDT_SYS_RESET_LENGTH_W::new(self, 13)
     }
     #[doc = "Bits 16:18 - Configure the HP CPU reset time.\\\\Measurement unit: LP\\_DYN\\_FAST\\_CLK"]
     #[inline(always)]
-    pub fn wdt_cpu_reset_length(&mut self) -> WDT_CPU_RESET_LENGTH_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_cpu_reset_length(&mut self) -> WDT_CPU_RESET_LENGTH_W<'_, WDTCONFIG0_SPEC> {
         WDT_CPU_RESET_LENGTH_W::new(self, 16)
     }
     #[doc = "Bits 19:21 - Configure the timeout action of stage3.\\\\0: No operation \\\\1:Generate interrupt \\\\2 :Generate HP CPU reset \\\\3:Generate HP core reset \\\\4 :Generate system reset."]
     #[inline(always)]
-    pub fn wdt_stg3(&mut self) -> WDT_STG3_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_stg3(&mut self) -> WDT_STG3_W<'_, WDTCONFIG0_SPEC> {
         WDT_STG3_W::new(self, 19)
     }
     #[doc = "Bits 22:24 - Configure the timeout action of stage2.\\\\0: No operation \\\\1:Generate interrupt \\\\2 :Generate HP CPU reset \\\\3:Generate HP core reset \\\\4 :Generate system reset."]
     #[inline(always)]
-    pub fn wdt_stg2(&mut self) -> WDT_STG2_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_stg2(&mut self) -> WDT_STG2_W<'_, WDTCONFIG0_SPEC> {
         WDT_STG2_W::new(self, 22)
     }
     #[doc = "Bits 25:27 - Configure the timeout action of stage1.\\\\0: No operation \\\\1:Generate interrupt \\\\2 :Generate HP CPU reset \\\\3:Generate HP core reset \\\\4 :Generate system reset."]
     #[inline(always)]
-    pub fn wdt_stg1(&mut self) -> WDT_STG1_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_stg1(&mut self) -> WDT_STG1_W<'_, WDTCONFIG0_SPEC> {
         WDT_STG1_W::new(self, 25)
     }
     #[doc = "Bits 28:30 - Configure the timeout action of stage0.\\\\0: No operation \\\\1:Generate interrupt \\\\2 :Generate HP CPU reset \\\\3:Generate HP core reset \\\\4 :Generate system reset."]
     #[inline(always)]
-    pub fn wdt_stg0(&mut self) -> WDT_STG0_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_stg0(&mut self) -> WDT_STG0_W<'_, WDTCONFIG0_SPEC> {
         WDT_STG0_W::new(self, 28)
     }
     #[doc = "Bit 31 - Configure whether or not to enable RWDT.\\\\0:Disable \\\\1:Enable"]
     #[inline(always)]
-    pub fn wdt_en(&mut self) -> WDT_EN_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_en(&mut self) -> WDT_EN_W<'_, WDTCONFIG0_SPEC> {
         WDT_EN_W::new(self, 31)
     }
 }

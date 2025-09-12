@@ -56,27 +56,29 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable alpha blending."]
     #[inline(always)]
-    pub fn blend_en(&mut self) -> BLEND_EN_W<BLEND_TRANS_MODE_SPEC> {
+    pub fn blend_en(&mut self) -> BLEND_EN_W<'_, BLEND_TRANS_MODE_SPEC> {
         BLEND_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to bypass blender. Then background date would be output."]
     #[inline(always)]
-    pub fn blend_bypass(&mut self) -> BLEND_BYPASS_W<BLEND_TRANS_MODE_SPEC> {
+    pub fn blend_bypass(&mut self) -> BLEND_BYPASS_W<'_, BLEND_TRANS_MODE_SPEC> {
         BLEND_BYPASS_W::new(self, 1)
     }
     #[doc = "Bit 2 - This bit is used to enable fix pixel filling. When this mode is enable only Tx channel is work and the output pixel is configured by PPA_OUT_FIX_PIXEL."]
     #[inline(always)]
-    pub fn blend_fix_pixel_fill_en(&mut self) -> BLEND_FIX_PIXEL_FILL_EN_W<BLEND_TRANS_MODE_SPEC> {
+    pub fn blend_fix_pixel_fill_en(
+        &mut self,
+    ) -> BLEND_FIX_PIXEL_FILL_EN_W<'_, BLEND_TRANS_MODE_SPEC> {
         BLEND_FIX_PIXEL_FILL_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to update the transfer mode. Only the bit is set the transfer mode is valid."]
     #[inline(always)]
-    pub fn update(&mut self) -> UPDATE_W<BLEND_TRANS_MODE_SPEC> {
+    pub fn update(&mut self) -> UPDATE_W<'_, BLEND_TRANS_MODE_SPEC> {
         UPDATE_W::new(self, 3)
     }
     #[doc = "Bit 4 - write 1 then write 0 to reset blending engine."]
     #[inline(always)]
-    pub fn blend_rst(&mut self) -> BLEND_RST_W<BLEND_TRANS_MODE_SPEC> {
+    pub fn blend_rst(&mut self) -> BLEND_RST_W<'_, BLEND_TRANS_MODE_SPEC> {
         BLEND_RST_W::new(self, 4)
     }
 }

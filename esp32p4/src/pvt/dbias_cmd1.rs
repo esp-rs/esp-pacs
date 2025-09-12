@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:16 - needs field desc"]
     #[inline(always)]
-    pub fn dbias_cmd1(&mut self) -> DBIAS_CMD1_W<DBIAS_CMD1_SPEC> {
+    pub fn dbias_cmd1(&mut self) -> DBIAS_CMD1_W<'_, DBIAS_CMD1_SPEC> {
         DBIAS_CMD1_W::new(self, 0)
     }
 }

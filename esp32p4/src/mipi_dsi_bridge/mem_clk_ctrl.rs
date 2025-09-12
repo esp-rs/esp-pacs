@@ -39,12 +39,12 @@ impl W {
     #[inline(always)]
     pub fn dsi_bridge_mem_clk_force_on(
         &mut self,
-    ) -> DSI_BRIDGE_MEM_CLK_FORCE_ON_W<MEM_CLK_CTRL_SPEC> {
+    ) -> DSI_BRIDGE_MEM_CLK_FORCE_ON_W<'_, MEM_CLK_CTRL_SPEC> {
         DSI_BRIDGE_MEM_CLK_FORCE_ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - this bit configures the clock force on of dpi fifo memory. 0: disable, 1: force on"]
     #[inline(always)]
-    pub fn dsi_mem_clk_force_on(&mut self) -> DSI_MEM_CLK_FORCE_ON_W<MEM_CLK_CTRL_SPEC> {
+    pub fn dsi_mem_clk_force_on(&mut self) -> DSI_MEM_CLK_FORCE_ON_W<'_, MEM_CLK_CTRL_SPEC> {
         DSI_MEM_CLK_FORCE_ON_W::new(self, 1)
     }
 }

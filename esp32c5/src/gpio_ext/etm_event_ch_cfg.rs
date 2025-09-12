@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Configures to select GPIO for ETM event channel.\\\\ 0: Select GPIO0\\\\ 1: Select GPIO1\\\\ ......\\\\ 27: Select GPIO27\\\\ 28: Select GPIO28\\\\ 29 ~ 63: Reserved\\\\"]
     #[inline(always)]
-    pub fn etm_ch0_event_sel(&mut self) -> ETM_CH0_EVENT_SEL_W<ETM_EVENT_CH_CFG_SPEC> {
+    pub fn etm_ch0_event_sel(&mut self) -> ETM_CH0_EVENT_SEL_W<'_, ETM_EVENT_CH_CFG_SPEC> {
         ETM_CH0_EVENT_SEL_W::new(self, 0)
     }
     #[doc = "Bit 7 - Configures whether or not to enable ETM event send.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn etm_ch0_event_en(&mut self) -> ETM_CH0_EVENT_EN_W<ETM_EVENT_CH_CFG_SPEC> {
+    pub fn etm_ch0_event_en(&mut self) -> ETM_CH0_EVENT_EN_W<'_, ETM_EVENT_CH_CFG_SPEC> {
         ETM_CH0_EVENT_EN_W::new(self, 7)
     }
 }

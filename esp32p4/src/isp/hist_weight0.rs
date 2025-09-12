@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - this field configures weight of subwindow 03"]
     #[inline(always)]
-    pub fn hist_weight_03(&mut self) -> HIST_WEIGHT_03_W<HIST_WEIGHT0_SPEC> {
+    pub fn hist_weight_03(&mut self) -> HIST_WEIGHT_03_W<'_, HIST_WEIGHT0_SPEC> {
         HIST_WEIGHT_03_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - this field configures weight of subwindow 02"]
     #[inline(always)]
-    pub fn hist_weight_02(&mut self) -> HIST_WEIGHT_02_W<HIST_WEIGHT0_SPEC> {
+    pub fn hist_weight_02(&mut self) -> HIST_WEIGHT_02_W<'_, HIST_WEIGHT0_SPEC> {
         HIST_WEIGHT_02_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - this field configures weight of subwindow 01"]
     #[inline(always)]
-    pub fn hist_weight_01(&mut self) -> HIST_WEIGHT_01_W<HIST_WEIGHT0_SPEC> {
+    pub fn hist_weight_01(&mut self) -> HIST_WEIGHT_01_W<'_, HIST_WEIGHT0_SPEC> {
         HIST_WEIGHT_01_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - this field configures weight of subwindow 00 and sum of all weight should be 256"]
     #[inline(always)]
-    pub fn hist_weight_00(&mut self) -> HIST_WEIGHT_00_W<HIST_WEIGHT0_SPEC> {
+    pub fn hist_weight_00(&mut self) -> HIST_WEIGHT_00_W<'_, HIST_WEIGHT0_SPEC> {
         HIST_WEIGHT_00_W::new(self, 24)
     }
 }

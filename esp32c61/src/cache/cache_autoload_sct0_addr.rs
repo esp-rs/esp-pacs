@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn cache_autoload_sct0_addr(
         &mut self,
-    ) -> CACHE_AUTOLOAD_SCT0_ADDR_W<CACHE_AUTOLOAD_SCT0_ADDR_SPEC> {
+    ) -> CACHE_AUTOLOAD_SCT0_ADDR_W<'_, CACHE_AUTOLOAD_SCT0_ADDR_SPEC> {
         CACHE_AUTOLOAD_SCT0_ADDR_W::new(self, 0)
     }
 }

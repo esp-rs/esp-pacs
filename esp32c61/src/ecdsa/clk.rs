@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 to force on register clock gate."]
     #[inline(always)]
-    pub fn gate_force_on(&mut self) -> GATE_FORCE_ON_W<CLK_SPEC> {
+    pub fn gate_force_on(&mut self) -> GATE_FORCE_ON_W<'_, CLK_SPEC> {
         GATE_FORCE_ON_W::new(self, 0)
     }
 }

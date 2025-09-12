@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures the pending status of the machine software interrupt."]
     #[inline(always)]
-    pub fn msip(&mut self) -> MSIP_W<MSIP_SPEC> {
+    pub fn msip(&mut self) -> MSIP_W<'_, MSIP_SPEC> {
         MSIP_W::new(self, 0)
     }
 }

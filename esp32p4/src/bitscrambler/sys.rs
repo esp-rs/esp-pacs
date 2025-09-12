@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - write this bit to set the bitscrambler tx loop back to DMA rx"]
     #[inline(always)]
-    pub fn loop_mode(&mut self) -> LOOP_MODE_W<SYS_SPEC> {
+    pub fn loop_mode(&mut self) -> LOOP_MODE_W<'_, SYS_SPEC> {
         LOOP_MODE_W::new(self, 0)
     }
     #[doc = "Bit 31 - Reserved"]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<SYS_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, SYS_SPEC> {
         CLK_EN_W::new(self, 31)
     }
 }

@@ -62,24 +62,26 @@ impl W {
     #[inline(always)]
     pub fn reg_gpio_func0_oe_inv_sel(
         &mut self,
-    ) -> REG_GPIO_FUNC0_OE_INV_SEL_W<FUNC0_OUT_SEL_CFG_SPEC> {
+    ) -> REG_GPIO_FUNC0_OE_INV_SEL_W<'_, FUNC0_OUT_SEL_CFG_SPEC> {
         REG_GPIO_FUNC0_OE_INV_SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpio_func0_oe_sel(&mut self) -> REG_GPIO_FUNC0_OE_SEL_W<FUNC0_OUT_SEL_CFG_SPEC> {
+    pub fn reg_gpio_func0_oe_sel(&mut self) -> REG_GPIO_FUNC0_OE_SEL_W<'_, FUNC0_OUT_SEL_CFG_SPEC> {
         REG_GPIO_FUNC0_OE_SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
     pub fn reg_gpio_func0_out_inv_sel(
         &mut self,
-    ) -> REG_GPIO_FUNC0_OUT_INV_SEL_W<FUNC0_OUT_SEL_CFG_SPEC> {
+    ) -> REG_GPIO_FUNC0_OUT_INV_SEL_W<'_, FUNC0_OUT_SEL_CFG_SPEC> {
         REG_GPIO_FUNC0_OUT_INV_SEL_W::new(self, 2)
     }
     #[doc = "Bits 3:8 - reg_gpio_func0_out_sel\\[5:1\\]==16 -> output gpio register value to pad"]
     #[inline(always)]
-    pub fn reg_gpio_func0_out_sel(&mut self) -> REG_GPIO_FUNC0_OUT_SEL_W<FUNC0_OUT_SEL_CFG_SPEC> {
+    pub fn reg_gpio_func0_out_sel(
+        &mut self,
+    ) -> REG_GPIO_FUNC0_OUT_SEL_W<'_, FUNC0_OUT_SEL_CFG_SPEC> {
         REG_GPIO_FUNC0_OUT_SEL_W::new(self, 3)
     }
 }

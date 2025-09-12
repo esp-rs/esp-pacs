@@ -3,6 +3,7 @@ _svd: "../esp32c6-lp.base.svd"
 _include:
   - ./_lp_io.yml
   - ./_lp_uart.yml
+  - ./_pmu.yml
 
 _modify:
   LP_ANA_PERI:

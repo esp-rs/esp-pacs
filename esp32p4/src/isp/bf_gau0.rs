@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - this field configures index 21 of gausian template"]
     #[inline(always)]
-    pub fn gau_template21(&mut self) -> GAU_TEMPLATE21_W<BF_GAU0_SPEC> {
+    pub fn gau_template21(&mut self) -> GAU_TEMPLATE21_W<'_, BF_GAU0_SPEC> {
         GAU_TEMPLATE21_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - this field configures index 20 of gausian template"]
     #[inline(always)]
-    pub fn gau_template20(&mut self) -> GAU_TEMPLATE20_W<BF_GAU0_SPEC> {
+    pub fn gau_template20(&mut self) -> GAU_TEMPLATE20_W<'_, BF_GAU0_SPEC> {
         GAU_TEMPLATE20_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - this field configures index 12 of gausian template"]
     #[inline(always)]
-    pub fn gau_template12(&mut self) -> GAU_TEMPLATE12_W<BF_GAU0_SPEC> {
+    pub fn gau_template12(&mut self) -> GAU_TEMPLATE12_W<'_, BF_GAU0_SPEC> {
         GAU_TEMPLATE12_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - this field configures index 11 of gausian template"]
     #[inline(always)]
-    pub fn gau_template11(&mut self) -> GAU_TEMPLATE11_W<BF_GAU0_SPEC> {
+    pub fn gau_template11(&mut self) -> GAU_TEMPLATE11_W<'_, BF_GAU0_SPEC> {
         GAU_TEMPLATE11_W::new(self, 12)
     }
     #[doc = "Bits 16:19 - this field configures index 10 of gausian template"]
     #[inline(always)]
-    pub fn gau_template10(&mut self) -> GAU_TEMPLATE10_W<BF_GAU0_SPEC> {
+    pub fn gau_template10(&mut self) -> GAU_TEMPLATE10_W<'_, BF_GAU0_SPEC> {
         GAU_TEMPLATE10_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - this field configures index 02 of gausian template"]
     #[inline(always)]
-    pub fn gau_template02(&mut self) -> GAU_TEMPLATE02_W<BF_GAU0_SPEC> {
+    pub fn gau_template02(&mut self) -> GAU_TEMPLATE02_W<'_, BF_GAU0_SPEC> {
         GAU_TEMPLATE02_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - this field configures index 01 of gausian template"]
     #[inline(always)]
-    pub fn gau_template01(&mut self) -> GAU_TEMPLATE01_W<BF_GAU0_SPEC> {
+    pub fn gau_template01(&mut self) -> GAU_TEMPLATE01_W<'_, BF_GAU0_SPEC> {
         GAU_TEMPLATE01_W::new(self, 24)
     }
     #[doc = "Bits 28:31 - this field configures index 00 of gausian template"]
     #[inline(always)]
-    pub fn gau_template00(&mut self) -> GAU_TEMPLATE00_W<BF_GAU0_SPEC> {
+    pub fn gau_template00(&mut self) -> GAU_TEMPLATE00_W<'_, BF_GAU0_SPEC> {
         GAU_TEMPLATE00_W::new(self, 28)
     }
 }

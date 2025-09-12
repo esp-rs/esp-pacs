@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    pub fn spi_smem_dout0_mode(&mut self) -> SPI_SMEM_DOUT0_MODE_W<SPI_SMEM_DOUT_MODE_SPEC> {
+    pub fn spi_smem_dout0_mode(&mut self) -> SPI_SMEM_DOUT0_MODE_W<'_, SPI_SMEM_DOUT_MODE_SPEC> {
         SPI_SMEM_DOUT0_MODE_W::new(self, 0)
     }
     #[doc = "Bits 3:5"]
     #[inline(always)]
-    pub fn spi_smem_dout1_mode(&mut self) -> SPI_SMEM_DOUT1_MODE_W<SPI_SMEM_DOUT_MODE_SPEC> {
+    pub fn spi_smem_dout1_mode(&mut self) -> SPI_SMEM_DOUT1_MODE_W<'_, SPI_SMEM_DOUT_MODE_SPEC> {
         SPI_SMEM_DOUT1_MODE_W::new(self, 3)
     }
     #[doc = "Bits 6:8"]
     #[inline(always)]
-    pub fn spi_smem_dout2_mode(&mut self) -> SPI_SMEM_DOUT2_MODE_W<SPI_SMEM_DOUT_MODE_SPEC> {
+    pub fn spi_smem_dout2_mode(&mut self) -> SPI_SMEM_DOUT2_MODE_W<'_, SPI_SMEM_DOUT_MODE_SPEC> {
         SPI_SMEM_DOUT2_MODE_W::new(self, 6)
     }
     #[doc = "Bits 9:11"]
     #[inline(always)]
-    pub fn spi_smem_dout3_mode(&mut self) -> SPI_SMEM_DOUT3_MODE_W<SPI_SMEM_DOUT_MODE_SPEC> {
+    pub fn spi_smem_dout3_mode(&mut self) -> SPI_SMEM_DOUT3_MODE_W<'_, SPI_SMEM_DOUT_MODE_SPEC> {
         SPI_SMEM_DOUT3_MODE_W::new(self, 9)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
-    pub fn spi_smem_dout4_mode(&mut self) -> SPI_SMEM_DOUT4_MODE_W<SPI_SMEM_DOUT_MODE_SPEC> {
+    pub fn spi_smem_dout4_mode(&mut self) -> SPI_SMEM_DOUT4_MODE_W<'_, SPI_SMEM_DOUT_MODE_SPEC> {
         SPI_SMEM_DOUT4_MODE_W::new(self, 12)
     }
     #[doc = "Bits 15:17"]
     #[inline(always)]
-    pub fn spi_smem_dout5_mode(&mut self) -> SPI_SMEM_DOUT5_MODE_W<SPI_SMEM_DOUT_MODE_SPEC> {
+    pub fn spi_smem_dout5_mode(&mut self) -> SPI_SMEM_DOUT5_MODE_W<'_, SPI_SMEM_DOUT_MODE_SPEC> {
         SPI_SMEM_DOUT5_MODE_W::new(self, 15)
     }
     #[doc = "Bits 18:20"]
     #[inline(always)]
-    pub fn spi_smem_dout6_mode(&mut self) -> SPI_SMEM_DOUT6_MODE_W<SPI_SMEM_DOUT_MODE_SPEC> {
+    pub fn spi_smem_dout6_mode(&mut self) -> SPI_SMEM_DOUT6_MODE_W<'_, SPI_SMEM_DOUT_MODE_SPEC> {
         SPI_SMEM_DOUT6_MODE_W::new(self, 18)
     }
     #[doc = "Bits 21:23"]
     #[inline(always)]
-    pub fn spi_smem_dout7_mode(&mut self) -> SPI_SMEM_DOUT7_MODE_W<SPI_SMEM_DOUT_MODE_SPEC> {
+    pub fn spi_smem_dout7_mode(&mut self) -> SPI_SMEM_DOUT7_MODE_W<'_, SPI_SMEM_DOUT_MODE_SPEC> {
         SPI_SMEM_DOUT7_MODE_W::new(self, 21)
     }
     #[doc = "Bits 24:26"]
     #[inline(always)]
-    pub fn spi_smem_douts_mode(&mut self) -> SPI_SMEM_DOUTS_MODE_W<SPI_SMEM_DOUT_MODE_SPEC> {
+    pub fn spi_smem_douts_mode(&mut self) -> SPI_SMEM_DOUTS_MODE_W<'_, SPI_SMEM_DOUT_MODE_SPEC> {
         SPI_SMEM_DOUTS_MODE_W::new(self, 24)
     }
 }

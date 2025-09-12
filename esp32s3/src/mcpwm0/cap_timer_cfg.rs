@@ -46,22 +46,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - When set, capture timer incrementing under APB_clk is enabled."]
     #[inline(always)]
-    pub fn cap_timer_en(&mut self) -> CAP_TIMER_EN_W<CAP_TIMER_CFG_SPEC> {
+    pub fn cap_timer_en(&mut self) -> CAP_TIMER_EN_W<'_, CAP_TIMER_CFG_SPEC> {
         CAP_TIMER_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - When set, capture timer sync is enabled."]
     #[inline(always)]
-    pub fn cap_synci_en(&mut self) -> CAP_SYNCI_EN_W<CAP_TIMER_CFG_SPEC> {
+    pub fn cap_synci_en(&mut self) -> CAP_SYNCI_EN_W<'_, CAP_TIMER_CFG_SPEC> {
         CAP_SYNCI_EN_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - capture module sync input selection. 0: none, 1: timer0 sync_out, 2: timer1 sync_out, 3: timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix"]
     #[inline(always)]
-    pub fn cap_synci_sel(&mut self) -> CAP_SYNCI_SEL_W<CAP_TIMER_CFG_SPEC> {
+    pub fn cap_synci_sel(&mut self) -> CAP_SYNCI_SEL_W<'_, CAP_TIMER_CFG_SPEC> {
         CAP_SYNCI_SEL_W::new(self, 2)
     }
     #[doc = "Bit 5 - Write 1 will force a capture timer sync, capture timer is loaded with value in phase register."]
     #[inline(always)]
-    pub fn cap_sync_sw(&mut self) -> CAP_SYNC_SW_W<CAP_TIMER_CFG_SPEC> {
+    pub fn cap_sync_sw(&mut self) -> CAP_SYNC_SW_W<'_, CAP_TIMER_CFG_SPEC> {
         CAP_SYNC_SW_W::new(self, 5)
     }
 }

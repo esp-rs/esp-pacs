@@ -39,14 +39,14 @@ impl W {
     #[inline(always)]
     pub fn l2_cache_pld_done_int_raw(
         &mut self,
-    ) -> L2_CACHE_PLD_DONE_INT_RAW_W<L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+    ) -> L2_CACHE_PLD_DONE_INT_RAW_W<'_, L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
         L2_CACHE_PLD_DONE_INT_RAW_W::new(self, 5)
     }
     #[doc = "Bit 12 - The raw bit of the interrupt that occurs only when L2-Cache preload-operation error occurs."]
     #[inline(always)]
     pub fn l2_cache_pld_err_int_raw(
         &mut self,
-    ) -> L2_CACHE_PLD_ERR_INT_RAW_W<L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+    ) -> L2_CACHE_PLD_ERR_INT_RAW_W<'_, L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
         L2_CACHE_PLD_ERR_INT_RAW_W::new(self, 12)
     }
 }

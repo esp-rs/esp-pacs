@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 16 - ?"]
     #[inline(always)]
-    pub fn sar_force_pu(&mut self) -> SAR_FORCE_PU_W<ANA_CONFIG_SPEC> {
+    pub fn sar_force_pu(&mut self) -> SAR_FORCE_PU_W<'_, ANA_CONFIG_SPEC> {
         SAR_FORCE_PU_W::new(self, 16)
     }
     #[doc = "Bit 17 - Clear to enable BBPLL"]
     #[inline(always)]
-    pub fn bbpll_pd(&mut self) -> BBPLL_PD_W<ANA_CONFIG_SPEC> {
+    pub fn bbpll_pd(&mut self) -> BBPLL_PD_W<'_, ANA_CONFIG_SPEC> {
         BBPLL_PD_W::new(self, 17)
     }
     #[doc = "Bit 18 - ?"]
     #[inline(always)]
-    pub fn sar_force_pd(&mut self) -> SAR_FORCE_PD_W<ANA_CONFIG_SPEC> {
+    pub fn sar_force_pd(&mut self) -> SAR_FORCE_PD_W<'_, ANA_CONFIG_SPEC> {
         SAR_FORCE_PD_W::new(self, 18)
     }
 }

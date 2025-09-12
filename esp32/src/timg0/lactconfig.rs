@@ -114,52 +114,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn rtc_only(&mut self) -> RTC_ONLY_W<LACTCONFIG_SPEC> {
+    pub fn rtc_only(&mut self) -> RTC_ONLY_W<'_, LACTCONFIG_SPEC> {
         RTC_ONLY_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn cpst_en(&mut self) -> CPST_EN_W<LACTCONFIG_SPEC> {
+    pub fn cpst_en(&mut self) -> CPST_EN_W<'_, LACTCONFIG_SPEC> {
         CPST_EN_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn lac_en(&mut self) -> LAC_EN_W<LACTCONFIG_SPEC> {
+    pub fn lac_en(&mut self) -> LAC_EN_W<'_, LACTCONFIG_SPEC> {
         LAC_EN_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn alarm_en(&mut self) -> ALARM_EN_W<LACTCONFIG_SPEC> {
+    pub fn alarm_en(&mut self) -> ALARM_EN_W<'_, LACTCONFIG_SPEC> {
         ALARM_EN_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn level_int_en(&mut self) -> LEVEL_INT_EN_W<LACTCONFIG_SPEC> {
+    pub fn level_int_en(&mut self) -> LEVEL_INT_EN_W<'_, LACTCONFIG_SPEC> {
         LEVEL_INT_EN_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn edge_int_en(&mut self) -> EDGE_INT_EN_W<LACTCONFIG_SPEC> {
+    pub fn edge_int_en(&mut self) -> EDGE_INT_EN_W<'_, LACTCONFIG_SPEC> {
         EDGE_INT_EN_W::new(self, 12)
     }
     #[doc = "Bits 13:28"]
     #[inline(always)]
-    pub fn divider(&mut self) -> DIVIDER_W<LACTCONFIG_SPEC> {
+    pub fn divider(&mut self) -> DIVIDER_W<'_, LACTCONFIG_SPEC> {
         DIVIDER_W::new(self, 13)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    pub fn autoreload(&mut self) -> AUTORELOAD_W<LACTCONFIG_SPEC> {
+    pub fn autoreload(&mut self) -> AUTORELOAD_W<'_, LACTCONFIG_SPEC> {
         AUTORELOAD_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn increase(&mut self) -> INCREASE_W<LACTCONFIG_SPEC> {
+    pub fn increase(&mut self) -> INCREASE_W<'_, LACTCONFIG_SPEC> {
         INCREASE_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<LACTCONFIG_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, LACTCONFIG_SPEC> {
         EN_W::new(self, 31)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Block size."]
     #[inline(always)]
-    pub fn block_size(&mut self) -> BLOCK_SIZE_W<BLKSIZ_SPEC> {
+    pub fn block_size(&mut self) -> BLOCK_SIZE_W<'_, BLKSIZ_SPEC> {
         BLOCK_SIZE_W::new(self, 0)
     }
 }

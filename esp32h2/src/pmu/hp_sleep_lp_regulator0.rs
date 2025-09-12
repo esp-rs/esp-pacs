@@ -68,28 +68,28 @@ impl W {
     #[inline(always)]
     pub fn hp_sleep_lp_regulator_slp_xpd(
         &mut self,
-    ) -> HP_SLEEP_LP_REGULATOR_SLP_XPD_W<HP_SLEEP_LP_REGULATOR0_SPEC> {
+    ) -> HP_SLEEP_LP_REGULATOR_SLP_XPD_W<'_, HP_SLEEP_LP_REGULATOR0_SPEC> {
         HP_SLEEP_LP_REGULATOR_SLP_XPD_W::new(self, 21)
     }
     #[doc = "Bit 22 - need_des"]
     #[inline(always)]
     pub fn hp_sleep_lp_regulator_xpd(
         &mut self,
-    ) -> HP_SLEEP_LP_REGULATOR_XPD_W<HP_SLEEP_LP_REGULATOR0_SPEC> {
+    ) -> HP_SLEEP_LP_REGULATOR_XPD_W<'_, HP_SLEEP_LP_REGULATOR0_SPEC> {
         HP_SLEEP_LP_REGULATOR_XPD_W::new(self, 22)
     }
     #[doc = "Bits 23:26 - need_des"]
     #[inline(always)]
     pub fn hp_sleep_lp_regulator_slp_dbias(
         &mut self,
-    ) -> HP_SLEEP_LP_REGULATOR_SLP_DBIAS_W<HP_SLEEP_LP_REGULATOR0_SPEC> {
+    ) -> HP_SLEEP_LP_REGULATOR_SLP_DBIAS_W<'_, HP_SLEEP_LP_REGULATOR0_SPEC> {
         HP_SLEEP_LP_REGULATOR_SLP_DBIAS_W::new(self, 23)
     }
     #[doc = "Bits 27:31 - need_des"]
     #[inline(always)]
     pub fn hp_sleep_lp_regulator_dbias(
         &mut self,
-    ) -> HP_SLEEP_LP_REGULATOR_DBIAS_W<HP_SLEEP_LP_REGULATOR0_SPEC> {
+    ) -> HP_SLEEP_LP_REGULATOR_DBIAS_W<'_, HP_SLEEP_LP_REGULATOR0_SPEC> {
         HP_SLEEP_LP_REGULATOR_DBIAS_W::new(self, 27)
     }
 }

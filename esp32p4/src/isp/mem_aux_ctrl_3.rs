@@ -42,14 +42,14 @@ impl W {
     #[inline(always)]
     pub fn sharp_matrix_y_mem_aux_ctrl(
         &mut self,
-    ) -> SHARP_MATRIX_Y_MEM_AUX_CTRL_W<MEM_AUX_CTRL_3_SPEC> {
+    ) -> SHARP_MATRIX_Y_MEM_AUX_CTRL_W<'_, MEM_AUX_CTRL_3_SPEC> {
         SHARP_MATRIX_Y_MEM_AUX_CTRL_W::new(self, 0)
     }
     #[doc = "Bits 16:29 - this field configures the mem_aux of demosaic line buffer memory"]
     #[inline(always)]
     pub fn demosaic_matrix_mem_aux_ctrl(
         &mut self,
-    ) -> DEMOSAIC_MATRIX_MEM_AUX_CTRL_W<MEM_AUX_CTRL_3_SPEC> {
+    ) -> DEMOSAIC_MATRIX_MEM_AUX_CTRL_W<'_, MEM_AUX_CTRL_3_SPEC> {
         DEMOSAIC_MATRIX_MEM_AUX_CTRL_W::new(self, 16)
     }
 }

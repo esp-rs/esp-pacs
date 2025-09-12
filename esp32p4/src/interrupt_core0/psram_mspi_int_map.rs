@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn core0_psram_mspi_int_map(
         &mut self,
-    ) -> CORE0_PSRAM_MSPI_INT_MAP_W<PSRAM_MSPI_INT_MAP_SPEC> {
+    ) -> CORE0_PSRAM_MSPI_INT_MAP_W<'_, PSRAM_MSPI_INT_MAP_SPEC> {
         CORE0_PSRAM_MSPI_INT_MAP_W::new(self, 0)
     }
 }

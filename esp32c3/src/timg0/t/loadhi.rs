@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - reg_t0_load_hi."]
     #[inline(always)]
-    pub fn load_hi(&mut self) -> LOAD_HI_W<LOADHI_SPEC> {
+    pub fn load_hi(&mut self) -> LOAD_HI_W<'_, LOADHI_SPEC> {
         LOAD_HI_W::new(self, 0)
     }
 }

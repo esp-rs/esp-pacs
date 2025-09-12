@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<_3_CONTINUE_SPEC> {
 impl W {
     #[doc = "Bit 0 - Continue typical sha3."]
     #[inline(always)]
-    pub fn _3_continue(&mut self) -> _3_CONTINUE_W<_3_CONTINUE_SPEC> {
+    pub fn _3_continue(&mut self) -> _3_CONTINUE_W<'_, _3_CONTINUE_SPEC> {
         _3_CONTINUE_W::new(self, 0)
     }
 }

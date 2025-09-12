@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
     #[inline(always)]
-    pub fn dcache_lock_ena(&mut self) -> DCACHE_LOCK_ENA_W<DCACHE_LOCK_CTRL_SPEC> {
+    pub fn dcache_lock_ena(&mut self) -> DCACHE_LOCK_ENA_W<'_, DCACHE_LOCK_CTRL_SPEC> {
         DCACHE_LOCK_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
     #[inline(always)]
-    pub fn dcache_unlock_ena(&mut self) -> DCACHE_UNLOCK_ENA_W<DCACHE_LOCK_CTRL_SPEC> {
+    pub fn dcache_unlock_ena(&mut self) -> DCACHE_UNLOCK_ENA_W<'_, DCACHE_LOCK_CTRL_SPEC> {
         DCACHE_UNLOCK_ENA_W::new(self, 1)
     }
 }

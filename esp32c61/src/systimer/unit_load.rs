@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<UNIT_LOAD_SPEC> {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to reload the value of UNIT0, i.e., reloads the values of SYSTIMER_TIMER_UNIT0_VALUE_HI and SYSTIMER_TIMER_UNIT0_VALUE_LO to UNIT0. \\\\ 0: No effect \\\\ 1: Reload the value of UNIT0\\\\"]
     #[inline(always)]
-    pub fn load(&mut self) -> LOAD_W<UNIT_LOAD_SPEC> {
+    pub fn load(&mut self) -> LOAD_W<'_, UNIT_LOAD_SPEC> {
         LOAD_W::new(self, 0)
     }
 }

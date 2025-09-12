@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:29 - Those bits stores the physical address. If linesize is 16-byte, the physical address should be aligned of 16 bytes. If linesize is 32-byte, the physical address should be aligned of 32 bytes. If linesize is 64-byte, the physical address should be aligned of 64 bytes."]
     #[inline(always)]
-    pub fn physical_address(&mut self) -> PHYSICAL_ADDRESS_W<PHYSICAL_ADDRESS_SPEC> {
+    pub fn physical_address(&mut self) -> PHYSICAL_ADDRESS_W<'_, PHYSICAL_ADDRESS_SPEC> {
         PHYSICAL_ADDRESS_W::new(self, 0)
     }
 }

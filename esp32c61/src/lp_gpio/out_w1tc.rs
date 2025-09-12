@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<OUT_W1TC_SPEC> {
 impl W {
     #[doc = "Bits 0:6 - Configures whether or not to clear the output register LP_GPIO_OUT_REG of LP_GPIO0 ~ LP_GPIO6 output.\\\\ 0: Not clear\\\\ 1: The corresponding bit in LP_GPIO_OUT_REG will be cleared.\\\\ Bit0 ~ bit6 are corresponding to LP_GPIO0 ~ LP_GPIO6. Bit7 ~ bit31 are invalid. \\\\ Recommended operation: use this register to clear LP_GPIO_OUT_REG. \\\\"]
     #[inline(always)]
-    pub fn out_w1tc(&mut self) -> OUT_W1TC_W<OUT_W1TC_SPEC> {
+    pub fn out_w1tc(&mut self) -> OUT_W1TC_W<'_, OUT_W1TC_SPEC> {
         OUT_W1TC_W::new(self, 0)
     }
 }

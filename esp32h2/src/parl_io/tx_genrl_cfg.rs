@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 14:29 - Configures bus value of transmitter in IDLE state."]
     #[inline(always)]
-    pub fn tx_idle_value(&mut self) -> TX_IDLE_VALUE_W<TX_GENRL_CFG_SPEC> {
+    pub fn tx_idle_value(&mut self) -> TX_IDLE_VALUE_W<'_, TX_GENRL_CFG_SPEC> {
         TX_IDLE_VALUE_W::new(self, 14)
     }
     #[doc = "Bit 30 - Set this bit to enable the clock gating of output tx clock."]
     #[inline(always)]
-    pub fn tx_gating_en(&mut self) -> TX_GATING_EN_W<TX_GENRL_CFG_SPEC> {
+    pub fn tx_gating_en(&mut self) -> TX_GATING_EN_W<'_, TX_GENRL_CFG_SPEC> {
         TX_GATING_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Set this bit to enable the output of tx data valid signal."]
     #[inline(always)]
-    pub fn tx_valid_output_en(&mut self) -> TX_VALID_OUTPUT_EN_W<TX_GENRL_CFG_SPEC> {
+    pub fn tx_valid_output_en(&mut self) -> TX_VALID_OUTPUT_EN_W<'_, TX_GENRL_CFG_SPEC> {
         TX_VALID_OUTPUT_EN_W::new(self, 31)
     }
 }

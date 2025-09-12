@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 24 - Set this bit to select RTC slow clock as the low power clock."]
     #[inline(always)]
-    pub fn lpclk_sel_rtc_slow(&mut self) -> LPCLK_SEL_RTC_SLOW_W<BT_LPCK_DIV_FRAC_SPEC> {
+    pub fn lpclk_sel_rtc_slow(&mut self) -> LPCLK_SEL_RTC_SLOW_W<'_, BT_LPCK_DIV_FRAC_SPEC> {
         LPCLK_SEL_RTC_SLOW_W::new(self, 24)
     }
     #[doc = "Bit 25 - Set this bit to select 8m clock as the low power clock."]
     #[inline(always)]
-    pub fn lpclk_sel_8m(&mut self) -> LPCLK_SEL_8M_W<BT_LPCK_DIV_FRAC_SPEC> {
+    pub fn lpclk_sel_8m(&mut self) -> LPCLK_SEL_8M_W<'_, BT_LPCK_DIV_FRAC_SPEC> {
         LPCLK_SEL_8M_W::new(self, 25)
     }
     #[doc = "Bit 26 - Set this bit to select xtal clock as the low power clock."]
     #[inline(always)]
-    pub fn lpclk_sel_xtal(&mut self) -> LPCLK_SEL_XTAL_W<BT_LPCK_DIV_FRAC_SPEC> {
+    pub fn lpclk_sel_xtal(&mut self) -> LPCLK_SEL_XTAL_W<'_, BT_LPCK_DIV_FRAC_SPEC> {
         LPCLK_SEL_XTAL_W::new(self, 26)
     }
     #[doc = "Bit 27 - Set this bit to select xtal32k clock as the low power clock."]
     #[inline(always)]
-    pub fn lpclk_sel_xtal32k(&mut self) -> LPCLK_SEL_XTAL32K_W<BT_LPCK_DIV_FRAC_SPEC> {
+    pub fn lpclk_sel_xtal32k(&mut self) -> LPCLK_SEL_XTAL32K_W<'_, BT_LPCK_DIV_FRAC_SPEC> {
         LPCLK_SEL_XTAL32K_W::new(self, 27)
     }
     #[doc = "Bit 28 - Set this bit to enable the RTC low power clock."]
     #[inline(always)]
-    pub fn lpclk_rtc_en(&mut self) -> LPCLK_RTC_EN_W<BT_LPCK_DIV_FRAC_SPEC> {
+    pub fn lpclk_rtc_en(&mut self) -> LPCLK_RTC_EN_W<'_, BT_LPCK_DIV_FRAC_SPEC> {
         LPCLK_RTC_EN_W::new(self, 28)
     }
 }

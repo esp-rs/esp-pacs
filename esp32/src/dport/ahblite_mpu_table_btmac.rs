@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn btmac_access_grant_config(
         &mut self,
-    ) -> BTMAC_ACCESS_GRANT_CONFIG_W<AHBLITE_MPU_TABLE_BTMAC_SPEC> {
+    ) -> BTMAC_ACCESS_GRANT_CONFIG_W<'_, AHBLITE_MPU_TABLE_BTMAC_SPEC> {
         BTMAC_ACCESS_GRANT_CONFIG_W::new(self, 0)
     }
 }

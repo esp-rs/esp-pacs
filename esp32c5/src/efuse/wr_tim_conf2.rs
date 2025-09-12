@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Configures the power outage time for VDDQ."]
     #[inline(always)]
-    pub fn pwr_off_num(&mut self) -> PWR_OFF_NUM_W<WR_TIM_CONF2_SPEC> {
+    pub fn pwr_off_num(&mut self) -> PWR_OFF_NUM_W<'_, WR_TIM_CONF2_SPEC> {
         PWR_OFF_NUM_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Configures the active programming time."]
     #[inline(always)]
-    pub fn tpgm(&mut self) -> TPGM_W<WR_TIM_CONF2_SPEC> {
+    pub fn tpgm(&mut self) -> TPGM_W<'_, WR_TIM_CONF2_SPEC> {
         TPGM_W::new(self, 16)
     }
 }

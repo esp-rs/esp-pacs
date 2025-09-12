@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Configures to latch the counter value. \\\\ 0: Latch \\\\ 1: Latch \\\\"]
     #[inline(always)]
-    pub fn t0_update(&mut self) -> T0_UPDATE_W<UPDATE_SPEC> {
+    pub fn t0_update(&mut self) -> T0_UPDATE_W<'_, UPDATE_SPEC> {
         T0_UPDATE_W::new(self, 31)
     }
 }

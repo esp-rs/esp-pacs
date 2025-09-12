@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Configures shadow register for FED."]
     #[inline(always)]
-    pub fn db_fed(&mut self) -> DB_FED_W<DT_FED_CFG_SPEC> {
+    pub fn db_fed(&mut self) -> DB_FED_W<'_, DT_FED_CFG_SPEC> {
         DB_FED_W::new(self, 0)
     }
 }

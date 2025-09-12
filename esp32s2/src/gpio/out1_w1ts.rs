@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<OUT1_W1TS_SPEC> {
 impl W {
     #[doc = "Bits 0:21 - GPIO32 ~ 53 output value set register. If the value 1 is written to a bit here, the corresponding bit in GPIO_OUT1_REG will be set to 1. Recommended operation: use this register to set GPIO_OUT1_REG."]
     #[inline(always)]
-    pub fn out1_w1ts(&mut self) -> OUT1_W1TS_W<OUT1_W1TS_SPEC> {
+    pub fn out1_w1ts(&mut self) -> OUT1_W1TS_W<'_, OUT1_W1TS_SPEC> {
         OUT1_W1TS_W::new(self, 0)
     }
 }

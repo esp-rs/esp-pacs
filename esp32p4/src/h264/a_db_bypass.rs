@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to bypass video A deblcoking filter. \\\\0: Open the deblock filter\\\\1: Close the deblock filter"]
     #[inline(always)]
-    pub fn a_bypass_db_filter(&mut self) -> A_BYPASS_DB_FILTER_W<A_DB_BYPASS_SPEC> {
+    pub fn a_bypass_db_filter(&mut self) -> A_BYPASS_DB_FILTER_W<'_, A_DB_BYPASS_SPEC> {
         A_BYPASS_DB_FILTER_W::new(self, 0)
     }
 }

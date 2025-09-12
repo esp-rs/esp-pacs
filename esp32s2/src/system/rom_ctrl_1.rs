@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - This field is used to power down internal ROM."]
     #[inline(always)]
-    pub fn rom_force_pd(&mut self) -> ROM_FORCE_PD_W<ROM_CTRL_1_SPEC> {
+    pub fn rom_force_pd(&mut self) -> ROM_FORCE_PD_W<'_, ROM_CTRL_1_SPEC> {
         ROM_FORCE_PD_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - This field is used to power up internal ROM."]
     #[inline(always)]
-    pub fn rom_force_pu(&mut self) -> ROM_FORCE_PU_W<ROM_CTRL_1_SPEC> {
+    pub fn rom_force_pu(&mut self) -> ROM_FORCE_PU_W<'_, ROM_CTRL_1_SPEC> {
         ROM_FORCE_PU_W::new(self, 2)
     }
 }

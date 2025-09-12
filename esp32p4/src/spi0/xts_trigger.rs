@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<XTS_TRIGGER_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to trigger the process of manual encryption calculation. This action should only be asserted when manual encryption status is 0. After this action, manual encryption status becomes 1. After calculation is done, manual encryption status becomes 2."]
     #[inline(always)]
-    pub fn spi_xts_trigger(&mut self) -> SPI_XTS_TRIGGER_W<XTS_TRIGGER_SPEC> {
+    pub fn spi_xts_trigger(&mut self) -> SPI_XTS_TRIGGER_W<'_, XTS_TRIGGER_SPEC> {
         SPI_XTS_TRIGGER_W::new(self, 0)
     }
 }

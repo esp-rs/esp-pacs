@@ -62,7 +62,7 @@ impl W {
     #[inline(always)]
     pub fn cache_l2_cache_preload_ena(
         &mut self,
-    ) -> CACHE_L2_CACHE_PRELOAD_ENA_W<CACHE_L2_CACHE_PRELOAD_CTRL_SPEC> {
+    ) -> CACHE_L2_CACHE_PRELOAD_ENA_W<'_, CACHE_L2_CACHE_PRELOAD_CTRL_SPEC> {
         CACHE_L2_CACHE_PRELOAD_ENA_W::new(self, 0)
     }
 }

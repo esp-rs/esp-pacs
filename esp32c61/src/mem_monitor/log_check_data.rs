@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Configures the data to be monitored during bus accessing."]
     #[inline(always)]
-    pub fn log_check_data(&mut self) -> LOG_CHECK_DATA_W<LOG_CHECK_DATA_SPEC> {
+    pub fn log_check_data(&mut self) -> LOG_CHECK_DATA_W<'_, LOG_CHECK_DATA_SPEC> {
         LOG_CHECK_DATA_W::new(self, 0)
     }
 }

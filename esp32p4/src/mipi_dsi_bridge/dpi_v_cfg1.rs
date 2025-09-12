@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - this field configures the length between vsync and valid line (by line) for dpi output"]
     #[inline(always)]
-    pub fn vbank(&mut self) -> VBANK_W<DPI_V_CFG1_SPEC> {
+    pub fn vbank(&mut self) -> VBANK_W<'_, DPI_V_CFG1_SPEC> {
         VBANK_W::new(self, 0)
     }
     #[doc = "Bits 16:27 - this field configures the length of vsync (by line) for dpi output"]
     #[inline(always)]
-    pub fn vsync(&mut self) -> VSYNC_W<DPI_V_CFG1_SPEC> {
+    pub fn vsync(&mut self) -> VSYNC_W<'_, DPI_V_CFG1_SPEC> {
         VSYNC_W::new(self, 16)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Set the bit to 1 to force rom always have clock, for low power can clear to 0 then only when have access the rom have clock"]
     #[inline(always)]
-    pub fn rom_clkgate_force_on(&mut self) -> ROM_CLKGATE_FORCE_ON_W<CLKGATE_FORCE_ON_SPEC> {
+    pub fn rom_clkgate_force_on(&mut self) -> ROM_CLKGATE_FORCE_ON_W<'_, CLKGATE_FORCE_ON_SPEC> {
         ROM_CLKGATE_FORCE_ON_W::new(self, 0)
     }
     #[doc = "Bits 3:6 - Set the bit to 1 to force sram always have clock, for low power can clear to 0 then only when have access the sram have clock"]
     #[inline(always)]
-    pub fn sram_clkgate_force_on(&mut self) -> SRAM_CLKGATE_FORCE_ON_W<CLKGATE_FORCE_ON_SPEC> {
+    pub fn sram_clkgate_force_on(&mut self) -> SRAM_CLKGATE_FORCE_ON_W<'_, CLKGATE_FORCE_ON_SPEC> {
         SRAM_CLKGATE_FORCE_ON_W::new(self, 3)
     }
 }

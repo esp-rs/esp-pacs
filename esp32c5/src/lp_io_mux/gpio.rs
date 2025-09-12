@@ -154,72 +154,72 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable the output of GPIO%s during sleep mode.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn mcu_oe(&mut self) -> MCU_OE_W<GPIO_SPEC> {
+    pub fn mcu_oe(&mut self) -> MCU_OE_W<'_, GPIO_SPEC> {
         MCU_OE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to enable the sleep mode for GPIO%s.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn slp_sel(&mut self) -> SLP_SEL_W<GPIO_SPEC> {
+    pub fn slp_sel(&mut self) -> SLP_SEL_W<'_, GPIO_SPEC> {
         SLP_SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to enable the pull-down resistor of GPIO%s during sleep mode. \\\\ 0: Not enable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn mcu_wpd(&mut self) -> MCU_WPD_W<GPIO_SPEC> {
+    pub fn mcu_wpd(&mut self) -> MCU_WPD_W<'_, GPIO_SPEC> {
         MCU_WPD_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to enable the pull-up resistor of GPIO%s during sleep mode.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn mcu_wpu(&mut self) -> MCU_WPU_W<GPIO_SPEC> {
+    pub fn mcu_wpu(&mut self) -> MCU_WPU_W<'_, GPIO_SPEC> {
         MCU_WPU_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to enable the input of GPIO%s during sleep mode.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn mcu_ie(&mut self) -> MCU_IE_W<GPIO_SPEC> {
+    pub fn mcu_ie(&mut self) -> MCU_IE_W<'_, GPIO_SPEC> {
         MCU_IE_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - Configures the drive strength of GPIO%s during sleep mode. \\\\ 0: ~5 mA\\\\ 1: ~10 mA\\\\ 2: ~20 mA\\\\ 3: ~40 mA\\\\"]
     #[inline(always)]
-    pub fn mcu_drv(&mut self) -> MCU_DRV_W<GPIO_SPEC> {
+    pub fn mcu_drv(&mut self) -> MCU_DRV_W<'_, GPIO_SPEC> {
         MCU_DRV_W::new(self, 5)
     }
     #[doc = "Bit 7 - Configures whether or not to enable the pull-down resistor of GPIO%s in normal execution mode.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn fun_wpd(&mut self) -> FUN_WPD_W<GPIO_SPEC> {
+    pub fn fun_wpd(&mut self) -> FUN_WPD_W<'_, GPIO_SPEC> {
         FUN_WPD_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether or not to enable the pull-up resistor of GPIO%s in normal execution mode.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn fun_wpu(&mut self) -> FUN_WPU_W<GPIO_SPEC> {
+    pub fn fun_wpu(&mut self) -> FUN_WPU_W<'_, GPIO_SPEC> {
         FUN_WPU_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures whether or not to enable the input of GPIO%s in normal execution mode.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn fun_ie(&mut self) -> FUN_IE_W<GPIO_SPEC> {
+    pub fn fun_ie(&mut self) -> FUN_IE_W<'_, GPIO_SPEC> {
         FUN_IE_W::new(self, 9)
     }
     #[doc = "Bits 10:11 - Configures the drive strength of GPIO%s in normal execution mode.\\\\ 0: ~5 mA\\\\ 1: ~10 mA\\\\ 2: ~20 mA\\\\ 3: ~40 mA\\\\"]
     #[inline(always)]
-    pub fn fun_drv(&mut self) -> FUN_DRV_W<GPIO_SPEC> {
+    pub fn fun_drv(&mut self) -> FUN_DRV_W<'_, GPIO_SPEC> {
         FUN_DRV_W::new(self, 10)
     }
     #[doc = "Bits 12:14 - Configures to select the LP IO MUX function for GPIO%s in normal execution mode.\\\\ 0: Select Function 0\\\\ 1: Select Function 1\\\\ ......\\\\"]
     #[inline(always)]
-    pub fn mcu_sel(&mut self) -> MCU_SEL_W<GPIO_SPEC> {
+    pub fn mcu_sel(&mut self) -> MCU_SEL_W<'_, GPIO_SPEC> {
         MCU_SEL_W::new(self, 12)
     }
     #[doc = "Bit 15 - Configures whether or not to enable filter for pin input signals.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn filter_en(&mut self) -> FILTER_EN_W<GPIO_SPEC> {
+    pub fn filter_en(&mut self) -> FILTER_EN_W<'_, GPIO_SPEC> {
         FILTER_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Configures whether or not to enable the hysteresis function of the pin when IO_MUX_GPIO%s_HYS_SEL is set to 1.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn hys_en(&mut self) -> HYS_EN_W<GPIO_SPEC> {
+    pub fn hys_en(&mut self) -> HYS_EN_W<'_, GPIO_SPEC> {
         HYS_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Configures to choose the signal for enabling the hysteresis function for GPIO%s. \\\\ 0: Choose the output enable signal of eFuse\\\\ 1: Choose the output enable signal of IO_MUX_GPIO%s_HYS_EN\\\\"]
     #[inline(always)]
-    pub fn hys_sel(&mut self) -> HYS_SEL_W<GPIO_SPEC> {
+    pub fn hys_sel(&mut self) -> HYS_SEL_W<'_, GPIO_SPEC> {
         HYS_SEL_W::new(self, 17)
     }
 }

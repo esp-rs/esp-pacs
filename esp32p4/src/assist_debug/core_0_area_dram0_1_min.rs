@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn core_0_area_dram0_1_min(
         &mut self,
-    ) -> CORE_0_AREA_DRAM0_1_MIN_W<CORE_0_AREA_DRAM0_1_MIN_SPEC> {
+    ) -> CORE_0_AREA_DRAM0_1_MIN_W<'_, CORE_0_AREA_DRAM0_1_MIN_SPEC> {
         CORE_0_AREA_DRAM0_1_MIN_W::new(self, 0)
     }
 }

@@ -68,37 +68,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - This field is used to select one of timers for channel %s. 0: select timer0, 1: select timer1, 2: select timer2, 3: select timer3"]
     #[inline(always)]
-    pub fn timer_sel(&mut self) -> TIMER_SEL_W<CONF0_SPEC> {
+    pub fn timer_sel(&mut self) -> TIMER_SEL_W<'_, CONF0_SPEC> {
         TIMER_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - Set this bit to enable signal output on channel %s."]
     #[inline(always)]
-    pub fn sig_out_en(&mut self) -> SIG_OUT_EN_W<CONF0_SPEC> {
+    pub fn sig_out_en(&mut self) -> SIG_OUT_EN_W<'_, CONF0_SPEC> {
         SIG_OUT_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - This bit is used to control the output value when channel %s is inactive (when LEDC_SIG_OUT_EN_CH%s is 0)."]
     #[inline(always)]
-    pub fn idle_lv(&mut self) -> IDLE_LV_W<CONF0_SPEC> {
+    pub fn idle_lv(&mut self) -> IDLE_LV_W<'_, CONF0_SPEC> {
         IDLE_LV_W::new(self, 3)
     }
     #[doc = "Bit 4 - This bit is used to update LEDC_HPOINT_CH%s, LEDC_DUTY_START_CH%s, LEDC_SIG_OUT_EN_CH%s, LEDC_TIMER_SEL_CH%s, LEDC_DUTY_NUM_CH%s, LEDC_DUTY_CYCLE_CH%s, LEDC_DUTY_SCALE_CH%s, LEDC_DUTY_INC_CH%s, and LEDC_OVF_CNT_EN_CH%s fields for channel %s, and will be automatically cleared by hardware."]
     #[inline(always)]
-    pub fn para_up(&mut self) -> PARA_UP_W<CONF0_SPEC> {
+    pub fn para_up(&mut self) -> PARA_UP_W<'_, CONF0_SPEC> {
         PARA_UP_W::new(self, 4)
     }
     #[doc = "Bits 5:14 - This register is used to configure the maximum times of overflow minus 1. The LEDC_OVF_CNT_CH%s_INT interrupt will be triggered when channel %s overflows for (LEDC_OVF_NUM_CH%s + 1) times."]
     #[inline(always)]
-    pub fn ovf_num(&mut self) -> OVF_NUM_W<CONF0_SPEC> {
+    pub fn ovf_num(&mut self) -> OVF_NUM_W<'_, CONF0_SPEC> {
         OVF_NUM_W::new(self, 5)
     }
     #[doc = "Bit 15 - This bit is used to enable the ovf_cnt of channel %s."]
     #[inline(always)]
-    pub fn ovf_cnt_en(&mut self) -> OVF_CNT_EN_W<CONF0_SPEC> {
+    pub fn ovf_cnt_en(&mut self) -> OVF_CNT_EN_W<'_, CONF0_SPEC> {
         OVF_CNT_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Set this bit to reset the ovf_cnt of channel %s."]
     #[inline(always)]
-    pub fn ovf_cnt_reset(&mut self) -> OVF_CNT_RESET_W<CONF0_SPEC> {
+    pub fn ovf_cnt_reset(&mut self) -> OVF_CNT_RESET_W<'_, CONF0_SPEC> {
         OVF_CNT_RESET_W::new(self, 16)
     }
 }

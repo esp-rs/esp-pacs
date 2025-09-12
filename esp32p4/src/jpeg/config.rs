@@ -226,112 +226,112 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - fsm reset"]
     #[inline(always)]
-    pub fn fsm_rst(&mut self) -> FSM_RST_W<CONFIG_SPEC> {
+    pub fn fsm_rst(&mut self) -> FSM_RST_W<'_, CONFIG_SPEC> {
         FSM_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - start to compress a new pic(in dma reg mode)"]
     #[inline(always)]
-    pub fn jpeg_start(&mut self) -> JPEG_START_W<CONFIG_SPEC> {
+    pub fn jpeg_start(&mut self) -> JPEG_START_W<'_, CONFIG_SPEC> {
         JPEG_START_W::new(self, 1)
     }
     #[doc = "Bit 2 - 0:8bit qnr,1:12bit qnr(TBD)"]
     #[inline(always)]
-    pub fn qnr_presition(&mut self) -> QNR_PRESITION_W<CONFIG_SPEC> {
+    pub fn qnr_presition(&mut self) -> QNR_PRESITION_W<'_, CONFIG_SPEC> {
         QNR_PRESITION_W::new(self, 2)
     }
     #[doc = "Bit 3 - enable whether to add \"00\" after \"ff\""]
     #[inline(always)]
-    pub fn ff_check_en(&mut self) -> FF_CHECK_EN_W<CONFIG_SPEC> {
+    pub fn ff_check_en(&mut self) -> FF_CHECK_EN_W<'_, CONFIG_SPEC> {
         FF_CHECK_EN_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - 0:yuv444,1:yuv422, 2:yuv420"]
     #[inline(always)]
-    pub fn sample_sel(&mut self) -> SAMPLE_SEL_W<CONFIG_SPEC> {
+    pub fn sample_sel(&mut self) -> SAMPLE_SEL_W<'_, CONFIG_SPEC> {
         SAMPLE_SEL_W::new(self, 4)
     }
     #[doc = "Bit 7 - 0:normal mode,1:debug mode for direct output from input"]
     #[inline(always)]
-    pub fn debug_direct_out_en(&mut self) -> DEBUG_DIRECT_OUT_EN_W<CONFIG_SPEC> {
+    pub fn debug_direct_out_en(&mut self) -> DEBUG_DIRECT_OUT_EN_W<'_, CONFIG_SPEC> {
         DEBUG_DIRECT_OUT_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - 0:use non-fifo way to access qnr ram,1:use fifo way to access qnr ram"]
     #[inline(always)]
-    pub fn gray_sel(&mut self) -> GRAY_SEL_W<CONFIG_SPEC> {
+    pub fn gray_sel(&mut self) -> GRAY_SEL_W<'_, CONFIG_SPEC> {
         GRAY_SEL_W::new(self, 8)
     }
     #[doc = "Bits 9:10 - choose luminance quntization table id(TBD)"]
     #[inline(always)]
-    pub fn lqnr_tbl_sel(&mut self) -> LQNR_TBL_SEL_W<CONFIG_SPEC> {
+    pub fn lqnr_tbl_sel(&mut self) -> LQNR_TBL_SEL_W<'_, CONFIG_SPEC> {
         LQNR_TBL_SEL_W::new(self, 9)
     }
     #[doc = "Bits 11:12 - choose chrominance quntization table id (TBD)"]
     #[inline(always)]
-    pub fn cqnr_tbl_sel(&mut self) -> CQNR_TBL_SEL_W<CONFIG_SPEC> {
+    pub fn cqnr_tbl_sel(&mut self) -> CQNR_TBL_SEL_W<'_, CONFIG_SPEC> {
         CQNR_TBL_SEL_W::new(self, 11)
     }
     #[doc = "Bits 13:14 - configure picture's color space:0-rb888,1-yuv422,2-rgb565, 3-gray"]
     #[inline(always)]
-    pub fn color_space(&mut self) -> COLOR_SPACE_W<CONFIG_SPEC> {
+    pub fn color_space(&mut self) -> COLOR_SPACE_W<'_, CONFIG_SPEC> {
         COLOR_SPACE_W::new(self, 13)
     }
     #[doc = "Bit 15 - 0:use non-fifo way to write dht len_total/codemin/value table,1:use fifo way to write dht len_total/codemin/value table. Reading dht len_total/codemin/value table only has nonfifo way"]
     #[inline(always)]
-    pub fn dht_fifo_en(&mut self) -> DHT_FIFO_EN_W<CONFIG_SPEC> {
+    pub fn dht_fifo_en(&mut self) -> DHT_FIFO_EN_W<'_, CONFIG_SPEC> {
         DHT_FIFO_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - force memory's clock enabled"]
     #[inline(always)]
-    pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<CONFIG_SPEC> {
+    pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<'_, CONFIG_SPEC> {
         MEM_CLK_FORCE_ON_W::new(self, 16)
     }
     #[doc = "Bits 17:22 - decode pause period to trigger decode_timeout int, the timeout periods =2 power (reg_decode_timeout_thres) -1"]
     #[inline(always)]
-    pub fn jfif_ver(&mut self) -> JFIF_VER_W<CONFIG_SPEC> {
+    pub fn jfif_ver(&mut self) -> JFIF_VER_W<'_, CONFIG_SPEC> {
         JFIF_VER_W::new(self, 17)
     }
     #[doc = "Bit 23 - 0: software use reset to abort decode process ,1: decoder abort decode process by itself"]
     #[inline(always)]
-    pub fn decode_timeout_task_sel(&mut self) -> DECODE_TIMEOUT_TASK_SEL_W<CONFIG_SPEC> {
+    pub fn decode_timeout_task_sel(&mut self) -> DECODE_TIMEOUT_TASK_SEL_W<'_, CONFIG_SPEC> {
         DECODE_TIMEOUT_TASK_SEL_W::new(self, 23)
     }
     #[doc = "Bit 24 - when set to 1, soft reset JPEG module except jpeg_reg module"]
     #[inline(always)]
-    pub fn soft_rst(&mut self) -> SOFT_RST_W<CONFIG_SPEC> {
+    pub fn soft_rst(&mut self) -> SOFT_RST_W<'_, CONFIG_SPEC> {
         SOFT_RST_W::new(self, 24)
     }
     #[doc = "Bit 25 - fifo reset"]
     #[inline(always)]
-    pub fn fifo_rst(&mut self) -> FIFO_RST_W<CONFIG_SPEC> {
+    pub fn fifo_rst(&mut self) -> FIFO_RST_W<'_, CONFIG_SPEC> {
         FIFO_RST_W::new(self, 25)
     }
     #[doc = "Bit 26 - reverse the source color pixel"]
     #[inline(always)]
-    pub fn pixel_rev(&mut self) -> PIXEL_REV_W<CONFIG_SPEC> {
+    pub fn pixel_rev(&mut self) -> PIXEL_REV_W<'_, CONFIG_SPEC> {
         PIXEL_REV_W::new(self, 26)
     }
     #[doc = "Bit 27 - set this bit to add EOI of \"0xffd9\" at the end of bitstream"]
     #[inline(always)]
-    pub fn tailer_en(&mut self) -> TAILER_EN_W<CONFIG_SPEC> {
+    pub fn tailer_en(&mut self) -> TAILER_EN_W<'_, CONFIG_SPEC> {
         TAILER_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - set this bit to pause jpeg encoding"]
     #[inline(always)]
-    pub fn pause_en(&mut self) -> PAUSE_EN_W<CONFIG_SPEC> {
+    pub fn pause_en(&mut self) -> PAUSE_EN_W<'_, CONFIG_SPEC> {
         PAUSE_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - 0: no operation,1:force jpeg memory to power down"]
     #[inline(always)]
-    pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<CONFIG_SPEC> {
+    pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<'_, CONFIG_SPEC> {
         MEM_FORCE_PD_W::new(self, 29)
     }
     #[doc = "Bit 30 - 0: no operation,1:force jpeg memory to power up"]
     #[inline(always)]
-    pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<CONFIG_SPEC> {
+    pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<'_, CONFIG_SPEC> {
         MEM_FORCE_PU_W::new(self, 30)
     }
     #[doc = "Bit 31 - 0:encoder mode, 1: decoder mode"]
     #[inline(always)]
-    pub fn mode(&mut self) -> MODE_W<CONFIG_SPEC> {
+    pub fn mode(&mut self) -> MODE_W<'_, CONFIG_SPEC> {
         MODE_W::new(self, 31)
     }
 }

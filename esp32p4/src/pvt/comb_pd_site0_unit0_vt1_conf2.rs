@@ -51,7 +51,7 @@ impl W {
     #[inline(always)]
     pub fn monitor_edg_mod_vt1_pd_site0_unit0(
         &mut self,
-    ) -> MONITOR_EDG_MOD_VT1_PD_SITE0_UNIT0_W<COMB_PD_SITE0_UNIT0_VT1_CONF2_SPEC> {
+    ) -> MONITOR_EDG_MOD_VT1_PD_SITE0_UNIT0_W<'_, COMB_PD_SITE0_UNIT0_VT1_CONF2_SPEC> {
         MONITOR_EDG_MOD_VT1_PD_SITE0_UNIT0_W::new(self, 0)
     }
 }

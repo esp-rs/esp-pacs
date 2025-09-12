@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures hold time for efuse read."]
     #[inline(always)]
-    pub fn thr_a(&mut self) -> THR_A_W<RD_TIM_CONF_SPEC> {
+    pub fn thr_a(&mut self) -> THR_A_W<'_, RD_TIM_CONF_SPEC> {
         THR_A_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Configures pulse time for efuse read."]
     #[inline(always)]
-    pub fn trd(&mut self) -> TRD_W<RD_TIM_CONF_SPEC> {
+    pub fn trd(&mut self) -> TRD_W<'_, RD_TIM_CONF_SPEC> {
         TRD_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Configures setup time for efuse read."]
     #[inline(always)]
-    pub fn tsur_a(&mut self) -> TSUR_A_W<RD_TIM_CONF_SPEC> {
+    pub fn tsur_a(&mut self) -> TSUR_A_W<'_, RD_TIM_CONF_SPEC> {
         TSUR_A_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Configures the initial read time of eFuse."]
     #[inline(always)]
-    pub fn read_init_num(&mut self) -> READ_INIT_NUM_W<RD_TIM_CONF_SPEC> {
+    pub fn read_init_num(&mut self) -> READ_INIT_NUM_W<'_, RD_TIM_CONF_SPEC> {
         READ_INIT_NUM_W::new(self, 24)
     }
 }

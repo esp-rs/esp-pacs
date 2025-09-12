@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to update xts_aes key"]
     #[inline(always)]
-    pub fn xts_aes_key_update(&mut self) -> XTS_AES_KEY_UPDATE_W<XTS_AES_KEY_UPDATE_SPEC> {
+    pub fn xts_aes_key_update(&mut self) -> XTS_AES_KEY_UPDATE_W<'_, XTS_AES_KEY_UPDATE_SPEC> {
         XTS_AES_KEY_UPDATE_W::new(self, 0)
     }
 }

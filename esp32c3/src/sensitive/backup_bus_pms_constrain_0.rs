@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn backup_bus_pms_constrain_lock(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_LOCK_W<BACKUP_BUS_PMS_CONSTRAIN_0_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_LOCK_W<'_, BACKUP_BUS_PMS_CONSTRAIN_0_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_LOCK_W::new(self, 0)
     }
 }

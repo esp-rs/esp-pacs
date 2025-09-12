@@ -38,7 +38,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:23 - need_des"]
     #[inline(always)]
-    pub fn lp_i2c_ana_mast_i2c0_conf(&mut self) -> LP_I2C_ANA_MAST_I2C0_CONF_W<I2C0_CONF_SPEC> {
+    pub fn lp_i2c_ana_mast_i2c0_conf(&mut self) -> LP_I2C_ANA_MAST_I2C0_CONF_W<'_, I2C0_CONF_SPEC> {
         LP_I2C_ANA_MAST_I2C0_CONF_W::new(self, 0)
     }
 }

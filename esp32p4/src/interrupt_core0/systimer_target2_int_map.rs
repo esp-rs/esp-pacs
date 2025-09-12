@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core0_systimer_target2_int_map(
         &mut self,
-    ) -> CORE0_SYSTIMER_TARGET2_INT_MAP_W<SYSTIMER_TARGET2_INT_MAP_SPEC> {
+    ) -> CORE0_SYSTIMER_TARGET2_INT_MAP_W<'_, SYSTIMER_TARGET2_INT_MAP_SPEC> {
         CORE0_SYSTIMER_TARGET2_INT_MAP_W::new(self, 0)
     }
 }

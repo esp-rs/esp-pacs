@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 10:31 - GPIO0 ~ 21 interrupt status register. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. This register should be used together with RTCIO_RTC_GPIO_PINn_INT_TYPE in RTCIO_RTC_GPIO_PINn_REG. 0: no interrupt; 1: corresponding interrupt."]
     #[inline(always)]
-    pub fn gpio_status_int(&mut self) -> GPIO_STATUS_INT_W<STATUS_SPEC> {
+    pub fn gpio_status_int(&mut self) -> GPIO_STATUS_INT_W<'_, STATUS_SPEC> {
         GPIO_STATUS_INT_W::new(self, 10)
     }
 }

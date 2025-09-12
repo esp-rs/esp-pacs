@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<M0_STATUS_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Clear exception status"]
     #[inline(always)]
-    pub fn m0_region_status_clr(&mut self) -> M0_REGION_STATUS_CLR_W<M0_STATUS_CLR_SPEC> {
+    pub fn m0_region_status_clr(&mut self) -> M0_REGION_STATUS_CLR_W<'_, M0_STATUS_CLR_SPEC> {
         M0_REGION_STATUS_CLR_W::new(self, 0)
     }
 }

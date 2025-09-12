@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<SHA_CONTINUE_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to start the latter caculation of SHA Calculator in ECDSA Accelerator. This bit will be self-cleared after configuration."]
     #[inline(always)]
-    pub fn sha_continue(&mut self) -> SHA_CONTINUE_W<SHA_CONTINUE_SPEC> {
+    pub fn sha_continue(&mut self) -> SHA_CONTINUE_W<'_, SHA_CONTINUE_SPEC> {
         SHA_CONTINUE_W::new(self, 0)
     }
 }

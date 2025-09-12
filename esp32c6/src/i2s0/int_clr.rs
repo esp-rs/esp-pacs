@@ -17,22 +17,22 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the i2s_rx_done_int interrupt"]
     #[inline(always)]
-    pub fn rx_done(&mut self) -> RX_DONE_W<INT_CLR_SPEC> {
+    pub fn rx_done(&mut self) -> RX_DONE_W<'_, INT_CLR_SPEC> {
         RX_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to clear the i2s_tx_done_int interrupt"]
     #[inline(always)]
-    pub fn tx_done(&mut self) -> TX_DONE_W<INT_CLR_SPEC> {
+    pub fn tx_done(&mut self) -> TX_DONE_W<'_, INT_CLR_SPEC> {
         TX_DONE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to clear the i2s_rx_hung_int interrupt"]
     #[inline(always)]
-    pub fn rx_hung(&mut self) -> RX_HUNG_W<INT_CLR_SPEC> {
+    pub fn rx_hung(&mut self) -> RX_HUNG_W<'_, INT_CLR_SPEC> {
         RX_HUNG_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to clear the i2s_tx_hung_int interrupt"]
     #[inline(always)]
-    pub fn tx_hung(&mut self) -> TX_HUNG_W<INT_CLR_SPEC> {
+    pub fn tx_hung(&mut self) -> TX_HUNG_W<'_, INT_CLR_SPEC> {
         TX_HUNG_W::new(self, 3)
     }
 }

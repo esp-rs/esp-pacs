@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core_1_toomanyexceptions_m_override(
         &mut self,
-    ) -> CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_W<CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_1_SPEC> {
+    ) -> CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_W<'_, CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_1_SPEC> {
         CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_W::new(self, 0)
     }
 }

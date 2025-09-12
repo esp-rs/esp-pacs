@@ -104,49 +104,65 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn spi_smem_dout08_mode(&mut self) -> SPI_SMEM_DOUT08_MODE_W<SPI_SMEM_DOUT_HEX_MODE_SPEC> {
+    pub fn spi_smem_dout08_mode(
+        &mut self,
+    ) -> SPI_SMEM_DOUT08_MODE_W<'_, SPI_SMEM_DOUT_HEX_MODE_SPEC> {
         SPI_SMEM_DOUT08_MODE_W::new(self, 0)
     }
     #[doc = "Bit 1 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn spi_smem_dout09_mode(&mut self) -> SPI_SMEM_DOUT09_MODE_W<SPI_SMEM_DOUT_HEX_MODE_SPEC> {
+    pub fn spi_smem_dout09_mode(
+        &mut self,
+    ) -> SPI_SMEM_DOUT09_MODE_W<'_, SPI_SMEM_DOUT_HEX_MODE_SPEC> {
         SPI_SMEM_DOUT09_MODE_W::new(self, 1)
     }
     #[doc = "Bit 2 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn spi_smem_dout10_mode(&mut self) -> SPI_SMEM_DOUT10_MODE_W<SPI_SMEM_DOUT_HEX_MODE_SPEC> {
+    pub fn spi_smem_dout10_mode(
+        &mut self,
+    ) -> SPI_SMEM_DOUT10_MODE_W<'_, SPI_SMEM_DOUT_HEX_MODE_SPEC> {
         SPI_SMEM_DOUT10_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn spi_smem_dout11_mode(&mut self) -> SPI_SMEM_DOUT11_MODE_W<SPI_SMEM_DOUT_HEX_MODE_SPEC> {
+    pub fn spi_smem_dout11_mode(
+        &mut self,
+    ) -> SPI_SMEM_DOUT11_MODE_W<'_, SPI_SMEM_DOUT_HEX_MODE_SPEC> {
         SPI_SMEM_DOUT11_MODE_W::new(self, 3)
     }
     #[doc = "Bit 4 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn spi_smem_dout12_mode(&mut self) -> SPI_SMEM_DOUT12_MODE_W<SPI_SMEM_DOUT_HEX_MODE_SPEC> {
+    pub fn spi_smem_dout12_mode(
+        &mut self,
+    ) -> SPI_SMEM_DOUT12_MODE_W<'_, SPI_SMEM_DOUT_HEX_MODE_SPEC> {
         SPI_SMEM_DOUT12_MODE_W::new(self, 4)
     }
     #[doc = "Bit 5 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn spi_smem_dout13_mode(&mut self) -> SPI_SMEM_DOUT13_MODE_W<SPI_SMEM_DOUT_HEX_MODE_SPEC> {
+    pub fn spi_smem_dout13_mode(
+        &mut self,
+    ) -> SPI_SMEM_DOUT13_MODE_W<'_, SPI_SMEM_DOUT_HEX_MODE_SPEC> {
         SPI_SMEM_DOUT13_MODE_W::new(self, 5)
     }
     #[doc = "Bit 6 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn spi_smem_dout14_mode(&mut self) -> SPI_SMEM_DOUT14_MODE_W<SPI_SMEM_DOUT_HEX_MODE_SPEC> {
+    pub fn spi_smem_dout14_mode(
+        &mut self,
+    ) -> SPI_SMEM_DOUT14_MODE_W<'_, SPI_SMEM_DOUT_HEX_MODE_SPEC> {
         SPI_SMEM_DOUT14_MODE_W::new(self, 6)
     }
     #[doc = "Bit 7 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn spi_smem_dout15_mode(&mut self) -> SPI_SMEM_DOUT15_MODE_W<SPI_SMEM_DOUT_HEX_MODE_SPEC> {
+    pub fn spi_smem_dout15_mode(
+        &mut self,
+    ) -> SPI_SMEM_DOUT15_MODE_W<'_, SPI_SMEM_DOUT_HEX_MODE_SPEC> {
         SPI_SMEM_DOUT15_MODE_W::new(self, 7)
     }
     #[doc = "Bit 8 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
     pub fn spi_smem_douts_hex_mode(
         &mut self,
-    ) -> SPI_SMEM_DOUTS_HEX_MODE_W<SPI_SMEM_DOUT_HEX_MODE_SPEC> {
+    ) -> SPI_SMEM_DOUTS_HEX_MODE_W<'_, SPI_SMEM_DOUT_HEX_MODE_SPEC> {
         SPI_SMEM_DOUTS_HEX_MODE_W::new(self, 8)
     }
 }

@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - For b <= a/2, the value of I2S_RX_CLKM_DIV_Z is b. For b > a/2, the value of I2S_RX_CLKM_DIV_Z is (a-b)."]
     #[inline(always)]
-    pub fn i2s_rx_clkm_div_z(&mut self) -> I2S_RX_CLKM_DIV_Z_W<I2S_RX_CLKM_DIV_CONF_SPEC> {
+    pub fn i2s_rx_clkm_div_z(&mut self) -> I2S_RX_CLKM_DIV_Z_W<'_, I2S_RX_CLKM_DIV_CONF_SPEC> {
         I2S_RX_CLKM_DIV_Z_W::new(self, 0)
     }
     #[doc = "Bits 9:17 - For b <= a/2, the value of I2S_RX_CLKM_DIV_Y is (a%b) . For b > a/2, the value of I2S_RX_CLKM_DIV_Y is (a%(a-b))."]
     #[inline(always)]
-    pub fn i2s_rx_clkm_div_y(&mut self) -> I2S_RX_CLKM_DIV_Y_W<I2S_RX_CLKM_DIV_CONF_SPEC> {
+    pub fn i2s_rx_clkm_div_y(&mut self) -> I2S_RX_CLKM_DIV_Y_W<'_, I2S_RX_CLKM_DIV_CONF_SPEC> {
         I2S_RX_CLKM_DIV_Y_W::new(self, 9)
     }
     #[doc = "Bits 18:26 - For b <= a/2, the value of I2S_RX_CLKM_DIV_X is (a/b) - 1. For b > a/2, the value of I2S_RX_CLKM_DIV_X is (a/(a-b)) - 1."]
     #[inline(always)]
-    pub fn i2s_rx_clkm_div_x(&mut self) -> I2S_RX_CLKM_DIV_X_W<I2S_RX_CLKM_DIV_CONF_SPEC> {
+    pub fn i2s_rx_clkm_div_x(&mut self) -> I2S_RX_CLKM_DIV_X_W<'_, I2S_RX_CLKM_DIV_CONF_SPEC> {
         I2S_RX_CLKM_DIV_X_W::new(self, 18)
     }
     #[doc = "Bit 27 - For b <= a/2, the value of I2S_RX_CLKM_DIV_YN1 is 0 . For b > a/2, the value of I2S_RX_CLKM_DIV_YN1 is 1."]
     #[inline(always)]
-    pub fn i2s_rx_clkm_div_yn1(&mut self) -> I2S_RX_CLKM_DIV_YN1_W<I2S_RX_CLKM_DIV_CONF_SPEC> {
+    pub fn i2s_rx_clkm_div_yn1(&mut self) -> I2S_RX_CLKM_DIV_YN1_W<'_, I2S_RX_CLKM_DIV_CONF_SPEC> {
         I2S_RX_CLKM_DIV_YN1_W::new(self, 27)
     }
 }

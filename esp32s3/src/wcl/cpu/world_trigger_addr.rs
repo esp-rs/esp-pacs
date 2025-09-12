@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This field is used to configure the entry address from WORLD0 to WORLD1,when the CPU executes to this address,switch to WORLD1"]
     #[inline(always)]
-    pub fn world_trigger_addr(&mut self) -> WORLD_TRIGGER_ADDR_W<WORLD_TRIGGER_ADDR_SPEC> {
+    pub fn world_trigger_addr(&mut self) -> WORLD_TRIGGER_ADDR_W<'_, WORLD_TRIGGER_ADDR_SPEC> {
         WORLD_TRIGGER_ADDR_W::new(self, 0)
     }
 }

@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core1_hp_parlio_tx_int_map(
         &mut self,
-    ) -> CORE1_HP_PARLIO_TX_INT_MAP_W<HP_PARLIO_TX_INT_MAP_SPEC> {
+    ) -> CORE1_HP_PARLIO_TX_INT_MAP_W<'_, HP_PARLIO_TX_INT_MAP_SPEC> {
         CORE1_HP_PARLIO_TX_INT_MAP_W::new(self, 0)
     }
 }

@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - configure Ncrc parameter in sdr50/104 mode, no more than 6."]
     #[inline(always)]
-    pub fn ncrc(&mut self) -> NCRC_W<CFG_TIMING_SPEC> {
+    pub fn ncrc(&mut self) -> NCRC_W<'_, CFG_TIMING_SPEC> {
         NCRC_W::new(self, 0)
     }
     #[doc = "Bits 3:9 - configure cycles to lower cmd after voltage is changed to 1.8V."]
     #[inline(always)]
-    pub fn pst_end_cmd_low_value(&mut self) -> PST_END_CMD_LOW_VALUE_W<CFG_TIMING_SPEC> {
+    pub fn pst_end_cmd_low_value(&mut self) -> PST_END_CMD_LOW_VALUE_W<'_, CFG_TIMING_SPEC> {
         PST_END_CMD_LOW_VALUE_W::new(self, 3)
     }
     #[doc = "Bits 10:15 - configure cycles to lower data after voltage is changed to 1.8V."]
     #[inline(always)]
-    pub fn pst_end_data_low_value(&mut self) -> PST_END_DATA_LOW_VALUE_W<CFG_TIMING_SPEC> {
+    pub fn pst_end_data_low_value(&mut self) -> PST_END_DATA_LOW_VALUE_W<'_, CFG_TIMING_SPEC> {
         PST_END_DATA_LOW_VALUE_W::new(self, 10)
     }
     #[doc = "Bits 16:26 - Configure the number of cycles of module clk to judge sdclk has stopped"]
     #[inline(always)]
-    pub fn sdclk_stop_thres(&mut self) -> SDCLK_STOP_THRES_W<CFG_TIMING_SPEC> {
+    pub fn sdclk_stop_thres(&mut self) -> SDCLK_STOP_THRES_W<'_, CFG_TIMING_SPEC> {
         SDCLK_STOP_THRES_W::new(self, 16)
     }
     #[doc = "Bits 28:31 - module clk divider to sample sdclk"]
     #[inline(always)]
-    pub fn sample_clk_divider(&mut self) -> SAMPLE_CLK_DIVIDER_W<CFG_TIMING_SPEC> {
+    pub fn sample_clk_divider(&mut self) -> SAMPLE_CLK_DIVIDER_W<'_, CFG_TIMING_SPEC> {
         SAMPLE_CLK_DIVIDER_W::new(self, 28)
     }
 }

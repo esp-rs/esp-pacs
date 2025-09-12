@@ -62,28 +62,28 @@ impl W {
     #[inline(always)]
     pub fn l2_cache_access_force_cc(
         &mut self,
-    ) -> L2_CACHE_ACCESS_FORCE_CC_W<L2_CACHE_ACCESS_ATTR_CTRL_SPEC> {
+    ) -> L2_CACHE_ACCESS_FORCE_CC_W<'_, L2_CACHE_ACCESS_ATTR_CTRL_SPEC> {
         L2_CACHE_ACCESS_FORCE_CC_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to force the request to l2 cache with write-back attribute, otherwise, the attribute is propagated from L1 cache or CPU, it could be one of write-back and write-through."]
     #[inline(always)]
     pub fn l2_cache_access_force_wb(
         &mut self,
-    ) -> L2_CACHE_ACCESS_FORCE_WB_W<L2_CACHE_ACCESS_ATTR_CTRL_SPEC> {
+    ) -> L2_CACHE_ACCESS_FORCE_WB_W<'_, L2_CACHE_ACCESS_ATTR_CTRL_SPEC> {
         L2_CACHE_ACCESS_FORCE_WB_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to force the request to l2 cache with write-miss-allocate attribute, otherwise, the attribute is propagated from L1 cache or CPU, it could be one of write-miss-allocate and write-miss-no-allocate."]
     #[inline(always)]
     pub fn l2_cache_access_force_wma(
         &mut self,
-    ) -> L2_CACHE_ACCESS_FORCE_WMA_W<L2_CACHE_ACCESS_ATTR_CTRL_SPEC> {
+    ) -> L2_CACHE_ACCESS_FORCE_WMA_W<'_, L2_CACHE_ACCESS_ATTR_CTRL_SPEC> {
         L2_CACHE_ACCESS_FORCE_WMA_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to force the request to l2 cache with read-miss-allocate attribute, otherwise, the attribute is propagated from L1 cache or CPU, it could be one of read-miss-allocate and read-miss-no-allocate."]
     #[inline(always)]
     pub fn l2_cache_access_force_rma(
         &mut self,
-    ) -> L2_CACHE_ACCESS_FORCE_RMA_W<L2_CACHE_ACCESS_ATTR_CTRL_SPEC> {
+    ) -> L2_CACHE_ACCESS_FORCE_RMA_W<'_, L2_CACHE_ACCESS_ATTR_CTRL_SPEC> {
         L2_CACHE_ACCESS_FORCE_RMA_W::new(self, 3)
     }
 }

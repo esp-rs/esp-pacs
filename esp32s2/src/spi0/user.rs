@@ -164,77 +164,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn cs_hold(&mut self) -> CS_HOLD_W<USER_SPEC> {
+    pub fn cs_hold(&mut self) -> CS_HOLD_W<'_, USER_SPEC> {
         CS_HOLD_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn cs_setup(&mut self) -> CS_SETUP_W<USER_SPEC> {
+    pub fn cs_setup(&mut self) -> CS_SETUP_W<'_, USER_SPEC> {
         CS_SETUP_W::new(self, 7)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W<USER_SPEC> {
+    pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W<'_, USER_SPEC> {
         CK_OUT_EDGE_W::new(self, 9)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn fwrite_dual(&mut self) -> FWRITE_DUAL_W<USER_SPEC> {
+    pub fn fwrite_dual(&mut self) -> FWRITE_DUAL_W<'_, USER_SPEC> {
         FWRITE_DUAL_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn fwrite_quad(&mut self) -> FWRITE_QUAD_W<USER_SPEC> {
+    pub fn fwrite_quad(&mut self) -> FWRITE_QUAD_W<'_, USER_SPEC> {
         FWRITE_QUAD_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn fwrite_dio(&mut self) -> FWRITE_DIO_W<USER_SPEC> {
+    pub fn fwrite_dio(&mut self) -> FWRITE_DIO_W<'_, USER_SPEC> {
         FWRITE_DIO_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn fwrite_qio(&mut self) -> FWRITE_QIO_W<USER_SPEC> {
+    pub fn fwrite_qio(&mut self) -> FWRITE_QIO_W<'_, USER_SPEC> {
         FWRITE_QIO_W::new(self, 15)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn usr_miso_highpart(&mut self) -> USR_MISO_HIGHPART_W<USER_SPEC> {
+    pub fn usr_miso_highpart(&mut self) -> USR_MISO_HIGHPART_W<'_, USER_SPEC> {
         USR_MISO_HIGHPART_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    pub fn usr_mosi_highpart(&mut self) -> USR_MOSI_HIGHPART_W<USER_SPEC> {
+    pub fn usr_mosi_highpart(&mut self) -> USR_MOSI_HIGHPART_W<'_, USER_SPEC> {
         USR_MOSI_HIGHPART_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W<USER_SPEC> {
+    pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W<'_, USER_SPEC> {
         USR_DUMMY_IDLE_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    pub fn usr_mosi(&mut self) -> USR_MOSI_W<USER_SPEC> {
+    pub fn usr_mosi(&mut self) -> USR_MOSI_W<'_, USER_SPEC> {
         USR_MOSI_W::new(self, 27)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn usr_miso(&mut self) -> USR_MISO_W<USER_SPEC> {
+    pub fn usr_miso(&mut self) -> USR_MISO_W<'_, USER_SPEC> {
         USR_MISO_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    pub fn usr_dummy(&mut self) -> USR_DUMMY_W<USER_SPEC> {
+    pub fn usr_dummy(&mut self) -> USR_DUMMY_W<'_, USER_SPEC> {
         USR_DUMMY_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn usr_addr(&mut self) -> USR_ADDR_W<USER_SPEC> {
+    pub fn usr_addr(&mut self) -> USR_ADDR_W<'_, USER_SPEC> {
         USR_ADDR_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn usr_command(&mut self) -> USR_COMMAND_W<USER_SPEC> {
+    pub fn usr_command(&mut self) -> USR_COMMAND_W<'_, USER_SPEC> {
         USR_COMMAND_W::new(self, 31)
     }
 }

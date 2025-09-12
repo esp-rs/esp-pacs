@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn sec_en(&mut self) -> SEC_EN_W<SEC_CTRL_SPEC> {
+    pub fn sec_en(&mut self) -> SEC_EN_W<'_, SEC_CTRL_SPEC> {
         SEC_EN_W::new(self, 0)
     }
     #[doc = "Bits 8:14"]
     #[inline(always)]
-    pub fn sec_payload_offset(&mut self) -> SEC_PAYLOAD_OFFSET_W<SEC_CTRL_SPEC> {
+    pub fn sec_payload_offset(&mut self) -> SEC_PAYLOAD_OFFSET_W<'_, SEC_CTRL_SPEC> {
         SEC_PAYLOAD_OFFSET_W::new(self, 8)
     }
 }

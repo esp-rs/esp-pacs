@@ -107,47 +107,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn spi_fmem_ddr_en(&mut self) -> SPI_FMEM_DDR_EN_W<DDR_SPEC> {
+    pub fn spi_fmem_ddr_en(&mut self) -> SPI_FMEM_DDR_EN_W<'_, DDR_SPEC> {
         SPI_FMEM_DDR_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn spi_fmem_var_dummy(&mut self) -> SPI_FMEM_VAR_DUMMY_W<DDR_SPEC> {
+    pub fn spi_fmem_var_dummy(&mut self) -> SPI_FMEM_VAR_DUMMY_W<'_, DDR_SPEC> {
         SPI_FMEM_VAR_DUMMY_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn spi_fmem_ddr_rdat_swp(&mut self) -> SPI_FMEM_DDR_RDAT_SWP_W<DDR_SPEC> {
+    pub fn spi_fmem_ddr_rdat_swp(&mut self) -> SPI_FMEM_DDR_RDAT_SWP_W<'_, DDR_SPEC> {
         SPI_FMEM_DDR_RDAT_SWP_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn spi_fmem_ddr_wdat_swp(&mut self) -> SPI_FMEM_DDR_WDAT_SWP_W<DDR_SPEC> {
+    pub fn spi_fmem_ddr_wdat_swp(&mut self) -> SPI_FMEM_DDR_WDAT_SWP_W<'_, DDR_SPEC> {
         SPI_FMEM_DDR_WDAT_SWP_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn spi_fmem_ddr_cmd_dis(&mut self) -> SPI_FMEM_DDR_CMD_DIS_W<DDR_SPEC> {
+    pub fn spi_fmem_ddr_cmd_dis(&mut self) -> SPI_FMEM_DDR_CMD_DIS_W<'_, DDR_SPEC> {
         SPI_FMEM_DDR_CMD_DIS_W::new(self, 4)
     }
     #[doc = "Bits 5:12"]
     #[inline(always)]
-    pub fn spi_fmem_outminbytelen(&mut self) -> SPI_FMEM_OUTMINBYTELEN_W<DDR_SPEC> {
+    pub fn spi_fmem_outminbytelen(&mut self) -> SPI_FMEM_OUTMINBYTELEN_W<'_, DDR_SPEC> {
         SPI_FMEM_OUTMINBYTELEN_W::new(self, 5)
     }
     #[doc = "Bits 13:20"]
     #[inline(always)]
-    pub fn spi_fmem_usr_ddr_dqs_thd(&mut self) -> SPI_FMEM_USR_DDR_DQS_THD_W<DDR_SPEC> {
+    pub fn spi_fmem_usr_ddr_dqs_thd(&mut self) -> SPI_FMEM_USR_DDR_DQS_THD_W<'_, DDR_SPEC> {
         SPI_FMEM_USR_DDR_DQS_THD_W::new(self, 13)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    pub fn spi_fmem_ddr_dqs_loop(&mut self) -> SPI_FMEM_DDR_DQS_LOOP_W<DDR_SPEC> {
+    pub fn spi_fmem_ddr_dqs_loop(&mut self) -> SPI_FMEM_DDR_DQS_LOOP_W<'_, DDR_SPEC> {
         SPI_FMEM_DDR_DQS_LOOP_W::new(self, 21)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
-    pub fn spi_fmem_ddr_dqs_loop_mode(&mut self) -> SPI_FMEM_DDR_DQS_LOOP_MODE_W<DDR_SPEC> {
+    pub fn spi_fmem_ddr_dqs_loop_mode(&mut self) -> SPI_FMEM_DDR_DQS_LOOP_MODE_W<'_, DDR_SPEC> {
         SPI_FMEM_DDR_DQS_LOOP_MODE_W::new(self, 22)
     }
 }

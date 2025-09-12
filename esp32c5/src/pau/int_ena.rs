@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - backup done flag"]
     #[inline(always)]
-    pub fn done_int_ena(&mut self) -> DONE_INT_ENA_W<INT_ENA_SPEC> {
+    pub fn done_int_ena(&mut self) -> DONE_INT_ENA_W<'_, INT_ENA_SPEC> {
         DONE_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - error flag"]
     #[inline(always)]
-    pub fn error_int_ena(&mut self) -> ERROR_INT_ENA_W<INT_ENA_SPEC> {
+    pub fn error_int_ena(&mut self) -> ERROR_INT_ENA_W<'_, INT_ENA_SPEC> {
         ERROR_INT_ENA_W::new(self, 1)
     }
 }

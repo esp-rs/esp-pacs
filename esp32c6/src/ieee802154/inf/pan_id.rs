@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn pan_id(&mut self) -> PAN_ID_W<PAN_ID_SPEC> {
+    pub fn pan_id(&mut self) -> PAN_ID_W<'_, PAN_ID_SPEC> {
         PAN_ID_W::new(self, 0)
     }
 }

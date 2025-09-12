@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:24 - This register represents the current duty of the output signal for low speed channel0."]
     #[inline(always)]
-    pub fn duty(&mut self) -> DUTY_W<DUTY_SPEC> {
+    pub fn duty(&mut self) -> DUTY_W<'_, DUTY_SPEC> {
         DUTY_W::new(self, 0)
     }
 }

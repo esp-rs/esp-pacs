@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - delay counter"]
     #[inline(always)]
-    pub fn wait_counter(&mut self) -> WAIT_COUNTER_W<COUNTER_SPEC> {
+    pub fn wait_counter(&mut self) -> WAIT_COUNTER_W<'_, COUNTER_SPEC> {
         WAIT_COUNTER_W::new(self, 0)
     }
 }

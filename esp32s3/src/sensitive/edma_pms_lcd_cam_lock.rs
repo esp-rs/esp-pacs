@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock EDMA-LCD/CAM permission control registers."]
     #[inline(always)]
-    pub fn edma_pms_lcd_cam_lock(&mut self) -> EDMA_PMS_LCD_CAM_LOCK_W<EDMA_PMS_LCD_CAM_LOCK_SPEC> {
+    pub fn edma_pms_lcd_cam_lock(
+        &mut self,
+    ) -> EDMA_PMS_LCD_CAM_LOCK_W<'_, EDMA_PMS_LCD_CAM_LOCK_SPEC> {
         EDMA_PMS_LCD_CAM_LOCK_W::new(self, 0)
     }
 }

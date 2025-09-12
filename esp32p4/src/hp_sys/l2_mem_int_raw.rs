@@ -55,21 +55,21 @@ impl W {
     #[inline(always)]
     pub fn reg_l2_mem_ecc_err_int_raw(
         &mut self,
-    ) -> REG_L2_MEM_ECC_ERR_INT_RAW_W<L2_MEM_INT_RAW_SPEC> {
+    ) -> REG_L2_MEM_ECC_ERR_INT_RAW_W<'_, L2_MEM_INT_RAW_SPEC> {
         REG_L2_MEM_ECC_ERR_INT_RAW_W::new(self, 0)
     }
     #[doc = "Bit 1 - intr triggered when access addr exceeds 0xff9ffff at bypass mode or exceeds 0xff80000 at l2cache 128kb mode or exceeds 0xff60000 at l2cache 256kb mode"]
     #[inline(always)]
     pub fn reg_l2_mem_exceed_addr_int_raw(
         &mut self,
-    ) -> REG_L2_MEM_EXCEED_ADDR_INT_RAW_W<L2_MEM_INT_RAW_SPEC> {
+    ) -> REG_L2_MEM_EXCEED_ADDR_INT_RAW_W<'_, L2_MEM_INT_RAW_SPEC> {
         REG_L2_MEM_EXCEED_ADDR_INT_RAW_W::new(self, 1)
     }
     #[doc = "Bit 2 - intr triggered when err response occurs"]
     #[inline(always)]
     pub fn reg_l2_mem_err_resp_int_raw(
         &mut self,
-    ) -> REG_L2_MEM_ERR_RESP_INT_RAW_W<L2_MEM_INT_RAW_SPEC> {
+    ) -> REG_L2_MEM_ERR_RESP_INT_RAW_W<'_, L2_MEM_INT_RAW_SPEC> {
         REG_L2_MEM_ERR_RESP_INT_RAW_W::new(self, 2)
     }
 }

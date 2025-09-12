@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Stores the mode of modular exponentiation."]
     #[inline(always)]
-    pub fn mode(&mut self) -> MODE_W<MODE_SPEC> {
+    pub fn mode(&mut self) -> MODE_W<'_, MODE_SPEC> {
         MODE_W::new(self, 0)
     }
 }

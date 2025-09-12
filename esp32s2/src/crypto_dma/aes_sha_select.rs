@@ -74,7 +74,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Select one between AES and SHA to use DMA. 0: AES. 1: SHA."]
     #[inline(always)]
-    pub fn select(&mut self) -> SELECT_W<AES_SHA_SELECT_SPEC> {
+    pub fn select(&mut self) -> SELECT_W<'_, AES_SHA_SELECT_SPEC> {
         SELECT_W::new(self, 0)
     }
 }

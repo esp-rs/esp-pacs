@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
     #[inline(always)]
-    pub fn smem_din0_num(&mut self) -> SMEM_DIN0_NUM_W<SMEM_DIN_NUM_SPEC> {
+    pub fn smem_din0_num(&mut self) -> SMEM_DIN0_NUM_W<'_, SMEM_DIN_NUM_SPEC> {
         SMEM_DIN0_NUM_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
     #[inline(always)]
-    pub fn smem_din1_num(&mut self) -> SMEM_DIN1_NUM_W<SMEM_DIN_NUM_SPEC> {
+    pub fn smem_din1_num(&mut self) -> SMEM_DIN1_NUM_W<'_, SMEM_DIN_NUM_SPEC> {
         SMEM_DIN1_NUM_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
     #[inline(always)]
-    pub fn smem_din2_num(&mut self) -> SMEM_DIN2_NUM_W<SMEM_DIN_NUM_SPEC> {
+    pub fn smem_din2_num(&mut self) -> SMEM_DIN2_NUM_W<'_, SMEM_DIN_NUM_SPEC> {
         SMEM_DIN2_NUM_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
     #[inline(always)]
-    pub fn smem_din3_num(&mut self) -> SMEM_DIN3_NUM_W<SMEM_DIN_NUM_SPEC> {
+    pub fn smem_din3_num(&mut self) -> SMEM_DIN3_NUM_W<'_, SMEM_DIN_NUM_SPEC> {
         SMEM_DIN3_NUM_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
     #[inline(always)]
-    pub fn smem_din4_num(&mut self) -> SMEM_DIN4_NUM_W<SMEM_DIN_NUM_SPEC> {
+    pub fn smem_din4_num(&mut self) -> SMEM_DIN4_NUM_W<'_, SMEM_DIN_NUM_SPEC> {
         SMEM_DIN4_NUM_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
     #[inline(always)]
-    pub fn smem_din5_num(&mut self) -> SMEM_DIN5_NUM_W<SMEM_DIN_NUM_SPEC> {
+    pub fn smem_din5_num(&mut self) -> SMEM_DIN5_NUM_W<'_, SMEM_DIN_NUM_SPEC> {
         SMEM_DIN5_NUM_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
     #[inline(always)]
-    pub fn smem_din6_num(&mut self) -> SMEM_DIN6_NUM_W<SMEM_DIN_NUM_SPEC> {
+    pub fn smem_din6_num(&mut self) -> SMEM_DIN6_NUM_W<'_, SMEM_DIN_NUM_SPEC> {
         SMEM_DIN6_NUM_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
     #[inline(always)]
-    pub fn smem_din7_num(&mut self) -> SMEM_DIN7_NUM_W<SMEM_DIN_NUM_SPEC> {
+    pub fn smem_din7_num(&mut self) -> SMEM_DIN7_NUM_W<'_, SMEM_DIN_NUM_SPEC> {
         SMEM_DIN7_NUM_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
     #[inline(always)]
-    pub fn smem_dins_num(&mut self) -> SMEM_DINS_NUM_W<SMEM_DIN_NUM_SPEC> {
+    pub fn smem_dins_num(&mut self) -> SMEM_DINS_NUM_W<'_, SMEM_DIN_NUM_SPEC> {
         SMEM_DINS_NUM_W::new(self, 16)
     }
 }

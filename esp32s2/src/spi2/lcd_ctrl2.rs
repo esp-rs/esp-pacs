@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - It is the position of spi_vsync active pulse in a line. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn lcd_vsync_width(&mut self) -> LCD_VSYNC_WIDTH_W<LCD_CTRL2_SPEC> {
+    pub fn lcd_vsync_width(&mut self) -> LCD_VSYNC_WIDTH_W<'_, LCD_CTRL2_SPEC> {
         LCD_VSYNC_WIDTH_W::new(self, 0)
     }
     #[doc = "Bit 7 - It is the idle value of spi_vsync. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn vsync_idle_pol(&mut self) -> VSYNC_IDLE_POL_W<LCD_CTRL2_SPEC> {
+    pub fn vsync_idle_pol(&mut self) -> VSYNC_IDLE_POL_W<'_, LCD_CTRL2_SPEC> {
         VSYNC_IDLE_POL_W::new(self, 7)
     }
     #[doc = "Bits 16:22 - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn lcd_hsync_width(&mut self) -> LCD_HSYNC_WIDTH_W<LCD_CTRL2_SPEC> {
+    pub fn lcd_hsync_width(&mut self) -> LCD_HSYNC_WIDTH_W<'_, LCD_CTRL2_SPEC> {
         LCD_HSYNC_WIDTH_W::new(self, 16)
     }
     #[doc = "Bit 23 - It is the idle value of spi_hsync. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn hsync_idle_pol(&mut self) -> HSYNC_IDLE_POL_W<LCD_CTRL2_SPEC> {
+    pub fn hsync_idle_pol(&mut self) -> HSYNC_IDLE_POL_W<'_, LCD_CTRL2_SPEC> {
         HSYNC_IDLE_POL_W::new(self, 23)
     }
     #[doc = "Bits 24:31 - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn lcd_hsync_position(&mut self) -> LCD_HSYNC_POSITION_W<LCD_CTRL2_SPEC> {
+    pub fn lcd_hsync_position(&mut self) -> LCD_HSYNC_POSITION_W<'_, LCD_CTRL2_SPEC> {
         LCD_HSYNC_POSITION_W::new(self, 24)
     }
 }

@@ -68,14 +68,14 @@ impl W {
     #[inline(always)]
     pub fn l2_cache_blocksize_64(
         &mut self,
-    ) -> L2_CACHE_BLOCKSIZE_64_W<L2_CACHE_BLOCKSIZE_CONF_SPEC> {
+    ) -> L2_CACHE_BLOCKSIZE_64_W<'_, L2_CACHE_BLOCKSIZE_CONF_SPEC> {
         L2_CACHE_BLOCKSIZE_64_W::new(self, 3)
     }
     #[doc = "Bit 4 - The field is used to configureblocksize of L2-Cache as 128 bytes. This field and all other fields within this register is onehot."]
     #[inline(always)]
     pub fn l2_cache_blocksize_128(
         &mut self,
-    ) -> L2_CACHE_BLOCKSIZE_128_W<L2_CACHE_BLOCKSIZE_CONF_SPEC> {
+    ) -> L2_CACHE_BLOCKSIZE_128_W<'_, L2_CACHE_BLOCKSIZE_CONF_SPEC> {
         L2_CACHE_BLOCKSIZE_128_W::new(self, 4)
     }
 }

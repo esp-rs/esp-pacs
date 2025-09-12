@@ -29,52 +29,52 @@ impl core::fmt::Debug for crate::generic::Reg<COMMAND_SPEC> {
 impl W {
     #[doc = "Bit 1 - RX Buffer read pointer move."]
     #[inline(always)]
-    pub fn rxrpmv(&mut self) -> RXRPMV_W<COMMAND_SPEC> {
+    pub fn rxrpmv(&mut self) -> RXRPMV_W<'_, COMMAND_SPEC> {
         RXRPMV_W::new(self, 1)
     }
     #[doc = "Bit 2 - Release RX Buffer. This command flushes RX buffer and resets its memory pointers. 0: invalid 1: delete"]
     #[inline(always)]
-    pub fn rrb(&mut self) -> RRB_W<COMMAND_SPEC> {
+    pub fn rrb(&mut self) -> RRB_W<'_, COMMAND_SPEC> {
         RRB_W::new(self, 2)
     }
     #[doc = "Bit 3 - Clear Data Overrun flag in RX buffer. 0: invalid 1: clear"]
     #[inline(always)]
-    pub fn cdo(&mut self) -> CDO_W<COMMAND_SPEC> {
+    pub fn cdo(&mut self) -> CDO_W<'_, COMMAND_SPEC> {
         CDO_W::new(self, 3)
     }
     #[doc = "Bit 4 - Error Counters Reset. When unit is bus off, issuing this command will request erasing TEC, REC counters after 128 consecutive ocurrences of 11 recessive bits. Upon completion, TEC and REC are erased and fault confinement State is set to error-active. When unit is not bus-off, or when unit is bus-off due to being disabled (SETTINGS\\[ENA\\] = ’0’), this command has no effect."]
     #[inline(always)]
-    pub fn ercrst(&mut self) -> ERCRST_W<COMMAND_SPEC> {
+    pub fn ercrst(&mut self) -> ERCRST_W<'_, COMMAND_SPEC> {
         ERCRST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Clear RX bus traffic counter (RX_COUNTER register)."]
     #[inline(always)]
-    pub fn rxfcrst(&mut self) -> RXFCRST_W<COMMAND_SPEC> {
+    pub fn rxfcrst(&mut self) -> RXFCRST_W<'_, COMMAND_SPEC> {
         RXFCRST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Clear TX bus traffic counter (TX_COUNTER register)."]
     #[inline(always)]
-    pub fn txfcrst(&mut self) -> TXFCRST_W<COMMAND_SPEC> {
+    pub fn txfcrst(&mut self) -> TXFCRST_W<'_, COMMAND_SPEC> {
         TXFCRST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Clear Protocol exception status (STATUS\\[PEXS\\])."]
     #[inline(always)]
-    pub fn cpexs(&mut self) -> CPEXS_W<COMMAND_SPEC> {
+    pub fn cpexs(&mut self) -> CPEXS_W<'_, COMMAND_SPEC> {
         CPEXS_W::new(self, 7)
     }
     #[doc = "Bit 8 - Clear STATUS\\[RXPE\\] flag."]
     #[inline(always)]
-    pub fn crxpe(&mut self) -> CRXPE_W<COMMAND_SPEC> {
+    pub fn crxpe(&mut self) -> CRXPE_W<'_, COMMAND_SPEC> {
         CRXPE_W::new(self, 8)
     }
     #[doc = "Bit 9 - Clear STATUS\\[TXPE\\] flag."]
     #[inline(always)]
-    pub fn ctxpe(&mut self) -> CTXPE_W<COMMAND_SPEC> {
+    pub fn ctxpe(&mut self) -> CTXPE_W<'_, COMMAND_SPEC> {
         CTXPE_W::new(self, 9)
     }
     #[doc = "Bit 10 - Clear STATUS\\[TXDPE\\] flag."]
     #[inline(always)]
-    pub fn ctxdpe(&mut self) -> CTXDPE_W<COMMAND_SPEC> {
+    pub fn ctxdpe(&mut self) -> CTXDPE_W<'_, COMMAND_SPEC> {
         CTXDPE_W::new(self, 10)
     }
 }

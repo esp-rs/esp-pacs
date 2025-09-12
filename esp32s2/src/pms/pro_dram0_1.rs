@@ -147,67 +147,69 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Setting to 1 grants DBUS0 permission to read SRAM Block 0."]
     #[inline(always)]
-    pub fn pro_dram0_sram_0_r(&mut self) -> PRO_DRAM0_SRAM_0_R_W<PRO_DRAM0_1_SPEC> {
+    pub fn pro_dram0_sram_0_r(&mut self) -> PRO_DRAM0_SRAM_0_R_W<'_, PRO_DRAM0_1_SPEC> {
         PRO_DRAM0_SRAM_0_R_W::new(self, 0)
     }
     #[doc = "Bit 1 - Setting to 1 grants DBUS0 permission to write SRAM Block 0."]
     #[inline(always)]
-    pub fn pro_dram0_sram_0_w(&mut self) -> PRO_DRAM0_SRAM_0_W_W<PRO_DRAM0_1_SPEC> {
+    pub fn pro_dram0_sram_0_w(&mut self) -> PRO_DRAM0_SRAM_0_W_W<'_, PRO_DRAM0_1_SPEC> {
         PRO_DRAM0_SRAM_0_W_W::new(self, 1)
     }
     #[doc = "Bit 2 - Setting to 1 grants DBUS0 permission to read SRAM Block 1."]
     #[inline(always)]
-    pub fn pro_dram0_sram_1_r(&mut self) -> PRO_DRAM0_SRAM_1_R_W<PRO_DRAM0_1_SPEC> {
+    pub fn pro_dram0_sram_1_r(&mut self) -> PRO_DRAM0_SRAM_1_R_W<'_, PRO_DRAM0_1_SPEC> {
         PRO_DRAM0_SRAM_1_R_W::new(self, 2)
     }
     #[doc = "Bit 3 - Setting to 1 grants DBUS0 permission to write SRAM Block 1."]
     #[inline(always)]
-    pub fn pro_dram0_sram_1_w(&mut self) -> PRO_DRAM0_SRAM_1_W_W<PRO_DRAM0_1_SPEC> {
+    pub fn pro_dram0_sram_1_w(&mut self) -> PRO_DRAM0_SRAM_1_W_W<'_, PRO_DRAM0_1_SPEC> {
         PRO_DRAM0_SRAM_1_W_W::new(self, 3)
     }
     #[doc = "Bit 4 - Setting to 1 grants DBUS0 permission to read SRAM Block 2."]
     #[inline(always)]
-    pub fn pro_dram0_sram_2_r(&mut self) -> PRO_DRAM0_SRAM_2_R_W<PRO_DRAM0_1_SPEC> {
+    pub fn pro_dram0_sram_2_r(&mut self) -> PRO_DRAM0_SRAM_2_R_W<'_, PRO_DRAM0_1_SPEC> {
         PRO_DRAM0_SRAM_2_R_W::new(self, 4)
     }
     #[doc = "Bit 5 - Setting to 1 grants DBUS0 permission to write SRAM Block 2."]
     #[inline(always)]
-    pub fn pro_dram0_sram_2_w(&mut self) -> PRO_DRAM0_SRAM_2_W_W<PRO_DRAM0_1_SPEC> {
+    pub fn pro_dram0_sram_2_w(&mut self) -> PRO_DRAM0_SRAM_2_W_W<'_, PRO_DRAM0_1_SPEC> {
         PRO_DRAM0_SRAM_2_W_W::new(self, 5)
     }
     #[doc = "Bit 6 - Setting to 1 grants DBUS0 permission to read SRAM Block 3."]
     #[inline(always)]
-    pub fn pro_dram0_sram_3_r(&mut self) -> PRO_DRAM0_SRAM_3_R_W<PRO_DRAM0_1_SPEC> {
+    pub fn pro_dram0_sram_3_r(&mut self) -> PRO_DRAM0_SRAM_3_R_W<'_, PRO_DRAM0_1_SPEC> {
         PRO_DRAM0_SRAM_3_R_W::new(self, 6)
     }
     #[doc = "Bit 7 - Setting to 1 grants DBUS0 permission to write SRAM Block 3."]
     #[inline(always)]
-    pub fn pro_dram0_sram_3_w(&mut self) -> PRO_DRAM0_SRAM_3_W_W<PRO_DRAM0_1_SPEC> {
+    pub fn pro_dram0_sram_3_w(&mut self) -> PRO_DRAM0_SRAM_3_W_W<'_, PRO_DRAM0_1_SPEC> {
         PRO_DRAM0_SRAM_3_W_W::new(self, 7)
     }
     #[doc = "Bits 8:24 - Configure the split address of SRAM Block 4-21 for DBUS0 access."]
     #[inline(always)]
-    pub fn pro_dram0_sram_4_spltaddr(&mut self) -> PRO_DRAM0_SRAM_4_SPLTADDR_W<PRO_DRAM0_1_SPEC> {
+    pub fn pro_dram0_sram_4_spltaddr(
+        &mut self,
+    ) -> PRO_DRAM0_SRAM_4_SPLTADDR_W<'_, PRO_DRAM0_1_SPEC> {
         PRO_DRAM0_SRAM_4_SPLTADDR_W::new(self, 8)
     }
     #[doc = "Bit 25 - Setting to 1 grants DBUS0 permission to read SRAM Block 4-21 low address region."]
     #[inline(always)]
-    pub fn pro_dram0_sram_4_l_r(&mut self) -> PRO_DRAM0_SRAM_4_L_R_W<PRO_DRAM0_1_SPEC> {
+    pub fn pro_dram0_sram_4_l_r(&mut self) -> PRO_DRAM0_SRAM_4_L_R_W<'_, PRO_DRAM0_1_SPEC> {
         PRO_DRAM0_SRAM_4_L_R_W::new(self, 25)
     }
     #[doc = "Bit 26 - Setting to 1 grants DBUS0 permission to write SRAM Block 4-21 low address region."]
     #[inline(always)]
-    pub fn pro_dram0_sram_4_l_w(&mut self) -> PRO_DRAM0_SRAM_4_L_W_W<PRO_DRAM0_1_SPEC> {
+    pub fn pro_dram0_sram_4_l_w(&mut self) -> PRO_DRAM0_SRAM_4_L_W_W<'_, PRO_DRAM0_1_SPEC> {
         PRO_DRAM0_SRAM_4_L_W_W::new(self, 26)
     }
     #[doc = "Bit 27 - Setting to 1 grants DBUS0 permission to read SRAM Block 4-21 high address region."]
     #[inline(always)]
-    pub fn pro_dram0_sram_4_h_r(&mut self) -> PRO_DRAM0_SRAM_4_H_R_W<PRO_DRAM0_1_SPEC> {
+    pub fn pro_dram0_sram_4_h_r(&mut self) -> PRO_DRAM0_SRAM_4_H_R_W<'_, PRO_DRAM0_1_SPEC> {
         PRO_DRAM0_SRAM_4_H_R_W::new(self, 27)
     }
     #[doc = "Bit 28 - Setting to 1 grants DBUS0 permission to write SRAM Block 4-21 high address region."]
     #[inline(always)]
-    pub fn pro_dram0_sram_4_h_w(&mut self) -> PRO_DRAM0_SRAM_4_H_W_W<PRO_DRAM0_1_SPEC> {
+    pub fn pro_dram0_sram_4_h_w(&mut self) -> PRO_DRAM0_SRAM_4_H_W_W<'_, PRO_DRAM0_1_SPEC> {
         PRO_DRAM0_SRAM_4_H_W_W::new(self, 28)
     }
 }

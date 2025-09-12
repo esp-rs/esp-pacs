@@ -62,26 +62,26 @@ impl W {
     #[inline(always)]
     pub fn reg_dat_dev6_static_addr(
         &mut self,
-    ) -> REG_DAT_DEV6_STATIC_ADDR_W<DEV_ADDR_TABLE6_LOC_SPEC> {
+    ) -> REG_DAT_DEV6_STATIC_ADDR_W<'_, DEV_ADDR_TABLE6_LOC_SPEC> {
         REG_DAT_DEV6_STATIC_ADDR_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - Device Dynamic Address with parity, The MSB,bit\\[23\\], should be programmed with parity of dynamic address."]
     #[inline(always)]
     pub fn reg_dat_dev6_dynamic_addr(
         &mut self,
-    ) -> REG_DAT_DEV6_DYNAMIC_ADDR_W<DEV_ADDR_TABLE6_LOC_SPEC> {
+    ) -> REG_DAT_DEV6_DYNAMIC_ADDR_W<'_, DEV_ADDR_TABLE6_LOC_SPEC> {
         REG_DAT_DEV6_DYNAMIC_ADDR_W::new(self, 16)
     }
     #[doc = "Bits 29:30 - This field is used to set the Device NACK Retry count for the particular device. If the Device NACK's for the device address, the controller automatically retries the same device until this count expires. If the Slave does not ACK for the mentioned number of retries, then controller generates an error response and move to the Halt state."]
     #[inline(always)]
     pub fn reg_dat_dev6_nack_retry_cnt(
         &mut self,
-    ) -> REG_DAT_DEV6_NACK_RETRY_CNT_W<DEV_ADDR_TABLE6_LOC_SPEC> {
+    ) -> REG_DAT_DEV6_NACK_RETRY_CNT_W<'_, DEV_ADDR_TABLE6_LOC_SPEC> {
         REG_DAT_DEV6_NACK_RETRY_CNT_W::new(self, 29)
     }
     #[doc = "Bit 31 - Legacy I2C device or not. This bit should be set to 1 if the device is a legacy I2C device."]
     #[inline(always)]
-    pub fn reg_dat_dev6_i2c(&mut self) -> REG_DAT_DEV6_I2C_W<DEV_ADDR_TABLE6_LOC_SPEC> {
+    pub fn reg_dat_dev6_i2c(&mut self) -> REG_DAT_DEV6_I2C_W<'_, DEV_ADDR_TABLE6_LOC_SPEC> {
         REG_DAT_DEV6_I2C_W::new(self, 31)
     }
 }

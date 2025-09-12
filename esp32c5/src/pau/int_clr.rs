@@ -13,12 +13,12 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - backup done flag"]
     #[inline(always)]
-    pub fn done_int_clr(&mut self) -> DONE_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn done_int_clr(&mut self) -> DONE_INT_CLR_W<'_, INT_CLR_SPEC> {
         DONE_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - error flag"]
     #[inline(always)]
-    pub fn error_int_clr(&mut self) -> ERROR_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn error_int_clr(&mut self) -> ERROR_INT_CLR_W<'_, INT_CLR_SPEC> {
         ERROR_INT_CLR_W::new(self, 1)
     }
 }

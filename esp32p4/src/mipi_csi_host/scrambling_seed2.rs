@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - NA"]
     #[inline(always)]
-    pub fn scramble_seed_lane2(&mut self) -> SCRAMBLE_SEED_LANE2_W<SCRAMBLING_SEED2_SPEC> {
+    pub fn scramble_seed_lane2(&mut self) -> SCRAMBLE_SEED_LANE2_W<'_, SCRAMBLING_SEED2_SPEC> {
         SCRAMBLE_SEED_LANE2_W::new(self, 0)
     }
 }

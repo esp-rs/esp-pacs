@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn af_env_user_threshold_sum(
         &mut self,
-    ) -> AF_ENV_USER_THRESHOLD_SUM_W<AF_ENV_USER_TH_SUM_SPEC> {
+    ) -> AF_ENV_USER_THRESHOLD_SUM_W<'_, AF_ENV_USER_TH_SUM_SPEC> {
         AF_ENV_USER_THRESHOLD_SUM_W::new(self, 0)
     }
 }

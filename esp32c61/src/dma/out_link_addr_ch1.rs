@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Configures the 32 bits of the first receive descriptor's address."]
     #[inline(always)]
-    pub fn outlink_addr_ch1(&mut self) -> OUTLINK_ADDR_CH1_W<OUT_LINK_ADDR_CH1_SPEC> {
+    pub fn outlink_addr_ch1(&mut self) -> OUTLINK_ADDR_CH1_W<'_, OUT_LINK_ADDR_CH1_SPEC> {
         OUTLINK_ADDR_CH1_W::new(self, 0)
     }
 }

@@ -42,14 +42,14 @@ impl W {
     #[inline(always)]
     pub fn core_0_iram0_pms_monitor_violate_clr(
         &mut self,
-    ) -> CORE_0_IRAM0_PMS_MONITOR_VIOLATE_CLR_W<CORE_0_IRAM0_PMS_MONITOR_1_SPEC> {
+    ) -> CORE_0_IRAM0_PMS_MONITOR_VIOLATE_CLR_W<'_, CORE_0_IRAM0_PMS_MONITOR_1_SPEC> {
         CORE_0_IRAM0_PMS_MONITOR_VIOLATE_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to enable core0 iram0 permission monitor, when core0_iram violated permission, will trigger interrupt"]
     #[inline(always)]
     pub fn core_0_iram0_pms_monitor_violate_en(
         &mut self,
-    ) -> CORE_0_IRAM0_PMS_MONITOR_VIOLATE_EN_W<CORE_0_IRAM0_PMS_MONITOR_1_SPEC> {
+    ) -> CORE_0_IRAM0_PMS_MONITOR_VIOLATE_EN_W<'_, CORE_0_IRAM0_PMS_MONITOR_1_SPEC> {
         CORE_0_IRAM0_PMS_MONITOR_VIOLATE_EN_W::new(self, 1)
     }
 }

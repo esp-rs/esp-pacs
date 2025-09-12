@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn i2c_scl_main_st_to_i2c(
         &mut self,
-    ) -> I2C_SCL_MAIN_ST_TO_I2C_W<I2C_SCL_MAIN_ST_TIME_OUT_SPEC> {
+    ) -> I2C_SCL_MAIN_ST_TO_I2C_W<'_, I2C_SCL_MAIN_ST_TIME_OUT_SPEC> {
         I2C_SCL_MAIN_ST_TO_I2C_W::new(self, 0)
     }
 }

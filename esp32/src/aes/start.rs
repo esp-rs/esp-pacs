@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<START_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to start the AES operation."]
     #[inline(always)]
-    pub fn start(&mut self) -> START_W<START_SPEC> {
+    pub fn start(&mut self) -> START_W<'_, START_SPEC> {
         START_W::new(self, 0)
     }
 }

@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn dsi_raw_buf_almost_empty_thrd(
         &mut self,
-    ) -> DSI_RAW_BUF_ALMOST_EMPTY_THRD_W<RAW_BUF_ALMOST_EMPTY_THRD_SPEC> {
+    ) -> DSI_RAW_BUF_ALMOST_EMPTY_THRD_W<'_, RAW_BUF_ALMOST_EMPTY_THRD_SPEC> {
         DSI_RAW_BUF_ALMOST_EMPTY_THRD_W::new(self, 0)
     }
 }

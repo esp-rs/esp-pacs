@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn clk_prescale(&mut self) -> CLK_PRESCALE_W<CLK_CFG_SPEC> {
+    pub fn clk_prescale(&mut self) -> CLK_PRESCALE_W<'_, CLK_CFG_SPEC> {
         CLK_PRESCALE_W::new(self, 0)
     }
 }

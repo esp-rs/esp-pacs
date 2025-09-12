@@ -21,32 +21,32 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn scan_done(&mut self) -> SCAN_DONE_W<INT_CLR_SPEC> {
+    pub fn scan_done(&mut self) -> SCAN_DONE_W<'_, INT_CLR_SPEC> {
         SCAN_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn done(&mut self) -> DONE_W<INT_CLR_SPEC> {
+    pub fn done(&mut self) -> DONE_W<'_, INT_CLR_SPEC> {
         DONE_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn active(&mut self) -> ACTIVE_W<INT_CLR_SPEC> {
+    pub fn active(&mut self) -> ACTIVE_W<'_, INT_CLR_SPEC> {
         ACTIVE_W::new(self, 2)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
-    pub fn inactive(&mut self) -> INACTIVE_W<INT_CLR_SPEC> {
+    pub fn inactive(&mut self) -> INACTIVE_W<'_, INT_CLR_SPEC> {
         INACTIVE_W::new(self, 3)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
-    pub fn timeout(&mut self) -> TIMEOUT_W<INT_CLR_SPEC> {
+    pub fn timeout(&mut self) -> TIMEOUT_W<'_, INT_CLR_SPEC> {
         TIMEOUT_W::new(self, 4)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    pub fn approach_loop_done(&mut self) -> APPROACH_LOOP_DONE_W<INT_CLR_SPEC> {
+    pub fn approach_loop_done(&mut self) -> APPROACH_LOOP_DONE_W<'_, INT_CLR_SPEC> {
         APPROACH_LOOP_DONE_W::new(self, 5)
     }
 }

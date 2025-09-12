@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Region execute authority in REE_MODE0"]
     #[inline(always)]
-    pub fn region2_r0_pms_x(&mut self) -> REGION2_R0_PMS_X_W<REGION2_PMS_ATTR_SPEC> {
+    pub fn region2_r0_pms_x(&mut self) -> REGION2_R0_PMS_X_W<'_, REGION2_PMS_ATTR_SPEC> {
         REGION2_R0_PMS_X_W::new(self, 0)
     }
     #[doc = "Bit 1 - Region write authority in REE_MODE0"]
     #[inline(always)]
-    pub fn region2_r0_pms_w(&mut self) -> REGION2_R0_PMS_W_W<REGION2_PMS_ATTR_SPEC> {
+    pub fn region2_r0_pms_w(&mut self) -> REGION2_R0_PMS_W_W<'_, REGION2_PMS_ATTR_SPEC> {
         REGION2_R0_PMS_W_W::new(self, 1)
     }
     #[doc = "Bit 2 - Region read authority in REE_MODE0"]
     #[inline(always)]
-    pub fn region2_r0_pms_r(&mut self) -> REGION2_R0_PMS_R_W<REGION2_PMS_ATTR_SPEC> {
+    pub fn region2_r0_pms_r(&mut self) -> REGION2_R0_PMS_R_W<'_, REGION2_PMS_ATTR_SPEC> {
         REGION2_R0_PMS_R_W::new(self, 2)
     }
     #[doc = "Bit 4 - Region execute authority in REE_MODE1"]
     #[inline(always)]
-    pub fn region2_r1_pms_x(&mut self) -> REGION2_R1_PMS_X_W<REGION2_PMS_ATTR_SPEC> {
+    pub fn region2_r1_pms_x(&mut self) -> REGION2_R1_PMS_X_W<'_, REGION2_PMS_ATTR_SPEC> {
         REGION2_R1_PMS_X_W::new(self, 4)
     }
     #[doc = "Bit 5 - Region write authority in REE_MODE1"]
     #[inline(always)]
-    pub fn region2_r1_pms_w(&mut self) -> REGION2_R1_PMS_W_W<REGION2_PMS_ATTR_SPEC> {
+    pub fn region2_r1_pms_w(&mut self) -> REGION2_R1_PMS_W_W<'_, REGION2_PMS_ATTR_SPEC> {
         REGION2_R1_PMS_W_W::new(self, 5)
     }
     #[doc = "Bit 6 - Region read authority in REE_MODE1"]
     #[inline(always)]
-    pub fn region2_r1_pms_r(&mut self) -> REGION2_R1_PMS_R_W<REGION2_PMS_ATTR_SPEC> {
+    pub fn region2_r1_pms_r(&mut self) -> REGION2_R1_PMS_R_W<'_, REGION2_PMS_ATTR_SPEC> {
         REGION2_R1_PMS_R_W::new(self, 6)
     }
     #[doc = "Bit 8 - Region execute authority in REE_MODE2"]
     #[inline(always)]
-    pub fn region2_r2_pms_x(&mut self) -> REGION2_R2_PMS_X_W<REGION2_PMS_ATTR_SPEC> {
+    pub fn region2_r2_pms_x(&mut self) -> REGION2_R2_PMS_X_W<'_, REGION2_PMS_ATTR_SPEC> {
         REGION2_R2_PMS_X_W::new(self, 8)
     }
     #[doc = "Bit 9 - Region write authority in REE_MODE2"]
     #[inline(always)]
-    pub fn region2_r2_pms_w(&mut self) -> REGION2_R2_PMS_W_W<REGION2_PMS_ATTR_SPEC> {
+    pub fn region2_r2_pms_w(&mut self) -> REGION2_R2_PMS_W_W<'_, REGION2_PMS_ATTR_SPEC> {
         REGION2_R2_PMS_W_W::new(self, 9)
     }
     #[doc = "Bit 10 - Region read authority in REE_MODE2"]
     #[inline(always)]
-    pub fn region2_r2_pms_r(&mut self) -> REGION2_R2_PMS_R_W<REGION2_PMS_ATTR_SPEC> {
+    pub fn region2_r2_pms_r(&mut self) -> REGION2_R2_PMS_R_W<'_, REGION2_PMS_ATTR_SPEC> {
         REGION2_R2_PMS_R_W::new(self, 10)
     }
 }

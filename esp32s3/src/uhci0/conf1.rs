@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This is the enable bit to check header checksum when UHCI receives a data packet."]
     #[inline(always)]
-    pub fn check_sum_en(&mut self) -> CHECK_SUM_EN_W<CONF1_SPEC> {
+    pub fn check_sum_en(&mut self) -> CHECK_SUM_EN_W<'_, CONF1_SPEC> {
         CHECK_SUM_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - This is the enable bit to check sequence number when UHCI receives a data packet."]
     #[inline(always)]
-    pub fn check_seq_en(&mut self) -> CHECK_SEQ_EN_W<CONF1_SPEC> {
+    pub fn check_seq_en(&mut self) -> CHECK_SEQ_EN_W<'_, CONF1_SPEC> {
         CHECK_SEQ_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to support CRC calculation. Data Integrity Check Present bit in UHCI packet frame should be 1."]
     #[inline(always)]
-    pub fn crc_disable(&mut self) -> CRC_DISABLE_W<CONF1_SPEC> {
+    pub fn crc_disable(&mut self) -> CRC_DISABLE_W<'_, CONF1_SPEC> {
         CRC_DISABLE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to save the packet header when HCI receives a data packet."]
     #[inline(always)]
-    pub fn save_head(&mut self) -> SAVE_HEAD_W<CONF1_SPEC> {
+    pub fn save_head(&mut self) -> SAVE_HEAD_W<'_, CONF1_SPEC> {
         SAVE_HEAD_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to encode the data packet with a checksum."]
     #[inline(always)]
-    pub fn tx_check_sum_re(&mut self) -> TX_CHECK_SUM_RE_W<CONF1_SPEC> {
+    pub fn tx_check_sum_re(&mut self) -> TX_CHECK_SUM_RE_W<'_, CONF1_SPEC> {
         TX_CHECK_SUM_RE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to encode the data packet with an acknowledgment when a reliable packet is to be transmit."]
     #[inline(always)]
-    pub fn tx_ack_num_re(&mut self) -> TX_ACK_NUM_RE_W<CONF1_SPEC> {
+    pub fn tx_ack_num_re(&mut self) -> TX_ACK_NUM_RE_W<'_, CONF1_SPEC> {
         TX_ACK_NUM_RE_W::new(self, 5)
     }
     #[doc = "Bit 7 - The uhci-encoder will jump to ST_SW_WAIT status if this register is set to 1."]
     #[inline(always)]
-    pub fn wait_sw_start(&mut self) -> WAIT_SW_START_W<CONF1_SPEC> {
+    pub fn wait_sw_start(&mut self) -> WAIT_SW_START_W<'_, CONF1_SPEC> {
         WAIT_SW_START_W::new(self, 7)
     }
     #[doc = "Bit 8 - If current UHCI_ENCODE_STATE is ST_SW_WAIT, the UHCI will start to send data packet out when this bit is set to 1."]
     #[inline(always)]
-    pub fn sw_start(&mut self) -> SW_START_W<CONF1_SPEC> {
+    pub fn sw_start(&mut self) -> SW_START_W<'_, CONF1_SPEC> {
         SW_START_W::new(self, 8)
     }
 }

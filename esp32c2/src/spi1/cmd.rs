@@ -180,77 +180,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 17 - In user mode, it is set to indicate that program/erase operation will be triggered. The bit is combined with spi_mem_usr bit. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
-    pub fn flash_pe(&mut self) -> FLASH_PE_W<CMD_SPEC> {
+    pub fn flash_pe(&mut self) -> FLASH_PE_W<'_, CMD_SPEC> {
         FLASH_PE_W::new(self, 17)
     }
     #[doc = "Bit 18 - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
-    pub fn usr(&mut self) -> USR_W<CMD_SPEC> {
+    pub fn usr(&mut self) -> USR_W<'_, CMD_SPEC> {
         USR_W::new(self, 18)
     }
     #[doc = "Bit 19 - Drive Flash into high performance mode. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
-    pub fn flash_hpm(&mut self) -> FLASH_HPM_W<CMD_SPEC> {
+    pub fn flash_hpm(&mut self) -> FLASH_HPM_W<'_, CMD_SPEC> {
         FLASH_HPM_W::new(self, 19)
     }
     #[doc = "Bit 20 - This bit combined with reg_resandres bit releases Flash from the power-down state or high performance mode and obtains the devices ID. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
-    pub fn flash_res(&mut self) -> FLASH_RES_W<CMD_SPEC> {
+    pub fn flash_res(&mut self) -> FLASH_RES_W<'_, CMD_SPEC> {
         FLASH_RES_W::new(self, 20)
     }
     #[doc = "Bit 21 - Drive Flash into power down. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
-    pub fn flash_dp(&mut self) -> FLASH_DP_W<CMD_SPEC> {
+    pub fn flash_dp(&mut self) -> FLASH_DP_W<'_, CMD_SPEC> {
         FLASH_DP_W::new(self, 21)
     }
     #[doc = "Bit 22 - Chip erase enable. Chip erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
-    pub fn flash_ce(&mut self) -> FLASH_CE_W<CMD_SPEC> {
+    pub fn flash_ce(&mut self) -> FLASH_CE_W<'_, CMD_SPEC> {
         FLASH_CE_W::new(self, 22)
     }
     #[doc = "Bit 23 - Block erase enable(32KB) . Block erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
-    pub fn flash_be(&mut self) -> FLASH_BE_W<CMD_SPEC> {
+    pub fn flash_be(&mut self) -> FLASH_BE_W<'_, CMD_SPEC> {
         FLASH_BE_W::new(self, 23)
     }
     #[doc = "Bit 24 - Sector erase enable(4KB). Sector erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
-    pub fn flash_se(&mut self) -> FLASH_SE_W<CMD_SPEC> {
+    pub fn flash_se(&mut self) -> FLASH_SE_W<'_, CMD_SPEC> {
         FLASH_SE_W::new(self, 24)
     }
     #[doc = "Bit 25 - Page program enable(1 byte ~256 bytes data to be programmed). Page program operation will be triggered when the bit is set. The bit will be cleared once the operation done .1: enable 0: disable."]
     #[inline(always)]
-    pub fn flash_pp(&mut self) -> FLASH_PP_W<CMD_SPEC> {
+    pub fn flash_pp(&mut self) -> FLASH_PP_W<'_, CMD_SPEC> {
         FLASH_PP_W::new(self, 25)
     }
     #[doc = "Bit 26 - Write status register enable. Write status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
-    pub fn flash_wrsr(&mut self) -> FLASH_WRSR_W<CMD_SPEC> {
+    pub fn flash_wrsr(&mut self) -> FLASH_WRSR_W<'_, CMD_SPEC> {
         FLASH_WRSR_W::new(self, 26)
     }
     #[doc = "Bit 27 - Read status register-1. Read status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
-    pub fn flash_rdsr(&mut self) -> FLASH_RDSR_W<CMD_SPEC> {
+    pub fn flash_rdsr(&mut self) -> FLASH_RDSR_W<'_, CMD_SPEC> {
         FLASH_RDSR_W::new(self, 27)
     }
     #[doc = "Bit 28 - Read JEDEC ID . Read ID command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn flash_rdid(&mut self) -> FLASH_RDID_W<CMD_SPEC> {
+    pub fn flash_rdid(&mut self) -> FLASH_RDID_W<'_, CMD_SPEC> {
         FLASH_RDID_W::new(self, 28)
     }
     #[doc = "Bit 29 - Write flash disable. Write disable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn flash_wrdi(&mut self) -> FLASH_WRDI_W<CMD_SPEC> {
+    pub fn flash_wrdi(&mut self) -> FLASH_WRDI_W<'_, CMD_SPEC> {
         FLASH_WRDI_W::new(self, 29)
     }
     #[doc = "Bit 30 - Write flash enable. Write enable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn flash_wren(&mut self) -> FLASH_WREN_W<CMD_SPEC> {
+    pub fn flash_wren(&mut self) -> FLASH_WREN_W<'_, CMD_SPEC> {
         FLASH_WREN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Read flash enable. Read flash operation will be triggered when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn flash_read(&mut self) -> FLASH_READ_W<CMD_SPEC> {
+    pub fn flash_read(&mut self) -> FLASH_READ_W<'_, CMD_SPEC> {
         FLASH_READ_W::new(self, 31)
     }
 }

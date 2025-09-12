@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 14:31 - GPIO0~17 interrupt status"]
     #[inline(always)]
-    pub fn int(&mut self) -> INT_W<STATUS_SPEC> {
+    pub fn int(&mut self) -> INT_W<'_, STATUS_SPEC> {
         INT_W::new(self, 14)
     }
 }

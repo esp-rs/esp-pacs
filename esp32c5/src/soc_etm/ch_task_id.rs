@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures ch%s_task_id"]
     #[inline(always)]
-    pub fn ch_task_id(&mut self) -> CH_TASK_ID_W<CH_TASK_ID_SPEC> {
+    pub fn ch_task_id(&mut self) -> CH_TASK_ID_W<'_, CH_TASK_ID_SPEC> {
         CH_TASK_ID_W::new(self, 0)
     }
 }

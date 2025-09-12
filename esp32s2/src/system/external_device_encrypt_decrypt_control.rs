@@ -68,28 +68,28 @@ impl W {
     #[inline(always)]
     pub fn enable_spi_manual_encrypt(
         &mut self,
-    ) -> ENABLE_SPI_MANUAL_ENCRYPT_W<EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC> {
+    ) -> ENABLE_SPI_MANUAL_ENCRYPT_W<'_, EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC> {
         ENABLE_SPI_MANUAL_ENCRYPT_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enable Auto Encryption under Download Boot mode."]
     #[inline(always)]
     pub fn enable_download_db_encrypt(
         &mut self,
-    ) -> ENABLE_DOWNLOAD_DB_ENCRYPT_W<EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC> {
+    ) -> ENABLE_DOWNLOAD_DB_ENCRYPT_W<'_, EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC> {
         ENABLE_DOWNLOAD_DB_ENCRYPT_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to enable Auto Decryption under Download Boot mode."]
     #[inline(always)]
     pub fn enable_download_g0cb_decrypt(
         &mut self,
-    ) -> ENABLE_DOWNLOAD_G0CB_DECRYPT_W<EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC> {
+    ) -> ENABLE_DOWNLOAD_G0CB_DECRYPT_W<'_, EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC> {
         ENABLE_DOWNLOAD_G0CB_DECRYPT_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to enable Manual Encryption under Download Boot mode."]
     #[inline(always)]
     pub fn enable_download_manual_encrypt(
         &mut self,
-    ) -> ENABLE_DOWNLOAD_MANUAL_ENCRYPT_W<EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC> {
+    ) -> ENABLE_DOWNLOAD_MANUAL_ENCRYPT_W<'_, EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC> {
         ENABLE_DOWNLOAD_MANUAL_ENCRYPT_W::new(self, 3)
     }
 }

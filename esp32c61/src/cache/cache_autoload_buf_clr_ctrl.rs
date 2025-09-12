@@ -56,7 +56,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - set this bit to clear autoload-buffer inside L1-Cache. If this bit is active, autoload will not work in L1-Cache. This bit should not be active when autoload works in L1-Cache."]
     #[inline(always)]
-    pub fn cache_ald_buf_clr(&mut self) -> CACHE_ALD_BUF_CLR_W<CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC> {
+    pub fn cache_ald_buf_clr(
+        &mut self,
+    ) -> CACHE_ALD_BUF_CLR_W<'_, CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC> {
         CACHE_ALD_BUF_CLR_W::new(self, 4)
     }
 }

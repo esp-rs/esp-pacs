@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Configure this field to lock or unlock RWDT`s configuration registers.\\\\0x50D83AA1: unlock the RWDT configuration registers.\\\\ Others value: Lock the RWDT configuration register which can`t be modified by software."]
     #[inline(always)]
-    pub fn wdt_wkey(&mut self) -> WDT_WKEY_W<WPROTECT_SPEC> {
+    pub fn wdt_wkey(&mut self) -> WDT_WKEY_W<'_, WPROTECT_SPEC> {
         WDT_WKEY_W::new(self, 0)
     }
 }

@@ -62,22 +62,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Lower threshold."]
     #[inline(always)]
-    pub fn wakeup_th_low(&mut self) -> WAKEUP_TH_LOW_W<WAKEUP_CTRL_SPEC> {
+    pub fn wakeup_th_low(&mut self) -> WAKEUP_TH_LOW_W<'_, WAKEUP_CTRL_SPEC> {
         WAKEUP_TH_LOW_W::new(self, 0)
     }
     #[doc = "Bits 14:21 - Upper threshold."]
     #[inline(always)]
-    pub fn wakeup_th_high(&mut self) -> WAKEUP_TH_HIGH_W<WAKEUP_CTRL_SPEC> {
+    pub fn wakeup_th_high(&mut self) -> WAKEUP_TH_HIGH_W<'_, WAKEUP_CTRL_SPEC> {
         WAKEUP_TH_HIGH_W::new(self, 14)
     }
     #[doc = "Bit 30 - Tsens wakeup enable."]
     #[inline(always)]
-    pub fn wakeup_en(&mut self) -> WAKEUP_EN_W<WAKEUP_CTRL_SPEC> {
+    pub fn wakeup_en(&mut self) -> WAKEUP_EN_W<'_, WAKEUP_CTRL_SPEC> {
         WAKEUP_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - 0:absolute value comparison mode. 1: relative value comparison mode."]
     #[inline(always)]
-    pub fn wakeup_mode(&mut self) -> WAKEUP_MODE_W<WAKEUP_CTRL_SPEC> {
+    pub fn wakeup_mode(&mut self) -> WAKEUP_MODE_W<'_, WAKEUP_CTRL_SPEC> {
         WAKEUP_MODE_W::new(self, 31)
     }
 }

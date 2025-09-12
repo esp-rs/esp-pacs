@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - The threshold that trigger error warning interrupt when this interrupt is enabled. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
-    pub fn err_warning_limit(&mut self) -> ERR_WARNING_LIMIT_W<ERR_WARNING_LIMIT_SPEC> {
+    pub fn err_warning_limit(&mut self) -> ERR_WARNING_LIMIT_W<'_, ERR_WARNING_LIMIT_SPEC> {
         ERR_WARNING_LIMIT_W::new(self, 0)
     }
 }

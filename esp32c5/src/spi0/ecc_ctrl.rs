@@ -93,32 +93,34 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 11:16 - Set the error times of MSPI ECC read to generate MSPI SPI_MEM_ECC_ERR_INT interrupt."]
     #[inline(always)]
-    pub fn fmem_ecc_err_int_num(&mut self) -> FMEM_ECC_ERR_INT_NUM_W<ECC_CTRL_SPEC> {
+    pub fn fmem_ecc_err_int_num(&mut self) -> FMEM_ECC_ERR_INT_NUM_W<'_, ECC_CTRL_SPEC> {
         FMEM_ECC_ERR_INT_NUM_W::new(self, 11)
     }
     #[doc = "Bit 17 - Set this bit to calculate the error times of MSPI ECC read when accesses to flash."]
     #[inline(always)]
-    pub fn fmem_ecc_err_int_en(&mut self) -> FMEM_ECC_ERR_INT_EN_W<ECC_CTRL_SPEC> {
+    pub fn fmem_ecc_err_int_en(&mut self) -> FMEM_ECC_ERR_INT_EN_W<'_, ECC_CTRL_SPEC> {
         FMEM_ECC_ERR_INT_EN_W::new(self, 17)
     }
     #[doc = "Bits 18:19 - Set the page size of the flash accessed by MSPI. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
-    pub fn fmem_page_size(&mut self) -> FMEM_PAGE_SIZE_W<ECC_CTRL_SPEC> {
+    pub fn fmem_page_size(&mut self) -> FMEM_PAGE_SIZE_W<'_, ECC_CTRL_SPEC> {
         FMEM_PAGE_SIZE_W::new(self, 18)
     }
     #[doc = "Bit 21 - Set this bit to enable MSPI ECC address conversion, no matter MSPI accesses to the ECC region or non-ECC region of flash. If there is no ECC region in flash, this bit should be 0. Otherwise, this bit should be 1."]
     #[inline(always)]
-    pub fn fmem_ecc_addr_en(&mut self) -> FMEM_ECC_ADDR_EN_W<ECC_CTRL_SPEC> {
+    pub fn fmem_ecc_addr_en(&mut self) -> FMEM_ECC_ADDR_EN_W<'_, ECC_CTRL_SPEC> {
         FMEM_ECC_ADDR_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - Set this bit to enable ECC address convert in SPI0/1 USR_CMD transfer."]
     #[inline(always)]
-    pub fn usr_ecc_addr_en(&mut self) -> USR_ECC_ADDR_EN_W<ECC_CTRL_SPEC> {
+    pub fn usr_ecc_addr_en(&mut self) -> USR_ECC_ADDR_EN_W<'_, ECC_CTRL_SPEC> {
         USR_ECC_ADDR_EN_W::new(self, 22)
     }
     #[doc = "Bit 24 - 1: The error information in SPI_MEM_ECC_ERR_BITS and SPI_MEM_ECC_ERR_ADDR is updated when there is an ECC error. 0: SPI_MEM_ECC_ERR_BITS and SPI_MEM_ECC_ERR_ADDR record the first ECC error information."]
     #[inline(always)]
-    pub fn ecc_continue_record_err_en(&mut self) -> ECC_CONTINUE_RECORD_ERR_EN_W<ECC_CTRL_SPEC> {
+    pub fn ecc_continue_record_err_en(
+        &mut self,
+    ) -> ECC_CONTINUE_RECORD_ERR_EN_W<'_, ECC_CTRL_SPEC> {
         ECC_CONTINUE_RECORD_ERR_EN_W::new(self, 24)
     }
 }

@@ -44,17 +44,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - set 1 to reset l1 dcahce"]
     #[inline(always)]
-    pub fn reg_l1_d_cache_reset(&mut self) -> REG_L1_D_CACHE_RESET_W<CACHE_RESET_CONFIG_SPEC> {
+    pub fn reg_l1_d_cache_reset(&mut self) -> REG_L1_D_CACHE_RESET_W<'_, CACHE_RESET_CONFIG_SPEC> {
         REG_L1_D_CACHE_RESET_W::new(self, 1)
     }
     #[doc = "Bit 4 - set 1 to reset l1 icahce1"]
     #[inline(always)]
-    pub fn reg_l1_i1_cache_reset(&mut self) -> REG_L1_I1_CACHE_RESET_W<CACHE_RESET_CONFIG_SPEC> {
+    pub fn reg_l1_i1_cache_reset(
+        &mut self,
+    ) -> REG_L1_I1_CACHE_RESET_W<'_, CACHE_RESET_CONFIG_SPEC> {
         REG_L1_I1_CACHE_RESET_W::new(self, 4)
     }
     #[doc = "Bit 5 - set 1 to reset l1 icahce0"]
     #[inline(always)]
-    pub fn reg_l1_i0_cache_reset(&mut self) -> REG_L1_I0_CACHE_RESET_W<CACHE_RESET_CONFIG_SPEC> {
+    pub fn reg_l1_i0_cache_reset(
+        &mut self,
+    ) -> REG_L1_I0_CACHE_RESET_W<'_, CACHE_RESET_CONFIG_SPEC> {
         REG_L1_I0_CACHE_RESET_W::new(self, 5)
     }
 }

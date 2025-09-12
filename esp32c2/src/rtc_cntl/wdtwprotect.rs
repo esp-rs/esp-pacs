@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Need add desc"]
     #[inline(always)]
-    pub fn wdt_wkey(&mut self) -> WDT_WKEY_W<WDTWPROTECT_SPEC> {
+    pub fn wdt_wkey(&mut self) -> WDT_WKEY_W<'_, WDTWPROTECT_SPEC> {
         WDT_WKEY_W::new(self, 0)
     }
 }

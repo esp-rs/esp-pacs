@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpio_enable_data(&mut self) -> REG_GPIO_ENABLE_DATA_W<ENABLE_SPEC> {
+    pub fn reg_gpio_enable_data(&mut self) -> REG_GPIO_ENABLE_DATA_W<'_, ENABLE_SPEC> {
         REG_GPIO_ENABLE_DATA_W::new(self, 0)
     }
 }

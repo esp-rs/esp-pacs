@@ -46,22 +46,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - (cycles-1) of prepare phase by spi clock this bits are combined with spi_mem_cs_setup bit."]
     #[inline(always)]
-    pub fn cs_setup_time(&mut self) -> CS_SETUP_TIME_W<CTRL2_SPEC> {
+    pub fn cs_setup_time(&mut self) -> CS_SETUP_TIME_W<'_, CTRL2_SPEC> {
         CS_SETUP_TIME_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - Spi cs signal is delayed to inactive by spi clock this bits are combined with spi_mem_cs_hold bit."]
     #[inline(always)]
-    pub fn cs_hold_time(&mut self) -> CS_HOLD_TIME_W<CTRL2_SPEC> {
+    pub fn cs_hold_time(&mut self) -> CS_HOLD_TIME_W<'_, CTRL2_SPEC> {
         CS_HOLD_TIME_W::new(self, 5)
     }
     #[doc = "Bits 25:30 - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
     #[inline(always)]
-    pub fn cs_hold_delay(&mut self) -> CS_HOLD_DELAY_W<CTRL2_SPEC> {
+    pub fn cs_hold_delay(&mut self) -> CS_HOLD_DELAY_W<'_, CTRL2_SPEC> {
         CS_HOLD_DELAY_W::new(self, 25)
     }
     #[doc = "Bit 31 - The FSM will be reset."]
     #[inline(always)]
-    pub fn sync_reset(&mut self) -> SYNC_RESET_W<CTRL2_SPEC> {
+    pub fn sync_reset(&mut self) -> SYNC_RESET_W<'_, CTRL2_SPEC> {
         SYNC_RESET_W::new(self, 31)
     }
 }

@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<_3_CLEAR_INT_SPEC> {
 impl W {
     #[doc = "Bit 0 - Clear sha3 interrupt."]
     #[inline(always)]
-    pub fn _3_clear_int(&mut self) -> _3_CLEAR_INT_W<_3_CLEAR_INT_SPEC> {
+    pub fn _3_clear_int(&mut self) -> _3_CLEAR_INT_W<'_, _3_CLEAR_INT_SPEC> {
         _3_CLEAR_INT_W::new(self, 0)
     }
 }

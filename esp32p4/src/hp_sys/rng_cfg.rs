@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - enable rng sample chain"]
     #[inline(always)]
-    pub fn rng_sample_enable(&mut self) -> RNG_SAMPLE_ENABLE_W<RNG_CFG_SPEC> {
+    pub fn rng_sample_enable(&mut self) -> RNG_SAMPLE_ENABLE_W<'_, RNG_CFG_SPEC> {
         RNG_SAMPLE_ENABLE_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - chain clk div num to pad for debug"]
     #[inline(always)]
-    pub fn rng_chain_clk_div_num(&mut self) -> RNG_CHAIN_CLK_DIV_NUM_W<RNG_CFG_SPEC> {
+    pub fn rng_chain_clk_div_num(&mut self) -> RNG_CHAIN_CLK_DIV_NUM_W<'_, RNG_CFG_SPEC> {
         RNG_CHAIN_CLK_DIV_NUM_W::new(self, 16)
     }
 }

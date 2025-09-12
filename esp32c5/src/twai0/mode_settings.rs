@@ -216,107 +216,107 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Soft reset. Writing logic 1 resets CTU CAN FD. After writing logic 1, logic 0 does not need to be written, this bit is automatically cleared. 0: invalid 1: reset."]
     #[inline(always)]
-    pub fn rst(&mut self) -> RST_W<MODE_SETTINGS_SPEC> {
+    pub fn rst(&mut self) -> RST_W<'_, MODE_SETTINGS_SPEC> {
         RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Bus monitoring mode. In this mode CTU CAN FD only receives frames and sends only recessive bits on CAN bus. When a dominant bit is sent, it is re-routed internally so that bus value is not changed. When this mode is enabled, CTU CAN FD will not transmit any frame from TXT Buffers, 0b0 - BMM_DISABLED - Bus monitoring mode disabled. 0b1 - BMM_ENABLED - Bus monitoring mode enabled."]
     #[inline(always)]
-    pub fn bmm(&mut self) -> BMM_W<MODE_SETTINGS_SPEC> {
+    pub fn bmm(&mut self) -> BMM_W<'_, MODE_SETTINGS_SPEC> {
         BMM_W::new(self, 1)
     }
     #[doc = "Bit 2 - Self Test Mode. In this mode transmitted frame is considered valid even if dominant acknowledge was not received. 0b0 - STM_DISABLED - Self test mode disabled. 0b1 - STM_ENABLED - Self test mode enabled."]
     #[inline(always)]
-    pub fn stm(&mut self) -> STM_W<MODE_SETTINGS_SPEC> {
+    pub fn stm(&mut self) -> STM_W<'_, MODE_SETTINGS_SPEC> {
         STM_W::new(self, 2)
     }
     #[doc = "Bit 3 - Acceptance Filters Mode. If enabled, only RX frames which pass Frame filters are stored in RX buffer. If disabled, every received frame is stored to RX buffer. This bit has meaning only if there is at least one filter available. Otherwise, this bit is reserved. 0b0 - AFM_DISABLED - Acceptance filter mode disabled 0b1 - AFM_ENABLED - Acceptance filter mode enabled"]
     #[inline(always)]
-    pub fn afm(&mut self) -> AFM_W<MODE_SETTINGS_SPEC> {
+    pub fn afm(&mut self) -> AFM_W<'_, MODE_SETTINGS_SPEC> {
         AFM_W::new(self, 3)
     }
     #[doc = "Bit 4 - Flexible data rate enable. When flexible data rate is enabled CTU CAN FD recognizes CAN FD frames (FDF bit = 1). 0b0 - FDE_DISABLE - Flexible data-rate support disabled. 0b1 - FDE_ENABLE - Flexible data-rate support enabled."]
     #[inline(always)]
-    pub fn fde(&mut self) -> FDE_W<MODE_SETTINGS_SPEC> {
+    pub fn fde(&mut self) -> FDE_W<'_, MODE_SETTINGS_SPEC> {
         FDE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Time triggered transmission mode. 0b0 - TTTM_DISABLED - 0b1 - TTTM_ENABLED -"]
     #[inline(always)]
-    pub fn tttm(&mut self) -> TTTM_W<MODE_SETTINGS_SPEC> {
+    pub fn tttm(&mut self) -> TTTM_W<'_, MODE_SETTINGS_SPEC> {
         TTTM_W::new(self, 5)
     }
     #[doc = "Bit 6 - Restricted operation mode. 0b0 - ROM_DISABLED - Restricted operation mode is disabled. 0b1 - ROM_ENABLED - Restricted operation mode is enabled."]
     #[inline(always)]
-    pub fn rom(&mut self) -> ROM_W<MODE_SETTINGS_SPEC> {
+    pub fn rom(&mut self) -> ROM_W<'_, MODE_SETTINGS_SPEC> {
         ROM_W::new(self, 6)
     }
     #[doc = "Bit 7 - Acknowledge Forbidden Mode. When enabled, acknowledge is not sent even if received CRC matches the calculated one. 0b0 - ACF_DISABLED - Acknowledge forbidden mode disabled. 0b1 - ACF_ENABLED - Acknowledge forbidden mode enabled."]
     #[inline(always)]
-    pub fn acf(&mut self) -> ACF_W<MODE_SETTINGS_SPEC> {
+    pub fn acf(&mut self) -> ACF_W<'_, MODE_SETTINGS_SPEC> {
         ACF_W::new(self, 7)
     }
     #[doc = "Bit 8 - Test Mode. In test mode several registers have special features. Reffer to description of Test mode for further Details."]
     #[inline(always)]
-    pub fn tstm(&mut self) -> TSTM_W<MODE_SETTINGS_SPEC> {
+    pub fn tstm(&mut self) -> TSTM_W<'_, MODE_SETTINGS_SPEC> {
         TSTM_W::new(self, 8)
     }
     #[doc = "Bit 9 - RX Buffer automatic mode. 0b0 - RXBAM_DISABLED - 0b1 - RXBAM_ENABLED -"]
     #[inline(always)]
-    pub fn rxbam(&mut self) -> RXBAM_W<MODE_SETTINGS_SPEC> {
+    pub fn rxbam(&mut self) -> RXBAM_W<'_, MODE_SETTINGS_SPEC> {
         RXBAM_W::new(self, 9)
     }
     #[doc = "Bit 10 - TXT Buffer Backup mode\\\\ 0b0 - TXBBM_DISABLED - TXT Buffer Backup mode disabled\\\\ 0b1 - TXBBM_ENABLED - TXT Buffer Backup mode enabled\\\\"]
     #[inline(always)]
-    pub fn txbbm(&mut self) -> TXBBM_W<MODE_SETTINGS_SPEC> {
+    pub fn txbbm(&mut self) -> TXBBM_W<'_, MODE_SETTINGS_SPEC> {
         TXBBM_W::new(self, 10)
     }
     #[doc = "Bit 11 - Self-acknowledge mode.\\\\ 0b0 - SAM_DISABLE - Do not send dominant ACK bit when CTU CAN FD sends Acknowledge bit.\\\\ 0b1 - SAM_ENABLE - Send dominant ACK bit when CTU CAN FD transmits CAN frame.\\\\"]
     #[inline(always)]
-    pub fn sam(&mut self) -> SAM_W<MODE_SETTINGS_SPEC> {
+    pub fn sam(&mut self) -> SAM_W<'_, MODE_SETTINGS_SPEC> {
         SAM_W::new(self, 11)
     }
     #[doc = "Bit 16 - Retransmitt Limit Enable. If enabled, CTU CAN FD only attempts to retransmitt each frame up to RTR_TH times. 0b0 - RTRLE_DISABLED - Retransmitt limit is disabled. 0b1 - RTRLE_ENABLED - Retransmitt limit is enabled."]
     #[inline(always)]
-    pub fn rtrle(&mut self) -> RTRLE_W<MODE_SETTINGS_SPEC> {
+    pub fn rtrle(&mut self) -> RTRLE_W<'_, MODE_SETTINGS_SPEC> {
         RTRLE_W::new(self, 16)
     }
     #[doc = "Bits 17:20 - Retransmitt Limit Threshold. Maximal amount of retransmission attempts when SETTINGS\\[RTRLE\\] is en- Abled."]
     #[inline(always)]
-    pub fn rtrth(&mut self) -> RTRTH_W<MODE_SETTINGS_SPEC> {
+    pub fn rtrth(&mut self) -> RTRTH_W<'_, MODE_SETTINGS_SPEC> {
         RTRTH_W::new(self, 17)
     }
     #[doc = "Bit 21 - Internal Loop Back mode. When enabled, CTU CAN FD receives any frame it transmitts. 0b0 - INT_LOOP_DISABLED - Internal loop-back is disabled. 0b1 - INT_LOOP_ENABLED - Internal loop-back is enabled."]
     #[inline(always)]
-    pub fn ilbp(&mut self) -> ILBP_W<MODE_SETTINGS_SPEC> {
+    pub fn ilbp(&mut self) -> ILBP_W<'_, MODE_SETTINGS_SPEC> {
         ILBP_W::new(self, 21)
     }
     #[doc = "Bit 22 - Main enable bit of CTU CAN FD. When enabled, CTU CAN FD communicates on CAN bus. When disabled, it is bus-off and does not take part of CAN bus communication. 0b0 - CTU_CAN_DISABLED - The CAN Core is disabled. 0b1 - CTU_CAN_ENABLED - The CAN Core is enabled."]
     #[inline(always)]
-    pub fn ena(&mut self) -> ENA_W<MODE_SETTINGS_SPEC> {
+    pub fn ena(&mut self) -> ENA_W<'_, MODE_SETTINGS_SPEC> {
         ENA_W::new(self, 22)
     }
     #[doc = "Bit 23 - Non ISO FD. When this bit is set, CTU CAN FD is compliant to NON-ISO CAN FD specification (no stuff count field). This bit should be modified only when SETTINGS\\[ENA\\]=0. 0b0 - ISO_FD - The CAN Controller conforms to ISO CAN FD specification. 0b1 - NON_ISO_FD - The CAN Controller conforms to NON ISO CAN FD specification. CANFD 1.0"]
     #[inline(always)]
-    pub fn nisofd(&mut self) -> NISOFD_W<MODE_SETTINGS_SPEC> {
+    pub fn nisofd(&mut self) -> NISOFD_W<'_, MODE_SETTINGS_SPEC> {
         NISOFD_W::new(self, 23)
     }
     #[doc = "Bit 24 - Protocol exception handling. When this bit is set, CTU CAN FD will start integration upon detection of protocol exception. This should be modified only when SETTINGS\\[ENA\\] = ’0’. 0b0 - PROTOCOL_EXCEPTION_DISABLED - Protocol exception handling is disabled. 0b1 - PROTOCOL_EXCEPTION_ENABLED - Protocol exception handling is enabled."]
     #[inline(always)]
-    pub fn pex(&mut self) -> PEX_W<MODE_SETTINGS_SPEC> {
+    pub fn pex(&mut self) -> PEX_W<'_, MODE_SETTINGS_SPEC> {
         PEX_W::new(self, 24)
     }
     #[doc = "Bit 25 - All TXT buffers shall go to \"TX failed\" state when CTU CAN FD becomes bus-off. 0b0 - TXTBUF_FAILED_BUS_OFF_DISABLED - TXT Buffers dont go to \"TX failed\" state when CTU CAN FD becomes bus-off. 0b1 - TXTBUF_FAILED_BUS_OFF_ENABLED - TXT Buffers go to \"TX failed\" state when CTU CAN FD becomes bus-off."]
     #[inline(always)]
-    pub fn tbfbo(&mut self) -> TBFBO_W<MODE_SETTINGS_SPEC> {
+    pub fn tbfbo(&mut self) -> TBFBO_W<'_, MODE_SETTINGS_SPEC> {
         TBFBO_W::new(self, 25)
     }
     #[doc = "Bit 26 - Frame filters drop Remote frames. 0b0 - DROP_RF_DISABLED - Frame filters accept RTR frames. 0b1 - DROP_RF_ENABLED - Frame filters drop RTR frames."]
     #[inline(always)]
-    pub fn fdrf(&mut self) -> FDRF_W<MODE_SETTINGS_SPEC> {
+    pub fn fdrf(&mut self) -> FDRF_W<'_, MODE_SETTINGS_SPEC> {
         FDRF_W::new(self, 26)
     }
     #[doc = "Bit 27 - Enable Parity checks in TXT Buffers and RX Buffer."]
     #[inline(always)]
-    pub fn pchke(&mut self) -> PCHKE_W<MODE_SETTINGS_SPEC> {
+    pub fn pchke(&mut self) -> PCHKE_W<'_, MODE_SETTINGS_SPEC> {
         PCHKE_W::new(self, 27)
     }
 }

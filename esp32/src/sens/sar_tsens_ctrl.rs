@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
-    pub fn tsens_xpd_wait(&mut self) -> TSENS_XPD_WAIT_W<SAR_TSENS_CTRL_SPEC> {
+    pub fn tsens_xpd_wait(&mut self) -> TSENS_XPD_WAIT_W<'_, SAR_TSENS_CTRL_SPEC> {
         TSENS_XPD_WAIT_W::new(self, 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn tsens_xpd_force(&mut self) -> TSENS_XPD_FORCE_W<SAR_TSENS_CTRL_SPEC> {
+    pub fn tsens_xpd_force(&mut self) -> TSENS_XPD_FORCE_W<'_, SAR_TSENS_CTRL_SPEC> {
         TSENS_XPD_FORCE_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn tsens_clk_inv(&mut self) -> TSENS_CLK_INV_W<SAR_TSENS_CTRL_SPEC> {
+    pub fn tsens_clk_inv(&mut self) -> TSENS_CLK_INV_W<'_, SAR_TSENS_CTRL_SPEC> {
         TSENS_CLK_INV_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn tsens_clk_gated(&mut self) -> TSENS_CLK_GATED_W<SAR_TSENS_CTRL_SPEC> {
+    pub fn tsens_clk_gated(&mut self) -> TSENS_CLK_GATED_W<'_, SAR_TSENS_CTRL_SPEC> {
         TSENS_CLK_GATED_W::new(self, 14)
     }
     #[doc = "Bit 15 - invert temperature sensor data"]
     #[inline(always)]
-    pub fn tsens_in_inv(&mut self) -> TSENS_IN_INV_W<SAR_TSENS_CTRL_SPEC> {
+    pub fn tsens_in_inv(&mut self) -> TSENS_IN_INV_W<'_, SAR_TSENS_CTRL_SPEC> {
         TSENS_IN_INV_W::new(self, 15)
     }
     #[doc = "Bits 16:23 - temperature sensor clock divider"]
     #[inline(always)]
-    pub fn tsens_clk_div(&mut self) -> TSENS_CLK_DIV_W<SAR_TSENS_CTRL_SPEC> {
+    pub fn tsens_clk_div(&mut self) -> TSENS_CLK_DIV_W<'_, SAR_TSENS_CTRL_SPEC> {
         TSENS_CLK_DIV_W::new(self, 16)
     }
     #[doc = "Bit 24 - temperature sensor power up"]
     #[inline(always)]
-    pub fn tsens_power_up(&mut self) -> TSENS_POWER_UP_W<SAR_TSENS_CTRL_SPEC> {
+    pub fn tsens_power_up(&mut self) -> TSENS_POWER_UP_W<'_, SAR_TSENS_CTRL_SPEC> {
         TSENS_POWER_UP_W::new(self, 24)
     }
     #[doc = "Bit 25 - 1: dump out & power up controlled by SW 0: by FSM"]
     #[inline(always)]
-    pub fn tsens_power_up_force(&mut self) -> TSENS_POWER_UP_FORCE_W<SAR_TSENS_CTRL_SPEC> {
+    pub fn tsens_power_up_force(&mut self) -> TSENS_POWER_UP_FORCE_W<'_, SAR_TSENS_CTRL_SPEC> {
         TSENS_POWER_UP_FORCE_W::new(self, 25)
     }
     #[doc = "Bit 26 - temperature sensor dump out only active when reg_tsens_power_up_force = 1"]
     #[inline(always)]
-    pub fn tsens_dump_out(&mut self) -> TSENS_DUMP_OUT_W<SAR_TSENS_CTRL_SPEC> {
+    pub fn tsens_dump_out(&mut self) -> TSENS_DUMP_OUT_W<'_, SAR_TSENS_CTRL_SPEC> {
         TSENS_DUMP_OUT_W::new(self, 26)
     }
 }

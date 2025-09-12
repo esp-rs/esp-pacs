@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn cache_dataarray_connect_lock(
         &mut self,
-    ) -> CACHE_DATAARRAY_CONNECT_LOCK_W<CACHE_DATAARRAY_CONNECT_0_SPEC> {
+    ) -> CACHE_DATAARRAY_CONNECT_LOCK_W<'_, CACHE_DATAARRAY_CONNECT_0_SPEC> {
         CACHE_DATAARRAY_CONNECT_LOCK_W::new(self, 0)
     }
 }

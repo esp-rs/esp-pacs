@@ -26,12 +26,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Configures the number of acknowledgements used in software flow control."]
     #[inline(always)]
-    pub fn ack_num(&mut self) -> ACK_NUM_W<ACK_NUM_SPEC> {
+    pub fn ack_num(&mut self) -> ACK_NUM_W<'_, ACK_NUM_SPEC> {
         ACK_NUM_W::new(self, 0)
     }
     #[doc = "Bit 3 - Configures whether or not load acknowledgements.\\\\ 0: Not load\\\\ 1: Load\\\\"]
     #[inline(always)]
-    pub fn load(&mut self) -> LOAD_W<ACK_NUM_SPEC> {
+    pub fn load(&mut self) -> LOAD_W<'_, ACK_NUM_SPEC> {
         LOAD_W::new(self, 3)
     }
 }

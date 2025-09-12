@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SPI CS0 pin enable, 1: disable CS0, 0: spi_cs0 signal is from/to CS0 pin. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn cs0_dis(&mut self) -> CS0_DIS_W<MISC_SPEC> {
+    pub fn cs0_dis(&mut self) -> CS0_DIS_W<'_, MISC_SPEC> {
         CS0_DIS_W::new(self, 0)
     }
     #[doc = "Bit 1 - SPI CS1 pin enable, 1: disable CS1, 0: spi_cs1 signal is from/to CS1 pin. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn cs1_dis(&mut self) -> CS1_DIS_W<MISC_SPEC> {
+    pub fn cs1_dis(&mut self) -> CS1_DIS_W<'_, MISC_SPEC> {
         CS1_DIS_W::new(self, 1)
     }
     #[doc = "Bit 2 - SPI CS2 pin enable, 1: disable CS2, 0: spi_cs2 signal is from/to CS2 pin. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn cs2_dis(&mut self) -> CS2_DIS_W<MISC_SPEC> {
+    pub fn cs2_dis(&mut self) -> CS2_DIS_W<'_, MISC_SPEC> {
         CS2_DIS_W::new(self, 2)
     }
     #[doc = "Bit 6 - 1: spi clk out disable, 0: spi clk out enable. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn ck_dis(&mut self) -> CK_DIS_W<MISC_SPEC> {
+    pub fn ck_dis(&mut self) -> CK_DIS_W<'_, MISC_SPEC> {
         CK_DIS_W::new(self, 6)
     }
     #[doc = "Bits 7:9 - In the master mode the bits are the polarity of spi cs line, the value is equivalent to spi_cs ^ spi_master_cs_pol. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn master_cs_pol(&mut self) -> MASTER_CS_POL_W<MISC_SPEC> {
+    pub fn master_cs_pol(&mut self) -> MASTER_CS_POL_W<'_, MISC_SPEC> {
         MASTER_CS_POL_W::new(self, 7)
     }
     #[doc = "Bit 23 - spi slave input cs polarity select. 1: inv 0: not change. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn slave_cs_pol(&mut self) -> SLAVE_CS_POL_W<MISC_SPEC> {
+    pub fn slave_cs_pol(&mut self) -> SLAVE_CS_POL_W<'_, MISC_SPEC> {
         SLAVE_CS_POL_W::new(self, 23)
     }
     #[doc = "Bit 29 - 1: spi clk line is high when idle 0: spi clk line is low when idle. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<MISC_SPEC> {
+    pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<'_, MISC_SPEC> {
         CK_IDLE_EDGE_W::new(self, 29)
     }
     #[doc = "Bit 30 - spi cs line keep low when the bit is set. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<MISC_SPEC> {
+    pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<'_, MISC_SPEC> {
         CS_KEEP_ACTIVE_W::new(self, 30)
     }
     #[doc = "Bit 31 - 1: spi quad input swap enable 0: spi quad input swap disable. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn quad_din_pin_swap(&mut self) -> QUAD_DIN_PIN_SWAP_W<MISC_SPEC> {
+    pub fn quad_din_pin_swap(&mut self) -> QUAD_DIN_PIN_SWAP_W<'_, MISC_SPEC> {
         QUAD_DIN_PIN_SWAP_W::new(self, 31)
     }
 }

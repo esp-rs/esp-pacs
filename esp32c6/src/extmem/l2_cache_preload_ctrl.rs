@@ -48,7 +48,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable preload operation on L2-Cache. It will be cleared by hardware automatically after preload operation is done."]
     #[inline(always)]
-    pub fn l2_cache_preload_ena(&mut self) -> L2_CACHE_PRELOAD_ENA_W<L2_CACHE_PRELOAD_CTRL_SPEC> {
+    pub fn l2_cache_preload_ena(
+        &mut self,
+    ) -> L2_CACHE_PRELOAD_ENA_W<'_, L2_CACHE_PRELOAD_CTRL_SPEC> {
         L2_CACHE_PRELOAD_ENA_W::new(self, 0)
     }
 }

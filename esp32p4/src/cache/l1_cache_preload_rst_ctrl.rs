@@ -60,17 +60,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - set this bit to reset preload-logic inside L1-ICache0. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
     #[inline(always)]
-    pub fn l1_icache0_pld_rst(&mut self) -> L1_ICACHE0_PLD_RST_W<L1_CACHE_PRELOAD_RST_CTRL_SPEC> {
+    pub fn l1_icache0_pld_rst(
+        &mut self,
+    ) -> L1_ICACHE0_PLD_RST_W<'_, L1_CACHE_PRELOAD_RST_CTRL_SPEC> {
         L1_ICACHE0_PLD_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - set this bit to reset preload-logic inside L1-ICache1. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
     #[inline(always)]
-    pub fn l1_icache1_pld_rst(&mut self) -> L1_ICACHE1_PLD_RST_W<L1_CACHE_PRELOAD_RST_CTRL_SPEC> {
+    pub fn l1_icache1_pld_rst(
+        &mut self,
+    ) -> L1_ICACHE1_PLD_RST_W<'_, L1_CACHE_PRELOAD_RST_CTRL_SPEC> {
         L1_ICACHE1_PLD_RST_W::new(self, 1)
     }
     #[doc = "Bit 4 - set this bit to reset preload-logic inside L1-DCache. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
     #[inline(always)]
-    pub fn l1_dcache_pld_rst(&mut self) -> L1_DCACHE_PLD_RST_W<L1_CACHE_PRELOAD_RST_CTRL_SPEC> {
+    pub fn l1_dcache_pld_rst(&mut self) -> L1_DCACHE_PLD_RST_W<'_, L1_CACHE_PRELOAD_RST_CTRL_SPEC> {
         L1_DCACHE_PLD_RST_W::new(self, 4)
     }
 }

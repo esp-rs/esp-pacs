@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - need des"]
     #[inline(always)]
-    pub fn hw_i2c_scl_pulse_dur(&mut self) -> HW_I2C_SCL_PULSE_DUR_W<HW_I2C_CTRL_SPEC> {
+    pub fn hw_i2c_scl_pulse_dur(&mut self) -> HW_I2C_SCL_PULSE_DUR_W<'_, HW_I2C_CTRL_SPEC> {
         HW_I2C_SCL_PULSE_DUR_W::new(self, 0)
     }
     #[doc = "Bits 6:10 - need des"]
     #[inline(always)]
-    pub fn hw_i2c_sda_side_guard(&mut self) -> HW_I2C_SDA_SIDE_GUARD_W<HW_I2C_CTRL_SPEC> {
+    pub fn hw_i2c_sda_side_guard(&mut self) -> HW_I2C_SDA_SIDE_GUARD_W<'_, HW_I2C_CTRL_SPEC> {
         HW_I2C_SDA_SIDE_GUARD_W::new(self, 6)
     }
     #[doc = "Bit 11 - need des"]
     #[inline(always)]
-    pub fn arbiter_dis(&mut self) -> ARBITER_DIS_W<HW_I2C_CTRL_SPEC> {
+    pub fn arbiter_dis(&mut self) -> ARBITER_DIS_W<'_, HW_I2C_CTRL_SPEC> {
         ARBITER_DIS_W::new(self, 11)
     }
 }

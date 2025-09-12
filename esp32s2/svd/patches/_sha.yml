@@ -15,4 +15,5 @@ SHA:
   CONTINUE:
     _modify:
       CONTINUE_OP:
+        name: CONTINUE
         access: write-only

@@ -70,22 +70,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 17 - SAR ADC2 controller (in RTC) starts conversion, active only when SENS_MEAS2_START_FORCE = 1."]
     #[inline(always)]
-    pub fn meas2_start_sar(&mut self) -> MEAS2_START_SAR_W<SAR_MEAS2_CTRL2_SPEC> {
+    pub fn meas2_start_sar(&mut self) -> MEAS2_START_SAR_W<'_, SAR_MEAS2_CTRL2_SPEC> {
         MEAS2_START_SAR_W::new(self, 17)
     }
     #[doc = "Bit 18 - 1: SAR ADC2 controller (in RTC) is started by software. 0: SAR ADC2 controller is started by ULP coprocessor."]
     #[inline(always)]
-    pub fn meas2_start_force(&mut self) -> MEAS2_START_FORCE_W<SAR_MEAS2_CTRL2_SPEC> {
+    pub fn meas2_start_force(&mut self) -> MEAS2_START_FORCE_W<'_, SAR_MEAS2_CTRL2_SPEC> {
         MEAS2_START_FORCE_W::new(self, 18)
     }
     #[doc = "Bits 19:30 - SAR ADC2 pad enable bitmap, active only whenSENS_SAR2_EN_PAD_FORCE = 1."]
     #[inline(always)]
-    pub fn sar2_en_pad(&mut self) -> SAR2_EN_PAD_W<SAR_MEAS2_CTRL2_SPEC> {
+    pub fn sar2_en_pad(&mut self) -> SAR2_EN_PAD_W<'_, SAR_MEAS2_CTRL2_SPEC> {
         SAR2_EN_PAD_W::new(self, 19)
     }
     #[doc = "Bit 31 - 1: SAR ADC2 pad enable bitmap is controlled by software. 0: SAR ADC2 pad enable bitmap is controlled by ULP coprocessor."]
     #[inline(always)]
-    pub fn sar2_en_pad_force(&mut self) -> SAR2_EN_PAD_FORCE_W<SAR_MEAS2_CTRL2_SPEC> {
+    pub fn sar2_en_pad_force(&mut self) -> SAR2_EN_PAD_FORCE_W<'_, SAR_MEAS2_CTRL2_SPEC> {
         SAR2_EN_PAD_FORCE_W::new(self, 31)
     }
 }

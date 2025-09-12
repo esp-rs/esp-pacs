@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - NA"]
     #[inline(always)]
-    pub fn icm_reg_data(&mut self) -> ICM_REG_DATA_W<DATA_SPEC> {
+    pub fn icm_reg_data(&mut self) -> ICM_REG_DATA_W<'_, DATA_SPEC> {
         ICM_REG_DATA_W::new(self, 0)
     }
 }

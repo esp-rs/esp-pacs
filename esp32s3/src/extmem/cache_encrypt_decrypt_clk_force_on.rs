@@ -49,21 +49,21 @@ impl W {
     #[inline(always)]
     pub fn clk_force_on_manual_crypt(
         &mut self,
-    ) -> CLK_FORCE_ON_MANUAL_CRYPT_W<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC> {
+    ) -> CLK_FORCE_ON_MANUAL_CRYPT_W<'_, CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC> {
         CLK_FORCE_ON_MANUAL_CRYPT_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to close clock gating of automatic crypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
     pub fn clk_force_on_auto_crypt(
         &mut self,
-    ) -> CLK_FORCE_ON_AUTO_CRYPT_W<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC> {
+    ) -> CLK_FORCE_ON_AUTO_CRYPT_W<'_, CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC> {
         CLK_FORCE_ON_AUTO_CRYPT_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to close clock gating of external memory encrypt and decrypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
     pub fn clk_force_on_crypt(
         &mut self,
-    ) -> CLK_FORCE_ON_CRYPT_W<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC> {
+    ) -> CLK_FORCE_ON_CRYPT_W<'_, CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC> {
         CLK_FORCE_ON_CRYPT_W::new(self, 2)
     }
 }

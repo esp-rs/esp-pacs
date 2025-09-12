@@ -126,42 +126,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 8 - The bit is used to enable ibus0 counter in L2-Cache."]
     #[inline(always)]
-    pub fn l2_ibus0_cnt_ena(&mut self) -> L2_IBUS0_CNT_ENA_W<L2_CACHE_ACS_CNT_CTRL_SPEC> {
+    pub fn l2_ibus0_cnt_ena(&mut self) -> L2_IBUS0_CNT_ENA_W<'_, L2_CACHE_ACS_CNT_CTRL_SPEC> {
         L2_IBUS0_CNT_ENA_W::new(self, 8)
     }
     #[doc = "Bit 9 - The bit is used to enable ibus1 counter in L2-Cache."]
     #[inline(always)]
-    pub fn l2_ibus1_cnt_ena(&mut self) -> L2_IBUS1_CNT_ENA_W<L2_CACHE_ACS_CNT_CTRL_SPEC> {
+    pub fn l2_ibus1_cnt_ena(&mut self) -> L2_IBUS1_CNT_ENA_W<'_, L2_CACHE_ACS_CNT_CTRL_SPEC> {
         L2_IBUS1_CNT_ENA_W::new(self, 9)
     }
     #[doc = "Bit 12 - The bit is used to enable dbus0 counter in L2-Cache."]
     #[inline(always)]
-    pub fn l2_dbus0_cnt_ena(&mut self) -> L2_DBUS0_CNT_ENA_W<L2_CACHE_ACS_CNT_CTRL_SPEC> {
+    pub fn l2_dbus0_cnt_ena(&mut self) -> L2_DBUS0_CNT_ENA_W<'_, L2_CACHE_ACS_CNT_CTRL_SPEC> {
         L2_DBUS0_CNT_ENA_W::new(self, 12)
     }
     #[doc = "Bit 13 - The bit is used to enable dbus1 counter in L2-Cache."]
     #[inline(always)]
-    pub fn l2_dbus1_cnt_ena(&mut self) -> L2_DBUS1_CNT_ENA_W<L2_CACHE_ACS_CNT_CTRL_SPEC> {
+    pub fn l2_dbus1_cnt_ena(&mut self) -> L2_DBUS1_CNT_ENA_W<'_, L2_CACHE_ACS_CNT_CTRL_SPEC> {
         L2_DBUS1_CNT_ENA_W::new(self, 13)
     }
     #[doc = "Bit 24 - The bit is used to clear ibus0 counter in L2-Cache."]
     #[inline(always)]
-    pub fn l2_ibus0_cnt_clr(&mut self) -> L2_IBUS0_CNT_CLR_W<L2_CACHE_ACS_CNT_CTRL_SPEC> {
+    pub fn l2_ibus0_cnt_clr(&mut self) -> L2_IBUS0_CNT_CLR_W<'_, L2_CACHE_ACS_CNT_CTRL_SPEC> {
         L2_IBUS0_CNT_CLR_W::new(self, 24)
     }
     #[doc = "Bit 25 - The bit is used to clear ibus1 counter in L2-Cache."]
     #[inline(always)]
-    pub fn l2_ibus1_cnt_clr(&mut self) -> L2_IBUS1_CNT_CLR_W<L2_CACHE_ACS_CNT_CTRL_SPEC> {
+    pub fn l2_ibus1_cnt_clr(&mut self) -> L2_IBUS1_CNT_CLR_W<'_, L2_CACHE_ACS_CNT_CTRL_SPEC> {
         L2_IBUS1_CNT_CLR_W::new(self, 25)
     }
     #[doc = "Bit 28 - The bit is used to clear dbus0 counter in L2-Cache."]
     #[inline(always)]
-    pub fn l2_dbus0_cnt_clr(&mut self) -> L2_DBUS0_CNT_CLR_W<L2_CACHE_ACS_CNT_CTRL_SPEC> {
+    pub fn l2_dbus0_cnt_clr(&mut self) -> L2_DBUS0_CNT_CLR_W<'_, L2_CACHE_ACS_CNT_CTRL_SPEC> {
         L2_DBUS0_CNT_CLR_W::new(self, 28)
     }
     #[doc = "Bit 29 - The bit is used to clear dbus1 counter in L2-Cache."]
     #[inline(always)]
-    pub fn l2_dbus1_cnt_clr(&mut self) -> L2_DBUS1_CNT_CLR_W<L2_CACHE_ACS_CNT_CTRL_SPEC> {
+    pub fn l2_dbus1_cnt_clr(&mut self) -> L2_DBUS1_CNT_CLR_W<'_, L2_CACHE_ACS_CNT_CTRL_SPEC> {
         L2_DBUS1_CNT_CLR_W::new(self, 29)
     }
 }

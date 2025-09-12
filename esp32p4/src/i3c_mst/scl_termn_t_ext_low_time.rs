@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn reg_i3c_mst_termn_t_ext_low_time(
         &mut self,
-    ) -> REG_I3C_MST_TERMN_T_EXT_LOW_TIME_W<SCL_TERMN_T_EXT_LOW_TIME_SPEC> {
+    ) -> REG_I3C_MST_TERMN_T_EXT_LOW_TIME_W<'_, SCL_TERMN_T_EXT_LOW_TIME_SPEC> {
         REG_I3C_MST_TERMN_T_EXT_LOW_TIME_W::new(self, 0)
     }
 }

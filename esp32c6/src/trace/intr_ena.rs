@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 enable fifo_overflow interrupt"]
     #[inline(always)]
-    pub fn fifo_overflow_intr_ena(&mut self) -> FIFO_OVERFLOW_INTR_ENA_W<INTR_ENA_SPEC> {
+    pub fn fifo_overflow_intr_ena(&mut self) -> FIFO_OVERFLOW_INTR_ENA_W<'_, INTR_ENA_SPEC> {
         FIFO_OVERFLOW_INTR_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 enable mem_full interrupt"]
     #[inline(always)]
-    pub fn mem_full_intr_ena(&mut self) -> MEM_FULL_INTR_ENA_W<INTR_ENA_SPEC> {
+    pub fn mem_full_intr_ena(&mut self) -> MEM_FULL_INTR_ENA_W<'_, INTR_ENA_SPEC> {
         MEM_FULL_INTR_ENA_W::new(self, 1)
     }
 }

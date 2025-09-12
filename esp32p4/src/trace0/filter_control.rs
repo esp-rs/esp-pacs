@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configure whether or not enable filter unit. \\\\1: enable filter.\\\\ 0: always match"]
     #[inline(always)]
-    pub fn filter_en(&mut self) -> FILTER_EN_W<FILTER_CONTROL_SPEC> {
+    pub fn filter_en(&mut self) -> FILTER_EN_W<'_, FILTER_CONTROL_SPEC> {
         FILTER_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - when set, the comparator must be high in order for the filter to match"]
     #[inline(always)]
-    pub fn match_comp(&mut self) -> MATCH_COMP_W<FILTER_CONTROL_SPEC> {
+    pub fn match_comp(&mut self) -> MATCH_COMP_W<'_, FILTER_CONTROL_SPEC> {
         MATCH_COMP_W::new(self, 1)
     }
     #[doc = "Bit 2 - when set, match privilege levels specified by \\hyperref\\[fielddesc:TRACEMATCHCHOICEPRIVILEGE\\]{TRACE_MATCH_CHOICE_PRIVILEGE}."]
     #[inline(always)]
-    pub fn match_privilege(&mut self) -> MATCH_PRIVILEGE_W<FILTER_CONTROL_SPEC> {
+    pub fn match_privilege(&mut self) -> MATCH_PRIVILEGE_W<'_, FILTER_CONTROL_SPEC> {
         MATCH_PRIVILEGE_W::new(self, 2)
     }
     #[doc = "Bit 3 - when set, start matching from exception cause codes specified by \\hyperref\\[fielddesc:TRACEMATCHCHOICEECAUSE\\]{TRACE_MATCH_CHOICE_ECAUSE}, and stop matching upon return from the 1st matching exception."]
     #[inline(always)]
-    pub fn match_ecause(&mut self) -> MATCH_ECAUSE_W<FILTER_CONTROL_SPEC> {
+    pub fn match_ecause(&mut self) -> MATCH_ECAUSE_W<'_, FILTER_CONTROL_SPEC> {
         MATCH_ECAUSE_W::new(self, 3)
     }
     #[doc = "Bit 4 - when set, start matching from a trap with the interrupt level codes specified by \\hyperref\\[fielddesc:TRACEMATCHVALUEINTERRUPT\\]{TRACE_MATCH_VALUE_INTERRUPT}, and stop matching upon return from the 1st matching trap."]
     #[inline(always)]
-    pub fn match_interrupt(&mut self) -> MATCH_INTERRUPT_W<FILTER_CONTROL_SPEC> {
+    pub fn match_interrupt(&mut self) -> MATCH_INTERRUPT_W<'_, FILTER_CONTROL_SPEC> {
         MATCH_INTERRUPT_W::new(self, 4)
     }
 }

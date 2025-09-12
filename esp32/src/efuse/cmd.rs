@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn read_cmd(&mut self) -> READ_CMD_W<CMD_SPEC> {
+    pub fn read_cmd(&mut self) -> READ_CMD_W<'_, CMD_SPEC> {
         READ_CMD_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn pgm_cmd(&mut self) -> PGM_CMD_W<CMD_SPEC> {
+    pub fn pgm_cmd(&mut self) -> PGM_CMD_W<'_, CMD_SPEC> {
         PGM_CMD_W::new(self, 1)
     }
 }

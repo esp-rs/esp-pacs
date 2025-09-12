@@ -70,22 +70,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - The bit is used to clear counters overflow interrupt and counters in L1-DCache due to bus0 accesses L1-DCache."]
     #[inline(always)]
-    pub fn bus0_ovf_int_clr(&mut self) -> BUS0_OVF_INT_CLR_W<CACHE_ACS_CNT_INT_CLR_SPEC> {
+    pub fn bus0_ovf_int_clr(&mut self) -> BUS0_OVF_INT_CLR_W<'_, CACHE_ACS_CNT_INT_CLR_SPEC> {
         BUS0_OVF_INT_CLR_W::new(self, 4)
     }
     #[doc = "Bit 5 - The bit is used to clear counters overflow interrupt and counters in L1-DCache due to bus1 accesses L1-DCache."]
     #[inline(always)]
-    pub fn bus1_ovf_int_clr(&mut self) -> BUS1_OVF_INT_CLR_W<CACHE_ACS_CNT_INT_CLR_SPEC> {
+    pub fn bus1_ovf_int_clr(&mut self) -> BUS1_OVF_INT_CLR_W<'_, CACHE_ACS_CNT_INT_CLR_SPEC> {
         BUS1_OVF_INT_CLR_W::new(self, 5)
     }
     #[doc = "Bit 6 - Reserved"]
     #[inline(always)]
-    pub fn dbus2_ovf_int_clr(&mut self) -> DBUS2_OVF_INT_CLR_W<CACHE_ACS_CNT_INT_CLR_SPEC> {
+    pub fn dbus2_ovf_int_clr(&mut self) -> DBUS2_OVF_INT_CLR_W<'_, CACHE_ACS_CNT_INT_CLR_SPEC> {
         DBUS2_OVF_INT_CLR_W::new(self, 6)
     }
     #[doc = "Bit 7 - Reserved"]
     #[inline(always)]
-    pub fn dbus3_ovf_int_clr(&mut self) -> DBUS3_OVF_INT_CLR_W<CACHE_ACS_CNT_INT_CLR_SPEC> {
+    pub fn dbus3_ovf_int_clr(&mut self) -> DBUS3_OVF_INT_CLR_W<'_, CACHE_ACS_CNT_INT_CLR_SPEC> {
         DBUS3_OVF_INT_CLR_W::new(self, 7)
     }
 }

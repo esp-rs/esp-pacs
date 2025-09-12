@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - *******Description***********"]
     #[inline(always)]
-    pub fn slc_apbwin_wdata(&mut self) -> SLC_APBWIN_WDATA_W<SLC_APBWIN_WDATA_SPEC> {
+    pub fn slc_apbwin_wdata(&mut self) -> SLC_APBWIN_WDATA_W<'_, SLC_APBWIN_WDATA_SPEC> {
         SLC_APBWIN_WDATA_W::new(self, 0)
     }
 }

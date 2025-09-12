@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks IBUS permission control registers."]
     #[inline(always)]
-    pub fn pro_iram0_lock(&mut self) -> PRO_IRAM0_LOCK_W<PRO_IRAM0_0_SPEC> {
+    pub fn pro_iram0_lock(&mut self) -> PRO_IRAM0_LOCK_W<'_, PRO_IRAM0_0_SPEC> {
         PRO_IRAM0_LOCK_W::new(self, 0)
     }
 }

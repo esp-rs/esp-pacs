@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn host_slchost_conf28(&mut self) -> HOST_SLCHOST_CONF28_W<HOST_SLCHOST_CONF_W7_SPEC> {
+    pub fn host_slchost_conf28(&mut self) -> HOST_SLCHOST_CONF28_W<'_, HOST_SLCHOST_CONF_W7_SPEC> {
         HOST_SLCHOST_CONF28_W::new(self, 0)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn host_slchost_conf29(&mut self) -> HOST_SLCHOST_CONF29_W<HOST_SLCHOST_CONF_W7_SPEC> {
+    pub fn host_slchost_conf29(&mut self) -> HOST_SLCHOST_CONF29_W<'_, HOST_SLCHOST_CONF_W7_SPEC> {
         HOST_SLCHOST_CONF29_W::new(self, 8)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
-    pub fn host_slchost_conf30(&mut self) -> HOST_SLCHOST_CONF30_W<HOST_SLCHOST_CONF_W7_SPEC> {
+    pub fn host_slchost_conf30(&mut self) -> HOST_SLCHOST_CONF30_W<'_, HOST_SLCHOST_CONF_W7_SPEC> {
         HOST_SLCHOST_CONF30_W::new(self, 16)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
-    pub fn host_slchost_conf31(&mut self) -> HOST_SLCHOST_CONF31_W<HOST_SLCHOST_CONF_W7_SPEC> {
+    pub fn host_slchost_conf31(&mut self) -> HOST_SLCHOST_CONF31_W<'_, HOST_SLCHOST_CONF_W7_SPEC> {
         HOST_SLCHOST_CONF31_W::new(self, 24)
     }
 }

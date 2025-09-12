@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - This register stores the timeout value.when DMA takes more time than this register value to receive a data it will produce uhci_tx_hung_int interrupt."]
     #[inline(always)]
-    pub fn txfifo_timeout(&mut self) -> TXFIFO_TIMEOUT_W<HUNG_CONF_SPEC> {
+    pub fn txfifo_timeout(&mut self) -> TXFIFO_TIMEOUT_W<'_, HUNG_CONF_SPEC> {
         TXFIFO_TIMEOUT_W::new(self, 0)
     }
     #[doc = "Bits 8:10 - The tick count is cleared when its value >=(17'd8000>>reg_txfifo_timeout_shift)"]
     #[inline(always)]
-    pub fn txfifo_timeout_shift(&mut self) -> TXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC> {
+    pub fn txfifo_timeout_shift(&mut self) -> TXFIFO_TIMEOUT_SHIFT_W<'_, HUNG_CONF_SPEC> {
         TXFIFO_TIMEOUT_SHIFT_W::new(self, 8)
     }
     #[doc = "Bit 11 - The enable bit for txfifo receive data timeout"]
     #[inline(always)]
-    pub fn txfifo_timeout_ena(&mut self) -> TXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC> {
+    pub fn txfifo_timeout_ena(&mut self) -> TXFIFO_TIMEOUT_ENA_W<'_, HUNG_CONF_SPEC> {
         TXFIFO_TIMEOUT_ENA_W::new(self, 11)
     }
     #[doc = "Bits 12:19 - This register stores the timeout value.when DMA takes more time than this register value to read a data from RAM it will produce uhci_rx_hung_int interrupt."]
     #[inline(always)]
-    pub fn rxfifo_timeout(&mut self) -> RXFIFO_TIMEOUT_W<HUNG_CONF_SPEC> {
+    pub fn rxfifo_timeout(&mut self) -> RXFIFO_TIMEOUT_W<'_, HUNG_CONF_SPEC> {
         RXFIFO_TIMEOUT_W::new(self, 12)
     }
     #[doc = "Bits 20:22 - The tick count is cleared when its value >=(17'd8000>>reg_rxfifo_timeout_shift)"]
     #[inline(always)]
-    pub fn rxfifo_timeout_shift(&mut self) -> RXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC> {
+    pub fn rxfifo_timeout_shift(&mut self) -> RXFIFO_TIMEOUT_SHIFT_W<'_, HUNG_CONF_SPEC> {
         RXFIFO_TIMEOUT_SHIFT_W::new(self, 20)
     }
     #[doc = "Bit 23 - This is the enable bit for DMA send data timeout"]
     #[inline(always)]
-    pub fn rxfifo_timeout_ena(&mut self) -> RXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC> {
+    pub fn rxfifo_timeout_ena(&mut self) -> RXFIFO_TIMEOUT_ENA_W<'_, HUNG_CONF_SPEC> {
         RXFIFO_TIMEOUT_ENA_W::new(self, 23)
     }
 }

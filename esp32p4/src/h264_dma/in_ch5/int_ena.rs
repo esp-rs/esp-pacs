@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the IN_DONE_CH_INT interrupt."]
     #[inline(always)]
-    pub fn in_done(&mut self) -> IN_DONE_W<INT_ENA_SPEC> {
+    pub fn in_done(&mut self) -> IN_DONE_W<'_, INT_ENA_SPEC> {
         IN_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the IN_SUC_EOF_CH_INT interrupt."]
     #[inline(always)]
-    pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<INT_ENA_SPEC> {
+    pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<'_, INT_ENA_SPEC> {
         IN_SUC_EOF_W::new(self, 1)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the INFIFO_OVF_L1_CH_INT interrupt."]
     #[inline(always)]
-    pub fn infifo_ovf_l1(&mut self) -> INFIFO_OVF_L1_W<INT_ENA_SPEC> {
+    pub fn infifo_ovf_l1(&mut self) -> INFIFO_OVF_L1_W<'_, INT_ENA_SPEC> {
         INFIFO_OVF_L1_W::new(self, 2)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the INFIFO_UDF_L1_CH_INT interrupt."]
     #[inline(always)]
-    pub fn infifo_udf_l1(&mut self) -> INFIFO_UDF_L1_W<INT_ENA_SPEC> {
+    pub fn infifo_udf_l1(&mut self) -> INFIFO_UDF_L1_W<'_, INT_ENA_SPEC> {
         INFIFO_UDF_L1_W::new(self, 3)
     }
     #[doc = "Bit 4 - The interrupt enable bit for the INFIFO_UDF_L1_CH_INT interrupt."]
     #[inline(always)]
-    pub fn fetch_mb_col_cnt_ovf(&mut self) -> FETCH_MB_COL_CNT_OVF_W<INT_ENA_SPEC> {
+    pub fn fetch_mb_col_cnt_ovf(&mut self) -> FETCH_MB_COL_CNT_OVF_W<'_, INT_ENA_SPEC> {
         FETCH_MB_COL_CNT_OVF_W::new(self, 4)
     }
 }

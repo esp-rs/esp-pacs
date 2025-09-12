@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - The period of the TWAI system clock is programmable and determines the individual bit timing. Software has R/W permission in reset mode and RO permission in operation mode."]
     #[inline(always)]
-    pub fn baud_presc(&mut self) -> BAUD_PRESC_W<BUS_TIMING_0_SPEC> {
+    pub fn baud_presc(&mut self) -> BAUD_PRESC_W<'_, BUS_TIMING_0_SPEC> {
         BAUD_PRESC_W::new(self, 0)
     }
     #[doc = "Bits 14:15 - The synchronization jump width defines the maximum number of clock cycles a bit period may be shortened or lengthened. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
-    pub fn sync_jump_width(&mut self) -> SYNC_JUMP_WIDTH_W<BUS_TIMING_0_SPEC> {
+    pub fn sync_jump_width(&mut self) -> SYNC_JUMP_WIDTH_W<'_, BUS_TIMING_0_SPEC> {
         SYNC_JUMP_WIDTH_W::new(self, 14)
     }
 }

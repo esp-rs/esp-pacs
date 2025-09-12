@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn core0_flash_mspi_int_map(
         &mut self,
-    ) -> CORE0_FLASH_MSPI_INT_MAP_W<FLASH_MSPI_INT_MAP_SPEC> {
+    ) -> CORE0_FLASH_MSPI_INT_MAP_W<'_, FLASH_MSPI_INT_MAP_SPEC> {
         CORE0_FLASH_MSPI_INT_MAP_W::new(self, 0)
     }
 }

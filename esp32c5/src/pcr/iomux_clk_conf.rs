@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 20:21 - Configures the clock source of IO MUX.\\\\ 0 (default): XTAL_CLK\\\\ 1: RC_FAST_CLK\\\\ 2: PLL_F80M_CLK\\\\"]
     #[inline(always)]
-    pub fn iomux_func_clk_sel(&mut self) -> IOMUX_FUNC_CLK_SEL_W<IOMUX_CLK_CONF_SPEC> {
+    pub fn iomux_func_clk_sel(&mut self) -> IOMUX_FUNC_CLK_SEL_W<'_, IOMUX_CLK_CONF_SPEC> {
         IOMUX_FUNC_CLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable iomux function clock"]
     #[inline(always)]
-    pub fn iomux_func_clk_en(&mut self) -> IOMUX_FUNC_CLK_EN_W<IOMUX_CLK_CONF_SPEC> {
+    pub fn iomux_func_clk_en(&mut self) -> IOMUX_FUNC_CLK_EN_W<'_, IOMUX_CLK_CONF_SPEC> {
         IOMUX_FUNC_CLK_EN_W::new(self, 22)
     }
 }

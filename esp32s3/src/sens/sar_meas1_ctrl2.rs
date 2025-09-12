@@ -70,22 +70,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 17 - SAR ADC1 controller (in RTC) starts conversion"]
     #[inline(always)]
-    pub fn meas1_start_sar(&mut self) -> MEAS1_START_SAR_W<SAR_MEAS1_CTRL2_SPEC> {
+    pub fn meas1_start_sar(&mut self) -> MEAS1_START_SAR_W<'_, SAR_MEAS1_CTRL2_SPEC> {
         MEAS1_START_SAR_W::new(self, 17)
     }
     #[doc = "Bit 18 - 1: SAR ADC1 controller (in RTC) is started by SW"]
     #[inline(always)]
-    pub fn meas1_start_force(&mut self) -> MEAS1_START_FORCE_W<SAR_MEAS1_CTRL2_SPEC> {
+    pub fn meas1_start_force(&mut self) -> MEAS1_START_FORCE_W<'_, SAR_MEAS1_CTRL2_SPEC> {
         MEAS1_START_FORCE_W::new(self, 18)
     }
     #[doc = "Bits 19:30 - SAR ADC1 pad enable bitmap"]
     #[inline(always)]
-    pub fn sar1_en_pad(&mut self) -> SAR1_EN_PAD_W<SAR_MEAS1_CTRL2_SPEC> {
+    pub fn sar1_en_pad(&mut self) -> SAR1_EN_PAD_W<'_, SAR_MEAS1_CTRL2_SPEC> {
         SAR1_EN_PAD_W::new(self, 19)
     }
     #[doc = "Bit 31 - 1: SAR ADC1 pad enable bitmap is controlled by SW"]
     #[inline(always)]
-    pub fn sar1_en_pad_force(&mut self) -> SAR1_EN_PAD_FORCE_W<SAR_MEAS1_CTRL2_SPEC> {
+    pub fn sar1_en_pad_force(&mut self) -> SAR1_EN_PAD_FORCE_W<'_, SAR_MEAS1_CTRL2_SPEC> {
         SAR1_EN_PAD_FORCE_W::new(self, 31)
     }
 }

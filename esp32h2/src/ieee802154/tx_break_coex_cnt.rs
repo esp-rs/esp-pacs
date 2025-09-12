@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn tx_break_coex_cnt(&mut self) -> TX_BREAK_COEX_CNT_W<TX_BREAK_COEX_CNT_SPEC> {
+    pub fn tx_break_coex_cnt(&mut self) -> TX_BREAK_COEX_CNT_W<'_, TX_BREAK_COEX_CNT_SPEC> {
         TX_BREAK_COEX_CNT_W::new(self, 0)
     }
 }

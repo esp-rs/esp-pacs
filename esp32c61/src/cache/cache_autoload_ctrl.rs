@@ -99,33 +99,33 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable and disable autoload operation on L1-Cache. 1: enable, 0: disable."]
     #[inline(always)]
-    pub fn cache_autoload_ena(&mut self) -> CACHE_AUTOLOAD_ENA_W<CACHE_AUTOLOAD_CTRL_SPEC> {
+    pub fn cache_autoload_ena(&mut self) -> CACHE_AUTOLOAD_ENA_W<'_, CACHE_AUTOLOAD_CTRL_SPEC> {
         CACHE_AUTOLOAD_ENA_W::new(self, 0)
     }
     #[doc = "Bit 2 - The bit is used to configure the direction of autoload operation on L1-Cache. 0: ascending. 1: descending."]
     #[inline(always)]
-    pub fn cache_autoload_order(&mut self) -> CACHE_AUTOLOAD_ORDER_W<CACHE_AUTOLOAD_CTRL_SPEC> {
+    pub fn cache_autoload_order(&mut self) -> CACHE_AUTOLOAD_ORDER_W<'_, CACHE_AUTOLOAD_CTRL_SPEC> {
         CACHE_AUTOLOAD_ORDER_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - The field is used to configure trigger mode of autoload operation on L1-Cache. 0/3: miss-trigger, 1: hit-trigger, 2: miss-hit-trigger."]
     #[inline(always)]
     pub fn cache_autoload_trigger_mode(
         &mut self,
-    ) -> CACHE_AUTOLOAD_TRIGGER_MODE_W<CACHE_AUTOLOAD_CTRL_SPEC> {
+    ) -> CACHE_AUTOLOAD_TRIGGER_MODE_W<'_, CACHE_AUTOLOAD_CTRL_SPEC> {
         CACHE_AUTOLOAD_TRIGGER_MODE_W::new(self, 3)
     }
     #[doc = "Bit 8 - The bit is used to enable the first section for autoload operation on L1-Cache."]
     #[inline(always)]
     pub fn cache_autoload_sct0_ena(
         &mut self,
-    ) -> CACHE_AUTOLOAD_SCT0_ENA_W<CACHE_AUTOLOAD_CTRL_SPEC> {
+    ) -> CACHE_AUTOLOAD_SCT0_ENA_W<'_, CACHE_AUTOLOAD_CTRL_SPEC> {
         CACHE_AUTOLOAD_SCT0_ENA_W::new(self, 8)
     }
     #[doc = "Bit 9 - The bit is used to enable the second section for autoload operation on L1-Cache."]
     #[inline(always)]
     pub fn cache_autoload_sct1_ena(
         &mut self,
-    ) -> CACHE_AUTOLOAD_SCT1_ENA_W<CACHE_AUTOLOAD_CTRL_SPEC> {
+    ) -> CACHE_AUTOLOAD_SCT1_ENA_W<'_, CACHE_AUTOLOAD_CTRL_SPEC> {
         CACHE_AUTOLOAD_SCT1_ENA_W::new(self, 9)
     }
 }

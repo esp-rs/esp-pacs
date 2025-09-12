@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - ******* Description ***********"]
     #[inline(always)]
-    pub fn wifi_clk_en(&mut self) -> WIFI_CLK_EN_W<WIFI_CLK_EN_SPEC> {
+    pub fn wifi_clk_en(&mut self) -> WIFI_CLK_EN_W<'_, WIFI_CLK_EN_SPEC> {
         WIFI_CLK_EN_W::new(self, 0)
     }
 }

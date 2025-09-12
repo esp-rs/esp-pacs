@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - VAD parameter"]
     #[inline(always)]
-    pub fn param_noise_amp_down(&mut self) -> PARAM_NOISE_AMP_DOWN_W<VAD_PARAM2_SPEC> {
+    pub fn param_noise_amp_down(&mut self) -> PARAM_NOISE_AMP_DOWN_W<'_, VAD_PARAM2_SPEC> {
         PARAM_NOISE_AMP_DOWN_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - VAD parameter"]
     #[inline(always)]
-    pub fn param_noise_amp_up(&mut self) -> PARAM_NOISE_AMP_UP_W<VAD_PARAM2_SPEC> {
+    pub fn param_noise_amp_up(&mut self) -> PARAM_NOISE_AMP_UP_W<'_, VAD_PARAM2_SPEC> {
         PARAM_NOISE_AMP_UP_W::new(self, 16)
     }
 }

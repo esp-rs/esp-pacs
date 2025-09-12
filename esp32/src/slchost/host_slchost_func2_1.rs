@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn host_slc_func2_int_en(&mut self) -> HOST_SLC_FUNC2_INT_EN_W<HOST_SLCHOST_FUNC2_1_SPEC> {
+    pub fn host_slc_func2_int_en(
+        &mut self,
+    ) -> HOST_SLC_FUNC2_INT_EN_W<'_, HOST_SLCHOST_FUNC2_1_SPEC> {
         HOST_SLC_FUNC2_INT_EN_W::new(self, 0)
     }
 }

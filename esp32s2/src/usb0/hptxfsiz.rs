@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn ptxfstaddr(&mut self) -> PTXFSTADDR_W<HPTXFSIZ_SPEC> {
+    pub fn ptxfstaddr(&mut self) -> PTXFSTADDR_W<'_, HPTXFSIZ_SPEC> {
         PTXFSTADDR_W::new(self, 0)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn ptxfsize(&mut self) -> PTXFSIZE_W<HPTXFSIZ_SPEC> {
+    pub fn ptxfsize(&mut self) -> PTXFSIZE_W<'_, HPTXFSIZ_SPEC> {
         PTXFSIZE_W::new(self, 16)
     }
 }

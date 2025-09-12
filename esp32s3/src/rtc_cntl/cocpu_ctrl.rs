@@ -116,57 +116,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - cocpu clk force on"]
     #[inline(always)]
-    pub fn cocpu_clk_fo(&mut self) -> COCPU_CLK_FO_W<COCPU_CTRL_SPEC> {
+    pub fn cocpu_clk_fo(&mut self) -> COCPU_CLK_FO_W<'_, COCPU_CTRL_SPEC> {
         COCPU_CLK_FO_W::new(self, 0)
     }
     #[doc = "Bits 1:6 - time from start cocpu to pull down reset"]
     #[inline(always)]
-    pub fn cocpu_start_2_reset_dis(&mut self) -> COCPU_START_2_RESET_DIS_W<COCPU_CTRL_SPEC> {
+    pub fn cocpu_start_2_reset_dis(&mut self) -> COCPU_START_2_RESET_DIS_W<'_, COCPU_CTRL_SPEC> {
         COCPU_START_2_RESET_DIS_W::new(self, 1)
     }
     #[doc = "Bits 7:12 - time from start cocpu to give start interrupt"]
     #[inline(always)]
-    pub fn cocpu_start_2_intr_en(&mut self) -> COCPU_START_2_INTR_EN_W<COCPU_CTRL_SPEC> {
+    pub fn cocpu_start_2_intr_en(&mut self) -> COCPU_START_2_INTR_EN_W<'_, COCPU_CTRL_SPEC> {
         COCPU_START_2_INTR_EN_W::new(self, 7)
     }
     #[doc = "Bit 13 - to shut cocpu"]
     #[inline(always)]
-    pub fn cocpu_shut(&mut self) -> COCPU_SHUT_W<COCPU_CTRL_SPEC> {
+    pub fn cocpu_shut(&mut self) -> COCPU_SHUT_W<'_, COCPU_CTRL_SPEC> {
         COCPU_SHUT_W::new(self, 13)
     }
     #[doc = "Bits 14:21 - time from shut cocpu to disable clk"]
     #[inline(always)]
-    pub fn cocpu_shut_2_clk_dis(&mut self) -> COCPU_SHUT_2_CLK_DIS_W<COCPU_CTRL_SPEC> {
+    pub fn cocpu_shut_2_clk_dis(&mut self) -> COCPU_SHUT_2_CLK_DIS_W<'_, COCPU_CTRL_SPEC> {
         COCPU_SHUT_2_CLK_DIS_W::new(self, 14)
     }
     #[doc = "Bit 22 - to reset cocpu"]
     #[inline(always)]
-    pub fn cocpu_shut_reset_en(&mut self) -> COCPU_SHUT_RESET_EN_W<COCPU_CTRL_SPEC> {
+    pub fn cocpu_shut_reset_en(&mut self) -> COCPU_SHUT_RESET_EN_W<'_, COCPU_CTRL_SPEC> {
         COCPU_SHUT_RESET_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - 1: old ULP 0: new riscV"]
     #[inline(always)]
-    pub fn cocpu_sel(&mut self) -> COCPU_SEL_W<COCPU_CTRL_SPEC> {
+    pub fn cocpu_sel(&mut self) -> COCPU_SEL_W<'_, COCPU_CTRL_SPEC> {
         COCPU_SEL_W::new(self, 23)
     }
     #[doc = "Bit 24 - 1: select riscv done 0: select ulp done"]
     #[inline(always)]
-    pub fn cocpu_done_force(&mut self) -> COCPU_DONE_FORCE_W<COCPU_CTRL_SPEC> {
+    pub fn cocpu_done_force(&mut self) -> COCPU_DONE_FORCE_W<'_, COCPU_CTRL_SPEC> {
         COCPU_DONE_FORCE_W::new(self, 24)
     }
     #[doc = "Bit 25 - done signal used by riscv to control timer."]
     #[inline(always)]
-    pub fn cocpu_done(&mut self) -> COCPU_DONE_W<COCPU_CTRL_SPEC> {
+    pub fn cocpu_done(&mut self) -> COCPU_DONE_W<'_, COCPU_CTRL_SPEC> {
         COCPU_DONE_W::new(self, 25)
     }
     #[doc = "Bit 26 - trigger cocpu register interrupt"]
     #[inline(always)]
-    pub fn cocpu_sw_int_trigger(&mut self) -> COCPU_SW_INT_TRIGGER_W<COCPU_CTRL_SPEC> {
+    pub fn cocpu_sw_int_trigger(&mut self) -> COCPU_SW_INT_TRIGGER_W<'_, COCPU_CTRL_SPEC> {
         COCPU_SW_INT_TRIGGER_W::new(self, 26)
     }
     #[doc = "Bit 27 - open ulp-riscv clk gate"]
     #[inline(always)]
-    pub fn cocpu_clkgate_en(&mut self) -> COCPU_CLKGATE_EN_W<COCPU_CTRL_SPEC> {
+    pub fn cocpu_clkgate_en(&mut self) -> COCPU_CLKGATE_EN_W<'_, COCPU_CTRL_SPEC> {
         COCPU_CLKGATE_EN_W::new(self, 27)
     }
 }

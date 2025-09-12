@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core0_core0_trace_int_map(
         &mut self,
-    ) -> CORE0_CORE0_TRACE_INT_MAP_W<CORE0_TRACE_INT_MAP_SPEC> {
+    ) -> CORE0_CORE0_TRACE_INT_MAP_W<'_, CORE0_TRACE_INT_MAP_SPEC> {
         CORE0_CORE0_TRACE_INT_MAP_W::new(self, 0)
     }
 }

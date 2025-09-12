@@ -50,12 +50,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 9 - 1: SPI_CLK line is high when idle 0: spi clk line is low when idle"]
     #[inline(always)]
-    pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<MISC_SPEC> {
+    pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<'_, MISC_SPEC> {
         CK_IDLE_EDGE_W::new(self, 9)
     }
     #[doc = "Bit 10 - SPI_CS line keep low when the bit is set."]
     #[inline(always)]
-    pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<MISC_SPEC> {
+    pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<'_, MISC_SPEC> {
         CS_KEEP_ACTIVE_W::new(self, 10)
     }
 }

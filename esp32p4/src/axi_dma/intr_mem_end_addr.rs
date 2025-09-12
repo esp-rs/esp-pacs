@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn access_intr_mem_end_addr(
         &mut self,
-    ) -> ACCESS_INTR_MEM_END_ADDR_W<INTR_MEM_END_ADDR_SPEC> {
+    ) -> ACCESS_INTR_MEM_END_ADDR_W<'_, INTR_MEM_END_ADDR_SPEC> {
         ACCESS_INTR_MEM_END_ADDR_W::new(self, 0)
     }
 }

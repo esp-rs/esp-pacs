@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - configure memory in lp system power status"]
     #[inline(always)]
-    pub fn sprf_mem_aux_ctrl(&mut self) -> SPRF_MEM_AUX_CTRL_W<SPRF_CTRL_SPEC> {
+    pub fn sprf_mem_aux_ctrl(&mut self) -> SPRF_MEM_AUX_CTRL_W<'_, SPRF_CTRL_SPEC> {
         SPRF_MEM_AUX_CTRL_W::new(self, 0)
     }
 }

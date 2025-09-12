@@ -74,34 +74,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn force_lp_peri_reset(&mut self) -> FORCE_LP_PERI_RESET_W<POWER_PD_LPPERI_CNTL_SPEC> {
+    pub fn force_lp_peri_reset(&mut self) -> FORCE_LP_PERI_RESET_W<'_, POWER_PD_LPPERI_CNTL_SPEC> {
         FORCE_LP_PERI_RESET_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn force_lp_peri_iso(&mut self) -> FORCE_LP_PERI_ISO_W<POWER_PD_LPPERI_CNTL_SPEC> {
+    pub fn force_lp_peri_iso(&mut self) -> FORCE_LP_PERI_ISO_W<'_, POWER_PD_LPPERI_CNTL_SPEC> {
         FORCE_LP_PERI_ISO_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn force_lp_peri_pu(&mut self) -> FORCE_LP_PERI_PU_W<POWER_PD_LPPERI_CNTL_SPEC> {
+    pub fn force_lp_peri_pu(&mut self) -> FORCE_LP_PERI_PU_W<'_, POWER_PD_LPPERI_CNTL_SPEC> {
         FORCE_LP_PERI_PU_W::new(self, 2)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
     pub fn force_lp_peri_no_reset(
         &mut self,
-    ) -> FORCE_LP_PERI_NO_RESET_W<POWER_PD_LPPERI_CNTL_SPEC> {
+    ) -> FORCE_LP_PERI_NO_RESET_W<'_, POWER_PD_LPPERI_CNTL_SPEC> {
         FORCE_LP_PERI_NO_RESET_W::new(self, 3)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
-    pub fn force_lp_peri_no_iso(&mut self) -> FORCE_LP_PERI_NO_ISO_W<POWER_PD_LPPERI_CNTL_SPEC> {
+    pub fn force_lp_peri_no_iso(
+        &mut self,
+    ) -> FORCE_LP_PERI_NO_ISO_W<'_, POWER_PD_LPPERI_CNTL_SPEC> {
         FORCE_LP_PERI_NO_ISO_W::new(self, 4)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    pub fn force_lp_peri_pd(&mut self) -> FORCE_LP_PERI_PD_W<POWER_PD_LPPERI_CNTL_SPEC> {
+    pub fn force_lp_peri_pd(&mut self) -> FORCE_LP_PERI_PD_W<'_, POWER_PD_LPPERI_CNTL_SPEC> {
         FORCE_LP_PERI_PD_W::new(self, 5)
     }
 }

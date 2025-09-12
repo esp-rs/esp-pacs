@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 23:24 - Need add description"]
     #[inline(always)]
-    pub fn onetime_atten(&mut self) -> ONETIME_ATTEN_W<ONETIME_SAMPLE_SPEC> {
+    pub fn onetime_atten(&mut self) -> ONETIME_ATTEN_W<'_, ONETIME_SAMPLE_SPEC> {
         ONETIME_ATTEN_W::new(self, 23)
     }
     #[doc = "Bits 25:28 - Need add description"]
     #[inline(always)]
-    pub fn onetime_channel(&mut self) -> ONETIME_CHANNEL_W<ONETIME_SAMPLE_SPEC> {
+    pub fn onetime_channel(&mut self) -> ONETIME_CHANNEL_W<'_, ONETIME_SAMPLE_SPEC> {
         ONETIME_CHANNEL_W::new(self, 25)
     }
     #[doc = "Bit 29 - Need add description"]
     #[inline(always)]
-    pub fn onetime_start(&mut self) -> ONETIME_START_W<ONETIME_SAMPLE_SPEC> {
+    pub fn onetime_start(&mut self) -> ONETIME_START_W<'_, ONETIME_SAMPLE_SPEC> {
         ONETIME_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - Need add description"]
     #[inline(always)]
-    pub fn saradc2_onetime_sample(&mut self) -> SARADC2_ONETIME_SAMPLE_W<ONETIME_SAMPLE_SPEC> {
+    pub fn saradc2_onetime_sample(&mut self) -> SARADC2_ONETIME_SAMPLE_W<'_, ONETIME_SAMPLE_SPEC> {
         SARADC2_ONETIME_SAMPLE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Need add description"]
     #[inline(always)]
-    pub fn saradc1_onetime_sample(&mut self) -> SARADC1_ONETIME_SAMPLE_W<ONETIME_SAMPLE_SPEC> {
+    pub fn saradc1_onetime_sample(&mut self) -> SARADC1_ONETIME_SAMPLE_W<'_, ONETIME_SAMPLE_SPEC> {
         SARADC1_ONETIME_SAMPLE_W::new(self, 31)
     }
 }

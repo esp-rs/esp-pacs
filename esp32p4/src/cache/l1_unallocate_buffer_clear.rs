@@ -62,21 +62,21 @@ impl W {
     #[inline(always)]
     pub fn l1_icache0_unalloc_clr(
         &mut self,
-    ) -> L1_ICACHE0_UNALLOC_CLR_W<L1_UNALLOCATE_BUFFER_CLEAR_SPEC> {
+    ) -> L1_ICACHE0_UNALLOC_CLR_W<'_, L1_UNALLOCATE_BUFFER_CLEAR_SPEC> {
         L1_ICACHE0_UNALLOC_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to clear the unallocate request buffer of l1 icache1 where the unallocate request is responsed but not completed."]
     #[inline(always)]
     pub fn l1_icache1_unalloc_clr(
         &mut self,
-    ) -> L1_ICACHE1_UNALLOC_CLR_W<L1_UNALLOCATE_BUFFER_CLEAR_SPEC> {
+    ) -> L1_ICACHE1_UNALLOC_CLR_W<'_, L1_UNALLOCATE_BUFFER_CLEAR_SPEC> {
         L1_ICACHE1_UNALLOC_CLR_W::new(self, 1)
     }
     #[doc = "Bit 4 - The bit is used to clear the unallocate request buffer of l1 dcache where the unallocate request is responsed but not completed."]
     #[inline(always)]
     pub fn l1_dcache_unalloc_clr(
         &mut self,
-    ) -> L1_DCACHE_UNALLOC_CLR_W<L1_UNALLOCATE_BUFFER_CLEAR_SPEC> {
+    ) -> L1_DCACHE_UNALLOC_CLR_W<'_, L1_UNALLOCATE_BUFFER_CLEAR_SPEC> {
         L1_DCACHE_UNALLOC_CLR_W::new(self, 4)
     }
 }

@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable PWM generator0 timer equal OP0_TSTMP_E1_REG event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_op0_tee1_en(&mut self) -> EVT_OP0_TEE1_EN_W<EVT_EN2_SPEC> {
+    pub fn evt_op0_tee1_en(&mut self) -> EVT_OP0_TEE1_EN_W<'_, EVT_EN2_SPEC> {
         EVT_OP0_TEE1_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to enable PWM generator1 timer equal OP1_TSTMP_E1_REG event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_op1_tee1_en(&mut self) -> EVT_OP1_TEE1_EN_W<EVT_EN2_SPEC> {
+    pub fn evt_op1_tee1_en(&mut self) -> EVT_OP1_TEE1_EN_W<'_, EVT_EN2_SPEC> {
         EVT_OP1_TEE1_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to enable PWM generator2 timer equal OP2_TSTMP_E1_REG event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_op2_tee1_en(&mut self) -> EVT_OP2_TEE1_EN_W<EVT_EN2_SPEC> {
+    pub fn evt_op2_tee1_en(&mut self) -> EVT_OP2_TEE1_EN_W<'_, EVT_EN2_SPEC> {
         EVT_OP2_TEE1_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to enable PWM generator0 timer equal OP0_TSTMP_E2_REG event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_op0_tee2_en(&mut self) -> EVT_OP0_TEE2_EN_W<EVT_EN2_SPEC> {
+    pub fn evt_op0_tee2_en(&mut self) -> EVT_OP0_TEE2_EN_W<'_, EVT_EN2_SPEC> {
         EVT_OP0_TEE2_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to enable PWM generator1 timer equal OP1_TSTMP_E2_REG event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_op1_tee2_en(&mut self) -> EVT_OP1_TEE2_EN_W<EVT_EN2_SPEC> {
+    pub fn evt_op1_tee2_en(&mut self) -> EVT_OP1_TEE2_EN_W<'_, EVT_EN2_SPEC> {
         EVT_OP1_TEE2_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether or not to enable PWM generator2 timer equal OP2_TSTMP_E2_REG event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_op2_tee2_en(&mut self) -> EVT_OP2_TEE2_EN_W<EVT_EN2_SPEC> {
+    pub fn evt_op2_tee2_en(&mut self) -> EVT_OP2_TEE2_EN_W<'_, EVT_EN2_SPEC> {
         EVT_OP2_TEE2_EN_W::new(self, 5)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The LCD write command value."]
     #[inline(always)]
-    pub fn lcd_cmd_value(&mut self) -> LCD_CMD_VALUE_W<LCD_CMD_VAL_SPEC> {
+    pub fn lcd_cmd_value(&mut self) -> LCD_CMD_VALUE_W<'_, LCD_CMD_VAL_SPEC> {
         LCD_CMD_VALUE_W::new(self, 0)
     }
 }

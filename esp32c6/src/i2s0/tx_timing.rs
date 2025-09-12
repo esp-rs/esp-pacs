@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - The delay mode of I2S TX SD output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
-    pub fn tx_sd_out_dm(&mut self) -> TX_SD_OUT_DM_W<TX_TIMING_SPEC> {
+    pub fn tx_sd_out_dm(&mut self) -> TX_SD_OUT_DM_W<'_, TX_TIMING_SPEC> {
         TX_SD_OUT_DM_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - The delay mode of I2S TX SD1 output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
-    pub fn tx_sd1_out_dm(&mut self) -> TX_SD1_OUT_DM_W<TX_TIMING_SPEC> {
+    pub fn tx_sd1_out_dm(&mut self) -> TX_SD1_OUT_DM_W<'_, TX_TIMING_SPEC> {
         TX_SD1_OUT_DM_W::new(self, 4)
     }
     #[doc = "Bits 16:17 - The delay mode of I2S TX WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
-    pub fn tx_ws_out_dm(&mut self) -> TX_WS_OUT_DM_W<TX_TIMING_SPEC> {
+    pub fn tx_ws_out_dm(&mut self) -> TX_WS_OUT_DM_W<'_, TX_TIMING_SPEC> {
         TX_WS_OUT_DM_W::new(self, 16)
     }
     #[doc = "Bits 20:21 - The delay mode of I2S TX BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
-    pub fn tx_bck_out_dm(&mut self) -> TX_BCK_OUT_DM_W<TX_TIMING_SPEC> {
+    pub fn tx_bck_out_dm(&mut self) -> TX_BCK_OUT_DM_W<'_, TX_TIMING_SPEC> {
         TX_BCK_OUT_DM_W::new(self, 20)
     }
     #[doc = "Bits 24:25 - The delay mode of I2S TX WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
-    pub fn tx_ws_in_dm(&mut self) -> TX_WS_IN_DM_W<TX_TIMING_SPEC> {
+    pub fn tx_ws_in_dm(&mut self) -> TX_WS_IN_DM_W<'_, TX_TIMING_SPEC> {
         TX_WS_IN_DM_W::new(self, 24)
     }
     #[doc = "Bits 28:29 - The delay mode of I2S TX BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
-    pub fn tx_bck_in_dm(&mut self) -> TX_BCK_IN_DM_W<TX_TIMING_SPEC> {
+    pub fn tx_bck_in_dm(&mut self) -> TX_BCK_IN_DM_W<'_, TX_TIMING_SPEC> {
         TX_BCK_IN_DM_W::new(self, 28)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    pub fn lp_cpu_boot_addr(&mut self) -> LP_CPU_BOOT_ADDR_W<LP_CORE_BOOT_ADDR_SPEC> {
+    pub fn lp_cpu_boot_addr(&mut self) -> LP_CPU_BOOT_ADDR_W<'_, LP_CORE_BOOT_ADDR_SPEC> {
         LP_CPU_BOOT_ADDR_W::new(self, 0)
     }
 }

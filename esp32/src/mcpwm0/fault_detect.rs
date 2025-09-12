@@ -98,32 +98,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn f0_en(&mut self) -> F0_EN_W<FAULT_DETECT_SPEC> {
+    pub fn f0_en(&mut self) -> F0_EN_W<'_, FAULT_DETECT_SPEC> {
         F0_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn f1_en(&mut self) -> F1_EN_W<FAULT_DETECT_SPEC> {
+    pub fn f1_en(&mut self) -> F1_EN_W<'_, FAULT_DETECT_SPEC> {
         F1_EN_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn f2_en(&mut self) -> F2_EN_W<FAULT_DETECT_SPEC> {
+    pub fn f2_en(&mut self) -> F2_EN_W<'_, FAULT_DETECT_SPEC> {
         F2_EN_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn f0_pole(&mut self) -> F0_POLE_W<FAULT_DETECT_SPEC> {
+    pub fn f0_pole(&mut self) -> F0_POLE_W<'_, FAULT_DETECT_SPEC> {
         F0_POLE_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn f1_pole(&mut self) -> F1_POLE_W<FAULT_DETECT_SPEC> {
+    pub fn f1_pole(&mut self) -> F1_POLE_W<'_, FAULT_DETECT_SPEC> {
         F1_POLE_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn f2_pole(&mut self) -> F2_POLE_W<FAULT_DETECT_SPEC> {
+    pub fn f2_pole(&mut self) -> F2_POLE_W<'_, FAULT_DETECT_SPEC> {
         F2_POLE_W::new(self, 5)
     }
 }

@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 7:11 - configure cmd4 code"]
     #[inline(always)]
-    pub fn pump_channel_code4(&mut self) -> PUMP_CHANNEL_CODE4_W<PMUP_CHANNEL_CFG_SPEC> {
+    pub fn pump_channel_code4(&mut self) -> PUMP_CHANNEL_CODE4_W<'_, PMUP_CHANNEL_CFG_SPEC> {
         PUMP_CHANNEL_CODE4_W::new(self, 7)
     }
     #[doc = "Bits 12:16 - configure cmd3 code"]
     #[inline(always)]
-    pub fn pump_channel_code3(&mut self) -> PUMP_CHANNEL_CODE3_W<PMUP_CHANNEL_CFG_SPEC> {
+    pub fn pump_channel_code3(&mut self) -> PUMP_CHANNEL_CODE3_W<'_, PMUP_CHANNEL_CFG_SPEC> {
         PUMP_CHANNEL_CODE3_W::new(self, 12)
     }
     #[doc = "Bits 17:21 - configure cmd2 code"]
     #[inline(always)]
-    pub fn pump_channel_code2(&mut self) -> PUMP_CHANNEL_CODE2_W<PMUP_CHANNEL_CFG_SPEC> {
+    pub fn pump_channel_code2(&mut self) -> PUMP_CHANNEL_CODE2_W<'_, PMUP_CHANNEL_CFG_SPEC> {
         PUMP_CHANNEL_CODE2_W::new(self, 17)
     }
     #[doc = "Bits 22:26 - configure cmd1 code"]
     #[inline(always)]
-    pub fn pump_channel_code1(&mut self) -> PUMP_CHANNEL_CODE1_W<PMUP_CHANNEL_CFG_SPEC> {
+    pub fn pump_channel_code1(&mut self) -> PUMP_CHANNEL_CODE1_W<'_, PMUP_CHANNEL_CFG_SPEC> {
         PUMP_CHANNEL_CODE1_W::new(self, 22)
     }
     #[doc = "Bits 27:31 - configure cmd0 code"]
     #[inline(always)]
-    pub fn pump_channel_code0(&mut self) -> PUMP_CHANNEL_CODE0_W<PMUP_CHANNEL_CFG_SPEC> {
+    pub fn pump_channel_code0(&mut self) -> PUMP_CHANNEL_CODE0_W<'_, PMUP_CHANNEL_CFG_SPEC> {
         PUMP_CHANNEL_CODE0_W::new(self, 27)
     }
 }

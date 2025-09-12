@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - The address of the first inlink descriptor."]
     #[inline(always)]
-    pub fn inlink_addr(&mut self) -> INLINK_ADDR_W<DMA_IN_LINK_SPEC> {
+    pub fn inlink_addr(&mut self) -> INLINK_ADDR_W<'_, DMA_IN_LINK_SPEC> {
         INLINK_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 20 - when the bit is set inlink descriptor returns to the next descriptor while a packet is wrong"]
     #[inline(always)]
-    pub fn inlink_auto_ret(&mut self) -> INLINK_AUTO_RET_W<DMA_IN_LINK_SPEC> {
+    pub fn inlink_auto_ret(&mut self) -> INLINK_AUTO_RET_W<'_, DMA_IN_LINK_SPEC> {
         INLINK_AUTO_RET_W::new(self, 20)
     }
     #[doc = "Bit 28 - Set the bit to stop to use inlink descriptor."]
     #[inline(always)]
-    pub fn inlink_stop(&mut self) -> INLINK_STOP_W<DMA_IN_LINK_SPEC> {
+    pub fn inlink_stop(&mut self) -> INLINK_STOP_W<'_, DMA_IN_LINK_SPEC> {
         INLINK_STOP_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set the bit to start to use inlink descriptor."]
     #[inline(always)]
-    pub fn inlink_start(&mut self) -> INLINK_START_W<DMA_IN_LINK_SPEC> {
+    pub fn inlink_start(&mut self) -> INLINK_START_W<'_, DMA_IN_LINK_SPEC> {
         INLINK_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set the bit to mount on new inlink descriptors."]
     #[inline(always)]
-    pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<DMA_IN_LINK_SPEC> {
+    pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<'_, DMA_IN_LINK_SPEC> {
         INLINK_RESTART_W::new(self, 30)
     }
 }

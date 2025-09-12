@@ -88,47 +88,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 23 - need_des"]
     #[inline(always)]
-    pub fn bus_reset_en(&mut self) -> BUS_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn bus_reset_en(&mut self) -> BUS_RESET_EN_W<'_, RESET_EN_SPEC> {
         BUS_RESET_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
-    pub fn lp_ble_timer_reset_en(&mut self) -> LP_BLE_TIMER_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn lp_ble_timer_reset_en(&mut self) -> LP_BLE_TIMER_RESET_EN_W<'_, RESET_EN_SPEC> {
         LP_BLE_TIMER_RESET_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
-    pub fn otp_dbg_reset_en(&mut self) -> OTP_DBG_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn otp_dbg_reset_en(&mut self) -> OTP_DBG_RESET_EN_W<'_, RESET_EN_SPEC> {
         OTP_DBG_RESET_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    pub fn lp_uart_reset_en(&mut self) -> LP_UART_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn lp_uart_reset_en(&mut self) -> LP_UART_RESET_EN_W<'_, RESET_EN_SPEC> {
         LP_UART_RESET_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    pub fn lp_io_reset_en(&mut self) -> LP_IO_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn lp_io_reset_en(&mut self) -> LP_IO_RESET_EN_W<'_, RESET_EN_SPEC> {
         LP_IO_RESET_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn lp_ext_i2c_reset_en(&mut self) -> LP_EXT_I2C_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn lp_ext_i2c_reset_en(&mut self) -> LP_EXT_I2C_RESET_EN_W<'_, RESET_EN_SPEC> {
         LP_EXT_I2C_RESET_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn lp_ana_i2c_reset_en(&mut self) -> LP_ANA_I2C_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn lp_ana_i2c_reset_en(&mut self) -> LP_ANA_I2C_RESET_EN_W<'_, RESET_EN_SPEC> {
         LP_ANA_I2C_RESET_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn efuse_reset_en(&mut self) -> EFUSE_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn efuse_reset_en(&mut self) -> EFUSE_RESET_EN_W<'_, RESET_EN_SPEC> {
         EFUSE_RESET_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn lp_cpu_reset_en(&mut self) -> LP_CPU_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn lp_cpu_reset_en(&mut self) -> LP_CPU_RESET_EN_W<'_, RESET_EN_SPEC> {
         LP_CPU_RESET_EN_W::new(self, 31)
     }
 }

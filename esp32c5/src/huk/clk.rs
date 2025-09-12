@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 to force on register clock gate."]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<CLK_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, CLK_SPEC> {
         EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to force on memory clock gate."]
     #[inline(always)]
-    pub fn mem_cg_force_on(&mut self) -> MEM_CG_FORCE_ON_W<CLK_SPEC> {
+    pub fn mem_cg_force_on(&mut self) -> MEM_CG_FORCE_ON_W<'_, CLK_SPEC> {
         MEM_CG_FORCE_ON_W::new(self, 1)
     }
 }

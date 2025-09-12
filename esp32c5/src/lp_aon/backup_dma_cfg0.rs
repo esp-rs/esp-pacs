@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Set this field to configure max value of burst in signle transfer."]
     #[inline(always)]
-    pub fn burst_limit_aon(&mut self) -> BURST_LIMIT_AON_W<BACKUP_DMA_CFG0_SPEC> {
+    pub fn burst_limit_aon(&mut self) -> BURST_LIMIT_AON_W<'_, BACKUP_DMA_CFG0_SPEC> {
         BURST_LIMIT_AON_W::new(self, 0)
     }
     #[doc = "Bits 5:11 - Set this field to configure read registers' interval time in reading mode."]
     #[inline(always)]
-    pub fn read_interval_aon(&mut self) -> READ_INTERVAL_AON_W<BACKUP_DMA_CFG0_SPEC> {
+    pub fn read_interval_aon(&mut self) -> READ_INTERVAL_AON_W<'_, BACKUP_DMA_CFG0_SPEC> {
         READ_INTERVAL_AON_W::new(self, 5)
     }
     #[doc = "Bits 12:15 - Set this field to configure link address."]
     #[inline(always)]
-    pub fn branch_link_length_aon(&mut self) -> BRANCH_LINK_LENGTH_AON_W<BACKUP_DMA_CFG0_SPEC> {
+    pub fn branch_link_length_aon(&mut self) -> BRANCH_LINK_LENGTH_AON_W<'_, BACKUP_DMA_CFG0_SPEC> {
         BRANCH_LINK_LENGTH_AON_W::new(self, 12)
     }
 }

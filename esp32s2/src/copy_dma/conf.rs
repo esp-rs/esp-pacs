@@ -154,47 +154,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to reset in DMA FSM."]
     #[inline(always)]
-    pub fn in_rst(&mut self) -> IN_RST_W<CONF_SPEC> {
+    pub fn in_rst(&mut self) -> IN_RST_W<'_, CONF_SPEC> {
         IN_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to reset out DMA FSM."]
     #[inline(always)]
-    pub fn out_rst(&mut self) -> OUT_RST_W<CONF_SPEC> {
+    pub fn out_rst(&mut self) -> OUT_RST_W<'_, CONF_SPEC> {
         OUT_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to reset in_cmd FIFO and out_cmd FIFO."]
     #[inline(always)]
-    pub fn cmdfifo_rst(&mut self) -> CMDFIFO_RST_W<CONF_SPEC> {
+    pub fn cmdfifo_rst(&mut self) -> CMDFIFO_RST_W<'_, CONF_SPEC> {
         CMDFIFO_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to reset data in RX FIFO."]
     #[inline(always)]
-    pub fn fifo_rst(&mut self) -> FIFO_RST_W<CONF_SPEC> {
+    pub fn fifo_rst(&mut self) -> FIFO_RST_W<'_, CONF_SPEC> {
         FIFO_RST_W::new(self, 3)
     }
     #[doc = "Bit 4 - This is used to configure the owner bit in transmit descriptor. This is effective only when you set OUT_AUTO_WRBACK."]
     #[inline(always)]
-    pub fn out_owner(&mut self) -> OUT_OWNER_W<CONF_SPEC> {
+    pub fn out_owner(&mut self) -> OUT_OWNER_W<'_, CONF_SPEC> {
         OUT_OWNER_W::new(self, 4)
     }
     #[doc = "Bit 5 - This is used to configure the owner bit in receive descriptor."]
     #[inline(always)]
-    pub fn in_owner(&mut self) -> IN_OWNER_W<CONF_SPEC> {
+    pub fn in_owner(&mut self) -> IN_OWNER_W<'_, CONF_SPEC> {
         IN_OWNER_W::new(self, 5)
     }
     #[doc = "Bit 6 - This bit is used to write back out descriptor when hardware has already used this descriptor."]
     #[inline(always)]
-    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<CONF_SPEC> {
+    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<'_, CONF_SPEC> {
         OUT_AUTO_WRBACK_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to enable owner bit check in descriptor."]
     #[inline(always)]
-    pub fn check_owner(&mut self) -> CHECK_OWNER_W<CONF_SPEC> {
+    pub fn check_owner(&mut self) -> CHECK_OWNER_W<'_, CONF_SPEC> {
         CHECK_OWNER_W::new(self, 7)
     }
     #[doc = "Bit 31 - 1’b1: Force clock on for register. 1’b0: Support clock only when application writes registers."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CONF_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CONF_SPEC> {
         CLK_EN_W::new(self, 31)
     }
 }

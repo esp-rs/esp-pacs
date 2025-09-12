@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - This field controls hp system memory WPULSE parameter. 0b000 for 1.1V/1.0V/0.9V operating Voltage."]
     #[inline(always)]
-    pub fn hp_mem_wpulse(&mut self) -> HP_MEM_WPULSE_W<MEM_TEST_CONF_SPEC> {
+    pub fn hp_mem_wpulse(&mut self) -> HP_MEM_WPULSE_W<'_, MEM_TEST_CONF_SPEC> {
         HP_MEM_WPULSE_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - This field controls hp system memory WA parameter. 0b100 for 1.1V operating Voltage, 0b101 for 1.0V, 0b110 for 0.9V."]
     #[inline(always)]
-    pub fn hp_mem_wa(&mut self) -> HP_MEM_WA_W<MEM_TEST_CONF_SPEC> {
+    pub fn hp_mem_wa(&mut self) -> HP_MEM_WA_W<'_, MEM_TEST_CONF_SPEC> {
         HP_MEM_WA_W::new(self, 3)
     }
     #[doc = "Bits 6:7 - This field controls hp system memory RA parameter. 0b00 for 1.1V/1.0V operating Voltage, 0b01 for 0.9V."]
     #[inline(always)]
-    pub fn hp_mem_ra(&mut self) -> HP_MEM_RA_W<MEM_TEST_CONF_SPEC> {
+    pub fn hp_mem_ra(&mut self) -> HP_MEM_RA_W<'_, MEM_TEST_CONF_SPEC> {
         HP_MEM_RA_W::new(self, 6)
     }
     #[doc = "Bits 8:11 - This field controls hp system memory RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0000 for 0.9V."]
     #[inline(always)]
-    pub fn hp_mem_rm(&mut self) -> HP_MEM_RM_W<MEM_TEST_CONF_SPEC> {
+    pub fn hp_mem_rm(&mut self) -> HP_MEM_RM_W<'_, MEM_TEST_CONF_SPEC> {
         HP_MEM_RM_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - This field controls rom RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0010(default) or 0b0001(slow) for 0.9V."]
     #[inline(always)]
-    pub fn rom_rm(&mut self) -> ROM_RM_W<MEM_TEST_CONF_SPEC> {
+    pub fn rom_rm(&mut self) -> ROM_RM_W<'_, MEM_TEST_CONF_SPEC> {
         ROM_RM_W::new(self, 12)
     }
 }

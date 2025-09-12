@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn s(&mut self) -> S_W<SRAM_ACE2_ADDR_SPEC> {
+    pub fn s(&mut self) -> S_W<'_, SRAM_ACE2_ADDR_SPEC> {
         S_W::new(self, 0)
     }
 }

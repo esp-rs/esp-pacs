@@ -119,56 +119,56 @@ impl W {
     #[inline(always)]
     pub fn l2_cache_autoload_ena(
         &mut self,
-    ) -> L2_CACHE_AUTOLOAD_ENA_W<L2_CACHE_AUTOLOAD_CTRL_SPEC> {
+    ) -> L2_CACHE_AUTOLOAD_ENA_W<'_, L2_CACHE_AUTOLOAD_CTRL_SPEC> {
         L2_CACHE_AUTOLOAD_ENA_W::new(self, 0)
     }
     #[doc = "Bit 2 - The bit is used to configure the direction of autoload operation on L2-Cache. 0: ascending. 1: descending."]
     #[inline(always)]
     pub fn l2_cache_autoload_order(
         &mut self,
-    ) -> L2_CACHE_AUTOLOAD_ORDER_W<L2_CACHE_AUTOLOAD_CTRL_SPEC> {
+    ) -> L2_CACHE_AUTOLOAD_ORDER_W<'_, L2_CACHE_AUTOLOAD_CTRL_SPEC> {
         L2_CACHE_AUTOLOAD_ORDER_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - The field is used to configure trigger mode of autoload operation on L2-Cache. 0/3: miss-trigger, 1: hit-trigger, 2: miss-hit-trigger."]
     #[inline(always)]
     pub fn l2_cache_autoload_trigger_mode(
         &mut self,
-    ) -> L2_CACHE_AUTOLOAD_TRIGGER_MODE_W<L2_CACHE_AUTOLOAD_CTRL_SPEC> {
+    ) -> L2_CACHE_AUTOLOAD_TRIGGER_MODE_W<'_, L2_CACHE_AUTOLOAD_CTRL_SPEC> {
         L2_CACHE_AUTOLOAD_TRIGGER_MODE_W::new(self, 3)
     }
     #[doc = "Bit 8 - The bit is used to enable the first section for autoload operation on L2-Cache."]
     #[inline(always)]
     pub fn l2_cache_autoload_sct0_ena(
         &mut self,
-    ) -> L2_CACHE_AUTOLOAD_SCT0_ENA_W<L2_CACHE_AUTOLOAD_CTRL_SPEC> {
+    ) -> L2_CACHE_AUTOLOAD_SCT0_ENA_W<'_, L2_CACHE_AUTOLOAD_CTRL_SPEC> {
         L2_CACHE_AUTOLOAD_SCT0_ENA_W::new(self, 8)
     }
     #[doc = "Bit 9 - The bit is used to enable the second section for autoload operation on L2-Cache."]
     #[inline(always)]
     pub fn l2_cache_autoload_sct1_ena(
         &mut self,
-    ) -> L2_CACHE_AUTOLOAD_SCT1_ENA_W<L2_CACHE_AUTOLOAD_CTRL_SPEC> {
+    ) -> L2_CACHE_AUTOLOAD_SCT1_ENA_W<'_, L2_CACHE_AUTOLOAD_CTRL_SPEC> {
         L2_CACHE_AUTOLOAD_SCT1_ENA_W::new(self, 9)
     }
     #[doc = "Bit 10 - The bit is used to enable the third section for autoload operation on L2-Cache."]
     #[inline(always)]
     pub fn l2_cache_autoload_sct2_ena(
         &mut self,
-    ) -> L2_CACHE_AUTOLOAD_SCT2_ENA_W<L2_CACHE_AUTOLOAD_CTRL_SPEC> {
+    ) -> L2_CACHE_AUTOLOAD_SCT2_ENA_W<'_, L2_CACHE_AUTOLOAD_CTRL_SPEC> {
         L2_CACHE_AUTOLOAD_SCT2_ENA_W::new(self, 10)
     }
     #[doc = "Bit 11 - The bit is used to enable the fourth section for autoload operation on L2-Cache."]
     #[inline(always)]
     pub fn l2_cache_autoload_sct3_ena(
         &mut self,
-    ) -> L2_CACHE_AUTOLOAD_SCT3_ENA_W<L2_CACHE_AUTOLOAD_CTRL_SPEC> {
+    ) -> L2_CACHE_AUTOLOAD_SCT3_ENA_W<'_, L2_CACHE_AUTOLOAD_CTRL_SPEC> {
         L2_CACHE_AUTOLOAD_SCT3_ENA_W::new(self, 11)
     }
     #[doc = "Bits 12:15 - The bit is used to set the gid of l2 cache autoload."]
     #[inline(always)]
     pub fn l2_cache_autoload_rgid(
         &mut self,
-    ) -> L2_CACHE_AUTOLOAD_RGID_W<L2_CACHE_AUTOLOAD_CTRL_SPEC> {
+    ) -> L2_CACHE_AUTOLOAD_RGID_W<'_, L2_CACHE_AUTOLOAD_CTRL_SPEC> {
         L2_CACHE_AUTOLOAD_RGID_W::new(self, 12)
     }
 }

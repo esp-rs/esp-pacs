@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Core0 Pdebugenable,set 1 to open core0 Pdebug interface,then can get core0 PC"]
     #[inline(always)]
-    pub fn rcd_pdebugenable(&mut self) -> RCD_PDEBUGENABLE_W<RCD_PDEBUGENABLE_SPEC> {
+    pub fn rcd_pdebugenable(&mut self) -> RCD_PDEBUGENABLE_W<'_, RCD_PDEBUGENABLE_SPEC> {
         RCD_PDEBUGENABLE_W::new(self, 0)
     }
 }

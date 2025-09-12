@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn spi_xts_physical_address(
         &mut self,
-    ) -> SPI_XTS_PHYSICAL_ADDRESS_W<XTS_PHYSICAL_ADDRESS_SPEC> {
+    ) -> SPI_XTS_PHYSICAL_ADDRESS_W<'_, XTS_PHYSICAL_ADDRESS_SPEC> {
         SPI_XTS_PHYSICAL_ADDRESS_W::new(self, 0)
     }
 }

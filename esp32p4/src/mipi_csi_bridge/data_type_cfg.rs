@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - the min value of data type used for pixel filter."]
     #[inline(always)]
-    pub fn data_type_min(&mut self) -> DATA_TYPE_MIN_W<DATA_TYPE_CFG_SPEC> {
+    pub fn data_type_min(&mut self) -> DATA_TYPE_MIN_W<'_, DATA_TYPE_CFG_SPEC> {
         DATA_TYPE_MIN_W::new(self, 0)
     }
     #[doc = "Bits 8:13 - the max value of data type used for pixel filter."]
     #[inline(always)]
-    pub fn data_type_max(&mut self) -> DATA_TYPE_MAX_W<DATA_TYPE_CFG_SPEC> {
+    pub fn data_type_max(&mut self) -> DATA_TYPE_MAX_W<'_, DATA_TYPE_CFG_SPEC> {
         DATA_TYPE_MAX_W::new(self, 8)
     }
 }

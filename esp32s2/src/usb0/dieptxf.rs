@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn inep1txfstaddr(&mut self) -> INEP1TXFSTADDR_W<DIEPTXF_SPEC> {
+    pub fn inep1txfstaddr(&mut self) -> INEP1TXFSTADDR_W<'_, DIEPTXF_SPEC> {
         INEP1TXFSTADDR_W::new(self, 0)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn inep1txfdep(&mut self) -> INEP1TXFDEP_W<DIEPTXF_SPEC> {
+    pub fn inep1txfdep(&mut self) -> INEP1TXFDEP_W<'_, DIEPTXF_SPEC> {
         INEP1TXFDEP_W::new(self, 16)
     }
 }

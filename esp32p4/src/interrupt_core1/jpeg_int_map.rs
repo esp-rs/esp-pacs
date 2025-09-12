@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core1_jpeg_int_map(&mut self) -> CORE1_JPEG_INT_MAP_W<JPEG_INT_MAP_SPEC> {
+    pub fn core1_jpeg_int_map(&mut self) -> CORE1_JPEG_INT_MAP_W<'_, JPEG_INT_MAP_SPEC> {
         CORE1_JPEG_INT_MAP_W::new(self, 0)
     }
 }

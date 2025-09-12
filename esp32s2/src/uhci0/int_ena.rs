@@ -184,87 +184,87 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This is the interrupt enable bit for UHCI_RX_START_INT interrupt."]
     #[inline(always)]
-    pub fn rx_start(&mut self) -> RX_START_W<INT_ENA_SPEC> {
+    pub fn rx_start(&mut self) -> RX_START_W<'_, INT_ENA_SPEC> {
         RX_START_W::new(self, 0)
     }
     #[doc = "Bit 1 - This is the interrupt enable bit for UHCI_TX_START_INT interrupt."]
     #[inline(always)]
-    pub fn tx_start(&mut self) -> TX_START_W<INT_ENA_SPEC> {
+    pub fn tx_start(&mut self) -> TX_START_W<'_, INT_ENA_SPEC> {
         TX_START_W::new(self, 1)
     }
     #[doc = "Bit 2 - This is the interrupt enable bit for UHCI_RX_HUNG_INT interrupt."]
     #[inline(always)]
-    pub fn rx_hung(&mut self) -> RX_HUNG_W<INT_ENA_SPEC> {
+    pub fn rx_hung(&mut self) -> RX_HUNG_W<'_, INT_ENA_SPEC> {
         RX_HUNG_W::new(self, 2)
     }
     #[doc = "Bit 3 - This is the interrupt enable bit for UHCI_TX_HUNG_INT interrupt."]
     #[inline(always)]
-    pub fn tx_hung(&mut self) -> TX_HUNG_W<INT_ENA_SPEC> {
+    pub fn tx_hung(&mut self) -> TX_HUNG_W<'_, INT_ENA_SPEC> {
         TX_HUNG_W::new(self, 3)
     }
     #[doc = "Bit 4 - This is the interrupt enable bit for UHCI_IN_DONE_INT interrupt."]
     #[inline(always)]
-    pub fn in_done(&mut self) -> IN_DONE_W<INT_ENA_SPEC> {
+    pub fn in_done(&mut self) -> IN_DONE_W<'_, INT_ENA_SPEC> {
         IN_DONE_W::new(self, 4)
     }
     #[doc = "Bit 5 - This is the interrupt enable bit for UHCI_IN_SUC_EOF_INT interrupt."]
     #[inline(always)]
-    pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<INT_ENA_SPEC> {
+    pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<'_, INT_ENA_SPEC> {
         IN_SUC_EOF_W::new(self, 5)
     }
     #[doc = "Bit 6 - This is the interrupt enable bit for UHCI_IN_ERR_EOF_INT interrupt."]
     #[inline(always)]
-    pub fn in_err_eof(&mut self) -> IN_ERR_EOF_W<INT_ENA_SPEC> {
+    pub fn in_err_eof(&mut self) -> IN_ERR_EOF_W<'_, INT_ENA_SPEC> {
         IN_ERR_EOF_W::new(self, 6)
     }
     #[doc = "Bit 7 - This is the interrupt enable bit for UHCI_OUT_DONE_INT interrupt."]
     #[inline(always)]
-    pub fn out_done(&mut self) -> OUT_DONE_W<INT_ENA_SPEC> {
+    pub fn out_done(&mut self) -> OUT_DONE_W<'_, INT_ENA_SPEC> {
         OUT_DONE_W::new(self, 7)
     }
     #[doc = "Bit 8 - This is the interrupt enable bit for UHCI_OUT_EOF_INT interrupt."]
     #[inline(always)]
-    pub fn out_eof(&mut self) -> OUT_EOF_W<INT_ENA_SPEC> {
+    pub fn out_eof(&mut self) -> OUT_EOF_W<'_, INT_ENA_SPEC> {
         OUT_EOF_W::new(self, 8)
     }
     #[doc = "Bit 9 - This is the interrupt enable bit for UHCI_IN_DSCR_ERR_INT interrupt."]
     #[inline(always)]
-    pub fn in_dscr_err(&mut self) -> IN_DSCR_ERR_W<INT_ENA_SPEC> {
+    pub fn in_dscr_err(&mut self) -> IN_DSCR_ERR_W<'_, INT_ENA_SPEC> {
         IN_DSCR_ERR_W::new(self, 9)
     }
     #[doc = "Bit 10 - This is the interrupt enable bit for UHCI_OUT_DSCR_ERR_INT interrupt."]
     #[inline(always)]
-    pub fn out_dscr_err(&mut self) -> OUT_DSCR_ERR_W<INT_ENA_SPEC> {
+    pub fn out_dscr_err(&mut self) -> OUT_DSCR_ERR_W<'_, INT_ENA_SPEC> {
         OUT_DSCR_ERR_W::new(self, 10)
     }
     #[doc = "Bit 11 - This is the interrupt enable bit for UHCI_IN_DSCR_EMPTY_INT interrupt."]
     #[inline(always)]
-    pub fn in_dscr_empty(&mut self) -> IN_DSCR_EMPTY_W<INT_ENA_SPEC> {
+    pub fn in_dscr_empty(&mut self) -> IN_DSCR_EMPTY_W<'_, INT_ENA_SPEC> {
         IN_DSCR_EMPTY_W::new(self, 11)
     }
     #[doc = "Bit 12 - This is the interrupt enable bit for UHCI_OUTLINK_EOF_ERR_INT interrupt."]
     #[inline(always)]
-    pub fn outlink_eof_err(&mut self) -> OUTLINK_EOF_ERR_W<INT_ENA_SPEC> {
+    pub fn outlink_eof_err(&mut self) -> OUTLINK_EOF_ERR_W<'_, INT_ENA_SPEC> {
         OUTLINK_EOF_ERR_W::new(self, 12)
     }
     #[doc = "Bit 13 - This is the interrupt enable bit for UHCI_OUT_TOTAL_EOF_INT interrupt."]
     #[inline(always)]
-    pub fn out_total_eof(&mut self) -> OUT_TOTAL_EOF_W<INT_ENA_SPEC> {
+    pub fn out_total_eof(&mut self) -> OUT_TOTAL_EOF_W<'_, INT_ENA_SPEC> {
         OUT_TOTAL_EOF_W::new(self, 13)
     }
     #[doc = "Bit 14 - This is the interrupt enable bit for UHCI_SEND_S_REG_Q_INT interrupt."]
     #[inline(always)]
-    pub fn send_s_reg_q(&mut self) -> SEND_S_REG_Q_W<INT_ENA_SPEC> {
+    pub fn send_s_reg_q(&mut self) -> SEND_S_REG_Q_W<'_, INT_ENA_SPEC> {
         SEND_S_REG_Q_W::new(self, 14)
     }
     #[doc = "Bit 15 - This is the interrupt enable bit for UHCI_SEND_A_REG_Q_INT interrupt."]
     #[inline(always)]
-    pub fn send_a_reg_q(&mut self) -> SEND_A_REG_Q_W<INT_ENA_SPEC> {
+    pub fn send_a_reg_q(&mut self) -> SEND_A_REG_Q_W<'_, INT_ENA_SPEC> {
         SEND_A_REG_Q_W::new(self, 15)
     }
     #[doc = "Bit 16 - This is the interrupt enable bit for UHCI_DMA_INFIFO_FULL_WM_INT interrupt."]
     #[inline(always)]
-    pub fn dma_infifo_full_wm(&mut self) -> DMA_INFIFO_FULL_WM_W<INT_ENA_SPEC> {
+    pub fn dma_infifo_full_wm(&mut self) -> DMA_INFIFO_FULL_WM_W<'_, INT_ENA_SPEC> {
         DMA_INFIFO_FULL_WM_W::new(self, 16)
     }
 }

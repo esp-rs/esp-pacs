@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn icache_atomic_operate_ena(
         &mut self,
-    ) -> ICACHE_ATOMIC_OPERATE_ENA_W<ICACHE_ATOMIC_OPERATE_ENA_SPEC> {
+    ) -> ICACHE_ATOMIC_OPERATE_ENA_W<'_, ICACHE_ATOMIC_OPERATE_ENA_SPEC> {
         ICACHE_ATOMIC_OPERATE_ENA_W::new(self, 0)
     }
 }

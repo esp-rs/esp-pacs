@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Set sleep cycles for touch timer."]
     #[inline(always)]
-    pub fn touch_sleep_cycles(&mut self) -> TOUCH_SLEEP_CYCLES_W<TOUCH_CTRL1_SPEC> {
+    pub fn touch_sleep_cycles(&mut self) -> TOUCH_SLEEP_CYCLES_W<'_, TOUCH_CTRL1_SPEC> {
         TOUCH_SLEEP_CYCLES_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Configure measurement length (in 8 MHz), i.e., charge/discharge times."]
     #[inline(always)]
-    pub fn touch_meas_num(&mut self) -> TOUCH_MEAS_NUM_W<TOUCH_CTRL1_SPEC> {
+    pub fn touch_meas_num(&mut self) -> TOUCH_MEAS_NUM_W<'_, TOUCH_CTRL1_SPEC> {
         TOUCH_MEAS_NUM_W::new(self, 16)
     }
 }

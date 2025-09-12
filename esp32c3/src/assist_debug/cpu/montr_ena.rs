@@ -140,62 +140,66 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reg_core_0_area_dram0_0_rd_ena"]
     #[inline(always)]
-    pub fn area_dram0_0_rd_ena(&mut self) -> AREA_DRAM0_0_RD_ENA_W<MONTR_ENA_SPEC> {
+    pub fn area_dram0_0_rd_ena(&mut self) -> AREA_DRAM0_0_RD_ENA_W<'_, MONTR_ENA_SPEC> {
         AREA_DRAM0_0_RD_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_core_0_area_dram0_0_wr_ena"]
     #[inline(always)]
-    pub fn area_dram0_0_wr_ena(&mut self) -> AREA_DRAM0_0_WR_ENA_W<MONTR_ENA_SPEC> {
+    pub fn area_dram0_0_wr_ena(&mut self) -> AREA_DRAM0_0_WR_ENA_W<'_, MONTR_ENA_SPEC> {
         AREA_DRAM0_0_WR_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_core_0_area_dram0_1_rd_ena"]
     #[inline(always)]
-    pub fn area_dram0_1_rd_ena(&mut self) -> AREA_DRAM0_1_RD_ENA_W<MONTR_ENA_SPEC> {
+    pub fn area_dram0_1_rd_ena(&mut self) -> AREA_DRAM0_1_RD_ENA_W<'_, MONTR_ENA_SPEC> {
         AREA_DRAM0_1_RD_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_core_0_area_dram0_1_wr_ena"]
     #[inline(always)]
-    pub fn area_dram0_1_wr_ena(&mut self) -> AREA_DRAM0_1_WR_ENA_W<MONTR_ENA_SPEC> {
+    pub fn area_dram0_1_wr_ena(&mut self) -> AREA_DRAM0_1_WR_ENA_W<'_, MONTR_ENA_SPEC> {
         AREA_DRAM0_1_WR_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - reg_core_0_area_pif_0_rd_ena"]
     #[inline(always)]
-    pub fn area_pif_0_rd_ena(&mut self) -> AREA_PIF_0_RD_ENA_W<MONTR_ENA_SPEC> {
+    pub fn area_pif_0_rd_ena(&mut self) -> AREA_PIF_0_RD_ENA_W<'_, MONTR_ENA_SPEC> {
         AREA_PIF_0_RD_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - reg_core_0_area_pif_0_wr_ena"]
     #[inline(always)]
-    pub fn area_pif_0_wr_ena(&mut self) -> AREA_PIF_0_WR_ENA_W<MONTR_ENA_SPEC> {
+    pub fn area_pif_0_wr_ena(&mut self) -> AREA_PIF_0_WR_ENA_W<'_, MONTR_ENA_SPEC> {
         AREA_PIF_0_WR_ENA_W::new(self, 5)
     }
     #[doc = "Bit 6 - reg_core_0_area_pif_1_rd_ena"]
     #[inline(always)]
-    pub fn area_pif_1_rd_ena(&mut self) -> AREA_PIF_1_RD_ENA_W<MONTR_ENA_SPEC> {
+    pub fn area_pif_1_rd_ena(&mut self) -> AREA_PIF_1_RD_ENA_W<'_, MONTR_ENA_SPEC> {
         AREA_PIF_1_RD_ENA_W::new(self, 6)
     }
     #[doc = "Bit 7 - reg_core_0_area_pif_1_wr_ena"]
     #[inline(always)]
-    pub fn area_pif_1_wr_ena(&mut self) -> AREA_PIF_1_WR_ENA_W<MONTR_ENA_SPEC> {
+    pub fn area_pif_1_wr_ena(&mut self) -> AREA_PIF_1_WR_ENA_W<'_, MONTR_ENA_SPEC> {
         AREA_PIF_1_WR_ENA_W::new(self, 7)
     }
     #[doc = "Bit 8 - reg_core_0_sp_spill_min_ena"]
     #[inline(always)]
-    pub fn sp_spill_min_ena(&mut self) -> SP_SPILL_MIN_ENA_W<MONTR_ENA_SPEC> {
+    pub fn sp_spill_min_ena(&mut self) -> SP_SPILL_MIN_ENA_W<'_, MONTR_ENA_SPEC> {
         SP_SPILL_MIN_ENA_W::new(self, 8)
     }
     #[doc = "Bit 9 - reg_core_0_sp_spill_max_ena"]
     #[inline(always)]
-    pub fn sp_spill_max_ena(&mut self) -> SP_SPILL_MAX_ENA_W<MONTR_ENA_SPEC> {
+    pub fn sp_spill_max_ena(&mut self) -> SP_SPILL_MAX_ENA_W<'_, MONTR_ENA_SPEC> {
         SP_SPILL_MAX_ENA_W::new(self, 9)
     }
     #[doc = "Bit 10 - reg_core_0_iram0_exception_monitor_ena"]
     #[inline(always)]
-    pub fn iram0_exception_monitor_ena(&mut self) -> IRAM0_EXCEPTION_MONITOR_ENA_W<MONTR_ENA_SPEC> {
+    pub fn iram0_exception_monitor_ena(
+        &mut self,
+    ) -> IRAM0_EXCEPTION_MONITOR_ENA_W<'_, MONTR_ENA_SPEC> {
         IRAM0_EXCEPTION_MONITOR_ENA_W::new(self, 10)
     }
     #[doc = "Bit 11 - reg_core_0_dram0_exception_monitor_ena"]
     #[inline(always)]
-    pub fn dram0_exception_monitor_ena(&mut self) -> DRAM0_EXCEPTION_MONITOR_ENA_W<MONTR_ENA_SPEC> {
+    pub fn dram0_exception_monitor_ena(
+        &mut self,
+    ) -> DRAM0_EXCEPTION_MONITOR_ENA_W<'_, MONTR_ENA_SPEC> {
         DRAM0_EXCEPTION_MONITOR_ENA_W::new(self, 11)
     }
 }

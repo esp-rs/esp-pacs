@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn usr_dummy_cyclelen(&mut self) -> USR_DUMMY_CYCLELEN_W<USER1_SPEC> {
+    pub fn usr_dummy_cyclelen(&mut self) -> USR_DUMMY_CYCLELEN_W<'_, USER1_SPEC> {
         USR_DUMMY_CYCLELEN_W::new(self, 0)
     }
     #[doc = "Bits 26:31"]
     #[inline(always)]
-    pub fn usr_addr_bitlen(&mut self) -> USR_ADDR_BITLEN_W<USER1_SPEC> {
+    pub fn usr_addr_bitlen(&mut self) -> USR_ADDR_BITLEN_W<'_, USER1_SPEC> {
         USR_ADDR_BITLEN_W::new(self, 26)
     }
 }

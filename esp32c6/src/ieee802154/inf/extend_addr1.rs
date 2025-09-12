@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn extend_addr1(&mut self) -> EXTEND_ADDR1_W<EXTEND_ADDR1_SPEC> {
+    pub fn extend_addr1(&mut self) -> EXTEND_ADDR1_W<'_, EXTEND_ADDR1_SPEC> {
         EXTEND_ADDR1_W::new(self, 0)
     }
 }

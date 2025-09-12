@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<REG_UPDATE_SPEC> {
 impl W {
     #[doc = "Bit 31 - Write 1 to update rx register configuration."]
     #[inline(always)]
-    pub fn rx_reg_update(&mut self) -> RX_REG_UPDATE_W<REG_UPDATE_SPEC> {
+    pub fn rx_reg_update(&mut self) -> RX_REG_UPDATE_W<'_, REG_UPDATE_SPEC> {
         RX_REG_UPDATE_W::new(self, 31)
     }
 }

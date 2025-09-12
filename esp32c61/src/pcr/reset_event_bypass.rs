@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This field is used to control reset event relationship for tee_reg/apm_reg/hp_system_reg. 1: tee_reg/apm_reg/hp_system_reg will only be reset by power-reset. some reset event will be bypass. 0: tee_reg/apm_reg/hp_system_reg will not only be reset by power-reset, but also some reset event."]
     #[inline(always)]
-    pub fn apm(&mut self) -> APM_W<RESET_EVENT_BYPASS_SPEC> {
+    pub fn apm(&mut self) -> APM_W<'_, RESET_EVENT_BYPASS_SPEC> {
         APM_W::new(self, 0)
     }
     #[doc = "Bit 1 - This field is used to control reset event relationship for system-bus. 1: system bus (including arbiter/router) will only be reset by power-reset. some reset event will be bypass. 0: system bus (including arbiter/router) will not only be reset by power-reset, but also some reset event."]
     #[inline(always)]
-    pub fn reset_event_bypass(&mut self) -> RESET_EVENT_BYPASS_W<RESET_EVENT_BYPASS_SPEC> {
+    pub fn reset_event_bypass(&mut self) -> RESET_EVENT_BYPASS_W<'_, RESET_EVENT_BYPASS_SPEC> {
         RESET_EVENT_BYPASS_W::new(self, 1)
     }
 }

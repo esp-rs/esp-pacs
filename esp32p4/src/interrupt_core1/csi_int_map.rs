@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core1_csi_int_map(&mut self) -> CORE1_CSI_INT_MAP_W<CSI_INT_MAP_SPEC> {
+    pub fn core1_csi_int_map(&mut self) -> CORE1_CSI_INT_MAP_W<'_, CSI_INT_MAP_SPEC> {
         CORE1_CSI_INT_MAP_W::new(self, 0)
     }
 }

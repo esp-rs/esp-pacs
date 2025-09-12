@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:17 - Configures the data bit length of SPI transfer in DMA-controlled master transfer or in CPU-controlled master transfer. Or configures the bit length of SPI RX transfer in DMA-controlled slave transfer. This value shall be (expected bit_num - 1). Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_ms_data_bitlen(&mut self) -> SPI_MS_DATA_BITLEN_W<SPI_MS_DLEN_SPEC> {
+    pub fn spi_ms_data_bitlen(&mut self) -> SPI_MS_DATA_BITLEN_W<'_, SPI_MS_DLEN_SPEC> {
         SPI_MS_DATA_BITLEN_W::new(self, 0)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable the output of GPIO32 ~ GPIO32.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn data(&mut self) -> DATA_W<ENABLE1_SPEC> {
+    pub fn data(&mut self) -> DATA_W<'_, ENABLE1_SPEC> {
         DATA_W::new(self, 0)
     }
 }

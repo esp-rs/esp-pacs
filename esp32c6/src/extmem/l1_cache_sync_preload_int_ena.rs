@@ -147,28 +147,28 @@ impl W {
     #[inline(always)]
     pub fn l1_cache_pld_done_int_ena(
         &mut self,
-    ) -> L1_CACHE_PLD_DONE_INT_ENA_W<L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
+    ) -> L1_CACHE_PLD_DONE_INT_ENA_W<'_, L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
         L1_CACHE_PLD_DONE_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 6 - The bit is used to enable interrupt of Cache sync-operation done."]
     #[inline(always)]
     pub fn cache_sync_done_int_ena(
         &mut self,
-    ) -> CACHE_SYNC_DONE_INT_ENA_W<L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
+    ) -> CACHE_SYNC_DONE_INT_ENA_W<'_, L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
         CACHE_SYNC_DONE_INT_ENA_W::new(self, 6)
     }
     #[doc = "Bit 11 - The bit is used to enable interrupt of L1-Cache preload-operation error."]
     #[inline(always)]
     pub fn l1_cache_pld_err_int_ena(
         &mut self,
-    ) -> L1_CACHE_PLD_ERR_INT_ENA_W<L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
+    ) -> L1_CACHE_PLD_ERR_INT_ENA_W<'_, L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
         L1_CACHE_PLD_ERR_INT_ENA_W::new(self, 11)
     }
     #[doc = "Bit 13 - The bit is used to enable interrupt of Cache sync-operation error."]
     #[inline(always)]
     pub fn cache_sync_err_int_ena(
         &mut self,
-    ) -> CACHE_SYNC_ERR_INT_ENA_W<L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
+    ) -> CACHE_SYNC_ERR_INT_ENA_W<'_, L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
         CACHE_SYNC_ERR_INT_ENA_W::new(self, 13)
     }
 }

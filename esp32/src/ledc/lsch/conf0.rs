@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - There are four low speed timers the two bits are used to select one of them for low speed channel0. 2'b00: seletc lstimer0. 2'b01: select lstimer1. 2'b10: select lstimer2. 2'b11: select lstimer3."]
     #[inline(always)]
-    pub fn timer_sel(&mut self) -> TIMER_SEL_W<CONF0_SPEC> {
+    pub fn timer_sel(&mut self) -> TIMER_SEL_W<'_, CONF0_SPEC> {
         TIMER_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - This is the output enable control bit for low speed channel0."]
     #[inline(always)]
-    pub fn sig_out_en(&mut self) -> SIG_OUT_EN_W<CONF0_SPEC> {
+    pub fn sig_out_en(&mut self) -> SIG_OUT_EN_W<'_, CONF0_SPEC> {
         SIG_OUT_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - This bit is used to control the output value when low speed channel0 is off."]
     #[inline(always)]
-    pub fn idle_lv(&mut self) -> IDLE_LV_W<CONF0_SPEC> {
+    pub fn idle_lv(&mut self) -> IDLE_LV_W<'_, CONF0_SPEC> {
         IDLE_LV_W::new(self, 3)
     }
     #[doc = "Bit 4 - This bit is used to update register LEDC_LSCH0_HPOINT and LEDC_LSCH0_DUTY for low speed channel0."]
     #[inline(always)]
-    pub fn para_up(&mut self) -> PARA_UP_W<CONF0_SPEC> {
+    pub fn para_up(&mut self) -> PARA_UP_W<'_, CONF0_SPEC> {
         PARA_UP_W::new(self, 4)
     }
 }

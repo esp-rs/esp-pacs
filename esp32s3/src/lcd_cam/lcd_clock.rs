@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - f<SUB>LCD_PCLK</SUB> = f<SUB>LCD_CLK</SUB>/(LCD_CAM_LCD_CLKCNT_N + 1) when LCD_CAM_LCD_CLK_EQU_SYSCLK is 0. Note: this field must not be configured to 0."]
     #[inline(always)]
-    pub fn lcd_clkcnt_n(&mut self) -> LCD_CLKCNT_N_W<LCD_CLOCK_SPEC> {
+    pub fn lcd_clkcnt_n(&mut self) -> LCD_CLKCNT_N_W<'_, LCD_CLOCK_SPEC> {
         LCD_CLKCNT_N_W::new(self, 0)
     }
     #[doc = "Bit 6 - 1: f<SUB>LCD_PCLK</SUB> = f<SUB>LCD_CLK</SUB>. 0: f<SUB>LCD_PCLK</SUB> = f<SUB>LCD_CLK</SUB>/(LCD_CAM_LCD_CLKCNT_N + 1)."]
     #[inline(always)]
-    pub fn lcd_clk_equ_sysclk(&mut self) -> LCD_CLK_EQU_SYSCLK_W<LCD_CLOCK_SPEC> {
+    pub fn lcd_clk_equ_sysclk(&mut self) -> LCD_CLK_EQU_SYSCLK_W<'_, LCD_CLOCK_SPEC> {
         LCD_CLK_EQU_SYSCLK_W::new(self, 6)
     }
     #[doc = "Bit 7 - 1: LCD_PCLK line is high in idle. 0: LCD_PCLK line is low in idle."]
     #[inline(always)]
-    pub fn lcd_ck_idle_edge(&mut self) -> LCD_CK_IDLE_EDGE_W<LCD_CLOCK_SPEC> {
+    pub fn lcd_ck_idle_edge(&mut self) -> LCD_CK_IDLE_EDGE_W<'_, LCD_CLOCK_SPEC> {
         LCD_CK_IDLE_EDGE_W::new(self, 7)
     }
     #[doc = "Bit 8 - 1: LCD_PCLK is high in the first half clock cycle. 0: LCD_PCLK is low in the first half clock cycle."]
     #[inline(always)]
-    pub fn lcd_ck_out_edge(&mut self) -> LCD_CK_OUT_EDGE_W<LCD_CLOCK_SPEC> {
+    pub fn lcd_ck_out_edge(&mut self) -> LCD_CK_OUT_EDGE_W<'_, LCD_CLOCK_SPEC> {
         LCD_CK_OUT_EDGE_W::new(self, 8)
     }
     #[doc = "Bits 9:16 - Integral LCD clock divider value."]
     #[inline(always)]
-    pub fn lcd_clkm_div_num(&mut self) -> LCD_CLKM_DIV_NUM_W<LCD_CLOCK_SPEC> {
+    pub fn lcd_clkm_div_num(&mut self) -> LCD_CLKM_DIV_NUM_W<'_, LCD_CLOCK_SPEC> {
         LCD_CLKM_DIV_NUM_W::new(self, 9)
     }
     #[doc = "Bits 17:22 - Fractional clock divider numerator value."]
     #[inline(always)]
-    pub fn lcd_clkm_div_b(&mut self) -> LCD_CLKM_DIV_B_W<LCD_CLOCK_SPEC> {
+    pub fn lcd_clkm_div_b(&mut self) -> LCD_CLKM_DIV_B_W<'_, LCD_CLOCK_SPEC> {
         LCD_CLKM_DIV_B_W::new(self, 17)
     }
     #[doc = "Bits 23:28 - Fractional clock divider denominator value."]
     #[inline(always)]
-    pub fn lcd_clkm_div_a(&mut self) -> LCD_CLKM_DIV_A_W<LCD_CLOCK_SPEC> {
+    pub fn lcd_clkm_div_a(&mut self) -> LCD_CLKM_DIV_A_W<'_, LCD_CLOCK_SPEC> {
         LCD_CLKM_DIV_A_W::new(self, 23)
     }
     #[doc = "Bits 29:30 - Select LCD module source clock. 0: clock source is disabled. 1: XTAL_CLK. 2: PLL_D2_CLK. 3: PLL_F160M_CLK."]
     #[inline(always)]
-    pub fn lcd_clk_sel(&mut self) -> LCD_CLK_SEL_W<LCD_CLOCK_SPEC> {
+    pub fn lcd_clk_sel(&mut self) -> LCD_CLK_SEL_W<'_, LCD_CLOCK_SPEC> {
         LCD_CLK_SEL_W::new(self, 29)
     }
     #[doc = "Bit 31 - Set this bit to force enable the clock for all configuration registers. Clock gate is not used."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<LCD_CLOCK_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, LCD_CLOCK_SPEC> {
         CLK_EN_W::new(self, 31)
     }
 }

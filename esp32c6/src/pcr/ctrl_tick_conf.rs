@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - ******* Description ***********"]
     #[inline(always)]
-    pub fn xtal_tick_num(&mut self) -> XTAL_TICK_NUM_W<CTRL_TICK_CONF_SPEC> {
+    pub fn xtal_tick_num(&mut self) -> XTAL_TICK_NUM_W<'_, CTRL_TICK_CONF_SPEC> {
         XTAL_TICK_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - ******* Description ***********"]
     #[inline(always)]
-    pub fn fosc_tick_num(&mut self) -> FOSC_TICK_NUM_W<CTRL_TICK_CONF_SPEC> {
+    pub fn fosc_tick_num(&mut self) -> FOSC_TICK_NUM_W<'_, CTRL_TICK_CONF_SPEC> {
         FOSC_TICK_NUM_W::new(self, 8)
     }
     #[doc = "Bit 16 - ******* Description ***********"]
     #[inline(always)]
-    pub fn tick_enable(&mut self) -> TICK_ENABLE_W<CTRL_TICK_CONF_SPEC> {
+    pub fn tick_enable(&mut self) -> TICK_ENABLE_W<'_, CTRL_TICK_CONF_SPEC> {
         TICK_ENABLE_W::new(self, 16)
     }
     #[doc = "Bit 17 - ******* Description ***********"]
     #[inline(always)]
-    pub fn rst_tick_cnt(&mut self) -> RST_TICK_CNT_W<CTRL_TICK_CONF_SPEC> {
+    pub fn rst_tick_cnt(&mut self) -> RST_TICK_CNT_W<'_, CTRL_TICK_CONF_SPEC> {
         RST_TICK_CNT_W::new(self, 17)
     }
 }

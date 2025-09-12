@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - Configure MAC dump connection."]
     #[inline(always)]
-    pub fn mac_dump_connect(&mut self) -> MAC_DUMP_CONNECT_W<MAC_DUMP_1_SPEC> {
+    pub fn mac_dump_connect(&mut self) -> MAC_DUMP_CONNECT_W<'_, MAC_DUMP_1_SPEC> {
         MAC_DUMP_CONNECT_W::new(self, 0)
     }
 }

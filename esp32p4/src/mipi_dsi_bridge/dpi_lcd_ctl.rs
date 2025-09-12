@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - this bit configures dpishutdn signal in dpi interface"]
     #[inline(always)]
-    pub fn dpishutdn(&mut self) -> DPISHUTDN_W<DPI_LCD_CTL_SPEC> {
+    pub fn dpishutdn(&mut self) -> DPISHUTDN_W<'_, DPI_LCD_CTL_SPEC> {
         DPISHUTDN_W::new(self, 0)
     }
     #[doc = "Bit 1 - this bit configures dpicolorm signal in dpi interface"]
     #[inline(always)]
-    pub fn dpicolorm(&mut self) -> DPICOLORM_W<DPI_LCD_CTL_SPEC> {
+    pub fn dpicolorm(&mut self) -> DPICOLORM_W<'_, DPI_LCD_CTL_SPEC> {
         DPICOLORM_W::new(self, 1)
     }
     #[doc = "Bit 2 - this bit configures dpiupdatecfg signal in dpi interface"]
     #[inline(always)]
-    pub fn dpiupdatecfg(&mut self) -> DPIUPDATECFG_W<DPI_LCD_CTL_SPEC> {
+    pub fn dpiupdatecfg(&mut self) -> DPIUPDATECFG_W<'_, DPI_LCD_CTL_SPEC> {
         DPIUPDATECFG_W::new(self, 2)
     }
 }

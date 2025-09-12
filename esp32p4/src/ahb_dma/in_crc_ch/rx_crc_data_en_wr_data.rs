@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn rx_crc_data_en_wr_data(
         &mut self,
-    ) -> RX_CRC_DATA_EN_WR_DATA_W<RX_CRC_DATA_EN_WR_DATA_SPEC> {
+    ) -> RX_CRC_DATA_EN_WR_DATA_W<'_, RX_CRC_DATA_EN_WR_DATA_SPEC> {
         RX_CRC_DATA_EN_WR_DATA_W::new(self, 0)
     }
 }

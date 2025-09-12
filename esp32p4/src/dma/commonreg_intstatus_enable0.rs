@@ -260,35 +260,35 @@ impl W {
     #[inline(always)]
     pub fn enable_slvif_commonreg_dec_err_intstat(
         &mut self,
-    ) -> ENABLE_SLVIF_COMMONREG_DEC_ERR_INTSTAT_W<COMMONREG_INTSTATUS_ENABLE0_SPEC> {
+    ) -> ENABLE_SLVIF_COMMONREG_DEC_ERR_INTSTAT_W<'_, COMMONREG_INTSTATUS_ENABLE0_SPEC> {
         ENABLE_SLVIF_COMMONREG_DEC_ERR_INTSTAT_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
     pub fn enable_slvif_commonreg_wr2ro_err_intstat(
         &mut self,
-    ) -> ENABLE_SLVIF_COMMONREG_WR2RO_ERR_INTSTAT_W<COMMONREG_INTSTATUS_ENABLE0_SPEC> {
+    ) -> ENABLE_SLVIF_COMMONREG_WR2RO_ERR_INTSTAT_W<'_, COMMONREG_INTSTATUS_ENABLE0_SPEC> {
         ENABLE_SLVIF_COMMONREG_WR2RO_ERR_INTSTAT_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
     pub fn enable_slvif_commonreg_rd2wo_err_intstat(
         &mut self,
-    ) -> ENABLE_SLVIF_COMMONREG_RD2WO_ERR_INTSTAT_W<COMMONREG_INTSTATUS_ENABLE0_SPEC> {
+    ) -> ENABLE_SLVIF_COMMONREG_RD2WO_ERR_INTSTAT_W<'_, COMMONREG_INTSTATUS_ENABLE0_SPEC> {
         ENABLE_SLVIF_COMMONREG_RD2WO_ERR_INTSTAT_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
     pub fn enable_slvif_commonreg_wronhold_err_intstat(
         &mut self,
-    ) -> ENABLE_SLVIF_COMMONREG_WRONHOLD_ERR_INTSTAT_W<COMMONREG_INTSTATUS_ENABLE0_SPEC> {
+    ) -> ENABLE_SLVIF_COMMONREG_WRONHOLD_ERR_INTSTAT_W<'_, COMMONREG_INTSTATUS_ENABLE0_SPEC> {
         ENABLE_SLVIF_COMMONREG_WRONHOLD_ERR_INTSTAT_W::new(self, 3)
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
     pub fn enable_slvif_undefinedreg_dec_err_intstat(
         &mut self,
-    ) -> ENABLE_SLVIF_UNDEFINEDREG_DEC_ERR_INTSTAT_W<COMMONREG_INTSTATUS_ENABLE0_SPEC> {
+    ) -> ENABLE_SLVIF_UNDEFINEDREG_DEC_ERR_INTSTAT_W<'_, COMMONREG_INTSTATUS_ENABLE0_SPEC> {
         ENABLE_SLVIF_UNDEFINEDREG_DEC_ERR_INTSTAT_W::new(self, 8)
     }
 }

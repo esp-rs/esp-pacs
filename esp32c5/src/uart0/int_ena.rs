@@ -214,102 +214,102 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 to enable UART_RXFIFO_FULL_INT."]
     #[inline(always)]
-    pub fn rxfifo_full(&mut self) -> RXFIFO_FULL_W<INT_ENA_SPEC> {
+    pub fn rxfifo_full(&mut self) -> RXFIFO_FULL_W<'_, INT_ENA_SPEC> {
         RXFIFO_FULL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to enable UART_TXFIFO_EMPTY_INT."]
     #[inline(always)]
-    pub fn txfifo_empty(&mut self) -> TXFIFO_EMPTY_W<INT_ENA_SPEC> {
+    pub fn txfifo_empty(&mut self) -> TXFIFO_EMPTY_W<'_, INT_ENA_SPEC> {
         TXFIFO_EMPTY_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 to enable UART_PARITY_ERR_INT."]
     #[inline(always)]
-    pub fn parity_err(&mut self) -> PARITY_ERR_W<INT_ENA_SPEC> {
+    pub fn parity_err(&mut self) -> PARITY_ERR_W<'_, INT_ENA_SPEC> {
         PARITY_ERR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Write 1 to enable UART_FRM_ERR_INT."]
     #[inline(always)]
-    pub fn frm_err(&mut self) -> FRM_ERR_W<INT_ENA_SPEC> {
+    pub fn frm_err(&mut self) -> FRM_ERR_W<'_, INT_ENA_SPEC> {
         FRM_ERR_W::new(self, 3)
     }
     #[doc = "Bit 4 - Write 1 to enable UART_RXFIFO_OVF_INT."]
     #[inline(always)]
-    pub fn rxfifo_ovf(&mut self) -> RXFIFO_OVF_W<INT_ENA_SPEC> {
+    pub fn rxfifo_ovf(&mut self) -> RXFIFO_OVF_W<'_, INT_ENA_SPEC> {
         RXFIFO_OVF_W::new(self, 4)
     }
     #[doc = "Bit 5 - Write 1 to enable UART_DSR_CHG_INT."]
     #[inline(always)]
-    pub fn dsr_chg(&mut self) -> DSR_CHG_W<INT_ENA_SPEC> {
+    pub fn dsr_chg(&mut self) -> DSR_CHG_W<'_, INT_ENA_SPEC> {
         DSR_CHG_W::new(self, 5)
     }
     #[doc = "Bit 6 - Write 1 to enable UART_CTS_CHG_INT."]
     #[inline(always)]
-    pub fn cts_chg(&mut self) -> CTS_CHG_W<INT_ENA_SPEC> {
+    pub fn cts_chg(&mut self) -> CTS_CHG_W<'_, INT_ENA_SPEC> {
         CTS_CHG_W::new(self, 6)
     }
     #[doc = "Bit 7 - Write 1 to enable UART_BRK_DET_INT."]
     #[inline(always)]
-    pub fn brk_det(&mut self) -> BRK_DET_W<INT_ENA_SPEC> {
+    pub fn brk_det(&mut self) -> BRK_DET_W<'_, INT_ENA_SPEC> {
         BRK_DET_W::new(self, 7)
     }
     #[doc = "Bit 8 - Write 1 to enable UART_RXFIFO_TOUT_INT."]
     #[inline(always)]
-    pub fn rxfifo_tout(&mut self) -> RXFIFO_TOUT_W<INT_ENA_SPEC> {
+    pub fn rxfifo_tout(&mut self) -> RXFIFO_TOUT_W<'_, INT_ENA_SPEC> {
         RXFIFO_TOUT_W::new(self, 8)
     }
     #[doc = "Bit 9 - Write 1 to enable UART_SW_XON_INT."]
     #[inline(always)]
-    pub fn sw_xon(&mut self) -> SW_XON_W<INT_ENA_SPEC> {
+    pub fn sw_xon(&mut self) -> SW_XON_W<'_, INT_ENA_SPEC> {
         SW_XON_W::new(self, 9)
     }
     #[doc = "Bit 10 - Write 1 to enable UART_SW_XOFF_INT."]
     #[inline(always)]
-    pub fn sw_xoff(&mut self) -> SW_XOFF_W<INT_ENA_SPEC> {
+    pub fn sw_xoff(&mut self) -> SW_XOFF_W<'_, INT_ENA_SPEC> {
         SW_XOFF_W::new(self, 10)
     }
     #[doc = "Bit 11 - Write 1 to enable UART_GLITCH_DET_INT."]
     #[inline(always)]
-    pub fn glitch_det(&mut self) -> GLITCH_DET_W<INT_ENA_SPEC> {
+    pub fn glitch_det(&mut self) -> GLITCH_DET_W<'_, INT_ENA_SPEC> {
         GLITCH_DET_W::new(self, 11)
     }
     #[doc = "Bit 12 - Write 1 to enable UART_TX_BRK_DONE_INT."]
     #[inline(always)]
-    pub fn tx_brk_done(&mut self) -> TX_BRK_DONE_W<INT_ENA_SPEC> {
+    pub fn tx_brk_done(&mut self) -> TX_BRK_DONE_W<'_, INT_ENA_SPEC> {
         TX_BRK_DONE_W::new(self, 12)
     }
     #[doc = "Bit 13 - Write 1 to enable UART_TX_BRK_IDLE_DONE_INT."]
     #[inline(always)]
-    pub fn tx_brk_idle_done(&mut self) -> TX_BRK_IDLE_DONE_W<INT_ENA_SPEC> {
+    pub fn tx_brk_idle_done(&mut self) -> TX_BRK_IDLE_DONE_W<'_, INT_ENA_SPEC> {
         TX_BRK_IDLE_DONE_W::new(self, 13)
     }
     #[doc = "Bit 14 - Write 1 to enable UART_TX_DONE_INT."]
     #[inline(always)]
-    pub fn tx_done(&mut self) -> TX_DONE_W<INT_ENA_SPEC> {
+    pub fn tx_done(&mut self) -> TX_DONE_W<'_, INT_ENA_SPEC> {
         TX_DONE_W::new(self, 14)
     }
     #[doc = "Bit 15 - Write 1 to enable UART_RS485_PARITY_ERR_INT."]
     #[inline(always)]
-    pub fn rs485_parity_err(&mut self) -> RS485_PARITY_ERR_W<INT_ENA_SPEC> {
+    pub fn rs485_parity_err(&mut self) -> RS485_PARITY_ERR_W<'_, INT_ENA_SPEC> {
         RS485_PARITY_ERR_W::new(self, 15)
     }
     #[doc = "Bit 16 - Write 1 to enable UART_RS485_FRM_ERR_INT."]
     #[inline(always)]
-    pub fn rs485_frm_err(&mut self) -> RS485_FRM_ERR_W<INT_ENA_SPEC> {
+    pub fn rs485_frm_err(&mut self) -> RS485_FRM_ERR_W<'_, INT_ENA_SPEC> {
         RS485_FRM_ERR_W::new(self, 16)
     }
     #[doc = "Bit 17 - Write 1 to enable UART_RS485_CLASH_INT."]
     #[inline(always)]
-    pub fn rs485_clash(&mut self) -> RS485_CLASH_W<INT_ENA_SPEC> {
+    pub fn rs485_clash(&mut self) -> RS485_CLASH_W<'_, INT_ENA_SPEC> {
         RS485_CLASH_W::new(self, 17)
     }
     #[doc = "Bit 18 - Write 1 to enable UART_AT_CMD_CHAR_DET_INT."]
     #[inline(always)]
-    pub fn at_cmd_char_det(&mut self) -> AT_CMD_CHAR_DET_W<INT_ENA_SPEC> {
+    pub fn at_cmd_char_det(&mut self) -> AT_CMD_CHAR_DET_W<'_, INT_ENA_SPEC> {
         AT_CMD_CHAR_DET_W::new(self, 18)
     }
     #[doc = "Bit 19 - Write 1 to enable UART_WAKEUP_INT."]
     #[inline(always)]
-    pub fn wakeup(&mut self) -> WAKEUP_W<INT_ENA_SPEC> {
+    pub fn wakeup(&mut self) -> WAKEUP_W<'_, INT_ENA_SPEC> {
         WAKEUP_W::new(self, 19)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 5 - set this bit to reset sync-logic inside L2-Cache. Recommend that this should only be used to initialize sync-logic when some fatal error of sync-logic occurs."]
     #[inline(always)]
-    pub fn l2_cache_sync_rst(&mut self) -> L2_CACHE_SYNC_RST_W<L2_CACHE_SYNC_RST_CTRL_SPEC> {
+    pub fn l2_cache_sync_rst(&mut self) -> L2_CACHE_SYNC_RST_W<'_, L2_CACHE_SYNC_RST_CTRL_SPEC> {
         L2_CACHE_SYNC_RST_W::new(self, 5)
     }
 }

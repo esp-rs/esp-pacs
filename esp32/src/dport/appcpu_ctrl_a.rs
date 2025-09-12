@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn appcpu_resetting(&mut self) -> APPCPU_RESETTING_W<APPCPU_CTRL_A_SPEC> {
+    pub fn appcpu_resetting(&mut self) -> APPCPU_RESETTING_W<'_, APPCPU_CTRL_A_SPEC> {
         APPCPU_RESETTING_W::new(self, 0)
     }
 }

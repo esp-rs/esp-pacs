@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 29 - ENT_RTC"]
     #[inline(always)]
-    pub fn ent_rtc(&mut self) -> ENT_RTC_W<TEST_MUX_SPEC> {
+    pub fn ent_rtc(&mut self) -> ENT_RTC_W<'_, TEST_MUX_SPEC> {
         ENT_RTC_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - DTEST_RTC"]
     #[inline(always)]
-    pub fn dtest_rtc(&mut self) -> DTEST_RTC_W<TEST_MUX_SPEC> {
+    pub fn dtest_rtc(&mut self) -> DTEST_RTC_W<'_, TEST_MUX_SPEC> {
         DTEST_RTC_W::new(self, 30)
     }
 }

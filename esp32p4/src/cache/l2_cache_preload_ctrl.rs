@@ -52,19 +52,23 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable preload operation on L2-Cache. It will be cleared by hardware automatically after preload operation is done."]
     #[inline(always)]
-    pub fn l2_cache_preload_ena(&mut self) -> L2_CACHE_PRELOAD_ENA_W<L2_CACHE_PRELOAD_CTRL_SPEC> {
+    pub fn l2_cache_preload_ena(
+        &mut self,
+    ) -> L2_CACHE_PRELOAD_ENA_W<'_, L2_CACHE_PRELOAD_CTRL_SPEC> {
         L2_CACHE_PRELOAD_ENA_W::new(self, 0)
     }
     #[doc = "Bit 2 - The bit is used to configure the direction of preload operation. 0: ascending, 1: descending."]
     #[inline(always)]
     pub fn l2_cache_preload_order(
         &mut self,
-    ) -> L2_CACHE_PRELOAD_ORDER_W<L2_CACHE_PRELOAD_CTRL_SPEC> {
+    ) -> L2_CACHE_PRELOAD_ORDER_W<'_, L2_CACHE_PRELOAD_CTRL_SPEC> {
         L2_CACHE_PRELOAD_ORDER_W::new(self, 2)
     }
     #[doc = "Bits 3:6 - The bit is used to set the gid of l2 cache preload."]
     #[inline(always)]
-    pub fn l2_cache_preload_rgid(&mut self) -> L2_CACHE_PRELOAD_RGID_W<L2_CACHE_PRELOAD_CTRL_SPEC> {
+    pub fn l2_cache_preload_rgid(
+        &mut self,
+    ) -> L2_CACHE_PRELOAD_RGID_W<'_, L2_CACHE_PRELOAD_CTRL_SPEC> {
         L2_CACHE_PRELOAD_RGID_W::new(self, 3)
     }
 }

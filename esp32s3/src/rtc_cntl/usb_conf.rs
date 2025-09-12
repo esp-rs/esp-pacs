@@ -204,97 +204,97 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - reg_usb_vrefh"]
     #[inline(always)]
-    pub fn usb_vrefh(&mut self) -> USB_VREFH_W<USB_CONF_SPEC> {
+    pub fn usb_vrefh(&mut self) -> USB_VREFH_W<'_, USB_CONF_SPEC> {
         USB_VREFH_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - reg_usb_vrefl"]
     #[inline(always)]
-    pub fn usb_vrefl(&mut self) -> USB_VREFL_W<USB_CONF_SPEC> {
+    pub fn usb_vrefl(&mut self) -> USB_VREFL_W<'_, USB_CONF_SPEC> {
         USB_VREFL_W::new(self, 2)
     }
     #[doc = "Bit 4 - reg_usb_vref_override"]
     #[inline(always)]
-    pub fn usb_vref_override(&mut self) -> USB_VREF_OVERRIDE_W<USB_CONF_SPEC> {
+    pub fn usb_vref_override(&mut self) -> USB_VREF_OVERRIDE_W<'_, USB_CONF_SPEC> {
         USB_VREF_OVERRIDE_W::new(self, 4)
     }
     #[doc = "Bit 5 - reg_usb_pad_pull_override"]
     #[inline(always)]
-    pub fn usb_pad_pull_override(&mut self) -> USB_PAD_PULL_OVERRIDE_W<USB_CONF_SPEC> {
+    pub fn usb_pad_pull_override(&mut self) -> USB_PAD_PULL_OVERRIDE_W<'_, USB_CONF_SPEC> {
         USB_PAD_PULL_OVERRIDE_W::new(self, 5)
     }
     #[doc = "Bit 6 - reg_usb_dp_pullup"]
     #[inline(always)]
-    pub fn usb_dp_pullup(&mut self) -> USB_DP_PULLUP_W<USB_CONF_SPEC> {
+    pub fn usb_dp_pullup(&mut self) -> USB_DP_PULLUP_W<'_, USB_CONF_SPEC> {
         USB_DP_PULLUP_W::new(self, 6)
     }
     #[doc = "Bit 7 - reg_usb_dp_pulldown"]
     #[inline(always)]
-    pub fn usb_dp_pulldown(&mut self) -> USB_DP_PULLDOWN_W<USB_CONF_SPEC> {
+    pub fn usb_dp_pulldown(&mut self) -> USB_DP_PULLDOWN_W<'_, USB_CONF_SPEC> {
         USB_DP_PULLDOWN_W::new(self, 7)
     }
     #[doc = "Bit 8 - reg_usb_dm_pullup"]
     #[inline(always)]
-    pub fn usb_dm_pullup(&mut self) -> USB_DM_PULLUP_W<USB_CONF_SPEC> {
+    pub fn usb_dm_pullup(&mut self) -> USB_DM_PULLUP_W<'_, USB_CONF_SPEC> {
         USB_DM_PULLUP_W::new(self, 8)
     }
     #[doc = "Bit 9 - reg_usb_dm_pulldown"]
     #[inline(always)]
-    pub fn usb_dm_pulldown(&mut self) -> USB_DM_PULLDOWN_W<USB_CONF_SPEC> {
+    pub fn usb_dm_pulldown(&mut self) -> USB_DM_PULLDOWN_W<'_, USB_CONF_SPEC> {
         USB_DM_PULLDOWN_W::new(self, 9)
     }
     #[doc = "Bit 10 - reg_usb_pullup_value"]
     #[inline(always)]
-    pub fn usb_pullup_value(&mut self) -> USB_PULLUP_VALUE_W<USB_CONF_SPEC> {
+    pub fn usb_pullup_value(&mut self) -> USB_PULLUP_VALUE_W<'_, USB_CONF_SPEC> {
         USB_PULLUP_VALUE_W::new(self, 10)
     }
     #[doc = "Bit 11 - reg_usb_pad_enable_override"]
     #[inline(always)]
-    pub fn usb_pad_enable_override(&mut self) -> USB_PAD_ENABLE_OVERRIDE_W<USB_CONF_SPEC> {
+    pub fn usb_pad_enable_override(&mut self) -> USB_PAD_ENABLE_OVERRIDE_W<'_, USB_CONF_SPEC> {
         USB_PAD_ENABLE_OVERRIDE_W::new(self, 11)
     }
     #[doc = "Bit 12 - reg_usb_pad_enable"]
     #[inline(always)]
-    pub fn usb_pad_enable(&mut self) -> USB_PAD_ENABLE_W<USB_CONF_SPEC> {
+    pub fn usb_pad_enable(&mut self) -> USB_PAD_ENABLE_W<'_, USB_CONF_SPEC> {
         USB_PAD_ENABLE_W::new(self, 12)
     }
     #[doc = "Bit 13 - reg_usb_txm"]
     #[inline(always)]
-    pub fn usb_txm(&mut self) -> USB_TXM_W<USB_CONF_SPEC> {
+    pub fn usb_txm(&mut self) -> USB_TXM_W<'_, USB_CONF_SPEC> {
         USB_TXM_W::new(self, 13)
     }
     #[doc = "Bit 14 - reg_usb_txp"]
     #[inline(always)]
-    pub fn usb_txp(&mut self) -> USB_TXP_W<USB_CONF_SPEC> {
+    pub fn usb_txp(&mut self) -> USB_TXP_W<'_, USB_CONF_SPEC> {
         USB_TXP_W::new(self, 14)
     }
     #[doc = "Bit 15 - reg_usb_tx_en"]
     #[inline(always)]
-    pub fn usb_tx_en(&mut self) -> USB_TX_EN_W<USB_CONF_SPEC> {
+    pub fn usb_tx_en(&mut self) -> USB_TX_EN_W<'_, USB_CONF_SPEC> {
         USB_TX_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - reg_usb_tx_en_override"]
     #[inline(always)]
-    pub fn usb_tx_en_override(&mut self) -> USB_TX_EN_OVERRIDE_W<USB_CONF_SPEC> {
+    pub fn usb_tx_en_override(&mut self) -> USB_TX_EN_OVERRIDE_W<'_, USB_CONF_SPEC> {
         USB_TX_EN_OVERRIDE_W::new(self, 16)
     }
     #[doc = "Bit 17 - reg_usb_reset_disable"]
     #[inline(always)]
-    pub fn usb_reset_disable(&mut self) -> USB_RESET_DISABLE_W<USB_CONF_SPEC> {
+    pub fn usb_reset_disable(&mut self) -> USB_RESET_DISABLE_W<'_, USB_CONF_SPEC> {
         USB_RESET_DISABLE_W::new(self, 17)
     }
     #[doc = "Bit 18 - reg_io_mux_reset_disable"]
     #[inline(always)]
-    pub fn io_mux_reset_disable(&mut self) -> IO_MUX_RESET_DISABLE_W<USB_CONF_SPEC> {
+    pub fn io_mux_reset_disable(&mut self) -> IO_MUX_RESET_DISABLE_W<'_, USB_CONF_SPEC> {
         IO_MUX_RESET_DISABLE_W::new(self, 18)
     }
     #[doc = "Bit 19 - reg_sw_usb_phy_sel"]
     #[inline(always)]
-    pub fn sw_usb_phy_sel(&mut self) -> SW_USB_PHY_SEL_W<USB_CONF_SPEC> {
+    pub fn sw_usb_phy_sel(&mut self) -> SW_USB_PHY_SEL_W<'_, USB_CONF_SPEC> {
         SW_USB_PHY_SEL_W::new(self, 19)
     }
     #[doc = "Bit 20 - reg_sw_hw_usb_phy_sel"]
     #[inline(always)]
-    pub fn sw_hw_usb_phy_sel(&mut self) -> SW_HW_USB_PHY_SEL_W<USB_CONF_SPEC> {
+    pub fn sw_hw_usb_phy_sel(&mut self) -> SW_HW_USB_PHY_SEL_W<'_, USB_CONF_SPEC> {
         SW_HW_USB_PHY_SEL_W::new(self, 20)
     }
 }

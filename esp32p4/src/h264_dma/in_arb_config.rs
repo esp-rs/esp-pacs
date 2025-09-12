@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Set the max number of timeout count of arbiter"]
     #[inline(always)]
-    pub fn in_arb_timeout_num(&mut self) -> IN_ARB_TIMEOUT_NUM_W<IN_ARB_CONFIG_SPEC> {
+    pub fn in_arb_timeout_num(&mut self) -> IN_ARB_TIMEOUT_NUM_W<'_, IN_ARB_CONFIG_SPEC> {
         IN_ARB_TIMEOUT_NUM_W::new(self, 0)
     }
     #[doc = "Bit 16 - reserved"]
     #[inline(always)]
-    pub fn in_weight_en(&mut self) -> IN_WEIGHT_EN_W<IN_ARB_CONFIG_SPEC> {
+    pub fn in_weight_en(&mut self) -> IN_WEIGHT_EN_W<'_, IN_ARB_CONFIG_SPEC> {
         IN_WEIGHT_EN_W::new(self, 16)
     }
 }

@@ -17,22 +17,22 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 28 - Clear bit of APB_SARADC_ADC2_THRES_INT interrupt."]
     #[inline(always)]
-    pub fn adc2_thres(&mut self) -> ADC2_THRES_W<INT_CLR_SPEC> {
+    pub fn adc2_thres(&mut self) -> ADC2_THRES_W<'_, INT_CLR_SPEC> {
         ADC2_THRES_W::new(self, 28)
     }
     #[doc = "Bit 29 - Clear bit of APB_SARADC_ADC1_THRES_INT interrupt."]
     #[inline(always)]
-    pub fn adc1_thres(&mut self) -> ADC1_THRES_W<INT_CLR_SPEC> {
+    pub fn adc1_thres(&mut self) -> ADC1_THRES_W<'_, INT_CLR_SPEC> {
         ADC1_THRES_W::new(self, 29)
     }
     #[doc = "Bit 30 - Clear bit of APB_SARADC_ADC2_DONE_INT interrupt."]
     #[inline(always)]
-    pub fn adc2_done(&mut self) -> ADC2_DONE_W<INT_CLR_SPEC> {
+    pub fn adc2_done(&mut self) -> ADC2_DONE_W<'_, INT_CLR_SPEC> {
         ADC2_DONE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Clear bit of APB_SARADC_ADC1_DONE_INT interrupt."]
     #[inline(always)]
-    pub fn adc1_done(&mut self) -> ADC1_DONE_W<INT_CLR_SPEC> {
+    pub fn adc1_done(&mut self) -> ADC1_DONE_W<'_, INT_CLR_SPEC> {
         ADC1_DONE_W::new(self, 31)
     }
 }

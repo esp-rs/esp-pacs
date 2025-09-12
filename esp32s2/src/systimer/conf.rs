@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - System timer clock force enable."]
     #[inline(always)]
-    pub fn clk_fo(&mut self) -> CLK_FO_W<CONF_SPEC> {
+    pub fn clk_fo(&mut self) -> CLK_FO_W<'_, CONF_SPEC> {
         CLK_FO_W::new(self, 0)
     }
     #[doc = "Bit 31 - Register clock enable."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CONF_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CONF_SPEC> {
         CLK_EN_W::new(self, 31)
     }
 }

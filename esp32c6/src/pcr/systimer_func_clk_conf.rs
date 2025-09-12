@@ -36,12 +36,14 @@ impl W {
     #[inline(always)]
     pub fn systimer_func_clk_sel(
         &mut self,
-    ) -> SYSTIMER_FUNC_CLK_SEL_W<SYSTIMER_FUNC_CLK_CONF_SPEC> {
+    ) -> SYSTIMER_FUNC_CLK_SEL_W<'_, SYSTIMER_FUNC_CLK_CONF_SPEC> {
         SYSTIMER_FUNC_CLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable systimer function clock"]
     #[inline(always)]
-    pub fn systimer_func_clk_en(&mut self) -> SYSTIMER_FUNC_CLK_EN_W<SYSTIMER_FUNC_CLK_CONF_SPEC> {
+    pub fn systimer_func_clk_en(
+        &mut self,
+    ) -> SYSTIMER_FUNC_CLK_EN_W<'_, SYSTIMER_FUNC_CLK_CONF_SPEC> {
         SYSTIMER_FUNC_CLK_EN_W::new(self, 22)
     }
 }

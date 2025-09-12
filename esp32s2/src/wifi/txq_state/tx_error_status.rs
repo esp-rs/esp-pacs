@@ -114,68 +114,68 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `SLOT_COLLISION0` field.</div>"]
     #[inline(always)]
-    pub fn slot_collision(&mut self, n: u8) -> SLOT_COLLISION_W<TX_ERROR_STATUS_SPEC> {
+    pub fn slot_collision(&mut self, n: u8) -> SLOT_COLLISION_W<'_, TX_ERROR_STATUS_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 5][n as usize];
         SLOT_COLLISION_W::new(self, n)
     }
     #[doc = "Bit 0 - Collision status bit for a slot"]
     #[inline(always)]
-    pub fn slot_collision0(&mut self) -> SLOT_COLLISION_W<TX_ERROR_STATUS_SPEC> {
+    pub fn slot_collision0(&mut self) -> SLOT_COLLISION_W<'_, TX_ERROR_STATUS_SPEC> {
         SLOT_COLLISION_W::new(self, 0)
     }
     #[doc = "Bit 1 - Collision status bit for a slot"]
     #[inline(always)]
-    pub fn slot_collision1(&mut self) -> SLOT_COLLISION_W<TX_ERROR_STATUS_SPEC> {
+    pub fn slot_collision1(&mut self) -> SLOT_COLLISION_W<'_, TX_ERROR_STATUS_SPEC> {
         SLOT_COLLISION_W::new(self, 1)
     }
     #[doc = "Bit 2 - Collision status bit for a slot"]
     #[inline(always)]
-    pub fn slot_collision2(&mut self) -> SLOT_COLLISION_W<TX_ERROR_STATUS_SPEC> {
+    pub fn slot_collision2(&mut self) -> SLOT_COLLISION_W<'_, TX_ERROR_STATUS_SPEC> {
         SLOT_COLLISION_W::new(self, 2)
     }
     #[doc = "Bit 3 - Collision status bit for a slot"]
     #[inline(always)]
-    pub fn slot_collision3(&mut self) -> SLOT_COLLISION_W<TX_ERROR_STATUS_SPEC> {
+    pub fn slot_collision3(&mut self) -> SLOT_COLLISION_W<'_, TX_ERROR_STATUS_SPEC> {
         SLOT_COLLISION_W::new(self, 3)
     }
     #[doc = "Bit 4 - Collision status bit for a slot"]
     #[inline(always)]
-    pub fn slot_collision4(&mut self) -> SLOT_COLLISION_W<TX_ERROR_STATUS_SPEC> {
+    pub fn slot_collision4(&mut self) -> SLOT_COLLISION_W<'_, TX_ERROR_STATUS_SPEC> {
         SLOT_COLLISION_W::new(self, 4)
     }
     #[doc = "Timeout status bit for a slot"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `SLOT_TIMEOUT0` field.</div>"]
     #[inline(always)]
-    pub fn slot_timeout(&mut self, n: u8) -> SLOT_TIMEOUT_W<TX_ERROR_STATUS_SPEC> {
+    pub fn slot_timeout(&mut self, n: u8) -> SLOT_TIMEOUT_W<'_, TX_ERROR_STATUS_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 5][n as usize];
         SLOT_TIMEOUT_W::new(self, n + 16)
     }
     #[doc = "Bit 16 - Timeout status bit for a slot"]
     #[inline(always)]
-    pub fn slot_timeout0(&mut self) -> SLOT_TIMEOUT_W<TX_ERROR_STATUS_SPEC> {
+    pub fn slot_timeout0(&mut self) -> SLOT_TIMEOUT_W<'_, TX_ERROR_STATUS_SPEC> {
         SLOT_TIMEOUT_W::new(self, 16)
     }
     #[doc = "Bit 17 - Timeout status bit for a slot"]
     #[inline(always)]
-    pub fn slot_timeout1(&mut self) -> SLOT_TIMEOUT_W<TX_ERROR_STATUS_SPEC> {
+    pub fn slot_timeout1(&mut self) -> SLOT_TIMEOUT_W<'_, TX_ERROR_STATUS_SPEC> {
         SLOT_TIMEOUT_W::new(self, 17)
     }
     #[doc = "Bit 18 - Timeout status bit for a slot"]
     #[inline(always)]
-    pub fn slot_timeout2(&mut self) -> SLOT_TIMEOUT_W<TX_ERROR_STATUS_SPEC> {
+    pub fn slot_timeout2(&mut self) -> SLOT_TIMEOUT_W<'_, TX_ERROR_STATUS_SPEC> {
         SLOT_TIMEOUT_W::new(self, 18)
     }
     #[doc = "Bit 19 - Timeout status bit for a slot"]
     #[inline(always)]
-    pub fn slot_timeout3(&mut self) -> SLOT_TIMEOUT_W<TX_ERROR_STATUS_SPEC> {
+    pub fn slot_timeout3(&mut self) -> SLOT_TIMEOUT_W<'_, TX_ERROR_STATUS_SPEC> {
         SLOT_TIMEOUT_W::new(self, 19)
     }
     #[doc = "Bit 20 - Timeout status bit for a slot"]
     #[inline(always)]
-    pub fn slot_timeout4(&mut self) -> SLOT_TIMEOUT_W<TX_ERROR_STATUS_SPEC> {
+    pub fn slot_timeout4(&mut self) -> SLOT_TIMEOUT_W<'_, TX_ERROR_STATUS_SPEC> {
         SLOT_TIMEOUT_W::new(self, 20)
     }
 }

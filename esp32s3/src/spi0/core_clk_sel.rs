@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - When the digital system clock selects PLL clock and the frequency of PLL clock is 480MHz, the value of SPI_MEM_CORE_CLK_SEL: 0: SPI0/1 module clock (MSPI_CORE_CLK) is 80MHz. 1: MSPI_CORE_CLK is 120MHz. 2: MSPI_CORE_CLK is 160MHz. 3: MSPI_CORE_CLK is 240MHz. When the digital system clock selects PLL clock and the frequency of PLL clock is 320MHz, the value of SPI_MEM_CORE_CLK_SEL: 0: MSPI_CORE_CLK is 80MHz. 1: MSPI_CORE_CLK is 80MHz. 2: MSPI_CORE_CLK 160MHz. 3: Not used."]
     #[inline(always)]
-    pub fn core_clk_sel(&mut self) -> CORE_CLK_SEL_W<CORE_CLK_SEL_SPEC> {
+    pub fn core_clk_sel(&mut self) -> CORE_CLK_SEL_W<'_, CORE_CLK_SEL_SPEC> {
         CORE_CLK_SEL_W::new(self, 0)
     }
 }

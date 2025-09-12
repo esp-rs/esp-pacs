@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12 - Configures whether to enable owner bit check for TX channel 0.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
-    pub fn out_check_owner_ch0(&mut self) -> OUT_CHECK_OWNER_CH0_W<OUT_CONF1_SPEC> {
+    pub fn out_check_owner_ch0(&mut self) -> OUT_CHECK_OWNER_CH0_W<'_, OUT_CONF1_SPEC> {
         OUT_CHECK_OWNER_CH0_W::new(self, 12)
     }
 }

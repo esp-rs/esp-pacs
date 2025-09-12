@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - configure io0~28 hold enable,when io in hold status, all io configure and output will be latch , input function is useful"]
     #[inline(always)]
-    pub fn gpio_hold0(&mut self) -> GPIO_HOLD0_W<GPIO_HOLD0_SPEC> {
+    pub fn gpio_hold0(&mut self) -> GPIO_HOLD0_W<'_, GPIO_HOLD0_SPEC> {
         GPIO_HOLD0_W::new(self, 0)
     }
 }

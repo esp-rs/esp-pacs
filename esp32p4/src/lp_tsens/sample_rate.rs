@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Hardware automatic sampling rate."]
     #[inline(always)]
-    pub fn sample_rate(&mut self) -> SAMPLE_RATE_W<SAMPLE_RATE_SPEC> {
+    pub fn sample_rate(&mut self) -> SAMPLE_RATE_W<'_, SAMPLE_RATE_SPEC> {
         SAMPLE_RATE_W::new(self, 0)
     }
 }

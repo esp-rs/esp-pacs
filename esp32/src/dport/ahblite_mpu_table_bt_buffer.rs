@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn btbuffer_access_grant_config(
         &mut self,
-    ) -> BTBUFFER_ACCESS_GRANT_CONFIG_W<AHBLITE_MPU_TABLE_BT_BUFFER_SPEC> {
+    ) -> BTBUFFER_ACCESS_GRANT_CONFIG_W<'_, AHBLITE_MPU_TABLE_BT_BUFFER_SPEC> {
         BTBUFFER_ACCESS_GRANT_CONFIG_W::new(self, 0)
     }
 }

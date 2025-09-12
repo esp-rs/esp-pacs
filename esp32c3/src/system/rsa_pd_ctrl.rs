@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reg_rsa_mem_pd"]
     #[inline(always)]
-    pub fn rsa_mem_pd(&mut self) -> RSA_MEM_PD_W<RSA_PD_CTRL_SPEC> {
+    pub fn rsa_mem_pd(&mut self) -> RSA_MEM_PD_W<'_, RSA_PD_CTRL_SPEC> {
         RSA_MEM_PD_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_rsa_mem_force_pu"]
     #[inline(always)]
-    pub fn rsa_mem_force_pu(&mut self) -> RSA_MEM_FORCE_PU_W<RSA_PD_CTRL_SPEC> {
+    pub fn rsa_mem_force_pu(&mut self) -> RSA_MEM_FORCE_PU_W<'_, RSA_PD_CTRL_SPEC> {
         RSA_MEM_FORCE_PU_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_rsa_mem_force_pd"]
     #[inline(always)]
-    pub fn rsa_mem_force_pd(&mut self) -> RSA_MEM_FORCE_PD_W<RSA_PD_CTRL_SPEC> {
+    pub fn rsa_mem_force_pd(&mut self) -> RSA_MEM_FORCE_PD_W<'_, RSA_PD_CTRL_SPEC> {
         RSA_MEM_FORCE_PD_W::new(self, 2)
     }
 }

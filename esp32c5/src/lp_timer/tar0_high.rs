@@ -26,12 +26,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Configures the higher 16 bits of the trigger threshold for the RTC timer compare0"]
     #[inline(always)]
-    pub fn main_timer_tar_high0(&mut self) -> MAIN_TIMER_TAR_HIGH0_W<TAR0_HIGH_SPEC> {
+    pub fn main_timer_tar_high0(&mut self) -> MAIN_TIMER_TAR_HIGH0_W<'_, TAR0_HIGH_SPEC> {
         MAIN_TIMER_TAR_HIGH0_W::new(self, 0)
     }
     #[doc = "Bit 31 - Configure this bit to enable the timer compare0 alarm.\\\\0: Disable \\\\1: Enable"]
     #[inline(always)]
-    pub fn main_timer_tar_en0(&mut self) -> MAIN_TIMER_TAR_EN0_W<TAR0_HIGH_SPEC> {
+    pub fn main_timer_tar_en0(&mut self) -> MAIN_TIMER_TAR_EN0_W<'_, TAR0_HIGH_SPEC> {
         MAIN_TIMER_TAR_EN0_W::new(self, 31)
     }
 }

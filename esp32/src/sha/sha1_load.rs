@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<SHA1_LOAD_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to finish the SHA-1 operation to calculate the final message hash."]
     #[inline(always)]
-    pub fn sha1_load(&mut self) -> SHA1_LOAD_W<SHA1_LOAD_SPEC> {
+    pub fn sha1_load(&mut self) -> SHA1_LOAD_W<'_, SHA1_LOAD_SPEC> {
         SHA1_LOAD_W::new(self, 0)
     }
 }

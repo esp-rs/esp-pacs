@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn core_0_area_dram0_1_max(
         &mut self,
-    ) -> CORE_0_AREA_DRAM0_1_MAX_W<CORE_0_AREA_DRAM0_1_MAX_SPEC> {
+    ) -> CORE_0_AREA_DRAM0_1_MAX_W<'_, CORE_0_AREA_DRAM0_1_MAX_SPEC> {
         CORE_0_AREA_DRAM0_1_MAX_W::new(self, 0)
     }
 }

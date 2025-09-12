@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - brownout mode0 lp interrupt enable register"]
     #[inline(always)]
-    pub fn bod_mode0_lp_int_ena(&mut self) -> BOD_MODE0_LP_INT_ENA_W<LP_INT_ENA_SPEC> {
+    pub fn bod_mode0_lp_int_ena(&mut self) -> BOD_MODE0_LP_INT_ENA_W<'_, LP_INT_ENA_SPEC> {
         BOD_MODE0_LP_INT_ENA_W::new(self, 31)
     }
 }

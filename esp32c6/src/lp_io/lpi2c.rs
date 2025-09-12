@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - need des"]
     #[inline(always)]
-    pub fn lp_i2c_sda_ie(&mut self) -> LP_I2C_SDA_IE_W<LPI2C_SPEC> {
+    pub fn lp_i2c_sda_ie(&mut self) -> LP_I2C_SDA_IE_W<'_, LPI2C_SPEC> {
         LP_I2C_SDA_IE_W::new(self, 30)
     }
     #[doc = "Bit 31 - need des"]
     #[inline(always)]
-    pub fn lp_i2c_scl_ie(&mut self) -> LP_I2C_SCL_IE_W<LPI2C_SPEC> {
+    pub fn lp_i2c_scl_ie(&mut self) -> LP_I2C_SCL_IE_W<'_, LPI2C_SPEC> {
         LP_I2C_SCL_IE_W::new(self, 31)
     }
 }

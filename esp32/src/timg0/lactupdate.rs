@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<LACTUPDATE_SPEC> {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn update(&mut self) -> UPDATE_W<LACTUPDATE_SPEC> {
+    pub fn update(&mut self) -> UPDATE_W<'_, LACTUPDATE_SPEC> {
         UPDATE_W::new(self, 0)
     }
 }

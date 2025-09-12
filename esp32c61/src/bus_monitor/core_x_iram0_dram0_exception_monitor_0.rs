@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core_x_iram0_dram0_limit_cycle_0(
         &mut self,
-    ) -> CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_W<CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0_SPEC> {
+    ) -> CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_W<'_, CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0_SPEC> {
         CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_W::new(self, 0)
     }
 }

@@ -17,19 +17,21 @@ impl W {
     #[inline(always)]
     pub fn gdma_ahb_task_out_start_ch1_st_clr(
         &mut self,
-    ) -> GDMA_AHB_TASK_OUT_START_CH1_ST_CLR_W<TASK_ST4_CLR_SPEC> {
+    ) -> GDMA_AHB_TASK_OUT_START_CH1_ST_CLR_W<'_, TASK_ST4_CLR_SPEC> {
         GDMA_AHB_TASK_OUT_START_CH1_ST_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to clear GDMA_AHB_task_out_start_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
     pub fn gdma_ahb_task_out_start_ch2_st_clr(
         &mut self,
-    ) -> GDMA_AHB_TASK_OUT_START_CH2_ST_CLR_W<TASK_ST4_CLR_SPEC> {
+    ) -> GDMA_AHB_TASK_OUT_START_CH2_ST_CLR_W<'_, TASK_ST4_CLR_SPEC> {
         GDMA_AHB_TASK_OUT_START_CH2_ST_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to clear PMU_task_sleep_req trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    pub fn pmu_task_sleep_req_st_clr(&mut self) -> PMU_TASK_SLEEP_REQ_ST_CLR_W<TASK_ST4_CLR_SPEC> {
+    pub fn pmu_task_sleep_req_st_clr(
+        &mut self,
+    ) -> PMU_TASK_SLEEP_REQ_ST_CLR_W<'_, TASK_ST4_CLR_SPEC> {
         PMU_TASK_SLEEP_REQ_ST_CLR_W::new(self, 2)
     }
 }

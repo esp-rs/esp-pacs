@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12 - NA"]
     #[inline(always)]
-    pub fn vid_num_chunks(&mut self) -> VID_NUM_CHUNKS_W<VID_NUM_CHUNKS_SPEC> {
+    pub fn vid_num_chunks(&mut self) -> VID_NUM_CHUNKS_W<'_, VID_NUM_CHUNKS_SPEC> {
         VID_NUM_CHUNKS_W::new(self, 0)
     }
 }

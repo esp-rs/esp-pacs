@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:22 - The length in bits of write-data. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
-    pub fn usr_mosi_dbitlen(&mut self) -> USR_MOSI_DBITLEN_W<MOSI_DLEN_SPEC> {
+    pub fn usr_mosi_dbitlen(&mut self) -> USR_MOSI_DBITLEN_W<'_, MOSI_DLEN_SPEC> {
         USR_MOSI_DBITLEN_W::new(self, 0)
     }
 }

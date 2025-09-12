@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - For SPI1 the value of crc32 for 256 bits data."]
     #[inline(always)]
-    pub fn data(&mut self) -> DATA_W<TX_CRC_SPEC> {
+    pub fn data(&mut self) -> DATA_W<'_, TX_CRC_SPEC> {
         DATA_W::new(self, 0)
     }
 }

@@ -13,12 +13,12 @@ impl core::fmt::Debug for crate::generic::Reg<START_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to continue Key Manager operation at LOAD/GAIN state."]
     #[inline(always)]
-    pub fn start(&mut self) -> START_W<START_SPEC> {
+    pub fn start(&mut self) -> START_W<'_, START_SPEC> {
         START_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to start Key Manager at IDLE state."]
     #[inline(always)]
-    pub fn continue_(&mut self) -> CONTINUE_W<START_SPEC> {
+    pub fn continue_(&mut self) -> CONTINUE_W<'_, START_SPEC> {
         CONTINUE_W::new(self, 1)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn cpu_uxint_thresh(&mut self) -> CPU_UXINT_THRESH_W<UXINT_THRESH_SPEC> {
+    pub fn cpu_uxint_thresh(&mut self) -> CPU_UXINT_THRESH_W<'_, UXINT_THRESH_SPEC> {
         CPU_UXINT_THRESH_W::new(self, 0)
     }
 }

@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn cache_l2_cache_fail_int_raw(
         &mut self,
-    ) -> CACHE_L2_CACHE_FAIL_INT_RAW_W<CACHE_L2_CACHE_ACS_FAIL_INT_RAW_SPEC> {
+    ) -> CACHE_L2_CACHE_FAIL_INT_RAW_W<'_, CACHE_L2_CACHE_ACS_FAIL_INT_RAW_SPEC> {
         CACHE_L2_CACHE_FAIL_INT_RAW_W::new(self, 5)
     }
 }

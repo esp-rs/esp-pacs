@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - clock divider"]
     #[inline(always)]
-    pub fn sar_sar1_clk_div(&mut self) -> SAR_SAR1_CLK_DIV_W<SAR_READER1_CTRL_SPEC> {
+    pub fn sar_sar1_clk_div(&mut self) -> SAR_SAR1_CLK_DIV_W<'_, SAR_READER1_CTRL_SPEC> {
         SAR_SAR1_CLK_DIV_W::new(self, 0)
     }
     #[doc = "Bit 18 - no public"]
     #[inline(always)]
-    pub fn sar_sar1_clk_gated(&mut self) -> SAR_SAR1_CLK_GATED_W<SAR_READER1_CTRL_SPEC> {
+    pub fn sar_sar1_clk_gated(&mut self) -> SAR_SAR1_CLK_GATED_W<'_, SAR_READER1_CTRL_SPEC> {
         SAR_SAR1_CLK_GATED_W::new(self, 18)
     }
     #[doc = "Bits 19:26 - no public"]
     #[inline(always)]
-    pub fn sar_sar1_sample_num(&mut self) -> SAR_SAR1_SAMPLE_NUM_W<SAR_READER1_CTRL_SPEC> {
+    pub fn sar_sar1_sample_num(&mut self) -> SAR_SAR1_SAMPLE_NUM_W<'_, SAR_READER1_CTRL_SPEC> {
         SAR_SAR1_SAMPLE_NUM_W::new(self, 19)
     }
     #[doc = "Bit 28 - Invert SAR ADC1 data"]
     #[inline(always)]
-    pub fn sar_sar1_data_inv(&mut self) -> SAR_SAR1_DATA_INV_W<SAR_READER1_CTRL_SPEC> {
+    pub fn sar_sar1_data_inv(&mut self) -> SAR_SAR1_DATA_INV_W<'_, SAR_READER1_CTRL_SPEC> {
         SAR_SAR1_DATA_INV_W::new(self, 28)
     }
     #[doc = "Bit 29 - enable saradc1 to send out interrupt"]
     #[inline(always)]
-    pub fn sar_sar1_int_en(&mut self) -> SAR_SAR1_INT_EN_W<SAR_READER1_CTRL_SPEC> {
+    pub fn sar_sar1_int_en(&mut self) -> SAR_SAR1_INT_EN_W<'_, SAR_READER1_CTRL_SPEC> {
         SAR_SAR1_INT_EN_W::new(self, 29)
     }
 }

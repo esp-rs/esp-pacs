@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - This field is used to select the clock frequency of CPU or CPU period."]
     #[inline(always)]
-    pub fn cpuperiod_sel(&mut self) -> CPUPERIOD_SEL_W<CPU_PER_CONF_SPEC> {
+    pub fn cpuperiod_sel(&mut self) -> CPUPERIOD_SEL_W<'_, CPU_PER_CONF_SPEC> {
         CPUPERIOD_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - This field is used to select the PLL clock frequency based on CPU period."]
     #[inline(always)]
-    pub fn pll_freq_sel(&mut self) -> PLL_FREQ_SEL_W<CPU_PER_CONF_SPEC> {
+    pub fn pll_freq_sel(&mut self) -> PLL_FREQ_SEL_W<'_, CPU_PER_CONF_SPEC> {
         PLL_FREQ_SEL_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to force on CPU wait mode. In this mode, the clock gate of CPU is turned off until any interrupts happen. This mode could also be force on via WAITI instruction."]
     #[inline(always)]
-    pub fn cpu_wait_mode_force_on(&mut self) -> CPU_WAIT_MODE_FORCE_ON_W<CPU_PER_CONF_SPEC> {
+    pub fn cpu_wait_mode_force_on(&mut self) -> CPU_WAIT_MODE_FORCE_ON_W<'_, CPU_PER_CONF_SPEC> {
         CPU_WAIT_MODE_FORCE_ON_W::new(self, 3)
     }
     #[doc = "Bits 4:7 - Sets the number of delay cycles to enter CPU wait mode after a WAITI instruction."]
     #[inline(always)]
-    pub fn cpu_waiti_delay_num(&mut self) -> CPU_WAITI_DELAY_NUM_W<CPU_PER_CONF_SPEC> {
+    pub fn cpu_waiti_delay_num(&mut self) -> CPU_WAITI_DELAY_NUM_W<'_, CPU_PER_CONF_SPEC> {
         CPU_WAITI_DELAY_NUM_W::new(self, 4)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - need_des"]
     #[inline(always)]
-    pub fn soc_wakeup_wait(&mut self) -> SOC_WAKEUP_WAIT_W<SLP_WAKEUP_CNTL6_SPEC> {
+    pub fn soc_wakeup_wait(&mut self) -> SOC_WAKEUP_WAIT_W<'_, SLP_WAKEUP_CNTL6_SPEC> {
         SOC_WAKEUP_WAIT_W::new(self, 0)
     }
     #[doc = "Bits 30:31 - need_des"]
     #[inline(always)]
-    pub fn soc_wakeup_wait_cfg(&mut self) -> SOC_WAKEUP_WAIT_CFG_W<SLP_WAKEUP_CNTL6_SPEC> {
+    pub fn soc_wakeup_wait_cfg(&mut self) -> SOC_WAKEUP_WAIT_CFG_W<'_, SLP_WAKEUP_CNTL6_SPEC> {
         SOC_WAKEUP_WAIT_CFG_W::new(self, 30)
     }
 }

@@ -86,22 +86,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
-    pub fn din0_num(&mut self) -> DIN0_NUM_W<DIN_NUM_SPEC> {
+    pub fn din0_num(&mut self) -> DIN0_NUM_W<'_, DIN_NUM_SPEC> {
         DIN0_NUM_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
-    pub fn din1_num(&mut self) -> DIN1_NUM_W<DIN_NUM_SPEC> {
+    pub fn din1_num(&mut self) -> DIN1_NUM_W<'_, DIN_NUM_SPEC> {
         DIN1_NUM_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
-    pub fn din2_num(&mut self) -> DIN2_NUM_W<DIN_NUM_SPEC> {
+    pub fn din2_num(&mut self) -> DIN2_NUM_W<'_, DIN_NUM_SPEC> {
         DIN2_NUM_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
-    pub fn din3_num(&mut self) -> DIN3_NUM_W<DIN_NUM_SPEC> {
+    pub fn din3_num(&mut self) -> DIN3_NUM_W<'_, DIN_NUM_SPEC> {
         DIN3_NUM_W::new(self, 6)
     }
 }

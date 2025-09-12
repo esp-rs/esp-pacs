@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12"]
     #[inline(always)]
-    pub fn cs_setup_time(&mut self) -> CS_SETUP_TIME_W<CTRL2_SPEC> {
+    pub fn cs_setup_time(&mut self) -> CS_SETUP_TIME_W<'_, CTRL2_SPEC> {
         CS_SETUP_TIME_W::new(self, 0)
     }
     #[doc = "Bits 13:25"]
     #[inline(always)]
-    pub fn cs_hold_time(&mut self) -> CS_HOLD_TIME_W<CTRL2_SPEC> {
+    pub fn cs_hold_time(&mut self) -> CS_HOLD_TIME_W<'_, CTRL2_SPEC> {
         CS_HOLD_TIME_W::new(self, 13)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn sync_reset(&mut self) -> SYNC_RESET_W<CTRL2_SPEC> {
+    pub fn sync_reset(&mut self) -> SYNC_RESET_W<'_, CTRL2_SPEC> {
         SYNC_RESET_W::new(self, 31)
     }
 }

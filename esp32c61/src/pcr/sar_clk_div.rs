@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures the divisor for SAR ADC 2 clock to generate ADC analog control signals.\\\\"]
     #[inline(always)]
-    pub fn sar2_clk_div_num(&mut self) -> SAR2_CLK_DIV_NUM_W<SAR_CLK_DIV_SPEC> {
+    pub fn sar2_clk_div_num(&mut self) -> SAR2_CLK_DIV_NUM_W<'_, SAR_CLK_DIV_SPEC> {
         SAR2_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Configures the divisor for SAR ADC 1 clock to generate ADC analog control signals.\\\\"]
     #[inline(always)]
-    pub fn sar1_clk_div_num(&mut self) -> SAR1_CLK_DIV_NUM_W<SAR_CLK_DIV_SPEC> {
+    pub fn sar1_clk_div_num(&mut self) -> SAR1_CLK_DIV_NUM_W<'_, SAR_CLK_DIV_SPEC> {
         SAR1_CLK_DIV_NUM_W::new(self, 8)
     }
 }

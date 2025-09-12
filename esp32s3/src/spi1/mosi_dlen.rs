@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - The length in bits of DOUT phase. The register value shall be (bit_num-1)."]
     #[inline(always)]
-    pub fn usr_mosi_dbitlen(&mut self) -> USR_MOSI_DBITLEN_W<MOSI_DLEN_SPEC> {
+    pub fn usr_mosi_dbitlen(&mut self) -> USR_MOSI_DBITLEN_W<'_, MOSI_DLEN_SPEC> {
         USR_MOSI_DBITLEN_W::new(self, 0)
     }
 }

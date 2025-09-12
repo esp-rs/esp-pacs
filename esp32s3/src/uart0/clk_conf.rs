@@ -114,52 +114,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor."]
     #[inline(always)]
-    pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<CLK_CONF_SPEC> {
+    pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<'_, CLK_CONF_SPEC> {
         SCLK_DIV_B_W::new(self, 0)
     }
     #[doc = "Bits 6:11 - The numerator of the frequency divider factor."]
     #[inline(always)]
-    pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<CLK_CONF_SPEC> {
+    pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<'_, CLK_CONF_SPEC> {
         SCLK_DIV_A_W::new(self, 6)
     }
     #[doc = "Bits 12:19 - The integral part of the frequency divider factor."]
     #[inline(always)]
-    pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<CLK_CONF_SPEC> {
+    pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<'_, CLK_CONF_SPEC> {
         SCLK_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bits 20:21 - UART clock source select. 1: 80Mhz, 2: 8Mhz, 3: XTAL."]
     #[inline(always)]
-    pub fn sclk_sel(&mut self) -> SCLK_SEL_W<CLK_CONF_SPEC> {
+    pub fn sclk_sel(&mut self) -> SCLK_SEL_W<'_, CLK_CONF_SPEC> {
         SCLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set this bit to enable UART Tx/Rx clock."]
     #[inline(always)]
-    pub fn sclk_en(&mut self) -> SCLK_EN_W<CLK_CONF_SPEC> {
+    pub fn sclk_en(&mut self) -> SCLK_EN_W<'_, CLK_CONF_SPEC> {
         SCLK_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Write 1 then write 0 to this bit, reset UART Tx/Rx."]
     #[inline(always)]
-    pub fn rst_core(&mut self) -> RST_CORE_W<CLK_CONF_SPEC> {
+    pub fn rst_core(&mut self) -> RST_CORE_W<'_, CLK_CONF_SPEC> {
         RST_CORE_W::new(self, 23)
     }
     #[doc = "Bit 24 - Set this bit to enable UART Tx clock."]
     #[inline(always)]
-    pub fn tx_sclk_en(&mut self) -> TX_SCLK_EN_W<CLK_CONF_SPEC> {
+    pub fn tx_sclk_en(&mut self) -> TX_SCLK_EN_W<'_, CLK_CONF_SPEC> {
         TX_SCLK_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Set this bit to enable UART Rx clock."]
     #[inline(always)]
-    pub fn rx_sclk_en(&mut self) -> RX_SCLK_EN_W<CLK_CONF_SPEC> {
+    pub fn rx_sclk_en(&mut self) -> RX_SCLK_EN_W<'_, CLK_CONF_SPEC> {
         RX_SCLK_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Write 1 then write 0 to this bit, reset UART Tx."]
     #[inline(always)]
-    pub fn tx_rst_core(&mut self) -> TX_RST_CORE_W<CLK_CONF_SPEC> {
+    pub fn tx_rst_core(&mut self) -> TX_RST_CORE_W<'_, CLK_CONF_SPEC> {
         TX_RST_CORE_W::new(self, 26)
     }
     #[doc = "Bit 27 - Write 1 then write 0 to this bit, reset UART Rx."]
     #[inline(always)]
-    pub fn rx_rst_core(&mut self) -> RX_RST_CORE_W<CLK_CONF_SPEC> {
+    pub fn rx_rst_core(&mut self) -> RX_RST_CORE_W<'_, CLK_CONF_SPEC> {
         RX_RST_CORE_W::new(self, 27)
     }
 }

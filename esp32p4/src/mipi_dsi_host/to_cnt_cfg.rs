@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - NA"]
     #[inline(always)]
-    pub fn lprx_to_cnt(&mut self) -> LPRX_TO_CNT_W<TO_CNT_CFG_SPEC> {
+    pub fn lprx_to_cnt(&mut self) -> LPRX_TO_CNT_W<'_, TO_CNT_CFG_SPEC> {
         LPRX_TO_CNT_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - NA"]
     #[inline(always)]
-    pub fn hstx_to_cnt(&mut self) -> HSTX_TO_CNT_W<TO_CNT_CFG_SPEC> {
+    pub fn hstx_to_cnt(&mut self) -> HSTX_TO_CNT_W<'_, TO_CNT_CFG_SPEC> {
         HSTX_TO_CNT_W::new(self, 16)
     }
 }

@@ -36,14 +36,14 @@ impl W {
     #[inline(always)]
     pub fn host_slc0host_token0_wd(
         &mut self,
-    ) -> HOST_SLC0HOST_TOKEN0_WD_W<HOST_SLC0HOST_TOKEN_WDATA_SPEC> {
+    ) -> HOST_SLC0HOST_TOKEN0_WD_W<'_, HOST_SLC0HOST_TOKEN_WDATA_SPEC> {
         HOST_SLC0HOST_TOKEN0_WD_W::new(self, 0)
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]
     pub fn host_slc0host_token1_wd(
         &mut self,
-    ) -> HOST_SLC0HOST_TOKEN1_WD_W<HOST_SLC0HOST_TOKEN_WDATA_SPEC> {
+    ) -> HOST_SLC0HOST_TOKEN1_WD_W<'_, HOST_SLC0HOST_TOKEN_WDATA_SPEC> {
         HOST_SLC0HOST_TOKEN1_WD_W::new(self, 16)
     }
 }

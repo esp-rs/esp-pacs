@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reg_scl_rst_slv_en"]
     #[inline(always)]
-    pub fn scl_rst_slv_en(&mut self) -> SCL_RST_SLV_EN_W<SCL_SP_CONF_SPEC> {
+    pub fn scl_rst_slv_en(&mut self) -> SCL_RST_SLV_EN_W<'_, SCL_SP_CONF_SPEC> {
         SCL_RST_SLV_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:5 - reg_scl_rst_slv_num"]
     #[inline(always)]
-    pub fn scl_rst_slv_num(&mut self) -> SCL_RST_SLV_NUM_W<SCL_SP_CONF_SPEC> {
+    pub fn scl_rst_slv_num(&mut self) -> SCL_RST_SLV_NUM_W<'_, SCL_SP_CONF_SPEC> {
         SCL_RST_SLV_NUM_W::new(self, 1)
     }
     #[doc = "Bit 6 - reg_scl_pd_en"]
     #[inline(always)]
-    pub fn scl_pd_en(&mut self) -> SCL_PD_EN_W<SCL_SP_CONF_SPEC> {
+    pub fn scl_pd_en(&mut self) -> SCL_PD_EN_W<'_, SCL_SP_CONF_SPEC> {
         SCL_PD_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - reg_sda_pd_en"]
     #[inline(always)]
-    pub fn sda_pd_en(&mut self) -> SDA_PD_EN_W<SCL_SP_CONF_SPEC> {
+    pub fn sda_pd_en(&mut self) -> SDA_PD_EN_W<'_, SCL_SP_CONF_SPEC> {
         SDA_PD_EN_W::new(self, 7)
     }
 }

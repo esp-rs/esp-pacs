@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    pub fn lp_aon_store7(&mut self) -> LP_AON_STORE7_W<STORE7_SPEC> {
+    pub fn lp_aon_store7(&mut self) -> LP_AON_STORE7_W<'_, STORE7_SPEC> {
         LP_AON_STORE7_W::new(self, 0)
     }
 }

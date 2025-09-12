@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - Bottom bits of address of dma_item"]
     #[inline(always)]
-    pub fn dma_addr(&mut self) -> DMA_ADDR_W<PLCP0_SPEC> {
+    pub fn dma_addr(&mut self) -> DMA_ADDR_W<'_, PLCP0_SPEC> {
         DMA_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 24 - Enables ACK timeouts"]
     #[inline(always)]
-    pub fn wait_for_ack(&mut self) -> WAIT_FOR_ACK_W<PLCP0_SPEC> {
+    pub fn wait_for_ack(&mut self) -> WAIT_FOR_ACK_W<'_, PLCP0_SPEC> {
         WAIT_FOR_ACK_W::new(self, 24)
     }
     #[doc = "Bit 30 - Marks this slot as valid"]
     #[inline(always)]
-    pub fn slot_valid(&mut self) -> SLOT_VALID_W<PLCP0_SPEC> {
+    pub fn slot_valid(&mut self) -> SLOT_VALID_W<'_, PLCP0_SPEC> {
         SLOT_VALID_W::new(self, 30)
     }
     #[doc = "Bit 31 - Marks this slot as ready for transmission"]
     #[inline(always)]
-    pub fn slot_enabled(&mut self) -> SLOT_ENABLED_W<PLCP0_SPEC> {
+    pub fn slot_enabled(&mut self) -> SLOT_ENABLED_W<'_, PLCP0_SPEC> {
         SLOT_ENABLED_W::new(self, 31)
     }
 }

@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - The dummy phase enable when wait flash idle (RDSR)"]
     #[inline(always)]
-    pub fn waiti_dummy(&mut self) -> WAITI_DUMMY_W<FLASH_WAITI_CTRL_SPEC> {
+    pub fn waiti_dummy(&mut self) -> WAITI_DUMMY_W<'_, FLASH_WAITI_CTRL_SPEC> {
         WAITI_DUMMY_W::new(self, 1)
     }
     #[doc = "Bits 2:9 - The command to wait flash idle(RDSR)."]
     #[inline(always)]
-    pub fn waiti_cmd(&mut self) -> WAITI_CMD_W<FLASH_WAITI_CTRL_SPEC> {
+    pub fn waiti_cmd(&mut self) -> WAITI_CMD_W<'_, FLASH_WAITI_CTRL_SPEC> {
         WAITI_CMD_W::new(self, 2)
     }
     #[doc = "Bits 10:15 - The dummy cycle length when wait flash idle(RDSR)."]
     #[inline(always)]
-    pub fn waiti_dummy_cyclelen(&mut self) -> WAITI_DUMMY_CYCLELEN_W<FLASH_WAITI_CTRL_SPEC> {
+    pub fn waiti_dummy_cyclelen(&mut self) -> WAITI_DUMMY_CYCLELEN_W<'_, FLASH_WAITI_CTRL_SPEC> {
         WAITI_DUMMY_CYCLELEN_W::new(self, 10)
     }
 }

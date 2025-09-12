@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn blk2_din2(&mut self) -> BLK2_DIN2_W<BLK2_WDATA2_SPEC> {
+    pub fn blk2_din2(&mut self) -> BLK2_DIN2_W<'_, BLK2_WDATA2_SPEC> {
         BLK2_DIN2_W::new(self, 0)
     }
 }

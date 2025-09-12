@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - no use"]
     #[inline(always)]
-    pub fn saradc_clk_en(&mut self) -> SARADC_CLK_EN_W<SARADC_CONF_SPEC> {
+    pub fn saradc_clk_en(&mut self) -> SARADC_CLK_EN_W<'_, SARADC_CONF_SPEC> {
         SARADC_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to reset function_register of saradc module"]
     #[inline(always)]
-    pub fn saradc_rst_en(&mut self) -> SARADC_RST_EN_W<SARADC_CONF_SPEC> {
+    pub fn saradc_rst_en(&mut self) -> SARADC_RST_EN_W<'_, SARADC_CONF_SPEC> {
         SARADC_RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to enable saradc apb clock"]
     #[inline(always)]
-    pub fn saradc_reg_clk_en(&mut self) -> SARADC_REG_CLK_EN_W<SARADC_CONF_SPEC> {
+    pub fn saradc_reg_clk_en(&mut self) -> SARADC_REG_CLK_EN_W<'_, SARADC_CONF_SPEC> {
         SARADC_REG_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set 1 to reset apb_register of saradc module"]
     #[inline(always)]
-    pub fn saradc_reg_rst_en(&mut self) -> SARADC_REG_RST_EN_W<SARADC_CONF_SPEC> {
+    pub fn saradc_reg_rst_en(&mut self) -> SARADC_REG_RST_EN_W<'_, SARADC_CONF_SPEC> {
         SARADC_REG_RST_EN_W::new(self, 3)
     }
 }

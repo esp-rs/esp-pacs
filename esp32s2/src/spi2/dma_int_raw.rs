@@ -152,27 +152,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 11 - The raw bit for SPI slave CMD6 interrupt."]
     #[inline(always)]
-    pub fn slv_cmd6(&mut self) -> SLV_CMD6_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_cmd6(&mut self) -> SLV_CMD6_W<'_, DMA_INT_RAW_SPEC> {
         SLV_CMD6_W::new(self, 11)
     }
     #[doc = "Bit 12 - The raw bit for SPI slave CMD7 interrupt."]
     #[inline(always)]
-    pub fn slv_cmd7(&mut self) -> SLV_CMD7_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_cmd7(&mut self) -> SLV_CMD7_W<'_, DMA_INT_RAW_SPEC> {
         SLV_CMD7_W::new(self, 12)
     }
     #[doc = "Bit 13 - The raw bit for SPI slave CMD8 interrupt."]
     #[inline(always)]
-    pub fn slv_cmd8(&mut self) -> SLV_CMD8_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_cmd8(&mut self) -> SLV_CMD8_W<'_, DMA_INT_RAW_SPEC> {
         SLV_CMD8_W::new(self, 13)
     }
     #[doc = "Bit 14 - The raw bit for SPI slave CMD9 interrupt."]
     #[inline(always)]
-    pub fn slv_cmd9(&mut self) -> SLV_CMD9_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_cmd9(&mut self) -> SLV_CMD9_W<'_, DMA_INT_RAW_SPEC> {
         SLV_CMD9_W::new(self, 14)
     }
     #[doc = "Bit 15 - The raw bit for SPI slave CMDA interrupt."]
     #[inline(always)]
-    pub fn slv_cmda(&mut self) -> SLV_CMDA_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_cmda(&mut self) -> SLV_CMDA_W<'_, DMA_INT_RAW_SPEC> {
         SLV_CMDA_W::new(self, 15)
     }
 }

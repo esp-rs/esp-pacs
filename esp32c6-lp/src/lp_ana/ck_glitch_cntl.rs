@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn ck_glitch_reset_ena(&mut self) -> CK_GLITCH_RESET_ENA_W<CK_GLITCH_CNTL_SPEC> {
+    pub fn ck_glitch_reset_ena(&mut self) -> CK_GLITCH_RESET_ENA_W<'_, CK_GLITCH_CNTL_SPEC> {
         CK_GLITCH_RESET_ENA_W::new(self, 31)
     }
 }

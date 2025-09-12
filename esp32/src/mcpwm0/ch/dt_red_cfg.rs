@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn red(&mut self) -> RED_W<DT_RED_CFG_SPEC> {
+    pub fn red(&mut self) -> RED_W<'_, DT_RED_CFG_SPEC> {
         RED_W::new(self, 0)
     }
 }

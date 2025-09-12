@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1: normally ouput sda data 0: exchange the function of sda_o and sda_oe (sda_o is the original internal output sda signal sda_oe is the enable bit for the internal output sda signal)"]
     #[inline(always)]
-    pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<CTR_SPEC> {
+    pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<'_, CTR_SPEC> {
         SDA_FORCE_OUT_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: normally ouput scl clock 0: exchange the function of scl_o and scl_oe (scl_o is the original internal output scl signal scl_oe is the enable bit for the internal output scl signal)"]
     #[inline(always)]
-    pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<CTR_SPEC> {
+    pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<'_, CTR_SPEC> {
         SCL_FORCE_OUT_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to sample data in SCL low level. clear this bit to sample data in SCL high level."]
     #[inline(always)]
-    pub fn sample_scl_level(&mut self) -> SAMPLE_SCL_LEVEL_W<CTR_SPEC> {
+    pub fn sample_scl_level(&mut self) -> SAMPLE_SCL_LEVEL_W<'_, CTR_SPEC> {
         SAMPLE_SCL_LEVEL_W::new(self, 2)
     }
     #[doc = "Bit 4 - Set this bit to configure the module as i2c master clear this bit to configure the module as i2c slave."]
     #[inline(always)]
-    pub fn ms_mode(&mut self) -> MS_MODE_W<CTR_SPEC> {
+    pub fn ms_mode(&mut self) -> MS_MODE_W<'_, CTR_SPEC> {
         MS_MODE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to start sending data in txfifo."]
     #[inline(always)]
-    pub fn trans_start(&mut self) -> TRANS_START_W<CTR_SPEC> {
+    pub fn trans_start(&mut self) -> TRANS_START_W<'_, CTR_SPEC> {
         TRANS_START_W::new(self, 5)
     }
     #[doc = "Bit 6 - This bit is used to control the sending mode for data need to be send. 1: receive data from most significant bit 0: receive data from least significant bit"]
     #[inline(always)]
-    pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<CTR_SPEC> {
+    pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<'_, CTR_SPEC> {
         TX_LSB_FIRST_W::new(self, 6)
     }
     #[doc = "Bit 7 - This bit is used to control the storage mode for received datas. 1: receive data from most significant bit 0: receive data from least significant bit"]
     #[inline(always)]
-    pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<CTR_SPEC> {
+    pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<'_, CTR_SPEC> {
         RX_LSB_FIRST_W::new(self, 7)
     }
     #[doc = "Bit 8 - This is the clock gating control bit for reading or writing registers."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CTR_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CTR_SPEC> {
         CLK_EN_W::new(self, 8)
     }
 }

@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<ENABLE_W1TC_SPEC> {
 impl W {
     #[doc = "Bits 14:31 - GPIO0~17 output enable write 1 to clear"]
     #[inline(always)]
-    pub fn enable_w1tc(&mut self) -> ENABLE_W1TC_W<ENABLE_W1TC_SPEC> {
+    pub fn enable_w1tc(&mut self) -> ENABLE_W1TC_W<'_, ENABLE_W1TC_SPEC> {
         ENABLE_W1TC_W::new(self, 14)
     }
 }

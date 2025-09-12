@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The raw bit of the interrupt of one of counters overflow that occurs in L1-ICache0 due to bus0 accesses L1-ICache0."]
     #[inline(always)]
-    pub fn ibus0_ovf_int_raw(&mut self) -> IBUS0_OVF_INT_RAW_W<CACHE_ACS_CNT_INT_RAW_SPEC> {
+    pub fn ibus0_ovf_int_raw(&mut self) -> IBUS0_OVF_INT_RAW_W<'_, CACHE_ACS_CNT_INT_RAW_SPEC> {
         IBUS0_OVF_INT_RAW_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw bit of the interrupt of one of counters overflow that occurs in L1-ICache1 due to bus1 accesses L1-ICache1."]
     #[inline(always)]
-    pub fn ibus1_ovf_int_raw(&mut self) -> IBUS1_OVF_INT_RAW_W<CACHE_ACS_CNT_INT_RAW_SPEC> {
+    pub fn ibus1_ovf_int_raw(&mut self) -> IBUS1_OVF_INT_RAW_W<'_, CACHE_ACS_CNT_INT_RAW_SPEC> {
         IBUS1_OVF_INT_RAW_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw bit of the interrupt of one of counters overflow that occurs in L1-ICache2 due to bus2 accesses L1-ICache2."]
     #[inline(always)]
-    pub fn ibus2_ovf_int_raw(&mut self) -> IBUS2_OVF_INT_RAW_W<CACHE_ACS_CNT_INT_RAW_SPEC> {
+    pub fn ibus2_ovf_int_raw(&mut self) -> IBUS2_OVF_INT_RAW_W<'_, CACHE_ACS_CNT_INT_RAW_SPEC> {
         IBUS2_OVF_INT_RAW_W::new(self, 2)
     }
     #[doc = "Bit 3 - The raw bit of the interrupt of one of counters overflow that occurs in L1-ICache3 due to bus3 accesses L1-ICache3."]
     #[inline(always)]
-    pub fn ibus3_ovf_int_raw(&mut self) -> IBUS3_OVF_INT_RAW_W<CACHE_ACS_CNT_INT_RAW_SPEC> {
+    pub fn ibus3_ovf_int_raw(&mut self) -> IBUS3_OVF_INT_RAW_W<'_, CACHE_ACS_CNT_INT_RAW_SPEC> {
         IBUS3_OVF_INT_RAW_W::new(self, 3)
     }
     #[doc = "Bit 4 - The raw bit of the interrupt of one of counters overflow that occurs in L1-DCache due to bus0 accesses L1-DCache."]
     #[inline(always)]
-    pub fn bus0_ovf_int_raw(&mut self) -> BUS0_OVF_INT_RAW_W<CACHE_ACS_CNT_INT_RAW_SPEC> {
+    pub fn bus0_ovf_int_raw(&mut self) -> BUS0_OVF_INT_RAW_W<'_, CACHE_ACS_CNT_INT_RAW_SPEC> {
         BUS0_OVF_INT_RAW_W::new(self, 4)
     }
     #[doc = "Bit 5 - The raw bit of the interrupt of one of counters overflow that occurs in L1-DCache due to bus1 accesses L1-DCache."]
     #[inline(always)]
-    pub fn bus1_ovf_int_raw(&mut self) -> BUS1_OVF_INT_RAW_W<CACHE_ACS_CNT_INT_RAW_SPEC> {
+    pub fn bus1_ovf_int_raw(&mut self) -> BUS1_OVF_INT_RAW_W<'_, CACHE_ACS_CNT_INT_RAW_SPEC> {
         BUS1_OVF_INT_RAW_W::new(self, 5)
     }
     #[doc = "Bit 6 - The raw bit of the interrupt of one of counters overflow that occurs in L1-DCache due to bus2 accesses L1-DCache."]
     #[inline(always)]
-    pub fn dbus2_ovf_int_raw(&mut self) -> DBUS2_OVF_INT_RAW_W<CACHE_ACS_CNT_INT_RAW_SPEC> {
+    pub fn dbus2_ovf_int_raw(&mut self) -> DBUS2_OVF_INT_RAW_W<'_, CACHE_ACS_CNT_INT_RAW_SPEC> {
         DBUS2_OVF_INT_RAW_W::new(self, 6)
     }
     #[doc = "Bit 7 - The raw bit of the interrupt of one of counters overflow that occurs in L1-DCache due to bus3 accesses L1-DCache."]
     #[inline(always)]
-    pub fn dbus3_ovf_int_raw(&mut self) -> DBUS3_OVF_INT_RAW_W<CACHE_ACS_CNT_INT_RAW_SPEC> {
+    pub fn dbus3_ovf_int_raw(&mut self) -> DBUS3_OVF_INT_RAW_W<'_, CACHE_ACS_CNT_INT_RAW_SPEC> {
         DBUS3_OVF_INT_RAW_W::new(self, 7)
     }
 }

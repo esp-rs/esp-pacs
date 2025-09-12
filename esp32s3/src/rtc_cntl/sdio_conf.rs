@@ -172,77 +172,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - timer count to apply reg_sdio_dcap after sdio power on"]
     #[inline(always)]
-    pub fn sdio_timer_target(&mut self) -> SDIO_TIMER_TARGET_W<SDIO_CONF_SPEC> {
+    pub fn sdio_timer_target(&mut self) -> SDIO_TIMER_TARGET_W<'_, SDIO_CONF_SPEC> {
         SDIO_TIMER_TARGET_W::new(self, 0)
     }
     #[doc = "Bits 9:10 - Tieh = 1 mode drive ability. Initially set to 0 to limit charge current, set to 3 after several us."]
     #[inline(always)]
-    pub fn sdio_dthdrv(&mut self) -> SDIO_DTHDRV_W<SDIO_CONF_SPEC> {
+    pub fn sdio_dthdrv(&mut self) -> SDIO_DTHDRV_W<'_, SDIO_CONF_SPEC> {
         SDIO_DTHDRV_W::new(self, 9)
     }
     #[doc = "Bits 11:12 - ability to prevent LDO from overshoot"]
     #[inline(always)]
-    pub fn sdio_dcap(&mut self) -> SDIO_DCAP_W<SDIO_CONF_SPEC> {
+    pub fn sdio_dcap(&mut self) -> SDIO_DCAP_W<'_, SDIO_CONF_SPEC> {
         SDIO_DCAP_W::new(self, 11)
     }
     #[doc = "Bits 13:14 - add resistor from ldo output to ground. 0: no res, 1: 6k,2:4k,3:2k"]
     #[inline(always)]
-    pub fn sdio_initi(&mut self) -> SDIO_INITI_W<SDIO_CONF_SPEC> {
+    pub fn sdio_initi(&mut self) -> SDIO_INITI_W<'_, SDIO_CONF_SPEC> {
         SDIO_INITI_W::new(self, 13)
     }
     #[doc = "Bit 15 - 0 to set init\\[1:0\\]=0"]
     #[inline(always)]
-    pub fn sdio_en_initi(&mut self) -> SDIO_EN_INITI_W<SDIO_CONF_SPEC> {
+    pub fn sdio_en_initi(&mut self) -> SDIO_EN_INITI_W<'_, SDIO_CONF_SPEC> {
         SDIO_EN_INITI_W::new(self, 15)
     }
     #[doc = "Bits 16:18 - tune current limit threshold when tieh = 0. About 800mA/(8+d)"]
     #[inline(always)]
-    pub fn sdio_dcurlim(&mut self) -> SDIO_DCURLIM_W<SDIO_CONF_SPEC> {
+    pub fn sdio_dcurlim(&mut self) -> SDIO_DCURLIM_W<'_, SDIO_CONF_SPEC> {
         SDIO_DCURLIM_W::new(self, 16)
     }
     #[doc = "Bit 19 - select current limit mode"]
     #[inline(always)]
-    pub fn sdio_modecurlim(&mut self) -> SDIO_MODECURLIM_W<SDIO_CONF_SPEC> {
+    pub fn sdio_modecurlim(&mut self) -> SDIO_MODECURLIM_W<'_, SDIO_CONF_SPEC> {
         SDIO_MODECURLIM_W::new(self, 19)
     }
     #[doc = "Bit 20 - enable current limit"]
     #[inline(always)]
-    pub fn sdio_encurlim(&mut self) -> SDIO_ENCURLIM_W<SDIO_CONF_SPEC> {
+    pub fn sdio_encurlim(&mut self) -> SDIO_ENCURLIM_W<'_, SDIO_CONF_SPEC> {
         SDIO_ENCURLIM_W::new(self, 20)
     }
     #[doc = "Bit 21 - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
     #[inline(always)]
-    pub fn sdio_reg_pd_en(&mut self) -> SDIO_REG_PD_EN_W<SDIO_CONF_SPEC> {
+    pub fn sdio_reg_pd_en(&mut self) -> SDIO_REG_PD_EN_W<'_, SDIO_CONF_SPEC> {
         SDIO_REG_PD_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - 1: use SW option to control SDIO_REG, 0: use state machine"]
     #[inline(always)]
-    pub fn sdio_force(&mut self) -> SDIO_FORCE_W<SDIO_CONF_SPEC> {
+    pub fn sdio_force(&mut self) -> SDIO_FORCE_W<'_, SDIO_CONF_SPEC> {
         SDIO_FORCE_W::new(self, 22)
     }
     #[doc = "Bit 23 - SW option for SDIO_TIEH. Only active when reg_sdio_force = 1"]
     #[inline(always)]
-    pub fn sdio_tieh(&mut self) -> SDIO_TIEH_W<SDIO_CONF_SPEC> {
+    pub fn sdio_tieh(&mut self) -> SDIO_TIEH_W<'_, SDIO_CONF_SPEC> {
         SDIO_TIEH_W::new(self, 23)
     }
     #[doc = "Bits 25:26 - SW option for DREFL_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
-    pub fn drefl_sdio(&mut self) -> DREFL_SDIO_W<SDIO_CONF_SPEC> {
+    pub fn drefl_sdio(&mut self) -> DREFL_SDIO_W<'_, SDIO_CONF_SPEC> {
         DREFL_SDIO_W::new(self, 25)
     }
     #[doc = "Bits 27:28 - SW option for DREFM_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
-    pub fn drefm_sdio(&mut self) -> DREFM_SDIO_W<SDIO_CONF_SPEC> {
+    pub fn drefm_sdio(&mut self) -> DREFM_SDIO_W<'_, SDIO_CONF_SPEC> {
         DREFM_SDIO_W::new(self, 27)
     }
     #[doc = "Bits 29:30 - SW option for DREFH_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
-    pub fn drefh_sdio(&mut self) -> DREFH_SDIO_W<SDIO_CONF_SPEC> {
+    pub fn drefh_sdio(&mut self) -> DREFH_SDIO_W<'_, SDIO_CONF_SPEC> {
         DREFH_SDIO_W::new(self, 29)
     }
     #[doc = "Bit 31 - power on flash regulator"]
     #[inline(always)]
-    pub fn xpd_sdio(&mut self) -> XPD_SDIO_W<SDIO_CONF_SPEC> {
+    pub fn xpd_sdio(&mut self) -> XPD_SDIO_W<'_, SDIO_CONF_SPEC> {
         XPD_SDIO_W::new(self, 31)
     }
 }

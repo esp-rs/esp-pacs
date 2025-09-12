@@ -35,7 +35,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn reg_l2_mem_rdn_eco_en(&mut self) -> REG_L2_MEM_RDN_ECO_EN_W<L2_MEM_RDN_ECO_CS_SPEC> {
+    pub fn reg_l2_mem_rdn_eco_en(&mut self) -> REG_L2_MEM_RDN_ECO_EN_W<'_, L2_MEM_RDN_ECO_CS_SPEC> {
         REG_L2_MEM_RDN_ECO_EN_W::new(self, 0)
     }
 }

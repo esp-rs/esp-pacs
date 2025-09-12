@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn rx_arb_weigh_opt_dir_ch(
         &mut self,
-    ) -> RX_ARB_WEIGH_OPT_DIR_CH_W<RX_ARB_WEIGH_OPT_DIR_CH_SPEC> {
+    ) -> RX_ARB_WEIGH_OPT_DIR_CH_W<'_, RX_ARB_WEIGH_OPT_DIR_CH_SPEC> {
         RX_ARB_WEIGH_OPT_DIR_CH_W::new(self, 0)
     }
 }

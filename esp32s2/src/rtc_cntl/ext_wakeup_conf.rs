@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 29 - Set this bit to enable the GPIO wakeup event filter."]
     #[inline(always)]
-    pub fn gpio_wakeup_filter(&mut self) -> GPIO_WAKEUP_FILTER_W<EXT_WAKEUP_CONF_SPEC> {
+    pub fn gpio_wakeup_filter(&mut self) -> GPIO_WAKEUP_FILTER_W<'_, EXT_WAKEUP_CONF_SPEC> {
         GPIO_WAKEUP_FILTER_W::new(self, 29)
     }
     #[doc = "Bit 30 - 0: external wakeup 0 at low level 1: external wakeup 0 at high level"]
     #[inline(always)]
-    pub fn ext_wakeup0_lv(&mut self) -> EXT_WAKEUP0_LV_W<EXT_WAKEUP_CONF_SPEC> {
+    pub fn ext_wakeup0_lv(&mut self) -> EXT_WAKEUP0_LV_W<'_, EXT_WAKEUP_CONF_SPEC> {
         EXT_WAKEUP0_LV_W::new(self, 30)
     }
     #[doc = "Bit 31 - 0: external wakeup 1 at low level 1: external wakeup 1 at high level"]
     #[inline(always)]
-    pub fn ext_wakeup1_lv(&mut self) -> EXT_WAKEUP1_LV_W<EXT_WAKEUP_CONF_SPEC> {
+    pub fn ext_wakeup1_lv(&mut self) -> EXT_WAKEUP1_LV_W<'_, EXT_WAKEUP_CONF_SPEC> {
         EXT_WAKEUP1_LV_W::new(self, 31)
     }
 }

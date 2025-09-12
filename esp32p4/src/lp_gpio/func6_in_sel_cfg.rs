@@ -49,17 +49,17 @@ impl W {
     #[inline(always)]
     pub fn reg_gpio_func6_in_inv_sel(
         &mut self,
-    ) -> REG_GPIO_FUNC6_IN_INV_SEL_W<FUNC6_IN_SEL_CFG_SPEC> {
+    ) -> REG_GPIO_FUNC6_IN_INV_SEL_W<'_, FUNC6_IN_SEL_CFG_SPEC> {
         REG_GPIO_FUNC6_IN_INV_SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpio_sig6_in_sel(&mut self) -> REG_GPIO_SIG6_IN_SEL_W<FUNC6_IN_SEL_CFG_SPEC> {
+    pub fn reg_gpio_sig6_in_sel(&mut self) -> REG_GPIO_SIG6_IN_SEL_W<'_, FUNC6_IN_SEL_CFG_SPEC> {
         REG_GPIO_SIG6_IN_SEL_W::new(self, 1)
     }
     #[doc = "Bits 2:7 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpio_func6_in_sel(&mut self) -> REG_GPIO_FUNC6_IN_SEL_W<FUNC6_IN_SEL_CFG_SPEC> {
+    pub fn reg_gpio_func6_in_sel(&mut self) -> REG_GPIO_FUNC6_IN_SEL_W<'_, FUNC6_IN_SEL_CFG_SPEC> {
         REG_GPIO_FUNC6_IN_SEL_W::new(self, 2)
     }
 }

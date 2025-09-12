@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
-    pub fn dl0_en(&mut self) -> DL0_EN_W<RS485_CONF_SPEC> {
+    pub fn dl0_en(&mut self) -> DL0_EN_W<'_, RS485_CONF_SPEC> {
         DL0_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
-    pub fn dl1_en(&mut self) -> DL1_EN_W<RS485_CONF_SPEC> {
+    pub fn dl1_en(&mut self) -> DL1_EN_W<'_, RS485_CONF_SPEC> {
         DL1_EN_W::new(self, 2)
     }
 }

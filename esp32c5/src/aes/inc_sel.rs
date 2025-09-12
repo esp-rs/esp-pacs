@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures the Standard Incrementing Function for CTR block operation. \\\\ 0: INC<SUB>32</SUB>\\\\ 1: INC<SUB>128</SUB>\\\\"]
     #[inline(always)]
-    pub fn inc_sel(&mut self) -> INC_SEL_W<INC_SEL_SPEC> {
+    pub fn inc_sel(&mut self) -> INC_SEL_W<'_, INC_SEL_SPEC> {
         INC_SEL_W::new(self, 0)
     }
 }

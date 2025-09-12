@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The global enable of update of all active registers in MCPWM module"]
     #[inline(always)]
-    pub fn global_up_en(&mut self) -> GLOBAL_UP_EN_W<UPDATE_CFG_SPEC> {
+    pub fn global_up_en(&mut self) -> GLOBAL_UP_EN_W<'_, UPDATE_CFG_SPEC> {
         GLOBAL_UP_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - a toggle (software invert its value) will trigger a forced update of all active registers in MCPWM module"]
     #[inline(always)]
-    pub fn global_force_up(&mut self) -> GLOBAL_FORCE_UP_W<UPDATE_CFG_SPEC> {
+    pub fn global_force_up(&mut self) -> GLOBAL_FORCE_UP_W<'_, UPDATE_CFG_SPEC> {
         GLOBAL_FORCE_UP_W::new(self, 1)
     }
     #[doc = "Bit 2 - When set and PWM_GLOBAL_UP_EN is set, update of active registers in PWM operator 0 are enabled"]
     #[inline(always)]
-    pub fn op0_up_en(&mut self) -> OP0_UP_EN_W<UPDATE_CFG_SPEC> {
+    pub fn op0_up_en(&mut self) -> OP0_UP_EN_W<'_, UPDATE_CFG_SPEC> {
         OP0_UP_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - a toggle (software invert its value) will trigger a forced update of active registers in PWM operator 0"]
     #[inline(always)]
-    pub fn op0_force_up(&mut self) -> OP0_FORCE_UP_W<UPDATE_CFG_SPEC> {
+    pub fn op0_force_up(&mut self) -> OP0_FORCE_UP_W<'_, UPDATE_CFG_SPEC> {
         OP0_FORCE_UP_W::new(self, 3)
     }
     #[doc = "Bit 4 - When set and PWM_GLOBAL_UP_EN is set, update of active registers in PWM operator 1 are enabled"]
     #[inline(always)]
-    pub fn op1_up_en(&mut self) -> OP1_UP_EN_W<UPDATE_CFG_SPEC> {
+    pub fn op1_up_en(&mut self) -> OP1_UP_EN_W<'_, UPDATE_CFG_SPEC> {
         OP1_UP_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - a toggle (software invert its value) will trigger a forced update of active registers in PWM operator 1"]
     #[inline(always)]
-    pub fn op1_force_up(&mut self) -> OP1_FORCE_UP_W<UPDATE_CFG_SPEC> {
+    pub fn op1_force_up(&mut self) -> OP1_FORCE_UP_W<'_, UPDATE_CFG_SPEC> {
         OP1_FORCE_UP_W::new(self, 5)
     }
     #[doc = "Bit 6 - When set and PWM_GLOBAL_UP_EN is set, update of active registers in PWM operator 2 are enabled"]
     #[inline(always)]
-    pub fn op2_up_en(&mut self) -> OP2_UP_EN_W<UPDATE_CFG_SPEC> {
+    pub fn op2_up_en(&mut self) -> OP2_UP_EN_W<'_, UPDATE_CFG_SPEC> {
         OP2_UP_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - a toggle (software invert its value) will trigger a forced update of active registers in PWM operator 2"]
     #[inline(always)]
-    pub fn op2_force_up(&mut self) -> OP2_FORCE_UP_W<UPDATE_CFG_SPEC> {
+    pub fn op2_force_up(&mut self) -> OP2_FORCE_UP_W<'_, UPDATE_CFG_SPEC> {
         OP2_FORCE_UP_W::new(self, 7)
     }
 }

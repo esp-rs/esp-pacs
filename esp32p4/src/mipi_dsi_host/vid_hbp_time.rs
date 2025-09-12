@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - NA"]
     #[inline(always)]
-    pub fn vid_hbp_time(&mut self) -> VID_HBP_TIME_W<VID_HBP_TIME_SPEC> {
+    pub fn vid_hbp_time(&mut self) -> VID_HBP_TIME_W<'_, VID_HBP_TIME_SPEC> {
         VID_HBP_TIME_W::new(self, 0)
     }
 }

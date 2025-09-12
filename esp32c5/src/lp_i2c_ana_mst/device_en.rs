@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - need_des"]
     #[inline(always)]
-    pub fn i2c_device_en(&mut self) -> I2C_DEVICE_EN_W<DEVICE_EN_SPEC> {
+    pub fn i2c_device_en(&mut self) -> I2C_DEVICE_EN_W<'_, DEVICE_EN_SPEC> {
         I2C_DEVICE_EN_W::new(self, 0)
     }
 }

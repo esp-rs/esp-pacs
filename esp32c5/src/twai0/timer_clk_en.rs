@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to force enable TWAIFD register configuration clock signal."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<TIMER_CLK_EN_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, TIMER_CLK_EN_SPEC> {
         CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to force enable TWAIFD RX buffer ram clock signal."]
     #[inline(always)]
-    pub fn force_rxbuf_mem_clk_on(&mut self) -> FORCE_RXBUF_MEM_CLK_ON_W<TIMER_CLK_EN_SPEC> {
+    pub fn force_rxbuf_mem_clk_on(&mut self) -> FORCE_RXBUF_MEM_CLK_ON_W<'_, TIMER_CLK_EN_SPEC> {
         FORCE_RXBUF_MEM_CLK_ON_W::new(self, 1)
     }
 }

@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<CONTINUE_SPEC> {
 impl W {
     #[doc = "Bits 1:31 - Write 1 to continue Typical SHA calculation."]
     #[inline(always)]
-    pub fn continue_(&mut self) -> CONTINUE_W<CONTINUE_SPEC> {
+    pub fn continue_(&mut self) -> CONTINUE_W<'_, CONTINUE_SPEC> {
         CONTINUE_W::new(self, 1)
     }
 }

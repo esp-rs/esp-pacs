@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Configures the divider factor for the 32 kHz crystal oscillator."]
     #[inline(always)]
-    pub fn xtal32k_clk_factor(&mut self) -> XTAL32K_CLK_FACTOR_W<XTAL32K_CLK_FACTOR_SPEC> {
+    pub fn xtal32k_clk_factor(&mut self) -> XTAL32K_CLK_FACTOR_W<'_, XTAL32K_CLK_FACTOR_SPEC> {
         XTAL32K_CLK_FACTOR_W::new(self, 0)
     }
 }

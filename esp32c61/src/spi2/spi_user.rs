@@ -220,97 +220,97 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable full-duplex communication. \\\\ 0: Disable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_doutdin(&mut self) -> SPI_DOUTDIN_W<SPI_USER_SPEC> {
+    pub fn spi_doutdin(&mut self) -> SPI_DOUTDIN_W<'_, SPI_USER_SPEC> {
         SPI_DOUTDIN_W::new(self, 0)
     }
     #[doc = "Bit 3 - Configures whether or not to enable QPI mode. \\\\ 0: Disable \\\\ 1: Enable \\\\ This configuration is applicable when the SPI controller works as master or slave. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_qpi_mode(&mut self) -> SPI_QPI_MODE_W<SPI_USER_SPEC> {
+    pub fn spi_qpi_mode(&mut self) -> SPI_QPI_MODE_W<'_, SPI_USER_SPEC> {
         SPI_QPI_MODE_W::new(self, 3)
     }
     #[doc = "Bit 5 - Configures whether or not to change the polarity of TSCK in slave transfer. \\\\ 0: TSCK = SPI_CK_I \\\\ 1: TSCK = !SPI_CK_I \\\\"]
     #[inline(always)]
-    pub fn spi_tsck_i_edge(&mut self) -> SPI_TSCK_I_EDGE_W<SPI_USER_SPEC> {
+    pub fn spi_tsck_i_edge(&mut self) -> SPI_TSCK_I_EDGE_W<'_, SPI_USER_SPEC> {
         SPI_TSCK_I_EDGE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or not to keep SPI CS low when SPI is in DONE state. \\\\ 0: Not keep low \\\\ 1: Keep low \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_cs_hold(&mut self) -> SPI_CS_HOLD_W<SPI_USER_SPEC> {
+    pub fn spi_cs_hold(&mut self) -> SPI_CS_HOLD_W<'_, SPI_USER_SPEC> {
         SPI_CS_HOLD_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures whether or not to enable SPI CS when SPI is in prepare (PREP) state. \\\\ 0: Disable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_cs_setup(&mut self) -> SPI_CS_SETUP_W<SPI_USER_SPEC> {
+    pub fn spi_cs_setup(&mut self) -> SPI_CS_SETUP_W<'_, SPI_USER_SPEC> {
         SPI_CS_SETUP_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether or not to change the polarity of RSCK in slave transfer. \\\\ 0: RSCK = !SPI_CK_I \\\\ 1: RSCK = SPI_CK_I \\\\"]
     #[inline(always)]
-    pub fn spi_rsck_i_edge(&mut self) -> SPI_RSCK_I_EDGE_W<SPI_USER_SPEC> {
+    pub fn spi_rsck_i_edge(&mut self) -> SPI_RSCK_I_EDGE_W<'_, SPI_USER_SPEC> {
         SPI_RSCK_I_EDGE_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures SPI clock mode together with SPI_CK_IDLE_EDGE. Can be configured in CONF state. For more information, see Section <a href='GP-SPI2 master clock control'>link</a>."]
     #[inline(always)]
-    pub fn spi_ck_out_edge(&mut self) -> SPI_CK_OUT_EDGE_W<SPI_USER_SPEC> {
+    pub fn spi_ck_out_edge(&mut self) -> SPI_CK_OUT_EDGE_W<'_, SPI_USER_SPEC> {
         SPI_CK_OUT_EDGE_W::new(self, 9)
     }
     #[doc = "Bit 12 - Configures whether or not to enable the 2-bit mode of read-data phase in write operations.\\\\ 0: Not enable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_fwrite_dual(&mut self) -> SPI_FWRITE_DUAL_W<SPI_USER_SPEC> {
+    pub fn spi_fwrite_dual(&mut self) -> SPI_FWRITE_DUAL_W<'_, SPI_USER_SPEC> {
         SPI_FWRITE_DUAL_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures whether or not to enable the 4-bit mode of read-data phase in write operations. \\\\ 0: Not enable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_fwrite_quad(&mut self) -> SPI_FWRITE_QUAD_W<SPI_USER_SPEC> {
+    pub fn spi_fwrite_quad(&mut self) -> SPI_FWRITE_QUAD_W<'_, SPI_USER_SPEC> {
         SPI_FWRITE_QUAD_W::new(self, 13)
     }
     #[doc = "Bit 15 - Configures whether or not to enable the CONF state for the next transaction (segment) in a configurable segmented transfer. \\\\ 0: this transfer will end after the current transaction (segment) is finished. Or this is not a configurable segmented transfer. \\\\ 1: this configurable segmented transfer will continue its next transaction (segment). \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_usr_conf_nxt(&mut self) -> SPI_USR_CONF_NXT_W<SPI_USER_SPEC> {
+    pub fn spi_usr_conf_nxt(&mut self) -> SPI_USR_CONF_NXT_W<'_, SPI_USER_SPEC> {
         SPI_USR_CONF_NXT_W::new(self, 15)
     }
     #[doc = "Bit 17 - Configures whether or not to enable 3-line half-duplex communication, where MOSI and MISO signals share the same pin.\\\\ 0: Disable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_sio(&mut self) -> SPI_SIO_W<SPI_USER_SPEC> {
+    pub fn spi_sio(&mut self) -> SPI_SIO_W<'_, SPI_USER_SPEC> {
         SPI_SIO_W::new(self, 17)
     }
     #[doc = "Bit 24 - Configures whether or not to enable high part mode, i.e., only access to high part of the buffers: SPI_W8_REG ~ SPI_W15_REG in read-data phase. \\\\ 0: Disable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_usr_miso_highpart(&mut self) -> SPI_USR_MISO_HIGHPART_W<SPI_USER_SPEC> {
+    pub fn spi_usr_miso_highpart(&mut self) -> SPI_USR_MISO_HIGHPART_W<'_, SPI_USER_SPEC> {
         SPI_USR_MISO_HIGHPART_W::new(self, 24)
     }
     #[doc = "Bit 25 - Configures whether or not to enable high part mode, i.e., only access to high part of the buffers: SPI_W8_REG ~ SPI_W15_REG in write-data phase. \\\\ 0: Disable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_usr_mosi_highpart(&mut self) -> SPI_USR_MOSI_HIGHPART_W<SPI_USER_SPEC> {
+    pub fn spi_usr_mosi_highpart(&mut self) -> SPI_USR_MOSI_HIGHPART_W<'_, SPI_USER_SPEC> {
         SPI_USR_MOSI_HIGHPART_W::new(self, 25)
     }
     #[doc = "Bit 26 - Configures whether or not to disable SPI clock in DUMMY state. \\\\ 0: Not disable \\\\ 1: Disable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_usr_dummy_idle(&mut self) -> SPI_USR_DUMMY_IDLE_W<SPI_USER_SPEC> {
+    pub fn spi_usr_dummy_idle(&mut self) -> SPI_USR_DUMMY_IDLE_W<'_, SPI_USER_SPEC> {
         SPI_USR_DUMMY_IDLE_W::new(self, 26)
     }
     #[doc = "Bit 27 - Configures whether or not to enable the write-data (DOUT) state of an operation. \\\\ 0: Disable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_usr_mosi(&mut self) -> SPI_USR_MOSI_W<SPI_USER_SPEC> {
+    pub fn spi_usr_mosi(&mut self) -> SPI_USR_MOSI_W<'_, SPI_USER_SPEC> {
         SPI_USR_MOSI_W::new(self, 27)
     }
     #[doc = "Bit 28 - Configures whether or not to enable the read-data (DIN) state of an operation. \\\\ 0: Disable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_usr_miso(&mut self) -> SPI_USR_MISO_W<SPI_USER_SPEC> {
+    pub fn spi_usr_miso(&mut self) -> SPI_USR_MISO_W<'_, SPI_USER_SPEC> {
         SPI_USR_MISO_W::new(self, 28)
     }
     #[doc = "Bit 29 - Configures whether or not to enable the DUMMY state of an operation. \\\\ 0: Disable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_usr_dummy(&mut self) -> SPI_USR_DUMMY_W<SPI_USER_SPEC> {
+    pub fn spi_usr_dummy(&mut self) -> SPI_USR_DUMMY_W<'_, SPI_USER_SPEC> {
         SPI_USR_DUMMY_W::new(self, 29)
     }
     #[doc = "Bit 30 - Configures whether or not to enable the address (ADDR) state of an operation. \\\\ 0: Disable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_usr_addr(&mut self) -> SPI_USR_ADDR_W<SPI_USER_SPEC> {
+    pub fn spi_usr_addr(&mut self) -> SPI_USR_ADDR_W<'_, SPI_USER_SPEC> {
         SPI_USR_ADDR_W::new(self, 30)
     }
     #[doc = "Bit 31 - Configures whether or not to enable the command (CMD) state of an operation. \\\\ 0: Disable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_usr_command(&mut self) -> SPI_USR_COMMAND_W<SPI_USER_SPEC> {
+    pub fn spi_usr_command(&mut self) -> SPI_USR_COMMAND_W<'_, SPI_USER_SPEC> {
         SPI_USR_COMMAND_W::new(self, 31)
     }
 }

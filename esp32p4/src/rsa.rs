@@ -69,7 +69,7 @@ impl RegisterBlock {
     pub fn x_mem_iter(&self) -> impl Iterator<Item = &X_MEM> {
         self.x_mem.iter()
     }
-    #[doc = "0x800 - Represents M’"]
+    #[doc = "0x800 - Represents M'"]
     #[inline(always)]
     pub const fn m_prime(&self) -> &M_PRIME {
         &self.m_prime
@@ -79,7 +79,7 @@ impl RegisterBlock {
     pub const fn mode(&self) -> &MODE {
         &self.mode
     }
-    #[doc = "0x808 - RSA clean register"]
+    #[doc = "0x808 - RSA initialization status"]
     #[inline(always)]
     pub const fn query_clean(&self) -> &QUERY_CLEAN {
         &self.query_clean
@@ -151,17 +151,17 @@ pub mod y_mem;
 pub type X_MEM = crate::Reg<x_mem::X_MEM_SPEC>;
 #[doc = "Represents X"]
 pub mod x_mem;
-#[doc = "M_PRIME (rw) register accessor: Represents M’\n\nYou can [`read`](crate::Reg::read) this register and get [`m_prime::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m_prime::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m_prime`] module"]
+#[doc = "M_PRIME (rw) register accessor: Represents M'\n\nYou can [`read`](crate::Reg::read) this register and get [`m_prime::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m_prime::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m_prime`] module"]
 pub type M_PRIME = crate::Reg<m_prime::M_PRIME_SPEC>;
-#[doc = "Represents M’"]
+#[doc = "Represents M'"]
 pub mod m_prime;
 #[doc = "MODE (rw) register accessor: Configures RSA length\n\nYou can [`read`](crate::Reg::read) this register and get [`mode::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mode::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mode`] module"]
 pub type MODE = crate::Reg<mode::MODE_SPEC>;
 #[doc = "Configures RSA length"]
 pub mod mode;
-#[doc = "QUERY_CLEAN (r) register accessor: RSA clean register\n\nYou can [`read`](crate::Reg::read) this register and get [`query_clean::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@query_clean`] module"]
+#[doc = "QUERY_CLEAN (r) register accessor: RSA initialization status\n\nYou can [`read`](crate::Reg::read) this register and get [`query_clean::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@query_clean`] module"]
 pub type QUERY_CLEAN = crate::Reg<query_clean::QUERY_CLEAN_SPEC>;
-#[doc = "RSA clean register"]
+#[doc = "RSA initialization status"]
 pub mod query_clean;
 #[doc = "SET_START_MODEXP (w) register accessor: Starts modular exponentiation\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_start_modexp::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@set_start_modexp`] module"]
 pub type SET_START_MODEXP = crate::Reg<set_start_modexp::SET_START_MODEXP_SPEC>;

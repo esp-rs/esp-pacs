@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn l2_cache_ald_buf_clr(
         &mut self,
-    ) -> L2_CACHE_ALD_BUF_CLR_W<L2_CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC> {
+    ) -> L2_CACHE_ALD_BUF_CLR_W<'_, L2_CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC> {
         L2_CACHE_ALD_BUF_CLR_W::new(self, 5)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - this field is used to read current world of Dram0 bus and PIF bus"]
     #[inline(always)]
-    pub fn world_dram0_pif(&mut self) -> WORLD_DRAM0_PIF_W<WORLD_DRAM0_PIF_SPEC> {
+    pub fn world_dram0_pif(&mut self) -> WORLD_DRAM0_PIF_W<'_, WORLD_DRAM0_PIF_SPEC> {
         WORLD_DRAM0_PIF_W::new(self, 0)
     }
 }

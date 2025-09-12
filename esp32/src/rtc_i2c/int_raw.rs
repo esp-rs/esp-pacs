@@ -62,22 +62,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - Slave accepted 1 byte and address matched"]
     #[inline(always)]
-    pub fn slave_trans_complete(&mut self) -> SLAVE_TRANS_COMPLETE_W<INT_RAW_SPEC> {
+    pub fn slave_trans_complete(&mut self) -> SLAVE_TRANS_COMPLETE_W<'_, INT_RAW_SPEC> {
         SLAVE_TRANS_COMPLETE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Master lost arbitration"]
     #[inline(always)]
-    pub fn arbitration_lost(&mut self) -> ARBITRATION_LOST_W<INT_RAW_SPEC> {
+    pub fn arbitration_lost(&mut self) -> ARBITRATION_LOST_W<'_, INT_RAW_SPEC> {
         ARBITRATION_LOST_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn master_trans_complete(&mut self) -> MASTER_TRANS_COMPLETE_W<INT_RAW_SPEC> {
+    pub fn master_trans_complete(&mut self) -> MASTER_TRANS_COMPLETE_W<'_, INT_RAW_SPEC> {
         MASTER_TRANS_COMPLETE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Stop condition has been detected interrupt raw status"]
     #[inline(always)]
-    pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W<INT_RAW_SPEC> {
+    pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W<'_, INT_RAW_SPEC> {
         TRANS_COMPLETE_W::new(self, 6)
     }
 }

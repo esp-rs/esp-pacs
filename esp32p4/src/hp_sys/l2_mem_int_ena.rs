@@ -55,21 +55,21 @@ impl W {
     #[inline(always)]
     pub fn reg_l2_mem_ecc_err_int_ena(
         &mut self,
-    ) -> REG_L2_MEM_ECC_ERR_INT_ENA_W<L2_MEM_INT_ENA_SPEC> {
+    ) -> REG_L2_MEM_ECC_ERR_INT_ENA_W<'_, L2_MEM_INT_ENA_SPEC> {
         REG_L2_MEM_ECC_ERR_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
     pub fn reg_l2_mem_exceed_addr_int_ena(
         &mut self,
-    ) -> REG_L2_MEM_EXCEED_ADDR_INT_ENA_W<L2_MEM_INT_ENA_SPEC> {
+    ) -> REG_L2_MEM_EXCEED_ADDR_INT_ENA_W<'_, L2_MEM_INT_ENA_SPEC> {
         REG_L2_MEM_EXCEED_ADDR_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
     pub fn reg_l2_mem_err_resp_int_ena(
         &mut self,
-    ) -> REG_L2_MEM_ERR_RESP_INT_ENA_W<L2_MEM_INT_ENA_SPEC> {
+    ) -> REG_L2_MEM_ERR_RESP_INT_ENA_W<'_, L2_MEM_INT_ENA_SPEC> {
         REG_L2_MEM_ERR_RESP_INT_ENA_W::new(self, 2)
     }
 }

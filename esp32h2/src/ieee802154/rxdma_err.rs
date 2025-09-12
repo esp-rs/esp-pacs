@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    pub fn rxdma_err(&mut self) -> RXDMA_ERR_W<RXDMA_ERR_SPEC> {
+    pub fn rxdma_err(&mut self) -> RXDMA_ERR_W<'_, RXDMA_ERR_SPEC> {
         RXDMA_ERR_W::new(self, 0)
     }
 }

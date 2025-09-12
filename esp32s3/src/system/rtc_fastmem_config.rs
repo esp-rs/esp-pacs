@@ -52,17 +52,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 8 - Set 1 to start the CRC of RTC memory"]
     #[inline(always)]
-    pub fn rtc_mem_crc_start(&mut self) -> RTC_MEM_CRC_START_W<RTC_FASTMEM_CONFIG_SPEC> {
+    pub fn rtc_mem_crc_start(&mut self) -> RTC_MEM_CRC_START_W<'_, RTC_FASTMEM_CONFIG_SPEC> {
         RTC_MEM_CRC_START_W::new(self, 8)
     }
     #[doc = "Bits 9:19 - This field is used to set address of RTC memory for CRC."]
     #[inline(always)]
-    pub fn rtc_mem_crc_addr(&mut self) -> RTC_MEM_CRC_ADDR_W<RTC_FASTMEM_CONFIG_SPEC> {
+    pub fn rtc_mem_crc_addr(&mut self) -> RTC_MEM_CRC_ADDR_W<'_, RTC_FASTMEM_CONFIG_SPEC> {
         RTC_MEM_CRC_ADDR_W::new(self, 9)
     }
     #[doc = "Bits 20:30 - This field is used to set length of RTC memory for CRC based on start address."]
     #[inline(always)]
-    pub fn rtc_mem_crc_len(&mut self) -> RTC_MEM_CRC_LEN_W<RTC_FASTMEM_CONFIG_SPEC> {
+    pub fn rtc_mem_crc_len(&mut self) -> RTC_MEM_CRC_LEN_W<'_, RTC_FASTMEM_CONFIG_SPEC> {
         RTC_MEM_CRC_LEN_W::new(self, 20)
     }
 }

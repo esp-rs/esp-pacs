@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:63 - Configures the 64-bit machine timer compare value."]
     #[inline(always)]
-    pub fn mtimecmp(&mut self) -> MTIMECMP_W<MTIMECMP_SPEC> {
+    pub fn mtimecmp(&mut self) -> MTIMECMP_W<'_, MTIMECMP_SPEC> {
         MTIMECMP_W::new(self, 0)
     }
 }

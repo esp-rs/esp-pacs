@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn operator0_timersel(&mut self) -> OPERATOR0_TIMERSEL_W<OPERATOR_TIMERSEL_SPEC> {
+    pub fn operator0_timersel(&mut self) -> OPERATOR0_TIMERSEL_W<'_, OPERATOR_TIMERSEL_SPEC> {
         OPERATOR0_TIMERSEL_W::new(self, 0)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
-    pub fn operator1_timersel(&mut self) -> OPERATOR1_TIMERSEL_W<OPERATOR_TIMERSEL_SPEC> {
+    pub fn operator1_timersel(&mut self) -> OPERATOR1_TIMERSEL_W<'_, OPERATOR_TIMERSEL_SPEC> {
         OPERATOR1_TIMERSEL_W::new(self, 2)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
-    pub fn operator2_timersel(&mut self) -> OPERATOR2_TIMERSEL_W<OPERATOR_TIMERSEL_SPEC> {
+    pub fn operator2_timersel(&mut self) -> OPERATOR2_TIMERSEL_W<'_, OPERATOR_TIMERSEL_SPEC> {
         OPERATOR2_TIMERSEL_W::new(self, 4)
     }
 }

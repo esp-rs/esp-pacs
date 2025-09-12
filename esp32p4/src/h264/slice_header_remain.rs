@@ -34,12 +34,14 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Configures Slice Header remain bit number"]
     #[inline(always)]
-    pub fn slice_remain_bitlength(&mut self) -> SLICE_REMAIN_BITLENGTH_W<SLICE_HEADER_REMAIN_SPEC> {
+    pub fn slice_remain_bitlength(
+        &mut self,
+    ) -> SLICE_REMAIN_BITLENGTH_W<'_, SLICE_HEADER_REMAIN_SPEC> {
         SLICE_REMAIN_BITLENGTH_W::new(self, 0)
     }
     #[doc = "Bits 3:10 - Configures Slice Header remain bit"]
     #[inline(always)]
-    pub fn slice_remain_bit(&mut self) -> SLICE_REMAIN_BIT_W<SLICE_HEADER_REMAIN_SPEC> {
+    pub fn slice_remain_bit(&mut self) -> SLICE_REMAIN_BIT_W<'_, SLICE_HEADER_REMAIN_SPEC> {
         SLICE_REMAIN_BIT_W::new(self, 3)
     }
 }

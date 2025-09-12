@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - This register is used to configure the timeout for receiving a data bit in APBclock cycles."]
     #[inline(always)]
-    pub fn i2c_time_out_value(&mut self) -> I2C_TIME_OUT_VALUE_W<I2C_TO_SPEC> {
+    pub fn i2c_time_out_value(&mut self) -> I2C_TIME_OUT_VALUE_W<'_, I2C_TO_SPEC> {
         I2C_TIME_OUT_VALUE_W::new(self, 0)
     }
     #[doc = "Bit 5 - This is the enable bit for time out control."]
     #[inline(always)]
-    pub fn i2c_time_out_en(&mut self) -> I2C_TIME_OUT_EN_W<I2C_TO_SPEC> {
+    pub fn i2c_time_out_en(&mut self) -> I2C_TIME_OUT_EN_W<'_, I2C_TO_SPEC> {
         I2C_TIME_OUT_EN_W::new(self, 5)
     }
 }

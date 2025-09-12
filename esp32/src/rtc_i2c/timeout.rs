@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - Maximum number of FAST_CLK cycles that the transmission can take"]
     #[inline(always)]
-    pub fn timeout(&mut self) -> TIMEOUT_W<TIMEOUT_SPEC> {
+    pub fn timeout(&mut self) -> TIMEOUT_W<'_, TIMEOUT_SPEC> {
         TIMEOUT_W::new(self, 0)
     }
 }

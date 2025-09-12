@@ -114,27 +114,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - This register is used to specify the least significant 20 bits of the first receive descriptor’s address."]
     #[inline(always)]
-    pub fn inlink_addr(&mut self) -> INLINK_ADDR_W<IN_LINK_SPEC> {
+    pub fn inlink_addr(&mut self) -> INLINK_ADDR_W<'_, IN_LINK_SPEC> {
         INLINK_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 28 - Set this bit to stop DMA from reading receive descriptors after finishing the current data transaction."]
     #[inline(always)]
-    pub fn inlink_stop(&mut self) -> INLINK_STOP_W<IN_LINK_SPEC> {
+    pub fn inlink_stop(&mut self) -> INLINK_STOP_W<'_, IN_LINK_SPEC> {
         INLINK_STOP_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set this bit to enable DMA to read receive descriptor."]
     #[inline(always)]
-    pub fn inlink_start(&mut self) -> INLINK_START_W<IN_LINK_SPEC> {
+    pub fn inlink_start(&mut self) -> INLINK_START_W<'_, IN_LINK_SPEC> {
         INLINK_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set this bit to restart new receive descriptors."]
     #[inline(always)]
-    pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<IN_LINK_SPEC> {
+    pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<'_, IN_LINK_SPEC> {
         INLINK_RESTART_W::new(self, 30)
     }
     #[doc = "Bit 31 - 1: the receive descriptor’s FSM is in idle state. 0: the receive descriptor’s FSM is working."]
     #[inline(always)]
-    pub fn inlink_park(&mut self) -> INLINK_PARK_W<IN_LINK_SPEC> {
+    pub fn inlink_park(&mut self) -> INLINK_PARK_W<'_, IN_LINK_SPEC> {
         INLINK_PARK_W::new(self, 31)
     }
 }

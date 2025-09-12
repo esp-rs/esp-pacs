@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:30 - need_des"]
     #[inline(always)]
-    pub fn wakeup_ena(&mut self) -> WAKEUP_ENA_W<SLP_WAKEUP_CNTL2_SPEC> {
+    pub fn wakeup_ena(&mut self) -> WAKEUP_ENA_W<'_, SLP_WAKEUP_CNTL2_SPEC> {
         WAKEUP_ENA_W::new(self, 0)
     }
 }

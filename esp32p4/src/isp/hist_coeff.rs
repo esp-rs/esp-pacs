@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - this field configures coefficient of B when set hist_mode to RGB, sum of coeff_r and coeff_g and coeff_b should be 256"]
     #[inline(always)]
-    pub fn b(&mut self) -> B_W<HIST_COEFF_SPEC> {
+    pub fn b(&mut self) -> B_W<'_, HIST_COEFF_SPEC> {
         B_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - this field configures coefficient of G when set hist_mode to RGB, sum of coeff_r and coeff_g and coeff_b should be 256"]
     #[inline(always)]
-    pub fn g(&mut self) -> G_W<HIST_COEFF_SPEC> {
+    pub fn g(&mut self) -> G_W<'_, HIST_COEFF_SPEC> {
         G_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - this field configures coefficient of R when set hist_mode to RGB, sum of coeff_r and coeff_g and coeff_b should be 256"]
     #[inline(always)]
-    pub fn r(&mut self) -> R_W<HIST_COEFF_SPEC> {
+    pub fn r(&mut self) -> R_W<'_, HIST_COEFF_SPEC> {
         R_W::new(self, 16)
     }
 }

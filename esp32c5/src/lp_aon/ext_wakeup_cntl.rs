@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 14 - clear external wakeup status 1: clear 0: no operation"]
     #[inline(always)]
-    pub fn ext_wakeup_status_clr(&mut self) -> EXT_WAKEUP_STATUS_CLR_W<EXT_WAKEUP_CNTL_SPEC> {
+    pub fn ext_wakeup_status_clr(&mut self) -> EXT_WAKEUP_STATUS_CLR_W<'_, EXT_WAKEUP_CNTL_SPEC> {
         EXT_WAKEUP_STATUS_CLR_W::new(self, 14)
     }
     #[doc = "Bits 15:22 - enable io0~7 bit map use to external wakeup 1: enable 0: disable"]
     #[inline(always)]
-    pub fn ext_wakeup_sel(&mut self) -> EXT_WAKEUP_SEL_W<EXT_WAKEUP_CNTL_SPEC> {
+    pub fn ext_wakeup_sel(&mut self) -> EXT_WAKEUP_SEL_W<'_, EXT_WAKEUP_CNTL_SPEC> {
         EXT_WAKEUP_SEL_W::new(self, 15)
     }
     #[doc = "Bits 23:30 - select external wakeup io level 1: io high level wakeup 0: io low level wakeup"]
     #[inline(always)]
-    pub fn ext_wakeup_lv(&mut self) -> EXT_WAKEUP_LV_W<EXT_WAKEUP_CNTL_SPEC> {
+    pub fn ext_wakeup_lv(&mut self) -> EXT_WAKEUP_LV_W<'_, EXT_WAKEUP_CNTL_SPEC> {
         EXT_WAKEUP_LV_W::new(self, 23)
     }
     #[doc = "Bit 31 - enable external filter or not 1: enable 0: disable"]
     #[inline(always)]
-    pub fn ext_wakeup_filter(&mut self) -> EXT_WAKEUP_FILTER_W<EXT_WAKEUP_CNTL_SPEC> {
+    pub fn ext_wakeup_filter(&mut self) -> EXT_WAKEUP_FILTER_W<'_, EXT_WAKEUP_CNTL_SPEC> {
         EXT_WAKEUP_FILTER_W::new(self, 31)
     }
 }

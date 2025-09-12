@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn l1_cache_prelock_sct1_addr(
         &mut self,
-    ) -> L1_CACHE_PRELOCK_SCT1_ADDR_W<L1_DCACHE_PRELOCK_SCT1_ADDR_SPEC> {
+    ) -> L1_CACHE_PRELOCK_SCT1_ADDR_W<'_, L1_DCACHE_PRELOCK_SCT1_ADDR_SPEC> {
         L1_CACHE_PRELOCK_SCT1_ADDR_W::new(self, 0)
     }
 }

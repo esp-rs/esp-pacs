@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Configures the weight(i.e the number of tokens) of TX channel%s"]
     #[inline(always)]
-    pub fn tx_ch_arb_weigh_ch(&mut self) -> TX_CH_ARB_WEIGH_CH_W<TX_CH_ARB_WEIGH_CH_SPEC> {
+    pub fn tx_ch_arb_weigh_ch(&mut self) -> TX_CH_ARB_WEIGH_CH_W<'_, TX_CH_ARB_WEIGH_CH_SPEC> {
         TX_CH_ARB_WEIGH_CH_W::new(self, 0)
     }
 }

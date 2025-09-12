@@ -30,22 +30,24 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - Configures SLC0 token 1 value."]
     #[inline(always)]
-    pub fn sdio_slc0_token1_wdata(&mut self) -> SDIO_SLC0_TOKEN1_WDATA_W<SLC0TOKEN1_SPEC> {
+    pub fn sdio_slc0_token1_wdata(&mut self) -> SDIO_SLC0_TOKEN1_WDATA_W<'_, SLC0TOKEN1_SPEC> {
         SDIO_SLC0_TOKEN1_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 12 - Configures this bit to 1 to write SDIO_SLC0_TOKEN1_WDATA into SDIO_SLC0_TOKEN1."]
     #[inline(always)]
-    pub fn sdio_slc0_token1_wr(&mut self) -> SDIO_SLC0_TOKEN1_WR_W<SLC0TOKEN1_SPEC> {
+    pub fn sdio_slc0_token1_wr(&mut self) -> SDIO_SLC0_TOKEN1_WR_W<'_, SLC0TOKEN1_SPEC> {
         SDIO_SLC0_TOKEN1_WR_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures this bit to 1 to add 1 to SDIO_SLC0_TOKEN1."]
     #[inline(always)]
-    pub fn sdio_slc0_token1_inc(&mut self) -> SDIO_SLC0_TOKEN1_INC_W<SLC0TOKEN1_SPEC> {
+    pub fn sdio_slc0_token1_inc(&mut self) -> SDIO_SLC0_TOKEN1_INC_W<'_, SLC0TOKEN1_SPEC> {
         SDIO_SLC0_TOKEN1_INC_W::new(self, 13)
     }
     #[doc = "Bit 14 - Configures this bit to 1 to add the value of SDIO_SLC0_TOKEN1_WDATA to SDIO_SLC0_TOKEN1."]
     #[inline(always)]
-    pub fn sdio_slc0_token1_inc_more(&mut self) -> SDIO_SLC0_TOKEN1_INC_MORE_W<SLC0TOKEN1_SPEC> {
+    pub fn sdio_slc0_token1_inc_more(
+        &mut self,
+    ) -> SDIO_SLC0_TOKEN1_INC_MORE_W<'_, SLC0TOKEN1_SPEC> {
         SDIO_SLC0_TOKEN1_INC_MORE_W::new(self, 14)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 15:31 - Enables the wakeup bitmap."]
     #[inline(always)]
-    pub fn wakeup_ena(&mut self) -> WAKEUP_ENA_W<WAKEUP_STATE_SPEC> {
+    pub fn wakeup_ena(&mut self) -> WAKEUP_ENA_W<'_, WAKEUP_STATE_SPEC> {
         WAKEUP_ENA_W::new(self, 15)
     }
 }

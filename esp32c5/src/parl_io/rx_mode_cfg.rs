@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 21:24 - Configures rx external enable signal selection from IO PAD."]
     #[inline(always)]
-    pub fn rx_ext_en_sel(&mut self) -> RX_EXT_EN_SEL_W<RX_MODE_CFG_SPEC> {
+    pub fn rx_ext_en_sel(&mut self) -> RX_EXT_EN_SEL_W<'_, RX_MODE_CFG_SPEC> {
         RX_EXT_EN_SEL_W::new(self, 21)
     }
     #[doc = "Bit 25 - Write 1 to enable data sampling by software."]
     #[inline(always)]
-    pub fn rx_sw_en(&mut self) -> RX_SW_EN_W<RX_MODE_CFG_SPEC> {
+    pub fn rx_sw_en(&mut self) -> RX_SW_EN_W<'_, RX_MODE_CFG_SPEC> {
         RX_SW_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Write 1 to invert the external enable signal."]
     #[inline(always)]
-    pub fn rx_ext_en_inv(&mut self) -> RX_EXT_EN_INV_W<RX_MODE_CFG_SPEC> {
+    pub fn rx_ext_en_inv(&mut self) -> RX_EXT_EN_INV_W<'_, RX_MODE_CFG_SPEC> {
         RX_EXT_EN_INV_W::new(self, 26)
     }
     #[doc = "Bits 27:29 - Configures the rxd pulse sampling submode. 0: positive pulse start(data bit included) && positive pulse end(data bit included) 1: positive pulse start(data bit included) && positive pulse end (data bit excluded) 2: positive pulse start(data bit excluded) && positive pulse end (data bit included) 3: positive pulse start(data bit excluded) && positive pulse end (data bit excluded) 4: positive pulse start(data bit included) && length end 5: positive pulse start(data bit excluded) && length end"]
     #[inline(always)]
-    pub fn rx_pulse_submode_sel(&mut self) -> RX_PULSE_SUBMODE_SEL_W<RX_MODE_CFG_SPEC> {
+    pub fn rx_pulse_submode_sel(&mut self) -> RX_PULSE_SUBMODE_SEL_W<'_, RX_MODE_CFG_SPEC> {
         RX_PULSE_SUBMODE_SEL_W::new(self, 27)
     }
     #[doc = "Bits 30:31 - Configures the rxd sampling mode. 0: external level enable mode 1: external pulse enable mode 2: internal software enable mode"]
     #[inline(always)]
-    pub fn rx_smp_mode_sel(&mut self) -> RX_SMP_MODE_SEL_W<RX_MODE_CFG_SPEC> {
+    pub fn rx_smp_mode_sel(&mut self) -> RX_SMP_MODE_SEL_W<'_, RX_MODE_CFG_SPEC> {
         RX_SMP_MODE_SEL_W::new(self, 30)
     }
 }

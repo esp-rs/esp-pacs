@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
-    pub fn din0_mode(&mut self) -> DIN0_MODE_W<DIN_MODE_SPEC> {
+    pub fn din0_mode(&mut self) -> DIN0_MODE_W<'_, DIN_MODE_SPEC> {
         DIN0_MODE_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
-    pub fn din1_mode(&mut self) -> DIN1_MODE_W<DIN_MODE_SPEC> {
+    pub fn din1_mode(&mut self) -> DIN1_MODE_W<'_, DIN_MODE_SPEC> {
         DIN1_MODE_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
-    pub fn din2_mode(&mut self) -> DIN2_MODE_W<DIN_MODE_SPEC> {
+    pub fn din2_mode(&mut self) -> DIN2_MODE_W<'_, DIN_MODE_SPEC> {
         DIN2_MODE_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
-    pub fn din3_mode(&mut self) -> DIN3_MODE_W<DIN_MODE_SPEC> {
+    pub fn din3_mode(&mut self) -> DIN3_MODE_W<'_, DIN_MODE_SPEC> {
         DIN3_MODE_W::new(self, 6)
     }
 }

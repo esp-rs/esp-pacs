@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn icache_autoload_sct0_addr(
         &mut self,
-    ) -> ICACHE_AUTOLOAD_SCT0_ADDR_W<ICACHE_AUTOLOAD_SCT0_ADDR_SPEC> {
+    ) -> ICACHE_AUTOLOAD_SCT0_ADDR_W<'_, ICACHE_AUTOLOAD_SCT0_ADDR_SPEC> {
         ICACHE_AUTOLOAD_SCT0_ADDR_W::new(self, 0)
     }
 }

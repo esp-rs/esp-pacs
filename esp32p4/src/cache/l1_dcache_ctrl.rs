@@ -70,22 +70,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to disable core0 dbus access L1-DCache, 0: enable, 1: disable"]
     #[inline(always)]
-    pub fn l1_dcache_shut_dbus0(&mut self) -> L1_DCACHE_SHUT_DBUS0_W<L1_DCACHE_CTRL_SPEC> {
+    pub fn l1_dcache_shut_dbus0(&mut self) -> L1_DCACHE_SHUT_DBUS0_W<'_, L1_DCACHE_CTRL_SPEC> {
         L1_DCACHE_SHUT_DBUS0_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to disable core1 dbus access L1-DCache, 0: enable, 1: disable"]
     #[inline(always)]
-    pub fn l1_dcache_shut_dbus1(&mut self) -> L1_DCACHE_SHUT_DBUS1_W<L1_DCACHE_CTRL_SPEC> {
+    pub fn l1_dcache_shut_dbus1(&mut self) -> L1_DCACHE_SHUT_DBUS1_W<'_, L1_DCACHE_CTRL_SPEC> {
         L1_DCACHE_SHUT_DBUS1_W::new(self, 1)
     }
     #[doc = "Bit 4 - The bit is used to disable DMA access L1-DCache, 0: enable, 1: disable"]
     #[inline(always)]
-    pub fn l1_dcache_shut_dma(&mut self) -> L1_DCACHE_SHUT_DMA_W<L1_DCACHE_CTRL_SPEC> {
+    pub fn l1_dcache_shut_dma(&mut self) -> L1_DCACHE_SHUT_DMA_W<'_, L1_DCACHE_CTRL_SPEC> {
         L1_DCACHE_SHUT_DMA_W::new(self, 4)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    pub fn l1_dcache_undef_op(&mut self) -> L1_DCACHE_UNDEF_OP_W<L1_DCACHE_CTRL_SPEC> {
+    pub fn l1_dcache_undef_op(&mut self) -> L1_DCACHE_UNDEF_OP_W<'_, L1_DCACHE_CTRL_SPEC> {
         L1_DCACHE_UNDEF_OP_W::new(self, 8)
     }
 }

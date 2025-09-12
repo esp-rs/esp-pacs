@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - The bit is used to configure attribute of the dbus permission control section1, bit0: load in world0, bit2: load in world1"]
     #[inline(always)]
-    pub fn dbus_pms_sct1_attr(&mut self) -> DBUS_PMS_SCT1_ATTR_W<DBUS_PMS_TBL_ATTR_SPEC> {
+    pub fn dbus_pms_sct1_attr(&mut self) -> DBUS_PMS_SCT1_ATTR_W<'_, DBUS_PMS_TBL_ATTR_SPEC> {
         DBUS_PMS_SCT1_ATTR_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - The bit is used to configure attribute of the dbus permission control section2, bit0: load in world0, bit2: load in world1"]
     #[inline(always)]
-    pub fn dbus_pms_sct2_attr(&mut self) -> DBUS_PMS_SCT2_ATTR_W<DBUS_PMS_TBL_ATTR_SPEC> {
+    pub fn dbus_pms_sct2_attr(&mut self) -> DBUS_PMS_SCT2_ATTR_W<'_, DBUS_PMS_TBL_ATTR_SPEC> {
         DBUS_PMS_SCT2_ATTR_W::new(self, 2)
     }
 }

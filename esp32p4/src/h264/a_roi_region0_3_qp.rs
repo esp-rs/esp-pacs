@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Configure H264 ROI region0 qp in video A,fixed qp or delta qp."]
     #[inline(always)]
-    pub fn a_roi_region0_qp(&mut self) -> A_ROI_REGION0_QP_W<A_ROI_REGION0_3_QP_SPEC> {
+    pub fn a_roi_region0_qp(&mut self) -> A_ROI_REGION0_QP_W<'_, A_ROI_REGION0_3_QP_SPEC> {
         A_ROI_REGION0_QP_W::new(self, 0)
     }
     #[doc = "Bits 7:13 - Configure H264 ROI region1 qp in video A,fixed qp or delta qp."]
     #[inline(always)]
-    pub fn a_roi_region1_qp(&mut self) -> A_ROI_REGION1_QP_W<A_ROI_REGION0_3_QP_SPEC> {
+    pub fn a_roi_region1_qp(&mut self) -> A_ROI_REGION1_QP_W<'_, A_ROI_REGION0_3_QP_SPEC> {
         A_ROI_REGION1_QP_W::new(self, 7)
     }
     #[doc = "Bits 14:20 - Configure H264 ROI region2 qp in video A,fixed qp or delta qp."]
     #[inline(always)]
-    pub fn a_roi_region2_qp(&mut self) -> A_ROI_REGION2_QP_W<A_ROI_REGION0_3_QP_SPEC> {
+    pub fn a_roi_region2_qp(&mut self) -> A_ROI_REGION2_QP_W<'_, A_ROI_REGION0_3_QP_SPEC> {
         A_ROI_REGION2_QP_W::new(self, 14)
     }
     #[doc = "Bits 21:27 - Configure H264 ROI region3 qp in video A,fixed qp or delta qp."]
     #[inline(always)]
-    pub fn a_roi_region3_qp(&mut self) -> A_ROI_REGION3_QP_W<A_ROI_REGION0_3_QP_SPEC> {
+    pub fn a_roi_region3_qp(&mut self) -> A_ROI_REGION3_QP_W<'_, A_ROI_REGION0_3_QP_SPEC> {
         A_ROI_REGION3_QP_W::new(self, 21)
     }
 }

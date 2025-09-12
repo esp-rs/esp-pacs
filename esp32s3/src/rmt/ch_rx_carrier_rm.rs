@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - The low level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_LOW_THRES_CH%s + 1) for channel %s."]
     #[inline(always)]
-    pub fn carrier_low_thres(&mut self) -> CARRIER_LOW_THRES_W<CH_RX_CARRIER_RM_SPEC> {
+    pub fn carrier_low_thres(&mut self) -> CARRIER_LOW_THRES_W<'_, CH_RX_CARRIER_RM_SPEC> {
         CARRIER_LOW_THRES_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - The high level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_HIGH_THRES_CH%s + 1) for channel %s."]
     #[inline(always)]
-    pub fn carrier_high_thres(&mut self) -> CARRIER_HIGH_THRES_W<CH_RX_CARRIER_RM_SPEC> {
+    pub fn carrier_high_thres(&mut self) -> CARRIER_HIGH_THRES_W<'_, CH_RX_CARRIER_RM_SPEC> {
         CARRIER_HIGH_THRES_W::new(self, 16)
     }
 }

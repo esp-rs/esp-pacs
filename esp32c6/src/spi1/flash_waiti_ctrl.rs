@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1: The hardware will wait idle after SE/PP/WRSR automatically, and hardware auto Suspend/Resume can be enabled. 0: The functions of hardware wait idle and auto Suspend/Resume are not supported."]
     #[inline(always)]
-    pub fn waiti_en(&mut self) -> WAITI_EN_W<FLASH_WAITI_CTRL_SPEC> {
+    pub fn waiti_en(&mut self) -> WAITI_EN_W<'_, FLASH_WAITI_CTRL_SPEC> {
         WAITI_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - The dummy phase enable when wait flash idle (RDSR)"]
     #[inline(always)]
-    pub fn waiti_dummy(&mut self) -> WAITI_DUMMY_W<FLASH_WAITI_CTRL_SPEC> {
+    pub fn waiti_dummy(&mut self) -> WAITI_DUMMY_W<'_, FLASH_WAITI_CTRL_SPEC> {
         WAITI_DUMMY_W::new(self, 1)
     }
     #[doc = "Bit 2 - 1: Output address 0 in RDSR or read SUS command transfer. 0: Do not send out address in RDSR or read SUS command transfer."]
     #[inline(always)]
-    pub fn waiti_addr_en(&mut self) -> WAITI_ADDR_EN_W<FLASH_WAITI_CTRL_SPEC> {
+    pub fn waiti_addr_en(&mut self) -> WAITI_ADDR_EN_W<'_, FLASH_WAITI_CTRL_SPEC> {
         WAITI_ADDR_EN_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - When SPI_MEM_WAITI_ADDR_EN is set, the cycle length of sent out address is (SPI_MEM_WAITI_ADDR_CYCLELEN\\[1:0\\] + 1) SPI bus clock cycles. It is not active when SPI_MEM_WAITI_ADDR_EN is cleared."]
     #[inline(always)]
-    pub fn waiti_addr_cyclelen(&mut self) -> WAITI_ADDR_CYCLELEN_W<FLASH_WAITI_CTRL_SPEC> {
+    pub fn waiti_addr_cyclelen(&mut self) -> WAITI_ADDR_CYCLELEN_W<'_, FLASH_WAITI_CTRL_SPEC> {
         WAITI_ADDR_CYCLELEN_W::new(self, 3)
     }
     #[doc = "Bit 9 - 1:The wait idle command bit length is 16. 0: The wait idle command bit length is 8."]
     #[inline(always)]
-    pub fn waiti_cmd_2b(&mut self) -> WAITI_CMD_2B_W<FLASH_WAITI_CTRL_SPEC> {
+    pub fn waiti_cmd_2b(&mut self) -> WAITI_CMD_2B_W<'_, FLASH_WAITI_CTRL_SPEC> {
         WAITI_CMD_2B_W::new(self, 9)
     }
     #[doc = "Bits 10:15 - The dummy cycle length when wait flash idle(RDSR)."]
     #[inline(always)]
-    pub fn waiti_dummy_cyclelen(&mut self) -> WAITI_DUMMY_CYCLELEN_W<FLASH_WAITI_CTRL_SPEC> {
+    pub fn waiti_dummy_cyclelen(&mut self) -> WAITI_DUMMY_CYCLELEN_W<'_, FLASH_WAITI_CTRL_SPEC> {
         WAITI_DUMMY_CYCLELEN_W::new(self, 10)
     }
     #[doc = "Bits 16:31 - The command value to wait flash idle(RDSR)."]
     #[inline(always)]
-    pub fn waiti_cmd(&mut self) -> WAITI_CMD_W<FLASH_WAITI_CTRL_SPEC> {
+    pub fn waiti_cmd(&mut self) -> WAITI_CMD_W<'_, FLASH_WAITI_CTRL_SPEC> {
         WAITI_CMD_W::new(self, 16)
     }
 }

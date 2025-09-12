@@ -56,22 +56,22 @@ impl W {
     #[inline(always)]
     pub fn regulator_drv_b_monitor(
         &mut self,
-    ) -> REGULATOR_DRV_B_MONITOR_W<REGULATOR_DRV_CTRL_SPEC> {
+    ) -> REGULATOR_DRV_B_MONITOR_W<'_, REGULATOR_DRV_CTRL_SPEC> {
         REGULATOR_DRV_B_MONITOR_W::new(self, 0)
     }
     #[doc = "Bits 6:11 - No public"]
     #[inline(always)]
-    pub fn regulator_drv_b_slp(&mut self) -> REGULATOR_DRV_B_SLP_W<REGULATOR_DRV_CTRL_SPEC> {
+    pub fn regulator_drv_b_slp(&mut self) -> REGULATOR_DRV_B_SLP_W<'_, REGULATOR_DRV_CTRL_SPEC> {
         REGULATOR_DRV_B_SLP_W::new(self, 6)
     }
     #[doc = "Bits 12:19 - No public"]
     #[inline(always)]
-    pub fn dg_vdd_drv_b_slp(&mut self) -> DG_VDD_DRV_B_SLP_W<REGULATOR_DRV_CTRL_SPEC> {
+    pub fn dg_vdd_drv_b_slp(&mut self) -> DG_VDD_DRV_B_SLP_W<'_, REGULATOR_DRV_CTRL_SPEC> {
         DG_VDD_DRV_B_SLP_W::new(self, 12)
     }
     #[doc = "Bits 20:27 - No public"]
     #[inline(always)]
-    pub fn dg_vdd_drv_b_monitor(&mut self) -> DG_VDD_DRV_B_MONITOR_W<REGULATOR_DRV_CTRL_SPEC> {
+    pub fn dg_vdd_drv_b_monitor(&mut self) -> DG_VDD_DRV_B_MONITOR_W<'_, REGULATOR_DRV_CTRL_SPEC> {
         DG_VDD_DRV_B_MONITOR_W::new(self, 20)
     }
 }

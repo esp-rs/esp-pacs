@@ -66,29 +66,31 @@ impl W {
     #[inline(always)]
     pub fn clk_coex_lp_sel_osc_slow(
         &mut self,
-    ) -> CLK_COEX_LP_SEL_OSC_SLOW_W<COEX_LP_CLK_CONF_SPEC> {
+    ) -> CLK_COEX_LP_SEL_OSC_SLOW_W<'_, COEX_LP_CLK_CONF_SPEC> {
         CLK_COEX_LP_SEL_OSC_SLOW_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn clk_coex_lp_sel_osc_fast(
         &mut self,
-    ) -> CLK_COEX_LP_SEL_OSC_FAST_W<COEX_LP_CLK_CONF_SPEC> {
+    ) -> CLK_COEX_LP_SEL_OSC_FAST_W<'_, COEX_LP_CLK_CONF_SPEC> {
         CLK_COEX_LP_SEL_OSC_FAST_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn clk_coex_lp_sel_xtal(&mut self) -> CLK_COEX_LP_SEL_XTAL_W<COEX_LP_CLK_CONF_SPEC> {
+    pub fn clk_coex_lp_sel_xtal(&mut self) -> CLK_COEX_LP_SEL_XTAL_W<'_, COEX_LP_CLK_CONF_SPEC> {
         CLK_COEX_LP_SEL_XTAL_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn clk_coex_lp_sel_xtal32k(&mut self) -> CLK_COEX_LP_SEL_XTAL32K_W<COEX_LP_CLK_CONF_SPEC> {
+    pub fn clk_coex_lp_sel_xtal32k(
+        &mut self,
+    ) -> CLK_COEX_LP_SEL_XTAL32K_W<'_, COEX_LP_CLK_CONF_SPEC> {
         CLK_COEX_LP_SEL_XTAL32K_W::new(self, 3)
     }
     #[doc = "Bits 4:15"]
     #[inline(always)]
-    pub fn clk_coex_lp_div_num(&mut self) -> CLK_COEX_LP_DIV_NUM_W<COEX_LP_CLK_CONF_SPEC> {
+    pub fn clk_coex_lp_div_num(&mut self) -> CLK_COEX_LP_DIV_NUM_W<'_, COEX_LP_CLK_CONF_SPEC> {
         CLK_COEX_LP_DIV_NUM_W::new(self, 4)
     }
 }

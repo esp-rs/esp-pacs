@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - l2_rom clk gating force on"]
     #[inline(always)]
-    pub fn reg_l2_rom_clk_force_on(&mut self) -> REG_L2_ROM_CLK_FORCE_ON_W<L2_ROM_PWR_CTRL0_SPEC> {
+    pub fn reg_l2_rom_clk_force_on(
+        &mut self,
+    ) -> REG_L2_ROM_CLK_FORCE_ON_W<'_, L2_ROM_PWR_CTRL0_SPEC> {
         REG_L2_ROM_CLK_FORCE_ON_W::new(self, 0)
     }
 }

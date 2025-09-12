@@ -44,19 +44,19 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    pub fn hpcore0_stall_en(&mut self) -> HPCORE0_STALL_EN_W<HPWDT_CORE0_RST_CTRL0_SPEC> {
+    pub fn hpcore0_stall_en(&mut self) -> HPCORE0_STALL_EN_W<'_, HPWDT_CORE0_RST_CTRL0_SPEC> {
         HPCORE0_STALL_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:8 - Reserved"]
     #[inline(always)]
     pub fn hpcore0_stall_wait_num(
         &mut self,
-    ) -> HPCORE0_STALL_WAIT_NUM_W<HPWDT_CORE0_RST_CTRL0_SPEC> {
+    ) -> HPCORE0_STALL_WAIT_NUM_W<'_, HPWDT_CORE0_RST_CTRL0_SPEC> {
         HPCORE0_STALL_WAIT_NUM_W::new(self, 1)
     }
     #[doc = "Bits 9:16 - Reserved"]
     #[inline(always)]
-    pub fn wdt_hpcore0_rst_len(&mut self) -> WDT_HPCORE0_RST_LEN_W<HPWDT_CORE0_RST_CTRL0_SPEC> {
+    pub fn wdt_hpcore0_rst_len(&mut self) -> WDT_HPCORE0_RST_LEN_W<'_, HPWDT_CORE0_RST_CTRL0_SPEC> {
         WDT_HPCORE0_RST_LEN_W::new(self, 9)
     }
 }

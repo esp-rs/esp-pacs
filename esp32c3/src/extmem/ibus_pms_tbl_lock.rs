@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to configure the ibus permission control section boundary0"]
     #[inline(always)]
-    pub fn ibus_pms_lock(&mut self) -> IBUS_PMS_LOCK_W<IBUS_PMS_TBL_LOCK_SPEC> {
+    pub fn ibus_pms_lock(&mut self) -> IBUS_PMS_LOCK_W<'_, IBUS_PMS_TBL_LOCK_SPEC> {
         IBUS_PMS_LOCK_W::new(self, 0)
     }
 }

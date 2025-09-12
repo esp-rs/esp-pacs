@@ -231,145 +231,145 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field.</div>"]
     #[inline(always)]
-    pub fn ch_tx_end(&mut self, n: u8) -> CH_TX_END_W<INT_ENA_SPEC> {
+    pub fn ch_tx_end(&mut self, n: u8) -> CH_TX_END_W<'_, INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         CH_TX_END_W::new(self, n * 3)
     }
     #[doc = "Bit 0 - The interrupt enabled bit for CH0_TX_END_INT."]
     #[inline(always)]
-    pub fn ch0_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC> {
+    pub fn ch0_tx_end(&mut self) -> CH_TX_END_W<'_, INT_ENA_SPEC> {
         CH_TX_END_W::new(self, 0)
     }
     #[doc = "Bit 3 - The interrupt enabled bit for CH1_TX_END_INT."]
     #[inline(always)]
-    pub fn ch1_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC> {
+    pub fn ch1_tx_end(&mut self) -> CH_TX_END_W<'_, INT_ENA_SPEC> {
         CH_TX_END_W::new(self, 3)
     }
     #[doc = "Bit 6 - The interrupt enabled bit for CH2_TX_END_INT."]
     #[inline(always)]
-    pub fn ch2_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC> {
+    pub fn ch2_tx_end(&mut self) -> CH_TX_END_W<'_, INT_ENA_SPEC> {
         CH_TX_END_W::new(self, 6)
     }
     #[doc = "Bit 9 - The interrupt enabled bit for CH3_TX_END_INT."]
     #[inline(always)]
-    pub fn ch3_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC> {
+    pub fn ch3_tx_end(&mut self) -> CH_TX_END_W<'_, INT_ENA_SPEC> {
         CH_TX_END_W::new(self, 9)
     }
     #[doc = "The interrupt enabled bit for CH(0-3)_RX_END_INT."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field.</div>"]
     #[inline(always)]
-    pub fn ch_rx_end(&mut self, n: u8) -> CH_RX_END_W<INT_ENA_SPEC> {
+    pub fn ch_rx_end(&mut self, n: u8) -> CH_RX_END_W<'_, INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         CH_RX_END_W::new(self, n * 3 + 1)
     }
     #[doc = "Bit 1 - The interrupt enabled bit for CH0_RX_END_INT."]
     #[inline(always)]
-    pub fn ch0_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC> {
+    pub fn ch0_rx_end(&mut self) -> CH_RX_END_W<'_, INT_ENA_SPEC> {
         CH_RX_END_W::new(self, 1)
     }
     #[doc = "Bit 4 - The interrupt enabled bit for CH1_RX_END_INT."]
     #[inline(always)]
-    pub fn ch1_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC> {
+    pub fn ch1_rx_end(&mut self) -> CH_RX_END_W<'_, INT_ENA_SPEC> {
         CH_RX_END_W::new(self, 4)
     }
     #[doc = "Bit 7 - The interrupt enabled bit for CH2_RX_END_INT."]
     #[inline(always)]
-    pub fn ch2_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC> {
+    pub fn ch2_rx_end(&mut self) -> CH_RX_END_W<'_, INT_ENA_SPEC> {
         CH_RX_END_W::new(self, 7)
     }
     #[doc = "Bit 10 - The interrupt enabled bit for CH3_RX_END_INT."]
     #[inline(always)]
-    pub fn ch3_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC> {
+    pub fn ch3_rx_end(&mut self) -> CH_RX_END_W<'_, INT_ENA_SPEC> {
         CH_RX_END_W::new(self, 10)
     }
     #[doc = "The interrupt enabled bit for CH(0-3)_ERR_INT."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field.</div>"]
     #[inline(always)]
-    pub fn ch_err(&mut self, n: u8) -> CH_ERR_W<INT_ENA_SPEC> {
+    pub fn ch_err(&mut self, n: u8) -> CH_ERR_W<'_, INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         CH_ERR_W::new(self, n * 3 + 2)
     }
     #[doc = "Bit 2 - The interrupt enabled bit for CH0_ERR_INT."]
     #[inline(always)]
-    pub fn ch0_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC> {
+    pub fn ch0_err(&mut self) -> CH_ERR_W<'_, INT_ENA_SPEC> {
         CH_ERR_W::new(self, 2)
     }
     #[doc = "Bit 5 - The interrupt enabled bit for CH1_ERR_INT."]
     #[inline(always)]
-    pub fn ch1_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC> {
+    pub fn ch1_err(&mut self) -> CH_ERR_W<'_, INT_ENA_SPEC> {
         CH_ERR_W::new(self, 5)
     }
     #[doc = "Bit 8 - The interrupt enabled bit for CH2_ERR_INT."]
     #[inline(always)]
-    pub fn ch2_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC> {
+    pub fn ch2_err(&mut self) -> CH_ERR_W<'_, INT_ENA_SPEC> {
         CH_ERR_W::new(self, 8)
     }
     #[doc = "Bit 11 - The interrupt enabled bit for CH3_ERR_INT."]
     #[inline(always)]
-    pub fn ch3_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC> {
+    pub fn ch3_err(&mut self) -> CH_ERR_W<'_, INT_ENA_SPEC> {
         CH_ERR_W::new(self, 11)
     }
     #[doc = "The interrupt enabled bit for CH(0-3)_TX_THR_EVENT_INT."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field.</div>"]
     #[inline(always)]
-    pub fn ch_tx_thr_event(&mut self, n: u8) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
+    pub fn ch_tx_thr_event(&mut self, n: u8) -> CH_TX_THR_EVENT_W<'_, INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         CH_TX_THR_EVENT_W::new(self, n + 12)
     }
     #[doc = "Bit 12 - The interrupt enabled bit for CH0_TX_THR_EVENT_INT."]
     #[inline(always)]
-    pub fn ch0_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
+    pub fn ch0_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<'_, INT_ENA_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 12)
     }
     #[doc = "Bit 13 - The interrupt enabled bit for CH1_TX_THR_EVENT_INT."]
     #[inline(always)]
-    pub fn ch1_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
+    pub fn ch1_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<'_, INT_ENA_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 13)
     }
     #[doc = "Bit 14 - The interrupt enabled bit for CH2_TX_THR_EVENT_INT."]
     #[inline(always)]
-    pub fn ch2_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
+    pub fn ch2_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<'_, INT_ENA_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 14)
     }
     #[doc = "Bit 15 - The interrupt enabled bit for CH3_TX_THR_EVENT_INT."]
     #[inline(always)]
-    pub fn ch3_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
+    pub fn ch3_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<'_, INT_ENA_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 15)
     }
     #[doc = "The interrupt enabled bit for CH(0-3)_TX_LOOP_INT."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field.</div>"]
     #[inline(always)]
-    pub fn ch_tx_loop(&mut self, n: u8) -> CH_TX_LOOP_W<INT_ENA_SPEC> {
+    pub fn ch_tx_loop(&mut self, n: u8) -> CH_TX_LOOP_W<'_, INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         CH_TX_LOOP_W::new(self, n + 16)
     }
     #[doc = "Bit 16 - The interrupt enabled bit for CH0_TX_LOOP_INT."]
     #[inline(always)]
-    pub fn ch0_tx_loop(&mut self) -> CH_TX_LOOP_W<INT_ENA_SPEC> {
+    pub fn ch0_tx_loop(&mut self) -> CH_TX_LOOP_W<'_, INT_ENA_SPEC> {
         CH_TX_LOOP_W::new(self, 16)
     }
     #[doc = "Bit 17 - The interrupt enabled bit for CH1_TX_LOOP_INT."]
     #[inline(always)]
-    pub fn ch1_tx_loop(&mut self) -> CH_TX_LOOP_W<INT_ENA_SPEC> {
+    pub fn ch1_tx_loop(&mut self) -> CH_TX_LOOP_W<'_, INT_ENA_SPEC> {
         CH_TX_LOOP_W::new(self, 17)
     }
     #[doc = "Bit 18 - The interrupt enabled bit for CH2_TX_LOOP_INT."]
     #[inline(always)]
-    pub fn ch2_tx_loop(&mut self) -> CH_TX_LOOP_W<INT_ENA_SPEC> {
+    pub fn ch2_tx_loop(&mut self) -> CH_TX_LOOP_W<'_, INT_ENA_SPEC> {
         CH_TX_LOOP_W::new(self, 18)
     }
     #[doc = "Bit 19 - The interrupt enabled bit for CH3_TX_LOOP_INT."]
     #[inline(always)]
-    pub fn ch3_tx_loop(&mut self) -> CH_TX_LOOP_W<INT_ENA_SPEC> {
+    pub fn ch3_tx_loop(&mut self) -> CH_TX_LOOP_W<'_, INT_ENA_SPEC> {
         CH_TX_LOOP_W::new(self, 19)
     }
 }

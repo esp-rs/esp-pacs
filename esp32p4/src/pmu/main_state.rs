@@ -48,7 +48,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn enable_cali_pmu_cntl(&mut self) -> ENABLE_CALI_PMU_CNTL_W<MAIN_STATE_SPEC> {
+    pub fn enable_cali_pmu_cntl(&mut self) -> ENABLE_CALI_PMU_CNTL_W<'_, MAIN_STATE_SPEC> {
         ENABLE_CALI_PMU_CNTL_W::new(self, 0)
     }
 }

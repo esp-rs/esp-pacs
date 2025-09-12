@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This field is only used to generate include file in c case. This field is useless. Please do not use this field."]
     #[inline(always)]
-    pub fn xts_plain(&mut self) -> XTS_PLAIN_W<XTS_PLAIN_BASE_SPEC> {
+    pub fn xts_plain(&mut self) -> XTS_PLAIN_W<'_, XTS_PLAIN_BASE_SPEC> {
         XTS_PLAIN_W::new(self, 0)
     }
 }

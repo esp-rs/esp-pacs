@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - reg_cpuperiod_sel"]
     #[inline(always)]
-    pub fn cpuperiod_sel(&mut self) -> CPUPERIOD_SEL_W<CPU_PER_CONF_SPEC> {
+    pub fn cpuperiod_sel(&mut self) -> CPUPERIOD_SEL_W<'_, CPU_PER_CONF_SPEC> {
         CPUPERIOD_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - reg_pll_freq_sel"]
     #[inline(always)]
-    pub fn pll_freq_sel(&mut self) -> PLL_FREQ_SEL_W<CPU_PER_CONF_SPEC> {
+    pub fn pll_freq_sel(&mut self) -> PLL_FREQ_SEL_W<'_, CPU_PER_CONF_SPEC> {
         PLL_FREQ_SEL_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_cpu_wait_mode_force_on"]
     #[inline(always)]
-    pub fn cpu_wait_mode_force_on(&mut self) -> CPU_WAIT_MODE_FORCE_ON_W<CPU_PER_CONF_SPEC> {
+    pub fn cpu_wait_mode_force_on(&mut self) -> CPU_WAIT_MODE_FORCE_ON_W<'_, CPU_PER_CONF_SPEC> {
         CPU_WAIT_MODE_FORCE_ON_W::new(self, 3)
     }
     #[doc = "Bits 4:7 - reg_cpu_waiti_delay_num"]
     #[inline(always)]
-    pub fn cpu_waiti_delay_num(&mut self) -> CPU_WAITI_DELAY_NUM_W<CPU_PER_CONF_SPEC> {
+    pub fn cpu_waiti_delay_num(&mut self) -> CPU_WAITI_DELAY_NUM_W<'_, CPU_PER_CONF_SPEC> {
         CPU_WAITI_DELAY_NUM_W::new(self, 4)
     }
 }

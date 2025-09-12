@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - In reset mode, it is acceptance code register n with R/W Permission. In operation mode, it stores the nth byte information of the data to be transmitted under operating mode."]
     #[inline(always)]
-    pub fn tx_byte(&mut self) -> TX_BYTE_W<DATA_SPEC> {
+    pub fn tx_byte(&mut self) -> TX_BYTE_W<'_, DATA_SPEC> {
         TX_BYTE_W::new(self, 0)
     }
 }

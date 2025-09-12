@@ -56,27 +56,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 18 - Configure this bit to enable to feed SWD automatically by hardware. \\\\0: Disable \\\\1: Enable"]
     #[inline(always)]
-    pub fn swd_auto_feed_en(&mut self) -> SWD_AUTO_FEED_EN_W<SWD_CONFIG_SPEC> {
+    pub fn swd_auto_feed_en(&mut self) -> SWD_AUTO_FEED_EN_W<'_, SWD_CONFIG_SPEC> {
         SWD_AUTO_FEED_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Configure this bit to clear SWD reset flag.\\\\ 0:Invalid \\\\ 1: Clear the reset flag"]
     #[inline(always)]
-    pub fn swd_rst_flag_clr(&mut self) -> SWD_RST_FLAG_CLR_W<SWD_CONFIG_SPEC> {
+    pub fn swd_rst_flag_clr(&mut self) -> SWD_RST_FLAG_CLR_W<'_, SWD_CONFIG_SPEC> {
         SWD_RST_FLAG_CLR_W::new(self, 19)
     }
     #[doc = "Bits 20:29 - Configure the SWD signal length that output to analog circuit. \\\\ Measurement unit: LP\\_DYN\\_FAST\\_CLK"]
     #[inline(always)]
-    pub fn swd_signal_width(&mut self) -> SWD_SIGNAL_WIDTH_W<SWD_CONFIG_SPEC> {
+    pub fn swd_signal_width(&mut self) -> SWD_SIGNAL_WIDTH_W<'_, SWD_CONFIG_SPEC> {
         SWD_SIGNAL_WIDTH_W::new(self, 20)
     }
     #[doc = "Bit 30 - Configure this bit to disable the SWD.\\\\ 0: Enable the SWD\\\\ 1: Disable the SWD"]
     #[inline(always)]
-    pub fn swd_disable(&mut self) -> SWD_DISABLE_W<SWD_CONFIG_SPEC> {
+    pub fn swd_disable(&mut self) -> SWD_DISABLE_W<'_, SWD_CONFIG_SPEC> {
         SWD_DISABLE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Configure this bit to feed the SWD.\\\\ 0: Invalid\\\\ 1: Feed SWD"]
     #[inline(always)]
-    pub fn swd_feed(&mut self) -> SWD_FEED_W<SWD_CONFIG_SPEC> {
+    pub fn swd_feed(&mut self) -> SWD_FEED_W<'_, SWD_CONFIG_SPEC> {
         SWD_FEED_W::new(self, 31)
     }
 }

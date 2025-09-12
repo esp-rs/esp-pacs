@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - reg_log_data_size"]
     #[inline(always)]
-    pub fn log_data_size(&mut self) -> LOG_DATA_SIZE_W<LOG_DATA_MASK_SPEC> {
+    pub fn log_data_size(&mut self) -> LOG_DATA_SIZE_W<'_, LOG_DATA_MASK_SPEC> {
         LOG_DATA_SIZE_W::new(self, 0)
     }
 }

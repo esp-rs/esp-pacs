@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn dcache_prelock_sct1_addr(
         &mut self,
-    ) -> DCACHE_PRELOCK_SCT1_ADDR_W<DCACHE_PRELOCK_SCT1_ADDR_SPEC> {
+    ) -> DCACHE_PRELOCK_SCT1_ADDR_W<'_, DCACHE_PRELOCK_SCT1_ADDR_SPEC> {
         DCACHE_PRELOCK_SCT1_ADDR_W::new(self, 0)
     }
 }

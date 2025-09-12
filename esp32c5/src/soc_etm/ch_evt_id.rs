@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures ch%s_evt_id"]
     #[inline(always)]
-    pub fn ch_evt_id(&mut self) -> CH_EVT_ID_W<CH_EVT_ID_SPEC> {
+    pub fn ch_evt_id(&mut self) -> CH_EVT_ID_W<'_, CH_EVT_ID_SPEC> {
         CH_EVT_ID_W::new(self, 0)
     }
 }

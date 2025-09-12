@@ -54,22 +54,24 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    pub fn adc_clk_en(&mut self) -> ADC_CLK_EN_W<PERI_CLK_CTRL23_SPEC> {
+    pub fn adc_clk_en(&mut self) -> ADC_CLK_EN_W<'_, PERI_CLK_CTRL23_SPEC> {
         ADC_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:8 - Reserved"]
     #[inline(always)]
-    pub fn adc_clk_div_num(&mut self) -> ADC_CLK_DIV_NUM_W<PERI_CLK_CTRL23_SPEC> {
+    pub fn adc_clk_div_num(&mut self) -> ADC_CLK_DIV_NUM_W<'_, PERI_CLK_CTRL23_SPEC> {
         ADC_CLK_DIV_NUM_W::new(self, 1)
     }
     #[doc = "Bits 9:16 - Reserved"]
     #[inline(always)]
-    pub fn adc_clk_div_numerator(&mut self) -> ADC_CLK_DIV_NUMERATOR_W<PERI_CLK_CTRL23_SPEC> {
+    pub fn adc_clk_div_numerator(&mut self) -> ADC_CLK_DIV_NUMERATOR_W<'_, PERI_CLK_CTRL23_SPEC> {
         ADC_CLK_DIV_NUMERATOR_W::new(self, 9)
     }
     #[doc = "Bits 17:24 - Reserved"]
     #[inline(always)]
-    pub fn adc_clk_div_denominator(&mut self) -> ADC_CLK_DIV_DENOMINATOR_W<PERI_CLK_CTRL23_SPEC> {
+    pub fn adc_clk_div_denominator(
+        &mut self,
+    ) -> ADC_CLK_DIV_DENOMINATOR_W<'_, PERI_CLK_CTRL23_SPEC> {
         ADC_CLK_DIV_DENOMINATOR_W::new(self, 17)
     }
 }

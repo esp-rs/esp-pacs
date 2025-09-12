@@ -23,42 +23,42 @@ impl W {
     #[inline(always)]
     pub fn cocpu_saradc1_int_ena_w1tc(
         &mut self,
-    ) -> COCPU_SARADC1_INT_ENA_W1TC_W<INT_ENA_W1TC_SPEC> {
+    ) -> COCPU_SARADC1_INT_ENA_W1TC_W<'_, INT_ENA_W1TC_SPEC> {
         COCPU_SARADC1_INT_ENA_W1TC_W::new(self, 0)
     }
     #[doc = "Bit 1 - ADC2 Conversion is done, write 1 to deassert int enable."]
     #[inline(always)]
     pub fn cocpu_saradc2_int_ena_w1tc(
         &mut self,
-    ) -> COCPU_SARADC2_INT_ENA_W1TC_W<INT_ENA_W1TC_SPEC> {
+    ) -> COCPU_SARADC2_INT_ENA_W1TC_W<'_, INT_ENA_W1TC_SPEC> {
         COCPU_SARADC2_INT_ENA_W1TC_W::new(self, 1)
     }
     #[doc = "Bit 2 - An errro occurs from ADC1, write 1 to deassert int enable."]
     #[inline(always)]
     pub fn cocpu_saradc1_error_int_ena_w1tc(
         &mut self,
-    ) -> COCPU_SARADC1_ERROR_INT_ENA_W1TC_W<INT_ENA_W1TC_SPEC> {
+    ) -> COCPU_SARADC1_ERROR_INT_ENA_W1TC_W<'_, INT_ENA_W1TC_SPEC> {
         COCPU_SARADC1_ERROR_INT_ENA_W1TC_W::new(self, 2)
     }
     #[doc = "Bit 3 - An errro occurs from ADC2, write 1 to deassert int enable."]
     #[inline(always)]
     pub fn cocpu_saradc2_error_int_ena_w1tc(
         &mut self,
-    ) -> COCPU_SARADC2_ERROR_INT_ENA_W1TC_W<INT_ENA_W1TC_SPEC> {
+    ) -> COCPU_SARADC2_ERROR_INT_ENA_W1TC_W<'_, INT_ENA_W1TC_SPEC> {
         COCPU_SARADC2_ERROR_INT_ENA_W1TC_W::new(self, 3)
     }
     #[doc = "Bit 4 - A wakeup event is triggered from ADC1, write 1 to deassert int enable."]
     #[inline(always)]
     pub fn cocpu_saradc1_wake_int_ena_w1tc(
         &mut self,
-    ) -> COCPU_SARADC1_WAKE_INT_ENA_W1TC_W<INT_ENA_W1TC_SPEC> {
+    ) -> COCPU_SARADC1_WAKE_INT_ENA_W1TC_W<'_, INT_ENA_W1TC_SPEC> {
         COCPU_SARADC1_WAKE_INT_ENA_W1TC_W::new(self, 4)
     }
     #[doc = "Bit 5 - A wakeup event is triggered from ADC2, write 1 to deassert int enable."]
     #[inline(always)]
     pub fn cocpu_saradc2_wake_int_ena_w1tc(
         &mut self,
-    ) -> COCPU_SARADC2_WAKE_INT_ENA_W1TC_W<INT_ENA_W1TC_SPEC> {
+    ) -> COCPU_SARADC2_WAKE_INT_ENA_W1TC_W<'_, INT_ENA_W1TC_SPEC> {
         COCPU_SARADC2_WAKE_INT_ENA_W1TC_W::new(self, 5)
     }
 }

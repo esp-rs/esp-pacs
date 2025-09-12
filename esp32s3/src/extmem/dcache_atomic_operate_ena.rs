@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn dcache_atomic_operate_ena(
         &mut self,
-    ) -> DCACHE_ATOMIC_OPERATE_ENA_W<DCACHE_ATOMIC_OPERATE_ENA_SPEC> {
+    ) -> DCACHE_ATOMIC_OPERATE_ENA_W<'_, DCACHE_ATOMIC_OPERATE_ENA_SPEC> {
         DCACHE_ATOMIC_OPERATE_ENA_W::new(self, 0)
     }
 }

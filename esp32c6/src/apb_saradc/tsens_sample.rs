@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - HW sample rate"]
     #[inline(always)]
-    pub fn rate(&mut self) -> RATE_W<TSENS_SAMPLE_SPEC> {
+    pub fn rate(&mut self) -> RATE_W<'_, TSENS_SAMPLE_SPEC> {
         RATE_W::new(self, 0)
     }
     #[doc = "Bit 16 - HW sample en"]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<TSENS_SAMPLE_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, TSENS_SAMPLE_SPEC> {
         EN_W::new(self, 16)
     }
 }

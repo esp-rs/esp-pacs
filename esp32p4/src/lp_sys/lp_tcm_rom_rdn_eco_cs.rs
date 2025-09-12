@@ -35,7 +35,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn lp_tcm_rom_rdn_eco_en(&mut self) -> LP_TCM_ROM_RDN_ECO_EN_W<LP_TCM_ROM_RDN_ECO_CS_SPEC> {
+    pub fn lp_tcm_rom_rdn_eco_en(
+        &mut self,
+    ) -> LP_TCM_ROM_RDN_ECO_EN_W<'_, LP_TCM_ROM_RDN_ECO_CS_SPEC> {
         LP_TCM_ROM_RDN_ECO_EN_W::new(self, 0)
     }
 }

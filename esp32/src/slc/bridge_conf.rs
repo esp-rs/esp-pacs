@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn txeof_ena(&mut self) -> TXEOF_ENA_W<BRIDGE_CONF_SPEC> {
+    pub fn txeof_ena(&mut self) -> TXEOF_ENA_W<'_, BRIDGE_CONF_SPEC> {
         TXEOF_ENA_W::new(self, 0)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
-    pub fn fifo_map_ena(&mut self) -> FIFO_MAP_ENA_W<BRIDGE_CONF_SPEC> {
+    pub fn fifo_map_ena(&mut self) -> FIFO_MAP_ENA_W<'_, BRIDGE_CONF_SPEC> {
         FIFO_MAP_ENA_W::new(self, 8)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn slc0_tx_dummy_mode(&mut self) -> SLC0_TX_DUMMY_MODE_W<BRIDGE_CONF_SPEC> {
+    pub fn slc0_tx_dummy_mode(&mut self) -> SLC0_TX_DUMMY_MODE_W<'_, BRIDGE_CONF_SPEC> {
         SLC0_TX_DUMMY_MODE_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn hda_map_128k(&mut self) -> HDA_MAP_128K_W<BRIDGE_CONF_SPEC> {
+    pub fn hda_map_128k(&mut self) -> HDA_MAP_128K_W<'_, BRIDGE_CONF_SPEC> {
         HDA_MAP_128K_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn slc1_tx_dummy_mode(&mut self) -> SLC1_TX_DUMMY_MODE_W<BRIDGE_CONF_SPEC> {
+    pub fn slc1_tx_dummy_mode(&mut self) -> SLC1_TX_DUMMY_MODE_W<'_, BRIDGE_CONF_SPEC> {
         SLC1_TX_DUMMY_MODE_W::new(self, 14)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn tx_push_idle_num(&mut self) -> TX_PUSH_IDLE_NUM_W<BRIDGE_CONF_SPEC> {
+    pub fn tx_push_idle_num(&mut self) -> TX_PUSH_IDLE_NUM_W<'_, BRIDGE_CONF_SPEC> {
         TX_PUSH_IDLE_NUM_W::new(self, 16)
     }
 }

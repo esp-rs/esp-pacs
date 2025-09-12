@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - NA"]
     #[inline(always)]
-    pub fn reg_ver_date(&mut self) -> REG_VER_DATE_W<VER_DATE_SPEC> {
+    pub fn reg_ver_date(&mut self) -> REG_VER_DATE_W<'_, VER_DATE_SPEC> {
         REG_VER_DATE_W::new(self, 0)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn rx_abort_coex_cnt(&mut self) -> RX_ABORT_COEX_CNT_W<RX_ABORT_COEX_CNT_SPEC> {
+    pub fn rx_abort_coex_cnt(&mut self) -> RX_ABORT_COEX_CNT_W<'_, RX_ABORT_COEX_CNT_SPEC> {
         RX_ABORT_COEX_CNT_W::new(self, 0)
     }
 }

@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This bit is used to configure the operating mode of the TWAI Controller. 1: Reset mode; 0: Operating mode."]
     #[inline(always)]
-    pub fn reset_mode(&mut self) -> RESET_MODE_W<MODE_SPEC> {
+    pub fn reset_mode(&mut self) -> RESET_MODE_W<'_, MODE_SPEC> {
         RESET_MODE_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: Listen only mode. In this mode the nodes will only receive messages from the bus, without generating the acknowledge signal nor updating the RX error counter."]
     #[inline(always)]
-    pub fn listen_only_mode(&mut self) -> LISTEN_ONLY_MODE_W<MODE_SPEC> {
+    pub fn listen_only_mode(&mut self) -> LISTEN_ONLY_MODE_W<'_, MODE_SPEC> {
         LISTEN_ONLY_MODE_W::new(self, 1)
     }
     #[doc = "Bit 2 - 1: Self test mode. In this mode the TX nodes can perform a successful transmission without receiving the acknowledge signal. This mode is often used to test a single node with the self reception request command."]
     #[inline(always)]
-    pub fn self_test_mode(&mut self) -> SELF_TEST_MODE_W<MODE_SPEC> {
+    pub fn self_test_mode(&mut self) -> SELF_TEST_MODE_W<'_, MODE_SPEC> {
         SELF_TEST_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3 - This bit is used to configure the filter mode. 0: Dual filter mode; 1: Single filter mode."]
     #[inline(always)]
-    pub fn rx_filter_mode(&mut self) -> RX_FILTER_MODE_W<MODE_SPEC> {
+    pub fn rx_filter_mode(&mut self) -> RX_FILTER_MODE_W<'_, MODE_SPEC> {
         RX_FILTER_MODE_W::new(self, 3)
     }
 }

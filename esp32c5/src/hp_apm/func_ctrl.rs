@@ -65,34 +65,34 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `M0_FUNC_EN` field.</div>"]
     #[inline(always)]
-    pub fn m_func_en(&mut self, n: u8) -> M_FUNC_EN_W<FUNC_CTRL_SPEC> {
+    pub fn m_func_en(&mut self, n: u8) -> M_FUNC_EN_W<'_, FUNC_CTRL_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 5][n as usize];
         M_FUNC_EN_W::new(self, n)
     }
     #[doc = "Bit 0 - PMS M0 function enable"]
     #[inline(always)]
-    pub fn m0_func_en(&mut self) -> M_FUNC_EN_W<FUNC_CTRL_SPEC> {
+    pub fn m0_func_en(&mut self) -> M_FUNC_EN_W<'_, FUNC_CTRL_SPEC> {
         M_FUNC_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - PMS M1 function enable"]
     #[inline(always)]
-    pub fn m1_func_en(&mut self) -> M_FUNC_EN_W<FUNC_CTRL_SPEC> {
+    pub fn m1_func_en(&mut self) -> M_FUNC_EN_W<'_, FUNC_CTRL_SPEC> {
         M_FUNC_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - PMS M2 function enable"]
     #[inline(always)]
-    pub fn m2_func_en(&mut self) -> M_FUNC_EN_W<FUNC_CTRL_SPEC> {
+    pub fn m2_func_en(&mut self) -> M_FUNC_EN_W<'_, FUNC_CTRL_SPEC> {
         M_FUNC_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - PMS M3 function enable"]
     #[inline(always)]
-    pub fn m3_func_en(&mut self) -> M_FUNC_EN_W<FUNC_CTRL_SPEC> {
+    pub fn m3_func_en(&mut self) -> M_FUNC_EN_W<'_, FUNC_CTRL_SPEC> {
         M_FUNC_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - PMS M4 function enable"]
     #[inline(always)]
-    pub fn m4_func_en(&mut self) -> M_FUNC_EN_W<FUNC_CTRL_SPEC> {
+    pub fn m4_func_en(&mut self) -> M_FUNC_EN_W<'_, FUNC_CTRL_SPEC> {
         M_FUNC_EN_W::new(self, 4)
     }
 }

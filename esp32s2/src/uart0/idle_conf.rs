@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - A frame end signal is generated when the receiver takes more time to receive one byte data than this register's value, in the unit of bit time (the time it takes to transfer one bit)."]
     #[inline(always)]
-    pub fn rx_idle_thrhd(&mut self) -> RX_IDLE_THRHD_W<IDLE_CONF_SPEC> {
+    pub fn rx_idle_thrhd(&mut self) -> RX_IDLE_THRHD_W<'_, IDLE_CONF_SPEC> {
         RX_IDLE_THRHD_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - This register is used to configure the duration time between transfers, in the unit of bit time (the time it takes to transfer one bit)."]
     #[inline(always)]
-    pub fn tx_idle_num(&mut self) -> TX_IDLE_NUM_W<IDLE_CONF_SPEC> {
+    pub fn tx_idle_num(&mut self) -> TX_IDLE_NUM_W<'_, IDLE_CONF_SPEC> {
         TX_IDLE_NUM_W::new(self, 10)
     }
     #[doc = "Bits 20:27 - This register is used to configure the number of 0 to be sent after the process of sending data is done. It is active when UART_TXD_BRK is set to 1."]
     #[inline(always)]
-    pub fn tx_brk_num(&mut self) -> TX_BRK_NUM_W<IDLE_CONF_SPEC> {
+    pub fn tx_brk_num(&mut self) -> TX_BRK_NUM_W<'_, IDLE_CONF_SPEC> {
         TX_BRK_NUM_W::new(self, 20)
     }
 }

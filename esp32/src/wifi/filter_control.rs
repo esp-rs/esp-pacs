@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Block unicast frames not matching the address filter"]
     #[inline(always)]
-    pub fn block_unicast(&mut self) -> BLOCK_UNICAST_W<FILTER_CONTROL_SPEC> {
+    pub fn block_unicast(&mut self) -> BLOCK_UNICAST_W<'_, FILTER_CONTROL_SPEC> {
         BLOCK_UNICAST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Check BSSID for filtering"]
     #[inline(always)]
-    pub fn bssid_check(&mut self) -> BSSID_CHECK_W<FILTER_CONTROL_SPEC> {
+    pub fn bssid_check(&mut self) -> BSSID_CHECK_W<'_, FILTER_CONTROL_SPEC> {
         BSSID_CHECK_W::new(self, 1)
     }
     #[doc = "Bit 2 - Block multicast frames not matching the address filter"]
     #[inline(always)]
-    pub fn block_multicast(&mut self) -> BLOCK_MULTICAST_W<FILTER_CONTROL_SPEC> {
+    pub fn block_multicast(&mut self) -> BLOCK_MULTICAST_W<'_, FILTER_CONTROL_SPEC> {
         BLOCK_MULTICAST_W::new(self, 2)
     }
     #[doc = "Bit 4 - Receive beacon frames"]
     #[inline(always)]
-    pub fn scan_mode(&mut self) -> SCAN_MODE_W<FILTER_CONTROL_SPEC> {
+    pub fn scan_mode(&mut self) -> SCAN_MODE_W<'_, FILTER_CONTROL_SPEC> {
         SCAN_MODE_W::new(self, 4)
     }
     #[doc = "Bit 8 - Receive everything except control frames"]
     #[inline(always)]
-    pub fn data_and_mgmt_mode(&mut self) -> DATA_AND_MGMT_MODE_W<FILTER_CONTROL_SPEC> {
+    pub fn data_and_mgmt_mode(&mut self) -> DATA_AND_MGMT_MODE_W<'_, FILTER_CONTROL_SPEC> {
         DATA_AND_MGMT_MODE_W::new(self, 8)
     }
 }

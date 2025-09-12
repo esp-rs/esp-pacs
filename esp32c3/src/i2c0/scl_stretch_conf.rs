@@ -56,27 +56,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - reg_stretch_protect_num"]
     #[inline(always)]
-    pub fn stretch_protect_num(&mut self) -> STRETCH_PROTECT_NUM_W<SCL_STRETCH_CONF_SPEC> {
+    pub fn stretch_protect_num(&mut self) -> STRETCH_PROTECT_NUM_W<'_, SCL_STRETCH_CONF_SPEC> {
         STRETCH_PROTECT_NUM_W::new(self, 0)
     }
     #[doc = "Bit 10 - reg_slave_scl_stretch_en"]
     #[inline(always)]
-    pub fn slave_scl_stretch_en(&mut self) -> SLAVE_SCL_STRETCH_EN_W<SCL_STRETCH_CONF_SPEC> {
+    pub fn slave_scl_stretch_en(&mut self) -> SLAVE_SCL_STRETCH_EN_W<'_, SCL_STRETCH_CONF_SPEC> {
         SLAVE_SCL_STRETCH_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - reg_slave_scl_stretch_clr"]
     #[inline(always)]
-    pub fn slave_scl_stretch_clr(&mut self) -> SLAVE_SCL_STRETCH_CLR_W<SCL_STRETCH_CONF_SPEC> {
+    pub fn slave_scl_stretch_clr(&mut self) -> SLAVE_SCL_STRETCH_CLR_W<'_, SCL_STRETCH_CONF_SPEC> {
         SLAVE_SCL_STRETCH_CLR_W::new(self, 11)
     }
     #[doc = "Bit 12 - reg_slave_byte_ack_ctl_en"]
     #[inline(always)]
-    pub fn slave_byte_ack_ctl_en(&mut self) -> SLAVE_BYTE_ACK_CTL_EN_W<SCL_STRETCH_CONF_SPEC> {
+    pub fn slave_byte_ack_ctl_en(&mut self) -> SLAVE_BYTE_ACK_CTL_EN_W<'_, SCL_STRETCH_CONF_SPEC> {
         SLAVE_BYTE_ACK_CTL_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - reg_slave_byte_ack_lvl"]
     #[inline(always)]
-    pub fn slave_byte_ack_lvl(&mut self) -> SLAVE_BYTE_ACK_LVL_W<SCL_STRETCH_CONF_SPEC> {
+    pub fn slave_byte_ack_lvl(&mut self) -> SLAVE_BYTE_ACK_LVL_W<'_, SCL_STRETCH_CONF_SPEC> {
         SLAVE_BYTE_ACK_LVL_W::new(self, 13)
     }
 }

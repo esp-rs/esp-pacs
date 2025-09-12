@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core1_gdma_int_map(&mut self) -> CORE1_GDMA_INT_MAP_W<GDMA_INT_MAP_SPEC> {
+    pub fn core1_gdma_int_map(&mut self) -> CORE1_GDMA_INT_MAP_W<'_, GDMA_INT_MAP_SPEC> {
         CORE1_GDMA_INT_MAP_W::new(self, 0)
     }
 }

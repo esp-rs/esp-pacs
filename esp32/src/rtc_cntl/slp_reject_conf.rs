@@ -62,22 +62,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 24 - enable GPIO reject"]
     #[inline(always)]
-    pub fn gpio_reject_en(&mut self) -> GPIO_REJECT_EN_W<SLP_REJECT_CONF_SPEC> {
+    pub fn gpio_reject_en(&mut self) -> GPIO_REJECT_EN_W<'_, SLP_REJECT_CONF_SPEC> {
         GPIO_REJECT_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - enable SDIO reject"]
     #[inline(always)]
-    pub fn sdio_reject_en(&mut self) -> SDIO_REJECT_EN_W<SLP_REJECT_CONF_SPEC> {
+    pub fn sdio_reject_en(&mut self) -> SDIO_REJECT_EN_W<'_, SLP_REJECT_CONF_SPEC> {
         SDIO_REJECT_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - enable reject for light sleep"]
     #[inline(always)]
-    pub fn light_slp_reject_en(&mut self) -> LIGHT_SLP_REJECT_EN_W<SLP_REJECT_CONF_SPEC> {
+    pub fn light_slp_reject_en(&mut self) -> LIGHT_SLP_REJECT_EN_W<'_, SLP_REJECT_CONF_SPEC> {
         LIGHT_SLP_REJECT_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - enable reject for deep sleep"]
     #[inline(always)]
-    pub fn deep_slp_reject_en(&mut self) -> DEEP_SLP_REJECT_EN_W<SLP_REJECT_CONF_SPEC> {
+    pub fn deep_slp_reject_en(&mut self) -> DEEP_SLP_REJECT_EN_W<'_, SLP_REJECT_CONF_SPEC> {
         DEEP_SLP_REJECT_EN_W::new(self, 27)
     }
 }

@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<SHA384_CONTINUE_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to continue the SHA-384 operation with subsequent blocks."]
     #[inline(always)]
-    pub fn sha384_continue(&mut self) -> SHA384_CONTINUE_W<SHA384_CONTINUE_SPEC> {
+    pub fn sha384_continue(&mut self) -> SHA384_CONTINUE_W<'_, SHA384_CONTINUE_SPEC> {
         SHA384_CONTINUE_W::new(self, 0)
     }
 }

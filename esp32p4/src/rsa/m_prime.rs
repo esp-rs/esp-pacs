@@ -2,12 +2,12 @@
 pub type R = crate::R<M_PRIME_SPEC>;
 #[doc = "Register `M_PRIME` writer"]
 pub type W = crate::W<M_PRIME_SPEC>;
-#[doc = "Field `M_PRIME` reader - Represents M’"]
+#[doc = "Field `M_PRIME` reader - Represents M'"]
 pub type M_PRIME_R = crate::FieldReader<u32>;
-#[doc = "Field `M_PRIME` writer - Represents M’"]
+#[doc = "Field `M_PRIME` writer - Represents M'"]
 pub type M_PRIME_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - Represents M’"]
+    #[doc = "Bits 0:31 - Represents M'"]
     #[inline(always)]
     pub fn m_prime(&self) -> M_PRIME_R {
         M_PRIME_R::new(self.bits)
@@ -22,13 +22,13 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Represents M’"]
+    #[doc = "Bits 0:31 - Represents M'"]
     #[inline(always)]
-    pub fn m_prime(&mut self) -> M_PRIME_W<M_PRIME_SPEC> {
+    pub fn m_prime(&mut self) -> M_PRIME_W<'_, M_PRIME_SPEC> {
         M_PRIME_W::new(self, 0)
     }
 }
-#[doc = "Represents M’\n\nYou can [`read`](crate::Reg::read) this register and get [`m_prime::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m_prime::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Represents M'\n\nYou can [`read`](crate::Reg::read) this register and get [`m_prime::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m_prime::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct M_PRIME_SPEC;
 impl crate::RegisterSpec for M_PRIME_SPEC {
     type Ux = u32;

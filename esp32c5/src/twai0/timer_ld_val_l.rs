@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - TWAI FD timer count pre-load value register, low part."]
     #[inline(always)]
-    pub fn timer_ld_val_l(&mut self) -> TIMER_LD_VAL_L_W<TIMER_LD_VAL_L_SPEC> {
+    pub fn timer_ld_val_l(&mut self) -> TIMER_LD_VAL_L_W<'_, TIMER_LD_VAL_L_SPEC> {
         TIMER_LD_VAL_L_W::new(self, 0)
     }
 }

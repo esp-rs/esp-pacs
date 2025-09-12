@@ -62,22 +62,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - enable rng RO 1: enable RO 0: disable RO"]
     #[inline(always)]
-    pub fn rng_sample_enable(&mut self) -> RNG_SAMPLE_ENABLE_W<RNG_CFG_SPEC> {
+    pub fn rng_sample_enable(&mut self) -> RNG_SAMPLE_ENABLE_W<'_, RNG_CFG_SPEC> {
         RNG_SAMPLE_ENABLE_W::new(self, 0)
     }
     #[doc = "Bits 1:8 - configure rng timer clk div"]
     #[inline(always)]
-    pub fn rng_timer_pscale(&mut self) -> RNG_TIMER_PSCALE_W<RNG_CFG_SPEC> {
+    pub fn rng_timer_pscale(&mut self) -> RNG_TIMER_PSCALE_W<'_, RNG_CFG_SPEC> {
         RNG_TIMER_PSCALE_W::new(self, 1)
     }
     #[doc = "Bit 9 - enable rng xor async rng timer"]
     #[inline(always)]
-    pub fn rng_timer_en(&mut self) -> RNG_TIMER_EN_W<RNG_CFG_SPEC> {
+    pub fn rng_timer_en(&mut self) -> RNG_TIMER_EN_W<'_, RNG_CFG_SPEC> {
         RNG_TIMER_EN_W::new(self, 9)
     }
     #[doc = "Bits 10:11 - enable rng xor rtc timer: bit(0) : enable rtc timer before crc Bit(1): enable rtc timer after crc"]
     #[inline(always)]
-    pub fn rtc_timer_en(&mut self) -> RTC_TIMER_EN_W<RNG_CFG_SPEC> {
+    pub fn rtc_timer_en(&mut self) -> RTC_TIMER_EN_W<'_, RNG_CFG_SPEC> {
         RTC_TIMER_EN_W::new(self, 10)
     }
 }

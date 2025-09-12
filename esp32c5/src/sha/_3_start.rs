@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<_3_START_SPEC> {
 impl W {
     #[doc = "Bit 0 - Start typical sha3."]
     #[inline(always)]
-    pub fn _3_start(&mut self) -> _3_START_W<_3_START_SPEC> {
+    pub fn _3_start(&mut self) -> _3_START_W<'_, _3_START_SPEC> {
         _3_START_W::new(self, 0)
     }
 }

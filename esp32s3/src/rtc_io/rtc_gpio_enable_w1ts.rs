@@ -11,7 +11,9 @@ impl core::fmt::Debug for crate::generic::Reg<RTC_GPIO_ENABLE_W1TS_SPEC> {
 impl W {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 enable write 1 to set"]
     #[inline(always)]
-    pub fn rtc_gpio_enable_w1ts(&mut self) -> RTC_GPIO_ENABLE_W1TS_W<RTC_GPIO_ENABLE_W1TS_SPEC> {
+    pub fn rtc_gpio_enable_w1ts(
+        &mut self,
+    ) -> RTC_GPIO_ENABLE_W1TS_W<'_, RTC_GPIO_ENABLE_W1TS_SPEC> {
         RTC_GPIO_ENABLE_W1TS_W::new(self, 10)
     }
 }

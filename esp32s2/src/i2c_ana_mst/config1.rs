@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 4:16 - I2C RTC Magic Control"]
     #[inline(always)]
-    pub fn magic_ctrl(&mut self) -> MAGIC_CTRL_W<CONFIG1_SPEC> {
+    pub fn magic_ctrl(&mut self) -> MAGIC_CTRL_W<'_, CONFIG1_SPEC> {
         MAGIC_CTRL_W::new(self, 4)
     }
     #[doc = "Bits 8:22 - I2C RTC All Mask"]
     #[inline(always)]
-    pub fn all_mask(&mut self) -> ALL_MASK_W<CONFIG1_SPEC> {
+    pub fn all_mask(&mut self) -> ALL_MASK_W<'_, CONFIG1_SPEC> {
         ALL_MASK_W::new(self, 8)
     }
     #[doc = "Bit 14 - I2C RTC APLL Mask"]
     #[inline(always)]
-    pub fn apll(&mut self) -> APLL_W<CONFIG1_SPEC> {
+    pub fn apll(&mut self) -> APLL_W<'_, CONFIG1_SPEC> {
         APLL_W::new(self, 14)
     }
     #[doc = "Bit 17 - I2C RTC BBPLL Mask"]
     #[inline(always)]
-    pub fn bbpll(&mut self) -> BBPLL_W<CONFIG1_SPEC> {
+    pub fn bbpll(&mut self) -> BBPLL_W<'_, CONFIG1_SPEC> {
         BBPLL_W::new(self, 17)
     }
     #[doc = "Bit 18 - I2C RTC SAR Mask"]
     #[inline(always)]
-    pub fn sar(&mut self) -> SAR_W<CONFIG1_SPEC> {
+    pub fn sar(&mut self) -> SAR_W<'_, CONFIG1_SPEC> {
         SAR_W::new(self, 18)
     }
     #[doc = "Bit 22 - I2C RTC BOD Mask"]
     #[inline(always)]
-    pub fn bod(&mut self) -> BOD_W<CONFIG1_SPEC> {
+    pub fn bod(&mut self) -> BOD_W<'_, CONFIG1_SPEC> {
         BOD_W::new(self, 22)
     }
 }

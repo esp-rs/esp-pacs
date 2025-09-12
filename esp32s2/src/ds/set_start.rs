@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<SET_START_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to this register to activate the DS peripheral."]
     #[inline(always)]
-    pub fn set_start(&mut self) -> SET_START_W<SET_START_SPEC> {
+    pub fn set_start(&mut self) -> SET_START_W<'_, SET_START_SPEC> {
         SET_START_W::new(self, 0)
     }
 }

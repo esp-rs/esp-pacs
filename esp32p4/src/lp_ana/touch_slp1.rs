@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]
-    pub fn touch_slp_th2(&mut self) -> TOUCH_SLP_TH2_W<TOUCH_SLP1_SPEC> {
+    pub fn touch_slp_th2(&mut self) -> TOUCH_SLP_TH2_W<'_, TOUCH_SLP1_SPEC> {
         TOUCH_SLP_TH2_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - need_des"]
     #[inline(always)]
-    pub fn touch_slp_th1(&mut self) -> TOUCH_SLP_TH1_W<TOUCH_SLP1_SPEC> {
+    pub fn touch_slp_th1(&mut self) -> TOUCH_SLP_TH1_W<'_, TOUCH_SLP1_SPEC> {
         TOUCH_SLP_TH1_W::new(self, 16)
     }
 }

@@ -19,27 +19,27 @@ impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set the bit to 1 to allow the driving nodes start transmission."]
     #[inline(always)]
-    pub fn tx_req(&mut self) -> TX_REQ_W<CMD_SPEC> {
+    pub fn tx_req(&mut self) -> TX_REQ_W<'_, CMD_SPEC> {
         TX_REQ_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set the bit to 1 to cancel a pending transmission request."]
     #[inline(always)]
-    pub fn abort_tx(&mut self) -> ABORT_TX_W<CMD_SPEC> {
+    pub fn abort_tx(&mut self) -> ABORT_TX_W<'_, CMD_SPEC> {
         ABORT_TX_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set the bit to 1 to release the RX buffer."]
     #[inline(always)]
-    pub fn release_buf(&mut self) -> RELEASE_BUF_W<CMD_SPEC> {
+    pub fn release_buf(&mut self) -> RELEASE_BUF_W<'_, CMD_SPEC> {
         RELEASE_BUF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set the bit to 1 to clear the data overrun status bit."]
     #[inline(always)]
-    pub fn clr_overrun(&mut self) -> CLR_OVERRUN_W<CMD_SPEC> {
+    pub fn clr_overrun(&mut self) -> CLR_OVERRUN_W<'_, CMD_SPEC> {
         CLR_OVERRUN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Self reception request command. Set the bit to 1 to allow a message be transmitted and received simultaneously."]
     #[inline(always)]
-    pub fn self_rx_req(&mut self) -> SELF_RX_REQ_W<CMD_SPEC> {
+    pub fn self_rx_req(&mut self) -> SELF_RX_REQ_W<'_, CMD_SPEC> {
         SELF_RX_REQ_W::new(self, 4)
     }
 }

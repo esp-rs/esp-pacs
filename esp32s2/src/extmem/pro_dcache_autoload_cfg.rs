@@ -95,49 +95,49 @@ impl W {
     #[inline(always)]
     pub fn pro_dcache_autoload_mode(
         &mut self,
-    ) -> PRO_DCACHE_AUTOLOAD_MODE_W<PRO_DCACHE_AUTOLOAD_CFG_SPEC> {
+    ) -> PRO_DCACHE_AUTOLOAD_MODE_W<'_, PRO_DCACHE_AUTOLOAD_CFG_SPEC> {
         PRO_DCACHE_AUTOLOAD_MODE_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - Reserved."]
     #[inline(always)]
     pub fn pro_dcache_autoload_step(
         &mut self,
-    ) -> PRO_DCACHE_AUTOLOAD_STEP_W<PRO_DCACHE_AUTOLOAD_CFG_SPEC> {
+    ) -> PRO_DCACHE_AUTOLOAD_STEP_W<'_, PRO_DCACHE_AUTOLOAD_CFG_SPEC> {
         PRO_DCACHE_AUTOLOAD_STEP_W::new(self, 1)
     }
     #[doc = "Bit 3 - The bits are used to configure the direction of conditional pre-load operation. 1: descending, 0: ascending."]
     #[inline(always)]
     pub fn pro_dcache_autoload_order(
         &mut self,
-    ) -> PRO_DCACHE_AUTOLOAD_ORDER_W<PRO_DCACHE_AUTOLOAD_CFG_SPEC> {
+    ) -> PRO_DCACHE_AUTOLOAD_ORDER_W<'_, PRO_DCACHE_AUTOLOAD_CFG_SPEC> {
         PRO_DCACHE_AUTOLOAD_ORDER_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - The bits are used to configure trigger conditions for conditional pre-load. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
     #[inline(always)]
     pub fn pro_dcache_autoload_rqst(
         &mut self,
-    ) -> PRO_DCACHE_AUTOLOAD_RQST_W<PRO_DCACHE_AUTOLOAD_CFG_SPEC> {
+    ) -> PRO_DCACHE_AUTOLOAD_RQST_W<'_, PRO_DCACHE_AUTOLOAD_CFG_SPEC> {
         PRO_DCACHE_AUTOLOAD_RQST_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - The bits are used to configure the numbers of the cache block for the issuing conditional pre-load operation."]
     #[inline(always)]
     pub fn pro_dcache_autoload_size(
         &mut self,
-    ) -> PRO_DCACHE_AUTOLOAD_SIZE_W<PRO_DCACHE_AUTOLOAD_CFG_SPEC> {
+    ) -> PRO_DCACHE_AUTOLOAD_SIZE_W<'_, PRO_DCACHE_AUTOLOAD_CFG_SPEC> {
         PRO_DCACHE_AUTOLOAD_SIZE_W::new(self, 6)
     }
     #[doc = "Bit 8 - The bits are used to enable the second section for conditional pre-load operation."]
     #[inline(always)]
     pub fn pro_dcache_autoload_sct0_ena(
         &mut self,
-    ) -> PRO_DCACHE_AUTOLOAD_SCT0_ENA_W<PRO_DCACHE_AUTOLOAD_CFG_SPEC> {
+    ) -> PRO_DCACHE_AUTOLOAD_SCT0_ENA_W<'_, PRO_DCACHE_AUTOLOAD_CFG_SPEC> {
         PRO_DCACHE_AUTOLOAD_SCT0_ENA_W::new(self, 8)
     }
     #[doc = "Bit 9 - The bits are used to enable the first section for conditional pre-load operation."]
     #[inline(always)]
     pub fn pro_dcache_autoload_sct1_ena(
         &mut self,
-    ) -> PRO_DCACHE_AUTOLOAD_SCT1_ENA_W<PRO_DCACHE_AUTOLOAD_CFG_SPEC> {
+    ) -> PRO_DCACHE_AUTOLOAD_SCT1_ENA_W<'_, PRO_DCACHE_AUTOLOAD_CFG_SPEC> {
         PRO_DCACHE_AUTOLOAD_SCT1_ENA_W::new(self, 9)
     }
 }

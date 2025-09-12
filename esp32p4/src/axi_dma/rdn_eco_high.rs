@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The start address of accessible address space."]
     #[inline(always)]
-    pub fn rdn_eco_high(&mut self) -> RDN_ECO_HIGH_W<RDN_ECO_HIGH_SPEC> {
+    pub fn rdn_eco_high(&mut self) -> RDN_ECO_HIGH_W<'_, RDN_ECO_HIGH_SPEC> {
         RDN_ECO_HIGH_W::new(self, 0)
     }
 }

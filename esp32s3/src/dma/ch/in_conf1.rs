@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - This register is used to generate the INFIFO_FULL_WM_INT interrupt when Rx channel 0 received byte number in Rx FIFO is up to the value of the register."]
     #[inline(always)]
-    pub fn dma_infifo_full_thrs(&mut self) -> DMA_INFIFO_FULL_THRS_W<IN_CONF1_SPEC> {
+    pub fn dma_infifo_full_thrs(&mut self) -> DMA_INFIFO_FULL_THRS_W<'_, IN_CONF1_SPEC> {
         DMA_INFIFO_FULL_THRS_W::new(self, 0)
     }
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
-    pub fn in_check_owner(&mut self) -> IN_CHECK_OWNER_W<IN_CONF1_SPEC> {
+    pub fn in_check_owner(&mut self) -> IN_CHECK_OWNER_W<'_, IN_CONF1_SPEC> {
         IN_CHECK_OWNER_W::new(self, 12)
     }
     #[doc = "Bits 13:14 - Block size of Rx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
     #[inline(always)]
-    pub fn in_ext_mem_bk_size(&mut self) -> IN_EXT_MEM_BK_SIZE_W<IN_CONF1_SPEC> {
+    pub fn in_ext_mem_bk_size(&mut self) -> IN_EXT_MEM_BK_SIZE_W<'_, IN_CONF1_SPEC> {
         IN_EXT_MEM_BK_SIZE_W::new(self, 13)
     }
 }

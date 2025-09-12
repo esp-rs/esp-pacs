@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - this bit configures the clk enable refclk and cfg_clk of dsi_host. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn dsi_cfg_ref_clk_en(&mut self) -> DSI_CFG_REF_CLK_EN_W<HOST_CTRL_SPEC> {
+    pub fn dsi_cfg_ref_clk_en(&mut self) -> DSI_CFG_REF_CLK_EN_W<'_, HOST_CTRL_SPEC> {
         DSI_CFG_REF_CLK_EN_W::new(self, 0)
     }
 }

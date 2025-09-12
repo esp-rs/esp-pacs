@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - force off lp memory"]
     #[inline(always)]
-    pub fn lp_mem_force_pd(&mut self) -> LP_MEM_FORCE_PD_W<MEM_CTRL_SPEC> {
+    pub fn lp_mem_force_pd(&mut self) -> LP_MEM_FORCE_PD_W<'_, MEM_CTRL_SPEC> {
         LP_MEM_FORCE_PD_W::new(self, 0)
     }
     #[doc = "Bit 1 - force on lp memory"]
     #[inline(always)]
-    pub fn lp_mem_force_pu(&mut self) -> LP_MEM_FORCE_PU_W<MEM_CTRL_SPEC> {
+    pub fn lp_mem_force_pu(&mut self) -> LP_MEM_FORCE_PU_W<'_, MEM_CTRL_SPEC> {
         LP_MEM_FORCE_PU_W::new(self, 1)
     }
     #[doc = "Bit 2 - force off huk memory"]
     #[inline(always)]
-    pub fn huk_mem_force_pd(&mut self) -> HUK_MEM_FORCE_PD_W<MEM_CTRL_SPEC> {
+    pub fn huk_mem_force_pd(&mut self) -> HUK_MEM_FORCE_PD_W<'_, MEM_CTRL_SPEC> {
         HUK_MEM_FORCE_PD_W::new(self, 2)
     }
     #[doc = "Bit 3 - force on huk memory"]
     #[inline(always)]
-    pub fn huk_mem_force_pu(&mut self) -> HUK_MEM_FORCE_PU_W<MEM_CTRL_SPEC> {
+    pub fn huk_mem_force_pu(&mut self) -> HUK_MEM_FORCE_PU_W<'_, MEM_CTRL_SPEC> {
         HUK_MEM_FORCE_PU_W::new(self, 3)
     }
 }

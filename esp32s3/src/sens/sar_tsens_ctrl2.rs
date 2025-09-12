@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - no public"]
     #[inline(always)]
-    pub fn sar_tsens_xpd_wait(&mut self) -> SAR_TSENS_XPD_WAIT_W<SAR_TSENS_CTRL2_SPEC> {
+    pub fn sar_tsens_xpd_wait(&mut self) -> SAR_TSENS_XPD_WAIT_W<'_, SAR_TSENS_CTRL2_SPEC> {
         SAR_TSENS_XPD_WAIT_W::new(self, 0)
     }
     #[doc = "Bits 12:13 - no public"]
     #[inline(always)]
-    pub fn sar_tsens_xpd_force(&mut self) -> SAR_TSENS_XPD_FORCE_W<SAR_TSENS_CTRL2_SPEC> {
+    pub fn sar_tsens_xpd_force(&mut self) -> SAR_TSENS_XPD_FORCE_W<'_, SAR_TSENS_CTRL2_SPEC> {
         SAR_TSENS_XPD_FORCE_W::new(self, 12)
     }
     #[doc = "Bit 14 - no public"]
     #[inline(always)]
-    pub fn sar_tsens_clk_inv(&mut self) -> SAR_TSENS_CLK_INV_W<SAR_TSENS_CTRL2_SPEC> {
+    pub fn sar_tsens_clk_inv(&mut self) -> SAR_TSENS_CLK_INV_W<'_, SAR_TSENS_CTRL2_SPEC> {
         SAR_TSENS_CLK_INV_W::new(self, 14)
     }
 }

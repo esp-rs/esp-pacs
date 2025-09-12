@@ -34,7 +34,7 @@ impl W {
     #[inline(always)]
     pub fn cache_l2_cache_undef_op(
         &mut self,
-    ) -> CACHE_L2_CACHE_UNDEF_OP_W<CACHE_L2_CACHE_CTRL_SPEC> {
+    ) -> CACHE_L2_CACHE_UNDEF_OP_W<'_, CACHE_L2_CACHE_CTRL_SPEC> {
         CACHE_L2_CACHE_UNDEF_OP_W::new(self, 8)
     }
 }

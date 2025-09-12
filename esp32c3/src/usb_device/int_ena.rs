@@ -134,62 +134,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the USB_DEVICE_JTAG_IN_FLUSH_INT interrupt."]
     #[inline(always)]
-    pub fn jtag_in_flush(&mut self) -> JTAG_IN_FLUSH_W<INT_ENA_SPEC> {
+    pub fn jtag_in_flush(&mut self) -> JTAG_IN_FLUSH_W<'_, INT_ENA_SPEC> {
         JTAG_IN_FLUSH_W::new(self, 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the USB_DEVICE_SOF_INT interrupt."]
     #[inline(always)]
-    pub fn sof(&mut self) -> SOF_W<INT_ENA_SPEC> {
+    pub fn sof(&mut self) -> SOF_W<'_, INT_ENA_SPEC> {
         SOF_W::new(self, 1)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the USB_DEVICE_SERIAL_OUT_RECV_PKT_INT interrupt."]
     #[inline(always)]
-    pub fn serial_out_recv_pkt(&mut self) -> SERIAL_OUT_RECV_PKT_W<INT_ENA_SPEC> {
+    pub fn serial_out_recv_pkt(&mut self) -> SERIAL_OUT_RECV_PKT_W<'_, INT_ENA_SPEC> {
         SERIAL_OUT_RECV_PKT_W::new(self, 2)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the USB_DEVICE_SERIAL_IN_EMPTY_INT interrupt."]
     #[inline(always)]
-    pub fn serial_in_empty(&mut self) -> SERIAL_IN_EMPTY_W<INT_ENA_SPEC> {
+    pub fn serial_in_empty(&mut self) -> SERIAL_IN_EMPTY_W<'_, INT_ENA_SPEC> {
         SERIAL_IN_EMPTY_W::new(self, 3)
     }
     #[doc = "Bit 4 - The interrupt enable bit for the USB_DEVICE_PID_ERR_INT interrupt."]
     #[inline(always)]
-    pub fn pid_err(&mut self) -> PID_ERR_W<INT_ENA_SPEC> {
+    pub fn pid_err(&mut self) -> PID_ERR_W<'_, INT_ENA_SPEC> {
         PID_ERR_W::new(self, 4)
     }
     #[doc = "Bit 5 - The interrupt enable bit for the USB_DEVICE_CRC5_ERR_INT interrupt."]
     #[inline(always)]
-    pub fn crc5_err(&mut self) -> CRC5_ERR_W<INT_ENA_SPEC> {
+    pub fn crc5_err(&mut self) -> CRC5_ERR_W<'_, INT_ENA_SPEC> {
         CRC5_ERR_W::new(self, 5)
     }
     #[doc = "Bit 6 - The interrupt enable bit for the USB_DEVICE_CRC16_ERR_INT interrupt."]
     #[inline(always)]
-    pub fn crc16_err(&mut self) -> CRC16_ERR_W<INT_ENA_SPEC> {
+    pub fn crc16_err(&mut self) -> CRC16_ERR_W<'_, INT_ENA_SPEC> {
         CRC16_ERR_W::new(self, 6)
     }
     #[doc = "Bit 7 - The interrupt enable bit for the USB_DEVICE_STUFF_ERR_INT interrupt."]
     #[inline(always)]
-    pub fn stuff_err(&mut self) -> STUFF_ERR_W<INT_ENA_SPEC> {
+    pub fn stuff_err(&mut self) -> STUFF_ERR_W<'_, INT_ENA_SPEC> {
         STUFF_ERR_W::new(self, 7)
     }
     #[doc = "Bit 8 - The interrupt enable bit for the USB_DEVICE_IN_TOKEN_REC_IN_EP1_INT interrupt."]
     #[inline(always)]
-    pub fn in_token_rec_in_ep1(&mut self) -> IN_TOKEN_REC_IN_EP1_W<INT_ENA_SPEC> {
+    pub fn in_token_rec_in_ep1(&mut self) -> IN_TOKEN_REC_IN_EP1_W<'_, INT_ENA_SPEC> {
         IN_TOKEN_REC_IN_EP1_W::new(self, 8)
     }
     #[doc = "Bit 9 - The interrupt enable bit for the USB_DEVICE_USB_BUS_RESET_INT interrupt."]
     #[inline(always)]
-    pub fn usb_bus_reset(&mut self) -> USB_BUS_RESET_W<INT_ENA_SPEC> {
+    pub fn usb_bus_reset(&mut self) -> USB_BUS_RESET_W<'_, INT_ENA_SPEC> {
         USB_BUS_RESET_W::new(self, 9)
     }
     #[doc = "Bit 10 - The interrupt enable bit for the USB_DEVICE_OUT_EP1_ZERO_PAYLOAD_INT interrupt."]
     #[inline(always)]
-    pub fn out_ep1_zero_payload(&mut self) -> OUT_EP1_ZERO_PAYLOAD_W<INT_ENA_SPEC> {
+    pub fn out_ep1_zero_payload(&mut self) -> OUT_EP1_ZERO_PAYLOAD_W<'_, INT_ENA_SPEC> {
         OUT_EP1_ZERO_PAYLOAD_W::new(self, 10)
     }
     #[doc = "Bit 11 - The interrupt enable bit for the USB_DEVICE_OUT_EP2_ZERO_PAYLOAD_INT interrupt."]
     #[inline(always)]
-    pub fn out_ep2_zero_payload(&mut self) -> OUT_EP2_ZERO_PAYLOAD_W<INT_ENA_SPEC> {
+    pub fn out_ep2_zero_payload(&mut self) -> OUT_EP2_ZERO_PAYLOAD_W<'_, INT_ENA_SPEC> {
         OUT_EP2_ZERO_PAYLOAD_W::new(self, 11)
     }
 }

@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn cca_ed_threshold(&mut self) -> CCA_ED_THRESHOLD_W<ED_SCAN_CFG_SPEC> {
+    pub fn cca_ed_threshold(&mut self) -> CCA_ED_THRESHOLD_W<'_, ED_SCAN_CFG_SPEC> {
         CCA_ED_THRESHOLD_W::new(self, 0)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
-    pub fn ed_sample_mode(&mut self) -> ED_SAMPLE_MODE_W<ED_SCAN_CFG_SPEC> {
+    pub fn ed_sample_mode(&mut self) -> ED_SAMPLE_MODE_W<'_, ED_SCAN_CFG_SPEC> {
         ED_SAMPLE_MODE_W::new(self, 11)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn dis_ed_power_sel(&mut self) -> DIS_ED_POWER_SEL_W<ED_SCAN_CFG_SPEC> {
+    pub fn dis_ed_power_sel(&mut self) -> DIS_ED_POWER_SEL_W<'_, ED_SCAN_CFG_SPEC> {
         DIS_ED_POWER_SEL_W::new(self, 13)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
-    pub fn cca_mode(&mut self) -> CCA_MODE_W<ED_SCAN_CFG_SPEC> {
+    pub fn cca_mode(&mut self) -> CCA_MODE_W<'_, ED_SCAN_CFG_SPEC> {
         CCA_MODE_W::new(self, 14)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
-    pub fn ed_rss(&mut self) -> ED_RSS_W<ED_SCAN_CFG_SPEC> {
+    pub fn ed_rss(&mut self) -> ED_RSS_W<'_, ED_SCAN_CFG_SPEC> {
         ED_RSS_W::new(self, 16)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn cca_busy(&mut self) -> CCA_BUSY_W<ED_SCAN_CFG_SPEC> {
+    pub fn cca_busy(&mut self) -> CCA_BUSY_W<'_, ED_SCAN_CFG_SPEC> {
         CCA_BUSY_W::new(self, 24)
     }
 }

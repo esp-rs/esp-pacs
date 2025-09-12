@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - The integral part of the frequency divider factor."]
     #[inline(always)]
-    pub fn clkdiv(&mut self) -> CLKDIV_W<CLKDIV_SPEC> {
+    pub fn clkdiv(&mut self) -> CLKDIV_W<'_, CLKDIV_SPEC> {
         CLKDIV_W::new(self, 0)
     }
     #[doc = "Bits 20:23 - The decimal part of the frequency divider factor."]
     #[inline(always)]
-    pub fn frag(&mut self) -> FRAG_W<CLKDIV_SPEC> {
+    pub fn frag(&mut self) -> FRAG_W<'_, CLKDIV_SPEC> {
         FRAG_W::new(self, 20)
     }
 }

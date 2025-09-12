@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 29 - reg_wdt_clk_is_active."]
     #[inline(always)]
-    pub fn wdt_clk_is_active(&mut self) -> WDT_CLK_IS_ACTIVE_W<REGCLK_SPEC> {
+    pub fn wdt_clk_is_active(&mut self) -> WDT_CLK_IS_ACTIVE_W<'_, REGCLK_SPEC> {
         WDT_CLK_IS_ACTIVE_W::new(self, 29)
     }
     #[doc = "Bit 30 - reg_timer_clk_is_active."]
     #[inline(always)]
-    pub fn timer_clk_is_active(&mut self) -> TIMER_CLK_IS_ACTIVE_W<REGCLK_SPEC> {
+    pub fn timer_clk_is_active(&mut self) -> TIMER_CLK_IS_ACTIVE_W<'_, REGCLK_SPEC> {
         TIMER_CLK_IS_ACTIVE_W::new(self, 30)
     }
     #[doc = "Bit 31 - reg_clk_en."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<REGCLK_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, REGCLK_SPEC> {
         CLK_EN_W::new(self, 31)
     }
 }

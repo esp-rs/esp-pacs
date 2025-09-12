@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Represents the data UART 0 read from FIFO.\\\\ Measurement unit: byte."]
     #[inline(always)]
-    pub fn rxfifo_rd_byte(&mut self) -> RXFIFO_RD_BYTE_W<FIFO_SPEC> {
+    pub fn rxfifo_rd_byte(&mut self) -> RXFIFO_RD_BYTE_W<'_, FIFO_SPEC> {
         RXFIFO_RD_BYTE_W::new(self, 0)
     }
 }

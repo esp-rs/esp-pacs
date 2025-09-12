@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - this field configures threshold of histogram bin 11 and bin 12"]
     #[inline(always)]
-    pub fn hist_seg_11_12(&mut self) -> HIST_SEG_11_12_W<HIST_SEG2_SPEC> {
+    pub fn hist_seg_11_12(&mut self) -> HIST_SEG_11_12_W<'_, HIST_SEG2_SPEC> {
         HIST_SEG_11_12_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - this field configures threshold of histogram bin 10 and bin 11"]
     #[inline(always)]
-    pub fn hist_seg_10_11(&mut self) -> HIST_SEG_10_11_W<HIST_SEG2_SPEC> {
+    pub fn hist_seg_10_11(&mut self) -> HIST_SEG_10_11_W<'_, HIST_SEG2_SPEC> {
         HIST_SEG_10_11_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - this field configures threshold of histogram bin 9 and bin 10"]
     #[inline(always)]
-    pub fn hist_seg_9_10(&mut self) -> HIST_SEG_9_10_W<HIST_SEG2_SPEC> {
+    pub fn hist_seg_9_10(&mut self) -> HIST_SEG_9_10_W<'_, HIST_SEG2_SPEC> {
         HIST_SEG_9_10_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - this field configures threshold of histogram bin 8 and bin 9"]
     #[inline(always)]
-    pub fn hist_seg_8_9(&mut self) -> HIST_SEG_8_9_W<HIST_SEG2_SPEC> {
+    pub fn hist_seg_8_9(&mut self) -> HIST_SEG_8_9_W<'_, HIST_SEG2_SPEC> {
         HIST_SEG_8_9_W::new(self, 24)
     }
 }

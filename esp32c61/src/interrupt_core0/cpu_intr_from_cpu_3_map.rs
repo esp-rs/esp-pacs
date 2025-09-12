@@ -39,14 +39,14 @@ impl W {
     #[inline(always)]
     pub fn cpu_intr_from_cpu_3_map(
         &mut self,
-    ) -> CPU_INTR_FROM_CPU_3_MAP_W<CPU_INTR_FROM_CPU_3_MAP_SPEC> {
+    ) -> CPU_INTR_FROM_CPU_3_MAP_W<'_, CPU_INTR_FROM_CPU_3_MAP_SPEC> {
         CPU_INTR_FROM_CPU_3_MAP_W::new(self, 0)
     }
     #[doc = "Bit 8 - Configures the PASS_IN_SEC flag of the interrupt source."]
     #[inline(always)]
     pub fn cpu_intr_from_cpu_3_pass_in_sec(
         &mut self,
-    ) -> CPU_INTR_FROM_CPU_3_PASS_IN_SEC_W<CPU_INTR_FROM_CPU_3_MAP_SPEC> {
+    ) -> CPU_INTR_FROM_CPU_3_PASS_IN_SEC_W<'_, CPU_INTR_FROM_CPU_3_MAP_SPEC> {
         CPU_INTR_FROM_CPU_3_PASS_IN_SEC_W::new(self, 8)
     }
 }

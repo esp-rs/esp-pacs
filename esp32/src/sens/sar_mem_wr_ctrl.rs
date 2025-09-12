@@ -36,17 +36,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
-    pub fn mem_wr_addr_init(&mut self) -> MEM_WR_ADDR_INIT_W<SAR_MEM_WR_CTRL_SPEC> {
+    pub fn mem_wr_addr_init(&mut self) -> MEM_WR_ADDR_INIT_W<'_, SAR_MEM_WR_CTRL_SPEC> {
         MEM_WR_ADDR_INIT_W::new(self, 0)
     }
     #[doc = "Bits 11:21"]
     #[inline(always)]
-    pub fn mem_wr_addr_size(&mut self) -> MEM_WR_ADDR_SIZE_W<SAR_MEM_WR_CTRL_SPEC> {
+    pub fn mem_wr_addr_size(&mut self) -> MEM_WR_ADDR_SIZE_W<'_, SAR_MEM_WR_CTRL_SPEC> {
         MEM_WR_ADDR_SIZE_W::new(self, 11)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    pub fn rtc_mem_wr_offst_clr(&mut self) -> RTC_MEM_WR_OFFST_CLR_W<SAR_MEM_WR_CTRL_SPEC> {
+    pub fn rtc_mem_wr_offst_clr(&mut self) -> RTC_MEM_WR_OFFST_CLR_W<'_, SAR_MEM_WR_CTRL_SPEC> {
         RTC_MEM_WR_OFFST_CLR_W::new(self, 22)
     }
 }

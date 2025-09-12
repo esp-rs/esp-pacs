@@ -124,57 +124,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 0 to select eof generated manchnism by configured data byte length. Write 1 to select eof generated manchnism by external enable signal."]
     #[inline(always)]
-    pub fn rx_eof_gen_sel(&mut self) -> RX_EOF_GEN_SEL_W<RX_CFG0_SPEC> {
+    pub fn rx_eof_gen_sel(&mut self) -> RX_EOF_GEN_SEL_W<'_, RX_CFG0_SPEC> {
         RX_EOF_GEN_SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to start rx global data sampling."]
     #[inline(always)]
-    pub fn rx_start(&mut self) -> RX_START_W<RX_CFG0_SPEC> {
+    pub fn rx_start(&mut self) -> RX_START_W<'_, RX_CFG0_SPEC> {
         RX_START_W::new(self, 1)
     }
     #[doc = "Bits 2:17 - Configures rx receieved data byte length."]
     #[inline(always)]
-    pub fn rx_data_bytelen(&mut self) -> RX_DATA_BYTELEN_W<RX_CFG0_SPEC> {
+    pub fn rx_data_bytelen(&mut self) -> RX_DATA_BYTELEN_W<'_, RX_CFG0_SPEC> {
         RX_DATA_BYTELEN_W::new(self, 2)
     }
     #[doc = "Bit 18 - Write 1 to enable software data sampling."]
     #[inline(always)]
-    pub fn rx_sw_en(&mut self) -> RX_SW_EN_W<RX_CFG0_SPEC> {
+    pub fn rx_sw_en(&mut self) -> RX_SW_EN_W<'_, RX_CFG0_SPEC> {
         RX_SW_EN_W::new(self, 18)
     }
     #[doc = "Bits 19:22 - Pulse submode selection. 0000: positive pulse start(data bit included) && positive pulse end(data bit included) 0001: positive pulse start(data bit included) && positive pulse end (data bit excluded) 0010: positive pulse start(data bit excluded) && positive pulse end (data bit included) 0011: positive pulse start(data bit excluded) && positive pulse end (data bit excluded) 0100: positive pulse start(data bit included) && length end 0101: positive pulse start(data bit excluded) && length end 0110: negative pulse start(data bit included) && negative pulse end(data bit included) 0111: negative pulse start(data bit included) && negative pulse end (data bit excluded) 1000: negative pulse start(data bit excluded) && negative pulse end (data bit included) 1001: negative pulse start(data bit excluded) && negative pulse end (data bit excluded) 1010: negative pulse start(data bit included) && length end 1011: negative pulse start(data bit excluded) && length end"]
     #[inline(always)]
-    pub fn rx_pulse_submode_sel(&mut self) -> RX_PULSE_SUBMODE_SEL_W<RX_CFG0_SPEC> {
+    pub fn rx_pulse_submode_sel(&mut self) -> RX_PULSE_SUBMODE_SEL_W<'_, RX_CFG0_SPEC> {
         RX_PULSE_SUBMODE_SEL_W::new(self, 19)
     }
     #[doc = "Bit 23 - Write 0 to sample data at high level of external enable signal. Write 1 to sample data at low level of external enable signal."]
     #[inline(always)]
-    pub fn rx_level_submode_sel(&mut self) -> RX_LEVEL_SUBMODE_SEL_W<RX_CFG0_SPEC> {
+    pub fn rx_level_submode_sel(&mut self) -> RX_LEVEL_SUBMODE_SEL_W<'_, RX_CFG0_SPEC> {
         RX_LEVEL_SUBMODE_SEL_W::new(self, 23)
     }
     #[doc = "Bits 24:25 - Rx data sampling mode selection. 000: external level enable mode 001: external pulse enable mode 010: internal software enable mode"]
     #[inline(always)]
-    pub fn rx_smp_mode_sel(&mut self) -> RX_SMP_MODE_SEL_W<RX_CFG0_SPEC> {
+    pub fn rx_smp_mode_sel(&mut self) -> RX_SMP_MODE_SEL_W<'_, RX_CFG0_SPEC> {
         RX_SMP_MODE_SEL_W::new(self, 24)
     }
     #[doc = "Bit 26 - Write 0 to enable sampling data on the rising edge of rx clock. Write 0 to enable sampling data on the falling edge of rx clock."]
     #[inline(always)]
-    pub fn rx_clk_edge_sel(&mut self) -> RX_CLK_EDGE_SEL_W<RX_CFG0_SPEC> {
+    pub fn rx_clk_edge_sel(&mut self) -> RX_CLK_EDGE_SEL_W<'_, RX_CFG0_SPEC> {
         RX_CLK_EDGE_SEL_W::new(self, 26)
     }
     #[doc = "Bit 27 - Write 0 to pack bits into 1byte from MSB when data bus width is 4/2/1 bits. Write 0 to pack bits into 1byte from LSB when data bus width is 4/2/1 bits."]
     #[inline(always)]
-    pub fn rx_bit_pack_order(&mut self) -> RX_BIT_PACK_ORDER_W<RX_CFG0_SPEC> {
+    pub fn rx_bit_pack_order(&mut self) -> RX_BIT_PACK_ORDER_W<'_, RX_CFG0_SPEC> {
         RX_BIT_PACK_ORDER_W::new(self, 27)
     }
     #[doc = "Bits 28:30 - Rx data bus width selection. 100: bus width is 1 bit 011: bus width is 2 bits 010: bus width is 4 bits 001: bus width is 8 bits 000: bus width is 16 bits"]
     #[inline(always)]
-    pub fn rx_bus_wid_sel(&mut self) -> RX_BUS_WID_SEL_W<RX_CFG0_SPEC> {
+    pub fn rx_bus_wid_sel(&mut self) -> RX_BUS_WID_SEL_W<'_, RX_CFG0_SPEC> {
         RX_BUS_WID_SEL_W::new(self, 28)
     }
     #[doc = "Bit 31 - Write 1 to enable soft reset of async fifo in rx module."]
     #[inline(always)]
-    pub fn rx_fifo_srst(&mut self) -> RX_FIFO_SRST_W<RX_CFG0_SPEC> {
+    pub fn rx_fifo_srst(&mut self) -> RX_FIFO_SRST_W<'_, RX_CFG0_SPEC> {
         RX_FIFO_SRST_W::new(self, 31)
     }
 }

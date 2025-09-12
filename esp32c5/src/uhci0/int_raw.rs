@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The raw interrupt status of UHCI_RX_START_INT."]
     #[inline(always)]
-    pub fn rx_start_int_raw(&mut self) -> RX_START_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn rx_start_int_raw(&mut self) -> RX_START_INT_RAW_W<'_, INT_RAW_SPEC> {
         RX_START_INT_RAW_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw interrupt status of UHCI_TX_START_INT."]
     #[inline(always)]
-    pub fn tx_start_int_raw(&mut self) -> TX_START_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn tx_start_int_raw(&mut self) -> TX_START_INT_RAW_W<'_, INT_RAW_SPEC> {
         TX_START_INT_RAW_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw interrupt status of UHCI_RX_HUNG_INT."]
     #[inline(always)]
-    pub fn rx_hung_int_raw(&mut self) -> RX_HUNG_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn rx_hung_int_raw(&mut self) -> RX_HUNG_INT_RAW_W<'_, INT_RAW_SPEC> {
         RX_HUNG_INT_RAW_W::new(self, 2)
     }
     #[doc = "Bit 3 - The raw interrupt status of UHCI_TX_HUNG_INT."]
     #[inline(always)]
-    pub fn tx_hung_int_raw(&mut self) -> TX_HUNG_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn tx_hung_int_raw(&mut self) -> TX_HUNG_INT_RAW_W<'_, INT_RAW_SPEC> {
         TX_HUNG_INT_RAW_W::new(self, 3)
     }
     #[doc = "Bit 4 - The raw interrupt status of UHCI_SEND_S_REG_Q_INT."]
     #[inline(always)]
-    pub fn send_s_reg_q_int_raw(&mut self) -> SEND_S_REG_Q_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn send_s_reg_q_int_raw(&mut self) -> SEND_S_REG_Q_INT_RAW_W<'_, INT_RAW_SPEC> {
         SEND_S_REG_Q_INT_RAW_W::new(self, 4)
     }
     #[doc = "Bit 5 - The raw interrupt status of UHCI_SEND_A_REG_Q_INT."]
     #[inline(always)]
-    pub fn send_a_reg_q_int_raw(&mut self) -> SEND_A_REG_Q_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn send_a_reg_q_int_raw(&mut self) -> SEND_A_REG_Q_INT_RAW_W<'_, INT_RAW_SPEC> {
         SEND_A_REG_Q_INT_RAW_W::new(self, 5)
     }
     #[doc = "Bit 6 - The raw interrupt status of UHCI_OUT_EOF_INT."]
     #[inline(always)]
-    pub fn out_eof_int_raw(&mut self) -> OUT_EOF_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn out_eof_int_raw(&mut self) -> OUT_EOF_INT_RAW_W<'_, INT_RAW_SPEC> {
         OUT_EOF_INT_RAW_W::new(self, 6)
     }
     #[doc = "Bit 7 - The raw interrupt status of UHCI_APP_CTRL0_INT."]
     #[inline(always)]
-    pub fn app_ctrl0_int_raw(&mut self) -> APP_CTRL0_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn app_ctrl0_int_raw(&mut self) -> APP_CTRL0_INT_RAW_W<'_, INT_RAW_SPEC> {
         APP_CTRL0_INT_RAW_W::new(self, 7)
     }
     #[doc = "Bit 8 - The raw interrupt status of UHCI_APP_CTRL1_INT."]
     #[inline(always)]
-    pub fn app_ctrl1_int_raw(&mut self) -> APP_CTRL1_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn app_ctrl1_int_raw(&mut self) -> APP_CTRL1_INT_RAW_W<'_, INT_RAW_SPEC> {
         APP_CTRL1_INT_RAW_W::new(self, 8)
     }
 }

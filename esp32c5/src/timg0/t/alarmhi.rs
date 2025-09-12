@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - Configures the high 22 bits of timer 0 alarm trigger time-base counter value. Valid only when TIMG_T0_ALARM_EN is 1. \\\\ Measurement unit: T0_clk \\\\"]
     #[inline(always)]
-    pub fn alarm_hi(&mut self) -> ALARM_HI_W<ALARMHI_SPEC> {
+    pub fn alarm_hi(&mut self) -> ALARM_HI_W<'_, ALARMHI_SPEC> {
         ALARM_HI_W::new(self, 0)
     }
 }

@@ -13,7 +13,7 @@ impl W {
     #[inline(always)]
     pub fn l2_cache_fail_int_clr(
         &mut self,
-    ) -> L2_CACHE_FAIL_INT_CLR_W<L2_CACHE_ACS_FAIL_INT_CLR_SPEC> {
+    ) -> L2_CACHE_FAIL_INT_CLR_W<'_, L2_CACHE_ACS_FAIL_INT_CLR_SPEC> {
         L2_CACHE_FAIL_INT_CLR_W::new(self, 5)
     }
 }

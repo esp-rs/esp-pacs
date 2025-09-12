@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Set 1: to update register with RTC timer"]
     #[inline(always)]
-    pub fn time_update(&mut self) -> TIME_UPDATE_W<TIME_UPDATE_SPEC> {
+    pub fn time_update(&mut self) -> TIME_UPDATE_W<'_, TIME_UPDATE_SPEC> {
         TIME_UPDATE_W::new(self, 31)
     }
 }

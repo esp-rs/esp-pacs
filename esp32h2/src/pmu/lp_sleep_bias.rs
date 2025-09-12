@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
-    pub fn lp_sleep_xpd_bias(&mut self) -> LP_SLEEP_XPD_BIAS_W<LP_SLEEP_BIAS_SPEC> {
+    pub fn lp_sleep_xpd_bias(&mut self) -> LP_SLEEP_XPD_BIAS_W<'_, LP_SLEEP_BIAS_SPEC> {
         LP_SLEEP_XPD_BIAS_W::new(self, 25)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn lp_sleep_pd_cur(&mut self) -> LP_SLEEP_PD_CUR_W<LP_SLEEP_BIAS_SPEC> {
+    pub fn lp_sleep_pd_cur(&mut self) -> LP_SLEEP_PD_CUR_W<'_, LP_SLEEP_BIAS_SPEC> {
         LP_SLEEP_PD_CUR_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn sleep(&mut self) -> SLEEP_W<LP_SLEEP_BIAS_SPEC> {
+    pub fn sleep(&mut self) -> SLEEP_W<'_, LP_SLEEP_BIAS_SPEC> {
         SLEEP_W::new(self, 31)
     }
 }

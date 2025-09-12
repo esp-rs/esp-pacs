@@ -76,37 +76,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - No public"]
     #[inline(always)]
-    pub fn ulp_cp_mem_addr_init(&mut self) -> ULP_CP_MEM_ADDR_INIT_W<RTC_ULP_CP_CTRL_SPEC> {
+    pub fn ulp_cp_mem_addr_init(&mut self) -> ULP_CP_MEM_ADDR_INIT_W<'_, RTC_ULP_CP_CTRL_SPEC> {
         ULP_CP_MEM_ADDR_INIT_W::new(self, 0)
     }
     #[doc = "Bits 11:21 - No public"]
     #[inline(always)]
-    pub fn ulp_cp_mem_addr_size(&mut self) -> ULP_CP_MEM_ADDR_SIZE_W<RTC_ULP_CP_CTRL_SPEC> {
+    pub fn ulp_cp_mem_addr_size(&mut self) -> ULP_CP_MEM_ADDR_SIZE_W<'_, RTC_ULP_CP_CTRL_SPEC> {
         ULP_CP_MEM_ADDR_SIZE_W::new(self, 11)
     }
     #[doc = "Bit 22 - No public"]
     #[inline(always)]
-    pub fn ulp_cp_mem_offst_clr(&mut self) -> ULP_CP_MEM_OFFST_CLR_W<RTC_ULP_CP_CTRL_SPEC> {
+    pub fn ulp_cp_mem_offst_clr(&mut self) -> ULP_CP_MEM_OFFST_CLR_W<'_, RTC_ULP_CP_CTRL_SPEC> {
         ULP_CP_MEM_OFFST_CLR_W::new(self, 22)
     }
     #[doc = "Bit 28 - ulp coprocessor clk force on"]
     #[inline(always)]
-    pub fn ulp_cp_clk_fo(&mut self) -> ULP_CP_CLK_FO_W<RTC_ULP_CP_CTRL_SPEC> {
+    pub fn ulp_cp_clk_fo(&mut self) -> ULP_CP_CLK_FO_W<'_, RTC_ULP_CP_CTRL_SPEC> {
         ULP_CP_CLK_FO_W::new(self, 28)
     }
     #[doc = "Bit 29 - ulp coprocessor clk software reset"]
     #[inline(always)]
-    pub fn ulp_cp_reset(&mut self) -> ULP_CP_RESET_W<RTC_ULP_CP_CTRL_SPEC> {
+    pub fn ulp_cp_reset(&mut self) -> ULP_CP_RESET_W<'_, RTC_ULP_CP_CTRL_SPEC> {
         ULP_CP_RESET_W::new(self, 29)
     }
     #[doc = "Bit 30 - 1: ULP-coprocessor is started by SW"]
     #[inline(always)]
-    pub fn ulp_cp_force_start_top(&mut self) -> ULP_CP_FORCE_START_TOP_W<RTC_ULP_CP_CTRL_SPEC> {
+    pub fn ulp_cp_force_start_top(&mut self) -> ULP_CP_FORCE_START_TOP_W<'_, RTC_ULP_CP_CTRL_SPEC> {
         ULP_CP_FORCE_START_TOP_W::new(self, 30)
     }
     #[doc = "Bit 31 - Write 1 to start ULP-coprocessor"]
     #[inline(always)]
-    pub fn ulp_cp_start_top(&mut self) -> ULP_CP_START_TOP_W<RTC_ULP_CP_CTRL_SPEC> {
+    pub fn ulp_cp_start_top(&mut self) -> ULP_CP_START_TOP_W<'_, RTC_ULP_CP_CTRL_SPEC> {
         ULP_CP_START_TOP_W::new(self, 31)
     }
 }

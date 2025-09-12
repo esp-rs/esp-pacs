@@ -52,19 +52,19 @@ impl W {
     #[inline(always)]
     pub fn a_db_tmp_ready_trigger_mb_num(
         &mut self,
-    ) -> A_DB_TMP_READY_TRIGGER_MB_NUM_W<A_SYS_CONF_SPEC> {
+    ) -> A_DB_TMP_READY_TRIGGER_MB_NUM_W<'_, A_SYS_CONF_SPEC> {
         A_DB_TMP_READY_TRIGGER_MB_NUM_W::new(self, 0)
     }
     #[doc = "Bits 7:13 - Configures when to trigger video A H264_REC_READY_INT. When the MB line number of generated reconstruct pixel is greater than this filed, trigger H264_REC_READY_INT. Min is 4."]
     #[inline(always)]
     pub fn a_rec_ready_trigger_mb_lines(
         &mut self,
-    ) -> A_REC_READY_TRIGGER_MB_LINES_W<A_SYS_CONF_SPEC> {
+    ) -> A_REC_READY_TRIGGER_MB_LINES_W<'_, A_SYS_CONF_SPEC> {
         A_REC_READY_TRIGGER_MB_LINES_W::new(self, 7)
     }
     #[doc = "Bits 14:29 - Configures video A intra cost offset when I MB compared with P MB."]
     #[inline(always)]
-    pub fn a_intra_cost_cmp_offset(&mut self) -> A_INTRA_COST_CMP_OFFSET_W<A_SYS_CONF_SPEC> {
+    pub fn a_intra_cost_cmp_offset(&mut self) -> A_INTRA_COST_CMP_OFFSET_W<'_, A_SYS_CONF_SPEC> {
         A_INTRA_COST_CMP_OFFSET_W::new(self, 14)
     }
 }

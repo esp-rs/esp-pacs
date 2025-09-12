@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - This bit is used to select clock source for the 4 timers . 1: APB_CLK. 2: RTC8M_CLK. 3: XTAL_CLK."]
     #[inline(always)]
-    pub fn apb_clk_sel(&mut self) -> APB_CLK_SEL_W<CONF_SPEC> {
+    pub fn apb_clk_sel(&mut self) -> APB_CLK_SEL_W<'_, CONF_SPEC> {
         APB_CLK_SEL_W::new(self, 0)
     }
     #[doc = "Bit 31 - This bit is used to control clock. 1: Force clock on for register. 0: Support clock only when application writes registers."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CONF_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CONF_SPEC> {
         CLK_EN_W::new(self, 31)
     }
 }

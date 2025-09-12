@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Configures the priority of TX channel %s.The larger of the value, the higher of the priority."]
     #[inline(always)]
-    pub fn tx_pri(&mut self) -> TX_PRI_W<OUT_PRI_SPEC> {
+    pub fn tx_pri(&mut self) -> TX_PRI_W<'_, OUT_PRI_SPEC> {
         TX_PRI_W::new(self, 0)
     }
 }

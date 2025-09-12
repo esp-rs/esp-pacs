@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<STATUS1_W1TS_SPEC> {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to set the interrupt status register GPIO_STATUS_INTERRUPT of GPIO32 ~ GPIO32. - If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS_INTERRUPT will be set to 1. \\item Recommended operation: use this register to set GPIO_STATUS_INTERRUPT."]
     #[inline(always)]
-    pub fn status1_w1ts(&mut self) -> STATUS1_W1TS_W<STATUS1_W1TS_SPEC> {
+    pub fn status1_w1ts(&mut self) -> STATUS1_W1TS_W<'_, STATUS1_W1TS_SPEC> {
         STATUS1_W1TS_W::new(self, 0)
     }
 }

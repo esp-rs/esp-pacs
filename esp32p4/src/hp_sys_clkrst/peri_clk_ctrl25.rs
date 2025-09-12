@@ -189,87 +189,87 @@ impl W {
     #[inline(always)]
     pub fn pvt_peri_group_clk_div_num(
         &mut self,
-    ) -> PVT_PERI_GROUP_CLK_DIV_NUM_W<PERI_CLK_CTRL25_SPEC> {
+    ) -> PVT_PERI_GROUP_CLK_DIV_NUM_W<'_, PERI_CLK_CTRL25_SPEC> {
         PVT_PERI_GROUP_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    pub fn pvt_peri_group1_clk_en(&mut self) -> PVT_PERI_GROUP1_CLK_EN_W<PERI_CLK_CTRL25_SPEC> {
+    pub fn pvt_peri_group1_clk_en(&mut self) -> PVT_PERI_GROUP1_CLK_EN_W<'_, PERI_CLK_CTRL25_SPEC> {
         PVT_PERI_GROUP1_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
-    pub fn pvt_peri_group2_clk_en(&mut self) -> PVT_PERI_GROUP2_CLK_EN_W<PERI_CLK_CTRL25_SPEC> {
+    pub fn pvt_peri_group2_clk_en(&mut self) -> PVT_PERI_GROUP2_CLK_EN_W<'_, PERI_CLK_CTRL25_SPEC> {
         PVT_PERI_GROUP2_CLK_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Reserved"]
     #[inline(always)]
-    pub fn pvt_peri_group3_clk_en(&mut self) -> PVT_PERI_GROUP3_CLK_EN_W<PERI_CLK_CTRL25_SPEC> {
+    pub fn pvt_peri_group3_clk_en(&mut self) -> PVT_PERI_GROUP3_CLK_EN_W<'_, PERI_CLK_CTRL25_SPEC> {
         PVT_PERI_GROUP3_CLK_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Reserved"]
     #[inline(always)]
-    pub fn pvt_peri_group4_clk_en(&mut self) -> PVT_PERI_GROUP4_CLK_EN_W<PERI_CLK_CTRL25_SPEC> {
+    pub fn pvt_peri_group4_clk_en(&mut self) -> PVT_PERI_GROUP4_CLK_EN_W<'_, PERI_CLK_CTRL25_SPEC> {
         PVT_PERI_GROUP4_CLK_EN_W::new(self, 11)
     }
     #[doc = "Bits 12:13 - Reserved"]
     #[inline(always)]
-    pub fn crypto_clk_src_sel(&mut self) -> CRYPTO_CLK_SRC_SEL_W<PERI_CLK_CTRL25_SPEC> {
+    pub fn crypto_clk_src_sel(&mut self) -> CRYPTO_CLK_SRC_SEL_W<'_, PERI_CLK_CTRL25_SPEC> {
         CRYPTO_CLK_SRC_SEL_W::new(self, 12)
     }
     #[doc = "Bit 14 - Reserved"]
     #[inline(always)]
-    pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W<PERI_CLK_CTRL25_SPEC> {
+    pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W<'_, PERI_CLK_CTRL25_SPEC> {
         CRYPTO_AES_CLK_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Reserved"]
     #[inline(always)]
-    pub fn crypto_ds_clk_en(&mut self) -> CRYPTO_DS_CLK_EN_W<PERI_CLK_CTRL25_SPEC> {
+    pub fn crypto_ds_clk_en(&mut self) -> CRYPTO_DS_CLK_EN_W<'_, PERI_CLK_CTRL25_SPEC> {
         CRYPTO_DS_CLK_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Reserved"]
     #[inline(always)]
-    pub fn crypto_ecc_clk_en(&mut self) -> CRYPTO_ECC_CLK_EN_W<PERI_CLK_CTRL25_SPEC> {
+    pub fn crypto_ecc_clk_en(&mut self) -> CRYPTO_ECC_CLK_EN_W<'_, PERI_CLK_CTRL25_SPEC> {
         CRYPTO_ECC_CLK_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Reserved"]
     #[inline(always)]
-    pub fn crypto_hmac_clk_en(&mut self) -> CRYPTO_HMAC_CLK_EN_W<PERI_CLK_CTRL25_SPEC> {
+    pub fn crypto_hmac_clk_en(&mut self) -> CRYPTO_HMAC_CLK_EN_W<'_, PERI_CLK_CTRL25_SPEC> {
         CRYPTO_HMAC_CLK_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Reserved"]
     #[inline(always)]
-    pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W<PERI_CLK_CTRL25_SPEC> {
+    pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W<'_, PERI_CLK_CTRL25_SPEC> {
         CRYPTO_RSA_CLK_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Reserved"]
     #[inline(always)]
-    pub fn crypto_sec_clk_en(&mut self) -> CRYPTO_SEC_CLK_EN_W<PERI_CLK_CTRL25_SPEC> {
+    pub fn crypto_sec_clk_en(&mut self) -> CRYPTO_SEC_CLK_EN_W<'_, PERI_CLK_CTRL25_SPEC> {
         CRYPTO_SEC_CLK_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Reserved"]
     #[inline(always)]
-    pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<PERI_CLK_CTRL25_SPEC> {
+    pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<'_, PERI_CLK_CTRL25_SPEC> {
         CRYPTO_SHA_CLK_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Reserved"]
     #[inline(always)]
-    pub fn crypto_ecdsa_clk_en(&mut self) -> CRYPTO_ECDSA_CLK_EN_W<PERI_CLK_CTRL25_SPEC> {
+    pub fn crypto_ecdsa_clk_en(&mut self) -> CRYPTO_ECDSA_CLK_EN_W<'_, PERI_CLK_CTRL25_SPEC> {
         CRYPTO_ECDSA_CLK_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - Reserved"]
     #[inline(always)]
-    pub fn crypto_km_clk_en(&mut self) -> CRYPTO_KM_CLK_EN_W<PERI_CLK_CTRL25_SPEC> {
+    pub fn crypto_km_clk_en(&mut self) -> CRYPTO_KM_CLK_EN_W<'_, PERI_CLK_CTRL25_SPEC> {
         CRYPTO_KM_CLK_EN_W::new(self, 22)
     }
     #[doc = "Bits 23:24 - Reserved"]
     #[inline(always)]
-    pub fn isp_clk_src_sel(&mut self) -> ISP_CLK_SRC_SEL_W<PERI_CLK_CTRL25_SPEC> {
+    pub fn isp_clk_src_sel(&mut self) -> ISP_CLK_SRC_SEL_W<'_, PERI_CLK_CTRL25_SPEC> {
         ISP_CLK_SRC_SEL_W::new(self, 23)
     }
     #[doc = "Bit 25 - Reserved"]
     #[inline(always)]
-    pub fn isp_clk_en(&mut self) -> ISP_CLK_EN_W<PERI_CLK_CTRL25_SPEC> {
+    pub fn isp_clk_en(&mut self) -> ISP_CLK_EN_W<'_, PERI_CLK_CTRL25_SPEC> {
         ISP_CLK_EN_W::new(self, 25)
     }
 }

@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core_0_vecbase_override_world1_value(
         &mut self,
-    ) -> CORE_0_VECBASE_OVERRIDE_WORLD1_VALUE_W<CORE_0_VECBASE_OVERRIDE_2_SPEC> {
+    ) -> CORE_0_VECBASE_OVERRIDE_WORLD1_VALUE_W<'_, CORE_0_VECBASE_OVERRIDE_2_SPEC> {
         CORE_0_VECBASE_OVERRIDE_WORLD1_VALUE_W::new(self, 0)
     }
 }

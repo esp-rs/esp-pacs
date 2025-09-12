@@ -62,22 +62,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures the slave address"]
     #[inline(always)]
-    pub fn slave_addr(&mut self) -> SLAVE_ADDR_W<I2C_CTRL_SPEC> {
+    pub fn slave_addr(&mut self) -> SLAVE_ADDR_W<'_, I2C_CTRL_SPEC> {
         SLAVE_ADDR_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Configures the slave register address"]
     #[inline(always)]
-    pub fn slave_reg_addr(&mut self) -> SLAVE_REG_ADDR_W<I2C_CTRL_SPEC> {
+    pub fn slave_reg_addr(&mut self) -> SLAVE_REG_ADDR_W<'_, I2C_CTRL_SPEC> {
         SLAVE_REG_ADDR_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Configures the transmitted data"]
     #[inline(always)]
-    pub fn data(&mut self) -> DATA_W<I2C_CTRL_SPEC> {
+    pub fn data(&mut self) -> DATA_W<'_, I2C_CTRL_SPEC> {
         DATA_W::new(self, 16)
     }
     #[doc = "Bit 24 - Configures the read/write operation"]
     #[inline(always)]
-    pub fn read_write(&mut self) -> READ_WRITE_W<I2C_CTRL_SPEC> {
+    pub fn read_write(&mut self) -> READ_WRITE_W<'_, I2C_CTRL_SPEC> {
         READ_WRITE_W::new(self, 24)
     }
 }

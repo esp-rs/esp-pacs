@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn icg_hp_xtal32k(&mut self) -> ICG_HP_XTAL32K_W<CLK_TO_HP_SPEC> {
+    pub fn icg_hp_xtal32k(&mut self) -> ICG_HP_XTAL32K_W<'_, CLK_TO_HP_SPEC> {
         ICG_HP_XTAL32K_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn icg_hp_sosc(&mut self) -> ICG_HP_SOSC_W<CLK_TO_HP_SPEC> {
+    pub fn icg_hp_sosc(&mut self) -> ICG_HP_SOSC_W<'_, CLK_TO_HP_SPEC> {
         ICG_HP_SOSC_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn icg_hp_osc32k(&mut self) -> ICG_HP_OSC32K_W<CLK_TO_HP_SPEC> {
+    pub fn icg_hp_osc32k(&mut self) -> ICG_HP_OSC32K_W<'_, CLK_TO_HP_SPEC> {
         ICG_HP_OSC32K_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn icg_hp_fosc(&mut self) -> ICG_HP_FOSC_W<CLK_TO_HP_SPEC> {
+    pub fn icg_hp_fosc(&mut self) -> ICG_HP_FOSC_W<'_, CLK_TO_HP_SPEC> {
         ICG_HP_FOSC_W::new(self, 31)
     }
 }

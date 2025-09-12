@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reg_cpu_intr_from_cpu_0"]
     #[inline(always)]
-    pub fn cpu_intr(&mut self) -> CPU_INTR_W<CPU_INTR_FROM_CPU_SPEC> {
+    pub fn cpu_intr(&mut self) -> CPU_INTR_W<'_, CPU_INTR_FROM_CPU_SPEC> {
         CPU_INTR_W::new(self, 0)
     }
 }

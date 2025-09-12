@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 26:31 - Need add desc"]
     #[inline(always)]
-    pub fn sw_stall_procpu_c1(&mut self) -> SW_STALL_PROCPU_C1_W<SW_CPU_STALL_SPEC> {
+    pub fn sw_stall_procpu_c1(&mut self) -> SW_STALL_PROCPU_C1_W<'_, SW_CPU_STALL_SPEC> {
         SW_STALL_PROCPU_C1_W::new(self, 26)
     }
 }

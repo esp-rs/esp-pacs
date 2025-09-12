@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn gbl_cslp_en(&mut self) -> GBL_CSLP_EN_W<LOWPOWER_CFG0_SPEC> {
+    pub fn gbl_cslp_en(&mut self) -> GBL_CSLP_EN_W<'_, LOWPOWER_CFG0_SPEC> {
         GBL_CSLP_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    pub fn chnl_cslp_en(&mut self) -> CHNL_CSLP_EN_W<LOWPOWER_CFG0_SPEC> {
+    pub fn chnl_cslp_en(&mut self) -> CHNL_CSLP_EN_W<'_, LOWPOWER_CFG0_SPEC> {
         CHNL_CSLP_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    pub fn sbiu_cslp_en(&mut self) -> SBIU_CSLP_EN_W<LOWPOWER_CFG0_SPEC> {
+    pub fn sbiu_cslp_en(&mut self) -> SBIU_CSLP_EN_W<'_, LOWPOWER_CFG0_SPEC> {
         SBIU_CSLP_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    pub fn mxif_cslp_en(&mut self) -> MXIF_CSLP_EN_W<LOWPOWER_CFG0_SPEC> {
+    pub fn mxif_cslp_en(&mut self) -> MXIF_CSLP_EN_W<'_, LOWPOWER_CFG0_SPEC> {
         MXIF_CSLP_EN_W::new(self, 3)
     }
 }

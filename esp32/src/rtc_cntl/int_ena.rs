@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - enable sleep wakeup interrupt"]
     #[inline(always)]
-    pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<INT_ENA_SPEC> {
+    pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<'_, INT_ENA_SPEC> {
         SLP_WAKEUP_W::new(self, 0)
     }
     #[doc = "Bit 1 - enable sleep reject interrupt"]
     #[inline(always)]
-    pub fn slp_reject(&mut self) -> SLP_REJECT_W<INT_ENA_SPEC> {
+    pub fn slp_reject(&mut self) -> SLP_REJECT_W<'_, INT_ENA_SPEC> {
         SLP_REJECT_W::new(self, 1)
     }
     #[doc = "Bit 2 - enable SDIO idle interrupt"]
     #[inline(always)]
-    pub fn sdio_idle(&mut self) -> SDIO_IDLE_W<INT_ENA_SPEC> {
+    pub fn sdio_idle(&mut self) -> SDIO_IDLE_W<'_, INT_ENA_SPEC> {
         SDIO_IDLE_W::new(self, 2)
     }
     #[doc = "Bit 3 - enable RTC WDT interrupt"]
     #[inline(always)]
-    pub fn wdt(&mut self) -> WDT_W<INT_ENA_SPEC> {
+    pub fn wdt(&mut self) -> WDT_W<'_, INT_ENA_SPEC> {
         WDT_W::new(self, 3)
     }
     #[doc = "Bit 4 - enable RTC time valid interrupt"]
     #[inline(always)]
-    pub fn time_valid(&mut self) -> TIME_VALID_W<INT_ENA_SPEC> {
+    pub fn time_valid(&mut self) -> TIME_VALID_W<'_, INT_ENA_SPEC> {
         TIME_VALID_W::new(self, 4)
     }
     #[doc = "Bit 5 - enable ULP-coprocessor interrupt"]
     #[inline(always)]
-    pub fn ulp_cp(&mut self) -> ULP_CP_W<INT_ENA_SPEC> {
+    pub fn ulp_cp(&mut self) -> ULP_CP_W<'_, INT_ENA_SPEC> {
         ULP_CP_W::new(self, 5)
     }
     #[doc = "Bit 6 - enable touch interrupt"]
     #[inline(always)]
-    pub fn touch(&mut self) -> TOUCH_W<INT_ENA_SPEC> {
+    pub fn touch(&mut self) -> TOUCH_W<'_, INT_ENA_SPEC> {
         TOUCH_W::new(self, 6)
     }
     #[doc = "Bit 7 - enable brown out interrupt"]
     #[inline(always)]
-    pub fn brown_out(&mut self) -> BROWN_OUT_W<INT_ENA_SPEC> {
+    pub fn brown_out(&mut self) -> BROWN_OUT_W<'_, INT_ENA_SPEC> {
         BROWN_OUT_W::new(self, 7)
     }
     #[doc = "Bit 8 - enable RTC main timer interrupt"]
     #[inline(always)]
-    pub fn main_timer(&mut self) -> MAIN_TIMER_W<INT_ENA_SPEC> {
+    pub fn main_timer(&mut self) -> MAIN_TIMER_W<'_, INT_ENA_SPEC> {
         MAIN_TIMER_W::new(self, 8)
     }
 }

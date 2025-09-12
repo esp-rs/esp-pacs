@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8"]
     #[inline(always)]
-    pub fn outfifo_wdata(&mut self) -> OUTFIFO_WDATA_W<OUTFIFO_PUSH_SPEC> {
+    pub fn outfifo_wdata(&mut self) -> OUTFIFO_WDATA_W<'_, OUTFIFO_PUSH_SPEC> {
         OUTFIFO_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn outfifo_push(&mut self) -> OUTFIFO_PUSH_W<OUTFIFO_PUSH_SPEC> {
+    pub fn outfifo_push(&mut self) -> OUTFIFO_PUSH_W<'_, OUTFIFO_PUSH_SPEC> {
         OUTFIFO_PUSH_W::new(self, 16)
     }
 }

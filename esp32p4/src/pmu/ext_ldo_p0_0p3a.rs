@@ -107,49 +107,49 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 7 - need_des"]
     #[inline(always)]
-    pub fn _0p3a_force_tieh_sel_0(&mut self) -> _0P3A_FORCE_TIEH_SEL_0_W<EXT_LDO_P0_0P3A_SPEC> {
+    pub fn _0p3a_force_tieh_sel_0(&mut self) -> _0P3A_FORCE_TIEH_SEL_0_W<'_, EXT_LDO_P0_0P3A_SPEC> {
         _0P3A_FORCE_TIEH_SEL_0_W::new(self, 7)
     }
     #[doc = "Bit 8 - need_des"]
     #[inline(always)]
-    pub fn _0p3a_xpd_0(&mut self) -> _0P3A_XPD_0_W<EXT_LDO_P0_0P3A_SPEC> {
+    pub fn _0p3a_xpd_0(&mut self) -> _0P3A_XPD_0_W<'_, EXT_LDO_P0_0P3A_SPEC> {
         _0P3A_XPD_0_W::new(self, 8)
     }
     #[doc = "Bits 9:11 - need_des"]
     #[inline(always)]
-    pub fn _0p3a_tieh_sel_0(&mut self) -> _0P3A_TIEH_SEL_0_W<EXT_LDO_P0_0P3A_SPEC> {
+    pub fn _0p3a_tieh_sel_0(&mut self) -> _0P3A_TIEH_SEL_0_W<'_, EXT_LDO_P0_0P3A_SPEC> {
         _0P3A_TIEH_SEL_0_W::new(self, 9)
     }
     #[doc = "Bit 12 - need_des"]
     #[inline(always)]
-    pub fn _0p3a_tieh_pos_en_0(&mut self) -> _0P3A_TIEH_POS_EN_0_W<EXT_LDO_P0_0P3A_SPEC> {
+    pub fn _0p3a_tieh_pos_en_0(&mut self) -> _0P3A_TIEH_POS_EN_0_W<'_, EXT_LDO_P0_0P3A_SPEC> {
         _0P3A_TIEH_POS_EN_0_W::new(self, 12)
     }
     #[doc = "Bit 13 - need_des"]
     #[inline(always)]
-    pub fn _0p3a_tieh_neg_en_0(&mut self) -> _0P3A_TIEH_NEG_EN_0_W<EXT_LDO_P0_0P3A_SPEC> {
+    pub fn _0p3a_tieh_neg_en_0(&mut self) -> _0P3A_TIEH_NEG_EN_0_W<'_, EXT_LDO_P0_0P3A_SPEC> {
         _0P3A_TIEH_NEG_EN_0_W::new(self, 13)
     }
     #[doc = "Bit 14 - need_des"]
     #[inline(always)]
-    pub fn _0p3a_tieh_0(&mut self) -> _0P3A_TIEH_0_W<EXT_LDO_P0_0P3A_SPEC> {
+    pub fn _0p3a_tieh_0(&mut self) -> _0P3A_TIEH_0_W<'_, EXT_LDO_P0_0P3A_SPEC> {
         _0P3A_TIEH_0_W::new(self, 14)
     }
     #[doc = "Bits 15:22 - need_des"]
     #[inline(always)]
-    pub fn _0p3a_target1_0(&mut self) -> _0P3A_TARGET1_0_W<EXT_LDO_P0_0P3A_SPEC> {
+    pub fn _0p3a_target1_0(&mut self) -> _0P3A_TARGET1_0_W<'_, EXT_LDO_P0_0P3A_SPEC> {
         _0P3A_TARGET1_0_W::new(self, 15)
     }
     #[doc = "Bits 23:30 - need_des"]
     #[inline(always)]
-    pub fn _0p3a_target0_0(&mut self) -> _0P3A_TARGET0_0_W<EXT_LDO_P0_0P3A_SPEC> {
+    pub fn _0p3a_target0_0(&mut self) -> _0P3A_TARGET0_0_W<'_, EXT_LDO_P0_0P3A_SPEC> {
         _0P3A_TARGET0_0_W::new(self, 23)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     pub fn _0p3a_ldo_cnt_prescaler_sel_0(
         &mut self,
-    ) -> _0P3A_LDO_CNT_PRESCALER_SEL_0_W<EXT_LDO_P0_0P3A_SPEC> {
+    ) -> _0P3A_LDO_CNT_PRESCALER_SEL_0_W<'_, EXT_LDO_P0_0P3A_SPEC> {
         _0P3A_LDO_CNT_PRESCALER_SEL_0_W::new(self, 31)
     }
 }

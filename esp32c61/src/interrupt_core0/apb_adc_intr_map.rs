@@ -34,14 +34,14 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Configures the interrupt source into one CPU interrupt."]
     #[inline(always)]
-    pub fn apb_adc_intr_map(&mut self) -> APB_ADC_INTR_MAP_W<APB_ADC_INTR_MAP_SPEC> {
+    pub fn apb_adc_intr_map(&mut self) -> APB_ADC_INTR_MAP_W<'_, APB_ADC_INTR_MAP_SPEC> {
         APB_ADC_INTR_MAP_W::new(self, 0)
     }
     #[doc = "Bit 8 - Configures the PASS_IN_SEC flag of the interrupt source."]
     #[inline(always)]
     pub fn apb_adc_intr_pass_in_sec(
         &mut self,
-    ) -> APB_ADC_INTR_PASS_IN_SEC_W<APB_ADC_INTR_MAP_SPEC> {
+    ) -> APB_ADC_INTR_PASS_IN_SEC_W<'_, APB_ADC_INTR_MAP_SPEC> {
         APB_ADC_INTR_PASS_IN_SEC_W::new(self, 8)
     }
 }

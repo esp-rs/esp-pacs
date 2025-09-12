@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn host_slc1host_rx_infor(
         &mut self,
-    ) -> HOST_SLC1HOST_RX_INFOR_W<HOST_SLC1HOST_RX_INFOR_SPEC> {
+    ) -> HOST_SLC1HOST_RX_INFOR_W<'_, HOST_SLC1HOST_RX_INFOR_SPEC> {
         HOST_SLC1HOST_RX_INFOR_W::new(self, 0)
     }
 }

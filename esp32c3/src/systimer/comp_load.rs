@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<COMP_LOAD_SPEC> {
 impl W {
     #[doc = "Bit 0 - timer comp0 load value"]
     #[inline(always)]
-    pub fn load(&mut self) -> LOAD_W<COMP_LOAD_SPEC> {
+    pub fn load(&mut self) -> LOAD_W<'_, COMP_LOAD_SPEC> {
         LOAD_W::new(self, 0)
     }
 }

@@ -2,12 +2,12 @@
 pub type R = crate::R<CONSTANT_TIME_SPEC>;
 #[doc = "Register `CONSTANT_TIME` writer"]
 pub type W = crate::W<CONSTANT_TIME_SPEC>;
-#[doc = "Field `CONSTANT_TIME` reader - Configures the constant_time option. 0: Acceleration 1: No acceleration (default)"]
+#[doc = "Field `CONSTANT_TIME` reader - Configures the constant_time option. \\\\ 0: Acceleration\\\\ 1: No acceleration (default)\\\\"]
 pub type CONSTANT_TIME_R = crate::BitReader;
-#[doc = "Field `CONSTANT_TIME` writer - Configures the constant_time option. 0: Acceleration 1: No acceleration (default)"]
+#[doc = "Field `CONSTANT_TIME` writer - Configures the constant_time option. \\\\ 0: Acceleration\\\\ 1: No acceleration (default)\\\\"]
 pub type CONSTANT_TIME_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - Configures the constant_time option. 0: Acceleration 1: No acceleration (default)"]
+    #[doc = "Bit 0 - Configures the constant_time option. \\\\ 0: Acceleration\\\\ 1: No acceleration (default)\\\\"]
     #[inline(always)]
     pub fn constant_time(&self) -> CONSTANT_TIME_R {
         CONSTANT_TIME_R::new((self.bits & 1) != 0)
@@ -22,9 +22,9 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Configures the constant_time option. 0: Acceleration 1: No acceleration (default)"]
+    #[doc = "Bit 0 - Configures the constant_time option. \\\\ 0: Acceleration\\\\ 1: No acceleration (default)\\\\"]
     #[inline(always)]
-    pub fn constant_time(&mut self) -> CONSTANT_TIME_W<CONSTANT_TIME_SPEC> {
+    pub fn constant_time(&mut self) -> CONSTANT_TIME_W<'_, CONSTANT_TIME_SPEC> {
         CONSTANT_TIME_W::new(self, 0)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn access_grant_config(&mut self) -> ACCESS_GRANT_CONFIG_W<AHBLITE_MPU_TABLE_BB_SPEC> {
+    pub fn access_grant_config(&mut self) -> ACCESS_GRANT_CONFIG_W<'_, AHBLITE_MPU_TABLE_BB_SPEC> {
         ACCESS_GRANT_CONFIG_W::new(self, 0)
     }
 }

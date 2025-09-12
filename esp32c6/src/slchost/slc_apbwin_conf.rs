@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - *******Description***********"]
     #[inline(always)]
-    pub fn slc_apbwin_addr(&mut self) -> SLC_APBWIN_ADDR_W<SLC_APBWIN_CONF_SPEC> {
+    pub fn slc_apbwin_addr(&mut self) -> SLC_APBWIN_ADDR_W<'_, SLC_APBWIN_CONF_SPEC> {
         SLC_APBWIN_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 28 - *******Description***********"]
     #[inline(always)]
-    pub fn slc_apbwin_wr(&mut self) -> SLC_APBWIN_WR_W<SLC_APBWIN_CONF_SPEC> {
+    pub fn slc_apbwin_wr(&mut self) -> SLC_APBWIN_WR_W<'_, SLC_APBWIN_CONF_SPEC> {
         SLC_APBWIN_WR_W::new(self, 28)
     }
     #[doc = "Bit 29 - *******Description***********"]
     #[inline(always)]
-    pub fn slc_apbwin_start(&mut self) -> SLC_APBWIN_START_W<SLC_APBWIN_CONF_SPEC> {
+    pub fn slc_apbwin_start(&mut self) -> SLC_APBWIN_START_W<'_, SLC_APBWIN_CONF_SPEC> {
         SLC_APBWIN_START_W::new(self, 29)
     }
 }

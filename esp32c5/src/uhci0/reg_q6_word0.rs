@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Data to be transmitted in Q6 register."]
     #[inline(always)]
-    pub fn send_q6_word0(&mut self) -> SEND_Q6_WORD0_W<REG_Q6_WORD0_SPEC> {
+    pub fn send_q6_word0(&mut self) -> SEND_Q6_WORD0_W<'_, REG_Q6_WORD0_SPEC> {
         SEND_Q6_WORD0_W::new(self, 0)
     }
 }

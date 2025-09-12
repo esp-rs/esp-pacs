@@ -187,21 +187,21 @@ impl W {
     #[inline(always)]
     pub fn l1_cache_data_mem_force_on(
         &mut self,
-    ) -> L1_CACHE_DATA_MEM_FORCE_ON_W<L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
+    ) -> L1_CACHE_DATA_MEM_FORCE_ON_W<'_, L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
         L1_CACHE_DATA_MEM_FORCE_ON_W::new(self, 16)
     }
     #[doc = "Bit 17 - The bit is used to power L1-Cache data memory down. 0: follow rtc_lslp, 1: power down"]
     #[inline(always)]
     pub fn l1_cache_data_mem_force_pd(
         &mut self,
-    ) -> L1_CACHE_DATA_MEM_FORCE_PD_W<L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
+    ) -> L1_CACHE_DATA_MEM_FORCE_PD_W<'_, L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
         L1_CACHE_DATA_MEM_FORCE_PD_W::new(self, 17)
     }
     #[doc = "Bit 18 - The bit is used to power L1-Cache data memory up. 0: follow rtc_lslp, 1: power up"]
     #[inline(always)]
     pub fn l1_cache_data_mem_force_pu(
         &mut self,
-    ) -> L1_CACHE_DATA_MEM_FORCE_PU_W<L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
+    ) -> L1_CACHE_DATA_MEM_FORCE_PU_W<'_, L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
         L1_CACHE_DATA_MEM_FORCE_PU_W::new(self, 18)
     }
 }

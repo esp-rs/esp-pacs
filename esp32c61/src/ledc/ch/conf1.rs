@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Configures whether the duty cycle fading configurations take effect.\\\\0: Not take effect\\\\1: Take effect"]
     #[inline(always)]
-    pub fn duty_start_ch(&mut self) -> DUTY_START_CH_W<CONF1_SPEC> {
+    pub fn duty_start_ch(&mut self) -> DUTY_START_CH_W<'_, CONF1_SPEC> {
         DUTY_START_CH_W::new(self, 31)
     }
 }

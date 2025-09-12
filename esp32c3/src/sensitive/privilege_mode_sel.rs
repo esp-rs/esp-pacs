@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - privilege_mode_sel"]
     #[inline(always)]
-    pub fn privilege_mode_sel(&mut self) -> PRIVILEGE_MODE_SEL_W<PRIVILEGE_MODE_SEL_SPEC> {
+    pub fn privilege_mode_sel(&mut self) -> PRIVILEGE_MODE_SEL_W<'_, PRIVILEGE_MODE_SEL_SPEC> {
         PRIVILEGE_MODE_SEL_W::new(self, 0)
     }
 }

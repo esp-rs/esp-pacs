@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable cache clock"]
     #[inline(always)]
-    pub fn cache_clk_en(&mut self) -> CACHE_CLK_EN_W<CACHE_CONF_SPEC> {
+    pub fn cache_clk_en(&mut self) -> CACHE_CLK_EN_W<'_, CACHE_CONF_SPEC> {
         CACHE_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset cache module"]
     #[inline(always)]
-    pub fn cache_rst_en(&mut self) -> CACHE_RST_EN_W<CACHE_CONF_SPEC> {
+    pub fn cache_rst_en(&mut self) -> CACHE_RST_EN_W<'_, CACHE_CONF_SPEC> {
         CACHE_RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 0 to power up cache mem"]
     #[inline(always)]
-    pub fn cache_pu_en(&mut self) -> CACHE_PU_EN_W<CACHE_CONF_SPEC> {
+    pub fn cache_pu_en(&mut self) -> CACHE_PU_EN_W<'_, CACHE_CONF_SPEC> {
         CACHE_PU_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set 0 to power down cache mem"]
     #[inline(always)]
-    pub fn cache_pd_en(&mut self) -> CACHE_PD_EN_W<CACHE_CONF_SPEC> {
+    pub fn cache_pd_en(&mut self) -> CACHE_PD_EN_W<'_, CACHE_CONF_SPEC> {
         CACHE_PD_EN_W::new(self, 3)
     }
 }

@@ -120,52 +120,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on."]
     #[inline(always)]
-    pub fn clk_mode(&mut self) -> CLK_MODE_W<CTRL1_SPEC> {
+    pub fn clk_mode(&mut self) -> CLK_MODE_W<'_, CTRL1_SPEC> {
         CLK_MODE_W::new(self, 0)
     }
     #[doc = "Bit 21 - 1: MSPI supports ARSIZE 0~3. When ARSIZE =0~2, MSPI read address is 4*n and reply the real AXI read data back. 0: When ARSIZE 0~1, MSPI reply SLV_ERR."]
     #[inline(always)]
-    pub fn spi_ar_size0_1_support_en(&mut self) -> SPI_AR_SIZE0_1_SUPPORT_EN_W<CTRL1_SPEC> {
+    pub fn spi_ar_size0_1_support_en(&mut self) -> SPI_AR_SIZE0_1_SUPPORT_EN_W<'_, CTRL1_SPEC> {
         SPI_AR_SIZE0_1_SUPPORT_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - 1: MSPI supports AWSIZE 0~3. 0: When AWSIZE 0~1, MSPI reply SLV_ERR."]
     #[inline(always)]
-    pub fn spi_aw_size0_1_support_en(&mut self) -> SPI_AW_SIZE0_1_SUPPORT_EN_W<CTRL1_SPEC> {
+    pub fn spi_aw_size0_1_support_en(&mut self) -> SPI_AW_SIZE0_1_SUPPORT_EN_W<'_, CTRL1_SPEC> {
         SPI_AW_SIZE0_1_SUPPORT_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - 1: Reply AXI read data to AXI bus when one AXI read beat data is available. 0: Reply AXI read data to AXI bus when all the read data is available."]
     #[inline(always)]
-    pub fn spi_axi_rdata_back_fast(&mut self) -> SPI_AXI_RDATA_BACK_FAST_W<CTRL1_SPEC> {
+    pub fn spi_axi_rdata_back_fast(&mut self) -> SPI_AXI_RDATA_BACK_FAST_W<'_, CTRL1_SPEC> {
         SPI_AXI_RDATA_BACK_FAST_W::new(self, 23)
     }
     #[doc = "Bit 24 - 1: RRESP is SLV_ERR when there is a ECC error in AXI read data. 0: RRESP is OKAY when there is a ECC error in AXI read data. The ECC error information is recorded in SPI_MEM_ECC_ERR_ADDR_REG."]
     #[inline(always)]
-    pub fn rresp_ecc_err_en(&mut self) -> RRESP_ECC_ERR_EN_W<CTRL1_SPEC> {
+    pub fn rresp_ecc_err_en(&mut self) -> RRESP_ECC_ERR_EN_W<'_, CTRL1_SPEC> {
         RRESP_ECC_ERR_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Set this bit to enable AXI Read Splice-transfer."]
     #[inline(always)]
-    pub fn ar_splice_en(&mut self) -> AR_SPLICE_EN_W<CTRL1_SPEC> {
+    pub fn ar_splice_en(&mut self) -> AR_SPLICE_EN_W<'_, CTRL1_SPEC> {
         AR_SPLICE_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Set this bit to enable AXI Write Splice-transfer."]
     #[inline(always)]
-    pub fn aw_splice_en(&mut self) -> AW_SPLICE_EN_W<CTRL1_SPEC> {
+    pub fn aw_splice_en(&mut self) -> AW_SPLICE_EN_W<'_, CTRL1_SPEC> {
         AW_SPLICE_EN_W::new(self, 26)
     }
     #[doc = "Bit 29 - Set this bit to write data faster, do not wait write data has been stored in tx_bus_fifo_l2. It will wait 4*T_clk_ctrl to insure the write data has been stored in tx_bus_fifo_l2."]
     #[inline(always)]
-    pub fn fast_write_en(&mut self) -> FAST_WRITE_EN_W<CTRL1_SPEC> {
+    pub fn fast_write_en(&mut self) -> FAST_WRITE_EN_W<'_, CTRL1_SPEC> {
         FAST_WRITE_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - The synchronous reset signal for SPI0 RX AFIFO and all the AES_MSPI SYNC FIFO to receive signals from AXI. Set this bit to reset these FIFO."]
     #[inline(always)]
-    pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<CTRL1_SPEC> {
+    pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<'_, CTRL1_SPEC> {
         RXFIFO_RST_W::new(self, 30)
     }
     #[doc = "Bit 31 - The synchronous reset signal for SPI0 TX AFIFO and all the AES_MSPI SYNC FIFO to send signals to AXI. Set this bit to reset these FIFO."]
     #[inline(always)]
-    pub fn txfifo_rst(&mut self) -> TXFIFO_RST_W<CTRL1_SPEC> {
+    pub fn txfifo_rst(&mut self) -> TXFIFO_RST_W<'_, CTRL1_SPEC> {
         TXFIFO_RST_W::new(self, 31)
     }
 }

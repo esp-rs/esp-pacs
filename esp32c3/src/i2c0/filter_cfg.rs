@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - reg_scl_filter_thres"]
     #[inline(always)]
-    pub fn scl_filter_thres(&mut self) -> SCL_FILTER_THRES_W<FILTER_CFG_SPEC> {
+    pub fn scl_filter_thres(&mut self) -> SCL_FILTER_THRES_W<'_, FILTER_CFG_SPEC> {
         SCL_FILTER_THRES_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - reg_sda_filter_thres"]
     #[inline(always)]
-    pub fn sda_filter_thres(&mut self) -> SDA_FILTER_THRES_W<FILTER_CFG_SPEC> {
+    pub fn sda_filter_thres(&mut self) -> SDA_FILTER_THRES_W<'_, FILTER_CFG_SPEC> {
         SDA_FILTER_THRES_W::new(self, 4)
     }
     #[doc = "Bit 8 - reg_scl_filter_en"]
     #[inline(always)]
-    pub fn scl_filter_en(&mut self) -> SCL_FILTER_EN_W<FILTER_CFG_SPEC> {
+    pub fn scl_filter_en(&mut self) -> SCL_FILTER_EN_W<'_, FILTER_CFG_SPEC> {
         SCL_FILTER_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - reg_sda_filter_en"]
     #[inline(always)]
-    pub fn sda_filter_en(&mut self) -> SDA_FILTER_EN_W<FILTER_CFG_SPEC> {
+    pub fn sda_filter_en(&mut self) -> SDA_FILTER_EN_W<'_, FILTER_CFG_SPEC> {
         SDA_FILTER_EN_W::new(self, 9)
     }
 }

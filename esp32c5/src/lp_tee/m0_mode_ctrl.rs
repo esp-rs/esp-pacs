@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Configures M0 security level mode.\\\\ 0: tee_mode \\\\ 1: ree_mode0 \\\\ 2: ree_mode1 \\\\ 3: ree_mode2 \\\\"]
     #[inline(always)]
-    pub fn m0_mode(&mut self) -> M0_MODE_W<M0_MODE_CTRL_SPEC> {
+    pub fn m0_mode(&mut self) -> M0_MODE_W<'_, M0_MODE_CTRL_SPEC> {
         M0_MODE_W::new(self, 0)
     }
     #[doc = "Bit 2 - Set 1 to lock m0 tee configuration"]
     #[inline(always)]
-    pub fn m0_lock(&mut self) -> M0_LOCK_W<M0_MODE_CTRL_SPEC> {
+    pub fn m0_lock(&mut self) -> M0_LOCK_W<'_, M0_MODE_CTRL_SPEC> {
         M0_LOCK_W::new(self, 2)
     }
 }

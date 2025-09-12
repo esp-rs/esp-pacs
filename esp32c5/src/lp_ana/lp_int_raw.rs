@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - brownout mode0 lp interrupt raw register"]
     #[inline(always)]
-    pub fn bod_mode0_lp_int_raw(&mut self) -> BOD_MODE0_LP_INT_RAW_W<LP_INT_RAW_SPEC> {
+    pub fn bod_mode0_lp_int_raw(&mut self) -> BOD_MODE0_LP_INT_RAW_W<'_, LP_INT_RAW_SPEC> {
         BOD_MODE0_LP_INT_RAW_W::new(self, 31)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Configures SLC0 RX linked list initial address."]
     #[inline(always)]
-    pub fn sdio_slc0_rxlink_addr(&mut self) -> SDIO_SLC0_RXLINK_ADDR_W<SLC0RX_LINK_ADDR_SPEC> {
+    pub fn sdio_slc0_rxlink_addr(&mut self) -> SDIO_SLC0_RXLINK_ADDR_W<'_, SLC0RX_LINK_ADDR_SPEC> {
         SDIO_SLC0_RXLINK_ADDR_W::new(self, 0)
     }
 }

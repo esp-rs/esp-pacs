@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
     #[inline(always)]
-    pub fn sw_stall_appcpu_c1(&mut self) -> SW_STALL_APPCPU_C1_W<SW_CPU_STALL_SPEC> {
+    pub fn sw_stall_appcpu_c1(&mut self) -> SW_STALL_APPCPU_C1_W<'_, SW_CPU_STALL_SPEC> {
         SW_STALL_APPCPU_C1_W::new(self, 20)
     }
     #[doc = "Bits 26:31 - {reg_sw_stall_procpu_c1\\[5:0\\] reg_sw_stall_procpu_c0\\[1:0\\]} == 0x86 will stall PRO CPU"]
     #[inline(always)]
-    pub fn sw_stall_procpu_c1(&mut self) -> SW_STALL_PROCPU_C1_W<SW_CPU_STALL_SPEC> {
+    pub fn sw_stall_procpu_c1(&mut self) -> SW_STALL_PROCPU_C1_W<'_, SW_CPU_STALL_SPEC> {
         SW_STALL_PROCPU_C1_W::new(self, 26)
     }
 }

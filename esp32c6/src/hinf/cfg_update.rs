@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<CFG_UPDATE_SPEC> {
 impl W {
     #[doc = "Bit 0 - update the timing configurations"]
     #[inline(always)]
-    pub fn conf_update(&mut self) -> CONF_UPDATE_W<CFG_UPDATE_SPEC> {
+    pub fn conf_update(&mut self) -> CONF_UPDATE_W<'_, CFG_UPDATE_SPEC> {
         CONF_UPDATE_W::new(self, 0)
     }
 }

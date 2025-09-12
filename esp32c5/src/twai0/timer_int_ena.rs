@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The enable signal for read_done interrupt."]
     #[inline(always)]
-    pub fn timer_overflow_int_ena(&mut self) -> TIMER_OVERFLOW_INT_ENA_W<TIMER_INT_ENA_SPEC> {
+    pub fn timer_overflow_int_ena(&mut self) -> TIMER_OVERFLOW_INT_ENA_W<'_, TIMER_INT_ENA_SPEC> {
         TIMER_OVERFLOW_INT_ENA_W::new(self, 0)
     }
 }

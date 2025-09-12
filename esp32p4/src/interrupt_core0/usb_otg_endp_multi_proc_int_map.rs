@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core0_usb_otg_endp_multi_proc_int_map(
         &mut self,
-    ) -> CORE0_USB_OTG_ENDP_MULTI_PROC_INT_MAP_W<USB_OTG_ENDP_MULTI_PROC_INT_MAP_SPEC> {
+    ) -> CORE0_USB_OTG_ENDP_MULTI_PROC_INT_MAP_W<'_, USB_OTG_ENDP_MULTI_PROC_INT_MAP_SPEC> {
         CORE0_USB_OTG_ENDP_MULTI_PROC_INT_MAP_W::new(self, 0)
     }
 }

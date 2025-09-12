@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - NA"]
     #[inline(always)]
-    pub fn ch1_block_ts(&mut self) -> CH1_BLOCK_TS_W<BLOCK_TS0_SPEC> {
+    pub fn ch1_block_ts(&mut self) -> CH1_BLOCK_TS_W<'_, BLOCK_TS0_SPEC> {
         CH1_BLOCK_TS_W::new(self, 0)
     }
 }

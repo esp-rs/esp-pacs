@@ -154,72 +154,72 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn mask_to_hs_tx(&mut self) -> MASK_TO_HS_TX_W<INT_MSK1_SPEC> {
+    pub fn mask_to_hs_tx(&mut self) -> MASK_TO_HS_TX_W<'_, INT_MSK1_SPEC> {
         MASK_TO_HS_TX_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    pub fn mask_to_lp_rx(&mut self) -> MASK_TO_LP_RX_W<INT_MSK1_SPEC> {
+    pub fn mask_to_lp_rx(&mut self) -> MASK_TO_LP_RX_W<'_, INT_MSK1_SPEC> {
         MASK_TO_LP_RX_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    pub fn mask_ecc_single_err(&mut self) -> MASK_ECC_SINGLE_ERR_W<INT_MSK1_SPEC> {
+    pub fn mask_ecc_single_err(&mut self) -> MASK_ECC_SINGLE_ERR_W<'_, INT_MSK1_SPEC> {
         MASK_ECC_SINGLE_ERR_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    pub fn mask_ecc_milti_err(&mut self) -> MASK_ECC_MILTI_ERR_W<INT_MSK1_SPEC> {
+    pub fn mask_ecc_milti_err(&mut self) -> MASK_ECC_MILTI_ERR_W<'_, INT_MSK1_SPEC> {
         MASK_ECC_MILTI_ERR_W::new(self, 3)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    pub fn mask_crc_err(&mut self) -> MASK_CRC_ERR_W<INT_MSK1_SPEC> {
+    pub fn mask_crc_err(&mut self) -> MASK_CRC_ERR_W<'_, INT_MSK1_SPEC> {
         MASK_CRC_ERR_W::new(self, 4)
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
-    pub fn mask_pkt_size_err(&mut self) -> MASK_PKT_SIZE_ERR_W<INT_MSK1_SPEC> {
+    pub fn mask_pkt_size_err(&mut self) -> MASK_PKT_SIZE_ERR_W<'_, INT_MSK1_SPEC> {
         MASK_PKT_SIZE_ERR_W::new(self, 5)
     }
     #[doc = "Bit 6 - NA"]
     #[inline(always)]
-    pub fn mask_eopt_err(&mut self) -> MASK_EOPT_ERR_W<INT_MSK1_SPEC> {
+    pub fn mask_eopt_err(&mut self) -> MASK_EOPT_ERR_W<'_, INT_MSK1_SPEC> {
         MASK_EOPT_ERR_W::new(self, 6)
     }
     #[doc = "Bit 7 - NA"]
     #[inline(always)]
-    pub fn mask_dpi_pld_wr_err(&mut self) -> MASK_DPI_PLD_WR_ERR_W<INT_MSK1_SPEC> {
+    pub fn mask_dpi_pld_wr_err(&mut self) -> MASK_DPI_PLD_WR_ERR_W<'_, INT_MSK1_SPEC> {
         MASK_DPI_PLD_WR_ERR_W::new(self, 7)
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    pub fn mask_gen_cmd_wr_err(&mut self) -> MASK_GEN_CMD_WR_ERR_W<INT_MSK1_SPEC> {
+    pub fn mask_gen_cmd_wr_err(&mut self) -> MASK_GEN_CMD_WR_ERR_W<'_, INT_MSK1_SPEC> {
         MASK_GEN_CMD_WR_ERR_W::new(self, 8)
     }
     #[doc = "Bit 9 - NA"]
     #[inline(always)]
-    pub fn mask_gen_pld_wr_err(&mut self) -> MASK_GEN_PLD_WR_ERR_W<INT_MSK1_SPEC> {
+    pub fn mask_gen_pld_wr_err(&mut self) -> MASK_GEN_PLD_WR_ERR_W<'_, INT_MSK1_SPEC> {
         MASK_GEN_PLD_WR_ERR_W::new(self, 9)
     }
     #[doc = "Bit 10 - NA"]
     #[inline(always)]
-    pub fn mask_gen_pld_send_err(&mut self) -> MASK_GEN_PLD_SEND_ERR_W<INT_MSK1_SPEC> {
+    pub fn mask_gen_pld_send_err(&mut self) -> MASK_GEN_PLD_SEND_ERR_W<'_, INT_MSK1_SPEC> {
         MASK_GEN_PLD_SEND_ERR_W::new(self, 10)
     }
     #[doc = "Bit 11 - NA"]
     #[inline(always)]
-    pub fn mask_gen_pld_rd_err(&mut self) -> MASK_GEN_PLD_RD_ERR_W<INT_MSK1_SPEC> {
+    pub fn mask_gen_pld_rd_err(&mut self) -> MASK_GEN_PLD_RD_ERR_W<'_, INT_MSK1_SPEC> {
         MASK_GEN_PLD_RD_ERR_W::new(self, 11)
     }
     #[doc = "Bit 12 - NA"]
     #[inline(always)]
-    pub fn mask_gen_pld_recev_err(&mut self) -> MASK_GEN_PLD_RECEV_ERR_W<INT_MSK1_SPEC> {
+    pub fn mask_gen_pld_recev_err(&mut self) -> MASK_GEN_PLD_RECEV_ERR_W<'_, INT_MSK1_SPEC> {
         MASK_GEN_PLD_RECEV_ERR_W::new(self, 12)
     }
     #[doc = "Bit 19 - NA"]
     #[inline(always)]
-    pub fn mask_dpi_buff_pld_under(&mut self) -> MASK_DPI_BUFF_PLD_UNDER_W<INT_MSK1_SPEC> {
+    pub fn mask_dpi_buff_pld_under(&mut self) -> MASK_DPI_BUFF_PLD_UNDER_W<'_, INT_MSK1_SPEC> {
         MASK_DPI_BUFF_PLD_UNDER_W::new(self, 19)
     }
 }

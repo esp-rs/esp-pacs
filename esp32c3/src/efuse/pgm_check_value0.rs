@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The content of the 0th 32-bit RS code to be programmed."]
     #[inline(always)]
-    pub fn pgm_rs_data_0(&mut self) -> PGM_RS_DATA_0_W<PGM_CHECK_VALUE0_SPEC> {
+    pub fn pgm_rs_data_0(&mut self) -> PGM_RS_DATA_0_W<'_, PGM_CHECK_VALUE0_SPEC> {
         PGM_RS_DATA_0_W::new(self, 0)
     }
 }

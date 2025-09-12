@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21"]
     #[inline(always)]
-    pub fn pro_out_vecbase(&mut self) -> PRO_OUT_VECBASE_W<PRO_VECBASE_SET_SPEC> {
+    pub fn pro_out_vecbase(&mut self) -> PRO_OUT_VECBASE_W<'_, PRO_VECBASE_SET_SPEC> {
         PRO_OUT_VECBASE_W::new(self, 0)
     }
 }

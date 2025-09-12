@@ -25,49 +25,49 @@ impl W {
     #[inline(always)]
     pub fn hp_modem_hp_power_det_bypass(
         &mut self,
-    ) -> HP_MODEM_HP_POWER_DET_BYPASS_W<HP_MODEM_HP_SYS_CNTL_SPEC> {
+    ) -> HP_MODEM_HP_POWER_DET_BYPASS_W<'_, HP_MODEM_HP_SYS_CNTL_SPEC> {
         HP_MODEM_HP_POWER_DET_BYPASS_W::new(self, 23)
     }
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
     pub fn hp_modem_uart_wakeup_en(
         &mut self,
-    ) -> HP_MODEM_UART_WAKEUP_EN_W<HP_MODEM_HP_SYS_CNTL_SPEC> {
+    ) -> HP_MODEM_UART_WAKEUP_EN_W<'_, HP_MODEM_HP_SYS_CNTL_SPEC> {
         HP_MODEM_UART_WAKEUP_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
     pub fn hp_modem_lp_pad_hold_all(
         &mut self,
-    ) -> HP_MODEM_LP_PAD_HOLD_ALL_W<HP_MODEM_HP_SYS_CNTL_SPEC> {
+    ) -> HP_MODEM_LP_PAD_HOLD_ALL_W<'_, HP_MODEM_HP_SYS_CNTL_SPEC> {
         HP_MODEM_LP_PAD_HOLD_ALL_W::new(self, 25)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
     pub fn hp_modem_hp_pad_hold_all(
         &mut self,
-    ) -> HP_MODEM_HP_PAD_HOLD_ALL_W<HP_MODEM_HP_SYS_CNTL_SPEC> {
+    ) -> HP_MODEM_HP_PAD_HOLD_ALL_W<'_, HP_MODEM_HP_SYS_CNTL_SPEC> {
         HP_MODEM_HP_PAD_HOLD_ALL_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
     pub fn hp_modem_dig_pad_slp_sel(
         &mut self,
-    ) -> HP_MODEM_DIG_PAD_SLP_SEL_W<HP_MODEM_HP_SYS_CNTL_SPEC> {
+    ) -> HP_MODEM_DIG_PAD_SLP_SEL_W<'_, HP_MODEM_HP_SYS_CNTL_SPEC> {
         HP_MODEM_DIG_PAD_SLP_SEL_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     pub fn hp_modem_dig_pause_wdt(
         &mut self,
-    ) -> HP_MODEM_DIG_PAUSE_WDT_W<HP_MODEM_HP_SYS_CNTL_SPEC> {
+    ) -> HP_MODEM_DIG_PAUSE_WDT_W<'_, HP_MODEM_HP_SYS_CNTL_SPEC> {
         HP_MODEM_DIG_PAUSE_WDT_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     pub fn hp_modem_dig_cpu_stall(
         &mut self,
-    ) -> HP_MODEM_DIG_CPU_STALL_W<HP_MODEM_HP_SYS_CNTL_SPEC> {
+    ) -> HP_MODEM_DIG_CPU_STALL_W<'_, HP_MODEM_HP_SYS_CNTL_SPEC> {
         HP_MODEM_DIG_CPU_STALL_W::new(self, 29)
     }
 }

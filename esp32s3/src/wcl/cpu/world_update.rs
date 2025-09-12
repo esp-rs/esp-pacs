@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<WORLD_UPDATE_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - This field is used to update configuration completed, can write any value,the hardware only checks the write operation of this register and does not case about its value"]
     #[inline(always)]
-    pub fn update(&mut self) -> UPDATE_W<WORLD_UPDATE_SPEC> {
+    pub fn update(&mut self) -> UPDATE_W<'_, WORLD_UPDATE_SPEC> {
         UPDATE_W::new(self, 0)
     }
 }

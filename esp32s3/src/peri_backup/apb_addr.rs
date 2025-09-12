@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - x"]
     #[inline(always)]
-    pub fn apb_start_addr(&mut self) -> APB_START_ADDR_W<APB_ADDR_SPEC> {
+    pub fn apb_start_addr(&mut self) -> APB_START_ADDR_W<'_, APB_ADDR_SPEC> {
         APB_START_ADDR_W::new(self, 0)
     }
 }

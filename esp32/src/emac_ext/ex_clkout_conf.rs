@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    pub fn div_num(&mut self) -> DIV_NUM_W<EX_CLKOUT_CONF_SPEC> {
+    pub fn div_num(&mut self) -> DIV_NUM_W<'_, EX_CLKOUT_CONF_SPEC> {
         DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
-    pub fn h_div_num(&mut self) -> H_DIV_NUM_W<EX_CLKOUT_CONF_SPEC> {
+    pub fn h_div_num(&mut self) -> H_DIV_NUM_W<'_, EX_CLKOUT_CONF_SPEC> {
         H_DIV_NUM_W::new(self, 4)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
-    pub fn dly_num(&mut self) -> DLY_NUM_W<EX_CLKOUT_CONF_SPEC> {
+    pub fn dly_num(&mut self) -> DLY_NUM_W<'_, EX_CLKOUT_CONF_SPEC> {
         DLY_NUM_W::new(self, 8)
     }
 }

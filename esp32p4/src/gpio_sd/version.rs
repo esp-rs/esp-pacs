@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - Version control register."]
     #[inline(always)]
-    pub fn gpio_sd_date(&mut self) -> GPIO_SD_DATE_W<VERSION_SPEC> {
+    pub fn gpio_sd_date(&mut self) -> GPIO_SD_DATE_W<'_, VERSION_SPEC> {
         GPIO_SD_DATE_W::new(self, 0)
     }
 }

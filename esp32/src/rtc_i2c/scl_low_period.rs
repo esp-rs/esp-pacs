@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:24 - number of cycles that scl == 0"]
     #[inline(always)]
-    pub fn scl_low_period(&mut self) -> SCL_LOW_PERIOD_W<SCL_LOW_PERIOD_SPEC> {
+    pub fn scl_low_period(&mut self) -> SCL_LOW_PERIOD_W<'_, SCL_LOW_PERIOD_SPEC> {
         SCL_LOW_PERIOD_W::new(self, 0)
     }
 }

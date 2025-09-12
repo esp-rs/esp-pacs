@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Configures the idle time before the receiver receives the first AT_CMD.\\\\Measurement unit: bit time (the time to transmit 1 bit)."]
     #[inline(always)]
-    pub fn pre_idle_num(&mut self) -> PRE_IDLE_NUM_W<AT_CMD_PRECNT_SYNC_SPEC> {
+    pub fn pre_idle_num(&mut self) -> PRE_IDLE_NUM_W<'_, AT_CMD_PRECNT_SYNC_SPEC> {
         PRE_IDLE_NUM_W::new(self, 0)
     }
 }

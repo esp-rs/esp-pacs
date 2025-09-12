@@ -107,27 +107,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - This register stores the 20 least significant bits of the first receive descriptor’s address."]
     #[inline(always)]
-    pub fn inlink_addr(&mut self) -> INLINK_ADDR_W<IN_LINK_SPEC> {
+    pub fn inlink_addr(&mut self) -> INLINK_ADDR_W<'_, IN_LINK_SPEC> {
         INLINK_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 20 - Reserved"]
     #[inline(always)]
-    pub fn inlink_auto_ret(&mut self) -> INLINK_AUTO_RET_W<IN_LINK_SPEC> {
+    pub fn inlink_auto_ret(&mut self) -> INLINK_AUTO_RET_W<'_, IN_LINK_SPEC> {
         INLINK_AUTO_RET_W::new(self, 20)
     }
     #[doc = "Bit 28 - Set this bit to stop DMA from reading receive descriptors after finishing the current data transaction."]
     #[inline(always)]
-    pub fn inlink_stop(&mut self) -> INLINK_STOP_W<IN_LINK_SPEC> {
+    pub fn inlink_stop(&mut self) -> INLINK_STOP_W<'_, IN_LINK_SPEC> {
         INLINK_STOP_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set this bit to enable DMA to read receive descriptors."]
     #[inline(always)]
-    pub fn inlink_start(&mut self) -> INLINK_START_W<IN_LINK_SPEC> {
+    pub fn inlink_start(&mut self) -> INLINK_START_W<'_, IN_LINK_SPEC> {
         INLINK_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set this bit to mount a new receive descriptor."]
     #[inline(always)]
-    pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<IN_LINK_SPEC> {
+    pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<'_, IN_LINK_SPEC> {
         INLINK_RESTART_W::new(self, 30)
     }
 }

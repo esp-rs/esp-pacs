@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable rsa clock"]
     #[inline(always)]
-    pub fn rsa_clk_en(&mut self) -> RSA_CLK_EN_W<RSA_CONF_SPEC> {
+    pub fn rsa_clk_en(&mut self) -> RSA_CLK_EN_W<'_, RSA_CONF_SPEC> {
         RSA_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset rsa module"]
     #[inline(always)]
-    pub fn rsa_rst_en(&mut self) -> RSA_RST_EN_W<RSA_CONF_SPEC> {
+    pub fn rsa_rst_en(&mut self) -> RSA_RST_EN_W<'_, RSA_CONF_SPEC> {
         RSA_RST_EN_W::new(self, 1)
     }
 }

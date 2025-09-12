@@ -34,12 +34,14 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 20:21 - set this field to select clock-source. 0(default): XTAL, 1: 80MHz, 2: FOSC, 3: reserved."]
     #[inline(always)]
-    pub fn tg0_timer_clk_sel(&mut self) -> TG0_TIMER_CLK_SEL_W<TIMERGROUP0_TIMER_CLK_CONF_SPEC> {
+    pub fn tg0_timer_clk_sel(
+        &mut self,
+    ) -> TG0_TIMER_CLK_SEL_W<'_, TIMERGROUP0_TIMER_CLK_CONF_SPEC> {
         TG0_TIMER_CLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable timer_group0 timer clock"]
     #[inline(always)]
-    pub fn tg0_timer_clk_en(&mut self) -> TG0_TIMER_CLK_EN_W<TIMERGROUP0_TIMER_CLK_CONF_SPEC> {
+    pub fn tg0_timer_clk_en(&mut self) -> TG0_TIMER_CLK_EN_W<'_, TIMERGROUP0_TIMER_CLK_CONF_SPEC> {
         TG0_TIMER_CLK_EN_W::new(self, 22)
     }
 }

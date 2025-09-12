@@ -5,14 +5,14 @@ edition = "2021"
 publish = false
 
 [dependencies]
-anyhow     = "1.0.98"
-clap       = { version = "4.5.40", features = ["derive"] }
+anyhow     = "1.0.99"
+clap       = { version = "4.5.45", features = ["derive"] }
 env_logger = "0.11.8"
 form       = "0.13.0"
 log        = "0.4.27"
-rayon      = "1.10.0"
+rayon      = "1.11.0"
 semver     = "1.0.26"
-strum      = { version = "0.27.1", features = ["derive"] }
-svd2rust   = { version = "0.36.1", features = ["serde", "yaml"], default-features = false }
+strum      = { version = "0.27.2", features = ["derive"] }
+svd2rust   = { version = "0.37.0", features = ["serde", "yaml"], default-features = false }
 svdtools   = "0.5.0"
-toml_edit  = "0.22.27"
+toml_edit  = "0.23.3"

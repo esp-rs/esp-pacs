@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core1_lp_timer_reg_1_int_map(
         &mut self,
-    ) -> CORE1_LP_TIMER_REG_1_INT_MAP_W<LP_TIMER_REG_1_INT_MAP_SPEC> {
+    ) -> CORE1_LP_TIMER_REG_1_INT_MAP_W<'_, LP_TIMER_REG_1_INT_MAP_SPEC> {
         CORE1_LP_TIMER_REG_1_INT_MAP_W::new(self, 0)
     }
 }

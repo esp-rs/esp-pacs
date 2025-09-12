@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - RTC timer low 32 bits"]
     #[inline(always)]
-    pub fn timer_value0_low(&mut self) -> TIMER_VALUE0_LOW_W<TIME_LOW0_SPEC> {
+    pub fn timer_value0_low(&mut self) -> TIMER_VALUE0_LOW_W<'_, TIME_LOW0_SPEC> {
         TIMER_VALUE0_LOW_W::new(self, 0)
     }
 }

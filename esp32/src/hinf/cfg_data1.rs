@@ -160,47 +160,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn sdio_enable(&mut self) -> SDIO_ENABLE_W<CFG_DATA1_SPEC> {
+    pub fn sdio_enable(&mut self) -> SDIO_ENABLE_W<'_, CFG_DATA1_SPEC> {
         SDIO_ENABLE_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn sdio_ioready1(&mut self) -> SDIO_IOREADY1_W<CFG_DATA1_SPEC> {
+    pub fn sdio_ioready1(&mut self) -> SDIO_IOREADY1_W<'_, CFG_DATA1_SPEC> {
         SDIO_IOREADY1_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn highspeed_enable(&mut self) -> HIGHSPEED_ENABLE_W<CFG_DATA1_SPEC> {
+    pub fn highspeed_enable(&mut self) -> HIGHSPEED_ENABLE_W<'_, CFG_DATA1_SPEC> {
         HIGHSPEED_ENABLE_W::new(self, 2)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn sdio_cd_enable(&mut self) -> SDIO_CD_ENABLE_W<CFG_DATA1_SPEC> {
+    pub fn sdio_cd_enable(&mut self) -> SDIO_CD_ENABLE_W<'_, CFG_DATA1_SPEC> {
         SDIO_CD_ENABLE_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn sdio_ioready2(&mut self) -> SDIO_IOREADY2_W<CFG_DATA1_SPEC> {
+    pub fn sdio_ioready2(&mut self) -> SDIO_IOREADY2_W<'_, CFG_DATA1_SPEC> {
         SDIO_IOREADY2_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn sdio_int_mask(&mut self) -> SDIO_INT_MASK_W<CFG_DATA1_SPEC> {
+    pub fn sdio_int_mask(&mut self) -> SDIO_INT_MASK_W<'_, CFG_DATA1_SPEC> {
         SDIO_INT_MASK_W::new(self, 6)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
-    pub fn sdio20_conf0(&mut self) -> SDIO20_CONF0_W<CFG_DATA1_SPEC> {
+    pub fn sdio20_conf0(&mut self) -> SDIO20_CONF0_W<'_, CFG_DATA1_SPEC> {
         SDIO20_CONF0_W::new(self, 12)
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]
-    pub fn sdio_ver(&mut self) -> SDIO_VER_W<CFG_DATA1_SPEC> {
+    pub fn sdio_ver(&mut self) -> SDIO_VER_W<'_, CFG_DATA1_SPEC> {
         SDIO_VER_W::new(self, 16)
     }
     #[doc = "Bits 29:31"]
     #[inline(always)]
-    pub fn sdio20_conf1(&mut self) -> SDIO20_CONF1_W<CFG_DATA1_SPEC> {
+    pub fn sdio20_conf1(&mut self) -> SDIO20_CONF1_W<'_, CFG_DATA1_SPEC> {
         SDIO20_CONF1_W::new(self, 29)
     }
 }

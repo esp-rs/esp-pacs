@@ -206,82 +206,82 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - CAN Basic Frame is accepted by filter A."]
     #[inline(always)]
-    pub fn fanb(&mut self) -> FANB_W<FILTER_CONTROL_FILTER_STATUS_SPEC> {
+    pub fn fanb(&mut self) -> FANB_W<'_, FILTER_CONTROL_FILTER_STATUS_SPEC> {
         FANB_W::new(self, 0)
     }
     #[doc = "Bit 1 - CAN Extended Frame is accepted by Filter A."]
     #[inline(always)]
-    pub fn fane(&mut self) -> FANE_W<FILTER_CONTROL_FILTER_STATUS_SPEC> {
+    pub fn fane(&mut self) -> FANE_W<'_, FILTER_CONTROL_FILTER_STATUS_SPEC> {
         FANE_W::new(self, 1)
     }
     #[doc = "Bit 2 - CAN FD Basic Frame is accepted by filter A."]
     #[inline(always)]
-    pub fn fafb(&mut self) -> FAFB_W<FILTER_CONTROL_FILTER_STATUS_SPEC> {
+    pub fn fafb(&mut self) -> FAFB_W<'_, FILTER_CONTROL_FILTER_STATUS_SPEC> {
         FAFB_W::new(self, 2)
     }
     #[doc = "Bit 3 - CAN FD Extended Frame is accepted by filter A."]
     #[inline(always)]
-    pub fn fafe(&mut self) -> FAFE_W<FILTER_CONTROL_FILTER_STATUS_SPEC> {
+    pub fn fafe(&mut self) -> FAFE_W<'_, FILTER_CONTROL_FILTER_STATUS_SPEC> {
         FAFE_W::new(self, 3)
     }
     #[doc = "Bit 4 - CAN Basic Frame is accepted by filter B."]
     #[inline(always)]
-    pub fn fbnb(&mut self) -> FBNB_W<FILTER_CONTROL_FILTER_STATUS_SPEC> {
+    pub fn fbnb(&mut self) -> FBNB_W<'_, FILTER_CONTROL_FILTER_STATUS_SPEC> {
         FBNB_W::new(self, 4)
     }
     #[doc = "Bit 5 - CAN Extended Frame is accepted by Filter B."]
     #[inline(always)]
-    pub fn fbne(&mut self) -> FBNE_W<FILTER_CONTROL_FILTER_STATUS_SPEC> {
+    pub fn fbne(&mut self) -> FBNE_W<'_, FILTER_CONTROL_FILTER_STATUS_SPEC> {
         FBNE_W::new(self, 5)
     }
     #[doc = "Bit 6 - CAN FD Basic Frame is accepted by filter B."]
     #[inline(always)]
-    pub fn fbfb(&mut self) -> FBFB_W<FILTER_CONTROL_FILTER_STATUS_SPEC> {
+    pub fn fbfb(&mut self) -> FBFB_W<'_, FILTER_CONTROL_FILTER_STATUS_SPEC> {
         FBFB_W::new(self, 6)
     }
     #[doc = "Bit 7 - CAN FD Extended Frame is accepted by filter B."]
     #[inline(always)]
-    pub fn fbfe(&mut self) -> FBFE_W<FILTER_CONTROL_FILTER_STATUS_SPEC> {
+    pub fn fbfe(&mut self) -> FBFE_W<'_, FILTER_CONTROL_FILTER_STATUS_SPEC> {
         FBFE_W::new(self, 7)
     }
     #[doc = "Bit 8 - CAN Basic Frame is accepted by filter C."]
     #[inline(always)]
-    pub fn fcnb(&mut self) -> FCNB_W<FILTER_CONTROL_FILTER_STATUS_SPEC> {
+    pub fn fcnb(&mut self) -> FCNB_W<'_, FILTER_CONTROL_FILTER_STATUS_SPEC> {
         FCNB_W::new(self, 8)
     }
     #[doc = "Bit 9 - CAN Extended Frame is accepted by Filter C."]
     #[inline(always)]
-    pub fn fcne(&mut self) -> FCNE_W<FILTER_CONTROL_FILTER_STATUS_SPEC> {
+    pub fn fcne(&mut self) -> FCNE_W<'_, FILTER_CONTROL_FILTER_STATUS_SPEC> {
         FCNE_W::new(self, 9)
     }
     #[doc = "Bit 10 - CAN FD Basic Frame is accepted by filter C."]
     #[inline(always)]
-    pub fn fcfb(&mut self) -> FCFB_W<FILTER_CONTROL_FILTER_STATUS_SPEC> {
+    pub fn fcfb(&mut self) -> FCFB_W<'_, FILTER_CONTROL_FILTER_STATUS_SPEC> {
         FCFB_W::new(self, 10)
     }
     #[doc = "Bit 11 - CAN FD Extended Frame is accepted by filter C."]
     #[inline(always)]
-    pub fn fcfe(&mut self) -> FCFE_W<FILTER_CONTROL_FILTER_STATUS_SPEC> {
+    pub fn fcfe(&mut self) -> FCFE_W<'_, FILTER_CONTROL_FILTER_STATUS_SPEC> {
         FCFE_W::new(self, 11)
     }
     #[doc = "Bit 12 - CAN Basic Frame is accepted by Range filter."]
     #[inline(always)]
-    pub fn frnb(&mut self) -> FRNB_W<FILTER_CONTROL_FILTER_STATUS_SPEC> {
+    pub fn frnb(&mut self) -> FRNB_W<'_, FILTER_CONTROL_FILTER_STATUS_SPEC> {
         FRNB_W::new(self, 12)
     }
     #[doc = "Bit 13 - CAN Extended Frame is accepted by Range filter."]
     #[inline(always)]
-    pub fn frne(&mut self) -> FRNE_W<FILTER_CONTROL_FILTER_STATUS_SPEC> {
+    pub fn frne(&mut self) -> FRNE_W<'_, FILTER_CONTROL_FILTER_STATUS_SPEC> {
         FRNE_W::new(self, 13)
     }
     #[doc = "Bit 14 - CAN FD Basic Frame is accepted by Range filter."]
     #[inline(always)]
-    pub fn frfb(&mut self) -> FRFB_W<FILTER_CONTROL_FILTER_STATUS_SPEC> {
+    pub fn frfb(&mut self) -> FRFB_W<'_, FILTER_CONTROL_FILTER_STATUS_SPEC> {
         FRFB_W::new(self, 14)
     }
     #[doc = "Bit 15 - CAN FD Extended Frame is accepted by Range filter."]
     #[inline(always)]
-    pub fn frfe(&mut self) -> FRFE_W<FILTER_CONTROL_FILTER_STATUS_SPEC> {
+    pub fn frfe(&mut self) -> FRFE_W<'_, FILTER_CONTROL_FILTER_STATUS_SPEC> {
         FRFE_W::new(self, 15)
     }
 }

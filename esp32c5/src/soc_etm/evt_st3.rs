@@ -367,168 +367,176 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Represents ADC_evt_started0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn adc_evt_started0_st(&mut self) -> ADC_EVT_STARTED0_ST_W<EVT_ST3_SPEC> {
+    pub fn adc_evt_started0_st(&mut self) -> ADC_EVT_STARTED0_ST_W<'_, EVT_ST3_SPEC> {
         ADC_EVT_STARTED0_ST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Represents REGDMA_evt_done0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn regdma_evt_done0_st(&mut self) -> REGDMA_EVT_DONE0_ST_W<EVT_ST3_SPEC> {
+    pub fn regdma_evt_done0_st(&mut self) -> REGDMA_EVT_DONE0_ST_W<'_, EVT_ST3_SPEC> {
         REGDMA_EVT_DONE0_ST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Represents REGDMA_evt_done1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn regdma_evt_done1_st(&mut self) -> REGDMA_EVT_DONE1_ST_W<EVT_ST3_SPEC> {
+    pub fn regdma_evt_done1_st(&mut self) -> REGDMA_EVT_DONE1_ST_W<'_, EVT_ST3_SPEC> {
         REGDMA_EVT_DONE1_ST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Represents REGDMA_evt_done2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn regdma_evt_done2_st(&mut self) -> REGDMA_EVT_DONE2_ST_W<EVT_ST3_SPEC> {
+    pub fn regdma_evt_done2_st(&mut self) -> REGDMA_EVT_DONE2_ST_W<'_, EVT_ST3_SPEC> {
         REGDMA_EVT_DONE2_ST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Represents REGDMA_evt_done3 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn regdma_evt_done3_st(&mut self) -> REGDMA_EVT_DONE3_ST_W<EVT_ST3_SPEC> {
+    pub fn regdma_evt_done3_st(&mut self) -> REGDMA_EVT_DONE3_ST_W<'_, EVT_ST3_SPEC> {
         REGDMA_EVT_DONE3_ST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Represents REGDMA_evt_err0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn regdma_evt_err0_st(&mut self) -> REGDMA_EVT_ERR0_ST_W<EVT_ST3_SPEC> {
+    pub fn regdma_evt_err0_st(&mut self) -> REGDMA_EVT_ERR0_ST_W<'_, EVT_ST3_SPEC> {
         REGDMA_EVT_ERR0_ST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Represents REGDMA_evt_err1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn regdma_evt_err1_st(&mut self) -> REGDMA_EVT_ERR1_ST_W<EVT_ST3_SPEC> {
+    pub fn regdma_evt_err1_st(&mut self) -> REGDMA_EVT_ERR1_ST_W<'_, EVT_ST3_SPEC> {
         REGDMA_EVT_ERR1_ST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Represents REGDMA_evt_err2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn regdma_evt_err2_st(&mut self) -> REGDMA_EVT_ERR2_ST_W<EVT_ST3_SPEC> {
+    pub fn regdma_evt_err2_st(&mut self) -> REGDMA_EVT_ERR2_ST_W<'_, EVT_ST3_SPEC> {
         REGDMA_EVT_ERR2_ST_W::new(self, 7)
     }
     #[doc = "Bit 8 - Represents REGDMA_evt_err3 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn regdma_evt_err3_st(&mut self) -> REGDMA_EVT_ERR3_ST_W<EVT_ST3_SPEC> {
+    pub fn regdma_evt_err3_st(&mut self) -> REGDMA_EVT_ERR3_ST_W<'_, EVT_ST3_SPEC> {
         REGDMA_EVT_ERR3_ST_W::new(self, 8)
     }
     #[doc = "Bit 9 - Represents TMPSNSR_evt_over_limit trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn tmpsnsr_evt_over_limit_st(&mut self) -> TMPSNSR_EVT_OVER_LIMIT_ST_W<EVT_ST3_SPEC> {
+    pub fn tmpsnsr_evt_over_limit_st(&mut self) -> TMPSNSR_EVT_OVER_LIMIT_ST_W<'_, EVT_ST3_SPEC> {
         TMPSNSR_EVT_OVER_LIMIT_ST_W::new(self, 9)
     }
     #[doc = "Bit 10 - Represents I2S0_evt_rx_done trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn i2s0_evt_rx_done_st(&mut self) -> I2S0_EVT_RX_DONE_ST_W<EVT_ST3_SPEC> {
+    pub fn i2s0_evt_rx_done_st(&mut self) -> I2S0_EVT_RX_DONE_ST_W<'_, EVT_ST3_SPEC> {
         I2S0_EVT_RX_DONE_ST_W::new(self, 10)
     }
     #[doc = "Bit 11 - Represents I2S0_evt_tx_done trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn i2s0_evt_tx_done_st(&mut self) -> I2S0_EVT_TX_DONE_ST_W<EVT_ST3_SPEC> {
+    pub fn i2s0_evt_tx_done_st(&mut self) -> I2S0_EVT_TX_DONE_ST_W<'_, EVT_ST3_SPEC> {
         I2S0_EVT_TX_DONE_ST_W::new(self, 11)
     }
     #[doc = "Bit 12 - Represents I2S0_evt_x_words_received trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn i2s0_evt_x_words_received_st(&mut self) -> I2S0_EVT_X_WORDS_RECEIVED_ST_W<EVT_ST3_SPEC> {
+    pub fn i2s0_evt_x_words_received_st(
+        &mut self,
+    ) -> I2S0_EVT_X_WORDS_RECEIVED_ST_W<'_, EVT_ST3_SPEC> {
         I2S0_EVT_X_WORDS_RECEIVED_ST_W::new(self, 12)
     }
     #[doc = "Bit 13 - Represents I2S0_evt_x_words_sent trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn i2s0_evt_x_words_sent_st(&mut self) -> I2S0_EVT_X_WORDS_SENT_ST_W<EVT_ST3_SPEC> {
+    pub fn i2s0_evt_x_words_sent_st(&mut self) -> I2S0_EVT_X_WORDS_SENT_ST_W<'_, EVT_ST3_SPEC> {
         I2S0_EVT_X_WORDS_SENT_ST_W::new(self, 13)
     }
     #[doc = "Bit 14 - Represents ULP_evt_err_intr trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ulp_evt_err_intr_st(&mut self) -> ULP_EVT_ERR_INTR_ST_W<EVT_ST3_SPEC> {
+    pub fn ulp_evt_err_intr_st(&mut self) -> ULP_EVT_ERR_INTR_ST_W<'_, EVT_ST3_SPEC> {
         ULP_EVT_ERR_INTR_ST_W::new(self, 14)
     }
     #[doc = "Bit 15 - Represents ULP_evt_halt trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ulp_evt_halt_st(&mut self) -> ULP_EVT_HALT_ST_W<EVT_ST3_SPEC> {
+    pub fn ulp_evt_halt_st(&mut self) -> ULP_EVT_HALT_ST_W<'_, EVT_ST3_SPEC> {
         ULP_EVT_HALT_ST_W::new(self, 15)
     }
     #[doc = "Bit 16 - Represents ULP_evt_start_intr trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ulp_evt_start_intr_st(&mut self) -> ULP_EVT_START_INTR_ST_W<EVT_ST3_SPEC> {
+    pub fn ulp_evt_start_intr_st(&mut self) -> ULP_EVT_START_INTR_ST_W<'_, EVT_ST3_SPEC> {
         ULP_EVT_START_INTR_ST_W::new(self, 16)
     }
     #[doc = "Bit 17 - Represents RTC_evt_tick trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn rtc_evt_tick_st(&mut self) -> RTC_EVT_TICK_ST_W<EVT_ST3_SPEC> {
+    pub fn rtc_evt_tick_st(&mut self) -> RTC_EVT_TICK_ST_W<'_, EVT_ST3_SPEC> {
         RTC_EVT_TICK_ST_W::new(self, 17)
     }
     #[doc = "Bit 18 - Represents RTC_evt_ovf trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn rtc_evt_ovf_st(&mut self) -> RTC_EVT_OVF_ST_W<EVT_ST3_SPEC> {
+    pub fn rtc_evt_ovf_st(&mut self) -> RTC_EVT_OVF_ST_W<'_, EVT_ST3_SPEC> {
         RTC_EVT_OVF_ST_W::new(self, 18)
     }
     #[doc = "Bit 19 - Represents RTC_evt_cmp trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn rtc_evt_cmp_st(&mut self) -> RTC_EVT_CMP_ST_W<EVT_ST3_SPEC> {
+    pub fn rtc_evt_cmp_st(&mut self) -> RTC_EVT_CMP_ST_W<'_, EVT_ST3_SPEC> {
         RTC_EVT_CMP_ST_W::new(self, 19)
     }
     #[doc = "Bit 20 - Represents GDMA_evt_in_done_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn gdma_evt_in_done_ch0_st(&mut self) -> GDMA_EVT_IN_DONE_CH0_ST_W<EVT_ST3_SPEC> {
+    pub fn gdma_evt_in_done_ch0_st(&mut self) -> GDMA_EVT_IN_DONE_CH0_ST_W<'_, EVT_ST3_SPEC> {
         GDMA_EVT_IN_DONE_CH0_ST_W::new(self, 20)
     }
     #[doc = "Bit 21 - Represents GDMA_evt_in_done_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn gdma_evt_in_done_ch1_st(&mut self) -> GDMA_EVT_IN_DONE_CH1_ST_W<EVT_ST3_SPEC> {
+    pub fn gdma_evt_in_done_ch1_st(&mut self) -> GDMA_EVT_IN_DONE_CH1_ST_W<'_, EVT_ST3_SPEC> {
         GDMA_EVT_IN_DONE_CH1_ST_W::new(self, 21)
     }
     #[doc = "Bit 22 - Represents GDMA_evt_in_done_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn gdma_evt_in_done_ch2_st(&mut self) -> GDMA_EVT_IN_DONE_CH2_ST_W<EVT_ST3_SPEC> {
+    pub fn gdma_evt_in_done_ch2_st(&mut self) -> GDMA_EVT_IN_DONE_CH2_ST_W<'_, EVT_ST3_SPEC> {
         GDMA_EVT_IN_DONE_CH2_ST_W::new(self, 22)
     }
     #[doc = "Bit 23 - Represents GDMA_evt_in_suc_eof_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn gdma_evt_in_suc_eof_ch0_st(&mut self) -> GDMA_EVT_IN_SUC_EOF_CH0_ST_W<EVT_ST3_SPEC> {
+    pub fn gdma_evt_in_suc_eof_ch0_st(&mut self) -> GDMA_EVT_IN_SUC_EOF_CH0_ST_W<'_, EVT_ST3_SPEC> {
         GDMA_EVT_IN_SUC_EOF_CH0_ST_W::new(self, 23)
     }
     #[doc = "Bit 24 - Represents GDMA_evt_in_suc_eof_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn gdma_evt_in_suc_eof_ch1_st(&mut self) -> GDMA_EVT_IN_SUC_EOF_CH1_ST_W<EVT_ST3_SPEC> {
+    pub fn gdma_evt_in_suc_eof_ch1_st(&mut self) -> GDMA_EVT_IN_SUC_EOF_CH1_ST_W<'_, EVT_ST3_SPEC> {
         GDMA_EVT_IN_SUC_EOF_CH1_ST_W::new(self, 24)
     }
     #[doc = "Bit 25 - Represents GDMA_evt_in_suc_eof_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn gdma_evt_in_suc_eof_ch2_st(&mut self) -> GDMA_EVT_IN_SUC_EOF_CH2_ST_W<EVT_ST3_SPEC> {
+    pub fn gdma_evt_in_suc_eof_ch2_st(&mut self) -> GDMA_EVT_IN_SUC_EOF_CH2_ST_W<'_, EVT_ST3_SPEC> {
         GDMA_EVT_IN_SUC_EOF_CH2_ST_W::new(self, 25)
     }
     #[doc = "Bit 26 - Represents GDMA_evt_in_fifo_empty_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_evt_in_fifo_empty_ch0_st(
         &mut self,
-    ) -> GDMA_EVT_IN_FIFO_EMPTY_CH0_ST_W<EVT_ST3_SPEC> {
+    ) -> GDMA_EVT_IN_FIFO_EMPTY_CH0_ST_W<'_, EVT_ST3_SPEC> {
         GDMA_EVT_IN_FIFO_EMPTY_CH0_ST_W::new(self, 26)
     }
     #[doc = "Bit 27 - Represents GDMA_evt_in_fifo_empty_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_evt_in_fifo_empty_ch1_st(
         &mut self,
-    ) -> GDMA_EVT_IN_FIFO_EMPTY_CH1_ST_W<EVT_ST3_SPEC> {
+    ) -> GDMA_EVT_IN_FIFO_EMPTY_CH1_ST_W<'_, EVT_ST3_SPEC> {
         GDMA_EVT_IN_FIFO_EMPTY_CH1_ST_W::new(self, 27)
     }
     #[doc = "Bit 28 - Represents GDMA_evt_in_fifo_empty_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_evt_in_fifo_empty_ch2_st(
         &mut self,
-    ) -> GDMA_EVT_IN_FIFO_EMPTY_CH2_ST_W<EVT_ST3_SPEC> {
+    ) -> GDMA_EVT_IN_FIFO_EMPTY_CH2_ST_W<'_, EVT_ST3_SPEC> {
         GDMA_EVT_IN_FIFO_EMPTY_CH2_ST_W::new(self, 28)
     }
     #[doc = "Bit 29 - Represents GDMA_evt_in_fifo_full_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn gdma_evt_in_fifo_full_ch0_st(&mut self) -> GDMA_EVT_IN_FIFO_FULL_CH0_ST_W<EVT_ST3_SPEC> {
+    pub fn gdma_evt_in_fifo_full_ch0_st(
+        &mut self,
+    ) -> GDMA_EVT_IN_FIFO_FULL_CH0_ST_W<'_, EVT_ST3_SPEC> {
         GDMA_EVT_IN_FIFO_FULL_CH0_ST_W::new(self, 29)
     }
     #[doc = "Bit 30 - Represents GDMA_evt_in_fifo_full_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn gdma_evt_in_fifo_full_ch1_st(&mut self) -> GDMA_EVT_IN_FIFO_FULL_CH1_ST_W<EVT_ST3_SPEC> {
+    pub fn gdma_evt_in_fifo_full_ch1_st(
+        &mut self,
+    ) -> GDMA_EVT_IN_FIFO_FULL_CH1_ST_W<'_, EVT_ST3_SPEC> {
         GDMA_EVT_IN_FIFO_FULL_CH1_ST_W::new(self, 30)
     }
     #[doc = "Bit 31 - Represents GDMA_evt_in_fifo_full_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn gdma_evt_in_fifo_full_ch2_st(&mut self) -> GDMA_EVT_IN_FIFO_FULL_CH2_ST_W<EVT_ST3_SPEC> {
+    pub fn gdma_evt_in_fifo_full_ch2_st(
+        &mut self,
+    ) -> GDMA_EVT_IN_FIFO_FULL_CH2_ST_W<'_, EVT_ST3_SPEC> {
         GDMA_EVT_IN_FIFO_FULL_CH2_ST_W::new(self, 31)
     }
 }

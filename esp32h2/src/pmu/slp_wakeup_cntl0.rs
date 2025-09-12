@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<SLP_WAKEUP_CNTL0_SPEC> {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn sleep_req(&mut self) -> SLEEP_REQ_W<SLP_WAKEUP_CNTL0_SPEC> {
+    pub fn sleep_req(&mut self) -> SLEEP_REQ_W<'_, SLP_WAKEUP_CNTL0_SPEC> {
         SLEEP_REQ_W::new(self, 31)
     }
 }

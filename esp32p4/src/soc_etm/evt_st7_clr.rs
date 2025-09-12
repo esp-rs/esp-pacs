@@ -31,70 +31,70 @@ impl W {
     #[inline(always)]
     pub fn dma2d_evt_in_suc_eof_ch1_st_clr(
         &mut self,
-    ) -> DMA2D_EVT_IN_SUC_EOF_CH1_ST_CLR_W<EVT_ST7_CLR_SPEC> {
+    ) -> DMA2D_EVT_IN_SUC_EOF_CH1_ST_CLR_W<'_, EVT_ST7_CLR_SPEC> {
         DMA2D_EVT_IN_SUC_EOF_CH1_ST_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to clear DMA2D_evt_out_done_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
     pub fn dma2d_evt_out_done_ch0_st_clr(
         &mut self,
-    ) -> DMA2D_EVT_OUT_DONE_CH0_ST_CLR_W<EVT_ST7_CLR_SPEC> {
+    ) -> DMA2D_EVT_OUT_DONE_CH0_ST_CLR_W<'_, EVT_ST7_CLR_SPEC> {
         DMA2D_EVT_OUT_DONE_CH0_ST_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to clear DMA2D_evt_out_done_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
     pub fn dma2d_evt_out_done_ch1_st_clr(
         &mut self,
-    ) -> DMA2D_EVT_OUT_DONE_CH1_ST_CLR_W<EVT_ST7_CLR_SPEC> {
+    ) -> DMA2D_EVT_OUT_DONE_CH1_ST_CLR_W<'_, EVT_ST7_CLR_SPEC> {
         DMA2D_EVT_OUT_DONE_CH1_ST_CLR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to clear DMA2D_evt_out_done_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
     pub fn dma2d_evt_out_done_ch2_st_clr(
         &mut self,
-    ) -> DMA2D_EVT_OUT_DONE_CH2_ST_CLR_W<EVT_ST7_CLR_SPEC> {
+    ) -> DMA2D_EVT_OUT_DONE_CH2_ST_CLR_W<'_, EVT_ST7_CLR_SPEC> {
         DMA2D_EVT_OUT_DONE_CH2_ST_CLR_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to clear DMA2D_evt_out_eof_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
     pub fn dma2d_evt_out_eof_ch0_st_clr(
         &mut self,
-    ) -> DMA2D_EVT_OUT_EOF_CH0_ST_CLR_W<EVT_ST7_CLR_SPEC> {
+    ) -> DMA2D_EVT_OUT_EOF_CH0_ST_CLR_W<'_, EVT_ST7_CLR_SPEC> {
         DMA2D_EVT_OUT_EOF_CH0_ST_CLR_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether or not to clear DMA2D_evt_out_eof_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
     pub fn dma2d_evt_out_eof_ch1_st_clr(
         &mut self,
-    ) -> DMA2D_EVT_OUT_EOF_CH1_ST_CLR_W<EVT_ST7_CLR_SPEC> {
+    ) -> DMA2D_EVT_OUT_EOF_CH1_ST_CLR_W<'_, EVT_ST7_CLR_SPEC> {
         DMA2D_EVT_OUT_EOF_CH1_ST_CLR_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or not to clear DMA2D_evt_out_eof_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
     pub fn dma2d_evt_out_eof_ch2_st_clr(
         &mut self,
-    ) -> DMA2D_EVT_OUT_EOF_CH2_ST_CLR_W<EVT_ST7_CLR_SPEC> {
+    ) -> DMA2D_EVT_OUT_EOF_CH2_ST_CLR_W<'_, EVT_ST7_CLR_SPEC> {
         DMA2D_EVT_OUT_EOF_CH2_ST_CLR_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures whether or not to clear DMA2D_evt_out_total_eof_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
     pub fn dma2d_evt_out_total_eof_ch0_st_clr(
         &mut self,
-    ) -> DMA2D_EVT_OUT_TOTAL_EOF_CH0_ST_CLR_W<EVT_ST7_CLR_SPEC> {
+    ) -> DMA2D_EVT_OUT_TOTAL_EOF_CH0_ST_CLR_W<'_, EVT_ST7_CLR_SPEC> {
         DMA2D_EVT_OUT_TOTAL_EOF_CH0_ST_CLR_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether or not to clear DMA2D_evt_out_total_eof_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
     pub fn dma2d_evt_out_total_eof_ch1_st_clr(
         &mut self,
-    ) -> DMA2D_EVT_OUT_TOTAL_EOF_CH1_ST_CLR_W<EVT_ST7_CLR_SPEC> {
+    ) -> DMA2D_EVT_OUT_TOTAL_EOF_CH1_ST_CLR_W<'_, EVT_ST7_CLR_SPEC> {
         DMA2D_EVT_OUT_TOTAL_EOF_CH1_ST_CLR_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures whether or not to clear DMA2D_evt_out_total_eof_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
     pub fn dma2d_evt_out_total_eof_ch2_st_clr(
         &mut self,
-    ) -> DMA2D_EVT_OUT_TOTAL_EOF_CH2_ST_CLR_W<EVT_ST7_CLR_SPEC> {
+    ) -> DMA2D_EVT_OUT_TOTAL_EOF_CH2_ST_CLR_W<'_, EVT_ST7_CLR_SPEC> {
         DMA2D_EVT_OUT_TOTAL_EOF_CH2_ST_CLR_W::new(self, 9)
     }
 }

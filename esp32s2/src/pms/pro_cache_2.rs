@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The clear signal for cache access interrupt."]
     #[inline(always)]
-    pub fn pro_cache_ilg_clr(&mut self) -> PRO_CACHE_ILG_CLR_W<PRO_CACHE_2_SPEC> {
+    pub fn pro_cache_ilg_clr(&mut self) -> PRO_CACHE_ILG_CLR_W<'_, PRO_CACHE_2_SPEC> {
         PRO_CACHE_ILG_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable signal for cache access interrupt."]
     #[inline(always)]
-    pub fn pro_cache_ilg_en(&mut self) -> PRO_CACHE_ILG_EN_W<PRO_CACHE_2_SPEC> {
+    pub fn pro_cache_ilg_en(&mut self) -> PRO_CACHE_ILG_EN_W<'_, PRO_CACHE_2_SPEC> {
         PRO_CACHE_ILG_EN_W::new(self, 1)
     }
 }

@@ -13,12 +13,12 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn overflow_clr(&mut self) -> OVERFLOW_CLR_W<INT_CLR_SPEC> {
+    pub fn overflow_clr(&mut self) -> OVERFLOW_CLR_W<'_, INT_CLR_SPEC> {
         OVERFLOW_CLR_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn soc_wakeup_int_clr(&mut self) -> SOC_WAKEUP_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn soc_wakeup_int_clr(&mut self) -> SOC_WAKEUP_INT_CLR_W<'_, INT_CLR_SPEC> {
         SOC_WAKEUP_INT_CLR_W::new(self, 31)
     }
 }

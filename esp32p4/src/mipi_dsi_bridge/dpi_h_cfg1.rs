@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - this field configures the length between hsync and pixel data valid (by pixel num) for dpi output"]
     #[inline(always)]
-    pub fn hbank(&mut self) -> HBANK_W<DPI_H_CFG1_SPEC> {
+    pub fn hbank(&mut self) -> HBANK_W<'_, DPI_H_CFG1_SPEC> {
         HBANK_W::new(self, 0)
     }
     #[doc = "Bits 16:27 - this field configures the length of hsync (by pixel num) for dpi output"]
     #[inline(always)]
-    pub fn hsync(&mut self) -> HSYNC_W<DPI_H_CFG1_SPEC> {
+    pub fn hsync(&mut self) -> HSYNC_W<'_, DPI_H_CFG1_SPEC> {
         HSYNC_W::new(self, 16)
     }
 }

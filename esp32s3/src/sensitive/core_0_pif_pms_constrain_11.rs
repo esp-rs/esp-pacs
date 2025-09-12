@@ -50,7 +50,7 @@ impl W {
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_rtcslow_0_spltaddr_world_0(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_SPLTADDR_WORLD_0_W<CORE_0_PIF_PMS_CONSTRAIN_11_SPEC>
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_SPLTADDR_WORLD_0_W<'_, CORE_0_PIF_PMS_CONSTRAIN_11_SPEC>
     {
         CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_SPLTADDR_WORLD_0_W::new(self, 0)
     }
@@ -58,7 +58,7 @@ impl W {
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_rtcslow_0_spltaddr_world_1(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_SPLTADDR_WORLD_1_W<CORE_0_PIF_PMS_CONSTRAIN_11_SPEC>
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_SPLTADDR_WORLD_1_W<'_, CORE_0_PIF_PMS_CONSTRAIN_11_SPEC>
     {
         CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_SPLTADDR_WORLD_1_W::new(self, 11)
     }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - This register is used to configure for how long SCL remains low in master mode, in I2C module clock cycles."]
     #[inline(always)]
-    pub fn i2c_scl_low_period(&mut self) -> I2C_SCL_LOW_PERIOD_W<I2C_SCL_LOW_PERIOD_SPEC> {
+    pub fn i2c_scl_low_period(&mut self) -> I2C_SCL_LOW_PERIOD_W<'_, I2C_SCL_LOW_PERIOD_SPEC> {
         I2C_SCL_LOW_PERIOD_W::new(self, 0)
     }
 }

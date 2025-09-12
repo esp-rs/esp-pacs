@@ -114,52 +114,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures the execution authority of REE_MODE 0 in region %s."]
     #[inline(always)]
-    pub fn region_r0_x(&mut self) -> REGION_R0_X_W<REGION_ATTR_SPEC> {
+    pub fn region_r0_x(&mut self) -> REGION_R0_X_W<'_, REGION_ATTR_SPEC> {
         REGION_R0_X_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures the write authority of REE_MODE 0 in region %s."]
     #[inline(always)]
-    pub fn region_r0_w(&mut self) -> REGION_R0_W_W<REGION_ATTR_SPEC> {
+    pub fn region_r0_w(&mut self) -> REGION_R0_W_W<'_, REGION_ATTR_SPEC> {
         REGION_R0_W_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures the read authority of REE_MODE 0 in region %s."]
     #[inline(always)]
-    pub fn region_r0_r(&mut self) -> REGION_R0_R_W<REGION_ATTR_SPEC> {
+    pub fn region_r0_r(&mut self) -> REGION_R0_R_W<'_, REGION_ATTR_SPEC> {
         REGION_R0_R_W::new(self, 2)
     }
     #[doc = "Bit 4 - Configures the execution authority of REE_MODE 1 in region %s."]
     #[inline(always)]
-    pub fn region_r1_x(&mut self) -> REGION_R1_X_W<REGION_ATTR_SPEC> {
+    pub fn region_r1_x(&mut self) -> REGION_R1_X_W<'_, REGION_ATTR_SPEC> {
         REGION_R1_X_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures the write authority of REE_MODE 1 in region %s."]
     #[inline(always)]
-    pub fn region_r1_w(&mut self) -> REGION_R1_W_W<REGION_ATTR_SPEC> {
+    pub fn region_r1_w(&mut self) -> REGION_R1_W_W<'_, REGION_ATTR_SPEC> {
         REGION_R1_W_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures the read authority of REE_MODE 1 in region %s."]
     #[inline(always)]
-    pub fn region_r1_r(&mut self) -> REGION_R1_R_W<REGION_ATTR_SPEC> {
+    pub fn region_r1_r(&mut self) -> REGION_R1_R_W<'_, REGION_ATTR_SPEC> {
         REGION_R1_R_W::new(self, 6)
     }
     #[doc = "Bit 8 - Configures the execution authority of REE_MODE 2 in region %s."]
     #[inline(always)]
-    pub fn region_r2_x(&mut self) -> REGION_R2_X_W<REGION_ATTR_SPEC> {
+    pub fn region_r2_x(&mut self) -> REGION_R2_X_W<'_, REGION_ATTR_SPEC> {
         REGION_R2_X_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures the write authority of REE_MODE 2 in region %s."]
     #[inline(always)]
-    pub fn region_r2_w(&mut self) -> REGION_R2_W_W<REGION_ATTR_SPEC> {
+    pub fn region_r2_w(&mut self) -> REGION_R2_W_W<'_, REGION_ATTR_SPEC> {
         REGION_R2_W_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures the read authority of REE_MODE 2 in region %s."]
     #[inline(always)]
-    pub fn region_r2_r(&mut self) -> REGION_R2_R_W<REGION_ATTR_SPEC> {
+    pub fn region_r2_r(&mut self) -> REGION_R2_R_W<'_, REGION_ATTR_SPEC> {
         REGION_R2_R_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set 1 to lock region0 configuration"]
     #[inline(always)]
-    pub fn region_lock(&mut self) -> REGION_LOCK_W<REGION_ATTR_SPEC> {
+    pub fn region_lock(&mut self) -> REGION_LOCK_W<'_, REGION_ATTR_SPEC> {
         REGION_LOCK_W::new(self, 11)
     }
 }

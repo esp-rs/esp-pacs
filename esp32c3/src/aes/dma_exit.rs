@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<DMA_EXIT_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this register to leave calculation done stage. Recommend to use it after software finishes reading DMA's output buffer."]
     #[inline(always)]
-    pub fn dma_exit(&mut self) -> DMA_EXIT_W<DMA_EXIT_SPEC> {
+    pub fn dma_exit(&mut self) -> DMA_EXIT_W<'_, DMA_EXIT_SPEC> {
         DMA_EXIT_W::new(self, 0)
     }
 }

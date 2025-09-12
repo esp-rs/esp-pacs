@@ -2,12 +2,12 @@
 pub type R = crate::R<SEARCH_POS_SPEC>;
 #[doc = "Register `SEARCH_POS` writer"]
 pub type W = crate::W<SEARCH_POS_SPEC>;
-#[doc = "Field `SEARCH_POS` reader - Configures the starting address to start search. This field should be used together with RSA_SEARCH_ENABLE. The field is only valid when RSA_SEARCH_ENABLE is high."]
+#[doc = "Field `SEARCH_POS` reader - Configures the starting address to start search. This field should be used together with RSA_SEARCH_ENABLE_REG. The field is only valid when RSA_SEARCH_ENABLE is high."]
 pub type SEARCH_POS_R = crate::FieldReader<u16>;
-#[doc = "Field `SEARCH_POS` writer - Configures the starting address to start search. This field should be used together with RSA_SEARCH_ENABLE. The field is only valid when RSA_SEARCH_ENABLE is high."]
+#[doc = "Field `SEARCH_POS` writer - Configures the starting address to start search. This field should be used together with RSA_SEARCH_ENABLE_REG. The field is only valid when RSA_SEARCH_ENABLE is high."]
 pub type SEARCH_POS_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
-    #[doc = "Bits 0:11 - Configures the starting address to start search. This field should be used together with RSA_SEARCH_ENABLE. The field is only valid when RSA_SEARCH_ENABLE is high."]
+    #[doc = "Bits 0:11 - Configures the starting address to start search. This field should be used together with RSA_SEARCH_ENABLE_REG. The field is only valid when RSA_SEARCH_ENABLE is high."]
     #[inline(always)]
     pub fn search_pos(&self) -> SEARCH_POS_R {
         SEARCH_POS_R::new((self.bits & 0x0fff) as u16)
@@ -22,9 +22,9 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:11 - Configures the starting address to start search. This field should be used together with RSA_SEARCH_ENABLE. The field is only valid when RSA_SEARCH_ENABLE is high."]
+    #[doc = "Bits 0:11 - Configures the starting address to start search. This field should be used together with RSA_SEARCH_ENABLE_REG. The field is only valid when RSA_SEARCH_ENABLE is high."]
     #[inline(always)]
-    pub fn search_pos(&mut self) -> SEARCH_POS_W<SEARCH_POS_SPEC> {
+    pub fn search_pos(&mut self) -> SEARCH_POS_W<'_, SEARCH_POS_SPEC> {
         SEARCH_POS_W::new(self, 0)
     }
 }

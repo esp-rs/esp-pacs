@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - NA"]
     #[inline(always)]
-    pub fn ch1_dar1(&mut self) -> CH1_DAR1_W<DAR1_SPEC> {
+    pub fn ch1_dar1(&mut self) -> CH1_DAR1_W<'_, DAR1_SPEC> {
         CH1_DAR1_W::new(self, 0)
     }
 }

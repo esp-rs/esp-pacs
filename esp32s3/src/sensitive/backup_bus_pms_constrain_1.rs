@@ -185,91 +185,91 @@ impl W {
     #[inline(always)]
     pub fn backup_bus_pms_constrain_uart(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_UART_W<BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_UART_W<'_, BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_UART_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - BackUp access g0spi_1 permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_g0spi_1(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_G0SPI_1_W<BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_G0SPI_1_W<'_, BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_G0SPI_1_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - BackUp access g0spi_0 permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_g0spi_0(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_G0SPI_0_W<BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_G0SPI_0_W<'_, BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_G0SPI_0_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - BackUp access gpio permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_gpio(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_GPIO_W<BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_GPIO_W<'_, BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_GPIO_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - BackUp access fe2 permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_fe2(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_FE2_W<BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_FE2_W<'_, BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_FE2_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - BackUp access fe permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_fe(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_FE_W<BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_FE_W<'_, BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_FE_W::new(self, 10)
     }
     #[doc = "Bits 14:15 - BackUp access rtc permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_rtc(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_RTC_W<BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_RTC_W<'_, BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_RTC_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - BackUp access io_mux permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_io_mux(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_IO_MUX_W<BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_IO_MUX_W<'_, BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_IO_MUX_W::new(self, 16)
     }
     #[doc = "Bits 20:21 - BackUp access hinf permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_hinf(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_HINF_W<BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_HINF_W<'_, BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_HINF_W::new(self, 20)
     }
     #[doc = "Bits 24:25 - BackUp access misc permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_misc(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_MISC_W<BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_MISC_W<'_, BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_MISC_W::new(self, 24)
     }
     #[doc = "Bits 26:27 - BackUp access i2c permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_i2c(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_I2C_W<BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_I2C_W<'_, BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_I2C_W::new(self, 26)
     }
     #[doc = "Bits 28:29 - BackUp access i2s0 permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_i2s0(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_I2S0_W<BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_I2S0_W<'_, BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_I2S0_W::new(self, 28)
     }
     #[doc = "Bits 30:31 - BackUp access uart1 permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_uart1(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_UART1_W<BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_UART1_W<'_, BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_UART1_W::new(self, 30)
     }
 }

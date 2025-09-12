@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - Configures the time to hold the data after the falling edge of SCL. Measurement unit: i2c_sclk"]
     #[inline(always)]
-    pub fn time(&mut self) -> TIME_W<SDA_HOLD_SPEC> {
+    pub fn time(&mut self) -> TIME_W<'_, SDA_HOLD_SPEC> {
         TIME_W::new(self, 0)
     }
 }

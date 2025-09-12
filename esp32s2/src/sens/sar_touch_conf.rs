@@ -82,32 +82,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:14 - Enable touch controller output."]
     #[inline(always)]
-    pub fn touch_outen(&mut self) -> TOUCH_OUTEN_W<SAR_TOUCH_CONF_SPEC> {
+    pub fn touch_outen(&mut self) -> TOUCH_OUTEN_W<'_, SAR_TOUCH_CONF_SPEC> {
         TOUCH_OUTEN_W::new(self, 0)
     }
     #[doc = "Bit 15 - Clear all touch active status."]
     #[inline(always)]
-    pub fn touch_status_clr(&mut self) -> TOUCH_STATUS_CLR_W<SAR_TOUCH_CONF_SPEC> {
+    pub fn touch_status_clr(&mut self) -> TOUCH_STATUS_CLR_W<'_, SAR_TOUCH_CONF_SPEC> {
         TOUCH_STATUS_CLR_W::new(self, 15)
     }
     #[doc = "Bits 16:17 - 0 and 1: touch_raw_data; 2: base_line; 3: touch_smooth_data."]
     #[inline(always)]
-    pub fn touch_data_sel(&mut self) -> TOUCH_DATA_SEL_W<SAR_TOUCH_CONF_SPEC> {
+    pub fn touch_data_sel(&mut self) -> TOUCH_DATA_SEL_W<'_, SAR_TOUCH_CONF_SPEC> {
         TOUCH_DATA_SEL_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - Indicate which pad is selected as proximity pad2"]
     #[inline(always)]
-    pub fn touch_approach_pad2(&mut self) -> TOUCH_APPROACH_PAD2_W<SAR_TOUCH_CONF_SPEC> {
+    pub fn touch_approach_pad2(&mut self) -> TOUCH_APPROACH_PAD2_W<'_, SAR_TOUCH_CONF_SPEC> {
         TOUCH_APPROACH_PAD2_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - Indicate which pad is selected as proximity pad1"]
     #[inline(always)]
-    pub fn touch_approach_pad1(&mut self) -> TOUCH_APPROACH_PAD1_W<SAR_TOUCH_CONF_SPEC> {
+    pub fn touch_approach_pad1(&mut self) -> TOUCH_APPROACH_PAD1_W<'_, SAR_TOUCH_CONF_SPEC> {
         TOUCH_APPROACH_PAD1_W::new(self, 24)
     }
     #[doc = "Bits 28:31 - Indicate which pad is selected as proximity pad0"]
     #[inline(always)]
-    pub fn touch_approach_pad0(&mut self) -> TOUCH_APPROACH_PAD0_W<SAR_TOUCH_CONF_SPEC> {
+    pub fn touch_approach_pad0(&mut self) -> TOUCH_APPROACH_PAD0_W<'_, SAR_TOUCH_CONF_SPEC> {
         TOUCH_APPROACH_PAD0_W::new(self, 28)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn cpu_uxint_type(&mut self) -> CPU_UXINT_TYPE_W<UXINT_TYPE_SPEC> {
+    pub fn cpu_uxint_type(&mut self) -> CPU_UXINT_TYPE_W<'_, UXINT_TYPE_SPEC> {
         CPU_UXINT_TYPE_W::new(self, 0)
     }
 }

@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Reserved."]
     #[inline(always)]
-    pub fn rdn_ena_apb(&mut self) -> RDN_ENA_APB_W<ECO_CELL_CTRL_APB_SPEC> {
+    pub fn rdn_ena_apb(&mut self) -> RDN_ENA_APB_W<'_, ECO_CELL_CTRL_APB_SPEC> {
         RDN_ENA_APB_W::new(self, 1)
     }
 }

@@ -52,21 +52,21 @@ impl W {
     #[inline(always)]
     pub fn internal_sram_icache_usage(
         &mut self,
-    ) -> INTERNAL_SRAM_ICACHE_USAGE_W<INTERNAL_SRAM_USAGE_1_SPEC> {
+    ) -> INTERNAL_SRAM_ICACHE_USAGE_W<'_, INTERNAL_SRAM_USAGE_1_SPEC> {
         INTERNAL_SRAM_ICACHE_USAGE_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by dcache."]
     #[inline(always)]
     pub fn internal_sram_dcache_usage(
         &mut self,
-    ) -> INTERNAL_SRAM_DCACHE_USAGE_W<INTERNAL_SRAM_USAGE_1_SPEC> {
+    ) -> INTERNAL_SRAM_DCACHE_USAGE_W<'_, INTERNAL_SRAM_USAGE_1_SPEC> {
         INTERNAL_SRAM_DCACHE_USAGE_W::new(self, 2)
     }
     #[doc = "Bits 4:10 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by cpu."]
     #[inline(always)]
     pub fn internal_sram_cpu_usage(
         &mut self,
-    ) -> INTERNAL_SRAM_CPU_USAGE_W<INTERNAL_SRAM_USAGE_1_SPEC> {
+    ) -> INTERNAL_SRAM_CPU_USAGE_W<'_, INTERNAL_SRAM_USAGE_1_SPEC> {
         INTERNAL_SRAM_CPU_USAGE_W::new(self, 4)
     }
 }

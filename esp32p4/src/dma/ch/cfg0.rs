@@ -50,12 +50,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - NA"]
     #[inline(always)]
-    pub fn ch1_src_multblk_type(&mut self) -> CH1_SRC_MULTBLK_TYPE_W<CFG0_SPEC> {
+    pub fn ch1_src_multblk_type(&mut self) -> CH1_SRC_MULTBLK_TYPE_W<'_, CFG0_SPEC> {
         CH1_SRC_MULTBLK_TYPE_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - NA"]
     #[inline(always)]
-    pub fn ch1_dst_multblk_type(&mut self) -> CH1_DST_MULTBLK_TYPE_W<CFG0_SPEC> {
+    pub fn ch1_dst_multblk_type(&mut self) -> CH1_DST_MULTBLK_TYPE_W<'_, CFG0_SPEC> {
         CH1_DST_MULTBLK_TYPE_W::new(self, 2)
     }
 }

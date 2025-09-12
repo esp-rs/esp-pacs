@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - this field configures every block x size"]
     #[inline(always)]
-    pub fn ae_x_bsize(&mut self) -> AE_X_BSIZE_W<AE_BX_SPEC> {
+    pub fn ae_x_bsize(&mut self) -> AE_X_BSIZE_W<'_, AE_BX_SPEC> {
         AE_X_BSIZE_W::new(self, 0)
     }
     #[doc = "Bits 11:21 - this field configures first block start x address"]
     #[inline(always)]
-    pub fn ae_x_start(&mut self) -> AE_X_START_W<AE_BX_SPEC> {
+    pub fn ae_x_start(&mut self) -> AE_X_START_W<'_, AE_BX_SPEC> {
         AE_X_START_W::new(self, 11)
     }
 }

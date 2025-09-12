@@ -227,169 +227,169 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH_ENABLED0` field.</div>"]
     #[inline(always)]
-    pub fn ch_enabled(&mut self, n: u8) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled(&mut self, n: u8) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 32][n as usize];
         CH_ENABLED_W::new(self, n)
     }
     #[doc = "Bit 0 - Represents ch0 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled0(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled0(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 0)
     }
     #[doc = "Bit 1 - Represents ch1 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled1(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled1(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 1)
     }
     #[doc = "Bit 2 - Represents ch2 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled2(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled2(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 2)
     }
     #[doc = "Bit 3 - Represents ch3 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled3(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled3(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 3)
     }
     #[doc = "Bit 4 - Represents ch4 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled4(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled4(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 4)
     }
     #[doc = "Bit 5 - Represents ch5 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled5(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled5(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 5)
     }
     #[doc = "Bit 6 - Represents ch6 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled6(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled6(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 6)
     }
     #[doc = "Bit 7 - Represents ch7 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled7(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled7(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 7)
     }
     #[doc = "Bit 8 - Represents ch8 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled8(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled8(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 8)
     }
     #[doc = "Bit 9 - Represents ch9 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled9(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled9(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 9)
     }
     #[doc = "Bit 10 - Represents ch10 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled10(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled10(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 10)
     }
     #[doc = "Bit 11 - Represents ch11 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled11(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled11(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 11)
     }
     #[doc = "Bit 12 - Represents ch12 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled12(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled12(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 12)
     }
     #[doc = "Bit 13 - Represents ch13 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled13(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled13(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 13)
     }
     #[doc = "Bit 14 - Represents ch14 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled14(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled14(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 14)
     }
     #[doc = "Bit 15 - Represents ch15 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled15(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled15(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 15)
     }
     #[doc = "Bit 16 - Represents ch16 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled16(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled16(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 16)
     }
     #[doc = "Bit 17 - Represents ch17 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled17(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled17(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 17)
     }
     #[doc = "Bit 18 - Represents ch18 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled18(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled18(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 18)
     }
     #[doc = "Bit 19 - Represents ch19 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled19(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled19(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 19)
     }
     #[doc = "Bit 20 - Represents ch20 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled20(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled20(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 20)
     }
     #[doc = "Bit 21 - Represents ch21 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled21(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled21(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 21)
     }
     #[doc = "Bit 22 - Represents ch22 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled22(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled22(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 22)
     }
     #[doc = "Bit 23 - Represents ch23 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled23(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled23(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 23)
     }
     #[doc = "Bit 24 - Represents ch24 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled24(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled24(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 24)
     }
     #[doc = "Bit 25 - Represents ch25 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled25(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled25(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 25)
     }
     #[doc = "Bit 26 - Represents ch26 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled26(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled26(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 26)
     }
     #[doc = "Bit 27 - Represents ch27 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled27(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled27(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 27)
     }
     #[doc = "Bit 28 - Represents ch28 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled28(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled28(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 28)
     }
     #[doc = "Bit 29 - Represents ch29 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled29(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled29(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 29)
     }
     #[doc = "Bit 30 - Represents ch30 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled30(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled30(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 30)
     }
     #[doc = "Bit 31 - Represents ch31 enable status.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn ch_enabled31(&mut self) -> CH_ENABLED_W<CH_ENA_AD0_SPEC> {
+    pub fn ch_enabled31(&mut self) -> CH_ENABLED_W<'_, CH_ENA_AD0_SPEC> {
         CH_ENABLED_W::new(self, 31)
     }
 }

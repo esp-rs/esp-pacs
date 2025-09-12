@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core0_dma2d_in_ch1_int_map(
         &mut self,
-    ) -> CORE0_DMA2D_IN_CH1_INT_MAP_W<DMA2D_IN_CH1_INT_MAP_SPEC> {
+    ) -> CORE0_DMA2D_IN_CH1_INT_MAP_W<'_, DMA2D_IN_CH1_INT_MAP_SPEC> {
         CORE0_DMA2D_IN_CH1_INT_MAP_W::new(self, 0)
     }
 }

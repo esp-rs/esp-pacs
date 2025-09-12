@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:23 - need des"]
     #[inline(always)]
-    pub fn i2c1_conf(&mut self) -> I2C1_CONF_W<I2C1_CONF_SPEC> {
+    pub fn i2c1_conf(&mut self) -> I2C1_CONF_W<'_, I2C1_CONF_SPEC> {
         I2C1_CONF_W::new(self, 0)
     }
 }

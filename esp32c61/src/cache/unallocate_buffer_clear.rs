@@ -56,7 +56,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - The bit is used to clear the unallocate request buffer of l1 cache where the unallocate request is responsed but not completed."]
     #[inline(always)]
-    pub fn cache_unalloc_clr(&mut self) -> CACHE_UNALLOC_CLR_W<UNALLOCATE_BUFFER_CLEAR_SPEC> {
+    pub fn cache_unalloc_clr(&mut self) -> CACHE_UNALLOC_CLR_W<'_, UNALLOCATE_BUFFER_CLEAR_SPEC> {
         CACHE_UNALLOC_CLR_W::new(self, 4)
     }
 }

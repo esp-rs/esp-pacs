@@ -41,21 +41,21 @@ impl W {
     #[inline(always)]
     pub fn modem_peri_timeout_thres(
         &mut self,
-    ) -> MODEM_PERI_TIMEOUT_THRES_W<MODEM_PERI_TIMEOUT_CONF_SPEC> {
+    ) -> MODEM_PERI_TIMEOUT_THRES_W<'_, MODEM_PERI_TIMEOUT_CONF_SPEC> {
         MODEM_PERI_TIMEOUT_THRES_W::new(self, 0)
     }
     #[doc = "Bit 16 - Set this bit as 1 to clear timeout interrupt"]
     #[inline(always)]
     pub fn modem_peri_timeout_int_clear(
         &mut self,
-    ) -> MODEM_PERI_TIMEOUT_INT_CLEAR_W<MODEM_PERI_TIMEOUT_CONF_SPEC> {
+    ) -> MODEM_PERI_TIMEOUT_INT_CLEAR_W<'_, MODEM_PERI_TIMEOUT_CONF_SPEC> {
         MODEM_PERI_TIMEOUT_INT_CLEAR_W::new(self, 16)
     }
     #[doc = "Bit 17 - Set this bit as 1 to enable timeout protection for accessing modem registers"]
     #[inline(always)]
     pub fn modem_peri_timeout_protect_en(
         &mut self,
-    ) -> MODEM_PERI_TIMEOUT_PROTECT_EN_W<MODEM_PERI_TIMEOUT_CONF_SPEC> {
+    ) -> MODEM_PERI_TIMEOUT_PROTECT_EN_W<'_, MODEM_PERI_TIMEOUT_CONF_SPEC> {
         MODEM_PERI_TIMEOUT_PROTECT_EN_W::new(self, 17)
     }
 }

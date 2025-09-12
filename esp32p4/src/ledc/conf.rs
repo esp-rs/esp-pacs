@@ -114,52 +114,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Configures the clock source for the four timers.\\\\0: APB_CLK\\\\1: RC_FAST_CLK\\\\2: XTAL_CLK\\\\3: Invalid. No clock"]
     #[inline(always)]
-    pub fn apb_clk_sel(&mut self) -> APB_CLK_SEL_W<CONF_SPEC> {
+    pub fn apb_clk_sel(&mut self) -> APB_CLK_SEL_W<'_, CONF_SPEC> {
         APB_CLK_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - Configures whether or not to open LEDC ch0 gamma ram clock gate.\\\\0: Open the clock gate only when application writes or reads LEDC ch0 gamma ram\\\\1: Force open the clock gate for LEDC ch0 gamma ram"]
     #[inline(always)]
-    pub fn gamma_ram_clk_en_ch0(&mut self) -> GAMMA_RAM_CLK_EN_CH0_W<CONF_SPEC> {
+    pub fn gamma_ram_clk_en_ch0(&mut self) -> GAMMA_RAM_CLK_EN_CH0_W<'_, CONF_SPEC> {
         GAMMA_RAM_CLK_EN_CH0_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to open LEDC ch1 gamma ram clock gate.\\\\0: Open the clock gate only when application writes or reads LEDC ch1 gamma ram\\\\1: Force open the clock gate for LEDC ch1 gamma ram"]
     #[inline(always)]
-    pub fn gamma_ram_clk_en_ch1(&mut self) -> GAMMA_RAM_CLK_EN_CH1_W<CONF_SPEC> {
+    pub fn gamma_ram_clk_en_ch1(&mut self) -> GAMMA_RAM_CLK_EN_CH1_W<'_, CONF_SPEC> {
         GAMMA_RAM_CLK_EN_CH1_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to open LEDC ch2 gamma ram clock gate.\\\\0: Open the clock gate only when application writes or reads LEDC ch2 gamma ram\\\\1: Force open the clock gate for LEDC ch2 gamma ram"]
     #[inline(always)]
-    pub fn gamma_ram_clk_en_ch2(&mut self) -> GAMMA_RAM_CLK_EN_CH2_W<CONF_SPEC> {
+    pub fn gamma_ram_clk_en_ch2(&mut self) -> GAMMA_RAM_CLK_EN_CH2_W<'_, CONF_SPEC> {
         GAMMA_RAM_CLK_EN_CH2_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether or not to open LEDC ch3 gamma ram clock gate.\\\\0: Open the clock gate only when application writes or reads LEDC ch3 gamma ram\\\\1: Force open the clock gate for LEDC ch3 gamma ram"]
     #[inline(always)]
-    pub fn gamma_ram_clk_en_ch3(&mut self) -> GAMMA_RAM_CLK_EN_CH3_W<CONF_SPEC> {
+    pub fn gamma_ram_clk_en_ch3(&mut self) -> GAMMA_RAM_CLK_EN_CH3_W<'_, CONF_SPEC> {
         GAMMA_RAM_CLK_EN_CH3_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or not to open LEDC ch4 gamma ram clock gate.\\\\0: Open the clock gate only when application writes or reads LEDC ch4 gamma ram\\\\1: Force open the clock gate for LEDC ch4 gamma ram"]
     #[inline(always)]
-    pub fn gamma_ram_clk_en_ch4(&mut self) -> GAMMA_RAM_CLK_EN_CH4_W<CONF_SPEC> {
+    pub fn gamma_ram_clk_en_ch4(&mut self) -> GAMMA_RAM_CLK_EN_CH4_W<'_, CONF_SPEC> {
         GAMMA_RAM_CLK_EN_CH4_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures whether or not to open LEDC ch5 gamma ram clock gate.\\\\0: Open the clock gate only when application writes or reads LEDC ch5 gamma ram\\\\1: Force open the clock gate for LEDC ch5 gamma ram"]
     #[inline(always)]
-    pub fn gamma_ram_clk_en_ch5(&mut self) -> GAMMA_RAM_CLK_EN_CH5_W<CONF_SPEC> {
+    pub fn gamma_ram_clk_en_ch5(&mut self) -> GAMMA_RAM_CLK_EN_CH5_W<'_, CONF_SPEC> {
         GAMMA_RAM_CLK_EN_CH5_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether or not to open LEDC ch6 gamma ram clock gate.\\\\0: Open the clock gate only when application writes or reads LEDC ch6 gamma ram\\\\1: Force open the clock gate for LEDC ch6 gamma ram"]
     #[inline(always)]
-    pub fn gamma_ram_clk_en_ch6(&mut self) -> GAMMA_RAM_CLK_EN_CH6_W<CONF_SPEC> {
+    pub fn gamma_ram_clk_en_ch6(&mut self) -> GAMMA_RAM_CLK_EN_CH6_W<'_, CONF_SPEC> {
         GAMMA_RAM_CLK_EN_CH6_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures whether or not to open LEDC ch7 gamma ram clock gate.\\\\0: Open the clock gate only when application writes or reads LEDC ch7 gamma ram\\\\1: Force open the clock gate for LEDC ch7 gamma ram"]
     #[inline(always)]
-    pub fn gamma_ram_clk_en_ch7(&mut self) -> GAMMA_RAM_CLK_EN_CH7_W<CONF_SPEC> {
+    pub fn gamma_ram_clk_en_ch7(&mut self) -> GAMMA_RAM_CLK_EN_CH7_W<'_, CONF_SPEC> {
         GAMMA_RAM_CLK_EN_CH7_W::new(self, 9)
     }
     #[doc = "Bit 31 - Configures whether or not to open register clock gate.\\\\0: Open the clock gate only when application writes registers\\\\1: Force open the clock gate for register"]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CONF_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CONF_SPEC> {
         CLK_EN_W::new(self, 31)
     }
 }

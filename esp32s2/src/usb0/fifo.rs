@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn word(&mut self) -> WORD_W<FIFO_SPEC> {
+    pub fn word(&mut self) -> WORD_W<'_, FIFO_SPEC> {
         WORD_W::new(self, 0)
     }
 }

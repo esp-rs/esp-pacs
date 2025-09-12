@@ -128,67 +128,67 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn rmtwkupsig(&mut self) -> RMTWKUPSIG_W<DCTL_SPEC> {
+    pub fn rmtwkupsig(&mut self) -> RMTWKUPSIG_W<'_, DCTL_SPEC> {
         RMTWKUPSIG_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn sftdiscon(&mut self) -> SFTDISCON_W<DCTL_SPEC> {
+    pub fn sftdiscon(&mut self) -> SFTDISCON_W<'_, DCTL_SPEC> {
         SFTDISCON_W::new(self, 1)
     }
     #[doc = "Bits 4:6"]
     #[inline(always)]
-    pub fn tstctl(&mut self) -> TSTCTL_W<DCTL_SPEC> {
+    pub fn tstctl(&mut self) -> TSTCTL_W<'_, DCTL_SPEC> {
         TSTCTL_W::new(self, 4)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn sgnpinnak(&mut self) -> SGNPINNAK_W<DCTL_SPEC> {
+    pub fn sgnpinnak(&mut self) -> SGNPINNAK_W<'_, DCTL_SPEC> {
         SGNPINNAK_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn cgnpinnak(&mut self) -> CGNPINNAK_W<DCTL_SPEC> {
+    pub fn cgnpinnak(&mut self) -> CGNPINNAK_W<'_, DCTL_SPEC> {
         CGNPINNAK_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn sgoutnak(&mut self) -> SGOUTNAK_W<DCTL_SPEC> {
+    pub fn sgoutnak(&mut self) -> SGOUTNAK_W<'_, DCTL_SPEC> {
         SGOUTNAK_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn cgoutnak(&mut self) -> CGOUTNAK_W<DCTL_SPEC> {
+    pub fn cgoutnak(&mut self) -> CGOUTNAK_W<'_, DCTL_SPEC> {
         CGOUTNAK_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn pwronprgdone(&mut self) -> PWRONPRGDONE_W<DCTL_SPEC> {
+    pub fn pwronprgdone(&mut self) -> PWRONPRGDONE_W<'_, DCTL_SPEC> {
         PWRONPRGDONE_W::new(self, 11)
     }
     #[doc = "Bits 13:14"]
     #[inline(always)]
-    pub fn gmc(&mut self) -> GMC_W<DCTL_SPEC> {
+    pub fn gmc(&mut self) -> GMC_W<'_, DCTL_SPEC> {
         GMC_W::new(self, 13)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn ignrfrmnum(&mut self) -> IGNRFRMNUM_W<DCTL_SPEC> {
+    pub fn ignrfrmnum(&mut self) -> IGNRFRMNUM_W<'_, DCTL_SPEC> {
         IGNRFRMNUM_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn nakonbble(&mut self) -> NAKONBBLE_W<DCTL_SPEC> {
+    pub fn nakonbble(&mut self) -> NAKONBBLE_W<'_, DCTL_SPEC> {
         NAKONBBLE_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn encountonbna(&mut self) -> ENCOUNTONBNA_W<DCTL_SPEC> {
+    pub fn encountonbna(&mut self) -> ENCOUNTONBNA_W<'_, DCTL_SPEC> {
         ENCOUNTONBNA_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn deepsleepbeslreject(&mut self) -> DEEPSLEEPBESLREJECT_W<DCTL_SPEC> {
+    pub fn deepsleepbeslreject(&mut self) -> DEEPSLEEPBESLREJECT_W<'_, DCTL_SPEC> {
         DEEPSLEEPBESLREJECT_W::new(self, 18)
     }
 }

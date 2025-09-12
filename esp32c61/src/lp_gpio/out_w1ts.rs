@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<OUT_W1TS_SPEC> {
 impl W {
     #[doc = "Bits 0:6 - Configures whether or not to set the output register LP_GPIO_OUT_REG of LP_GPIO0 ~ LP_GPIO6.\\\\ 0: Not set\\\\ 1: The corresponding bit in LP_GPIO_OUT_REG will be set to 1\\\\ Bit0 ~ bit6 are corresponding to LP_GPIO0 ~ LP_GPIO6. Bit7 ~ bit31 are invalid. \\\\ Recommended operation: use this register to set LP_GPIO_OUT_REG. \\\\"]
     #[inline(always)]
-    pub fn out_w1ts(&mut self) -> OUT_W1TS_W<OUT_W1TS_SPEC> {
+    pub fn out_w1ts(&mut self) -> OUT_W1TS_W<'_, OUT_W1TS_SPEC> {
         OUT_W1TS_W::new(self, 0)
     }
 }

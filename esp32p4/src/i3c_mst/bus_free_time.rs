@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - I3C Bus Free Count Value. This field is used only in Master mode. In pure Bus System, this field represents tCAS. In Mixed Bus System, this field is expected to be programmed to tLOW of I2C Timing."]
     #[inline(always)]
-    pub fn reg_bus_free_time(&mut self) -> REG_BUS_FREE_TIME_W<BUS_FREE_TIME_SPEC> {
+    pub fn reg_bus_free_time(&mut self) -> REG_BUS_FREE_TIME_W<'_, BUS_FREE_TIME_SPEC> {
         REG_BUS_FREE_TIME_W::new(self, 0)
     }
 }

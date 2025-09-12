@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn ext_en(&mut self) -> EXT_EN_W<EX_CLK_CTRL_SPEC> {
+    pub fn ext_en(&mut self) -> EXT_EN_W<'_, EX_CLK_CTRL_SPEC> {
         EXT_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn int_en(&mut self) -> INT_EN_W<EX_CLK_CTRL_SPEC> {
+    pub fn int_en(&mut self) -> INT_EN_W<'_, EX_CLK_CTRL_SPEC> {
         INT_EN_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn rx_125_clk_en(&mut self) -> RX_125_CLK_EN_W<EX_CLK_CTRL_SPEC> {
+    pub fn rx_125_clk_en(&mut self) -> RX_125_CLK_EN_W<'_, EX_CLK_CTRL_SPEC> {
         RX_125_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn mii_clk_tx_en(&mut self) -> MII_CLK_TX_EN_W<EX_CLK_CTRL_SPEC> {
+    pub fn mii_clk_tx_en(&mut self) -> MII_CLK_TX_EN_W<'_, EX_CLK_CTRL_SPEC> {
         MII_CLK_TX_EN_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn mii_clk_rx_en(&mut self) -> MII_CLK_RX_EN_W<EX_CLK_CTRL_SPEC> {
+    pub fn mii_clk_rx_en(&mut self) -> MII_CLK_RX_EN_W<'_, EX_CLK_CTRL_SPEC> {
         MII_CLK_RX_EN_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<EX_CLK_CTRL_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, EX_CLK_CTRL_SPEC> {
         CLK_EN_W::new(self, 5)
     }
 }

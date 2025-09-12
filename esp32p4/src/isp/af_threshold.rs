@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - this field configures user threshold. When set to non-zero, autofocus will use this threshold"]
     #[inline(always)]
-    pub fn af_threshold(&mut self) -> AF_THRESHOLD_W<AF_THRESHOLD_SPEC> {
+    pub fn af_threshold(&mut self) -> AF_THRESHOLD_W<'_, AF_THRESHOLD_SPEC> {
         AF_THRESHOLD_W::new(self, 0)
     }
 }

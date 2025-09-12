@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]
-    pub fn probe_b_mod_sel(&mut self) -> PROBE_B_MOD_SEL_W<LP_PROBEB_CTRL_SPEC> {
+    pub fn probe_b_mod_sel(&mut self) -> PROBE_B_MOD_SEL_W<'_, LP_PROBEB_CTRL_SPEC> {
         PROBE_B_MOD_SEL_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - need_des"]
     #[inline(always)]
-    pub fn probe_b_top_sel(&mut self) -> PROBE_B_TOP_SEL_W<LP_PROBEB_CTRL_SPEC> {
+    pub fn probe_b_top_sel(&mut self) -> PROBE_B_TOP_SEL_W<'_, LP_PROBEB_CTRL_SPEC> {
         PROBE_B_TOP_SEL_W::new(self, 16)
     }
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
-    pub fn probe_b_en(&mut self) -> PROBE_B_EN_W<LP_PROBEB_CTRL_SPEC> {
+    pub fn probe_b_en(&mut self) -> PROBE_B_EN_W<'_, LP_PROBEB_CTRL_SPEC> {
         PROBE_B_EN_W::new(self, 24)
     }
 }

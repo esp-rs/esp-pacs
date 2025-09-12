@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn saradc_sar2_patt_tab1(
         &mut self,
-    ) -> SARADC_SAR2_PATT_TAB1_W<APB_SARADC_SAR2_PATT_TAB_SPEC> {
+    ) -> SARADC_SAR2_PATT_TAB1_W<'_, APB_SARADC_SAR2_PATT_TAB_SPEC> {
         SARADC_SAR2_PATT_TAB1_W::new(self, 0)
     }
 }

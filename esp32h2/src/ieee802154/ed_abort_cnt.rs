@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn ed_abort_cnt(&mut self) -> ED_ABORT_CNT_W<ED_ABORT_CNT_SPEC> {
+    pub fn ed_abort_cnt(&mut self) -> ED_ABORT_CNT_W<'_, ED_ABORT_CNT_SPEC> {
         ED_ABORT_CNT_W::new(self, 0)
     }
 }

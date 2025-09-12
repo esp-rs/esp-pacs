@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn sdio_slc0_token_no_replace(
         &mut self,
-    ) -> SDIO_SLC0_TOKEN_NO_REPLACE_W<SLC_RX_DSCR_CONF_SPEC> {
+    ) -> SDIO_SLC0_TOKEN_NO_REPLACE_W<'_, SLC_RX_DSCR_CONF_SPEC> {
         SDIO_SLC0_TOKEN_NO_REPLACE_W::new(self, 1)
     }
 }

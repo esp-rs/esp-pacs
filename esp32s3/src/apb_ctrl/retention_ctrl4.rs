@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - ******* Description ***********"]
     #[inline(always)]
-    pub fn retention_inv_cfg(&mut self) -> RETENTION_INV_CFG_W<RETENTION_CTRL4_SPEC> {
+    pub fn retention_inv_cfg(&mut self) -> RETENTION_INV_CFG_W<'_, RETENTION_CTRL4_SPEC> {
         RETENTION_INV_CFG_W::new(self, 0)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:28 - Filter Range Low threshold. The identifier format is the same as in IDENTIFIER_W of TXT buffer or RX buffer. If Range filter is not supported, writes to this register have no effect and read will return all Zeroes."]
     #[inline(always)]
-    pub fn bit_ran_low_val(&mut self) -> BIT_RAN_LOW_VAL_W<FILTER_RAN_LOW_SPEC> {
+    pub fn bit_ran_low_val(&mut self) -> BIT_RAN_LOW_VAL_W<'_, FILTER_RAN_LOW_SPEC> {
         BIT_RAN_LOW_VAL_W::new(self, 0)
     }
 }

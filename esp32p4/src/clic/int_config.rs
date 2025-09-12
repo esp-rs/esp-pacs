@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Number of vector bits for interrupt"]
     #[inline(always)]
-    pub fn int_config_nvbits(&mut self) -> INT_CONFIG_NVBITS_W<INT_CONFIG_SPEC> {
+    pub fn int_config_nvbits(&mut self) -> INT_CONFIG_NVBITS_W<'_, INT_CONFIG_SPEC> {
         INT_CONFIG_NVBITS_W::new(self, 0)
     }
     #[doc = "Bits 1:4 - Number of level bits for interrupt"]
     #[inline(always)]
-    pub fn int_config_nlbits(&mut self) -> INT_CONFIG_NLBITS_W<INT_CONFIG_SPEC> {
+    pub fn int_config_nlbits(&mut self) -> INT_CONFIG_NLBITS_W<'_, INT_CONFIG_SPEC> {
         INT_CONFIG_NLBITS_W::new(self, 1)
     }
     #[doc = "Bits 5:6 - Number of mode bits for interrupt"]
     #[inline(always)]
-    pub fn int_config_nmbits(&mut self) -> INT_CONFIG_NMBITS_W<INT_CONFIG_SPEC> {
+    pub fn int_config_nmbits(&mut self) -> INT_CONFIG_NMBITS_W<'_, INT_CONFIG_SPEC> {
         INT_CONFIG_NMBITS_W::new(self, 5)
     }
 }

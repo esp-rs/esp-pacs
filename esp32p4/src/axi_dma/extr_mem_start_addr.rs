@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn access_extr_mem_start_addr(
         &mut self,
-    ) -> ACCESS_EXTR_MEM_START_ADDR_W<EXTR_MEM_START_ADDR_SPEC> {
+    ) -> ACCESS_EXTR_MEM_START_ADDR_W<'_, EXTR_MEM_START_ADDR_SPEC> {
         ACCESS_EXTR_MEM_START_ADDR_W::new(self, 0)
     }
 }

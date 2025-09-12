@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn apb_peripheral_split_burst(
         &mut self,
-    ) -> APB_PERIPHERAL_SPLIT_BURST_W<APB_PERIPHERAL_1_SPEC> {
+    ) -> APB_PERIPHERAL_SPLIT_BURST_W<'_, APB_PERIPHERAL_1_SPEC> {
         APB_PERIPHERAL_SPLIT_BURST_W::new(self, 0)
     }
 }

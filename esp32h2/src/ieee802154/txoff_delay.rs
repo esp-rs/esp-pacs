@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn txoff_delay(&mut self) -> TXOFF_DELAY_W<TXOFF_DELAY_SPEC> {
+    pub fn txoff_delay(&mut self) -> TXOFF_DELAY_W<'_, TXOFF_DELAY_SPEC> {
         TXOFF_DELAY_W::new(self, 0)
     }
 }

@@ -70,42 +70,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - etm_start_0 reg"]
     #[inline(always)]
-    pub fn etm_start_0(&mut self) -> ETM_START_0_W<REGDMA_ETM_CTRL_SPEC> {
+    pub fn etm_start_0(&mut self) -> ETM_START_0_W<'_, REGDMA_ETM_CTRL_SPEC> {
         ETM_START_0_W::new(self, 0)
     }
     #[doc = "Bit 1 - etm_start_1 reg"]
     #[inline(always)]
-    pub fn etm_start_1(&mut self) -> ETM_START_1_W<REGDMA_ETM_CTRL_SPEC> {
+    pub fn etm_start_1(&mut self) -> ETM_START_1_W<'_, REGDMA_ETM_CTRL_SPEC> {
         ETM_START_1_W::new(self, 1)
     }
     #[doc = "Bit 2 - etm_start_2 reg"]
     #[inline(always)]
-    pub fn etm_start_2(&mut self) -> ETM_START_2_W<REGDMA_ETM_CTRL_SPEC> {
+    pub fn etm_start_2(&mut self) -> ETM_START_2_W<'_, REGDMA_ETM_CTRL_SPEC> {
         ETM_START_2_W::new(self, 2)
     }
     #[doc = "Bit 3 - etm_start_3 reg"]
     #[inline(always)]
-    pub fn etm_start_3(&mut self) -> ETM_START_3_W<REGDMA_ETM_CTRL_SPEC> {
+    pub fn etm_start_3(&mut self) -> ETM_START_3_W<'_, REGDMA_ETM_CTRL_SPEC> {
         ETM_START_3_W::new(self, 3)
     }
     #[doc = "Bits 4:7 - etm_link sel"]
     #[inline(always)]
-    pub fn etm_link_sel_0(&mut self) -> ETM_LINK_SEL_0_W<REGDMA_ETM_CTRL_SPEC> {
+    pub fn etm_link_sel_0(&mut self) -> ETM_LINK_SEL_0_W<'_, REGDMA_ETM_CTRL_SPEC> {
         ETM_LINK_SEL_0_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - etm_link sel"]
     #[inline(always)]
-    pub fn etm_link_sel_1(&mut self) -> ETM_LINK_SEL_1_W<REGDMA_ETM_CTRL_SPEC> {
+    pub fn etm_link_sel_1(&mut self) -> ETM_LINK_SEL_1_W<'_, REGDMA_ETM_CTRL_SPEC> {
         ETM_LINK_SEL_1_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - etm_link sel"]
     #[inline(always)]
-    pub fn etm_link_sel_2(&mut self) -> ETM_LINK_SEL_2_W<REGDMA_ETM_CTRL_SPEC> {
+    pub fn etm_link_sel_2(&mut self) -> ETM_LINK_SEL_2_W<'_, REGDMA_ETM_CTRL_SPEC> {
         ETM_LINK_SEL_2_W::new(self, 12)
     }
     #[doc = "Bits 16:19 - etm_link sel"]
     #[inline(always)]
-    pub fn etm_link_sel_3(&mut self) -> ETM_LINK_SEL_3_W<REGDMA_ETM_CTRL_SPEC> {
+    pub fn etm_link_sel_3(&mut self) -> ETM_LINK_SEL_3_W<'_, REGDMA_ETM_CTRL_SPEC> {
         ETM_LINK_SEL_3_W::new(self, 16)
     }
 }

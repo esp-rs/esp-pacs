@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - USB serial out ep timeout max threshold value, indicates the maximum time that waiting for ESP to take away data in memory. This value is in steps of 20.83ns."]
     #[inline(always)]
-    pub fn serial_timeout_max(&mut self) -> SERIAL_TIMEOUT_MAX_W<SERIAL_EP_TIMEOUT1_SPEC> {
+    pub fn serial_timeout_max(&mut self) -> SERIAL_TIMEOUT_MAX_W<'_, SERIAL_EP_TIMEOUT1_SPEC> {
         SERIAL_TIMEOUT_MAX_W::new(self, 0)
     }
 }

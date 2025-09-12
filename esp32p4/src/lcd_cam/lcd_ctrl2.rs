@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - It is the position of LCD_VSYNC active pulse in a line."]
     #[inline(always)]
-    pub fn lcd_vsync_width(&mut self) -> LCD_VSYNC_WIDTH_W<LCD_CTRL2_SPEC> {
+    pub fn lcd_vsync_width(&mut self) -> LCD_VSYNC_WIDTH_W<'_, LCD_CTRL2_SPEC> {
         LCD_VSYNC_WIDTH_W::new(self, 0)
     }
     #[doc = "Bit 7 - It is the idle value of LCD_VSYNC."]
     #[inline(always)]
-    pub fn lcd_vsync_idle_pol(&mut self) -> LCD_VSYNC_IDLE_POL_W<LCD_CTRL2_SPEC> {
+    pub fn lcd_vsync_idle_pol(&mut self) -> LCD_VSYNC_IDLE_POL_W<'_, LCD_CTRL2_SPEC> {
         LCD_VSYNC_IDLE_POL_W::new(self, 7)
     }
     #[doc = "Bit 8 - It is the idle value of LCD_DE."]
     #[inline(always)]
-    pub fn lcd_de_idle_pol(&mut self) -> LCD_DE_IDLE_POL_W<LCD_CTRL2_SPEC> {
+    pub fn lcd_de_idle_pol(&mut self) -> LCD_DE_IDLE_POL_W<'_, LCD_CTRL2_SPEC> {
         LCD_DE_IDLE_POL_W::new(self, 8)
     }
     #[doc = "Bit 9 - 1: The pulse of LCD_HSYNC is out in vertical blanking lines RGB mode. 0: LCD_HSYNC pulse is valid only in active region lines in RGB mode."]
     #[inline(always)]
-    pub fn lcd_hs_blank_en(&mut self) -> LCD_HS_BLANK_EN_W<LCD_CTRL2_SPEC> {
+    pub fn lcd_hs_blank_en(&mut self) -> LCD_HS_BLANK_EN_W<'_, LCD_CTRL2_SPEC> {
         LCD_HS_BLANK_EN_W::new(self, 9)
     }
     #[doc = "Bits 16:22 - It is the position of LCD_HSYNC active pulse in a line."]
     #[inline(always)]
-    pub fn lcd_hsync_width(&mut self) -> LCD_HSYNC_WIDTH_W<LCD_CTRL2_SPEC> {
+    pub fn lcd_hsync_width(&mut self) -> LCD_HSYNC_WIDTH_W<'_, LCD_CTRL2_SPEC> {
         LCD_HSYNC_WIDTH_W::new(self, 16)
     }
     #[doc = "Bit 23 - It is the idle value of LCD_HSYNC."]
     #[inline(always)]
-    pub fn lcd_hsync_idle_pol(&mut self) -> LCD_HSYNC_IDLE_POL_W<LCD_CTRL2_SPEC> {
+    pub fn lcd_hsync_idle_pol(&mut self) -> LCD_HSYNC_IDLE_POL_W<'_, LCD_CTRL2_SPEC> {
         LCD_HSYNC_IDLE_POL_W::new(self, 23)
     }
     #[doc = "Bits 24:31 - It is the position of LCD_HSYNC active pulse in a line."]
     #[inline(always)]
-    pub fn lcd_hsync_position(&mut self) -> LCD_HSYNC_POSITION_W<LCD_CTRL2_SPEC> {
+    pub fn lcd_hsync_position(&mut self) -> LCD_HSYNC_POSITION_W<'_, LCD_CTRL2_SPEC> {
         LCD_HSYNC_POSITION_W::new(self, 24)
     }
 }

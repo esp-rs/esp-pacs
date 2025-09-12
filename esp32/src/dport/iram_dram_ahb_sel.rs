@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn mask_pro_iram(&mut self) -> MASK_PRO_IRAM_W<IRAM_DRAM_AHB_SEL_SPEC> {
+    pub fn mask_pro_iram(&mut self) -> MASK_PRO_IRAM_W<'_, IRAM_DRAM_AHB_SEL_SPEC> {
         MASK_PRO_IRAM_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn mask_app_iram(&mut self) -> MASK_APP_IRAM_W<IRAM_DRAM_AHB_SEL_SPEC> {
+    pub fn mask_app_iram(&mut self) -> MASK_APP_IRAM_W<'_, IRAM_DRAM_AHB_SEL_SPEC> {
         MASK_APP_IRAM_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn mask_pro_dram(&mut self) -> MASK_PRO_DRAM_W<IRAM_DRAM_AHB_SEL_SPEC> {
+    pub fn mask_pro_dram(&mut self) -> MASK_PRO_DRAM_W<'_, IRAM_DRAM_AHB_SEL_SPEC> {
         MASK_PRO_DRAM_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn mask_app_dram(&mut self) -> MASK_APP_DRAM_W<IRAM_DRAM_AHB_SEL_SPEC> {
+    pub fn mask_app_dram(&mut self) -> MASK_APP_DRAM_W<'_, IRAM_DRAM_AHB_SEL_SPEC> {
         MASK_APP_DRAM_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn mask_ahb(&mut self) -> MASK_AHB_W<IRAM_DRAM_AHB_SEL_SPEC> {
+    pub fn mask_ahb(&mut self) -> MASK_AHB_W<'_, IRAM_DRAM_AHB_SEL_SPEC> {
         MASK_AHB_W::new(self, 4)
     }
     #[doc = "Bits 5:6"]
     #[inline(always)]
-    pub fn mac_dump_mode(&mut self) -> MAC_DUMP_MODE_W<IRAM_DRAM_AHB_SEL_SPEC> {
+    pub fn mac_dump_mode(&mut self) -> MAC_DUMP_MODE_W<'_, IRAM_DRAM_AHB_SEL_SPEC> {
         MAC_DUMP_MODE_W::new(self, 5)
     }
 }

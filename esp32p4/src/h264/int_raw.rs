@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Raw status bit: The raw interrupt status of H264_DB_TMP_READY_INT. Triggered when H264 written enough db tmp pixel."]
     #[inline(always)]
-    pub fn db_tmp_ready(&mut self) -> DB_TMP_READY_W<INT_RAW_SPEC> {
+    pub fn db_tmp_ready(&mut self) -> DB_TMP_READY_W<'_, INT_RAW_SPEC> {
         DB_TMP_READY_W::new(self, 0)
     }
     #[doc = "Bit 1 - Raw status bit: The raw interrupt status of H264_REC_READY_INT. Triggered when H264 encoding enough reconstruct pixel."]
     #[inline(always)]
-    pub fn rec_ready(&mut self) -> REC_READY_W<INT_RAW_SPEC> {
+    pub fn rec_ready(&mut self) -> REC_READY_W<'_, INT_RAW_SPEC> {
         REC_READY_W::new(self, 1)
     }
     #[doc = "Bit 2 - Raw status bit: The raw interrupt status of H264_FRAME_DONE_INT. Triggered when H264 encoding one frame done."]
     #[inline(always)]
-    pub fn frame_done(&mut self) -> FRAME_DONE_W<INT_RAW_SPEC> {
+    pub fn frame_done(&mut self) -> FRAME_DONE_W<'_, INT_RAW_SPEC> {
         FRAME_DONE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Raw status bit: The raw interrupt status of H264_DMA_MOVE_2MB_LINE_DONE_INT. Triggered when H264 move two MB lines of reference frame from external mem to internal mem done."]
     #[inline(always)]
-    pub fn dma_move_2mb_line_done(&mut self) -> DMA_MOVE_2MB_LINE_DONE_W<INT_RAW_SPEC> {
+    pub fn dma_move_2mb_line_done(&mut self) -> DMA_MOVE_2MB_LINE_DONE_W<'_, INT_RAW_SPEC> {
         DMA_MOVE_2MB_LINE_DONE_W::new(self, 3)
     }
 }

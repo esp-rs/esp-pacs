@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor of the i2c function clock."]
     #[inline(always)]
-    pub fn i2c_sclk_div_a(&mut self) -> I2C_SCLK_DIV_A_W<I2C_SCLK_CONF_SPEC> {
+    pub fn i2c_sclk_div_a(&mut self) -> I2C_SCLK_DIV_A_W<'_, I2C_SCLK_CONF_SPEC> {
         I2C_SCLK_DIV_A_W::new(self, 0)
     }
     #[doc = "Bits 6:11 - The numerator of the frequency divider factor of the i2c function clock."]
     #[inline(always)]
-    pub fn i2c_sclk_div_b(&mut self) -> I2C_SCLK_DIV_B_W<I2C_SCLK_CONF_SPEC> {
+    pub fn i2c_sclk_div_b(&mut self) -> I2C_SCLK_DIV_B_W<'_, I2C_SCLK_CONF_SPEC> {
         I2C_SCLK_DIV_B_W::new(self, 6)
     }
     #[doc = "Bits 12:19 - The integral part of the frequency divider factor of the i2c function clock."]
     #[inline(always)]
-    pub fn i2c_sclk_div_num(&mut self) -> I2C_SCLK_DIV_NUM_W<I2C_SCLK_CONF_SPEC> {
+    pub fn i2c_sclk_div_num(&mut self) -> I2C_SCLK_DIV_NUM_W<'_, I2C_SCLK_CONF_SPEC> {
         I2C_SCLK_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bit 20 - Configures the clock source of I2C.\\\\ 0 (default): XTAL_CLK\\\\ 1: RC_FAST_CLK\\\\"]
     #[inline(always)]
-    pub fn i2c_sclk_sel(&mut self) -> I2C_SCLK_SEL_W<I2C_SCLK_CONF_SPEC> {
+    pub fn i2c_sclk_sel(&mut self) -> I2C_SCLK_SEL_W<'_, I2C_SCLK_CONF_SPEC> {
         I2C_SCLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable i2c function clock"]
     #[inline(always)]
-    pub fn i2c_sclk_en(&mut self) -> I2C_SCLK_EN_W<I2C_SCLK_CONF_SPEC> {
+    pub fn i2c_sclk_en(&mut self) -> I2C_SCLK_EN_W<'_, I2C_SCLK_CONF_SPEC> {
         I2C_SCLK_EN_W::new(self, 22)
     }
 }

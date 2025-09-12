@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn dtm_txrx_pkt_count(&mut self) -> DTM_TXRX_PKT_COUNT_W<DTM_PKT_COUNTER_SPEC> {
+    pub fn dtm_txrx_pkt_count(&mut self) -> DTM_TXRX_PKT_COUNT_W<'_, DTM_PKT_COUNTER_SPEC> {
         DTM_TXRX_PKT_COUNT_W::new(self, 0)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn dtm_crc_err_pkt_count(&mut self) -> DTM_CRC_ERR_PKT_COUNT_W<DTM_PKT_COUNTER_SPEC> {
+    pub fn dtm_crc_err_pkt_count(&mut self) -> DTM_CRC_ERR_PKT_COUNT_W<'_, DTM_PKT_COUNTER_SPEC> {
         DTM_CRC_ERR_PKT_COUNT_W::new(self, 16)
     }
 }

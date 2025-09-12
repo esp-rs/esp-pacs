@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn ext_addr(&mut self) -> EXT_ADDR_W<EXT_ADDR_SPEC> {
+    pub fn ext_addr(&mut self) -> EXT_ADDR_W<'_, EXT_ADDR_SPEC> {
         EXT_ADDR_W::new(self, 0)
     }
 }

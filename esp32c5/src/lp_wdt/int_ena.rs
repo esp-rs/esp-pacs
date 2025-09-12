@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - Configure whether or not to enable the SWD to send timeout interrupt.\\\\0:Disable \\\\1:Enable"]
     #[inline(always)]
-    pub fn super_wdt_int_ena(&mut self) -> SUPER_WDT_INT_ENA_W<INT_ENA_SPEC> {
+    pub fn super_wdt_int_ena(&mut self) -> SUPER_WDT_INT_ENA_W<'_, INT_ENA_SPEC> {
         SUPER_WDT_INT_ENA_W::new(self, 30)
     }
     #[doc = "Bit 31 - Configure whether or not to enable the RWDT to send timeout interrupt.\\\\0:Disable \\\\1:Enable"]
     #[inline(always)]
-    pub fn wdt_int_ena(&mut self) -> WDT_INT_ENA_W<INT_ENA_SPEC> {
+    pub fn wdt_int_ena(&mut self) -> WDT_INT_ENA_W<'_, INT_ENA_SPEC> {
         WDT_INT_ENA_W::new(self, 31)
     }
 }

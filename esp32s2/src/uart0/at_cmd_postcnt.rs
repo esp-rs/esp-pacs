@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - This register is used to configure the duration time between the last AT_CMD and the next data. It will not take the previous data as AT_CMD character when the duration is less than this register's value."]
     #[inline(always)]
-    pub fn post_idle_num(&mut self) -> POST_IDLE_NUM_W<AT_CMD_POSTCNT_SPEC> {
+    pub fn post_idle_num(&mut self) -> POST_IDLE_NUM_W<'_, AT_CMD_POSTCNT_SPEC> {
         POST_IDLE_NUM_W::new(self, 0)
     }
 }

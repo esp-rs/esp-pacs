@@ -27,47 +27,47 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Clear sleep wakeup interrupt state"]
     #[inline(always)]
-    pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<INT_CLR_SPEC> {
+    pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<'_, INT_CLR_SPEC> {
         SLP_WAKEUP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Clear sleep reject interrupt state"]
     #[inline(always)]
-    pub fn slp_reject(&mut self) -> SLP_REJECT_W<INT_CLR_SPEC> {
+    pub fn slp_reject(&mut self) -> SLP_REJECT_W<'_, INT_CLR_SPEC> {
         SLP_REJECT_W::new(self, 1)
     }
     #[doc = "Bit 3 - Clear RTC WDT interrupt state"]
     #[inline(always)]
-    pub fn wdt(&mut self) -> WDT_W<INT_CLR_SPEC> {
+    pub fn wdt(&mut self) -> WDT_W<'_, INT_CLR_SPEC> {
         WDT_W::new(self, 3)
     }
     #[doc = "Bit 9 - Clear brown out interrupt state"]
     #[inline(always)]
-    pub fn brown_out(&mut self) -> BROWN_OUT_W<INT_CLR_SPEC> {
+    pub fn brown_out(&mut self) -> BROWN_OUT_W<'_, INT_CLR_SPEC> {
         BROWN_OUT_W::new(self, 9)
     }
     #[doc = "Bit 10 - Clear RTC main timer interrupt state"]
     #[inline(always)]
-    pub fn main_timer(&mut self) -> MAIN_TIMER_W<INT_CLR_SPEC> {
+    pub fn main_timer(&mut self) -> MAIN_TIMER_W<'_, INT_CLR_SPEC> {
         MAIN_TIMER_W::new(self, 10)
     }
     #[doc = "Bit 15 - Clear super watch dog interrupt state"]
     #[inline(always)]
-    pub fn swd(&mut self) -> SWD_W<INT_CLR_SPEC> {
+    pub fn swd(&mut self) -> SWD_W<'_, INT_CLR_SPEC> {
         SWD_W::new(self, 15)
     }
     #[doc = "Bit 16 - Clear RTC WDT interrupt state"]
     #[inline(always)]
-    pub fn xtal32k_dead(&mut self) -> XTAL32K_DEAD_W<INT_CLR_SPEC> {
+    pub fn xtal32k_dead(&mut self) -> XTAL32K_DEAD_W<'_, INT_CLR_SPEC> {
         XTAL32K_DEAD_W::new(self, 16)
     }
     #[doc = "Bit 19 - Clear glitch det interrupt state"]
     #[inline(always)]
-    pub fn glitch_det(&mut self) -> GLITCH_DET_W<INT_CLR_SPEC> {
+    pub fn glitch_det(&mut self) -> GLITCH_DET_W<'_, INT_CLR_SPEC> {
         GLITCH_DET_W::new(self, 19)
     }
     #[doc = "Bit 20 - clear bbpll cal end interrupt state"]
     #[inline(always)]
-    pub fn bbpll_cal(&mut self) -> BBPLL_CAL_W<INT_CLR_SPEC> {
+    pub fn bbpll_cal(&mut self) -> BBPLL_CAL_W<'_, INT_CLR_SPEC> {
         BBPLL_CAL_W::new(self, 20)
     }
 }

@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn privilege_mode_sel_lock(
         &mut self,
-    ) -> PRIVILEGE_MODE_SEL_LOCK_W<PRIVILEGE_MODE_SEL_LOCK_SPEC> {
+    ) -> PRIVILEGE_MODE_SEL_LOCK_W<'_, PRIVILEGE_MODE_SEL_LOCK_SPEC> {
         PRIVILEGE_MODE_SEL_LOCK_W::new(self, 0)
     }
 }

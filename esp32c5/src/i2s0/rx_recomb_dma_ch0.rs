@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable the adc-dma-channel."]
     #[inline(always)]
-    pub fn valid(&mut self) -> VALID_W<RX_RECOMB_DMA_CH0_SPEC> {
+    pub fn valid(&mut self) -> VALID_W<'_, RX_RECOMB_DMA_CH0_SPEC> {
         VALID_W::new(self, 0)
     }
     #[doc = "Bits 1:4 - Set this field to set the recombined-dma-channel style. If choose to use i2s extracted ch 1&3 in 4 channels, the style should be: 6'b1010."]
     #[inline(always)]
-    pub fn style(&mut self) -> STYLE_W<RX_RECOMB_DMA_CH0_SPEC> {
+    pub fn style(&mut self) -> STYLE_W<'_, RX_RECOMB_DMA_CH0_SPEC> {
         STYLE_W::new(self, 1)
     }
     #[doc = "Bits 5:12 - Set this field to set the recombined-dma-channel order. If choose to use the order ch3 -> ch1, the order should be: 8'd7 = {2'd0,2'd0,2'd1,2'd3}."]
     #[inline(always)]
-    pub fn order(&mut self) -> ORDER_W<RX_RECOMB_DMA_CH0_SPEC> {
+    pub fn order(&mut self) -> ORDER_W<'_, RX_RECOMB_DMA_CH0_SPEC> {
         ORDER_W::new(self, 5)
     }
     #[doc = "Bits 13:28 - Set this field to set the receive eof byte length of the recombined-dma-channel."]
     #[inline(always)]
-    pub fn eof_num(&mut self) -> EOF_NUM_W<RX_RECOMB_DMA_CH0_SPEC> {
+    pub fn eof_num(&mut self) -> EOF_NUM_W<'_, RX_RECOMB_DMA_CH0_SPEC> {
         EOF_NUM_W::new(self, 13)
     }
 }

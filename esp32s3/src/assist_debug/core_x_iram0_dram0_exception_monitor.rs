@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - busy monitor window cycle"]
     #[inline(always)]
-    pub fn limit_cycle_0(&mut self) -> LIMIT_CYCLE_0_W<CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_SPEC> {
+    pub fn limit_cycle_0(
+        &mut self,
+    ) -> LIMIT_CYCLE_0_W<'_, CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_SPEC> {
         LIMIT_CYCLE_0_W::new(self, 0)
     }
 }

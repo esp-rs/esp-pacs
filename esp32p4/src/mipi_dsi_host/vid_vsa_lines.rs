@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - NA"]
     #[inline(always)]
-    pub fn vsa_lines(&mut self) -> VSA_LINES_W<VID_VSA_LINES_SPEC> {
+    pub fn vsa_lines(&mut self) -> VSA_LINES_W<'_, VID_VSA_LINES_SPEC> {
         VSA_LINES_W::new(self, 0)
     }
 }

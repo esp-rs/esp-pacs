@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the i2s_rx_done_int interrupt"]
     #[inline(always)]
-    pub fn rx_done(&mut self) -> RX_DONE_W<INT_ENA_SPEC> {
+    pub fn rx_done(&mut self) -> RX_DONE_W<'_, INT_ENA_SPEC> {
         RX_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the i2s_rx_hung_int interrupt"]
     #[inline(always)]
-    pub fn rx_hung(&mut self) -> RX_HUNG_W<INT_ENA_SPEC> {
+    pub fn rx_hung(&mut self) -> RX_HUNG_W<'_, INT_ENA_SPEC> {
         RX_HUNG_W::new(self, 1)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the i2s_rx_fifomem_udf_int interrupt"]
     #[inline(always)]
-    pub fn rx_fifomem_udf(&mut self) -> RX_FIFOMEM_UDF_W<INT_ENA_SPEC> {
+    pub fn rx_fifomem_udf(&mut self) -> RX_FIFOMEM_UDF_W<'_, INT_ENA_SPEC> {
         RX_FIFOMEM_UDF_W::new(self, 2)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the vad_done_int interrupt"]
     #[inline(always)]
-    pub fn lp_vad_done(&mut self) -> LP_VAD_DONE_W<INT_ENA_SPEC> {
+    pub fn lp_vad_done(&mut self) -> LP_VAD_DONE_W<'_, INT_ENA_SPEC> {
         LP_VAD_DONE_W::new(self, 3)
     }
     #[doc = "Bit 4 - The interrupt enable bit for the vad_reset_done_int interrupt"]
     #[inline(always)]
-    pub fn lp_vad_reset_done(&mut self) -> LP_VAD_RESET_DONE_W<INT_ENA_SPEC> {
+    pub fn lp_vad_reset_done(&mut self) -> LP_VAD_RESET_DONE_W<'_, INT_ENA_SPEC> {
         LP_VAD_RESET_DONE_W::new(self, 4)
     }
     #[doc = "Bit 5 - The interrupt enable bit for the rx_mem_threshold_int interrupt"]
     #[inline(always)]
-    pub fn rx_mem_threshold(&mut self) -> RX_MEM_THRESHOLD_W<INT_ENA_SPEC> {
+    pub fn rx_mem_threshold(&mut self) -> RX_MEM_THRESHOLD_W<'_, INT_ENA_SPEC> {
         RX_MEM_THRESHOLD_W::new(self, 5)
     }
 }

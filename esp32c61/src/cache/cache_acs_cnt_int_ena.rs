@@ -82,12 +82,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - The bit is used to enable interrupt of one of counters overflow that occurs in L1-DCache due to bus0 accesses L1-DCache."]
     #[inline(always)]
-    pub fn bus0_ovf_int_ena(&mut self) -> BUS0_OVF_INT_ENA_W<CACHE_ACS_CNT_INT_ENA_SPEC> {
+    pub fn bus0_ovf_int_ena(&mut self) -> BUS0_OVF_INT_ENA_W<'_, CACHE_ACS_CNT_INT_ENA_SPEC> {
         BUS0_OVF_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - The bit is used to enable interrupt of one of counters overflow that occurs in L1-DCache due to bus1 accesses L1-DCache."]
     #[inline(always)]
-    pub fn bus1_ovf_int_ena(&mut self) -> BUS1_OVF_INT_ENA_W<CACHE_ACS_CNT_INT_ENA_SPEC> {
+    pub fn bus1_ovf_int_ena(&mut self) -> BUS1_OVF_INT_ENA_W<'_, CACHE_ACS_CNT_INT_ENA_SPEC> {
         BUS1_OVF_INT_ENA_W::new(self, 5)
     }
 }

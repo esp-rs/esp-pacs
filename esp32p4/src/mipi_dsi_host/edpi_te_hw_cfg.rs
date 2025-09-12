@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn hw_tear_effect_on(&mut self) -> HW_TEAR_EFFECT_ON_W<EDPI_TE_HW_CFG_SPEC> {
+    pub fn hw_tear_effect_on(&mut self) -> HW_TEAR_EFFECT_ON_W<'_, EDPI_TE_HW_CFG_SPEC> {
         HW_TEAR_EFFECT_ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    pub fn hw_tear_effect_gen(&mut self) -> HW_TEAR_EFFECT_GEN_W<EDPI_TE_HW_CFG_SPEC> {
+    pub fn hw_tear_effect_gen(&mut self) -> HW_TEAR_EFFECT_GEN_W<'_, EDPI_TE_HW_CFG_SPEC> {
         HW_TEAR_EFFECT_GEN_W::new(self, 1)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    pub fn hw_set_scan_line(&mut self) -> HW_SET_SCAN_LINE_W<EDPI_TE_HW_CFG_SPEC> {
+    pub fn hw_set_scan_line(&mut self) -> HW_SET_SCAN_LINE_W<'_, EDPI_TE_HW_CFG_SPEC> {
         HW_SET_SCAN_LINE_W::new(self, 4)
     }
     #[doc = "Bits 16:31 - NA"]
     #[inline(always)]
-    pub fn scan_line_parameter(&mut self) -> SCAN_LINE_PARAMETER_W<EDPI_TE_HW_CFG_SPEC> {
+    pub fn scan_line_parameter(&mut self) -> SCAN_LINE_PARAMETER_W<'_, EDPI_TE_HW_CFG_SPEC> {
         SCAN_LINE_PARAMETER_W::new(self, 16)
     }
 }

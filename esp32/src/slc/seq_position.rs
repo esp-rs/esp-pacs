@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn slc0_seq_position(&mut self) -> SLC0_SEQ_POSITION_W<SEQ_POSITION_SPEC> {
+    pub fn slc0_seq_position(&mut self) -> SLC0_SEQ_POSITION_W<'_, SEQ_POSITION_SPEC> {
         SLC0_SEQ_POSITION_W::new(self, 0)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn slc1_seq_position(&mut self) -> SLC1_SEQ_POSITION_W<SEQ_POSITION_SPEC> {
+    pub fn slc1_seq_position(&mut self) -> SLC1_SEQ_POSITION_W<'_, SEQ_POSITION_SPEC> {
         SLC1_SEQ_POSITION_W::new(self, 8)
     }
 }

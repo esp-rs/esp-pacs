@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn glbllntrmsk(&mut self) -> GLBLLNTRMSK_W<GAHBCFG_SPEC> {
+    pub fn glbllntrmsk(&mut self) -> GLBLLNTRMSK_W<'_, GAHBCFG_SPEC> {
         GLBLLNTRMSK_W::new(self, 0)
     }
     #[doc = "Bits 1:4"]
     #[inline(always)]
-    pub fn hbstlen(&mut self) -> HBSTLEN_W<GAHBCFG_SPEC> {
+    pub fn hbstlen(&mut self) -> HBSTLEN_W<'_, GAHBCFG_SPEC> {
         HBSTLEN_W::new(self, 1)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn dmaen(&mut self) -> DMAEN_W<GAHBCFG_SPEC> {
+    pub fn dmaen(&mut self) -> DMAEN_W<'_, GAHBCFG_SPEC> {
         DMAEN_W::new(self, 5)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn nptxfemplvl(&mut self) -> NPTXFEMPLVL_W<GAHBCFG_SPEC> {
+    pub fn nptxfemplvl(&mut self) -> NPTXFEMPLVL_W<'_, GAHBCFG_SPEC> {
         NPTXFEMPLVL_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn ptxfemplvl(&mut self) -> PTXFEMPLVL_W<GAHBCFG_SPEC> {
+    pub fn ptxfemplvl(&mut self) -> PTXFEMPLVL_W<'_, GAHBCFG_SPEC> {
         PTXFEMPLVL_W::new(self, 8)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    pub fn remmemsupp(&mut self) -> REMMEMSUPP_W<GAHBCFG_SPEC> {
+    pub fn remmemsupp(&mut self) -> REMMEMSUPP_W<'_, GAHBCFG_SPEC> {
         REMMEMSUPP_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    pub fn notialldmawrit(&mut self) -> NOTIALLDMAWRIT_W<GAHBCFG_SPEC> {
+    pub fn notialldmawrit(&mut self) -> NOTIALLDMAWRIT_W<'_, GAHBCFG_SPEC> {
         NOTIALLDMAWRIT_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    pub fn ahbsingle(&mut self) -> AHBSINGLE_W<GAHBCFG_SPEC> {
+    pub fn ahbsingle(&mut self) -> AHBSINGLE_W<'_, GAHBCFG_SPEC> {
         AHBSINGLE_W::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn invdescendianess(&mut self) -> INVDESCENDIANESS_W<GAHBCFG_SPEC> {
+    pub fn invdescendianess(&mut self) -> INVDESCENDIANESS_W<'_, GAHBCFG_SPEC> {
         INVDESCENDIANESS_W::new(self, 24)
     }
 }

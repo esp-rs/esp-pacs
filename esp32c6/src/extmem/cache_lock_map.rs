@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Those bits are used to indicate which caches in the two-level cache structure will apply this lock/unlock operation. \\[4\\]: L1-Cache"]
     #[inline(always)]
-    pub fn cache_lock_map(&mut self) -> CACHE_LOCK_MAP_W<CACHE_LOCK_MAP_SPEC> {
+    pub fn cache_lock_map(&mut self) -> CACHE_LOCK_MAP_W<'_, CACHE_LOCK_MAP_SPEC> {
         CACHE_LOCK_MAP_W::new(self, 0)
     }
 }

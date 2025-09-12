@@ -50,14 +50,16 @@ impl W {
     #[inline(always)]
     pub fn core_1_pif_pms_constrain_rtcfast_spltaddr_world_0(
         &mut self,
-    ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_SPLTADDR_WORLD_0_W<CORE_1_PIF_PMS_CONSTRAIN_9_SPEC> {
+    ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_SPLTADDR_WORLD_0_W<'_, CORE_1_PIF_PMS_CONSTRAIN_9_SPEC>
+    {
         CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_SPLTADDR_WORLD_0_W::new(self, 0)
     }
     #[doc = "Bits 11:21 - RTCFast memory split address in world 1 for core1."]
     #[inline(always)]
     pub fn core_1_pif_pms_constrain_rtcfast_spltaddr_world_1(
         &mut self,
-    ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_SPLTADDR_WORLD_1_W<CORE_1_PIF_PMS_CONSTRAIN_9_SPEC> {
+    ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_SPLTADDR_WORLD_1_W<'_, CORE_1_PIF_PMS_CONSTRAIN_9_SPEC>
+    {
         CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_SPLTADDR_WORLD_1_W::new(self, 11)
     }
 }

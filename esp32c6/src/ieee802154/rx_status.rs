@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    pub fn filter_fail_status(&mut self) -> FILTER_FAIL_STATUS_W<RX_STATUS_SPEC> {
+    pub fn filter_fail_status(&mut self) -> FILTER_FAIL_STATUS_W<'_, RX_STATUS_SPEC> {
         FILTER_FAIL_STATUS_W::new(self, 0)
     }
     #[doc = "Bits 4:8"]
     #[inline(always)]
-    pub fn rx_abort_status(&mut self) -> RX_ABORT_STATUS_W<RX_STATUS_SPEC> {
+    pub fn rx_abort_status(&mut self) -> RX_ABORT_STATUS_W<'_, RX_STATUS_SPEC> {
         RX_ABORT_STATUS_W::new(self, 4)
     }
     #[doc = "Bits 16:18"]
     #[inline(always)]
-    pub fn rx_state(&mut self) -> RX_STATE_W<RX_STATUS_SPEC> {
+    pub fn rx_state(&mut self) -> RX_STATE_W<'_, RX_STATUS_SPEC> {
         RX_STATE_W::new(self, 16)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn preamble_match(&mut self) -> PREAMBLE_MATCH_W<RX_STATUS_SPEC> {
+    pub fn preamble_match(&mut self) -> PREAMBLE_MATCH_W<'_, RX_STATUS_SPEC> {
         PREAMBLE_MATCH_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    pub fn sfd_match(&mut self) -> SFD_MATCH_W<RX_STATUS_SPEC> {
+    pub fn sfd_match(&mut self) -> SFD_MATCH_W<'_, RX_STATUS_SPEC> {
         SFD_MATCH_W::new(self, 21)
     }
 }

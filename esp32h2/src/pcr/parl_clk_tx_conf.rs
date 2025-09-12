@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - The integral part of the frequency divider factor of the parl tx clock."]
     #[inline(always)]
-    pub fn parl_clk_tx_div_num(&mut self) -> PARL_CLK_TX_DIV_NUM_W<PARL_CLK_TX_CONF_SPEC> {
+    pub fn parl_clk_tx_div_num(&mut self) -> PARL_CLK_TX_DIV_NUM_W<'_, PARL_CLK_TX_CONF_SPEC> {
         PARL_CLK_TX_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 16:17 - set this field to select clock-source. 0(default): XTAL, 1: 240MHz, 2: FOSC, 3: user clock from pad."]
     #[inline(always)]
-    pub fn parl_clk_tx_sel(&mut self) -> PARL_CLK_TX_SEL_W<PARL_CLK_TX_CONF_SPEC> {
+    pub fn parl_clk_tx_sel(&mut self) -> PARL_CLK_TX_SEL_W<'_, PARL_CLK_TX_CONF_SPEC> {
         PARL_CLK_TX_SEL_W::new(self, 16)
     }
     #[doc = "Bit 18 - Set 1 to enable parl tx clock"]
     #[inline(always)]
-    pub fn parl_clk_tx_en(&mut self) -> PARL_CLK_TX_EN_W<PARL_CLK_TX_CONF_SPEC> {
+    pub fn parl_clk_tx_en(&mut self) -> PARL_CLK_TX_EN_W<'_, PARL_CLK_TX_CONF_SPEC> {
         PARL_CLK_TX_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Set 0 to reset parl tx module"]
     #[inline(always)]
-    pub fn parl_tx_rst_en(&mut self) -> PARL_TX_RST_EN_W<PARL_CLK_TX_CONF_SPEC> {
+    pub fn parl_tx_rst_en(&mut self) -> PARL_TX_RST_EN_W<'_, PARL_CLK_TX_CONF_SPEC> {
         PARL_TX_RST_EN_W::new(self, 19)
     }
 }

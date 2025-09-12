@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Configures monitoring modes.bit\\[0\\]: Configures write monitoring. \\\\ 0: Disable \\\\ 1: Enable\\\\ bit\\[1\\]: Configures word monitoring. \\\\ 0: Disable \\\\ 1: Enable\\\\ bit\\[2\\]: Configures halfword monitoring. \\\\ 0: Disable \\\\ 1: Enable\\\\ bit\\[3\\]: Configures byte monitoring. \\\\ 0: Disable \\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn log_mode(&mut self) -> LOG_MODE_W<LOG_SETTING_SPEC> {
+    pub fn log_mode(&mut self) -> LOG_MODE_W<'_, LOG_SETTING_SPEC> {
         LOG_MODE_W::new(self, 0)
     }
     #[doc = "Bit 4 - Configures the writing mode for recorded data.1: Loop mode\\\\ 0: Non-loop mode\\\\"]
     #[inline(always)]
-    pub fn log_mem_loop_enable(&mut self) -> LOG_MEM_LOOP_ENABLE_W<LOG_SETTING_SPEC> {
+    pub fn log_mem_loop_enable(&mut self) -> LOG_MEM_LOOP_ENABLE_W<'_, LOG_SETTING_SPEC> {
         LOG_MEM_LOOP_ENABLE_W::new(self, 4)
     }
     #[doc = "Bits 8:15 - Configures whether to enable CPU bus access logging.bit\\[0\\]: Configures whether to enable HP CPU bus access logging. \\\\ 0: Disable \\\\ 1: Enable\\\\ Bit\\[7:1\\]: Reserved"]
     #[inline(always)]
-    pub fn log_core_ena(&mut self) -> LOG_CORE_ENA_W<LOG_SETTING_SPEC> {
+    pub fn log_core_ena(&mut self) -> LOG_CORE_ENA_W<'_, LOG_SETTING_SPEC> {
         LOG_CORE_ENA_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Configures whether to enable DMA_0 bus access logging.bit\\[0\\]: Configures whether to enable DMA_0 bus access logging. \\\\ 0: Disable \\\\ 1: Enable\\\\ Bit\\[7:1\\]: Reserved"]
     #[inline(always)]
-    pub fn log_dma_0_ena(&mut self) -> LOG_DMA_0_ENA_W<LOG_SETTING_SPEC> {
+    pub fn log_dma_0_ena(&mut self) -> LOG_DMA_0_ENA_W<'_, LOG_SETTING_SPEC> {
         LOG_DMA_0_ENA_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Configures whether to enable DMA_1 bus access logging.bit\\[0\\]: Configures whether to enable DMA_1 bus access logging. \\\\ 0: Disable \\\\ 1: Enable\\\\ Bit\\[7:1\\]: Reserved"]
     #[inline(always)]
-    pub fn log_dma_1_ena(&mut self) -> LOG_DMA_1_ENA_W<LOG_SETTING_SPEC> {
+    pub fn log_dma_1_ena(&mut self) -> LOG_DMA_1_ENA_W<'_, LOG_SETTING_SPEC> {
         LOG_DMA_1_ENA_W::new(self, 24)
     }
 }

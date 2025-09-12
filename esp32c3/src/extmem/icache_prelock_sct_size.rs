@@ -36,14 +36,14 @@ impl W {
     #[inline(always)]
     pub fn icache_prelock_sct1_size(
         &mut self,
-    ) -> ICACHE_PRELOCK_SCT1_SIZE_W<ICACHE_PRELOCK_SCT_SIZE_SPEC> {
+    ) -> ICACHE_PRELOCK_SCT1_SIZE_W<'_, ICACHE_PRELOCK_SCT_SIZE_SPEC> {
         ICACHE_PRELOCK_SCT1_SIZE_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - The bits are used to configure the first length of data locking, which is combined with ICACHE_PRELOCK_SCT0_ADDR_REG"]
     #[inline(always)]
     pub fn icache_prelock_sct0_size(
         &mut self,
-    ) -> ICACHE_PRELOCK_SCT0_SIZE_W<ICACHE_PRELOCK_SCT_SIZE_SPEC> {
+    ) -> ICACHE_PRELOCK_SCT0_SIZE_W<'_, ICACHE_PRELOCK_SCT_SIZE_SPEC> {
         ICACHE_PRELOCK_SCT0_SIZE_W::new(self, 16)
     }
 }

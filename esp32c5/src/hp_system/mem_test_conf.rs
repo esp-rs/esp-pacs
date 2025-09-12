@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - This field controls hp system memory WPULSE parameter."]
     #[inline(always)]
-    pub fn hp_mem_wpulse(&mut self) -> HP_MEM_WPULSE_W<MEM_TEST_CONF_SPEC> {
+    pub fn hp_mem_wpulse(&mut self) -> HP_MEM_WPULSE_W<'_, MEM_TEST_CONF_SPEC> {
         HP_MEM_WPULSE_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - This field controls hp system memory WA parameter."]
     #[inline(always)]
-    pub fn hp_mem_wa(&mut self) -> HP_MEM_WA_W<MEM_TEST_CONF_SPEC> {
+    pub fn hp_mem_wa(&mut self) -> HP_MEM_WA_W<'_, MEM_TEST_CONF_SPEC> {
         HP_MEM_WA_W::new(self, 3)
     }
     #[doc = "Bits 6:7 - This field controls hp system memory RA parameter."]
     #[inline(always)]
-    pub fn hp_mem_ra(&mut self) -> HP_MEM_RA_W<MEM_TEST_CONF_SPEC> {
+    pub fn hp_mem_ra(&mut self) -> HP_MEM_RA_W<'_, MEM_TEST_CONF_SPEC> {
         HP_MEM_RA_W::new(self, 6)
     }
 }

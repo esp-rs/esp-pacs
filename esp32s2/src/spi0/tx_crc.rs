@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn tx_crc_data(&mut self) -> TX_CRC_DATA_W<TX_CRC_SPEC> {
+    pub fn tx_crc_data(&mut self) -> TX_CRC_DATA_W<'_, TX_CRC_SPEC> {
         TX_CRC_DATA_W::new(self, 0)
     }
 }

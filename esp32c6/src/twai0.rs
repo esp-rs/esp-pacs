@@ -5,8 +5,8 @@ pub struct RegisterBlock {
     mode: MODE,
     cmd: CMD,
     status: STATUS,
-    interrupt: INTERRUPT,
-    interrupt_enable: INTERRUPT_ENABLE,
+    int_raw: INT_RAW,
+    int_ena: INT_ENA,
     _reserved5: [u8; 0x04],
     bus_timing_0: BUS_TIMING_0,
     bus_timing_1: BUS_TIMING_1,
@@ -44,13 +44,13 @@ impl RegisterBlock {
     }
     #[doc = "0x0c - Interrupt signals' register."]
     #[inline(always)]
-    pub const fn interrupt(&self) -> &INTERRUPT {
-        &self.interrupt
+    pub const fn int_raw(&self) -> &INT_RAW {
+        &self.int_raw
     }
     #[doc = "0x10 - Interrupt enable register."]
     #[inline(always)]
-    pub const fn interrupt_enable(&self) -> &INTERRUPT_ENABLE {
-        &self.interrupt_enable
+    pub const fn int_ena(&self) -> &INT_ENA {
+        &self.int_ena
     }
     #[doc = "0x18 - Bit timing configuration register 0."]
     #[inline(always)]
@@ -146,14 +146,14 @@ pub mod cmd;
 pub type STATUS = crate::Reg<status::STATUS_SPEC>;
 #[doc = "TWAI status register."]
 pub mod status;
-#[doc = "INTERRUPT (r) register accessor: Interrupt signals' register.\n\nYou can [`read`](crate::Reg::read) this register and get [`interrupt::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@interrupt`] module"]
-pub type INTERRUPT = crate::Reg<interrupt::INTERRUPT_SPEC>;
+#[doc = "INT_RAW (r) register accessor: Interrupt signals' register.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
+pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "Interrupt signals' register."]
-pub mod interrupt;
-#[doc = "INTERRUPT_ENABLE (rw) register accessor: Interrupt enable register.\n\nYou can [`read`](crate::Reg::read) this register and get [`interrupt_enable::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`interrupt_enable::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@interrupt_enable`] module"]
-pub type INTERRUPT_ENABLE = crate::Reg<interrupt_enable::INTERRUPT_ENABLE_SPEC>;
+pub mod int_raw;
+#[doc = "INT_ENA (rw) register accessor: Interrupt enable register.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "Interrupt enable register."]
-pub mod interrupt_enable;
+pub mod int_ena;
 #[doc = "BUS_TIMING_0 (rw) register accessor: Bit timing configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`bus_timing_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bus_timing_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@bus_timing_0`] module"]
 pub type BUS_TIMING_0 = crate::Reg<bus_timing_0::BUS_TIMING_0_SPEC>;
 #[doc = "Bit timing configuration register 0."]

@@ -72,47 +72,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable receiver to receive data on CHANNEL%s."]
     #[inline(always)]
-    pub fn rx_en_ch4(&mut self) -> RX_EN_CH4_W<RX_CHCONF1_SPEC> {
+    pub fn rx_en_ch4(&mut self) -> RX_EN_CH4_W<'_, RX_CHCONF1_SPEC> {
         RX_EN_CH4_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to reset write ram address for CHANNEL%s by accessing receiver."]
     #[inline(always)]
-    pub fn mem_wr_rst_ch4(&mut self) -> MEM_WR_RST_CH4_W<RX_CHCONF1_SPEC> {
+    pub fn mem_wr_rst_ch4(&mut self) -> MEM_WR_RST_CH4_W<'_, RX_CHCONF1_SPEC> {
         MEM_WR_RST_CH4_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to reset W/R ram address for CHANNEL%s by accessing apb fifo."]
     #[inline(always)]
-    pub fn apb_mem_rst_ch4(&mut self) -> APB_MEM_RST_CH4_W<RX_CHCONF1_SPEC> {
+    pub fn apb_mem_rst_ch4(&mut self) -> APB_MEM_RST_CH4_W<'_, RX_CHCONF1_SPEC> {
         APB_MEM_RST_CH4_W::new(self, 2)
     }
     #[doc = "Bit 3 - This register marks the ownership of CHANNEL%s's ram block.1'h1: Receiver is using the ram. 1'h0: APB bus is using the ram."]
     #[inline(always)]
-    pub fn mem_owner_ch4(&mut self) -> MEM_OWNER_CH4_W<RX_CHCONF1_SPEC> {
+    pub fn mem_owner_ch4(&mut self) -> MEM_OWNER_CH4_W<'_, RX_CHCONF1_SPEC> {
         MEM_OWNER_CH4_W::new(self, 3)
     }
     #[doc = "Bit 4 - This is the receive filter's enable bit for CHANNEL%s."]
     #[inline(always)]
-    pub fn rx_filter_en_ch4(&mut self) -> RX_FILTER_EN_CH4_W<RX_CHCONF1_SPEC> {
+    pub fn rx_filter_en_ch4(&mut self) -> RX_FILTER_EN_CH4_W<'_, RX_CHCONF1_SPEC> {
         RX_FILTER_EN_CH4_W::new(self, 4)
     }
     #[doc = "Bits 5:12 - Ignores the input pulse when its width is smaller than this register value in APB clock periods (in receive mode)."]
     #[inline(always)]
-    pub fn rx_filter_thres_ch4(&mut self) -> RX_FILTER_THRES_CH4_W<RX_CHCONF1_SPEC> {
+    pub fn rx_filter_thres_ch4(&mut self) -> RX_FILTER_THRES_CH4_W<'_, RX_CHCONF1_SPEC> {
         RX_FILTER_THRES_CH4_W::new(self, 5)
     }
     #[doc = "Bit 13 - This is the channel %s enable bit for wraparound mode: it will resume receiving at the start when the data to be received is more than its memory size."]
     #[inline(always)]
-    pub fn mem_rx_wrap_en_ch4(&mut self) -> MEM_RX_WRAP_EN_CH4_W<RX_CHCONF1_SPEC> {
+    pub fn mem_rx_wrap_en_ch4(&mut self) -> MEM_RX_WRAP_EN_CH4_W<'_, RX_CHCONF1_SPEC> {
         MEM_RX_WRAP_EN_CH4_W::new(self, 13)
     }
     #[doc = "Bit 14 - Reserved"]
     #[inline(always)]
-    pub fn afifo_rst_ch4(&mut self) -> AFIFO_RST_CH4_W<RX_CHCONF1_SPEC> {
+    pub fn afifo_rst_ch4(&mut self) -> AFIFO_RST_CH4_W<'_, RX_CHCONF1_SPEC> {
         AFIFO_RST_CH4_W::new(self, 14)
     }
     #[doc = "Bit 15 - synchronization bit for CHANNEL%s"]
     #[inline(always)]
-    pub fn conf_update_ch4(&mut self) -> CONF_UPDATE_CH4_W<RX_CHCONF1_SPEC> {
+    pub fn conf_update_ch4(&mut self) -> CONF_UPDATE_CH4_W<'_, RX_CHCONF1_SPEC> {
         CONF_UPDATE_CH4_W::new(self, 15)
     }
 }

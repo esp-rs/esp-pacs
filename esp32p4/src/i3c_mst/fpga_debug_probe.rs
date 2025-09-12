@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn reg_i3c_mst_fpga_debug_probe(
         &mut self,
-    ) -> REG_I3C_MST_FPGA_DEBUG_PROBE_W<FPGA_DEBUG_PROBE_SPEC> {
+    ) -> REG_I3C_MST_FPGA_DEBUG_PROBE_W<'_, FPGA_DEBUG_PROBE_SPEC> {
         REG_I3C_MST_FPGA_DEBUG_PROBE_W::new(self, 0)
     }
 }

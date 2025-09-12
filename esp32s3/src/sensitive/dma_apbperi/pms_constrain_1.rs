@@ -112,42 +112,42 @@ impl W {
     #[inline(always)]
     pub fn dma_apbperi_spi2_pms_constrain_sram_pms_0(
         &mut self,
-    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_PMS_0_W<PMS_CONSTRAIN_1_SPEC> {
+    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_PMS_0_W<'_, PMS_CONSTRAIN_1_SPEC> {
         DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_PMS_0_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - spi2's permission(store,load) in data region1 of SRAM"]
     #[inline(always)]
     pub fn dma_apbperi_spi2_pms_constrain_sram_pms_1(
         &mut self,
-    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_PMS_1_W<PMS_CONSTRAIN_1_SPEC> {
+    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_PMS_1_W<'_, PMS_CONSTRAIN_1_SPEC> {
         DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_PMS_1_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - spi2's permission(store,load) in data region2 of SRAM"]
     #[inline(always)]
     pub fn dma_apbperi_spi2_pms_constrain_sram_pms_2(
         &mut self,
-    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_PMS_2_W<PMS_CONSTRAIN_1_SPEC> {
+    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_PMS_2_W<'_, PMS_CONSTRAIN_1_SPEC> {
         DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_PMS_2_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - spi2's permission(store,load) in data region3 of SRAM"]
     #[inline(always)]
     pub fn dma_apbperi_spi2_pms_constrain_sram_pms_3(
         &mut self,
-    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_PMS_3_W<PMS_CONSTRAIN_1_SPEC> {
+    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_PMS_3_W<'_, PMS_CONSTRAIN_1_SPEC> {
         DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_PMS_3_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - spi2's permission(store,load) in dcache data sram block0"]
     #[inline(always)]
     pub fn dma_apbperi_spi2_pms_constrain_sram_cachedataarray_pms_0(
         &mut self,
-    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W<PMS_CONSTRAIN_1_SPEC> {
+    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W<'_, PMS_CONSTRAIN_1_SPEC> {
         DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - spi2's permission(store,load) in dcache data sram block1"]
     #[inline(always)]
     pub fn dma_apbperi_spi2_pms_constrain_sram_cachedataarray_pms_1(
         &mut self,
-    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W<PMS_CONSTRAIN_1_SPEC> {
+    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W<'_, PMS_CONSTRAIN_1_SPEC> {
         DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W::new(self, 10)
     }
 }

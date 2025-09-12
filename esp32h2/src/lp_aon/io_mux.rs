@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 28:30 - need_des"]
     #[inline(always)]
-    pub fn pull_ldo(&mut self) -> PULL_LDO_W<IO_MUX_SPEC> {
+    pub fn pull_ldo(&mut self) -> PULL_LDO_W<'_, IO_MUX_SPEC> {
         PULL_LDO_W::new(self, 28)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn reset_disable(&mut self) -> RESET_DISABLE_W<IO_MUX_SPEC> {
+    pub fn reset_disable(&mut self) -> RESET_DISABLE_W<'_, IO_MUX_SPEC> {
         RESET_DISABLE_W::new(self, 31)
     }
 }

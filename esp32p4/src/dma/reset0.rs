@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn dmac_rst(&mut self) -> DMAC_RST_W<RESET0_SPEC> {
+    pub fn dmac_rst(&mut self) -> DMAC_RST_W<'_, RESET0_SPEC> {
         DMAC_RST_W::new(self, 0)
     }
 }

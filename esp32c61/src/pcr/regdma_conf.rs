@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable regdma clock"]
     #[inline(always)]
-    pub fn regdma_clk_en(&mut self) -> REGDMA_CLK_EN_W<REGDMA_CONF_SPEC> {
+    pub fn regdma_clk_en(&mut self) -> REGDMA_CLK_EN_W<'_, REGDMA_CONF_SPEC> {
         REGDMA_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to reset regdma module"]
     #[inline(always)]
-    pub fn regdma_rst_en(&mut self) -> REGDMA_RST_EN_W<REGDMA_CONF_SPEC> {
+    pub fn regdma_rst_en(&mut self) -> REGDMA_RST_EN_W<'_, REGDMA_CONF_SPEC> {
         REGDMA_RST_EN_W::new(self, 1)
     }
 }

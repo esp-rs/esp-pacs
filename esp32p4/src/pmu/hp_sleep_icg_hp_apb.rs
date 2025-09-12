@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn hp_sleep_dig_icg_apb_en(
         &mut self,
-    ) -> HP_SLEEP_DIG_ICG_APB_EN_W<HP_SLEEP_ICG_HP_APB_SPEC> {
+    ) -> HP_SLEEP_DIG_ICG_APB_EN_W<'_, HP_SLEEP_ICG_HP_APB_SPEC> {
         HP_SLEEP_DIG_ICG_APB_EN_W::new(self, 0)
     }
 }

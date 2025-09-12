@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - clock enable"]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<REGDMA_CLK_CONF_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, REGDMA_CLK_CONF_SPEC> {
         CLK_EN_W::new(self, 0)
     }
 }

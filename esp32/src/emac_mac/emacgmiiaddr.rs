@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This bit should read logic 0 before writing to PHY Addr Register and PHY data Register.During a PHY register access the software sets this bit to 1'b1 to indicate that a Read or Write access is in progress. PHY data Register is invalid until this bit is cleared by the MAC. Therefore PHY data Register (MII Data) should be kept valid until the MAC clears this bit during a PHY Write operation. Similarly for a read operation the contents of Register 5 are not valid until this bit is cleared. The subsequent read or write operation should happen only after the previous operation is complete. Because there is no acknowledgment from the PHY to MAC after a read or write operation is completed there is no change in the functionality of this bit even when the PHY is not Present."]
     #[inline(always)]
-    pub fn miibusy(&mut self) -> MIIBUSY_W<EMACGMIIADDR_SPEC> {
+    pub fn miibusy(&mut self) -> MIIBUSY_W<'_, EMACGMIIADDR_SPEC> {
         MIIBUSY_W::new(self, 0)
     }
     #[doc = "Bit 1 - When set this bit indicates to the PHY that this is a Write operation using the MII Data register. If this bit is not set it indicates that this is a Read operation that is placing the data in the MII Data register."]
     #[inline(always)]
-    pub fn miiwrite(&mut self) -> MIIWRITE_W<EMACGMIIADDR_SPEC> {
+    pub fn miiwrite(&mut self) -> MIIWRITE_W<'_, EMACGMIIADDR_SPEC> {
         MIIWRITE_W::new(self, 1)
     }
     #[doc = "Bits 2:5 - CSR clock range: 1.0 MHz ~ 2.5 MHz. 4'b0000: When the APB clock frequency is 80 MHz the MDC clock frequency is APB CLK/42 4'b0011: When the APB clock frequency is 40 MHz the MDC clock frequency is APB CLK/26."]
     #[inline(always)]
-    pub fn miicsrclk(&mut self) -> MIICSRCLK_W<EMACGMIIADDR_SPEC> {
+    pub fn miicsrclk(&mut self) -> MIICSRCLK_W<'_, EMACGMIIADDR_SPEC> {
         MIICSRCLK_W::new(self, 2)
     }
     #[doc = "Bits 6:10 - These bits select the desired MII register in the selected PHY device."]
     #[inline(always)]
-    pub fn miireg(&mut self) -> MIIREG_W<EMACGMIIADDR_SPEC> {
+    pub fn miireg(&mut self) -> MIIREG_W<'_, EMACGMIIADDR_SPEC> {
         MIIREG_W::new(self, 6)
     }
     #[doc = "Bits 11:15 - This field indicates which of the 32 possible PHY devices are being accessed."]
     #[inline(always)]
-    pub fn miidev(&mut self) -> MIIDEV_W<EMACGMIIADDR_SPEC> {
+    pub fn miidev(&mut self) -> MIIDEV_W<'_, EMACGMIIADDR_SPEC> {
         MIIDEV_W::new(self, 11)
     }
 }

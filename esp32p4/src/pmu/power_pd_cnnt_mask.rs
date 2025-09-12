@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - need_des"]
     #[inline(always)]
-    pub fn xpd_cnnt_mask(&mut self) -> XPD_CNNT_MASK_W<POWER_PD_CNNT_MASK_SPEC> {
+    pub fn xpd_cnnt_mask(&mut self) -> XPD_CNNT_MASK_W<'_, POWER_PD_CNNT_MASK_SPEC> {
         XPD_CNNT_MASK_W::new(self, 0)
     }
     #[doc = "Bits 27:31 - need_des"]
     #[inline(always)]
-    pub fn pd_cnnt_mask(&mut self) -> PD_CNNT_MASK_W<POWER_PD_CNNT_MASK_SPEC> {
+    pub fn pd_cnnt_mask(&mut self) -> PD_CNNT_MASK_W<'_, POWER_PD_CNNT_MASK_SPEC> {
         PD_CNNT_MASK_W::new(self, 27)
     }
 }

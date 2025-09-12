@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - This register is used to configure the maximum entries that CHANNEL%s can receive."]
     #[inline(always)]
-    pub fn rx_lim(&mut self) -> RX_LIM_W<CH_RX_LIM_SPEC> {
+    pub fn rx_lim(&mut self) -> RX_LIM_W<'_, CH_RX_LIM_SPEC> {
         RX_LIM_W::new(self, 0)
     }
 }

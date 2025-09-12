@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - It must equal to the value of SPI_MEM_CLKCNT_N."]
     #[inline(always)]
-    pub fn clkcnt_l(&mut self) -> CLKCNT_L_W<CLOCK_SPEC> {
+    pub fn clkcnt_l(&mut self) -> CLKCNT_L_W<'_, CLOCK_SPEC> {
         CLKCNT_L_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - It must be a floor value of ((SPI_MEM_CLKCNT_N+1)/2-1)."]
     #[inline(always)]
-    pub fn clkcnt_h(&mut self) -> CLKCNT_H_W<CLOCK_SPEC> {
+    pub fn clkcnt_h(&mut self) -> CLKCNT_H_W<'_, CLOCK_SPEC> {
         CLKCNT_H_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - When SPI0 accesses flash, f_SPI_CLK = f_MSPI_CORE_CLK/(SPI_MEM_CLKCNT_N+1)"]
     #[inline(always)]
-    pub fn clkcnt_n(&mut self) -> CLKCNT_N_W<CLOCK_SPEC> {
+    pub fn clkcnt_n(&mut self) -> CLKCNT_N_W<'_, CLOCK_SPEC> {
         CLKCNT_N_W::new(self, 16)
     }
     #[doc = "Bit 31 - When SPI0 accesses flash, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
     #[inline(always)]
-    pub fn clk_equ_sysclk(&mut self) -> CLK_EQU_SYSCLK_W<CLOCK_SPEC> {
+    pub fn clk_equ_sysclk(&mut self) -> CLK_EQU_SYSCLK_W<'_, CLOCK_SPEC> {
         CLK_EQU_SYSCLK_W::new(self, 31)
     }
 }

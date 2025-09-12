@@ -100,37 +100,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 9 - Enable sample signal for wakeup module."]
     #[inline(always)]
-    pub fn sample_en(&mut self) -> SAMPLE_EN_W<CTRL_SPEC> {
+    pub fn sample_en(&mut self) -> SAMPLE_EN_W<'_, CTRL_SPEC> {
         SAMPLE_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Wake up signal mask."]
     #[inline(always)]
-    pub fn wakeup_mask(&mut self) -> WAKEUP_MASK_W<CTRL_SPEC> {
+    pub fn wakeup_mask(&mut self) -> WAKEUP_MASK_W<'_, CTRL_SPEC> {
         WAKEUP_MASK_W::new(self, 10)
     }
     #[doc = "Bit 12 - Enable temperature sensor to send out interrupt."]
     #[inline(always)]
-    pub fn int_en(&mut self) -> INT_EN_W<CTRL_SPEC> {
+    pub fn int_en(&mut self) -> INT_EN_W<'_, CTRL_SPEC> {
         INT_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Invert temperature sensor data."]
     #[inline(always)]
-    pub fn in_inv(&mut self) -> IN_INV_W<CTRL_SPEC> {
+    pub fn in_inv(&mut self) -> IN_INV_W<'_, CTRL_SPEC> {
         IN_INV_W::new(self, 13)
     }
     #[doc = "Bits 14:21 - Temperature sensor clock divider."]
     #[inline(always)]
-    pub fn clk_div(&mut self) -> CLK_DIV_W<CTRL_SPEC> {
+    pub fn clk_div(&mut self) -> CLK_DIV_W<'_, CTRL_SPEC> {
         CLK_DIV_W::new(self, 14)
     }
     #[doc = "Bit 22 - Temperature sensor power up."]
     #[inline(always)]
-    pub fn power_up(&mut self) -> POWER_UP_W<CTRL_SPEC> {
+    pub fn power_up(&mut self) -> POWER_UP_W<'_, CTRL_SPEC> {
         POWER_UP_W::new(self, 22)
     }
     #[doc = "Bit 23 - 1: dump out & power up controlled by SW, 0: by FSM."]
     #[inline(always)]
-    pub fn power_up_force(&mut self) -> POWER_UP_FORCE_W<CTRL_SPEC> {
+    pub fn power_up_force(&mut self) -> POWER_UP_FORCE_W<'_, CTRL_SPEC> {
         POWER_UP_FORCE_W::new(self, 23)
     }
 }

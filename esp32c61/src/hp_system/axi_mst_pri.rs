@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - AHB-DMA arbitration priority for command channels between masters connected to ext_mem_DW_axi"]
     #[inline(always)]
-    pub fn dma_priority(&mut self) -> DMA_PRIORITY_W<AXI_MST_PRI_SPEC> {
+    pub fn dma_priority(&mut self) -> DMA_PRIORITY_W<'_, AXI_MST_PRI_SPEC> {
         DMA_PRIORITY_W::new(self, 0)
     }
     #[doc = "Bit 1 - CACHE arbitration priority for command channels between masters connected to ext_mem_DW_axi"]
     #[inline(always)]
-    pub fn cache_priority(&mut self) -> CACHE_PRIORITY_W<AXI_MST_PRI_SPEC> {
+    pub fn cache_priority(&mut self) -> CACHE_PRIORITY_W<'_, AXI_MST_PRI_SPEC> {
         CACHE_PRIORITY_W::new(self, 1)
     }
 }

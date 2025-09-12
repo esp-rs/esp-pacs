@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_XTAL_SPEC> {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn hp_modem_xpd_xtal(&mut self) -> HP_MODEM_XPD_XTAL_W<HP_MODEM_XTAL_SPEC> {
+    pub fn hp_modem_xpd_xtal(&mut self) -> HP_MODEM_XPD_XTAL_W<'_, HP_MODEM_XTAL_SPEC> {
         HP_MODEM_XPD_XTAL_W::new(self, 31)
     }
 }

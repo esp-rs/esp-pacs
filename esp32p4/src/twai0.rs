@@ -16,21 +16,9 @@ pub struct RegisterBlock {
     err_warning_limit: ERR_WARNING_LIMIT,
     rx_err_cnt: RX_ERR_CNT,
     tx_err_cnt: TX_ERR_CNT,
-    data_0: DATA_0,
-    data_1: DATA_1,
-    data_2: DATA_2,
-    data_3: DATA_3,
-    data_4: DATA_4,
-    data_5: DATA_5,
-    data_6: DATA_6,
-    data_7: DATA_7,
-    data_8: DATA_8,
-    data_9: DATA_9,
-    data_10: DATA_10,
-    data_11: DATA_11,
-    data_12: DATA_12,
+    data: [DATA; 13],
     rx_message_counter: RX_MESSAGE_COUNTER,
-    _reserved26: [u8; 0x04],
+    _reserved14: [u8; 0x04],
     clock_divider: CLOCK_DIVIDER,
     sw_standby_cfg: SW_STANDBY_CFG,
     hw_cfg: HW_CFG,
@@ -102,70 +90,16 @@ impl RegisterBlock {
     pub const fn tx_err_cnt(&self) -> &TX_ERR_CNT {
         &self.tx_err_cnt
     }
-    #[doc = "0x40 - Data register 0."]
+    #[doc = "0x40..0x74 - Data register %s."]
     #[inline(always)]
-    pub const fn data_0(&self) -> &DATA_0 {
-        &self.data_0
+    pub const fn data(&self, n: usize) -> &DATA {
+        &self.data[n]
     }
-    #[doc = "0x44 - Data register 1."]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x40..0x74 - Data register %s."]
     #[inline(always)]
-    pub const fn data_1(&self) -> &DATA_1 {
-        &self.data_1
-    }
-    #[doc = "0x48 - Data register 2."]
-    #[inline(always)]
-    pub const fn data_2(&self) -> &DATA_2 {
-        &self.data_2
-    }
-    #[doc = "0x4c - Data register 3."]
-    #[inline(always)]
-    pub const fn data_3(&self) -> &DATA_3 {
-        &self.data_3
-    }
-    #[doc = "0x50 - Data register 4."]
-    #[inline(always)]
-    pub const fn data_4(&self) -> &DATA_4 {
-        &self.data_4
-    }
-    #[doc = "0x54 - Data register 5."]
-    #[inline(always)]
-    pub const fn data_5(&self) -> &DATA_5 {
-        &self.data_5
-    }
-    #[doc = "0x58 - Data register 6."]
-    #[inline(always)]
-    pub const fn data_6(&self) -> &DATA_6 {
-        &self.data_6
-    }
-    #[doc = "0x5c - Data register 7."]
-    #[inline(always)]
-    pub const fn data_7(&self) -> &DATA_7 {
-        &self.data_7
-    }
-    #[doc = "0x60 - Data register 8."]
-    #[inline(always)]
-    pub const fn data_8(&self) -> &DATA_8 {
-        &self.data_8
-    }
-    #[doc = "0x64 - Data register 9."]
-    #[inline(always)]
-    pub const fn data_9(&self) -> &DATA_9 {
-        &self.data_9
-    }
-    #[doc = "0x68 - Data register 10."]
-    #[inline(always)]
-    pub const fn data_10(&self) -> &DATA_10 {
-        &self.data_10
-    }
-    #[doc = "0x6c - Data register 11."]
-    #[inline(always)]
-    pub const fn data_11(&self) -> &DATA_11 {
-        &self.data_11
-    }
-    #[doc = "0x70 - Data register 12."]
-    #[inline(always)]
-    pub const fn data_12(&self) -> &DATA_12 {
-        &self.data_12
+    pub fn data_iter(&self) -> impl Iterator<Item = &DATA> {
+        self.data.iter()
     }
     #[doc = "0x74 - Received message counter register."]
     #[inline(always)]
@@ -266,58 +200,10 @@ pub mod rx_err_cnt;
 pub type TX_ERR_CNT = crate::Reg<tx_err_cnt::TX_ERR_CNT_SPEC>;
 #[doc = "Tx error counter register."]
 pub mod tx_err_cnt;
-#[doc = "DATA_0 (rw) register accessor: Data register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`data_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data_0`] module"]
-pub type DATA_0 = crate::Reg<data_0::DATA_0_SPEC>;
-#[doc = "Data register 0."]
-pub mod data_0;
-#[doc = "DATA_1 (rw) register accessor: Data register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`data_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data_1`] module"]
-pub type DATA_1 = crate::Reg<data_1::DATA_1_SPEC>;
-#[doc = "Data register 1."]
-pub mod data_1;
-#[doc = "DATA_2 (rw) register accessor: Data register 2.\n\nYou can [`read`](crate::Reg::read) this register and get [`data_2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data_2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data_2`] module"]
-pub type DATA_2 = crate::Reg<data_2::DATA_2_SPEC>;
-#[doc = "Data register 2."]
-pub mod data_2;
-#[doc = "DATA_3 (rw) register accessor: Data register 3.\n\nYou can [`read`](crate::Reg::read) this register and get [`data_3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data_3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data_3`] module"]
-pub type DATA_3 = crate::Reg<data_3::DATA_3_SPEC>;
-#[doc = "Data register 3."]
-pub mod data_3;
-#[doc = "DATA_4 (rw) register accessor: Data register 4.\n\nYou can [`read`](crate::Reg::read) this register and get [`data_4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data_4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data_4`] module"]
-pub type DATA_4 = crate::Reg<data_4::DATA_4_SPEC>;
-#[doc = "Data register 4."]
-pub mod data_4;
-#[doc = "DATA_5 (rw) register accessor: Data register 5.\n\nYou can [`read`](crate::Reg::read) this register and get [`data_5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data_5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data_5`] module"]
-pub type DATA_5 = crate::Reg<data_5::DATA_5_SPEC>;
-#[doc = "Data register 5."]
-pub mod data_5;
-#[doc = "DATA_6 (rw) register accessor: Data register 6.\n\nYou can [`read`](crate::Reg::read) this register and get [`data_6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data_6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data_6`] module"]
-pub type DATA_6 = crate::Reg<data_6::DATA_6_SPEC>;
-#[doc = "Data register 6."]
-pub mod data_6;
-#[doc = "DATA_7 (rw) register accessor: Data register 7.\n\nYou can [`read`](crate::Reg::read) this register and get [`data_7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data_7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data_7`] module"]
-pub type DATA_7 = crate::Reg<data_7::DATA_7_SPEC>;
-#[doc = "Data register 7."]
-pub mod data_7;
-#[doc = "DATA_8 (rw) register accessor: Data register 8.\n\nYou can [`read`](crate::Reg::read) this register and get [`data_8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data_8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data_8`] module"]
-pub type DATA_8 = crate::Reg<data_8::DATA_8_SPEC>;
-#[doc = "Data register 8."]
-pub mod data_8;
-#[doc = "DATA_9 (rw) register accessor: Data register 9.\n\nYou can [`read`](crate::Reg::read) this register and get [`data_9::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data_9::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data_9`] module"]
-pub type DATA_9 = crate::Reg<data_9::DATA_9_SPEC>;
-#[doc = "Data register 9."]
-pub mod data_9;
-#[doc = "DATA_10 (rw) register accessor: Data register 10.\n\nYou can [`read`](crate::Reg::read) this register and get [`data_10::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data_10::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data_10`] module"]
-pub type DATA_10 = crate::Reg<data_10::DATA_10_SPEC>;
-#[doc = "Data register 10."]
-pub mod data_10;
-#[doc = "DATA_11 (rw) register accessor: Data register 11.\n\nYou can [`read`](crate::Reg::read) this register and get [`data_11::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data_11::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data_11`] module"]
-pub type DATA_11 = crate::Reg<data_11::DATA_11_SPEC>;
-#[doc = "Data register 11."]
-pub mod data_11;
-#[doc = "DATA_12 (rw) register accessor: Data register 12.\n\nYou can [`read`](crate::Reg::read) this register and get [`data_12::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data_12::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data_12`] module"]
-pub type DATA_12 = crate::Reg<data_12::DATA_12_SPEC>;
-#[doc = "Data register 12."]
-pub mod data_12;
+#[doc = "DATA (rw) register accessor: Data register %s.\n\nYou can [`read`](crate::Reg::read) this register and get [`data::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data`] module"]
+pub type DATA = crate::Reg<data::DATA_SPEC>;
+#[doc = "Data register %s."]
+pub mod data;
 #[doc = "RX_MESSAGE_COUNTER (r) register accessor: Received message counter register.\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_message_counter::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_message_counter`] module"]
 pub type RX_MESSAGE_COUNTER = crate::Reg<rx_message_counter::RX_MESSAGE_COUNTER_SPEC>;
 #[doc = "Received message counter register."]

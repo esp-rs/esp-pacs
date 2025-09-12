@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - retention inv scan out"]
     #[inline(always)]
-    pub fn ret_inv_cfg(&mut self) -> RET_INV_CFG_W<RETENTION_CFG_SPEC> {
+    pub fn ret_inv_cfg(&mut self) -> RET_INV_CFG_W<'_, RETENTION_CFG_SPEC> {
         RET_INV_CFG_W::new(self, 0)
     }
 }

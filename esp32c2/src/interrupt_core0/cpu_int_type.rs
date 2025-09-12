@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Need add description"]
     #[inline(always)]
-    pub fn cpu_int_type(&mut self) -> CPU_INT_TYPE_W<CPU_INT_TYPE_SPEC> {
+    pub fn cpu_int_type(&mut self) -> CPU_INT_TYPE_W<'_, CPU_INT_TYPE_SPEC> {
         CPU_INT_TYPE_W::new(self, 0)
     }
 }

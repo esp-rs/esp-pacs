@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:23 - In the slave mode it is the length in bits for write-buffer operations. The register value shall be (bit_num-1)."]
     #[inline(always)]
-    pub fn slv_wrbuf_dbitlen(&mut self) -> SLV_WRBUF_DBITLEN_W<SLV_WRBUF_DLEN_SPEC> {
+    pub fn slv_wrbuf_dbitlen(&mut self) -> SLV_WRBUF_DBITLEN_W<'_, SLV_WRBUF_DLEN_SPEC> {
         SLV_WRBUF_DBITLEN_W::new(self, 0)
     }
 }

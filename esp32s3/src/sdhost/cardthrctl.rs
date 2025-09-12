@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Card read threshold enable. 1'b0-Card read threshold disabled. 1'b1-Card read threshold enabled."]
     #[inline(always)]
-    pub fn cardrdthren(&mut self) -> CARDRDTHREN_W<CARDTHRCTL_SPEC> {
+    pub fn cardrdthren(&mut self) -> CARDRDTHREN_W<'_, CARDTHRCTL_SPEC> {
         CARDRDTHREN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Busy clear interrupt generation: 1'b0-Busy clear interrypt disabled. 1'b1-Busy clear interrypt enabled."]
     #[inline(always)]
-    pub fn cardclrinten(&mut self) -> CARDCLRINTEN_W<CARDTHRCTL_SPEC> {
+    pub fn cardclrinten(&mut self) -> CARDCLRINTEN_W<'_, CARDTHRCTL_SPEC> {
         CARDCLRINTEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Applicable when HS400 mode is enabled. 1'b0-Card write Threshold disabled. 1'b1-Card write Threshold enabled."]
     #[inline(always)]
-    pub fn cardwrthren(&mut self) -> CARDWRTHREN_W<CARDTHRCTL_SPEC> {
+    pub fn cardwrthren(&mut self) -> CARDWRTHREN_W<'_, CARDTHRCTL_SPEC> {
         CARDWRTHREN_W::new(self, 2)
     }
     #[doc = "Bits 16:31 - The inside FIFO size is 512,This register is applicable when SDHOST_CARDERTHREN_REG is set to 1 or SDHOST_CARDRDTHREN_REG set to 1."]
     #[inline(always)]
-    pub fn cardthreshold(&mut self) -> CARDTHRESHOLD_W<CARDTHRCTL_SPEC> {
+    pub fn cardthreshold(&mut self) -> CARDTHRESHOLD_W<'_, CARDTHRCTL_SPEC> {
         CARDTHRESHOLD_W::new(self, 16)
     }
 }

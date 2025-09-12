@@ -72,27 +72,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable mmu-memory clock force on"]
     #[inline(always)]
-    pub fn spi_mmu_mem_force_on(&mut self) -> SPI_MMU_MEM_FORCE_ON_W<MMU_POWER_CTRL_SPEC> {
+    pub fn spi_mmu_mem_force_on(&mut self) -> SPI_MMU_MEM_FORCE_ON_W<'_, MMU_POWER_CTRL_SPEC> {
         SPI_MMU_MEM_FORCE_ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to force mmu-memory powerdown"]
     #[inline(always)]
-    pub fn spi_mmu_mem_force_pd(&mut self) -> SPI_MMU_MEM_FORCE_PD_W<MMU_POWER_CTRL_SPEC> {
+    pub fn spi_mmu_mem_force_pd(&mut self) -> SPI_MMU_MEM_FORCE_PD_W<'_, MMU_POWER_CTRL_SPEC> {
         SPI_MMU_MEM_FORCE_PD_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to force mmu-memory powerup, in this case, the power should also be controlled by rtc."]
     #[inline(always)]
-    pub fn spi_mmu_mem_force_pu(&mut self) -> SPI_MMU_MEM_FORCE_PU_W<MMU_POWER_CTRL_SPEC> {
+    pub fn spi_mmu_mem_force_pu(&mut self) -> SPI_MMU_MEM_FORCE_PU_W<'_, MMU_POWER_CTRL_SPEC> {
         SPI_MMU_MEM_FORCE_PU_W::new(self, 2)
     }
     #[doc = "Bits 16:29 - MMU PSRAM aux control register"]
     #[inline(always)]
-    pub fn aux_ctrl(&mut self) -> AUX_CTRL_W<MMU_POWER_CTRL_SPEC> {
+    pub fn aux_ctrl(&mut self) -> AUX_CTRL_W<'_, MMU_POWER_CTRL_SPEC> {
         AUX_CTRL_W::new(self, 16)
     }
     #[doc = "Bit 30 - ECO register enable bit"]
     #[inline(always)]
-    pub fn rdn_ena(&mut self) -> RDN_ENA_W<MMU_POWER_CTRL_SPEC> {
+    pub fn rdn_ena(&mut self) -> RDN_ENA_W<'_, MMU_POWER_CTRL_SPEC> {
         RDN_ENA_W::new(self, 30)
     }
 }

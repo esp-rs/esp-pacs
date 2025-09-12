@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable sdio_slave clock"]
     #[inline(always)]
-    pub fn sdio_slave_clk_en(&mut self) -> SDIO_SLAVE_CLK_EN_W<SDIO_SLAVE_CONF_SPEC> {
+    pub fn sdio_slave_clk_en(&mut self) -> SDIO_SLAVE_CLK_EN_W<'_, SDIO_SLAVE_CONF_SPEC> {
         SDIO_SLAVE_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to reset sdio_slave module"]
     #[inline(always)]
-    pub fn sdio_slave_rst_en(&mut self) -> SDIO_SLAVE_RST_EN_W<SDIO_SLAVE_CONF_SPEC> {
+    pub fn sdio_slave_rst_en(&mut self) -> SDIO_SLAVE_RST_EN_W<'_, SDIO_SLAVE_CONF_SPEC> {
         SDIO_SLAVE_RST_EN_W::new(self, 1)
     }
 }

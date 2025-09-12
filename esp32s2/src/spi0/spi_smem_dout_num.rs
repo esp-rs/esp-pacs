@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn spi_smem_dout0_num(&mut self) -> SPI_SMEM_DOUT0_NUM_W<SPI_SMEM_DOUT_NUM_SPEC> {
+    pub fn spi_smem_dout0_num(&mut self) -> SPI_SMEM_DOUT0_NUM_W<'_, SPI_SMEM_DOUT_NUM_SPEC> {
         SPI_SMEM_DOUT0_NUM_W::new(self, 0)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
-    pub fn spi_smem_dout1_num(&mut self) -> SPI_SMEM_DOUT1_NUM_W<SPI_SMEM_DOUT_NUM_SPEC> {
+    pub fn spi_smem_dout1_num(&mut self) -> SPI_SMEM_DOUT1_NUM_W<'_, SPI_SMEM_DOUT_NUM_SPEC> {
         SPI_SMEM_DOUT1_NUM_W::new(self, 2)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
-    pub fn spi_smem_dout2_num(&mut self) -> SPI_SMEM_DOUT2_NUM_W<SPI_SMEM_DOUT_NUM_SPEC> {
+    pub fn spi_smem_dout2_num(&mut self) -> SPI_SMEM_DOUT2_NUM_W<'_, SPI_SMEM_DOUT_NUM_SPEC> {
         SPI_SMEM_DOUT2_NUM_W::new(self, 4)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
-    pub fn spi_smem_dout3_num(&mut self) -> SPI_SMEM_DOUT3_NUM_W<SPI_SMEM_DOUT_NUM_SPEC> {
+    pub fn spi_smem_dout3_num(&mut self) -> SPI_SMEM_DOUT3_NUM_W<'_, SPI_SMEM_DOUT_NUM_SPEC> {
         SPI_SMEM_DOUT3_NUM_W::new(self, 6)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
-    pub fn spi_smem_dout4_num(&mut self) -> SPI_SMEM_DOUT4_NUM_W<SPI_SMEM_DOUT_NUM_SPEC> {
+    pub fn spi_smem_dout4_num(&mut self) -> SPI_SMEM_DOUT4_NUM_W<'_, SPI_SMEM_DOUT_NUM_SPEC> {
         SPI_SMEM_DOUT4_NUM_W::new(self, 8)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
-    pub fn spi_smem_dout5_num(&mut self) -> SPI_SMEM_DOUT5_NUM_W<SPI_SMEM_DOUT_NUM_SPEC> {
+    pub fn spi_smem_dout5_num(&mut self) -> SPI_SMEM_DOUT5_NUM_W<'_, SPI_SMEM_DOUT_NUM_SPEC> {
         SPI_SMEM_DOUT5_NUM_W::new(self, 10)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
-    pub fn spi_smem_dout6_num(&mut self) -> SPI_SMEM_DOUT6_NUM_W<SPI_SMEM_DOUT_NUM_SPEC> {
+    pub fn spi_smem_dout6_num(&mut self) -> SPI_SMEM_DOUT6_NUM_W<'_, SPI_SMEM_DOUT_NUM_SPEC> {
         SPI_SMEM_DOUT6_NUM_W::new(self, 12)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
-    pub fn spi_smem_dout7_num(&mut self) -> SPI_SMEM_DOUT7_NUM_W<SPI_SMEM_DOUT_NUM_SPEC> {
+    pub fn spi_smem_dout7_num(&mut self) -> SPI_SMEM_DOUT7_NUM_W<'_, SPI_SMEM_DOUT_NUM_SPEC> {
         SPI_SMEM_DOUT7_NUM_W::new(self, 14)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
-    pub fn spi_smem_douts_num(&mut self) -> SPI_SMEM_DOUTS_NUM_W<SPI_SMEM_DOUT_NUM_SPEC> {
+    pub fn spi_smem_douts_num(&mut self) -> SPI_SMEM_DOUTS_NUM_W<'_, SPI_SMEM_DOUT_NUM_SPEC> {
         SPI_SMEM_DOUTS_NUM_W::new(self, 16)
     }
 }

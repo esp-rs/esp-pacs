@@ -56,27 +56,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - When set, capture on channel 0 is enabled"]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<CAP_CH_CFG_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, CAP_CH_CFG_SPEC> {
         EN_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - Edge of capture on channel 0 after prescaling. When bit0 is set to 1: enable capture on the negative edge, When bit1 is set to 1: enable capture on the positive edge."]
     #[inline(always)]
-    pub fn mode(&mut self) -> MODE_W<CAP_CH_CFG_SPEC> {
+    pub fn mode(&mut self) -> MODE_W<'_, CAP_CH_CFG_SPEC> {
         MODE_W::new(self, 1)
     }
     #[doc = "Bits 3:10 - Value of prescaling on possitive edge of CAP0. Prescale value = PWM_CAP0_PRESCALE + 1"]
     #[inline(always)]
-    pub fn prescale(&mut self) -> PRESCALE_W<CAP_CH_CFG_SPEC> {
+    pub fn prescale(&mut self) -> PRESCALE_W<'_, CAP_CH_CFG_SPEC> {
         PRESCALE_W::new(self, 3)
     }
     #[doc = "Bit 11 - when set, CAP0 form GPIO matrix is inverted before prescale"]
     #[inline(always)]
-    pub fn in_invert(&mut self) -> IN_INVERT_W<CAP_CH_CFG_SPEC> {
+    pub fn in_invert(&mut self) -> IN_INVERT_W<'_, CAP_CH_CFG_SPEC> {
         IN_INVERT_W::new(self, 11)
     }
     #[doc = "Bit 12 - Write 1 will trigger a software forced capture on channel 0"]
     #[inline(always)]
-    pub fn sw(&mut self) -> SW_W<CAP_CH_CFG_SPEC> {
+    pub fn sw(&mut self) -> SW_W<'_, CAP_CH_CFG_SPEC> {
         SW_W::new(self, 12)
     }
 }

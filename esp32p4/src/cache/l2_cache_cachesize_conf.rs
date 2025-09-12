@@ -126,21 +126,21 @@ impl W {
     #[inline(always)]
     pub fn l2_cache_cachesize_128k(
         &mut self,
-    ) -> L2_CACHE_CACHESIZE_128K_W<L2_CACHE_CACHESIZE_CONF_SPEC> {
+    ) -> L2_CACHE_CACHESIZE_128K_W<'_, L2_CACHE_CACHESIZE_CONF_SPEC> {
         L2_CACHE_CACHESIZE_128K_W::new(self, 9)
     }
     #[doc = "Bit 10 - The field is used to configure cachesize of L2-Cache as 256k bytes. This field and all other fields within this register is onehot."]
     #[inline(always)]
     pub fn l2_cache_cachesize_256k(
         &mut self,
-    ) -> L2_CACHE_CACHESIZE_256K_W<L2_CACHE_CACHESIZE_CONF_SPEC> {
+    ) -> L2_CACHE_CACHESIZE_256K_W<'_, L2_CACHE_CACHESIZE_CONF_SPEC> {
         L2_CACHE_CACHESIZE_256K_W::new(self, 10)
     }
     #[doc = "Bit 11 - The field is used to configure cachesize of L2-Cache as 512k bytes. This field and all other fields within this register is onehot."]
     #[inline(always)]
     pub fn l2_cache_cachesize_512k(
         &mut self,
-    ) -> L2_CACHE_CACHESIZE_512K_W<L2_CACHE_CACHESIZE_CONF_SPEC> {
+    ) -> L2_CACHE_CACHESIZE_512K_W<'_, L2_CACHE_CACHESIZE_CONF_SPEC> {
         L2_CACHE_CACHESIZE_512K_W::new(self, 11)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn ch1_lms(&mut self) -> CH1_LMS_W<LLP0_SPEC> {
+    pub fn ch1_lms(&mut self) -> CH1_LMS_W<'_, LLP0_SPEC> {
         CH1_LMS_W::new(self, 0)
     }
     #[doc = "Bits 6:31 - NA"]
     #[inline(always)]
-    pub fn ch1_loc0(&mut self) -> CH1_LOC0_W<LLP0_SPEC> {
+    pub fn ch1_loc0(&mut self) -> CH1_LOC0_W<'_, LLP0_SPEC> {
         CH1_LOC0_W::new(self, 6)
     }
 }

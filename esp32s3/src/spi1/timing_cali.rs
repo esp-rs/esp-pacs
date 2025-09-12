@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
     #[inline(always)]
-    pub fn timing_cali(&mut self) -> TIMING_CALI_W<TIMING_CALI_SPEC> {
+    pub fn timing_cali(&mut self) -> TIMING_CALI_W<'_, TIMING_CALI_SPEC> {
         TIMING_CALI_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - Extra SPI_CLK cycles added in DUMMY phase for timing compensation. Active when SPI_MEM_TIMING_CALI bit is set."]
     #[inline(always)]
-    pub fn extra_dummy_cyclelen(&mut self) -> EXTRA_DUMMY_CYCLELEN_W<TIMING_CALI_SPEC> {
+    pub fn extra_dummy_cyclelen(&mut self) -> EXTRA_DUMMY_CYCLELEN_W<'_, TIMING_CALI_SPEC> {
         EXTRA_DUMMY_CYCLELEN_W::new(self, 2)
     }
 }

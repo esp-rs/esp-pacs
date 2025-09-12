@@ -134,62 +134,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - NA"]
     #[inline(always)]
-    pub fn vid_mode_type(&mut self) -> VID_MODE_TYPE_W<VID_MODE_CFG_SPEC> {
+    pub fn vid_mode_type(&mut self) -> VID_MODE_TYPE_W<'_, VID_MODE_CFG_SPEC> {
         VID_MODE_TYPE_W::new(self, 0)
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    pub fn lp_vsa_en(&mut self) -> LP_VSA_EN_W<VID_MODE_CFG_SPEC> {
+    pub fn lp_vsa_en(&mut self) -> LP_VSA_EN_W<'_, VID_MODE_CFG_SPEC> {
         LP_VSA_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - NA"]
     #[inline(always)]
-    pub fn lp_vbp_en(&mut self) -> LP_VBP_EN_W<VID_MODE_CFG_SPEC> {
+    pub fn lp_vbp_en(&mut self) -> LP_VBP_EN_W<'_, VID_MODE_CFG_SPEC> {
         LP_VBP_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - NA"]
     #[inline(always)]
-    pub fn lp_vfp_en(&mut self) -> LP_VFP_EN_W<VID_MODE_CFG_SPEC> {
+    pub fn lp_vfp_en(&mut self) -> LP_VFP_EN_W<'_, VID_MODE_CFG_SPEC> {
         LP_VFP_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - NA"]
     #[inline(always)]
-    pub fn lp_vact_en(&mut self) -> LP_VACT_EN_W<VID_MODE_CFG_SPEC> {
+    pub fn lp_vact_en(&mut self) -> LP_VACT_EN_W<'_, VID_MODE_CFG_SPEC> {
         LP_VACT_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - NA"]
     #[inline(always)]
-    pub fn lp_hbp_en(&mut self) -> LP_HBP_EN_W<VID_MODE_CFG_SPEC> {
+    pub fn lp_hbp_en(&mut self) -> LP_HBP_EN_W<'_, VID_MODE_CFG_SPEC> {
         LP_HBP_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - NA"]
     #[inline(always)]
-    pub fn lp_hfp_en(&mut self) -> LP_HFP_EN_W<VID_MODE_CFG_SPEC> {
+    pub fn lp_hfp_en(&mut self) -> LP_HFP_EN_W<'_, VID_MODE_CFG_SPEC> {
         LP_HFP_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - NA"]
     #[inline(always)]
-    pub fn frame_bta_ack_en(&mut self) -> FRAME_BTA_ACK_EN_W<VID_MODE_CFG_SPEC> {
+    pub fn frame_bta_ack_en(&mut self) -> FRAME_BTA_ACK_EN_W<'_, VID_MODE_CFG_SPEC> {
         FRAME_BTA_ACK_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - NA"]
     #[inline(always)]
-    pub fn lp_cmd_en(&mut self) -> LP_CMD_EN_W<VID_MODE_CFG_SPEC> {
+    pub fn lp_cmd_en(&mut self) -> LP_CMD_EN_W<'_, VID_MODE_CFG_SPEC> {
         LP_CMD_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - NA"]
     #[inline(always)]
-    pub fn vpg_en(&mut self) -> VPG_EN_W<VID_MODE_CFG_SPEC> {
+    pub fn vpg_en(&mut self) -> VPG_EN_W<'_, VID_MODE_CFG_SPEC> {
         VPG_EN_W::new(self, 16)
     }
     #[doc = "Bit 20 - NA"]
     #[inline(always)]
-    pub fn vpg_mode(&mut self) -> VPG_MODE_W<VID_MODE_CFG_SPEC> {
+    pub fn vpg_mode(&mut self) -> VPG_MODE_W<'_, VID_MODE_CFG_SPEC> {
         VPG_MODE_W::new(self, 20)
     }
     #[doc = "Bit 24 - NA"]
     #[inline(always)]
-    pub fn vpg_orientation(&mut self) -> VPG_ORIENTATION_W<VID_MODE_CFG_SPEC> {
+    pub fn vpg_orientation(&mut self) -> VPG_ORIENTATION_W<'_, VID_MODE_CFG_SPEC> {
         VPG_ORIENTATION_W::new(self, 24)
     }
 }

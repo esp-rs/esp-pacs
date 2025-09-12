@@ -292,144 +292,156 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable the LEDC_EVT_DUTY_CHNG_END_CH0 event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_duty_chng_end_ch0_en(&mut self) -> EVT_DUTY_CHNG_END_CH0_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_duty_chng_end_ch0_en(
+        &mut self,
+    ) -> EVT_DUTY_CHNG_END_CH0_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_DUTY_CHNG_END_CH0_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to enable the LEDC_EVT_DUTY_CHNG_END_CH1 event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_duty_chng_end_ch1_en(&mut self) -> EVT_DUTY_CHNG_END_CH1_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_duty_chng_end_ch1_en(
+        &mut self,
+    ) -> EVT_DUTY_CHNG_END_CH1_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_DUTY_CHNG_END_CH1_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to enable the LEDC_EVT_DUTY_CHNG_END_CH2 event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_duty_chng_end_ch2_en(&mut self) -> EVT_DUTY_CHNG_END_CH2_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_duty_chng_end_ch2_en(
+        &mut self,
+    ) -> EVT_DUTY_CHNG_END_CH2_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_DUTY_CHNG_END_CH2_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to enable the LEDC_EVT_DUTY_CHNG_END_CH3 event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_duty_chng_end_ch3_en(&mut self) -> EVT_DUTY_CHNG_END_CH3_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_duty_chng_end_ch3_en(
+        &mut self,
+    ) -> EVT_DUTY_CHNG_END_CH3_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_DUTY_CHNG_END_CH3_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to enable the LEDC_EVT_DUTY_CHNG_END_CH4 event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_duty_chng_end_ch4_en(&mut self) -> EVT_DUTY_CHNG_END_CH4_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_duty_chng_end_ch4_en(
+        &mut self,
+    ) -> EVT_DUTY_CHNG_END_CH4_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_DUTY_CHNG_END_CH4_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether or not to enable the LEDC_EVT_DUTY_CHNG_END_CH5 event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_duty_chng_end_ch5_en(&mut self) -> EVT_DUTY_CHNG_END_CH5_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_duty_chng_end_ch5_en(
+        &mut self,
+    ) -> EVT_DUTY_CHNG_END_CH5_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_DUTY_CHNG_END_CH5_EN_W::new(self, 5)
     }
     #[doc = "Bit 8 - Configures whether or not to enable the LEDC_EVT_OVF_CNT_PLS_CH0 event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_ovf_cnt_pls_ch0_en(&mut self) -> EVT_OVF_CNT_PLS_CH0_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_ovf_cnt_pls_ch0_en(&mut self) -> EVT_OVF_CNT_PLS_CH0_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_OVF_CNT_PLS_CH0_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures whether or not to enable the LEDC_EVT_OVF_CNT_PLS_CH1 event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_ovf_cnt_pls_ch1_en(&mut self) -> EVT_OVF_CNT_PLS_CH1_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_ovf_cnt_pls_ch1_en(&mut self) -> EVT_OVF_CNT_PLS_CH1_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_OVF_CNT_PLS_CH1_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures whether or not to enable the LEDC_EVT_OVF_CNT_PLS_CH2 event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_ovf_cnt_pls_ch2_en(&mut self) -> EVT_OVF_CNT_PLS_CH2_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_ovf_cnt_pls_ch2_en(&mut self) -> EVT_OVF_CNT_PLS_CH2_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_OVF_CNT_PLS_CH2_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures whether or not to enable the LEDC_EVT_OVF_CNT_PLS_CH3 event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_ovf_cnt_pls_ch3_en(&mut self) -> EVT_OVF_CNT_PLS_CH3_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_ovf_cnt_pls_ch3_en(&mut self) -> EVT_OVF_CNT_PLS_CH3_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_OVF_CNT_PLS_CH3_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Configures whether or not to enable the LEDC_EVT_OVF_CNT_PLS_CH4 event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_ovf_cnt_pls_ch4_en(&mut self) -> EVT_OVF_CNT_PLS_CH4_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_ovf_cnt_pls_ch4_en(&mut self) -> EVT_OVF_CNT_PLS_CH4_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_OVF_CNT_PLS_CH4_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures whether or not to enable the LEDC_EVT_OVF_CNT_PLS_CH5 event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_ovf_cnt_pls_ch5_en(&mut self) -> EVT_OVF_CNT_PLS_CH5_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_ovf_cnt_pls_ch5_en(&mut self) -> EVT_OVF_CNT_PLS_CH5_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_OVF_CNT_PLS_CH5_EN_W::new(self, 13)
     }
     #[doc = "Bit 16 - Configures whether or not to enable the LEDC_EVT_TIME_OVF_TIMER0 event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_time_ovf_timer0_en(&mut self) -> EVT_TIME_OVF_TIMER0_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_time_ovf_timer0_en(&mut self) -> EVT_TIME_OVF_TIMER0_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_TIME_OVF_TIMER0_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Configures whether or not to enable the LEDC_EVT_TIME_OVF_TIMER1 event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_time_ovf_timer1_en(&mut self) -> EVT_TIME_OVF_TIMER1_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_time_ovf_timer1_en(&mut self) -> EVT_TIME_OVF_TIMER1_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_TIME_OVF_TIMER1_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Configures whether or not to enable the LEDC_EVT_TIME_OVF_TIMER2 event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_time_ovf_timer2_en(&mut self) -> EVT_TIME_OVF_TIMER2_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_time_ovf_timer2_en(&mut self) -> EVT_TIME_OVF_TIMER2_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_TIME_OVF_TIMER2_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Configures whether or not to enable the LEDC_EVT_TIME_OVF_TIMER3 event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_time_ovf_timer3_en(&mut self) -> EVT_TIME_OVF_TIMER3_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_time_ovf_timer3_en(&mut self) -> EVT_TIME_OVF_TIMER3_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_TIME_OVF_TIMER3_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Configures whether or not to enable the LEDC_EVT_TIMER0_CMP event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_time0_cmp_en(&mut self) -> EVT_TIME0_CMP_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_time0_cmp_en(&mut self) -> EVT_TIME0_CMP_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_TIME0_CMP_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Configures whether or not to enable the LEDC_EVT_TIMER1_CMP event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_time1_cmp_en(&mut self) -> EVT_TIME1_CMP_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_time1_cmp_en(&mut self) -> EVT_TIME1_CMP_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_TIME1_CMP_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - Configures whether or not to enable the LEDC_EVT_TIMER2_CMP event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_time2_cmp_en(&mut self) -> EVT_TIME2_CMP_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_time2_cmp_en(&mut self) -> EVT_TIME2_CMP_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_TIME2_CMP_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Configures whether or not to enable the LEDC_EVT_TIMER3_CMP event.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn evt_time3_cmp_en(&mut self) -> EVT_TIME3_CMP_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_time3_cmp_en(&mut self) -> EVT_TIME3_CMP_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_TIME3_CMP_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - Configures whether or not to enable the LEDC_TASK_DUTY_SCALE_UPDATE_CH0 task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     pub fn task_duty_scale_update_ch0_en(
         &mut self,
-    ) -> TASK_DUTY_SCALE_UPDATE_CH0_EN_W<EVT_TASK_EN0_SPEC> {
+    ) -> TASK_DUTY_SCALE_UPDATE_CH0_EN_W<'_, EVT_TASK_EN0_SPEC> {
         TASK_DUTY_SCALE_UPDATE_CH0_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Configures whether or not to enable the LEDC_TASK_DUTY_SCALE_UPDATE_CH1 task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     pub fn task_duty_scale_update_ch1_en(
         &mut self,
-    ) -> TASK_DUTY_SCALE_UPDATE_CH1_EN_W<EVT_TASK_EN0_SPEC> {
+    ) -> TASK_DUTY_SCALE_UPDATE_CH1_EN_W<'_, EVT_TASK_EN0_SPEC> {
         TASK_DUTY_SCALE_UPDATE_CH1_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Configures whether or not to enable the LEDC_TASK_DUTY_SCALE_UPDATE_CH2 task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     pub fn task_duty_scale_update_ch2_en(
         &mut self,
-    ) -> TASK_DUTY_SCALE_UPDATE_CH2_EN_W<EVT_TASK_EN0_SPEC> {
+    ) -> TASK_DUTY_SCALE_UPDATE_CH2_EN_W<'_, EVT_TASK_EN0_SPEC> {
         TASK_DUTY_SCALE_UPDATE_CH2_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - Configures whether or not to enable the LEDC_TASK_DUTY_SCALE_UPDATE_CH3 task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     pub fn task_duty_scale_update_ch3_en(
         &mut self,
-    ) -> TASK_DUTY_SCALE_UPDATE_CH3_EN_W<EVT_TASK_EN0_SPEC> {
+    ) -> TASK_DUTY_SCALE_UPDATE_CH3_EN_W<'_, EVT_TASK_EN0_SPEC> {
         TASK_DUTY_SCALE_UPDATE_CH3_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Configures whether or not to enable the LEDC_TASK_DUTY_SCALE_UPDATE_CH4 task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     pub fn task_duty_scale_update_ch4_en(
         &mut self,
-    ) -> TASK_DUTY_SCALE_UPDATE_CH4_EN_W<EVT_TASK_EN0_SPEC> {
+    ) -> TASK_DUTY_SCALE_UPDATE_CH4_EN_W<'_, EVT_TASK_EN0_SPEC> {
         TASK_DUTY_SCALE_UPDATE_CH4_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - Configures whether or not to enable the LEDC_TASK_DUTY_SCALE_UPDATE_CH5 task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
     pub fn task_duty_scale_update_ch5_en(
         &mut self,
-    ) -> TASK_DUTY_SCALE_UPDATE_CH5_EN_W<EVT_TASK_EN0_SPEC> {
+    ) -> TASK_DUTY_SCALE_UPDATE_CH5_EN_W<'_, EVT_TASK_EN0_SPEC> {
         TASK_DUTY_SCALE_UPDATE_CH5_EN_W::new(self, 29)
     }
 }

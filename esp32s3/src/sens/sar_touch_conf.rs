@@ -82,32 +82,38 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:14 - touch controller output enable"]
     #[inline(always)]
-    pub fn sar_touch_outen(&mut self) -> SAR_TOUCH_OUTEN_W<SAR_TOUCH_CONF_SPEC> {
+    pub fn sar_touch_outen(&mut self) -> SAR_TOUCH_OUTEN_W<'_, SAR_TOUCH_CONF_SPEC> {
         SAR_TOUCH_OUTEN_W::new(self, 0)
     }
     #[doc = "Bit 15 - clear all touch active status"]
     #[inline(always)]
-    pub fn sar_touch_status_clr(&mut self) -> SAR_TOUCH_STATUS_CLR_W<SAR_TOUCH_CONF_SPEC> {
+    pub fn sar_touch_status_clr(&mut self) -> SAR_TOUCH_STATUS_CLR_W<'_, SAR_TOUCH_CONF_SPEC> {
         SAR_TOUCH_STATUS_CLR_W::new(self, 15)
     }
     #[doc = "Bits 16:17 - 3: smooth data 2: baseline 1,0: raw_data"]
     #[inline(always)]
-    pub fn sar_touch_data_sel(&mut self) -> SAR_TOUCH_DATA_SEL_W<SAR_TOUCH_CONF_SPEC> {
+    pub fn sar_touch_data_sel(&mut self) -> SAR_TOUCH_DATA_SEL_W<'_, SAR_TOUCH_CONF_SPEC> {
         SAR_TOUCH_DATA_SEL_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - indicate which pad is approach pad2"]
     #[inline(always)]
-    pub fn sar_touch_approach_pad2(&mut self) -> SAR_TOUCH_APPROACH_PAD2_W<SAR_TOUCH_CONF_SPEC> {
+    pub fn sar_touch_approach_pad2(
+        &mut self,
+    ) -> SAR_TOUCH_APPROACH_PAD2_W<'_, SAR_TOUCH_CONF_SPEC> {
         SAR_TOUCH_APPROACH_PAD2_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - indicate which pad is approach pad1"]
     #[inline(always)]
-    pub fn sar_touch_approach_pad1(&mut self) -> SAR_TOUCH_APPROACH_PAD1_W<SAR_TOUCH_CONF_SPEC> {
+    pub fn sar_touch_approach_pad1(
+        &mut self,
+    ) -> SAR_TOUCH_APPROACH_PAD1_W<'_, SAR_TOUCH_CONF_SPEC> {
         SAR_TOUCH_APPROACH_PAD1_W::new(self, 24)
     }
     #[doc = "Bits 28:31 - indicate which pad is approach pad0"]
     #[inline(always)]
-    pub fn sar_touch_approach_pad0(&mut self) -> SAR_TOUCH_APPROACH_PAD0_W<SAR_TOUCH_CONF_SPEC> {
+    pub fn sar_touch_approach_pad0(
+        &mut self,
+    ) -> SAR_TOUCH_APPROACH_PAD0_W<'_, SAR_TOUCH_CONF_SPEC> {
         SAR_TOUCH_APPROACH_PAD0_W::new(self, 28)
     }
 }

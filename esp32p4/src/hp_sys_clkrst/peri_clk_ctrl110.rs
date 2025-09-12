@@ -64,27 +64,29 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    pub fn lcd_clk_div_num(&mut self) -> LCD_CLK_DIV_NUM_W<PERI_CLK_CTRL110_SPEC> {
+    pub fn lcd_clk_div_num(&mut self) -> LCD_CLK_DIV_NUM_W<'_, PERI_CLK_CTRL110_SPEC> {
         LCD_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    pub fn lcd_clk_div_numerator(&mut self) -> LCD_CLK_DIV_NUMERATOR_W<PERI_CLK_CTRL110_SPEC> {
+    pub fn lcd_clk_div_numerator(&mut self) -> LCD_CLK_DIV_NUMERATOR_W<'_, PERI_CLK_CTRL110_SPEC> {
         LCD_CLK_DIV_NUMERATOR_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
-    pub fn lcd_clk_div_denominator(&mut self) -> LCD_CLK_DIV_DENOMINATOR_W<PERI_CLK_CTRL110_SPEC> {
+    pub fn lcd_clk_div_denominator(
+        &mut self,
+    ) -> LCD_CLK_DIV_DENOMINATOR_W<'_, PERI_CLK_CTRL110_SPEC> {
         LCD_CLK_DIV_DENOMINATOR_W::new(self, 16)
     }
     #[doc = "Bits 24:25 - Reserved"]
     #[inline(always)]
-    pub fn uart0_clk_src_sel(&mut self) -> UART0_CLK_SRC_SEL_W<PERI_CLK_CTRL110_SPEC> {
+    pub fn uart0_clk_src_sel(&mut self) -> UART0_CLK_SRC_SEL_W<'_, PERI_CLK_CTRL110_SPEC> {
         UART0_CLK_SRC_SEL_W::new(self, 24)
     }
     #[doc = "Bit 26 - Reserved"]
     #[inline(always)]
-    pub fn uart0_clk_en(&mut self) -> UART0_CLK_EN_W<PERI_CLK_CTRL110_SPEC> {
+    pub fn uart0_clk_en(&mut self) -> UART0_CLK_EN_W<'_, PERI_CLK_CTRL110_SPEC> {
         UART0_CLK_EN_W::new(self, 26)
     }
 }

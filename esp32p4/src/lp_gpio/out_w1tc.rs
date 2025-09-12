@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<OUT_W1TC_SPEC> {
 impl W {
     #[doc = "Bits 0:15 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpio_out_data_w1tc(&mut self) -> REG_GPIO_OUT_DATA_W1TC_W<OUT_W1TC_SPEC> {
+    pub fn reg_gpio_out_data_w1tc(&mut self) -> REG_GPIO_OUT_DATA_W1TC_W<'_, OUT_W1TC_SPEC> {
         REG_GPIO_OUT_DATA_W1TC_W::new(self, 0)
     }
 }

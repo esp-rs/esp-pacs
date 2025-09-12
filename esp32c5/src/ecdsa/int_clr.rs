@@ -17,22 +17,22 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the ecdsa_prep_done_int interrupt"]
     #[inline(always)]
-    pub fn prep_done(&mut self) -> PREP_DONE_W<INT_CLR_SPEC> {
+    pub fn prep_done(&mut self) -> PREP_DONE_W<'_, INT_CLR_SPEC> {
         PREP_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to clear the ecdsa_proc_done_int interrupt"]
     #[inline(always)]
-    pub fn proc_done(&mut self) -> PROC_DONE_W<INT_CLR_SPEC> {
+    pub fn proc_done(&mut self) -> PROC_DONE_W<'_, INT_CLR_SPEC> {
         PROC_DONE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to clear the ecdsa_post_done_int interrupt"]
     #[inline(always)]
-    pub fn post_done(&mut self) -> POST_DONE_W<INT_CLR_SPEC> {
+    pub fn post_done(&mut self) -> POST_DONE_W<'_, INT_CLR_SPEC> {
         POST_DONE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to clear the ecdsa_sha_release_int interrupt"]
     #[inline(always)]
-    pub fn sha_release(&mut self) -> SHA_RELEASE_W<INT_CLR_SPEC> {
+    pub fn sha_release(&mut self) -> SHA_RELEASE_W<'_, INT_CLR_SPEC> {
         SHA_RELEASE_W::new(self, 3)
     }
 }

@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn reg_l2_mem_clk_force_on(
         &mut self,
-    ) -> REG_L2_MEM_CLK_FORCE_ON_W<L2_MEM_RAM_PWR_CTRL0_SPEC> {
+    ) -> REG_L2_MEM_CLK_FORCE_ON_W<'_, L2_MEM_RAM_PWR_CTRL0_SPEC> {
         REG_L2_MEM_CLK_FORCE_ON_W::new(self, 0)
     }
 }

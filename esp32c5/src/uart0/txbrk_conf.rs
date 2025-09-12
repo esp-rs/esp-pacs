@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures the number of NULL characters to be sent after finishing data transmission.\\\\Valid only when UART_TXD_BRK is 1."]
     #[inline(always)]
-    pub fn tx_brk_num(&mut self) -> TX_BRK_NUM_W<TXBRK_CONF_SPEC> {
+    pub fn tx_brk_num(&mut self) -> TX_BRK_NUM_W<'_, TXBRK_CONF_SPEC> {
         TX_BRK_NUM_W::new(self, 0)
     }
 }

@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn dbus_to_flash_end_vaddr(
         &mut self,
-    ) -> DBUS_TO_FLASH_END_VADDR_W<DBUS_TO_FLASH_END_VADDR_SPEC> {
+    ) -> DBUS_TO_FLASH_END_VADDR_W<'_, DBUS_TO_FLASH_END_VADDR_SPEC> {
         DBUS_TO_FLASH_END_VADDR_W::new(self, 0)
     }
 }

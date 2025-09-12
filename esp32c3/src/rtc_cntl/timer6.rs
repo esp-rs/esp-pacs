@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:24 - digital peri power domain wakeup time"]
     #[inline(always)]
-    pub fn dg_peri_wait_timer(&mut self) -> DG_PERI_WAIT_TIMER_W<TIMER6_SPEC> {
+    pub fn dg_peri_wait_timer(&mut self) -> DG_PERI_WAIT_TIMER_W<'_, TIMER6_SPEC> {
         DG_PERI_WAIT_TIMER_W::new(self, 16)
     }
     #[doc = "Bits 25:31 - digital peri power domain power on time"]
     #[inline(always)]
-    pub fn dg_peri_powerup_timer(&mut self) -> DG_PERI_POWERUP_TIMER_W<TIMER6_SPEC> {
+    pub fn dg_peri_powerup_timer(&mut self) -> DG_PERI_POWERUP_TIMER_W<'_, TIMER6_SPEC> {
         DG_PERI_POWERUP_TIMER_W::new(self, 25)
     }
 }

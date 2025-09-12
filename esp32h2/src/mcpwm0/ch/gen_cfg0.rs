@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Update method for PWM generator 0's active register of configuration. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1:TEP,when bit2 is set to 1:sync,when bit3 is set to 1:disable the update"]
     #[inline(always)]
-    pub fn cfg_upmethod(&mut self) -> CFG_UPMETHOD_W<GEN_CFG0_SPEC> {
+    pub fn cfg_upmethod(&mut self) -> CFG_UPMETHOD_W<'_, GEN_CFG0_SPEC> {
         CFG_UPMETHOD_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Source selection for PWM generator 0 event_t0, take effect immediately, 0: fault_event0, 1: fault_event1, 2: fault_event2, 3: sync_taken, 4: none"]
     #[inline(always)]
-    pub fn t0_sel(&mut self) -> T0_SEL_W<GEN_CFG0_SPEC> {
+    pub fn t0_sel(&mut self) -> T0_SEL_W<'_, GEN_CFG0_SPEC> {
         T0_SEL_W::new(self, 4)
     }
     #[doc = "Bits 7:9 - Source selection for PWM generator 0 event_t1, take effect immediately, 0: fault_event0, 1: fault_event1, 2: fault_event2, 3: sync_taken, 4: none"]
     #[inline(always)]
-    pub fn t1_sel(&mut self) -> T1_SEL_W<GEN_CFG0_SPEC> {
+    pub fn t1_sel(&mut self) -> T1_SEL_W<'_, GEN_CFG0_SPEC> {
         T1_SEL_W::new(self, 7)
     }
 }

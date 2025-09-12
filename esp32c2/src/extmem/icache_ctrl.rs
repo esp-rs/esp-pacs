@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn icache_enable(&mut self) -> ICACHE_ENABLE_W<ICACHE_CTRL_SPEC> {
+    pub fn icache_enable(&mut self) -> ICACHE_ENABLE_W<'_, ICACHE_CTRL_SPEC> {
         ICACHE_ENABLE_W::new(self, 0)
     }
 }

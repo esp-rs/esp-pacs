@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - this field configures the total length of one frame (by line) for dpi output, must meet: reg_vtotal > reg_vdisp+reg_vsync+reg_vbank"]
     #[inline(always)]
-    pub fn vtotal(&mut self) -> VTOTAL_W<DPI_V_CFG0_SPEC> {
+    pub fn vtotal(&mut self) -> VTOTAL_W<'_, DPI_V_CFG0_SPEC> {
         VTOTAL_W::new(self, 0)
     }
     #[doc = "Bits 16:27 - this field configures the length of valid line (by line) for dpi output"]
     #[inline(always)]
-    pub fn vdisp(&mut self) -> VDISP_W<DPI_V_CFG0_SPEC> {
+    pub fn vdisp(&mut self) -> VDISP_W<'_, DPI_V_CFG0_SPEC> {
         VDISP_W::new(self, 16)
     }
 }

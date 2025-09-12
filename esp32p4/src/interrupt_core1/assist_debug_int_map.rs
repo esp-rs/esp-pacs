@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core1_assist_debug_int_map(
         &mut self,
-    ) -> CORE1_ASSIST_DEBUG_INT_MAP_W<ASSIST_DEBUG_INT_MAP_SPEC> {
+    ) -> CORE1_ASSIST_DEBUG_INT_MAP_W<'_, ASSIST_DEBUG_INT_MAP_SPEC> {
         CORE1_ASSIST_DEBUG_INT_MAP_W::new(self, 0)
     }
 }

@@ -56,27 +56,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 27 - Triggers timer by software"]
     #[inline(always)]
-    pub fn main_timer_update(&mut self) -> MAIN_TIMER_UPDATE_W<UPDATE_SPEC> {
+    pub fn main_timer_update(&mut self) -> MAIN_TIMER_UPDATE_W<'_, UPDATE_SPEC> {
         MAIN_TIMER_UPDATE_W::new(self, 27)
     }
     #[doc = "Bit 28 - Selects the triggering condition for the RTC timer,triggered when regdma working"]
     #[inline(always)]
-    pub fn main_timer_regdma_work(&mut self) -> MAIN_TIMER_REGDMA_WORK_W<UPDATE_SPEC> {
+    pub fn main_timer_regdma_work(&mut self) -> MAIN_TIMER_REGDMA_WORK_W<'_, UPDATE_SPEC> {
         MAIN_TIMER_REGDMA_WORK_W::new(self, 28)
     }
     #[doc = "Bit 29 - Selects the triggering condition for the RTC timer,triggered when XTAL\\_CLK powers up"]
     #[inline(always)]
-    pub fn main_timer_xtal_off(&mut self) -> MAIN_TIMER_XTAL_OFF_W<UPDATE_SPEC> {
+    pub fn main_timer_xtal_off(&mut self) -> MAIN_TIMER_XTAL_OFF_W<'_, UPDATE_SPEC> {
         MAIN_TIMER_XTAL_OFF_W::new(self, 29)
     }
     #[doc = "Bit 30 - Selects the triggering condition for the RTC timer,triggered when CPU enters or exits the stall state."]
     #[inline(always)]
-    pub fn main_timer_sys_stall(&mut self) -> MAIN_TIMER_SYS_STALL_W<UPDATE_SPEC> {
+    pub fn main_timer_sys_stall(&mut self) -> MAIN_TIMER_SYS_STALL_W<'_, UPDATE_SPEC> {
         MAIN_TIMER_SYS_STALL_W::new(self, 30)
     }
     #[doc = "Bit 31 - Selects the triggering condition for the RTC timer,triggered when resetting digital core completes"]
     #[inline(always)]
-    pub fn main_timer_sys_rst(&mut self) -> MAIN_TIMER_SYS_RST_W<UPDATE_SPEC> {
+    pub fn main_timer_sys_rst(&mut self) -> MAIN_TIMER_SYS_RST_W<'_, UPDATE_SPEC> {
         MAIN_TIMER_SYS_RST_W::new(self, 31)
     }
 }

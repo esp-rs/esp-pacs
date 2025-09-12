@@ -62,22 +62,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19"]
     #[inline(always)]
-    pub fn slc1_txlink_addr(&mut self) -> SLC1_TXLINK_ADDR_W<_1TX_LINK_SPEC> {
+    pub fn slc1_txlink_addr(&mut self) -> SLC1_TXLINK_ADDR_W<'_, _1TX_LINK_SPEC> {
         SLC1_TXLINK_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn slc1_txlink_stop(&mut self) -> SLC1_TXLINK_STOP_W<_1TX_LINK_SPEC> {
+    pub fn slc1_txlink_stop(&mut self) -> SLC1_TXLINK_STOP_W<'_, _1TX_LINK_SPEC> {
         SLC1_TXLINK_STOP_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    pub fn slc1_txlink_start(&mut self) -> SLC1_TXLINK_START_W<_1TX_LINK_SPEC> {
+    pub fn slc1_txlink_start(&mut self) -> SLC1_TXLINK_START_W<'_, _1TX_LINK_SPEC> {
         SLC1_TXLINK_START_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn slc1_txlink_restart(&mut self) -> SLC1_TXLINK_RESTART_W<_1TX_LINK_SPEC> {
+    pub fn slc1_txlink_restart(&mut self) -> SLC1_TXLINK_RESTART_W<'_, _1TX_LINK_SPEC> {
         SLC1_TXLINK_RESTART_W::new(self, 30)
     }
 }

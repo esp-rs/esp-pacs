@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This is the interrupt enable bit for IN_DONE interrupt."]
     #[inline(always)]
-    pub fn in_done(&mut self) -> IN_DONE_W<INT_ENA_SPEC> {
+    pub fn in_done(&mut self) -> IN_DONE_W<'_, INT_ENA_SPEC> {
         IN_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - This is the interrupt enable bit for IN_SUC_EOF interrupt."]
     #[inline(always)]
-    pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<INT_ENA_SPEC> {
+    pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<'_, INT_ENA_SPEC> {
         IN_SUC_EOF_W::new(self, 1)
     }
     #[doc = "Bit 2 - This is the interrupt enable bit for OUT_DONE interrupt."]
     #[inline(always)]
-    pub fn out_done(&mut self) -> OUT_DONE_W<INT_ENA_SPEC> {
+    pub fn out_done(&mut self) -> OUT_DONE_W<'_, INT_ENA_SPEC> {
         OUT_DONE_W::new(self, 2)
     }
     #[doc = "Bit 3 - This is the interrupt enable bit for OUT_EOF interrupt."]
     #[inline(always)]
-    pub fn out_eof(&mut self) -> OUT_EOF_W<INT_ENA_SPEC> {
+    pub fn out_eof(&mut self) -> OUT_EOF_W<'_, INT_ENA_SPEC> {
         OUT_EOF_W::new(self, 3)
     }
     #[doc = "Bit 4 - This is the interrupt enable bit for IN_DSCR_ERR interrupt."]
     #[inline(always)]
-    pub fn in_dscr_err(&mut self) -> IN_DSCR_ERR_W<INT_ENA_SPEC> {
+    pub fn in_dscr_err(&mut self) -> IN_DSCR_ERR_W<'_, INT_ENA_SPEC> {
         IN_DSCR_ERR_W::new(self, 4)
     }
     #[doc = "Bit 5 - This is the interrupt enable bit for OUT_DSCR_ERR interrupt."]
     #[inline(always)]
-    pub fn out_dscr_err(&mut self) -> OUT_DSCR_ERR_W<INT_ENA_SPEC> {
+    pub fn out_dscr_err(&mut self) -> OUT_DSCR_ERR_W<'_, INT_ENA_SPEC> {
         OUT_DSCR_ERR_W::new(self, 5)
     }
     #[doc = "Bit 6 - This is the interrupt enable bit for IN_DSCR_EMPTY interrupt."]
     #[inline(always)]
-    pub fn in_dscr_empty(&mut self) -> IN_DSCR_EMPTY_W<INT_ENA_SPEC> {
+    pub fn in_dscr_empty(&mut self) -> IN_DSCR_EMPTY_W<'_, INT_ENA_SPEC> {
         IN_DSCR_EMPTY_W::new(self, 6)
     }
     #[doc = "Bit 7 - This is the interrupt enable bit for OUT_TOTAL_EOF interrupt."]
     #[inline(always)]
-    pub fn out_total_eof(&mut self) -> OUT_TOTAL_EOF_W<INT_ENA_SPEC> {
+    pub fn out_total_eof(&mut self) -> OUT_TOTAL_EOF_W<'_, INT_ENA_SPEC> {
         OUT_TOTAL_EOF_W::new(self, 7)
     }
 }

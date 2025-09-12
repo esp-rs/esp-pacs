@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core_1_vecbase_world_mask(
         &mut self,
-    ) -> CORE_1_VECBASE_WORLD_MASK_W<CORE_1_VECBASE_OVERRIDE_0_SPEC> {
+    ) -> CORE_1_VECBASE_WORLD_MASK_W<'_, CORE_1_VECBASE_OVERRIDE_0_SPEC> {
         CORE_1_VECBASE_WORLD_MASK_W::new(self, 0)
     }
 }

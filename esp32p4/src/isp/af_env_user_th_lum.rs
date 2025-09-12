@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn af_env_user_threshold_lum(
         &mut self,
-    ) -> AF_ENV_USER_THRESHOLD_LUM_W<AF_ENV_USER_TH_LUM_SPEC> {
+    ) -> AF_ENV_USER_THRESHOLD_LUM_W<'_, AF_ENV_USER_TH_LUM_SPEC> {
         AF_ENV_USER_THRESHOLD_LUM_W::new(self, 0)
     }
 }

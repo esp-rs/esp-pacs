@@ -72,27 +72,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 11 - 1: TOUCH_START & TOUCH_XPD is controlled by touch fsm 0: TOUCH_START & TOUCH_XPD is controlled by registers"]
     #[inline(always)]
-    pub fn touch_start_fsm_en(&mut self) -> TOUCH_START_FSM_EN_W<SAR_TOUCH_CTRL2_SPEC> {
+    pub fn touch_start_fsm_en(&mut self) -> TOUCH_START_FSM_EN_W<'_, SAR_TOUCH_CTRL2_SPEC> {
         TOUCH_START_FSM_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - 1: start touch fsm valid when reg_touch_start_force is set"]
     #[inline(always)]
-    pub fn touch_start_en(&mut self) -> TOUCH_START_EN_W<SAR_TOUCH_CTRL2_SPEC> {
+    pub fn touch_start_en(&mut self) -> TOUCH_START_EN_W<'_, SAR_TOUCH_CTRL2_SPEC> {
         TOUCH_START_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - 1: to start touch fsm by SW 0: to start touch fsm by timer"]
     #[inline(always)]
-    pub fn touch_start_force(&mut self) -> TOUCH_START_FORCE_W<SAR_TOUCH_CTRL2_SPEC> {
+    pub fn touch_start_force(&mut self) -> TOUCH_START_FORCE_W<'_, SAR_TOUCH_CTRL2_SPEC> {
         TOUCH_START_FORCE_W::new(self, 13)
     }
     #[doc = "Bits 14:29 - sleep cycles for timer"]
     #[inline(always)]
-    pub fn touch_sleep_cycles(&mut self) -> TOUCH_SLEEP_CYCLES_W<SAR_TOUCH_CTRL2_SPEC> {
+    pub fn touch_sleep_cycles(&mut self) -> TOUCH_SLEEP_CYCLES_W<'_, SAR_TOUCH_CTRL2_SPEC> {
         TOUCH_SLEEP_CYCLES_W::new(self, 14)
     }
     #[doc = "Bit 30 - to clear reg_touch_meas_en"]
     #[inline(always)]
-    pub fn touch_meas_en_clr(&mut self) -> TOUCH_MEAS_EN_CLR_W<SAR_TOUCH_CTRL2_SPEC> {
+    pub fn touch_meas_en_clr(&mut self) -> TOUCH_MEAS_EN_CLR_W<'_, SAR_TOUCH_CTRL2_SPEC> {
         TOUCH_MEAS_EN_CLR_W::new(self, 30)
     }
 }

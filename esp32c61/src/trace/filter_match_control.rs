@@ -46,17 +46,19 @@ impl W {
     #[inline(always)]
     pub fn match_choice_privilege(
         &mut self,
-    ) -> MATCH_CHOICE_PRIVILEGE_W<FILTER_MATCH_CONTROL_SPEC> {
+    ) -> MATCH_CHOICE_PRIVILEGE_W<'_, FILTER_MATCH_CONTROL_SPEC> {
         MATCH_CHOICE_PRIVILEGE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures the interrupt level for match. Valid only when when \\hyperref\\[fielddesc:TRACEMATCHINTERRUPT\\]{TRACE_MATCH_INTERRUP} is set. \\\\0: itype=2. \\\\0: itype=2."]
     #[inline(always)]
-    pub fn match_value_interrupt(&mut self) -> MATCH_VALUE_INTERRUPT_W<FILTER_MATCH_CONTROL_SPEC> {
+    pub fn match_value_interrupt(
+        &mut self,
+    ) -> MATCH_VALUE_INTERRUPT_W<'_, FILTER_MATCH_CONTROL_SPEC> {
         MATCH_VALUE_INTERRUPT_W::new(self, 1)
     }
     #[doc = "Bits 2:7 - Configures the ecause code for matching."]
     #[inline(always)]
-    pub fn match_choice_ecause(&mut self) -> MATCH_CHOICE_ECAUSE_W<FILTER_MATCH_CONTROL_SPEC> {
+    pub fn match_choice_ecause(&mut self) -> MATCH_CHOICE_ECAUSE_W<'_, FILTER_MATCH_CONTROL_SPEC> {
         MATCH_CHOICE_ECAUSE_W::new(self, 2)
     }
 }

@@ -54,26 +54,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - The bit is used to enable the interrupt by icache pre-load done."]
     #[inline(always)]
-    pub fn ena(&mut self) -> ENA_W<CACHE_PRELOAD_INT_CTRL_SPEC> {
+    pub fn ena(&mut self) -> ENA_W<'_, CACHE_PRELOAD_INT_CTRL_SPEC> {
         ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to clear the interrupt by icache pre-load done."]
     #[inline(always)]
-    pub fn clr(&mut self) -> CLR_W<CACHE_PRELOAD_INT_CTRL_SPEC> {
+    pub fn clr(&mut self) -> CLR_W<'_, CACHE_PRELOAD_INT_CTRL_SPEC> {
         CLR_W::new(self, 2)
     }
     #[doc = "Bit 4 - The bit is used to enable the interrupt by dcache pre-load done."]
     #[inline(always)]
     pub fn dcache_preload_int_ena(
         &mut self,
-    ) -> DCACHE_PRELOAD_INT_ENA_W<CACHE_PRELOAD_INT_CTRL_SPEC> {
+    ) -> DCACHE_PRELOAD_INT_ENA_W<'_, CACHE_PRELOAD_INT_CTRL_SPEC> {
         DCACHE_PRELOAD_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - The bit is used to clear the interrupt by dcache pre-load done."]
     #[inline(always)]
     pub fn dcache_preload_int_clr(
         &mut self,
-    ) -> DCACHE_PRELOAD_INT_CLR_W<CACHE_PRELOAD_INT_CTRL_SPEC> {
+    ) -> DCACHE_PRELOAD_INT_CLR_W<'_, CACHE_PRELOAD_INT_CTRL_SPEC> {
         DCACHE_PRELOAD_INT_CLR_W::new(self, 5)
     }
 }
