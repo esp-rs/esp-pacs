@@ -55,13 +55,13 @@ RMT:
       - "_CH0"
 
   SYS_CONF:
+    _delete:
+      - RMT_SCLK_DIV_NUM
+      - RMT_SCLK_DIV_A
+      - RMT_SCLK_DIV_B
+      - RMT_SCLK_SEL
+      - RMT_SCLK_ACTIVE
     _strip: RMT_
-    _delete: # TODO: doesn't work so far, I love svdtools <3
-      - SCLK_DIV_NUM
-      - SCLK_DIV_A
-      - SCLK_DIV_B
-      - SCLK_SEL
-      - SCLK_ACTIVE
 
   INT_RAW:
     _strip_end: "_INT_RAW"
