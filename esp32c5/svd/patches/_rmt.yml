@@ -47,6 +47,8 @@ RMT:
       - "_CH"
 
   "CH*_RX_LIM":
+    _strip:
+      - "RMT_"
     _strip_end:
       - "_CH2"
 
