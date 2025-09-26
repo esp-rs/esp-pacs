@@ -97,7 +97,7 @@ RMT:
       "CH?_RX_THR_EVENT":
         name: "CH%s_RX_THR_EVENT"
       "CH?_TX_LOOP":
-        name: "CH%s_X_LOOP"
+        name: "CH%s_TX_LOOP"
 
   INT_ENA:
     _strip_end: "_INT_ENA"
@@ -117,7 +117,7 @@ RMT:
       "CH?_RX_THR_EVENT":
         name: "CH%s_RX_THR_EVENT"
       "CH?_TX_LOOP":
-        name: "CH%s_X_LOOP"
+        name: "CH%s_TX_LOOP"
 
   INT_CLR:
     _strip_end: "_INT_CLR"
