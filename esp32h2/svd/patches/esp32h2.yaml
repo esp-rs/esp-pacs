@@ -1142,15 +1142,6 @@ TWAI0:
       RECEIVE_INT_ST:
         name: RX_INT_ST
 
-RMT:
-  SYS_CONF:
-    _delete:
-      - SCLK_DIV_NUM
-      - SCLK_DIV_A
-      - SCLK_DIV_B
-      - SCLK_SEL
-      - SCLK_ACTIVE
-
 RSA:
   INT_CLR:
     _modify:
