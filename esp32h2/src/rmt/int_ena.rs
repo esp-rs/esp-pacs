@@ -26,10 +26,10 @@ pub type CH_TX_THR_EVENT_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type CH_RX_THR_EVENT_R = crate::BitReader;
 #[doc = "Field `CH_RX_THR_EVENT(2-3)` writer - The interrupt enable bit for CH%s_RX_THR_EVENT_INT."]
 pub type CH_RX_THR_EVENT_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_X_LOOP(0-1)` reader - The interrupt enable bit for CH%s_TX_LOOP_INT."]
-pub type CH_X_LOOP_R = crate::BitReader;
-#[doc = "Field `CH_X_LOOP(0-1)` writer - The interrupt enable bit for CH%s_TX_LOOP_INT."]
-pub type CH_X_LOOP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH_TX_LOOP(0-1)` reader - The interrupt enable bit for CH%s_TX_LOOP_INT."]
+pub type CH_TX_LOOP_R = crate::BitReader;
+#[doc = "Field `CH_TX_LOOP(0-1)` writer - The interrupt enable bit for CH%s_TX_LOOP_INT."]
+pub type CH_TX_LOOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "The interrupt enable bit for CH(0-1)_TX_END_INT."]
     #[doc = ""]
@@ -183,28 +183,28 @@ impl R {
     }
     #[doc = "The interrupt enable bit for CH(0-1)_TX_LOOP_INT."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_X_LOOP` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field.</div>"]
     #[inline(always)]
-    pub fn ch_x_loop(&self, n: u8) -> CH_X_LOOP_R {
+    pub fn ch_tx_loop(&self, n: u8) -> CH_TX_LOOP_R {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
-        CH_X_LOOP_R::new(((self.bits >> (n + 12)) & 1) != 0)
+        CH_TX_LOOP_R::new(((self.bits >> (n + 12)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
     #[doc = "The interrupt enable bit for CH(0-1)_TX_LOOP_INT."]
     #[inline(always)]
-    pub fn ch_x_loop_iter(&self) -> impl Iterator<Item = CH_X_LOOP_R> + '_ {
-        (0..2).map(move |n| CH_X_LOOP_R::new(((self.bits >> (n + 12)) & 1) != 0))
+    pub fn ch_tx_loop_iter(&self) -> impl Iterator<Item = CH_TX_LOOP_R> + '_ {
+        (0..2).map(move |n| CH_TX_LOOP_R::new(((self.bits >> (n + 12)) & 1) != 0))
     }
     #[doc = "Bit 12 - The interrupt enable bit for CH0_TX_LOOP_INT."]
     #[inline(always)]
-    pub fn ch0_x_loop(&self) -> CH_X_LOOP_R {
-        CH_X_LOOP_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn ch0_tx_loop(&self) -> CH_TX_LOOP_R {
+        CH_TX_LOOP_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - The interrupt enable bit for CH1_TX_LOOP_INT."]
     #[inline(always)]
-    pub fn ch1_x_loop(&self) -> CH_X_LOOP_R {
-        CH_X_LOOP_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn ch1_tx_loop(&self) -> CH_TX_LOOP_R {
+        CH_TX_LOOP_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -223,8 +223,8 @@ impl core::fmt::Debug for R {
             .field("ch1_tx_thr_event", &self.ch1_tx_thr_event())
             .field("ch2_rx_thr_event", &self.ch2_rx_thr_event())
             .field("ch3_rx_thr_event", &self.ch3_rx_thr_event())
-            .field("ch0_x_loop", &self.ch0_x_loop())
-            .field("ch1_x_loop", &self.ch1_x_loop())
+            .field("ch0_tx_loop", &self.ch0_tx_loop())
+            .field("ch1_tx_loop", &self.ch1_tx_loop())
             .finish()
     }
 }
@@ -345,22 +345,22 @@ impl W {
     }
     #[doc = "The interrupt enable bit for CH(0-1)_TX_LOOP_INT."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_X_LOOP` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field.</div>"]
     #[inline(always)]
-    pub fn ch_x_loop(&mut self, n: u8) -> CH_X_LOOP_W<'_, INT_ENA_SPEC> {
+    pub fn ch_tx_loop(&mut self, n: u8) -> CH_TX_LOOP_W<'_, INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
-        CH_X_LOOP_W::new(self, n + 12)
+        CH_TX_LOOP_W::new(self, n + 12)
     }
     #[doc = "Bit 12 - The interrupt enable bit for CH0_TX_LOOP_INT."]
     #[inline(always)]
-    pub fn ch0_x_loop(&mut self) -> CH_X_LOOP_W<'_, INT_ENA_SPEC> {
-        CH_X_LOOP_W::new(self, 12)
+    pub fn ch0_tx_loop(&mut self) -> CH_TX_LOOP_W<'_, INT_ENA_SPEC> {
+        CH_TX_LOOP_W::new(self, 12)
     }
     #[doc = "Bit 13 - The interrupt enable bit for CH1_TX_LOOP_INT."]
     #[inline(always)]
-    pub fn ch1_x_loop(&mut self) -> CH_X_LOOP_W<'_, INT_ENA_SPEC> {
-        CH_X_LOOP_W::new(self, 13)
+    pub fn ch1_tx_loop(&mut self) -> CH_TX_LOOP_W<'_, INT_ENA_SPEC> {
+        CH_TX_LOOP_W::new(self, 13)
     }
 }
 #[doc = "Interrupt enable bits\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

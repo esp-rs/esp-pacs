@@ -1,6 +1,5 @@
 RMT:
   _delete: "RX_CH%sDATA"
-
   _modify:
     "TX_CH%sDATA":
       name: "CH%sDATA"
@@ -57,9 +56,14 @@ RMT:
     _strip_end:
       - "_CH0"
 
-  "SYS_CONF":
-    _delete: ["RMT_SCLK_DIV_NUM", "RMT_SCLK_DIV_A", "RMT_SCLK_DIV_B", "RMT_SCLK_SEL", "RMT_SCLK_ACTIVE"]
-    _strip: "RMT_"
+  SYS_CONF:
+    _delete:
+      - RMT_SCLK_DIV_NUM
+      - RMT_SCLK_DIV_A
+      - RMT_SCLK_DIV_B
+      - RMT_SCLK_SEL
+      - RMT_SCLK_ACTIVE
+    _strip: RMT_
 
   INT_RAW:
     _strip_end: "_INT_RAW"
@@ -70,10 +74,10 @@ RMT:
         name: "CH%s_RX_END"
       "TX_CH[01]_ERR":
         name: "CH%s_TX_ERR"
-        description: todo
+        description: TODO
       "TX_CH[23]_ERR":
         name: "CH%s_RX_ERR"
-        description: todo
+        description: TODO
       "CH?_TX_THR_EVENT":
         name: "CH%s_TX_THR_EVENT"
       "CH?_RX_THR_EVENT":
@@ -90,16 +94,16 @@ RMT:
         name: "CH%s_RX_END"
       "RX_CH[01]_ERR":
         name: "CH%s_TX_ERR"
-        description: todo
+        description: TODO
       "RX_CH[23]_ERR":
         name: "CH%s_RX_ERR"
-        description: todo
+        description: TODO
       "CH?_TX_THR_EVENT":
         name: "CH%s_TX_THR_EVENT"
       "CH?_RX_THR_EVENT":
         name: "CH%s_RX_THR_EVENT"
       "CH?_TX_LOOP":
-        name: "CH%s_TX_LOOP"
+        name: "CH%s_X_LOOP"
 
   INT_ENA:
     _strip_end: "_INT_ENA"
@@ -110,16 +114,16 @@ RMT:
         name: "CH%s_RX_END"
       "CH[01]_ERR":
         name: "CH%s_TX_ERR"
-        description: todo
+        description: TODO
       "CH[23]_ERR":
         name: "CH%s_RX_ERR"
-        description: todo
+        description: TODO
       "CH?_TX_THR_EVENT":
         name: "CH%s_TX_THR_EVENT"
       "CH?_RX_THR_EVENT":
         name: "CH%s_RX_THR_EVENT"
       "CH?_TX_LOOP":
-        name: "CH%s_TX_LOOP"
+        name: "CH%s_X_LOOP"
 
   INT_CLR:
     _strip_end: "_INT_CLR"
@@ -130,13 +134,14 @@ RMT:
         name: "CH%s_RX_END"
       "RX_CH[01]_ERR":
         name: "CH%s_TX_ERR"
-        description: todo
+        description: TODO
       "RX_CH[23]_ERR":
         name: "CH%s_RX_ERR"
-        description: todo
+        description: TODO
       "CH?_TX_THR_EVENT":
         name: "CH%s_TX_THR_EVENT"
       "CH?_RX_THR_EVENT":
         name: "CH%s_RX_THR_EVENT"
       "CH?_TX_LOOP":
         name: "CH%s_TX_LOOP"
+

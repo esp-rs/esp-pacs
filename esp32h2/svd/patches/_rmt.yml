@@ -48,6 +48,8 @@ RMT:
       - "_CH"
 
   "CH*_RX_LIM":
+    _strip:
+      - "RMT_"
     _strip_end:
       - "_CH2"
 
@@ -55,8 +57,13 @@ RMT:
     _strip_end:
       - "_CH0"
 
-  "SYS_CONF":
-    _delete: ["RMT_SCLK_DIV_NUM", "RMT_SCLK_DIV_A", "RMT_SCLK_DIV_B", "RMT_SCLK_SEL", "RMT_SCLK_ACTIVE"]
+  SYS_CONF:
+    _delete:
+      - RMT_SCLK_DIV_NUM,
+      - RMT_SCLK_DIV_A,
+      - RMT_SCLK_DIV_B,
+      - RMT_SCLK_SEL,
+      - RMT_SCLK_ACTIVE
     _strip: "RMT_"
 
   INT_RAW:
@@ -97,7 +104,7 @@ RMT:
       "CH?_RX_THR_EVENT":
         name: "CH%s_RX_THR_EVENT"
       "CH?_TX_LOOP":
-        name: "CH%s_X_LOOP"
+        name: "CH%s_TX_LOOP"
 
   INT_ENA:
     _strip_end: "_INT_ENA"
@@ -117,7 +124,7 @@ RMT:
       "CH?_RX_THR_EVENT":
         name: "CH%s_RX_THR_EVENT"
       "CH?_TX_LOOP":
-        name: "CH%s_X_LOOP"
+        name: "CH%s_TX_LOOP"
 
   INT_CLR:
     _strip_end: "_INT_CLR"
