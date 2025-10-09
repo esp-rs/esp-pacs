@@ -29,6 +29,13 @@ UNIT?_LOAD:
   _array:
     TARGET?: {}
 
+CONF:
+  _array:
+    TARGET?_WORK_EN: {}
+    TIMER_UNIT?_WORK_EN: {}
+    TIMER_UNIT?_CORE0_STALL_EN: {}
+    TIMER_UNIT?_CORE1_STALL_EN: {}
+
 _array:
   UNIT?_OP: {}
   TARGET?_CONF: {}

@@ -10,42 +10,22 @@ pub type SYSTIMER_CLK_FO_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type ETM_EN_R = crate::BitReader;
 #[doc = "Field `ETM_EN` writer - Configures whether or not to enable generation of ETM events.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
 pub type ETM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TARGET2_WORK_EN` reader - Configures whether or not to enable COMP2.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
-pub type TARGET2_WORK_EN_R = crate::BitReader;
-#[doc = "Field `TARGET2_WORK_EN` writer - Configures whether or not to enable COMP2.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
-pub type TARGET2_WORK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TARGET1_WORK_EN` reader - Configures whether or not to enable COMP1. See details in SYSTIMER_TARGET2_WORK_EN."]
-pub type TARGET1_WORK_EN_R = crate::BitReader;
-#[doc = "Field `TARGET1_WORK_EN` writer - Configures whether or not to enable COMP1. See details in SYSTIMER_TARGET2_WORK_EN."]
-pub type TARGET1_WORK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TARGET0_WORK_EN` reader - Configures whether or not to enable COMP0. See details in SYSTIMER_TARGET2_WORK_EN."]
-pub type TARGET0_WORK_EN_R = crate::BitReader;
-#[doc = "Field `TARGET0_WORK_EN` writer - Configures whether or not to enable COMP0. See details in SYSTIMER_TARGET2_WORK_EN."]
-pub type TARGET0_WORK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER_UNIT1_CORE1_STALL_EN` reader - Configures whether or not UNIT1 is stalled when CORE1 is stalled. \\\\ 0: UNIT1 is not stalled. \\\\ 1: UNIT1 is stalled.\\\\"]
-pub type TIMER_UNIT1_CORE1_STALL_EN_R = crate::BitReader;
-#[doc = "Field `TIMER_UNIT1_CORE1_STALL_EN` writer - Configures whether or not UNIT1 is stalled when CORE1 is stalled. \\\\ 0: UNIT1 is not stalled. \\\\ 1: UNIT1 is stalled.\\\\"]
-pub type TIMER_UNIT1_CORE1_STALL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER_UNIT1_CORE0_STALL_EN` reader - Configures whether or not UNIT1 is stalled when CORE0 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
-pub type TIMER_UNIT1_CORE0_STALL_EN_R = crate::BitReader;
-#[doc = "Field `TIMER_UNIT1_CORE0_STALL_EN` writer - Configures whether or not UNIT1 is stalled when CORE0 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
-pub type TIMER_UNIT1_CORE0_STALL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER_UNIT0_CORE1_STALL_EN` reader - Configures whether or not UNIT0 is stalled when CORE1 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
-pub type TIMER_UNIT0_CORE1_STALL_EN_R = crate::BitReader;
-#[doc = "Field `TIMER_UNIT0_CORE1_STALL_EN` writer - Configures whether or not UNIT0 is stalled when CORE1 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
-pub type TIMER_UNIT0_CORE1_STALL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER_UNIT0_CORE0_STALL_EN` reader - Configures whether or not UNIT0 is stalled when CORE0 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
-pub type TIMER_UNIT0_CORE0_STALL_EN_R = crate::BitReader;
-#[doc = "Field `TIMER_UNIT0_CORE0_STALL_EN` writer - Configures whether or not UNIT0 is stalled when CORE0 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
-pub type TIMER_UNIT0_CORE0_STALL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER_UNIT1_WORK_EN` reader - Configures whether or not to enable UNIT1. \\\\ 0: Disable\\\\ 1: Enable\\\\"]
-pub type TIMER_UNIT1_WORK_EN_R = crate::BitReader;
-#[doc = "Field `TIMER_UNIT1_WORK_EN` writer - Configures whether or not to enable UNIT1. \\\\ 0: Disable\\\\ 1: Enable\\\\"]
-pub type TIMER_UNIT1_WORK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER_UNIT0_WORK_EN` reader - Configures whether or not to enable UNIT0. \\\\ 0: Disable\\\\ 1: Enable\\\\"]
-pub type TIMER_UNIT0_WORK_EN_R = crate::BitReader;
-#[doc = "Field `TIMER_UNIT0_WORK_EN` writer - Configures whether or not to enable UNIT0. \\\\ 0: Disable\\\\ 1: Enable\\\\"]
-pub type TIMER_UNIT0_WORK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TARGET_WORK_EN(2,1,0)` reader - target%s work enable"]
+pub type TARGET_WORK_EN_R = crate::BitReader;
+#[doc = "Field `TARGET_WORK_EN(2,1,0)` writer - target%s work enable"]
+pub type TARGET_WORK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER_UNIT_CORE1_STALL_EN(1,0)` reader - If timer unit%s is stalled when core1 stalled"]
+pub type TIMER_UNIT_CORE1_STALL_EN_R = crate::BitReader;
+#[doc = "Field `TIMER_UNIT_CORE1_STALL_EN(1,0)` writer - If timer unit%s is stalled when core1 stalled"]
+pub type TIMER_UNIT_CORE1_STALL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER_UNIT_CORE0_STALL_EN(1,0)` reader - Configures whether or not UNIT%s is stalled when CORE0 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
+pub type TIMER_UNIT_CORE0_STALL_EN_R = crate::BitReader;
+#[doc = "Field `TIMER_UNIT_CORE0_STALL_EN(1,0)` writer - Configures whether or not UNIT%s is stalled when CORE0 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
+pub type TIMER_UNIT_CORE0_STALL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER_UNIT_WORK_EN(1,0)` reader - Configures whether or not to enable UNIT%s. \\\\ 0: Disable\\\\ 1: Enable\\\\"]
+pub type TIMER_UNIT_WORK_EN_R = crate::BitReader;
+#[doc = "Field `TIMER_UNIT_WORK_EN(1,0)` writer - Configures whether or not to enable UNIT%s. \\\\ 0: Disable\\\\ 1: Enable\\\\"]
+pub type TIMER_UNIT_WORK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EN` reader - Configures register clock gating. \\\\ 0: Only enable needed clock for register read or write operations. \\\\ 1: Register clock is always enabled for read and write operations. \\\\"]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Configures register clock gating. \\\\ 0: Only enable needed clock for register read or write operations. \\\\ 1: Register clock is always enabled for read and write operations. \\\\"]
@@ -61,50 +41,116 @@ impl R {
     pub fn etm_en(&self) -> ETM_EN_R {
         ETM_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 22 - Configures whether or not to enable COMP2.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
+    #[doc = "target(2,1,0) work enable"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TARGET2_WORK_EN` field.</div>"]
     #[inline(always)]
-    pub fn target2_work_en(&self) -> TARGET2_WORK_EN_R {
-        TARGET2_WORK_EN_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn target_work_en(&self, n: u8) -> TARGET_WORK_EN_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TARGET_WORK_EN_R::new(((self.bits >> (n + 22)) & 1) != 0)
     }
-    #[doc = "Bit 23 - Configures whether or not to enable COMP1. See details in SYSTIMER_TARGET2_WORK_EN."]
+    #[doc = "Iterator for array of:"]
+    #[doc = "target(2,1,0) work enable"]
     #[inline(always)]
-    pub fn target1_work_en(&self) -> TARGET1_WORK_EN_R {
-        TARGET1_WORK_EN_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn target_work_en_iter(&self) -> impl Iterator<Item = TARGET_WORK_EN_R> + '_ {
+        (0..3).map(move |n| TARGET_WORK_EN_R::new(((self.bits >> (n + 22)) & 1) != 0))
     }
-    #[doc = "Bit 24 - Configures whether or not to enable COMP0. See details in SYSTIMER_TARGET2_WORK_EN."]
+    #[doc = "Bit 22 - target2 work enable"]
     #[inline(always)]
-    pub fn target0_work_en(&self) -> TARGET0_WORK_EN_R {
-        TARGET0_WORK_EN_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn target2_work_en(&self) -> TARGET_WORK_EN_R {
+        TARGET_WORK_EN_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "Bit 25 - Configures whether or not UNIT1 is stalled when CORE1 is stalled. \\\\ 0: UNIT1 is not stalled. \\\\ 1: UNIT1 is stalled.\\\\"]
+    #[doc = "Bit 23 - target1 work enable"]
     #[inline(always)]
-    pub fn timer_unit1_core1_stall_en(&self) -> TIMER_UNIT1_CORE1_STALL_EN_R {
-        TIMER_UNIT1_CORE1_STALL_EN_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn target1_work_en(&self) -> TARGET_WORK_EN_R {
+        TARGET_WORK_EN_R::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bit 24 - target0 work enable"]
+    #[inline(always)]
+    pub fn target0_work_en(&self) -> TARGET_WORK_EN_R {
+        TARGET_WORK_EN_R::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "If timer unit(1,0) is stalled when core1 stalled"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER_UNIT1_CORE1_STALL_EN` field.</div>"]
+    #[inline(always)]
+    pub fn timer_unit_core1_stall_en(&self, n: u8) -> TIMER_UNIT_CORE1_STALL_EN_R {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
+        TIMER_UNIT_CORE1_STALL_EN_R::new(((self.bits >> (n * 2 + 25)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "If timer unit(1,0) is stalled when core1 stalled"]
+    #[inline(always)]
+    pub fn timer_unit_core1_stall_en_iter(
+        &self,
+    ) -> impl Iterator<Item = TIMER_UNIT_CORE1_STALL_EN_R> + '_ {
+        (0..2)
+            .map(move |n| TIMER_UNIT_CORE1_STALL_EN_R::new(((self.bits >> (n * 2 + 25)) & 1) != 0))
+    }
+    #[doc = "Bit 25 - If timer unit1 is stalled when core1 stalled"]
+    #[inline(always)]
+    pub fn timer_unit1_core1_stall_en(&self) -> TIMER_UNIT_CORE1_STALL_EN_R {
+        TIMER_UNIT_CORE1_STALL_EN_R::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 27 - If timer unit0 is stalled when core1 stalled"]
+    #[inline(always)]
+    pub fn timer_unit0_core1_stall_en(&self) -> TIMER_UNIT_CORE1_STALL_EN_R {
+        TIMER_UNIT_CORE1_STALL_EN_R::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Configures whether or not UNIT(1,0) is stalled when CORE0 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER_UNIT1_CORE0_STALL_EN` field.</div>"]
+    #[inline(always)]
+    pub fn timer_unit_core0_stall_en(&self, n: u8) -> TIMER_UNIT_CORE0_STALL_EN_R {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
+        TIMER_UNIT_CORE0_STALL_EN_R::new(((self.bits >> (n * 2 + 26)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Configures whether or not UNIT(1,0) is stalled when CORE0 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
+    #[inline(always)]
+    pub fn timer_unit_core0_stall_en_iter(
+        &self,
+    ) -> impl Iterator<Item = TIMER_UNIT_CORE0_STALL_EN_R> + '_ {
+        (0..2)
+            .map(move |n| TIMER_UNIT_CORE0_STALL_EN_R::new(((self.bits >> (n * 2 + 26)) & 1) != 0))
     }
     #[doc = "Bit 26 - Configures whether or not UNIT1 is stalled when CORE0 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
     #[inline(always)]
-    pub fn timer_unit1_core0_stall_en(&self) -> TIMER_UNIT1_CORE0_STALL_EN_R {
-        TIMER_UNIT1_CORE0_STALL_EN_R::new(((self.bits >> 26) & 1) != 0)
-    }
-    #[doc = "Bit 27 - Configures whether or not UNIT0 is stalled when CORE1 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
-    #[inline(always)]
-    pub fn timer_unit0_core1_stall_en(&self) -> TIMER_UNIT0_CORE1_STALL_EN_R {
-        TIMER_UNIT0_CORE1_STALL_EN_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn timer_unit1_core0_stall_en(&self) -> TIMER_UNIT_CORE0_STALL_EN_R {
+        TIMER_UNIT_CORE0_STALL_EN_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 28 - Configures whether or not UNIT0 is stalled when CORE0 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
     #[inline(always)]
-    pub fn timer_unit0_core0_stall_en(&self) -> TIMER_UNIT0_CORE0_STALL_EN_R {
-        TIMER_UNIT0_CORE0_STALL_EN_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn timer_unit0_core0_stall_en(&self) -> TIMER_UNIT_CORE0_STALL_EN_R {
+        TIMER_UNIT_CORE0_STALL_EN_R::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Configures whether or not to enable UNIT(1,0). \\\\ 0: Disable\\\\ 1: Enable\\\\"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER_UNIT1_WORK_EN` field.</div>"]
+    #[inline(always)]
+    pub fn timer_unit_work_en(&self, n: u8) -> TIMER_UNIT_WORK_EN_R {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
+        TIMER_UNIT_WORK_EN_R::new(((self.bits >> (n + 29)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Configures whether or not to enable UNIT(1,0). \\\\ 0: Disable\\\\ 1: Enable\\\\"]
+    #[inline(always)]
+    pub fn timer_unit_work_en_iter(&self) -> impl Iterator<Item = TIMER_UNIT_WORK_EN_R> + '_ {
+        (0..2).map(move |n| TIMER_UNIT_WORK_EN_R::new(((self.bits >> (n + 29)) & 1) != 0))
     }
     #[doc = "Bit 29 - Configures whether or not to enable UNIT1. \\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn timer_unit1_work_en(&self) -> TIMER_UNIT1_WORK_EN_R {
-        TIMER_UNIT1_WORK_EN_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn timer_unit1_work_en(&self) -> TIMER_UNIT_WORK_EN_R {
+        TIMER_UNIT_WORK_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Configures whether or not to enable UNIT0. \\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn timer_unit0_work_en(&self) -> TIMER_UNIT0_WORK_EN_R {
-        TIMER_UNIT0_WORK_EN_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn timer_unit0_work_en(&self) -> TIMER_UNIT_WORK_EN_R {
+        TIMER_UNIT_WORK_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Configures register clock gating. \\\\ 0: Only enable needed clock for register read or write operations. \\\\ 1: Register clock is always enabled for read and write operations. \\\\"]
     #[inline(always)]
@@ -126,12 +172,12 @@ impl core::fmt::Debug for R {
                 &self.timer_unit1_core1_stall_en(),
             )
             .field(
-                "timer_unit1_core0_stall_en",
-                &self.timer_unit1_core0_stall_en(),
-            )
-            .field(
                 "timer_unit0_core1_stall_en",
                 &self.timer_unit0_core1_stall_en(),
+            )
+            .field(
+                "timer_unit1_core0_stall_en",
+                &self.timer_unit1_core0_stall_en(),
             )
             .field(
                 "timer_unit0_core0_stall_en",
@@ -154,50 +200,92 @@ impl W {
     pub fn etm_en(&mut self) -> ETM_EN_W<'_, CONF_SPEC> {
         ETM_EN_W::new(self, 1)
     }
-    #[doc = "Bit 22 - Configures whether or not to enable COMP2.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
+    #[doc = "target(2,1,0) work enable"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TARGET2_WORK_EN` field.</div>"]
     #[inline(always)]
-    pub fn target2_work_en(&mut self) -> TARGET2_WORK_EN_W<'_, CONF_SPEC> {
-        TARGET2_WORK_EN_W::new(self, 22)
+    pub fn target_work_en(&mut self, n: u8) -> TARGET_WORK_EN_W<'_, CONF_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TARGET_WORK_EN_W::new(self, n + 22)
     }
-    #[doc = "Bit 23 - Configures whether or not to enable COMP1. See details in SYSTIMER_TARGET2_WORK_EN."]
+    #[doc = "Bit 22 - target2 work enable"]
     #[inline(always)]
-    pub fn target1_work_en(&mut self) -> TARGET1_WORK_EN_W<'_, CONF_SPEC> {
-        TARGET1_WORK_EN_W::new(self, 23)
+    pub fn target2_work_en(&mut self) -> TARGET_WORK_EN_W<'_, CONF_SPEC> {
+        TARGET_WORK_EN_W::new(self, 22)
     }
-    #[doc = "Bit 24 - Configures whether or not to enable COMP0. See details in SYSTIMER_TARGET2_WORK_EN."]
+    #[doc = "Bit 23 - target1 work enable"]
     #[inline(always)]
-    pub fn target0_work_en(&mut self) -> TARGET0_WORK_EN_W<'_, CONF_SPEC> {
-        TARGET0_WORK_EN_W::new(self, 24)
+    pub fn target1_work_en(&mut self) -> TARGET_WORK_EN_W<'_, CONF_SPEC> {
+        TARGET_WORK_EN_W::new(self, 23)
     }
-    #[doc = "Bit 25 - Configures whether or not UNIT1 is stalled when CORE1 is stalled. \\\\ 0: UNIT1 is not stalled. \\\\ 1: UNIT1 is stalled.\\\\"]
+    #[doc = "Bit 24 - target0 work enable"]
     #[inline(always)]
-    pub fn timer_unit1_core1_stall_en(&mut self) -> TIMER_UNIT1_CORE1_STALL_EN_W<'_, CONF_SPEC> {
-        TIMER_UNIT1_CORE1_STALL_EN_W::new(self, 25)
+    pub fn target0_work_en(&mut self) -> TARGET_WORK_EN_W<'_, CONF_SPEC> {
+        TARGET_WORK_EN_W::new(self, 24)
+    }
+    #[doc = "If timer unit(1,0) is stalled when core1 stalled"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER_UNIT1_CORE1_STALL_EN` field.</div>"]
+    #[inline(always)]
+    pub fn timer_unit_core1_stall_en(
+        &mut self,
+        n: u8,
+    ) -> TIMER_UNIT_CORE1_STALL_EN_W<'_, CONF_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
+        TIMER_UNIT_CORE1_STALL_EN_W::new(self, n * 2 + 25)
+    }
+    #[doc = "Bit 25 - If timer unit1 is stalled when core1 stalled"]
+    #[inline(always)]
+    pub fn timer_unit1_core1_stall_en(&mut self) -> TIMER_UNIT_CORE1_STALL_EN_W<'_, CONF_SPEC> {
+        TIMER_UNIT_CORE1_STALL_EN_W::new(self, 25)
+    }
+    #[doc = "Bit 27 - If timer unit0 is stalled when core1 stalled"]
+    #[inline(always)]
+    pub fn timer_unit0_core1_stall_en(&mut self) -> TIMER_UNIT_CORE1_STALL_EN_W<'_, CONF_SPEC> {
+        TIMER_UNIT_CORE1_STALL_EN_W::new(self, 27)
+    }
+    #[doc = "Configures whether or not UNIT(1,0) is stalled when CORE0 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER_UNIT1_CORE0_STALL_EN` field.</div>"]
+    #[inline(always)]
+    pub fn timer_unit_core0_stall_en(
+        &mut self,
+        n: u8,
+    ) -> TIMER_UNIT_CORE0_STALL_EN_W<'_, CONF_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
+        TIMER_UNIT_CORE0_STALL_EN_W::new(self, n * 2 + 26)
     }
     #[doc = "Bit 26 - Configures whether or not UNIT1 is stalled when CORE0 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
     #[inline(always)]
-    pub fn timer_unit1_core0_stall_en(&mut self) -> TIMER_UNIT1_CORE0_STALL_EN_W<'_, CONF_SPEC> {
-        TIMER_UNIT1_CORE0_STALL_EN_W::new(self, 26)
-    }
-    #[doc = "Bit 27 - Configures whether or not UNIT0 is stalled when CORE1 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
-    #[inline(always)]
-    pub fn timer_unit0_core1_stall_en(&mut self) -> TIMER_UNIT0_CORE1_STALL_EN_W<'_, CONF_SPEC> {
-        TIMER_UNIT0_CORE1_STALL_EN_W::new(self, 27)
+    pub fn timer_unit1_core0_stall_en(&mut self) -> TIMER_UNIT_CORE0_STALL_EN_W<'_, CONF_SPEC> {
+        TIMER_UNIT_CORE0_STALL_EN_W::new(self, 26)
     }
     #[doc = "Bit 28 - Configures whether or not UNIT0 is stalled when CORE0 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
     #[inline(always)]
-    pub fn timer_unit0_core0_stall_en(&mut self) -> TIMER_UNIT0_CORE0_STALL_EN_W<'_, CONF_SPEC> {
-        TIMER_UNIT0_CORE0_STALL_EN_W::new(self, 28)
+    pub fn timer_unit0_core0_stall_en(&mut self) -> TIMER_UNIT_CORE0_STALL_EN_W<'_, CONF_SPEC> {
+        TIMER_UNIT_CORE0_STALL_EN_W::new(self, 28)
+    }
+    #[doc = "Configures whether or not to enable UNIT(1,0). \\\\ 0: Disable\\\\ 1: Enable\\\\"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER_UNIT1_WORK_EN` field.</div>"]
+    #[inline(always)]
+    pub fn timer_unit_work_en(&mut self, n: u8) -> TIMER_UNIT_WORK_EN_W<'_, CONF_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
+        TIMER_UNIT_WORK_EN_W::new(self, n + 29)
     }
     #[doc = "Bit 29 - Configures whether or not to enable UNIT1. \\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn timer_unit1_work_en(&mut self) -> TIMER_UNIT1_WORK_EN_W<'_, CONF_SPEC> {
-        TIMER_UNIT1_WORK_EN_W::new(self, 29)
+    pub fn timer_unit1_work_en(&mut self) -> TIMER_UNIT_WORK_EN_W<'_, CONF_SPEC> {
+        TIMER_UNIT_WORK_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - Configures whether or not to enable UNIT0. \\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn timer_unit0_work_en(&mut self) -> TIMER_UNIT0_WORK_EN_W<'_, CONF_SPEC> {
-        TIMER_UNIT0_WORK_EN_W::new(self, 30)
+    pub fn timer_unit0_work_en(&mut self) -> TIMER_UNIT_WORK_EN_W<'_, CONF_SPEC> {
+        TIMER_UNIT_WORK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Configures register clock gating. \\\\ 0: Only enable needed clock for register read or write operations. \\\\ 1: Register clock is always enabled for read and write operations. \\\\"]
     #[inline(always)]

@@ -190,6 +190,12 @@ SOC_ETM:
             name: TASK_ID
 
 SYSTIMER:
+  CONF:
+    _modify:
+      TARGET?_WORK_EN:
+        description: "target%s work enable"
+      TIMER_UNIT?_CORE1_STALL_EN:
+        description: "If timer unit%s is stalled when core1 stalled"
   _include:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/systimer.yaml
