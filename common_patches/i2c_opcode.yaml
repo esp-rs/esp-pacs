@@ -1,8 +1,0 @@
-COMD%s:
-  OPCODE:
-    _replace_enum:
-      Rstart: [0, RSTART opcode]
-      Write: [1, WRITE opcode]
-      Read: [2, READ opcode]
-      Stop: [3, STOP opcode]
-      End: [4, END opcode]
