@@ -246,6 +246,9 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
         "# ! [doc(html_logo_url = \"https://avatars.githubusercontent.com/u/46717278\")]\n# ! [no_std]",
     );
 
+    // HACK: Replace `doc_auto_cfg` with `doc_cfg` until `svd2rust` is updated
+    let data = data.replace("doc_auto_cfg", "doc_cfg");
+
     let mut file = File::create(path.join("lib.rs"))?;
     file.write_all(data.as_ref())?;
 
