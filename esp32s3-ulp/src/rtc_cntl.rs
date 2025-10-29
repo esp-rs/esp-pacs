@@ -2,14 +2,21 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    _reserved0: [u8; 0xfc],
+    _reserved0: [u8; 0x18],
+    rtc_state0: RTC_STATE0,
+    _reserved1: [u8; 0xe0],
     rtc_ulp_cp_timer: RTC_ULP_CP_TIMER,
     rtc_ulp_cp_ctrl: RTC_ULP_CP_CTRL,
     cocpu_ctrl: COCPU_CTRL,
-    _reserved3: [u8; 0x2c],
+    _reserved4: [u8; 0x2c],
     rtc_ulp_cp_timer_1: RTC_ULP_CP_TIMER_1,
 }
 impl RegisterBlock {
+    #[doc = "0x18 - configure chip sleep"]
+    #[inline(always)]
+    pub const fn rtc_state0(&self) -> &RTC_STATE0 {
+        &self.rtc_state0
+    }
     #[doc = "0xfc - configure ulp"]
     #[inline(always)]
     pub const fn rtc_ulp_cp_timer(&self) -> &RTC_ULP_CP_TIMER {
@@ -31,6 +38,10 @@ impl RegisterBlock {
         &self.rtc_ulp_cp_timer_1
     }
 }
+#[doc = "RTC_STATE0 (rw) register accessor: configure chip sleep\n\nYou can [`read`](crate::Reg::read) this register and get [`rtc_state0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rtc_state0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_state0`] module"]
+pub type RTC_STATE0 = crate::Reg<rtc_state0::RTC_STATE0_SPEC>;
+#[doc = "configure chip sleep"]
+pub mod rtc_state0;
 #[doc = "RTC_ULP_CP_TIMER (rw) register accessor: configure ulp\n\nYou can [`read`](crate::Reg::read) this register and get [`rtc_ulp_cp_timer::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rtc_ulp_cp_timer::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_ulp_cp_timer`] module"]
 pub type RTC_ULP_CP_TIMER = crate::Reg<rtc_ulp_cp_timer::RTC_ULP_CP_TIMER_SPEC>;
 #[doc = "configure ulp"]

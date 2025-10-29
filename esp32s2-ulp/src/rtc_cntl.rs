@@ -2,14 +2,21 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    _reserved0: [u8; 0xf8],
+    _reserved0: [u8; 0x18],
+    state0: STATE0,
+    _reserved1: [u8; 0xdc],
     ulp_cp_timer: ULP_CP_TIMER,
     ulp_cp_ctrl: ULP_CP_CTRL,
     cocpu_ctrl: COCPU_CTRL,
-    _reserved3: [u8; 0x2c],
+    _reserved4: [u8; 0x2c],
     ulp_cp_timer_1: ULP_CP_TIMER_1,
 }
 impl RegisterBlock {
+    #[doc = "0x18 - Configures the sleep / reject / wakeup state"]
+    #[inline(always)]
+    pub const fn state0(&self) -> &STATE0 {
+        &self.state0
+    }
     #[doc = "0xf8 - Configure coprocessor timer"]
     #[inline(always)]
     pub const fn ulp_cp_timer(&self) -> &ULP_CP_TIMER {
@@ -31,6 +38,10 @@ impl RegisterBlock {
         &self.ulp_cp_timer_1
     }
 }
+#[doc = "STATE0 (rw) register accessor: Configures the sleep / reject / wakeup state\n\nYou can [`read`](crate::Reg::read) this register and get [`state0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`state0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@state0`] module"]
+pub type STATE0 = crate::Reg<state0::STATE0_SPEC>;
+#[doc = "Configures the sleep / reject / wakeup state"]
+pub mod state0;
 #[doc = "ULP_CP_TIMER (rw) register accessor: Configure coprocessor timer\n\nYou can [`read`](crate::Reg::read) this register and get [`ulp_cp_timer::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ulp_cp_timer::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ulp_cp_timer`] module"]
 pub type ULP_CP_TIMER = crate::Reg<ulp_cp_timer::ULP_CP_TIMER_SPEC>;
 #[doc = "Configure coprocessor timer"]

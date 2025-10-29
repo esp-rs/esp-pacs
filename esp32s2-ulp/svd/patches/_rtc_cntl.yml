@@ -6,7 +6,6 @@ RTC_CNTL:
     - TIME_UPDATE
     - TIME_LOW0
     - TIME_HIGH0
-    - STATE0
     - TIMER1
     - TIMER2
     - TIMER3
