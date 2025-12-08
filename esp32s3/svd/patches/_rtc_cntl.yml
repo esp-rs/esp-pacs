@@ -20,3 +20,16 @@ RTC_CNTL:
       _modify:
         WDT_STG0_HOLD:
           name: HOLD
+
+  PAD_HOLD:
+    _strip_end: _HOLD
+
+  _include: ../../../common_patches/rtc_cntl_int_strip.yaml
+
+  DATE:
+    _add:
+      LDO_SLAVE:
+        description: "LDO slave control"
+        access: read-write
+        bitOffset: 13
+        bitWidth: 6

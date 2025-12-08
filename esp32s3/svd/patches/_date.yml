@@ -8,7 +8,7 @@ AES:
   DATE:
     _delete: DATE
 
-"APB_*,ASSIST_DEBUG,[^AS]*,SPI[123],S[^P]*": # everything but AES, SPI0's DATE register is used for PSRAM
+"APB_*,ASSIST_DEBUG,[^ASR]*,SPI[123],S[^P]*,RMT,RNG,RSA,RTC_I2C,RTC_IO": # everything but AES, SPI0's DATE register is used for PSRAM, RTC_CNTL's DATE register is special
   _derive:
     "?~*_DATE":
       _from: AES.DATE
