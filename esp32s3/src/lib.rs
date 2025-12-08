@@ -808,6 +808,15 @@ impl core::fmt::Debug for IO_MUX {
 }
 #[doc = "Input/Output Multiplexer"]
 pub mod io_mux;
+#[doc = "I2C_MST_ANA Peripheral"]
+pub type I2C_ANA_MST = crate::Periph<i2c_ana_mst::RegisterBlock, 0x6000_e040>;
+impl core::fmt::Debug for I2C_ANA_MST {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C_ANA_MST").finish()
+    }
+}
+#[doc = "I2C_MST_ANA Peripheral"]
+pub mod i2c_ana_mst;
 #[doc = "Camera/LCD Controller"]
 pub type LCD_CAM = crate::Periph<lcd_cam::RegisterBlock, 0x6004_1000>;
 impl core::fmt::Debug for LCD_CAM {
@@ -1170,6 +1179,8 @@ pub struct Peripherals {
     pub INTERRUPT_CORE1: INTERRUPT_CORE1,
     #[doc = "IO_MUX"]
     pub IO_MUX: IO_MUX,
+    #[doc = "I2C_ANA_MST"]
+    pub I2C_ANA_MST: I2C_ANA_MST,
     #[doc = "LCD_CAM"]
     pub LCD_CAM: LCD_CAM,
     #[doc = "LEDC"]
@@ -1283,6 +1294,7 @@ impl Peripherals {
             INTERRUPT_CORE0: INTERRUPT_CORE0::steal(),
             INTERRUPT_CORE1: INTERRUPT_CORE1::steal(),
             IO_MUX: IO_MUX::steal(),
+            I2C_ANA_MST: I2C_ANA_MST::steal(),
             LCD_CAM: LCD_CAM::steal(),
             LEDC: LEDC::steal(),
             NRX: NRX::steal(),
