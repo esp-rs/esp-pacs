@@ -1,0 +1,9 @@
+_add:
+    CACHE_MMU_TABLE:
+        description: Cache MMU Table
+        baseAddress: 0x3ff10000
+        size: 32
+        addressBlock:
+            offset: 0x0
+            size: 0x4000
+            usage: registers
