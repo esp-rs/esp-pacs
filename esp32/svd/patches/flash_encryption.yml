@@ -1,0 +1,9 @@
+_add:
+    FLASH_ENCRYPTION2:
+        description: Flash encryption
+        baseAddress: 0x3ff5b000
+        size: 32
+        addressBlock:
+            offset: 0x0
+            size: 0x1000
+            usage: registers

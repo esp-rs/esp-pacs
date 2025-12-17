@@ -16,6 +16,7 @@ _include:
   - "_rtc_io.yml"
   - "_timg.yml"
   - "wifi.yaml"
+  - "flash_encryption.yml"
 
 RNG:
   _modify:
