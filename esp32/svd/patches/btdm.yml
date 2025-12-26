@@ -1,0 +1,579 @@
+_add:
+  BTDM:
+    description: Dual mode Bluetooth Core peripheral
+    groupName: BTDM
+    baseAddress: 0x3ff71000
+    size: 32
+    addressBlock:
+      offset: 0x0
+      size: 0x1000
+      usage: registers
+    registers:
+      # BR/EDR Section
+      BTCNTL:
+        description: BR/EDR control register
+        addressOffset: 0x00
+        access: read-write
+      BTVERSION:
+        description: BR/EDR peripheral version
+        addressOffset: 0x04
+        access: read
+        fields:
+          BUILD:
+            bitOffset: 0
+            bitWidth: 8
+            description: BR/EDR Core Build number
+          UPG:
+            bitOffset: 8
+            bitWidth: 8
+            description: BR/EDR Core Upgrade number
+          REL:
+            bitOffset: 16
+            bitWidth: 8
+            description: BR/EDR Core version Major release number
+          TYP:
+            bitOffset: 24
+            bitWidth: 8
+            description: BR/EDR Core Type (This corresponds to Bluetooth Assigned Numbers document, Core specification versions section)
+      BTINTCNTL:
+        description: BR/EDR interrupt control register
+        addressOffset: 0x0c
+        access: read-write
+      BTINTSTAT:
+        description: BR/EDR interrupt status register
+        addressOffset: 0x10
+        access: read
+      BTINTRAWSTAT:
+        description: BR/EDR interrupt raw status register
+        addressOffset: 0x14
+        access: read
+      BTINTACK:
+        description: BR/EDR interrupt acknowledgement register
+        addressOffset: 0x18
+        access: write
+      # BLE Section
+      BLECNTL:
+        description: BLE control register
+        addressOffset: 0x200
+        access: read-write
+        fields:
+          SYNCERR:
+            bitOffset: 0
+            bitWidth: 3
+            description: Max number of bit errors allowed to recognize a syncword
+          RXWINSZDEF:
+            bitOffset: 4
+            bitWidth: 4
+            description: Default RX window size in μs
+          RWBLE_EN:
+            bitOffset: 8
+            bitWidth: 1
+            description: RW-BLE Core Exchange table pre-fetch mechanism enable
+          ADVERTFILT_EN:
+            bitOffset: 9
+            bitWidth: 1
+            description: Filter to only correctly received packets
+          HOP_REMAP_DSB:
+            bitOffset: 16
+            bitWidth: 1
+            description: Hop remapping algorithm disable
+          CRC_DSB:
+            bitOffset: 17
+            bitWidth: 1
+            description: If enabled, CRC is removed from stream, when disabled, CRC is appended for user check
+          WHIT_DSB:
+            bitOffset: 18
+            bitWidth: 1
+            description: Whitening disable
+          CRYPT_DSB:
+            bitOffset: 19
+            bitWidth: 1
+            description: Encryption and decryption disable
+          NESN_DSB:
+            bitOffset: 20
+            bitWidth: 1
+            description: Acknowledge scheme disable
+          SN_DSB:
+            bitOffset: 21
+            bitWidth: 1
+            description: Sequence number disable
+          MD_DSB:
+            bitOffset: 22
+            bitWidth: 1
+            description: More data bit disable (0=Normal operation, 1=Allow a one Tx/Rx exchange whatever the MD bits are)
+          SCAN_ABORT:
+            bitOffset: 24
+            bitWidth: 1
+            description: Abort the current scan window
+          ADVERT_ABORT:
+            bitOffset: 25
+            bitWidth: 1
+            description: Abort the current advertising event
+          RFTEST_ABORT:
+            bitOffset: 26
+            bitWidth: 1
+            description: Abort the current RF test
+          SWINT_REQ:
+            bitOffset: 28
+            bitWidth: 1
+            description: Force a software interrupt
+          REG_SOFT_RST:
+            bitOffset: 29
+            bitWidth: 1
+            description: Reset of the complete register block
+          MASTER_TGSOFT_RST:
+            bitOffset: 30
+            bitWidth: 1
+            description: Master timing generator reset
+          MASTER_SOFT_RST:
+            bitOffset: 31
+            bitWidth: 1
+            description: Reset the complete BLE Core except registers and timing generator (Master state machine reset)
+      BLEVERSION:
+        description: BLE peripheral version
+        addressOffset: 0x204
+        access: read
+        fields:
+          BUILD:
+            bitOffset: 0
+            bitWidth: 8
+            description: BLE Core Build number
+          UPG:
+            bitOffset: 8
+            bitWidth: 8
+            description: BLE Core Upgrade number
+          REL:
+            bitOffset: 16
+            bitWidth: 8
+            description: BLE Core version Major release number
+          TYP:
+            bitOffset: 24
+            bitWidth: 8
+            description: BLE Core Type (This corresponds to Bluetooth Assigned Numbers document, Core specification versions section)
+      BLECONF:
+        description: BLE configuration register
+        addressOffset: 0x208
+        access: read
+      BLEINTCNTL:
+        description: BLE interrupt controller register
+        addressOffset: 0x20c
+        access: read-write
+        fields:
+          CSCNTINTMSK:
+            bitOffset: 0
+            bitWidth: 1
+            description: 625μs base time (for active modes) interrupt mask
+          RXINTMSK:
+            bitOffset: 1
+            bitWidth: 1
+            description: RX interrupt mask
+          SLPINTMSK:
+            bitOffset: 2
+            bitWidth: 1
+            description: Sleep mode interrupt mask
+          EVENTINTMSK:
+            bitOffset: 3
+            bitWidth: 1
+            description: End of event (adv, scan, conn) interrupt mask
+          CRYPTINTMSK:
+            bitOffset: 4
+            bitWidth: 1
+            description: Encryption engine interrupt mask
+          ERRORINTMSK:
+            bitOffset: 5
+            bitWidth: 1
+            description: Error interrupt mask
+          GROSSTGTIMINTMSK:
+            bitOffset: 6
+            bitWidth: 1
+            description: Gross target timer interrupt mask
+          FINETGTIMINTMSK:
+            bitOffset: 7
+            bitWidth: 1
+            description: Fine target timer interrupt mask
+          EVENTAPFAINTMSK:
+            bitOffset: 8
+            bitWidth: 1
+            description: End of event/anticipated pre-fetch abort interrupt mask
+          SWINTMSK:
+            bitOffset: 9
+            bitWidth: 1
+            description: Software triggered interrupt mask
+      BLEINTSTAT:
+        description: BLE interrupt status register
+        addressOffset: 0x210
+        access: read
+        fields:
+          CSCNTINTSTAT:
+            bitOffset: 0
+            bitWidth: 1
+            description: Masked 625μs base time reference interrupt status
+          RXINTSTAT:
+            bitOffset: 1
+            bitWidth: 1
+            description: Masked packet RX interrupt status
+          SLPINTSTAT:
+            bitOffset: 2
+            bitWidth: 1
+            description: Masked sleep mode interrupt status
+          EVENTINTSTAT:
+            bitOffset: 3
+            bitWidth: 1
+            description: Masked end of event interrupt status
+          CRYPTINTSTAT:
+            bitOffset: 4
+            bitWidth: 1
+            description: Masked encryption engine interrupt status
+          ERRORINTSTAT:
+            bitOffset: 5
+            bitWidth: 1
+            description: Masked error interrupt status
+          GROSSTGTIMINTSTAT:
+            bitOffset: 6
+            bitWidth: 1
+            description: Masked gross target timer interrupt status
+          FINETGTIMINTSTAT:
+            bitOffset: 7
+            bitWidth: 1
+            description: Masked fine target timer interrupt status
+          EVENTAPFAINTSTAT:
+            bitOffset: 8
+            bitWidth: 1
+            description: Masked end of event/anticipated pre-fetch abort interrupt status
+          SWINTSTAT:
+            bitOffset: 9
+            bitWidth: 1
+            description: Masked software triggered interrupt status
+      BLEINTRAWSTAT:
+        description: BLE interrupt raw status register
+        addressOffset: 0x214
+        access: read
+        fields:
+          CSCNTINTRAWSTAT:
+            bitOffset: 0
+            bitWidth: 1
+            description: 625μs base time reference interrupt raw status
+          RXINTRAWSTAT:
+            bitOffset: 1
+            bitWidth: 1
+            description: Packet RX interrupt raw status
+          SLPINTRAWSTAT:
+            bitOffset: 2
+            bitWidth: 1
+            description: Sleep mode interrupt raw status
+          EVENTINTRAWSTAT:
+            bitOffset: 3
+            bitWidth: 1
+            description: End of event interrupt raw status
+          CRYPTINTRAWSTAT:
+            bitOffset: 4
+            bitWidth: 1
+            description: Encryption engine interrupt raw status
+          ERRORINTRAWSTAT:
+            bitOffset: 5
+            bitWidth: 1
+            description: Error interrupt raw status
+          GROSSTGTIMINTRAWSTAT:
+            bitOffset: 6
+            bitWidth: 1
+            description: Gross target timer interrupt raw status
+          FINETGTIMINTRAWSTAT:
+            bitOffset: 7
+            bitWidth: 1
+            description: Fine target timer interrupt raw status
+          EVENTAPFAINTRAWSTAT:
+            bitOffset: 8
+            bitWidth: 1
+            description: End of event/anticipated pre-fetch abort interrupt raw status
+          SWINTRAWSTAT:
+            bitOffset: 9
+            bitWidth: 1
+            description: Software triggered interrupt raw status
+      BLEINTACK:
+        description: BLE interrupt acknowledgement register
+        addressOffset: 0x218
+        access: write
+        fields:
+          CSCNTINTACK:
+            bitOffset: 0
+            bitWidth: 1
+            description: 625μs base time reference interrupt acknowledgment bit
+          RXINTACK:
+            bitOffset: 1
+            bitWidth: 1
+            description: Packet RX interrupt acknowledgment bit
+          SLPINTACK:
+            bitOffset: 2
+            bitWidth: 1
+            description: Sleep mode interrupt acknowledgment bit
+          EVENTINTACK:
+            bitOffset: 3
+            bitWidth: 1
+            description: End of event interrupt acknowledgment bit
+          CRYPTINTACK:
+            bitOffset: 4
+            bitWidth: 1
+            description: Encryption engine interrupt acknowledgment bit
+          ERRORINTACK:
+            bitOffset: 5
+            bitWidth: 1
+            description: Error interrupt acknowledgment bit
+          GROSSTGTIMINTACK:
+            bitOffset: 6
+            bitWidth: 1
+            description: Gross target timer interrupt acknowledgment bit
+          FINETGTIMINTACK:
+            bitOffset: 7
+            bitWidth: 1
+            description: Fine target timer interrupt acknowledgment bit
+          EVENTAPFAINTACK:
+            bitOffset: 8
+            bitWidth: 1
+            description: End of event/anticipated pre-fetch abort interrupt acknowledgment bit
+          SWINTACK:
+            bitOffset: 9
+            bitWidth: 1
+            description: Software triggered interrupt acknowledgment bit
+      BLEBASETIMECNT:
+        description: Base time reference counter
+        addressOffset: 0x21c
+        access: read-write
+        fields:
+          BASETIMECNT:
+            bitOffset: 0
+            bitWidth: 27
+            description: Base time counter value
+          SAMP:
+            bitOffset: 31
+            bitWidth: 1
+            description: Sample the base time counter
+      BLEFINETIMECNT:
+        description: Fine time reference counter
+        addressOffset: 0x220
+        access: read-write
+        fields:
+          FINECNT:
+            bitOffset: 0
+            bitWidth: 10
+            description: Fine time counter value
+      BLEBDADDRL:
+        description: BLE device address LSB register
+        addressOffset: 0x224
+        access: read-write
+        fields:
+          BDADDRL:
+            bitOffset: 0
+            bitWidth: 32
+      BLEBDADDRU:
+        description: BLE device address MSB register
+        addressOffset: 0x228
+        access: read-write
+        fields:
+          BDADDRU:
+            bitOffset: 0
+            bitWidth: 16
+          PRIV_NPUB:
+            bitOffset: 16
+            bitWidth: 1
+            description: Address privacy indicator (0=public, 1=private)
+      BLECURRENTRXDESCPTR:
+        description: BLE RX descriptor pointer for the receive buffer chained list
+        addressOffset: 0x22c
+        access: read-write
+        fields:
+          CURRENTRXDESCPTR:
+            bitOffset: 0
+            bitWidth: 15
+            description: Pointer that determines the starting point of the RX Buffer Chained List
+          ETPTR:
+            bitOffset: 16
+            bitWidth: 15
+            description: Pointer that determines the starting point of the Exchange Table
+      BLEDIAGCNTL:
+        description: Diagnostics control register
+        addressOffset: 0x250
+        access: read-write
+      BLEDIAGSTAT:
+        description: Diagnostics status register
+        addressOffset: 0x254
+        access: read
+      BLEERRORTYPESTAT:
+        description: Error type status register
+        addressOffset: 0x260
+        access: read-write
+      BLERADIOCNTL0:
+        description: Radio interface control register 0
+        addressOffset: 0x270
+        access: read-write
+      BLERADIOCNTL1:
+        description: Radio interface control register 1
+        addressOffset: 0x274
+        access: read-write
+      BLERADIOPWRUPDN:
+        description: RX/TX power up/down phase register
+        addressOffset: 0x280
+        access: read-write
+      BLEADVCHMAP:
+        description: Advertising Channel Map
+        addressOffset: 0x290
+        access: read-write
+        fields:
+          CHAN37:
+            bitOffset: 0
+            bitWidth: 1
+            description: Use channel 37 to send advertisements
+          CHAN38:
+            bitOffset: 1
+            bitWidth: 1
+            description: Use channel 38 to send advertisements
+          CHAN39:
+            bitOffset: 2
+            bitWidth: 1
+            description: Use channel 38 to send advertisements
+      BLEADVTIM:
+        description: Advertising Packet Interval
+        addressOffset: 0x2a0
+        access: read-write
+        fields:
+          ADVINT:
+            bitOffset: 0
+            bitWidth: 14
+            description: Time in us between sent advertisement packets
+      BLEWLPUBADDRPTR:
+        description: Pointer to public devices whitelist
+        addressOffset: 0x2b0
+        access: read-write
+      BLEWLPRIVADDRPTR:
+        description: Pointer to private devices whitelist
+        addressOffset: 0x2b4
+        access: read-write
+      BLEWLNBDEV:
+        description: Number of devices in whitelist
+        addressOffset: 0x2b8
+        access: read-write
+        fields:
+          NBPUBDEV:
+            bitOffset: 0
+            bitWidth: 8
+            description: Number of public devices in the white list
+          NBPRIVDEV:
+            bitOffset: 8
+            bitWidth: 8
+            description: Number of private devices in the white list
+      BLEAESCNTL:
+        description: AES encryption control register
+        addressOffset: 0x2c0
+        access: read-write
+        fields:
+          AES_START:
+            bitOffset: 0
+            bitWidth: 1
+            description: Start AES encryption/decryption
+          AES_MODE:
+            bitOffset: 1
+            bitWidth: 1
+            description: AES mode (0=encrypt, 1=decrypt)
+      BLEAESKEY0:
+        description: AES key[31:0]
+        addressOffset: 0x2c4
+        access: read-write
+      BLEAESKEY1:
+        description: AES key[63:32]
+        addressOffset: 0x2c8
+        access: read-write
+      BLEAESKEY2:
+        description: AES key[95:64]
+        addressOffset: 0x2cc
+        access: read-write
+      BLEAESKEY3:
+        description: AES key[127:96]
+        addressOffset: 0x2d0
+        access: read-write
+      BLEAESPTR:
+        description: Pointer to the block to encrypt/decrypt with AES
+        addressOffset: 0x2d4
+        access: read-write
+      BLERFTESTCNTL:
+        description: Test Mode control register
+        addressOffset: 0x2e0
+        access: read-write
+        fields:
+          TXLENGTH:
+            bitOffset: 0
+            bitWidth: 9
+            description: TX packet length in number of bytes
+          TXPKTCNTEN:
+            bitOffset: 11
+            bitWidth: 1
+            description: Enable TX packet count
+          TXPLDSRC:
+            bitOffset: 12
+            bitWidth: 1
+            description: TX packet payload source (0=Control Structure, 1=PRBS)
+          PRBSTYPE:
+            bitOffset: 13
+            bitWidth: 1
+            description: PRBS payload type (0=PRBS9, 1=PRBS15)
+          TXLENGTHSRC:
+            bitOffset: 14
+            bitWidth: 1
+            description: TX packet payload length source (0=TXADVLEN, 1=BLERFTESTCNTL.TXLENGTH)
+          INFINITETX:
+            bitOffset: 15
+            bitWidth: 1
+            description: Infinite TX packet
+          RXPKTCNTEN:
+            bitOffset: 27
+            bitWidth: 1
+            description: Enable RX packet count
+          INFINITERX:
+            bitOffset: 31
+            bitWidth: 1
+            description: Infinite RX window
+      BLERFTESTTXSTAT:
+        description: Number of valid packets transmited during Test
+        addressOffset: 0x2e4
+        access: read
+      BLERFTESTRXSTAT:
+        description: Number of valid packets received during Test
+        addressOffset: 0x2e8
+        access: read
+      BLETIMGENCNTL:
+        description: Pre-Fecth mechanism control
+        addressOffset: 0x2f0
+        access: read-write
+        fields:
+          PREFETCH_TIME:
+            bitOffset: 0
+            bitWidth: 9
+            description: Exchange Table prefetch instant (us)
+          PREFETCHABORT_TIME:
+            bitOffset: 16
+            bitWidth: 10
+            description: Pre-Fetch abort instant (us)
+          APFM_EN:
+            bitOffset: 31
+            bitWidth: 1
+            description: Enable Anticipated Pre-Fetch Abort mechanism
+      BLECOEXIFCNTL0:
+        description: Interface Coexistance Control
+        addressOffset: 0x300
+        access: read-write
+      BLERALPTR:
+        description: Resolve Address List pointer
+        addressOffset: 0x320
+        access: read-write
+        fields:
+          RALPTR:
+            bitOffset: 0
+            bitWidth: 16
+            description: Pointer to Resolve Address List
+      BLERALNBDEV:
+        description: Number of devices in Resolve Address List
+        addressOffset: 0x324
+        access: read-write
+        fields:
+          NBRALDEV:
+            bitOffset: 0
+            bitWidth: 8
+            description: Number of devices in Resolve Address List

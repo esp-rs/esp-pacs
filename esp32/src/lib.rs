@@ -823,6 +823,15 @@ impl core::fmt::Debug for UART2 {
 }
 #[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 2"]
 pub use self::uart0 as uart2;
+#[doc = "Dual mode Bluetooth Core peripheral"]
+pub type BTDM = crate::Periph<btdm::RegisterBlock, 0x3ff7_1000>;
+impl core::fmt::Debug for BTDM {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BTDM").finish()
+    }
+}
+#[doc = "Dual mode Bluetooth Core peripheral"]
+pub mod btdm;
 #[doc = "MAC controller for Wi-Fi peripheral"]
 pub type WIFI = crate::Periph<wifi::RegisterBlock, 0x3ff7_3000>;
 impl core::fmt::Debug for WIFI {
@@ -943,6 +952,8 @@ pub struct Peripherals {
     pub UART1: UART1,
     #[doc = "UART2"]
     pub UART2: UART2,
+    #[doc = "BTDM"]
+    pub BTDM: BTDM,
     #[doc = "WIFI"]
     pub WIFI: WIFI,
     #[doc = "UHCI0"]
@@ -1015,6 +1026,7 @@ impl Peripherals {
             UART0: UART0::steal(),
             UART1: UART1::steal(),
             UART2: UART2::steal(),
+            BTDM: BTDM::steal(),
             WIFI: WIFI::steal(),
             UHCI0: UHCI0::steal(),
             UHCI1: UHCI1::steal(),
