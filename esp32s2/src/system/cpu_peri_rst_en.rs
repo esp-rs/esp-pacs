@@ -2,30 +2,30 @@
 pub type R = crate::R<CPU_PERI_RST_EN_SPEC>;
 #[doc = "Register `CPU_PERI_RST_EN` writer"]
 pub type W = crate::W<CPU_PERI_RST_EN_SPEC>;
-#[doc = "Field `RST_EN_DEDICATED_GPIO` reader - Set this bit to reset DEDICATED GPIO module."]
-pub type RST_EN_DEDICATED_GPIO_R = crate::BitReader;
-#[doc = "Field `RST_EN_DEDICATED_GPIO` writer - Set this bit to reset DEDICATED GPIO module."]
-pub type RST_EN_DEDICATED_GPIO_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DEDICATED_GPIO_RST` reader - Set this bit to reset DEDICATED GPIO module."]
+pub type DEDICATED_GPIO_RST_R = crate::BitReader;
+#[doc = "Field `DEDICATED_GPIO_RST` writer - Set this bit to reset DEDICATED GPIO module."]
+pub type DEDICATED_GPIO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 7 - Set this bit to reset DEDICATED GPIO module."]
     #[inline(always)]
-    pub fn rst_en_dedicated_gpio(&self) -> RST_EN_DEDICATED_GPIO_R {
-        RST_EN_DEDICATED_GPIO_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn dedicated_gpio_rst(&self) -> DEDICATED_GPIO_RST_R {
+        DEDICATED_GPIO_RST_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_PERI_RST_EN")
-            .field("rst_en_dedicated_gpio", &self.rst_en_dedicated_gpio())
+            .field("dedicated_gpio_rst", &self.dedicated_gpio_rst())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 7 - Set this bit to reset DEDICATED GPIO module."]
     #[inline(always)]
-    pub fn rst_en_dedicated_gpio(&mut self) -> RST_EN_DEDICATED_GPIO_W<'_, CPU_PERI_RST_EN_SPEC> {
-        RST_EN_DEDICATED_GPIO_W::new(self, 7)
+    pub fn dedicated_gpio_rst(&mut self) -> DEDICATED_GPIO_RST_W<'_, CPU_PERI_RST_EN_SPEC> {
+        DEDICATED_GPIO_RST_W::new(self, 7)
     }
 }
 #[doc = "CPU peripheral reset register\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_peri_rst_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_peri_rst_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
