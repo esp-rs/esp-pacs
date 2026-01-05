@@ -7,5 +7,13 @@ SYSTEM:
     _modify:
       CAN_RST:
         name: TWAI_RST
+  CPU_PERI_CLK_EN:
+    _modify:
+      CLK_EN_DEDICATED_GPIO:
+        name: DEDICATED_GPIO_CLK_EN
+  CPU_PERI_RST_EN:
+    _modify:
+      RST_EN_DEDICATED_GPIO:
+        name: DEDICATED_GPIO_RST
 
   _include: ../../../common_patches/sw_interrupts.yaml
