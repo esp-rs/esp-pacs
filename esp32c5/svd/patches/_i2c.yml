@@ -1,4 +1,4 @@
-I2C*:
+I2C0:
   COMD*:
     _delete: ["COMMAND?"]
     _add:

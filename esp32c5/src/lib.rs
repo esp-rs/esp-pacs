@@ -397,6 +397,15 @@ impl core::fmt::Debug for HP_APM {
 }
 #[doc = "HP_APM Peripheral"]
 pub mod hp_apm;
+#[doc = "I2C_ANA_MST Peripheral"]
+pub type I2C_ANA_MST = crate::Periph<i2c_ana_mst::RegisterBlock, 0x600a_f800>;
+impl core::fmt::Debug for I2C_ANA_MST {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C_ANA_MST").finish()
+    }
+}
+#[doc = "I2C_ANA_MST Peripheral"]
+pub mod i2c_ana_mst;
 #[doc = "HP_SYSTEM Peripheral"]
 pub type HP_SYSTEM = crate::Periph<hp_system::RegisterBlock, 0x6009_5000>;
 impl core::fmt::Debug for HP_SYSTEM {
@@ -864,6 +873,8 @@ pub struct Peripherals {
     pub HMAC: HMAC,
     #[doc = "HP_APM"]
     pub HP_APM: HP_APM,
+    #[doc = "I2C_ANA_MST"]
+    pub I2C_ANA_MST: I2C_ANA_MST,
     #[doc = "HP_SYSTEM"]
     pub HP_SYSTEM: HP_SYSTEM,
     #[doc = "HUK"]
@@ -997,6 +1008,7 @@ impl Peripherals {
             GPIO_EXT: GPIO_EXT::steal(),
             HMAC: HMAC::steal(),
             HP_APM: HP_APM::steal(),
+            I2C_ANA_MST: I2C_ANA_MST::steal(),
             HP_SYSTEM: HP_SYSTEM::steal(),
             HUK: HUK::steal(),
             I2C0: I2C0::steal(),

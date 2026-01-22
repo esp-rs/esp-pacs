@@ -2,6 +2,7 @@ _svd: ../esp32c5.base.svd
 
 _include:
   - ../../../common_patches/plic.yaml
+  - ../../../common_patches/i2c_ana_mst.yaml
   - _date.yml
   - _gpio.yml
   - _i2c.yml
