@@ -743,6 +743,9 @@ UART0:
 _modify:
   AHB_DMA:
     name: DMA
+  
+  HP_SYSTEM:
+    name: HP_SYS
 
   SPI?:
     groupName: SPI
