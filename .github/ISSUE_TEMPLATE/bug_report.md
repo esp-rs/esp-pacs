@@ -1,0 +1,30 @@
+---
+name: Bug report
+about: Create a report to help us improve
+title: ''
+labels: ["bug", "bug jury"]
+assignees: ''
+
+---
+
+## Bug description
+
+<!-- A clear and concise description of what the bug is. -->
+
+## To Reproduce
+
+<!-- Steps to reproduce the behavior. -->
+1. ...
+2. ...
+
+<!-- Please share a minimal reproducer which demonstrates the issue. `documentation/REPRODUCERS.md` gives some hints what an ideal reproducer should look like. -->
+
+<!-- Make sure you are able to reproduce the bug in the `main` branch, too. -->
+
+## Expected behavior
+
+<!-- A clear and concise description of what you expected to happen. Attach screenshots if needed. -->
+
+## Environment
+
+- Crate name and version: [e.g. esp32c6 0.22.0]
