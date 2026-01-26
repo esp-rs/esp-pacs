@@ -1,13 +1,18 @@
 _svd: ../esp32c5.base.svd
 
 _include:
-  - ../../../common_patches/plic.yaml
+  - ../../../common_patches/clint.yaml
   - ../../../common_patches/i2c_ana_mst.yaml
+  - ../../../common_patches/slc.yaml
   - _date.yml
   - _gpio.yml
   - _i2c.yml
   - _interrupt.yml
   - _lp_io.yml
+  - _modem_lpcon.yml
+  - _modem_syscon.yml
+  - _pcr.yml
+  - _sha.yml
   - _rmt.yml
   - _uart.yml
 
@@ -349,6 +354,8 @@ ECC:
       dim: 12
       dimIncrement: 0x4
       size: 0x20
+    CONF:
+      name: MULT_CONF
   INT_RAW:
     _strip_end: _INT_RAW
   INT_ST:
@@ -390,7 +397,10 @@ ECDSA:
   _include: ../../../common_patches/int_strip.yaml
 
 EFUSE:
-  _include: ../../../common_patches/int_strip.yaml
+    _strip: APB2OTP_
+    "*":
+      _strip: APB2OTP_
+
 
 GPIO:
   _delete: "FUNC*_IN_SEL_CFG"
@@ -476,6 +486,11 @@ INTPRI:
       addressOffset: 0x9c
   _include: ../../../common_patches/sw_interrupts.yaml
 
+I2C_ANA_MST:
+  _array:
+    I2C?_CTRL: {}
+    I2C?_CTRL1: {}
+
 LP_WDT:
   _modify:
     CONFIG0:
@@ -533,6 +548,11 @@ RSA:
       dimIncrement: 0x4
       size: 0x20
       access: read-write
+  INT_CLR:
+    _modify:
+      CLEAR_INTERRUPT:
+        name: INT_CLR
+        access: read-write
 
 I2C0:
   _include: ../../../common_patches/int_strip.yaml
@@ -638,37 +658,35 @@ PCNT:
 MCPWM0:
   _include: ../../../common_patches/int_strip.yaml
 
-SHA:
-  _modify:
-    "H_MEM*":
-      dim: 16
-      dimIncrement: 0x4
-      size: 0x20
-    "M_MEM*":
-      dim: 16
-      dimIncrement: 0x4
-      size: 0x20
-
-  START:
-    _modify:
-      START:
-        access: write-only
-
-  CONTINUE:
-    _modify:
-      CONTINUE:
-        access: write-only
-
 SOC_ETM:
   CH_ENA_AD?:
     _array:
-      CH_ENABLED*: {}
+      CH_ENABLED*:
+        name: CH_ENA%s
   CH_ENA_AD?_SET:
     _array:
-      CH_ENABLE*: {}
+      CH_ENABLE*:
+        name: CH_SET%s
   CH_ENA_AD?_CLR:
     _array:
-      CH_DISABLE*: {}
+      CH_DISABLE*:
+        name: CH_CLR%s
+  _expand_array:
+    CH%s_EVT_ID: {}
+    CH%s_TASK_ID: {}
+    
+  _cluster:
+    CH%s:
+      "CH*_EVT_ID":
+        name: EVT_ID
+        _modify:
+          "CH*_EVT_ID":
+            name: EVT_ID
+      "CH*_TASK_ID":
+        name: TASK_ID
+        _modify:
+          "CH*_TASK_ID":
+            name: TASK_ID
 
 SPI0:
   _strip: MEM_
@@ -698,7 +716,10 @@ SPI2:
 SPI[12]:
   _include: ../../../common_patches/spi_w.yaml
 
-SPI[01]:
+PMU:
+  _include: ../../../common_patches/pmu_int_strip.yaml
+  
+"EFUSE,I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
   _include: ../../../common_patches/int_strip.yaml
 
 SYSTIMER:

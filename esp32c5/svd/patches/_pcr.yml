@@ -1,0 +1,3 @@
+PCR:
+  RMT_SCLK_CONF:
+    _strip: "RMT_"

@@ -262,24 +262,15 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 83] = [
 #[doc(hidden)]
 pub mod interrupt;
 pub use self::interrupt::Interrupt;
-#[doc = "PLIC Peripheral"]
-pub type PLIC_MX = crate::Periph<plic_mx::RegisterBlock, 0x2000_1000>;
-impl core::fmt::Debug for PLIC_MX {
+#[doc = "Core Local Interrupts"]
+pub type CLINT = crate::Periph<clint::RegisterBlock, 0x2000_0000>;
+impl core::fmt::Debug for CLINT {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("PLIC_MX").finish()
+        f.debug_struct("CLINT").finish()
     }
 }
-#[doc = "PLIC Peripheral"]
-pub mod plic_mx;
-#[doc = "PLIC Peripheral"]
-pub type PLIC_UX = crate::Periph<plic_ux::RegisterBlock, 0x2000_1400>;
-impl core::fmt::Debug for PLIC_UX {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("PLIC_UX").finish()
-    }
-}
-#[doc = "PLIC Peripheral"]
-pub mod plic_ux;
+#[doc = "Core Local Interrupts"]
+pub mod clint;
 #[doc = "AES (Advanced Encryption Standard) Accelerator"]
 pub type AES = crate::Periph<aes::RegisterBlock, 0x6008_8000>;
 impl core::fmt::Debug for AES {
@@ -397,6 +388,24 @@ impl core::fmt::Debug for HP_APM {
 }
 #[doc = "HP_APM Peripheral"]
 pub mod hp_apm;
+#[doc = "MODEM_SYSCON"]
+pub type MODEM_SYSCON = crate::Periph<modem_syscon::RegisterBlock, 0x600a_9c00>;
+impl core::fmt::Debug for MODEM_SYSCON {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MODEM_SYSCON").finish()
+    }
+}
+#[doc = "MODEM_SYSCON"]
+pub mod modem_syscon;
+#[doc = "MODEM_LPCON"]
+pub type MODEM_LPCON = crate::Periph<modem_lpcon::RegisterBlock, 0x600a_f000>;
+impl core::fmt::Debug for MODEM_LPCON {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MODEM_LPCON").finish()
+    }
+}
+#[doc = "MODEM_LPCON"]
+pub mod modem_lpcon;
 #[doc = "I2C_ANA_MST Peripheral"]
 pub type I2C_ANA_MST = crate::Periph<i2c_ana_mst::RegisterBlock, 0x600a_f800>;
 impl core::fmt::Debug for I2C_ANA_MST {
@@ -631,6 +640,15 @@ impl core::fmt::Debug for PARL_IO {
 }
 #[doc = "Parallel IO Controller"]
 pub mod parl_io;
+#[doc = "SDIO SLC"]
+pub type SLC = crate::Periph<slc::RegisterBlock, 0x6001_7000>;
+impl core::fmt::Debug for SLC {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLC").finish()
+    }
+}
+#[doc = "SDIO SLC"]
+pub mod slc;
 #[doc = "PAU Peripheral"]
 pub type PAU = crate::Periph<pau::RegisterBlock, 0x6009_3000>;
 impl core::fmt::Debug for PAU {
@@ -843,10 +861,8 @@ static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r" All the peripherals."]
 #[allow(non_snake_case)]
 pub struct Peripherals {
-    #[doc = "PLIC_MX"]
-    pub PLIC_MX: PLIC_MX,
-    #[doc = "PLIC_UX"]
-    pub PLIC_UX: PLIC_UX,
+    #[doc = "CLINT"]
+    pub CLINT: CLINT,
     #[doc = "AES"]
     pub AES: AES,
     #[doc = "DMA"]
@@ -873,6 +889,10 @@ pub struct Peripherals {
     pub HMAC: HMAC,
     #[doc = "HP_APM"]
     pub HP_APM: HP_APM,
+    #[doc = "MODEM_SYSCON"]
+    pub MODEM_SYSCON: MODEM_SYSCON,
+    #[doc = "MODEM_LPCON"]
+    pub MODEM_LPCON: MODEM_LPCON,
     #[doc = "I2C_ANA_MST"]
     pub I2C_ANA_MST: I2C_ANA_MST,
     #[doc = "HP_SYS"]
@@ -925,6 +945,8 @@ pub struct Peripherals {
     pub MEM_MONITOR: MEM_MONITOR,
     #[doc = "PARL_IO"]
     pub PARL_IO: PARL_IO,
+    #[doc = "SLC"]
+    pub SLC: SLC,
     #[doc = "PAU"]
     pub PAU: PAU,
     #[doc = "PCNT"]
@@ -993,8 +1015,7 @@ impl Peripherals {
     pub unsafe fn steal() -> Self {
         DEVICE_PERIPHERALS = true;
         Peripherals {
-            PLIC_MX: PLIC_MX::steal(),
-            PLIC_UX: PLIC_UX::steal(),
+            CLINT: CLINT::steal(),
             AES: AES::steal(),
             DMA: DMA::steal(),
             APB_SARADC: APB_SARADC::steal(),
@@ -1008,6 +1029,8 @@ impl Peripherals {
             GPIO_EXT: GPIO_EXT::steal(),
             HMAC: HMAC::steal(),
             HP_APM: HP_APM::steal(),
+            MODEM_SYSCON: MODEM_SYSCON::steal(),
+            MODEM_LPCON: MODEM_LPCON::steal(),
             I2C_ANA_MST: I2C_ANA_MST::steal(),
             HP_SYS: HP_SYS::steal(),
             HUK: HUK::steal(),
@@ -1034,6 +1057,7 @@ impl Peripherals {
             MCPWM0: MCPWM0::steal(),
             MEM_MONITOR: MEM_MONITOR::steal(),
             PARL_IO: PARL_IO::steal(),
+            SLC: SLC::steal(),
             PAU: PAU::steal(),
             PCNT: PCNT::steal(),
             PCR: PCR::steal(),

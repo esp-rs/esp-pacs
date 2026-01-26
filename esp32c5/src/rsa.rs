@@ -179,7 +179,7 @@ pub mod set_start_mult;
 pub type QUERY_IDLE = crate::Reg<query_idle::QUERY_IDLE_SPEC>;
 #[doc = "Represents the RSA status"]
 pub mod query_idle;
-#[doc = "INT_CLR (w) register accessor: Clears RSA interrupt\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+#[doc = "INT_CLR (rw) register accessor: Clears RSA interrupt\n\nYou can [`read`](crate::Reg::read) this register and get [`int_clr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "Clears RSA interrupt"]
 pub mod int_clr;

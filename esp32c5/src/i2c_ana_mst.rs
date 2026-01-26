@@ -2,8 +2,7 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    i2c0_ctrl: I2C0_CTRL,
-    i2c1_ctrl: I2C1_CTRL,
+    i2c_ctrl: [I2C_CTRL; 2],
     i2c0_conf: I2C0_CONF,
     i2c1_conf: I2C1_CONF,
     burst_conf: BURST_CONF,
@@ -11,21 +10,31 @@ pub struct RegisterBlock {
     ana_conf0: ANA_CONF0,
     ana_conf1: ANA_CONF1,
     ana_conf2: ANA_CONF2,
-    i2c0_ctrl1: I2C0_CTRL1,
-    i2c1_ctrl1: I2C1_CTRL1,
-    _reserved11: [u8; 0x08],
+    i2c_ctrl1: [I2C_CTRL1; 2],
+    _reserved9: [u8; 0x08],
     date: DATE,
 }
 impl RegisterBlock {
+    #[doc = "0x00..0x08 - I2C%s_CTRL register"]
+    #[inline(always)]
+    pub const fn i2c_ctrl(&self, n: usize) -> &I2C_CTRL {
+        &self.i2c_ctrl[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x08 - I2C%s_CTRL register"]
+    #[inline(always)]
+    pub fn i2c_ctrl_iter(&self) -> impl Iterator<Item = &I2C_CTRL> {
+        self.i2c_ctrl.iter()
+    }
     #[doc = "0x00 - I2C0_CTRL register"]
     #[inline(always)]
-    pub const fn i2c0_ctrl(&self) -> &I2C0_CTRL {
-        &self.i2c0_ctrl
+    pub const fn i2c0_ctrl(&self) -> &I2C_CTRL {
+        self.i2c_ctrl(0)
     }
     #[doc = "0x04 - I2C1_CTRL register"]
     #[inline(always)]
-    pub const fn i2c1_ctrl(&self) -> &I2C1_CTRL {
-        &self.i2c1_ctrl
+    pub const fn i2c1_ctrl(&self) -> &I2C_CTRL {
+        self.i2c_ctrl(1)
     }
     #[doc = "0x08 - I2C0_CONF register"]
     #[inline(always)]
@@ -62,15 +71,26 @@ impl RegisterBlock {
     pub const fn ana_conf2(&self) -> &ANA_CONF2 {
         &self.ana_conf2
     }
+    #[doc = "0x24..0x2c - I2C%s_CTRL1 register"]
+    #[inline(always)]
+    pub const fn i2c_ctrl1(&self, n: usize) -> &I2C_CTRL1 {
+        &self.i2c_ctrl1[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x24..0x2c - I2C%s_CTRL1 register"]
+    #[inline(always)]
+    pub fn i2c_ctrl1_iter(&self) -> impl Iterator<Item = &I2C_CTRL1> {
+        self.i2c_ctrl1.iter()
+    }
     #[doc = "0x24 - I2C0_CTRL1 register"]
     #[inline(always)]
-    pub const fn i2c0_ctrl1(&self) -> &I2C0_CTRL1 {
-        &self.i2c0_ctrl1
+    pub const fn i2c0_ctrl1(&self) -> &I2C_CTRL1 {
+        self.i2c_ctrl1(0)
     }
     #[doc = "0x28 - I2C1_CTRL1 register"]
     #[inline(always)]
-    pub const fn i2c1_ctrl1(&self) -> &I2C1_CTRL1 {
-        &self.i2c1_ctrl1
+    pub const fn i2c1_ctrl1(&self) -> &I2C_CTRL1 {
+        self.i2c_ctrl1(1)
     }
     #[doc = "0x34 - DATE register"]
     #[inline(always)]
@@ -78,14 +98,10 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "I2C0_CTRL (rw) register accessor: I2C0_CTRL register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c0_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c0_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c0_ctrl`] module"]
-pub type I2C0_CTRL = crate::Reg<i2c0_ctrl::I2C0_CTRL_SPEC>;
-#[doc = "I2C0_CTRL register"]
-pub mod i2c0_ctrl;
-#[doc = "I2C1_CTRL (rw) register accessor: I2C1_CTRL register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c1_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c1_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c1_ctrl`] module"]
-pub type I2C1_CTRL = crate::Reg<i2c1_ctrl::I2C1_CTRL_SPEC>;
-#[doc = "I2C1_CTRL register"]
-pub mod i2c1_ctrl;
+#[doc = "I2C_CTRL (rw) register accessor: I2C%s_CTRL register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c_ctrl`] module"]
+pub type I2C_CTRL = crate::Reg<i2c_ctrl::I2C_CTRL_SPEC>;
+#[doc = "I2C%s_CTRL register"]
+pub mod i2c_ctrl;
 #[doc = "I2C0_CONF (rw) register accessor: I2C0_CONF register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c0_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c0_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c0_conf`] module"]
 pub type I2C0_CONF = crate::Reg<i2c0_conf::I2C0_CONF_SPEC>;
 #[doc = "I2C0_CONF register"]
@@ -114,13 +130,9 @@ pub mod ana_conf1;
 pub type ANA_CONF2 = crate::Reg<ana_conf2::ANA_CONF2_SPEC>;
 #[doc = "ANA_CONF2 register"]
 pub mod ana_conf2;
-#[doc = "I2C0_CTRL1 (rw) register accessor: I2C0_CTRL1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c0_ctrl1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c0_ctrl1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c0_ctrl1`] module"]
-pub type I2C0_CTRL1 = crate::Reg<i2c0_ctrl1::I2C0_CTRL1_SPEC>;
-#[doc = "I2C0_CTRL1 register"]
-pub mod i2c0_ctrl1;
-#[doc = "I2C1_CTRL1 (rw) register accessor: I2C1_CTRL1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c1_ctrl1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c1_ctrl1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c1_ctrl1`] module"]
-pub type I2C1_CTRL1 = crate::Reg<i2c1_ctrl1::I2C1_CTRL1_SPEC>;
-#[doc = "I2C1_CTRL1 register"]
-pub mod i2c1_ctrl1;
+#[doc = "I2C_CTRL1 (rw) register accessor: I2C%s_CTRL1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c_ctrl1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c_ctrl1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c_ctrl1`] module"]
+pub type I2C_CTRL1 = crate::Reg<i2c_ctrl1::I2C_CTRL1_SPEC>;
+#[doc = "I2C%s_CTRL1 register"]
+pub mod i2c_ctrl1;
 pub use crate::aes::date;
 pub use crate::aes::DATE;
