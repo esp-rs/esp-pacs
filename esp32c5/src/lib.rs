@@ -53,7 +53,7 @@ extern "C" {
     fn CPU_APM_M0();
     fn CPU_APM_M1();
     fn MSPI();
-    fn I2S();
+    fn I2S0();
     fn UHCI0();
     fn UART0();
     fn UART1();
@@ -62,7 +62,7 @@ extern "C" {
     fn TWAI0_TIMER();
     fn TWAI1();
     fn TWAI1_TIMER();
-    fn USB_SERIAL_JTAG();
+    fn USB_DEVICE();
     fn RMT();
     fn I2C_EXT0();
     fn TG0_T0_LEVEL();
@@ -184,7 +184,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 83] = [
         _handler: CPU_APM_M1,
     },
     Vector { _handler: MSPI },
-    Vector { _handler: I2S },
+    Vector { _handler: I2S0 },
     Vector { _handler: UHCI0 },
     Vector { _handler: UART0 },
     Vector { _handler: UART1 },
@@ -198,7 +198,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 83] = [
         _handler: TWAI1_TIMER,
     },
     Vector {
-        _handler: USB_SERIAL_JTAG,
+        _handler: USB_DEVICE,
     },
     Vector { _handler: RMT },
     Vector { _handler: I2C_EXT0 },

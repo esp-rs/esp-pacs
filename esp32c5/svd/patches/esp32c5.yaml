@@ -577,7 +577,10 @@ I2C0:
         access: read-write
 
 I2S0:
-  _include: ../../../common_patches/int_strip.yaml
+  _modify:
+    _interrupts:
+      I2S:
+        name: I2S0
 
 LEDC:
   "*":
@@ -722,6 +725,12 @@ PMU:
 "EFUSE,I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
   _include: ../../../common_patches/int_strip.yaml
 
+USB_DEVICE:
+  _modify:
+    _interrupts:
+      USB_SERIAL_JTAG:
+        name: USB_DEVICE
+
 SYSTIMER:
   _include:
     - ../../../common_patches/int_strip.yaml
@@ -770,6 +779,9 @@ _modify:
 
   SPI?:
     groupName: SPI
+
+  USB_DEVICE:
+    groupName: USB_DEVICE
 
 LP_AON:
   # Make sure the STORE registers are the same type
