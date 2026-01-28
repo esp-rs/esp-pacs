@@ -7,7 +7,7 @@ pub struct RegisterBlock {
     int_st: INT_ST,
     int_ena: INT_ENA,
     int_clr: INT_CLR,
-    conf: CONF,
+    mult_conf: MULT_CONF,
     _reserved5: [u8; 0xdc],
     date: DATE,
     _reserved_6_k_mem: [u8; 0xd0],
@@ -35,8 +35,8 @@ impl RegisterBlock {
     }
     #[doc = "0x1c - ECC configuration register"]
     #[inline(always)]
-    pub const fn conf(&self) -> &CONF {
-        &self.conf
+    pub const fn mult_conf(&self) -> &MULT_CONF {
+        &self.mult_conf
     }
     #[doc = "0xfc - Version control register"]
     #[inline(always)]
@@ -210,10 +210,10 @@ pub mod int_ena;
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "ECC interrupt clear register"]
 pub mod int_clr;
-#[doc = "CONF (rw) register accessor: ECC configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@conf`] module"]
-pub type CONF = crate::Reg<conf::CONF_SPEC>;
+#[doc = "MULT_CONF (rw) register accessor: ECC configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`mult_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mult_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mult_conf`] module"]
+pub type MULT_CONF = crate::Reg<mult_conf::MULT_CONF_SPEC>;
 #[doc = "ECC configuration register"]
-pub mod conf;
+pub mod mult_conf;
 pub use crate::aes::date;
 pub use crate::aes::DATE;
 #[doc = "K_MEM (rw) register accessor: The memory that stores k.\n\nYou can [`read`](crate::Reg::read) this register and get [`k_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`k_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@k_mem`] module"]

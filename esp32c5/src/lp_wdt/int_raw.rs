@@ -2,45 +2,45 @@
 pub type R = crate::R<INT_RAW_SPEC>;
 #[doc = "Register `INT_RAW` writer"]
 pub type W = crate::W<INT_RAW_SPEC>;
-#[doc = "Field `SUPER_WDT_INT_RAW` reader - Represents the SWD whether or not generates timeout interrupt.\\\\ 0:No \\\\1: Yes"]
-pub type SUPER_WDT_INT_RAW_R = crate::BitReader;
-#[doc = "Field `SUPER_WDT_INT_RAW` writer - Represents the SWD whether or not generates timeout interrupt.\\\\ 0:No \\\\1: Yes"]
-pub type SUPER_WDT_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LP_WDT_INT_RAW` reader - Represents the RWDT whether or not generates timeout interrupt.\\\\ 0:No \\\\1: Yes"]
-pub type LP_WDT_INT_RAW_R = crate::BitReader;
-#[doc = "Field `LP_WDT_INT_RAW` writer - Represents the RWDT whether or not generates timeout interrupt.\\\\ 0:No \\\\1: Yes"]
-pub type LP_WDT_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SUPER_WDT` reader - Represents the SWD whether or not generates timeout interrupt.\\\\ 0:No \\\\1: Yes"]
+pub type SUPER_WDT_R = crate::BitReader;
+#[doc = "Field `SUPER_WDT` writer - Represents the SWD whether or not generates timeout interrupt.\\\\ 0:No \\\\1: Yes"]
+pub type SUPER_WDT_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LP_WDT` reader - Represents the RWDT whether or not generates timeout interrupt.\\\\ 0:No \\\\1: Yes"]
+pub type LP_WDT_R = crate::BitReader;
+#[doc = "Field `LP_WDT` writer - Represents the RWDT whether or not generates timeout interrupt.\\\\ 0:No \\\\1: Yes"]
+pub type LP_WDT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 30 - Represents the SWD whether or not generates timeout interrupt.\\\\ 0:No \\\\1: Yes"]
     #[inline(always)]
-    pub fn super_wdt_int_raw(&self) -> SUPER_WDT_INT_RAW_R {
-        SUPER_WDT_INT_RAW_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn super_wdt(&self) -> SUPER_WDT_R {
+        SUPER_WDT_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Represents the RWDT whether or not generates timeout interrupt.\\\\ 0:No \\\\1: Yes"]
     #[inline(always)]
-    pub fn lp_wdt_int_raw(&self) -> LP_WDT_INT_RAW_R {
-        LP_WDT_INT_RAW_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn lp_wdt(&self) -> LP_WDT_R {
+        LP_WDT_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("super_wdt_int_raw", &self.super_wdt_int_raw())
-            .field("lp_wdt_int_raw", &self.lp_wdt_int_raw())
+            .field("super_wdt", &self.super_wdt())
+            .field("lp_wdt", &self.lp_wdt())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 30 - Represents the SWD whether or not generates timeout interrupt.\\\\ 0:No \\\\1: Yes"]
     #[inline(always)]
-    pub fn super_wdt_int_raw(&mut self) -> SUPER_WDT_INT_RAW_W<'_, INT_RAW_SPEC> {
-        SUPER_WDT_INT_RAW_W::new(self, 30)
+    pub fn super_wdt(&mut self) -> SUPER_WDT_W<'_, INT_RAW_SPEC> {
+        SUPER_WDT_W::new(self, 30)
     }
     #[doc = "Bit 31 - Represents the RWDT whether or not generates timeout interrupt.\\\\ 0:No \\\\1: Yes"]
     #[inline(always)]
-    pub fn lp_wdt_int_raw(&mut self) -> LP_WDT_INT_RAW_W<'_, INT_RAW_SPEC> {
-        LP_WDT_INT_RAW_W::new(self, 31)
+    pub fn lp_wdt(&mut self) -> LP_WDT_W<'_, INT_RAW_SPEC> {
+        LP_WDT_W::new(self, 31)
     }
 }
 #[doc = "Configure whether to generate timeout interrupt\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_raw::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

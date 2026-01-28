@@ -48,137 +48,137 @@ pub struct RegisterBlock {
     wr_tim_conf2: WR_TIM_CONF2,
     wr_tim_conf0_rs_bypass: WR_TIM_CONF0_RS_BYPASS,
     _reserved44: [u8; 0x0304],
-    apb2otp_wr_dis: APB2OTP_WR_DIS,
-    apb2otp_blk0_backup1_w1: APB2OTP_BLK0_BACKUP1_W1,
-    apb2otp_blk0_backup1_w2: APB2OTP_BLK0_BACKUP1_W2,
-    apb2otp_blk0_backup1_w3: APB2OTP_BLK0_BACKUP1_W3,
-    apb2otp_blk0_backup1_w4: APB2OTP_BLK0_BACKUP1_W4,
-    apb2otp_blk0_backup1_w5: APB2OTP_BLK0_BACKUP1_W5,
-    apb2otp_blk0_backup2_w1: APB2OTP_BLK0_BACKUP2_W1,
-    apb2otp_blk0_backup2_w2: APB2OTP_BLK0_BACKUP2_W2,
-    apb2otp_blk0_backup2_w3: APB2OTP_BLK0_BACKUP2_W3,
-    apb2otp_blk0_backup2_w4: APB2OTP_BLK0_BACKUP2_W4,
-    apb2otp_blk0_backup2_w5: APB2OTP_BLK0_BACKUP2_W5,
-    apb2otp_blk0_backup3_w1: APB2OTP_BLK0_BACKUP3_W1,
-    apb2otp_blk0_backup3_w2: APB2OTP_BLK0_BACKUP3_W2,
-    apb2otp_blk0_backup3_w3: APB2OTP_BLK0_BACKUP3_W3,
-    apb2otp_blk0_backup3_w4: APB2OTP_BLK0_BACKUP3_W4,
-    apb2otp_blk0_backup3_w5: APB2OTP_BLK0_BACKUP3_W5,
-    apb2otp_blk0_backup4_w1: APB2OTP_BLK0_BACKUP4_W1,
-    apb2otp_blk0_backup4_w2: APB2OTP_BLK0_BACKUP4_W2,
-    apb2otp_blk0_backup4_w3: APB2OTP_BLK0_BACKUP4_W3,
-    apb2otp_blk0_backup4_w4: APB2OTP_BLK0_BACKUP4_W4,
-    apb2otp_blk0_backup4_w5: APB2OTP_BLK0_BACKUP4_W5,
-    apb2otp_blk1_w1: APB2OTP_BLK1_W1,
-    apb2otp_blk1_w2: APB2OTP_BLK1_W2,
-    apb2otp_blk1_w3: APB2OTP_BLK1_W3,
-    apb2otp_blk1_w4: APB2OTP_BLK1_W4,
-    apb2otp_blk1_w5: APB2OTP_BLK1_W5,
-    apb2otp_blk1_w6: APB2OTP_BLK1_W6,
-    apb2otp_blk1_w7: APB2OTP_BLK1_W7,
-    apb2otp_blk1_w8: APB2OTP_BLK1_W8,
-    apb2otp_blk1_w9: APB2OTP_BLK1_W9,
-    apb2otp_blk2_w1: APB2OTP_BLK2_W1,
-    apb2otp_blk2_w2: APB2OTP_BLK2_W2,
-    apb2otp_blk2_w3: APB2OTP_BLK2_W3,
-    apb2otp_blk2_w4: APB2OTP_BLK2_W4,
-    apb2otp_blk2_w5: APB2OTP_BLK2_W5,
-    apb2otp_blk2_w6: APB2OTP_BLK2_W6,
-    apb2otp_blk2_w7: APB2OTP_BLK2_W7,
-    apb2otp_blk2_w8: APB2OTP_BLK2_W8,
-    apb2otp_blk2_w9: APB2OTP_BLK2_W9,
-    apb2otp_blk2_w10: APB2OTP_BLK2_W10,
-    apb2otp_blk2_w11: APB2OTP_BLK2_W11,
-    apb2otp_blk3_w1: APB2OTP_BLK3_W1,
-    apb2otp_blk3_w2: APB2OTP_BLK3_W2,
-    apb2otp_blk3_w3: APB2OTP_BLK3_W3,
-    apb2otp_blk3_w4: APB2OTP_BLK3_W4,
-    apb2otp_blk3_w5: APB2OTP_BLK3_W5,
-    apb2otp_blk3_w6: APB2OTP_BLK3_W6,
-    apb2otp_blk3_w7: APB2OTP_BLK3_W7,
-    apb2otp_blk3_w8: APB2OTP_BLK3_W8,
-    apb2otp_blk3_w9: APB2OTP_BLK3_W9,
-    apb2otp_blk3_w10: APB2OTP_BLK3_W10,
-    apb2otp_blk3_w11: APB2OTP_BLK3_W11,
-    apb2otp_blk4_w1: APB2OTP_BLK4_W1,
-    apb2otp_blk4_w2: APB2OTP_BLK4_W2,
-    apb2otp_blk4_w3: APB2OTP_BLK4_W3,
-    apb2otp_blk4_w4: APB2OTP_BLK4_W4,
-    apb2otp_blk4_w5: APB2OTP_BLK4_W5,
-    apb2otp_blk4_w6: APB2OTP_BLK4_W6,
-    apb2otp_blk4_w7: APB2OTP_BLK4_W7,
-    apb2otp_blk4_w8: APB2OTP_BLK4_W8,
-    apb2otp_blk4_w9: APB2OTP_BLK4_W9,
-    apb2otp_blk4_w10: APB2OTP_BLK4_W10,
-    apb2otp_blk4_w11: APB2OTP_BLK4_W11,
-    apb2otp_blk5_w1: APB2OTP_BLK5_W1,
-    apb2otp_blk5_w2: APB2OTP_BLK5_W2,
-    apb2otp_blk5_w3: APB2OTP_BLK5_W3,
-    apb2otp_blk5_w4: APB2OTP_BLK5_W4,
-    apb2otp_blk5_w5: APB2OTP_BLK5_W5,
-    apb2otp_blk5_w6: APB2OTP_BLK5_W6,
-    apb2otp_blk5_w7: APB2OTP_BLK5_W7,
-    apb2otp_blk5_w8: APB2OTP_BLK5_W8,
-    apb2otp_blk5_w9: APB2OTP_BLK5_W9,
-    apb2otp_blk5_w10: APB2OTP_BLK5_W10,
-    apb2otp_blk5_w11: APB2OTP_BLK5_W11,
-    apb2otp_blk6_w1: APB2OTP_BLK6_W1,
-    apb2otp_blk6_w2: APB2OTP_BLK6_W2,
-    apb2otp_blk6_w3: APB2OTP_BLK6_W3,
-    apb2otp_blk6_w4: APB2OTP_BLK6_W4,
-    apb2otp_blk6_w5: APB2OTP_BLK6_W5,
-    apb2otp_blk6_w6: APB2OTP_BLK6_W6,
-    apb2otp_blk6_w7: APB2OTP_BLK6_W7,
-    apb2otp_blk6_w8: APB2OTP_BLK6_W8,
-    apb2otp_blk6_w9: APB2OTP_BLK6_W9,
-    apb2otp_blk6_w10: APB2OTP_BLK6_W10,
-    apb2otp_blk6_w11: APB2OTP_BLK6_W11,
-    apb2otp_blk7_w1: APB2OTP_BLK7_W1,
-    apb2otp_blk7_w2: APB2OTP_BLK7_W2,
-    apb2otp_blk7_w3: APB2OTP_BLK7_W3,
-    apb2otp_blk7_w4: APB2OTP_BLK7_W4,
-    apb2otp_blk7_w5: APB2OTP_BLK7_W5,
-    apb2otp_blk7_w6: APB2OTP_BLK7_W6,
-    apb2otp_blk7_w7: APB2OTP_BLK7_W7,
-    apb2otp_blk7_w8: APB2OTP_BLK7_W8,
-    apb2otp_blk7_w9: APB2OTP_BLK7_W9,
-    apb2otp_blk7_w10: APB2OTP_BLK7_W10,
-    apb2otp_blk7_w11: APB2OTP_BLK7_W11,
-    apb2otp_blk8_w1: APB2OTP_BLK8_W1,
-    apb2otp_blk8_w2: APB2OTP_BLK8_W2,
-    apb2otp_blk8_w3: APB2OTP_BLK8_W3,
-    apb2otp_blk8_w4: APB2OTP_BLK8_W4,
-    apb2otp_blk8_w5: APB2OTP_BLK8_W5,
-    apb2otp_blk8_w6: APB2OTP_BLK8_W6,
-    apb2otp_blk8_w7: APB2OTP_BLK8_W7,
-    apb2otp_blk8_w8: APB2OTP_BLK8_W8,
-    apb2otp_blk8_w9: APB2OTP_BLK8_W9,
-    apb2otp_blk8_w10: APB2OTP_BLK8_W10,
-    apb2otp_blk8_w11: APB2OTP_BLK8_W11,
-    apb2otp_blk9_w1: APB2OTP_BLK9_W1,
-    apb2otp_blk9_w2: APB2OTP_BLK9_W2,
-    apb2otp_blk9_w3: APB2OTP_BLK9_W3,
-    apb2otp_blk9_w4: APB2OTP_BLK9_W4,
-    apb2otp_blk9_w5: APB2OTP_BLK9_W5,
-    apb2otp_blk9_w6: APB2OTP_BLK9_W6,
-    apb2otp_blk9_w7: APB2OTP_BLK9_W7,
-    apb2otp_blk9_w8: APB2OTP_BLK9_W8,
-    apb2otp_blk9_w9: APB2OTP_BLK9_W9,
-    apb2otp_blk9_w10: APB2OTP_BLK9_W10,
-    apb2otp_blk9_w11: APB2OTP_BLK9_W11,
-    apb2otp_blk10_w1: APB2OTP_BLK10_W1,
-    apb2otp_blk10_w2: APB2OTP_BLK10_W2,
-    apb2otp_blk10_w3: APB2OTP_BLK10_W3,
-    apb2otp_blk10_w4: APB2OTP_BLK10_W4,
-    apb2otp_blk10_w5: APB2OTP_BLK10_W5,
-    apb2otp_blk10_w6: APB2OTP_BLK10_W6,
-    apb2otp_blk10_w7: APB2OTP_BLK10_W7,
-    apb2otp_blk10_w8: APB2OTP_BLK10_W8,
-    apb2otp_blk10_w9: APB2OTP_BLK10_W9,
-    apb2otp_blk10_w10: APB2OTP_BLK10_W10,
-    apb2otp_blk10_w11: APB2OTP_BLK10_W11,
+    wr_dis: WR_DIS,
+    blk0_backup1_w1: BLK0_BACKUP1_W1,
+    blk0_backup1_w2: BLK0_BACKUP1_W2,
+    blk0_backup1_w3: BLK0_BACKUP1_W3,
+    blk0_backup1_w4: BLK0_BACKUP1_W4,
+    blk0_backup1_w5: BLK0_BACKUP1_W5,
+    blk0_backup2_w1: BLK0_BACKUP2_W1,
+    blk0_backup2_w2: BLK0_BACKUP2_W2,
+    blk0_backup2_w3: BLK0_BACKUP2_W3,
+    blk0_backup2_w4: BLK0_BACKUP2_W4,
+    blk0_backup2_w5: BLK0_BACKUP2_W5,
+    blk0_backup3_w1: BLK0_BACKUP3_W1,
+    blk0_backup3_w2: BLK0_BACKUP3_W2,
+    blk0_backup3_w3: BLK0_BACKUP3_W3,
+    blk0_backup3_w4: BLK0_BACKUP3_W4,
+    blk0_backup3_w5: BLK0_BACKUP3_W5,
+    blk0_backup4_w1: BLK0_BACKUP4_W1,
+    blk0_backup4_w2: BLK0_BACKUP4_W2,
+    blk0_backup4_w3: BLK0_BACKUP4_W3,
+    blk0_backup4_w4: BLK0_BACKUP4_W4,
+    blk0_backup4_w5: BLK0_BACKUP4_W5,
+    blk1_w1: BLK1_W1,
+    blk1_w2: BLK1_W2,
+    blk1_w3: BLK1_W3,
+    blk1_w4: BLK1_W4,
+    blk1_w5: BLK1_W5,
+    blk1_w6: BLK1_W6,
+    blk1_w7: BLK1_W7,
+    blk1_w8: BLK1_W8,
+    blk1_w9: BLK1_W9,
+    blk2_w1: BLK2_W1,
+    blk2_w2: BLK2_W2,
+    blk2_w3: BLK2_W3,
+    blk2_w4: BLK2_W4,
+    blk2_w5: BLK2_W5,
+    blk2_w6: BLK2_W6,
+    blk2_w7: BLK2_W7,
+    blk2_w8: BLK2_W8,
+    blk2_w9: BLK2_W9,
+    blk2_w10: BLK2_W10,
+    blk2_w11: BLK2_W11,
+    blk3_w1: BLK3_W1,
+    blk3_w2: BLK3_W2,
+    blk3_w3: BLK3_W3,
+    blk3_w4: BLK3_W4,
+    blk3_w5: BLK3_W5,
+    blk3_w6: BLK3_W6,
+    blk3_w7: BLK3_W7,
+    blk3_w8: BLK3_W8,
+    blk3_w9: BLK3_W9,
+    blk3_w10: BLK3_W10,
+    blk3_w11: BLK3_W11,
+    blk4_w1: BLK4_W1,
+    blk4_w2: BLK4_W2,
+    blk4_w3: BLK4_W3,
+    blk4_w4: BLK4_W4,
+    blk4_w5: BLK4_W5,
+    blk4_w6: BLK4_W6,
+    blk4_w7: BLK4_W7,
+    blk4_w8: BLK4_W8,
+    blk4_w9: BLK4_W9,
+    blk4_w10: BLK4_W10,
+    blk4_w11: BLK4_W11,
+    blk5_w1: BLK5_W1,
+    blk5_w2: BLK5_W2,
+    blk5_w3: BLK5_W3,
+    blk5_w4: BLK5_W4,
+    blk5_w5: BLK5_W5,
+    blk5_w6: BLK5_W6,
+    blk5_w7: BLK5_W7,
+    blk5_w8: BLK5_W8,
+    blk5_w9: BLK5_W9,
+    blk5_w10: BLK5_W10,
+    blk5_w11: BLK5_W11,
+    blk6_w1: BLK6_W1,
+    blk6_w2: BLK6_W2,
+    blk6_w3: BLK6_W3,
+    blk6_w4: BLK6_W4,
+    blk6_w5: BLK6_W5,
+    blk6_w6: BLK6_W6,
+    blk6_w7: BLK6_W7,
+    blk6_w8: BLK6_W8,
+    blk6_w9: BLK6_W9,
+    blk6_w10: BLK6_W10,
+    blk6_w11: BLK6_W11,
+    blk7_w1: BLK7_W1,
+    blk7_w2: BLK7_W2,
+    blk7_w3: BLK7_W3,
+    blk7_w4: BLK7_W4,
+    blk7_w5: BLK7_W5,
+    blk7_w6: BLK7_W6,
+    blk7_w7: BLK7_W7,
+    blk7_w8: BLK7_W8,
+    blk7_w9: BLK7_W9,
+    blk7_w10: BLK7_W10,
+    blk7_w11: BLK7_W11,
+    blk8_w1: BLK8_W1,
+    blk8_w2: BLK8_W2,
+    blk8_w3: BLK8_W3,
+    blk8_w4: BLK8_W4,
+    blk8_w5: BLK8_W5,
+    blk8_w6: BLK8_W6,
+    blk8_w7: BLK8_W7,
+    blk8_w8: BLK8_W8,
+    blk8_w9: BLK8_W9,
+    blk8_w10: BLK8_W10,
+    blk8_w11: BLK8_W11,
+    blk9_w1: BLK9_W1,
+    blk9_w2: BLK9_W2,
+    blk9_w3: BLK9_W3,
+    blk9_w4: BLK9_W4,
+    blk9_w5: BLK9_W5,
+    blk9_w6: BLK9_W6,
+    blk9_w7: BLK9_W7,
+    blk9_w8: BLK9_W8,
+    blk9_w9: BLK9_W9,
+    blk9_w10: BLK9_W10,
+    blk9_w11: BLK9_W11,
+    blk10_w1: BLK10_W1,
+    blk10_w2: BLK10_W2,
+    blk10_w3: BLK10_W3,
+    blk10_w4: BLK10_W4,
+    blk10_w5: BLK10_W5,
+    blk10_w6: BLK10_W6,
+    blk10_w7: BLK10_W7,
+    blk10_w8: BLK10_W8,
+    blk10_w9: BLK10_W9,
+    blk10_w10: BLK10_W10,
+    blk10_w11: BLK10_W11,
     _reserved173: [u8; 0x04],
-    apb2otp_en: APB2OTP_EN,
+    en: EN,
 }
 impl RegisterBlock {
     #[doc = "0x00..0x20 - Represents pgm_data%s"]
@@ -469,653 +469,653 @@ impl RegisterBlock {
     }
     #[doc = "0x500 - eFuse apb2otp block0 data register1."]
     #[inline(always)]
-    pub const fn apb2otp_wr_dis(&self) -> &APB2OTP_WR_DIS {
-        &self.apb2otp_wr_dis
+    pub const fn wr_dis(&self) -> &WR_DIS {
+        &self.wr_dis
     }
     #[doc = "0x504 - eFuse apb2otp block0 data register2."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup1_w1(&self) -> &APB2OTP_BLK0_BACKUP1_W1 {
-        &self.apb2otp_blk0_backup1_w1
+    pub const fn blk0_backup1_w1(&self) -> &BLK0_BACKUP1_W1 {
+        &self.blk0_backup1_w1
     }
     #[doc = "0x508 - eFuse apb2otp block0 data register3."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup1_w2(&self) -> &APB2OTP_BLK0_BACKUP1_W2 {
-        &self.apb2otp_blk0_backup1_w2
+    pub const fn blk0_backup1_w2(&self) -> &BLK0_BACKUP1_W2 {
+        &self.blk0_backup1_w2
     }
     #[doc = "0x50c - eFuse apb2otp block0 data register4."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup1_w3(&self) -> &APB2OTP_BLK0_BACKUP1_W3 {
-        &self.apb2otp_blk0_backup1_w3
+    pub const fn blk0_backup1_w3(&self) -> &BLK0_BACKUP1_W3 {
+        &self.blk0_backup1_w3
     }
     #[doc = "0x510 - eFuse apb2otp block0 data register5."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup1_w4(&self) -> &APB2OTP_BLK0_BACKUP1_W4 {
-        &self.apb2otp_blk0_backup1_w4
+    pub const fn blk0_backup1_w4(&self) -> &BLK0_BACKUP1_W4 {
+        &self.blk0_backup1_w4
     }
     #[doc = "0x514 - eFuse apb2otp block0 data register6."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup1_w5(&self) -> &APB2OTP_BLK0_BACKUP1_W5 {
-        &self.apb2otp_blk0_backup1_w5
+    pub const fn blk0_backup1_w5(&self) -> &BLK0_BACKUP1_W5 {
+        &self.blk0_backup1_w5
     }
     #[doc = "0x518 - eFuse apb2otp block0 data register7."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup2_w1(&self) -> &APB2OTP_BLK0_BACKUP2_W1 {
-        &self.apb2otp_blk0_backup2_w1
+    pub const fn blk0_backup2_w1(&self) -> &BLK0_BACKUP2_W1 {
+        &self.blk0_backup2_w1
     }
     #[doc = "0x51c - eFuse apb2otp block0 data register8."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup2_w2(&self) -> &APB2OTP_BLK0_BACKUP2_W2 {
-        &self.apb2otp_blk0_backup2_w2
+    pub const fn blk0_backup2_w2(&self) -> &BLK0_BACKUP2_W2 {
+        &self.blk0_backup2_w2
     }
     #[doc = "0x520 - eFuse apb2otp block0 data register9."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup2_w3(&self) -> &APB2OTP_BLK0_BACKUP2_W3 {
-        &self.apb2otp_blk0_backup2_w3
+    pub const fn blk0_backup2_w3(&self) -> &BLK0_BACKUP2_W3 {
+        &self.blk0_backup2_w3
     }
     #[doc = "0x524 - eFuse apb2otp block0 data register10."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup2_w4(&self) -> &APB2OTP_BLK0_BACKUP2_W4 {
-        &self.apb2otp_blk0_backup2_w4
+    pub const fn blk0_backup2_w4(&self) -> &BLK0_BACKUP2_W4 {
+        &self.blk0_backup2_w4
     }
     #[doc = "0x528 - eFuse apb2otp block0 data register11."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup2_w5(&self) -> &APB2OTP_BLK0_BACKUP2_W5 {
-        &self.apb2otp_blk0_backup2_w5
+    pub const fn blk0_backup2_w5(&self) -> &BLK0_BACKUP2_W5 {
+        &self.blk0_backup2_w5
     }
     #[doc = "0x52c - eFuse apb2otp block0 data register12."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup3_w1(&self) -> &APB2OTP_BLK0_BACKUP3_W1 {
-        &self.apb2otp_blk0_backup3_w1
+    pub const fn blk0_backup3_w1(&self) -> &BLK0_BACKUP3_W1 {
+        &self.blk0_backup3_w1
     }
     #[doc = "0x530 - eFuse apb2otp block0 data register13."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup3_w2(&self) -> &APB2OTP_BLK0_BACKUP3_W2 {
-        &self.apb2otp_blk0_backup3_w2
+    pub const fn blk0_backup3_w2(&self) -> &BLK0_BACKUP3_W2 {
+        &self.blk0_backup3_w2
     }
     #[doc = "0x534 - eFuse apb2otp block0 data register14."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup3_w3(&self) -> &APB2OTP_BLK0_BACKUP3_W3 {
-        &self.apb2otp_blk0_backup3_w3
+    pub const fn blk0_backup3_w3(&self) -> &BLK0_BACKUP3_W3 {
+        &self.blk0_backup3_w3
     }
     #[doc = "0x538 - eFuse apb2otp block0 data register15."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup3_w4(&self) -> &APB2OTP_BLK0_BACKUP3_W4 {
-        &self.apb2otp_blk0_backup3_w4
+    pub const fn blk0_backup3_w4(&self) -> &BLK0_BACKUP3_W4 {
+        &self.blk0_backup3_w4
     }
     #[doc = "0x53c - eFuse apb2otp block0 data register16."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup3_w5(&self) -> &APB2OTP_BLK0_BACKUP3_W5 {
-        &self.apb2otp_blk0_backup3_w5
+    pub const fn blk0_backup3_w5(&self) -> &BLK0_BACKUP3_W5 {
+        &self.blk0_backup3_w5
     }
     #[doc = "0x540 - eFuse apb2otp block0 data register17."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup4_w1(&self) -> &APB2OTP_BLK0_BACKUP4_W1 {
-        &self.apb2otp_blk0_backup4_w1
+    pub const fn blk0_backup4_w1(&self) -> &BLK0_BACKUP4_W1 {
+        &self.blk0_backup4_w1
     }
     #[doc = "0x544 - eFuse apb2otp block0 data register18."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup4_w2(&self) -> &APB2OTP_BLK0_BACKUP4_W2 {
-        &self.apb2otp_blk0_backup4_w2
+    pub const fn blk0_backup4_w2(&self) -> &BLK0_BACKUP4_W2 {
+        &self.blk0_backup4_w2
     }
     #[doc = "0x548 - eFuse apb2otp block0 data register19."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup4_w3(&self) -> &APB2OTP_BLK0_BACKUP4_W3 {
-        &self.apb2otp_blk0_backup4_w3
+    pub const fn blk0_backup4_w3(&self) -> &BLK0_BACKUP4_W3 {
+        &self.blk0_backup4_w3
     }
     #[doc = "0x54c - eFuse apb2otp block0 data register20."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup4_w4(&self) -> &APB2OTP_BLK0_BACKUP4_W4 {
-        &self.apb2otp_blk0_backup4_w4
+    pub const fn blk0_backup4_w4(&self) -> &BLK0_BACKUP4_W4 {
+        &self.blk0_backup4_w4
     }
     #[doc = "0x550 - eFuse apb2otp block0 data register21."]
     #[inline(always)]
-    pub const fn apb2otp_blk0_backup4_w5(&self) -> &APB2OTP_BLK0_BACKUP4_W5 {
-        &self.apb2otp_blk0_backup4_w5
+    pub const fn blk0_backup4_w5(&self) -> &BLK0_BACKUP4_W5 {
+        &self.blk0_backup4_w5
     }
     #[doc = "0x554 - eFuse apb2otp block1 data register1."]
     #[inline(always)]
-    pub const fn apb2otp_blk1_w1(&self) -> &APB2OTP_BLK1_W1 {
-        &self.apb2otp_blk1_w1
+    pub const fn blk1_w1(&self) -> &BLK1_W1 {
+        &self.blk1_w1
     }
     #[doc = "0x558 - eFuse apb2otp block1 data register2."]
     #[inline(always)]
-    pub const fn apb2otp_blk1_w2(&self) -> &APB2OTP_BLK1_W2 {
-        &self.apb2otp_blk1_w2
+    pub const fn blk1_w2(&self) -> &BLK1_W2 {
+        &self.blk1_w2
     }
     #[doc = "0x55c - eFuse apb2otp block1 data register3."]
     #[inline(always)]
-    pub const fn apb2otp_blk1_w3(&self) -> &APB2OTP_BLK1_W3 {
-        &self.apb2otp_blk1_w3
+    pub const fn blk1_w3(&self) -> &BLK1_W3 {
+        &self.blk1_w3
     }
     #[doc = "0x560 - eFuse apb2otp block1 data register4."]
     #[inline(always)]
-    pub const fn apb2otp_blk1_w4(&self) -> &APB2OTP_BLK1_W4 {
-        &self.apb2otp_blk1_w4
+    pub const fn blk1_w4(&self) -> &BLK1_W4 {
+        &self.blk1_w4
     }
     #[doc = "0x564 - eFuse apb2otp block1 data register5."]
     #[inline(always)]
-    pub const fn apb2otp_blk1_w5(&self) -> &APB2OTP_BLK1_W5 {
-        &self.apb2otp_blk1_w5
+    pub const fn blk1_w5(&self) -> &BLK1_W5 {
+        &self.blk1_w5
     }
     #[doc = "0x568 - eFuse apb2otp block1 data register6."]
     #[inline(always)]
-    pub const fn apb2otp_blk1_w6(&self) -> &APB2OTP_BLK1_W6 {
-        &self.apb2otp_blk1_w6
+    pub const fn blk1_w6(&self) -> &BLK1_W6 {
+        &self.blk1_w6
     }
     #[doc = "0x56c - eFuse apb2otp block1 data register7."]
     #[inline(always)]
-    pub const fn apb2otp_blk1_w7(&self) -> &APB2OTP_BLK1_W7 {
-        &self.apb2otp_blk1_w7
+    pub const fn blk1_w7(&self) -> &BLK1_W7 {
+        &self.blk1_w7
     }
     #[doc = "0x570 - eFuse apb2otp block1 data register8."]
     #[inline(always)]
-    pub const fn apb2otp_blk1_w8(&self) -> &APB2OTP_BLK1_W8 {
-        &self.apb2otp_blk1_w8
+    pub const fn blk1_w8(&self) -> &BLK1_W8 {
+        &self.blk1_w8
     }
     #[doc = "0x574 - eFuse apb2otp block1 data register9."]
     #[inline(always)]
-    pub const fn apb2otp_blk1_w9(&self) -> &APB2OTP_BLK1_W9 {
-        &self.apb2otp_blk1_w9
+    pub const fn blk1_w9(&self) -> &BLK1_W9 {
+        &self.blk1_w9
     }
     #[doc = "0x578 - eFuse apb2otp block2 data register1."]
     #[inline(always)]
-    pub const fn apb2otp_blk2_w1(&self) -> &APB2OTP_BLK2_W1 {
-        &self.apb2otp_blk2_w1
+    pub const fn blk2_w1(&self) -> &BLK2_W1 {
+        &self.blk2_w1
     }
     #[doc = "0x57c - eFuse apb2otp block2 data register2."]
     #[inline(always)]
-    pub const fn apb2otp_blk2_w2(&self) -> &APB2OTP_BLK2_W2 {
-        &self.apb2otp_blk2_w2
+    pub const fn blk2_w2(&self) -> &BLK2_W2 {
+        &self.blk2_w2
     }
     #[doc = "0x580 - eFuse apb2otp block2 data register3."]
     #[inline(always)]
-    pub const fn apb2otp_blk2_w3(&self) -> &APB2OTP_BLK2_W3 {
-        &self.apb2otp_blk2_w3
+    pub const fn blk2_w3(&self) -> &BLK2_W3 {
+        &self.blk2_w3
     }
     #[doc = "0x584 - eFuse apb2otp block2 data register4."]
     #[inline(always)]
-    pub const fn apb2otp_blk2_w4(&self) -> &APB2OTP_BLK2_W4 {
-        &self.apb2otp_blk2_w4
+    pub const fn blk2_w4(&self) -> &BLK2_W4 {
+        &self.blk2_w4
     }
     #[doc = "0x588 - eFuse apb2otp block2 data register5."]
     #[inline(always)]
-    pub const fn apb2otp_blk2_w5(&self) -> &APB2OTP_BLK2_W5 {
-        &self.apb2otp_blk2_w5
+    pub const fn blk2_w5(&self) -> &BLK2_W5 {
+        &self.blk2_w5
     }
     #[doc = "0x58c - eFuse apb2otp block2 data register6."]
     #[inline(always)]
-    pub const fn apb2otp_blk2_w6(&self) -> &APB2OTP_BLK2_W6 {
-        &self.apb2otp_blk2_w6
+    pub const fn blk2_w6(&self) -> &BLK2_W6 {
+        &self.blk2_w6
     }
     #[doc = "0x590 - eFuse apb2otp block2 data register7."]
     #[inline(always)]
-    pub const fn apb2otp_blk2_w7(&self) -> &APB2OTP_BLK2_W7 {
-        &self.apb2otp_blk2_w7
+    pub const fn blk2_w7(&self) -> &BLK2_W7 {
+        &self.blk2_w7
     }
     #[doc = "0x594 - eFuse apb2otp block2 data register8."]
     #[inline(always)]
-    pub const fn apb2otp_blk2_w8(&self) -> &APB2OTP_BLK2_W8 {
-        &self.apb2otp_blk2_w8
+    pub const fn blk2_w8(&self) -> &BLK2_W8 {
+        &self.blk2_w8
     }
     #[doc = "0x598 - eFuse apb2otp block2 data register9."]
     #[inline(always)]
-    pub const fn apb2otp_blk2_w9(&self) -> &APB2OTP_BLK2_W9 {
-        &self.apb2otp_blk2_w9
+    pub const fn blk2_w9(&self) -> &BLK2_W9 {
+        &self.blk2_w9
     }
     #[doc = "0x59c - eFuse apb2otp block2 data register10."]
     #[inline(always)]
-    pub const fn apb2otp_blk2_w10(&self) -> &APB2OTP_BLK2_W10 {
-        &self.apb2otp_blk2_w10
+    pub const fn blk2_w10(&self) -> &BLK2_W10 {
+        &self.blk2_w10
     }
     #[doc = "0x5a0 - eFuse apb2otp block2 data register11."]
     #[inline(always)]
-    pub const fn apb2otp_blk2_w11(&self) -> &APB2OTP_BLK2_W11 {
-        &self.apb2otp_blk2_w11
+    pub const fn blk2_w11(&self) -> &BLK2_W11 {
+        &self.blk2_w11
     }
     #[doc = "0x5a4 - eFuse apb2otp block3 data register1."]
     #[inline(always)]
-    pub const fn apb2otp_blk3_w1(&self) -> &APB2OTP_BLK3_W1 {
-        &self.apb2otp_blk3_w1
+    pub const fn blk3_w1(&self) -> &BLK3_W1 {
+        &self.blk3_w1
     }
     #[doc = "0x5a8 - eFuse apb2otp block3 data register2."]
     #[inline(always)]
-    pub const fn apb2otp_blk3_w2(&self) -> &APB2OTP_BLK3_W2 {
-        &self.apb2otp_blk3_w2
+    pub const fn blk3_w2(&self) -> &BLK3_W2 {
+        &self.blk3_w2
     }
     #[doc = "0x5ac - eFuse apb2otp block3 data register3."]
     #[inline(always)]
-    pub const fn apb2otp_blk3_w3(&self) -> &APB2OTP_BLK3_W3 {
-        &self.apb2otp_blk3_w3
+    pub const fn blk3_w3(&self) -> &BLK3_W3 {
+        &self.blk3_w3
     }
     #[doc = "0x5b0 - eFuse apb2otp block3 data register4."]
     #[inline(always)]
-    pub const fn apb2otp_blk3_w4(&self) -> &APB2OTP_BLK3_W4 {
-        &self.apb2otp_blk3_w4
+    pub const fn blk3_w4(&self) -> &BLK3_W4 {
+        &self.blk3_w4
     }
     #[doc = "0x5b4 - eFuse apb2otp block3 data register5."]
     #[inline(always)]
-    pub const fn apb2otp_blk3_w5(&self) -> &APB2OTP_BLK3_W5 {
-        &self.apb2otp_blk3_w5
+    pub const fn blk3_w5(&self) -> &BLK3_W5 {
+        &self.blk3_w5
     }
     #[doc = "0x5b8 - eFuse apb2otp block3 data register6."]
     #[inline(always)]
-    pub const fn apb2otp_blk3_w6(&self) -> &APB2OTP_BLK3_W6 {
-        &self.apb2otp_blk3_w6
+    pub const fn blk3_w6(&self) -> &BLK3_W6 {
+        &self.blk3_w6
     }
     #[doc = "0x5bc - eFuse apb2otp block3 data register7."]
     #[inline(always)]
-    pub const fn apb2otp_blk3_w7(&self) -> &APB2OTP_BLK3_W7 {
-        &self.apb2otp_blk3_w7
+    pub const fn blk3_w7(&self) -> &BLK3_W7 {
+        &self.blk3_w7
     }
     #[doc = "0x5c0 - eFuse apb2otp block3 data register8."]
     #[inline(always)]
-    pub const fn apb2otp_blk3_w8(&self) -> &APB2OTP_BLK3_W8 {
-        &self.apb2otp_blk3_w8
+    pub const fn blk3_w8(&self) -> &BLK3_W8 {
+        &self.blk3_w8
     }
     #[doc = "0x5c4 - eFuse apb2otp block3 data register9."]
     #[inline(always)]
-    pub const fn apb2otp_blk3_w9(&self) -> &APB2OTP_BLK3_W9 {
-        &self.apb2otp_blk3_w9
+    pub const fn blk3_w9(&self) -> &BLK3_W9 {
+        &self.blk3_w9
     }
     #[doc = "0x5c8 - eFuse apb2otp block3 data register10."]
     #[inline(always)]
-    pub const fn apb2otp_blk3_w10(&self) -> &APB2OTP_BLK3_W10 {
-        &self.apb2otp_blk3_w10
+    pub const fn blk3_w10(&self) -> &BLK3_W10 {
+        &self.blk3_w10
     }
     #[doc = "0x5cc - eFuse apb2otp block3 data register11."]
     #[inline(always)]
-    pub const fn apb2otp_blk3_w11(&self) -> &APB2OTP_BLK3_W11 {
-        &self.apb2otp_blk3_w11
+    pub const fn blk3_w11(&self) -> &BLK3_W11 {
+        &self.blk3_w11
     }
     #[doc = "0x5d0 - eFuse apb2otp BLOCK7 data register1."]
     #[inline(always)]
-    pub const fn apb2otp_blk4_w1(&self) -> &APB2OTP_BLK4_W1 {
-        &self.apb2otp_blk4_w1
+    pub const fn blk4_w1(&self) -> &BLK4_W1 {
+        &self.blk4_w1
     }
     #[doc = "0x5d4 - eFuse apb2otp block4 data register2."]
     #[inline(always)]
-    pub const fn apb2otp_blk4_w2(&self) -> &APB2OTP_BLK4_W2 {
-        &self.apb2otp_blk4_w2
+    pub const fn blk4_w2(&self) -> &BLK4_W2 {
+        &self.blk4_w2
     }
     #[doc = "0x5d8 - eFuse apb2otp block4 data register3."]
     #[inline(always)]
-    pub const fn apb2otp_blk4_w3(&self) -> &APB2OTP_BLK4_W3 {
-        &self.apb2otp_blk4_w3
+    pub const fn blk4_w3(&self) -> &BLK4_W3 {
+        &self.blk4_w3
     }
     #[doc = "0x5dc - eFuse apb2otp block4 data register4."]
     #[inline(always)]
-    pub const fn apb2otp_blk4_w4(&self) -> &APB2OTP_BLK4_W4 {
-        &self.apb2otp_blk4_w4
+    pub const fn blk4_w4(&self) -> &BLK4_W4 {
+        &self.blk4_w4
     }
     #[doc = "0x5e0 - eFuse apb2otp block4 data register5."]
     #[inline(always)]
-    pub const fn apb2otp_blk4_w5(&self) -> &APB2OTP_BLK4_W5 {
-        &self.apb2otp_blk4_w5
+    pub const fn blk4_w5(&self) -> &BLK4_W5 {
+        &self.blk4_w5
     }
     #[doc = "0x5e4 - eFuse apb2otp block4 data register6."]
     #[inline(always)]
-    pub const fn apb2otp_blk4_w6(&self) -> &APB2OTP_BLK4_W6 {
-        &self.apb2otp_blk4_w6
+    pub const fn blk4_w6(&self) -> &BLK4_W6 {
+        &self.blk4_w6
     }
     #[doc = "0x5e8 - eFuse apb2otp block4 data register7."]
     #[inline(always)]
-    pub const fn apb2otp_blk4_w7(&self) -> &APB2OTP_BLK4_W7 {
-        &self.apb2otp_blk4_w7
+    pub const fn blk4_w7(&self) -> &BLK4_W7 {
+        &self.blk4_w7
     }
     #[doc = "0x5ec - eFuse apb2otp block4 data register8."]
     #[inline(always)]
-    pub const fn apb2otp_blk4_w8(&self) -> &APB2OTP_BLK4_W8 {
-        &self.apb2otp_blk4_w8
+    pub const fn blk4_w8(&self) -> &BLK4_W8 {
+        &self.blk4_w8
     }
     #[doc = "0x5f0 - eFuse apb2otp block4 data register9."]
     #[inline(always)]
-    pub const fn apb2otp_blk4_w9(&self) -> &APB2OTP_BLK4_W9 {
-        &self.apb2otp_blk4_w9
+    pub const fn blk4_w9(&self) -> &BLK4_W9 {
+        &self.blk4_w9
     }
     #[doc = "0x5f4 - eFuse apb2otp block4 data registe10."]
     #[inline(always)]
-    pub const fn apb2otp_blk4_w10(&self) -> &APB2OTP_BLK4_W10 {
-        &self.apb2otp_blk4_w10
+    pub const fn blk4_w10(&self) -> &BLK4_W10 {
+        &self.blk4_w10
     }
     #[doc = "0x5f8 - eFuse apb2otp block4 data register11."]
     #[inline(always)]
-    pub const fn apb2otp_blk4_w11(&self) -> &APB2OTP_BLK4_W11 {
-        &self.apb2otp_blk4_w11
+    pub const fn blk4_w11(&self) -> &BLK4_W11 {
+        &self.blk4_w11
     }
     #[doc = "0x5fc - eFuse apb2otp block5 data register1."]
     #[inline(always)]
-    pub const fn apb2otp_blk5_w1(&self) -> &APB2OTP_BLK5_W1 {
-        &self.apb2otp_blk5_w1
+    pub const fn blk5_w1(&self) -> &BLK5_W1 {
+        &self.blk5_w1
     }
     #[doc = "0x600 - eFuse apb2otp block5 data register2."]
     #[inline(always)]
-    pub const fn apb2otp_blk5_w2(&self) -> &APB2OTP_BLK5_W2 {
-        &self.apb2otp_blk5_w2
+    pub const fn blk5_w2(&self) -> &BLK5_W2 {
+        &self.blk5_w2
     }
     #[doc = "0x604 - eFuse apb2otp block5 data register3."]
     #[inline(always)]
-    pub const fn apb2otp_blk5_w3(&self) -> &APB2OTP_BLK5_W3 {
-        &self.apb2otp_blk5_w3
+    pub const fn blk5_w3(&self) -> &BLK5_W3 {
+        &self.blk5_w3
     }
     #[doc = "0x608 - eFuse apb2otp block5 data register4."]
     #[inline(always)]
-    pub const fn apb2otp_blk5_w4(&self) -> &APB2OTP_BLK5_W4 {
-        &self.apb2otp_blk5_w4
+    pub const fn blk5_w4(&self) -> &BLK5_W4 {
+        &self.blk5_w4
     }
     #[doc = "0x60c - eFuse apb2otp block5 data register5."]
     #[inline(always)]
-    pub const fn apb2otp_blk5_w5(&self) -> &APB2OTP_BLK5_W5 {
-        &self.apb2otp_blk5_w5
+    pub const fn blk5_w5(&self) -> &BLK5_W5 {
+        &self.blk5_w5
     }
     #[doc = "0x610 - eFuse apb2otp block5 data register6."]
     #[inline(always)]
-    pub const fn apb2otp_blk5_w6(&self) -> &APB2OTP_BLK5_W6 {
-        &self.apb2otp_blk5_w6
+    pub const fn blk5_w6(&self) -> &BLK5_W6 {
+        &self.blk5_w6
     }
     #[doc = "0x614 - eFuse apb2otp block5 data register7."]
     #[inline(always)]
-    pub const fn apb2otp_blk5_w7(&self) -> &APB2OTP_BLK5_W7 {
-        &self.apb2otp_blk5_w7
+    pub const fn blk5_w7(&self) -> &BLK5_W7 {
+        &self.blk5_w7
     }
     #[doc = "0x618 - eFuse apb2otp block5 data register8."]
     #[inline(always)]
-    pub const fn apb2otp_blk5_w8(&self) -> &APB2OTP_BLK5_W8 {
-        &self.apb2otp_blk5_w8
+    pub const fn blk5_w8(&self) -> &BLK5_W8 {
+        &self.blk5_w8
     }
     #[doc = "0x61c - eFuse apb2otp block5 data register9."]
     #[inline(always)]
-    pub const fn apb2otp_blk5_w9(&self) -> &APB2OTP_BLK5_W9 {
-        &self.apb2otp_blk5_w9
+    pub const fn blk5_w9(&self) -> &BLK5_W9 {
+        &self.blk5_w9
     }
     #[doc = "0x620 - eFuse apb2otp block5 data register10."]
     #[inline(always)]
-    pub const fn apb2otp_blk5_w10(&self) -> &APB2OTP_BLK5_W10 {
-        &self.apb2otp_blk5_w10
+    pub const fn blk5_w10(&self) -> &BLK5_W10 {
+        &self.blk5_w10
     }
     #[doc = "0x624 - eFuse apb2otp block5 data register11."]
     #[inline(always)]
-    pub const fn apb2otp_blk5_w11(&self) -> &APB2OTP_BLK5_W11 {
-        &self.apb2otp_blk5_w11
+    pub const fn blk5_w11(&self) -> &BLK5_W11 {
+        &self.blk5_w11
     }
     #[doc = "0x628 - eFuse apb2otp block6 data register1."]
     #[inline(always)]
-    pub const fn apb2otp_blk6_w1(&self) -> &APB2OTP_BLK6_W1 {
-        &self.apb2otp_blk6_w1
+    pub const fn blk6_w1(&self) -> &BLK6_W1 {
+        &self.blk6_w1
     }
     #[doc = "0x62c - eFuse apb2otp block6 data register2."]
     #[inline(always)]
-    pub const fn apb2otp_blk6_w2(&self) -> &APB2OTP_BLK6_W2 {
-        &self.apb2otp_blk6_w2
+    pub const fn blk6_w2(&self) -> &BLK6_W2 {
+        &self.blk6_w2
     }
     #[doc = "0x630 - eFuse apb2otp block6 data register3."]
     #[inline(always)]
-    pub const fn apb2otp_blk6_w3(&self) -> &APB2OTP_BLK6_W3 {
-        &self.apb2otp_blk6_w3
+    pub const fn blk6_w3(&self) -> &BLK6_W3 {
+        &self.blk6_w3
     }
     #[doc = "0x634 - eFuse apb2otp block6 data register4."]
     #[inline(always)]
-    pub const fn apb2otp_blk6_w4(&self) -> &APB2OTP_BLK6_W4 {
-        &self.apb2otp_blk6_w4
+    pub const fn blk6_w4(&self) -> &BLK6_W4 {
+        &self.blk6_w4
     }
     #[doc = "0x638 - eFuse apb2otp block6 data register5."]
     #[inline(always)]
-    pub const fn apb2otp_blk6_w5(&self) -> &APB2OTP_BLK6_W5 {
-        &self.apb2otp_blk6_w5
+    pub const fn blk6_w5(&self) -> &BLK6_W5 {
+        &self.blk6_w5
     }
     #[doc = "0x63c - eFuse apb2otp block6 data register6."]
     #[inline(always)]
-    pub const fn apb2otp_blk6_w6(&self) -> &APB2OTP_BLK6_W6 {
-        &self.apb2otp_blk6_w6
+    pub const fn blk6_w6(&self) -> &BLK6_W6 {
+        &self.blk6_w6
     }
     #[doc = "0x640 - eFuse apb2otp block6 data register7."]
     #[inline(always)]
-    pub const fn apb2otp_blk6_w7(&self) -> &APB2OTP_BLK6_W7 {
-        &self.apb2otp_blk6_w7
+    pub const fn blk6_w7(&self) -> &BLK6_W7 {
+        &self.blk6_w7
     }
     #[doc = "0x644 - eFuse apb2otp block6 data register8."]
     #[inline(always)]
-    pub const fn apb2otp_blk6_w8(&self) -> &APB2OTP_BLK6_W8 {
-        &self.apb2otp_blk6_w8
+    pub const fn blk6_w8(&self) -> &BLK6_W8 {
+        &self.blk6_w8
     }
     #[doc = "0x648 - eFuse apb2otp block6 data register9."]
     #[inline(always)]
-    pub const fn apb2otp_blk6_w9(&self) -> &APB2OTP_BLK6_W9 {
-        &self.apb2otp_blk6_w9
+    pub const fn blk6_w9(&self) -> &BLK6_W9 {
+        &self.blk6_w9
     }
     #[doc = "0x64c - eFuse apb2otp block6 data register10."]
     #[inline(always)]
-    pub const fn apb2otp_blk6_w10(&self) -> &APB2OTP_BLK6_W10 {
-        &self.apb2otp_blk6_w10
+    pub const fn blk6_w10(&self) -> &BLK6_W10 {
+        &self.blk6_w10
     }
     #[doc = "0x650 - eFuse apb2otp block6 data register11."]
     #[inline(always)]
-    pub const fn apb2otp_blk6_w11(&self) -> &APB2OTP_BLK6_W11 {
-        &self.apb2otp_blk6_w11
+    pub const fn blk6_w11(&self) -> &BLK6_W11 {
+        &self.blk6_w11
     }
     #[doc = "0x654 - eFuse apb2otp block7 data register1."]
     #[inline(always)]
-    pub const fn apb2otp_blk7_w1(&self) -> &APB2OTP_BLK7_W1 {
-        &self.apb2otp_blk7_w1
+    pub const fn blk7_w1(&self) -> &BLK7_W1 {
+        &self.blk7_w1
     }
     #[doc = "0x658 - eFuse apb2otp block7 data register2."]
     #[inline(always)]
-    pub const fn apb2otp_blk7_w2(&self) -> &APB2OTP_BLK7_W2 {
-        &self.apb2otp_blk7_w2
+    pub const fn blk7_w2(&self) -> &BLK7_W2 {
+        &self.blk7_w2
     }
     #[doc = "0x65c - eFuse apb2otp block7 data register3."]
     #[inline(always)]
-    pub const fn apb2otp_blk7_w3(&self) -> &APB2OTP_BLK7_W3 {
-        &self.apb2otp_blk7_w3
+    pub const fn blk7_w3(&self) -> &BLK7_W3 {
+        &self.blk7_w3
     }
     #[doc = "0x660 - eFuse apb2otp block7 data register4."]
     #[inline(always)]
-    pub const fn apb2otp_blk7_w4(&self) -> &APB2OTP_BLK7_W4 {
-        &self.apb2otp_blk7_w4
+    pub const fn blk7_w4(&self) -> &BLK7_W4 {
+        &self.blk7_w4
     }
     #[doc = "0x664 - eFuse apb2otp block7 data register5."]
     #[inline(always)]
-    pub const fn apb2otp_blk7_w5(&self) -> &APB2OTP_BLK7_W5 {
-        &self.apb2otp_blk7_w5
+    pub const fn blk7_w5(&self) -> &BLK7_W5 {
+        &self.blk7_w5
     }
     #[doc = "0x668 - eFuse apb2otp block7 data register6."]
     #[inline(always)]
-    pub const fn apb2otp_blk7_w6(&self) -> &APB2OTP_BLK7_W6 {
-        &self.apb2otp_blk7_w6
+    pub const fn blk7_w6(&self) -> &BLK7_W6 {
+        &self.blk7_w6
     }
     #[doc = "0x66c - eFuse apb2otp block7 data register7."]
     #[inline(always)]
-    pub const fn apb2otp_blk7_w7(&self) -> &APB2OTP_BLK7_W7 {
-        &self.apb2otp_blk7_w7
+    pub const fn blk7_w7(&self) -> &BLK7_W7 {
+        &self.blk7_w7
     }
     #[doc = "0x670 - eFuse apb2otp block7 data register8."]
     #[inline(always)]
-    pub const fn apb2otp_blk7_w8(&self) -> &APB2OTP_BLK7_W8 {
-        &self.apb2otp_blk7_w8
+    pub const fn blk7_w8(&self) -> &BLK7_W8 {
+        &self.blk7_w8
     }
     #[doc = "0x674 - eFuse apb2otp block7 data register9."]
     #[inline(always)]
-    pub const fn apb2otp_blk7_w9(&self) -> &APB2OTP_BLK7_W9 {
-        &self.apb2otp_blk7_w9
+    pub const fn blk7_w9(&self) -> &BLK7_W9 {
+        &self.blk7_w9
     }
     #[doc = "0x678 - eFuse apb2otp block7 data register10."]
     #[inline(always)]
-    pub const fn apb2otp_blk7_w10(&self) -> &APB2OTP_BLK7_W10 {
-        &self.apb2otp_blk7_w10
+    pub const fn blk7_w10(&self) -> &BLK7_W10 {
+        &self.blk7_w10
     }
     #[doc = "0x67c - eFuse apb2otp block7 data register11."]
     #[inline(always)]
-    pub const fn apb2otp_blk7_w11(&self) -> &APB2OTP_BLK7_W11 {
-        &self.apb2otp_blk7_w11
+    pub const fn blk7_w11(&self) -> &BLK7_W11 {
+        &self.blk7_w11
     }
     #[doc = "0x680 - eFuse apb2otp block8 data register1."]
     #[inline(always)]
-    pub const fn apb2otp_blk8_w1(&self) -> &APB2OTP_BLK8_W1 {
-        &self.apb2otp_blk8_w1
+    pub const fn blk8_w1(&self) -> &BLK8_W1 {
+        &self.blk8_w1
     }
     #[doc = "0x684 - eFuse apb2otp block8 data register2."]
     #[inline(always)]
-    pub const fn apb2otp_blk8_w2(&self) -> &APB2OTP_BLK8_W2 {
-        &self.apb2otp_blk8_w2
+    pub const fn blk8_w2(&self) -> &BLK8_W2 {
+        &self.blk8_w2
     }
     #[doc = "0x688 - eFuse apb2otp block8 data register3."]
     #[inline(always)]
-    pub const fn apb2otp_blk8_w3(&self) -> &APB2OTP_BLK8_W3 {
-        &self.apb2otp_blk8_w3
+    pub const fn blk8_w3(&self) -> &BLK8_W3 {
+        &self.blk8_w3
     }
     #[doc = "0x68c - eFuse apb2otp block8 data register4."]
     #[inline(always)]
-    pub const fn apb2otp_blk8_w4(&self) -> &APB2OTP_BLK8_W4 {
-        &self.apb2otp_blk8_w4
+    pub const fn blk8_w4(&self) -> &BLK8_W4 {
+        &self.blk8_w4
     }
     #[doc = "0x690 - eFuse apb2otp block8 data register5."]
     #[inline(always)]
-    pub const fn apb2otp_blk8_w5(&self) -> &APB2OTP_BLK8_W5 {
-        &self.apb2otp_blk8_w5
+    pub const fn blk8_w5(&self) -> &BLK8_W5 {
+        &self.blk8_w5
     }
     #[doc = "0x694 - eFuse apb2otp block8 data register6."]
     #[inline(always)]
-    pub const fn apb2otp_blk8_w6(&self) -> &APB2OTP_BLK8_W6 {
-        &self.apb2otp_blk8_w6
+    pub const fn blk8_w6(&self) -> &BLK8_W6 {
+        &self.blk8_w6
     }
     #[doc = "0x698 - eFuse apb2otp block8 data register7."]
     #[inline(always)]
-    pub const fn apb2otp_blk8_w7(&self) -> &APB2OTP_BLK8_W7 {
-        &self.apb2otp_blk8_w7
+    pub const fn blk8_w7(&self) -> &BLK8_W7 {
+        &self.blk8_w7
     }
     #[doc = "0x69c - eFuse apb2otp block8 data register8."]
     #[inline(always)]
-    pub const fn apb2otp_blk8_w8(&self) -> &APB2OTP_BLK8_W8 {
-        &self.apb2otp_blk8_w8
+    pub const fn blk8_w8(&self) -> &BLK8_W8 {
+        &self.blk8_w8
     }
     #[doc = "0x6a0 - eFuse apb2otp block8 data register9."]
     #[inline(always)]
-    pub const fn apb2otp_blk8_w9(&self) -> &APB2OTP_BLK8_W9 {
-        &self.apb2otp_blk8_w9
+    pub const fn blk8_w9(&self) -> &BLK8_W9 {
+        &self.blk8_w9
     }
     #[doc = "0x6a4 - eFuse apb2otp block8 data register10."]
     #[inline(always)]
-    pub const fn apb2otp_blk8_w10(&self) -> &APB2OTP_BLK8_W10 {
-        &self.apb2otp_blk8_w10
+    pub const fn blk8_w10(&self) -> &BLK8_W10 {
+        &self.blk8_w10
     }
     #[doc = "0x6a8 - eFuse apb2otp block8 data register11."]
     #[inline(always)]
-    pub const fn apb2otp_blk8_w11(&self) -> &APB2OTP_BLK8_W11 {
-        &self.apb2otp_blk8_w11
+    pub const fn blk8_w11(&self) -> &BLK8_W11 {
+        &self.blk8_w11
     }
     #[doc = "0x6ac - eFuse apb2otp block9 data register1."]
     #[inline(always)]
-    pub const fn apb2otp_blk9_w1(&self) -> &APB2OTP_BLK9_W1 {
-        &self.apb2otp_blk9_w1
+    pub const fn blk9_w1(&self) -> &BLK9_W1 {
+        &self.blk9_w1
     }
     #[doc = "0x6b0 - eFuse apb2otp block9 data register2."]
     #[inline(always)]
-    pub const fn apb2otp_blk9_w2(&self) -> &APB2OTP_BLK9_W2 {
-        &self.apb2otp_blk9_w2
+    pub const fn blk9_w2(&self) -> &BLK9_W2 {
+        &self.blk9_w2
     }
     #[doc = "0x6b4 - eFuse apb2otp block9 data register3."]
     #[inline(always)]
-    pub const fn apb2otp_blk9_w3(&self) -> &APB2OTP_BLK9_W3 {
-        &self.apb2otp_blk9_w3
+    pub const fn blk9_w3(&self) -> &BLK9_W3 {
+        &self.blk9_w3
     }
     #[doc = "0x6b8 - eFuse apb2otp block9 data register4."]
     #[inline(always)]
-    pub const fn apb2otp_blk9_w4(&self) -> &APB2OTP_BLK9_W4 {
-        &self.apb2otp_blk9_w4
+    pub const fn blk9_w4(&self) -> &BLK9_W4 {
+        &self.blk9_w4
     }
     #[doc = "0x6bc - eFuse apb2otp block9 data register5."]
     #[inline(always)]
-    pub const fn apb2otp_blk9_w5(&self) -> &APB2OTP_BLK9_W5 {
-        &self.apb2otp_blk9_w5
+    pub const fn blk9_w5(&self) -> &BLK9_W5 {
+        &self.blk9_w5
     }
     #[doc = "0x6c0 - eFuse apb2otp block9 data register6."]
     #[inline(always)]
-    pub const fn apb2otp_blk9_w6(&self) -> &APB2OTP_BLK9_W6 {
-        &self.apb2otp_blk9_w6
+    pub const fn blk9_w6(&self) -> &BLK9_W6 {
+        &self.blk9_w6
     }
     #[doc = "0x6c4 - eFuse apb2otp block9 data register7."]
     #[inline(always)]
-    pub const fn apb2otp_blk9_w7(&self) -> &APB2OTP_BLK9_W7 {
-        &self.apb2otp_blk9_w7
+    pub const fn blk9_w7(&self) -> &BLK9_W7 {
+        &self.blk9_w7
     }
     #[doc = "0x6c8 - eFuse apb2otp block9 data register8."]
     #[inline(always)]
-    pub const fn apb2otp_blk9_w8(&self) -> &APB2OTP_BLK9_W8 {
-        &self.apb2otp_blk9_w8
+    pub const fn blk9_w8(&self) -> &BLK9_W8 {
+        &self.blk9_w8
     }
     #[doc = "0x6cc - eFuse apb2otp block9 data register9."]
     #[inline(always)]
-    pub const fn apb2otp_blk9_w9(&self) -> &APB2OTP_BLK9_W9 {
-        &self.apb2otp_blk9_w9
+    pub const fn blk9_w9(&self) -> &BLK9_W9 {
+        &self.blk9_w9
     }
     #[doc = "0x6d0 - eFuse apb2otp block9 data register10."]
     #[inline(always)]
-    pub const fn apb2otp_blk9_w10(&self) -> &APB2OTP_BLK9_W10 {
-        &self.apb2otp_blk9_w10
+    pub const fn blk9_w10(&self) -> &BLK9_W10 {
+        &self.blk9_w10
     }
     #[doc = "0x6d4 - eFuse apb2otp block9 data register11."]
     #[inline(always)]
-    pub const fn apb2otp_blk9_w11(&self) -> &APB2OTP_BLK9_W11 {
-        &self.apb2otp_blk9_w11
+    pub const fn blk9_w11(&self) -> &BLK9_W11 {
+        &self.blk9_w11
     }
     #[doc = "0x6d8 - eFuse apb2otp block10 data register1."]
     #[inline(always)]
-    pub const fn apb2otp_blk10_w1(&self) -> &APB2OTP_BLK10_W1 {
-        &self.apb2otp_blk10_w1
+    pub const fn blk10_w1(&self) -> &BLK10_W1 {
+        &self.blk10_w1
     }
     #[doc = "0x6dc - eFuse apb2otp block10 data register2."]
     #[inline(always)]
-    pub const fn apb2otp_blk10_w2(&self) -> &APB2OTP_BLK10_W2 {
-        &self.apb2otp_blk10_w2
+    pub const fn blk10_w2(&self) -> &BLK10_W2 {
+        &self.blk10_w2
     }
     #[doc = "0x6e0 - eFuse apb2otp block10 data register3."]
     #[inline(always)]
-    pub const fn apb2otp_blk10_w3(&self) -> &APB2OTP_BLK10_W3 {
-        &self.apb2otp_blk10_w3
+    pub const fn blk10_w3(&self) -> &BLK10_W3 {
+        &self.blk10_w3
     }
     #[doc = "0x6e4 - eFuse apb2otp block10 data register4."]
     #[inline(always)]
-    pub const fn apb2otp_blk10_w4(&self) -> &APB2OTP_BLK10_W4 {
-        &self.apb2otp_blk10_w4
+    pub const fn blk10_w4(&self) -> &BLK10_W4 {
+        &self.blk10_w4
     }
     #[doc = "0x6e8 - eFuse apb2otp block10 data register5."]
     #[inline(always)]
-    pub const fn apb2otp_blk10_w5(&self) -> &APB2OTP_BLK10_W5 {
-        &self.apb2otp_blk10_w5
+    pub const fn blk10_w5(&self) -> &BLK10_W5 {
+        &self.blk10_w5
     }
     #[doc = "0x6ec - eFuse apb2otp block10 data register6."]
     #[inline(always)]
-    pub const fn apb2otp_blk10_w6(&self) -> &APB2OTP_BLK10_W6 {
-        &self.apb2otp_blk10_w6
+    pub const fn blk10_w6(&self) -> &BLK10_W6 {
+        &self.blk10_w6
     }
     #[doc = "0x6f0 - eFuse apb2otp block10 data register7."]
     #[inline(always)]
-    pub const fn apb2otp_blk10_w7(&self) -> &APB2OTP_BLK10_W7 {
-        &self.apb2otp_blk10_w7
+    pub const fn blk10_w7(&self) -> &BLK10_W7 {
+        &self.blk10_w7
     }
     #[doc = "0x6f4 - eFuse apb2otp block10 data register8."]
     #[inline(always)]
-    pub const fn apb2otp_blk10_w8(&self) -> &APB2OTP_BLK10_W8 {
-        &self.apb2otp_blk10_w8
+    pub const fn blk10_w8(&self) -> &BLK10_W8 {
+        &self.blk10_w8
     }
     #[doc = "0x6f8 - eFuse apb2otp block10 data register9."]
     #[inline(always)]
-    pub const fn apb2otp_blk10_w9(&self) -> &APB2OTP_BLK10_W9 {
-        &self.apb2otp_blk10_w9
+    pub const fn blk10_w9(&self) -> &BLK10_W9 {
+        &self.blk10_w9
     }
     #[doc = "0x6fc - eFuse apb2otp block10 data register10."]
     #[inline(always)]
-    pub const fn apb2otp_blk10_w10(&self) -> &APB2OTP_BLK10_W10 {
-        &self.apb2otp_blk10_w10
+    pub const fn blk10_w10(&self) -> &BLK10_W10 {
+        &self.blk10_w10
     }
     #[doc = "0x700 - eFuse apb2otp block10 data register11."]
     #[inline(always)]
-    pub const fn apb2otp_blk10_w11(&self) -> &APB2OTP_BLK10_W11 {
-        &self.apb2otp_blk10_w11
+    pub const fn blk10_w11(&self) -> &BLK10_W11 {
+        &self.blk10_w11
     }
     #[doc = "0x708 - eFuse apb2otp enable configuration register."]
     #[inline(always)]
-    pub const fn apb2otp_en(&self) -> &APB2OTP_EN {
-        &self.apb2otp_en
+    pub const fn en(&self) -> &EN {
+        &self.en
     }
 }
 #[doc = "PGM_DATA (rw) register accessor: Represents pgm_data%s\n\nYou can [`read`](crate::Reg::read) this register and get [`pgm_data::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pgm_data::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pgm_data`] module"]
@@ -1292,543 +1292,523 @@ pub mod wr_tim_conf2;
 pub type WR_TIM_CONF0_RS_BYPASS = crate::Reg<wr_tim_conf0_rs_bypass::WR_TIM_CONF0_RS_BYPASS_SPEC>;
 #[doc = "Configurarion register0 of eFuse programming time parameters and rs bypass operation."]
 pub mod wr_tim_conf0_rs_bypass;
-#[doc = "APB2OTP_WR_DIS (r) register accessor: eFuse apb2otp block0 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_wr_dis::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_wr_dis`] module"]
-pub type APB2OTP_WR_DIS = crate::Reg<apb2otp_wr_dis::APB2OTP_WR_DIS_SPEC>;
+#[doc = "WR_DIS (r) register accessor: eFuse apb2otp block0 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`wr_dis::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wr_dis`] module"]
+pub type WR_DIS = crate::Reg<wr_dis::WR_DIS_SPEC>;
 #[doc = "eFuse apb2otp block0 data register1."]
-pub mod apb2otp_wr_dis;
-#[doc = "APB2OTP_BLK0_BACKUP1_W1 (r) register accessor: eFuse apb2otp block0 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup1_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup1_w1`] module"]
-pub type APB2OTP_BLK0_BACKUP1_W1 =
-    crate::Reg<apb2otp_blk0_backup1_w1::APB2OTP_BLK0_BACKUP1_W1_SPEC>;
+pub mod wr_dis;
+#[doc = "BLK0_BACKUP1_W1 (r) register accessor: eFuse apb2otp block0 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup1_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup1_w1`] module"]
+pub type BLK0_BACKUP1_W1 = crate::Reg<blk0_backup1_w1::BLK0_BACKUP1_W1_SPEC>;
 #[doc = "eFuse apb2otp block0 data register2."]
-pub mod apb2otp_blk0_backup1_w1;
-#[doc = "APB2OTP_BLK0_BACKUP1_W2 (r) register accessor: eFuse apb2otp block0 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup1_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup1_w2`] module"]
-pub type APB2OTP_BLK0_BACKUP1_W2 =
-    crate::Reg<apb2otp_blk0_backup1_w2::APB2OTP_BLK0_BACKUP1_W2_SPEC>;
+pub mod blk0_backup1_w1;
+#[doc = "BLK0_BACKUP1_W2 (r) register accessor: eFuse apb2otp block0 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup1_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup1_w2`] module"]
+pub type BLK0_BACKUP1_W2 = crate::Reg<blk0_backup1_w2::BLK0_BACKUP1_W2_SPEC>;
 #[doc = "eFuse apb2otp block0 data register3."]
-pub mod apb2otp_blk0_backup1_w2;
-#[doc = "APB2OTP_BLK0_BACKUP1_W3 (r) register accessor: eFuse apb2otp block0 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup1_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup1_w3`] module"]
-pub type APB2OTP_BLK0_BACKUP1_W3 =
-    crate::Reg<apb2otp_blk0_backup1_w3::APB2OTP_BLK0_BACKUP1_W3_SPEC>;
+pub mod blk0_backup1_w2;
+#[doc = "BLK0_BACKUP1_W3 (r) register accessor: eFuse apb2otp block0 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup1_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup1_w3`] module"]
+pub type BLK0_BACKUP1_W3 = crate::Reg<blk0_backup1_w3::BLK0_BACKUP1_W3_SPEC>;
 #[doc = "eFuse apb2otp block0 data register4."]
-pub mod apb2otp_blk0_backup1_w3;
-#[doc = "APB2OTP_BLK0_BACKUP1_W4 (r) register accessor: eFuse apb2otp block0 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup1_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup1_w4`] module"]
-pub type APB2OTP_BLK0_BACKUP1_W4 =
-    crate::Reg<apb2otp_blk0_backup1_w4::APB2OTP_BLK0_BACKUP1_W4_SPEC>;
+pub mod blk0_backup1_w3;
+#[doc = "BLK0_BACKUP1_W4 (r) register accessor: eFuse apb2otp block0 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup1_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup1_w4`] module"]
+pub type BLK0_BACKUP1_W4 = crate::Reg<blk0_backup1_w4::BLK0_BACKUP1_W4_SPEC>;
 #[doc = "eFuse apb2otp block0 data register5."]
-pub mod apb2otp_blk0_backup1_w4;
-#[doc = "APB2OTP_BLK0_BACKUP1_W5 (r) register accessor: eFuse apb2otp block0 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup1_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup1_w5`] module"]
-pub type APB2OTP_BLK0_BACKUP1_W5 =
-    crate::Reg<apb2otp_blk0_backup1_w5::APB2OTP_BLK0_BACKUP1_W5_SPEC>;
+pub mod blk0_backup1_w4;
+#[doc = "BLK0_BACKUP1_W5 (r) register accessor: eFuse apb2otp block0 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup1_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup1_w5`] module"]
+pub type BLK0_BACKUP1_W5 = crate::Reg<blk0_backup1_w5::BLK0_BACKUP1_W5_SPEC>;
 #[doc = "eFuse apb2otp block0 data register6."]
-pub mod apb2otp_blk0_backup1_w5;
-#[doc = "APB2OTP_BLK0_BACKUP2_W1 (r) register accessor: eFuse apb2otp block0 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup2_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup2_w1`] module"]
-pub type APB2OTP_BLK0_BACKUP2_W1 =
-    crate::Reg<apb2otp_blk0_backup2_w1::APB2OTP_BLK0_BACKUP2_W1_SPEC>;
+pub mod blk0_backup1_w5;
+#[doc = "BLK0_BACKUP2_W1 (r) register accessor: eFuse apb2otp block0 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup2_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup2_w1`] module"]
+pub type BLK0_BACKUP2_W1 = crate::Reg<blk0_backup2_w1::BLK0_BACKUP2_W1_SPEC>;
 #[doc = "eFuse apb2otp block0 data register7."]
-pub mod apb2otp_blk0_backup2_w1;
-#[doc = "APB2OTP_BLK0_BACKUP2_W2 (r) register accessor: eFuse apb2otp block0 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup2_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup2_w2`] module"]
-pub type APB2OTP_BLK0_BACKUP2_W2 =
-    crate::Reg<apb2otp_blk0_backup2_w2::APB2OTP_BLK0_BACKUP2_W2_SPEC>;
+pub mod blk0_backup2_w1;
+#[doc = "BLK0_BACKUP2_W2 (r) register accessor: eFuse apb2otp block0 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup2_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup2_w2`] module"]
+pub type BLK0_BACKUP2_W2 = crate::Reg<blk0_backup2_w2::BLK0_BACKUP2_W2_SPEC>;
 #[doc = "eFuse apb2otp block0 data register8."]
-pub mod apb2otp_blk0_backup2_w2;
-#[doc = "APB2OTP_BLK0_BACKUP2_W3 (r) register accessor: eFuse apb2otp block0 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup2_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup2_w3`] module"]
-pub type APB2OTP_BLK0_BACKUP2_W3 =
-    crate::Reg<apb2otp_blk0_backup2_w3::APB2OTP_BLK0_BACKUP2_W3_SPEC>;
+pub mod blk0_backup2_w2;
+#[doc = "BLK0_BACKUP2_W3 (r) register accessor: eFuse apb2otp block0 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup2_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup2_w3`] module"]
+pub type BLK0_BACKUP2_W3 = crate::Reg<blk0_backup2_w3::BLK0_BACKUP2_W3_SPEC>;
 #[doc = "eFuse apb2otp block0 data register9."]
-pub mod apb2otp_blk0_backup2_w3;
-#[doc = "APB2OTP_BLK0_BACKUP2_W4 (r) register accessor: eFuse apb2otp block0 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup2_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup2_w4`] module"]
-pub type APB2OTP_BLK0_BACKUP2_W4 =
-    crate::Reg<apb2otp_blk0_backup2_w4::APB2OTP_BLK0_BACKUP2_W4_SPEC>;
+pub mod blk0_backup2_w3;
+#[doc = "BLK0_BACKUP2_W4 (r) register accessor: eFuse apb2otp block0 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup2_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup2_w4`] module"]
+pub type BLK0_BACKUP2_W4 = crate::Reg<blk0_backup2_w4::BLK0_BACKUP2_W4_SPEC>;
 #[doc = "eFuse apb2otp block0 data register10."]
-pub mod apb2otp_blk0_backup2_w4;
-#[doc = "APB2OTP_BLK0_BACKUP2_W5 (r) register accessor: eFuse apb2otp block0 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup2_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup2_w5`] module"]
-pub type APB2OTP_BLK0_BACKUP2_W5 =
-    crate::Reg<apb2otp_blk0_backup2_w5::APB2OTP_BLK0_BACKUP2_W5_SPEC>;
+pub mod blk0_backup2_w4;
+#[doc = "BLK0_BACKUP2_W5 (r) register accessor: eFuse apb2otp block0 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup2_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup2_w5`] module"]
+pub type BLK0_BACKUP2_W5 = crate::Reg<blk0_backup2_w5::BLK0_BACKUP2_W5_SPEC>;
 #[doc = "eFuse apb2otp block0 data register11."]
-pub mod apb2otp_blk0_backup2_w5;
-#[doc = "APB2OTP_BLK0_BACKUP3_W1 (r) register accessor: eFuse apb2otp block0 data register12.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup3_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup3_w1`] module"]
-pub type APB2OTP_BLK0_BACKUP3_W1 =
-    crate::Reg<apb2otp_blk0_backup3_w1::APB2OTP_BLK0_BACKUP3_W1_SPEC>;
+pub mod blk0_backup2_w5;
+#[doc = "BLK0_BACKUP3_W1 (r) register accessor: eFuse apb2otp block0 data register12.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup3_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup3_w1`] module"]
+pub type BLK0_BACKUP3_W1 = crate::Reg<blk0_backup3_w1::BLK0_BACKUP3_W1_SPEC>;
 #[doc = "eFuse apb2otp block0 data register12."]
-pub mod apb2otp_blk0_backup3_w1;
-#[doc = "APB2OTP_BLK0_BACKUP3_W2 (r) register accessor: eFuse apb2otp block0 data register13.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup3_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup3_w2`] module"]
-pub type APB2OTP_BLK0_BACKUP3_W2 =
-    crate::Reg<apb2otp_blk0_backup3_w2::APB2OTP_BLK0_BACKUP3_W2_SPEC>;
+pub mod blk0_backup3_w1;
+#[doc = "BLK0_BACKUP3_W2 (r) register accessor: eFuse apb2otp block0 data register13.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup3_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup3_w2`] module"]
+pub type BLK0_BACKUP3_W2 = crate::Reg<blk0_backup3_w2::BLK0_BACKUP3_W2_SPEC>;
 #[doc = "eFuse apb2otp block0 data register13."]
-pub mod apb2otp_blk0_backup3_w2;
-#[doc = "APB2OTP_BLK0_BACKUP3_W3 (r) register accessor: eFuse apb2otp block0 data register14.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup3_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup3_w3`] module"]
-pub type APB2OTP_BLK0_BACKUP3_W3 =
-    crate::Reg<apb2otp_blk0_backup3_w3::APB2OTP_BLK0_BACKUP3_W3_SPEC>;
+pub mod blk0_backup3_w2;
+#[doc = "BLK0_BACKUP3_W3 (r) register accessor: eFuse apb2otp block0 data register14.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup3_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup3_w3`] module"]
+pub type BLK0_BACKUP3_W3 = crate::Reg<blk0_backup3_w3::BLK0_BACKUP3_W3_SPEC>;
 #[doc = "eFuse apb2otp block0 data register14."]
-pub mod apb2otp_blk0_backup3_w3;
-#[doc = "APB2OTP_BLK0_BACKUP3_W4 (r) register accessor: eFuse apb2otp block0 data register15.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup3_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup3_w4`] module"]
-pub type APB2OTP_BLK0_BACKUP3_W4 =
-    crate::Reg<apb2otp_blk0_backup3_w4::APB2OTP_BLK0_BACKUP3_W4_SPEC>;
+pub mod blk0_backup3_w3;
+#[doc = "BLK0_BACKUP3_W4 (r) register accessor: eFuse apb2otp block0 data register15.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup3_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup3_w4`] module"]
+pub type BLK0_BACKUP3_W4 = crate::Reg<blk0_backup3_w4::BLK0_BACKUP3_W4_SPEC>;
 #[doc = "eFuse apb2otp block0 data register15."]
-pub mod apb2otp_blk0_backup3_w4;
-#[doc = "APB2OTP_BLK0_BACKUP3_W5 (r) register accessor: eFuse apb2otp block0 data register16.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup3_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup3_w5`] module"]
-pub type APB2OTP_BLK0_BACKUP3_W5 =
-    crate::Reg<apb2otp_blk0_backup3_w5::APB2OTP_BLK0_BACKUP3_W5_SPEC>;
+pub mod blk0_backup3_w4;
+#[doc = "BLK0_BACKUP3_W5 (r) register accessor: eFuse apb2otp block0 data register16.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup3_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup3_w5`] module"]
+pub type BLK0_BACKUP3_W5 = crate::Reg<blk0_backup3_w5::BLK0_BACKUP3_W5_SPEC>;
 #[doc = "eFuse apb2otp block0 data register16."]
-pub mod apb2otp_blk0_backup3_w5;
-#[doc = "APB2OTP_BLK0_BACKUP4_W1 (r) register accessor: eFuse apb2otp block0 data register17.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup4_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup4_w1`] module"]
-pub type APB2OTP_BLK0_BACKUP4_W1 =
-    crate::Reg<apb2otp_blk0_backup4_w1::APB2OTP_BLK0_BACKUP4_W1_SPEC>;
+pub mod blk0_backup3_w5;
+#[doc = "BLK0_BACKUP4_W1 (r) register accessor: eFuse apb2otp block0 data register17.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup4_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup4_w1`] module"]
+pub type BLK0_BACKUP4_W1 = crate::Reg<blk0_backup4_w1::BLK0_BACKUP4_W1_SPEC>;
 #[doc = "eFuse apb2otp block0 data register17."]
-pub mod apb2otp_blk0_backup4_w1;
-#[doc = "APB2OTP_BLK0_BACKUP4_W2 (r) register accessor: eFuse apb2otp block0 data register18.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup4_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup4_w2`] module"]
-pub type APB2OTP_BLK0_BACKUP4_W2 =
-    crate::Reg<apb2otp_blk0_backup4_w2::APB2OTP_BLK0_BACKUP4_W2_SPEC>;
+pub mod blk0_backup4_w1;
+#[doc = "BLK0_BACKUP4_W2 (r) register accessor: eFuse apb2otp block0 data register18.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup4_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup4_w2`] module"]
+pub type BLK0_BACKUP4_W2 = crate::Reg<blk0_backup4_w2::BLK0_BACKUP4_W2_SPEC>;
 #[doc = "eFuse apb2otp block0 data register18."]
-pub mod apb2otp_blk0_backup4_w2;
-#[doc = "APB2OTP_BLK0_BACKUP4_W3 (r) register accessor: eFuse apb2otp block0 data register19.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup4_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup4_w3`] module"]
-pub type APB2OTP_BLK0_BACKUP4_W3 =
-    crate::Reg<apb2otp_blk0_backup4_w3::APB2OTP_BLK0_BACKUP4_W3_SPEC>;
+pub mod blk0_backup4_w2;
+#[doc = "BLK0_BACKUP4_W3 (r) register accessor: eFuse apb2otp block0 data register19.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup4_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup4_w3`] module"]
+pub type BLK0_BACKUP4_W3 = crate::Reg<blk0_backup4_w3::BLK0_BACKUP4_W3_SPEC>;
 #[doc = "eFuse apb2otp block0 data register19."]
-pub mod apb2otp_blk0_backup4_w3;
-#[doc = "APB2OTP_BLK0_BACKUP4_W4 (r) register accessor: eFuse apb2otp block0 data register20.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup4_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup4_w4`] module"]
-pub type APB2OTP_BLK0_BACKUP4_W4 =
-    crate::Reg<apb2otp_blk0_backup4_w4::APB2OTP_BLK0_BACKUP4_W4_SPEC>;
+pub mod blk0_backup4_w3;
+#[doc = "BLK0_BACKUP4_W4 (r) register accessor: eFuse apb2otp block0 data register20.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup4_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup4_w4`] module"]
+pub type BLK0_BACKUP4_W4 = crate::Reg<blk0_backup4_w4::BLK0_BACKUP4_W4_SPEC>;
 #[doc = "eFuse apb2otp block0 data register20."]
-pub mod apb2otp_blk0_backup4_w4;
-#[doc = "APB2OTP_BLK0_BACKUP4_W5 (r) register accessor: eFuse apb2otp block0 data register21.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup4_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk0_backup4_w5`] module"]
-pub type APB2OTP_BLK0_BACKUP4_W5 =
-    crate::Reg<apb2otp_blk0_backup4_w5::APB2OTP_BLK0_BACKUP4_W5_SPEC>;
+pub mod blk0_backup4_w4;
+#[doc = "BLK0_BACKUP4_W5 (r) register accessor: eFuse apb2otp block0 data register21.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup4_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup4_w5`] module"]
+pub type BLK0_BACKUP4_W5 = crate::Reg<blk0_backup4_w5::BLK0_BACKUP4_W5_SPEC>;
 #[doc = "eFuse apb2otp block0 data register21."]
-pub mod apb2otp_blk0_backup4_w5;
-#[doc = "APB2OTP_BLK1_W1 (r) register accessor: eFuse apb2otp block1 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk1_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk1_w1`] module"]
-pub type APB2OTP_BLK1_W1 = crate::Reg<apb2otp_blk1_w1::APB2OTP_BLK1_W1_SPEC>;
+pub mod blk0_backup4_w5;
+#[doc = "BLK1_W1 (r) register accessor: eFuse apb2otp block1 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w1`] module"]
+pub type BLK1_W1 = crate::Reg<blk1_w1::BLK1_W1_SPEC>;
 #[doc = "eFuse apb2otp block1 data register1."]
-pub mod apb2otp_blk1_w1;
-#[doc = "APB2OTP_BLK1_W2 (r) register accessor: eFuse apb2otp block1 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk1_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk1_w2`] module"]
-pub type APB2OTP_BLK1_W2 = crate::Reg<apb2otp_blk1_w2::APB2OTP_BLK1_W2_SPEC>;
+pub mod blk1_w1;
+#[doc = "BLK1_W2 (r) register accessor: eFuse apb2otp block1 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w2`] module"]
+pub type BLK1_W2 = crate::Reg<blk1_w2::BLK1_W2_SPEC>;
 #[doc = "eFuse apb2otp block1 data register2."]
-pub mod apb2otp_blk1_w2;
-#[doc = "APB2OTP_BLK1_W3 (r) register accessor: eFuse apb2otp block1 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk1_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk1_w3`] module"]
-pub type APB2OTP_BLK1_W3 = crate::Reg<apb2otp_blk1_w3::APB2OTP_BLK1_W3_SPEC>;
+pub mod blk1_w2;
+#[doc = "BLK1_W3 (r) register accessor: eFuse apb2otp block1 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w3`] module"]
+pub type BLK1_W3 = crate::Reg<blk1_w3::BLK1_W3_SPEC>;
 #[doc = "eFuse apb2otp block1 data register3."]
-pub mod apb2otp_blk1_w3;
-#[doc = "APB2OTP_BLK1_W4 (r) register accessor: eFuse apb2otp block1 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk1_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk1_w4`] module"]
-pub type APB2OTP_BLK1_W4 = crate::Reg<apb2otp_blk1_w4::APB2OTP_BLK1_W4_SPEC>;
+pub mod blk1_w3;
+#[doc = "BLK1_W4 (r) register accessor: eFuse apb2otp block1 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w4`] module"]
+pub type BLK1_W4 = crate::Reg<blk1_w4::BLK1_W4_SPEC>;
 #[doc = "eFuse apb2otp block1 data register4."]
-pub mod apb2otp_blk1_w4;
-#[doc = "APB2OTP_BLK1_W5 (r) register accessor: eFuse apb2otp block1 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk1_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk1_w5`] module"]
-pub type APB2OTP_BLK1_W5 = crate::Reg<apb2otp_blk1_w5::APB2OTP_BLK1_W5_SPEC>;
+pub mod blk1_w4;
+#[doc = "BLK1_W5 (r) register accessor: eFuse apb2otp block1 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w5`] module"]
+pub type BLK1_W5 = crate::Reg<blk1_w5::BLK1_W5_SPEC>;
 #[doc = "eFuse apb2otp block1 data register5."]
-pub mod apb2otp_blk1_w5;
-#[doc = "APB2OTP_BLK1_W6 (r) register accessor: eFuse apb2otp block1 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk1_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk1_w6`] module"]
-pub type APB2OTP_BLK1_W6 = crate::Reg<apb2otp_blk1_w6::APB2OTP_BLK1_W6_SPEC>;
+pub mod blk1_w5;
+#[doc = "BLK1_W6 (r) register accessor: eFuse apb2otp block1 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w6`] module"]
+pub type BLK1_W6 = crate::Reg<blk1_w6::BLK1_W6_SPEC>;
 #[doc = "eFuse apb2otp block1 data register6."]
-pub mod apb2otp_blk1_w6;
-#[doc = "APB2OTP_BLK1_W7 (r) register accessor: eFuse apb2otp block1 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk1_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk1_w7`] module"]
-pub type APB2OTP_BLK1_W7 = crate::Reg<apb2otp_blk1_w7::APB2OTP_BLK1_W7_SPEC>;
+pub mod blk1_w6;
+#[doc = "BLK1_W7 (r) register accessor: eFuse apb2otp block1 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w7`] module"]
+pub type BLK1_W7 = crate::Reg<blk1_w7::BLK1_W7_SPEC>;
 #[doc = "eFuse apb2otp block1 data register7."]
-pub mod apb2otp_blk1_w7;
-#[doc = "APB2OTP_BLK1_W8 (r) register accessor: eFuse apb2otp block1 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk1_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk1_w8`] module"]
-pub type APB2OTP_BLK1_W8 = crate::Reg<apb2otp_blk1_w8::APB2OTP_BLK1_W8_SPEC>;
+pub mod blk1_w7;
+#[doc = "BLK1_W8 (r) register accessor: eFuse apb2otp block1 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w8`] module"]
+pub type BLK1_W8 = crate::Reg<blk1_w8::BLK1_W8_SPEC>;
 #[doc = "eFuse apb2otp block1 data register8."]
-pub mod apb2otp_blk1_w8;
-#[doc = "APB2OTP_BLK1_W9 (r) register accessor: eFuse apb2otp block1 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk1_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk1_w9`] module"]
-pub type APB2OTP_BLK1_W9 = crate::Reg<apb2otp_blk1_w9::APB2OTP_BLK1_W9_SPEC>;
+pub mod blk1_w8;
+#[doc = "BLK1_W9 (r) register accessor: eFuse apb2otp block1 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w9`] module"]
+pub type BLK1_W9 = crate::Reg<blk1_w9::BLK1_W9_SPEC>;
 #[doc = "eFuse apb2otp block1 data register9."]
-pub mod apb2otp_blk1_w9;
-#[doc = "APB2OTP_BLK2_W1 (r) register accessor: eFuse apb2otp block2 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk2_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk2_w1`] module"]
-pub type APB2OTP_BLK2_W1 = crate::Reg<apb2otp_blk2_w1::APB2OTP_BLK2_W1_SPEC>;
+pub mod blk1_w9;
+#[doc = "BLK2_W1 (r) register accessor: eFuse apb2otp block2 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w1`] module"]
+pub type BLK2_W1 = crate::Reg<blk2_w1::BLK2_W1_SPEC>;
 #[doc = "eFuse apb2otp block2 data register1."]
-pub mod apb2otp_blk2_w1;
-#[doc = "APB2OTP_BLK2_W2 (r) register accessor: eFuse apb2otp block2 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk2_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk2_w2`] module"]
-pub type APB2OTP_BLK2_W2 = crate::Reg<apb2otp_blk2_w2::APB2OTP_BLK2_W2_SPEC>;
+pub mod blk2_w1;
+#[doc = "BLK2_W2 (r) register accessor: eFuse apb2otp block2 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w2`] module"]
+pub type BLK2_W2 = crate::Reg<blk2_w2::BLK2_W2_SPEC>;
 #[doc = "eFuse apb2otp block2 data register2."]
-pub mod apb2otp_blk2_w2;
-#[doc = "APB2OTP_BLK2_W3 (r) register accessor: eFuse apb2otp block2 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk2_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk2_w3`] module"]
-pub type APB2OTP_BLK2_W3 = crate::Reg<apb2otp_blk2_w3::APB2OTP_BLK2_W3_SPEC>;
+pub mod blk2_w2;
+#[doc = "BLK2_W3 (r) register accessor: eFuse apb2otp block2 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w3`] module"]
+pub type BLK2_W3 = crate::Reg<blk2_w3::BLK2_W3_SPEC>;
 #[doc = "eFuse apb2otp block2 data register3."]
-pub mod apb2otp_blk2_w3;
-#[doc = "APB2OTP_BLK2_W4 (r) register accessor: eFuse apb2otp block2 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk2_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk2_w4`] module"]
-pub type APB2OTP_BLK2_W4 = crate::Reg<apb2otp_blk2_w4::APB2OTP_BLK2_W4_SPEC>;
+pub mod blk2_w3;
+#[doc = "BLK2_W4 (r) register accessor: eFuse apb2otp block2 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w4`] module"]
+pub type BLK2_W4 = crate::Reg<blk2_w4::BLK2_W4_SPEC>;
 #[doc = "eFuse apb2otp block2 data register4."]
-pub mod apb2otp_blk2_w4;
-#[doc = "APB2OTP_BLK2_W5 (r) register accessor: eFuse apb2otp block2 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk2_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk2_w5`] module"]
-pub type APB2OTP_BLK2_W5 = crate::Reg<apb2otp_blk2_w5::APB2OTP_BLK2_W5_SPEC>;
+pub mod blk2_w4;
+#[doc = "BLK2_W5 (r) register accessor: eFuse apb2otp block2 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w5`] module"]
+pub type BLK2_W5 = crate::Reg<blk2_w5::BLK2_W5_SPEC>;
 #[doc = "eFuse apb2otp block2 data register5."]
-pub mod apb2otp_blk2_w5;
-#[doc = "APB2OTP_BLK2_W6 (r) register accessor: eFuse apb2otp block2 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk2_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk2_w6`] module"]
-pub type APB2OTP_BLK2_W6 = crate::Reg<apb2otp_blk2_w6::APB2OTP_BLK2_W6_SPEC>;
+pub mod blk2_w5;
+#[doc = "BLK2_W6 (r) register accessor: eFuse apb2otp block2 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w6`] module"]
+pub type BLK2_W6 = crate::Reg<blk2_w6::BLK2_W6_SPEC>;
 #[doc = "eFuse apb2otp block2 data register6."]
-pub mod apb2otp_blk2_w6;
-#[doc = "APB2OTP_BLK2_W7 (r) register accessor: eFuse apb2otp block2 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk2_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk2_w7`] module"]
-pub type APB2OTP_BLK2_W7 = crate::Reg<apb2otp_blk2_w7::APB2OTP_BLK2_W7_SPEC>;
+pub mod blk2_w6;
+#[doc = "BLK2_W7 (r) register accessor: eFuse apb2otp block2 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w7`] module"]
+pub type BLK2_W7 = crate::Reg<blk2_w7::BLK2_W7_SPEC>;
 #[doc = "eFuse apb2otp block2 data register7."]
-pub mod apb2otp_blk2_w7;
-#[doc = "APB2OTP_BLK2_W8 (r) register accessor: eFuse apb2otp block2 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk2_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk2_w8`] module"]
-pub type APB2OTP_BLK2_W8 = crate::Reg<apb2otp_blk2_w8::APB2OTP_BLK2_W8_SPEC>;
+pub mod blk2_w7;
+#[doc = "BLK2_W8 (r) register accessor: eFuse apb2otp block2 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w8`] module"]
+pub type BLK2_W8 = crate::Reg<blk2_w8::BLK2_W8_SPEC>;
 #[doc = "eFuse apb2otp block2 data register8."]
-pub mod apb2otp_blk2_w8;
-#[doc = "APB2OTP_BLK2_W9 (r) register accessor: eFuse apb2otp block2 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk2_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk2_w9`] module"]
-pub type APB2OTP_BLK2_W9 = crate::Reg<apb2otp_blk2_w9::APB2OTP_BLK2_W9_SPEC>;
+pub mod blk2_w8;
+#[doc = "BLK2_W9 (r) register accessor: eFuse apb2otp block2 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w9`] module"]
+pub type BLK2_W9 = crate::Reg<blk2_w9::BLK2_W9_SPEC>;
 #[doc = "eFuse apb2otp block2 data register9."]
-pub mod apb2otp_blk2_w9;
-#[doc = "APB2OTP_BLK2_W10 (r) register accessor: eFuse apb2otp block2 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk2_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk2_w10`] module"]
-pub type APB2OTP_BLK2_W10 = crate::Reg<apb2otp_blk2_w10::APB2OTP_BLK2_W10_SPEC>;
+pub mod blk2_w9;
+#[doc = "BLK2_W10 (r) register accessor: eFuse apb2otp block2 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w10`] module"]
+pub type BLK2_W10 = crate::Reg<blk2_w10::BLK2_W10_SPEC>;
 #[doc = "eFuse apb2otp block2 data register10."]
-pub mod apb2otp_blk2_w10;
-#[doc = "APB2OTP_BLK2_W11 (r) register accessor: eFuse apb2otp block2 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk2_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk2_w11`] module"]
-pub type APB2OTP_BLK2_W11 = crate::Reg<apb2otp_blk2_w11::APB2OTP_BLK2_W11_SPEC>;
+pub mod blk2_w10;
+#[doc = "BLK2_W11 (r) register accessor: eFuse apb2otp block2 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w11`] module"]
+pub type BLK2_W11 = crate::Reg<blk2_w11::BLK2_W11_SPEC>;
 #[doc = "eFuse apb2otp block2 data register11."]
-pub mod apb2otp_blk2_w11;
-#[doc = "APB2OTP_BLK3_W1 (r) register accessor: eFuse apb2otp block3 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk3_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk3_w1`] module"]
-pub type APB2OTP_BLK3_W1 = crate::Reg<apb2otp_blk3_w1::APB2OTP_BLK3_W1_SPEC>;
+pub mod blk2_w11;
+#[doc = "BLK3_W1 (r) register accessor: eFuse apb2otp block3 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w1`] module"]
+pub type BLK3_W1 = crate::Reg<blk3_w1::BLK3_W1_SPEC>;
 #[doc = "eFuse apb2otp block3 data register1."]
-pub mod apb2otp_blk3_w1;
-#[doc = "APB2OTP_BLK3_W2 (r) register accessor: eFuse apb2otp block3 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk3_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk3_w2`] module"]
-pub type APB2OTP_BLK3_W2 = crate::Reg<apb2otp_blk3_w2::APB2OTP_BLK3_W2_SPEC>;
+pub mod blk3_w1;
+#[doc = "BLK3_W2 (r) register accessor: eFuse apb2otp block3 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w2`] module"]
+pub type BLK3_W2 = crate::Reg<blk3_w2::BLK3_W2_SPEC>;
 #[doc = "eFuse apb2otp block3 data register2."]
-pub mod apb2otp_blk3_w2;
-#[doc = "APB2OTP_BLK3_W3 (r) register accessor: eFuse apb2otp block3 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk3_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk3_w3`] module"]
-pub type APB2OTP_BLK3_W3 = crate::Reg<apb2otp_blk3_w3::APB2OTP_BLK3_W3_SPEC>;
+pub mod blk3_w2;
+#[doc = "BLK3_W3 (r) register accessor: eFuse apb2otp block3 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w3`] module"]
+pub type BLK3_W3 = crate::Reg<blk3_w3::BLK3_W3_SPEC>;
 #[doc = "eFuse apb2otp block3 data register3."]
-pub mod apb2otp_blk3_w3;
-#[doc = "APB2OTP_BLK3_W4 (r) register accessor: eFuse apb2otp block3 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk3_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk3_w4`] module"]
-pub type APB2OTP_BLK3_W4 = crate::Reg<apb2otp_blk3_w4::APB2OTP_BLK3_W4_SPEC>;
+pub mod blk3_w3;
+#[doc = "BLK3_W4 (r) register accessor: eFuse apb2otp block3 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w4`] module"]
+pub type BLK3_W4 = crate::Reg<blk3_w4::BLK3_W4_SPEC>;
 #[doc = "eFuse apb2otp block3 data register4."]
-pub mod apb2otp_blk3_w4;
-#[doc = "APB2OTP_BLK3_W5 (r) register accessor: eFuse apb2otp block3 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk3_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk3_w5`] module"]
-pub type APB2OTP_BLK3_W5 = crate::Reg<apb2otp_blk3_w5::APB2OTP_BLK3_W5_SPEC>;
+pub mod blk3_w4;
+#[doc = "BLK3_W5 (r) register accessor: eFuse apb2otp block3 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w5`] module"]
+pub type BLK3_W5 = crate::Reg<blk3_w5::BLK3_W5_SPEC>;
 #[doc = "eFuse apb2otp block3 data register5."]
-pub mod apb2otp_blk3_w5;
-#[doc = "APB2OTP_BLK3_W6 (r) register accessor: eFuse apb2otp block3 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk3_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk3_w6`] module"]
-pub type APB2OTP_BLK3_W6 = crate::Reg<apb2otp_blk3_w6::APB2OTP_BLK3_W6_SPEC>;
+pub mod blk3_w5;
+#[doc = "BLK3_W6 (r) register accessor: eFuse apb2otp block3 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w6`] module"]
+pub type BLK3_W6 = crate::Reg<blk3_w6::BLK3_W6_SPEC>;
 #[doc = "eFuse apb2otp block3 data register6."]
-pub mod apb2otp_blk3_w6;
-#[doc = "APB2OTP_BLK3_W7 (r) register accessor: eFuse apb2otp block3 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk3_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk3_w7`] module"]
-pub type APB2OTP_BLK3_W7 = crate::Reg<apb2otp_blk3_w7::APB2OTP_BLK3_W7_SPEC>;
+pub mod blk3_w6;
+#[doc = "BLK3_W7 (r) register accessor: eFuse apb2otp block3 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w7`] module"]
+pub type BLK3_W7 = crate::Reg<blk3_w7::BLK3_W7_SPEC>;
 #[doc = "eFuse apb2otp block3 data register7."]
-pub mod apb2otp_blk3_w7;
-#[doc = "APB2OTP_BLK3_W8 (r) register accessor: eFuse apb2otp block3 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk3_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk3_w8`] module"]
-pub type APB2OTP_BLK3_W8 = crate::Reg<apb2otp_blk3_w8::APB2OTP_BLK3_W8_SPEC>;
+pub mod blk3_w7;
+#[doc = "BLK3_W8 (r) register accessor: eFuse apb2otp block3 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w8`] module"]
+pub type BLK3_W8 = crate::Reg<blk3_w8::BLK3_W8_SPEC>;
 #[doc = "eFuse apb2otp block3 data register8."]
-pub mod apb2otp_blk3_w8;
-#[doc = "APB2OTP_BLK3_W9 (r) register accessor: eFuse apb2otp block3 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk3_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk3_w9`] module"]
-pub type APB2OTP_BLK3_W9 = crate::Reg<apb2otp_blk3_w9::APB2OTP_BLK3_W9_SPEC>;
+pub mod blk3_w8;
+#[doc = "BLK3_W9 (r) register accessor: eFuse apb2otp block3 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w9`] module"]
+pub type BLK3_W9 = crate::Reg<blk3_w9::BLK3_W9_SPEC>;
 #[doc = "eFuse apb2otp block3 data register9."]
-pub mod apb2otp_blk3_w9;
-#[doc = "APB2OTP_BLK3_W10 (r) register accessor: eFuse apb2otp block3 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk3_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk3_w10`] module"]
-pub type APB2OTP_BLK3_W10 = crate::Reg<apb2otp_blk3_w10::APB2OTP_BLK3_W10_SPEC>;
+pub mod blk3_w9;
+#[doc = "BLK3_W10 (r) register accessor: eFuse apb2otp block3 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w10`] module"]
+pub type BLK3_W10 = crate::Reg<blk3_w10::BLK3_W10_SPEC>;
 #[doc = "eFuse apb2otp block3 data register10."]
-pub mod apb2otp_blk3_w10;
-#[doc = "APB2OTP_BLK3_W11 (r) register accessor: eFuse apb2otp block3 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk3_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk3_w11`] module"]
-pub type APB2OTP_BLK3_W11 = crate::Reg<apb2otp_blk3_w11::APB2OTP_BLK3_W11_SPEC>;
+pub mod blk3_w10;
+#[doc = "BLK3_W11 (r) register accessor: eFuse apb2otp block3 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w11`] module"]
+pub type BLK3_W11 = crate::Reg<blk3_w11::BLK3_W11_SPEC>;
 #[doc = "eFuse apb2otp block3 data register11."]
-pub mod apb2otp_blk3_w11;
-#[doc = "APB2OTP_BLK4_W1 (r) register accessor: eFuse apb2otp BLOCK7 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk4_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk4_w1`] module"]
-pub type APB2OTP_BLK4_W1 = crate::Reg<apb2otp_blk4_w1::APB2OTP_BLK4_W1_SPEC>;
+pub mod blk3_w11;
+#[doc = "BLK4_W1 (r) register accessor: eFuse apb2otp BLOCK7 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w1`] module"]
+pub type BLK4_W1 = crate::Reg<blk4_w1::BLK4_W1_SPEC>;
 #[doc = "eFuse apb2otp BLOCK7 data register1."]
-pub mod apb2otp_blk4_w1;
-#[doc = "APB2OTP_BLK4_W2 (r) register accessor: eFuse apb2otp block4 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk4_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk4_w2`] module"]
-pub type APB2OTP_BLK4_W2 = crate::Reg<apb2otp_blk4_w2::APB2OTP_BLK4_W2_SPEC>;
+pub mod blk4_w1;
+#[doc = "BLK4_W2 (r) register accessor: eFuse apb2otp block4 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w2`] module"]
+pub type BLK4_W2 = crate::Reg<blk4_w2::BLK4_W2_SPEC>;
 #[doc = "eFuse apb2otp block4 data register2."]
-pub mod apb2otp_blk4_w2;
-#[doc = "APB2OTP_BLK4_W3 (r) register accessor: eFuse apb2otp block4 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk4_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk4_w3`] module"]
-pub type APB2OTP_BLK4_W3 = crate::Reg<apb2otp_blk4_w3::APB2OTP_BLK4_W3_SPEC>;
+pub mod blk4_w2;
+#[doc = "BLK4_W3 (r) register accessor: eFuse apb2otp block4 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w3`] module"]
+pub type BLK4_W3 = crate::Reg<blk4_w3::BLK4_W3_SPEC>;
 #[doc = "eFuse apb2otp block4 data register3."]
-pub mod apb2otp_blk4_w3;
-#[doc = "APB2OTP_BLK4_W4 (r) register accessor: eFuse apb2otp block4 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk4_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk4_w4`] module"]
-pub type APB2OTP_BLK4_W4 = crate::Reg<apb2otp_blk4_w4::APB2OTP_BLK4_W4_SPEC>;
+pub mod blk4_w3;
+#[doc = "BLK4_W4 (r) register accessor: eFuse apb2otp block4 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w4`] module"]
+pub type BLK4_W4 = crate::Reg<blk4_w4::BLK4_W4_SPEC>;
 #[doc = "eFuse apb2otp block4 data register4."]
-pub mod apb2otp_blk4_w4;
-#[doc = "APB2OTP_BLK4_W5 (r) register accessor: eFuse apb2otp block4 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk4_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk4_w5`] module"]
-pub type APB2OTP_BLK4_W5 = crate::Reg<apb2otp_blk4_w5::APB2OTP_BLK4_W5_SPEC>;
+pub mod blk4_w4;
+#[doc = "BLK4_W5 (r) register accessor: eFuse apb2otp block4 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w5`] module"]
+pub type BLK4_W5 = crate::Reg<blk4_w5::BLK4_W5_SPEC>;
 #[doc = "eFuse apb2otp block4 data register5."]
-pub mod apb2otp_blk4_w5;
-#[doc = "APB2OTP_BLK4_W6 (r) register accessor: eFuse apb2otp block4 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk4_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk4_w6`] module"]
-pub type APB2OTP_BLK4_W6 = crate::Reg<apb2otp_blk4_w6::APB2OTP_BLK4_W6_SPEC>;
+pub mod blk4_w5;
+#[doc = "BLK4_W6 (r) register accessor: eFuse apb2otp block4 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w6`] module"]
+pub type BLK4_W6 = crate::Reg<blk4_w6::BLK4_W6_SPEC>;
 #[doc = "eFuse apb2otp block4 data register6."]
-pub mod apb2otp_blk4_w6;
-#[doc = "APB2OTP_BLK4_W7 (r) register accessor: eFuse apb2otp block4 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk4_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk4_w7`] module"]
-pub type APB2OTP_BLK4_W7 = crate::Reg<apb2otp_blk4_w7::APB2OTP_BLK4_W7_SPEC>;
+pub mod blk4_w6;
+#[doc = "BLK4_W7 (r) register accessor: eFuse apb2otp block4 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w7`] module"]
+pub type BLK4_W7 = crate::Reg<blk4_w7::BLK4_W7_SPEC>;
 #[doc = "eFuse apb2otp block4 data register7."]
-pub mod apb2otp_blk4_w7;
-#[doc = "APB2OTP_BLK4_W8 (r) register accessor: eFuse apb2otp block4 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk4_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk4_w8`] module"]
-pub type APB2OTP_BLK4_W8 = crate::Reg<apb2otp_blk4_w8::APB2OTP_BLK4_W8_SPEC>;
+pub mod blk4_w7;
+#[doc = "BLK4_W8 (r) register accessor: eFuse apb2otp block4 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w8`] module"]
+pub type BLK4_W8 = crate::Reg<blk4_w8::BLK4_W8_SPEC>;
 #[doc = "eFuse apb2otp block4 data register8."]
-pub mod apb2otp_blk4_w8;
-#[doc = "APB2OTP_BLK4_W9 (r) register accessor: eFuse apb2otp block4 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk4_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk4_w9`] module"]
-pub type APB2OTP_BLK4_W9 = crate::Reg<apb2otp_blk4_w9::APB2OTP_BLK4_W9_SPEC>;
+pub mod blk4_w8;
+#[doc = "BLK4_W9 (r) register accessor: eFuse apb2otp block4 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w9`] module"]
+pub type BLK4_W9 = crate::Reg<blk4_w9::BLK4_W9_SPEC>;
 #[doc = "eFuse apb2otp block4 data register9."]
-pub mod apb2otp_blk4_w9;
-#[doc = "APB2OTP_BLK4_W10 (r) register accessor: eFuse apb2otp block4 data registe10.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk4_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk4_w10`] module"]
-pub type APB2OTP_BLK4_W10 = crate::Reg<apb2otp_blk4_w10::APB2OTP_BLK4_W10_SPEC>;
+pub mod blk4_w9;
+#[doc = "BLK4_W10 (r) register accessor: eFuse apb2otp block4 data registe10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w10`] module"]
+pub type BLK4_W10 = crate::Reg<blk4_w10::BLK4_W10_SPEC>;
 #[doc = "eFuse apb2otp block4 data registe10."]
-pub mod apb2otp_blk4_w10;
-#[doc = "APB2OTP_BLK4_W11 (r) register accessor: eFuse apb2otp block4 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk4_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk4_w11`] module"]
-pub type APB2OTP_BLK4_W11 = crate::Reg<apb2otp_blk4_w11::APB2OTP_BLK4_W11_SPEC>;
+pub mod blk4_w10;
+#[doc = "BLK4_W11 (r) register accessor: eFuse apb2otp block4 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w11`] module"]
+pub type BLK4_W11 = crate::Reg<blk4_w11::BLK4_W11_SPEC>;
 #[doc = "eFuse apb2otp block4 data register11."]
-pub mod apb2otp_blk4_w11;
-#[doc = "APB2OTP_BLK5_W1 (r) register accessor: eFuse apb2otp block5 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk5_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk5_w1`] module"]
-pub type APB2OTP_BLK5_W1 = crate::Reg<apb2otp_blk5_w1::APB2OTP_BLK5_W1_SPEC>;
+pub mod blk4_w11;
+#[doc = "BLK5_W1 (r) register accessor: eFuse apb2otp block5 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w1`] module"]
+pub type BLK5_W1 = crate::Reg<blk5_w1::BLK5_W1_SPEC>;
 #[doc = "eFuse apb2otp block5 data register1."]
-pub mod apb2otp_blk5_w1;
-#[doc = "APB2OTP_BLK5_W2 (r) register accessor: eFuse apb2otp block5 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk5_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk5_w2`] module"]
-pub type APB2OTP_BLK5_W2 = crate::Reg<apb2otp_blk5_w2::APB2OTP_BLK5_W2_SPEC>;
+pub mod blk5_w1;
+#[doc = "BLK5_W2 (r) register accessor: eFuse apb2otp block5 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w2`] module"]
+pub type BLK5_W2 = crate::Reg<blk5_w2::BLK5_W2_SPEC>;
 #[doc = "eFuse apb2otp block5 data register2."]
-pub mod apb2otp_blk5_w2;
-#[doc = "APB2OTP_BLK5_W3 (r) register accessor: eFuse apb2otp block5 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk5_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk5_w3`] module"]
-pub type APB2OTP_BLK5_W3 = crate::Reg<apb2otp_blk5_w3::APB2OTP_BLK5_W3_SPEC>;
+pub mod blk5_w2;
+#[doc = "BLK5_W3 (r) register accessor: eFuse apb2otp block5 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w3`] module"]
+pub type BLK5_W3 = crate::Reg<blk5_w3::BLK5_W3_SPEC>;
 #[doc = "eFuse apb2otp block5 data register3."]
-pub mod apb2otp_blk5_w3;
-#[doc = "APB2OTP_BLK5_W4 (r) register accessor: eFuse apb2otp block5 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk5_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk5_w4`] module"]
-pub type APB2OTP_BLK5_W4 = crate::Reg<apb2otp_blk5_w4::APB2OTP_BLK5_W4_SPEC>;
+pub mod blk5_w3;
+#[doc = "BLK5_W4 (r) register accessor: eFuse apb2otp block5 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w4`] module"]
+pub type BLK5_W4 = crate::Reg<blk5_w4::BLK5_W4_SPEC>;
 #[doc = "eFuse apb2otp block5 data register4."]
-pub mod apb2otp_blk5_w4;
-#[doc = "APB2OTP_BLK5_W5 (r) register accessor: eFuse apb2otp block5 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk5_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk5_w5`] module"]
-pub type APB2OTP_BLK5_W5 = crate::Reg<apb2otp_blk5_w5::APB2OTP_BLK5_W5_SPEC>;
+pub mod blk5_w4;
+#[doc = "BLK5_W5 (r) register accessor: eFuse apb2otp block5 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w5`] module"]
+pub type BLK5_W5 = crate::Reg<blk5_w5::BLK5_W5_SPEC>;
 #[doc = "eFuse apb2otp block5 data register5."]
-pub mod apb2otp_blk5_w5;
-#[doc = "APB2OTP_BLK5_W6 (r) register accessor: eFuse apb2otp block5 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk5_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk5_w6`] module"]
-pub type APB2OTP_BLK5_W6 = crate::Reg<apb2otp_blk5_w6::APB2OTP_BLK5_W6_SPEC>;
+pub mod blk5_w5;
+#[doc = "BLK5_W6 (r) register accessor: eFuse apb2otp block5 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w6`] module"]
+pub type BLK5_W6 = crate::Reg<blk5_w6::BLK5_W6_SPEC>;
 #[doc = "eFuse apb2otp block5 data register6."]
-pub mod apb2otp_blk5_w6;
-#[doc = "APB2OTP_BLK5_W7 (r) register accessor: eFuse apb2otp block5 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk5_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk5_w7`] module"]
-pub type APB2OTP_BLK5_W7 = crate::Reg<apb2otp_blk5_w7::APB2OTP_BLK5_W7_SPEC>;
+pub mod blk5_w6;
+#[doc = "BLK5_W7 (r) register accessor: eFuse apb2otp block5 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w7`] module"]
+pub type BLK5_W7 = crate::Reg<blk5_w7::BLK5_W7_SPEC>;
 #[doc = "eFuse apb2otp block5 data register7."]
-pub mod apb2otp_blk5_w7;
-#[doc = "APB2OTP_BLK5_W8 (r) register accessor: eFuse apb2otp block5 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk5_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk5_w8`] module"]
-pub type APB2OTP_BLK5_W8 = crate::Reg<apb2otp_blk5_w8::APB2OTP_BLK5_W8_SPEC>;
+pub mod blk5_w7;
+#[doc = "BLK5_W8 (r) register accessor: eFuse apb2otp block5 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w8`] module"]
+pub type BLK5_W8 = crate::Reg<blk5_w8::BLK5_W8_SPEC>;
 #[doc = "eFuse apb2otp block5 data register8."]
-pub mod apb2otp_blk5_w8;
-#[doc = "APB2OTP_BLK5_W9 (r) register accessor: eFuse apb2otp block5 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk5_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk5_w9`] module"]
-pub type APB2OTP_BLK5_W9 = crate::Reg<apb2otp_blk5_w9::APB2OTP_BLK5_W9_SPEC>;
+pub mod blk5_w8;
+#[doc = "BLK5_W9 (r) register accessor: eFuse apb2otp block5 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w9`] module"]
+pub type BLK5_W9 = crate::Reg<blk5_w9::BLK5_W9_SPEC>;
 #[doc = "eFuse apb2otp block5 data register9."]
-pub mod apb2otp_blk5_w9;
-#[doc = "APB2OTP_BLK5_W10 (r) register accessor: eFuse apb2otp block5 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk5_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk5_w10`] module"]
-pub type APB2OTP_BLK5_W10 = crate::Reg<apb2otp_blk5_w10::APB2OTP_BLK5_W10_SPEC>;
+pub mod blk5_w9;
+#[doc = "BLK5_W10 (r) register accessor: eFuse apb2otp block5 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w10`] module"]
+pub type BLK5_W10 = crate::Reg<blk5_w10::BLK5_W10_SPEC>;
 #[doc = "eFuse apb2otp block5 data register10."]
-pub mod apb2otp_blk5_w10;
-#[doc = "APB2OTP_BLK5_W11 (r) register accessor: eFuse apb2otp block5 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk5_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk5_w11`] module"]
-pub type APB2OTP_BLK5_W11 = crate::Reg<apb2otp_blk5_w11::APB2OTP_BLK5_W11_SPEC>;
+pub mod blk5_w10;
+#[doc = "BLK5_W11 (r) register accessor: eFuse apb2otp block5 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w11`] module"]
+pub type BLK5_W11 = crate::Reg<blk5_w11::BLK5_W11_SPEC>;
 #[doc = "eFuse apb2otp block5 data register11."]
-pub mod apb2otp_blk5_w11;
-#[doc = "APB2OTP_BLK6_W1 (r) register accessor: eFuse apb2otp block6 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk6_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk6_w1`] module"]
-pub type APB2OTP_BLK6_W1 = crate::Reg<apb2otp_blk6_w1::APB2OTP_BLK6_W1_SPEC>;
+pub mod blk5_w11;
+#[doc = "BLK6_W1 (r) register accessor: eFuse apb2otp block6 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w1`] module"]
+pub type BLK6_W1 = crate::Reg<blk6_w1::BLK6_W1_SPEC>;
 #[doc = "eFuse apb2otp block6 data register1."]
-pub mod apb2otp_blk6_w1;
-#[doc = "APB2OTP_BLK6_W2 (r) register accessor: eFuse apb2otp block6 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk6_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk6_w2`] module"]
-pub type APB2OTP_BLK6_W2 = crate::Reg<apb2otp_blk6_w2::APB2OTP_BLK6_W2_SPEC>;
+pub mod blk6_w1;
+#[doc = "BLK6_W2 (r) register accessor: eFuse apb2otp block6 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w2`] module"]
+pub type BLK6_W2 = crate::Reg<blk6_w2::BLK6_W2_SPEC>;
 #[doc = "eFuse apb2otp block6 data register2."]
-pub mod apb2otp_blk6_w2;
-#[doc = "APB2OTP_BLK6_W3 (r) register accessor: eFuse apb2otp block6 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk6_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk6_w3`] module"]
-pub type APB2OTP_BLK6_W3 = crate::Reg<apb2otp_blk6_w3::APB2OTP_BLK6_W3_SPEC>;
+pub mod blk6_w2;
+#[doc = "BLK6_W3 (r) register accessor: eFuse apb2otp block6 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w3`] module"]
+pub type BLK6_W3 = crate::Reg<blk6_w3::BLK6_W3_SPEC>;
 #[doc = "eFuse apb2otp block6 data register3."]
-pub mod apb2otp_blk6_w3;
-#[doc = "APB2OTP_BLK6_W4 (r) register accessor: eFuse apb2otp block6 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk6_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk6_w4`] module"]
-pub type APB2OTP_BLK6_W4 = crate::Reg<apb2otp_blk6_w4::APB2OTP_BLK6_W4_SPEC>;
+pub mod blk6_w3;
+#[doc = "BLK6_W4 (r) register accessor: eFuse apb2otp block6 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w4`] module"]
+pub type BLK6_W4 = crate::Reg<blk6_w4::BLK6_W4_SPEC>;
 #[doc = "eFuse apb2otp block6 data register4."]
-pub mod apb2otp_blk6_w4;
-#[doc = "APB2OTP_BLK6_W5 (r) register accessor: eFuse apb2otp block6 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk6_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk6_w5`] module"]
-pub type APB2OTP_BLK6_W5 = crate::Reg<apb2otp_blk6_w5::APB2OTP_BLK6_W5_SPEC>;
+pub mod blk6_w4;
+#[doc = "BLK6_W5 (r) register accessor: eFuse apb2otp block6 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w5`] module"]
+pub type BLK6_W5 = crate::Reg<blk6_w5::BLK6_W5_SPEC>;
 #[doc = "eFuse apb2otp block6 data register5."]
-pub mod apb2otp_blk6_w5;
-#[doc = "APB2OTP_BLK6_W6 (r) register accessor: eFuse apb2otp block6 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk6_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk6_w6`] module"]
-pub type APB2OTP_BLK6_W6 = crate::Reg<apb2otp_blk6_w6::APB2OTP_BLK6_W6_SPEC>;
+pub mod blk6_w5;
+#[doc = "BLK6_W6 (r) register accessor: eFuse apb2otp block6 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w6`] module"]
+pub type BLK6_W6 = crate::Reg<blk6_w6::BLK6_W6_SPEC>;
 #[doc = "eFuse apb2otp block6 data register6."]
-pub mod apb2otp_blk6_w6;
-#[doc = "APB2OTP_BLK6_W7 (r) register accessor: eFuse apb2otp block6 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk6_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk6_w7`] module"]
-pub type APB2OTP_BLK6_W7 = crate::Reg<apb2otp_blk6_w7::APB2OTP_BLK6_W7_SPEC>;
+pub mod blk6_w6;
+#[doc = "BLK6_W7 (r) register accessor: eFuse apb2otp block6 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w7`] module"]
+pub type BLK6_W7 = crate::Reg<blk6_w7::BLK6_W7_SPEC>;
 #[doc = "eFuse apb2otp block6 data register7."]
-pub mod apb2otp_blk6_w7;
-#[doc = "APB2OTP_BLK6_W8 (r) register accessor: eFuse apb2otp block6 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk6_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk6_w8`] module"]
-pub type APB2OTP_BLK6_W8 = crate::Reg<apb2otp_blk6_w8::APB2OTP_BLK6_W8_SPEC>;
+pub mod blk6_w7;
+#[doc = "BLK6_W8 (r) register accessor: eFuse apb2otp block6 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w8`] module"]
+pub type BLK6_W8 = crate::Reg<blk6_w8::BLK6_W8_SPEC>;
 #[doc = "eFuse apb2otp block6 data register8."]
-pub mod apb2otp_blk6_w8;
-#[doc = "APB2OTP_BLK6_W9 (r) register accessor: eFuse apb2otp block6 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk6_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk6_w9`] module"]
-pub type APB2OTP_BLK6_W9 = crate::Reg<apb2otp_blk6_w9::APB2OTP_BLK6_W9_SPEC>;
+pub mod blk6_w8;
+#[doc = "BLK6_W9 (r) register accessor: eFuse apb2otp block6 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w9`] module"]
+pub type BLK6_W9 = crate::Reg<blk6_w9::BLK6_W9_SPEC>;
 #[doc = "eFuse apb2otp block6 data register9."]
-pub mod apb2otp_blk6_w9;
-#[doc = "APB2OTP_BLK6_W10 (r) register accessor: eFuse apb2otp block6 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk6_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk6_w10`] module"]
-pub type APB2OTP_BLK6_W10 = crate::Reg<apb2otp_blk6_w10::APB2OTP_BLK6_W10_SPEC>;
+pub mod blk6_w9;
+#[doc = "BLK6_W10 (r) register accessor: eFuse apb2otp block6 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w10`] module"]
+pub type BLK6_W10 = crate::Reg<blk6_w10::BLK6_W10_SPEC>;
 #[doc = "eFuse apb2otp block6 data register10."]
-pub mod apb2otp_blk6_w10;
-#[doc = "APB2OTP_BLK6_W11 (r) register accessor: eFuse apb2otp block6 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk6_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk6_w11`] module"]
-pub type APB2OTP_BLK6_W11 = crate::Reg<apb2otp_blk6_w11::APB2OTP_BLK6_W11_SPEC>;
+pub mod blk6_w10;
+#[doc = "BLK6_W11 (r) register accessor: eFuse apb2otp block6 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w11`] module"]
+pub type BLK6_W11 = crate::Reg<blk6_w11::BLK6_W11_SPEC>;
 #[doc = "eFuse apb2otp block6 data register11."]
-pub mod apb2otp_blk6_w11;
-#[doc = "APB2OTP_BLK7_W1 (r) register accessor: eFuse apb2otp block7 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk7_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk7_w1`] module"]
-pub type APB2OTP_BLK7_W1 = crate::Reg<apb2otp_blk7_w1::APB2OTP_BLK7_W1_SPEC>;
+pub mod blk6_w11;
+#[doc = "BLK7_W1 (r) register accessor: eFuse apb2otp block7 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w1`] module"]
+pub type BLK7_W1 = crate::Reg<blk7_w1::BLK7_W1_SPEC>;
 #[doc = "eFuse apb2otp block7 data register1."]
-pub mod apb2otp_blk7_w1;
-#[doc = "APB2OTP_BLK7_W2 (r) register accessor: eFuse apb2otp block7 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk7_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk7_w2`] module"]
-pub type APB2OTP_BLK7_W2 = crate::Reg<apb2otp_blk7_w2::APB2OTP_BLK7_W2_SPEC>;
+pub mod blk7_w1;
+#[doc = "BLK7_W2 (r) register accessor: eFuse apb2otp block7 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w2`] module"]
+pub type BLK7_W2 = crate::Reg<blk7_w2::BLK7_W2_SPEC>;
 #[doc = "eFuse apb2otp block7 data register2."]
-pub mod apb2otp_blk7_w2;
-#[doc = "APB2OTP_BLK7_W3 (r) register accessor: eFuse apb2otp block7 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk7_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk7_w3`] module"]
-pub type APB2OTP_BLK7_W3 = crate::Reg<apb2otp_blk7_w3::APB2OTP_BLK7_W3_SPEC>;
+pub mod blk7_w2;
+#[doc = "BLK7_W3 (r) register accessor: eFuse apb2otp block7 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w3`] module"]
+pub type BLK7_W3 = crate::Reg<blk7_w3::BLK7_W3_SPEC>;
 #[doc = "eFuse apb2otp block7 data register3."]
-pub mod apb2otp_blk7_w3;
-#[doc = "APB2OTP_BLK7_W4 (r) register accessor: eFuse apb2otp block7 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk7_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk7_w4`] module"]
-pub type APB2OTP_BLK7_W4 = crate::Reg<apb2otp_blk7_w4::APB2OTP_BLK7_W4_SPEC>;
+pub mod blk7_w3;
+#[doc = "BLK7_W4 (r) register accessor: eFuse apb2otp block7 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w4`] module"]
+pub type BLK7_W4 = crate::Reg<blk7_w4::BLK7_W4_SPEC>;
 #[doc = "eFuse apb2otp block7 data register4."]
-pub mod apb2otp_blk7_w4;
-#[doc = "APB2OTP_BLK7_W5 (r) register accessor: eFuse apb2otp block7 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk7_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk7_w5`] module"]
-pub type APB2OTP_BLK7_W5 = crate::Reg<apb2otp_blk7_w5::APB2OTP_BLK7_W5_SPEC>;
+pub mod blk7_w4;
+#[doc = "BLK7_W5 (r) register accessor: eFuse apb2otp block7 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w5`] module"]
+pub type BLK7_W5 = crate::Reg<blk7_w5::BLK7_W5_SPEC>;
 #[doc = "eFuse apb2otp block7 data register5."]
-pub mod apb2otp_blk7_w5;
-#[doc = "APB2OTP_BLK7_W6 (r) register accessor: eFuse apb2otp block7 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk7_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk7_w6`] module"]
-pub type APB2OTP_BLK7_W6 = crate::Reg<apb2otp_blk7_w6::APB2OTP_BLK7_W6_SPEC>;
+pub mod blk7_w5;
+#[doc = "BLK7_W6 (r) register accessor: eFuse apb2otp block7 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w6`] module"]
+pub type BLK7_W6 = crate::Reg<blk7_w6::BLK7_W6_SPEC>;
 #[doc = "eFuse apb2otp block7 data register6."]
-pub mod apb2otp_blk7_w6;
-#[doc = "APB2OTP_BLK7_W7 (r) register accessor: eFuse apb2otp block7 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk7_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk7_w7`] module"]
-pub type APB2OTP_BLK7_W7 = crate::Reg<apb2otp_blk7_w7::APB2OTP_BLK7_W7_SPEC>;
+pub mod blk7_w6;
+#[doc = "BLK7_W7 (r) register accessor: eFuse apb2otp block7 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w7`] module"]
+pub type BLK7_W7 = crate::Reg<blk7_w7::BLK7_W7_SPEC>;
 #[doc = "eFuse apb2otp block7 data register7."]
-pub mod apb2otp_blk7_w7;
-#[doc = "APB2OTP_BLK7_W8 (r) register accessor: eFuse apb2otp block7 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk7_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk7_w8`] module"]
-pub type APB2OTP_BLK7_W8 = crate::Reg<apb2otp_blk7_w8::APB2OTP_BLK7_W8_SPEC>;
+pub mod blk7_w7;
+#[doc = "BLK7_W8 (r) register accessor: eFuse apb2otp block7 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w8`] module"]
+pub type BLK7_W8 = crate::Reg<blk7_w8::BLK7_W8_SPEC>;
 #[doc = "eFuse apb2otp block7 data register8."]
-pub mod apb2otp_blk7_w8;
-#[doc = "APB2OTP_BLK7_W9 (r) register accessor: eFuse apb2otp block7 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk7_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk7_w9`] module"]
-pub type APB2OTP_BLK7_W9 = crate::Reg<apb2otp_blk7_w9::APB2OTP_BLK7_W9_SPEC>;
+pub mod blk7_w8;
+#[doc = "BLK7_W9 (r) register accessor: eFuse apb2otp block7 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w9`] module"]
+pub type BLK7_W9 = crate::Reg<blk7_w9::BLK7_W9_SPEC>;
 #[doc = "eFuse apb2otp block7 data register9."]
-pub mod apb2otp_blk7_w9;
-#[doc = "APB2OTP_BLK7_W10 (r) register accessor: eFuse apb2otp block7 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk7_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk7_w10`] module"]
-pub type APB2OTP_BLK7_W10 = crate::Reg<apb2otp_blk7_w10::APB2OTP_BLK7_W10_SPEC>;
+pub mod blk7_w9;
+#[doc = "BLK7_W10 (r) register accessor: eFuse apb2otp block7 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w10`] module"]
+pub type BLK7_W10 = crate::Reg<blk7_w10::BLK7_W10_SPEC>;
 #[doc = "eFuse apb2otp block7 data register10."]
-pub mod apb2otp_blk7_w10;
-#[doc = "APB2OTP_BLK7_W11 (r) register accessor: eFuse apb2otp block7 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk7_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk7_w11`] module"]
-pub type APB2OTP_BLK7_W11 = crate::Reg<apb2otp_blk7_w11::APB2OTP_BLK7_W11_SPEC>;
+pub mod blk7_w10;
+#[doc = "BLK7_W11 (r) register accessor: eFuse apb2otp block7 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w11`] module"]
+pub type BLK7_W11 = crate::Reg<blk7_w11::BLK7_W11_SPEC>;
 #[doc = "eFuse apb2otp block7 data register11."]
-pub mod apb2otp_blk7_w11;
-#[doc = "APB2OTP_BLK8_W1 (r) register accessor: eFuse apb2otp block8 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk8_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk8_w1`] module"]
-pub type APB2OTP_BLK8_W1 = crate::Reg<apb2otp_blk8_w1::APB2OTP_BLK8_W1_SPEC>;
+pub mod blk7_w11;
+#[doc = "BLK8_W1 (r) register accessor: eFuse apb2otp block8 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w1`] module"]
+pub type BLK8_W1 = crate::Reg<blk8_w1::BLK8_W1_SPEC>;
 #[doc = "eFuse apb2otp block8 data register1."]
-pub mod apb2otp_blk8_w1;
-#[doc = "APB2OTP_BLK8_W2 (r) register accessor: eFuse apb2otp block8 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk8_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk8_w2`] module"]
-pub type APB2OTP_BLK8_W2 = crate::Reg<apb2otp_blk8_w2::APB2OTP_BLK8_W2_SPEC>;
+pub mod blk8_w1;
+#[doc = "BLK8_W2 (r) register accessor: eFuse apb2otp block8 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w2`] module"]
+pub type BLK8_W2 = crate::Reg<blk8_w2::BLK8_W2_SPEC>;
 #[doc = "eFuse apb2otp block8 data register2."]
-pub mod apb2otp_blk8_w2;
-#[doc = "APB2OTP_BLK8_W3 (r) register accessor: eFuse apb2otp block8 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk8_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk8_w3`] module"]
-pub type APB2OTP_BLK8_W3 = crate::Reg<apb2otp_blk8_w3::APB2OTP_BLK8_W3_SPEC>;
+pub mod blk8_w2;
+#[doc = "BLK8_W3 (r) register accessor: eFuse apb2otp block8 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w3`] module"]
+pub type BLK8_W3 = crate::Reg<blk8_w3::BLK8_W3_SPEC>;
 #[doc = "eFuse apb2otp block8 data register3."]
-pub mod apb2otp_blk8_w3;
-#[doc = "APB2OTP_BLK8_W4 (r) register accessor: eFuse apb2otp block8 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk8_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk8_w4`] module"]
-pub type APB2OTP_BLK8_W4 = crate::Reg<apb2otp_blk8_w4::APB2OTP_BLK8_W4_SPEC>;
+pub mod blk8_w3;
+#[doc = "BLK8_W4 (r) register accessor: eFuse apb2otp block8 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w4`] module"]
+pub type BLK8_W4 = crate::Reg<blk8_w4::BLK8_W4_SPEC>;
 #[doc = "eFuse apb2otp block8 data register4."]
-pub mod apb2otp_blk8_w4;
-#[doc = "APB2OTP_BLK8_W5 (r) register accessor: eFuse apb2otp block8 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk8_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk8_w5`] module"]
-pub type APB2OTP_BLK8_W5 = crate::Reg<apb2otp_blk8_w5::APB2OTP_BLK8_W5_SPEC>;
+pub mod blk8_w4;
+#[doc = "BLK8_W5 (r) register accessor: eFuse apb2otp block8 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w5`] module"]
+pub type BLK8_W5 = crate::Reg<blk8_w5::BLK8_W5_SPEC>;
 #[doc = "eFuse apb2otp block8 data register5."]
-pub mod apb2otp_blk8_w5;
-#[doc = "APB2OTP_BLK8_W6 (r) register accessor: eFuse apb2otp block8 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk8_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk8_w6`] module"]
-pub type APB2OTP_BLK8_W6 = crate::Reg<apb2otp_blk8_w6::APB2OTP_BLK8_W6_SPEC>;
+pub mod blk8_w5;
+#[doc = "BLK8_W6 (r) register accessor: eFuse apb2otp block8 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w6`] module"]
+pub type BLK8_W6 = crate::Reg<blk8_w6::BLK8_W6_SPEC>;
 #[doc = "eFuse apb2otp block8 data register6."]
-pub mod apb2otp_blk8_w6;
-#[doc = "APB2OTP_BLK8_W7 (r) register accessor: eFuse apb2otp block8 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk8_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk8_w7`] module"]
-pub type APB2OTP_BLK8_W7 = crate::Reg<apb2otp_blk8_w7::APB2OTP_BLK8_W7_SPEC>;
+pub mod blk8_w6;
+#[doc = "BLK8_W7 (r) register accessor: eFuse apb2otp block8 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w7`] module"]
+pub type BLK8_W7 = crate::Reg<blk8_w7::BLK8_W7_SPEC>;
 #[doc = "eFuse apb2otp block8 data register7."]
-pub mod apb2otp_blk8_w7;
-#[doc = "APB2OTP_BLK8_W8 (r) register accessor: eFuse apb2otp block8 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk8_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk8_w8`] module"]
-pub type APB2OTP_BLK8_W8 = crate::Reg<apb2otp_blk8_w8::APB2OTP_BLK8_W8_SPEC>;
+pub mod blk8_w7;
+#[doc = "BLK8_W8 (r) register accessor: eFuse apb2otp block8 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w8`] module"]
+pub type BLK8_W8 = crate::Reg<blk8_w8::BLK8_W8_SPEC>;
 #[doc = "eFuse apb2otp block8 data register8."]
-pub mod apb2otp_blk8_w8;
-#[doc = "APB2OTP_BLK8_W9 (r) register accessor: eFuse apb2otp block8 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk8_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk8_w9`] module"]
-pub type APB2OTP_BLK8_W9 = crate::Reg<apb2otp_blk8_w9::APB2OTP_BLK8_W9_SPEC>;
+pub mod blk8_w8;
+#[doc = "BLK8_W9 (r) register accessor: eFuse apb2otp block8 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w9`] module"]
+pub type BLK8_W9 = crate::Reg<blk8_w9::BLK8_W9_SPEC>;
 #[doc = "eFuse apb2otp block8 data register9."]
-pub mod apb2otp_blk8_w9;
-#[doc = "APB2OTP_BLK8_W10 (r) register accessor: eFuse apb2otp block8 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk8_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk8_w10`] module"]
-pub type APB2OTP_BLK8_W10 = crate::Reg<apb2otp_blk8_w10::APB2OTP_BLK8_W10_SPEC>;
+pub mod blk8_w9;
+#[doc = "BLK8_W10 (r) register accessor: eFuse apb2otp block8 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w10`] module"]
+pub type BLK8_W10 = crate::Reg<blk8_w10::BLK8_W10_SPEC>;
 #[doc = "eFuse apb2otp block8 data register10."]
-pub mod apb2otp_blk8_w10;
-#[doc = "APB2OTP_BLK8_W11 (r) register accessor: eFuse apb2otp block8 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk8_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk8_w11`] module"]
-pub type APB2OTP_BLK8_W11 = crate::Reg<apb2otp_blk8_w11::APB2OTP_BLK8_W11_SPEC>;
+pub mod blk8_w10;
+#[doc = "BLK8_W11 (r) register accessor: eFuse apb2otp block8 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w11`] module"]
+pub type BLK8_W11 = crate::Reg<blk8_w11::BLK8_W11_SPEC>;
 #[doc = "eFuse apb2otp block8 data register11."]
-pub mod apb2otp_blk8_w11;
-#[doc = "APB2OTP_BLK9_W1 (r) register accessor: eFuse apb2otp block9 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk9_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk9_w1`] module"]
-pub type APB2OTP_BLK9_W1 = crate::Reg<apb2otp_blk9_w1::APB2OTP_BLK9_W1_SPEC>;
+pub mod blk8_w11;
+#[doc = "BLK9_W1 (r) register accessor: eFuse apb2otp block9 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w1`] module"]
+pub type BLK9_W1 = crate::Reg<blk9_w1::BLK9_W1_SPEC>;
 #[doc = "eFuse apb2otp block9 data register1."]
-pub mod apb2otp_blk9_w1;
-#[doc = "APB2OTP_BLK9_W2 (r) register accessor: eFuse apb2otp block9 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk9_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk9_w2`] module"]
-pub type APB2OTP_BLK9_W2 = crate::Reg<apb2otp_blk9_w2::APB2OTP_BLK9_W2_SPEC>;
+pub mod blk9_w1;
+#[doc = "BLK9_W2 (r) register accessor: eFuse apb2otp block9 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w2`] module"]
+pub type BLK9_W2 = crate::Reg<blk9_w2::BLK9_W2_SPEC>;
 #[doc = "eFuse apb2otp block9 data register2."]
-pub mod apb2otp_blk9_w2;
-#[doc = "APB2OTP_BLK9_W3 (r) register accessor: eFuse apb2otp block9 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk9_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk9_w3`] module"]
-pub type APB2OTP_BLK9_W3 = crate::Reg<apb2otp_blk9_w3::APB2OTP_BLK9_W3_SPEC>;
+pub mod blk9_w2;
+#[doc = "BLK9_W3 (r) register accessor: eFuse apb2otp block9 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w3`] module"]
+pub type BLK9_W3 = crate::Reg<blk9_w3::BLK9_W3_SPEC>;
 #[doc = "eFuse apb2otp block9 data register3."]
-pub mod apb2otp_blk9_w3;
-#[doc = "APB2OTP_BLK9_W4 (r) register accessor: eFuse apb2otp block9 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk9_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk9_w4`] module"]
-pub type APB2OTP_BLK9_W4 = crate::Reg<apb2otp_blk9_w4::APB2OTP_BLK9_W4_SPEC>;
+pub mod blk9_w3;
+#[doc = "BLK9_W4 (r) register accessor: eFuse apb2otp block9 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w4`] module"]
+pub type BLK9_W4 = crate::Reg<blk9_w4::BLK9_W4_SPEC>;
 #[doc = "eFuse apb2otp block9 data register4."]
-pub mod apb2otp_blk9_w4;
-#[doc = "APB2OTP_BLK9_W5 (r) register accessor: eFuse apb2otp block9 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk9_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk9_w5`] module"]
-pub type APB2OTP_BLK9_W5 = crate::Reg<apb2otp_blk9_w5::APB2OTP_BLK9_W5_SPEC>;
+pub mod blk9_w4;
+#[doc = "BLK9_W5 (r) register accessor: eFuse apb2otp block9 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w5`] module"]
+pub type BLK9_W5 = crate::Reg<blk9_w5::BLK9_W5_SPEC>;
 #[doc = "eFuse apb2otp block9 data register5."]
-pub mod apb2otp_blk9_w5;
-#[doc = "APB2OTP_BLK9_W6 (r) register accessor: eFuse apb2otp block9 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk9_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk9_w6`] module"]
-pub type APB2OTP_BLK9_W6 = crate::Reg<apb2otp_blk9_w6::APB2OTP_BLK9_W6_SPEC>;
+pub mod blk9_w5;
+#[doc = "BLK9_W6 (r) register accessor: eFuse apb2otp block9 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w6`] module"]
+pub type BLK9_W6 = crate::Reg<blk9_w6::BLK9_W6_SPEC>;
 #[doc = "eFuse apb2otp block9 data register6."]
-pub mod apb2otp_blk9_w6;
-#[doc = "APB2OTP_BLK9_W7 (r) register accessor: eFuse apb2otp block9 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk9_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk9_w7`] module"]
-pub type APB2OTP_BLK9_W7 = crate::Reg<apb2otp_blk9_w7::APB2OTP_BLK9_W7_SPEC>;
+pub mod blk9_w6;
+#[doc = "BLK9_W7 (r) register accessor: eFuse apb2otp block9 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w7`] module"]
+pub type BLK9_W7 = crate::Reg<blk9_w7::BLK9_W7_SPEC>;
 #[doc = "eFuse apb2otp block9 data register7."]
-pub mod apb2otp_blk9_w7;
-#[doc = "APB2OTP_BLK9_W8 (r) register accessor: eFuse apb2otp block9 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk9_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk9_w8`] module"]
-pub type APB2OTP_BLK9_W8 = crate::Reg<apb2otp_blk9_w8::APB2OTP_BLK9_W8_SPEC>;
+pub mod blk9_w7;
+#[doc = "BLK9_W8 (r) register accessor: eFuse apb2otp block9 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w8`] module"]
+pub type BLK9_W8 = crate::Reg<blk9_w8::BLK9_W8_SPEC>;
 #[doc = "eFuse apb2otp block9 data register8."]
-pub mod apb2otp_blk9_w8;
-#[doc = "APB2OTP_BLK9_W9 (r) register accessor: eFuse apb2otp block9 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk9_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk9_w9`] module"]
-pub type APB2OTP_BLK9_W9 = crate::Reg<apb2otp_blk9_w9::APB2OTP_BLK9_W9_SPEC>;
+pub mod blk9_w8;
+#[doc = "BLK9_W9 (r) register accessor: eFuse apb2otp block9 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w9`] module"]
+pub type BLK9_W9 = crate::Reg<blk9_w9::BLK9_W9_SPEC>;
 #[doc = "eFuse apb2otp block9 data register9."]
-pub mod apb2otp_blk9_w9;
-#[doc = "APB2OTP_BLK9_W10 (r) register accessor: eFuse apb2otp block9 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk9_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk9_w10`] module"]
-pub type APB2OTP_BLK9_W10 = crate::Reg<apb2otp_blk9_w10::APB2OTP_BLK9_W10_SPEC>;
+pub mod blk9_w9;
+#[doc = "BLK9_W10 (r) register accessor: eFuse apb2otp block9 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w10`] module"]
+pub type BLK9_W10 = crate::Reg<blk9_w10::BLK9_W10_SPEC>;
 #[doc = "eFuse apb2otp block9 data register10."]
-pub mod apb2otp_blk9_w10;
-#[doc = "APB2OTP_BLK9_W11 (r) register accessor: eFuse apb2otp block9 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk9_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk9_w11`] module"]
-pub type APB2OTP_BLK9_W11 = crate::Reg<apb2otp_blk9_w11::APB2OTP_BLK9_W11_SPEC>;
+pub mod blk9_w10;
+#[doc = "BLK9_W11 (r) register accessor: eFuse apb2otp block9 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w11`] module"]
+pub type BLK9_W11 = crate::Reg<blk9_w11::BLK9_W11_SPEC>;
 #[doc = "eFuse apb2otp block9 data register11."]
-pub mod apb2otp_blk9_w11;
-#[doc = "APB2OTP_BLK10_W1 (r) register accessor: eFuse apb2otp block10 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk10_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk10_w1`] module"]
-pub type APB2OTP_BLK10_W1 = crate::Reg<apb2otp_blk10_w1::APB2OTP_BLK10_W1_SPEC>;
+pub mod blk9_w11;
+#[doc = "BLK10_W1 (r) register accessor: eFuse apb2otp block10 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w1`] module"]
+pub type BLK10_W1 = crate::Reg<blk10_w1::BLK10_W1_SPEC>;
 #[doc = "eFuse apb2otp block10 data register1."]
-pub mod apb2otp_blk10_w1;
-#[doc = "APB2OTP_BLK10_W2 (r) register accessor: eFuse apb2otp block10 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk10_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk10_w2`] module"]
-pub type APB2OTP_BLK10_W2 = crate::Reg<apb2otp_blk10_w2::APB2OTP_BLK10_W2_SPEC>;
+pub mod blk10_w1;
+#[doc = "BLK10_W2 (r) register accessor: eFuse apb2otp block10 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w2`] module"]
+pub type BLK10_W2 = crate::Reg<blk10_w2::BLK10_W2_SPEC>;
 #[doc = "eFuse apb2otp block10 data register2."]
-pub mod apb2otp_blk10_w2;
-#[doc = "APB2OTP_BLK10_W3 (r) register accessor: eFuse apb2otp block10 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk10_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk10_w3`] module"]
-pub type APB2OTP_BLK10_W3 = crate::Reg<apb2otp_blk10_w3::APB2OTP_BLK10_W3_SPEC>;
+pub mod blk10_w2;
+#[doc = "BLK10_W3 (r) register accessor: eFuse apb2otp block10 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w3`] module"]
+pub type BLK10_W3 = crate::Reg<blk10_w3::BLK10_W3_SPEC>;
 #[doc = "eFuse apb2otp block10 data register3."]
-pub mod apb2otp_blk10_w3;
-#[doc = "APB2OTP_BLK10_W4 (r) register accessor: eFuse apb2otp block10 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk10_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk10_w4`] module"]
-pub type APB2OTP_BLK10_W4 = crate::Reg<apb2otp_blk10_w4::APB2OTP_BLK10_W4_SPEC>;
+pub mod blk10_w3;
+#[doc = "BLK10_W4 (r) register accessor: eFuse apb2otp block10 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w4`] module"]
+pub type BLK10_W4 = crate::Reg<blk10_w4::BLK10_W4_SPEC>;
 #[doc = "eFuse apb2otp block10 data register4."]
-pub mod apb2otp_blk10_w4;
-#[doc = "APB2OTP_BLK10_W5 (r) register accessor: eFuse apb2otp block10 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk10_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk10_w5`] module"]
-pub type APB2OTP_BLK10_W5 = crate::Reg<apb2otp_blk10_w5::APB2OTP_BLK10_W5_SPEC>;
+pub mod blk10_w4;
+#[doc = "BLK10_W5 (r) register accessor: eFuse apb2otp block10 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w5`] module"]
+pub type BLK10_W5 = crate::Reg<blk10_w5::BLK10_W5_SPEC>;
 #[doc = "eFuse apb2otp block10 data register5."]
-pub mod apb2otp_blk10_w5;
-#[doc = "APB2OTP_BLK10_W6 (r) register accessor: eFuse apb2otp block10 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk10_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk10_w6`] module"]
-pub type APB2OTP_BLK10_W6 = crate::Reg<apb2otp_blk10_w6::APB2OTP_BLK10_W6_SPEC>;
+pub mod blk10_w5;
+#[doc = "BLK10_W6 (r) register accessor: eFuse apb2otp block10 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w6`] module"]
+pub type BLK10_W6 = crate::Reg<blk10_w6::BLK10_W6_SPEC>;
 #[doc = "eFuse apb2otp block10 data register6."]
-pub mod apb2otp_blk10_w6;
-#[doc = "APB2OTP_BLK10_W7 (r) register accessor: eFuse apb2otp block10 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk10_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk10_w7`] module"]
-pub type APB2OTP_BLK10_W7 = crate::Reg<apb2otp_blk10_w7::APB2OTP_BLK10_W7_SPEC>;
+pub mod blk10_w6;
+#[doc = "BLK10_W7 (r) register accessor: eFuse apb2otp block10 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w7`] module"]
+pub type BLK10_W7 = crate::Reg<blk10_w7::BLK10_W7_SPEC>;
 #[doc = "eFuse apb2otp block10 data register7."]
-pub mod apb2otp_blk10_w7;
-#[doc = "APB2OTP_BLK10_W8 (r) register accessor: eFuse apb2otp block10 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk10_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk10_w8`] module"]
-pub type APB2OTP_BLK10_W8 = crate::Reg<apb2otp_blk10_w8::APB2OTP_BLK10_W8_SPEC>;
+pub mod blk10_w7;
+#[doc = "BLK10_W8 (r) register accessor: eFuse apb2otp block10 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w8`] module"]
+pub type BLK10_W8 = crate::Reg<blk10_w8::BLK10_W8_SPEC>;
 #[doc = "eFuse apb2otp block10 data register8."]
-pub mod apb2otp_blk10_w8;
-#[doc = "APB2OTP_BLK10_W9 (r) register accessor: eFuse apb2otp block10 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk10_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk10_w9`] module"]
-pub type APB2OTP_BLK10_W9 = crate::Reg<apb2otp_blk10_w9::APB2OTP_BLK10_W9_SPEC>;
+pub mod blk10_w8;
+#[doc = "BLK10_W9 (r) register accessor: eFuse apb2otp block10 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w9`] module"]
+pub type BLK10_W9 = crate::Reg<blk10_w9::BLK10_W9_SPEC>;
 #[doc = "eFuse apb2otp block10 data register9."]
-pub mod apb2otp_blk10_w9;
-#[doc = "APB2OTP_BLK10_W10 (r) register accessor: eFuse apb2otp block10 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk10_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk10_w10`] module"]
-pub type APB2OTP_BLK10_W10 = crate::Reg<apb2otp_blk10_w10::APB2OTP_BLK10_W10_SPEC>;
+pub mod blk10_w9;
+#[doc = "BLK10_W10 (r) register accessor: eFuse apb2otp block10 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w10`] module"]
+pub type BLK10_W10 = crate::Reg<blk10_w10::BLK10_W10_SPEC>;
 #[doc = "eFuse apb2otp block10 data register10."]
-pub mod apb2otp_blk10_w10;
-#[doc = "APB2OTP_BLK10_W11 (r) register accessor: eFuse apb2otp block10 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk10_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_blk10_w11`] module"]
-pub type APB2OTP_BLK10_W11 = crate::Reg<apb2otp_blk10_w11::APB2OTP_BLK10_W11_SPEC>;
+pub mod blk10_w10;
+#[doc = "BLK10_W11 (r) register accessor: eFuse apb2otp block10 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w11`] module"]
+pub type BLK10_W11 = crate::Reg<blk10_w11::BLK10_W11_SPEC>;
 #[doc = "eFuse apb2otp block10 data register11."]
-pub mod apb2otp_blk10_w11;
-#[doc = "APB2OTP_EN (rw) register accessor: eFuse apb2otp enable configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apb2otp_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_en`] module"]
-pub type APB2OTP_EN = crate::Reg<apb2otp_en::APB2OTP_EN_SPEC>;
+pub mod blk10_w11;
+#[doc = "EN (rw) register accessor: eFuse apb2otp enable configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@en`] module"]
+pub type EN = crate::Reg<en::EN_SPEC>;
 #[doc = "eFuse apb2otp enable configuration register."]
-pub mod apb2otp_en;
+pub mod en;

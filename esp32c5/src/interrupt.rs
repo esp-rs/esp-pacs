@@ -85,8 +85,8 @@ pub enum Interrupt {
     CPU_APM_M1 = 43,
     #[doc = "44 - MSPI"]
     MSPI = 44,
-    #[doc = "45 - I2S"]
-    I2S = 45,
+    #[doc = "45 - I2S0"]
+    I2S0 = 45,
     #[doc = "46 - UHCI0"]
     UHCI0 = 46,
     #[doc = "47 - UART0"]
@@ -103,8 +103,8 @@ pub enum Interrupt {
     TWAI1 = 52,
     #[doc = "53 - TWAI1_TIMER"]
     TWAI1_TIMER = 53,
-    #[doc = "54 - USB_SERIAL_JTAG"]
-    USB_SERIAL_JTAG = 54,
+    #[doc = "54 - USB_DEVICE"]
+    USB_DEVICE = 54,
     #[doc = "55 - RMT"]
     RMT = 55,
     #[doc = "56 - I2C_EXT0"]
@@ -208,7 +208,7 @@ impl Interrupt {
             42 => Ok(Interrupt::CPU_APM_M0),
             43 => Ok(Interrupt::CPU_APM_M1),
             44 => Ok(Interrupt::MSPI),
-            45 => Ok(Interrupt::I2S),
+            45 => Ok(Interrupt::I2S0),
             46 => Ok(Interrupt::UHCI0),
             47 => Ok(Interrupt::UART0),
             48 => Ok(Interrupt::UART1),
@@ -217,7 +217,7 @@ impl Interrupt {
             51 => Ok(Interrupt::TWAI0_TIMER),
             52 => Ok(Interrupt::TWAI1),
             53 => Ok(Interrupt::TWAI1_TIMER),
-            54 => Ok(Interrupt::USB_SERIAL_JTAG),
+            54 => Ok(Interrupt::USB_DEVICE),
             55 => Ok(Interrupt::RMT),
             56 => Ok(Interrupt::I2C_EXT0),
             57 => Ok(Interrupt::TG0_T0_LEVEL),

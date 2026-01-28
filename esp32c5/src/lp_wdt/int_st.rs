@@ -1,27 +1,27 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `SUPER_WDT_INT_ST` reader - Represents the SWD whether or not has generated and sent timeout interrupt to CPU.\\\\ 0:No \\\\1: Yes"]
-pub type SUPER_WDT_INT_ST_R = crate::BitReader;
-#[doc = "Field `WDT_INT_ST` reader - Represents the RWDT whether or not has generated and sent timeout interrupt to CPU.\\\\ 0:No \\\\1: Yes"]
-pub type WDT_INT_ST_R = crate::BitReader;
+#[doc = "Field `SUPER_WDT` reader - Represents the SWD whether or not has generated and sent timeout interrupt to CPU.\\\\ 0:No \\\\1: Yes"]
+pub type SUPER_WDT_R = crate::BitReader;
+#[doc = "Field `WDT` reader - Represents the RWDT whether or not has generated and sent timeout interrupt to CPU.\\\\ 0:No \\\\1: Yes"]
+pub type WDT_R = crate::BitReader;
 impl R {
     #[doc = "Bit 30 - Represents the SWD whether or not has generated and sent timeout interrupt to CPU.\\\\ 0:No \\\\1: Yes"]
     #[inline(always)]
-    pub fn super_wdt_int_st(&self) -> SUPER_WDT_INT_ST_R {
-        SUPER_WDT_INT_ST_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn super_wdt(&self) -> SUPER_WDT_R {
+        SUPER_WDT_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Represents the RWDT whether or not has generated and sent timeout interrupt to CPU.\\\\ 0:No \\\\1: Yes"]
     #[inline(always)]
-    pub fn wdt_int_st(&self) -> WDT_INT_ST_R {
-        WDT_INT_ST_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn wdt(&self) -> WDT_R {
+        WDT_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("super_wdt_int_st", &self.super_wdt_int_st())
-            .field("wdt_int_st", &self.wdt_int_st())
+            .field("super_wdt", &self.super_wdt())
+            .field("wdt", &self.wdt())
             .finish()
     }
 }
