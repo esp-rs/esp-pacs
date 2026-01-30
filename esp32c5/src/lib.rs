@@ -271,6 +271,15 @@ impl core::fmt::Debug for CLINT {
 }
 #[doc = "Core Local Interrupts"]
 pub mod clint;
+#[doc = "Core Local Interrupt Controller"]
+pub type CLIC = crate::Periph<clic::RegisterBlock, 0x2080_0000>;
+impl core::fmt::Debug for CLIC {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLIC").finish()
+    }
+}
+#[doc = "Core Local Interrupt Controller"]
+pub mod clic;
 #[doc = "AES (Advanced Encryption Standard) Accelerator"]
 pub type AES = crate::Periph<aes::RegisterBlock, 0x6008_8000>;
 impl core::fmt::Debug for AES {
@@ -863,6 +872,8 @@ static mut DEVICE_PERIPHERALS: bool = false;
 pub struct Peripherals {
     #[doc = "CLINT"]
     pub CLINT: CLINT,
+    #[doc = "CLIC"]
+    pub CLIC: CLIC,
     #[doc = "AES"]
     pub AES: AES,
     #[doc = "DMA"]
@@ -1016,6 +1027,7 @@ impl Peripherals {
         DEVICE_PERIPHERALS = true;
         Peripherals {
             CLINT: CLINT::steal(),
+            CLIC: CLIC::steal(),
             AES: AES::steal(),
             DMA: DMA::steal(),
             APB_SARADC: APB_SARADC::steal(),

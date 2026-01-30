@@ -2,39 +2,40 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    core_0_intr_map: [CORE_0_INTR_MAP; 80],
+    _reserved_0_clock_gate: [u8; 0x0150],
     core_0_intr_status: [CORE_0_INTR_STATUS; 3],
-    clock_gate: CLOCK_GATE,
-    _reserved3: [u8; 0x06ac],
+    _reserved2: [u8; 0x06a0],
     interrupt_date: INTERRUPT_DATE,
 }
 impl RegisterBlock {
-    #[doc = "0x00..0x140 - "]
+    #[doc = "0x00..0x150 - "]
     #[inline(always)]
     pub const fn core_0_intr_map(&self, n: usize) -> &CORE_0_INTR_MAP {
-        &self.core_0_intr_map[n]
+        #[allow(clippy::no_effect)]
+        [(); 84][n];
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(4 * n).cast() }
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x00..0x140 - "]
+    #[doc = "0x00..0x150 - "]
     #[inline(always)]
     pub fn core_0_intr_map_iter(&self) -> impl Iterator<Item = &CORE_0_INTR_MAP> {
-        self.core_0_intr_map.iter()
+        (0..84).map(move |n| unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(4 * n).cast() })
     }
-    #[doc = "0x140..0x14c - Represents the status of the interrupt sources. Each bit corresponds to one interrupt source"]
+    #[doc = "0x14c - Interrupt clock gating configure register"]
+    #[inline(always)]
+    pub const fn clock_gate(&self) -> &CLOCK_GATE {
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(332).cast() }
+    }
+    #[doc = "0x150..0x15c - Represents the status of the interrupt sources. Each bit corresponds to one interrupt source"]
     #[inline(always)]
     pub const fn core_0_intr_status(&self, n: usize) -> &CORE_0_INTR_STATUS {
         &self.core_0_intr_status[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x140..0x14c - Represents the status of the interrupt sources. Each bit corresponds to one interrupt source"]
+    #[doc = "0x150..0x15c - Represents the status of the interrupt sources. Each bit corresponds to one interrupt source"]
     #[inline(always)]
     pub fn core_0_intr_status_iter(&self) -> impl Iterator<Item = &CORE_0_INTR_STATUS> {
         self.core_0_intr_status.iter()
-    }
-    #[doc = "0x14c - Interrupt clock gating configure register"]
-    #[inline(always)]
-    pub const fn clock_gate(&self) -> &CLOCK_GATE {
-        &self.clock_gate
     }
     #[doc = "0x7fc - Version control register"]
     #[inline(always)]

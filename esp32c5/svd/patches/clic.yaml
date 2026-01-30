@@ -5,7 +5,7 @@ _add:
     baseAddress: 0x20800000
     addressBlocks:
       - offset: 0x0
-        size: 0x180
+        size: 0x10C0
         usage: registers
     registers:
       INT_CONFIG:
