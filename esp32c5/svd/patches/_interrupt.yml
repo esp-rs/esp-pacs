@@ -10,7 +10,7 @@ INTERRUPT_CORE0:
   _add:
     CORE_0_INTR_MAP%s:
       addressOffset: 0
-      dim: 80 # last register is at 0x13C
+      dim: 84 # last register is at 0x14C
       dimIncrement: 4
       access: read-write
       size: 32
