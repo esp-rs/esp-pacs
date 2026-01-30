@@ -1,4 +1,4 @@
-_add:  
+_add:
   I2C_ANA_MST:
     description: I2C_ANA_MST Peripheral
     baseAddress: 0x600AF800

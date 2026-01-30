@@ -1,4 +1,4 @@
-_add:  
+_add:
   CLINT:
     description: Core Local Interrupts
     groupName: CLINT
