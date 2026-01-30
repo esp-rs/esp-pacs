@@ -1,4 +1,11 @@
 INTERRUPT_CORE0:
+  _modify:
+    INT_STATUS_0:
+      addressOffset: 0x150
+    INT_STATUS_1:
+      addressOffset: 0x154
+    INT_STATUS_2:
+      addressOffset: 0x158
   _array:
     INT_STATUS_*:
       name: CORE_0_INTR_STATUS%s
