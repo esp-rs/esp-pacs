@@ -13,6 +13,7 @@ INTERRUPT_CORE0:
 
   _delete:
     - "*_MAP"
+    - CLOCK_GATE
 
   _add:
     CORE_0_INTR_MAP%s:
