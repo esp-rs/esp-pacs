@@ -1,0 +1,869 @@
+_add:
+  LP_APM:
+    description: LP_APM Peripheral
+    baseAddress: 0x600B3800
+    addressBlock:
+      - offset: 0x0
+        size: 0x100
+        usage: "Registers"
+    interrupts:
+      LP_APM_M0:
+          value: 20
+      LP_APM_M1:
+          value: 21
+      LP_APM0:
+          value: 41
+    registers:
+      REGION_FILTER_EN:
+        addressOffset: 0x00
+        size: 32
+        fields:
+          REGION_FILTER_EN:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+            description: |
+              Configure bit $n (0-7) to enable region $n (0-7).
+              0: Disable
+              1: Enable
+
+      REGION0_ADDR_START:
+        addressOffset: 0x04
+        size: 32
+        description: Region address register
+        fields:
+          REGION0_ADDR_START:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            description: Configures the start address of region 0.
+
+      REGION0_ADDR_END:
+        addressOffset: 0x08
+        size: 32
+        description: Region address register
+        fields:
+          REGION0_ADDR_END:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            description: Configures the end address of region 0.
+
+      REGION0_ATTR:
+        addressOffset: 0x0C
+        size: 32
+        description: Region access permissions configuration register
+        fields:
+          REGION0_R0_X:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 0 in REE0 mode.
+          REGION0_R0_W:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 0 in REE0 mode.
+          REGION0_R0_R:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 0 in REE0 mode.
+          REGION0_R1_X:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 0 in REE1 mode.
+          REGION0_R1_W:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 0 in REE1 mode.
+          REGION0_R1_R:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 0 in REE1 mode.
+          REGION0_R2_X:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 0 in REE1 mode.
+          REGION0_R2_W:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 0 in REE2 mode.
+          REGION0_R2_R:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 0 in REE2 mode.
+          REGION0_LOCK:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+            description: |
+              Configures to lock the value of region 0 configuration registers
+              (LP_APM_REGION0_ADDR_START_REG, LP_APM_REGION0_ADDR_END_REG and
+              LP_APM_REGION0_ATTR_REG).
+              0: Do not lock
+              1: Lock
+
+      REGION1_ADDR_START:
+        addressOffset: 0x10
+        size: 32
+        description: Region address register
+        fields:
+          REGION1_ADDR_START:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            description: Configures the start address of region 1.
+
+      REGION1_ADDR_END:
+        addressOffset: 0x14
+        size: 32
+        description: Region address register
+        fields:
+          REGION1_ADDR_END:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            description: Configures the end address of region 1.
+
+      REGION1_ATTR:
+        addressOffset: 0x18
+        size: 32
+        description: Region access permissions configuration register
+        fields:
+          REGION1_R0_X:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 1 in REE0 mode.
+          REGION1_R0_W:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 1 in REE0 mode.
+          REGION1_R0_R:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 1 in REE0 mode.
+          REGION1_R1_X:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 1 in REE1 mode.
+          REGION1_R1_W:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 1 in REE1 mode.
+          REGION1_R1_R:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 1 in REE1 mode.
+          REGION1_R2_X:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 1 in REE1 mode.
+          REGION1_R2_W:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 1 in REE2 mode.
+          REGION1_R2_R:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 1 in REE2 mode.
+          REGION1_LOCK:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+            description: |
+              Configures to lock the value of region 1 configuration registers
+              (LP_APM_REGION1_ADDR_START_REG, LP_APM_REGION1_ADDR_END_REG and
+              LP_APM_REGION1_ATTR_REG).
+              0: Do not lock
+              1: Lock
+
+      REGION2_ADDR_START:
+        addressOffset: 0x1C
+        size: 32
+        description: Region address register
+        fields:
+          REGION2_ADDR_START:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            description: Configures the start address of region 2.
+
+      REGION2_ADDR_END:
+        addressOffset: 0x20
+        size: 32
+        description: Region address register
+        fields:
+          REGION2_ADDR_END:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            description: Configures the end address of region 2.
+
+      REGION2_ATTR:
+        addressOffset: 0x24
+        size: 32
+        description: Region access permissions configuration register
+        fields:
+          REGION2_R0_X:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 2 in REE0 mode.
+          REGION2_R0_W:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 2 in REE0 mode.
+          REGION2_R0_R:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 2 in REE0 mode.
+          REGION2_R1_X:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 2 in REE1 mode.
+          REGION2_R1_W:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 2 in REE1 mode.
+          REGION2_R1_R:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 2 in REE1 mode.
+          REGION2_R2_X:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 2 in REE1 mode.
+          REGION2_R2_W:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 2 in REE2 mode.
+          REGION2_R2_R:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 2 in REE2 mode.
+          REGION2_LOCK:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+            description: |
+              Configures to lock the value of region 2 configuration registers
+              (LP_APM_REGION2_ADDR_START_REG, LP_APM_REGION2_ADDR_END_REG and
+              LP_APM_REGION2_ATTR_REG).
+              0: Do not lock
+              1: Lock
+
+      REGION3_ADDR_START:
+        addressOffset: 0x28
+        size: 32
+        description: Region address register
+        fields:
+          REGION3_ADDR_START:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            description: Configures the start address of region 3.
+
+      REGION3_ADDR_END:
+        addressOffset: 0x2C
+        size: 32
+        description: Region address register
+        fields:
+          REGION3_ADDR_END:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            description: Configures the end address of region 3.
+
+      REGION3_ATTR:
+        addressOffset: 0x30
+        size: 32
+        description: Region access permissions configuration register
+        fields:
+          REGION3_R0_X:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 3 in REE0 mode.
+          REGION3_R0_W:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 3 in REE0 mode.
+          REGION3_R0_R:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 3 in REE0 mode.
+          REGION3_R1_X:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 3 in REE1 mode.
+          REGION3_R1_W:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 3 in REE1 mode.
+          REGION3_R1_R:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 3 in REE1 mode.
+          REGION3_R2_X:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 3 in REE1 mode.
+          REGION3_R2_W:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 3 in REE2 mode.
+          REGION3_R2_R:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 3 in REE2 mode.
+          REGION3_LOCK:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+            description: |
+              Configures to lock the value of region 3 configuration registers
+              (LP_APM_REGION3_ADDR_START_REG, LP_APM_REGION3_ADDR_END_REG and
+              LP_APM_REGION3_ATTR_REG).
+              0: Do not lock
+              1: Lock
+
+      REGION4_ADDR_START:
+        addressOffset: 0x34
+        size: 32
+        description: Region address register
+        fields:
+          REGION4_ADDR_START:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            description: Configures the start address of region 4.
+
+      REGION4_ADDR_END:
+        addressOffset: 0x38
+        size: 32
+        description: Region address register
+        fields:
+          REGION4_ADDR_END:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            description: Configures the end address of region 4.
+
+      REGION4_ATTR:
+        addressOffset: 0x3C
+        size: 32
+        description: Region access permissions configuration register
+        fields:
+          REGION4_R0_X:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 4 in REE0 mode.
+          REGION4_R0_W:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 4 in REE0 mode.
+          REGION4_R0_R:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 4 in REE0 mode.
+          REGION4_R1_X:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 4 in REE1 mode.
+          REGION4_R1_W:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 4 in REE1 mode.
+          REGION4_R1_R:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 4 in REE1 mode.
+          REGION4_R2_X:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 4 in REE1 mode.
+          REGION4_R2_W:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 4 in REE2 mode.
+          REGION4_R2_R:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 4 in REE2 mode.
+          REGION4_LOCK:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+            description: |
+              Configures to lock the value of region 4 configuration registers
+              (LP_APM_REGION4_ADDR_START_REG, LP_APM_REGION4_ADDR_END_REG and
+              LP_APM_REGION4_ATTR_REG).
+              0: Do not lock
+              1: Lock
+
+      REGION5_ADDR_START:
+        addressOffset: 0x40
+        size: 32
+        description: Region address register
+        fields:
+          REGION5_ADDR_START:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            description: Configures the start address of region 5.
+
+      REGION5_ADDR_END:
+        addressOffset: 0x44
+        size: 32
+        description: Region address register
+        fields:
+          REGION5_ADDR_END:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            description: Configures the end address of region 5.
+
+      REGION5_ATTR:
+        addressOffset: 0x48
+        size: 32
+        description: Region access permissions configuration register
+        fields:
+          REGION5_R0_X:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 5 in REE0 mode.
+          REGION5_R0_W:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 5 in REE0 mode.
+          REGION5_R0_R:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 5 in REE0 mode.
+          REGION5_R1_X:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 5 in REE1 mode.
+          REGION5_R1_W:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 5 in REE1 mode.
+          REGION5_R1_R:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 5 in REE1 mode.
+          REGION5_R2_X:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 5 in REE1 mode.
+          REGION5_R2_W:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 5 in REE2 mode.
+          REGION5_R2_R:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 5 in REE2 mode.
+          REGION5_LOCK:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+            description: |
+              Configures to lock the value of region 5 configuration registers
+              (LP_APM_REGION5_ADDR_START_REG, LP_APM_REGION5_ADDR_END_REG and
+              LP_APM_REGION5_ATTR_REG).
+              0: Do not lock
+              1: Lock
+
+      REGION6_ADDR_START:
+        addressOffset: 0x4C
+        size: 32
+        description: Region address register
+        fields:
+          REGION6_ADDR_START:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            description: Configures the start address of region 6.
+
+      REGION6_ADDR_END:
+        addressOffset: 0x50
+        size: 32
+        description: Region address register
+        fields:
+          REGION6_ADDR_END:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            description: Configures the end address of region 6.
+
+      REGION6_ATTR:
+        addressOffset: 0x54
+        size: 32
+        description: Region access permissions configuration register
+        fields:
+          REGION6_R0_X:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 6 in REE0 mode.
+          REGION6_R0_W:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 6 in REE0 mode.
+          REGION6_R0_R:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 6 in REE0 mode.
+          REGION6_R1_X:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 6 in REE1 mode.
+          REGION6_R1_W:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 6 in REE1 mode.
+          REGION6_R1_R:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 6 in REE1 mode.
+          REGION6_R2_X:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 6 in REE1 mode.
+          REGION6_R2_W:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 6 in REE2 mode.
+          REGION6_R2_R:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 6 in REE2 mode.
+          REGION6_LOCK:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+            description: |
+              Configures to lock the value of region 6 configuration registers
+              (LP_APM_REGION6_ADDR_START_REG, LP_APM_REGION6_ADDR_END_REG and
+              LP_APM_REGION6_ATTR_REG).
+              0: Do not lock
+              1: Lock
+
+      REGION7_ADDR_START:
+        addressOffset: 0x58
+        size: 32
+        description: Region address register
+        fields:
+          REGION7_ADDR_START:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            description: Configures the start address of region 7.
+
+      REGION7_ADDR_END:
+        addressOffset: 0x5C
+        size: 32
+        description: Region address register
+        fields:
+          REGION7_ADDR_END:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            description: Configures the end address of region 7.
+
+      REGION7_ATTR:
+        addressOffset: 0x60
+        size: 32
+        description: Region access permissions configuration register
+        fields:
+          REGION7_R0_X:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 7 in REE0 mode.
+          REGION7_R0_W:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 7 in REE0 mode.
+          REGION7_R0_R:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 7 in REE0 mode.
+          REGION7_R1_X:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 7 in REE1 mode.
+          REGION7_R1_W:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 7 in REE1 mode.
+          REGION7_R1_R:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 7 in REE1 mode.
+          REGION7_R2_X:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+            description: Configures the execution permission in region 7 in REE1 mode.
+          REGION7_R2_W:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+            description: Configures the write permission in region 7 in REE2 mode.
+          REGION7_R2_R:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+            description: Configures the read permission in region 7 in REE2 mode.
+          REGION7_LOCK:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+            description: |
+              Configures to lock the value of region 7 configuration registers
+              (LP_APM_REGION7_ADDR_START_REG, LP_APM_REGION7_ADDR_END_REG and
+              LP_APM_REGION7_ATTR_REG).
+              0: Do not lock
+              1: Lock
+
+      FUNC_CTRL:
+        addressOffset: 0xC4
+        size: 32
+        description: APM access path permission management register
+        fields:
+          M0_FUNC_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+            description: Configures to enable permission management for LP_APM_CTRL M0.
+          M1_FUNC_EN:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+            description: Configures to enable permission management for LP_APM_CTRL M1.
+
+      M0_STATUS:
+        addressOffset: 0xC8
+        size: 32
+        description: LP_APM_CTRL M0 status register
+        fields:
+          M0_EXCEPTION_STATUS:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-only
+            description: |
+              Represents exception status.
+              bit0: 1 represents permission restrictions
+              bit1: 1 represents address out of bounds
+
+      M0_STATUS_CLR:
+        addressOffset: 0xCC
+        size: 32
+        description: LP_APM_CTRL M0 status clear register
+        fields:
+          M0_EXCEPTION_STATUS_CLR:
+            bitOffset: 0
+            bitWidth: 1
+            access: write-only
+            description: Configures to clear exception status.
+
+      M0_EXCEPTION_INFO0:
+        addressOffset: 0xD0
+        size: 32
+        description: LP_APM_CTRL M0 exception information register
+        fields:
+          M0_EXCEPTION_REGION:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-only
+            description: Represents the region where an exception occurs.
+          M0_EXCEPTION_MODE:
+            bitOffset: 16
+            bitWidth: 2
+            access: read-only
+            description: Represents the master's security mode when an exception occurs.
+          M0_EXCEPTION_ID:
+            bitOffset: 18
+            bitWidth: 5
+            access: read-only
+            description: Represents master ID when an exception occurs.
+
+      M0_EXCEPTION_INFO1:
+        addressOffset: 0xD4
+        size: 32
+        description: LP_APM_CTRL M0 exception information register
+        fields:
+          M0_EXCEPTION_ADDR:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+            description: Represents the access address when an exception occurs.
+
+      M1_STATUS:
+        addressOffset: 0xD8
+        size: 32
+        description: LP_APM_CTRL M1 status register
+        fields:
+          M1_EXCEPTION_STATUS:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-only
+            description: |
+              Represents exception status.
+              bit0: 1 represents permission restrictions
+              bit1: 1 represents address out of bounds
+
+      M1_STATUS_CLR:
+        addressOffset: 0xDC
+        size: 32
+        description: LP_APM_CTRL M1 status clear register
+        fields:
+          M1_EXCEPTION_STATUS_CLR:
+            bitOffset: 0
+            bitWidth: 1
+            access: write-only
+            description: Configures to clear exception status.
+
+      M1_EXCEPTION_INFO0:
+        addressOffset: 0xE0
+        size: 32
+        description: LP_APM_CTRL M1 exception information register
+        fields:
+          M1_EXCEPTION_REGION:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-only
+            description: Represents the region where an exception occurs.
+          M1_EXCEPTION_MODE:
+            bitOffset: 16
+            bitWidth: 2
+            access: read-only
+            description: Represents the master's security mode when an exception occurs.
+          M1_EXCEPTION_ID:
+            bitOffset: 18
+            bitWidth: 5
+            access: read-only
+            description: Represents master ID when an exception occurs.
+
+      M1_EXCEPTION_INFO1:
+        addressOffset: 0xE4
+        size: 32
+        description: LP_APM_CTRL M1 exception information register
+        fields:
+          M1_EXCEPTION_ADDR:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+            description: Represents the access address when an exception occurs.
+
+      INT_EN:
+        addressOffset: 0xE8
+        size: 32
+        description: LP_APM_CTRL M0/1 interrupt enable register
+        fields:
+          M0_APM_INT_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+            description: |
+              Configures to enable LP_APM_CTRL M0 interrupt.
+              0: Disable
+              1: Enable
+          M1_APM_INT_EN:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+            description: |
+              Configures to enable LP_APM_CTRL M1 interrupt.
+              0: Disable
+              1: Enable
+
+      CLOCK_GATE:
+        addressOffset: 0xEC
+        size: 32
+        description: Clock gating register
+        fields:
+          CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+            description: |
+              Configures whether to keep the clock always on.
+              0: Enable automatic clock gating
+              1: Keep the clock always on
+
+      DATE:
+        addressOffset: 0xFC
+        size: 32
+        description: Version control register
+        fields:
+          DATE:
+            bitOffset: 0
+            bitWidth: 28
+            access: read-write
+            description: Version control register.

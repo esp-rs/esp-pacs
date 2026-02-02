@@ -316,15 +316,15 @@ impl core::fmt::Debug for BITSCRAMBLER {
 }
 #[doc = "BITSCRAMBLER Peripheral"]
 pub mod bitscrambler;
-#[doc = "BUS_MONITOR Peripheral"]
-pub type BUS_MONITOR = crate::Periph<bus_monitor::RegisterBlock, 0x600c_2000>;
-impl core::fmt::Debug for BUS_MONITOR {
+#[doc = "ASSIST_DEBUG (BUS_MONITOR) Peripheral"]
+pub type ASSIST_DEBUG = crate::Periph<assist_debug::RegisterBlock, 0x600c_2000>;
+impl core::fmt::Debug for ASSIST_DEBUG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("BUS_MONITOR").finish()
+        f.debug_struct("ASSIST_DEBUG").finish()
     }
 }
-#[doc = "BUS_MONITOR Peripheral"]
-pub mod bus_monitor;
+#[doc = "ASSIST_DEBUG (BUS_MONITOR) Peripheral"]
+pub mod assist_debug;
 #[doc = "Digital Signature"]
 pub type DS = crate::Periph<ds::RegisterBlock, 0x6008_c000>;
 impl core::fmt::Debug for DS {
@@ -397,6 +397,15 @@ impl core::fmt::Debug for HP_APM {
 }
 #[doc = "HP_APM Peripheral"]
 pub mod hp_apm;
+#[doc = "IEEE802154 Peripheral"]
+pub type IEEE802154 = crate::Periph<ieee802154::RegisterBlock, 0x600a_3000>;
+impl core::fmt::Debug for IEEE802154 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IEEE802154").finish()
+    }
+}
+#[doc = "IEEE802154 Peripheral"]
+pub mod ieee802154;
 #[doc = "MODEM_SYSCON"]
 pub type MODEM_SYSCON = crate::Periph<modem_syscon::RegisterBlock, 0x600a_9c00>;
 impl core::fmt::Debug for MODEM_SYSCON {
@@ -541,6 +550,15 @@ impl core::fmt::Debug for LP_APM0 {
 }
 #[doc = "LP_APM0 Peripheral"]
 pub mod lp_apm0;
+#[doc = "LP_APM Peripheral"]
+pub type LP_APM = crate::Periph<lp_apm::RegisterBlock, 0x600b_3800>;
+impl core::fmt::Debug for LP_APM {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_APM").finish()
+    }
+}
+#[doc = "LP_APM Peripheral"]
+pub mod lp_apm;
 #[doc = "LP_CLKRST Peripheral"]
 pub type LP_CLKRST = crate::Periph<lp_clkrst::RegisterBlock, 0x600b_0400>;
 impl core::fmt::Debug for LP_CLKRST {
@@ -649,6 +667,15 @@ impl core::fmt::Debug for PARL_IO {
 }
 #[doc = "Parallel IO Controller"]
 pub mod parl_io;
+#[doc = "HINF"]
+pub type HINF = crate::Periph<hinf::RegisterBlock, 0x6001_6000>;
+impl core::fmt::Debug for HINF {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HINF").finish()
+    }
+}
+#[doc = "HINF"]
+pub mod hinf;
 #[doc = "SDIO SLC"]
 pub type SLC = crate::Periph<slc::RegisterBlock, 0x6001_7000>;
 impl core::fmt::Debug for SLC {
@@ -882,8 +909,8 @@ pub struct Peripherals {
     pub APB_SARADC: APB_SARADC,
     #[doc = "BITSCRAMBLER"]
     pub BITSCRAMBLER: BITSCRAMBLER,
-    #[doc = "BUS_MONITOR"]
-    pub BUS_MONITOR: BUS_MONITOR,
+    #[doc = "ASSIST_DEBUG"]
+    pub ASSIST_DEBUG: ASSIST_DEBUG,
     #[doc = "DS"]
     pub DS: DS,
     #[doc = "ECC"]
@@ -900,6 +927,8 @@ pub struct Peripherals {
     pub HMAC: HMAC,
     #[doc = "HP_APM"]
     pub HP_APM: HP_APM,
+    #[doc = "IEEE802154"]
+    pub IEEE802154: IEEE802154,
     #[doc = "MODEM_SYSCON"]
     pub MODEM_SYSCON: MODEM_SYSCON,
     #[doc = "MODEM_LPCON"]
@@ -932,6 +961,8 @@ pub struct Peripherals {
     pub LP_AON: LP_AON,
     #[doc = "LP_APM0"]
     pub LP_APM0: LP_APM0,
+    #[doc = "LP_APM"]
+    pub LP_APM: LP_APM,
     #[doc = "LP_CLKRST"]
     pub LP_CLKRST: LP_CLKRST,
     #[doc = "LP_IO"]
@@ -956,6 +987,8 @@ pub struct Peripherals {
     pub MEM_MONITOR: MEM_MONITOR,
     #[doc = "PARL_IO"]
     pub PARL_IO: PARL_IO,
+    #[doc = "HINF"]
+    pub HINF: HINF,
     #[doc = "SLC"]
     pub SLC: SLC,
     #[doc = "PAU"]
@@ -1032,7 +1065,7 @@ impl Peripherals {
             DMA: DMA::steal(),
             APB_SARADC: APB_SARADC::steal(),
             BITSCRAMBLER: BITSCRAMBLER::steal(),
-            BUS_MONITOR: BUS_MONITOR::steal(),
+            ASSIST_DEBUG: ASSIST_DEBUG::steal(),
             DS: DS::steal(),
             ECC: ECC::steal(),
             ECDSA: ECDSA::steal(),
@@ -1041,6 +1074,7 @@ impl Peripherals {
             GPIO_EXT: GPIO_EXT::steal(),
             HMAC: HMAC::steal(),
             HP_APM: HP_APM::steal(),
+            IEEE802154: IEEE802154::steal(),
             MODEM_SYSCON: MODEM_SYSCON::steal(),
             MODEM_LPCON: MODEM_LPCON::steal(),
             I2C_ANA_MST: I2C_ANA_MST::steal(),
@@ -1057,6 +1091,7 @@ impl Peripherals {
             LP_ANA: LP_ANA::steal(),
             LP_AON: LP_AON::steal(),
             LP_APM0: LP_APM0::steal(),
+            LP_APM: LP_APM::steal(),
             LP_CLKRST: LP_CLKRST::steal(),
             LP_IO: LP_IO::steal(),
             LP_I2C0: LP_I2C0::steal(),
@@ -1069,6 +1104,7 @@ impl Peripherals {
             MCPWM0: MCPWM0::steal(),
             MEM_MONITOR: MEM_MONITOR::steal(),
             PARL_IO: PARL_IO::steal(),
+            HINF: HINF::steal(),
             SLC: SLC::steal(),
             PAU: PAU::steal(),
             PCNT: PCNT::steal(),
