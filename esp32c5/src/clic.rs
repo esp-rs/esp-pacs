@@ -3,7 +3,7 @@
 #[doc = "Register block"]
 pub struct RegisterBlock {
     int_config: INT_CONFIG,
-    info: INFO,
+    int_info: INT_INFO,
     _reserved2: [u8; 0x0ff8],
     int_ip: (),
     _reserved3: [u8; 0x01],
@@ -21,8 +21,8 @@ impl RegisterBlock {
     }
     #[doc = "0x04 - "]
     #[inline(always)]
-    pub const fn info(&self) -> &INFO {
-        &self.info
+    pub const fn int_info(&self) -> &INT_INFO {
+        &self.int_info
     }
     #[doc = "0x1000..0x1030 - Interrupt pending register."]
     #[inline(always)]
@@ -129,10 +129,10 @@ impl RegisterBlock {
 pub type INT_CONFIG = crate::Reg<int_config::INT_CONFIG_SPEC>;
 #[doc = ""]
 pub mod int_config;
-#[doc = "INFO (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`info::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@info`] module"]
-pub type INFO = crate::Reg<info::INFO_SPEC>;
+#[doc = "INT_INFO (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`int_info::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_info`] module"]
+pub type INT_INFO = crate::Reg<int_info::INT_INFO_SPEC>;
 #[doc = ""]
-pub mod info;
+pub mod int_info;
 #[doc = "INT_IP (rw) register accessor: Interrupt pending register.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ip::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ip::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ip`] module"]
 pub type INT_IP = crate::Reg<int_ip::INT_IP_SPEC>;
 #[doc = "Interrupt pending register."]

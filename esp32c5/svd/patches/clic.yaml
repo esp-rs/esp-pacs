@@ -33,12 +33,12 @@ _add:
             bitOffset: 0
             bitWidth: 4
             access: read-write
-      INFO:
+      INT_INFO:
         addressOffset: 4
         size: 0x20
         access: read-only
         fields:
-          CLBITS:
+          CTLBITS:
             description: The effective bits of priority in the CLICINTCTL register.
             bitOffset: 21
             bitWidth: 8
