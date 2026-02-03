@@ -1,4 +1,11 @@
 INTERRUPT_CORE0:
+  _modify:
+    INT_STATUS_0:
+      addressOffset: 0x150
+    INT_STATUS_1:
+      addressOffset: 0x154
+    INT_STATUS_2:
+      addressOffset: 0x158
   _array:
     INT_STATUS_*:
       name: CORE_0_INTR_STATUS%s
@@ -6,11 +13,12 @@ INTERRUPT_CORE0:
 
   _delete:
     - "*_MAP"
+    - CLOCK_GATE
 
   _add:
     CORE_0_INTR_MAP%s:
       addressOffset: 0
-      dim: 80 # last register is at 0x13C
+      dim: 84 # last register is at 0x14C
       dimIncrement: 4
       access: read-write
       size: 32

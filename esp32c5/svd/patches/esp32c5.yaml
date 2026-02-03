@@ -15,6 +15,7 @@ _include:
   - _sha.yml
   - _rmt.yml
   - _uart.yml
+  - clic.yaml
 
 PCR:
   _include: ../../../common_patches/pcr.yaml
@@ -677,7 +678,7 @@ SOC_ETM:
   _expand_array:
     CH%s_EVT_ID: {}
     CH%s_TASK_ID: {}
-    
+
   _cluster:
     CH%s:
       "CH*_EVT_ID":
@@ -721,7 +722,7 @@ SPI[12]:
 
 PMU:
   _include: ../../../common_patches/pmu_int_strip.yaml
-  
+
 "EFUSE,I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
   _include: ../../../common_patches/int_strip.yaml
 
@@ -773,7 +774,7 @@ UART0:
 _modify:
   AHB_DMA:
     name: DMA
-  
+
   HP_SYSTEM:
     name: HP_SYS
 

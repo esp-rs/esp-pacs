@@ -1,0 +1,136 @@
+_add:
+  CLIC:
+    description: Core Local Interrupt Controller
+    groupName: CLIC
+    baseAddress: 0x20800000
+    addressBlocks:
+      - offset: 0x0
+        size: 0x10C0
+        usage: registers
+    registers:
+      INT_CONFIG:
+        addressOffset: 0
+        size: 0x20
+        resetValue: 0x0
+        fields:
+          UNLBITS:
+            description: User mode interrupt priority effective digits, the maximum value is 8.
+            bitOffset: 24
+            bitWidth: 4
+            access: read-write
+          SNLBITS:
+            description: Supervisor mode interrupt priority effective digits, the maximum value is 8.
+            bitOffset: 16
+            bitWidth: 4
+            access: read-write
+          NMBITS:
+            description: The effective number of bits in the privileged state.
+            bitOffset: 4
+            bitWidth: 2
+            access: read-write
+          MNLBITS:
+            description: Machine mode interrupt priority effective digits, the maximum value is 8.
+            bitOffset: 0
+            bitWidth: 4
+            access: read-write
+      INT_INFO:
+        addressOffset: 4
+        size: 0x20
+        access: read-only
+        fields:
+          CTLBITS:
+            description: The effective bits of priority in the CLICINTCTL register.
+            bitOffset: 21
+            bitWidth: 8
+            access: read-only
+          VERSION:
+            description: The lower 4 bits are the modified version of the hardware implementation; the upper 4 bits are the CLIC architecture version information.
+            bitOffset: 13
+            bitWidth: 8
+            access: read-only
+          NUM_INT:
+            description: The number of interrupt sources.
+            bitOffset: 0
+            bitWidth: 13
+            access: read-only
+
+      INT_IP%s:
+        description: Interrupt pending register.
+        addressOffset: 0x1000
+        size: 0x8
+        dim: 48
+        dimIncrement: 0x4
+        dimIndex: 0-47
+        fields:
+          INT_IP:
+            description: Interrupt pending bit.
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      INT_IE%s:
+        description: Interrupt enable register.
+        addressOffset: 0x1001
+        size: 0x8
+        dim: 48
+        dimIncrement: 0x4
+        dimIndex: 0-47
+        fields:
+          INT_IE:
+            description: Interrupt enable bit.
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      INT_ATTR%s:
+        description: Interrupt attribute register.
+        addressOffset: 0x1002
+        size: 0x8
+        dim: 48
+        dimIncrement: 0x4
+        dimIndex: 0-47
+        fields:
+          SHV:
+            description: Configures hardware vectoring for the ith CLIC machine mode interrupt.
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          TRIG:
+            description: "Configures the trigger type and polarity of the ith CLIC machine mode interrupt."
+            bitOffset: 1
+            bitWidth: 2
+            access: read-write
+          MODE:
+            description: Configures the privilege mode of the ith CLIC interrupt. This is hardwired to 0x3 as user mode interrupts are not supported.
+            bitOffset: 6
+            bitWidth: 2
+            access: read-only
+      INT_CTL%s:
+        description: Interrupt level control register.
+        addressOffset: 0x1003
+        size: 0x8
+        dim: 48
+        dimIncrement: 0x4
+        dimIndex: 0-47
+        fields:
+          CTL:
+            description: Configures the level and priority of the ith CLIC machine mode interrupt.
+            bitOffset: 5
+            bitWidth: 3
+            access: read-write
+          RESERVED:
+            description: Reserved bits.
+            bitOffset: 0
+            bitWidth: 5
+            access: read-only
+            defaultValue: 0x1F
+
+# We need to define enumeratedValues separately, becase svdtools has awesome UX.
+CLIC:
+  INT_ATTR%s:
+    SHV:
+      SOFTWARE: [0, "Not hardware vectored. Upon taking this interrupt, the CPU will jump to the address configured in mtvec."]
+      HARDWARE: [1, "Hardware vectored. Upon taking this interrupt, the CPU will jump to the word address stored at (mtvt + 4*i) relative to the base address configured in mtvt."]
+    TRIG:
+      POSITIVE_LEVEL: [0, "interrupt is positive level-triggered"]
+      POSITIVE_EDGE:  [1, "interrupt is positive edge-triggered"]
+      NEGATIVE_LEVEL: [2, "interrupt is negative level-triggered"]
+      NEGATIVE_EDGE:  [3, "interrupt is negative edge-triggered"]
