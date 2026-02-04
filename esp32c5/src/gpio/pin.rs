@@ -22,9 +22,9 @@ pub type INT_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 pub type WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `WAKEUP_ENABLE` writer - Configures whether or not to enable GPIO wake-up function.\\\\ 0: Disable\\\\ 1: Enable\\\\ This function only wakes up the CPU from Light-sleep. \\\\"]
 pub type WAKEUP_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `INT_ENA` reader - Configures whether or not to enable CPU interrupt or CPU non-maskable interrupt. - bit13: Configures whether or not to enable CPU interrupt:\\\\ 0: Disable\\\\ 1: Enable\\\\ - bit14 ~ bit17: invalid"]
+#[doc = "Field `INT_ENA` reader - Configures whether or not to enable gpio_procpu_int or gpio_sdio_int(need update in different project). - bit13: Configures whether or not to enable gpio_procpu_int(need update in different project):\\\\ 0: Disable\\\\ 1: Enable\\\\ - bit15: Configures whether or not to enable gpio_sdio_int(need update in different project):\\\\ 0: Disable\\\\ 1: Enable\\\\ - bit16 ~ bit17: invalid"]
 pub type INT_ENA_R = crate::FieldReader;
-#[doc = "Field `INT_ENA` writer - Configures whether or not to enable CPU interrupt or CPU non-maskable interrupt. - bit13: Configures whether or not to enable CPU interrupt:\\\\ 0: Disable\\\\ 1: Enable\\\\ - bit14 ~ bit17: invalid"]
+#[doc = "Field `INT_ENA` writer - Configures whether or not to enable gpio_procpu_int or gpio_sdio_int(need update in different project). - bit13: Configures whether or not to enable gpio_procpu_int(need update in different project):\\\\ 0: Disable\\\\ 1: Enable\\\\ - bit15: Configures whether or not to enable gpio_sdio_int(need update in different project):\\\\ 0: Disable\\\\ 1: Enable\\\\ - bit16 ~ bit17: invalid"]
 pub type INT_ENA_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:1 - Configures whether or not to synchronize GPIO input data on either edge of IO MUX operating clock for the second-level synchronization.\\\\ 0: Not synchronize\\\\ 1: Synchronize on falling edge\\\\ 2: Synchronize on rising edge\\\\ 3: Synchronize on rising edge\\\\"]
@@ -52,7 +52,7 @@ impl R {
     pub fn wakeup_enable(&self) -> WAKEUP_ENABLE_R {
         WAKEUP_ENABLE_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bits 13:17 - Configures whether or not to enable CPU interrupt or CPU non-maskable interrupt. - bit13: Configures whether or not to enable CPU interrupt:\\\\ 0: Disable\\\\ 1: Enable\\\\ - bit14 ~ bit17: invalid"]
+    #[doc = "Bits 13:17 - Configures whether or not to enable gpio_procpu_int or gpio_sdio_int(need update in different project). - bit13: Configures whether or not to enable gpio_procpu_int(need update in different project):\\\\ 0: Disable\\\\ 1: Enable\\\\ - bit15: Configures whether or not to enable gpio_sdio_int(need update in different project):\\\\ 0: Disable\\\\ 1: Enable\\\\ - bit16 ~ bit17: invalid"]
     #[inline(always)]
     pub fn int_ena(&self) -> INT_ENA_R {
         INT_ENA_R::new(((self.bits >> 13) & 0x1f) as u8)
@@ -97,13 +97,13 @@ impl W {
     pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<'_, PIN_SPEC> {
         WAKEUP_ENABLE_W::new(self, 10)
     }
-    #[doc = "Bits 13:17 - Configures whether or not to enable CPU interrupt or CPU non-maskable interrupt. - bit13: Configures whether or not to enable CPU interrupt:\\\\ 0: Disable\\\\ 1: Enable\\\\ - bit14 ~ bit17: invalid"]
+    #[doc = "Bits 13:17 - Configures whether or not to enable gpio_procpu_int or gpio_sdio_int(need update in different project). - bit13: Configures whether or not to enable gpio_procpu_int(need update in different project):\\\\ 0: Disable\\\\ 1: Enable\\\\ - bit15: Configures whether or not to enable gpio_sdio_int(need update in different project):\\\\ 0: Disable\\\\ 1: Enable\\\\ - bit16 ~ bit17: invalid"]
     #[inline(always)]
     pub fn int_ena(&mut self) -> INT_ENA_W<'_, PIN_SPEC> {
         INT_ENA_W::new(self, 13)
     }
 }
-#[doc = "GPIO$N configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`pin::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO%s configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`pin::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PIN_SPEC;
 impl crate::RegisterSpec for PIN_SPEC {
     type Ux = u32;

@@ -1,6 +1,6 @@
 #[doc = "Register `ENABLE1_W1TC` writer"]
 pub type W = crate::W<ENABLE1_W1TC_SPEC>;
-#[doc = "Field `ENABLE1_W1TC` writer - Configures whether or not to clear the output enable register GPIO_ENABLE_REG of GPIO32 ~ GPIO32. \\\\ 0: Not clear\\\\ 1: The corresponding bit in GPIO_ENABLE_REG will be cleared\\\\ Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\\\"]
+#[doc = "Field `ENABLE1_W1TC` writer - Configures whether or not to clear the output enable register GPIO_ENABLE1_REG of GPIO32 ~ GPIO32. \\\\ 0: Not clear\\\\ 1: The corresponding bit in GPIO_ENABLE1_REG will be cleared\\\\ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. \\\\ Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\\\"]
 pub type ENABLE1_W1TC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ENABLE1_W1TC_SPEC> {
@@ -9,13 +9,13 @@ impl core::fmt::Debug for crate::generic::Reg<ENABLE1_W1TC_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Configures whether or not to clear the output enable register GPIO_ENABLE_REG of GPIO32 ~ GPIO32. \\\\ 0: Not clear\\\\ 1: The corresponding bit in GPIO_ENABLE_REG will be cleared\\\\ Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\\\"]
+    #[doc = "Bit 0 - Configures whether or not to clear the output enable register GPIO_ENABLE1_REG of GPIO32 ~ GPIO32. \\\\ 0: Not clear\\\\ 1: The corresponding bit in GPIO_ENABLE1_REG will be cleared\\\\ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. \\\\ Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\\\"]
     #[inline(always)]
     pub fn enable1_w1tc(&mut self) -> ENABLE1_W1TC_W<'_, ENABLE1_W1TC_SPEC> {
         ENABLE1_W1TC_W::new(self, 0)
     }
 }
-#[doc = "GPIO output enable clear register for GPIO32-32\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable1_w1tc::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO output enable clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable1_w1tc::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ENABLE1_W1TC_SPEC;
 impl crate::RegisterSpec for ENABLE1_W1TC_SPEC {
     type Ux = u32;

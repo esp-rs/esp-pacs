@@ -1,6 +1,6 @@
 #[doc = "Register `OUT_W1TS` writer"]
 pub type W = crate::W<OUT_W1TS_SPEC>;
-#[doc = "Field `OUT_W1TS` writer - Configures whether or not to set the output register GPIO_OUT_REG of GPIO0 ~ GPIO31.\\\\ 0: Not set\\\\ 1: The corresponding bit in GPIO_OUT_REG will be set to 1\\\\ Recommended operation: use this register to set GPIO_OUT_REG. \\\\"]
+#[doc = "Field `OUT_W1TS` writer - Configures whether or not to set the output register GPIO_OUT_REG of GPIO0 ~ GPIO31.\\\\ 0: Not set\\\\ 1: The corresponding bit in GPIO_OUT_REG will be set to 1\\\\ Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. \\\\ Recommended operation: use this register to set GPIO_OUT_REG. \\\\"]
 pub type OUT_W1TS_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<OUT_W1TS_SPEC> {
@@ -9,7 +9,7 @@ impl core::fmt::Debug for crate::generic::Reg<OUT_W1TS_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Configures whether or not to set the output register GPIO_OUT_REG of GPIO0 ~ GPIO31.\\\\ 0: Not set\\\\ 1: The corresponding bit in GPIO_OUT_REG will be set to 1\\\\ Recommended operation: use this register to set GPIO_OUT_REG. \\\\"]
+    #[doc = "Bits 0:31 - Configures whether or not to set the output register GPIO_OUT_REG of GPIO0 ~ GPIO31.\\\\ 0: Not set\\\\ 1: The corresponding bit in GPIO_OUT_REG will be set to 1\\\\ Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. \\\\ Recommended operation: use this register to set GPIO_OUT_REG. \\\\"]
     #[inline(always)]
     pub fn out_w1ts(&mut self) -> OUT_W1TS_W<'_, OUT_W1TS_SPEC> {
         OUT_W1TS_W::new(self, 0)

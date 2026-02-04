@@ -28,25 +28,27 @@ pub struct RegisterBlock {
     status1_w1tc: STATUS1_W1TC,
     _reserved21: [u8; 0x18],
     pcpu_int: PCPU_INT,
+    sdio_int: SDIO_INT,
     procpu_int1: PROCPU_INT1,
-    _reserved23: [u8; 0x08],
+    sdio_int1: SDIO_INT1,
+    _reserved25: [u8; 0x10],
     status_next: STATUS_NEXT,
     status_next1: STATUS_NEXT1,
-    _reserved25: [u8; 0x08],
+    _reserved27: [u8; 0x08],
     pin: [PIN; 29],
     pin29: PIN29,
     pin30: PIN30,
     pin31: PIN31,
     pin32: PIN32,
-    _reserved30: [u8; 0x017c],
+    _reserved32: [u8; 0x016c],
     func_in_sel_cfg: [FUNC_IN_SEL_CFG; 128],
-    _reserved31: [u8; 0x0600],
+    _reserved33: [u8; 0x0610],
     func_out_sel_cfg: [FUNC_OUT_SEL_CFG; 29],
     func29_out_sel_cfg: FUNC29_OUT_SEL_CFG,
     func30_out_sel_cfg: FUNC30_OUT_SEL_CFG,
     func31_out_sel_cfg: FUNC31_OUT_SEL_CFG,
     func32_out_sel_cfg: FUNC32_OUT_SEL_CFG,
-    _reserved36: [u8; 0x02b0],
+    _reserved38: [u8; 0x02a0],
     clock_gate: CLOCK_GATE,
     date: DATE,
 }
@@ -71,17 +73,17 @@ impl RegisterBlock {
     pub const fn out_w1tc(&self) -> &OUT_W1TC {
         &self.out_w1tc
     }
-    #[doc = "0x10 - GPIO output register for GPIO32-32"]
+    #[doc = "0x10 - GPIO output register"]
     #[inline(always)]
     pub const fn out1(&self) -> &OUT1 {
         &self.out1
     }
-    #[doc = "0x14 - GPIO output set register for GPIO32-32"]
+    #[doc = "0x14 - GPIO output set register"]
     #[inline(always)]
     pub const fn out1_w1ts(&self) -> &OUT1_W1TS {
         &self.out1_w1ts
     }
-    #[doc = "0x18 - GPIO output clear register for GPIO32-32"]
+    #[doc = "0x18 - GPIO output clear register"]
     #[inline(always)]
     pub const fn out1_w1tc(&self) -> &OUT1_W1TC {
         &self.out1_w1tc
@@ -101,17 +103,17 @@ impl RegisterBlock {
     pub const fn enable_w1tc(&self) -> &ENABLE_W1TC {
         &self.enable_w1tc
     }
-    #[doc = "0x40 - GPIO output enable register for GPIO32-32"]
+    #[doc = "0x40 - GPIO output enable register"]
     #[inline(always)]
     pub const fn enable1(&self) -> &ENABLE1 {
         &self.enable1
     }
-    #[doc = "0x44 - GPIO output enable set register for GPIO32-32"]
+    #[doc = "0x44 - GPIO output enable set register"]
     #[inline(always)]
     pub const fn enable1_w1ts(&self) -> &ENABLE1_W1TS {
         &self.enable1_w1ts
     }
-    #[doc = "0x48 - GPIO output enable clear register for GPIO32-32"]
+    #[doc = "0x48 - GPIO output enable clear register"]
     #[inline(always)]
     pub const fn enable1_w1tc(&self) -> &ENABLE1_W1TC {
         &self.enable1_w1tc
@@ -121,7 +123,7 @@ impl RegisterBlock {
     pub const fn in_(&self) -> &IN {
         &self.in_
     }
-    #[doc = "0x68 - GPIO input register for GPIO32-32"]
+    #[doc = "0x68 - GPIO input register"]
     #[inline(always)]
     pub const fn in1(&self) -> &IN1 {
         &self.in1
@@ -141,68 +143,78 @@ impl RegisterBlock {
     pub const fn status_w1tc(&self) -> &STATUS_W1TC {
         &self.status_w1tc
     }
-    #[doc = "0x80 - GPIO interrupt status register for GPIO32-32"]
+    #[doc = "0x80 - GPIO interrupt status register"]
     #[inline(always)]
     pub const fn status1(&self) -> &STATUS1 {
         &self.status1
     }
-    #[doc = "0x84 - GPIO interrupt status set register for GPIO32-32"]
+    #[doc = "0x84 - GPIO interrupt status set register"]
     #[inline(always)]
     pub const fn status1_w1ts(&self) -> &STATUS1_W1TS {
         &self.status1_w1ts
     }
-    #[doc = "0x88 - GPIO interrupt status clear register for GPIO32-32"]
+    #[doc = "0x88 - GPIO interrupt status clear register"]
     #[inline(always)]
     pub const fn status1_w1tc(&self) -> &STATUS1_W1TC {
         &self.status1_w1tc
     }
-    #[doc = "0xa4 - GPIO_PROCPU_INT interrupt status register for GPIO0-31"]
+    #[doc = "0xa4 - GPIO_PROCPU_INT interrupt status register"]
     #[inline(always)]
     pub const fn pcpu_int(&self) -> &PCPU_INT {
         &self.pcpu_int
     }
-    #[doc = "0xa8 - GPIO_PROCPU_INT interrupt status register for GPIO32-32"]
+    #[doc = "0xa8 - GPIO_SDIO_INT interrupt status register"]
+    #[inline(always)]
+    pub const fn sdio_int(&self) -> &SDIO_INT {
+        &self.sdio_int
+    }
+    #[doc = "0xac - GPIO_PROCPU_INT interrupt status register"]
     #[inline(always)]
     pub const fn procpu_int1(&self) -> &PROCPU_INT1 {
         &self.procpu_int1
     }
-    #[doc = "0xb4 - GPIO interrupt source register"]
+    #[doc = "0xb0 - GPIO_SDIO_INT interrupt status register"]
+    #[inline(always)]
+    pub const fn sdio_int1(&self) -> &SDIO_INT1 {
+        &self.sdio_int1
+    }
+    #[doc = "0xc4 - GPIO interrupt source register"]
     #[inline(always)]
     pub const fn status_next(&self) -> &STATUS_NEXT {
         &self.status_next
     }
-    #[doc = "0xb8 - GPIO interrupt source register for GPIO32-32"]
+    #[doc = "0xc8 - GPIO interrupt source register"]
     #[inline(always)]
     pub const fn status_next1(&self) -> &STATUS_NEXT1 {
         &self.status_next1
     }
-    #[doc = "0xc4..0x138 - GPIO$N configuration register"]
+    #[doc = "0xd4..0x148 - GPIO%s configuration register"]
     #[inline(always)]
     pub const fn pin(&self, n: usize) -> &PIN {
         &self.pin[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xc4..0x138 - GPIO$N configuration register"]
+    #[doc = "0xd4..0x148 - GPIO%s configuration register"]
     #[inline(always)]
     pub fn pin_iter(&self) -> impl Iterator<Item = &PIN> {
         self.pin.iter()
     }
-    #[doc = "0x138 - GPIO29 configuration register"]
+    #[doc = "0x148 - GPIO$n configuration register"]
     #[inline(always)]
     pub const fn pin29(&self) -> &PIN29 {
         &self.pin29
     }
-    #[doc = "0x13c - GPIO30 configuration register"]
+    #[doc = "0x14c - GPIO$n configuration register"]
     #[inline(always)]
     pub const fn pin30(&self) -> &PIN30 {
         &self.pin30
     }
-    #[doc = "0x140 - GPIO31 configuration register"]
+    #[doc = "0x150 - GPIO$n configuration register"]
     #[inline(always)]
     pub const fn pin31(&self) -> &PIN31 {
         &self.pin31
     }
-    #[doc = "0x144 - GPIO32 configuration register"]
+    #[doc = "0x154 - GPIO$n configuration register"]
     #[inline(always)]
     pub const fn pin32(&self) -> &PIN32 {
         &self.pin32
@@ -858,178 +870,178 @@ impl RegisterBlock {
     pub const fn func127_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(127)
     }
-    #[doc = "0xac4..0xb38 - Configuration register for GPIO%s output"]
+    #[doc = "0xad4..0xb48 - Configuration register for GPIO%s output"]
     #[inline(always)]
     pub const fn func_out_sel_cfg(&self, n: usize) -> &FUNC_OUT_SEL_CFG {
         &self.func_out_sel_cfg[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xac4..0xb38 - Configuration register for GPIO%s output"]
+    #[doc = "0xad4..0xb48 - Configuration register for GPIO%s output"]
     #[inline(always)]
     pub fn func_out_sel_cfg_iter(&self) -> impl Iterator<Item = &FUNC_OUT_SEL_CFG> {
         self.func_out_sel_cfg.iter()
     }
-    #[doc = "0xac4 - Configuration register for GPIO0 output"]
+    #[doc = "0xad4 - Configuration register for GPIO0 output"]
     #[inline(always)]
     pub const fn func0_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(0)
     }
-    #[doc = "0xac8 - Configuration register for GPIO1 output"]
+    #[doc = "0xad8 - Configuration register for GPIO1 output"]
     #[inline(always)]
     pub const fn func1_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(1)
     }
-    #[doc = "0xacc - Configuration register for GPIO2 output"]
+    #[doc = "0xadc - Configuration register for GPIO2 output"]
     #[inline(always)]
     pub const fn func2_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(2)
     }
-    #[doc = "0xad0 - Configuration register for GPIO3 output"]
+    #[doc = "0xae0 - Configuration register for GPIO3 output"]
     #[inline(always)]
     pub const fn func3_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(3)
     }
-    #[doc = "0xad4 - Configuration register for GPIO4 output"]
+    #[doc = "0xae4 - Configuration register for GPIO4 output"]
     #[inline(always)]
     pub const fn func4_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(4)
     }
-    #[doc = "0xad8 - Configuration register for GPIO5 output"]
+    #[doc = "0xae8 - Configuration register for GPIO5 output"]
     #[inline(always)]
     pub const fn func5_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(5)
     }
-    #[doc = "0xadc - Configuration register for GPIO6 output"]
+    #[doc = "0xaec - Configuration register for GPIO6 output"]
     #[inline(always)]
     pub const fn func6_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(6)
     }
-    #[doc = "0xae0 - Configuration register for GPIO7 output"]
+    #[doc = "0xaf0 - Configuration register for GPIO7 output"]
     #[inline(always)]
     pub const fn func7_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(7)
     }
-    #[doc = "0xae4 - Configuration register for GPIO8 output"]
+    #[doc = "0xaf4 - Configuration register for GPIO8 output"]
     #[inline(always)]
     pub const fn func8_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(8)
     }
-    #[doc = "0xae8 - Configuration register for GPIO9 output"]
+    #[doc = "0xaf8 - Configuration register for GPIO9 output"]
     #[inline(always)]
     pub const fn func9_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(9)
     }
-    #[doc = "0xaec - Configuration register for GPIO10 output"]
+    #[doc = "0xafc - Configuration register for GPIO10 output"]
     #[inline(always)]
     pub const fn func10_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(10)
     }
-    #[doc = "0xaf0 - Configuration register for GPIO11 output"]
+    #[doc = "0xb00 - Configuration register for GPIO11 output"]
     #[inline(always)]
     pub const fn func11_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(11)
     }
-    #[doc = "0xaf4 - Configuration register for GPIO12 output"]
+    #[doc = "0xb04 - Configuration register for GPIO12 output"]
     #[inline(always)]
     pub const fn func12_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(12)
     }
-    #[doc = "0xaf8 - Configuration register for GPIO13 output"]
+    #[doc = "0xb08 - Configuration register for GPIO13 output"]
     #[inline(always)]
     pub const fn func13_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(13)
     }
-    #[doc = "0xafc - Configuration register for GPIO14 output"]
+    #[doc = "0xb0c - Configuration register for GPIO14 output"]
     #[inline(always)]
     pub const fn func14_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(14)
     }
-    #[doc = "0xb00 - Configuration register for GPIO15 output"]
+    #[doc = "0xb10 - Configuration register for GPIO15 output"]
     #[inline(always)]
     pub const fn func15_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(15)
     }
-    #[doc = "0xb04 - Configuration register for GPIO16 output"]
+    #[doc = "0xb14 - Configuration register for GPIO16 output"]
     #[inline(always)]
     pub const fn func16_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(16)
     }
-    #[doc = "0xb08 - Configuration register for GPIO17 output"]
+    #[doc = "0xb18 - Configuration register for GPIO17 output"]
     #[inline(always)]
     pub const fn func17_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(17)
     }
-    #[doc = "0xb0c - Configuration register for GPIO18 output"]
+    #[doc = "0xb1c - Configuration register for GPIO18 output"]
     #[inline(always)]
     pub const fn func18_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(18)
     }
-    #[doc = "0xb10 - Configuration register for GPIO19 output"]
+    #[doc = "0xb20 - Configuration register for GPIO19 output"]
     #[inline(always)]
     pub const fn func19_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(19)
     }
-    #[doc = "0xb14 - Configuration register for GPIO20 output"]
+    #[doc = "0xb24 - Configuration register for GPIO20 output"]
     #[inline(always)]
     pub const fn func20_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(20)
     }
-    #[doc = "0xb18 - Configuration register for GPIO21 output"]
+    #[doc = "0xb28 - Configuration register for GPIO21 output"]
     #[inline(always)]
     pub const fn func21_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(21)
     }
-    #[doc = "0xb1c - Configuration register for GPIO22 output"]
+    #[doc = "0xb2c - Configuration register for GPIO22 output"]
     #[inline(always)]
     pub const fn func22_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(22)
     }
-    #[doc = "0xb20 - Configuration register for GPIO23 output"]
+    #[doc = "0xb30 - Configuration register for GPIO23 output"]
     #[inline(always)]
     pub const fn func23_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(23)
     }
-    #[doc = "0xb24 - Configuration register for GPIO24 output"]
+    #[doc = "0xb34 - Configuration register for GPIO24 output"]
     #[inline(always)]
     pub const fn func24_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(24)
     }
-    #[doc = "0xb28 - Configuration register for GPIO25 output"]
+    #[doc = "0xb38 - Configuration register for GPIO25 output"]
     #[inline(always)]
     pub const fn func25_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(25)
     }
-    #[doc = "0xb2c - Configuration register for GPIO26 output"]
+    #[doc = "0xb3c - Configuration register for GPIO26 output"]
     #[inline(always)]
     pub const fn func26_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(26)
     }
-    #[doc = "0xb30 - Configuration register for GPIO27 output"]
+    #[doc = "0xb40 - Configuration register for GPIO27 output"]
     #[inline(always)]
     pub const fn func27_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(27)
     }
-    #[doc = "0xb34 - Configuration register for GPIO28 output"]
+    #[doc = "0xb44 - Configuration register for GPIO28 output"]
     #[inline(always)]
     pub const fn func28_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(28)
     }
-    #[doc = "0xb38 - Configuration register for GPIO$n output"]
+    #[doc = "0xb48 - Configuration register for GPIO$n output"]
     #[inline(always)]
     pub const fn func29_out_sel_cfg(&self) -> &FUNC29_OUT_SEL_CFG {
         &self.func29_out_sel_cfg
     }
-    #[doc = "0xb3c - Configuration register for GPIO$n output"]
+    #[doc = "0xb4c - Configuration register for GPIO$n output"]
     #[inline(always)]
     pub const fn func30_out_sel_cfg(&self) -> &FUNC30_OUT_SEL_CFG {
         &self.func30_out_sel_cfg
     }
-    #[doc = "0xb40 - Configuration register for GPIO$n output"]
+    #[doc = "0xb50 - Configuration register for GPIO$n output"]
     #[inline(always)]
     pub const fn func31_out_sel_cfg(&self) -> &FUNC31_OUT_SEL_CFG {
         &self.func31_out_sel_cfg
     }
-    #[doc = "0xb44 - Configuration register for GPIO$n output"]
+    #[doc = "0xb54 - Configuration register for GPIO$n output"]
     #[inline(always)]
     pub const fn func32_out_sel_cfg(&self) -> &FUNC32_OUT_SEL_CFG {
         &self.func32_out_sel_cfg
@@ -1061,17 +1073,17 @@ pub mod out_w1ts;
 pub type OUT_W1TC = crate::Reg<out_w1tc::OUT_W1TC_SPEC>;
 #[doc = "GPIO output clear register"]
 pub mod out_w1tc;
-#[doc = "OUT1 (rw) register accessor: GPIO output register for GPIO32-32\n\nYou can [`read`](crate::Reg::read) this register and get [`out1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out1`] module"]
+#[doc = "OUT1 (rw) register accessor: GPIO output register\n\nYou can [`read`](crate::Reg::read) this register and get [`out1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out1`] module"]
 pub type OUT1 = crate::Reg<out1::OUT1_SPEC>;
-#[doc = "GPIO output register for GPIO32-32"]
+#[doc = "GPIO output register"]
 pub mod out1;
-#[doc = "OUT1_W1TS (w) register accessor: GPIO output set register for GPIO32-32\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out1_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out1_w1ts`] module"]
+#[doc = "OUT1_W1TS (w) register accessor: GPIO output set register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out1_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out1_w1ts`] module"]
 pub type OUT1_W1TS = crate::Reg<out1_w1ts::OUT1_W1TS_SPEC>;
-#[doc = "GPIO output set register for GPIO32-32"]
+#[doc = "GPIO output set register"]
 pub mod out1_w1ts;
-#[doc = "OUT1_W1TC (w) register accessor: GPIO output clear register for GPIO32-32\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out1_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out1_w1tc`] module"]
+#[doc = "OUT1_W1TC (w) register accessor: GPIO output clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out1_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out1_w1tc`] module"]
 pub type OUT1_W1TC = crate::Reg<out1_w1tc::OUT1_W1TC_SPEC>;
-#[doc = "GPIO output clear register for GPIO32-32"]
+#[doc = "GPIO output clear register"]
 pub mod out1_w1tc;
 #[doc = "ENABLE (rw) register accessor: GPIO output enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`enable::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable`] module"]
 pub type ENABLE = crate::Reg<enable::ENABLE_SPEC>;
@@ -1085,25 +1097,25 @@ pub mod enable_w1ts;
 pub type ENABLE_W1TC = crate::Reg<enable_w1tc::ENABLE_W1TC_SPEC>;
 #[doc = "GPIO output enable clear register"]
 pub mod enable_w1tc;
-#[doc = "ENABLE1 (rw) register accessor: GPIO output enable register for GPIO32-32\n\nYou can [`read`](crate::Reg::read) this register and get [`enable1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable1`] module"]
+#[doc = "ENABLE1 (rw) register accessor: GPIO output enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`enable1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable1`] module"]
 pub type ENABLE1 = crate::Reg<enable1::ENABLE1_SPEC>;
-#[doc = "GPIO output enable register for GPIO32-32"]
+#[doc = "GPIO output enable register"]
 pub mod enable1;
-#[doc = "ENABLE1_W1TS (w) register accessor: GPIO output enable set register for GPIO32-32\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable1_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable1_w1ts`] module"]
+#[doc = "ENABLE1_W1TS (w) register accessor: GPIO output enable set register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable1_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable1_w1ts`] module"]
 pub type ENABLE1_W1TS = crate::Reg<enable1_w1ts::ENABLE1_W1TS_SPEC>;
-#[doc = "GPIO output enable set register for GPIO32-32"]
+#[doc = "GPIO output enable set register"]
 pub mod enable1_w1ts;
-#[doc = "ENABLE1_W1TC (w) register accessor: GPIO output enable clear register for GPIO32-32\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable1_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable1_w1tc`] module"]
+#[doc = "ENABLE1_W1TC (w) register accessor: GPIO output enable clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable1_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable1_w1tc`] module"]
 pub type ENABLE1_W1TC = crate::Reg<enable1_w1tc::ENABLE1_W1TC_SPEC>;
-#[doc = "GPIO output enable clear register for GPIO32-32"]
+#[doc = "GPIO output enable clear register"]
 pub mod enable1_w1tc;
 #[doc = "IN (r) register accessor: GPIO input register\n\nYou can [`read`](crate::Reg::read) this register and get [`in_::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_`] module"]
 pub type IN = crate::Reg<in_::IN_SPEC>;
 #[doc = "GPIO input register"]
 pub mod in_;
-#[doc = "IN1 (r) register accessor: GPIO input register for GPIO32-32\n\nYou can [`read`](crate::Reg::read) this register and get [`in1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in1`] module"]
+#[doc = "IN1 (r) register accessor: GPIO input register\n\nYou can [`read`](crate::Reg::read) this register and get [`in1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in1`] module"]
 pub type IN1 = crate::Reg<in1::IN1_SPEC>;
-#[doc = "GPIO input register for GPIO32-32"]
+#[doc = "GPIO input register"]
 pub mod in1;
 #[doc = "STATUS (rw) register accessor: GPIO interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`status::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status`] module"]
 pub type STATUS = crate::Reg<status::STATUS_SPEC>;
@@ -1117,37 +1129,45 @@ pub mod status_w1ts;
 pub type STATUS_W1TC = crate::Reg<status_w1tc::STATUS_W1TC_SPEC>;
 #[doc = "GPIO interrupt status clear register"]
 pub mod status_w1tc;
-#[doc = "STATUS1 (rw) register accessor: GPIO interrupt status register for GPIO32-32\n\nYou can [`read`](crate::Reg::read) this register and get [`status1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status1`] module"]
+#[doc = "STATUS1 (rw) register accessor: GPIO interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`status1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status1`] module"]
 pub type STATUS1 = crate::Reg<status1::STATUS1_SPEC>;
-#[doc = "GPIO interrupt status register for GPIO32-32"]
+#[doc = "GPIO interrupt status register"]
 pub mod status1;
-#[doc = "STATUS1_W1TS (w) register accessor: GPIO interrupt status set register for GPIO32-32\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status1_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status1_w1ts`] module"]
+#[doc = "STATUS1_W1TS (w) register accessor: GPIO interrupt status set register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status1_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status1_w1ts`] module"]
 pub type STATUS1_W1TS = crate::Reg<status1_w1ts::STATUS1_W1TS_SPEC>;
-#[doc = "GPIO interrupt status set register for GPIO32-32"]
+#[doc = "GPIO interrupt status set register"]
 pub mod status1_w1ts;
-#[doc = "STATUS1_W1TC (w) register accessor: GPIO interrupt status clear register for GPIO32-32\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status1_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status1_w1tc`] module"]
+#[doc = "STATUS1_W1TC (w) register accessor: GPIO interrupt status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status1_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status1_w1tc`] module"]
 pub type STATUS1_W1TC = crate::Reg<status1_w1tc::STATUS1_W1TC_SPEC>;
-#[doc = "GPIO interrupt status clear register for GPIO32-32"]
+#[doc = "GPIO interrupt status clear register"]
 pub mod status1_w1tc;
-#[doc = "PCPU_INT (r) register accessor: GPIO_PROCPU_INT interrupt status register for GPIO0-31\n\nYou can [`read`](crate::Reg::read) this register and get [`pcpu_int::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pcpu_int`] module"]
+#[doc = "PCPU_INT (r) register accessor: GPIO_PROCPU_INT interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`pcpu_int::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pcpu_int`] module"]
 pub type PCPU_INT = crate::Reg<pcpu_int::PCPU_INT_SPEC>;
-#[doc = "GPIO_PROCPU_INT interrupt status register for GPIO0-31"]
+#[doc = "GPIO_PROCPU_INT interrupt status register"]
 pub mod pcpu_int;
-#[doc = "PROCPU_INT1 (r) register accessor: GPIO_PROCPU_INT interrupt status register for GPIO32-32\n\nYou can [`read`](crate::Reg::read) this register and get [`procpu_int1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@procpu_int1`] module"]
+#[doc = "SDIO_INT (r) register accessor: GPIO_SDIO_INT interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`sdio_int::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sdio_int`] module"]
+pub type SDIO_INT = crate::Reg<sdio_int::SDIO_INT_SPEC>;
+#[doc = "GPIO_SDIO_INT interrupt status register"]
+pub mod sdio_int;
+#[doc = "PROCPU_INT1 (r) register accessor: GPIO_PROCPU_INT interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`procpu_int1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@procpu_int1`] module"]
 pub type PROCPU_INT1 = crate::Reg<procpu_int1::PROCPU_INT1_SPEC>;
-#[doc = "GPIO_PROCPU_INT interrupt status register for GPIO32-32"]
+#[doc = "GPIO_PROCPU_INT interrupt status register"]
 pub mod procpu_int1;
+#[doc = "SDIO_INT1 (r) register accessor: GPIO_SDIO_INT interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`sdio_int1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sdio_int1`] module"]
+pub type SDIO_INT1 = crate::Reg<sdio_int1::SDIO_INT1_SPEC>;
+#[doc = "GPIO_SDIO_INT interrupt status register"]
+pub mod sdio_int1;
 #[doc = "STATUS_NEXT (r) register accessor: GPIO interrupt source register\n\nYou can [`read`](crate::Reg::read) this register and get [`status_next::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_next`] module"]
 pub type STATUS_NEXT = crate::Reg<status_next::STATUS_NEXT_SPEC>;
 #[doc = "GPIO interrupt source register"]
 pub mod status_next;
-#[doc = "STATUS_NEXT1 (r) register accessor: GPIO interrupt source register for GPIO32-32\n\nYou can [`read`](crate::Reg::read) this register and get [`status_next1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_next1`] module"]
+#[doc = "STATUS_NEXT1 (r) register accessor: GPIO interrupt source register\n\nYou can [`read`](crate::Reg::read) this register and get [`status_next1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_next1`] module"]
 pub type STATUS_NEXT1 = crate::Reg<status_next1::STATUS_NEXT1_SPEC>;
-#[doc = "GPIO interrupt source register for GPIO32-32"]
+#[doc = "GPIO interrupt source register"]
 pub mod status_next1;
-#[doc = "PIN (rw) register accessor: GPIO$N configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`pin::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin`] module"]
+#[doc = "PIN (rw) register accessor: GPIO%s configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`pin::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin`] module"]
 pub type PIN = crate::Reg<pin::PIN_SPEC>;
-#[doc = "GPIO$N configuration register"]
+#[doc = "GPIO%s configuration register"]
 pub mod pin;
 pub use pin as pin29;
 pub use pin as pin30;

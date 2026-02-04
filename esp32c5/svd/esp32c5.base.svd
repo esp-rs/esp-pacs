@@ -8967,7 +8967,7 @@ Other: Inactive status\\</description>
       <baseAddress>0x60091000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
-        <size>0x2cc</size>
+        <size>0x2d4</size>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
@@ -8983,7 +8983,7 @@ Other: Inactive status\\</description>
           <fields>
             <field>
               <name>STRAPPING</name>
-              <description>Represents the values of GPIO strapping pins. 
+              <description>Represents the values of GPIO strapping pins. (need update the description, for example)
 
     - bit0: invalid
     - bit1: MTMS
@@ -9008,7 +9008,8 @@ Other: Inactive status\\</description>
               <name>DATA_ORIG</name>
               <description>Configures the output value of GPIO0 ~ 31 output in simple GPIO output mode.\\
 0: Low level\\
-1: High level\\</description>
+1: High level\\
+The value of bit0 ~ bit31 correspond to the output value of GPIO0 ~ GPIO31 respectively. Bitxx ~ bitxx is invalid.\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -9026,6 +9027,7 @@ Other: Inactive status\\</description>
               <description>Configures whether or not to set the output register GPIO_OUT_REG of GPIO0 ~ GPIO31.\\
 0: Not set\\
 1: The corresponding bit in GPIO_OUT_REG will be set to 1\\
+Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. \\
 Recommended operation: use this register to set GPIO_OUT_REG. \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -9044,6 +9046,7 @@ Recommended operation: use this register to set GPIO_OUT_REG. \\</description>
               <description>Configures whether or not to clear the output register GPIO_OUT_REG of GPIO0 ~ GPIO31 output.\\
 0: Not clear\\
 1: The corresponding bit in GPIO_OUT_REG will be cleared.\\
+Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. \\
 Recommended operation: use this register to clear GPIO_OUT_REG. \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -9053,7 +9056,7 @@ Recommended operation: use this register to clear GPIO_OUT_REG. \\</description>
         </register>
         <register>
           <name>OUT1</name>
-          <description>GPIO output register for GPIO32-32</description>
+          <description>GPIO output register</description>
           <addressOffset>0x10</addressOffset>
           <size>32</size>
           <fields>
@@ -9061,7 +9064,8 @@ Recommended operation: use this register to clear GPIO_OUT_REG. \\</description>
               <name>DATA_ORIG</name>
               <description>Configures the output value of GPIO32 ~ 32 output in simple GPIO output mode.\\
 0: Low level\\
-1: High level\\</description>
+1: High level\\
+The value of bit32 ~ bit32 correspond to the output value of GPIO32 ~ GPIO32 respectively. Bitxx ~ bitxx is invalid.\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -9070,7 +9074,7 @@ Recommended operation: use this register to clear GPIO_OUT_REG. \\</description>
         </register>
         <register>
           <name>OUT1_W1TS</name>
-          <description>GPIO output set register for GPIO32-32</description>
+          <description>GPIO output set register</description>
           <addressOffset>0x14</addressOffset>
           <size>32</size>
           <fields>
@@ -9078,7 +9082,8 @@ Recommended operation: use this register to clear GPIO_OUT_REG. \\</description>
               <name>OUT1_W1TS</name>
               <description>Configures whether or not to set the output register GPIO_OUT1_REG of GPIO32 ~ GPIO32.\\
 0: Not set\\
-1: The corresponding bit in GPIO_OUT_REG will be set to 1\\
+1: The corresponding bit in GPIO_OUT1_REG will be set to 1\\
+Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. \\
 Recommended operation: use this register to set GPIO_OUT1_REG. \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -9088,7 +9093,7 @@ Recommended operation: use this register to set GPIO_OUT1_REG. \\</description>
         </register>
         <register>
           <name>OUT1_W1TC</name>
-          <description>GPIO output clear register for GPIO32-32</description>
+          <description>GPIO output clear register</description>
           <addressOffset>0x18</addressOffset>
           <size>32</size>
           <fields>
@@ -9096,7 +9101,8 @@ Recommended operation: use this register to set GPIO_OUT1_REG. \\</description>
               <name>OUT1_W1TC</name>
               <description>Configures whether or not to clear the output register GPIO_OUT1_REG of GPIO32 ~ GPIO32 output.\\
 0: Not clear\\
-1: The corresponding bit in GPIO_OUT_REG will be cleared.\\
+1: The corresponding bit in GPIO_OUT1_REG will be cleared.\\
+Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. \\
 Recommended operation: use this register to clear GPIO_OUT1_REG. \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -9114,7 +9120,8 @@ Recommended operation: use this register to clear GPIO_OUT1_REG. \\</description
               <name>DATA</name>
               <description>Configures whether or not to enable the output of GPIO0 ~ GPIO31.\\
 0: Not enable\\
-1: Enable\\</description>
+1: Enable\\
+Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid.\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -9132,6 +9139,7 @@ Recommended operation: use this register to clear GPIO_OUT1_REG. \\</description
               <description>Configures whether or not to set the output enable register GPIO_ENABLE_REG of GPIO0 ~ GPIO31.\\
 0: Not set\\
 1: The corresponding bit in GPIO_ENABLE_REG will be set to 1\\
+Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. \\
 Recommended operation: use this register to set GPIO_ENABLE_REG.\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -9150,6 +9158,7 @@ Recommended operation: use this register to set GPIO_ENABLE_REG.\\</description>
               <description>Configures whether or not to clear the output enable register GPIO_ENABLE_REG of GPIO0 ~ GPIO31. \\
 0: Not clear\\
 1: The corresponding bit in GPIO_ENABLE_REG will be cleared\\
+Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. \\
 Recommended operation: use this register to clear GPIO_ENABLE_REG.\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -9159,7 +9168,7 @@ Recommended operation: use this register to clear GPIO_ENABLE_REG.\\</descriptio
         </register>
         <register>
           <name>ENABLE1</name>
-          <description>GPIO output enable register for GPIO32-32</description>
+          <description>GPIO output enable register</description>
           <addressOffset>0x40</addressOffset>
           <size>32</size>
           <fields>
@@ -9167,7 +9176,8 @@ Recommended operation: use this register to clear GPIO_ENABLE_REG.\\</descriptio
               <name>DATA</name>
               <description>Configures whether or not to enable the output of GPIO32 ~ GPIO32.\\
 0: Not enable\\
-1: Enable\\</description>
+1: Enable\\
+Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -9176,15 +9186,16 @@ Recommended operation: use this register to clear GPIO_ENABLE_REG.\\</descriptio
         </register>
         <register>
           <name>ENABLE1_W1TS</name>
-          <description>GPIO output enable set register for GPIO32-32</description>
+          <description>GPIO output enable set register</description>
           <addressOffset>0x44</addressOffset>
           <size>32</size>
           <fields>
             <field>
               <name>ENABLE1_W1TS</name>
-              <description>Configures whether or not to set the output enable register GPIO_ENABLE_REG of GPIO32 ~ GPIO32.\\
+              <description>Configures whether or not to set the output enable register GPIO_ENABLE1_REG of GPIO32 ~ GPIO32.\\
 0: Not set\\
-1: The corresponding bit in GPIO_ENABLE_REG will be set to 1\\
+1: The corresponding bit in GPIO_ENABLE1_REG will be set to 1\\
+Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. \\
 Recommended operation: use this register to set GPIO_ENABLE1_REG.\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -9194,15 +9205,16 @@ Recommended operation: use this register to set GPIO_ENABLE1_REG.\\</description
         </register>
         <register>
           <name>ENABLE1_W1TC</name>
-          <description>GPIO output enable clear register for GPIO32-32</description>
+          <description>GPIO output enable clear register</description>
           <addressOffset>0x48</addressOffset>
           <size>32</size>
           <fields>
             <field>
               <name>ENABLE1_W1TC</name>
-              <description>Configures whether or not to clear the output enable register GPIO_ENABLE_REG of GPIO32 ~ GPIO32. \\
+              <description>Configures whether or not to clear the output enable register GPIO_ENABLE1_REG of GPIO32 ~ GPIO32. \\
 0: Not clear\\
-1: The corresponding bit in GPIO_ENABLE_REG will be cleared\\
+1: The corresponding bit in GPIO_ENABLE1_REG will be cleared\\
+Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. \\
 Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -9220,7 +9232,8 @@ Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\</descripti
               <name>DATA_NEXT</name>
               <description>Represents the input value of GPIO0 ~ GPIO31. Each bit represents a pin input value:\\
 0: Low level\\
-1: High level\\</description>
+1: High level\\
+Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid.\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -9229,7 +9242,7 @@ Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\</descripti
         </register>
         <register>
           <name>IN1</name>
-          <description>GPIO input register for GPIO32-32</description>
+          <description>GPIO input register</description>
           <addressOffset>0x68</addressOffset>
           <size>32</size>
           <fields>
@@ -9237,7 +9250,8 @@ Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\</descripti
               <name>DATA_NEXT</name>
               <description>Represents the input value of GPIO32 ~ GPIO32. Each bit represents a pin input value:\\
 0: Low level\\
-1: High level\\</description>
+1: High level\\
+Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
@@ -9254,6 +9268,7 @@ Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\</descripti
               <name>INTERRUPT</name>
               <description>The interrupt status of GPIO0 ~ GPIO31, can be configured by the software. 
 
+    - Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. 
     - Each bit represents the status of its corresponding GPIO:
     
         - 0: Represents the GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE, or this bit is configured to 0 by the software.
@@ -9275,6 +9290,7 @@ Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\</descripti
               <name>STATUS_W1TS</name>
               <description>Configures whether or not to set the interrupt status register GPIO_STATUS_INTERRUPT of GPIO0 ~ GPIO31. 
 
+    - Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. 
     - If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS_INTERRUPT will be set to 1. \item Recommended operation: use this register to set GPIO_STATUS_INTERRUPT. </description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -9292,6 +9308,7 @@ Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\</descripti
               <name>STATUS_W1TC</name>
               <description>Configures whether or not to clear the interrupt status register GPIO_STATUS_INTERRUPT of GPIO0 ~ GPIO31. 
 
+    - Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. 
     - If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS_INTERRUPT will be cleared. \item Recommended operation: use this register to clear GPIO_STATUS_INTERRUPT.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -9301,7 +9318,7 @@ Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\</descripti
         </register>
         <register>
           <name>STATUS1</name>
-          <description>GPIO interrupt status register for GPIO32-32</description>
+          <description>GPIO interrupt status register</description>
           <addressOffset>0x80</addressOffset>
           <size>32</size>
           <fields>
@@ -9309,6 +9326,7 @@ Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\</descripti
               <name>INTERRUPT</name>
               <description>The interrupt status of GPIO32 ~ GPIO32, can be configured by the software. 
 
+    - Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. 
     - Each bit represents the status of its corresponding GPIO:
     
         - 0: Represents the GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE, or this bit is configured to 0 by the software.
@@ -9322,15 +9340,16 @@ Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\</descripti
         </register>
         <register>
           <name>STATUS1_W1TS</name>
-          <description>GPIO interrupt status set register for GPIO32-32</description>
+          <description>GPIO interrupt status set register</description>
           <addressOffset>0x84</addressOffset>
           <size>32</size>
           <fields>
             <field>
               <name>STATUS1_W1TS</name>
-              <description>Configures whether or not to set the interrupt status register GPIO_STATUS_INTERRUPT of GPIO32 ~ GPIO32. 
+              <description>Configures whether or not to set the interrupt status register GPIO_STATUS1_INTERRUPT of GPIO32 ~ GPIO32. 
 
-    - If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS_INTERRUPT will be set to 1. \item Recommended operation: use this register to set GPIO_STATUS_INTERRUPT. </description>
+    - Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. 
+    - If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS1_INTERRUPT will be set to 1. \item Recommended operation: use this register to set GPIO_STATUS1_INTERRUPT. </description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
@@ -9339,15 +9358,16 @@ Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\</descripti
         </register>
         <register>
           <name>STATUS1_W1TC</name>
-          <description>GPIO interrupt status clear register for GPIO32-32</description>
+          <description>GPIO interrupt status clear register</description>
           <addressOffset>0x88</addressOffset>
           <size>32</size>
           <fields>
             <field>
               <name>STATUS1_W1TC</name>
-              <description>Configures whether or not to clear the interrupt status register GPIO_STATUS_INTERRUPT of GPIO32 ~ GPIO32. 
+              <description>Configures whether or not to clear the interrupt status register GPIO_STATUS1_INTERRUPT of GPIO32 ~ GPIO32. 
 
-    - If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS_INTERRUPT will be cleared. \item Recommended operation: use this register to clear GPIO_STATUS_INTERRUPT.</description>
+    - Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. 
+    - If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS1_INTERRUPT will be cleared. \item Recommended operation: use this register to clear GPIO_STATUS1_INTERRUPT.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
@@ -9356,16 +9376,34 @@ Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\</descripti
         </register>
         <register>
           <name>PROCPU_INT</name>
-          <description>GPIO_PROCPU_INT interrupt status register for GPIO0-31</description>
+          <description>GPIO_PROCPU_INT interrupt status register</description>
           <addressOffset>0xa4</addressOffset>
           <size>32</size>
           <fields>
             <field>
               <name>PROCPU_INT</name>
-              <description>Represents the CPU interrupt status of GPIO0 ~ GPIO31. Each bit represents:\\
-0: Represents CPU interrupt is not enabled, or the GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE.\\
-1: Represents the GPIO generates an interrupt configured by GPIO_PIN0_INT_TYPE after the CPU interrupt is enabled.\\
-This interrupt status is corresponding to the bit in GPIO_STATUS_REG when assert (high) enable signal (bit13 of GPIO_PIN0_REG). \\</description>
+              <description>Represents the GPIO_PROCPU_INT interrupt status of GPIO0 ~ GPIO31. Each bit represents:(need update in different project)\\
+0: Represents GPIO_PROCPU_INT interrupt is not enabled, or the GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE.\\
+1: Represents the GPIO generates an interrupt configured by GPIO_PIN0_INT_TYPE after the GPIO_PROCPU_INT interrupt is enabled.\\
+Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. This interrupt status is corresponding to the bit in GPIO_STATUS_REG when assert (high) enable signal (bit13 of GPIO_PIN0_REG). \\</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SDIO_INT</name>
+          <description>GPIO_SDIO_INT interrupt status register</description>
+          <addressOffset>0xa8</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>SDIO_INT</name>
+              <description>Represents the GPIO_SDIO_INT interrupt status of GPIO0 ~ GPIO31. Each bit represents:(need update in different project)\\
+0: Represents GPIO_SDIO_INT interrupt is not enabled, or the GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE.\\
+1: Represents the GPIO generates an interrupt configured by GPIO_PIN0_INT_TYPE after the GPIO_SDIO_INT interrupt is enabled.\\
+Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. This interrupt status is corresponding to the bit in GPIO_STATUS_REG when assert (high) enable signal (bit13 of GPIO_PIN0_REG). \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -9374,16 +9412,34 @@ This interrupt status is corresponding to the bit in GPIO_STATUS_REG when assert
         </register>
         <register>
           <name>PROCPU_INT1</name>
-          <description>GPIO_PROCPU_INT interrupt status register for GPIO32-32</description>
-          <addressOffset>0xa8</addressOffset>
+          <description>GPIO_PROCPU_INT interrupt status register</description>
+          <addressOffset>0xac</addressOffset>
           <size>32</size>
           <fields>
             <field>
               <name>PROCPU_INT1</name>
-              <description>Represents the CPU interrupt status of GPIO32 ~ GPIO32. Each bit represents:\\
-0: Represents CPU interrupt is not enabled, or the GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE.\\
-1: Represents the GPIO generates an interrupt configured by GPIO_PIN0_INT_TYPE after the CPU interrupt is enabled.\\
-This interrupt status is corresponding to the bit in GPIO_STATUS_REG when assert (high) enable signal (bit13 of GPIO_PIN0_REG). \\</description>
+              <description>Represents the GPIO_PROCPU_INT interrupt status of GPIO32 ~ GPIO32. Each bit represents:(need update in different project)\\
+0: Represents GPIO_PROCPU_INT interrupt is not enabled, or the GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE.\\
+1: Represents the GPIO generates an interrupt configured by GPIO_PIN0_INT_TYPE after the GPIO_PROCPU_INT interrupt is enabled.\\
+Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. This interrupt status is corresponding to the bit in GPIO_STATUS1_REG when assert (high) enable signal (bit13 of GPIO_PIN0_REG). \\</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SDIO_INT1</name>
+          <description>GPIO_SDIO_INT interrupt status register</description>
+          <addressOffset>0xb0</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>SDIO_INT1</name>
+              <description>Represents the GPIO_SDIO_INT interrupt status of GPIO32 ~ GPIO32. Each bit represents:(need update in different project)\\
+0: Represents GPIO_SDIO_INT interrupt is not enabled, or the GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE.\\
+1: Represents the GPIO generates an interrupt configured by GPIO_PIN0_INT_TYPE after the GPIO_SDIO_INT interrupt is enabled.\\
+Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. This interrupt status is corresponding to the bit in GPIO_STATUS1_REG when assert (high) enable signal (bit13 of GPIO_PIN0_REG). \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
@@ -9393,13 +9449,13 @@ This interrupt status is corresponding to the bit in GPIO_STATUS_REG when assert
         <register>
           <name>STATUS_NEXT</name>
           <description>GPIO interrupt source register</description>
-          <addressOffset>0xb4</addressOffset>
+          <addressOffset>0xc4</addressOffset>
           <size>32</size>
           <fields>
             <field>
               <name>STATUS_INTERRUPT_NEXT</name>
               <description>Represents the interrupt source signal of GPIO0 ~ GPIO31.\\
-Each bit represents:\\
+Bit0 ~ bit24 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. Each bit represents:\\
 0: The GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE.\\
 1: The GPIO generates an interrupt configured by GPIO_PIN0_INT_TYPE.\\
 The interrupt could be rising edge interrupt, falling edge interrupt, level sensitive interrupt and any edge interrupt.\\</description>
@@ -9411,14 +9467,14 @@ The interrupt could be rising edge interrupt, falling edge interrupt, level sens
         </register>
         <register>
           <name>STATUS_NEXT1</name>
-          <description>GPIO interrupt source register for GPIO32-32</description>
-          <addressOffset>0xb8</addressOffset>
+          <description>GPIO interrupt source register</description>
+          <addressOffset>0xc8</addressOffset>
           <size>32</size>
           <fields>
             <field>
               <name>STATUS_INTERRUPT_NEXT1</name>
               <description>Represents the interrupt source signal of GPIO32 ~ GPIO32.\\
-Each bit represents:\\
+Bit0 ~ bit24 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. Each bit represents:\\
 0: The GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE.\\
 1: The GPIO generates an interrupt configured by GPIO_PIN0_INT_TYPE.\\
 The interrupt could be rising edge interrupt, falling edge interrupt, level sensitive interrupt and any edge interrupt.\\</description>
@@ -9432,8 +9488,8 @@ The interrupt could be rising edge interrupt, falling edge interrupt, level sens
           <dim>29</dim>
           <dimIncrement>0x4</dimIncrement>
           <name>PIN%s</name>
-          <description>GPIO$N configuration register</description>
-          <addressOffset>0xc4</addressOffset>
+          <description>GPIO%s configuration register</description>
+          <addressOffset>0xd4</addressOffset>
           <size>32</size>
           <fields>
             <field>
@@ -9492,12 +9548,14 @@ This function only wakes up the CPU from Light-sleep. \\</description>
             </field>
             <field>
               <name>INT_ENA</name>
-              <description>Configures whether or not to enable CPU interrupt or CPU non-maskable interrupt.
+              <description>Configures whether or not to enable gpio_procpu_int or gpio_sdio_int(need update in different project).
 
-    - bit13: Configures whether or not to enable CPU interrupt:\\
+    - bit13: Configures whether or not to enable gpio_procpu_int(need update in different project):\\
+    0: Disable\\
+    1: Enable\\    - bit15: Configures whether or not to enable gpio_sdio_int(need update in different project):\\
     0: Disable\\
     1: Enable\\
-    - bit14 ~ bit17: invalid</description>
+    - bit16 ~ bit17: invalid</description>
               <bitOffset>13</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
@@ -9506,8 +9564,8 @@ This function only wakes up the CPU from Light-sleep. \\</description>
         </register>
         <register>
           <name>PIN29</name>
-          <description>GPIO29 configuration register</description>
-          <addressOffset>0x138</addressOffset>
+          <description>GPIO$n configuration register</description>
+          <addressOffset>0x148</addressOffset>
           <size>32</size>
           <fields>
             <field>
@@ -9566,12 +9624,14 @@ This function only wakes up the CPU from Light-sleep. \\</description>
             </field>
             <field>
               <name>INT_ENA</name>
-              <description>Configures whether or not to enable CPU interrupt or CPU non-maskable interrupt.
+              <description>Configures whether or not to enable gpio_procpu_int or gpio_sdio_int(need update in different project).
 
-    - bit13: Configures whether or not to enable CPU interrupt:\\
+    - bit13: Configures whether or not to enable gpio_procpu_int(need update in different project):\\
+    0: Disable\\
+    1: Enable\\    - bit15: Configures whether or not to enable gpio_sdio_int(need update in different project):\\
     0: Disable\\
     1: Enable\\
-    - bit14 ~ bit17: invalid</description>
+    - bit16 ~ bit17: invalid</description>
               <bitOffset>13</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
@@ -9580,8 +9640,8 @@ This function only wakes up the CPU from Light-sleep. \\</description>
         </register>
         <register>
           <name>PIN30</name>
-          <description>GPIO30 configuration register</description>
-          <addressOffset>0x13c</addressOffset>
+          <description>GPIO$n configuration register</description>
+          <addressOffset>0x14c</addressOffset>
           <size>32</size>
           <fields>
             <field>
@@ -9640,12 +9700,14 @@ This function only wakes up the CPU from Light-sleep. \\</description>
             </field>
             <field>
               <name>INT_ENA</name>
-              <description>Configures whether or not to enable CPU interrupt or CPU non-maskable interrupt.
+              <description>Configures whether or not to enable gpio_procpu_int or gpio_sdio_int(need update in different project).
 
-    - bit13: Configures whether or not to enable CPU interrupt:\\
+    - bit13: Configures whether or not to enable gpio_procpu_int(need update in different project):\\
+    0: Disable\\
+    1: Enable\\    - bit15: Configures whether or not to enable gpio_sdio_int(need update in different project):\\
     0: Disable\\
     1: Enable\\
-    - bit14 ~ bit17: invalid</description>
+    - bit16 ~ bit17: invalid</description>
               <bitOffset>13</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
@@ -9654,8 +9716,8 @@ This function only wakes up the CPU from Light-sleep. \\</description>
         </register>
         <register>
           <name>PIN31</name>
-          <description>GPIO31 configuration register</description>
-          <addressOffset>0x140</addressOffset>
+          <description>GPIO$n configuration register</description>
+          <addressOffset>0x150</addressOffset>
           <size>32</size>
           <fields>
             <field>
@@ -9714,12 +9776,14 @@ This function only wakes up the CPU from Light-sleep. \\</description>
             </field>
             <field>
               <name>INT_ENA</name>
-              <description>Configures whether or not to enable CPU interrupt or CPU non-maskable interrupt.
+              <description>Configures whether or not to enable gpio_procpu_int or gpio_sdio_int(need update in different project).
 
-    - bit13: Configures whether or not to enable CPU interrupt:\\
+    - bit13: Configures whether or not to enable gpio_procpu_int(need update in different project):\\
+    0: Disable\\
+    1: Enable\\    - bit15: Configures whether or not to enable gpio_sdio_int(need update in different project):\\
     0: Disable\\
     1: Enable\\
-    - bit14 ~ bit17: invalid</description>
+    - bit16 ~ bit17: invalid</description>
               <bitOffset>13</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
@@ -9728,8 +9792,8 @@ This function only wakes up the CPU from Light-sleep. \\</description>
         </register>
         <register>
           <name>PIN32</name>
-          <description>GPIO32 configuration register</description>
-          <addressOffset>0x144</addressOffset>
+          <description>GPIO$n configuration register</description>
+          <addressOffset>0x154</addressOffset>
           <size>32</size>
           <fields>
             <field>
@@ -9788,12 +9852,14 @@ This function only wakes up the CPU from Light-sleep. \\</description>
             </field>
             <field>
               <name>INT_ENA</name>
-              <description>Configures whether or not to enable CPU interrupt or CPU non-maskable interrupt.
+              <description>Configures whether or not to enable gpio_procpu_int or gpio_sdio_int(need update in different project).
 
-    - bit13: Configures whether or not to enable CPU interrupt:\\
+    - bit13: Configures whether or not to enable gpio_procpu_int(need update in different project):\\
+    0: Disable\\
+    1: Enable\\    - bit15: Configures whether or not to enable gpio_sdio_int(need update in different project):\\
     0: Disable\\
     1: Enable\\
-    - bit14 ~ bit17: invalid</description>
+    - bit16 ~ bit17: invalid</description>
               <bitOffset>13</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
@@ -9803,7 +9869,7 @@ This function only wakes up the CPU from Light-sleep. \\</description>
         <register>
           <name>FUNC0_IN_SEL_CFG</name>
           <description>Configuration register for input signal 0</description>
-          <addressOffset>0x2c4</addressOffset>
+          <addressOffset>0x2d4</addressOffset>
           <size>32</size>
           <resetValue>0x60</resetValue>
           <fields>
@@ -9817,7 +9883,7 @@ This function only wakes up the CPU from Light-sleep. \\</description>
 28: Select GPIO28\\
 Or\\
 0x40: A constantly high input\\
-0x50: A constantly low input\\</description>
+0x60: A constantly low input\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>7</bitWidth>
               <access>read-write</access>
@@ -9847,7 +9913,7 @@ Or\\
           <dimIncrement>0x4</dimIncrement>
           <name>FUNC%s_IN_SEL_CFG</name>
           <description>Configuration register for input signal %s</description>
-          <addressOffset>0x2dc</addressOffset>
+          <addressOffset>0x2ec</addressOffset>
           <size>32</size>
           <resetValue>0x60</resetValue>
           <fields>
@@ -9861,7 +9927,7 @@ Or\\
 28: Select GPIO28\\
 Or\\
 0x40: A constantly high input\\
-0x50: A constantly low input\\</description>
+0x60: A constantly low input\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>7</bitWidth>
               <access>read-write</access>
@@ -9891,7 +9957,7 @@ Or\\
           <dimIncrement>0x4</dimIncrement>
           <name>FUNC%s_IN_SEL_CFG</name>
           <description>Configuration register for input signal %s</description>
-          <addressOffset>0x330</addressOffset>
+          <addressOffset>0x340</addressOffset>
           <size>32</size>
           <resetValue>0x60</resetValue>
           <fields>
@@ -9905,7 +9971,7 @@ Or\\
 28: Select GPIO28\\
 Or\\
 0x40: A constantly high input\\
-0x50: A constantly low input\\</description>
+0x60: A constantly low input\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>7</bitWidth>
               <access>read-write</access>
@@ -9935,7 +10001,7 @@ Or\\
           <dimIncrement>0x4</dimIncrement>
           <name>FUNC%s_IN_SEL_CFG</name>
           <description>Configuration register for input signal %s</description>
-          <addressOffset>0x368</addressOffset>
+          <addressOffset>0x378</addressOffset>
           <size>32</size>
           <resetValue>0x60</resetValue>
           <fields>
@@ -9949,7 +10015,7 @@ Or\\
 28: Select GPIO28\\
 Or\\
 0x40: A constantly high input\\
-0x50: A constantly low input\\</description>
+0x60: A constantly low input\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>7</bitWidth>
               <access>read-write</access>
@@ -9979,7 +10045,7 @@ Or\\
           <dimIncrement>0x4</dimIncrement>
           <name>FUNC%s_IN_SEL_CFG</name>
           <description>Configuration register for input signal %s</description>
-          <addressOffset>0x37c</addressOffset>
+          <addressOffset>0x38c</addressOffset>
           <size>32</size>
           <resetValue>0x40</resetValue>
           <fields>
@@ -9993,7 +10059,7 @@ Or\\
 28: Select GPIO28\\
 Or\\
 0x40: A constantly high input\\
-0x50: A constantly low input\\</description>
+0x60: A constantly low input\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>7</bitWidth>
               <access>read-write</access>
@@ -10021,7 +10087,7 @@ Or\\
         <register>
           <name>FUNC70_IN_SEL_CFG</name>
           <description>Configuration register for input signal 70</description>
-          <addressOffset>0x3dc</addressOffset>
+          <addressOffset>0x3ec</addressOffset>
           <size>32</size>
           <resetValue>0x40</resetValue>
           <fields>
@@ -10035,7 +10101,7 @@ Or\\
 28: Select GPIO28\\
 Or\\
 0x40: A constantly high input\\
-0x50: A constantly low input\\</description>
+0x60: A constantly low input\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>7</bitWidth>
               <access>read-write</access>
@@ -10065,7 +10131,7 @@ Or\\
           <dimIncrement>0x4</dimIncrement>
           <name>FUNC%s_IN_SEL_CFG</name>
           <description>Configuration register for input signal %s</description>
-          <addressOffset>0x3ec</addressOffset>
+          <addressOffset>0x3fc</addressOffset>
           <size>32</size>
           <resetValue>0x60</resetValue>
           <fields>
@@ -10079,7 +10145,7 @@ Or\\
 28: Select GPIO28\\
 Or\\
 0x40: A constantly high input\\
-0x50: A constantly low input\\</description>
+0x60: A constantly low input\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>7</bitWidth>
               <access>read-write</access>
@@ -10109,7 +10175,7 @@ Or\\
           <dimIncrement>0x4</dimIncrement>
           <name>FUNC%s_IN_SEL_CFG</name>
           <description>Configuration register for input signal %s</description>
-          <addressOffset>0x448</addressOffset>
+          <addressOffset>0x458</addressOffset>
           <size>32</size>
           <resetValue>0x60</resetValue>
           <fields>
@@ -10123,7 +10189,7 @@ Or\\
 28: Select GPIO28\\
 Or\\
 0x40: A constantly high input\\
-0x50: A constantly low input\\</description>
+0x60: A constantly low input\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>7</bitWidth>
               <access>read-write</access>
@@ -10153,7 +10219,7 @@ Or\\
           <dimIncrement>0x4</dimIncrement>
           <name>FUNC%s_OUT_SEL_CFG</name>
           <description>Configuration register for GPIO%s output</description>
-          <addressOffset>0xac4</addressOffset>
+          <addressOffset>0xad4</addressOffset>
           <size>32</size>
           <resetValue>0x100</resetValue>
           <fields>
@@ -10168,8 +10234,8 @@ Or\\
 Or\\
 256: Bit %s of GPIO_OUT_REG and GPIO_ENABLE_REG are selected as the output value and output enable.
 
-For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix"&gt;link&lt;/a&gt;.
-"</description>
+For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix&quot;&gt;link&lt;/a&gt;.
+&quot;</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
@@ -10206,7 +10272,7 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
         <register>
           <name>FUNC29_OUT_SEL_CFG</name>
           <description>Configuration register for GPIO$n output</description>
-          <addressOffset>0xb38</addressOffset>
+          <addressOffset>0xb48</addressOffset>
           <size>32</size>
           <resetValue>0x100</resetValue>
           <fields>
@@ -10221,8 +10287,8 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
 Or\\
 256: Bit 0 of GPIO_OUT_REG and GPIO_ENABLE_REG are selected as the output value and output enable.
 
-For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix"&gt;link&lt;/a&gt;.
-"</description>
+For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix&quot;&gt;link&lt;/a&gt;.
+&quot;</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
@@ -10259,7 +10325,7 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
         <register>
           <name>FUNC30_OUT_SEL_CFG</name>
           <description>Configuration register for GPIO$n output</description>
-          <addressOffset>0xb3c</addressOffset>
+          <addressOffset>0xb4c</addressOffset>
           <size>32</size>
           <resetValue>0x100</resetValue>
           <fields>
@@ -10274,8 +10340,8 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
 Or\\
 256: Bit 0 of GPIO_OUT_REG and GPIO_ENABLE_REG are selected as the output value and output enable.
 
-For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix"&gt;link&lt;/a&gt;.
-"</description>
+For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix&quot;&gt;link&lt;/a&gt;.
+&quot;</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
@@ -10312,7 +10378,7 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
         <register>
           <name>FUNC31_OUT_SEL_CFG</name>
           <description>Configuration register for GPIO$n output</description>
-          <addressOffset>0xb40</addressOffset>
+          <addressOffset>0xb50</addressOffset>
           <size>32</size>
           <resetValue>0x100</resetValue>
           <fields>
@@ -10327,8 +10393,8 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
 Or\\
 256: Bit 0 of GPIO_OUT_REG and GPIO_ENABLE_REG are selected as the output value and output enable.
 
-For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix"&gt;link&lt;/a&gt;.
-"</description>
+For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix&quot;&gt;link&lt;/a&gt;.
+&quot;</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
@@ -10365,7 +10431,7 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
         <register>
           <name>FUNC32_OUT_SEL_CFG</name>
           <description>Configuration register for GPIO$n output</description>
-          <addressOffset>0xb44</addressOffset>
+          <addressOffset>0xb54</addressOffset>
           <size>32</size>
           <resetValue>0x100</resetValue>
           <fields>
@@ -10380,8 +10446,8 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
 Or\\
 256: Bit 0 of GPIO_OUT_REG and GPIO_ENABLE_REG are selected as the output value and output enable.
 
-For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix"&gt;link&lt;/a&gt;.
-"</description>
+For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix&quot;&gt;link&lt;/a&gt;.
+&quot;</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
@@ -10438,7 +10504,7 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
           <description>GPIO version register</description>
           <addressOffset>0xdfc</addressOffset>
           <size>32</size>
-          <resetValue>0x2312140</resetValue>
+          <resetValue>0x2410300</resetValue>
           <fields>
             <field>
               <name>DATE</name>

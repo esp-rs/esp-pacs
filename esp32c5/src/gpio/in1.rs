@@ -1,9 +1,9 @@
 #[doc = "Register `IN1` reader"]
 pub type R = crate::R<IN1_SPEC>;
-#[doc = "Field `DATA_NEXT` reader - Represents the input value of GPIO32 ~ GPIO32. Each bit represents a pin input value:\\\\ 0: Low level\\\\ 1: High level\\\\"]
+#[doc = "Field `DATA_NEXT` reader - Represents the input value of GPIO32 ~ GPIO32. Each bit represents a pin input value:\\\\ 0: Low level\\\\ 1: High level\\\\ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.\\\\"]
 pub type DATA_NEXT_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - Represents the input value of GPIO32 ~ GPIO32. Each bit represents a pin input value:\\\\ 0: Low level\\\\ 1: High level\\\\"]
+    #[doc = "Bit 0 - Represents the input value of GPIO32 ~ GPIO32. Each bit represents a pin input value:\\\\ 0: Low level\\\\ 1: High level\\\\ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.\\\\"]
     #[inline(always)]
     pub fn data_next(&self) -> DATA_NEXT_R {
         DATA_NEXT_R::new((self.bits & 1) != 0)
@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "GPIO input register for GPIO32-32\n\nYou can [`read`](crate::Reg::read) this register and get [`in1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO input register\n\nYou can [`read`](crate::Reg::read) this register and get [`in1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN1_SPEC;
 impl crate::RegisterSpec for IN1_SPEC {
     type Ux = u32;

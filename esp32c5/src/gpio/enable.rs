@@ -2,12 +2,12 @@
 pub type R = crate::R<ENABLE_SPEC>;
 #[doc = "Register `ENABLE` writer"]
 pub type W = crate::W<ENABLE_SPEC>;
-#[doc = "Field `DATA` reader - Configures whether or not to enable the output of GPIO0 ~ GPIO31.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
+#[doc = "Field `DATA` reader - Configures whether or not to enable the output of GPIO0 ~ GPIO31.\\\\ 0: Not enable\\\\ 1: Enable\\\\ Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid.\\\\"]
 pub type DATA_R = crate::FieldReader<u32>;
-#[doc = "Field `DATA` writer - Configures whether or not to enable the output of GPIO0 ~ GPIO31.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
+#[doc = "Field `DATA` writer - Configures whether or not to enable the output of GPIO0 ~ GPIO31.\\\\ 0: Not enable\\\\ 1: Enable\\\\ Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid.\\\\"]
 pub type DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - Configures whether or not to enable the output of GPIO0 ~ GPIO31.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
+    #[doc = "Bits 0:31 - Configures whether or not to enable the output of GPIO0 ~ GPIO31.\\\\ 0: Not enable\\\\ 1: Enable\\\\ Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid.\\\\"]
     #[inline(always)]
     pub fn data(&self) -> DATA_R {
         DATA_R::new(self.bits)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Configures whether or not to enable the output of GPIO0 ~ GPIO31.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
+    #[doc = "Bits 0:31 - Configures whether or not to enable the output of GPIO0 ~ GPIO31.\\\\ 0: Not enable\\\\ 1: Enable\\\\ Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid.\\\\"]
     #[inline(always)]
     pub fn data(&mut self) -> DATA_W<'_, ENABLE_SPEC> {
         DATA_W::new(self, 0)

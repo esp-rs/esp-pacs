@@ -1,6 +1,6 @@
 #[doc = "Register `STATUS_W1TS` writer"]
 pub type W = crate::W<STATUS_W1TS_SPEC>;
-#[doc = "Field `STATUS_W1TS` writer - Configures whether or not to set the interrupt status register GPIO_STATUS_INTERRUPT of GPIO0 ~ GPIO31. - If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS_INTERRUPT will be set to 1. \\item Recommended operation: use this register to set GPIO_STATUS_INTERRUPT."]
+#[doc = "Field `STATUS_W1TS` writer - Configures whether or not to set the interrupt status register GPIO_STATUS_INTERRUPT of GPIO0 ~ GPIO31. - Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. - If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS_INTERRUPT will be set to 1. \\item Recommended operation: use this register to set GPIO_STATUS_INTERRUPT."]
 pub type STATUS_W1TS_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<STATUS_W1TS_SPEC> {
@@ -9,7 +9,7 @@ impl core::fmt::Debug for crate::generic::Reg<STATUS_W1TS_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Configures whether or not to set the interrupt status register GPIO_STATUS_INTERRUPT of GPIO0 ~ GPIO31. - If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS_INTERRUPT will be set to 1. \\item Recommended operation: use this register to set GPIO_STATUS_INTERRUPT."]
+    #[doc = "Bits 0:31 - Configures whether or not to set the interrupt status register GPIO_STATUS_INTERRUPT of GPIO0 ~ GPIO31. - Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. - If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS_INTERRUPT will be set to 1. \\item Recommended operation: use this register to set GPIO_STATUS_INTERRUPT."]
     #[inline(always)]
     pub fn status_w1ts(&mut self) -> STATUS_W1TS_W<'_, STATUS_W1TS_SPEC> {
         STATUS_W1TS_W::new(self, 0)

@@ -1,9 +1,9 @@
 #[doc = "Register `IN` reader"]
 pub type R = crate::R<IN_SPEC>;
-#[doc = "Field `DATA_NEXT` reader - Represents the input value of GPIO0 ~ GPIO31. Each bit represents a pin input value:\\\\ 0: Low level\\\\ 1: High level\\\\"]
+#[doc = "Field `DATA_NEXT` reader - Represents the input value of GPIO0 ~ GPIO31. Each bit represents a pin input value:\\\\ 0: Low level\\\\ 1: High level\\\\ Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid.\\\\"]
 pub type DATA_NEXT_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - Represents the input value of GPIO0 ~ GPIO31. Each bit represents a pin input value:\\\\ 0: Low level\\\\ 1: High level\\\\"]
+    #[doc = "Bits 0:31 - Represents the input value of GPIO0 ~ GPIO31. Each bit represents a pin input value:\\\\ 0: Low level\\\\ 1: High level\\\\ Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid.\\\\"]
     #[inline(always)]
     pub fn data_next(&self) -> DATA_NEXT_R {
         DATA_NEXT_R::new(self.bits)

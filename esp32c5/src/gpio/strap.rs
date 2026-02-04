@@ -1,9 +1,9 @@
 #[doc = "Register `STRAP` reader"]
 pub type R = crate::R<STRAP_SPEC>;
-#[doc = "Field `STRAPPING` reader - Represents the values of GPIO strapping pins. - bit0: invalid - bit1: MTMS - bit2: MTDI - bit3: GPIO27 - bit4: GPIO28 - bit5: GPIO7 - bit6 ~ bit15: invalid"]
+#[doc = "Field `STRAPPING` reader - Represents the values of GPIO strapping pins. (need update the description, for example) - bit0: invalid - bit1: MTMS - bit2: MTDI - bit3: GPIO27 - bit4: GPIO28 - bit5: GPIO7 - bit6 ~ bit15: invalid"]
 pub type STRAPPING_R = crate::FieldReader<u16>;
 impl R {
-    #[doc = "Bits 0:15 - Represents the values of GPIO strapping pins. - bit0: invalid - bit1: MTMS - bit2: MTDI - bit3: GPIO27 - bit4: GPIO28 - bit5: GPIO7 - bit6 ~ bit15: invalid"]
+    #[doc = "Bits 0:15 - Represents the values of GPIO strapping pins. (need update the description, for example) - bit0: invalid - bit1: MTMS - bit2: MTDI - bit3: GPIO27 - bit4: GPIO28 - bit5: GPIO7 - bit6 ~ bit15: invalid"]
     #[inline(always)]
     pub fn strapping(&self) -> STRAPPING_R {
         STRAPPING_R::new((self.bits & 0xffff) as u16)
