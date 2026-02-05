@@ -2,12 +2,12 @@
 pub type R = crate::R<OUT_SPEC>;
 #[doc = "Register `OUT` writer"]
 pub type W = crate::W<OUT_SPEC>;
-#[doc = "Field `DATA_ORIG` reader - Configures the output value of GPIO0 ~ 31 output in simple GPIO output mode.\\\\ 0: Low level\\\\ 1: High level\\\\"]
+#[doc = "Field `DATA_ORIG` reader - Configures the output value of GPIO0 ~ 31 output in simple GPIO output mode.\\\\ 0: Low level\\\\ 1: High level\\\\ The value of bit0 ~ bit31 correspond to the output value of GPIO0 ~ GPIO31 respectively. Bitxx ~ bitxx is invalid.\\\\"]
 pub type DATA_ORIG_R = crate::FieldReader<u32>;
-#[doc = "Field `DATA_ORIG` writer - Configures the output value of GPIO0 ~ 31 output in simple GPIO output mode.\\\\ 0: Low level\\\\ 1: High level\\\\"]
+#[doc = "Field `DATA_ORIG` writer - Configures the output value of GPIO0 ~ 31 output in simple GPIO output mode.\\\\ 0: Low level\\\\ 1: High level\\\\ The value of bit0 ~ bit31 correspond to the output value of GPIO0 ~ GPIO31 respectively. Bitxx ~ bitxx is invalid.\\\\"]
 pub type DATA_ORIG_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - Configures the output value of GPIO0 ~ 31 output in simple GPIO output mode.\\\\ 0: Low level\\\\ 1: High level\\\\"]
+    #[doc = "Bits 0:31 - Configures the output value of GPIO0 ~ 31 output in simple GPIO output mode.\\\\ 0: Low level\\\\ 1: High level\\\\ The value of bit0 ~ bit31 correspond to the output value of GPIO0 ~ GPIO31 respectively. Bitxx ~ bitxx is invalid.\\\\"]
     #[inline(always)]
     pub fn data_orig(&self) -> DATA_ORIG_R {
         DATA_ORIG_R::new(self.bits)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Configures the output value of GPIO0 ~ 31 output in simple GPIO output mode.\\\\ 0: Low level\\\\ 1: High level\\\\"]
+    #[doc = "Bits 0:31 - Configures the output value of GPIO0 ~ 31 output in simple GPIO output mode.\\\\ 0: Low level\\\\ 1: High level\\\\ The value of bit0 ~ bit31 correspond to the output value of GPIO0 ~ GPIO31 respectively. Bitxx ~ bitxx is invalid.\\\\"]
     #[inline(always)]
     pub fn data_orig(&mut self) -> DATA_ORIG_W<'_, OUT_SPEC> {
         DATA_ORIG_W::new(self, 0)

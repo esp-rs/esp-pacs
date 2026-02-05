@@ -1,0 +1,284 @@
+_add:
+  HINF:
+    description: HINF
+    baseAddress: 0x60016000
+    addressBlock:
+      - offset: 0x0
+        size: 0x100
+        usage: "Registers"
+    registers:
+      CFG_DATA0:
+        description: CFG_DATA0
+        addressOffset: 0x0
+        size: 32
+        access: read-write
+        resetValue: 0x009A6666
+        fields:
+          DEVICE_ID_FN1:
+            bitOffset: 0
+            bitWidth: 16
+          USER_ID_FN1:
+            bitOffset: 16
+            bitWidth: 16
+
+      CFG_DATA1:
+        description: CFG_DATA1
+        addressOffset: 0x4
+        size: 32
+        access: read-write
+        resetValue: 0x00232811
+        fields:
+          SDIO_ENABLE:
+            bitOffset: 0
+            bitWidth: 1
+          SDIO_IOREADY1:
+            bitOffset: 1
+            bitWidth: 1
+          HIGHSPEED_ENABLE:
+            bitOffset: 2
+            bitWidth: 1
+          HIGHSPEED_MODE:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-only
+          SDIO_CD_ENABLE:
+            bitOffset: 4
+            bitWidth: 1
+          SDIO_IOREADY2:
+            bitOffset: 5
+            bitWidth: 1
+          SDIO_INT_MASK:
+            bitOffset: 6
+            bitWidth: 1
+          IOENABLE2:
+            bitOffset: 7
+            bitWidth: 1
+            access: read-only
+          CD_DISABLE:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-only
+          FUNC1_EPS:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-only
+          EMP:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-only
+          IOENABLE1:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-only
+          SDIO_VER:
+            bitOffset: 12
+            bitWidth: 12
+          FUNC2_EPS:
+            bitOffset: 24
+            bitWidth: 1
+            access: read-only
+          SDIO20_CONF:
+            bitOffset: 25
+            bitWidth: 7
+
+      CFG_TIMING:
+        description: CFG_TIMING
+        addressOffset: 0x8
+        size: 32
+        access: read-write
+        resetValue: 0x1D780842
+        fields:
+          NCRC:
+            bitOffset: 0
+            bitWidth: 3
+          PST_END_CMD_LOW_VALUE:
+            bitOffset: 3
+            bitWidth: 7
+          PST_END_DATA_LOW_VALUE:
+            bitOffset: 10
+            bitWidth: 6
+          SDCLK_STOP_THRES:
+            bitOffset: 16
+            bitWidth: 11
+          SAMPLE_CLK_DIVIDER:
+            bitOffset: 28
+            bitWidth: 4
+
+      CFG_UPDATE:
+        description: CFG_UPDATE
+        addressOffset: 0xC
+        size: 32
+        access: write-only
+        resetValue: 0x0
+        fields:
+          CONF_UPDATE:
+            bitOffset: 0
+            bitWidth: 1
+
+      CFG_DATA7:
+        description: CFG_DATA7
+        addressOffset: 0x1C
+        size: 32
+        access: read-write
+        resetValue: 0x03A00000
+        fields:
+          PIN_STATE:
+            bitOffset: 0
+            bitWidth: 8
+          CHIP_STATE:
+            bitOffset: 8
+            bitWidth: 8
+          SDIO_RST:
+            bitOffset: 16
+            bitWidth: 1
+          SDIO_IOREADY0:
+            bitOffset: 17
+            bitWidth: 1
+          SDIO_MEM_PD:
+            bitOffset: 18
+            bitWidth: 1
+          ESDIO_DATA1_INT_EN:
+            bitOffset: 19
+            bitWidth: 1
+          SDIO_SWITCH_VOLT_SW:
+            bitOffset: 20
+            bitWidth: 1
+          DDR50_BLK_LEN_FIX_EN:
+            bitOffset: 21
+            bitWidth: 1
+          CLK_EN:
+            bitOffset: 22
+            bitWidth: 1
+          SDDR50:
+            bitOffset: 23
+            bitWidth: 1
+          SSDR104:
+            bitOffset: 24
+            bitWidth: 1
+          SSDR50:
+            bitOffset: 25
+            bitWidth: 1
+          SDTD:
+            bitOffset: 26
+            bitWidth: 1
+          SDTA:
+            bitOffset: 27
+            bitWidth: 1
+          SDTC:
+            bitOffset: 28
+            bitWidth: 1
+          SAI:
+            bitOffset: 29
+            bitWidth: 1
+          SDIO_WAKEUP_CLR:
+            bitOffset: 30
+            bitWidth: 1
+
+      CIS_CONF_W%s:
+        dim: 8
+        dimIncrement: 0x4
+        dimIndex: "0-7"
+        description: "SDIO cis configuration register"
+        addressOffset: 0x20
+        size: 0x20
+        resetValue: 0xFFFFFFFF
+        fields:
+          CIS_CONF_W:
+            description: "Configure cis addr 39~36"
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+
+      CFG_DATA16:
+        description: CFG_DATA16
+        addressOffset: 0x40
+        size: 32
+        access: read-write
+        resetValue: 0x009A7767
+        fields:
+          DEVICE_ID_FN2:
+            bitOffset: 0
+            bitWidth: 16
+          USER_ID_FN2:
+            bitOffset: 16
+            bitWidth: 16
+
+      CFG_UHS1_INT_MODE:
+        description: CFG_UHS1_INT_MODE
+        addressOffset: 0x44
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          INTOE_END_AHEAD_MODE:
+            bitOffset: 0
+            bitWidth: 2
+          INT_END_AHEAD_MODE:
+            bitOffset: 2
+            bitWidth: 2
+          INTOE_ST_AHEAD_MODE:
+            bitOffset: 4
+            bitWidth: 2
+          INT_ST_AHEAD_MODE:
+            bitOffset: 6
+            bitWidth: 2
+
+      CONF_STATUS:
+        description: CONF_STATUS
+        addressOffset: 0x54
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          FUNC0_CONFIG0:
+            bitOffset: 0
+            bitWidth: 8
+          SDR25_ST:
+            bitOffset: 8
+            bitWidth: 1
+          SDR50_ST:
+            bitOffset: 9
+            bitWidth: 1
+          SDR104_ST:
+            bitOffset: 10
+            bitWidth: 1
+          DDR50_ST:
+            bitOffset: 11
+            bitWidth: 1
+          TUNE_ST:
+            bitOffset: 12
+            bitWidth: 3
+          SDIO_SWITCH_VOLT_ST:
+            bitOffset: 15
+            bitWidth: 1
+          SDIO_SWITCH_END:
+            bitOffset: 16
+            bitWidth: 1
+
+      SDIO_SLAVE_LDO_CONF:
+        description: SDIO_SLAVE_LDO_CONF
+        addressOffset: 0xB0
+        size: 32
+        access: read-write
+        resetValue: 0x00000014
+        fields:
+          LDO_READY_CTL_IN_EN:
+            bitOffset: 0
+            bitWidth: 1
+          LDO_READY_THRES:
+            bitOffset: 1
+            bitWidth: 5
+          LDO_READY_IGNORE_EN:
+            bitOffset: 6
+            bitWidth: 1
+
+      SDIO_DATE:
+        description: SDIO_DATE
+        addressOffset: 0xFC
+        size: 32
+        access: read-write
+        resetValue: 0x02412000
+        fields:
+          SDIO_DATE:
+            bitOffset: 0
+            bitWidth: 32

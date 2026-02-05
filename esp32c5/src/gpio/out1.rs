@@ -2,12 +2,12 @@
 pub type R = crate::R<OUT1_SPEC>;
 #[doc = "Register `OUT1` writer"]
 pub type W = crate::W<OUT1_SPEC>;
-#[doc = "Field `DATA_ORIG` reader - Configures the output value of GPIO32 ~ 32 output in simple GPIO output mode.\\\\ 0: Low level\\\\ 1: High level\\\\"]
+#[doc = "Field `DATA_ORIG` reader - Configures the output value of GPIO32 ~ 32 output in simple GPIO output mode.\\\\ 0: Low level\\\\ 1: High level\\\\ The value of bit32 ~ bit32 correspond to the output value of GPIO32 ~ GPIO32 respectively. Bitxx ~ bitxx is invalid.\\\\"]
 pub type DATA_ORIG_R = crate::BitReader;
-#[doc = "Field `DATA_ORIG` writer - Configures the output value of GPIO32 ~ 32 output in simple GPIO output mode.\\\\ 0: Low level\\\\ 1: High level\\\\"]
+#[doc = "Field `DATA_ORIG` writer - Configures the output value of GPIO32 ~ 32 output in simple GPIO output mode.\\\\ 0: Low level\\\\ 1: High level\\\\ The value of bit32 ~ bit32 correspond to the output value of GPIO32 ~ GPIO32 respectively. Bitxx ~ bitxx is invalid.\\\\"]
 pub type DATA_ORIG_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - Configures the output value of GPIO32 ~ 32 output in simple GPIO output mode.\\\\ 0: Low level\\\\ 1: High level\\\\"]
+    #[doc = "Bit 0 - Configures the output value of GPIO32 ~ 32 output in simple GPIO output mode.\\\\ 0: Low level\\\\ 1: High level\\\\ The value of bit32 ~ bit32 correspond to the output value of GPIO32 ~ GPIO32 respectively. Bitxx ~ bitxx is invalid.\\\\"]
     #[inline(always)]
     pub fn data_orig(&self) -> DATA_ORIG_R {
         DATA_ORIG_R::new((self.bits & 1) != 0)
@@ -22,13 +22,13 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Configures the output value of GPIO32 ~ 32 output in simple GPIO output mode.\\\\ 0: Low level\\\\ 1: High level\\\\"]
+    #[doc = "Bit 0 - Configures the output value of GPIO32 ~ 32 output in simple GPIO output mode.\\\\ 0: Low level\\\\ 1: High level\\\\ The value of bit32 ~ bit32 correspond to the output value of GPIO32 ~ GPIO32 respectively. Bitxx ~ bitxx is invalid.\\\\"]
     #[inline(always)]
     pub fn data_orig(&mut self) -> DATA_ORIG_W<'_, OUT1_SPEC> {
         DATA_ORIG_W::new(self, 0)
     }
 }
-#[doc = "GPIO output register for GPIO32-32\n\nYou can [`read`](crate::Reg::read) this register and get [`out1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO output register\n\nYou can [`read`](crate::Reg::read) this register and get [`out1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT1_SPEC;
 impl crate::RegisterSpec for OUT1_SPEC {
     type Ux = u32;

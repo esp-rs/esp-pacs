@@ -2,12 +2,12 @@
 pub type R = crate::R<ENABLE1_SPEC>;
 #[doc = "Register `ENABLE1` writer"]
 pub type W = crate::W<ENABLE1_SPEC>;
-#[doc = "Field `DATA` reader - Configures whether or not to enable the output of GPIO32 ~ GPIO32.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
+#[doc = "Field `DATA` reader - Configures whether or not to enable the output of GPIO32 ~ GPIO32.\\\\ 0: Not enable\\\\ 1: Enable\\\\ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.\\\\"]
 pub type DATA_R = crate::BitReader;
-#[doc = "Field `DATA` writer - Configures whether or not to enable the output of GPIO32 ~ GPIO32.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
+#[doc = "Field `DATA` writer - Configures whether or not to enable the output of GPIO32 ~ GPIO32.\\\\ 0: Not enable\\\\ 1: Enable\\\\ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.\\\\"]
 pub type DATA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - Configures whether or not to enable the output of GPIO32 ~ GPIO32.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
+    #[doc = "Bit 0 - Configures whether or not to enable the output of GPIO32 ~ GPIO32.\\\\ 0: Not enable\\\\ 1: Enable\\\\ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.\\\\"]
     #[inline(always)]
     pub fn data(&self) -> DATA_R {
         DATA_R::new((self.bits & 1) != 0)
@@ -22,13 +22,13 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Configures whether or not to enable the output of GPIO32 ~ GPIO32.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
+    #[doc = "Bit 0 - Configures whether or not to enable the output of GPIO32 ~ GPIO32.\\\\ 0: Not enable\\\\ 1: Enable\\\\ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.\\\\"]
     #[inline(always)]
     pub fn data(&mut self) -> DATA_W<'_, ENABLE1_SPEC> {
         DATA_W::new(self, 0)
     }
 }
-#[doc = "GPIO output enable register for GPIO32-32\n\nYou can [`read`](crate::Reg::read) this register and get [`enable1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO output enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`enable1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ENABLE1_SPEC;
 impl crate::RegisterSpec for ENABLE1_SPEC {
     type Ux = u32;

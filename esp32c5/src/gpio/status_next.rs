@@ -1,9 +1,9 @@
 #[doc = "Register `STATUS_NEXT` reader"]
 pub type R = crate::R<STATUS_NEXT_SPEC>;
-#[doc = "Field `STATUS_INTERRUPT_NEXT` reader - Represents the interrupt source signal of GPIO0 ~ GPIO31.\\\\ Each bit represents:\\\\ 0: The GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE.\\\\ 1: The GPIO generates an interrupt configured by GPIO_PIN0_INT_TYPE.\\\\ The interrupt could be rising edge interrupt, falling edge interrupt, level sensitive interrupt and any edge interrupt.\\\\"]
+#[doc = "Field `STATUS_INTERRUPT_NEXT` reader - Represents the interrupt source signal of GPIO0 ~ GPIO31.\\\\ Bit0 ~ bit24 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. Each bit represents:\\\\ 0: The GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE.\\\\ 1: The GPIO generates an interrupt configured by GPIO_PIN0_INT_TYPE.\\\\ The interrupt could be rising edge interrupt, falling edge interrupt, level sensitive interrupt and any edge interrupt.\\\\"]
 pub type STATUS_INTERRUPT_NEXT_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - Represents the interrupt source signal of GPIO0 ~ GPIO31.\\\\ Each bit represents:\\\\ 0: The GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE.\\\\ 1: The GPIO generates an interrupt configured by GPIO_PIN0_INT_TYPE.\\\\ The interrupt could be rising edge interrupt, falling edge interrupt, level sensitive interrupt and any edge interrupt.\\\\"]
+    #[doc = "Bits 0:31 - Represents the interrupt source signal of GPIO0 ~ GPIO31.\\\\ Bit0 ~ bit24 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. Each bit represents:\\\\ 0: The GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE.\\\\ 1: The GPIO generates an interrupt configured by GPIO_PIN0_INT_TYPE.\\\\ The interrupt could be rising edge interrupt, falling edge interrupt, level sensitive interrupt and any edge interrupt.\\\\"]
     #[inline(always)]
     pub fn status_interrupt_next(&self) -> STATUS_INTERRUPT_NEXT_R {
         STATUS_INTERRUPT_NEXT_R::new(self.bits)

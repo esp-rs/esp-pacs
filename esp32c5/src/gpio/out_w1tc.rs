@@ -1,6 +1,6 @@
 #[doc = "Register `OUT_W1TC` writer"]
 pub type W = crate::W<OUT_W1TC_SPEC>;
-#[doc = "Field `OUT_W1TC` writer - Configures whether or not to clear the output register GPIO_OUT_REG of GPIO0 ~ GPIO31 output.\\\\ 0: Not clear\\\\ 1: The corresponding bit in GPIO_OUT_REG will be cleared.\\\\ Recommended operation: use this register to clear GPIO_OUT_REG. \\\\"]
+#[doc = "Field `OUT_W1TC` writer - Configures whether or not to clear the output register GPIO_OUT_REG of GPIO0 ~ GPIO31 output.\\\\ 0: Not clear\\\\ 1: The corresponding bit in GPIO_OUT_REG will be cleared.\\\\ Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. \\\\ Recommended operation: use this register to clear GPIO_OUT_REG. \\\\"]
 pub type OUT_W1TC_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<OUT_W1TC_SPEC> {
@@ -9,7 +9,7 @@ impl core::fmt::Debug for crate::generic::Reg<OUT_W1TC_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Configures whether or not to clear the output register GPIO_OUT_REG of GPIO0 ~ GPIO31 output.\\\\ 0: Not clear\\\\ 1: The corresponding bit in GPIO_OUT_REG will be cleared.\\\\ Recommended operation: use this register to clear GPIO_OUT_REG. \\\\"]
+    #[doc = "Bits 0:31 - Configures whether or not to clear the output register GPIO_OUT_REG of GPIO0 ~ GPIO31 output.\\\\ 0: Not clear\\\\ 1: The corresponding bit in GPIO_OUT_REG will be cleared.\\\\ Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. \\\\ Recommended operation: use this register to clear GPIO_OUT_REG. \\\\"]
     #[inline(always)]
     pub fn out_w1tc(&mut self) -> OUT_W1TC_W<'_, OUT_W1TC_SPEC> {
         OUT_W1TC_W::new(self, 0)

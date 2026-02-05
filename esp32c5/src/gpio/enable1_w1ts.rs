@@ -1,6 +1,6 @@
 #[doc = "Register `ENABLE1_W1TS` writer"]
 pub type W = crate::W<ENABLE1_W1TS_SPEC>;
-#[doc = "Field `ENABLE1_W1TS` writer - Configures whether or not to set the output enable register GPIO_ENABLE_REG of GPIO32 ~ GPIO32.\\\\ 0: Not set\\\\ 1: The corresponding bit in GPIO_ENABLE_REG will be set to 1\\\\ Recommended operation: use this register to set GPIO_ENABLE1_REG.\\\\"]
+#[doc = "Field `ENABLE1_W1TS` writer - Configures whether or not to set the output enable register GPIO_ENABLE1_REG of GPIO32 ~ GPIO32.\\\\ 0: Not set\\\\ 1: The corresponding bit in GPIO_ENABLE1_REG will be set to 1\\\\ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. \\\\ Recommended operation: use this register to set GPIO_ENABLE1_REG.\\\\"]
 pub type ENABLE1_W1TS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ENABLE1_W1TS_SPEC> {
@@ -9,13 +9,13 @@ impl core::fmt::Debug for crate::generic::Reg<ENABLE1_W1TS_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Configures whether or not to set the output enable register GPIO_ENABLE_REG of GPIO32 ~ GPIO32.\\\\ 0: Not set\\\\ 1: The corresponding bit in GPIO_ENABLE_REG will be set to 1\\\\ Recommended operation: use this register to set GPIO_ENABLE1_REG.\\\\"]
+    #[doc = "Bit 0 - Configures whether or not to set the output enable register GPIO_ENABLE1_REG of GPIO32 ~ GPIO32.\\\\ 0: Not set\\\\ 1: The corresponding bit in GPIO_ENABLE1_REG will be set to 1\\\\ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. \\\\ Recommended operation: use this register to set GPIO_ENABLE1_REG.\\\\"]
     #[inline(always)]
     pub fn enable1_w1ts(&mut self) -> ENABLE1_W1TS_W<'_, ENABLE1_W1TS_SPEC> {
         ENABLE1_W1TS_W::new(self, 0)
     }
 }
-#[doc = "GPIO output enable set register for GPIO32-32\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable1_w1ts::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO output enable set register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable1_w1ts::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ENABLE1_W1TS_SPEC;
 impl crate::RegisterSpec for ENABLE1_W1TS_SPEC {
     type Ux = u32;

@@ -1,6 +1,6 @@
 #[doc = "Register `OUT1_W1TC` writer"]
 pub type W = crate::W<OUT1_W1TC_SPEC>;
-#[doc = "Field `OUT1_W1TC` writer - Configures whether or not to clear the output register GPIO_OUT1_REG of GPIO32 ~ GPIO32 output.\\\\ 0: Not clear\\\\ 1: The corresponding bit in GPIO_OUT_REG will be cleared.\\\\ Recommended operation: use this register to clear GPIO_OUT1_REG. \\\\"]
+#[doc = "Field `OUT1_W1TC` writer - Configures whether or not to clear the output register GPIO_OUT1_REG of GPIO32 ~ GPIO32 output.\\\\ 0: Not clear\\\\ 1: The corresponding bit in GPIO_OUT1_REG will be cleared.\\\\ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. \\\\ Recommended operation: use this register to clear GPIO_OUT1_REG. \\\\"]
 pub type OUT1_W1TC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<OUT1_W1TC_SPEC> {
@@ -9,13 +9,13 @@ impl core::fmt::Debug for crate::generic::Reg<OUT1_W1TC_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Configures whether or not to clear the output register GPIO_OUT1_REG of GPIO32 ~ GPIO32 output.\\\\ 0: Not clear\\\\ 1: The corresponding bit in GPIO_OUT_REG will be cleared.\\\\ Recommended operation: use this register to clear GPIO_OUT1_REG. \\\\"]
+    #[doc = "Bit 0 - Configures whether or not to clear the output register GPIO_OUT1_REG of GPIO32 ~ GPIO32 output.\\\\ 0: Not clear\\\\ 1: The corresponding bit in GPIO_OUT1_REG will be cleared.\\\\ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. \\\\ Recommended operation: use this register to clear GPIO_OUT1_REG. \\\\"]
     #[inline(always)]
     pub fn out1_w1tc(&mut self) -> OUT1_W1TC_W<'_, OUT1_W1TC_SPEC> {
         OUT1_W1TC_W::new(self, 0)
     }
 }
-#[doc = "GPIO output clear register for GPIO32-32\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out1_w1tc::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO output clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out1_w1tc::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT1_W1TC_SPEC;
 impl crate::RegisterSpec for OUT1_W1TC_SPEC {
     type Ux = u32;
