@@ -9266,11 +9266,11 @@ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.\\<
           <fields>
             <field>
               <name>INTERRUPT</name>
-              <description>The interrupt status of GPIO0 ~ GPIO31, can be configured by the software. 
+              <description>The interrupt status of GPIO0 ~ GPIO31, can be configured by the software.
 
-    - Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. 
+    - Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid.
     - Each bit represents the status of its corresponding GPIO:
-    
+
         - 0: Represents the GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE, or this bit is configured to 0 by the software.
         - 1: Represents the GPIO generates the interrupt configured by GPIO_PIN0_INT_TYPE, or this bit is configured to 1 by the software.
     </description>
@@ -9288,9 +9288,9 @@ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.\\<
           <fields>
             <field>
               <name>STATUS_W1TS</name>
-              <description>Configures whether or not to set the interrupt status register GPIO_STATUS_INTERRUPT of GPIO0 ~ GPIO31. 
+              <description>Configures whether or not to set the interrupt status register GPIO_STATUS_INTERRUPT of GPIO0 ~ GPIO31.
 
-    - Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. 
+    - Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid.
     - If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS_INTERRUPT will be set to 1. \item Recommended operation: use this register to set GPIO_STATUS_INTERRUPT. </description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -9306,9 +9306,9 @@ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.\\<
           <fields>
             <field>
               <name>STATUS_W1TC</name>
-              <description>Configures whether or not to clear the interrupt status register GPIO_STATUS_INTERRUPT of GPIO0 ~ GPIO31. 
+              <description>Configures whether or not to clear the interrupt status register GPIO_STATUS_INTERRUPT of GPIO0 ~ GPIO31.
 
-    - Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid. 
+    - Bit0 ~ bit31 are corresponding to GPIO0 ~ GPIO31. Bitxx ~ bitxx is invalid.
     - If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS_INTERRUPT will be cleared. \item Recommended operation: use this register to clear GPIO_STATUS_INTERRUPT.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -9324,11 +9324,11 @@ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.\\<
           <fields>
             <field>
               <name>INTERRUPT</name>
-              <description>The interrupt status of GPIO32 ~ GPIO32, can be configured by the software. 
+              <description>The interrupt status of GPIO32 ~ GPIO32, can be configured by the software.
 
-    - Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. 
+    - Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.
     - Each bit represents the status of its corresponding GPIO:
-    
+
         - 0: Represents the GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE, or this bit is configured to 0 by the software.
         - 1: Represents the GPIO generates the interrupt configured by GPIO_PIN0_INT_TYPE, or this bit is configured to 1 by the software.
     </description>
@@ -9346,9 +9346,9 @@ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.\\<
           <fields>
             <field>
               <name>STATUS1_W1TS</name>
-              <description>Configures whether or not to set the interrupt status register GPIO_STATUS1_INTERRUPT of GPIO32 ~ GPIO32. 
+              <description>Configures whether or not to set the interrupt status register GPIO_STATUS1_INTERRUPT of GPIO32 ~ GPIO32.
 
-    - Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. 
+    - Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.
     - If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS1_INTERRUPT will be set to 1. \item Recommended operation: use this register to set GPIO_STATUS1_INTERRUPT. </description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -9364,9 +9364,9 @@ Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.\\<
           <fields>
             <field>
               <name>STATUS1_W1TC</name>
-              <description>Configures whether or not to clear the interrupt status register GPIO_STATUS1_INTERRUPT of GPIO32 ~ GPIO32. 
+              <description>Configures whether or not to clear the interrupt status register GPIO_STATUS1_INTERRUPT of GPIO32 ~ GPIO32.
 
-    - Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid. 
+    - Bit32 ~ bit32 are corresponding to GPIO32 ~ GPIO32. Bitxx ~ bitxx is invalid.
     - If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS1_INTERRUPT will be cleared. \item Recommended operation: use this register to clear GPIO_STATUS1_INTERRUPT.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -10252,7 +10252,7 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
             <field>
               <name>FUNC_OE_SEL</name>
               <description>Configures to select the source of output enable signal.\\
-0: Use output enable signal from peripheral.\\ 
+0: Use output enable signal from peripheral.\\
 1: Force the output enable signal to be sourced from bit %s of GPIO_ENABLE_REG. \\</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
@@ -10305,7 +10305,7 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
             <field>
               <name>FUNC29_OE_SEL</name>
               <description>Configures to select the source of output enable signal.\\
-0: Use output enable signal from peripheral.\\ 
+0: Use output enable signal from peripheral.\\
 1: Force the output enable signal to be sourced from bit 10 of GPIO_ENABLE_REG. \\</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
@@ -10358,7 +10358,7 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
             <field>
               <name>FUNC30_OE_SEL</name>
               <description>Configures to select the source of output enable signal.\\
-0: Use output enable signal from peripheral.\\ 
+0: Use output enable signal from peripheral.\\
 1: Force the output enable signal to be sourced from bit 10 of GPIO_ENABLE_REG. \\</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
@@ -10411,7 +10411,7 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
             <field>
               <name>FUNC31_OE_SEL</name>
               <description>Configures to select the source of output enable signal.\\
-0: Use output enable signal from peripheral.\\ 
+0: Use output enable signal from peripheral.\\
 1: Force the output enable signal to be sourced from bit 10 of GPIO_ENABLE_REG. \\</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
@@ -10464,7 +10464,7 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
             <field>
               <name>FUNC32_OE_SEL</name>
               <description>Configures to select the source of output enable signal.\\
-0: Use output enable signal from peripheral.\\ 
+0: Use output enable signal from peripheral.\\
 1: Force the output enable signal to be sourced from bit 10 of GPIO_ENABLE_REG. \\</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
@@ -10706,7 +10706,7 @@ Measurement unit: IO MUX operating clock cycle\\</description>
 1: Select GPIO1\\
 ......\\
 27: Select GPIO27\\
-28: Select GPIO28\\ 
+28: Select GPIO28\\
 29 ~ 63: Reserved\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>6</bitWidth>
@@ -11840,8 +11840,8 @@ Measurement unit: IO MUX operating clock cycle\\</description>
           <fields>
             <field>
               <name>REGION_FILTER_EN</name>
-              <description>Configure bit 0 (0-15) to enable region 0.\\ 
-0: disable \\ 
+              <description>Configure bit 0 (0-15) to enable region 0.\\
+0: disable \\
 1: enable  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
@@ -12016,8 +12016,8 @@ Measurement unit: IO MUX operating clock cycle\\</description>
           <fields>
             <field>
               <name>M0_EXCEPTION_STATUS</name>
-              <description>Represents exception status.\\ 
-bit0: 1 represents authority_exception \\ 
+              <description>Represents exception status.\\
+bit0: 1 represents authority_exception \\
 bit1: 1 represents space_exception  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -12092,8 +12092,8 @@ bit1: 1 represents space_exception  \\</description>
           <fields>
             <field>
               <name>M1_EXCEPTION_STATUS</name>
-              <description>Represents exception status.\\ 
-bit0: 1 represents authority_exception \\ 
+              <description>Represents exception status.\\
+bit0: 1 represents authority_exception \\
 bit1: 1 represents space_exception  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -12168,8 +12168,8 @@ bit1: 1 represents space_exception  \\</description>
           <fields>
             <field>
               <name>M2_EXCEPTION_STATUS</name>
-              <description>Represents exception status.\\ 
-bit0: 1 represents authority_exception \\ 
+              <description>Represents exception status.\\
+bit0: 1 represents authority_exception \\
 bit1: 1 represents space_exception  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -12244,8 +12244,8 @@ bit1: 1 represents space_exception  \\</description>
           <fields>
             <field>
               <name>M3_EXCEPTION_STATUS</name>
-              <description>Represents exception status.\\ 
-bit0: 1 represents authority_exception \\ 
+              <description>Represents exception status.\\
+bit0: 1 represents authority_exception \\
 bit1: 1 represents space_exception  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -12320,8 +12320,8 @@ bit1: 1 represents space_exception  \\</description>
           <fields>
             <field>
               <name>M4_EXCEPTION_STATUS</name>
-              <description>Represents exception status.\\ 
-bit0: 1 represents authority_exception \\ 
+              <description>Represents exception status.\\
+bit0: 1 represents authority_exception \\
 bit1: 1 represents space_exception  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -12396,8 +12396,8 @@ bit1: 1 represents space_exception  \\</description>
           <fields>
             <field>
               <name>M0_APM_INT_EN</name>
-              <description>Configures to enable APM M0 interrupt.\\ 
-0: disable \\ 
+              <description>Configures to enable APM M0 interrupt.\\
+0: disable \\
 1: enable  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -12405,8 +12405,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>M1_APM_INT_EN</name>
-              <description>Configures to enable APM M1 interrupt.\\ 
-0: disable \\ 
+              <description>Configures to enable APM M1 interrupt.\\
+0: disable \\
 1: enable  \\</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -12414,8 +12414,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>M2_APM_INT_EN</name>
-              <description>Configures to enable APM M2 interrupt.\\ 
-0: disable \\ 
+              <description>Configures to enable APM M2 interrupt.\\
+0: disable \\
 1: enable  \\</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -12423,8 +12423,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>M3_APM_INT_EN</name>
-              <description>Configures to enable APM M3 interrupt.\\ 
-0: disable \\ 
+              <description>Configures to enable APM M3 interrupt.\\
+0: disable \\
 1: enable  \\</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -12432,8 +12432,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>M4_APM_INT_EN</name>
-              <description>Configures to enable APM M4 interrupt.\\ 
-0: disable \\ 
+              <description>Configures to enable APM M4 interrupt.\\
+0: disable \\
 1: enable  \\</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -12450,8 +12450,8 @@ bit1: 1 represents space_exception  \\</description>
           <fields>
             <field>
               <name>CLK_EN</name>
-              <description>Configures whether to keep the clock always on.\\ 
-0: enable automatic clock gating \\ 
+              <description>Configures whether to keep the clock always on.\\
+0: enable automatic clock gating \\
 1: keep the clock always on  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -13368,7 +13368,7 @@ Measurement unit: i2c_sclk \\</description>
             <field>
               <name>SDA_FORCE_OUT</name>
               <description>Configures the SDA output mode.\\
-0: Open drain output \\ 
+0: Open drain output \\
 1: Direct output \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -13377,7 +13377,7 @@ Measurement unit: i2c_sclk \\</description>
             <field>
               <name>SCL_FORCE_OUT</name>
               <description>Configures the SCL output mode.\\
-0: Open drain output \\ 
+0: Open drain output \\
 1: Direct output \\</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -13401,7 +13401,7 @@ Measurement unit: i2c_sclk \\</description>
             </field>
             <field>
               <name>MS_MODE</name>
-              <description>Configures the module as an I2C Master or Slave.\\ 
+              <description>Configures the module as an I2C Master or Slave.\\
 0: Slave \\
 1: Master \\</description>
               <bitOffset>4</bitOffset>
@@ -13410,7 +13410,7 @@ Measurement unit: i2c_sclk \\</description>
             </field>
             <field>
               <name>TRANS_START</name>
-              <description>Configures whether the slave starts sending the data in txfifo.\\ 
+              <description>Configures whether the slave starts sending the data in txfifo.\\
 0: No effect \\
 1: Start</description>
               <bitOffset>5</bitOffset>
@@ -13419,7 +13419,7 @@ Measurement unit: i2c_sclk \\</description>
             </field>
             <field>
               <name>TX_LSB_FIRST</name>
-              <description>Configures to control the sending order for data needing to be sent.\\ 
+              <description>Configures to control the sending order for data needing to be sent.\\
 0: send data from the most significant bit \\
 1: send data from the least significant bit \\</description>
               <bitOffset>6</bitOffset>
@@ -13429,7 +13429,7 @@ Measurement unit: i2c_sclk \\</description>
             <field>
               <name>RX_LSB_FIRST</name>
               <description>Configures to control the storage order for received data.\\
-0: receive data from the most significant bit \\ 
+0: receive data from the most significant bit \\
 1: receive data from the least significant bit \\</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
@@ -13491,7 +13491,7 @@ Measurement unit: i2c_sclk \\</description>
             </field>
             <field>
               <name>ADDR_BROADCASTING_EN</name>
-              <description>Configures to support the 7 bit general call function.\\ 
+              <description>Configures to support the 7 bit general call function.\\
 0: Not support \\
 1: Support \\</description>
               <bitOffset>14</bitOffset>
@@ -13537,7 +13537,7 @@ Measurement unit: i2c_sclk \\</description>
             <field>
               <name>BUS_BUSY</name>
               <description>Represents the I2C bus state.\\
-1: The I2C bus is busy transferring data\\ 
+1: The I2C bus is busy transferring data\\
 0: The I2C bus is in idle state.\\</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -13579,7 +13579,7 @@ Valid only when the module is configured as an I2C Slave.\\
             </field>
             <field>
               <name>SCL_MAIN_STATE_LAST</name>
-              <description>Represents the states of the I2C module state machine.\\ 
+              <description>Represents the states of the I2C module state machine.\\
 0: Idle\\
 1: Address shift\\
 2: ACK address\\
@@ -13648,7 +13648,7 @@ Measurement unit: i2c_sclk \\</description>
             </field>
             <field>
               <name>ADDR_10BIT_EN</name>
-              <description>Configures to enable the slave 10-bit addressing mode in master mode.\\ 
+              <description>Configures to enable the slave 10-bit addressing mode in master mode.\\
 0: No effect \\
 1: Enable \\</description>
               <bitOffset>31</bitOffset>
@@ -13709,7 +13709,7 @@ Measurement unit: i2c_sclk \\</description>
           <fields>
             <field>
               <name>RXFIFO_WM_THRHD</name>
-              <description>Configures the water mark threshold of RXFIFO in nonfifo access mode. When I2C_FIFO_PRT_EN is 1 and RX FIFO counter is bigger than I2C_RXFIFO_WM_THRHD[4:0], I2C_RXFIFO_WM_INT_RAW bit will be valid. 
+              <description>Configures the water mark threshold of RXFIFO in nonfifo access mode. When I2C_FIFO_PRT_EN is 1 and RX FIFO counter is bigger than I2C_RXFIFO_WM_THRHD[4:0], I2C_RXFIFO_WM_INT_RAW bit will be valid.
 \tododone{For CJ, please check this description. I habe doubt about reg_reg_fifo_prt_en.CJ: modified}</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -14482,7 +14482,7 @@ SCL positive edge for a stop condition</description>
           <fields>
             <field>
               <name>SCL_FILTER_THRES</name>
-              <description>Configures the threshold pulse width to be filtered on SCL. When a pulse on the SCL input has smaller width than this register value, the I2C controller will ignore that pulse. 
+              <description>Configures the threshold pulse width to be filtered on SCL. When a pulse on the SCL input has smaller width than this register value, the I2C controller will ignore that pulse.
 Measurement unit: i2c_sclk \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
@@ -14490,7 +14490,7 @@ Measurement unit: i2c_sclk \\</description>
             </field>
             <field>
               <name>SDA_FILTER_THRES</name>
-              <description>Configures the threshold pulse width to be filtered on SDA. When a pulse on the SDA input has smaller width than this register value, the I2C controller will ignore that pulse. 
+              <description>Configures the threshold pulse width to be filtered on SDA. When a pulse on the SDA input has smaller width than this register value, the I2C controller will ignore that pulse.
 Measurement unit: i2c_sclk \\</description>
               <bitOffset>4</bitOffset>
               <bitWidth>4</bitWidth>
@@ -14569,7 +14569,7 @@ Measurement unit: i2c_sclk \\</description>
             <field>
               <name>COMMAND0</name>
               <description>Configures command 0. \\
-It consists of three parts:\\ 
+It consists of three parts:\\
 op_code is the command\\
 1: WRITE\\
 2: STOP\\
@@ -14601,7 +14601,7 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
           <fields>
             <field>
               <name>COMMAND1</name>
-              <description>Configures command 1.\\ 
+              <description>Configures command 1.\\
 See details in I2C_CMD0_REG[13:0].</description>
               <bitOffset>0</bitOffset>
               <bitWidth>14</bitWidth>
@@ -17955,7 +17955,7 @@ Measurement unit: i2c_sclk \\</description>
           <fields>
             <field>
               <name>MCU_OE</name>
-              <description>Configures whether or not to enable the output of GPIO%s in sleep mode. 
+              <description>Configures whether or not to enable the output of GPIO%s in sleep mode.
 0: Disable\\
 1: Enable\\</description>
               <bitOffset>0</bitOffset>
@@ -20873,7 +20873,7 @@ Others : no operation</description>
             <field>
               <name>CPU_CORE0_DRESET_MASK</name>
               <description>disable bypass core dreset
-1: enable bypass 
+1: enable bypass
 0: disable bypass</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -20931,7 +20931,7 @@ Others : no operation</description>
             </field>
             <field>
               <name>EXT_WAKEUP_LV</name>
-              <description>select external wakeup io level 
+              <description>select external wakeup io level
 1: io high level wakeup
 0: io low level wakeup</description>
               <bitOffset>23</bitOffset>
@@ -20940,7 +20940,7 @@ Others : no operation</description>
             </field>
             <field>
               <name>EXT_WAKEUP_FILTER</name>
-              <description>enable external filter or not 
+              <description>enable external filter or not
 1: enable
 0: disable</description>
               <bitOffset>31</bitOffset>
@@ -21345,8 +21345,8 @@ Others : no operation</description>
           <fields>
             <field>
               <name>REGION_FILTER_EN</name>
-              <description>Configure bit 0 (0-3) to enable region 0.\\ 
-0: disable \\ 
+              <description>Configure bit 0 (0-3) to enable region 0.\\
+0: disable \\
 1: enable  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
@@ -21500,8 +21500,8 @@ Others : no operation</description>
           <fields>
             <field>
               <name>M0_EXCEPTION_STATUS</name>
-              <description>Represents exception status.\\ 
-bit0: 1 represents authority_exception \\ 
+              <description>Represents exception status.\\
+bit0: 1 represents authority_exception \\
 bit1: 1 represents space_exception  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -21576,8 +21576,8 @@ bit1: 1 represents space_exception  \\</description>
           <fields>
             <field>
               <name>M1_EXCEPTION_STATUS</name>
-              <description>Represents exception status.\\ 
-bit0: 1 represents authority_exception \\ 
+              <description>Represents exception status.\\
+bit0: 1 represents authority_exception \\
 bit1: 1 represents space_exception  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -21652,8 +21652,8 @@ bit1: 1 represents space_exception  \\</description>
           <fields>
             <field>
               <name>M0_APM_INT_EN</name>
-              <description>Configures to enable APM M0 interrupt.\\ 
-0: disable \\ 
+              <description>Configures to enable APM M0 interrupt.\\
+0: disable \\
 1: enable  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21661,8 +21661,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>M1_APM_INT_EN</name>
-              <description>Configures to enable APM M1 interrupt.\\ 
-0: disable \\ 
+              <description>Configures to enable APM M1 interrupt.\\
+0: disable \\
 1: enable  \\</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21679,8 +21679,8 @@ bit1: 1 represents space_exception  \\</description>
           <fields>
             <field>
               <name>CLK_EN</name>
-              <description>Configures whether to keep the clock always on.\\ 
-0: enable automatic clock gating \\ 
+              <description>Configures whether to keep the clock always on.\\
+0: enable automatic clock gating \\
 1: keep the clock always on  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21728,7 +21728,7 @@ bit1: 1 represents space_exception  \\</description>
               <name>SLOW_CLK_SEL</name>
               <description>Configures the source of LP_SLOW_CLK.
 0: RC_SLOW_CLK
-1: XTAL32K_CLK 
+1: XTAL32K_CLK
 2: RC32K_CLK
 3:OSC_SLOW_CLK</description>
               <bitOffset>0</bitOffset>
@@ -21772,8 +21772,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>AON_FAST_OEN</name>
-              <description>Configures the clock gate to pad of the LP_DYN_FAST_CLK. 
-0: Disable the clk pass clock gate  
+              <description>Configures the clock gate to pad of the LP_DYN_FAST_CLK.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21781,8 +21781,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>SOSC_OEN</name>
-              <description>Configures the clock gate to pad of the OSC_SLOW_CLK.  
-0: Disable the clk pass clock gate 
+              <description>Configures the clock gate to pad of the OSC_SLOW_CLK.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21790,8 +21790,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>FOSC_OEN</name>
-              <description>Configures the clock gate to pad of the RC_FAST_CLK. 
-0: Disable the clk pass clock gate  
+              <description>Configures the clock gate to pad of the RC_FAST_CLK.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21799,8 +21799,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>OSC32K_OEN</name>
-              <description>Configures the clock gate to pad of the RC32K_CLK. 
-0: Disable the clk pass clock gate  
+              <description>Configures the clock gate to pad of the RC32K_CLK.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21808,8 +21808,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>XTAL32K_OEN</name>
-              <description>Configures the clock gate to pad of the XTAL32K_CLK. 
-0: Disable the clk pass clock gate 
+              <description>Configures the clock gate to pad of the XTAL32K_CLK.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate </description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21817,8 +21817,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>CORE_EFUSE_OEN</name>
-              <description>Configures the clock gate to pad of the EFUSE_CTRL clock. 
-0: Disable the clk pass clock gate  
+              <description>Configures the clock gate to pad of the EFUSE_CTRL clock.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21827,7 +21827,7 @@ bit1: 1 represents space_exception  \\</description>
             <field>
               <name>SLOW_OEN</name>
               <description>Configures the clock gate to pad of the LP_SLOW_CLK.
-0: Disable the clk pass clock gate 
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21835,8 +21835,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>FAST_OEN</name>
-              <description>Configures the clock gate to pad of the LP_FAST_CLK. 
-0: Disable the clk pass clock gate 
+              <description>Configures the clock gate to pad of the LP_FAST_CLK.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21844,8 +21844,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>RNG_OEN</name>
-              <description>Configures the clock gate to pad of the RNG clk. 
-0: Disable the clk pass clock gate 
+              <description>Configures the clock gate to pad of the RNG clk.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21853,8 +21853,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>LPBUS_OEN</name>
-              <description>Configures the clock gate to pad of the LP bus clk. 
-0: Disable the clk pass clock gate 
+              <description>Configures the clock gate to pad of the LP bus clk.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21915,7 +21915,7 @@ bit1: 1 represents space_exception  \\</description>
             <field>
               <name>WDT_RESET_EN</name>
               <description>Configures whether or not to reset LP_WDT and super watch dog
-0: Invalid.No effect 
+0: Invalid.No effect
 1: Reset</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22005,7 +22005,7 @@ Measurement unit: LP_DYN_FAST_CLK</description>
             <field>
               <name>RTC_WDT_CPU_RESET_EN</name>
               <description>Configures whether or not LP_WDT can reset CPU
-0: LP_WDT could not reset CPU when LP_WDT timeout 
+0: LP_WDT could not reset CPU when LP_WDT timeout
 1: LP_WDT could reset CPU when LP_WDT timeout</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22022,7 +22022,7 @@ Measurement unit: LP_DYN_FAST_CLK</description>
             <field>
               <name>CPU_STALL_EN</name>
               <description>Configures whether or not CPU entry stall state before LP_WDT and software reset CPU
-0: CPU will not entry stall state before LP_WDT and software reset CPU 
+0: CPU will not entry stall state before LP_WDT and software reset CPU
 1: CPU will entry stall state before LP_WDT and software reset CPU</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22134,7 +22134,7 @@ Measurement unit: LP_DYN_FAST_CLK</description>
             <field>
               <name>HUK_CLK_SEL</name>
               <description>Configures the source clk of HUK
-0: 0: RC_FAST_CLK  
+0: 0: RC_FAST_CLK
 1: XTAL_D2_CLK</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22143,7 +22143,7 @@ Measurement unit: LP_DYN_FAST_CLK</description>
             <field>
               <name>LP_I2C_CLK_SEL</name>
               <description>Configures the source clk of LP I2C.
-0: LP_FAST_CLK 
+0: LP_FAST_CLK
 1: XTAL_D2_CLK</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22430,7 +22430,7 @@ Bit0 is corresponding to GPIO0, bit1 is corresponding to GPIO1, and etc. This re
               <description>Represents the interrupt source status of GPIO0 ~ GPIO7.\\
 bit0 ~ bit7 are corresponding to GPIO0 ~ 7. Each bit represents:\\
 0: Interrupt source status is invalid.\\
-1: Interrupt source status is valid.\\ 
+1: Interrupt source status is valid.\\
 The interrupt here can be rising-edge triggered, falling-edge triggered, any edge triggered, or level triggered.\\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -24535,7 +24535,7 @@ SCL positive edge for a stop condition</description>
             </field>
             <field>
               <name>SLP_SEL</name>
-              <description>Configures whether or not to enable the sleep mode for GPIO%s.\\ 
+              <description>Configures whether or not to enable the sleep mode for GPIO%s.\\
 0: Not enable\\
 1: Enable\\</description>
               <bitOffset>1</bitOffset>
@@ -24695,10 +24695,10 @@ SCL positive edge for a stop condition</description>
           <fields>
             <field>
               <name>M0_MODE</name>
-              <description>Configures M0 security level mode.\\ 
-0: tee_mode \\ 
-1: ree_mode0 \\ 
-2: ree_mode1 \\ 
+              <description>Configures M0 security level mode.\\
+0: tee_mode \\
+1: ree_mode0 \\
+2: ree_mode1 \\
 3: ree_mode2  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -24722,8 +24722,8 @@ SCL positive edge for a stop condition</description>
           <fields>
             <field>
               <name>CLK_EN</name>
-              <description>Configures whether to keep the clock always on.\\ 
-0: enable automatic clock gating \\ 
+              <description>Configures whether to keep the clock always on.\\
+0: enable automatic clock gating \\
 1: keep the clock always on  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -26044,7 +26044,7 @@ Measurement unit: byte.</description>
             <field>
               <name>CLK_EN</name>
               <description>Configures clock gating.\\
-0: Support clock only when the application writes registers.\\ 
+0: Support clock only when the application writes registers.\\
 1: Always force the clock on for registers.\\</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
@@ -30079,7 +30079,7 @@ Bit[7:1]: Reserved\\</description>
             </field>
             <field>
               <name>RX_PULSE_SUBMODE_SEL</name>
-              <description>Configures the rxd pulse sampling submode. 
+              <description>Configures the rxd pulse sampling submode.
 0: positive pulse start(data bit included) &amp;&amp;  positive pulse end(data bit included)
 1: positive pulse start(data bit included) &amp;&amp; positive pulse end (data bit excluded)
 2: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit included)
@@ -30092,9 +30092,9 @@ Bit[7:1]: Reserved\\</description>
             </field>
             <field>
               <name>RX_SMP_MODE_SEL</name>
-              <description>Configures the rxd sampling mode. 
+              <description>Configures the rxd sampling mode.
 0: external level enable mode
-1: external pulse enable mode  
+1: external pulse enable mode
 2: internal software enable mode</description>
               <bitOffset>30</bitOffset>
               <bitWidth>2</bitWidth>
@@ -30125,7 +30125,7 @@ Bit[7:1]: Reserved\\</description>
             </field>
             <field>
               <name>RX_BUS_WID_SEL</name>
-              <description>Configures the rxd bus width. 
+              <description>Configures the rxd bus width.
 0: bus width is 1.
 1: bus width is 2.
 2: bus width is 4.
@@ -30211,7 +30211,7 @@ Bit[7:1]: Reserved\\</description>
             </field>
             <field>
               <name>TX_BUS_WID_SEL</name>
-              <description>Configures the txd bus width. 
+              <description>Configures the txd bus width.
 0: bus width is 1.
 1: bus width is 2.
 2: bus width is 4.
@@ -30903,7 +30903,7 @@ Bit[7:1]: Reserved\\</description>
       <registers>
         <register>
           <dim>4</dim>
-          <dimIncrement>0xc</dimIncrement>
+          <dimIncrement>16</dimIncrement>
           <name>U%s_CONF0</name>
           <description>Configuration register 0 for unit %s</description>
           <addressOffset>0x0</addressOffset>
@@ -31044,7 +31044,7 @@ Measurement unit: APB_CLK cycles.\\</description>
         </register>
         <register>
           <dim>4</dim>
-          <dimIncrement>0xc</dimIncrement>
+          <dimIncrement>16</dimIncrement>
           <name>U%s_CONF1</name>
           <description>Configuration register 1 for unit %s</description>
           <addressOffset>0x4</addressOffset>
@@ -31068,7 +31068,7 @@ Measurement unit: APB_CLK cycles.\\</description>
         </register>
         <register>
           <dim>4</dim>
-          <dimIncrement>0xc</dimIncrement>
+          <dimIncrement>16</dimIncrement>
           <name>U%s_CONF2</name>
           <description>Configuration register 2 for unit %s</description>
           <addressOffset>0x8</addressOffset>
@@ -31092,10 +31092,34 @@ Measurement unit: APB_CLK cycles.\\</description>
         </register>
         <register>
           <dim>4</dim>
+          <dimIncrement>16</dimIncrement>
+          <name>U%s_CONF3</name>
+          <description>Configuration register for unit %s's step value.</description>
+          <addressOffset>0xc</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>CNT_STEP_U</name>
+              <description>Configures the step value for unit %s.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CNT_STEP_LIM_U</name>
+              <description>Configures the step limit value for unit %s.</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <dim>4</dim>
           <dimIncrement>0x4</dimIncrement>
           <name>U%s_CNT</name>
           <description>Counter value for unit %s</description>
-          <addressOffset>0x30</addressOffset>
+          <addressOffset>0x40</addressOffset>
           <size>32</size>
           <fields>
             <field>
@@ -31110,7 +31134,7 @@ Measurement unit: APB_CLK cycles.\\</description>
         <register>
           <name>INT_RAW</name>
           <description>Interrupt raw status register</description>
-          <addressOffset>0x40</addressOffset>
+          <addressOffset>0x50</addressOffset>
           <size>32</size>
           <fields>
             <field>
@@ -31146,7 +31170,7 @@ Measurement unit: APB_CLK cycles.\\</description>
         <register>
           <name>INT_ST</name>
           <description>Interrupt status register</description>
-          <addressOffset>0x44</addressOffset>
+          <addressOffset>0x54</addressOffset>
           <size>32</size>
           <fields>
             <field>
@@ -31182,7 +31206,7 @@ Measurement unit: APB_CLK cycles.\\</description>
         <register>
           <name>INT_ENA</name>
           <description>Interrupt enable register</description>
-          <addressOffset>0x48</addressOffset>
+          <addressOffset>0x58</addressOffset>
           <size>32</size>
           <fields>
             <field>
@@ -31218,7 +31242,7 @@ Measurement unit: APB_CLK cycles.\\</description>
         <register>
           <name>INT_CLR</name>
           <description>Interrupt clear register</description>
-          <addressOffset>0x4c</addressOffset>
+          <addressOffset>0x5c</addressOffset>
           <size>32</size>
           <fields>
             <field>
@@ -31256,7 +31280,7 @@ Measurement unit: APB_CLK cycles.\\</description>
           <dimIncrement>0x4</dimIncrement>
           <name>U%s_STATUS</name>
           <description>PNCT UNIT%s status register</description>
-          <addressOffset>0x50</addressOffset>
+          <addressOffset>0x60</addressOffset>
           <size>32</size>
           <fields>
             <field>
@@ -31300,7 +31324,7 @@ Measurement unit: APB_CLK cycles.\\</description>
             <field>
               <name>CNT_THR_H_LIM_LAT_U</name>
               <description>Represents the latched value of high limit event of PCNT_U%s when threshold event interrupt is valid. \\
-0: others\\ 
+0: others\\
 1: the current pulse counter equals to thr_h_lim and high limit event is valid. \\</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
@@ -31334,7 +31358,7 @@ Measurement unit: APB_CLK cycles.\\</description>
         <register>
           <name>CTRL</name>
           <description>Control register for all counters</description>
-          <addressOffset>0x60</addressOffset>
+          <addressOffset>0x70</addressOffset>
           <size>32</size>
           <resetValue>0x1</resetValue>
           <fields>
@@ -31427,94 +31451,6 @@ Measurement unit: APB_CLK cycles.\\</description>
               <description>The registers clock gate enable signal of PCNT module. 1: the registers can be read and written by application. 0: the registers can not be read or written by application</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>U3_CHANGE_CONF</name>
-          <description>Configuration register for unit $n's step value.</description>
-          <addressOffset>0x64</addressOffset>
-          <size>32</size>
-          <fields>
-            <field>
-              <name>CNT_STEP_U3</name>
-              <description>Configures the step value for unit 3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CNT_STEP_LIM_U3</name>
-              <description>Configures the step limit value for unit 3.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>U2_CHANGE_CONF</name>
-          <description>Configuration register for unit $n's step value.</description>
-          <addressOffset>0x68</addressOffset>
-          <size>32</size>
-          <fields>
-            <field>
-              <name>CNT_STEP_U2</name>
-              <description>Configures the step value for unit 2.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CNT_STEP_LIM_U2</name>
-              <description>Configures the step limit value for unit 2.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>U1_CHANGE_CONF</name>
-          <description>Configuration register for unit $n's step value.</description>
-          <addressOffset>0x6c</addressOffset>
-          <size>32</size>
-          <fields>
-            <field>
-              <name>CNT_STEP_U1</name>
-              <description>Configures the step value for unit 1.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CNT_STEP_LIM_U1</name>
-              <description>Configures the step limit value for unit 1.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>U0_CHANGE_CONF</name>
-          <description>Configuration register for unit $n's step value.</description>
-          <addressOffset>0x70</addressOffset>
-          <size>32</size>
-          <fields>
-            <field>
-              <name>CNT_STEP_U0</name>
-              <description>Configures the step value for unit 0.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CNT_STEP_LIM_U0</name>
-              <description>Configures the step limit value for unit 0.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -42734,7 +42670,7 @@ This bit is automatically cleared when configurations have been updated.\\</desc
               <name>MEM_OWNER_CH2</name>
               <description>This register marks the ownership of CHANNEL%s's ram block.
 
-1'h1: Receiver is using the ram. 
+1'h1: Receiver is using the ram.
 
 1'h0: APB bus is using the ram.</description>
               <bitOffset>3</bitOffset>
@@ -55956,7 +55892,7 @@ Can be configured in CONF state.</description>
             <field>
               <name>SPI_SLV_RX_SEG_TRANS_CLR_EN</name>
               <description>In slave segmented transfer, if the size of the DMA RX buffer is smaller than the size of the received data, \\1: the data in all the following Wr_DMA transactions will not be received\\ 0: the data in this Wr_DMA transaction will not be received, but in the following transactions,\\
-    
+
         - if the size of DMA RX buffer is not 0, the data in following Wr_DMA transactions will be received.
         - if the size of DMA RX buffer is 0, the data in following Wr_DMA transactions will not be received.</description>
               <bitOffset>19</bitOffset>
@@ -55968,7 +55904,7 @@ Can be configured in CONF state.</description>
               <description>In slave segmented transfer, if the size of the DMA TX buffer is smaller than the size of the transmitted data,\\
 1: the data in the following transactions will not be updated, i.e. the old data is transmitted repeatedly.\\
 0: the data in this transaction will not be updated. But in the following transactions,\\
-    
+
         - if new data is filled in DMA TX FIFO, new data will be transmitted.
         - if no new data is filled in DMA TX FIFO, no new data will be transmitted.</description>
               <bitOffset>20</bitOffset>
@@ -58028,10 +57964,10 @@ Can be configured in CONF state.</description>
           <fields>
             <field>
               <name>M_MODE</name>
-              <description>Configures M%s security level mode.\\ 
-0: tee_mode \\ 
-1: ree_mode0 \\ 
-2: ree_mode1 \\ 
+              <description>Configures M%s security level mode.\\
+0: tee_mode \\
+1: ree_mode0 \\
+2: ree_mode1 \\
 3: ree_mode2  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -58055,8 +57991,8 @@ Can be configured in CONF state.</description>
           <fields>
             <field>
               <name>CLK_EN</name>
-              <description>Configures whether to keep the clock always on.\\ 
-0: enable automatic clock gating \\ 
+              <description>Configures whether to keep the clock always on.\\
+0: enable automatic clock gating \\
 1: keep the clock always on  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -59966,7 +59902,7 @@ TXT Buffer.</description>
             <field>
               <name>ERCRST</name>
               <description>Error Counters Reset. When unit is bus off, issuing this command will request erasing TEC, REC counters after
-128 consecutive ocurrences of 11 recessive bits. Upon completion, TEC and REC are erased and fault confinement 
+128 consecutive ocurrences of 11 recessive bits. Upon completion, TEC and REC are erased and fault confinement
 State is set to error-active. When unit is not bus-off, or when unit is bus-off due to being disabled (SETTINGS[ENA]
 = ’0’), this command has no effect.</description>
               <bitOffset>4</bitOffset>
@@ -60025,7 +59961,7 @@ State is set to error-active. When unit is not bus-off, or when unit is bus-off 
           <fields>
             <field>
               <name>RXI_INT_ST</name>
-              <description>The masked interrupt status of TWAIFD_RXI_INT. 
+              <description>The masked interrupt status of TWAIFD_RXI_INT.
 Frame received interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -60033,7 +59969,7 @@ Frame received interrupt.</description>
             </field>
             <field>
               <name>TXI_INT_ST</name>
-              <description>The masked interrupt status of TWAIFD_TXI_INT. 
+              <description>The masked interrupt status of TWAIFD_TXI_INT.
 Frame transmitted interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -60041,7 +59977,7 @@ Frame transmitted interrupt.</description>
             </field>
             <field>
               <name>EWLI_INT_ST</name>
-              <description>The masked interrupt status of TWAIFD_EWLI_INT. 
+              <description>The masked interrupt status of TWAIFD_EWLI_INT.
 Error warning limit interrupt. When both TEC and REC are lower than EWL and one of the becomes equal to or
 higher than EWL, or when both TEC and REC become less than EWL, this interrupt is generated. When Interrupt
 is cleared and REC, or TEC is still equal to or higher than EWL, Interrupt is not generated again.</description>
@@ -60051,8 +59987,8 @@ is cleared and REC, or TEC is still equal to or higher than EWL, Interrupt is no
             </field>
             <field>
               <name>DOI_INT_ST</name>
-              <description>The masked interrupt status of TWAIFD_DOI_INT. 
-Data overrun interrupt. Before this  Interrupt is cleared , STATUS[DOR] must be cleared to avoid setting of this 
+              <description>The masked interrupt status of TWAIFD_DOI_INT.
+Data overrun interrupt. Before this  Interrupt is cleared , STATUS[DOR] must be cleared to avoid setting of this
 Interrupt again.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -61085,7 +61021,7 @@ Zeroes.</description>
             </field>
             <field>
               <name>RXMOF</name>
-              <description>Represents the number of received frame in RX buffer. 
+              <description>Represents the number of received frame in RX buffer.
 RX Buffer middle of frame. When RXMOF = 1, next read from RX_DATA register will return other than first
 word (FRAME_FORMAT_W) of CAN frame.</description>
               <bitOffset>2</bitOffset>
@@ -61828,7 +61764,7 @@ in both. Transceiver as well as receiver.</description>
           <fields>
             <field>
               <name>TIMER_LD_VAL_H</name>
-              <description>TWAI FD timer pre-load value register, high part. 
+              <description>TWAI FD timer pre-load value register, high part.
 If timestamp valid bit-width less than 33, this field is ignored.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -62917,7 +62853,7 @@ Measurement unit: byte.</description>
             <field>
               <name>CLK_EN</name>
               <description>Configures clock gating.\\
-0: Support clock only when the application writes registers.\\ 
+0: Support clock only when the application writes registers.\\
 1: Always force the clock on for registers.\\</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
@@ -63784,7 +63720,7 @@ Measurement unit: byte.</description>
             <field>
               <name>CLK_EN</name>
               <description>Configures clock gating.\\
-0: Support clock only when the application writes registers.\\ 
+0: Support clock only when the application writes registers.\\
 1: Always force the clock on for registers.\\</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>

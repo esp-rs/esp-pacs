@@ -2,6 +2,7 @@ _expand_array:
   U%s_CONF0: {}
   U%s_CONF1: {}
   U%s_CONF2: {}
+  U%s_CONF3: {}
 
 _cluster:
   UNIT%s:
@@ -36,6 +37,8 @@ _cluster:
       name: CONF1
     U?_CONF2:
       name: CONF2
+    U?_CONF3:
+      name: CONF3
 
 "INT_RAW,INT_ST,INT_ENA,INT_CLR":
   _array:

@@ -704,7 +704,7 @@ PCNT:
   U%s_CNT:
     _strip: "PULSE_"
 
-  _include: ../../../common_patches/pcnt.yaml
+  _include: pcnt.yaml
 
 MCPWM0:
   _include: ../../../common_patches/int_strip.yaml
@@ -826,7 +826,7 @@ _modify:
     name: ASSIST_DEBUG
     description: ASSIST_DEBUG (BUS_MONITOR) Peripheral
     groupName: ASSIST_DEBUG
-  
+
   HP_SYSTEM:
     name: HP_SYS
 
