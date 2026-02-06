@@ -40,9 +40,9 @@ pub struct RegisterBlock {
     pin30: PIN30,
     pin31: PIN31,
     pin32: PIN32,
-    _reserved32: [u8; 0x016c],
-    func_in_sel_cfg: [FUNC_IN_SEL_CFG; 128],
-    _reserved33: [u8; 0x0610],
+    _reserved32: [u8; 0x017c],
+    func_in_sel_cfg: [FUNC_IN_SEL_CFG; 116],
+    _reserved33: [u8; 0x0630],
     func_out_sel_cfg: [FUNC_OUT_SEL_CFG; 29],
     func29_out_sel_cfg: FUNC29_OUT_SEL_CFG,
     func30_out_sel_cfg: FUNC30_OUT_SEL_CFG,
@@ -219,656 +219,596 @@ impl RegisterBlock {
     pub const fn pin32(&self) -> &PIN32 {
         &self.pin32
     }
-    #[doc = "0x2c4..0x4c4 - "]
+    #[doc = "0x2d4..0x4a4 - Configuration register for input signal %s"]
     #[inline(always)]
     pub const fn func_in_sel_cfg(&self, n: usize) -> &FUNC_IN_SEL_CFG {
         &self.func_in_sel_cfg[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x2c4..0x4c4 - "]
+    #[doc = "0x2d4..0x4a4 - Configuration register for input signal %s"]
     #[inline(always)]
     pub fn func_in_sel_cfg_iter(&self) -> impl Iterator<Item = &FUNC_IN_SEL_CFG> {
         self.func_in_sel_cfg.iter()
     }
-    #[doc = "0x2c4 - FUNC0_IN_SEL_CFG"]
+    #[doc = "0x2d4 - Configuration register for input signal 0"]
     #[inline(always)]
     pub const fn func0_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(0)
     }
-    #[doc = "0x2c8 - FUNC1_IN_SEL_CFG"]
+    #[doc = "0x2d8 - Configuration register for input signal 1"]
     #[inline(always)]
     pub const fn func1_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(1)
     }
-    #[doc = "0x2cc - FUNC2_IN_SEL_CFG"]
+    #[doc = "0x2dc - Configuration register for input signal 2"]
     #[inline(always)]
     pub const fn func2_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(2)
     }
-    #[doc = "0x2d0 - FUNC3_IN_SEL_CFG"]
+    #[doc = "0x2e0 - Configuration register for input signal 3"]
     #[inline(always)]
     pub const fn func3_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(3)
     }
-    #[doc = "0x2d4 - FUNC4_IN_SEL_CFG"]
+    #[doc = "0x2e4 - Configuration register for input signal 4"]
     #[inline(always)]
     pub const fn func4_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(4)
     }
-    #[doc = "0x2d8 - FUNC5_IN_SEL_CFG"]
+    #[doc = "0x2e8 - Configuration register for input signal 5"]
     #[inline(always)]
     pub const fn func5_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(5)
     }
-    #[doc = "0x2dc - FUNC6_IN_SEL_CFG"]
+    #[doc = "0x2ec - Configuration register for input signal 6"]
     #[inline(always)]
     pub const fn func6_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(6)
     }
-    #[doc = "0x2e0 - FUNC7_IN_SEL_CFG"]
+    #[doc = "0x2f0 - Configuration register for input signal 7"]
     #[inline(always)]
     pub const fn func7_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(7)
     }
-    #[doc = "0x2e4 - FUNC8_IN_SEL_CFG"]
+    #[doc = "0x2f4 - Configuration register for input signal 8"]
     #[inline(always)]
     pub const fn func8_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(8)
     }
-    #[doc = "0x2e8 - FUNC9_IN_SEL_CFG"]
+    #[doc = "0x2f8 - Configuration register for input signal 9"]
     #[inline(always)]
     pub const fn func9_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(9)
     }
-    #[doc = "0x2ec - FUNC10_IN_SEL_CFG"]
+    #[doc = "0x2fc - Configuration register for input signal 10"]
     #[inline(always)]
     pub const fn func10_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(10)
     }
-    #[doc = "0x2f0 - FUNC11_IN_SEL_CFG"]
+    #[doc = "0x300 - Configuration register for input signal 11"]
     #[inline(always)]
     pub const fn func11_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(11)
     }
-    #[doc = "0x2f4 - FUNC12_IN_SEL_CFG"]
+    #[doc = "0x304 - Configuration register for input signal 12"]
     #[inline(always)]
     pub const fn func12_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(12)
     }
-    #[doc = "0x2f8 - FUNC13_IN_SEL_CFG"]
+    #[doc = "0x308 - Configuration register for input signal 13"]
     #[inline(always)]
     pub const fn func13_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(13)
     }
-    #[doc = "0x2fc - FUNC14_IN_SEL_CFG"]
+    #[doc = "0x30c - Configuration register for input signal 14"]
     #[inline(always)]
     pub const fn func14_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(14)
     }
-    #[doc = "0x300 - FUNC15_IN_SEL_CFG"]
+    #[doc = "0x310 - Configuration register for input signal 15"]
     #[inline(always)]
     pub const fn func15_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(15)
     }
-    #[doc = "0x304 - FUNC16_IN_SEL_CFG"]
+    #[doc = "0x314 - Configuration register for input signal 16"]
     #[inline(always)]
     pub const fn func16_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(16)
     }
-    #[doc = "0x308 - FUNC17_IN_SEL_CFG"]
+    #[doc = "0x318 - Configuration register for input signal 17"]
     #[inline(always)]
     pub const fn func17_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(17)
     }
-    #[doc = "0x30c - FUNC18_IN_SEL_CFG"]
+    #[doc = "0x31c - Configuration register for input signal 18"]
     #[inline(always)]
     pub const fn func18_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(18)
     }
-    #[doc = "0x310 - FUNC19_IN_SEL_CFG"]
+    #[doc = "0x320 - Configuration register for input signal 19"]
     #[inline(always)]
     pub const fn func19_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(19)
     }
-    #[doc = "0x314 - FUNC20_IN_SEL_CFG"]
+    #[doc = "0x324 - Configuration register for input signal 20"]
     #[inline(always)]
     pub const fn func20_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(20)
     }
-    #[doc = "0x318 - FUNC21_IN_SEL_CFG"]
+    #[doc = "0x328 - Configuration register for input signal 21"]
     #[inline(always)]
     pub const fn func21_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(21)
     }
-    #[doc = "0x31c - FUNC22_IN_SEL_CFG"]
+    #[doc = "0x32c - Configuration register for input signal 22"]
     #[inline(always)]
     pub const fn func22_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(22)
     }
-    #[doc = "0x320 - FUNC23_IN_SEL_CFG"]
+    #[doc = "0x330 - Configuration register for input signal 23"]
     #[inline(always)]
     pub const fn func23_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(23)
     }
-    #[doc = "0x324 - FUNC24_IN_SEL_CFG"]
+    #[doc = "0x334 - Configuration register for input signal 24"]
     #[inline(always)]
     pub const fn func24_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(24)
     }
-    #[doc = "0x328 - FUNC25_IN_SEL_CFG"]
+    #[doc = "0x338 - Configuration register for input signal 25"]
     #[inline(always)]
     pub const fn func25_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(25)
     }
-    #[doc = "0x32c - FUNC26_IN_SEL_CFG"]
+    #[doc = "0x33c - Configuration register for input signal 26"]
     #[inline(always)]
     pub const fn func26_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(26)
     }
-    #[doc = "0x330 - FUNC27_IN_SEL_CFG"]
+    #[doc = "0x340 - Configuration register for input signal 27"]
     #[inline(always)]
     pub const fn func27_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(27)
     }
-    #[doc = "0x334 - FUNC28_IN_SEL_CFG"]
+    #[doc = "0x344 - Configuration register for input signal 28"]
     #[inline(always)]
     pub const fn func28_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(28)
     }
-    #[doc = "0x338 - FUNC29_IN_SEL_CFG"]
+    #[doc = "0x348 - Configuration register for input signal 29"]
     #[inline(always)]
     pub const fn func29_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(29)
     }
-    #[doc = "0x33c - FUNC30_IN_SEL_CFG"]
+    #[doc = "0x34c - Configuration register for input signal 30"]
     #[inline(always)]
     pub const fn func30_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(30)
     }
-    #[doc = "0x340 - FUNC31_IN_SEL_CFG"]
+    #[doc = "0x350 - Configuration register for input signal 31"]
     #[inline(always)]
     pub const fn func31_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(31)
     }
-    #[doc = "0x344 - FUNC32_IN_SEL_CFG"]
+    #[doc = "0x354 - Configuration register for input signal 32"]
     #[inline(always)]
     pub const fn func32_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(32)
     }
-    #[doc = "0x348 - FUNC33_IN_SEL_CFG"]
+    #[doc = "0x358 - Configuration register for input signal 33"]
     #[inline(always)]
     pub const fn func33_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(33)
     }
-    #[doc = "0x34c - FUNC34_IN_SEL_CFG"]
+    #[doc = "0x35c - Configuration register for input signal 34"]
     #[inline(always)]
     pub const fn func34_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(34)
     }
-    #[doc = "0x350 - FUNC35_IN_SEL_CFG"]
+    #[doc = "0x360 - Configuration register for input signal 35"]
     #[inline(always)]
     pub const fn func35_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(35)
     }
-    #[doc = "0x354 - FUNC36_IN_SEL_CFG"]
+    #[doc = "0x364 - Configuration register for input signal 36"]
     #[inline(always)]
     pub const fn func36_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(36)
     }
-    #[doc = "0x358 - FUNC37_IN_SEL_CFG"]
+    #[doc = "0x368 - Configuration register for input signal 37"]
     #[inline(always)]
     pub const fn func37_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(37)
     }
-    #[doc = "0x35c - FUNC38_IN_SEL_CFG"]
+    #[doc = "0x36c - Configuration register for input signal 38"]
     #[inline(always)]
     pub const fn func38_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(38)
     }
-    #[doc = "0x360 - FUNC39_IN_SEL_CFG"]
+    #[doc = "0x370 - Configuration register for input signal 39"]
     #[inline(always)]
     pub const fn func39_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(39)
     }
-    #[doc = "0x364 - FUNC40_IN_SEL_CFG"]
+    #[doc = "0x374 - Configuration register for input signal 40"]
     #[inline(always)]
     pub const fn func40_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(40)
     }
-    #[doc = "0x368 - FUNC41_IN_SEL_CFG"]
+    #[doc = "0x378 - Configuration register for input signal 41"]
     #[inline(always)]
     pub const fn func41_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(41)
     }
-    #[doc = "0x36c - FUNC42_IN_SEL_CFG"]
+    #[doc = "0x37c - Configuration register for input signal 42"]
     #[inline(always)]
     pub const fn func42_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(42)
     }
-    #[doc = "0x370 - FUNC43_IN_SEL_CFG"]
+    #[doc = "0x380 - Configuration register for input signal 43"]
     #[inline(always)]
     pub const fn func43_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(43)
     }
-    #[doc = "0x374 - FUNC44_IN_SEL_CFG"]
+    #[doc = "0x384 - Configuration register for input signal 44"]
     #[inline(always)]
     pub const fn func44_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(44)
     }
-    #[doc = "0x378 - FUNC45_IN_SEL_CFG"]
+    #[doc = "0x388 - Configuration register for input signal 45"]
     #[inline(always)]
     pub const fn func45_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(45)
     }
-    #[doc = "0x37c - FUNC46_IN_SEL_CFG"]
+    #[doc = "0x38c - Configuration register for input signal 46"]
     #[inline(always)]
     pub const fn func46_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(46)
     }
-    #[doc = "0x380 - FUNC47_IN_SEL_CFG"]
+    #[doc = "0x390 - Configuration register for input signal 47"]
     #[inline(always)]
     pub const fn func47_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(47)
     }
-    #[doc = "0x384 - FUNC48_IN_SEL_CFG"]
+    #[doc = "0x394 - Configuration register for input signal 48"]
     #[inline(always)]
     pub const fn func48_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(48)
     }
-    #[doc = "0x388 - FUNC49_IN_SEL_CFG"]
+    #[doc = "0x398 - Configuration register for input signal 49"]
     #[inline(always)]
     pub const fn func49_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(49)
     }
-    #[doc = "0x38c - FUNC50_IN_SEL_CFG"]
+    #[doc = "0x39c - Configuration register for input signal 50"]
     #[inline(always)]
     pub const fn func50_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(50)
     }
-    #[doc = "0x390 - FUNC51_IN_SEL_CFG"]
+    #[doc = "0x3a0 - Configuration register for input signal 51"]
     #[inline(always)]
     pub const fn func51_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(51)
     }
-    #[doc = "0x394 - FUNC52_IN_SEL_CFG"]
+    #[doc = "0x3a4 - Configuration register for input signal 52"]
     #[inline(always)]
     pub const fn func52_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(52)
     }
-    #[doc = "0x398 - FUNC53_IN_SEL_CFG"]
+    #[doc = "0x3a8 - Configuration register for input signal 53"]
     #[inline(always)]
     pub const fn func53_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(53)
     }
-    #[doc = "0x39c - FUNC54_IN_SEL_CFG"]
+    #[doc = "0x3ac - Configuration register for input signal 54"]
     #[inline(always)]
     pub const fn func54_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(54)
     }
-    #[doc = "0x3a0 - FUNC55_IN_SEL_CFG"]
+    #[doc = "0x3b0 - Configuration register for input signal 55"]
     #[inline(always)]
     pub const fn func55_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(55)
     }
-    #[doc = "0x3a4 - FUNC56_IN_SEL_CFG"]
+    #[doc = "0x3b4 - Configuration register for input signal 56"]
     #[inline(always)]
     pub const fn func56_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(56)
     }
-    #[doc = "0x3a8 - FUNC57_IN_SEL_CFG"]
+    #[doc = "0x3b8 - Configuration register for input signal 57"]
     #[inline(always)]
     pub const fn func57_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(57)
     }
-    #[doc = "0x3ac - FUNC58_IN_SEL_CFG"]
+    #[doc = "0x3bc - Configuration register for input signal 58"]
     #[inline(always)]
     pub const fn func58_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(58)
     }
-    #[doc = "0x3b0 - FUNC59_IN_SEL_CFG"]
+    #[doc = "0x3c0 - Configuration register for input signal 59"]
     #[inline(always)]
     pub const fn func59_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(59)
     }
-    #[doc = "0x3b4 - FUNC60_IN_SEL_CFG"]
+    #[doc = "0x3c4 - Configuration register for input signal 60"]
     #[inline(always)]
     pub const fn func60_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(60)
     }
-    #[doc = "0x3b8 - FUNC61_IN_SEL_CFG"]
+    #[doc = "0x3c8 - Configuration register for input signal 61"]
     #[inline(always)]
     pub const fn func61_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(61)
     }
-    #[doc = "0x3bc - FUNC62_IN_SEL_CFG"]
+    #[doc = "0x3cc - Configuration register for input signal 62"]
     #[inline(always)]
     pub const fn func62_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(62)
     }
-    #[doc = "0x3c0 - FUNC63_IN_SEL_CFG"]
+    #[doc = "0x3d0 - Configuration register for input signal 63"]
     #[inline(always)]
     pub const fn func63_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(63)
     }
-    #[doc = "0x3c4 - FUNC64_IN_SEL_CFG"]
+    #[doc = "0x3d4 - Configuration register for input signal 64"]
     #[inline(always)]
     pub const fn func64_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(64)
     }
-    #[doc = "0x3c8 - FUNC65_IN_SEL_CFG"]
+    #[doc = "0x3d8 - Configuration register for input signal 65"]
     #[inline(always)]
     pub const fn func65_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(65)
     }
-    #[doc = "0x3cc - FUNC66_IN_SEL_CFG"]
+    #[doc = "0x3dc - Configuration register for input signal 66"]
     #[inline(always)]
     pub const fn func66_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(66)
     }
-    #[doc = "0x3d0 - FUNC67_IN_SEL_CFG"]
+    #[doc = "0x3e0 - Configuration register for input signal 67"]
     #[inline(always)]
     pub const fn func67_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(67)
     }
-    #[doc = "0x3d4 - FUNC68_IN_SEL_CFG"]
+    #[doc = "0x3e4 - Configuration register for input signal 68"]
     #[inline(always)]
     pub const fn func68_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(68)
     }
-    #[doc = "0x3d8 - FUNC69_IN_SEL_CFG"]
+    #[doc = "0x3e8 - Configuration register for input signal 69"]
     #[inline(always)]
     pub const fn func69_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(69)
     }
-    #[doc = "0x3dc - FUNC70_IN_SEL_CFG"]
+    #[doc = "0x3ec - Configuration register for input signal 70"]
     #[inline(always)]
     pub const fn func70_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(70)
     }
-    #[doc = "0x3e0 - FUNC71_IN_SEL_CFG"]
+    #[doc = "0x3f0 - Configuration register for input signal 71"]
     #[inline(always)]
     pub const fn func71_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(71)
     }
-    #[doc = "0x3e4 - FUNC72_IN_SEL_CFG"]
+    #[doc = "0x3f4 - Configuration register for input signal 72"]
     #[inline(always)]
     pub const fn func72_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(72)
     }
-    #[doc = "0x3e8 - FUNC73_IN_SEL_CFG"]
+    #[doc = "0x3f8 - Configuration register for input signal 73"]
     #[inline(always)]
     pub const fn func73_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(73)
     }
-    #[doc = "0x3ec - FUNC74_IN_SEL_CFG"]
+    #[doc = "0x3fc - Configuration register for input signal 74"]
     #[inline(always)]
     pub const fn func74_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(74)
     }
-    #[doc = "0x3f0 - FUNC75_IN_SEL_CFG"]
+    #[doc = "0x400 - Configuration register for input signal 75"]
     #[inline(always)]
     pub const fn func75_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(75)
     }
-    #[doc = "0x3f4 - FUNC76_IN_SEL_CFG"]
+    #[doc = "0x404 - Configuration register for input signal 76"]
     #[inline(always)]
     pub const fn func76_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(76)
     }
-    #[doc = "0x3f8 - FUNC77_IN_SEL_CFG"]
+    #[doc = "0x408 - Configuration register for input signal 77"]
     #[inline(always)]
     pub const fn func77_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(77)
     }
-    #[doc = "0x3fc - FUNC78_IN_SEL_CFG"]
+    #[doc = "0x40c - Configuration register for input signal 78"]
     #[inline(always)]
     pub const fn func78_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(78)
     }
-    #[doc = "0x400 - FUNC79_IN_SEL_CFG"]
+    #[doc = "0x410 - Configuration register for input signal 79"]
     #[inline(always)]
     pub const fn func79_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(79)
     }
-    #[doc = "0x404 - FUNC80_IN_SEL_CFG"]
+    #[doc = "0x414 - Configuration register for input signal 80"]
     #[inline(always)]
     pub const fn func80_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(80)
     }
-    #[doc = "0x408 - FUNC81_IN_SEL_CFG"]
+    #[doc = "0x418 - Configuration register for input signal 81"]
     #[inline(always)]
     pub const fn func81_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(81)
     }
-    #[doc = "0x40c - FUNC82_IN_SEL_CFG"]
+    #[doc = "0x41c - Configuration register for input signal 82"]
     #[inline(always)]
     pub const fn func82_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(82)
     }
-    #[doc = "0x410 - FUNC83_IN_SEL_CFG"]
+    #[doc = "0x420 - Configuration register for input signal 83"]
     #[inline(always)]
     pub const fn func83_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(83)
     }
-    #[doc = "0x414 - FUNC84_IN_SEL_CFG"]
+    #[doc = "0x424 - Configuration register for input signal 84"]
     #[inline(always)]
     pub const fn func84_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(84)
     }
-    #[doc = "0x418 - FUNC85_IN_SEL_CFG"]
+    #[doc = "0x428 - Configuration register for input signal 85"]
     #[inline(always)]
     pub const fn func85_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(85)
     }
-    #[doc = "0x41c - FUNC86_IN_SEL_CFG"]
+    #[doc = "0x42c - Configuration register for input signal 86"]
     #[inline(always)]
     pub const fn func86_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(86)
     }
-    #[doc = "0x420 - FUNC87_IN_SEL_CFG"]
+    #[doc = "0x430 - Configuration register for input signal 87"]
     #[inline(always)]
     pub const fn func87_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(87)
     }
-    #[doc = "0x424 - FUNC88_IN_SEL_CFG"]
+    #[doc = "0x434 - Configuration register for input signal 88"]
     #[inline(always)]
     pub const fn func88_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(88)
     }
-    #[doc = "0x428 - FUNC89_IN_SEL_CFG"]
+    #[doc = "0x438 - Configuration register for input signal 89"]
     #[inline(always)]
     pub const fn func89_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(89)
     }
-    #[doc = "0x42c - FUNC90_IN_SEL_CFG"]
+    #[doc = "0x43c - Configuration register for input signal 90"]
     #[inline(always)]
     pub const fn func90_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(90)
     }
-    #[doc = "0x430 - FUNC91_IN_SEL_CFG"]
+    #[doc = "0x440 - Configuration register for input signal 91"]
     #[inline(always)]
     pub const fn func91_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(91)
     }
-    #[doc = "0x434 - FUNC92_IN_SEL_CFG"]
+    #[doc = "0x444 - Configuration register for input signal 92"]
     #[inline(always)]
     pub const fn func92_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(92)
     }
-    #[doc = "0x438 - FUNC93_IN_SEL_CFG"]
+    #[doc = "0x448 - Configuration register for input signal 93"]
     #[inline(always)]
     pub const fn func93_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(93)
     }
-    #[doc = "0x43c - FUNC94_IN_SEL_CFG"]
+    #[doc = "0x44c - Configuration register for input signal 94"]
     #[inline(always)]
     pub const fn func94_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(94)
     }
-    #[doc = "0x440 - FUNC95_IN_SEL_CFG"]
+    #[doc = "0x450 - Configuration register for input signal 95"]
     #[inline(always)]
     pub const fn func95_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(95)
     }
-    #[doc = "0x444 - FUNC96_IN_SEL_CFG"]
+    #[doc = "0x454 - Configuration register for input signal 96"]
     #[inline(always)]
     pub const fn func96_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(96)
     }
-    #[doc = "0x448 - FUNC97_IN_SEL_CFG"]
+    #[doc = "0x458 - Configuration register for input signal 97"]
     #[inline(always)]
     pub const fn func97_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(97)
     }
-    #[doc = "0x44c - FUNC98_IN_SEL_CFG"]
+    #[doc = "0x45c - Configuration register for input signal 98"]
     #[inline(always)]
     pub const fn func98_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(98)
     }
-    #[doc = "0x450 - FUNC99_IN_SEL_CFG"]
+    #[doc = "0x460 - Configuration register for input signal 99"]
     #[inline(always)]
     pub const fn func99_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(99)
     }
-    #[doc = "0x454 - FUNC100_IN_SEL_CFG"]
+    #[doc = "0x464 - Configuration register for input signal 100"]
     #[inline(always)]
     pub const fn func100_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(100)
     }
-    #[doc = "0x458 - FUNC101_IN_SEL_CFG"]
+    #[doc = "0x468 - Configuration register for input signal 101"]
     #[inline(always)]
     pub const fn func101_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(101)
     }
-    #[doc = "0x45c - FUNC102_IN_SEL_CFG"]
+    #[doc = "0x46c - Configuration register for input signal 102"]
     #[inline(always)]
     pub const fn func102_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(102)
     }
-    #[doc = "0x460 - FUNC103_IN_SEL_CFG"]
+    #[doc = "0x470 - Configuration register for input signal 103"]
     #[inline(always)]
     pub const fn func103_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(103)
     }
-    #[doc = "0x464 - FUNC104_IN_SEL_CFG"]
+    #[doc = "0x474 - Configuration register for input signal 104"]
     #[inline(always)]
     pub const fn func104_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(104)
     }
-    #[doc = "0x468 - FUNC105_IN_SEL_CFG"]
+    #[doc = "0x478 - Configuration register for input signal 105"]
     #[inline(always)]
     pub const fn func105_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(105)
     }
-    #[doc = "0x46c - FUNC106_IN_SEL_CFG"]
+    #[doc = "0x47c - Configuration register for input signal 106"]
     #[inline(always)]
     pub const fn func106_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(106)
     }
-    #[doc = "0x470 - FUNC107_IN_SEL_CFG"]
+    #[doc = "0x480 - Configuration register for input signal 107"]
     #[inline(always)]
     pub const fn func107_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(107)
     }
-    #[doc = "0x474 - FUNC108_IN_SEL_CFG"]
+    #[doc = "0x484 - Configuration register for input signal 108"]
     #[inline(always)]
     pub const fn func108_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(108)
     }
-    #[doc = "0x478 - FUNC109_IN_SEL_CFG"]
+    #[doc = "0x488 - Configuration register for input signal 109"]
     #[inline(always)]
     pub const fn func109_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(109)
     }
-    #[doc = "0x47c - FUNC110_IN_SEL_CFG"]
+    #[doc = "0x48c - Configuration register for input signal 110"]
     #[inline(always)]
     pub const fn func110_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(110)
     }
-    #[doc = "0x480 - FUNC111_IN_SEL_CFG"]
+    #[doc = "0x490 - Configuration register for input signal 111"]
     #[inline(always)]
     pub const fn func111_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(111)
     }
-    #[doc = "0x484 - FUNC112_IN_SEL_CFG"]
+    #[doc = "0x494 - Configuration register for input signal 112"]
     #[inline(always)]
     pub const fn func112_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(112)
     }
-    #[doc = "0x488 - FUNC113_IN_SEL_CFG"]
+    #[doc = "0x498 - Configuration register for input signal 113"]
     #[inline(always)]
     pub const fn func113_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(113)
     }
-    #[doc = "0x48c - FUNC114_IN_SEL_CFG"]
+    #[doc = "0x49c - Configuration register for input signal 114"]
     #[inline(always)]
     pub const fn func114_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(114)
     }
-    #[doc = "0x490 - FUNC115_IN_SEL_CFG"]
+    #[doc = "0x4a0 - Configuration register for input signal 115"]
     #[inline(always)]
     pub const fn func115_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(115)
-    }
-    #[doc = "0x494 - FUNC116_IN_SEL_CFG"]
-    #[inline(always)]
-    pub const fn func116_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
-        self.func_in_sel_cfg(116)
-    }
-    #[doc = "0x498 - FUNC117_IN_SEL_CFG"]
-    #[inline(always)]
-    pub const fn func117_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
-        self.func_in_sel_cfg(117)
-    }
-    #[doc = "0x49c - FUNC118_IN_SEL_CFG"]
-    #[inline(always)]
-    pub const fn func118_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
-        self.func_in_sel_cfg(118)
-    }
-    #[doc = "0x4a0 - FUNC119_IN_SEL_CFG"]
-    #[inline(always)]
-    pub const fn func119_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
-        self.func_in_sel_cfg(119)
-    }
-    #[doc = "0x4a4 - FUNC120_IN_SEL_CFG"]
-    #[inline(always)]
-    pub const fn func120_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
-        self.func_in_sel_cfg(120)
-    }
-    #[doc = "0x4a8 - FUNC121_IN_SEL_CFG"]
-    #[inline(always)]
-    pub const fn func121_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
-        self.func_in_sel_cfg(121)
-    }
-    #[doc = "0x4ac - FUNC122_IN_SEL_CFG"]
-    #[inline(always)]
-    pub const fn func122_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
-        self.func_in_sel_cfg(122)
-    }
-    #[doc = "0x4b0 - FUNC123_IN_SEL_CFG"]
-    #[inline(always)]
-    pub const fn func123_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
-        self.func_in_sel_cfg(123)
-    }
-    #[doc = "0x4b4 - FUNC124_IN_SEL_CFG"]
-    #[inline(always)]
-    pub const fn func124_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
-        self.func_in_sel_cfg(124)
-    }
-    #[doc = "0x4b8 - FUNC125_IN_SEL_CFG"]
-    #[inline(always)]
-    pub const fn func125_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
-        self.func_in_sel_cfg(125)
-    }
-    #[doc = "0x4bc - FUNC126_IN_SEL_CFG"]
-    #[inline(always)]
-    pub const fn func126_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
-        self.func_in_sel_cfg(126)
-    }
-    #[doc = "0x4c0 - FUNC127_IN_SEL_CFG"]
-    #[inline(always)]
-    pub const fn func127_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
-        self.func_in_sel_cfg(127)
     }
     #[doc = "0xad4..0xb48 - Configuration register for GPIO%s output"]
     #[inline(always)]
@@ -1177,9 +1117,9 @@ pub use PIN as PIN29;
 pub use PIN as PIN30;
 pub use PIN as PIN31;
 pub use PIN as PIN32;
-#[doc = "FUNC_IN_SEL_CFG (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`func_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func_in_sel_cfg`] module"]
+#[doc = "FUNC_IN_SEL_CFG (rw) register accessor: Configuration register for input signal %s\n\nYou can [`read`](crate::Reg::read) this register and get [`func_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func_in_sel_cfg`] module"]
 pub type FUNC_IN_SEL_CFG = crate::Reg<func_in_sel_cfg::FUNC_IN_SEL_CFG_SPEC>;
-#[doc = ""]
+#[doc = "Configuration register for input signal %s"]
 pub mod func_in_sel_cfg;
 #[doc = "FUNC_OUT_SEL_CFG (rw) register accessor: Configuration register for GPIO%s output\n\nYou can [`read`](crate::Reg::read) this register and get [`func_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func_out_sel_cfg`] module"]
 pub type FUNC_OUT_SEL_CFG = crate::Reg<func_out_sel_cfg::FUNC_OUT_SEL_CFG_SPEC>;

@@ -408,32 +408,14 @@ EFUSE:
 
 
 GPIO:
-  _delete: "FUNC*_IN_SEL_CFG"
-
-  _add:
-    FUNC%s_IN_SEL_CFG:
-      dim: 128
-      dimIncrement: 0x4
-      description: ""
-      addressOffset: 0x2c4
-      size: 32
-      fields:
-        IN_SEL:
-          description: ""
-          bitOffset: 0
-          bitWidth: 7
-          access: read-write
-        IN_INV_SEL:
-          description: ""
-          bitOffset: 7
-          bitWidth: 1
-          access: read-write
-        SEL:
-          description: ""
-          bitOffset: 8
-          bitWidth: 1
-          access: read-write
-
+  FUNC*_IN_SEL_CFG:
+    _modify:
+      FUNC_IN_SEL:
+        name: IN_SEL
+      FUNC_IN_INV_SEL:
+        name: IN_INV_SEL
+      SIG_IN_SEL:
+        name: SEL
   FUNC*_OUT_SEL_CFG:
     _modify:
       FUNC*_OUT_SEL:
