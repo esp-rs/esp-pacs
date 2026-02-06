@@ -1,10 +1,11 @@
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
-#[doc = "Cluster UNIT%s, containing U?_CONF0, U?_CONF1, U?_CONF2"]
+#[doc = "Cluster UNIT%s, containing U?_CONF0, U?_CONF1, U?_CONF2, U?_CONF3"]
 pub struct UNIT {
     conf0: CONF0,
     conf1: CONF1,
     conf2: CONF2,
+    conf3: CONF3,
 }
 impl UNIT {
     #[doc = "0x00 - Configuration register 0 for unit"]
@@ -22,6 +23,11 @@ impl UNIT {
     pub const fn conf2(&self) -> &CONF2 {
         &self.conf2
     }
+    #[doc = "0x0c - Configuration register for unit 0's step value."]
+    #[inline(always)]
+    pub const fn conf3(&self) -> &CONF3 {
+        &self.conf3
+    }
 }
 #[doc = "CONF0 (rw) register accessor: Configuration register 0 for unit\n\nYou can [`read`](crate::Reg::read) this register and get [`conf0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`conf0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@conf0`] module"]
 pub type CONF0 = crate::Reg<conf0::CONF0_SPEC>;
@@ -35,3 +41,7 @@ pub mod conf1;
 pub type CONF2 = crate::Reg<conf2::CONF2_SPEC>;
 #[doc = "Configuration register 2 for unit 0"]
 pub mod conf2;
+#[doc = "CONF3 (rw) register accessor: Configuration register for unit 0's step value.\n\nYou can [`read`](crate::Reg::read) this register and get [`conf3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`conf3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@conf3`] module"]
+pub type CONF3 = crate::Reg<conf3::CONF3_SPEC>;
+#[doc = "Configuration register for unit 0's step value."]
+pub mod conf3;
