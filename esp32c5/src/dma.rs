@@ -10,22 +10,28 @@ pub struct RegisterBlock {
     _reserved5: [u8; 0x04],
     ch: [CH; 3],
     _reserved6: [u8; 0x2c],
-    tx_ch_arb_weigh_ch: (),
+    tx_ch_arb_weight_ch: (),
     _reserved7: [u8; 0x04],
-    tx_arb_weigh_opt_dir_ch: (),
+    tx_arb_weight_opt_dis_ch: (),
     _reserved8: [u8; 0x74],
-    rx_ch_arb_weigh_ch: (),
+    rx_ch_arb_weight_ch: (),
     _reserved9: [u8; 0x04],
-    rx_arb_weigh_opt_dir_ch: (),
+    rx_arb_weight_opt_dis_ch: (),
     _reserved10: [u8; 0x54],
     in_link_addr_ch: [IN_LINK_ADDR_CH; 3],
     out_link_addr_ch: [OUT_LINK_ADDR_CH; 3],
     intr_mem_start_addr: INTR_MEM_START_ADDR,
     intr_mem_end_addr: INTR_MEM_END_ADDR,
+    _reserved14: [u8; 0x10],
     arb_timeout_tx: ARB_TIMEOUT_TX,
-    arb_timeout_rx: ARB_TIMEOUT_RX,
-    weight_en_tx: WEIGHT_EN_TX,
-    weight_en_rx: WEIGHT_EN_RX,
+    _reserved15: [u8; 0x20],
+    weight_en: WEIGHT_EN,
+    module_clk_en: MODULE_CLK_EN,
+    ahbinf_resp_err_status0: AHBINF_RESP_ERR_STATUS0,
+    ahbinf_resp_err_status1: AHBINF_RESP_ERR_STATUS1,
+    in_done_des_addr_ch: (),
+    _reserved20: [u8; 0x04],
+    out_done_des_addr_ch: (),
 }
 impl RegisterBlock {
     #[doc = "0x00..0x30 - Cluster IN_INT_CH%s, containing IN_INT_RAW_CH?, IN_INT_ST_CH?, IN_INT_ENA_CH?, IN_INT_CLR_CH?"]
@@ -78,7 +84,7 @@ impl RegisterBlock {
     }
     #[doc = "0x2dc..0x2e8 - TX channel %s arbitration weight configuration register"]
     #[inline(always)]
-    pub const fn tx_ch_arb_weigh_ch(&self, n: usize) -> &TX_CH_ARB_WEIGH_CH {
+    pub const fn tx_ch_arb_weight_ch(&self, n: usize) -> &TX_CH_ARB_WEIGHT_CH {
         #[allow(clippy::no_effect)]
         [(); 3][n];
         unsafe {
@@ -92,7 +98,7 @@ impl RegisterBlock {
     #[doc = "Iterator for array of:"]
     #[doc = "0x2dc..0x2e8 - TX channel %s arbitration weight configuration register"]
     #[inline(always)]
-    pub fn tx_ch_arb_weigh_ch_iter(&self) -> impl Iterator<Item = &TX_CH_ARB_WEIGH_CH> {
+    pub fn tx_ch_arb_weight_ch_iter(&self) -> impl Iterator<Item = &TX_CH_ARB_WEIGHT_CH> {
         (0..3).map(move |n| unsafe {
             &*core::ptr::from_ref(self)
                 .cast::<u8>()
@@ -103,7 +109,7 @@ impl RegisterBlock {
     }
     #[doc = "0x2e0..0x2ec - TX channel %s weight arbitration optimization enable register"]
     #[inline(always)]
-    pub const fn tx_arb_weigh_opt_dir_ch(&self, n: usize) -> &TX_ARB_WEIGH_OPT_DIR_CH {
+    pub const fn tx_arb_weight_opt_dis_ch(&self, n: usize) -> &TX_ARB_WEIGHT_OPT_DIS_CH {
         #[allow(clippy::no_effect)]
         [(); 3][n];
         unsafe {
@@ -117,7 +123,7 @@ impl RegisterBlock {
     #[doc = "Iterator for array of:"]
     #[doc = "0x2e0..0x2ec - TX channel %s weight arbitration optimization enable register"]
     #[inline(always)]
-    pub fn tx_arb_weigh_opt_dir_ch_iter(&self) -> impl Iterator<Item = &TX_ARB_WEIGH_OPT_DIR_CH> {
+    pub fn tx_arb_weight_opt_dis_ch_iter(&self) -> impl Iterator<Item = &TX_ARB_WEIGHT_OPT_DIS_CH> {
         (0..3).map(move |n| unsafe {
             &*core::ptr::from_ref(self)
                 .cast::<u8>()
@@ -128,7 +134,7 @@ impl RegisterBlock {
     }
     #[doc = "0x354..0x360 - RX channel %s arbitration weight configuration register"]
     #[inline(always)]
-    pub const fn rx_ch_arb_weigh_ch(&self, n: usize) -> &RX_CH_ARB_WEIGH_CH {
+    pub const fn rx_ch_arb_weight_ch(&self, n: usize) -> &RX_CH_ARB_WEIGHT_CH {
         #[allow(clippy::no_effect)]
         [(); 3][n];
         unsafe {
@@ -142,7 +148,7 @@ impl RegisterBlock {
     #[doc = "Iterator for array of:"]
     #[doc = "0x354..0x360 - RX channel %s arbitration weight configuration register"]
     #[inline(always)]
-    pub fn rx_ch_arb_weigh_ch_iter(&self) -> impl Iterator<Item = &RX_CH_ARB_WEIGH_CH> {
+    pub fn rx_ch_arb_weight_ch_iter(&self) -> impl Iterator<Item = &RX_CH_ARB_WEIGHT_CH> {
         (0..3).map(move |n| unsafe {
             &*core::ptr::from_ref(self)
                 .cast::<u8>()
@@ -153,7 +159,7 @@ impl RegisterBlock {
     }
     #[doc = "0x358..0x364 - RX channel %s weight arbitration optimization enable register"]
     #[inline(always)]
-    pub const fn rx_arb_weigh_opt_dir_ch(&self, n: usize) -> &RX_ARB_WEIGH_OPT_DIR_CH {
+    pub const fn rx_arb_weight_opt_dis_ch(&self, n: usize) -> &RX_ARB_WEIGHT_OPT_DIS_CH {
         #[allow(clippy::no_effect)]
         [(); 3][n];
         unsafe {
@@ -167,7 +173,7 @@ impl RegisterBlock {
     #[doc = "Iterator for array of:"]
     #[doc = "0x358..0x364 - RX channel %s weight arbitration optimization enable register"]
     #[inline(always)]
-    pub fn rx_arb_weigh_opt_dir_ch_iter(&self) -> impl Iterator<Item = &RX_ARB_WEIGH_OPT_DIR_CH> {
+    pub fn rx_arb_weight_opt_dis_ch_iter(&self) -> impl Iterator<Item = &RX_ARB_WEIGHT_OPT_DIS_CH> {
         (0..3).map(move |n| unsafe {
             &*core::ptr::from_ref(self)
                 .cast::<u8>()
@@ -208,25 +214,80 @@ impl RegisterBlock {
     pub const fn intr_mem_end_addr(&self) -> &INTR_MEM_END_ADDR {
         &self.intr_mem_end_addr
     }
-    #[doc = "0x3cc - TX arbitration timeout configuration register"]
+    #[doc = "0x3dc - TX arbitration timeout configuration register"]
     #[inline(always)]
     pub const fn arb_timeout_tx(&self) -> &ARB_TIMEOUT_TX {
         &self.arb_timeout_tx
     }
-    #[doc = "0x3d0 - RX arbitration timeout configuration register"]
+    #[doc = "0x400 - TX weight arbitration enable register"]
     #[inline(always)]
-    pub const fn arb_timeout_rx(&self) -> &ARB_TIMEOUT_RX {
-        &self.arb_timeout_rx
+    pub const fn weight_en(&self) -> &WEIGHT_EN {
+        &self.weight_en
     }
-    #[doc = "0x3d4 - TX weight arbitration enable register"]
+    #[doc = "0x404 - Module clock force on register"]
     #[inline(always)]
-    pub const fn weight_en_tx(&self) -> &WEIGHT_EN_TX {
-        &self.weight_en_tx
+    pub const fn module_clk_en(&self) -> &MODULE_CLK_EN {
+        &self.module_clk_en
     }
-    #[doc = "0x3d8 - RX weight arbitration enable register"]
+    #[doc = "0x408 - Represents the address of the AHB response error."]
     #[inline(always)]
-    pub const fn weight_en_rx(&self) -> &WEIGHT_EN_RX {
-        &self.weight_en_rx
+    pub const fn ahbinf_resp_err_status0(&self) -> &AHBINF_RESP_ERR_STATUS0 {
+        &self.ahbinf_resp_err_status0
+    }
+    #[doc = "0x40c - Represents the AHB response error is write request."]
+    #[inline(always)]
+    pub const fn ahbinf_resp_err_status1(&self) -> &AHBINF_RESP_ERR_STATUS1 {
+        &self.ahbinf_resp_err_status1
+    }
+    #[doc = "0x410..0x41c - Represents the address of the inlink descriptor when this descriptor is completed."]
+    #[inline(always)]
+    pub const fn in_done_des_addr_ch(&self, n: usize) -> &IN_DONE_DES_ADDR_CH {
+        #[allow(clippy::no_effect)]
+        [(); 3][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(1040)
+                .add(8 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x410..0x41c - Represents the address of the inlink descriptor when this descriptor is completed."]
+    #[inline(always)]
+    pub fn in_done_des_addr_ch_iter(&self) -> impl Iterator<Item = &IN_DONE_DES_ADDR_CH> {
+        (0..3).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(1040)
+                .add(8 * n)
+                .cast()
+        })
+    }
+    #[doc = "0x414..0x420 - Represents the address of the outlink descriptor when this descriptor is completed."]
+    #[inline(always)]
+    pub const fn out_done_des_addr_ch(&self, n: usize) -> &OUT_DONE_DES_ADDR_CH {
+        #[allow(clippy::no_effect)]
+        [(); 3][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(1044)
+                .add(8 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x414..0x420 - Represents the address of the outlink descriptor when this descriptor is completed."]
+    #[inline(always)]
+    pub fn out_done_des_addr_ch_iter(&self) -> impl Iterator<Item = &OUT_DONE_DES_ADDR_CH> {
+        (0..3).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(1044)
+                .add(8 * n)
+                .cast()
+        })
     }
 }
 #[doc = "Cluster IN_INT_CH%s, containing IN_INT_RAW_CH?, IN_INT_ST_CH?, IN_INT_ENA_CH?, IN_INT_CLR_CH?"]
@@ -254,24 +315,24 @@ pub use crate::aes::DATE;
 #[doc = r"Cluster"]
 #[doc = "Cluster CH%s, containing IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PRI_CH?, IN_PERI_SEL_CH?, OUT_CONF0_CH?, OUT_CONF1_CH?, OUTFIFO_STATUS_CH?, OUT_PUSH_CH?, OUT_LINK_CH?, OUT_STATE_CH?, OUT_EOF_DES_ADDR_CH?, OUT_EOF_BFR_DES_ADDR_CH?, OUT_DSCR_CH?, OUT_DSCR_BF0_CH?, OUT_DSCR_BF1_CH?, OUT_PRI_CH?, OUT_PERI_SEL_CH?"]
 pub mod ch;
-#[doc = "TX_CH_ARB_WEIGH_CH (rw) register accessor: TX channel %s arbitration weight configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_ch_arb_weigh_ch::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_ch_arb_weigh_ch::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_ch_arb_weigh_ch`] module"]
-pub type TX_CH_ARB_WEIGH_CH = crate::Reg<tx_ch_arb_weigh_ch::TX_CH_ARB_WEIGH_CH_SPEC>;
+#[doc = "TX_CH_ARB_WEIGHT_CH (rw) register accessor: TX channel %s arbitration weight configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_ch_arb_weight_ch::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_ch_arb_weight_ch::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_ch_arb_weight_ch`] module"]
+pub type TX_CH_ARB_WEIGHT_CH = crate::Reg<tx_ch_arb_weight_ch::TX_CH_ARB_WEIGHT_CH_SPEC>;
 #[doc = "TX channel %s arbitration weight configuration register"]
-pub mod tx_ch_arb_weigh_ch;
-#[doc = "TX_ARB_WEIGH_OPT_DIR_CH (rw) register accessor: TX channel %s weight arbitration optimization enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_arb_weigh_opt_dir_ch::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_arb_weigh_opt_dir_ch::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_arb_weigh_opt_dir_ch`] module"]
-pub type TX_ARB_WEIGH_OPT_DIR_CH =
-    crate::Reg<tx_arb_weigh_opt_dir_ch::TX_ARB_WEIGH_OPT_DIR_CH_SPEC>;
+pub mod tx_ch_arb_weight_ch;
+#[doc = "TX_ARB_WEIGHT_OPT_DIS_CH (rw) register accessor: TX channel %s weight arbitration optimization enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_arb_weight_opt_dis_ch::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_arb_weight_opt_dis_ch::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_arb_weight_opt_dis_ch`] module"]
+pub type TX_ARB_WEIGHT_OPT_DIS_CH =
+    crate::Reg<tx_arb_weight_opt_dis_ch::TX_ARB_WEIGHT_OPT_DIS_CH_SPEC>;
 #[doc = "TX channel %s weight arbitration optimization enable register"]
-pub mod tx_arb_weigh_opt_dir_ch;
-#[doc = "RX_CH_ARB_WEIGH_CH (rw) register accessor: RX channel %s arbitration weight configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_ch_arb_weigh_ch::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_ch_arb_weigh_ch::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_ch_arb_weigh_ch`] module"]
-pub type RX_CH_ARB_WEIGH_CH = crate::Reg<rx_ch_arb_weigh_ch::RX_CH_ARB_WEIGH_CH_SPEC>;
+pub mod tx_arb_weight_opt_dis_ch;
+#[doc = "RX_CH_ARB_WEIGHT_CH (rw) register accessor: RX channel %s arbitration weight configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_ch_arb_weight_ch::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_ch_arb_weight_ch::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_ch_arb_weight_ch`] module"]
+pub type RX_CH_ARB_WEIGHT_CH = crate::Reg<rx_ch_arb_weight_ch::RX_CH_ARB_WEIGHT_CH_SPEC>;
 #[doc = "RX channel %s arbitration weight configuration register"]
-pub mod rx_ch_arb_weigh_ch;
-#[doc = "RX_ARB_WEIGH_OPT_DIR_CH (rw) register accessor: RX channel %s weight arbitration optimization enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_arb_weigh_opt_dir_ch::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_arb_weigh_opt_dir_ch::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_arb_weigh_opt_dir_ch`] module"]
-pub type RX_ARB_WEIGH_OPT_DIR_CH =
-    crate::Reg<rx_arb_weigh_opt_dir_ch::RX_ARB_WEIGH_OPT_DIR_CH_SPEC>;
+pub mod rx_ch_arb_weight_ch;
+#[doc = "RX_ARB_WEIGHT_OPT_DIS_CH (rw) register accessor: RX channel %s weight arbitration optimization enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_arb_weight_opt_dis_ch::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_arb_weight_opt_dis_ch::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_arb_weight_opt_dis_ch`] module"]
+pub type RX_ARB_WEIGHT_OPT_DIS_CH =
+    crate::Reg<rx_arb_weight_opt_dis_ch::RX_ARB_WEIGHT_OPT_DIS_CH_SPEC>;
 #[doc = "RX channel %s weight arbitration optimization enable register"]
-pub mod rx_arb_weigh_opt_dir_ch;
+pub mod rx_arb_weight_opt_dis_ch;
 #[doc = "IN_LINK_ADDR_CH (rw) register accessor: Link list descriptor address configuration of RX channel %s\n\nYou can [`read`](crate::Reg::read) this register and get [`in_link_addr_ch::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_link_addr_ch::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_link_addr_ch`] module"]
 pub type IN_LINK_ADDR_CH = crate::Reg<in_link_addr_ch::IN_LINK_ADDR_CH_SPEC>;
 #[doc = "Link list descriptor address configuration of RX channel %s"]
@@ -292,15 +353,29 @@ pub mod intr_mem_end_addr;
 pub type ARB_TIMEOUT_TX = crate::Reg<arb_timeout_tx::ARB_TIMEOUT_TX_SPEC>;
 #[doc = "TX arbitration timeout configuration register"]
 pub mod arb_timeout_tx;
-#[doc = "ARB_TIMEOUT_RX (rw) register accessor: RX arbitration timeout configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`arb_timeout_rx::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`arb_timeout_rx::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@arb_timeout_rx`] module"]
-pub type ARB_TIMEOUT_RX = crate::Reg<arb_timeout_rx::ARB_TIMEOUT_RX_SPEC>;
-#[doc = "RX arbitration timeout configuration register"]
-pub mod arb_timeout_rx;
-#[doc = "WEIGHT_EN_TX (rw) register accessor: TX weight arbitration enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`weight_en_tx::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`weight_en_tx::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@weight_en_tx`] module"]
-pub type WEIGHT_EN_TX = crate::Reg<weight_en_tx::WEIGHT_EN_TX_SPEC>;
+#[doc = "WEIGHT_EN (rw) register accessor: TX weight arbitration enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`weight_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`weight_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@weight_en`] module"]
+pub type WEIGHT_EN = crate::Reg<weight_en::WEIGHT_EN_SPEC>;
 #[doc = "TX weight arbitration enable register"]
-pub mod weight_en_tx;
-#[doc = "WEIGHT_EN_RX (rw) register accessor: RX weight arbitration enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`weight_en_rx::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`weight_en_rx::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@weight_en_rx`] module"]
-pub type WEIGHT_EN_RX = crate::Reg<weight_en_rx::WEIGHT_EN_RX_SPEC>;
-#[doc = "RX weight arbitration enable register"]
-pub mod weight_en_rx;
+pub mod weight_en;
+#[doc = "MODULE_CLK_EN (rw) register accessor: Module clock force on register\n\nYou can [`read`](crate::Reg::read) this register and get [`module_clk_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`module_clk_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@module_clk_en`] module"]
+pub type MODULE_CLK_EN = crate::Reg<module_clk_en::MODULE_CLK_EN_SPEC>;
+#[doc = "Module clock force on register"]
+pub mod module_clk_en;
+#[doc = "AHBINF_RESP_ERR_STATUS0 (r) register accessor: Represents the address of the AHB response error.\n\nYou can [`read`](crate::Reg::read) this register and get [`ahbinf_resp_err_status0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ahbinf_resp_err_status0`] module"]
+pub type AHBINF_RESP_ERR_STATUS0 =
+    crate::Reg<ahbinf_resp_err_status0::AHBINF_RESP_ERR_STATUS0_SPEC>;
+#[doc = "Represents the address of the AHB response error."]
+pub mod ahbinf_resp_err_status0;
+#[doc = "AHBINF_RESP_ERR_STATUS1 (r) register accessor: Represents the AHB response error is write request.\n\nYou can [`read`](crate::Reg::read) this register and get [`ahbinf_resp_err_status1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ahbinf_resp_err_status1`] module"]
+pub type AHBINF_RESP_ERR_STATUS1 =
+    crate::Reg<ahbinf_resp_err_status1::AHBINF_RESP_ERR_STATUS1_SPEC>;
+#[doc = "Represents the AHB response error is write request."]
+pub mod ahbinf_resp_err_status1;
+#[doc = "IN_DONE_DES_ADDR_CH (r) register accessor: Represents the address of the inlink descriptor when this descriptor is completed.\n\nYou can [`read`](crate::Reg::read) this register and get [`in_done_des_addr_ch::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_done_des_addr_ch`] module"]
+pub type IN_DONE_DES_ADDR_CH = crate::Reg<in_done_des_addr_ch::IN_DONE_DES_ADDR_CH_SPEC>;
+#[doc = "Represents the address of the inlink descriptor when this descriptor is completed."]
+pub mod in_done_des_addr_ch;
+#[doc = "OUT_DONE_DES_ADDR_CH (r) register accessor: Represents the address of the outlink descriptor when this descriptor is completed.\n\nYou can [`read`](crate::Reg::read) this register and get [`out_done_des_addr_ch::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_done_des_addr_ch`] module"]
+pub type OUT_DONE_DES_ADDR_CH = crate::Reg<out_done_des_addr_ch::OUT_DONE_DES_ADDR_CH_SPEC>;
+#[doc = "Represents the address of the outlink descriptor when this descriptor is completed."]
+pub mod out_done_des_addr_ch;
