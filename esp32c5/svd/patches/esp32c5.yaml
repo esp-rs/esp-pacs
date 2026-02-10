@@ -82,7 +82,7 @@ DMA:
       DMA_OUT_CH2:
         value: 76
 
-  IN_INT_RAW_CH?:
+  IN_INT_RAW_CH%s:
     _strip_end:
       - _CH_INT_RAW
       - _CH?_INT_RAW
@@ -185,6 +185,7 @@ DMA:
     _strip_end: _CH
 
   _expand_array:
+    IN_INT_RAW_CH%s: {}
     IN_INT_ST_CH%s: {}
     IN_INT_ENA_CH%s: {}
     IN_INT_CLR_CH%s: {}

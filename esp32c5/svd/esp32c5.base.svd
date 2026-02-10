@@ -479,56 +479,58 @@ Only valid for DMA-AES operation.</description>
       </addressBlock>
       <registers>
         <register>
-          <name>IN_INT_RAW_CH0</name>
+          <dim>3</dim>
+          <dimIncrement>0x10</dimIncrement>
+          <name>IN_INT_RAW_CH%s</name>
           <description>Raw interrupt status of RX channel 0</description>
           <addressOffset>0x0</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>IN_DONE_CH0_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DONE_CH0_INT.</description>
+              <name>IN_DONE_CH_INT_RAW</name>
+              <description>The raw interrupt status of AHB_DMA_IN_DONE_CH%s_INT.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH0_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_SUC_EOF_CH0_INT.</description>
+              <name>IN_SUC_EOF_CH_INT_RAW</name>
+              <description>The raw interrupt status of AHB_DMA_IN_SUC_EOF_CH%s_INT.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH0_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_ERR_EOF_CH0_INT.</description>
+              <name>IN_ERR_EOF_CH_INT_RAW</name>
+              <description>The raw interrupt status of AHB_DMA_IN_ERR_EOF_CH%s_INT.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH0_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DSCR_ERR_CH0_INT.</description>
+              <name>IN_DSCR_ERR_CH_INT_RAW</name>
+              <description>The raw interrupt status of AHB_DMA_IN_DSCR_ERR_CH%s_INT.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH0_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DSCR_EMPTY_CH0_INT.</description>
+              <name>IN_DSCR_EMPTY_CH_INT_RAW</name>
+              <description>The raw interrupt status of AHB_DMA_IN_DSCR_EMPTY_CH%s_INT.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH0_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_INFIFO_OVF_CH0_INT.</description>
+              <name>INFIFO_OVF_CH_INT_RAW</name>
+              <description>The raw interrupt status of AHB_DMA_INFIFO_OVF_CH%s_INT.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH0_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_INFIFO_UDF_CH0_INT.</description>
+              <name>INFIFO_UDF_CH_INT_RAW</name>
+              <description>The raw interrupt status of AHB_DMA_INFIFO_UDF_CH%s_INT.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -709,120 +711,6 @@ Only valid for DMA-AES operation.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>IN_INT_RAW_CH1</name>
-          <description>Raw interrupt status interrupt of RX channel 1</description>
-          <addressOffset>0x10</addressOffset>
-          <size>32</size>
-          <fields>
-            <field>
-              <name>IN_DONE_CH1_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DONE_CH1_INT.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IN_SUC_EOF_CH1_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_SUC_EOF_CH1_INT.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IN_ERR_EOF_CH1_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_ERR_EOF_CH1_INT.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IN_DSCR_ERR_CH1_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DSCR_ERR_CH1_INT.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IN_DSCR_EMPTY_CH1_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DSCR_EMPTY_CH1_INT.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INFIFO_OVF_CH1_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_INFIFO_OVF_CH1_INT.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INFIFO_UDF_CH1_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_INFIFO_UDF_CH1_INT.</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>IN_INT_RAW_CH2</name>
-          <description>Raw interrupt status interrupt of RX channel 2</description>
-          <addressOffset>0x20</addressOffset>
-          <size>32</size>
-          <fields>
-            <field>
-              <name>IN_DONE_CH2_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DONE_CH2_INT.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IN_SUC_EOF_CH2_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_SUC_EOF_CH2_INT.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IN_ERR_EOF_CH2_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_ERR_EOF_CH2_INT.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IN_DSCR_ERR_CH2_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DSCR_ERR_CH2_INT.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IN_DSCR_EMPTY_CH2_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DSCR_EMPTY_CH2_INT.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INFIFO_OVF_CH2_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_INFIFO_OVF_CH2_INT.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INFIFO_UDF_CH2_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_INFIFO_UDF_CH2_INT.</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
           </fields>
         </register>
