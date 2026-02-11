@@ -514,6 +514,15 @@ impl core::fmt::Debug for LEDC {
 }
 #[doc = "LED Control PWM (Pulse Width Modulation)"]
 pub mod ledc;
+#[doc = "LEDC gamma fade configuration RAM."]
+pub type LEDC_GAMMA_RAM = crate::Periph<ledc_gamma_ram::RegisterBlock, 0x6000_7400>;
+impl core::fmt::Debug for LEDC_GAMMA_RAM {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LEDC_GAMMA_RAM").finish()
+    }
+}
+#[doc = "LEDC gamma fade configuration RAM."]
+pub mod ledc_gamma_ram;
 #[doc = "LPPERI Peripheral"]
 pub type LPPERI = crate::Periph<lpperi::RegisterBlock, 0x600b_2800>;
 impl core::fmt::Debug for LPPERI {
@@ -953,6 +962,8 @@ pub struct Peripherals {
     pub KEYMNG: KEYMNG,
     #[doc = "LEDC"]
     pub LEDC: LEDC,
+    #[doc = "LEDC_GAMMA_RAM"]
+    pub LEDC_GAMMA_RAM: LEDC_GAMMA_RAM,
     #[doc = "LPPERI"]
     pub LPPERI: LPPERI,
     #[doc = "LP_ANA"]
@@ -1087,6 +1098,7 @@ impl Peripherals {
             IO_MUX: IO_MUX::steal(),
             KEYMNG: KEYMNG::steal(),
             LEDC: LEDC::steal(),
+            LEDC_GAMMA_RAM: LEDC_GAMMA_RAM::steal(),
             LPPERI: LPPERI::steal(),
             LP_ANA: LP_ANA::steal(),
             LP_AON: LP_AON::steal(),
