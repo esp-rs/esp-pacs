@@ -6,9 +6,10 @@ pub struct RegisterBlock {
     mspi_conf: MSPI_CONF,
     mspi_clk_conf: MSPI_CLK_CONF,
     i2c0_conf: I2C0_CONF,
-    i2c0_sclk_conf: I2C0_SCLK_CONF,
+    i2c_sclk_conf: (),
+    _reserved5: [u8; 0x04],
     i2c1_conf: I2C1_CONF,
-    i2c1_sclk_conf: I2C1_SCLK_CONF,
+    _reserved6: [u8; 0x04],
     uhci_conf: UHCI_CONF,
     rmt_conf: RMT_CONF,
     rmt_sclk_conf: RMT_SCLK_CONF,
@@ -82,7 +83,7 @@ pub struct RegisterBlock {
     bus_clk_update: BUS_CLK_UPDATE,
     sar_clk_div: SAR_CLK_DIV,
     pwdet_sar_clk_conf: PWDET_SAR_CLK_CONF,
-    _reserved80: [u8; 0x0e9c],
+    _reserved79: [u8; 0x0e9c],
     reset_event_bypass: RESET_EVENT_BYPASS,
     fpga_debug: FPGA_DEBUG,
     clock_gate: CLOCK_GATE,
@@ -115,20 +116,45 @@ impl RegisterBlock {
     pub const fn i2c0_conf(&self) -> &I2C0_CONF {
         &self.i2c0_conf
     }
+    #[doc = "0x24..0x2c - I2C_SCLK configuration register"]
+    #[inline(always)]
+    pub const fn i2c_sclk_conf(&self, n: usize) -> &I2C_SCLK_CONF {
+        #[allow(clippy::no_effect)]
+        [(); 2][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(36)
+                .add(8 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x24..0x2c - I2C_SCLK configuration register"]
+    #[inline(always)]
+    pub fn i2c_sclk_conf_iter(&self) -> impl Iterator<Item = &I2C_SCLK_CONF> {
+        (0..2).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(36)
+                .add(8 * n)
+                .cast()
+        })
+    }
     #[doc = "0x24 - I2C_SCLK configuration register"]
     #[inline(always)]
-    pub const fn i2c0_sclk_conf(&self) -> &I2C0_SCLK_CONF {
-        &self.i2c0_sclk_conf
+    pub const fn i2c0_sclk_conf(&self) -> &I2C_SCLK_CONF {
+        self.i2c_sclk_conf(0)
+    }
+    #[doc = "0x2c - I2C_SCLK configuration register"]
+    #[inline(always)]
+    pub const fn i2c1_sclk_conf(&self) -> &I2C_SCLK_CONF {
+        self.i2c_sclk_conf(1)
     }
     #[doc = "0x28 - I2C configuration register"]
     #[inline(always)]
     pub const fn i2c1_conf(&self) -> &I2C1_CONF {
         &self.i2c1_conf
-    }
-    #[doc = "0x2c - I2C_SCLK configuration register"]
-    #[inline(always)]
-    pub const fn i2c1_sclk_conf(&self) -> &I2C1_SCLK_CONF {
-        &self.i2c1_sclk_conf
     }
     #[doc = "0x30 - UHCI configuration register"]
     #[inline(always)]
@@ -533,18 +559,14 @@ pub mod mspi_clk_conf;
 pub type I2C0_CONF = crate::Reg<i2c0_conf::I2C0_CONF_SPEC>;
 #[doc = "I2C configuration register"]
 pub mod i2c0_conf;
-#[doc = "I2C0_SCLK_CONF (rw) register accessor: I2C_SCLK configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c0_sclk_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c0_sclk_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c0_sclk_conf`] module"]
-pub type I2C0_SCLK_CONF = crate::Reg<i2c0_sclk_conf::I2C0_SCLK_CONF_SPEC>;
+#[doc = "I2C_SCLK_CONF (rw) register accessor: I2C_SCLK configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c_sclk_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c_sclk_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c_sclk_conf`] module"]
+pub type I2C_SCLK_CONF = crate::Reg<i2c_sclk_conf::I2C_SCLK_CONF_SPEC>;
 #[doc = "I2C_SCLK configuration register"]
-pub mod i2c0_sclk_conf;
+pub mod i2c_sclk_conf;
 #[doc = "I2C1_CONF (rw) register accessor: I2C configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c1_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c1_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c1_conf`] module"]
 pub type I2C1_CONF = crate::Reg<i2c1_conf::I2C1_CONF_SPEC>;
 #[doc = "I2C configuration register"]
 pub mod i2c1_conf;
-#[doc = "I2C1_SCLK_CONF (rw) register accessor: I2C_SCLK configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c1_sclk_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c1_sclk_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c1_sclk_conf`] module"]
-pub type I2C1_SCLK_CONF = crate::Reg<i2c1_sclk_conf::I2C1_SCLK_CONF_SPEC>;
-#[doc = "I2C_SCLK configuration register"]
-pub mod i2c1_sclk_conf;
 #[doc = "UHCI_CONF (rw) register accessor: UHCI configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`uhci_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uhci_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uhci_conf`] module"]
 pub type UHCI_CONF = crate::Reg<uhci_conf::UHCI_CONF_SPEC>;
 #[doc = "UHCI configuration register"]
