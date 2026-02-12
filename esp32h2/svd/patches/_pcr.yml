@@ -1,3 +1,20 @@
 PCR:
   RMT_SCLK_CONF:
     _strip: "RMT_"
+  _array:
+    I2C*_SCLK_CONF:
+      name: I2C%s_SCLK_CONF
+
+  I2C*_SCLK_CONF:
+    _modify:
+      I2C*_SCLK_DIV_A:
+        name: I2C_SCLK_DIV_A
+      I2C*_SCLK_DIV_B:
+        name: I2C_SCLK_DIV_B
+      I2C*_SCLK_DIV_NUM:
+        name: I2C_SCLK_DIV_NUM
+      I2C*_SCLK_SEL:
+        name: I2C_SCLK_SEL
+      I2C*_SCLK_EN:
+        name: I2C_SCLK_EN
+
