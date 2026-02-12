@@ -2,66 +2,66 @@
 pub type R = crate::R<RAW_SPEC>;
 #[doc = "Register `RAW` writer"]
 pub type W = crate::W<RAW_SPEC>;
-#[doc = "Field `IN_DONE` reader - The raw interrupt status of AHB_DMA_IN_DONE_CH0_INT."]
+#[doc = "Field `IN_DONE` reader - The raw interrupt status of AHB_DMA_IN_DONE_CH%s_INT."]
 pub type IN_DONE_R = crate::BitReader;
-#[doc = "Field `IN_DONE` writer - The raw interrupt status of AHB_DMA_IN_DONE_CH0_INT."]
+#[doc = "Field `IN_DONE` writer - The raw interrupt status of AHB_DMA_IN_DONE_CH%s_INT."]
 pub type IN_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `IN_SUC_EOF` reader - The raw interrupt status of AHB_DMA_IN_SUC_EOF_CH0_INT."]
+#[doc = "Field `IN_SUC_EOF` reader - The raw interrupt status of AHB_DMA_IN_SUC_EOF_CH%s_INT."]
 pub type IN_SUC_EOF_R = crate::BitReader;
-#[doc = "Field `IN_SUC_EOF` writer - The raw interrupt status of AHB_DMA_IN_SUC_EOF_CH0_INT."]
+#[doc = "Field `IN_SUC_EOF` writer - The raw interrupt status of AHB_DMA_IN_SUC_EOF_CH%s_INT."]
 pub type IN_SUC_EOF_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `IN_ERR_EOF` reader - The raw interrupt status of AHB_DMA_IN_ERR_EOF_CH0_INT."]
+#[doc = "Field `IN_ERR_EOF` reader - The raw interrupt status of AHB_DMA_IN_ERR_EOF_CH%s_INT."]
 pub type IN_ERR_EOF_R = crate::BitReader;
-#[doc = "Field `IN_ERR_EOF` writer - The raw interrupt status of AHB_DMA_IN_ERR_EOF_CH0_INT."]
+#[doc = "Field `IN_ERR_EOF` writer - The raw interrupt status of AHB_DMA_IN_ERR_EOF_CH%s_INT."]
 pub type IN_ERR_EOF_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `IN_DSCR_ERR` reader - The raw interrupt status of AHB_DMA_IN_DSCR_ERR_CH0_INT."]
+#[doc = "Field `IN_DSCR_ERR` reader - The raw interrupt status of AHB_DMA_IN_DSCR_ERR_CH%s_INT."]
 pub type IN_DSCR_ERR_R = crate::BitReader;
-#[doc = "Field `IN_DSCR_ERR` writer - The raw interrupt status of AHB_DMA_IN_DSCR_ERR_CH0_INT."]
+#[doc = "Field `IN_DSCR_ERR` writer - The raw interrupt status of AHB_DMA_IN_DSCR_ERR_CH%s_INT."]
 pub type IN_DSCR_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `IN_DSCR_EMPTY` reader - The raw interrupt status of AHB_DMA_IN_DSCR_EMPTY_CH0_INT."]
+#[doc = "Field `IN_DSCR_EMPTY` reader - The raw interrupt status of AHB_DMA_IN_DSCR_EMPTY_CH%s_INT."]
 pub type IN_DSCR_EMPTY_R = crate::BitReader;
-#[doc = "Field `IN_DSCR_EMPTY` writer - The raw interrupt status of AHB_DMA_IN_DSCR_EMPTY_CH0_INT."]
+#[doc = "Field `IN_DSCR_EMPTY` writer - The raw interrupt status of AHB_DMA_IN_DSCR_EMPTY_CH%s_INT."]
 pub type IN_DSCR_EMPTY_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `INFIFO_OVF` reader - The raw interrupt status of AHB_DMA_INFIFO_OVF_CH0_INT."]
+#[doc = "Field `INFIFO_OVF` reader - The raw interrupt status of AHB_DMA_INFIFO_OVF_CH%s_INT."]
 pub type INFIFO_OVF_R = crate::BitReader;
-#[doc = "Field `INFIFO_OVF` writer - The raw interrupt status of AHB_DMA_INFIFO_OVF_CH0_INT."]
+#[doc = "Field `INFIFO_OVF` writer - The raw interrupt status of AHB_DMA_INFIFO_OVF_CH%s_INT."]
 pub type INFIFO_OVF_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `INFIFO_UDF` reader - The raw interrupt status of AHB_DMA_INFIFO_UDF_CH0_INT."]
+#[doc = "Field `INFIFO_UDF` reader - The raw interrupt status of AHB_DMA_INFIFO_UDF_CH%s_INT."]
 pub type INFIFO_UDF_R = crate::BitReader;
-#[doc = "Field `INFIFO_UDF` writer - The raw interrupt status of AHB_DMA_INFIFO_UDF_CH0_INT."]
+#[doc = "Field `INFIFO_UDF` writer - The raw interrupt status of AHB_DMA_INFIFO_UDF_CH%s_INT."]
 pub type INFIFO_UDF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - The raw interrupt status of AHB_DMA_IN_DONE_CH0_INT."]
+    #[doc = "Bit 0 - The raw interrupt status of AHB_DMA_IN_DONE_CH%s_INT."]
     #[inline(always)]
     pub fn in_done(&self) -> IN_DONE_R {
         IN_DONE_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - The raw interrupt status of AHB_DMA_IN_SUC_EOF_CH0_INT."]
+    #[doc = "Bit 1 - The raw interrupt status of AHB_DMA_IN_SUC_EOF_CH%s_INT."]
     #[inline(always)]
     pub fn in_suc_eof(&self) -> IN_SUC_EOF_R {
         IN_SUC_EOF_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - The raw interrupt status of AHB_DMA_IN_ERR_EOF_CH0_INT."]
+    #[doc = "Bit 2 - The raw interrupt status of AHB_DMA_IN_ERR_EOF_CH%s_INT."]
     #[inline(always)]
     pub fn in_err_eof(&self) -> IN_ERR_EOF_R {
         IN_ERR_EOF_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - The raw interrupt status of AHB_DMA_IN_DSCR_ERR_CH0_INT."]
+    #[doc = "Bit 3 - The raw interrupt status of AHB_DMA_IN_DSCR_ERR_CH%s_INT."]
     #[inline(always)]
     pub fn in_dscr_err(&self) -> IN_DSCR_ERR_R {
         IN_DSCR_ERR_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 4 - The raw interrupt status of AHB_DMA_IN_DSCR_EMPTY_CH0_INT."]
+    #[doc = "Bit 4 - The raw interrupt status of AHB_DMA_IN_DSCR_EMPTY_CH%s_INT."]
     #[inline(always)]
     pub fn in_dscr_empty(&self) -> IN_DSCR_EMPTY_R {
         IN_DSCR_EMPTY_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 5 - The raw interrupt status of AHB_DMA_INFIFO_OVF_CH0_INT."]
+    #[doc = "Bit 5 - The raw interrupt status of AHB_DMA_INFIFO_OVF_CH%s_INT."]
     #[inline(always)]
     pub fn infifo_ovf(&self) -> INFIFO_OVF_R {
         INFIFO_OVF_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6 - The raw interrupt status of AHB_DMA_INFIFO_UDF_CH0_INT."]
+    #[doc = "Bit 6 - The raw interrupt status of AHB_DMA_INFIFO_UDF_CH%s_INT."]
     #[inline(always)]
     pub fn infifo_udf(&self) -> INFIFO_UDF_R {
         INFIFO_UDF_R::new(((self.bits >> 6) & 1) != 0)
@@ -82,37 +82,37 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - The raw interrupt status of AHB_DMA_IN_DONE_CH0_INT."]
+    #[doc = "Bit 0 - The raw interrupt status of AHB_DMA_IN_DONE_CH%s_INT."]
     #[inline(always)]
     pub fn in_done(&mut self) -> IN_DONE_W<'_, RAW_SPEC> {
         IN_DONE_W::new(self, 0)
     }
-    #[doc = "Bit 1 - The raw interrupt status of AHB_DMA_IN_SUC_EOF_CH0_INT."]
+    #[doc = "Bit 1 - The raw interrupt status of AHB_DMA_IN_SUC_EOF_CH%s_INT."]
     #[inline(always)]
     pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<'_, RAW_SPEC> {
         IN_SUC_EOF_W::new(self, 1)
     }
-    #[doc = "Bit 2 - The raw interrupt status of AHB_DMA_IN_ERR_EOF_CH0_INT."]
+    #[doc = "Bit 2 - The raw interrupt status of AHB_DMA_IN_ERR_EOF_CH%s_INT."]
     #[inline(always)]
     pub fn in_err_eof(&mut self) -> IN_ERR_EOF_W<'_, RAW_SPEC> {
         IN_ERR_EOF_W::new(self, 2)
     }
-    #[doc = "Bit 3 - The raw interrupt status of AHB_DMA_IN_DSCR_ERR_CH0_INT."]
+    #[doc = "Bit 3 - The raw interrupt status of AHB_DMA_IN_DSCR_ERR_CH%s_INT."]
     #[inline(always)]
     pub fn in_dscr_err(&mut self) -> IN_DSCR_ERR_W<'_, RAW_SPEC> {
         IN_DSCR_ERR_W::new(self, 3)
     }
-    #[doc = "Bit 4 - The raw interrupt status of AHB_DMA_IN_DSCR_EMPTY_CH0_INT."]
+    #[doc = "Bit 4 - The raw interrupt status of AHB_DMA_IN_DSCR_EMPTY_CH%s_INT."]
     #[inline(always)]
     pub fn in_dscr_empty(&mut self) -> IN_DSCR_EMPTY_W<'_, RAW_SPEC> {
         IN_DSCR_EMPTY_W::new(self, 4)
     }
-    #[doc = "Bit 5 - The raw interrupt status of AHB_DMA_INFIFO_OVF_CH0_INT."]
+    #[doc = "Bit 5 - The raw interrupt status of AHB_DMA_INFIFO_OVF_CH%s_INT."]
     #[inline(always)]
     pub fn infifo_ovf(&mut self) -> INFIFO_OVF_W<'_, RAW_SPEC> {
         INFIFO_OVF_W::new(self, 5)
     }
-    #[doc = "Bit 6 - The raw interrupt status of AHB_DMA_INFIFO_UDF_CH0_INT."]
+    #[doc = "Bit 6 - The raw interrupt status of AHB_DMA_INFIFO_UDF_CH%s_INT."]
     #[inline(always)]
     pub fn infifo_udf(&mut self) -> INFIFO_UDF_W<'_, RAW_SPEC> {
         INFIFO_UDF_W::new(self, 6)

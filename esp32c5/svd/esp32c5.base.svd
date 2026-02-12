@@ -479,56 +479,58 @@ Only valid for DMA-AES operation.</description>
       </addressBlock>
       <registers>
         <register>
-          <name>IN_INT_RAW_CH0</name>
-          <description>Raw interrupt status of RX channel 0</description>
+          <dim>3</dim>
+          <dimIncrement>0x10</dimIncrement>
+          <name>IN_INT_RAW_CH%s</name>
+          <description>Raw interrupt status of RX channel %s</description>
           <addressOffset>0x0</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>IN_DONE_CH0_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DONE_CH0_INT.</description>
+              <name>IN_DONE_CH_INT_RAW</name>
+              <description>The raw interrupt status of AHB_DMA_IN_DONE_CH%s_INT.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH0_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_SUC_EOF_CH0_INT.</description>
+              <name>IN_SUC_EOF_CH_INT_RAW</name>
+              <description>The raw interrupt status of AHB_DMA_IN_SUC_EOF_CH%s_INT.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH0_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_ERR_EOF_CH0_INT.</description>
+              <name>IN_ERR_EOF_CH_INT_RAW</name>
+              <description>The raw interrupt status of AHB_DMA_IN_ERR_EOF_CH%s_INT.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH0_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DSCR_ERR_CH0_INT.</description>
+              <name>IN_DSCR_ERR_CH_INT_RAW</name>
+              <description>The raw interrupt status of AHB_DMA_IN_DSCR_ERR_CH%s_INT.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH0_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DSCR_EMPTY_CH0_INT.</description>
+              <name>IN_DSCR_EMPTY_CH_INT_RAW</name>
+              <description>The raw interrupt status of AHB_DMA_IN_DSCR_EMPTY_CH%s_INT.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH0_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_INFIFO_OVF_CH0_INT.</description>
+              <name>INFIFO_OVF_CH_INT_RAW</name>
+              <description>The raw interrupt status of AHB_DMA_INFIFO_OVF_CH%s_INT.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH0_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_INFIFO_UDF_CH0_INT.</description>
+              <name>INFIFO_UDF_CH_INT_RAW</name>
+              <description>The raw interrupt status of AHB_DMA_INFIFO_UDF_CH%s_INT.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -709,120 +711,6 @@ Only valid for DMA-AES operation.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>IN_INT_RAW_CH1</name>
-          <description>Raw interrupt status interrupt of RX channel 1</description>
-          <addressOffset>0x10</addressOffset>
-          <size>32</size>
-          <fields>
-            <field>
-              <name>IN_DONE_CH1_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DONE_CH1_INT.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IN_SUC_EOF_CH1_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_SUC_EOF_CH1_INT.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IN_ERR_EOF_CH1_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_ERR_EOF_CH1_INT.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IN_DSCR_ERR_CH1_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DSCR_ERR_CH1_INT.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IN_DSCR_EMPTY_CH1_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DSCR_EMPTY_CH1_INT.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INFIFO_OVF_CH1_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_INFIFO_OVF_CH1_INT.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INFIFO_UDF_CH1_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_INFIFO_UDF_CH1_INT.</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>IN_INT_RAW_CH2</name>
-          <description>Raw interrupt status interrupt of RX channel 2</description>
-          <addressOffset>0x20</addressOffset>
-          <size>32</size>
-          <fields>
-            <field>
-              <name>IN_DONE_CH2_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DONE_CH2_INT.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IN_SUC_EOF_CH2_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_SUC_EOF_CH2_INT.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IN_ERR_EOF_CH2_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_ERR_EOF_CH2_INT.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IN_DSCR_ERR_CH2_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DSCR_ERR_CH2_INT.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IN_DSCR_EMPTY_CH2_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_IN_DSCR_EMPTY_CH2_INT.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INFIFO_OVF_CH2_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_INFIFO_OVF_CH2_INT.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INFIFO_UDF_CH2_INT_RAW</name>
-              <description>The raw interrupt status of AHB_DMA_INFIFO_UDF_CH2_INT.</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -1813,13 +1701,13 @@ Only valid for DMA-AES operation.</description>
         <register>
           <dim>3</dim>
           <dimIncrement>0x28</dimIncrement>
-          <name>TX_CH_ARB_WEIGH_CH%s</name>
+          <name>TX_CH_ARB_WEIGHT_CH%s</name>
           <description>TX channel %s arbitration weight configuration register</description>
           <addressOffset>0x2dc</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>TX_CH_ARB_WEIGH_CH</name>
+              <name>TX_CH_ARB_WEIGHT_CH</name>
               <description>Configures the weight(i.e the number of tokens) of TX channel%s</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
@@ -1830,13 +1718,13 @@ Only valid for DMA-AES operation.</description>
         <register>
           <dim>3</dim>
           <dimIncrement>0x28</dimIncrement>
-          <name>TX_ARB_WEIGH_OPT_DIR_CH%s</name>
+          <name>TX_ARB_WEIGHT_OPT_DIS_CH%s</name>
           <description>TX channel %s weight arbitration optimization enable register</description>
           <addressOffset>0x2e0</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>TX_ARB_WEIGH_OPT_DIR_CH</name>
+              <name>TX_ARB_WEIGHT_OPT_DIS_CH</name>
               <description>reserved</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -1847,13 +1735,13 @@ Only valid for DMA-AES operation.</description>
         <register>
           <dim>3</dim>
           <dimIncrement>0x28</dimIncrement>
-          <name>RX_CH_ARB_WEIGH_CH%s</name>
+          <name>RX_CH_ARB_WEIGHT_CH%s</name>
           <description>RX channel %s arbitration weight configuration register</description>
           <addressOffset>0x354</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>RX_CH_ARB_WEIGH_CH</name>
+              <name>RX_CH_ARB_WEIGHT_CH</name>
               <description>Configures the weight(i.e the number of tokens) of RX channel%s</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
@@ -1864,13 +1752,13 @@ Only valid for DMA-AES operation.</description>
         <register>
           <dim>3</dim>
           <dimIncrement>0x28</dimIncrement>
-          <name>RX_ARB_WEIGH_OPT_DIR_CH%s</name>
+          <name>RX_ARB_WEIGHT_OPT_DIS_CH%s</name>
           <description>RX channel %s weight arbitration optimization enable register</description>
           <addressOffset>0x358</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>RX_ARB_WEIGH_OPT_DIR_CH</name>
+              <name>RX_ARB_WEIGHT_OPT_DIS_CH</name>
               <description>reserved</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -1946,7 +1834,7 @@ Only valid for DMA-AES operation.</description>
         <register>
           <name>ARB_TIMEOUT_TX</name>
           <description>TX arbitration timeout configuration register</description>
-          <addressOffset>0x3cc</addressOffset>
+          <addressOffset>0x3dc</addressOffset>
           <size>32</size>
           <fields>
             <field>
@@ -1959,29 +1847,14 @@ Only valid for DMA-AES operation.</description>
           </fields>
         </register>
         <register>
-          <name>ARB_TIMEOUT_RX</name>
-          <description>RX arbitration timeout configuration register</description>
-          <addressOffset>0x3d0</addressOffset>
-          <size>32</size>
-          <fields>
-            <field>
-              <name>ARB_TIMEOUT_RX</name>
-              <description>Configures the time slot for RX. Measurement unit: AHB bus clock cycle.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>WEIGHT_EN_TX</name>
+          <name>WEIGHT_EN</name>
           <description>TX weight arbitration enable register</description>
-          <addressOffset>0x3d4</addressOffset>
+          <addressOffset>0x400</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>WEIGHT_EN_TX</name>
-              <description>Configures whether to enable weight arbitration for TX.\\0: Disable\\1: Enable\\</description>
+              <name>WEIGHT_EN</name>
+              <description>Configures whether to enable weight arbitration for TX. 0: Disable 1: Enable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -1989,17 +1862,137 @@ Only valid for DMA-AES operation.</description>
           </fields>
         </register>
         <register>
-          <name>WEIGHT_EN_RX</name>
-          <description>RX weight arbitration enable register</description>
-          <addressOffset>0x3d8</addressOffset>
+          <name>MODULE_CLK_EN</name>
+          <description>Module clock force on register</description>
+          <addressOffset>0x404</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>WEIGHT_EN_RX</name>
-              <description>Configures whether to enable weight arbitration for RX.\\0: Disable\\1: Enable\\</description>
+              <name>AHB_APB_SYNC_CLK_EN</name>
+              <description>Configures whether to force on ahb_apb_sync 2~0 module clock.</description>
               <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OUT_DSCR_CLK_EN</name>
+              <description>Configures whether to force on out_dscr 2~0 module clock.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OUT_CTRL_CLK_EN</name>
+              <description>Configures whether to force on out_ctrl 2~0 module clock.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>IN_DSCR_CLK_EN</name>
+              <description>Configures whether to force on in_dscr 2~0 module clock.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>IN_CTRL_CLK_EN</name>
+              <description>Configures whether to force on in_ctrl 2~0 module clock.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CMD_ARB_CLK_EN</name>
+              <description>Configures whether to force on cmd_arb module clock.</description>
+              <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+            </field>
+            <field>
+              <name>AHBINF_CLK_EN</name>
+              <description>Configures whether to force on arbinf module clock.</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>AHBINF_RESP_ERR_STATUS0</name>
+          <description>Represents the address of the AHB response error.</description>
+          <addressOffset>0x408</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>ADDR</name>
+              <description>Represents the address of the AHB response error.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>AHBINF_RESP_ERR_STATUS1</name>
+          <description>Represents the AHB response error is write request.</description>
+          <addressOffset>0x40C</addressOffset>
+          <access>read-only</access>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>AHBINF_RESP_ERR_WR</name>
+              <description>Represents the AHB response error is write request.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>AHBINF_RESP_ERR_ID</name>
+              <description>Represents the AHB response error request id.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>AHBINF_RESP_ERR_CH_ID</name>
+              <description>Represents the AHB response error request channel id.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <dim>3</dim>
+          <dimIncrement>8</dimIncrement>
+          <name>IN_DONE_DES_ADDR_CH%s</name>
+          <description>Represents the address of the inlink descriptor when this descriptor is completed.</description>
+          <addressOffset>0x410</addressOffset>
+          <access>read-only</access>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>ADDR</name>
+              <description>Represents the address of the inlink descriptor when this descriptor is completed.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <dim>3</dim>
+          <dimIncrement>8</dimIncrement>
+          <name>OUT_DONE_DES_ADDR_CH%s</name>
+          <description>Represents the address of the outlink descriptor when this descriptor is completed.</description>
+          <addressOffset>0x414</addressOffset>
+          <access>read-only</access>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>ADDR</name>
+              <description>Represents the address of the outlink descriptor when this descriptor is completed.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
             </field>
           </fields>
         </register>
