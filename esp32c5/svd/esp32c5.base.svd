@@ -42,7 +42,7 @@
       <baseAddress>0x60088000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
-        <size>0xc8</size>
+        <size>0xD4</size>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
@@ -51,12 +51,10 @@
       </interrupt>
       <registers>
         <register>
-          <dim>8</dim>
-          <dimIncrement>0x4</dimIncrement>
-          <name>KEY_%s</name>
-          <description>AES key data register %s</description>
+          <name>KEY_0</name>
+          <description>AES key data register 0</description>
           <addressOffset>0x0</addressOffset>
-          <size>32</size>
+          <size>0x20</size>
           <fields>
             <field>
               <name>KEY_0</name>
@@ -68,12 +66,115 @@
           </fields>
         </register>
         <register>
-          <dim>4</dim>
-          <dimIncrement>0x4</dimIncrement>
-          <name>TEXT_IN_%s</name>
-          <description>Source text data register %s</description>
+          <name>KEY_1</name>
+          <description>AES key data register 1</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>KEY_0</name>
+              <description>This bits stores key_0 that is a part of key material.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>KEY_2</name>
+          <description>AES key data register 2</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>KEY_0</name>
+              <description>This bits stores key_0 that is a part of key material.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>KEY_3</name>
+          <description>AES key data register 3</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>KEY_0</name>
+              <description>This bits stores key_0 that is a part of key material.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>KEY_4</name>
+          <description>AES key data register 4</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>KEY_0</name>
+              <description>This bits stores key_0 that is a part of key material.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>KEY_5</name>
+          <description>AES key data register 5</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>KEY_0</name>
+              <description>This bits stores key_0 that is a part of key material.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>KEY_6</name>
+          <description>AES key data register 6</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>KEY_0</name>
+              <description>This bits stores key_0 that is a part of key material.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>KEY_7</name>
+          <description>AES key data register 7</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>KEY_0</name>
+              <description>This bits stores key_0 that is a part of key material.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TEXT_IN_0</name>
+          <description>Source text data register 0</description>
           <addressOffset>0x20</addressOffset>
-          <size>32</size>
+          <size>0x20</size>
           <fields>
             <field>
               <name>TEXT_IN_0</name>
@@ -85,12 +186,100 @@
           </fields>
         </register>
         <register>
-          <dim>4</dim>
-          <dimIncrement>0x4</dimIncrement>
-          <name>TEXT_OUT_%s</name>
-          <description>Result text data register %s</description>
+          <name>TEXT_IN_1</name>
+          <description>Source text data register 1</description>
+          <addressOffset>0x24</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TEXT_IN_0</name>
+              <description>This bits stores text_in_0 that is a part of source text material.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TEXT_IN_2</name>
+          <description>Source text data register 2</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TEXT_IN_0</name>
+              <description>This bits stores text_in_0 that is a part of source text material.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TEXT_IN_3</name>
+          <description>Source text data register 3</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TEXT_IN_0</name>
+              <description>This bits stores text_in_0 that is a part of source text material.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TEXT_OUT_0</name>
+          <description>Result text data register 0</description>
           <addressOffset>0x30</addressOffset>
-          <size>32</size>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TEXT_OUT_0</name>
+              <description>This bits stores text_out_0 that is a part of result text material.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TEXT_OUT_1</name>
+          <description>Result text data register 1</description>
+          <addressOffset>0x34</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TEXT_OUT_0</name>
+              <description>This bits stores text_out_0 that is a part of result text material.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TEXT_OUT_2</name>
+          <description>Result text data register 2</description>
+          <addressOffset>0x38</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TEXT_OUT_0</name>
+              <description>This bits stores text_out_0 that is a part of result text material.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TEXT_OUT_3</name>
+          <description>Result text data register 3</description>
+          <addressOffset>0x3C</addressOffset>
+          <size>0x20</size>
           <fields>
             <field>
               <name>TEXT_OUT_0</name>
@@ -105,7 +294,7 @@
           <name>MODE</name>
           <description>Defines key length and encryption / decryption</description>
           <addressOffset>0x40</addressOffset>
-          <size>32</size>
+          <size>0x20</size>
           <fields>
             <field>
               <name>MODE</name>
@@ -128,7 +317,7 @@
           <name>ENDIAN</name>
           <description>AES Endian configure register</description>
           <addressOffset>0x44</addressOffset>
-          <size>32</size>
+          <size>0x20</size>
           <fields>
             <field>
               <name>ENDIAN</name>
@@ -143,7 +332,7 @@
           <name>TRIGGER</name>
           <description>Operation start controlling register</description>
           <addressOffset>0x48</addressOffset>
-          <size>32</size>
+          <size>0x20</size>
           <fields>
             <field>
               <name>TRIGGER</name>
@@ -159,8 +348,8 @@
         <register>
           <name>STATE</name>
           <description>Operation status register</description>
-          <addressOffset>0x4c</addressOffset>
-          <size>32</size>
+          <addressOffset>0x4C</addressOffset>
+          <size>0x20</size>
           <fields>
             <field>
               <name>STATE</name>
@@ -182,42 +371,42 @@ In DMA-AES working mode:\\
           </fields>
         </register>
         <register>
-          <dim>16</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>4</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>IV_MEM[%s]</name>
           <description>The memory that stores initialization vector</description>
           <addressOffset>0x50</addressOffset>
-          <size>8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>16</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>4</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>H_MEM[%s]</name>
           <description>The memory that stores GCM hash subkey</description>
           <addressOffset>0x60</addressOffset>
-          <size>8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>16</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>4</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>J0_MEM[%s]</name>
           <description>The memory that stores J0</description>
           <addressOffset>0x70</addressOffset>
-          <size>8</size>
+          <size>0x20</size>
         </register>
         <register>
-          <dim>16</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>4</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>T0_MEM[%s]</name>
           <description>The memory that stores T0</description>
           <addressOffset>0x80</addressOffset>
-          <size>8</size>
+          <size>0x20</size>
         </register>
         <register>
           <name>DMA_ENABLE</name>
           <description>Selects the working mode of the AES accelerator</description>
           <addressOffset>0x90</addressOffset>
-          <size>32</size>
+          <size>0x20</size>
           <fields>
             <field>
               <name>DMA_ENABLE</name>
@@ -234,7 +423,7 @@ In DMA-AES working mode:\\
           <name>BLOCK_MODE</name>
           <description>Defines the block cipher mode</description>
           <addressOffset>0x94</addressOffset>
-          <size>32</size>
+          <size>0x20</size>
           <fields>
             <field>
               <name>BLOCK_MODE</name>
@@ -257,7 +446,7 @@ In DMA-AES working mode:\\
           <name>BLOCK_NUM</name>
           <description>Block number configuration register</description>
           <addressOffset>0x98</addressOffset>
-          <size>32</size>
+          <size>0x20</size>
           <fields>
             <field>
               <name>BLOCK_NUM</name>
@@ -271,8 +460,8 @@ In DMA-AES working mode:\\
         <register>
           <name>INC_SEL</name>
           <description>Standard incrementing function register</description>
-          <addressOffset>0x9c</addressOffset>
-          <size>32</size>
+          <addressOffset>0x9C</addressOffset>
+          <size>0x20</size>
           <fields>
             <field>
               <name>INC_SEL</name>
@@ -288,8 +477,8 @@ In DMA-AES working mode:\\
         <register>
           <name>AAD_BLOCK_NUM</name>
           <description>Additional Authential Data block number register</description>
-          <addressOffset>0xa0</addressOffset>
-          <size>32</size>
+          <addressOffset>0xA0</addressOffset>
+          <size>0x20</size>
           <fields>
             <field>
               <name>AAD_BLOCK_NUM</name>
@@ -303,8 +492,8 @@ In DMA-AES working mode:\\
         <register>
           <name>REMAINDER_BIT_NUM</name>
           <description>AES remainder bit number register</description>
-          <addressOffset>0xa4</addressOffset>
-          <size>32</size>
+          <addressOffset>0xA4</addressOffset>
+          <size>0x20</size>
           <fields>
             <field>
               <name>REMAINDER_BIT_NUM</name>
@@ -318,8 +507,8 @@ In DMA-AES working mode:\\
         <register>
           <name>CONTINUE</name>
           <description>AES continue register</description>
-          <addressOffset>0xa8</addressOffset>
-          <size>32</size>
+          <addressOffset>0xA8</addressOffset>
+          <size>0x20</size>
           <fields>
             <field>
               <name>CONTINUE</name>
@@ -333,8 +522,8 @@ In DMA-AES working mode:\\
         <register>
           <name>INT_CLEAR</name>
           <description>DMA-AES interrupt clear register</description>
-          <addressOffset>0xac</addressOffset>
-          <size>32</size>
+          <addressOffset>0xAC</addressOffset>
+          <size>0x20</size>
           <fields>
             <field>
               <name>INT_CLEAR</name>
@@ -350,8 +539,8 @@ In DMA-AES working mode:\\
         <register>
           <name>INT_ENA</name>
           <description>DMA-AES interrupt enable register</description>
-          <addressOffset>0xb0</addressOffset>
-          <size>32</size>
+          <addressOffset>0xB0</addressOffset>
+          <size>0x20</size>
           <fields>
             <field>
               <name>INT_ENA</name>
@@ -367,24 +556,16 @@ In DMA-AES working mode:\\
         <register>
           <name>DATE</name>
           <description>AES version control register</description>
-          <addressOffset>0xb4</addressOffset>
-          <size>32</size>
-          <resetValue>0x2312070</resetValue>
-          <fields>
-            <field>
-              <name>DATE</name>
-              <description>This bits stores the version information of AES.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>28</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
+          <addressOffset>0xB4</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
         </register>
         <register>
           <name>DMA_EXIT</name>
           <description>Operation exit controlling register</description>
-          <addressOffset>0xb8</addressOffset>
-          <size>32</size>
+          <addressOffset>0xB8</addressOffset>
+          <size>0x20</size>
           <fields>
             <field>
               <name>DMA_EXIT</name>
@@ -401,8 +582,8 @@ Only valid for DMA-AES operation.</description>
         <register>
           <name>RX_RESET</name>
           <description>AES-DMA reset rx-fifo register</description>
-          <addressOffset>0xc0</addressOffset>
-          <size>32</size>
+          <addressOffset>0xC0</addressOffset>
+          <size>0x20</size>
           <fields>
             <field>
               <name>RX_RESET</name>
@@ -416,8 +597,8 @@ Only valid for DMA-AES operation.</description>
         <register>
           <name>TX_RESET</name>
           <description>AES-DMA reset tx-fifo register</description>
-          <addressOffset>0xc4</addressOffset>
-          <size>32</size>
+          <addressOffset>0xC4</addressOffset>
+          <size>0x20</size>
           <fields>
             <field>
               <name>TX_RESET</name>
@@ -431,9 +612,9 @@ Only valid for DMA-AES operation.</description>
         <register>
           <name>PSEUDO</name>
           <description>AES PSEUDO function configure register</description>
-          <addressOffset>0xd0</addressOffset>
-          <size>32</size>
-          <resetValue>0x3c4</resetValue>
+          <addressOffset>0xD0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x000003C4</resetValue>
           <fields>
             <field>
               <name>EN</name>
