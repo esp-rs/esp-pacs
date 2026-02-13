@@ -8,10 +8,60 @@ pub type START_R = crate::BitReader;
 pub type START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RESET` writer - Write 1 to reset ECC Accelerator."]
 pub type RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "The key length mode bit of ECC Accelerator. 0: P-192. 1: P-256.\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum KEY_LENGTH {
+    #[doc = "0: P-192 elliptic curve"]
+    P192 = 0,
+    #[doc = "1: P-256 elliptic curve"]
+    P256 = 1,
+}
+impl From<KEY_LENGTH> for bool {
+    #[inline(always)]
+    fn from(variant: KEY_LENGTH) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `KEY_LENGTH` reader - The key length mode bit of ECC Accelerator. 0: P-192. 1: P-256."]
-pub type KEY_LENGTH_R = crate::BitReader;
+pub type KEY_LENGTH_R = crate::BitReader<KEY_LENGTH>;
+impl KEY_LENGTH_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> KEY_LENGTH {
+        match self.bits {
+            false => KEY_LENGTH::P192,
+            true => KEY_LENGTH::P256,
+        }
+    }
+    #[doc = "P-192 elliptic curve"]
+    #[inline(always)]
+    pub fn is_p192(&self) -> bool {
+        *self == KEY_LENGTH::P192
+    }
+    #[doc = "P-256 elliptic curve"]
+    #[inline(always)]
+    pub fn is_p256(&self) -> bool {
+        *self == KEY_LENGTH::P256
+    }
+}
 #[doc = "Field `KEY_LENGTH` writer - The key length mode bit of ECC Accelerator. 0: P-192. 1: P-256."]
-pub type KEY_LENGTH_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type KEY_LENGTH_W<'a, REG> = crate::BitWriter<'a, REG, KEY_LENGTH>;
+impl<'a, REG> KEY_LENGTH_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "P-192 elliptic curve"]
+    #[inline(always)]
+    pub fn p192(self) -> &'a mut crate::W<REG> {
+        self.variant(KEY_LENGTH::P192)
+    }
+    #[doc = "P-256 elliptic curve"]
+    #[inline(always)]
+    pub fn p256(self) -> &'a mut crate::W<REG> {
+        self.variant(KEY_LENGTH::P256)
+    }
+}
 #[doc = "Field `MOD_BASE` reader - The mod base of mod operation, only valid in work_mode 8-11. 0: n(order of curve). 1: p(mod base of curve)"]
 pub type MOD_BASE_R = crate::BitReader;
 #[doc = "Field `MOD_BASE` writer - The mod base of mod operation, only valid in work_mode 8-11. 0: n(order of curve). 1: p(mod base of curve)"]

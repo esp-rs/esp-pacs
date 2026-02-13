@@ -4703,9 +4703,10 @@ Other: Inactive status\\</description>
               <name>KEY_LENGTH</name>
               <description>Configures the key length mode bit of ECC Accelerator. \\
 0: P-192\\
-1: P-256\\</description>
+1: P-256\\
+2: P-384\\</description>
               <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
+              <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
@@ -4713,7 +4714,7 @@ Other: Inactive status\\</description>
               <description>Configures the mod base of mod operation, only valid in work_mode 8-11. \\
 0: n(order of curve)\\
 1: p(mod base of curve)\\</description>
-              <bitOffset>3</bitOffset>
+              <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
@@ -4732,7 +4733,7 @@ Other: Inactive status\\</description>
 9. Mod Sub mode\\
 10: Mod Multi mode\\
 11: Mod Div mode\\</description>
-              <bitOffset>4</bitOffset>
+              <bitOffset>5</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
@@ -4741,7 +4742,7 @@ Other: Inactive status\\</description>
               <description>Configures the security mode of ECC Accelerator.\\
 0: no secure function enabled.\\
 1: enable constant-time calculation in all point multiplication modes.\\</description>
-              <bitOffset>8</bitOffset>
+              <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
@@ -4789,52 +4790,52 @@ Other: Inactive status\\</description>
           </fields>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>12</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>K_MEM[%s]</name>
           <description>The memory that stores k.</description>
           <addressOffset>0x100</addressOffset>
-          <size>8</size>
+          <size>32</size>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>12</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>PX_MEM[%s]</name>
           <description>The memory that stores Px.</description>
-          <addressOffset>0x120</addressOffset>
-          <size>8</size>
+          <addressOffset>0x130</addressOffset>
+          <size>32</size>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>12</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>PY_MEM[%s]</name>
           <description>The memory that stores Py.</description>
-          <addressOffset>0x140</addressOffset>
-          <size>8</size>
+          <addressOffset>0x160</addressOffset>
+          <size>32</size>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>12</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>QX_MEM[%s]</name>
           <description>The memory that stores Qx.</description>
-          <addressOffset>0x160</addressOffset>
-          <size>8</size>
+          <addressOffset>0x190</addressOffset>
+          <size>32</size>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>12</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>QY_MEM[%s]</name>
           <description>The memory that stores Qy.</description>
-          <addressOffset>0x180</addressOffset>
-          <size>8</size>
+          <addressOffset>0x1C0</addressOffset>
+          <size>32</size>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>12</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>QZ_MEM[%s]</name>
           <description>The memory that stores Qz.</description>
-          <addressOffset>0x1a0</addressOffset>
-          <size>8</size>
+          <addressOffset>0x1F0</addressOffset>
+          <size>32</size>
         </register>
       </registers>
     </peripheral>
