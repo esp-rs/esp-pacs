@@ -3384,49 +3384,49 @@
           <fields>
             <field>
               <name>START</name>
-              <description>Set this bit to reset receiver</description>
+              <description>Configures whether to start calculation of ECC Accelerator.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>RESET</name>
-              <description>Set this bit to reset Rx AFIFO</description>
+              <description>Configures whether to reset ECC Accelerator.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
               <name>KEY_LENGTH</name>
-              <description>Set this bit to start receiving data</description>
+              <description>Configures the key length mode bit of ECC Accelerator.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SECURITY_MODE</name>
-              <description>Set this bit to enable slave receiver mode</description>
+              <description>Configures the security mode of ECC Accelerator.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CLK_EN</name>
-              <description>clk gate</description>
+              <description>Configures whether to force on register clock gate.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>WORK_MODE</name>
-              <description>Reserved</description>
+              <description>Configures the work mode of ECC Accelerator.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>VERIFICATION_RESULT</name>
-              <description>Reserve</description>
+              <description>Represents the verification result of ECC Accelerator, valid only when calculation is done.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
@@ -12057,7 +12057,7 @@ module as an I2C Slave.</description>
             </field>
             <field>
               <name>TX_LSB_FIRST</name>
-              <description>This bit is used to control the sending mode for data needing to be sent. 
+              <description>This bit is used to control the sending mode for data needing to be sent.
 1: send data from the least significant bit,
 0: send data from the most significant bit.</description>
               <bitOffset>6</bitOffset>
@@ -12153,7 +12153,7 @@ module as an I2C Slave.</description>
             </field>
             <field>
               <name>SCL_MAIN_STATE_LAST</name>
-              <description>This field indicates the states of the I2C module state machine. 
+              <description>This field indicates the states of the I2C module state machine.
 0: Idle, 1: Address shift, 2: ACK address, 3: Rx data, 4: Tx data, 5: Send ACK, 6: Wait ACK</description>
               <bitOffset>24</bitOffset>
               <bitWidth>3</bitWidth>
@@ -12991,7 +12991,7 @@ in I2C module clock cycles, the I2C controller will ignore that pulse.</descript
           <fields>
             <field>
               <name>COMMAND0</name>
-              <description>This is the content of command 0. It consists of three parts: 
+              <description>This is the content of command 0. It consists of three parts:
 op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END.
 Byte_num represents the number of bytes that need to be sent or received.
 ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more
@@ -13018,7 +13018,7 @@ level.</description>
           <fields>
             <field>
               <name>COMMAND1</name>
-              <description>This is the content of command 1. It consists of three parts: 
+              <description>This is the content of command 1. It consists of three parts:
 op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END.
 Byte_num represents the number of bytes that need to be sent or received.
 ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more
@@ -13045,7 +13045,7 @@ level.</description>
           <fields>
             <field>
               <name>COMMAND2</name>
-              <description>This is the content of command 2. It consists of three parts: 
+              <description>This is the content of command 2. It consists of three parts:
 op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END.
 Byte_num represents the number of bytes that need to be sent or received.
 ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more
@@ -13072,7 +13072,7 @@ Level.</description>
           <fields>
             <field>
               <name>COMMAND3</name>
-              <description>This is the content of command 3. It consists of three parts: 
+              <description>This is the content of command 3. It consists of three parts:
 op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END.
 Byte_num represents the number of bytes that need to be sent or received.
 ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more
@@ -13099,7 +13099,7 @@ level.</description>
           <fields>
             <field>
               <name>COMMAND4</name>
-              <description>This is the content of command 4. It consists of three parts: 
+              <description>This is the content of command 4. It consists of three parts:
 op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END.
 Byte_num represents the number of bytes that need to be sent or received.
 ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more
@@ -13152,7 +13152,7 @@ Information.</description>
           <fields>
             <field>
               <name>COMMAND6</name>
-              <description>This is the content of command 6. It consists of three parts: 
+              <description>This is the content of command 6. It consists of three parts:
 op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END.
 Byte_num represents the number of bytes that need to be sent or received.
 ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more
@@ -13178,7 +13178,7 @@ Information.</description>
           <fields>
             <field>
               <name>COMMAND7</name>
-              <description>This is the content of command 7. It consists of three parts: 
+              <description>This is the content of command 7. It consists of three parts:
 op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END.
 Byte_num represents the number of bytes that need to be sent or received.
 ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more
