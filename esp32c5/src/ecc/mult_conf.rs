@@ -8,10 +8,80 @@ pub type START_R = crate::BitReader;
 pub type START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RESET` writer - Configures whether to reset ECC Accelerator. \\\\ 0: No effect\\\\ 1: Reset\\\\"]
 pub type RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `KEY_LENGTH` reader - Configures the key length mode bit of ECC Accelerator. \\\\ 0: P-192\\\\ 1: P-256\\\\"]
-pub type KEY_LENGTH_R = crate::BitReader;
-#[doc = "Field `KEY_LENGTH` writer - Configures the key length mode bit of ECC Accelerator. \\\\ 0: P-192\\\\ 1: P-256\\\\"]
-pub type KEY_LENGTH_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Configures the key length mode bit of ECC Accelerator. \\\\ 0: P-192\\\\ 1: P-256\\\\ 2: P-384\\\\\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum KEY_LENGTH {
+    #[doc = "0: P-192 elliptic curve"]
+    P192 = 0,
+    #[doc = "1: P-256 elliptic curve"]
+    P256 = 1,
+    #[doc = "2: P-384 elliptic curve"]
+    P384 = 2,
+}
+impl From<KEY_LENGTH> for u8 {
+    #[inline(always)]
+    fn from(variant: KEY_LENGTH) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for KEY_LENGTH {
+    type Ux = u8;
+}
+impl crate::IsEnum for KEY_LENGTH {}
+#[doc = "Field `KEY_LENGTH` reader - Configures the key length mode bit of ECC Accelerator. \\\\ 0: P-192\\\\ 1: P-256\\\\ 2: P-384\\\\"]
+pub type KEY_LENGTH_R = crate::FieldReader<KEY_LENGTH>;
+impl KEY_LENGTH_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<KEY_LENGTH> {
+        match self.bits {
+            0 => Some(KEY_LENGTH::P192),
+            1 => Some(KEY_LENGTH::P256),
+            2 => Some(KEY_LENGTH::P384),
+            _ => None,
+        }
+    }
+    #[doc = "P-192 elliptic curve"]
+    #[inline(always)]
+    pub fn is_p192(&self) -> bool {
+        *self == KEY_LENGTH::P192
+    }
+    #[doc = "P-256 elliptic curve"]
+    #[inline(always)]
+    pub fn is_p256(&self) -> bool {
+        *self == KEY_LENGTH::P256
+    }
+    #[doc = "P-384 elliptic curve"]
+    #[inline(always)]
+    pub fn is_p384(&self) -> bool {
+        *self == KEY_LENGTH::P384
+    }
+}
+#[doc = "Field `KEY_LENGTH` writer - Configures the key length mode bit of ECC Accelerator. \\\\ 0: P-192\\\\ 1: P-256\\\\ 2: P-384\\\\"]
+pub type KEY_LENGTH_W<'a, REG> = crate::FieldWriter<'a, REG, 2, KEY_LENGTH>;
+impl<'a, REG> KEY_LENGTH_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "P-192 elliptic curve"]
+    #[inline(always)]
+    pub fn p192(self) -> &'a mut crate::W<REG> {
+        self.variant(KEY_LENGTH::P192)
+    }
+    #[doc = "P-256 elliptic curve"]
+    #[inline(always)]
+    pub fn p256(self) -> &'a mut crate::W<REG> {
+        self.variant(KEY_LENGTH::P256)
+    }
+    #[doc = "P-384 elliptic curve"]
+    #[inline(always)]
+    pub fn p384(self) -> &'a mut crate::W<REG> {
+        self.variant(KEY_LENGTH::P384)
+    }
+}
 #[doc = "Field `MOD_BASE` reader - Configures the mod base of mod operation, only valid in work_mode 8-11. \\\\ 0: n(order of curve)\\\\ 1: p(mod base of curve)\\\\"]
 pub type MOD_BASE_R = crate::BitReader;
 #[doc = "Field `MOD_BASE` writer - Configures the mod base of mod operation, only valid in work_mode 8-11. \\\\ 0: n(order of curve)\\\\ 1: p(mod base of curve)\\\\"]
@@ -40,25 +110,25 @@ impl R {
     pub fn start(&self) -> START_R {
         START_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 2 - Configures the key length mode bit of ECC Accelerator. \\\\ 0: P-192\\\\ 1: P-256\\\\"]
+    #[doc = "Bits 2:3 - Configures the key length mode bit of ECC Accelerator. \\\\ 0: P-192\\\\ 1: P-256\\\\ 2: P-384\\\\"]
     #[inline(always)]
     pub fn key_length(&self) -> KEY_LENGTH_R {
-        KEY_LENGTH_R::new(((self.bits >> 2) & 1) != 0)
+        KEY_LENGTH_R::new(((self.bits >> 2) & 3) as u8)
     }
-    #[doc = "Bit 3 - Configures the mod base of mod operation, only valid in work_mode 8-11. \\\\ 0: n(order of curve)\\\\ 1: p(mod base of curve)\\\\"]
+    #[doc = "Bit 4 - Configures the mod base of mod operation, only valid in work_mode 8-11. \\\\ 0: n(order of curve)\\\\ 1: p(mod base of curve)\\\\"]
     #[inline(always)]
     pub fn mod_base(&self) -> MOD_BASE_R {
-        MOD_BASE_R::new(((self.bits >> 3) & 1) != 0)
+        MOD_BASE_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bits 4:7 - Configures the work mode of ECC Accelerator.\\\\ 0: Point Multi mode\\\\ 1: Reserved\\\\ 2: Point Verif mode\\\\ 3: Point Verif + Multi mode\\\\ 4: Jacobian Point Multi mode\\\\ 5: Reserved\\\\ 6: Jacobian Point Verif mode\\\\ 7: Point Verif + Jacobian Point Multi mode\\\\ 8: Mod Add mode\\\\ 9. Mod Sub mode\\\\ 10: Mod Multi mode\\\\ 11: Mod Div mode\\\\"]
+    #[doc = "Bits 5:8 - Configures the work mode of ECC Accelerator.\\\\ 0: Point Multi mode\\\\ 1: Reserved\\\\ 2: Point Verif mode\\\\ 3: Point Verif + Multi mode\\\\ 4: Jacobian Point Multi mode\\\\ 5: Reserved\\\\ 6: Jacobian Point Verif mode\\\\ 7: Point Verif + Jacobian Point Multi mode\\\\ 8: Mod Add mode\\\\ 9. Mod Sub mode\\\\ 10: Mod Multi mode\\\\ 11: Mod Div mode\\\\"]
     #[inline(always)]
     pub fn work_mode(&self) -> WORK_MODE_R {
-        WORK_MODE_R::new(((self.bits >> 4) & 0x0f) as u8)
+        WORK_MODE_R::new(((self.bits >> 5) & 0x0f) as u8)
     }
-    #[doc = "Bit 8 - Configures the security mode of ECC Accelerator.\\\\ 0: no secure function enabled.\\\\ 1: enable constant-time calculation in all point multiplication modes.\\\\"]
+    #[doc = "Bit 9 - Configures the security mode of ECC Accelerator.\\\\ 0: no secure function enabled.\\\\ 1: enable constant-time calculation in all point multiplication modes.\\\\"]
     #[inline(always)]
     pub fn security_mode(&self) -> SECURITY_MODE_R {
-        SECURITY_MODE_R::new(((self.bits >> 8) & 1) != 0)
+        SECURITY_MODE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 29 - Represents the verification result of ECC Accelerator, valid only when calculation is done."]
     #[inline(always)]
@@ -102,25 +172,25 @@ impl W {
     pub fn reset(&mut self) -> RESET_W<'_, MULT_CONF_SPEC> {
         RESET_W::new(self, 1)
     }
-    #[doc = "Bit 2 - Configures the key length mode bit of ECC Accelerator. \\\\ 0: P-192\\\\ 1: P-256\\\\"]
+    #[doc = "Bits 2:3 - Configures the key length mode bit of ECC Accelerator. \\\\ 0: P-192\\\\ 1: P-256\\\\ 2: P-384\\\\"]
     #[inline(always)]
     pub fn key_length(&mut self) -> KEY_LENGTH_W<'_, MULT_CONF_SPEC> {
         KEY_LENGTH_W::new(self, 2)
     }
-    #[doc = "Bit 3 - Configures the mod base of mod operation, only valid in work_mode 8-11. \\\\ 0: n(order of curve)\\\\ 1: p(mod base of curve)\\\\"]
+    #[doc = "Bit 4 - Configures the mod base of mod operation, only valid in work_mode 8-11. \\\\ 0: n(order of curve)\\\\ 1: p(mod base of curve)\\\\"]
     #[inline(always)]
     pub fn mod_base(&mut self) -> MOD_BASE_W<'_, MULT_CONF_SPEC> {
-        MOD_BASE_W::new(self, 3)
+        MOD_BASE_W::new(self, 4)
     }
-    #[doc = "Bits 4:7 - Configures the work mode of ECC Accelerator.\\\\ 0: Point Multi mode\\\\ 1: Reserved\\\\ 2: Point Verif mode\\\\ 3: Point Verif + Multi mode\\\\ 4: Jacobian Point Multi mode\\\\ 5: Reserved\\\\ 6: Jacobian Point Verif mode\\\\ 7: Point Verif + Jacobian Point Multi mode\\\\ 8: Mod Add mode\\\\ 9. Mod Sub mode\\\\ 10: Mod Multi mode\\\\ 11: Mod Div mode\\\\"]
+    #[doc = "Bits 5:8 - Configures the work mode of ECC Accelerator.\\\\ 0: Point Multi mode\\\\ 1: Reserved\\\\ 2: Point Verif mode\\\\ 3: Point Verif + Multi mode\\\\ 4: Jacobian Point Multi mode\\\\ 5: Reserved\\\\ 6: Jacobian Point Verif mode\\\\ 7: Point Verif + Jacobian Point Multi mode\\\\ 8: Mod Add mode\\\\ 9. Mod Sub mode\\\\ 10: Mod Multi mode\\\\ 11: Mod Div mode\\\\"]
     #[inline(always)]
     pub fn work_mode(&mut self) -> WORK_MODE_W<'_, MULT_CONF_SPEC> {
-        WORK_MODE_W::new(self, 4)
+        WORK_MODE_W::new(self, 5)
     }
-    #[doc = "Bit 8 - Configures the security mode of ECC Accelerator.\\\\ 0: no secure function enabled.\\\\ 1: enable constant-time calculation in all point multiplication modes.\\\\"]
+    #[doc = "Bit 9 - Configures the security mode of ECC Accelerator.\\\\ 0: no secure function enabled.\\\\ 1: enable constant-time calculation in all point multiplication modes.\\\\"]
     #[inline(always)]
     pub fn security_mode(&mut self) -> SECURITY_MODE_W<'_, MULT_CONF_SPEC> {
-        SECURITY_MODE_W::new(self, 8)
+        SECURITY_MODE_W::new(self, 9)
     }
     #[doc = "Bit 30 - Configures whether to force on register clock gate. \\\\ 0: No effect\\\\ 1: Force on\\\\"]
     #[inline(always)]

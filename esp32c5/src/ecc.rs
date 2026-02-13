@@ -10,7 +10,12 @@ pub struct RegisterBlock {
     mult_conf: MULT_CONF,
     _reserved5: [u8; 0xdc],
     date: DATE,
-    _reserved_6_k_mem: [u8; 0xd0],
+    k_mem: [K_MEM; 12],
+    px_mem: [PX_MEM; 12],
+    py_mem: [PY_MEM; 12],
+    qx_mem: [QX_MEM; 12],
+    qy_mem: [QY_MEM; 12],
+    qz_mem: [QZ_MEM; 12],
 }
 impl RegisterBlock {
     #[doc = "0x0c - ECC raw interrupt status register"]
@@ -46,152 +51,68 @@ impl RegisterBlock {
     #[doc = "0x100..0x130 - The memory that stores k."]
     #[inline(always)]
     pub const fn k_mem(&self, n: usize) -> &K_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 12][n];
-        unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(256)
-                .add(4 * n)
-                .cast()
-        }
+        &self.k_mem[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x100..0x130 - The memory that stores k."]
     #[inline(always)]
     pub fn k_mem_iter(&self) -> impl Iterator<Item = &K_MEM> {
-        (0..12).map(move |n| unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(256)
-                .add(4 * n)
-                .cast()
-        })
+        self.k_mem.iter()
     }
-    #[doc = "0x120..0x150 - The memory that stores Px."]
+    #[doc = "0x130..0x160 - The memory that stores Px."]
     #[inline(always)]
     pub const fn px_mem(&self, n: usize) -> &PX_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 12][n];
-        unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(288)
-                .add(4 * n)
-                .cast()
-        }
+        &self.px_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x120..0x150 - The memory that stores Px."]
+    #[doc = "0x130..0x160 - The memory that stores Px."]
     #[inline(always)]
     pub fn px_mem_iter(&self) -> impl Iterator<Item = &PX_MEM> {
-        (0..12).map(move |n| unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(288)
-                .add(4 * n)
-                .cast()
-        })
+        self.px_mem.iter()
     }
-    #[doc = "0x140..0x170 - The memory that stores Py."]
+    #[doc = "0x160..0x190 - The memory that stores Py."]
     #[inline(always)]
     pub const fn py_mem(&self, n: usize) -> &PY_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 12][n];
-        unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(320)
-                .add(4 * n)
-                .cast()
-        }
+        &self.py_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x140..0x170 - The memory that stores Py."]
+    #[doc = "0x160..0x190 - The memory that stores Py."]
     #[inline(always)]
     pub fn py_mem_iter(&self) -> impl Iterator<Item = &PY_MEM> {
-        (0..12).map(move |n| unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(320)
-                .add(4 * n)
-                .cast()
-        })
+        self.py_mem.iter()
     }
-    #[doc = "0x160..0x190 - The memory that stores Qx."]
+    #[doc = "0x190..0x1c0 - The memory that stores Qx."]
     #[inline(always)]
     pub const fn qx_mem(&self, n: usize) -> &QX_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 12][n];
-        unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(352)
-                .add(4 * n)
-                .cast()
-        }
+        &self.qx_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x160..0x190 - The memory that stores Qx."]
+    #[doc = "0x190..0x1c0 - The memory that stores Qx."]
     #[inline(always)]
     pub fn qx_mem_iter(&self) -> impl Iterator<Item = &QX_MEM> {
-        (0..12).map(move |n| unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(352)
-                .add(4 * n)
-                .cast()
-        })
+        self.qx_mem.iter()
     }
-    #[doc = "0x180..0x1b0 - The memory that stores Qy."]
+    #[doc = "0x1c0..0x1f0 - The memory that stores Qy."]
     #[inline(always)]
     pub const fn qy_mem(&self, n: usize) -> &QY_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 12][n];
-        unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(384)
-                .add(4 * n)
-                .cast()
-        }
+        &self.qy_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x180..0x1b0 - The memory that stores Qy."]
+    #[doc = "0x1c0..0x1f0 - The memory that stores Qy."]
     #[inline(always)]
     pub fn qy_mem_iter(&self) -> impl Iterator<Item = &QY_MEM> {
-        (0..12).map(move |n| unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(384)
-                .add(4 * n)
-                .cast()
-        })
+        self.qy_mem.iter()
     }
-    #[doc = "0x1a0..0x1d0 - The memory that stores Qz."]
+    #[doc = "0x1f0..0x220 - The memory that stores Qz."]
     #[inline(always)]
     pub const fn qz_mem(&self, n: usize) -> &QZ_MEM {
-        #[allow(clippy::no_effect)]
-        [(); 12][n];
-        unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(416)
-                .add(4 * n)
-                .cast()
-        }
+        &self.qz_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x1a0..0x1d0 - The memory that stores Qz."]
+    #[doc = "0x1f0..0x220 - The memory that stores Qz."]
     #[inline(always)]
     pub fn qz_mem_iter(&self) -> impl Iterator<Item = &QZ_MEM> {
-        (0..12).map(move |n| unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(416)
-                .add(4 * n)
-                .cast()
-        })
+        self.qz_mem.iter()
     }
 }
 #[doc = "INT_RAW (r) register accessor: ECC raw interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]

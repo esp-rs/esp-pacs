@@ -8,10 +8,60 @@ pub type START_R = crate::BitReader;
 pub type START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RESET` writer - Set this bit to reset Rx AFIFO"]
 pub type RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Set this bit to start receiving data\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum KEY_LENGTH {
+    #[doc = "0: P-192 elliptic curve"]
+    P192 = 0,
+    #[doc = "1: P-256 elliptic curve"]
+    P256 = 1,
+}
+impl From<KEY_LENGTH> for bool {
+    #[inline(always)]
+    fn from(variant: KEY_LENGTH) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `KEY_LENGTH` reader - Set this bit to start receiving data"]
-pub type KEY_LENGTH_R = crate::BitReader;
+pub type KEY_LENGTH_R = crate::BitReader<KEY_LENGTH>;
+impl KEY_LENGTH_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> KEY_LENGTH {
+        match self.bits {
+            false => KEY_LENGTH::P192,
+            true => KEY_LENGTH::P256,
+        }
+    }
+    #[doc = "P-192 elliptic curve"]
+    #[inline(always)]
+    pub fn is_p192(&self) -> bool {
+        *self == KEY_LENGTH::P192
+    }
+    #[doc = "P-256 elliptic curve"]
+    #[inline(always)]
+    pub fn is_p256(&self) -> bool {
+        *self == KEY_LENGTH::P256
+    }
+}
 #[doc = "Field `KEY_LENGTH` writer - Set this bit to start receiving data"]
-pub type KEY_LENGTH_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type KEY_LENGTH_W<'a, REG> = crate::BitWriter<'a, REG, KEY_LENGTH>;
+impl<'a, REG> KEY_LENGTH_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "P-192 elliptic curve"]
+    #[inline(always)]
+    pub fn p192(self) -> &'a mut crate::W<REG> {
+        self.variant(KEY_LENGTH::P192)
+    }
+    #[doc = "P-256 elliptic curve"]
+    #[inline(always)]
+    pub fn p256(self) -> &'a mut crate::W<REG> {
+        self.variant(KEY_LENGTH::P256)
+    }
+}
 #[doc = "Field `SECURITY_MODE` reader - Set this bit to enable slave receiver mode"]
 pub type SECURITY_MODE_R = crate::BitReader;
 #[doc = "Field `SECURITY_MODE` writer - Set this bit to enable slave receiver mode"]

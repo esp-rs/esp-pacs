@@ -1,0 +1,20 @@
+ECC:
+  _modify:
+    CONF:
+      name: MULT_CONF
+  INT_RAW:
+    _strip_end: _INT_RAW
+  INT_ST:
+    _strip_end: _INT_ST
+  INT_ENA:
+    _strip_end: _INT_ENA
+  INT_CLR:
+    _strip_end: _INT_CLR
+    _modify:
+      "*":
+        modifiedWriteValues: oneToClear
+  MULT_CONF:
+    KEY_LENGTH:
+      P192: [0, "P-192 elliptic curve"]
+      P256: [1, "P-256 elliptic curve"]
+      P384: [2, "P-384 elliptic curve"]

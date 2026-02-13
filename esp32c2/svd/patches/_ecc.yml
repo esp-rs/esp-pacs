@@ -18,3 +18,8 @@ ECC:
       description: The memory that stores Py.
       addressOffset: 0x140
       size: 0x20
+
+  MULT_CONF:
+    KEY_LENGTH:
+      P192: [0, "P-192 elliptic curve"]
+      P256: [1, "P-256 elliptic curve"]
