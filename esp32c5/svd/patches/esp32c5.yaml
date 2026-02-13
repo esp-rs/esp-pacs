@@ -12,6 +12,7 @@ _include:
   - ../../../common_patches/ieee802154.yaml
   - _i2c.yml
   - _interrupt.yml
+  - _ledc_gamma_ram.yml
   - _lp_apm.yml
   - _lp_io.yml
   - _modem_lpcon.yml

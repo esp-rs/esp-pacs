@@ -1,0 +1,48 @@
+_add:
+  LEDC_GAMMA_RAM:
+    description: LEDC gamma fade configuration RAM.
+    groupName: LEDC_GAMMA_RAM
+    baseAddress: 0x60007400
+    addressBlock:
+      - offset: 0x0
+        size: 0x180
+        usage: "Registers"
+
+LEDC_GAMMA_RAM:
+  _add:
+    _clusters:
+      CHANNEL%s:
+        description: LEDC gamma fade configuration RAM for channel %s (16 entries, 64 bytes).
+        addressOffset: 0x0
+        dim: 6
+        dimIncrement: 0x40
+        registers:
+          ENTRY%s:
+            description: LEDC gamma fade configuration RAM entry %s.
+            addressOffset: 0x0
+            dim: 16
+            dimIncrement: 0x4
+            access: read-write
+            size: 32
+            resetValue: 0x0
+            fields:
+              DUTY_INC:
+                description: Configures whether to increase duty in this fade range.
+                bitOffset: 0
+                bitWidth: 1
+                access: read-write
+              DUTY_CYCLE:
+                description: Configures PWM overflows between duty updates in this fade range.
+                bitOffset: 1
+                bitWidth: 10
+                access: read-write
+              SCALE:
+                description: Configures duty delta per update in this fade range.
+                bitOffset: 11
+                bitWidth: 10
+                access: read-write
+              DUTY_NUM:
+                description: Configures number of duty updates in this fade range.
+                bitOffset: 21
+                bitWidth: 10
+                access: read-write
