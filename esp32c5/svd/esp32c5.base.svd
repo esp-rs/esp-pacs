@@ -42,7 +42,7 @@
       <baseAddress>0x60088000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
-        <size>0xC8</size>
+        <size>0xD4</size>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
