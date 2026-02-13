@@ -4,6 +4,7 @@ _include:
   - ../../../common_patches/clint.yaml
   - ../../../common_patches/i2c_ana_mst.yaml
   - ../../../common_patches/slc.yaml
+  - _aes.yml
   - _date.yml
   - _ecc.yml
   - _gpio.yml
@@ -37,23 +38,7 @@ PCR:
         name: I2C0_RST_EN
 
 AES:
-  _modify:
-    "IV_MEM*":
-      dim: 4
-      dimIncrement: 0x4
-      size: 0x20
-    "H_MEM*":
-      dim: 4
-      dimIncrement: 0x4
-      size: 0x20
-    "J0_MEM*":
-      dim: 4
-      dimIncrement: 0x4
-      size: 0x20
-    "T0_MEM*":
-      dim: 4
-      dimIncrement: 0x4
-      size: 0x20
+  _include: ../../../common_patches/aes.yaml
 
 APB_SARADC:
   _modify:
