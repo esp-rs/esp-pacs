@@ -43214,6 +43214,25 @@ This bit is automatically cleared when configurations have been updated.\\</desc
       </registers>
     </peripheral>
     <peripheral>
+      <name>RNG</name>
+      <description>Hardware Random Number Generator</description>
+      <groupName>RNG</groupName>
+      <baseAddress>0x600B2800</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x4</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>DATA</name>
+          <description>Random number data</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
       <name>RSA</name>
       <description>RSA (Rivest Shamir Adleman) Accelerator</description>
       <groupName>RSA</groupName>

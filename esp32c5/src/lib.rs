@@ -739,6 +739,15 @@ impl core::fmt::Debug for RMT {
 }
 #[doc = "Remote Control"]
 pub mod rmt;
+#[doc = "Hardware Random Number Generator"]
+pub type RNG = crate::Periph<rng::RegisterBlock, 0x600b_2800>;
+impl core::fmt::Debug for RNG {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RNG").finish()
+    }
+}
+#[doc = "Hardware Random Number Generator"]
+pub mod rng;
 #[doc = "RSA (Rivest Shamir Adleman) Accelerator"]
 pub type RSA = crate::Periph<rsa::RegisterBlock, 0x6008_a000>;
 impl core::fmt::Debug for RSA {
@@ -1003,6 +1012,8 @@ pub struct Peripherals {
     pub PVT: PVT,
     #[doc = "RMT"]
     pub RMT: RMT,
+    #[doc = "RNG"]
+    pub RNG: RNG,
     #[doc = "RSA"]
     pub RSA: RSA,
     #[doc = "SHA"]
@@ -1112,6 +1123,7 @@ impl Peripherals {
             PMU: PMU::steal(),
             PVT: PVT::steal(),
             RMT: RMT::steal(),
+            RNG: RNG::steal(),
             RSA: RSA::steal(),
             SHA: SHA::steal(),
             SOC_ETM: SOC_ETM::steal(),
