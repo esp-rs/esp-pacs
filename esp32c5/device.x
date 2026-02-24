@@ -24,6 +24,7 @@ PROVIDE(FROM_CPU_INTR0 = DefaultHandler);
 PROVIDE(FROM_CPU_INTR1 = DefaultHandler);
 PROVIDE(FROM_CPU_INTR2 = DefaultHandler);
 PROVIDE(FROM_CPU_INTR3 = DefaultHandler);
+PROVIDE(ASSIST_DEBUG = DefaultHandler);
 PROVIDE(TRACE = DefaultHandler);
 PROVIDE(CACHE = DefaultHandler);
 PROVIDE(CPU_PERI_TIMEOUT = DefaultHandler);
