@@ -55,6 +55,8 @@ pub enum Interrupt {
     FROM_CPU_INTR2 = 25,
     #[doc = "26 - FROM_CPU_INTR3"]
     FROM_CPU_INTR3 = 26,
+    #[doc = "27 - ASSIST_DEBUG"]
+    ASSIST_DEBUG = 27,
     #[doc = "28 - TRACE"]
     TRACE = 28,
     #[doc = "29 - CACHE"]
@@ -193,6 +195,7 @@ impl Interrupt {
             24 => Ok(Interrupt::FROM_CPU_INTR1),
             25 => Ok(Interrupt::FROM_CPU_INTR2),
             26 => Ok(Interrupt::FROM_CPU_INTR3),
+            27 => Ok(Interrupt::ASSIST_DEBUG),
             28 => Ok(Interrupt::TRACE),
             29 => Ok(Interrupt::CACHE),
             30 => Ok(Interrupt::CPU_PERI_TIMEOUT),

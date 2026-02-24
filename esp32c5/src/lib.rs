@@ -38,6 +38,7 @@ extern "C" {
     fn FROM_CPU_INTR1();
     fn FROM_CPU_INTR2();
     fn FROM_CPU_INTR3();
+    fn ASSIST_DEBUG();
     fn TRACE();
     fn CACHE();
     fn CPU_PERI_TIMEOUT();
@@ -150,7 +151,9 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 83] = [
     Vector {
         _handler: FROM_CPU_INTR3,
     },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: ASSIST_DEBUG,
+    },
     Vector { _handler: TRACE },
     Vector { _handler: CACHE },
     Vector {

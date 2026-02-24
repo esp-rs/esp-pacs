@@ -5,6 +5,7 @@ _include:
   - ../../../common_patches/i2c_ana_mst.yaml
   - ../../../common_patches/slc.yaml
   - _aes.yml
+  - "_assist_debug.yml"
   - _date.yml
   - _ecc.yml
   - _gpio.yml
