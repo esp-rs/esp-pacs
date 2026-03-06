@@ -1,7 +1,7 @@
 #[doc = "Register `WDTFEED` writer"]
 pub type W = crate::W<WDTFEED_SPEC>;
-#[doc = "Field `RTC_WDT_FEED` writer - Configure this bit to feed the RWDT.\\\\ 0: Invalid\\\\ 1: Feed RWDT"]
-pub type RTC_WDT_FEED_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `WDT_FEED` writer - Configure this bit to feed the RWDT.\\\\ 0: Invalid\\\\ 1: Feed RWDT"]
+pub type WDT_FEED_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WDTFEED_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -11,8 +11,8 @@ impl core::fmt::Debug for crate::generic::Reg<WDTFEED_SPEC> {
 impl W {
     #[doc = "Bit 31 - Configure this bit to feed the RWDT.\\\\ 0: Invalid\\\\ 1: Feed RWDT"]
     #[inline(always)]
-    pub fn rtc_wdt_feed(&mut self) -> RTC_WDT_FEED_W<'_, WDTFEED_SPEC> {
-        RTC_WDT_FEED_W::new(self, 31)
+    pub fn wdt_feed(&mut self) -> WDT_FEED_W<'_, WDTFEED_SPEC> {
+        WDT_FEED_W::new(self, 31)
     }
 }
 #[doc = "Configure the feed function of RWDT\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtfeed::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

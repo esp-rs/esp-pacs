@@ -479,10 +479,10 @@ LP_WDT:
       name: SWD_CONF
     FEED:
       name: WDTFEED
-    WDTFEED:
-      _modify:
-        RTC_WDT_FEED:
-          name: WDT_FEED
+  WDTFEED:
+    _modify:
+      RTC_WDT_FEED:
+        name: WDT_FEED
   INT_ENA:
     _modify:
       LP_WDT_INT_ENA:
