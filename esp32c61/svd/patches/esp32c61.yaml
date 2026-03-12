@@ -2,21 +2,38 @@ _svd: "../esp32c61.base.svd"
 
 _include:
   - ../../../common_patches/clint.yaml
+  - ../../../common_patches/clic.yaml
   - ../../../common_patches/i2c_ana_mst.yaml
   - ../../../common_patches/slc.yaml
+  - _assist_debug.yml
+  - _modem_lpcon.yml
+  - _modem_syscon.yml
+  - _interrupt.yml
   - _date.yml
 
 TIMG0:
   "*":
     _strip: "T_"
+  "T0*":
+    _strip:
+      - "T0_"
+  "T1*":
+    _strip:
+      - "T1_"
 
   _include: ../../../common_patches/tim_collect.yaml
 
 _modify:
+  BUS_MONITOR:
+    name: ASSIST_DEBUG
+    description: ASSIST_DEBUG (BUS_MONITOR) Peripheral
+    groupName: ASSIST_DEBUG
   SPI?:
     groupName: SPI
   AHB_DMA:
     name: DMA
+  HP_SYSTEM:
+    name: HP_SYS
 
 APB_SARADC:
   _modify:
@@ -30,6 +47,10 @@ APB_SARADC:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/adc.yaml
 
+INTPRI:
+  CPU_INTR_FROM_CPU%s:
+    _strip_end: _FROM_CPU
+  
 I2C0:
   _modify:
     INT_STATUS:
@@ -37,6 +58,12 @@ I2C0:
   _include:
     - ../../../common_patches/i2c0.yaml
     - ../../../common_patches/i2c_st_timeouts.yaml
+
+I2S0:
+  _add:
+    _interrupts:
+      I2S0:
+        value: 39
 
 GPIO_EXT:
   ETM_EVENT_CH%s_CFG:
@@ -97,13 +124,37 @@ HP_APM,LP_APM:
 
 LP_WDT:
   _modify:
+    CONFIG0:
+      name: WDTCONFIG0
+    WPROTECT:
+      name: WDTWPROTECT
+    SWD_CONFIG:
+      name: SWD_CONF
     FEED:
       name: WDTFEED
-
   WDTFEED:
     _modify:
       RTC_WDT_FEED:
         name: WDT_FEED
+  INT_ENA:
+    _modify:
+      LP_WDT_INT_ENA:
+        name: WDT_INT_ENA
+  INT_CLR:
+    _modify:
+      LP_WDT_INT_CLR:
+        name: WDT_INT_CLR
+  INT_ST:
+    _modify:
+      LP_WDT_INT_ST:
+        name: WDT_INT_ST
+  _array:
+    CONFIG[1-4]:
+      name: WDTCONFIG%s
+      description: WDT configuration register
+      _modify:
+        WDT_STG0_HOLD:
+          name: HOLD
 
 PMU:
   _include: ../../../common_patches/pmu_int_strip.yaml
@@ -116,9 +167,8 @@ SPI[01]:
 PCR:
   _include: ../../../common_patches/pcr.yaml
 
-# "EFUSE,I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
-#   _include: ../../../common_patches/int_strip.yaml
-
+"EFUSE,I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
+  _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
   _include:

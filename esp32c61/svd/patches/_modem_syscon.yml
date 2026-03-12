@@ -1,0 +1,375 @@
+_add:
+  MODEM_SYSCON:
+    description: MODEM_SYSCON
+    baseAddress: 0x600A9C00 # TODO: set DR_REG_MODEM_SYSCON_BASE for ESP32-C5
+    addressBlock:
+      - offset: 0x0
+        size: 0x2C
+        usage: "Registers"
+    registers:
+      TEST_CONF:
+        description: TEST_CONF
+        addressOffset: 0x0
+        size: 32
+        access: read-write
+        resetValue: 0x00000100
+        fields:
+          CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+          MODEM_ANT_FORCE_SEL_BT:
+            bitOffset: 1
+            bitWidth: 1
+          MODEM_ANT_FORCE_SEL_WIFI:
+            bitOffset: 2
+            bitWidth: 1
+          FPGA_DEBUG_CLKSWITCH:
+            bitOffset: 3
+            bitWidth: 1
+          FPGA_DEBUG_CLK80:
+            bitOffset: 4
+            bitWidth: 1
+          FPGA_DEBUG_CLK40:
+            bitOffset: 5
+            bitWidth: 1
+          FPGA_DEBUG_CLK20:
+            bitOffset: 6
+            bitWidth: 1
+          FPGA_DEBUG_CLK10:
+            bitOffset: 7
+            bitWidth: 1
+          MODEM_MEM_MODE_FORCE:
+            bitOffset: 8
+            bitWidth: 1
+
+      CLK_CONF:
+        description: CLK_CONF
+        addressOffset: 0x4
+        size: 32
+        access: read-write
+        resetValue: 0x00200002
+        fields:
+          PWDET_SAR_CLOCK_ENA:
+            bitOffset: 0
+            bitWidth: 1
+          PWDET_CLK_DIV_NUM:
+            bitOffset: 1
+            bitWidth: 8
+          CLK_TX_DAC_INV_ENA:
+            bitOffset: 9
+            bitWidth: 1
+          CLK_RX_ADC_INV_ENA:
+            bitOffset: 10
+            bitWidth: 1
+          CLK_PWDET_ADC_INV_ENA:
+            bitOffset: 11
+            bitWidth: 1
+          CLK_I2C_MST_SEL_160M:
+            bitOffset: 12
+            bitWidth: 1
+          CLK_DATA_DUMP_MUX:
+            bitOffset: 21
+            bitWidth: 1
+          CLK_ETM_EN:
+            bitOffset: 22
+            bitWidth: 1
+          CLK_ZB_APB_EN:
+            bitOffset: 23
+            bitWidth: 1
+          CLK_ZBMAC_EN:
+            bitOffset: 24
+            bitWidth: 1
+          CLK_MODEM_SEC_ECB_EN:
+            bitOffset: 25
+            bitWidth: 1
+          CLK_MODEM_SEC_CCM_EN:
+            bitOffset: 26
+            bitWidth: 1
+          CLK_MODEM_SEC_BAH_EN:
+            bitOffset: 27
+            bitWidth: 1
+          CLK_MODEM_SEC_APB_EN:
+            bitOffset: 28
+            bitWidth: 1
+          CLK_MODEM_SEC_EN:
+            bitOffset: 29
+            bitWidth: 1
+          CLK_BLE_TIMER_EN:
+            bitOffset: 30
+            bitWidth: 1
+          CLK_DATA_DUMP_EN:
+            bitOffset: 31
+            bitWidth: 1
+
+      CLK_CONF_FORCE_ON:
+        description: CLK_CONF_FORCE_ON
+        addressOffset: 0x8
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          CLK_WIFIBB_FO:
+            bitOffset: 0
+            bitWidth: 1
+          CLK_WIFIMAC_FO:
+            bitOffset: 1
+            bitWidth: 1
+          CLK_WIFI_APB_FO:
+            bitOffset: 2
+            bitWidth: 1
+          CLK_FE_FO:
+            bitOffset: 3
+            bitWidth: 1
+          CLK_FE_APB_FO:
+            bitOffset: 4
+            bitWidth: 1
+          CLK_BTBB_FO:
+            bitOffset: 5
+            bitWidth: 1
+          CLK_BTMAC_FO:
+            bitOffset: 6
+            bitWidth: 1
+          CLK_BT_APB_FO:
+            bitOffset: 7
+            bitWidth: 1
+          CLK_ZBMAC_FO:
+            bitOffset: 8
+            bitWidth: 1
+          CLK_ZBMAC_APB_FO:
+            bitOffset: 9
+            bitWidth: 1
+          CLK_ETM_FO:
+            bitOffset: 28
+            bitWidth: 1
+          CLK_MODEM_SEC_FO:
+            bitOffset: 29
+            bitWidth: 1
+          CLK_BLE_TIMER_FO:
+            bitOffset: 30
+            bitWidth: 1
+          CLK_DATA_DUMP_FO:
+            bitOffset: 31
+            bitWidth: 1
+
+      CLK_CONF_POWER_ST:
+        description: CLK_CONF_POWER_ST
+        addressOffset: 0xC
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          CLK_ZB_ST_MAP:
+            bitOffset: 8
+            bitWidth: 4
+          CLK_FE_ST_MAP:
+            bitOffset: 12
+            bitWidth: 4
+          CLK_BT_ST_MAP:
+            bitOffset: 16
+            bitWidth: 4
+          CLK_WIFI_ST_MAP:
+            bitOffset: 20
+            bitWidth: 4
+          CLK_MODEM_PERI_ST_MAP:
+            bitOffset: 24
+            bitWidth: 4
+          CLK_MODEM_APB_ST_MAP:
+            bitOffset: 28
+            bitWidth: 4
+
+      MODEM_RST_CONF:
+        description: MODEM_RST_CONF
+        addressOffset: 0x10
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          RST_WIFIBB:
+            bitOffset: 8
+            bitWidth: 1
+          RST_WIFIMAC:
+            bitOffset: 9
+            bitWidth: 1
+          RST_FE_PWDET_ADC:
+            bitOffset: 10
+            bitWidth: 1
+          RST_FE_DAC:
+            bitOffset: 11
+            bitWidth: 1
+          RST_FE_ADC:
+            bitOffset: 12
+            bitWidth: 1
+          RST_FE_AHB:
+            bitOffset: 13
+            bitWidth: 1
+          RST_FE:
+            bitOffset: 14
+            bitWidth: 1
+          RST_BTMAC_APB:
+            bitOffset: 15
+            bitWidth: 1
+          RST_BTMAC:
+            bitOffset: 16
+            bitWidth: 1
+          RST_BTBB_APB:
+            bitOffset: 17
+            bitWidth: 1
+          RST_BTBB:
+            bitOffset: 18
+            bitWidth: 1
+          RST_ETM:
+            bitOffset: 22
+            bitWidth: 1
+          RST_ZBMAC_APB:
+            bitOffset: 23
+            bitWidth: 1
+          RST_ZBMAC:
+            bitOffset: 24
+            bitWidth: 1
+          RST_MODEM_ECB:
+            bitOffset: 25
+            bitWidth: 1
+          RST_MODEM_CCM:
+            bitOffset: 26
+            bitWidth: 1
+          RST_MODEM_BAH:
+            bitOffset: 27
+            bitWidth: 1
+          RST_MODEM_SEC:
+            bitOffset: 29
+            bitWidth: 1
+          RST_BLE_TIMER:
+            bitOffset: 30
+            bitWidth: 1
+          RST_DATA_DUMP:
+            bitOffset: 31
+            bitWidth: 1
+
+      CLK_CONF1:
+        description: CLK_CONF1
+        addressOffset: 0x14
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          CLK_WIFIBB_22M_EN:
+            bitOffset: 0
+            bitWidth: 1
+          CLK_WIFIBB_40M_EN:
+            bitOffset: 1
+            bitWidth: 1
+          CLK_WIFIBB_44M_EN:
+            bitOffset: 2
+            bitWidth: 1
+          CLK_WIFIBB_80M_EN:
+            bitOffset: 3
+            bitWidth: 1
+          CLK_WIFIBB_40X_EN:
+            bitOffset: 4
+            bitWidth: 1
+          CLK_WIFIBB_80X_EN:
+            bitOffset: 5
+            bitWidth: 1
+          CLK_WIFIBB_40X1_EN:
+            bitOffset: 6
+            bitWidth: 1
+          CLK_WIFIBB_80X1_EN:
+            bitOffset: 7
+            bitWidth: 1
+          CLK_WIFIBB_160X1_EN:
+            bitOffset: 8
+            bitWidth: 1
+          CLK_WIFIMAC_EN:
+            bitOffset: 9
+            bitWidth: 1
+          CLK_WIFI_APB_EN:
+            bitOffset: 10
+            bitWidth: 1
+          CLK_FE_20M_EN:
+            bitOffset: 11
+            bitWidth: 1
+          CLK_FE_40M_EN:
+            bitOffset: 12
+            bitWidth: 1
+          CLK_FE_80M_EN:
+            bitOffset: 13
+            bitWidth: 1
+          CLK_FE_160M_EN:
+            bitOffset: 14
+            bitWidth: 1
+          CLK_FE_APB_EN:
+            bitOffset: 15
+            bitWidth: 1
+          CLK_BT_APB_EN:
+            bitOffset: 16
+            bitWidth: 1
+          CLK_BTBB_EN:
+            bitOffset: 17
+            bitWidth: 1
+          CLK_BTMAC_EN:
+            bitOffset: 18
+            bitWidth: 1
+          CLK_FE_PWDET_ADC_EN:
+            bitOffset: 19
+            bitWidth: 1
+          CLK_FE_ADC_EN:
+            bitOffset: 20
+            bitWidth: 1
+          CLK_FE_DAC_EN:
+            bitOffset: 21
+            bitWidth: 1
+
+      WIFI_BB_CFG:
+        description: WIFI_BB_CFG
+        addressOffset: 0x18
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          WIFI_BB_CFG:
+            bitOffset: 0
+            bitWidth: 32
+
+      FE_CFG:
+        description: FE_CFG
+        addressOffset: 0x1C
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          FE_CFG:
+            bitOffset: 0
+            bitWidth: 32
+
+      MEM_RF1_CONF:
+        description: MEM_RF1_CONF
+        addressOffset: 0x20
+        size: 32
+        access: read-write
+        resetValue: 0x00002070
+        fields:
+          MODEM_RF1_MEM_AUX_CTRL:
+            bitOffset: 0
+            bitWidth: 32
+
+      MEM_RF2_CONF:
+        description: MEM_RF2_CONF
+        addressOffset: 0x24
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          MODEM_RF2_MEM_AUX_CTRL:
+            bitOffset: 0
+            bitWidth: 32
+
+      DATE:
+        description: DATE
+        addressOffset: 0x28
+        size: 32
+        access: read-write
+        resetValue: 0x02410160
+        fields:
+          DATE:
+            bitOffset: 0
+            bitWidth: 28
