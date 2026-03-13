@@ -2,47 +2,57 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    config0: CONFIG0,
-    config1: CONFIG1,
-    config2: CONFIG2,
-    config3: CONFIG3,
-    config4: CONFIG4,
+    wdtconfig0: WDTCONFIG0,
+    wdtconfig: [WDTCONFIG; 4],
     wdtfeed: WDTFEED,
-    wprotect: WPROTECT,
-    swd_config: SWD_CONFIG,
+    wdtwprotect: WDTWPROTECT,
+    swd_conf: SWD_CONF,
     swd_wprotect: SWD_WPROTECT,
     int_raw: INT_RAW,
     int_st: INT_ST,
     int_ena: INT_ENA,
     int_clr: INT_CLR,
-    _reserved13: [u8; 0x03c8],
+    _reserved10: [u8; 0x03c8],
     date: DATE,
 }
 impl RegisterBlock {
     #[doc = "0x00 - Configure the RWDT operation."]
     #[inline(always)]
-    pub const fn config0(&self) -> &CONFIG0 {
-        &self.config0
+    pub const fn wdtconfig0(&self) -> &WDTCONFIG0 {
+        &self.wdtconfig0
     }
-    #[doc = "0x04 - Configure the RWDT timeout of stage0"]
+    #[doc = "0x04..0x14 - WDT configuration register"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `WDTCONFIG1` register.</div>"]
     #[inline(always)]
-    pub const fn config1(&self) -> &CONFIG1 {
-        &self.config1
+    pub const fn wdtconfig(&self, n: usize) -> &WDTCONFIG {
+        &self.wdtconfig[n]
     }
-    #[doc = "0x08 - Configure the RWDT timeout of stage1"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x04..0x14 - WDT configuration register"]
     #[inline(always)]
-    pub const fn config2(&self) -> &CONFIG2 {
-        &self.config2
+    pub fn wdtconfig_iter(&self) -> impl Iterator<Item = &WDTCONFIG> {
+        self.wdtconfig.iter()
     }
-    #[doc = "0x0c - Configure the RWDT timeout of stage2"]
+    #[doc = "0x04 - WDT configuration register"]
     #[inline(always)]
-    pub const fn config3(&self) -> &CONFIG3 {
-        &self.config3
+    pub const fn wdtconfig1(&self) -> &WDTCONFIG {
+        self.wdtconfig(0)
     }
-    #[doc = "0x10 - Configure the RWDT timeout of stage3"]
+    #[doc = "0x08 - WDT configuration register"]
     #[inline(always)]
-    pub const fn config4(&self) -> &CONFIG4 {
-        &self.config4
+    pub const fn wdtconfig2(&self) -> &WDTCONFIG {
+        self.wdtconfig(1)
+    }
+    #[doc = "0x0c - WDT configuration register"]
+    #[inline(always)]
+    pub const fn wdtconfig3(&self) -> &WDTCONFIG {
+        self.wdtconfig(2)
+    }
+    #[doc = "0x10 - WDT configuration register"]
+    #[inline(always)]
+    pub const fn wdtconfig4(&self) -> &WDTCONFIG {
+        self.wdtconfig(3)
     }
     #[doc = "0x14 - Configure the feed function of RWDT"]
     #[inline(always)]
@@ -51,13 +61,13 @@ impl RegisterBlock {
     }
     #[doc = "0x18 - Configure the lock function of SWD"]
     #[inline(always)]
-    pub const fn wprotect(&self) -> &WPROTECT {
-        &self.wprotect
+    pub const fn wdtwprotect(&self) -> &WDTWPROTECT {
+        &self.wdtwprotect
     }
     #[doc = "0x1c - Configure the SWD operation"]
     #[inline(always)]
-    pub const fn swd_config(&self) -> &SWD_CONFIG {
-        &self.swd_config
+    pub const fn swd_conf(&self) -> &SWD_CONF {
+        &self.swd_conf
     }
     #[doc = "0x20 - Configure the lock function of SWD"]
     #[inline(always)]
@@ -90,38 +100,26 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "CONFIG0 (rw) register accessor: Configure the RWDT operation.\n\nYou can [`read`](crate::Reg::read) this register and get [`config0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`config0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@config0`] module"]
-pub type CONFIG0 = crate::Reg<config0::CONFIG0_SPEC>;
+#[doc = "WDTCONFIG0 (rw) register accessor: Configure the RWDT operation.\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig0`] module"]
+pub type WDTCONFIG0 = crate::Reg<wdtconfig0::WDTCONFIG0_SPEC>;
 #[doc = "Configure the RWDT operation."]
-pub mod config0;
-#[doc = "CONFIG1 (rw) register accessor: Configure the RWDT timeout of stage0\n\nYou can [`read`](crate::Reg::read) this register and get [`config1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`config1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@config1`] module"]
-pub type CONFIG1 = crate::Reg<config1::CONFIG1_SPEC>;
-#[doc = "Configure the RWDT timeout of stage0"]
-pub mod config1;
-#[doc = "CONFIG2 (rw) register accessor: Configure the RWDT timeout of stage1\n\nYou can [`read`](crate::Reg::read) this register and get [`config2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`config2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@config2`] module"]
-pub type CONFIG2 = crate::Reg<config2::CONFIG2_SPEC>;
-#[doc = "Configure the RWDT timeout of stage1"]
-pub mod config2;
-#[doc = "CONFIG3 (rw) register accessor: Configure the RWDT timeout of stage2\n\nYou can [`read`](crate::Reg::read) this register and get [`config3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`config3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@config3`] module"]
-pub type CONFIG3 = crate::Reg<config3::CONFIG3_SPEC>;
-#[doc = "Configure the RWDT timeout of stage2"]
-pub mod config3;
-#[doc = "CONFIG4 (rw) register accessor: Configure the RWDT timeout of stage3\n\nYou can [`read`](crate::Reg::read) this register and get [`config4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`config4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@config4`] module"]
-pub type CONFIG4 = crate::Reg<config4::CONFIG4_SPEC>;
-#[doc = "Configure the RWDT timeout of stage3"]
-pub mod config4;
+pub mod wdtconfig0;
+#[doc = "WDTCONFIG (rw) register accessor: WDT configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig`] module"]
+pub type WDTCONFIG = crate::Reg<wdtconfig::WDTCONFIG_SPEC>;
+#[doc = "WDT configuration register"]
+pub mod wdtconfig;
 #[doc = "WDTFEED (w) register accessor: Configure the feed function of RWDT\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtfeed::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtfeed`] module"]
 pub type WDTFEED = crate::Reg<wdtfeed::WDTFEED_SPEC>;
 #[doc = "Configure the feed function of RWDT"]
 pub mod wdtfeed;
-#[doc = "WPROTECT (rw) register accessor: Configure the lock function of SWD\n\nYou can [`read`](crate::Reg::read) this register and get [`wprotect::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wprotect::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wprotect`] module"]
-pub type WPROTECT = crate::Reg<wprotect::WPROTECT_SPEC>;
+#[doc = "WDTWPROTECT (rw) register accessor: Configure the lock function of SWD\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtwprotect::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtwprotect::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtwprotect`] module"]
+pub type WDTWPROTECT = crate::Reg<wdtwprotect::WDTWPROTECT_SPEC>;
 #[doc = "Configure the lock function of SWD"]
-pub mod wprotect;
-#[doc = "SWD_CONFIG (rw) register accessor: Configure the SWD operation\n\nYou can [`read`](crate::Reg::read) this register and get [`swd_config::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`swd_config::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@swd_config`] module"]
-pub type SWD_CONFIG = crate::Reg<swd_config::SWD_CONFIG_SPEC>;
+pub mod wdtwprotect;
+#[doc = "SWD_CONF (rw) register accessor: Configure the SWD operation\n\nYou can [`read`](crate::Reg::read) this register and get [`swd_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`swd_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@swd_conf`] module"]
+pub type SWD_CONF = crate::Reg<swd_conf::SWD_CONF_SPEC>;
 #[doc = "Configure the SWD operation"]
-pub mod swd_config;
+pub mod swd_conf;
 #[doc = "SWD_WPROTECT (rw) register accessor: Configure the lock function of SWD\n\nYou can [`read`](crate::Reg::read) this register and get [`swd_wprotect::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`swd_wprotect::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@swd_wprotect`] module"]
 pub type SWD_WPROTECT = crate::Reg<swd_wprotect::SWD_WPROTECT_SPEC>;
 #[doc = "Configure the lock function of SWD"]

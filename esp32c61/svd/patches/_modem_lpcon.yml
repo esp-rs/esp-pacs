@@ -1,0 +1,351 @@
+_add:
+  MODEM_LPCON:
+    description: MODEM_LPCON
+    baseAddress: 0x600AF000 # TODO: set DR_REG_MODEM_LPCON_BASE for ESP32-C5
+    addressBlock:
+      - offset: 0x0
+        size: 0x50
+        usage: "Registers"
+    registers:
+      TEST_CONF:
+        description: TEST_CONF
+        addressOffset: 0x0
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+
+      LP_TIMER_CONF:
+        description: LP_TIMER_CONF
+        addressOffset: 0x4
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          CLK_LP_TIMER_SEL_OSC_SLOW:
+            bitOffset: 0
+            bitWidth: 1
+          CLK_LP_TIMER_SEL_OSC_FAST:
+            bitOffset: 1
+            bitWidth: 1
+          CLK_LP_TIMER_SEL_XTAL:
+            bitOffset: 2
+            bitWidth: 1
+          CLK_LP_TIMER_SEL_XTAL32K:
+            bitOffset: 3
+            bitWidth: 1
+          CLK_LP_TIMER_DIV_NUM:
+            bitOffset: 4
+            bitWidth: 12
+
+      COEX_LP_CLK_CONF:
+        description: COEX_LP_CLK_CONF
+        addressOffset: 0x8
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          CLK_COEX_LP_SEL_OSC_SLOW:
+            bitOffset: 0
+            bitWidth: 1
+          CLK_COEX_LP_SEL_OSC_FAST:
+            bitOffset: 1
+            bitWidth: 1
+          CLK_COEX_LP_SEL_XTAL:
+            bitOffset: 2
+            bitWidth: 1
+          CLK_COEX_LP_SEL_XTAL32K:
+            bitOffset: 3
+            bitWidth: 1
+          CLK_COEX_LP_DIV_NUM:
+            bitOffset: 4
+            bitWidth: 12
+
+      WIFI_LP_CLK_CONF:
+        description: WIFI_LP_CLK_CONF
+        addressOffset: 0xC
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          CLK_WIFIPWR_LP_SEL_OSC_SLOW:
+            bitOffset: 0
+            bitWidth: 1
+          CLK_WIFIPWR_LP_SEL_OSC_FAST:
+            bitOffset: 1
+            bitWidth: 1
+          CLK_WIFIPWR_LP_SEL_XTAL:
+            bitOffset: 2
+            bitWidth: 1
+          CLK_WIFIPWR_LP_SEL_XTAL32K:
+            bitOffset: 3
+            bitWidth: 1
+          CLK_WIFIPWR_LP_DIV_NUM:
+            bitOffset: 4
+            bitWidth: 12
+
+      MODEM_SRC_CLK_CONF:
+        description: MODEM_SRC_CLK_CONF
+        addressOffset: 0x10
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          CLK_MODEM_AON_FORCE:
+            bitOffset: 0
+            bitWidth: 2
+          MODEM_PWR_CLK_SRC_FO:
+            bitOffset: 2
+            bitWidth: 1
+
+      MODEM_32K_CLK_CONF:
+        description: MODEM_32K_CLK_CONF
+        addressOffset: 0x14
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          CLK_MODEM_32K_SEL:
+            bitOffset: 0
+            bitWidth: 2
+
+      CLK_CONF:
+        description: CLK_CONF
+        addressOffset: 0x18
+        size: 32
+        resetValue: 0x0
+        fields:
+          CLK_WIFIPWR_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          CLK_COEX_EN:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          CLK_I2C_MST_EN:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          CLK_LP_TIMER_EN:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+
+      CLK_CONF_FORCE_ON:
+        description: CLK_CONF_FORCE_ON
+        addressOffset: 0x1C
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          CLK_WIFIPWR_FO:
+            bitOffset: 0
+            bitWidth: 1
+          CLK_COEX_FO:
+            bitOffset: 1
+            bitWidth: 1
+          CLK_I2C_MST_FO:
+            bitOffset: 2
+            bitWidth: 1
+          CLK_LP_TIMER_FO:
+            bitOffset: 3
+            bitWidth: 1
+          CLK_FE_MEM_FO:
+            bitOffset: 4
+            bitWidth: 1
+
+      CLK_CONF_POWER_ST:
+        description: CLK_CONF_POWER_ST
+        addressOffset: 0x20
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          CLK_WIFIPWR_ST_MAP:
+            bitOffset: 16
+            bitWidth: 4
+          CLK_COEX_ST_MAP:
+            bitOffset: 20
+            bitWidth: 4
+          CLK_I2C_MST_ST_MAP:
+            bitOffset: 24
+            bitWidth: 4
+          CLK_LP_APB_ST_MAP:
+            bitOffset: 28
+            bitWidth: 4
+
+      RST_CONF:
+        description: RST_CONF
+        addressOffset: 0x24
+        size: 32
+        access: write-only
+        resetValue: 0x0
+        fields:
+          RST_WIFIPWR:
+            bitOffset: 0
+            bitWidth: 1
+          RST_COEX:
+            bitOffset: 1
+            bitWidth: 1
+          RST_I2C_MST:
+            bitOffset: 2
+            bitWidth: 1
+          RST_LP_TIMER:
+            bitOffset: 3
+            bitWidth: 1
+          RST_DCMEM:
+            bitOffset: 4
+            bitWidth: 1
+
+      TICK_CONF:
+        description: TICK_CONF
+        addressOffset: 0x28
+        size: 32
+        access: read-write
+        resetValue: 0x27
+        fields:
+          MODEM_PWR_TICK_TARGET:
+            bitOffset: 0
+            bitWidth: 6
+
+      MEM_CONF:
+        description: MEM_CONF
+        addressOffset: 0x2C
+        size: 32
+        access: read-write
+        resetValue: 0x00888888
+        fields:
+          DC_MEM_MODE:
+            bitOffset: 0
+            bitWidth: 3
+          DC_MEM_FORCE:
+            bitOffset: 3
+            bitWidth: 1
+          AGC_MEM_MODE:
+            bitOffset: 4
+            bitWidth: 3
+          AGC_MEM_FORCE:
+            bitOffset: 7
+            bitWidth: 1
+          PBUS_MEM_MODE:
+            bitOffset: 8
+            bitWidth: 3
+          PBUS_MEM_FORCE:
+            bitOffset: 11
+            bitWidth: 1
+          BC_MEM_MODE:
+            bitOffset: 12
+            bitWidth: 3
+          BC_MEM_FORCE:
+            bitOffset: 15
+            bitWidth: 1
+          I2C_MST_MEM_MODE:
+            bitOffset: 16
+            bitWidth: 3
+          I2C_MST_MEM_FORCE:
+            bitOffset: 19
+            bitWidth: 1
+          CHAN_FREQ_MEM_MODE:
+            bitOffset: 20
+            bitWidth: 3
+          CHAN_FREQ_MEM_FORCE:
+            bitOffset: 23
+            bitWidth: 1
+
+      MEM_RF1_AUX_CTRL:
+        description: MEM_RF1_AUX_CTRL
+        addressOffset: 0x30
+        size: 32
+        access: read-write
+        resetValue: 0x00002070
+        fields:
+          MODEM_PWR_RF1_AUX_CTRL:
+            bitOffset: 0
+            bitWidth: 32
+
+      MEM_RF2_AUX_CTRL:
+        description: MEM_RF2_AUX_CTRL
+        addressOffset: 0x34
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          MODEM_PWR_RF2_AUX_CTRL:
+            bitOffset: 0
+            bitWidth: 32
+
+      APB_MEM_SEL:
+        description: APB_MEM_SEL
+        addressOffset: 0x38
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          CHAN_FREQ_MEM_EN:
+            bitOffset: 0
+            bitWidth: 1
+          PBUS_MEM_EN:
+            bitOffset: 1
+            bitWidth: 1
+          AGC_MEM_EN:
+            bitOffset: 2
+            bitWidth: 1
+
+      DCMEM_VALID_0:
+        description: DCMEM_VALID_0
+        addressOffset: 0x3C
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          DCMEM_VALID_0:
+            bitOffset: 0
+            bitWidth: 32
+
+      DCMEM_VALID_1:
+        description: DCMEM_VALID_1
+        addressOffset: 0x40
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          DCMEM_VALID_1:
+            bitOffset: 0
+            bitWidth: 32
+
+      DCMEM_VALID_2:
+        description: DCMEM_VALID_2
+        addressOffset: 0x44
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          DCMEM_VALID_2:
+            bitOffset: 0
+            bitWidth: 32
+
+      DCMEM_VALID_3:
+        description: DCMEM_VALID_3
+        addressOffset: 0x48
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          DCMEM_VALID_3:
+            bitOffset: 0
+            bitWidth: 32
+
+      DATE:
+        description: DATE
+        addressOffset: 0x4C
+        size: 32
+        access: read-write
+        resetValue: 0x02410170
+        fields:
+          DATE:
+            bitOffset: 0
+            bitWidth: 28

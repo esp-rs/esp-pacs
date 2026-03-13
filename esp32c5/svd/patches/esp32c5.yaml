@@ -2,10 +2,11 @@ _svd: ../esp32c5.base.svd
 
 _include:
   - ../../../common_patches/clint.yaml
+  - ../../../common_patches/clic.yaml
   - ../../../common_patches/i2c_ana_mst.yaml
   - ../../../common_patches/slc.yaml
   - _aes.yml
-  - "_assist_debug.yml"
+  - _assist_debug.yml
   - _date.yml
   - _ecc.yml
   - _gpio.yml
@@ -22,7 +23,6 @@ _include:
   - _sha.yml
   - _rmt.yml
   - _uart.yml
-  - clic.yaml
 
 PCR:
   _include: ../../../common_patches/pcr.yaml

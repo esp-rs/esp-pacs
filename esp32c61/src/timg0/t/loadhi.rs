@@ -2,30 +2,30 @@
 pub type R = crate::R<LOADHI_SPEC>;
 #[doc = "Register `LOADHI` writer"]
 pub type W = crate::W<LOADHI_SPEC>;
-#[doc = "Field `T0_LOAD_HI` reader - Configures high 22 bits of the value that a reload will load onto timer 0 time-base counter. \\\\ Measurement unit: T0_clk \\\\"]
-pub type T0_LOAD_HI_R = crate::FieldReader<u32>;
-#[doc = "Field `T0_LOAD_HI` writer - Configures high 22 bits of the value that a reload will load onto timer 0 time-base counter. \\\\ Measurement unit: T0_clk \\\\"]
-pub type T0_LOAD_HI_W<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
+#[doc = "Field `LOAD_HI` reader - Configures high 22 bits of the value that a reload will load onto timer 0 time-base counter. \\\\ Measurement unit: T0_clk \\\\"]
+pub type LOAD_HI_R = crate::FieldReader<u32>;
+#[doc = "Field `LOAD_HI` writer - Configures high 22 bits of the value that a reload will load onto timer 0 time-base counter. \\\\ Measurement unit: T0_clk \\\\"]
+pub type LOAD_HI_W<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
 impl R {
     #[doc = "Bits 0:21 - Configures high 22 bits of the value that a reload will load onto timer 0 time-base counter. \\\\ Measurement unit: T0_clk \\\\"]
     #[inline(always)]
-    pub fn t0_load_hi(&self) -> T0_LOAD_HI_R {
-        T0_LOAD_HI_R::new(self.bits & 0x003f_ffff)
+    pub fn load_hi(&self) -> LOAD_HI_R {
+        LOAD_HI_R::new(self.bits & 0x003f_ffff)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LOADHI")
-            .field("t0_load_hi", &self.t0_load_hi())
+            .field("load_hi", &self.load_hi())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:21 - Configures high 22 bits of the value that a reload will load onto timer 0 time-base counter. \\\\ Measurement unit: T0_clk \\\\"]
     #[inline(always)]
-    pub fn t0_load_hi(&mut self) -> T0_LOAD_HI_W<'_, LOADHI_SPEC> {
-        T0_LOAD_HI_W::new(self, 0)
+    pub fn load_hi(&mut self) -> LOAD_HI_W<'_, LOADHI_SPEC> {
+        LOAD_HI_W::new(self, 0)
     }
 }
 #[doc = "Timer 0 reload value, high 22 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`loadhi::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`loadhi::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

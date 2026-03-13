@@ -47,6 +47,8 @@ pub enum Interrupt {
     FROM_CPU_INTR2 = 21,
     #[doc = "22 - FROM_CPU_INTR3"]
     FROM_CPU_INTR3 = 22,
+    #[doc = "23 - ASSIST_DEBUG"]
+    ASSIST_DEBUG = 23,
     #[doc = "24 - TRACE"]
     TRACE = 24,
     #[doc = "25 - CACHE"]
@@ -69,6 +71,8 @@ pub enum Interrupt {
     HP_APM_M3 = 35,
     #[doc = "38 - MSPI"]
     MSPI = 38,
+    #[doc = "39 - I2S0"]
+    I2S0 = 39,
     #[doc = "40 - UART0"]
     UART0 = 40,
     #[doc = "41 - UART1"]
@@ -141,6 +145,7 @@ impl Interrupt {
             20 => Ok(Interrupt::FROM_CPU_INTR1),
             21 => Ok(Interrupt::FROM_CPU_INTR2),
             22 => Ok(Interrupt::FROM_CPU_INTR3),
+            23 => Ok(Interrupt::ASSIST_DEBUG),
             24 => Ok(Interrupt::TRACE),
             25 => Ok(Interrupt::CACHE),
             26 => Ok(Interrupt::CPU_PERI_TIMEOUT),
@@ -152,6 +157,7 @@ impl Interrupt {
             34 => Ok(Interrupt::HP_APM_M2),
             35 => Ok(Interrupt::HP_APM_M3),
             38 => Ok(Interrupt::MSPI),
+            39 => Ok(Interrupt::I2S0),
             40 => Ok(Interrupt::UART0),
             41 => Ok(Interrupt::UART1),
             42 => Ok(Interrupt::UART2),
