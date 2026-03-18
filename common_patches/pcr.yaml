@@ -10,6 +10,18 @@ UART?_PD_CTRL:
   _strip:
     UART?_
 
+TIMERGROUP?_CONF:
+  _strip:
+    TG?_
+
+TIMERGROUP?_TIMER_CLK_CONF:
+  _strip:
+    TG?_
+
+TIMERGROUP?_WDT_CLK_CONF:
+  _strip:
+    TG?_
+
 _cluster:
   UART%s:
     UART?_CONF:
@@ -18,3 +30,11 @@ _cluster:
       name: CLK_CONF
     UART?_PD_CTRL:
       name: PD_CTRL
+
+  TIMERGROUP%s:
+    TIMERGROUP?_CONF:
+      name: CONF
+    TIMERGROUP?_TIMER_CLK_CONF:
+      name: TIMER_CLK_CONF
+    TIMERGROUP?_WDT_CLK_CONF:
+      name: WDT_CLK_CONF
