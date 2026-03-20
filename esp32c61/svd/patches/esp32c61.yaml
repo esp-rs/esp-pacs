@@ -10,6 +10,7 @@ _include:
   - _modem_syscon.yml
   - _interrupt.yml
   - _date.yml
+  - _uart.yml
 
 TIMG0:
   "*":
@@ -244,6 +245,20 @@ SYSTIMER:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/systimer.yaml
     - ../../../common_patches/systimer_real_target.yaml
+    
+UART0:
+  _strip_end: "_SYNC"
+
+  CLKDIV:
+    _modify:
+      CLKDIV_FRAG:
+        name: FRAG
+
+  FIFO:
+    _modify:
+      RXFIFO_RD_BYTE:
+        access: read-write
+  _include: ../../../common_patches/int_strip.yaml
 
 DMA:
   _cluster:
