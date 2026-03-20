@@ -1,7 +1,7 @@
-#[doc = "Register `CONF0_SYNC` reader"]
-pub type R = crate::R<CONF0_SYNC_SPEC>;
-#[doc = "Register `CONF0_SYNC` writer"]
-pub type W = crate::W<CONF0_SYNC_SPEC>;
+#[doc = "Register `CONF0` reader"]
+pub type R = crate::R<CONF0_SPEC>;
+#[doc = "Register `CONF0` writer"]
+pub type W = crate::W<CONF0_SPEC>;
 #[doc = "Field `PARITY` reader - Configures the parity check mode.\\\\ 0: Even parity\\\\ 1: Odd parity\\\\"]
 pub type PARITY_R = crate::BitReader;
 #[doc = "Field `PARITY` writer - Configures the parity check mode.\\\\ 0: Even parity\\\\ 1: Odd parity\\\\"]
@@ -205,7 +205,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("CONF0_SYNC")
+        f.debug_struct("CONF0")
             .field("parity", &self.parity())
             .field("parity_en", &self.parity_en())
             .field("bit_num", &self.bit_num())
@@ -234,127 +234,127 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures the parity check mode.\\\\ 0: Even parity\\\\ 1: Odd parity\\\\"]
     #[inline(always)]
-    pub fn parity(&mut self) -> PARITY_W<'_, CONF0_SYNC_SPEC> {
+    pub fn parity(&mut self) -> PARITY_W<'_, CONF0_SPEC> {
         PARITY_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to enable UART parity check.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn parity_en(&mut self) -> PARITY_EN_W<'_, CONF0_SYNC_SPEC> {
+    pub fn parity_en(&mut self) -> PARITY_EN_W<'_, CONF0_SPEC> {
         PARITY_EN_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - Configures the number of data bits.\\\\ 0: 5 bits\\\\ 1: 6 bits\\\\ 2: 7 bits\\\\ 3: 8 bits\\\\"]
     #[inline(always)]
-    pub fn bit_num(&mut self) -> BIT_NUM_W<'_, CONF0_SYNC_SPEC> {
+    pub fn bit_num(&mut self) -> BIT_NUM_W<'_, CONF0_SPEC> {
         BIT_NUM_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Configures the number of stop bits.\\\\ 0: Invalid. No effect\\\\ 1: 1 bits\\\\ 2: 1.5 bits\\\\ 3: 2 bits\\\\"]
     #[inline(always)]
-    pub fn stop_bit_num(&mut self) -> STOP_BIT_NUM_W<'_, CONF0_SYNC_SPEC> {
+    pub fn stop_bit_num(&mut self) -> STOP_BIT_NUM_W<'_, CONF0_SPEC> {
         STOP_BIT_NUM_W::new(self, 4)
     }
     #[doc = "Bit 6 - Configures whether or not to send NULL characters when finishing data transmission.\\\\ 0: Not send\\\\ 1: Send\\\\"]
     #[inline(always)]
-    pub fn txd_brk(&mut self) -> TXD_BRK_W<'_, CONF0_SYNC_SPEC> {
+    pub fn txd_brk(&mut self) -> TXD_BRK_W<'_, CONF0_SPEC> {
         TXD_BRK_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures whether or not to enable IrDA loopback test.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn irda_dplx(&mut self) -> IRDA_DPLX_W<'_, CONF0_SYNC_SPEC> {
+    pub fn irda_dplx(&mut self) -> IRDA_DPLX_W<'_, CONF0_SPEC> {
         IRDA_DPLX_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether or not to enable the IrDA transmitter.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn irda_tx_en(&mut self) -> IRDA_TX_EN_W<'_, CONF0_SYNC_SPEC> {
+    pub fn irda_tx_en(&mut self) -> IRDA_TX_EN_W<'_, CONF0_SPEC> {
         IRDA_TX_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures the 11th bit of the IrDA transmitter.\\\\ 0: This bit is 0.\\\\ 1: This bit is the same as the 10th bit.\\\\"]
     #[inline(always)]
-    pub fn irda_wctl(&mut self) -> IRDA_WCTL_W<'_, CONF0_SYNC_SPEC> {
+    pub fn irda_wctl(&mut self) -> IRDA_WCTL_W<'_, CONF0_SPEC> {
         IRDA_WCTL_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures whether or not to invert the level of the IrDA transmitter.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
     #[inline(always)]
-    pub fn irda_tx_inv(&mut self) -> IRDA_TX_INV_W<'_, CONF0_SYNC_SPEC> {
+    pub fn irda_tx_inv(&mut self) -> IRDA_TX_INV_W<'_, CONF0_SPEC> {
         IRDA_TX_INV_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures whether or not to invert the level of the IrDA receiver.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
     #[inline(always)]
-    pub fn irda_rx_inv(&mut self) -> IRDA_RX_INV_W<'_, CONF0_SYNC_SPEC> {
+    pub fn irda_rx_inv(&mut self) -> IRDA_RX_INV_W<'_, CONF0_SPEC> {
         IRDA_RX_INV_W::new(self, 11)
     }
     #[doc = "Bit 12 - Configures whether or not to enable UART loopback test.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn loopback(&mut self) -> LOOPBACK_W<'_, CONF0_SYNC_SPEC> {
+    pub fn loopback(&mut self) -> LOOPBACK_W<'_, CONF0_SPEC> {
         LOOPBACK_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures whether or not to enable flow control for the transmitter.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn tx_flow_en(&mut self) -> TX_FLOW_EN_W<'_, CONF0_SYNC_SPEC> {
+    pub fn tx_flow_en(&mut self) -> TX_FLOW_EN_W<'_, CONF0_SPEC> {
         TX_FLOW_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Configures whether or not to enable IrDA protocol.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn irda_en(&mut self) -> IRDA_EN_W<'_, CONF0_SYNC_SPEC> {
+    pub fn irda_en(&mut self) -> IRDA_EN_W<'_, CONF0_SPEC> {
         IRDA_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Configures whether or not to invert the level of UART RXD signal.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
     #[inline(always)]
-    pub fn rxd_inv(&mut self) -> RXD_INV_W<'_, CONF0_SYNC_SPEC> {
+    pub fn rxd_inv(&mut self) -> RXD_INV_W<'_, CONF0_SPEC> {
         RXD_INV_W::new(self, 15)
     }
     #[doc = "Bit 16 - Configures whether or not to invert the level of UART TXD signal.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
     #[inline(always)]
-    pub fn txd_inv(&mut self) -> TXD_INV_W<'_, CONF0_SYNC_SPEC> {
+    pub fn txd_inv(&mut self) -> TXD_INV_W<'_, CONF0_SPEC> {
         TXD_INV_W::new(self, 16)
     }
     #[doc = "Bit 17 - Configures whether or not to disable data overflow detection for the UART receiver.\\\\ 0: Enable\\\\ 1: Disable\\\\"]
     #[inline(always)]
-    pub fn dis_rx_dat_ovf(&mut self) -> DIS_RX_DAT_OVF_W<'_, CONF0_SYNC_SPEC> {
+    pub fn dis_rx_dat_ovf(&mut self) -> DIS_RX_DAT_OVF_W<'_, CONF0_SPEC> {
         DIS_RX_DAT_OVF_W::new(self, 17)
     }
     #[doc = "Bit 18 - Configures whether or not to store the received data with errors into FIFO.\\\\ 0: Store\\\\ 1: Not store\\\\"]
     #[inline(always)]
-    pub fn err_wr_mask(&mut self) -> ERR_WR_MASK_W<'_, CONF0_SYNC_SPEC> {
+    pub fn err_wr_mask(&mut self) -> ERR_WR_MASK_W<'_, CONF0_SPEC> {
         ERR_WR_MASK_W::new(self, 18)
     }
     #[doc = "Bit 19 - Configures whether or not to enable baud rate detection.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn autobaud_en(&mut self) -> AUTOBAUD_EN_W<'_, CONF0_SYNC_SPEC> {
+    pub fn autobaud_en(&mut self) -> AUTOBAUD_EN_W<'_, CONF0_SPEC> {
         AUTOBAUD_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Configures whether or not to enable clock gating for UART memory.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn mem_clk_en(&mut self) -> MEM_CLK_EN_W<'_, CONF0_SYNC_SPEC> {
+    pub fn mem_clk_en(&mut self) -> MEM_CLK_EN_W<'_, CONF0_SPEC> {
         MEM_CLK_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Configures the RTS signal used in software flow control.\\\\ 0: The UART transmitter is allowed to send data.\\\\ 1: The UART transmitted is not allowed to send data.\\\\"]
     #[inline(always)]
-    pub fn sw_rts(&mut self) -> SW_RTS_W<'_, CONF0_SYNC_SPEC> {
+    pub fn sw_rts(&mut self) -> SW_RTS_W<'_, CONF0_SPEC> {
         SW_RTS_W::new(self, 21)
     }
     #[doc = "Bit 22 - Configures whether or not to reset the UART RX FIFO.\\\\ 0: Not reset\\\\ 1: Reset\\\\"]
     #[inline(always)]
-    pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<'_, CONF0_SYNC_SPEC> {
+    pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<'_, CONF0_SPEC> {
         RXFIFO_RST_W::new(self, 22)
     }
     #[doc = "Bit 23 - Configures whether or not to reset the UART TX FIFO.\\\\ 0: Not reset\\\\ 1: Reset\\\\"]
     #[inline(always)]
-    pub fn txfifo_rst(&mut self) -> TXFIFO_RST_W<'_, CONF0_SYNC_SPEC> {
+    pub fn txfifo_rst(&mut self) -> TXFIFO_RST_W<'_, CONF0_SPEC> {
         TXFIFO_RST_W::new(self, 23)
     }
 }
-#[doc = "Configuration register 0\n\nYou can [`read`](crate::Reg::read) this register and get [`conf0_sync::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`conf0_sync::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct CONF0_SYNC_SPEC;
-impl crate::RegisterSpec for CONF0_SYNC_SPEC {
+#[doc = "Configuration register 0\n\nYou can [`read`](crate::Reg::read) this register and get [`conf0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`conf0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CONF0_SPEC;
+impl crate::RegisterSpec for CONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`conf0_sync::R`](R) reader structure"]
-impl crate::Readable for CONF0_SYNC_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`conf0_sync::W`](W) writer structure"]
-impl crate::Writable for CONF0_SYNC_SPEC {
+#[doc = "`read()` method returns [`conf0::R`](R) reader structure"]
+impl crate::Readable for CONF0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`conf0::W`](W) writer structure"]
+impl crate::Writable for CONF0_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets CONF0_SYNC to value 0x1c"]
-impl crate::Resettable for CONF0_SYNC_SPEC {
+#[doc = "`reset()` method sets CONF0 to value 0x1c"]
+impl crate::Resettable for CONF0_SPEC {
     const RESET_VALUE: u32 = 0x1c;
 }

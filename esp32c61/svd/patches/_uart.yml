@@ -1,0 +1,4 @@
+"*UART*":
+  CLK_CONF:
+    _strip:
+      - "RX_"
