@@ -66,6 +66,28 @@ I2S0:
       I2S0:
         value: 39
 
+IO_MUX:
+  _array:
+    GPIO*:
+      description: IO_MUX Configure Registers for different pads
+
+# _IN_SEL_CFG were manually rewritten into a big array because
+# it was impossible to gather them automatically
+GPIO: 
+  _modify:
+    PROCPU_INT:
+      name: PCPU_INT
+  FUNC*_OUT_SEL_CFG:
+    _modify:
+      FUNC*_OUT_SEL:
+        name: OUT_SEL
+      FUNC*_OUT_INV_SEL:
+        name: INV_SEL
+      FUNC*_OE_SEL:
+        name: OEN_SEL
+      FUNC*_OE_INV_SEL:
+        name: OEN_INV_SEL
+
 GPIO_EXT:
   ETM_EVENT_CH%s_CFG:
     _strip: ETM_CH0_
