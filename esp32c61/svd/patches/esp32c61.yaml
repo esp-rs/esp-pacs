@@ -56,6 +56,10 @@ I2C0:
   _modify:
     INT_STATUS:
       name: INT_ST
+  DATA:
+    _modify:
+      FIFO_RDATA:
+        access: read-write
   _include:
     - ../../../common_patches/i2c0.yaml
     - ../../../common_patches/i2c_st_timeouts.yaml
@@ -189,6 +193,16 @@ SPI[01]:
 
 PCR:
   _include: ../../../common_patches/pcr.yaml
+  _modify:
+    I2C_CONF:
+      name: I2C0_CONF
+
+  I2C0_CONF:
+    _modify:
+      I2C_CLK_EN:
+        name: I2C0_CLK_EN
+      I2C_RST_EN:
+        name: I2C0_RST_EN
 
 "EFUSE,I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
   _include: ../../../common_patches/int_strip.yaml
