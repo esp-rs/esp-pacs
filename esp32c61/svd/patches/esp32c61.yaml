@@ -191,6 +191,17 @@ SPI[01]:
   "*":
     _strip: MEM_
 
+SPI2:
+  _strip: SPI_
+  "*":
+    _strip: SPI_
+  _include: ../../../common_patches/spi_dma_int_strip.yaml
+  
+  CMD:
+    _modify:
+      UPDATE:
+        access: read-write
+
 PCR:
   _include: ../../../common_patches/pcr.yaml
   _modify:
@@ -246,7 +257,7 @@ LP_TEE:
     M*_MODE_CTRL:
       dimIncrement: 4
 
-SPI1:
+SPI[12]:
   _include: ../../../common_patches/spi_w.yaml
 
 SOC_ETM:
