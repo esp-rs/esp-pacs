@@ -15,3 +15,8 @@ CAP_CH?_CFG:
     FallingEdge: [1, "Capture falling edges"]
     RisingEdge: [2, "Capture rising edges"]
     AnyEdge: [3, "Capture any edges"]
+
+TIMER_SYNCI_CFG:
+  _array:
+    TIMER?_SYNCISEL: {}
+    EXTERNAL_SYNCI?_INVERT: {}
