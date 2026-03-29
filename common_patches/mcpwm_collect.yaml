@@ -91,4 +91,6 @@ _array:
     description: Value of last capture on channel %s
     _strip: CAP?_
 
-_include: int_strip.yaml
+_include:
+  - int_strip.yaml
+  - mcpwm.yaml

@@ -28,6 +28,7 @@ _include:
   - "_twai.yml"
   - "_uart.yml"
   - "_wdt.yml"
+  - "_mcpwm.yml"
 
 RNG:
   _modify:

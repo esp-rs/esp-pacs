@@ -17,6 +17,7 @@ _include:
   - "_timg.yml"
   - "wifi.yaml"
   - "btdm.yml"
+  - _mcpwm.yml
 
 RNG:
   _modify:
@@ -170,7 +171,8 @@ UHCI0:
     ESC_CONF?: {}
 
 MCPWM0:
-  _include: ../../../common_patches/mcpwm_collect.yaml
+  _include:
+    - ../../../common_patches/mcpwm_collect.yaml
   INT_RAW:
     _modify:
       "*":
