@@ -173,6 +173,7 @@ UHCI0:
 MCPWM0:
   _include:
     - ../../../common_patches/mcpwm_collect.yaml
+    - ../../../common_patches/mcpwm.yaml
   INT_RAW:
     _modify:
       "*":
