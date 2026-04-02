@@ -16,6 +16,7 @@ _include:
   - _i2c.yml
   - _interrupt.yml
   - _lp_apm.yml
+  - _mcpwm.yml
   - _lp_io.yml
   - _modem_lpcon.yml
   - _modem_syscon.yml
@@ -637,7 +638,8 @@ PCNT:
   _include: pcnt.yaml
 
 MCPWM0:
-  _include: ../../../common_patches/int_strip.yaml
+  _include:
+    - ../../../common_patches/int_strip.yaml
 
 SOC_ETM:
   CH_ENA_AD?:

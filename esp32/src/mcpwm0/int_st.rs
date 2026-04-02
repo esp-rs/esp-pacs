@@ -10,14 +10,14 @@ pub type TIMER_TEP_R = crate::BitReader;
 pub type FAULT_R = crate::BitReader;
 #[doc = "Field `FAULT_CLR(0-2)` reader - The interrupt status bit for the fault%s clear event."]
 pub type FAULT_CLR_R = crate::BitReader;
-#[doc = "Field `OP_TEA(0-2)` reader - The interrupt status bit for the operator%s compare A event."]
-pub type OP_TEA_R = crate::BitReader;
-#[doc = "Field `OP_TEB(0-2)` reader - The interrupt status bit for the operator%s compare B event."]
-pub type OP_TEB_R = crate::BitReader;
-#[doc = "Field `FH_CBC(0-2)` reader - The interrupt status bit for the fault handler%s cycle-by-cycle mode action."]
-pub type FH_CBC_R = crate::BitReader;
-#[doc = "Field `FH_OST(0-2)` reader - The interrupt status bit for the fault handler%s one-shot mode action."]
-pub type FH_OST_R = crate::BitReader;
+#[doc = "Field `CMPR_TEA(0-2)` reader - The interrupt status bit for the operator%s compare A event."]
+pub type CMPR_TEA_R = crate::BitReader;
+#[doc = "Field `CMPR_TEB(0-2)` reader - The interrupt status bit for the operator%s compare B event."]
+pub type CMPR_TEB_R = crate::BitReader;
+#[doc = "Field `TZ_CBC(0-2)` reader - The interrupt status bit for the fault handler%s cycle-by-cycle mode action."]
+pub type TZ_CBC_R = crate::BitReader;
+#[doc = "Field `TZ_OST(0-2)` reader - The interrupt status bit for the fault handler%s one-shot mode action."]
+pub type TZ_OST_R = crate::BitReader;
 #[doc = "Field `CAP(0-2)` reader - The interrupt status bit for the capture%s event."]
 pub type CAP_R = crate::BitReader;
 impl R {
@@ -173,123 +173,123 @@ impl R {
     }
     #[doc = "The interrupt status bit for the operator(0-2) compare A event."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OP0_TEA` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CMPR0_TEA` field.</div>"]
     #[inline(always)]
-    pub fn op_tea(&self, n: u8) -> OP_TEA_R {
+    pub fn cmpr_tea(&self, n: u8) -> CMPR_TEA_R {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
-        OP_TEA_R::new(((self.bits >> (n + 15)) & 1) != 0)
+        CMPR_TEA_R::new(((self.bits >> (n + 15)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
     #[doc = "The interrupt status bit for the operator(0-2) compare A event."]
     #[inline(always)]
-    pub fn op_tea_iter(&self) -> impl Iterator<Item = OP_TEA_R> + '_ {
-        (0..3).map(move |n| OP_TEA_R::new(((self.bits >> (n + 15)) & 1) != 0))
+    pub fn cmpr_tea_iter(&self) -> impl Iterator<Item = CMPR_TEA_R> + '_ {
+        (0..3).map(move |n| CMPR_TEA_R::new(((self.bits >> (n + 15)) & 1) != 0))
     }
     #[doc = "Bit 15 - The interrupt status bit for the operator0 compare A event."]
     #[inline(always)]
-    pub fn op0_tea(&self) -> OP_TEA_R {
-        OP_TEA_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn cmpr0_tea(&self) -> CMPR_TEA_R {
+        CMPR_TEA_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - The interrupt status bit for the operator1 compare A event."]
     #[inline(always)]
-    pub fn op1_tea(&self) -> OP_TEA_R {
-        OP_TEA_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn cmpr1_tea(&self) -> CMPR_TEA_R {
+        CMPR_TEA_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - The interrupt status bit for the operator2 compare A event."]
     #[inline(always)]
-    pub fn op2_tea(&self) -> OP_TEA_R {
-        OP_TEA_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn cmpr2_tea(&self) -> CMPR_TEA_R {
+        CMPR_TEA_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "The interrupt status bit for the operator(0-2) compare B event."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OP0_TEB` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CMPR0_TEB` field.</div>"]
     #[inline(always)]
-    pub fn op_teb(&self, n: u8) -> OP_TEB_R {
+    pub fn cmpr_teb(&self, n: u8) -> CMPR_TEB_R {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
-        OP_TEB_R::new(((self.bits >> (n + 18)) & 1) != 0)
+        CMPR_TEB_R::new(((self.bits >> (n + 18)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
     #[doc = "The interrupt status bit for the operator(0-2) compare B event."]
     #[inline(always)]
-    pub fn op_teb_iter(&self) -> impl Iterator<Item = OP_TEB_R> + '_ {
-        (0..3).map(move |n| OP_TEB_R::new(((self.bits >> (n + 18)) & 1) != 0))
+    pub fn cmpr_teb_iter(&self) -> impl Iterator<Item = CMPR_TEB_R> + '_ {
+        (0..3).map(move |n| CMPR_TEB_R::new(((self.bits >> (n + 18)) & 1) != 0))
     }
     #[doc = "Bit 18 - The interrupt status bit for the operator0 compare B event."]
     #[inline(always)]
-    pub fn op0_teb(&self) -> OP_TEB_R {
-        OP_TEB_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn cmpr0_teb(&self) -> CMPR_TEB_R {
+        CMPR_TEB_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - The interrupt status bit for the operator1 compare B event."]
     #[inline(always)]
-    pub fn op1_teb(&self) -> OP_TEB_R {
-        OP_TEB_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn cmpr1_teb(&self) -> CMPR_TEB_R {
+        CMPR_TEB_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - The interrupt status bit for the operator2 compare B event."]
     #[inline(always)]
-    pub fn op2_teb(&self) -> OP_TEB_R {
-        OP_TEB_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn cmpr2_teb(&self) -> CMPR_TEB_R {
+        CMPR_TEB_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "The interrupt status bit for the fault handler(0-2) cycle-by-cycle mode action."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `FH0_CBC` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TZ0_CBC` field.</div>"]
     #[inline(always)]
-    pub fn fh_cbc(&self, n: u8) -> FH_CBC_R {
+    pub fn tz_cbc(&self, n: u8) -> TZ_CBC_R {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
-        FH_CBC_R::new(((self.bits >> (n + 21)) & 1) != 0)
+        TZ_CBC_R::new(((self.bits >> (n + 21)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
     #[doc = "The interrupt status bit for the fault handler(0-2) cycle-by-cycle mode action."]
     #[inline(always)]
-    pub fn fh_cbc_iter(&self) -> impl Iterator<Item = FH_CBC_R> + '_ {
-        (0..3).map(move |n| FH_CBC_R::new(((self.bits >> (n + 21)) & 1) != 0))
+    pub fn tz_cbc_iter(&self) -> impl Iterator<Item = TZ_CBC_R> + '_ {
+        (0..3).map(move |n| TZ_CBC_R::new(((self.bits >> (n + 21)) & 1) != 0))
     }
     #[doc = "Bit 21 - The interrupt status bit for the fault handler0 cycle-by-cycle mode action."]
     #[inline(always)]
-    pub fn fh0_cbc(&self) -> FH_CBC_R {
-        FH_CBC_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn tz0_cbc(&self) -> TZ_CBC_R {
+        TZ_CBC_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - The interrupt status bit for the fault handler1 cycle-by-cycle mode action."]
     #[inline(always)]
-    pub fn fh1_cbc(&self) -> FH_CBC_R {
-        FH_CBC_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn tz1_cbc(&self) -> TZ_CBC_R {
+        TZ_CBC_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - The interrupt status bit for the fault handler2 cycle-by-cycle mode action."]
     #[inline(always)]
-    pub fn fh2_cbc(&self) -> FH_CBC_R {
-        FH_CBC_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn tz2_cbc(&self) -> TZ_CBC_R {
+        TZ_CBC_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "The interrupt status bit for the fault handler(0-2) one-shot mode action."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `FH0_OST` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TZ0_OST` field.</div>"]
     #[inline(always)]
-    pub fn fh_ost(&self, n: u8) -> FH_OST_R {
+    pub fn tz_ost(&self, n: u8) -> TZ_OST_R {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
-        FH_OST_R::new(((self.bits >> (n + 24)) & 1) != 0)
+        TZ_OST_R::new(((self.bits >> (n + 24)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
     #[doc = "The interrupt status bit for the fault handler(0-2) one-shot mode action."]
     #[inline(always)]
-    pub fn fh_ost_iter(&self) -> impl Iterator<Item = FH_OST_R> + '_ {
-        (0..3).map(move |n| FH_OST_R::new(((self.bits >> (n + 24)) & 1) != 0))
+    pub fn tz_ost_iter(&self) -> impl Iterator<Item = TZ_OST_R> + '_ {
+        (0..3).map(move |n| TZ_OST_R::new(((self.bits >> (n + 24)) & 1) != 0))
     }
     #[doc = "Bit 24 - The interrupt status bit for the fault handler0 one-shot mode action."]
     #[inline(always)]
-    pub fn fh0_ost(&self) -> FH_OST_R {
-        FH_OST_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn tz0_ost(&self) -> TZ_OST_R {
+        TZ_OST_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - The interrupt status bit for the fault handler1 one-shot mode action."]
     #[inline(always)]
-    pub fn fh1_ost(&self) -> FH_OST_R {
-        FH_OST_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn tz1_ost(&self) -> TZ_OST_R {
+        TZ_OST_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - The interrupt status bit for the fault handler2 one-shot mode action."]
     #[inline(always)]
-    pub fn fh2_ost(&self) -> FH_OST_R {
-        FH_OST_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn tz2_ost(&self) -> TZ_OST_R {
+        TZ_OST_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "The interrupt status bit for the capture(0-2) event."]
     #[doc = ""]
@@ -341,18 +341,18 @@ impl core::fmt::Debug for R {
             .field("fault0_clr", &self.fault0_clr())
             .field("fault1_clr", &self.fault1_clr())
             .field("fault2_clr", &self.fault2_clr())
-            .field("op0_tea", &self.op0_tea())
-            .field("op1_tea", &self.op1_tea())
-            .field("op2_tea", &self.op2_tea())
-            .field("op0_teb", &self.op0_teb())
-            .field("op1_teb", &self.op1_teb())
-            .field("op2_teb", &self.op2_teb())
-            .field("fh0_cbc", &self.fh0_cbc())
-            .field("fh1_cbc", &self.fh1_cbc())
-            .field("fh2_cbc", &self.fh2_cbc())
-            .field("fh0_ost", &self.fh0_ost())
-            .field("fh1_ost", &self.fh1_ost())
-            .field("fh2_ost", &self.fh2_ost())
+            .field("cmpr0_tea", &self.cmpr0_tea())
+            .field("cmpr1_tea", &self.cmpr1_tea())
+            .field("cmpr2_tea", &self.cmpr2_tea())
+            .field("cmpr0_teb", &self.cmpr0_teb())
+            .field("cmpr1_teb", &self.cmpr1_teb())
+            .field("cmpr2_teb", &self.cmpr2_teb())
+            .field("tz0_cbc", &self.tz0_cbc())
+            .field("tz1_cbc", &self.tz1_cbc())
+            .field("tz2_cbc", &self.tz2_cbc())
+            .field("tz0_ost", &self.tz0_ost())
+            .field("tz1_ost", &self.tz1_ost())
+            .field("tz2_ost", &self.tz2_ost())
             .field("cap0", &self.cap0())
             .field("cap1", &self.cap1())
             .field("cap2", &self.cap2())

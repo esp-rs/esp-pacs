@@ -17,6 +17,7 @@ _include:
   - "_ledc.yml"
   - "_lp_wdt.yml"
   - "_pcnt.yml"
+  - "_mcpwm.yml"
   - "_pcr.yml"
   - "_pmu.yml"
   - "_rmt.yml"
@@ -939,7 +940,9 @@ PCR:
   _include: ../../../common_patches/pcr.yaml
 
 MCPWM0:
-  _include: ../../../common_patches/mcpwm_collect.yaml
+  _include:
+    - ../../../common_patches/mcpwm_collect.yaml
+    - ../../../common_patches/mcpwm.yaml
 
 SOC_ETM:
   _include: ../../../common_patches/etm_collect.yaml

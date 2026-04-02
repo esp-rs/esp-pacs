@@ -1,8 +1,30 @@
 MCPWM0:
-  CAP_TIMER_PHASE:
+  CAP_STATUS:
+    _array:
+      CAP?_EDGE:
+        description: Describes the last captured edge on channel%s.
+    CAP?_EDGE:
+      Rising: [0, "Rising edge"]
+      Falling: [1, "Falling edge"]
+
+  CAP_CH%s_CFG:
     _modify:
-      CAP_TIMER_PHASE:
-        name: CAP_PHASE
+      CAP_MODE:
+        description: Describes which edges to trigger a capture event
+    CAP_MODE:
+      None: [0, "Capture nothing"]
+      FallingEdge: [1, "Capture falling edges"]
+      RisingEdge: [2, "Capture rising edges"]
+      AnyEdge: [3, "Capture any edges"]
+
+  TIMER_SYNCI_CFG:
+    _array:
+      TIMER?_SYNCISEL: {}
+      EXTERNAL_SYNCI?_INVERT: {}
+
+  OPERATOR_TIMERSEL:
+    _array:
+      OPERATOR?_TIMERSEL: {}
 
   INT_RAW:
     _array:
@@ -18,17 +40,13 @@ MCPWM0:
         description: The interrupt raw bit for the fault%s clear event.
       CAP?:
         description: The interrupt raw bit for the capture%s event.
-      OP?_TEA:
-        name: CMPR%s_TEA
+      CMPR?_TEA:
         description: The interrupt raw bit for the operator%s compare A event.
-      OP?_TEB:
-        name: CMPR%s_TEB
+      CMPR?_TEB:
         description: The interrupt raw bit for the operator%s compare B event.
-      FH?_CBC:
-        name: TZ%s_CBC
+      TZ?_CBC:
         description: The interrupt raw bit for the fault handler%s cycle-by-cycle mode action.
-      FH?_OST:
-        name: TZ%s_OST
+      TZ?_OST:
         description: The interrupt raw bit for the fault handler%s one-shot mode action.
 
   INT_ST:
@@ -45,17 +63,13 @@ MCPWM0:
         description: The interrupt status bit for the fault%s clear event.
       CAP?:
         description: The interrupt status bit for the capture%s event.
-      OP?_TEA:
-        name: CMPR%s_TEA
+      CMPR?_TEA:
         description: The interrupt status bit for the operator%s compare A event.
-      OP?_TEB:
-        name: CMPR%s_TEB
+      CMPR?_TEB:
         description: The interrupt status bit for the operator%s compare B event.
-      FH?_CBC:
-        name: TZ%s_CBC
+      TZ?_CBC:
         description: The interrupt status bit for the fault handler%s cycle-by-cycle mode action.
-      FH?_OST:
-        name: TZ%s_OST
+      TZ?_OST:
         description: The interrupt status bit for the fault handler%s one-shot mode action.
 
   INT_ENA:
@@ -72,17 +86,13 @@ MCPWM0:
         description: The interrupt enable bit for the fault%s clear event.
       CAP?:
         description: The interrupt enable bit for the capture%s event.
-      OP?_TEA:
-        name: CMPR%s_TEA
+      CMPR?_TEA:
         description: The interrupt enable bit for the operator%s compare A event.
-      OP?_TEB:
-        name: CMPR%s_TEB
+      CMPR?_TEB:
         description: The interrupt enable bit for the operator%s compare B event.
-      FH?_CBC:
-        name: TZ%s_CBC
+      TZ?_CBC:
         description: The interrupt enable bit for the fault handler%s cycle-by-cycle mode action.
-      FH?_OST:
-        name: TZ%s_OST
+      TZ?_OST:
         description: The interrupt enable bit for the fault handler%s one-shot mode action.
 
   INT_CLR:
@@ -99,15 +109,11 @@ MCPWM0:
         description: The interrupt clear bit for the fault%s clear event.
       CAP?:
         description: The interrupt clear bit for the capture%s event.
-      OP?_TEA:
-        name: CMPR%s_TEA
+      CMPR?_TEA:
         description: The interrupt clear bit for the operator%s compare A event.
-      OP?_TEB:
-        name: CMPR%s_TEB
+      CMPR?_TEB:
         description: The interrupt clear bit for the operator%s compare B event.
-      FH?_CBC:
-        name: TZ%s_CBC
+      TZ?_CBC:
         description: The interrupt clear bit for the fault handler%s cycle-by-cycle mode action.
-      FH?_OST:
-        name: TZ%s_OST
+      TZ?_OST:
         description: The interrupt clear bit for the fault handler%s one-shot mode action.

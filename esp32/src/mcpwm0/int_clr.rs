@@ -10,14 +10,14 @@ pub type TIMER_TEP_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 pub type FAULT_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `FAULT_CLR(0-2)` writer - The interrupt clear bit for the fault%s clear event."]
 pub type FAULT_CLR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
-#[doc = "Field `OP_TEA(0-2)` writer - The interrupt clear bit for the operator%s compare A event."]
-pub type OP_TEA_W<'a, REG> = crate::BitWriter1C<'a, REG>;
-#[doc = "Field `OP_TEB(0-2)` writer - The interrupt clear bit for the operator%s compare B event."]
-pub type OP_TEB_W<'a, REG> = crate::BitWriter1C<'a, REG>;
-#[doc = "Field `FH_CBC(0-2)` writer - The interrupt clear bit for the fault handler%s cycle-by-cycle mode action."]
-pub type FH_CBC_W<'a, REG> = crate::BitWriter1C<'a, REG>;
-#[doc = "Field `FH_OST(0-2)` writer - The interrupt clear bit for the fault handler%s one-shot mode action."]
-pub type FH_OST_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `CMPR_TEA(0-2)` writer - The interrupt clear bit for the operator%s compare A event."]
+pub type CMPR_TEA_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `CMPR_TEB(0-2)` writer - The interrupt clear bit for the operator%s compare B event."]
+pub type CMPR_TEB_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TZ_CBC(0-2)` writer - The interrupt clear bit for the fault handler%s cycle-by-cycle mode action."]
+pub type TZ_CBC_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TZ_OST(0-2)` writer - The interrupt clear bit for the fault handler%s one-shot mode action."]
+pub type TZ_OST_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `CAP(0-2)` writer - The interrupt clear bit for the capture%s event."]
 pub type CAP_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
@@ -149,99 +149,99 @@ impl W {
     }
     #[doc = "The interrupt clear bit for the operator(0-2) compare A event."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OP0_TEA` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CMPR0_TEA` field.</div>"]
     #[inline(always)]
-    pub fn op_tea(&mut self, n: u8) -> OP_TEA_W<'_, INT_CLR_SPEC> {
+    pub fn cmpr_tea(&mut self, n: u8) -> CMPR_TEA_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
-        OP_TEA_W::new(self, n + 15)
+        CMPR_TEA_W::new(self, n + 15)
     }
     #[doc = "Bit 15 - The interrupt clear bit for the operator0 compare A event."]
     #[inline(always)]
-    pub fn op0_tea(&mut self) -> OP_TEA_W<'_, INT_CLR_SPEC> {
-        OP_TEA_W::new(self, 15)
+    pub fn cmpr0_tea(&mut self) -> CMPR_TEA_W<'_, INT_CLR_SPEC> {
+        CMPR_TEA_W::new(self, 15)
     }
     #[doc = "Bit 16 - The interrupt clear bit for the operator1 compare A event."]
     #[inline(always)]
-    pub fn op1_tea(&mut self) -> OP_TEA_W<'_, INT_CLR_SPEC> {
-        OP_TEA_W::new(self, 16)
+    pub fn cmpr1_tea(&mut self) -> CMPR_TEA_W<'_, INT_CLR_SPEC> {
+        CMPR_TEA_W::new(self, 16)
     }
     #[doc = "Bit 17 - The interrupt clear bit for the operator2 compare A event."]
     #[inline(always)]
-    pub fn op2_tea(&mut self) -> OP_TEA_W<'_, INT_CLR_SPEC> {
-        OP_TEA_W::new(self, 17)
+    pub fn cmpr2_tea(&mut self) -> CMPR_TEA_W<'_, INT_CLR_SPEC> {
+        CMPR_TEA_W::new(self, 17)
     }
     #[doc = "The interrupt clear bit for the operator(0-2) compare B event."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OP0_TEB` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CMPR0_TEB` field.</div>"]
     #[inline(always)]
-    pub fn op_teb(&mut self, n: u8) -> OP_TEB_W<'_, INT_CLR_SPEC> {
+    pub fn cmpr_teb(&mut self, n: u8) -> CMPR_TEB_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
-        OP_TEB_W::new(self, n + 18)
+        CMPR_TEB_W::new(self, n + 18)
     }
     #[doc = "Bit 18 - The interrupt clear bit for the operator0 compare B event."]
     #[inline(always)]
-    pub fn op0_teb(&mut self) -> OP_TEB_W<'_, INT_CLR_SPEC> {
-        OP_TEB_W::new(self, 18)
+    pub fn cmpr0_teb(&mut self) -> CMPR_TEB_W<'_, INT_CLR_SPEC> {
+        CMPR_TEB_W::new(self, 18)
     }
     #[doc = "Bit 19 - The interrupt clear bit for the operator1 compare B event."]
     #[inline(always)]
-    pub fn op1_teb(&mut self) -> OP_TEB_W<'_, INT_CLR_SPEC> {
-        OP_TEB_W::new(self, 19)
+    pub fn cmpr1_teb(&mut self) -> CMPR_TEB_W<'_, INT_CLR_SPEC> {
+        CMPR_TEB_W::new(self, 19)
     }
     #[doc = "Bit 20 - The interrupt clear bit for the operator2 compare B event."]
     #[inline(always)]
-    pub fn op2_teb(&mut self) -> OP_TEB_W<'_, INT_CLR_SPEC> {
-        OP_TEB_W::new(self, 20)
+    pub fn cmpr2_teb(&mut self) -> CMPR_TEB_W<'_, INT_CLR_SPEC> {
+        CMPR_TEB_W::new(self, 20)
     }
     #[doc = "The interrupt clear bit for the fault handler(0-2) cycle-by-cycle mode action."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `FH0_CBC` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TZ0_CBC` field.</div>"]
     #[inline(always)]
-    pub fn fh_cbc(&mut self, n: u8) -> FH_CBC_W<'_, INT_CLR_SPEC> {
+    pub fn tz_cbc(&mut self, n: u8) -> TZ_CBC_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
-        FH_CBC_W::new(self, n + 21)
+        TZ_CBC_W::new(self, n + 21)
     }
     #[doc = "Bit 21 - The interrupt clear bit for the fault handler0 cycle-by-cycle mode action."]
     #[inline(always)]
-    pub fn fh0_cbc(&mut self) -> FH_CBC_W<'_, INT_CLR_SPEC> {
-        FH_CBC_W::new(self, 21)
+    pub fn tz0_cbc(&mut self) -> TZ_CBC_W<'_, INT_CLR_SPEC> {
+        TZ_CBC_W::new(self, 21)
     }
     #[doc = "Bit 22 - The interrupt clear bit for the fault handler1 cycle-by-cycle mode action."]
     #[inline(always)]
-    pub fn fh1_cbc(&mut self) -> FH_CBC_W<'_, INT_CLR_SPEC> {
-        FH_CBC_W::new(self, 22)
+    pub fn tz1_cbc(&mut self) -> TZ_CBC_W<'_, INT_CLR_SPEC> {
+        TZ_CBC_W::new(self, 22)
     }
     #[doc = "Bit 23 - The interrupt clear bit for the fault handler2 cycle-by-cycle mode action."]
     #[inline(always)]
-    pub fn fh2_cbc(&mut self) -> FH_CBC_W<'_, INT_CLR_SPEC> {
-        FH_CBC_W::new(self, 23)
+    pub fn tz2_cbc(&mut self) -> TZ_CBC_W<'_, INT_CLR_SPEC> {
+        TZ_CBC_W::new(self, 23)
     }
     #[doc = "The interrupt clear bit for the fault handler(0-2) one-shot mode action."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `FH0_OST` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TZ0_OST` field.</div>"]
     #[inline(always)]
-    pub fn fh_ost(&mut self, n: u8) -> FH_OST_W<'_, INT_CLR_SPEC> {
+    pub fn tz_ost(&mut self, n: u8) -> TZ_OST_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
-        FH_OST_W::new(self, n + 24)
+        TZ_OST_W::new(self, n + 24)
     }
     #[doc = "Bit 24 - The interrupt clear bit for the fault handler0 one-shot mode action."]
     #[inline(always)]
-    pub fn fh0_ost(&mut self) -> FH_OST_W<'_, INT_CLR_SPEC> {
-        FH_OST_W::new(self, 24)
+    pub fn tz0_ost(&mut self) -> TZ_OST_W<'_, INT_CLR_SPEC> {
+        TZ_OST_W::new(self, 24)
     }
     #[doc = "Bit 25 - The interrupt clear bit for the fault handler1 one-shot mode action."]
     #[inline(always)]
-    pub fn fh1_ost(&mut self) -> FH_OST_W<'_, INT_CLR_SPEC> {
-        FH_OST_W::new(self, 25)
+    pub fn tz1_ost(&mut self) -> TZ_OST_W<'_, INT_CLR_SPEC> {
+        TZ_OST_W::new(self, 25)
     }
     #[doc = "Bit 26 - The interrupt clear bit for the fault handler2 one-shot mode action."]
     #[inline(always)]
-    pub fn fh2_ost(&mut self) -> FH_OST_W<'_, INT_CLR_SPEC> {
-        FH_OST_W::new(self, 26)
+    pub fn tz2_ost(&mut self) -> TZ_OST_W<'_, INT_CLR_SPEC> {
+        TZ_OST_W::new(self, 26)
     }
     #[doc = "The interrupt clear bit for the capture(0-2) event."]
     #[doc = ""]
