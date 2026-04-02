@@ -4,23 +4,25 @@
 #[repr(u16)]
 pub enum Interrupt {
     #[doc = "0 - TOUCH_DONE_INT"]
-    TOUCH_DONE_INT     = 0,
+    TOUCH_DONE_INT = 0,
     #[doc = "1 - TOUCH_INACTIVE_INT"]
     TOUCH_INACTIVE_INT = 1,
     #[doc = "2 - TOUCH_ACTIVE_INT"]
-    TOUCH_ACTIVE_INT   = 2,
+    TOUCH_ACTIVE_INT = 2,
     #[doc = "3 - SARADC1_DONE_INT"]
-    SARADC1_DONE_INT   = 3,
+    SARADC1_DONE_INT = 3,
     #[doc = "4 - SARADC2_DONE_INT"]
-    SARADC2_DONE_INT   = 4,
+    SARADC2_DONE_INT = 4,
     #[doc = "5 - TSENS_DONE_INT"]
-    TSENS_DONE_INT     = 5,
+    TSENS_DONE_INT = 5,
     #[doc = "6 - RISCV_START_INT"]
-    RISCV_START_INT    = 6,
+    RISCV_START_INT = 6,
     #[doc = "7 - SW_INT"]
-    SW_INT             = 7,
+    SW_INT = 7,
     #[doc = "8 - SWD_INT"]
-    SWD_INT            = 8,
+    SWD_INT = 8,
+    #[doc = "9 - GPIO_INT"]
+    GPIO_INT = 9,
 }
 #[doc = r" TryFromInterruptError"]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
@@ -40,6 +42,7 @@ impl Interrupt {
             6 => Ok(Interrupt::RISCV_START_INT),
             7 => Ok(Interrupt::SW_INT),
             8 => Ok(Interrupt::SWD_INT),
+            9 => Ok(Interrupt::GPIO_INT),
             _ => Err(TryFromInterruptError(())),
         }
     }

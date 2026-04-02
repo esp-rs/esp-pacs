@@ -43,6 +43,10 @@
         <size>0xF0</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>GPIO_INT</name>
+        <value>9</value>
+      </interrupt>
       <registers>
         <register>
           <name>RTC_GPIO_OUT</name>

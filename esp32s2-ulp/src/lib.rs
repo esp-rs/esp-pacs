@@ -21,6 +21,7 @@ extern "C" {
     fn RISCV_START_INT();
     fn SW_INT();
     fn SWD_INT();
+    fn GPIO_INT();
 }
 #[doc(hidden)]
 #[repr(C)]
@@ -32,7 +33,7 @@ pub union Vector {
 #[doc(hidden)]
 #[link_section = ".rwtext"]
 #[no_mangle]
-pub static __EXTERNAL_INTERRUPTS: [Vector; 9] = [
+pub static __EXTERNAL_INTERRUPTS: [Vector; 10] = [
     Vector {
         _handler: TOUCH_DONE_INT,
     },
@@ -56,6 +57,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 9] = [
     },
     Vector { _handler: SW_INT },
     Vector { _handler: SWD_INT },
+    Vector { _handler: GPIO_INT },
 ];
 #[doc(hidden)]
 pub mod interrupt;
@@ -96,6 +98,8 @@ impl core::fmt::Debug for SENS {
 }
 #[doc = "SENS Peripheral"]
 pub mod sens;
+#[no_mangle]
+static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r" All the peripherals."]
 #[allow(non_snake_case)]
 pub struct Peripherals {
@@ -112,15 +116,12 @@ impl Peripherals {
     #[doc = r" Returns all the peripherals *once*."]
     #[cfg(feature = "critical-section")]
     #[inline]
-    pub fn take() -> Self {
-        #[no_mangle]
-        static mut DEVICE_PERIPHERALS: bool = false;
-
-        critical_section::with(|_| unsafe {
-            if DEVICE_PERIPHERALS {
-                core::panic!("Peripheral was taken more than once!");
+    pub fn take() -> Option<Self> {
+        critical_section::with(|_| {
+            if unsafe { DEVICE_PERIPHERALS } {
+                return None;
             }
-            Self::steal()
+            Some(unsafe { Peripherals::steal() })
         })
     }
     #[doc = r" Unchecked version of `Peripherals::take`."]
@@ -130,6 +131,7 @@ impl Peripherals {
     #[doc = r" Each of the returned peripherals must be used at most once."]
     #[inline]
     pub unsafe fn steal() -> Self {
+        DEVICE_PERIPHERALS = true;
         Peripherals {
             RTC_IO: RTC_IO::steal(),
             RTC_CNTL: RTC_CNTL::steal(),
