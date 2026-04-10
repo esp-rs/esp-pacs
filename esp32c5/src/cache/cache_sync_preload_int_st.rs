@@ -1,0 +1,68 @@
+#[doc = "Register `CACHE_SYNC_PRELOAD_INT_ST` reader"]
+pub type R = crate::R<CACHE_SYNC_PRELOAD_INT_ST_SPEC>;
+#[doc = "Field `ICACHE2_PLD_DONE_INT_ST` reader - Reserved"]
+pub type ICACHE2_PLD_DONE_INT_ST_R = crate::BitReader;
+#[doc = "Field `CACHE_PLD_DONE_INT_ST` reader - The bit indicates the status of the interrupt that occurs only when Cache preload-operation is done."]
+pub type CACHE_PLD_DONE_INT_ST_R = crate::BitReader;
+#[doc = "Field `SYNC_DONE_INT_ST` reader - The bit indicates the status of the interrupt that occurs only when Cache sync-operation is done."]
+pub type SYNC_DONE_INT_ST_R = crate::BitReader;
+#[doc = "Field `ICACHE2_PLD_ERR_INT_ST` reader - Reserved"]
+pub type ICACHE2_PLD_ERR_INT_ST_R = crate::BitReader;
+#[doc = "Field `CACHE_PLD_ERR_INT_ST` reader - The bit indicates the status of the interrupt of Cache preload-operation error."]
+pub type CACHE_PLD_ERR_INT_ST_R = crate::BitReader;
+#[doc = "Field `SYNC_ERR_INT_ST` reader - The bit indicates the status of the interrupt of Cache sync-operation error."]
+pub type SYNC_ERR_INT_ST_R = crate::BitReader;
+impl R {
+    #[doc = "Bit 2 - Reserved"]
+    #[inline(always)]
+    pub fn icache2_pld_done_int_st(&self) -> ICACHE2_PLD_DONE_INT_ST_R {
+        ICACHE2_PLD_DONE_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 4 - The bit indicates the status of the interrupt that occurs only when Cache preload-operation is done."]
+    #[inline(always)]
+    pub fn cache_pld_done_int_st(&self) -> CACHE_PLD_DONE_INT_ST_R {
+        CACHE_PLD_DONE_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 6 - The bit indicates the status of the interrupt that occurs only when Cache sync-operation is done."]
+    #[inline(always)]
+    pub fn sync_done_int_st(&self) -> SYNC_DONE_INT_ST_R {
+        SYNC_DONE_INT_ST_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Reserved"]
+    #[inline(always)]
+    pub fn icache2_pld_err_int_st(&self) -> ICACHE2_PLD_ERR_INT_ST_R {
+        ICACHE2_PLD_ERR_INT_ST_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 11 - The bit indicates the status of the interrupt of Cache preload-operation error."]
+    #[inline(always)]
+    pub fn cache_pld_err_int_st(&self) -> CACHE_PLD_ERR_INT_ST_R {
+        CACHE_PLD_ERR_INT_ST_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 13 - The bit indicates the status of the interrupt of Cache sync-operation error."]
+    #[inline(always)]
+    pub fn sync_err_int_st(&self) -> SYNC_ERR_INT_ST_R {
+        SYNC_ERR_INT_ST_R::new(((self.bits >> 13) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_SYNC_PRELOAD_INT_ST")
+            .field("icache2_pld_done_int_st", &self.icache2_pld_done_int_st())
+            .field("cache_pld_done_int_st", &self.cache_pld_done_int_st())
+            .field("sync_done_int_st", &self.sync_done_int_st())
+            .field("icache2_pld_err_int_st", &self.icache2_pld_err_int_st())
+            .field("cache_pld_err_int_st", &self.cache_pld_err_int_st())
+            .field("sync_err_int_st", &self.sync_err_int_st())
+            .finish()
+    }
+}
+#[doc = "Cache Access Fail Interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`cache_sync_preload_int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CACHE_SYNC_PRELOAD_INT_ST_SPEC;
+impl crate::RegisterSpec for CACHE_SYNC_PRELOAD_INT_ST_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`cache_sync_preload_int_st::R`](R) reader structure"]
+impl crate::Readable for CACHE_SYNC_PRELOAD_INT_ST_SPEC {}
+#[doc = "`reset()` method sets CACHE_SYNC_PRELOAD_INT_ST to value 0"]
+impl crate::Resettable for CACHE_SYNC_PRELOAD_INT_ST_SPEC {}

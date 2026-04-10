@@ -339,8 +339,7 @@ pub mod i2c_scl_main_st_time_out;
 pub type I2C_SCL_SP_CONF = crate::Reg<i2c_scl_sp_conf::I2C_SCL_SP_CONF_SPEC>;
 #[doc = "Power configuration register"]
 pub mod i2c_scl_sp_conf;
-pub use crate::aes::date as i2c_date;
-pub use crate::aes::DATE as I2C_DATE;
+pub use crate::aes::{date as i2c_date, DATE as I2C_DATE};
 #[doc = "I2C_TXFIFO_START_ADDR (r) register accessor: I2C TXFIFO base address register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c_txfifo_start_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c_txfifo_start_addr`] module"]
 pub type I2C_TXFIFO_START_ADDR = crate::Reg<i2c_txfifo_start_addr::I2C_TXFIFO_START_ADDR_SPEC>;
 #[doc = "I2C TXFIFO base address register"]

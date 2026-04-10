@@ -305,5 +305,4 @@ pub mod backup_dma_cfg2;
 pub type MEM_CTRL = crate::Reg<mem_ctrl::MEM_CTRL_SPEC>;
 #[doc = "configure rmemory power in lp system register"]
 pub mod mem_ctrl;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

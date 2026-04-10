@@ -292,5 +292,4 @@ pub mod debug;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "HP-SYSTEM clock gating configure register"]
 pub mod clock_gate;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

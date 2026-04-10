@@ -490,6 +490,15 @@ impl core::fmt::Debug for INTPRI {
 }
 #[doc = "INTPRI Peripheral"]
 pub mod intpri;
+#[doc = "Cache controller, preload/sync, and performance counters"]
+pub type CACHE = crate::Periph<cache::RegisterBlock, 0x600c_8000>;
+impl core::fmt::Debug for CACHE {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE").finish()
+    }
+}
+#[doc = "Cache controller, preload/sync, and performance counters"]
+pub mod cache;
 #[doc = "Input/Output Multiplexer"]
 pub type IO_MUX = crate::Periph<io_mux::RegisterBlock, 0x6009_0000>;
 impl core::fmt::Debug for IO_MUX {
@@ -959,6 +968,8 @@ pub struct Peripherals {
     pub INTERRUPT_CORE0: INTERRUPT_CORE0,
     #[doc = "INTPRI"]
     pub INTPRI: INTPRI,
+    #[doc = "CACHE"]
+    pub CACHE: CACHE,
     #[doc = "IO_MUX"]
     pub IO_MUX: IO_MUX,
     #[doc = "KEYMNG"]
@@ -1098,6 +1109,7 @@ impl Peripherals {
             I2S0: I2S0::steal(),
             INTERRUPT_CORE0: INTERRUPT_CORE0::steal(),
             INTPRI: INTPRI::steal(),
+            CACHE: CACHE::steal(),
             IO_MUX: IO_MUX::steal(),
             KEYMNG: KEYMNG::steal(),
             LEDC: LEDC::steal(),

@@ -240,5 +240,4 @@ pub mod slave1;
 pub type CLK_GATE = crate::Reg<clk_gate::CLK_GATE_SPEC>;
 #[doc = "SPI module clock and register clock control"]
 pub mod clk_gate;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};
