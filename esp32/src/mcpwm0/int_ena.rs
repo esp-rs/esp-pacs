@@ -2,276 +2,346 @@
 pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
 pub type W = crate::W<INT_ENA_SPEC>;
-#[doc = "Field `TIMER0_STOP` reader - "]
-pub type TIMER0_STOP_R = crate::BitReader;
-#[doc = "Field `TIMER0_STOP` writer - "]
-pub type TIMER0_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER1_STOP` reader - "]
-pub type TIMER1_STOP_R = crate::BitReader;
-#[doc = "Field `TIMER1_STOP` writer - "]
-pub type TIMER1_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER2_STOP` reader - "]
-pub type TIMER2_STOP_R = crate::BitReader;
-#[doc = "Field `TIMER2_STOP` writer - "]
-pub type TIMER2_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER0_TEZ` reader - "]
-pub type TIMER0_TEZ_R = crate::BitReader;
-#[doc = "Field `TIMER0_TEZ` writer - "]
-pub type TIMER0_TEZ_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER1_TEZ` reader - "]
-pub type TIMER1_TEZ_R = crate::BitReader;
-#[doc = "Field `TIMER1_TEZ` writer - "]
-pub type TIMER1_TEZ_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER2_TEZ` reader - "]
-pub type TIMER2_TEZ_R = crate::BitReader;
-#[doc = "Field `TIMER2_TEZ` writer - "]
-pub type TIMER2_TEZ_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER0_TEP` reader - "]
-pub type TIMER0_TEP_R = crate::BitReader;
-#[doc = "Field `TIMER0_TEP` writer - "]
-pub type TIMER0_TEP_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER1_TEP` reader - "]
-pub type TIMER1_TEP_R = crate::BitReader;
-#[doc = "Field `TIMER1_TEP` writer - "]
-pub type TIMER1_TEP_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TIMER2_TEP` reader - "]
-pub type TIMER2_TEP_R = crate::BitReader;
-#[doc = "Field `TIMER2_TEP` writer - "]
-pub type TIMER2_TEP_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FAULT0` reader - "]
-pub type FAULT0_R = crate::BitReader;
-#[doc = "Field `FAULT0` writer - "]
-pub type FAULT0_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FAULT1` reader - "]
-pub type FAULT1_R = crate::BitReader;
-#[doc = "Field `FAULT1` writer - "]
-pub type FAULT1_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FAULT2` reader - "]
-pub type FAULT2_R = crate::BitReader;
-#[doc = "Field `FAULT2` writer - "]
-pub type FAULT2_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FAULT0_CLR` reader - "]
-pub type FAULT0_CLR_R = crate::BitReader;
-#[doc = "Field `FAULT0_CLR` writer - "]
-pub type FAULT0_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FAULT1_CLR` reader - "]
-pub type FAULT1_CLR_R = crate::BitReader;
-#[doc = "Field `FAULT1_CLR` writer - "]
-pub type FAULT1_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FAULT2_CLR` reader - "]
-pub type FAULT2_CLR_R = crate::BitReader;
-#[doc = "Field `FAULT2_CLR` writer - "]
-pub type FAULT2_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OP0_TEA` reader - "]
-pub type OP0_TEA_R = crate::BitReader;
-#[doc = "Field `OP0_TEA` writer - "]
-pub type OP0_TEA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OP1_TEA` reader - "]
-pub type OP1_TEA_R = crate::BitReader;
-#[doc = "Field `OP1_TEA` writer - "]
-pub type OP1_TEA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OP2_TEA` reader - "]
-pub type OP2_TEA_R = crate::BitReader;
-#[doc = "Field `OP2_TEA` writer - "]
-pub type OP2_TEA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OP0_TEB` reader - "]
-pub type OP0_TEB_R = crate::BitReader;
-#[doc = "Field `OP0_TEB` writer - "]
-pub type OP0_TEB_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OP1_TEB` reader - "]
-pub type OP1_TEB_R = crate::BitReader;
-#[doc = "Field `OP1_TEB` writer - "]
-pub type OP1_TEB_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OP2_TEB` reader - "]
-pub type OP2_TEB_R = crate::BitReader;
-#[doc = "Field `OP2_TEB` writer - "]
-pub type OP2_TEB_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FH0_CBC` reader - "]
-pub type FH0_CBC_R = crate::BitReader;
-#[doc = "Field `FH0_CBC` writer - "]
-pub type FH0_CBC_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FH1_CBC` reader - "]
-pub type FH1_CBC_R = crate::BitReader;
-#[doc = "Field `FH1_CBC` writer - "]
-pub type FH1_CBC_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FH2_CBC` reader - "]
-pub type FH2_CBC_R = crate::BitReader;
-#[doc = "Field `FH2_CBC` writer - "]
-pub type FH2_CBC_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FH0_OST` reader - "]
-pub type FH0_OST_R = crate::BitReader;
-#[doc = "Field `FH0_OST` writer - "]
-pub type FH0_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FH1_OST` reader - "]
-pub type FH1_OST_R = crate::BitReader;
-#[doc = "Field `FH1_OST` writer - "]
-pub type FH1_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FH2_OST` reader - "]
-pub type FH2_OST_R = crate::BitReader;
-#[doc = "Field `FH2_OST` writer - "]
-pub type FH2_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CAP0` reader - "]
-pub type CAP0_R = crate::BitReader;
-#[doc = "Field `CAP0` writer - "]
-pub type CAP0_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CAP1` reader - "]
-pub type CAP1_R = crate::BitReader;
-#[doc = "Field `CAP1` writer - "]
-pub type CAP1_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CAP2` reader - "]
-pub type CAP2_R = crate::BitReader;
-#[doc = "Field `CAP2` writer - "]
-pub type CAP2_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER_STOP(0-2)` reader - The interrupt enable bit for the timer%s stop event."]
+pub type TIMER_STOP_R = crate::BitReader;
+#[doc = "Field `TIMER_STOP(0-2)` writer - The interrupt enable bit for the timer%s stop event."]
+pub type TIMER_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER_TEZ(0-2)` reader - The interrupt enable bit for the timer%s zero event."]
+pub type TIMER_TEZ_R = crate::BitReader;
+#[doc = "Field `TIMER_TEZ(0-2)` writer - The interrupt enable bit for the timer%s zero event."]
+pub type TIMER_TEZ_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER_TEP(0-2)` reader - The interrupt enable bit for the timer%s period event."]
+pub type TIMER_TEP_R = crate::BitReader;
+#[doc = "Field `TIMER_TEP(0-2)` writer - The interrupt enable bit for the timer%s period event."]
+pub type TIMER_TEP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FAULT(0-2)` reader - The interrupt enable bit for the fault%s event."]
+pub type FAULT_R = crate::BitReader;
+#[doc = "Field `FAULT(0-2)` writer - The interrupt enable bit for the fault%s event."]
+pub type FAULT_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FAULT_CLR(0-2)` reader - The interrupt enable bit for the fault%s clear event."]
+pub type FAULT_CLR_R = crate::BitReader;
+#[doc = "Field `FAULT_CLR(0-2)` writer - The interrupt enable bit for the fault%s clear event."]
+pub type FAULT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CMPR_TEA(0-2)` reader - The interrupt enable bit for the operator%s compare A event."]
+pub type CMPR_TEA_R = crate::BitReader;
+#[doc = "Field `CMPR_TEA(0-2)` writer - The interrupt enable bit for the operator%s compare A event."]
+pub type CMPR_TEA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CMPR_TEB(0-2)` reader - The interrupt enable bit for the operator%s compare B event."]
+pub type CMPR_TEB_R = crate::BitReader;
+#[doc = "Field `CMPR_TEB(0-2)` writer - The interrupt enable bit for the operator%s compare B event."]
+pub type CMPR_TEB_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TZ_CBC(0-2)` reader - The interrupt enable bit for the fault handler%s cycle-by-cycle mode action."]
+pub type TZ_CBC_R = crate::BitReader;
+#[doc = "Field `TZ_CBC(0-2)` writer - The interrupt enable bit for the fault handler%s cycle-by-cycle mode action."]
+pub type TZ_CBC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TZ_OST(0-2)` reader - The interrupt enable bit for the fault handler%s one-shot mode action."]
+pub type TZ_OST_R = crate::BitReader;
+#[doc = "Field `TZ_OST(0-2)` writer - The interrupt enable bit for the fault handler%s one-shot mode action."]
+pub type TZ_OST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CAP(0-2)` reader - The interrupt enable bit for the capture%s event."]
+pub type CAP_R = crate::BitReader;
+#[doc = "Field `CAP(0-2)` writer - The interrupt enable bit for the capture%s event."]
+pub type CAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0"]
+    #[doc = "The interrupt enable bit for the timer(0-2) stop event."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_STOP` field.</div>"]
     #[inline(always)]
-    pub fn timer0_stop(&self) -> TIMER0_STOP_R {
-        TIMER0_STOP_R::new((self.bits & 1) != 0)
+    pub fn timer_stop(&self, n: u8) -> TIMER_STOP_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TIMER_STOP_R::new(((self.bits >> n) & 1) != 0)
     }
-    #[doc = "Bit 1"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "The interrupt enable bit for the timer(0-2) stop event."]
     #[inline(always)]
-    pub fn timer1_stop(&self) -> TIMER1_STOP_R {
-        TIMER1_STOP_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn timer_stop_iter(&self) -> impl Iterator<Item = TIMER_STOP_R> + '_ {
+        (0..3).map(move |n| TIMER_STOP_R::new(((self.bits >> n) & 1) != 0))
     }
-    #[doc = "Bit 2"]
+    #[doc = "Bit 0 - The interrupt enable bit for the timer0 stop event."]
     #[inline(always)]
-    pub fn timer2_stop(&self) -> TIMER2_STOP_R {
-        TIMER2_STOP_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn timer0_stop(&self) -> TIMER_STOP_R {
+        TIMER_STOP_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 3"]
+    #[doc = "Bit 1 - The interrupt enable bit for the timer1 stop event."]
     #[inline(always)]
-    pub fn timer0_tez(&self) -> TIMER0_TEZ_R {
-        TIMER0_TEZ_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn timer1_stop(&self) -> TIMER_STOP_R {
+        TIMER_STOP_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 4"]
+    #[doc = "Bit 2 - The interrupt enable bit for the timer2 stop event."]
     #[inline(always)]
-    pub fn timer1_tez(&self) -> TIMER1_TEZ_R {
-        TIMER1_TEZ_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn timer2_stop(&self) -> TIMER_STOP_R {
+        TIMER_STOP_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 5"]
+    #[doc = "The interrupt enable bit for the timer(0-2) zero event."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_TEZ` field.</div>"]
     #[inline(always)]
-    pub fn timer2_tez(&self) -> TIMER2_TEZ_R {
-        TIMER2_TEZ_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn timer_tez(&self, n: u8) -> TIMER_TEZ_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TIMER_TEZ_R::new(((self.bits >> (n + 3)) & 1) != 0)
     }
-    #[doc = "Bit 6"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "The interrupt enable bit for the timer(0-2) zero event."]
     #[inline(always)]
-    pub fn timer0_tep(&self) -> TIMER0_TEP_R {
-        TIMER0_TEP_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn timer_tez_iter(&self) -> impl Iterator<Item = TIMER_TEZ_R> + '_ {
+        (0..3).map(move |n| TIMER_TEZ_R::new(((self.bits >> (n + 3)) & 1) != 0))
     }
-    #[doc = "Bit 7"]
+    #[doc = "Bit 3 - The interrupt enable bit for the timer0 zero event."]
     #[inline(always)]
-    pub fn timer1_tep(&self) -> TIMER1_TEP_R {
-        TIMER1_TEP_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn timer0_tez(&self) -> TIMER_TEZ_R {
+        TIMER_TEZ_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 8"]
+    #[doc = "Bit 4 - The interrupt enable bit for the timer1 zero event."]
     #[inline(always)]
-    pub fn timer2_tep(&self) -> TIMER2_TEP_R {
-        TIMER2_TEP_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn timer1_tez(&self) -> TIMER_TEZ_R {
+        TIMER_TEZ_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 9"]
+    #[doc = "Bit 5 - The interrupt enable bit for the timer2 zero event."]
     #[inline(always)]
-    pub fn fault0(&self) -> FAULT0_R {
-        FAULT0_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn timer2_tez(&self) -> TIMER_TEZ_R {
+        TIMER_TEZ_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 10"]
+    #[doc = "The interrupt enable bit for the timer(0-2) period event."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_TEP` field.</div>"]
     #[inline(always)]
-    pub fn fault1(&self) -> FAULT1_R {
-        FAULT1_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn timer_tep(&self, n: u8) -> TIMER_TEP_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TIMER_TEP_R::new(((self.bits >> (n + 6)) & 1) != 0)
     }
-    #[doc = "Bit 11"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "The interrupt enable bit for the timer(0-2) period event."]
     #[inline(always)]
-    pub fn fault2(&self) -> FAULT2_R {
-        FAULT2_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn timer_tep_iter(&self) -> impl Iterator<Item = TIMER_TEP_R> + '_ {
+        (0..3).map(move |n| TIMER_TEP_R::new(((self.bits >> (n + 6)) & 1) != 0))
     }
-    #[doc = "Bit 12"]
+    #[doc = "Bit 6 - The interrupt enable bit for the timer0 period event."]
     #[inline(always)]
-    pub fn fault0_clr(&self) -> FAULT0_CLR_R {
-        FAULT0_CLR_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn timer0_tep(&self) -> TIMER_TEP_R {
+        TIMER_TEP_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 13"]
+    #[doc = "Bit 7 - The interrupt enable bit for the timer1 period event."]
     #[inline(always)]
-    pub fn fault1_clr(&self) -> FAULT1_CLR_R {
-        FAULT1_CLR_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn timer1_tep(&self) -> TIMER_TEP_R {
+        TIMER_TEP_R::new(((self.bits >> 7) & 1) != 0)
     }
-    #[doc = "Bit 14"]
+    #[doc = "Bit 8 - The interrupt enable bit for the timer2 period event."]
     #[inline(always)]
-    pub fn fault2_clr(&self) -> FAULT2_CLR_R {
-        FAULT2_CLR_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn timer2_tep(&self) -> TIMER_TEP_R {
+        TIMER_TEP_R::new(((self.bits >> 8) & 1) != 0)
     }
-    #[doc = "Bit 15"]
+    #[doc = "The interrupt enable bit for the fault(0-2) event."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `FAULT0` field.</div>"]
     #[inline(always)]
-    pub fn op0_tea(&self) -> OP0_TEA_R {
-        OP0_TEA_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn fault(&self, n: u8) -> FAULT_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        FAULT_R::new(((self.bits >> (n + 9)) & 1) != 0)
     }
-    #[doc = "Bit 16"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "The interrupt enable bit for the fault(0-2) event."]
     #[inline(always)]
-    pub fn op1_tea(&self) -> OP1_TEA_R {
-        OP1_TEA_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn fault_iter(&self) -> impl Iterator<Item = FAULT_R> + '_ {
+        (0..3).map(move |n| FAULT_R::new(((self.bits >> (n + 9)) & 1) != 0))
     }
-    #[doc = "Bit 17"]
+    #[doc = "Bit 9 - The interrupt enable bit for the fault0 event."]
     #[inline(always)]
-    pub fn op2_tea(&self) -> OP2_TEA_R {
-        OP2_TEA_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn fault0(&self) -> FAULT_R {
+        FAULT_R::new(((self.bits >> 9) & 1) != 0)
     }
-    #[doc = "Bit 18"]
+    #[doc = "Bit 10 - The interrupt enable bit for the fault1 event."]
     #[inline(always)]
-    pub fn op0_teb(&self) -> OP0_TEB_R {
-        OP0_TEB_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn fault1(&self) -> FAULT_R {
+        FAULT_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bit 19"]
+    #[doc = "Bit 11 - The interrupt enable bit for the fault2 event."]
     #[inline(always)]
-    pub fn op1_teb(&self) -> OP1_TEB_R {
-        OP1_TEB_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn fault2(&self) -> FAULT_R {
+        FAULT_R::new(((self.bits >> 11) & 1) != 0)
     }
-    #[doc = "Bit 20"]
+    #[doc = "The interrupt enable bit for the fault(0-2) clear event."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `FAULT0_CLR` field.</div>"]
     #[inline(always)]
-    pub fn op2_teb(&self) -> OP2_TEB_R {
-        OP2_TEB_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn fault_clr(&self, n: u8) -> FAULT_CLR_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        FAULT_CLR_R::new(((self.bits >> (n + 12)) & 1) != 0)
     }
-    #[doc = "Bit 21"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "The interrupt enable bit for the fault(0-2) clear event."]
     #[inline(always)]
-    pub fn fh0_cbc(&self) -> FH0_CBC_R {
-        FH0_CBC_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn fault_clr_iter(&self) -> impl Iterator<Item = FAULT_CLR_R> + '_ {
+        (0..3).map(move |n| FAULT_CLR_R::new(((self.bits >> (n + 12)) & 1) != 0))
     }
-    #[doc = "Bit 22"]
+    #[doc = "Bit 12 - The interrupt enable bit for the fault0 clear event."]
     #[inline(always)]
-    pub fn fh1_cbc(&self) -> FH1_CBC_R {
-        FH1_CBC_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn fault0_clr(&self) -> FAULT_CLR_R {
+        FAULT_CLR_R::new(((self.bits >> 12) & 1) != 0)
     }
-    #[doc = "Bit 23"]
+    #[doc = "Bit 13 - The interrupt enable bit for the fault1 clear event."]
     #[inline(always)]
-    pub fn fh2_cbc(&self) -> FH2_CBC_R {
-        FH2_CBC_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn fault1_clr(&self) -> FAULT_CLR_R {
+        FAULT_CLR_R::new(((self.bits >> 13) & 1) != 0)
     }
-    #[doc = "Bit 24"]
+    #[doc = "Bit 14 - The interrupt enable bit for the fault2 clear event."]
     #[inline(always)]
-    pub fn fh0_ost(&self) -> FH0_OST_R {
-        FH0_OST_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn fault2_clr(&self) -> FAULT_CLR_R {
+        FAULT_CLR_R::new(((self.bits >> 14) & 1) != 0)
     }
-    #[doc = "Bit 25"]
+    #[doc = "The interrupt enable bit for the operator(0-2) compare A event."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CMPR0_TEA` field.</div>"]
     #[inline(always)]
-    pub fn fh1_ost(&self) -> FH1_OST_R {
-        FH1_OST_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn cmpr_tea(&self, n: u8) -> CMPR_TEA_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        CMPR_TEA_R::new(((self.bits >> (n + 15)) & 1) != 0)
     }
-    #[doc = "Bit 26"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "The interrupt enable bit for the operator(0-2) compare A event."]
     #[inline(always)]
-    pub fn fh2_ost(&self) -> FH2_OST_R {
-        FH2_OST_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn cmpr_tea_iter(&self) -> impl Iterator<Item = CMPR_TEA_R> + '_ {
+        (0..3).map(move |n| CMPR_TEA_R::new(((self.bits >> (n + 15)) & 1) != 0))
     }
-    #[doc = "Bit 27"]
+    #[doc = "Bit 15 - The interrupt enable bit for the operator0 compare A event."]
     #[inline(always)]
-    pub fn cap0(&self) -> CAP0_R {
-        CAP0_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn cmpr0_tea(&self) -> CMPR_TEA_R {
+        CMPR_TEA_R::new(((self.bits >> 15) & 1) != 0)
     }
-    #[doc = "Bit 28"]
+    #[doc = "Bit 16 - The interrupt enable bit for the operator1 compare A event."]
     #[inline(always)]
-    pub fn cap1(&self) -> CAP1_R {
-        CAP1_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn cmpr1_tea(&self) -> CMPR_TEA_R {
+        CMPR_TEA_R::new(((self.bits >> 16) & 1) != 0)
     }
-    #[doc = "Bit 29"]
+    #[doc = "Bit 17 - The interrupt enable bit for the operator2 compare A event."]
     #[inline(always)]
-    pub fn cap2(&self) -> CAP2_R {
-        CAP2_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn cmpr2_tea(&self) -> CMPR_TEA_R {
+        CMPR_TEA_R::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "The interrupt enable bit for the operator(0-2) compare B event."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CMPR0_TEB` field.</div>"]
+    #[inline(always)]
+    pub fn cmpr_teb(&self, n: u8) -> CMPR_TEB_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        CMPR_TEB_R::new(((self.bits >> (n + 18)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "The interrupt enable bit for the operator(0-2) compare B event."]
+    #[inline(always)]
+    pub fn cmpr_teb_iter(&self) -> impl Iterator<Item = CMPR_TEB_R> + '_ {
+        (0..3).map(move |n| CMPR_TEB_R::new(((self.bits >> (n + 18)) & 1) != 0))
+    }
+    #[doc = "Bit 18 - The interrupt enable bit for the operator0 compare B event."]
+    #[inline(always)]
+    pub fn cmpr0_teb(&self) -> CMPR_TEB_R {
+        CMPR_TEB_R::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - The interrupt enable bit for the operator1 compare B event."]
+    #[inline(always)]
+    pub fn cmpr1_teb(&self) -> CMPR_TEB_R {
+        CMPR_TEB_R::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - The interrupt enable bit for the operator2 compare B event."]
+    #[inline(always)]
+    pub fn cmpr2_teb(&self) -> CMPR_TEB_R {
+        CMPR_TEB_R::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "The interrupt enable bit for the fault handler(0-2) cycle-by-cycle mode action."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TZ0_CBC` field.</div>"]
+    #[inline(always)]
+    pub fn tz_cbc(&self, n: u8) -> TZ_CBC_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TZ_CBC_R::new(((self.bits >> (n + 21)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "The interrupt enable bit for the fault handler(0-2) cycle-by-cycle mode action."]
+    #[inline(always)]
+    pub fn tz_cbc_iter(&self) -> impl Iterator<Item = TZ_CBC_R> + '_ {
+        (0..3).map(move |n| TZ_CBC_R::new(((self.bits >> (n + 21)) & 1) != 0))
+    }
+    #[doc = "Bit 21 - The interrupt enable bit for the fault handler0 cycle-by-cycle mode action."]
+    #[inline(always)]
+    pub fn tz0_cbc(&self) -> TZ_CBC_R {
+        TZ_CBC_R::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - The interrupt enable bit for the fault handler1 cycle-by-cycle mode action."]
+    #[inline(always)]
+    pub fn tz1_cbc(&self) -> TZ_CBC_R {
+        TZ_CBC_R::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23 - The interrupt enable bit for the fault handler2 cycle-by-cycle mode action."]
+    #[inline(always)]
+    pub fn tz2_cbc(&self) -> TZ_CBC_R {
+        TZ_CBC_R::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "The interrupt enable bit for the fault handler(0-2) one-shot mode action."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TZ0_OST` field.</div>"]
+    #[inline(always)]
+    pub fn tz_ost(&self, n: u8) -> TZ_OST_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TZ_OST_R::new(((self.bits >> (n + 24)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "The interrupt enable bit for the fault handler(0-2) one-shot mode action."]
+    #[inline(always)]
+    pub fn tz_ost_iter(&self) -> impl Iterator<Item = TZ_OST_R> + '_ {
+        (0..3).map(move |n| TZ_OST_R::new(((self.bits >> (n + 24)) & 1) != 0))
+    }
+    #[doc = "Bit 24 - The interrupt enable bit for the fault handler0 one-shot mode action."]
+    #[inline(always)]
+    pub fn tz0_ost(&self) -> TZ_OST_R {
+        TZ_OST_R::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25 - The interrupt enable bit for the fault handler1 one-shot mode action."]
+    #[inline(always)]
+    pub fn tz1_ost(&self) -> TZ_OST_R {
+        TZ_OST_R::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 26 - The interrupt enable bit for the fault handler2 one-shot mode action."]
+    #[inline(always)]
+    pub fn tz2_ost(&self) -> TZ_OST_R {
+        TZ_OST_R::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "The interrupt enable bit for the capture(0-2) event."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CAP0` field.</div>"]
+    #[inline(always)]
+    pub fn cap(&self, n: u8) -> CAP_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        CAP_R::new(((self.bits >> (n + 27)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "The interrupt enable bit for the capture(0-2) event."]
+    #[inline(always)]
+    pub fn cap_iter(&self) -> impl Iterator<Item = CAP_R> + '_ {
+        (0..3).map(move |n| CAP_R::new(((self.bits >> (n + 27)) & 1) != 0))
+    }
+    #[doc = "Bit 27 - The interrupt enable bit for the capture0 event."]
+    #[inline(always)]
+    pub fn cap0(&self) -> CAP_R {
+        CAP_R::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28 - The interrupt enable bit for the capture1 event."]
+    #[inline(always)]
+    pub fn cap1(&self) -> CAP_R {
+        CAP_R::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - The interrupt enable bit for the capture2 event."]
+    #[inline(always)]
+    pub fn cap2(&self) -> CAP_R {
+        CAP_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -293,18 +363,18 @@ impl core::fmt::Debug for R {
             .field("fault0_clr", &self.fault0_clr())
             .field("fault1_clr", &self.fault1_clr())
             .field("fault2_clr", &self.fault2_clr())
-            .field("op0_tea", &self.op0_tea())
-            .field("op1_tea", &self.op1_tea())
-            .field("op2_tea", &self.op2_tea())
-            .field("op0_teb", &self.op0_teb())
-            .field("op1_teb", &self.op1_teb())
-            .field("op2_teb", &self.op2_teb())
-            .field("fh0_cbc", &self.fh0_cbc())
-            .field("fh1_cbc", &self.fh1_cbc())
-            .field("fh2_cbc", &self.fh2_cbc())
-            .field("fh0_ost", &self.fh0_ost())
-            .field("fh1_ost", &self.fh1_ost())
-            .field("fh2_ost", &self.fh2_ost())
+            .field("cmpr0_tea", &self.cmpr0_tea())
+            .field("cmpr1_tea", &self.cmpr1_tea())
+            .field("cmpr2_tea", &self.cmpr2_tea())
+            .field("cmpr0_teb", &self.cmpr0_teb())
+            .field("cmpr1_teb", &self.cmpr1_teb())
+            .field("cmpr2_teb", &self.cmpr2_teb())
+            .field("tz0_cbc", &self.tz0_cbc())
+            .field("tz1_cbc", &self.tz1_cbc())
+            .field("tz2_cbc", &self.tz2_cbc())
+            .field("tz0_ost", &self.tz0_ost())
+            .field("tz1_ost", &self.tz1_ost())
+            .field("tz2_ost", &self.tz2_ost())
             .field("cap0", &self.cap0())
             .field("cap1", &self.cap1())
             .field("cap2", &self.cap2())
@@ -312,155 +382,245 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0"]
+    #[doc = "The interrupt enable bit for the timer(0-2) stop event."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_STOP` field.</div>"]
     #[inline(always)]
-    pub fn timer0_stop(&mut self) -> TIMER0_STOP_W<'_, INT_ENA_SPEC> {
-        TIMER0_STOP_W::new(self, 0)
+    pub fn timer_stop(&mut self, n: u8) -> TIMER_STOP_W<'_, INT_ENA_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TIMER_STOP_W::new(self, n)
     }
-    #[doc = "Bit 1"]
+    #[doc = "Bit 0 - The interrupt enable bit for the timer0 stop event."]
     #[inline(always)]
-    pub fn timer1_stop(&mut self) -> TIMER1_STOP_W<'_, INT_ENA_SPEC> {
-        TIMER1_STOP_W::new(self, 1)
+    pub fn timer0_stop(&mut self) -> TIMER_STOP_W<'_, INT_ENA_SPEC> {
+        TIMER_STOP_W::new(self, 0)
     }
-    #[doc = "Bit 2"]
+    #[doc = "Bit 1 - The interrupt enable bit for the timer1 stop event."]
     #[inline(always)]
-    pub fn timer2_stop(&mut self) -> TIMER2_STOP_W<'_, INT_ENA_SPEC> {
-        TIMER2_STOP_W::new(self, 2)
+    pub fn timer1_stop(&mut self) -> TIMER_STOP_W<'_, INT_ENA_SPEC> {
+        TIMER_STOP_W::new(self, 1)
     }
-    #[doc = "Bit 3"]
+    #[doc = "Bit 2 - The interrupt enable bit for the timer2 stop event."]
     #[inline(always)]
-    pub fn timer0_tez(&mut self) -> TIMER0_TEZ_W<'_, INT_ENA_SPEC> {
-        TIMER0_TEZ_W::new(self, 3)
+    pub fn timer2_stop(&mut self) -> TIMER_STOP_W<'_, INT_ENA_SPEC> {
+        TIMER_STOP_W::new(self, 2)
     }
-    #[doc = "Bit 4"]
+    #[doc = "The interrupt enable bit for the timer(0-2) zero event."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_TEZ` field.</div>"]
     #[inline(always)]
-    pub fn timer1_tez(&mut self) -> TIMER1_TEZ_W<'_, INT_ENA_SPEC> {
-        TIMER1_TEZ_W::new(self, 4)
+    pub fn timer_tez(&mut self, n: u8) -> TIMER_TEZ_W<'_, INT_ENA_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TIMER_TEZ_W::new(self, n + 3)
     }
-    #[doc = "Bit 5"]
+    #[doc = "Bit 3 - The interrupt enable bit for the timer0 zero event."]
     #[inline(always)]
-    pub fn timer2_tez(&mut self) -> TIMER2_TEZ_W<'_, INT_ENA_SPEC> {
-        TIMER2_TEZ_W::new(self, 5)
+    pub fn timer0_tez(&mut self) -> TIMER_TEZ_W<'_, INT_ENA_SPEC> {
+        TIMER_TEZ_W::new(self, 3)
     }
-    #[doc = "Bit 6"]
+    #[doc = "Bit 4 - The interrupt enable bit for the timer1 zero event."]
     #[inline(always)]
-    pub fn timer0_tep(&mut self) -> TIMER0_TEP_W<'_, INT_ENA_SPEC> {
-        TIMER0_TEP_W::new(self, 6)
+    pub fn timer1_tez(&mut self) -> TIMER_TEZ_W<'_, INT_ENA_SPEC> {
+        TIMER_TEZ_W::new(self, 4)
     }
-    #[doc = "Bit 7"]
+    #[doc = "Bit 5 - The interrupt enable bit for the timer2 zero event."]
     #[inline(always)]
-    pub fn timer1_tep(&mut self) -> TIMER1_TEP_W<'_, INT_ENA_SPEC> {
-        TIMER1_TEP_W::new(self, 7)
+    pub fn timer2_tez(&mut self) -> TIMER_TEZ_W<'_, INT_ENA_SPEC> {
+        TIMER_TEZ_W::new(self, 5)
     }
-    #[doc = "Bit 8"]
+    #[doc = "The interrupt enable bit for the timer(0-2) period event."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_TEP` field.</div>"]
     #[inline(always)]
-    pub fn timer2_tep(&mut self) -> TIMER2_TEP_W<'_, INT_ENA_SPEC> {
-        TIMER2_TEP_W::new(self, 8)
+    pub fn timer_tep(&mut self, n: u8) -> TIMER_TEP_W<'_, INT_ENA_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TIMER_TEP_W::new(self, n + 6)
     }
-    #[doc = "Bit 9"]
+    #[doc = "Bit 6 - The interrupt enable bit for the timer0 period event."]
     #[inline(always)]
-    pub fn fault0(&mut self) -> FAULT0_W<'_, INT_ENA_SPEC> {
-        FAULT0_W::new(self, 9)
+    pub fn timer0_tep(&mut self) -> TIMER_TEP_W<'_, INT_ENA_SPEC> {
+        TIMER_TEP_W::new(self, 6)
     }
-    #[doc = "Bit 10"]
+    #[doc = "Bit 7 - The interrupt enable bit for the timer1 period event."]
     #[inline(always)]
-    pub fn fault1(&mut self) -> FAULT1_W<'_, INT_ENA_SPEC> {
-        FAULT1_W::new(self, 10)
+    pub fn timer1_tep(&mut self) -> TIMER_TEP_W<'_, INT_ENA_SPEC> {
+        TIMER_TEP_W::new(self, 7)
     }
-    #[doc = "Bit 11"]
+    #[doc = "Bit 8 - The interrupt enable bit for the timer2 period event."]
     #[inline(always)]
-    pub fn fault2(&mut self) -> FAULT2_W<'_, INT_ENA_SPEC> {
-        FAULT2_W::new(self, 11)
+    pub fn timer2_tep(&mut self) -> TIMER_TEP_W<'_, INT_ENA_SPEC> {
+        TIMER_TEP_W::new(self, 8)
     }
-    #[doc = "Bit 12"]
+    #[doc = "The interrupt enable bit for the fault(0-2) event."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `FAULT0` field.</div>"]
     #[inline(always)]
-    pub fn fault0_clr(&mut self) -> FAULT0_CLR_W<'_, INT_ENA_SPEC> {
-        FAULT0_CLR_W::new(self, 12)
+    pub fn fault(&mut self, n: u8) -> FAULT_W<'_, INT_ENA_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        FAULT_W::new(self, n + 9)
     }
-    #[doc = "Bit 13"]
+    #[doc = "Bit 9 - The interrupt enable bit for the fault0 event."]
     #[inline(always)]
-    pub fn fault1_clr(&mut self) -> FAULT1_CLR_W<'_, INT_ENA_SPEC> {
-        FAULT1_CLR_W::new(self, 13)
+    pub fn fault0(&mut self) -> FAULT_W<'_, INT_ENA_SPEC> {
+        FAULT_W::new(self, 9)
     }
-    #[doc = "Bit 14"]
+    #[doc = "Bit 10 - The interrupt enable bit for the fault1 event."]
     #[inline(always)]
-    pub fn fault2_clr(&mut self) -> FAULT2_CLR_W<'_, INT_ENA_SPEC> {
-        FAULT2_CLR_W::new(self, 14)
+    pub fn fault1(&mut self) -> FAULT_W<'_, INT_ENA_SPEC> {
+        FAULT_W::new(self, 10)
     }
-    #[doc = "Bit 15"]
+    #[doc = "Bit 11 - The interrupt enable bit for the fault2 event."]
     #[inline(always)]
-    pub fn op0_tea(&mut self) -> OP0_TEA_W<'_, INT_ENA_SPEC> {
-        OP0_TEA_W::new(self, 15)
+    pub fn fault2(&mut self) -> FAULT_W<'_, INT_ENA_SPEC> {
+        FAULT_W::new(self, 11)
     }
-    #[doc = "Bit 16"]
+    #[doc = "The interrupt enable bit for the fault(0-2) clear event."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `FAULT0_CLR` field.</div>"]
     #[inline(always)]
-    pub fn op1_tea(&mut self) -> OP1_TEA_W<'_, INT_ENA_SPEC> {
-        OP1_TEA_W::new(self, 16)
+    pub fn fault_clr(&mut self, n: u8) -> FAULT_CLR_W<'_, INT_ENA_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        FAULT_CLR_W::new(self, n + 12)
     }
-    #[doc = "Bit 17"]
+    #[doc = "Bit 12 - The interrupt enable bit for the fault0 clear event."]
     #[inline(always)]
-    pub fn op2_tea(&mut self) -> OP2_TEA_W<'_, INT_ENA_SPEC> {
-        OP2_TEA_W::new(self, 17)
+    pub fn fault0_clr(&mut self) -> FAULT_CLR_W<'_, INT_ENA_SPEC> {
+        FAULT_CLR_W::new(self, 12)
     }
-    #[doc = "Bit 18"]
+    #[doc = "Bit 13 - The interrupt enable bit for the fault1 clear event."]
     #[inline(always)]
-    pub fn op0_teb(&mut self) -> OP0_TEB_W<'_, INT_ENA_SPEC> {
-        OP0_TEB_W::new(self, 18)
+    pub fn fault1_clr(&mut self) -> FAULT_CLR_W<'_, INT_ENA_SPEC> {
+        FAULT_CLR_W::new(self, 13)
     }
-    #[doc = "Bit 19"]
+    #[doc = "Bit 14 - The interrupt enable bit for the fault2 clear event."]
     #[inline(always)]
-    pub fn op1_teb(&mut self) -> OP1_TEB_W<'_, INT_ENA_SPEC> {
-        OP1_TEB_W::new(self, 19)
+    pub fn fault2_clr(&mut self) -> FAULT_CLR_W<'_, INT_ENA_SPEC> {
+        FAULT_CLR_W::new(self, 14)
     }
-    #[doc = "Bit 20"]
+    #[doc = "The interrupt enable bit for the operator(0-2) compare A event."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CMPR0_TEA` field.</div>"]
     #[inline(always)]
-    pub fn op2_teb(&mut self) -> OP2_TEB_W<'_, INT_ENA_SPEC> {
-        OP2_TEB_W::new(self, 20)
+    pub fn cmpr_tea(&mut self, n: u8) -> CMPR_TEA_W<'_, INT_ENA_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        CMPR_TEA_W::new(self, n + 15)
     }
-    #[doc = "Bit 21"]
+    #[doc = "Bit 15 - The interrupt enable bit for the operator0 compare A event."]
     #[inline(always)]
-    pub fn fh0_cbc(&mut self) -> FH0_CBC_W<'_, INT_ENA_SPEC> {
-        FH0_CBC_W::new(self, 21)
+    pub fn cmpr0_tea(&mut self) -> CMPR_TEA_W<'_, INT_ENA_SPEC> {
+        CMPR_TEA_W::new(self, 15)
     }
-    #[doc = "Bit 22"]
+    #[doc = "Bit 16 - The interrupt enable bit for the operator1 compare A event."]
     #[inline(always)]
-    pub fn fh1_cbc(&mut self) -> FH1_CBC_W<'_, INT_ENA_SPEC> {
-        FH1_CBC_W::new(self, 22)
+    pub fn cmpr1_tea(&mut self) -> CMPR_TEA_W<'_, INT_ENA_SPEC> {
+        CMPR_TEA_W::new(self, 16)
     }
-    #[doc = "Bit 23"]
+    #[doc = "Bit 17 - The interrupt enable bit for the operator2 compare A event."]
     #[inline(always)]
-    pub fn fh2_cbc(&mut self) -> FH2_CBC_W<'_, INT_ENA_SPEC> {
-        FH2_CBC_W::new(self, 23)
+    pub fn cmpr2_tea(&mut self) -> CMPR_TEA_W<'_, INT_ENA_SPEC> {
+        CMPR_TEA_W::new(self, 17)
     }
-    #[doc = "Bit 24"]
+    #[doc = "The interrupt enable bit for the operator(0-2) compare B event."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CMPR0_TEB` field.</div>"]
     #[inline(always)]
-    pub fn fh0_ost(&mut self) -> FH0_OST_W<'_, INT_ENA_SPEC> {
-        FH0_OST_W::new(self, 24)
+    pub fn cmpr_teb(&mut self, n: u8) -> CMPR_TEB_W<'_, INT_ENA_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        CMPR_TEB_W::new(self, n + 18)
     }
-    #[doc = "Bit 25"]
+    #[doc = "Bit 18 - The interrupt enable bit for the operator0 compare B event."]
     #[inline(always)]
-    pub fn fh1_ost(&mut self) -> FH1_OST_W<'_, INT_ENA_SPEC> {
-        FH1_OST_W::new(self, 25)
+    pub fn cmpr0_teb(&mut self) -> CMPR_TEB_W<'_, INT_ENA_SPEC> {
+        CMPR_TEB_W::new(self, 18)
     }
-    #[doc = "Bit 26"]
+    #[doc = "Bit 19 - The interrupt enable bit for the operator1 compare B event."]
     #[inline(always)]
-    pub fn fh2_ost(&mut self) -> FH2_OST_W<'_, INT_ENA_SPEC> {
-        FH2_OST_W::new(self, 26)
+    pub fn cmpr1_teb(&mut self) -> CMPR_TEB_W<'_, INT_ENA_SPEC> {
+        CMPR_TEB_W::new(self, 19)
     }
-    #[doc = "Bit 27"]
+    #[doc = "Bit 20 - The interrupt enable bit for the operator2 compare B event."]
     #[inline(always)]
-    pub fn cap0(&mut self) -> CAP0_W<'_, INT_ENA_SPEC> {
-        CAP0_W::new(self, 27)
+    pub fn cmpr2_teb(&mut self) -> CMPR_TEB_W<'_, INT_ENA_SPEC> {
+        CMPR_TEB_W::new(self, 20)
     }
-    #[doc = "Bit 28"]
+    #[doc = "The interrupt enable bit for the fault handler(0-2) cycle-by-cycle mode action."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TZ0_CBC` field.</div>"]
     #[inline(always)]
-    pub fn cap1(&mut self) -> CAP1_W<'_, INT_ENA_SPEC> {
-        CAP1_W::new(self, 28)
+    pub fn tz_cbc(&mut self, n: u8) -> TZ_CBC_W<'_, INT_ENA_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TZ_CBC_W::new(self, n + 21)
     }
-    #[doc = "Bit 29"]
+    #[doc = "Bit 21 - The interrupt enable bit for the fault handler0 cycle-by-cycle mode action."]
     #[inline(always)]
-    pub fn cap2(&mut self) -> CAP2_W<'_, INT_ENA_SPEC> {
-        CAP2_W::new(self, 29)
+    pub fn tz0_cbc(&mut self) -> TZ_CBC_W<'_, INT_ENA_SPEC> {
+        TZ_CBC_W::new(self, 21)
+    }
+    #[doc = "Bit 22 - The interrupt enable bit for the fault handler1 cycle-by-cycle mode action."]
+    #[inline(always)]
+    pub fn tz1_cbc(&mut self) -> TZ_CBC_W<'_, INT_ENA_SPEC> {
+        TZ_CBC_W::new(self, 22)
+    }
+    #[doc = "Bit 23 - The interrupt enable bit for the fault handler2 cycle-by-cycle mode action."]
+    #[inline(always)]
+    pub fn tz2_cbc(&mut self) -> TZ_CBC_W<'_, INT_ENA_SPEC> {
+        TZ_CBC_W::new(self, 23)
+    }
+    #[doc = "The interrupt enable bit for the fault handler(0-2) one-shot mode action."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TZ0_OST` field.</div>"]
+    #[inline(always)]
+    pub fn tz_ost(&mut self, n: u8) -> TZ_OST_W<'_, INT_ENA_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TZ_OST_W::new(self, n + 24)
+    }
+    #[doc = "Bit 24 - The interrupt enable bit for the fault handler0 one-shot mode action."]
+    #[inline(always)]
+    pub fn tz0_ost(&mut self) -> TZ_OST_W<'_, INT_ENA_SPEC> {
+        TZ_OST_W::new(self, 24)
+    }
+    #[doc = "Bit 25 - The interrupt enable bit for the fault handler1 one-shot mode action."]
+    #[inline(always)]
+    pub fn tz1_ost(&mut self) -> TZ_OST_W<'_, INT_ENA_SPEC> {
+        TZ_OST_W::new(self, 25)
+    }
+    #[doc = "Bit 26 - The interrupt enable bit for the fault handler2 one-shot mode action."]
+    #[inline(always)]
+    pub fn tz2_ost(&mut self) -> TZ_OST_W<'_, INT_ENA_SPEC> {
+        TZ_OST_W::new(self, 26)
+    }
+    #[doc = "The interrupt enable bit for the capture(0-2) event."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CAP0` field.</div>"]
+    #[inline(always)]
+    pub fn cap(&mut self, n: u8) -> CAP_W<'_, INT_ENA_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        CAP_W::new(self, n + 27)
+    }
+    #[doc = "Bit 27 - The interrupt enable bit for the capture0 event."]
+    #[inline(always)]
+    pub fn cap0(&mut self) -> CAP_W<'_, INT_ENA_SPEC> {
+        CAP_W::new(self, 27)
+    }
+    #[doc = "Bit 28 - The interrupt enable bit for the capture1 event."]
+    #[inline(always)]
+    pub fn cap1(&mut self) -> CAP_W<'_, INT_ENA_SPEC> {
+        CAP_W::new(self, 28)
+    }
+    #[doc = "Bit 29 - The interrupt enable bit for the capture2 event."]
+    #[inline(always)]
+    pub fn cap2(&mut self) -> CAP_W<'_, INT_ENA_SPEC> {
+        CAP_W::new(self, 29)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

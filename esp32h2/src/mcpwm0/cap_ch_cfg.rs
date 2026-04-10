@@ -6,10 +6,93 @@ pub type W = crate::W<CAP_CH_CFG_SPEC>;
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - When set, capture on channel 0 is enabled"]
 pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `MODE` reader - Edge of capture on channel 0 after prescaling. When bit0 is set to 1: enable capture on the negative edge, When bit1 is set to 1: enable capture on the positive edge."]
-pub type MODE_R = crate::FieldReader;
-#[doc = "Field `MODE` writer - Edge of capture on channel 0 after prescaling. When bit0 is set to 1: enable capture on the negative edge, When bit1 is set to 1: enable capture on the positive edge."]
-pub type MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Describes which edges to trigger a capture event\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum CAP0_MODE {
+    #[doc = "0: Capture nothing"]
+    None = 0,
+    #[doc = "1: Capture falling edges"]
+    FallingEdge = 1,
+    #[doc = "2: Capture rising edges"]
+    RisingEdge = 2,
+    #[doc = "3: Capture any edges"]
+    AnyEdge = 3,
+}
+impl From<CAP0_MODE> for u8 {
+    #[inline(always)]
+    fn from(variant: CAP0_MODE) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for CAP0_MODE {
+    type Ux = u8;
+}
+impl crate::IsEnum for CAP0_MODE {}
+#[doc = "Field `MODE` reader - Describes which edges to trigger a capture event"]
+pub type MODE_R = crate::FieldReader<CAP0_MODE>;
+impl MODE_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> CAP0_MODE {
+        match self.bits {
+            0 => CAP0_MODE::None,
+            1 => CAP0_MODE::FallingEdge,
+            2 => CAP0_MODE::RisingEdge,
+            3 => CAP0_MODE::AnyEdge,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Capture nothing"]
+    #[inline(always)]
+    pub fn is_none(&self) -> bool {
+        *self == CAP0_MODE::None
+    }
+    #[doc = "Capture falling edges"]
+    #[inline(always)]
+    pub fn is_falling_edge(&self) -> bool {
+        *self == CAP0_MODE::FallingEdge
+    }
+    #[doc = "Capture rising edges"]
+    #[inline(always)]
+    pub fn is_rising_edge(&self) -> bool {
+        *self == CAP0_MODE::RisingEdge
+    }
+    #[doc = "Capture any edges"]
+    #[inline(always)]
+    pub fn is_any_edge(&self) -> bool {
+        *self == CAP0_MODE::AnyEdge
+    }
+}
+#[doc = "Field `MODE` writer - Describes which edges to trigger a capture event"]
+pub type MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2, CAP0_MODE, crate::Safe>;
+impl<'a, REG> MODE_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "Capture nothing"]
+    #[inline(always)]
+    pub fn none(self) -> &'a mut crate::W<REG> {
+        self.variant(CAP0_MODE::None)
+    }
+    #[doc = "Capture falling edges"]
+    #[inline(always)]
+    pub fn falling_edge(self) -> &'a mut crate::W<REG> {
+        self.variant(CAP0_MODE::FallingEdge)
+    }
+    #[doc = "Capture rising edges"]
+    #[inline(always)]
+    pub fn rising_edge(self) -> &'a mut crate::W<REG> {
+        self.variant(CAP0_MODE::RisingEdge)
+    }
+    #[doc = "Capture any edges"]
+    #[inline(always)]
+    pub fn any_edge(self) -> &'a mut crate::W<REG> {
+        self.variant(CAP0_MODE::AnyEdge)
+    }
+}
 #[doc = "Field `PRESCALE` reader - Value of prescaling on possitive edge of CAP0. Prescale value = PWM_CAP0_PRESCALE + 1"]
 pub type PRESCALE_R = crate::FieldReader;
 #[doc = "Field `PRESCALE` writer - Value of prescaling on possitive edge of CAP0. Prescale value = PWM_CAP0_PRESCALE + 1"]
@@ -26,7 +109,7 @@ impl R {
     pub fn en(&self) -> EN_R {
         EN_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bits 1:2 - Edge of capture on channel 0 after prescaling. When bit0 is set to 1: enable capture on the negative edge, When bit1 is set to 1: enable capture on the positive edge."]
+    #[doc = "Bits 1:2 - Describes which edges to trigger a capture event"]
     #[inline(always)]
     pub fn mode(&self) -> MODE_R {
         MODE_R::new(((self.bits >> 1) & 3) as u8)
@@ -59,7 +142,7 @@ impl W {
     pub fn en(&mut self) -> EN_W<'_, CAP_CH_CFG_SPEC> {
         EN_W::new(self, 0)
     }
-    #[doc = "Bits 1:2 - Edge of capture on channel 0 after prescaling. When bit0 is set to 1: enable capture on the negative edge, When bit1 is set to 1: enable capture on the positive edge."]
+    #[doc = "Bits 1:2 - Describes which edges to trigger a capture event"]
     #[inline(always)]
     pub fn mode(&mut self) -> MODE_W<'_, CAP_CH_CFG_SPEC> {
         MODE_W::new(self, 1)

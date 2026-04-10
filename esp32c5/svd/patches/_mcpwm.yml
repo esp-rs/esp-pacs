@@ -1,39 +1,30 @@
 MCPWM0:
-  TIMER0_SYNC:
+  CAP_STATUS:
+    _array:
+      CAP?_EDGE:
+        description: Describes the last captured edge on channel%s.
+    CAP?_EDGE:
+      Rising: [0, "Rising edge"]
+      Falling: [1, "Falling edge"]
+
+  CAP_CH%s_CFG:
     _modify:
-      TIMER0_PHASE:
-        bitWidth: 16
+      CAP_MODE:
+        description: Describes which edges to trigger a capture event
+    CAP_MODE:
+      None: [0, "Capture nothing"]
+      FallingEdge: [1, "Capture falling edges"]
+      RisingEdge: [2, "Capture rising edges"]
+      AnyEdge: [3, "Capture any edges"]
 
-    _add:
-      TIMER0_PHASE_DIRECTION:
-        description: "Configure the PWM timer0's direction when timer0 mode is up-down mode. 0: increase; 1: decrease."
-        bitOffset: 20
-        bitWidth: 1
-        access: read-write
+  TIMER_SYNCI_CFG:
+    _array:
+      TIMER?_SYNCISEL: {}
+      EXTERNAL_SYNCI?_INVERT: {}
 
-  TIMER1_SYNC:
-    _modify:
-      TIMER1_PHASE:
-        bitWidth: 16
-
-    _add:
-      TIMER1_PHASE_DIRECTION:
-        description: "Configure the PWM timer1's direction when timer1 mode is up-down mode. 0: increase; 1: decrease."
-        bitOffset: 20
-        bitWidth: 1
-        access: read-write
-
-  TIMER2_SYNC:
-    _modify:
-      TIMER2_PHASE:
-        bitWidth: 16
-
-    _add:
-      TIMER2_PHASE_DIRECTION:
-        description: "Configure the PWM timer2's direction when timer2 mode is up-down mode. 0: increase; 1: decrease."
-        bitOffset: 20
-        bitWidth: 1
-        access: read-write
+  OPERATOR_TIMERSEL:
+    _array:
+      OPERATOR?_TIMERSEL: {}
 
   INT_RAW:
     _array:

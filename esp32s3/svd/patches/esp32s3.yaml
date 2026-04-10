@@ -502,7 +502,9 @@ MCPWM0:
       description: Value of last capture on channel %s
       _strip: CAP?_
 
-  _include: ../../../common_patches/int_strip.yaml
+  _include: 
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/mcpwm.yaml
 
 USB0:
   _include: ../../../common_patches/usb0.yaml
