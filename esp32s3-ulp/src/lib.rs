@@ -24,6 +24,7 @@ extern "C" {
     fn TOUCH_TIME_OUT_INT();
     fn TOUCH_APPROACH_LOOP_DONE_INT();
     fn TOUCH_SCAN_DONE_INT();
+    fn GPIO_INT();
 }
 #[doc(hidden)]
 #[repr(C)]
@@ -35,7 +36,7 @@ pub union Vector {
 #[doc(hidden)]
 #[link_section = ".rwtext"]
 #[no_mangle]
-pub static __EXTERNAL_INTERRUPTS: [Vector; 12] = [
+pub static __EXTERNAL_INTERRUPTS: [Vector; 13] = [
     Vector {
         _handler: TOUCH_DONE_INT,
     },
@@ -68,6 +69,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 12] = [
     Vector {
         _handler: TOUCH_SCAN_DONE_INT,
     },
+    Vector { _handler: GPIO_INT },
 ];
 #[doc(hidden)]
 pub mod interrupt;

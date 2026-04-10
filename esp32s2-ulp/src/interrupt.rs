@@ -21,6 +21,8 @@ pub enum Interrupt {
     SW_INT = 7,
     #[doc = "8 - SWD_INT"]
     SWD_INT = 8,
+    #[doc = "9 - GPIO_INT"]
+    GPIO_INT = 9,
 }
 #[doc = r" TryFromInterruptError"]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
@@ -40,6 +42,7 @@ impl Interrupt {
             6 => Ok(Interrupt::RISCV_START_INT),
             7 => Ok(Interrupt::SW_INT),
             8 => Ok(Interrupt::SWD_INT),
+            9 => Ok(Interrupt::GPIO_INT),
             _ => Err(TryFromInterruptError(())),
         }
     }

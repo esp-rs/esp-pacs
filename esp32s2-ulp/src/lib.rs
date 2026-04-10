@@ -21,6 +21,7 @@ extern "C" {
     fn RISCV_START_INT();
     fn SW_INT();
     fn SWD_INT();
+    fn GPIO_INT();
 }
 #[doc(hidden)]
 #[repr(C)]
@@ -32,7 +33,7 @@ pub union Vector {
 #[doc(hidden)]
 #[link_section = ".rwtext"]
 #[no_mangle]
-pub static __EXTERNAL_INTERRUPTS: [Vector; 9] = [
+pub static __EXTERNAL_INTERRUPTS: [Vector; 10] = [
     Vector {
         _handler: TOUCH_DONE_INT,
     },
@@ -56,6 +57,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 9] = [
     },
     Vector { _handler: SW_INT },
     Vector { _handler: SWD_INT },
+    Vector { _handler: GPIO_INT },
 ];
 #[doc(hidden)]
 pub mod interrupt;

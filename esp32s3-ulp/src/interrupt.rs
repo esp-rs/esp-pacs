@@ -27,6 +27,8 @@ pub enum Interrupt {
     TOUCH_APPROACH_LOOP_DONE_INT = 10,
     #[doc = "11 - TOUCH_SCAN_DONE_INT"]
     TOUCH_SCAN_DONE_INT = 11,
+    #[doc = "12 - GPIO_INT"]
+    GPIO_INT = 12,
 }
 #[doc = r" TryFromInterruptError"]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
@@ -49,6 +51,7 @@ impl Interrupt {
             9 => Ok(Interrupt::TOUCH_TIME_OUT_INT),
             10 => Ok(Interrupt::TOUCH_APPROACH_LOOP_DONE_INT),
             11 => Ok(Interrupt::TOUCH_SCAN_DONE_INT),
+            12 => Ok(Interrupt::GPIO_INT),
             _ => Err(TryFromInterruptError(())),
         }
     }
