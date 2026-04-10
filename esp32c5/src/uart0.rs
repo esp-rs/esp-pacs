@@ -371,8 +371,7 @@ pub mod rxd_cnt;
 pub type CLK_CONF = crate::Reg<clk_conf::CLK_CONF_SPEC>;
 #[doc = "UART core clock configuration"]
 pub mod clk_conf;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};
 #[doc = "AFIFO_STATUS (r) register accessor: UART asynchronous FIFO status\n\nYou can [`read`](crate::Reg::read) this register and get [`afifo_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@afifo_status`] module"]
 pub type AFIFO_STATUS = crate::Reg<afifo_status::AFIFO_STATUS_SPEC>;
 #[doc = "UART asynchronous FIFO status"]

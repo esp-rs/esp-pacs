@@ -134,5 +134,4 @@ pub mod ana_conf2;
 pub type I2C_CTRL1 = crate::Reg<i2c_ctrl1::I2C_CTRL1_SPEC>;
 #[doc = "I2C%s_CTRL1 register"]
 pub mod i2c_ctrl1;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

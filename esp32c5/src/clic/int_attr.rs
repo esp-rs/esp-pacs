@@ -64,11 +64,11 @@ pub enum TRIG {
     #[doc = "0: interrupt is positive level-triggered"]
     PositiveLevel = 0,
     #[doc = "1: interrupt is positive edge-triggered"]
-    PositiveEdge = 1,
+    PositiveEdge  = 1,
     #[doc = "2: interrupt is negative level-triggered"]
     NegativeLevel = 2,
     #[doc = "3: interrupt is negative edge-triggered"]
-    NegativeEdge = 3,
+    NegativeEdge  = 3,
 }
 impl From<TRIG> for u8 {
     #[inline(always)]

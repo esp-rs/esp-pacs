@@ -7,6 +7,7 @@ _include:
   - ../../../common_patches/slc.yaml
   - _aes.yml
   - _assist_debug.yml
+  - _cache.yml
   - _date.yml
   - _ecc.yml
   - _gpio.yml

@@ -132,5 +132,4 @@ pub mod lpperi;
 pub type XTAL32K = crate::Reg<xtal32k::XTAL32K_SPEC>;
 #[doc = "Configures the XTAL32K parameter"]
 pub mod xtal32k;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

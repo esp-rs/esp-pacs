@@ -44,5 +44,4 @@ pub mod core_0_intr_map;
 pub type CORE_0_INTR_STATUS = crate::Reg<core_0_intr_status::CORE_0_INTR_STATUS_SPEC>;
 #[doc = "Represents the status of the interrupt sources. Each bit corresponds to one interrupt source"]
 pub mod core_0_intr_status;
-pub use crate::aes::date as interrupt_date;
-pub use crate::aes::DATE as INTERRUPT_DATE;
+pub use crate::aes::{date as interrupt_date, DATE as INTERRUPT_DATE};

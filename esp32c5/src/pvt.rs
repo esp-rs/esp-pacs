@@ -1348,5 +1348,4 @@ pub mod value_update;
 pub type BYPASS_CHAIN = crate::Reg<bypass_chain::BYPASS_CHAIN_SPEC>;
 #[doc = "needs field desc"]
 pub mod bypass_chain;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

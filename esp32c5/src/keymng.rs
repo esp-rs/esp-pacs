@@ -179,8 +179,7 @@ pub mod key_vld;
 pub type HUK_VLD = crate::Reg<huk_vld::HUK_VLD_SPEC>;
 #[doc = "Key Manager HUK status register"]
 pub mod huk_vld;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};
 #[doc = "ASSIST_INFO_MEM (rw) register accessor: The memory that stores assist key info.\n\nYou can [`read`](crate::Reg::read) this register and get [`assist_info_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`assist_info_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@assist_info_mem`] module"]
 pub type ASSIST_INFO_MEM = crate::Reg<assist_info_mem::ASSIST_INFO_MEM_SPEC>;
 #[doc = "The memory that stores assist key info."]
