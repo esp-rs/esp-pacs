@@ -1145,5 +1145,4 @@ pub mod func32_out_sel_cfg;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "GPIO clock gate register"]
 pub mod clock_gate;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

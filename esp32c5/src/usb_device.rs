@@ -302,5 +302,4 @@ pub mod serial_ep_timeout0;
 pub type SERIAL_EP_TIMEOUT1 = crate::Reg<serial_ep_timeout1::SERIAL_EP_TIMEOUT1_SPEC>;
 #[doc = "USB uart out endpoint timeout configuration."]
 pub mod serial_ep_timeout1;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};
