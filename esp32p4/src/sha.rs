@@ -14,7 +14,8 @@ pub struct RegisterBlock {
     clear_irq: CLEAR_IRQ,
     irq_ena: IRQ_ENA,
     date: DATE,
-    _reserved12: [u8; 0x10],
+    dma_rx_reset: DMA_RX_RESET,
+    _reserved13: [u8; 0x0c],
     h_mem: [H_MEM; 16],
     m_mem: [M_MEM; 16],
 }
@@ -78,6 +79,11 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn date(&self) -> &DATE {
         &self.date
+    }
+    #[doc = "0x30 - SHA DMA RX FIFO reset"]
+    #[inline(always)]
+    pub const fn dma_rx_reset(&self) -> &DMA_RX_RESET {
+        &self.dma_rx_reset
     }
     #[doc = "0x40..0x80 - Sha H memory which contains intermediate hash or finial hash."]
     #[inline(always)]
@@ -150,6 +156,10 @@ pub mod irq_ena;
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Date register."]
 pub mod date;
+#[doc = "DMA_RX_RESET (w) register accessor: SHA DMA RX FIFO reset\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_rx_reset::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_rx_reset`] module"]
+pub type DMA_RX_RESET = crate::Reg<dma_rx_reset::DMA_RX_RESET_SPEC>;
+#[doc = "SHA DMA RX FIFO reset"]
+pub mod dma_rx_reset;
 #[doc = "H_MEM (rw) register accessor: Sha H memory which contains intermediate hash or finial hash.\n\nYou can [`read`](crate::Reg::read) this register and get [`h_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`h_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@h_mem`] module"]
 pub type H_MEM = crate::Reg<h_mem::H_MEM_SPEC>;
 #[doc = "Sha H memory which contains intermediate hash or finial hash."]

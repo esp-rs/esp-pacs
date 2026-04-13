@@ -41,6 +41,8 @@ pub struct RegisterBlock {
     phy_lp_loopback_ctrl: PHY_LP_LOOPBACK_CTRL,
     phy_hs_loopback_ctrl: PHY_HS_LOOPBACK_CTRL,
     phy_loopback_cnt: PHY_LOOPBACK_CNT,
+    _reserved37: [u8; 0x60],
+    dsi_brg_ver_date: DSI_BRG_VER_DATE,
 }
 impl RegisterBlock {
     #[doc = "0x00 - dsi bridge clk control register"]
@@ -228,6 +230,11 @@ impl RegisterBlock {
     pub const fn phy_loopback_cnt(&self) -> &PHY_LOOPBACK_CNT {
         &self.phy_loopback_cnt
     }
+    #[doc = "0x100 - "]
+    #[inline(always)]
+    pub const fn dsi_brg_ver_date(&self) -> &DSI_BRG_VER_DATE {
+        &self.dsi_brg_ver_date
+    }
 }
 #[doc = "CLK_EN (rw) register accessor: dsi bridge clk control register\n\nYou can [`read`](crate::Reg::read) this register and get [`clk_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk_en`] module"]
 pub type CLK_EN = crate::Reg<clk_en::CLK_EN_SPEC>;
@@ -378,3 +385,7 @@ pub mod phy_hs_loopback_ctrl;
 pub type PHY_LOOPBACK_CNT = crate::Reg<phy_loopback_cnt::PHY_LOOPBACK_CNT_SPEC>;
 #[doc = "loopback test cnt"]
 pub mod phy_loopback_cnt;
+#[doc = "DSI_BRG_VER_DATE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dsi_brg_ver_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dsi_brg_ver_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dsi_brg_ver_date`] module"]
+pub type DSI_BRG_VER_DATE = crate::Reg<dsi_brg_ver_date::DSI_BRG_VER_DATE_SPEC>;
+#[doc = ""]
+pub mod dsi_brg_ver_date;

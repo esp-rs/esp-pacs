@@ -136,7 +136,9 @@ pub struct RegisterBlock {
     vddbat_cfg: VDDBAT_CFG,
     touch_pwr_cntl: TOUCH_PWR_CNTL,
     rdn_eco: RDN_ECO,
-    _reserved134: [u8; 0x01e4],
+    power_pd_hp_cpu_cntl: POWER_PD_HP_CPU_CNTL,
+    power_pd_hp_cpu_mask: POWER_PD_HP_CPU_MASK,
+    _reserved136: [u8; 0x01dc],
     date: DATE,
 }
 impl RegisterBlock {
@@ -810,6 +812,16 @@ impl RegisterBlock {
     pub const fn rdn_eco(&self) -> &RDN_ECO {
         &self.rdn_eco
     }
+    #[doc = "0x218 - "]
+    #[inline(always)]
+    pub const fn power_pd_hp_cpu_cntl(&self) -> &POWER_PD_HP_CPU_CNTL {
+        &self.power_pd_hp_cpu_cntl
+    }
+    #[doc = "0x21c - "]
+    #[inline(always)]
+    pub const fn power_pd_hp_cpu_mask(&self) -> &POWER_PD_HP_CPU_MASK {
+        &self.power_pd_hp_cpu_mask
+    }
     #[doc = "0x3fc - need_des"]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {
@@ -1356,6 +1368,14 @@ pub mod touch_pwr_cntl;
 pub type RDN_ECO = crate::Reg<rdn_eco::RDN_ECO_SPEC>;
 #[doc = "need_des"]
 pub mod rdn_eco;
+#[doc = "POWER_PD_HP_CPU_CNTL (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`power_pd_hp_cpu_cntl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`power_pd_hp_cpu_cntl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@power_pd_hp_cpu_cntl`] module"]
+pub type POWER_PD_HP_CPU_CNTL = crate::Reg<power_pd_hp_cpu_cntl::POWER_PD_HP_CPU_CNTL_SPEC>;
+#[doc = ""]
+pub mod power_pd_hp_cpu_cntl;
+#[doc = "POWER_PD_HP_CPU_MASK (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`power_pd_hp_cpu_mask::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`power_pd_hp_cpu_mask::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@power_pd_hp_cpu_mask`] module"]
+pub type POWER_PD_HP_CPU_MASK = crate::Reg<power_pd_hp_cpu_mask::POWER_PD_HP_CPU_MASK_SPEC>;
+#[doc = ""]
+pub mod power_pd_hp_cpu_mask;
 #[doc = "DATE (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "need_des"]

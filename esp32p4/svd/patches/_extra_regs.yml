@@ -1,0 +1,398 @@
+# Extra register slots vs vendor SVD (placeholder VAL fields; refine as needed).
+HP_SYS:
+  _add:
+    SYSTEM_USB_OTGHS_PHY_ST:
+      description: USB OTG HS PHY status
+      addressOffset: 0x1e8
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    SYSTEM_CPU_WAKEUP_EVENT:
+      description: CPU wakeup event
+      addressOffset: 0x1ec
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    SYSTEM_HP2LP_INTR_GROUP%s_EN:
+      description: HP to LP interrupt group %s enable
+      addressOffset: 0x1f0
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    SYSTEM_HP2LP_INTR_GROUP%s_ST:
+      description: HP to LP interrupt group %s status
+      addressOffset: 0x200
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+      access: read-only
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-only
+    SYSTEM_HP2LP_WAKEUP_GROUP%s_EN:
+      description: HP to LP wakeup group %s enable
+      addressOffset: 0x210
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+
+HP_SYS_CLKRST:
+  _add:
+    AXI_PERF_MON_CLKRST_CTRL0:
+      addressOffset: 0xf0
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    CPU_WAITI_CTRL0:
+      addressOffset: 0xf4
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+
+ISP:
+  _add:
+    CROP_CTRL:
+      addressOffset: 0x244
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    CROP_Y_CAPTURE:
+      addressOffset: 0x248
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    CROP_X_CAPTURE:
+      addressOffset: 0x24c
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    CROP_ERR_ST:
+      addressOffset: 0x250
+      size: 0x20
+      access: read-only
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-only
+    WBG_COEF_R:
+      addressOffset: 0x254
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    WBG_COEF_G:
+      addressOffset: 0x258
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    WBG_COEF_B:
+      addressOffset: 0x25c
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    COLOR_HUE_CTRL:
+      addressOffset: 0x260
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    AWB_BX:
+      addressOffset: 0x264
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    AWB_BY:
+      addressOffset: 0x268
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    STATE:
+      addressOffset: 0x26c
+      size: 0x20
+      access: read-only
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-only
+    SHADOW_REG_CTRL:
+      addressOffset: 0x270
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+
+JPEG:
+  _add:
+    EXTD_CONFIG:
+      addressOffset: 0xc
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+
+LP_ANA:
+  _add:
+    TOUCH_CTRL:
+      addressOffset: 0x1fc
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+
+LP_SYS:
+  _add:
+    REG_PAD_RTC_HOLD_CTRL%s:
+      description: Pad RTC hold control %s
+      addressOffset: 0x1c4
+      dim: 2
+      dimIncrement: 0x4
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    REG_DED_PAD_RTC_HOLD_CTRL:
+      addressOffset: 0x1cc
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    REG_DISCHARGE:
+      addressOffset: 0x200
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    REG_HP_USB_OTGHS_PHY_CTRL:
+      addressOffset: 0x204
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+
+MIPI_DSI_BRIDGE:
+  _add:
+    DSI_BRG_VER_DATE:
+      addressOffset: 0x100
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+
+PARL_IO:
+  _add:
+    TX_CS_CFG:
+      addressOffset: 0x4c
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+
+PMU:
+  _add:
+    POWER_PD_HP_CPU_CNTL:
+      addressOffset: 0x218
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    POWER_PD_HP_CPU_MASK:
+      addressOffset: 0x21c
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+
+PPA:
+  _add:
+    DEBUG_CTRL0:
+      addressOffset: 0x90
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    DEBUG_CTRL1:
+      addressOffset: 0x94
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    RGB2GRAY:
+      addressOffset: 0x98
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+
+PVT:
+  _add:
+    BYPASS_CHAIN:
+      addressOffset: 0x1ec
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    DLY_NUM_REC%s:
+      description: Delay-chain capture %s
+      addressOffset: 0x1f0
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    DLY_NUM_REC_CLR:
+      addressOffset: 0x210
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+
+SPI0:
+  _add:
+    SPI_MEM_C_DLL_DLY_DB:
+      addressOffset: 0xdc
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    SPI_MEM_C_DLL_DB_ST%s:
+      description: DLL delay buffer status %s
+      addressOffset: 0xe0
+      dim: 2
+      dimIncrement: 0x4
+      size: 0x20
+      access: read-only
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-only
+    SPI_MEM_C_XTS_PSEUDO_ROUND_CONF:
+      addressOffset: 0x38c
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write

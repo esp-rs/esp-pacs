@@ -38,7 +38,10 @@ pub struct RegisterBlock {
     eco_high: ECO_HIGH,
     eco_cell_ctrl: ECO_CELL_CTRL,
     sram_ctrl: SRAM_CTRL,
-    _reserved33: [u8; 0x70],
+    debug_ctrl0: DEBUG_CTRL0,
+    debug_ctrl1: DEBUG_CTRL1,
+    rgb2gray: RGB2GRAY,
+    _reserved36: [u8; 0x64],
     date: DATE,
 }
 impl RegisterBlock {
@@ -207,6 +210,21 @@ impl RegisterBlock {
     pub const fn sram_ctrl(&self) -> &SRAM_CTRL {
         &self.sram_ctrl
     }
+    #[doc = "0x90 - "]
+    #[inline(always)]
+    pub const fn debug_ctrl0(&self) -> &DEBUG_CTRL0 {
+        &self.debug_ctrl0
+    }
+    #[doc = "0x94 - "]
+    #[inline(always)]
+    pub const fn debug_ctrl1(&self) -> &DEBUG_CTRL1 {
+        &self.debug_ctrl1
+    }
+    #[doc = "0x98 - "]
+    #[inline(always)]
+    pub const fn rgb2gray(&self) -> &RGB2GRAY {
+        &self.rgb2gray
+    }
     #[doc = "0x100 - PPA Version register"]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {
@@ -345,6 +363,18 @@ pub mod eco_cell_ctrl;
 pub type SRAM_CTRL = crate::Reg<sram_ctrl::SRAM_CTRL_SPEC>;
 #[doc = "PPA SRAM Control Register"]
 pub mod sram_ctrl;
+#[doc = "DEBUG_CTRL0 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`debug_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`debug_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@debug_ctrl0`] module"]
+pub type DEBUG_CTRL0 = crate::Reg<debug_ctrl0::DEBUG_CTRL0_SPEC>;
+#[doc = ""]
+pub mod debug_ctrl0;
+#[doc = "DEBUG_CTRL1 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`debug_ctrl1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`debug_ctrl1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@debug_ctrl1`] module"]
+pub type DEBUG_CTRL1 = crate::Reg<debug_ctrl1::DEBUG_CTRL1_SPEC>;
+#[doc = ""]
+pub mod debug_ctrl1;
+#[doc = "RGB2GRAY (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`rgb2gray::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rgb2gray::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rgb2gray`] module"]
+pub type RGB2GRAY = crate::Reg<rgb2gray::RGB2GRAY_SPEC>;
+#[doc = ""]
+pub mod rgb2gray;
 #[doc = "DATE (rw) register accessor: PPA Version register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "PPA Version register"]

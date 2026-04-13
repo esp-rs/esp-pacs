@@ -10,9 +10,12 @@ pub struct RegisterBlock {
     mult_conf: MULT_CONF,
     _reserved5: [u8; 0xdc],
     mult_date: MULT_DATE,
-    k_mem: [K_MEM; 8],
-    px_mem: [PX_MEM; 8],
-    py_mem: [PY_MEM; 8],
+    k_mem: [K_MEM; 12],
+    px_mem: [PX_MEM; 12],
+    py_mem: [PY_MEM; 12],
+    qx_mem: [QX_MEM; 12],
+    qy_mem: [QY_MEM; 12],
+    qz_mem: [QZ_MEM; 12],
 }
 impl RegisterBlock {
     #[doc = "0x0c - ECC interrupt raw register, valid in level."]
@@ -45,38 +48,71 @@ impl RegisterBlock {
     pub const fn mult_date(&self) -> &MULT_DATE {
         &self.mult_date
     }
-    #[doc = "0x100..0x120 - The memory that stores k."]
+    #[doc = "0x100..0x130 - The memory that stores k."]
     #[inline(always)]
     pub const fn k_mem(&self, n: usize) -> &K_MEM {
         &self.k_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x100..0x120 - The memory that stores k."]
+    #[doc = "0x100..0x130 - The memory that stores k."]
     #[inline(always)]
     pub fn k_mem_iter(&self) -> impl Iterator<Item = &K_MEM> {
         self.k_mem.iter()
     }
-    #[doc = "0x120..0x140 - The memory that stores Px."]
+    #[doc = "0x130..0x160 - The memory that stores Px."]
     #[inline(always)]
     pub const fn px_mem(&self, n: usize) -> &PX_MEM {
         &self.px_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x120..0x140 - The memory that stores Px."]
+    #[doc = "0x130..0x160 - The memory that stores Px."]
     #[inline(always)]
     pub fn px_mem_iter(&self) -> impl Iterator<Item = &PX_MEM> {
         self.px_mem.iter()
     }
-    #[doc = "0x140..0x160 - The memory that stores Py."]
+    #[doc = "0x160..0x190 - The memory that stores Py."]
     #[inline(always)]
     pub const fn py_mem(&self, n: usize) -> &PY_MEM {
         &self.py_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x140..0x160 - The memory that stores Py."]
+    #[doc = "0x160..0x190 - The memory that stores Py."]
     #[inline(always)]
     pub fn py_mem_iter(&self) -> impl Iterator<Item = &PY_MEM> {
         self.py_mem.iter()
+    }
+    #[doc = "0x190..0x1c0 - ECC Qx coordinate RAM"]
+    #[inline(always)]
+    pub const fn qx_mem(&self, n: usize) -> &QX_MEM {
+        &self.qx_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x190..0x1c0 - ECC Qx coordinate RAM"]
+    #[inline(always)]
+    pub fn qx_mem_iter(&self) -> impl Iterator<Item = &QX_MEM> {
+        self.qx_mem.iter()
+    }
+    #[doc = "0x1c0..0x1f0 - ECC Qy coordinate RAM"]
+    #[inline(always)]
+    pub const fn qy_mem(&self, n: usize) -> &QY_MEM {
+        &self.qy_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1c0..0x1f0 - ECC Qy coordinate RAM"]
+    #[inline(always)]
+    pub fn qy_mem_iter(&self) -> impl Iterator<Item = &QY_MEM> {
+        self.qy_mem.iter()
+    }
+    #[doc = "0x1f0..0x220 - ECC Qz coordinate RAM"]
+    #[inline(always)]
+    pub const fn qz_mem(&self, n: usize) -> &QZ_MEM {
+        &self.qz_mem[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1f0..0x220 - ECC Qz coordinate RAM"]
+    #[inline(always)]
+    pub fn qz_mem_iter(&self) -> impl Iterator<Item = &QZ_MEM> {
+        self.qz_mem.iter()
     }
 }
 #[doc = "MULT_INT_RAW (r) register accessor: ECC interrupt raw register, valid in level.\n\nYou can [`read`](crate::Reg::read) this register and get [`mult_int_raw::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mult_int_raw`] module"]
@@ -115,3 +151,15 @@ pub mod px_mem;
 pub type PY_MEM = crate::Reg<py_mem::PY_MEM_SPEC>;
 #[doc = "The memory that stores Py."]
 pub mod py_mem;
+#[doc = "QX_MEM (rw) register accessor: ECC Qx coordinate RAM\n\nYou can [`read`](crate::Reg::read) this register and get [`qx_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`qx_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@qx_mem`] module"]
+pub type QX_MEM = crate::Reg<qx_mem::QX_MEM_SPEC>;
+#[doc = "ECC Qx coordinate RAM"]
+pub mod qx_mem;
+#[doc = "QY_MEM (rw) register accessor: ECC Qy coordinate RAM\n\nYou can [`read`](crate::Reg::read) this register and get [`qy_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`qy_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@qy_mem`] module"]
+pub type QY_MEM = crate::Reg<qy_mem::QY_MEM_SPEC>;
+#[doc = "ECC Qy coordinate RAM"]
+pub mod qy_mem;
+#[doc = "QZ_MEM (rw) register accessor: ECC Qz coordinate RAM\n\nYou can [`read`](crate::Reg::read) this register and get [`qz_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`qz_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@qz_mem`] module"]
+pub type QZ_MEM = crate::Reg<qz_mem::QZ_MEM_SPEC>;
+#[doc = "ECC Qz coordinate RAM"]
+pub mod qz_mem;

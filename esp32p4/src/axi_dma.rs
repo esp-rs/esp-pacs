@@ -23,6 +23,7 @@ pub struct RegisterBlock {
     infifo_status1_ch: [INFIFO_STATUS1_CH; 3],
     outfifo_status1_ch: [OUTFIFO_STATUS1_CH; 3],
     date: DATE,
+    link_switch_state: LINK_SWITCH_STATE,
 }
 impl RegisterBlock {
     #[doc = "0x00..0x138 - Cluster IN_CH%s, containing IN_INT_RAW_CH?, IN_INT_ST_CH?, IN_INT_ENA_CH?, IN_INT_CLR_CH?, IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK1_CH?, IN_LINK2_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PRI_CH?, IN_PERI_SEL_CH?, IN_CRC_INIT_DATA_CH?, RX_CRC_WIDTH_CH?, IN_CRC_CLEAR_CH?, IN_CRC_FINAL_RESULT_CH?, RX_CRC_EN_WR_DATA_CH?, RX_CRC_EN_ADDR_CH?, RX_CRC_DATA_EN_WR_DATA_CH?, RX_CRC_DATA_EN_ADDR_CH?"]
@@ -161,6 +162,11 @@ impl RegisterBlock {
     pub const fn date(&self) -> &DATE {
         &self.date
     }
+    #[doc = "0x2dc - Link descriptor switch state"]
+    #[inline(always)]
+    pub const fn link_switch_state(&self) -> &LINK_SWITCH_STATE {
+        &self.link_switch_state
+    }
 }
 #[doc = "Cluster IN_CH%s, containing IN_INT_RAW_CH?, IN_INT_ST_CH?, IN_INT_ENA_CH?, IN_INT_CLR_CH?, IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK1_CH?, IN_LINK2_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PRI_CH?, IN_PERI_SEL_CH?, IN_CRC_INIT_DATA_CH?, RX_CRC_WIDTH_CH?, IN_CRC_CLEAR_CH?, IN_CRC_FINAL_RESULT_CH?, RX_CRC_EN_WR_DATA_CH?, RX_CRC_EN_ADDR_CH?, RX_CRC_DATA_EN_WR_DATA_CH?, RX_CRC_DATA_EN_ADDR_CH?"]
 pub use self::in_ch::IN_CH;
@@ -244,3 +250,7 @@ pub mod outfifo_status1_ch;
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version control register"]
 pub mod date;
+#[doc = "LINK_SWITCH_STATE (rw) register accessor: Link descriptor switch state\n\nYou can [`read`](crate::Reg::read) this register and get [`link_switch_state::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`link_switch_state::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@link_switch_state`] module"]
+pub type LINK_SWITCH_STATE = crate::Reg<link_switch_state::LINK_SWITCH_STATE_SPEC>;
+#[doc = "Link descriptor switch state"]
+pub mod link_switch_state;

@@ -40,7 +40,7 @@ pub enum EDGE_MODE {
     #[doc = "2: Decrease the counter"]
     Decrement = 2,
     #[doc = "0: No effect on counter"]
-    Hold = 0,
+    Hold      = 0,
 }
 impl From<EDGE_MODE> for u8 {
     #[inline(always)]
@@ -113,7 +113,7 @@ pub use CH_NEG_MODE_W as CH_POS_MODE_W;
 #[repr(u8)]
 pub enum CTRL_MODE {
     #[doc = "0: No modification"]
-    Keep = 0,
+    Keep    = 0,
     #[doc = "1: Invert behavior (increase -> decrease"]
     Reverse = 1,
     #[doc = "2: Inhibit counter modification"]

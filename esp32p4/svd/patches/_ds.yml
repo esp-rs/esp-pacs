@@ -28,3 +28,13 @@ DS:
       dim: 128
       dimIncrement: 0x4
       size: 0x20
+  _add:
+    KEY_SOURCE:
+      description: Digital signature key source
+      addressOffset: 0xe18
+      size: 0x20
+      fields:
+        KEY_SOURCE:
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write

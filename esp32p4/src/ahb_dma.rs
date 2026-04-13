@@ -20,6 +20,15 @@ pub struct RegisterBlock {
     arb_timeout_rx: ARB_TIMEOUT_RX,
     weight_en_tx: WEIGHT_EN_TX,
     weight_en_rx: WEIGHT_EN_RX,
+    arb_timeout: ARB_TIMEOUT,
+    _reserved17: [u8; 0x20],
+    weight_en: WEIGHT_EN,
+    module_clk_en: MODULE_CLK_EN,
+    ahbinf_resp_err_status0: AHBINF_RESP_ERR_STATUS0,
+    ahbinf_resp_err_status1: AHBINF_RESP_ERR_STATUS1,
+    in_done_des_addr_ch: (),
+    _reserved22: [u8; 0x04],
+    out_done_des_addr_ch: (),
 }
 impl RegisterBlock {
     #[doc = "0x00..0x30 - Cluster IN_INT_CH%s, containing IN_INT_RAW_CH?, IN_INT_ST_CH?, IN_INT_ENA_CH?, IN_INT_CLR_CH?"]
@@ -144,6 +153,81 @@ impl RegisterBlock {
     pub const fn weight_en_rx(&self) -> &WEIGHT_EN_RX {
         &self.weight_en_rx
     }
+    #[doc = "0x3dc - Combined arbiter timeout"]
+    #[inline(always)]
+    pub const fn arb_timeout(&self) -> &ARB_TIMEOUT {
+        &self.arb_timeout
+    }
+    #[doc = "0x400 - Arbiter weight enable"]
+    #[inline(always)]
+    pub const fn weight_en(&self) -> &WEIGHT_EN {
+        &self.weight_en
+    }
+    #[doc = "0x404 - Module clock force-on"]
+    #[inline(always)]
+    pub const fn module_clk_en(&self) -> &MODULE_CLK_EN {
+        &self.module_clk_en
+    }
+    #[doc = "0x408 - AHB response error status 0"]
+    #[inline(always)]
+    pub const fn ahbinf_resp_err_status0(&self) -> &AHBINF_RESP_ERR_STATUS0 {
+        &self.ahbinf_resp_err_status0
+    }
+    #[doc = "0x40c - AHB response error status 1"]
+    #[inline(always)]
+    pub const fn ahbinf_resp_err_status1(&self) -> &AHBINF_RESP_ERR_STATUS1 {
+        &self.ahbinf_resp_err_status1
+    }
+    #[doc = "0x410..0x41c - IN link EOF address for channel %s"]
+    #[inline(always)]
+    pub const fn in_done_des_addr_ch(&self, n: usize) -> &IN_DONE_DES_ADDR_CH {
+        #[allow(clippy::no_effect)]
+        [(); 3][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(1040)
+                .add(8 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x410..0x41c - IN link EOF address for channel %s"]
+    #[inline(always)]
+    pub fn in_done_des_addr_ch_iter(&self) -> impl Iterator<Item = &IN_DONE_DES_ADDR_CH> {
+        (0..3).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(1040)
+                .add(8 * n)
+                .cast()
+        })
+    }
+    #[doc = "0x414..0x420 - OUT link EOF address for channel %s"]
+    #[inline(always)]
+    pub const fn out_done_des_addr_ch(&self, n: usize) -> &OUT_DONE_DES_ADDR_CH {
+        #[allow(clippy::no_effect)]
+        [(); 3][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(1044)
+                .add(8 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x414..0x420 - OUT link EOF address for channel %s"]
+    #[inline(always)]
+    pub fn out_done_des_addr_ch_iter(&self) -> impl Iterator<Item = &OUT_DONE_DES_ADDR_CH> {
+        (0..3).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(1044)
+                .add(8 * n)
+                .cast()
+        })
+    }
 }
 #[doc = "Cluster IN_INT_CH%s, containing IN_INT_RAW_CH?, IN_INT_ST_CH?, IN_INT_ENA_CH?, IN_INT_CLR_CH?"]
 pub use self::in_int_ch::IN_INT_CH;
@@ -214,3 +298,33 @@ pub mod weight_en_tx;
 pub type WEIGHT_EN_RX = crate::Reg<weight_en_rx::WEIGHT_EN_RX_SPEC>;
 #[doc = "This register is used to config arbiter weigh function to on or off for rx dir"]
 pub mod weight_en_rx;
+#[doc = "ARB_TIMEOUT (rw) register accessor: Combined arbiter timeout\n\nYou can [`read`](crate::Reg::read) this register and get [`arb_timeout::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`arb_timeout::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@arb_timeout`] module"]
+pub type ARB_TIMEOUT = crate::Reg<arb_timeout::ARB_TIMEOUT_SPEC>;
+#[doc = "Combined arbiter timeout"]
+pub mod arb_timeout;
+#[doc = "WEIGHT_EN (rw) register accessor: Arbiter weight enable\n\nYou can [`read`](crate::Reg::read) this register and get [`weight_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`weight_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@weight_en`] module"]
+pub type WEIGHT_EN = crate::Reg<weight_en::WEIGHT_EN_SPEC>;
+#[doc = "Arbiter weight enable"]
+pub mod weight_en;
+#[doc = "MODULE_CLK_EN (rw) register accessor: Module clock force-on\n\nYou can [`read`](crate::Reg::read) this register and get [`module_clk_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`module_clk_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@module_clk_en`] module"]
+pub type MODULE_CLK_EN = crate::Reg<module_clk_en::MODULE_CLK_EN_SPEC>;
+#[doc = "Module clock force-on"]
+pub mod module_clk_en;
+#[doc = "AHBINF_RESP_ERR_STATUS0 (r) register accessor: AHB response error status 0\n\nYou can [`read`](crate::Reg::read) this register and get [`ahbinf_resp_err_status0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ahbinf_resp_err_status0`] module"]
+pub type AHBINF_RESP_ERR_STATUS0 =
+    crate::Reg<ahbinf_resp_err_status0::AHBINF_RESP_ERR_STATUS0_SPEC>;
+#[doc = "AHB response error status 0"]
+pub mod ahbinf_resp_err_status0;
+#[doc = "AHBINF_RESP_ERR_STATUS1 (r) register accessor: AHB response error status 1\n\nYou can [`read`](crate::Reg::read) this register and get [`ahbinf_resp_err_status1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ahbinf_resp_err_status1`] module"]
+pub type AHBINF_RESP_ERR_STATUS1 =
+    crate::Reg<ahbinf_resp_err_status1::AHBINF_RESP_ERR_STATUS1_SPEC>;
+#[doc = "AHB response error status 1"]
+pub mod ahbinf_resp_err_status1;
+#[doc = "IN_DONE_DES_ADDR_CH (r) register accessor: IN link EOF address for channel %s\n\nYou can [`read`](crate::Reg::read) this register and get [`in_done_des_addr_ch::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_done_des_addr_ch`] module"]
+pub type IN_DONE_DES_ADDR_CH = crate::Reg<in_done_des_addr_ch::IN_DONE_DES_ADDR_CH_SPEC>;
+#[doc = "IN link EOF address for channel %s"]
+pub mod in_done_des_addr_ch;
+#[doc = "OUT_DONE_DES_ADDR_CH (r) register accessor: OUT link EOF address for channel %s\n\nYou can [`read`](crate::Reg::read) this register and get [`out_done_des_addr_ch::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_done_des_addr_ch`] module"]
+pub type OUT_DONE_DES_ADDR_CH = crate::Reg<out_done_des_addr_ch::OUT_DONE_DES_ADDR_CH_SPEC>;
+#[doc = "OUT link EOF address for channel %s"]
+pub mod out_done_des_addr_ch;

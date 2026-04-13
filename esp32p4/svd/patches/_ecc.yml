@@ -1,14 +1,54 @@
 ECC:
   _modify:
     "K_MEM*":
-      dim: 8
+      dim: 12
       dimIncrement: 0x4
       size: 0x20
     "PX_MEM*":
-      dim: 8
+      addressOffset: 0x130
+      dim: 12
       dimIncrement: 0x4
       size: 0x20
     "PY_MEM*":
-      dim: 8
+      addressOffset: 0x160
+      dim: 12
       dimIncrement: 0x4
       size: 0x20
+  _add:
+    _registers:
+      QX_MEM%s:
+        description: ECC Qx coordinate RAM
+        addressOffset: 0x190
+        dim: 12
+        dimIncrement: 0x4
+        size: 0x20
+        access: read-write
+        fields:
+          WORD:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      QY_MEM%s:
+        description: ECC Qy coordinate RAM
+        addressOffset: 0x1c0
+        dim: 12
+        dimIncrement: 0x4
+        size: 0x20
+        access: read-write
+        fields:
+          WORD:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      QZ_MEM%s:
+        description: ECC Qz coordinate RAM
+        addressOffset: 0x1f0
+        dim: 12
+        dimIncrement: 0x4
+        size: 0x20
+        access: read-write
+        fields:
+          WORD:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write

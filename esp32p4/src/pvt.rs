@@ -125,7 +125,10 @@ pub struct RegisterBlock {
     comb_pd_site3_unit2_vt2_conf2: COMB_PD_SITE3_UNIT2_VT2_CONF2,
     comb_pd_site3_unit3_vt2_conf2: COMB_PD_SITE3_UNIT3_VT2_CONF2,
     value_update: VALUE_UPDATE,
-    _reserved123: [u8; 0x0e10],
+    bypass_chain: BYPASS_CHAIN,
+    dly_num_rec: [DLY_NUM_REC; 8],
+    dly_num_rec_clr: DLY_NUM_REC_CLR,
+    _reserved126: [u8; 0x0de8],
     date: DATE,
 }
 impl RegisterBlock {
@@ -744,6 +747,27 @@ impl RegisterBlock {
     pub const fn value_update(&self) -> &VALUE_UPDATE {
         &self.value_update
     }
+    #[doc = "0x1ec - "]
+    #[inline(always)]
+    pub const fn bypass_chain(&self) -> &BYPASS_CHAIN {
+        &self.bypass_chain
+    }
+    #[doc = "0x1f0..0x210 - Delay-chain capture %s"]
+    #[inline(always)]
+    pub const fn dly_num_rec(&self, n: usize) -> &DLY_NUM_REC {
+        &self.dly_num_rec[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1f0..0x210 - Delay-chain capture %s"]
+    #[inline(always)]
+    pub fn dly_num_rec_iter(&self) -> impl Iterator<Item = &DLY_NUM_REC> {
+        self.dly_num_rec.iter()
+    }
+    #[doc = "0x210 - "]
+    #[inline(always)]
+    pub const fn dly_num_rec_clr(&self) -> &DLY_NUM_REC_CLR {
+        &self.dly_num_rec_clr
+    }
     #[doc = "0xffc - version register"]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {
@@ -1338,6 +1362,18 @@ pub mod comb_pd_site3_unit3_vt2_conf2;
 pub type VALUE_UPDATE = crate::Reg<value_update::VALUE_UPDATE_SPEC>;
 #[doc = "needs field desc"]
 pub mod value_update;
+#[doc = "BYPASS_CHAIN (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`bypass_chain::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bypass_chain::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@bypass_chain`] module"]
+pub type BYPASS_CHAIN = crate::Reg<bypass_chain::BYPASS_CHAIN_SPEC>;
+#[doc = ""]
+pub mod bypass_chain;
+#[doc = "DLY_NUM_REC (rw) register accessor: Delay-chain capture %s\n\nYou can [`read`](crate::Reg::read) this register and get [`dly_num_rec::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dly_num_rec::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dly_num_rec`] module"]
+pub type DLY_NUM_REC = crate::Reg<dly_num_rec::DLY_NUM_REC_SPEC>;
+#[doc = "Delay-chain capture %s"]
+pub mod dly_num_rec;
+#[doc = "DLY_NUM_REC_CLR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dly_num_rec_clr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dly_num_rec_clr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dly_num_rec_clr`] module"]
+pub type DLY_NUM_REC_CLR = crate::Reg<dly_num_rec_clr::DLY_NUM_REC_CLR_SPEC>;
+#[doc = ""]
+pub mod dly_num_rec_clr;
 #[doc = "DATE (rw) register accessor: version register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "version register"]

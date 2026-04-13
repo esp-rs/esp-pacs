@@ -8,3 +8,13 @@ SHA:
       dim: 16
       dimIncrement: 0x4
       size: 0x20
+  _add:
+    DMA_RX_RESET:
+      description: SHA DMA RX FIFO reset
+      addressOffset: 0x30
+      size: 0x20
+      fields:
+        DMA_RX_RESET:
+          bitOffset: 0
+          bitWidth: 1
+          access: write-only

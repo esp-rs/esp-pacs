@@ -16,3 +16,45 @@ AES:
       dim: 4
       dimIncrement: 0x4
       size: 0x20
+  _add:
+    RX_RESET:
+      description: AES-DMA RX FIFO reset
+      addressOffset: 0xc0
+      size: 0x20
+      fields:
+        RX_RESET:
+          description: Set to reset rx_fifo under DMA-AES mode
+          bitOffset: 0
+          bitWidth: 1
+          access: write-only
+    TX_RESET:
+      description: AES-DMA TX FIFO reset
+      addressOffset: 0xc4
+      size: 0x20
+      fields:
+        TX_RESET:
+          description: Set to reset tx_fifo under DMA-AES mode
+          bitOffset: 0
+          bitWidth: 1
+          access: write-only
+    PSEUDO:
+      description: AES pseudo-round configuration
+      addressOffset: 0xd0
+      size: 0x20
+      fields:
+        PSEUDO_EN:
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+        PSEUDO_BASE:
+          bitOffset: 1
+          bitWidth: 4
+          access: read-write
+        PSEUDO_INC:
+          bitOffset: 5
+          bitWidth: 2
+          access: read-write
+        PSEUDO_RNG_CNT:
+          bitOffset: 7
+          bitWidth: 3
+          access: read-write

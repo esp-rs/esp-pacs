@@ -684,6 +684,15 @@ impl core::fmt::Debug for AXI_ICM {
 }
 #[doc = "AXI_ICM Peripheral"]
 pub mod axi_icm;
+#[doc = "AXI ICM QoS indirect-access window (base + 0x400)"]
+pub type ICM_AXI_QOS = crate::Periph<icm_axi_qos::RegisterBlock, 0x500a_4400>;
+impl core::fmt::Debug for ICM_AXI_QOS {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ICM_AXI_QOS").finish()
+    }
+}
+#[doc = "AXI ICM QoS indirect-access window (base + 0x400)"]
+pub mod icm_axi_qos;
 #[doc = "Input/Output Multiplexer"]
 pub type IO_MUX = crate::Periph<io_mux::RegisterBlock, 0x500e_1000>;
 impl core::fmt::Debug for IO_MUX {
@@ -847,7 +856,7 @@ impl core::fmt::Debug for PARL_IO {
 #[doc = "Parallel IO Controller"]
 pub mod parl_io;
 #[doc = "PAU Peripheral"]
-pub type PAU = crate::Periph<pau::RegisterBlock, 0x6009_3000>;
+pub type PAU = crate::Periph<pau::RegisterBlock, 0x5008_2000>;
 impl core::fmt::Debug for PAU {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PAU").finish()
@@ -892,7 +901,7 @@ impl core::fmt::Debug for PVT {
 #[doc = "PVT Peripheral"]
 pub mod pvt;
 #[doc = "Remote Control"]
-pub type RMT = crate::Periph<rmt::RegisterBlock, 0x500d_4000>;
+pub type RMT = crate::Periph<rmt::RegisterBlock, 0x500a_2000>;
 impl core::fmt::Debug for RMT {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RMT").finish()
@@ -1240,6 +1249,8 @@ pub struct Peripherals {
     pub I3C_SLV: I3C_SLV,
     #[doc = "AXI_ICM"]
     pub AXI_ICM: AXI_ICM,
+    #[doc = "ICM_AXI_QOS"]
+    pub ICM_AXI_QOS: ICM_AXI_QOS,
     #[doc = "IO_MUX"]
     pub IO_MUX: IO_MUX,
     #[doc = "ISP"]
@@ -1405,6 +1416,7 @@ impl Peripherals {
             I3C_MST_MEM: I3C_MST_MEM::steal(),
             I3C_SLV: I3C_SLV::steal(),
             AXI_ICM: AXI_ICM::steal(),
+            ICM_AXI_QOS: ICM_AXI_QOS::steal(),
             IO_MUX: IO_MUX::steal(),
             ISP: ISP::steal(),
             JPEG: JPEG::steal(),

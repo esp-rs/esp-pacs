@@ -102,7 +102,9 @@ pub struct RegisterBlock {
     rd_repeat_err2: RD_REPEAT_ERR2,
     rd_repeat_err3: RD_REPEAT_ERR3,
     rd_repeat_err4: RD_REPEAT_ERR4,
-    _reserved100: [u8; 0x30],
+    _reserved100: [u8; 0x20],
+    ecdsa: ECDSA,
+    _reserved101: [u8; 0x0c],
     rd_rs_err0: RD_RS_ERR0,
     rd_rs_err1: RD_RS_ERR1,
     clk: CLK,
@@ -119,7 +121,7 @@ pub struct RegisterBlock {
     wr_tim_conf2: WR_TIM_CONF2,
     wr_tim_conf0_rs_bypass: WR_TIM_CONF0_RS_BYPASS,
     date: DATE,
-    _reserved116: [u8; 0x0600],
+    _reserved117: [u8; 0x0600],
     apb2otp_wr_dis: APB2OTP_WR_DIS,
     apb2otp_blk0_backup1_w1: APB2OTP_BLK0_BACKUP1_W1,
     apb2otp_blk0_backup1_w2: APB2OTP_BLK0_BACKUP1_W2,
@@ -249,7 +251,7 @@ pub struct RegisterBlock {
     apb2otp_blk10_w9: APB2OTP_BLK10_W9,
     apb2otp_blk10_w10: APB2OTP_BLK10_W10,
     apb2otp_blk10_w11: APB2OTP_BLK10_W11,
-    _reserved245: [u8; 0x04],
+    _reserved246: [u8; 0x04],
     apb2otp_en: APB2OTP_EN,
 }
 impl RegisterBlock {
@@ -752,6 +754,11 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn rd_repeat_err4(&self) -> &RD_REPEAT_ERR4 {
         &self.rd_repeat_err4
+    }
+    #[doc = "0x1b0 - ECDSA key block configuration"]
+    #[inline(always)]
+    pub const fn ecdsa(&self) -> &ECDSA {
+        &self.ecdsa
     }
     #[doc = "0x1c0 - Programming error record register 0 of BLOCK1-10."]
     #[inline(always)]
@@ -1884,6 +1891,10 @@ pub mod rd_repeat_err3;
 pub type RD_REPEAT_ERR4 = crate::Reg<rd_repeat_err4::RD_REPEAT_ERR4_SPEC>;
 #[doc = "Programming error record register 4 of BLOCK0."]
 pub mod rd_repeat_err4;
+#[doc = "ECDSA (rw) register accessor: ECDSA key block configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`ecdsa::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ecdsa::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ecdsa`] module"]
+pub type ECDSA = crate::Reg<ecdsa::ECDSA_SPEC>;
+#[doc = "ECDSA key block configuration"]
+pub mod ecdsa;
 #[doc = "RD_RS_ERR0 (r) register accessor: Programming error record register 0 of BLOCK1-10.\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_rs_err0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_rs_err0`] module"]
 pub type RD_RS_ERR0 = crate::Reg<rd_rs_err0::RD_RS_ERR0_SPEC>;
 #[doc = "Programming error record register 0 of BLOCK1-10."]

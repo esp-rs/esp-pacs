@@ -17,7 +17,8 @@ pub struct RegisterBlock {
     query_busy: QUERY_BUSY,
     query_key_wrong: QUERY_KEY_WRONG,
     query_check: QUERY_CHECK,
-    _reserved13: [u8; 0x08],
+    key_source: KEY_SOURCE,
+    _reserved14: [u8; 0x04],
     date: DATE,
 }
 impl RegisterBlock {
@@ -128,6 +129,11 @@ impl RegisterBlock {
     pub const fn query_check(&self) -> &QUERY_CHECK {
         &self.query_check
     }
+    #[doc = "0xe18 - Digital signature key source"]
+    #[inline(always)]
+    pub const fn key_source(&self) -> &KEY_SOURCE {
+        &self.key_source
+    }
     #[doc = "0xe20 - DS version control register"]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {
@@ -186,6 +192,10 @@ pub mod query_key_wrong;
 pub type QUERY_CHECK = crate::Reg<query_check::QUERY_CHECK_SPEC>;
 #[doc = "DS query check result register"]
 pub mod query_check;
+#[doc = "KEY_SOURCE (rw) register accessor: Digital signature key source\n\nYou can [`read`](crate::Reg::read) this register and get [`key_source::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`key_source::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key_source`] module"]
+pub type KEY_SOURCE = crate::Reg<key_source::KEY_SOURCE_SPEC>;
+#[doc = "Digital signature key source"]
+pub mod key_source;
 #[doc = "DATE (rw) register accessor: DS version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "DS version control register"]

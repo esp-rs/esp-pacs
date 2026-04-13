@@ -1,0 +1,131 @@
+# AHB_DMA / AXI_DMA tail registers.
+AHB_DMA:
+  _add:
+    ARB_TIMEOUT:
+      description: Combined arbiter timeout
+      addressOffset: 0x3dc
+      size: 0x20
+      access: read-write
+      fields:
+        ARB_TIMEOUT_NUM:
+          description: Arbiter timeout value
+          bitOffset: 0
+          bitWidth: 16
+          access: read-write
+    WEIGHT_EN:
+      description: Arbiter weight enable
+      addressOffset: 0x400
+      size: 0x20
+      access: read-write
+      fields:
+        WEIGHT_EN:
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+    MODULE_CLK_EN:
+      description: Module clock force-on
+      addressOffset: 0x404
+      size: 0x20
+      access: read-write
+      fields:
+        AHB_APB_SYNC_CLK_EN:
+          bitOffset: 0
+          bitWidth: 3
+          access: read-write
+        OUT_DSCR_CLK_EN:
+          bitOffset: 3
+          bitWidth: 3
+          access: read-write
+        OUT_CTRL_CLK_EN:
+          bitOffset: 6
+          bitWidth: 3
+          access: read-write
+        IN_DSCR_CLK_EN:
+          bitOffset: 9
+          bitWidth: 3
+          access: read-write
+        IN_CTRL_CLK_EN:
+          bitOffset: 12
+          bitWidth: 3
+          access: read-write
+        CMD_ARB_CLK_EN:
+          bitOffset: 27
+          bitWidth: 1
+          access: read-write
+        AHBINF_CLK_EN:
+          bitOffset: 28
+          bitWidth: 1
+          access: read-write
+    AHBINF_RESP_ERR_STATUS0:
+      description: AHB response error status 0
+      addressOffset: 0x408
+      size: 0x20
+      access: read-only
+      fields:
+        AHBINF_RESP_ERR_ADDR:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-only
+    AHBINF_RESP_ERR_STATUS1:
+      description: AHB response error status 1
+      addressOffset: 0x40c
+      size: 0x20
+      access: read-only
+      fields:
+        AHBINF_RESP_ERR_WR:
+          bitOffset: 0
+          bitWidth: 1
+          access: read-only
+        AHBINF_RESP_ERR_ID:
+          bitOffset: 1
+          bitWidth: 4
+          access: read-only
+        AHBINF_RESP_ERR_CH_ID:
+          bitOffset: 5
+          bitWidth: 3
+          access: read-only
+    IN_DONE_DES_ADDR_CH%s:
+      description: IN link EOF address for channel %s
+      addressOffset: 0x410
+      dim: 3
+      dimIncrement: 0x8
+      size: 0x20
+      access: read-only
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-only
+    OUT_DONE_DES_ADDR_CH%s:
+      description: OUT link EOF address for channel %s
+      addressOffset: 0x414
+      dim: 3
+      dimIncrement: 0x8
+      size: 0x20
+      access: read-only
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-only
+
+AXI_DMA:
+  _add:
+    LINK_SWITCH_STATE:
+      description: Link descriptor switch state
+      addressOffset: 0x2dc
+      size: 0x20
+      access: read-write
+      fields:
+        LINK_SWITCH_STATE_CH0:
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+        LINK_SWITCH_STATE_CH1:
+          bitOffset: 1
+          bitWidth: 1
+          access: read-write
+        LINK_SWITCH_STATE_CH2:
+          bitOffset: 2
+          bitWidth: 1
+          access: read-write

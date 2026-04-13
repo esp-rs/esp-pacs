@@ -24,6 +24,11 @@ pub struct RegisterBlock {
     int_ena: INT_ENA,
     date: DATE,
     dma_exit: DMA_EXIT,
+    _reserved22: [u8; 0x04],
+    rx_reset: RX_RESET,
+    tx_reset: TX_RESET,
+    _reserved24: [u8; 0x08],
+    pseudo: PSEUDO,
 }
 impl RegisterBlock {
     #[doc = "0x00..0x20 - Key material key_%s configure register"]
@@ -178,6 +183,21 @@ impl RegisterBlock {
     pub const fn dma_exit(&self) -> &DMA_EXIT {
         &self.dma_exit
     }
+    #[doc = "0xc0 - AES-DMA RX FIFO reset"]
+    #[inline(always)]
+    pub const fn rx_reset(&self) -> &RX_RESET {
+        &self.rx_reset
+    }
+    #[doc = "0xc4 - AES-DMA TX FIFO reset"]
+    #[inline(always)]
+    pub const fn tx_reset(&self) -> &TX_RESET {
+        &self.tx_reset
+    }
+    #[doc = "0xd0 - AES pseudo-round configuration"]
+    #[inline(always)]
+    pub const fn pseudo(&self) -> &PSEUDO {
+        &self.pseudo
+    }
 }
 #[doc = "KEY (rw) register accessor: Key material key_%s configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`key::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`key::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key`] module"]
 pub type KEY = crate::Reg<key::KEY_SPEC>;
@@ -267,3 +287,15 @@ pub mod date;
 pub type DMA_EXIT = crate::Reg<dma_exit::DMA_EXIT_SPEC>;
 #[doc = "AES-DMA exit config"]
 pub mod dma_exit;
+#[doc = "RX_RESET (w) register accessor: AES-DMA RX FIFO reset\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_reset::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_reset`] module"]
+pub type RX_RESET = crate::Reg<rx_reset::RX_RESET_SPEC>;
+#[doc = "AES-DMA RX FIFO reset"]
+pub mod rx_reset;
+#[doc = "TX_RESET (w) register accessor: AES-DMA TX FIFO reset\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_reset::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_reset`] module"]
+pub type TX_RESET = crate::Reg<tx_reset::TX_RESET_SPEC>;
+#[doc = "AES-DMA TX FIFO reset"]
+pub mod tx_reset;
+#[doc = "PSEUDO (rw) register accessor: AES pseudo-round configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`pseudo::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pseudo::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pseudo`] module"]
+pub type PSEUDO = crate::Reg<pseudo::PSEUDO_SPEC>;
+#[doc = "AES pseudo-round configuration"]
+pub mod pseudo;

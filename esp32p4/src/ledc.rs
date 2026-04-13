@@ -19,6 +19,8 @@ pub struct RegisterBlock {
     _reserved12: [u8; 0x10],
     conf: CONF,
     date: DATE,
+    _reserved14: [u8; 0x0288],
+    ch_gamma_range: [CH_GAMMA_RANGE; 128],
 }
 impl RegisterBlock {
     #[doc = "0x00..0xa0 - Cluster CH%s, containing CH?_CONF0, CH?_HPOINT, CH?_DUTY, CH?_CONF1, CH?_DUTY_R"]
@@ -201,6 +203,17 @@ impl RegisterBlock {
     pub const fn date(&self) -> &DATE {
         &self.date
     }
+    #[doc = "0x400..0x600 - Gamma range word %s (channel = %s / 16, range = %s mod 16)"]
+    #[inline(always)]
+    pub const fn ch_gamma_range(&self, n: usize) -> &CH_GAMMA_RANGE {
+        &self.ch_gamma_range[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x400..0x600 - Gamma range word %s (channel = %s / 16, range = %s mod 16)"]
+    #[inline(always)]
+    pub fn ch_gamma_range_iter(&self) -> impl Iterator<Item = &CH_GAMMA_RANGE> {
+        self.ch_gamma_range.iter()
+    }
 }
 #[doc = "Cluster CH%s, containing CH?_CONF0, CH?_HPOINT, CH?_DUTY, CH?_CONF1, CH?_DUTY_R"]
 pub use self::ch::CH;
@@ -260,3 +273,7 @@ pub mod conf;
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version control register"]
 pub mod date;
+#[doc = "CH_GAMMA_RANGE (rw) register accessor: Gamma range word %s (channel = %s / 16, range = %s mod 16)\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_gamma_range::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_gamma_range::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_gamma_range`] module"]
+pub type CH_GAMMA_RANGE = crate::Reg<ch_gamma_range::CH_GAMMA_RANGE_SPEC>;
+#[doc = "Gamma range word %s (channel = %s / 16, range = %s mod 16)"]
+pub mod ch_gamma_range;

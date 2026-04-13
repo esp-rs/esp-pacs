@@ -2,6 +2,11 @@ _svd: "../esp32p4.base.svd"
 
 _include:
   - ../../../common_patches/twai.yaml
+  - "_dma.yml"
+  - "_icm_axi.yml"
+  - "_interrupt_core.yml"
+  - "_efuse.yml"
+  - "_ledc_gamma.yml"
   - "_aes.yml"
   - "_ds.yml"
   - "_ecc.yml"
@@ -10,6 +15,7 @@ _include:
   - "_hmac.yml"
   - "_hp_sys_clkrst.yml"
   - "_hp_sys.yml"
+  - "_extra_regs.yml"
   - "_io_mux.yml"
   - "_lp_huk.yml"
   - "_rsa.yml"
@@ -21,6 +27,10 @@ _include:
 _modify:
   SPI?:
     groupName: SPI
+  RMT:
+    baseAddress: 0x500a2000
+  PAU:
+    baseAddress: 0x50082000
   "AHB_DMA,AXI_DMA,DMA":
     groupName: DMA
   LP_ANA_PERI:

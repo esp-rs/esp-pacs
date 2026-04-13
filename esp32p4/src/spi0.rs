@@ -31,14 +31,16 @@ pub struct RegisterBlock {
     _reserved21: [u8; 0x04],
     ddr: DDR,
     spi_smem_ddr: SPI_SMEM_DDR,
-    _reserved23: [u8; 0x24],
+    spi_mem_c_dll_dly_db: SPI_MEM_C_DLL_DLY_DB,
+    spi_mem_c_dll_db_st: [SPI_MEM_C_DLL_DB_ST; 2],
+    _reserved25: [u8; 0x18],
     spi_fmem_pms_attr: [SPI_FMEM_PMS_ATTR; 4],
     spi_fmem_pms_addr: [SPI_FMEM_PMS_ADDR; 4],
     spi_fmem_pms_size: [SPI_FMEM_PMS_SIZE; 4],
     spi_smem_pms_attr: [SPI_SMEM_PMS_ATTR; 4],
     spi_smem_pms_addr: [SPI_SMEM_PMS_ADDR; 4],
     spi_smem_pms_size: [SPI_SMEM_PMS_SIZE; 4],
-    _reserved29: [u8; 0x04],
+    _reserved31: [u8; 0x04],
     pms_reject: PMS_REJECT,
     ecc_ctrl: ECC_CTRL,
     ecc_err_addr: ECC_ERR_ADDR,
@@ -58,11 +60,11 @@ pub struct RegisterBlock {
     spi_smem_din_hex_mode: SPI_SMEM_DIN_HEX_MODE,
     spi_smem_din_hex_num: SPI_SMEM_DIN_HEX_NUM,
     spi_smem_dout_hex_mode: SPI_SMEM_DOUT_HEX_MODE,
-    _reserved48: [u8; 0x50],
+    _reserved50: [u8; 0x50],
     clock_gate: CLOCK_GATE,
-    _reserved49: [u8; 0xfc],
+    _reserved51: [u8; 0xfc],
     xts_plain_base: XTS_PLAIN_BASE,
-    _reserved50: [u8; 0x3c],
+    _reserved52: [u8; 0x3c],
     xts_linesize: XTS_LINESIZE,
     xts_destination: XTS_DESTINATION,
     xts_physical_address: XTS_PHYSICAL_ADDRESS,
@@ -71,15 +73,16 @@ pub struct RegisterBlock {
     xts_destroy: XTS_DESTROY,
     xts_state: XTS_STATE,
     xts_date: XTS_DATE,
-    _reserved58: [u8; 0x1c],
+    _reserved60: [u8; 0x1c],
     mmu_item_content: MMU_ITEM_CONTENT,
     mmu_item_index: MMU_ITEM_INDEX,
     mmu_power_ctrl: MMU_POWER_CTRL,
     dpa_ctrl: DPA_CTRL,
-    _reserved62: [u8; 0x64],
+    spi_mem_c_xts_pseudo_round_conf: SPI_MEM_C_XTS_PSEUDO_ROUND_CONF,
+    _reserved65: [u8; 0x60],
     registerrnd_eco_high: REGISTERRND_ECO_HIGH,
     registerrnd_eco_low: REGISTERRND_ECO_LOW,
-    _reserved64: [u8; 0x04],
+    _reserved67: [u8; 0x04],
     date: DATE,
 }
 impl RegisterBlock {
@@ -197,6 +200,22 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn spi_smem_ddr(&self) -> &SPI_SMEM_DDR {
         &self.spi_smem_ddr
+    }
+    #[doc = "0xdc - "]
+    #[inline(always)]
+    pub const fn spi_mem_c_dll_dly_db(&self) -> &SPI_MEM_C_DLL_DLY_DB {
+        &self.spi_mem_c_dll_dly_db
+    }
+    #[doc = "0xe0..0xe8 - DLL delay buffer status %s"]
+    #[inline(always)]
+    pub const fn spi_mem_c_dll_db_st(&self, n: usize) -> &SPI_MEM_C_DLL_DB_ST {
+        &self.spi_mem_c_dll_db_st[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xe0..0xe8 - DLL delay buffer status %s"]
+    #[inline(always)]
+    pub fn spi_mem_c_dll_db_st_iter(&self) -> impl Iterator<Item = &SPI_MEM_C_DLL_DB_ST> {
+        self.spi_mem_c_dll_db_st.iter()
     }
     #[doc = "0x100..0x110 - MSPI flash PMS section %s attribute register"]
     #[inline(always)]
@@ -549,6 +568,11 @@ impl RegisterBlock {
     pub const fn dpa_ctrl(&self) -> &DPA_CTRL {
         &self.dpa_ctrl
     }
+    #[doc = "0x38c - "]
+    #[inline(always)]
+    pub const fn spi_mem_c_xts_pseudo_round_conf(&self) -> &SPI_MEM_C_XTS_PSEUDO_ROUND_CONF {
+        &self.spi_mem_c_xts_pseudo_round_conf
+    }
     #[doc = "0x3f0 - MSPI ECO high register"]
     #[inline(always)]
     pub const fn registerrnd_eco_high(&self) -> &REGISTERRND_ECO_HIGH {
@@ -657,6 +681,14 @@ pub mod ddr;
 pub type SPI_SMEM_DDR = crate::Reg<spi_smem_ddr::SPI_SMEM_DDR_SPEC>;
 #[doc = "SPI0 external RAM DDR mode control register"]
 pub mod spi_smem_ddr;
+#[doc = "SPI_MEM_C_DLL_DLY_DB (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`spi_mem_c_dll_dly_db::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_mem_c_dll_dly_db::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi_mem_c_dll_dly_db`] module"]
+pub type SPI_MEM_C_DLL_DLY_DB = crate::Reg<spi_mem_c_dll_dly_db::SPI_MEM_C_DLL_DLY_DB_SPEC>;
+#[doc = ""]
+pub mod spi_mem_c_dll_dly_db;
+#[doc = "SPI_MEM_C_DLL_DB_ST (r) register accessor: DLL delay buffer status %s\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_mem_c_dll_db_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi_mem_c_dll_db_st`] module"]
+pub type SPI_MEM_C_DLL_DB_ST = crate::Reg<spi_mem_c_dll_db_st::SPI_MEM_C_DLL_DB_ST_SPEC>;
+#[doc = "DLL delay buffer status %s"]
+pub mod spi_mem_c_dll_db_st;
 #[doc = "SPI_FMEM_PMS_ATTR (rw) register accessor: MSPI flash PMS section %s attribute register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_fmem_pms_attr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_fmem_pms_attr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi_fmem_pms_attr`] module"]
 pub type SPI_FMEM_PMS_ATTR = crate::Reg<spi_fmem_pms_attr::SPI_FMEM_PMS_ATTR_SPEC>;
 #[doc = "MSPI flash PMS section %s attribute register"]
@@ -813,6 +845,11 @@ pub mod mmu_power_ctrl;
 pub type DPA_CTRL = crate::Reg<dpa_ctrl::DPA_CTRL_SPEC>;
 #[doc = "SPI memory cryption DPA register"]
 pub mod dpa_ctrl;
+#[doc = "SPI_MEM_C_XTS_PSEUDO_ROUND_CONF (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`spi_mem_c_xts_pseudo_round_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_mem_c_xts_pseudo_round_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi_mem_c_xts_pseudo_round_conf`] module"]
+pub type SPI_MEM_C_XTS_PSEUDO_ROUND_CONF =
+    crate::Reg<spi_mem_c_xts_pseudo_round_conf::SPI_MEM_C_XTS_PSEUDO_ROUND_CONF_SPEC>;
+#[doc = ""]
+pub mod spi_mem_c_xts_pseudo_round_conf;
 #[doc = "REGISTERRND_ECO_HIGH (rw) register accessor: MSPI ECO high register\n\nYou can [`read`](crate::Reg::read) this register and get [`registerrnd_eco_high::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`registerrnd_eco_high::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@registerrnd_eco_high`] module"]
 pub type REGISTERRND_ECO_HIGH = crate::Reg<registerrnd_eco_high::REGISTERRND_ECO_HIGH_SPEC>;
 #[doc = "MSPI ECO high register"]

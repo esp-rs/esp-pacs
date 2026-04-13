@@ -1,0 +1,31 @@
+# LEDC gamma RAM: 8 channels × 16 range words (linear index = channel * 16 + range).
+LEDC:
+  _add:
+    CH_GAMMA_RANGE%s:
+      description: Gamma range word %s (channel = %s / 16, range = %s mod 16)
+      addressOffset: 0x400
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+      access: read-write
+      fields:
+        DUTY_INC:
+          description: Duty increase or decrease
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+        DUTY_CYCLE:
+          description: Duty cycle
+          bitOffset: 1
+          bitWidth: 10
+          access: read-write
+        SCALE:
+          description: Gamma scale
+          bitOffset: 11
+          bitWidth: 10
+          access: read-write
+        DUTY_NUM:
+          description: Duty number
+          bitOffset: 21
+          bitWidth: 10
+          access: read-write

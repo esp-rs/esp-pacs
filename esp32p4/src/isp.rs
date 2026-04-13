@@ -147,6 +147,18 @@ pub struct RegisterBlock {
     rdn_eco_cs: RDN_ECO_CS,
     rdn_eco_low: RDN_ECO_LOW,
     rdn_eco_high: RDN_ECO_HIGH,
+    crop_ctrl: CROP_CTRL,
+    crop_y_capture: CROP_Y_CAPTURE,
+    crop_x_capture: CROP_X_CAPTURE,
+    crop_err_st: CROP_ERR_ST,
+    wbg_coef_r: WBG_COEF_R,
+    wbg_coef_g: WBG_COEF_G,
+    wbg_coef_b: WBG_COEF_B,
+    color_hue_ctrl: COLOR_HUE_CTRL,
+    awb_bx: AWB_BX,
+    awb_by: AWB_BY,
+    state: STATE,
+    shadow_reg_ctrl: SHADOW_REG_CTRL,
 }
 impl RegisterBlock {
     #[doc = "0x00 - version control register"]
@@ -874,6 +886,66 @@ impl RegisterBlock {
     pub const fn rdn_eco_high(&self) -> &RDN_ECO_HIGH {
         &self.rdn_eco_high
     }
+    #[doc = "0x244 - "]
+    #[inline(always)]
+    pub const fn crop_ctrl(&self) -> &CROP_CTRL {
+        &self.crop_ctrl
+    }
+    #[doc = "0x248 - "]
+    #[inline(always)]
+    pub const fn crop_y_capture(&self) -> &CROP_Y_CAPTURE {
+        &self.crop_y_capture
+    }
+    #[doc = "0x24c - "]
+    #[inline(always)]
+    pub const fn crop_x_capture(&self) -> &CROP_X_CAPTURE {
+        &self.crop_x_capture
+    }
+    #[doc = "0x250 - "]
+    #[inline(always)]
+    pub const fn crop_err_st(&self) -> &CROP_ERR_ST {
+        &self.crop_err_st
+    }
+    #[doc = "0x254 - "]
+    #[inline(always)]
+    pub const fn wbg_coef_r(&self) -> &WBG_COEF_R {
+        &self.wbg_coef_r
+    }
+    #[doc = "0x258 - "]
+    #[inline(always)]
+    pub const fn wbg_coef_g(&self) -> &WBG_COEF_G {
+        &self.wbg_coef_g
+    }
+    #[doc = "0x25c - "]
+    #[inline(always)]
+    pub const fn wbg_coef_b(&self) -> &WBG_COEF_B {
+        &self.wbg_coef_b
+    }
+    #[doc = "0x260 - "]
+    #[inline(always)]
+    pub const fn color_hue_ctrl(&self) -> &COLOR_HUE_CTRL {
+        &self.color_hue_ctrl
+    }
+    #[doc = "0x264 - "]
+    #[inline(always)]
+    pub const fn awb_bx(&self) -> &AWB_BX {
+        &self.awb_bx
+    }
+    #[doc = "0x268 - "]
+    #[inline(always)]
+    pub const fn awb_by(&self) -> &AWB_BY {
+        &self.awb_by
+    }
+    #[doc = "0x26c - "]
+    #[inline(always)]
+    pub const fn state(&self) -> &STATE {
+        &self.state
+    }
+    #[doc = "0x270 - "]
+    #[inline(always)]
+    pub const fn shadow_reg_ctrl(&self) -> &SHADOW_REG_CTRL {
+        &self.shadow_reg_ctrl
+    }
 }
 #[doc = "VER_DATE (rw) register accessor: version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ver_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ver_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ver_date`] module"]
 pub type VER_DATE = crate::Reg<ver_date::VER_DATE_SPEC>;
@@ -1455,3 +1527,51 @@ pub mod rdn_eco_low;
 pub type RDN_ECO_HIGH = crate::Reg<rdn_eco_high::RDN_ECO_HIGH_SPEC>;
 #[doc = "rdn eco all high register"]
 pub mod rdn_eco_high;
+#[doc = "CROP_CTRL (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`crop_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`crop_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@crop_ctrl`] module"]
+pub type CROP_CTRL = crate::Reg<crop_ctrl::CROP_CTRL_SPEC>;
+#[doc = ""]
+pub mod crop_ctrl;
+#[doc = "CROP_Y_CAPTURE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`crop_y_capture::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`crop_y_capture::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@crop_y_capture`] module"]
+pub type CROP_Y_CAPTURE = crate::Reg<crop_y_capture::CROP_Y_CAPTURE_SPEC>;
+#[doc = ""]
+pub mod crop_y_capture;
+#[doc = "CROP_X_CAPTURE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`crop_x_capture::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`crop_x_capture::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@crop_x_capture`] module"]
+pub type CROP_X_CAPTURE = crate::Reg<crop_x_capture::CROP_X_CAPTURE_SPEC>;
+#[doc = ""]
+pub mod crop_x_capture;
+#[doc = "CROP_ERR_ST (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`crop_err_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@crop_err_st`] module"]
+pub type CROP_ERR_ST = crate::Reg<crop_err_st::CROP_ERR_ST_SPEC>;
+#[doc = ""]
+pub mod crop_err_st;
+#[doc = "WBG_COEF_R (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`wbg_coef_r::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wbg_coef_r::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wbg_coef_r`] module"]
+pub type WBG_COEF_R = crate::Reg<wbg_coef_r::WBG_COEF_R_SPEC>;
+#[doc = ""]
+pub mod wbg_coef_r;
+#[doc = "WBG_COEF_G (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`wbg_coef_g::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wbg_coef_g::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wbg_coef_g`] module"]
+pub type WBG_COEF_G = crate::Reg<wbg_coef_g::WBG_COEF_G_SPEC>;
+#[doc = ""]
+pub mod wbg_coef_g;
+#[doc = "WBG_COEF_B (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`wbg_coef_b::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wbg_coef_b::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wbg_coef_b`] module"]
+pub type WBG_COEF_B = crate::Reg<wbg_coef_b::WBG_COEF_B_SPEC>;
+#[doc = ""]
+pub mod wbg_coef_b;
+#[doc = "COLOR_HUE_CTRL (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`color_hue_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`color_hue_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@color_hue_ctrl`] module"]
+pub type COLOR_HUE_CTRL = crate::Reg<color_hue_ctrl::COLOR_HUE_CTRL_SPEC>;
+#[doc = ""]
+pub mod color_hue_ctrl;
+#[doc = "AWB_BX (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`awb_bx::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`awb_bx::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@awb_bx`] module"]
+pub type AWB_BX = crate::Reg<awb_bx::AWB_BX_SPEC>;
+#[doc = ""]
+pub mod awb_bx;
+#[doc = "AWB_BY (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`awb_by::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`awb_by::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@awb_by`] module"]
+pub type AWB_BY = crate::Reg<awb_by::AWB_BY_SPEC>;
+#[doc = ""]
+pub mod awb_by;
+#[doc = "STATE (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`state::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@state`] module"]
+pub type STATE = crate::Reg<state::STATE_SPEC>;
+#[doc = ""]
+pub mod state;
+#[doc = "SHADOW_REG_CTRL (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shadow_reg_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shadow_reg_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shadow_reg_ctrl`] module"]
+pub type SHADOW_REG_CTRL = crate::Reg<shadow_reg_ctrl::SHADOW_REG_CTRL_SPEC>;
+#[doc = ""]
+pub mod shadow_reg_ctrl;

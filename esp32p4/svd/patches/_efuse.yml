@@ -1,0 +1,41 @@
+# EFUSE ECDSA block configuration.
+EFUSE:
+  _add:
+    ECDSA:
+      description: ECDSA key block configuration
+      addressOffset: 0x1b0
+      size: 0x20
+      access: read-write
+      fields:
+        CFG_ECDSA_P192_BLK:
+          bitOffset: 0
+          bitWidth: 4
+          access: read-write
+        CFG_ECDSA_P256_BLK:
+          bitOffset: 4
+          bitWidth: 4
+          access: read-write
+        CFG_ECDSA_P384_L_BLK:
+          bitOffset: 8
+          bitWidth: 4
+          access: read-write
+        CFG_ECDSA_P384_H_BLK:
+          bitOffset: 12
+          bitWidth: 4
+          access: read-write
+        CUR_ECDSA_P192_BLK:
+          bitOffset: 16
+          bitWidth: 4
+          access: read-only
+        CUR_ECDSA_P256_BLK:
+          bitOffset: 20
+          bitWidth: 4
+          access: read-only
+        CUR_ECDSA_P384_L_BLK:
+          bitOffset: 24
+          bitWidth: 4
+          access: read-only
+        CUR_ECDSA_P384_H_BLK:
+          bitOffset: 28
+          bitWidth: 4
+          access: read-only
