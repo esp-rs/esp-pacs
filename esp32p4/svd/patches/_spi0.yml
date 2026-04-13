@@ -1,0 +1,33 @@
+# SPI0 (SPI_MEM) tail registers vs vendor SVD.
+SPI0:
+  _add:
+    SPI_MEM_C_DLL_DLY_DB:
+      addressOffset: 0xdc
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    SPI_MEM_C_DLL_DB_ST%s:
+      description: DLL delay buffer status %s
+      addressOffset: 0xe0
+      dim: 2
+      dimIncrement: 0x4
+      size: 0x20
+      access: read-only
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-only
+    SPI_MEM_C_XTS_PSEUDO_ROUND_CONF:
+      addressOffset: 0x38c
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write

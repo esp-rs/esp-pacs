@@ -1,0 +1,30 @@
+# PPA tail registers vs vendor SVD.
+PPA:
+  _add:
+    DEBUG_CTRL0:
+      addressOffset: 0x90
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    DEBUG_CTRL1:
+      addressOffset: 0x94
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    RGB2GRAY:
+      addressOffset: 0x98
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write

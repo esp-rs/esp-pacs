@@ -1,0 +1,12 @@
+# LP_ANA tail register vs vendor SVD.
+LP_ANA:
+  _add:
+    TOUCH_CTRL:
+      addressOffset: 0x1fc
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write

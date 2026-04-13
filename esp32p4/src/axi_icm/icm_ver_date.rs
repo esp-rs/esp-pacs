@@ -28,7 +28,7 @@ impl W {
         ICM_REG_VER_DATE_W::new(self, 0)
     }
 }
-#[doc = "ICM version / date (icm_sys_reg.h)\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_ver_date::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_ver_date::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ICM version / date\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_ver_date::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_ver_date::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ICM_VER_DATE_SPEC;
 impl crate::RegisterSpec for ICM_VER_DATE_SPEC {
     type Ux = u32;

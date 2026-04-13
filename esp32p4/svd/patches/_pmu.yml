@@ -1,15 +1,8 @@
-HP_SYS_CLKRST:
-  "*":
-    _strip: "REG_"
-
-  ROOT_CLK_CTRL0:
-    _modify:
-      SOC_CLK_DIV_UPDATE:
-        access: read-write
-
+# PMU tail registers vs vendor SVD.
+PMU:
   _add:
-    AXI_PERF_MON_CLKRST_CTRL0:
-      addressOffset: 0xf0
+    POWER_PD_HP_CPU_CNTL:
+      addressOffset: 0x218
       size: 0x20
       access: read-write
       fields:
@@ -17,8 +10,8 @@ HP_SYS_CLKRST:
           bitOffset: 0
           bitWidth: 32
           access: read-write
-    CPU_WAITI_CTRL0:
-      addressOffset: 0xf4
+    POWER_PD_HP_CPU_MASK:
+      addressOffset: 0x21c
       size: 0x20
       access: read-write
       fields:

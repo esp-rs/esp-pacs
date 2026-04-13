@@ -1,0 +1,21 @@
+# AXI_DMA tail registers.
+AXI_DMA:
+  _add:
+    LINK_SWITCH_STATE:
+      description: Link descriptor switch state
+      addressOffset: 0x2dc
+      size: 0x20
+      access: read-write
+      fields:
+        LINK_SWITCH_STATE_CH0:
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+        LINK_SWITCH_STATE_CH1:
+          bitOffset: 1
+          bitWidth: 1
+          access: read-write
+        LINK_SWITCH_STATE_CH2:
+          bitOffset: 2
+          bitWidth: 1
+          access: read-write

@@ -1,0 +1,12 @@
+# PARL_IO tail register vs vendor SVD.
+PARL_IO:
+  _add:
+    TX_CS_CFG:
+      addressOffset: 0x4c
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write

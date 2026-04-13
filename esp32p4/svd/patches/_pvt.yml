@@ -1,0 +1,33 @@
+# PVT tail registers vs vendor SVD.
+PVT:
+  _add:
+    BYPASS_CHAIN:
+      addressOffset: 0x1ec
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    DLY_NUM_REC%s:
+      description: Delay-chain capture %s
+      addressOffset: 0x1f0
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    DLY_NUM_REC_CLR:
+      addressOffset: 0x210
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write

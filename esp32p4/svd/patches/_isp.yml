@@ -1,0 +1,111 @@
+# ISP tail registers vs vendor SVD (placeholder VAL fields; refine as needed).
+ISP:
+  _add:
+    CROP_CTRL:
+      addressOffset: 0x244
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    CROP_Y_CAPTURE:
+      addressOffset: 0x248
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    CROP_X_CAPTURE:
+      addressOffset: 0x24c
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    CROP_ERR_ST:
+      addressOffset: 0x250
+      size: 0x20
+      access: read-only
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-only
+    WBG_COEF_R:
+      addressOffset: 0x254
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    WBG_COEF_G:
+      addressOffset: 0x258
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    WBG_COEF_B:
+      addressOffset: 0x25c
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    COLOR_HUE_CTRL:
+      addressOffset: 0x260
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    AWB_BX:
+      addressOffset: 0x264
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    AWB_BY:
+      addressOffset: 0x268
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    STATE:
+      addressOffset: 0x26c
+      size: 0x20
+      access: read-only
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-only
+    SHADOW_REG_CTRL:
+      addressOffset: 0x270
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write

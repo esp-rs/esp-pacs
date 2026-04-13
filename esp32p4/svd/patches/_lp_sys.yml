@@ -1,0 +1,42 @@
+# LP_SYS tail registers vs vendor SVD.
+LP_SYS:
+  _add:
+    REG_PAD_RTC_HOLD_CTRL%s:
+      description: Pad RTC hold control %s
+      addressOffset: 0x1c4
+      dim: 2
+      dimIncrement: 0x4
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    REG_DED_PAD_RTC_HOLD_CTRL:
+      addressOffset: 0x1cc
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    REG_DISCHARGE:
+      addressOffset: 0x200
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    REG_HP_USB_OTGHS_PHY_CTRL:
+      addressOffset: 0x204
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write

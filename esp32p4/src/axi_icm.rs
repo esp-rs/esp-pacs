@@ -27,7 +27,7 @@ pub struct RegisterBlock {
     icm_rdn_eco_high: ICM_RDN_ECO_HIGH,
 }
 impl RegisterBlock {
-    #[doc = "0x00 - ICM version / date (icm_sys_reg.h)"]
+    #[doc = "0x00 - ICM version / date"]
     #[inline(always)]
     pub const fn icm_ver_date(&self) -> &ICM_VER_DATE {
         &self.icm_ver_date
@@ -123,9 +123,9 @@ impl RegisterBlock {
         &self.icm_rdn_eco_high
     }
 }
-#[doc = "ICM_VER_DATE (rw) register accessor: ICM version / date (icm_sys_reg.h)\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_ver_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_ver_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_ver_date`] module"]
+#[doc = "ICM_VER_DATE (rw) register accessor: ICM version / date\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_ver_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_ver_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_ver_date`] module"]
 pub type ICM_VER_DATE = crate::Reg<icm_ver_date::ICM_VER_DATE_SPEC>;
-#[doc = "ICM version / date (icm_sys_reg.h)"]
+#[doc = "ICM version / date"]
 pub mod icm_ver_date;
 #[doc = "ICM_CLK_EN (rw) register accessor: ICM clock enable\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_clk_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_clk_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_clk_en`] module"]
 pub type ICM_CLK_EN = crate::Reg<icm_clk_en::ICM_CLK_EN_SPEC>;

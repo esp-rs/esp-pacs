@@ -1,0 +1,12 @@
+# JPEG extra register vs vendor SVD.
+JPEG:
+  _add:
+    EXTD_CONFIG:
+      addressOffset: 0xc
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
