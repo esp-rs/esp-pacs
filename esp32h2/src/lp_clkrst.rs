@@ -132,5 +132,4 @@ pub mod lpperi;
 pub type XTAL32K = crate::Reg<xtal32k::XTAL32K_SPEC>;
 #[doc = "need_des"]
 pub mod xtal32k;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

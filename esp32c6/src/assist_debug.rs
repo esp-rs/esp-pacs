@@ -75,5 +75,4 @@ pub mod core_x_iram0_dram0_exception_monitor;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "clock register"]
 pub mod clock_gate;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

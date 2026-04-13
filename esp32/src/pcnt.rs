@@ -191,5 +191,4 @@ pub mod u_status;
 pub type CTRL = crate::Reg<ctrl::CTRL_SPEC>;
 #[doc = ""]
 pub mod ctrl;
-pub use crate::apb_ctrl::date;
-pub use crate::apb_ctrl::DATE;
+pub use crate::apb_ctrl::{date, DATE};

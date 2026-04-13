@@ -387,5 +387,4 @@ pub mod peri_backup_int_ena;
 pub type PERI_BACKUP_INT_CLR = crate::Reg<peri_backup_int_clr::PERI_BACKUP_INT_CLR_SPEC>;
 #[doc = "APB_CTRL_PERI_BACKUP_INT_CLR_REG"]
 pub mod peri_backup_int_clr;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

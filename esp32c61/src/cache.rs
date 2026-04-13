@@ -2671,5 +2671,4 @@ pub mod cache_redundancy_sig3;
 pub type CACHE_REDUNDANCY_SIG4 = crate::Reg<cache_redundancy_sig4::CACHE_REDUNDANCY_SIG4_SPEC>;
 #[doc = "Cache redundancy signal 0 register"]
 pub mod cache_redundancy_sig4;
-pub use crate::dma::date as cache_date;
-pub use crate::dma::DATE as CACHE_DATE;
+pub use crate::dma::{date as cache_date, DATE as CACHE_DATE};

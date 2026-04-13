@@ -273,8 +273,7 @@ pub mod int_st;
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = ""]
 pub mod int_clr;
-pub use crate::apb_ctrl::date as ntimers_date;
-pub use crate::apb_ctrl::DATE as NTIMERS_DATE;
+pub use crate::apb_ctrl::{date as ntimers_date, DATE as NTIMERS_DATE};
 #[doc = "TIMGCLK (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`timgclk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timgclk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@timgclk`] module"]
 pub type TIMGCLK = crate::Reg<timgclk::TIMGCLK_SPEC>;
 #[doc = ""]

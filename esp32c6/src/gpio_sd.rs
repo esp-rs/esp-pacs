@@ -204,5 +204,4 @@ pub mod etm_task_p6_cfg;
 pub type ETM_TASK_P7_CFG = crate::Reg<etm_task_p7_cfg::ETM_TASK_P7_CFG_SPEC>;
 #[doc = "Etm Configure Register to decide which GPIO been chosen"]
 pub mod etm_task_p7_cfg;
-pub use crate::aes::date as version;
-pub use crate::aes::DATE as VERSION;
+pub use crate::aes::{date as version, DATE as VERSION};

@@ -829,5 +829,4 @@ pub mod cache_conf_misc;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "register description"]
 pub mod clock_gate;
-pub use crate::aes::date as pro_extmem_reg_date;
-pub use crate::aes::DATE as PRO_EXTMEM_REG_DATE;
+pub use crate::aes::{date as pro_extmem_reg_date, DATE as PRO_EXTMEM_REG_DATE};

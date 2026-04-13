@@ -247,5 +247,4 @@ pub mod int_clr;
 pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = "systimer interrupt status register"]
 pub mod int_st;
-pub use crate::apb_ctrl::date;
-pub use crate::apb_ctrl::DATE;
+pub use crate::apb_ctrl::{date, DATE};

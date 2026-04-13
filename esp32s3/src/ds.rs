@@ -138,5 +138,4 @@ pub mod query_key_wrong;
 pub type QUERY_CHECK = crate::Reg<query_check::QUERY_CHECK_SPEC>;
 #[doc = "Queries DS check result"]
 pub mod query_check;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

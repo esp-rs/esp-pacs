@@ -113,5 +113,4 @@ pub mod rng_cfg;
 pub type RNG_DATA_SYNC = crate::Reg<rng_data_sync::RNG_DATA_SYNC_SPEC>;
 #[doc = "need_des"]
 pub mod rng_data_sync;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

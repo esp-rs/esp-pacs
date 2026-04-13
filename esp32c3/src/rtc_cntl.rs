@@ -736,5 +736,4 @@ pub mod dbg_sar_sel;
 pub type PG_CTRL = crate::Reg<pg_ctrl::PG_CTRL_SPEC>;
 #[doc = "rtc configure register"]
 pub mod pg_ctrl;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

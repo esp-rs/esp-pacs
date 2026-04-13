@@ -180,5 +180,4 @@ pub mod extmem_reject_int_ena;
 pub type EXTMEM_REJECT_INT_CLR = crate::Reg<extmem_reject_int_clr::EXTMEM_REJECT_INT_CLR_SPEC>;
 #[doc = "Interrupt clear bits of external RAM permission"]
 pub mod extmem_reject_int_clr;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

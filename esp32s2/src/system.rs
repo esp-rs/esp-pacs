@@ -353,5 +353,4 @@ pub mod sram_ctrl_2;
 pub type SYSCLK_CONF = crate::Reg<sysclk_conf::SYSCLK_CONF_SPEC>;
 #[doc = "SoC clock configuration register"]
 pub mod sysclk_conf;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

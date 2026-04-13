@@ -25,7 +25,7 @@ pub enum OUTLINK_PARK {
     #[doc = "0: The transmit descriptor’s FSM is working"]
     Working = 0,
     #[doc = "1: The transmit descriptor’s FSM is in idle state"]
-    Idle = 1,
+    Idle    = 1,
 }
 impl From<OUTLINK_PARK> for bool {
     #[inline(always)]

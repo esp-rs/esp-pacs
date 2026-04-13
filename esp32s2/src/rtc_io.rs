@@ -264,5 +264,4 @@ pub mod sar_i2c_io;
 pub type RTC_IO_TOUCH_CTRL = crate::Reg<rtc_io_touch_ctrl::RTC_IO_TOUCH_CTRL_SPEC>;
 #[doc = "Touch control register"]
 pub mod rtc_io_touch_ctrl;
-pub use crate::aes::date as rtc_io_date;
-pub use crate::aes::DATE as RTC_IO_DATE;
+pub use crate::aes::{date as rtc_io_date, DATE as RTC_IO_DATE};

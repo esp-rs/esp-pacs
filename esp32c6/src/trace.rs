@@ -122,5 +122,4 @@ pub mod resync_prolonged;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "Clock gate control register"]
 pub mod clock_gate;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

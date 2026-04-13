@@ -86,5 +86,4 @@ pub mod int_en;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "clock gating register"]
 pub mod clock_gate;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

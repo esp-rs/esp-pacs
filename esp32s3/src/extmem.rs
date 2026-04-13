@@ -989,5 +989,4 @@ pub mod cache_vaddr;
 pub type CACHE_TAG_CONTENT = crate::Reg<cache_tag_content::CACHE_TAG_CONTENT_SPEC>;
 #[doc = "******* Description ***********"]
 pub mod cache_tag_content;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

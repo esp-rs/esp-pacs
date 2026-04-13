@@ -122,5 +122,4 @@ pub mod debug_sel0;
 pub type DEBUG_SEL1 = crate::Reg<debug_sel1::DEBUG_SEL1_SPEC>;
 #[doc = "need des"]
 pub mod debug_sel1;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

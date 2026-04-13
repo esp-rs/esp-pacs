@@ -146,8 +146,7 @@ pub mod int_clear;
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "DMA-SHA interrupt enable register"]
 pub mod int_ena;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};
 #[doc = "H_MEM (rw) register accessor: Hash value\n\nYou can [`read`](crate::Reg::read) this register and get [`h_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`h_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@h_mem`] module"]
 pub type H_MEM = crate::Reg<h_mem::H_MEM_SPEC>;
 #[doc = "Hash value"]

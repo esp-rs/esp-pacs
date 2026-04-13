@@ -130,5 +130,4 @@ pub mod int_clr;
 pub type CONF = crate::Reg<conf::CONF_SPEC>;
 #[doc = ""]
 pub mod conf;
-pub use crate::apb_ctrl::date;
-pub use crate::apb_ctrl::DATE;
+pub use crate::apb_ctrl::{date, DATE};

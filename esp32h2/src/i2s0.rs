@@ -245,5 +245,4 @@ pub mod state;
 pub type ETM_CONF = crate::Reg<etm_conf::ETM_CONF_SPEC>;
 #[doc = "I2S ETM configure register"]
 pub mod etm_conf;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};
