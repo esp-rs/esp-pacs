@@ -2,30 +2,70 @@
 pub type R = crate::R<ECDSA_INT_MAP_SPEC>;
 #[doc = "Register `ECDSA_INT_MAP` writer"]
 pub type W = crate::W<ECDSA_INT_MAP_SPEC>;
-#[doc = "Field `CORE0_ECDSA_INT_MAP` reader - NA"]
-pub type CORE0_ECDSA_INT_MAP_R = crate::FieldReader;
-#[doc = "Field `CORE0_ECDSA_INT_MAP` writer - NA"]
-pub type CORE0_ECDSA_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `ECDSA_INT_MAP` reader - Configures the interrupt source into one CPU interrupt."]
+pub type ECDSA_INT_MAP_R = crate::FieldReader;
+#[doc = "Field `ECDSA_INT_MAP` writer - Configures the interrupt source into one CPU interrupt."]
+pub type ECDSA_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `ECDSA_INT_SRC_PASS_IN_SEC` reader - NA"]
+pub type ECDSA_INT_SRC_PASS_IN_SEC_R = crate::BitReader;
+#[doc = "Field `ECDSA_INT_SRC_PASS_IN_SEC` writer - NA"]
+pub type ECDSA_INT_SRC_PASS_IN_SEC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ECDSA_INT_SRC_IN_SEC_FLAG` reader - NA"]
+pub type ECDSA_INT_SRC_IN_SEC_FLAG_R = crate::BitReader;
+#[doc = "Field `ECDSA_INT_SRC_IN_SEC_FLAG` writer - NA"]
+pub type ECDSA_INT_SRC_IN_SEC_FLAG_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:5 - NA"]
+    #[doc = "Bits 0:5 - Configures the interrupt source into one CPU interrupt."]
     #[inline(always)]
-    pub fn core0_ecdsa_int_map(&self) -> CORE0_ECDSA_INT_MAP_R {
-        CORE0_ECDSA_INT_MAP_R::new((self.bits & 0x3f) as u8)
+    pub fn ecdsa_int_map(&self) -> ECDSA_INT_MAP_R {
+        ECDSA_INT_MAP_R::new((self.bits & 0x3f) as u8)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn ecdsa_int_src_pass_in_sec(&self) -> ECDSA_INT_SRC_PASS_IN_SEC_R {
+        ECDSA_INT_SRC_PASS_IN_SEC_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn ecdsa_int_src_in_sec_flag(&self) -> ECDSA_INT_SRC_IN_SEC_FLAG_R {
+        ECDSA_INT_SRC_IN_SEC_FLAG_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ECDSA_INT_MAP")
-            .field("core0_ecdsa_int_map", &self.core0_ecdsa_int_map())
+            .field("ecdsa_int_map", &self.ecdsa_int_map())
+            .field(
+                "ecdsa_int_src_pass_in_sec",
+                &self.ecdsa_int_src_pass_in_sec(),
+            )
+            .field(
+                "ecdsa_int_src_in_sec_flag",
+                &self.ecdsa_int_src_in_sec_flag(),
+            )
             .finish()
     }
 }
 impl W {
-    #[doc = "Bits 0:5 - NA"]
+    #[doc = "Bits 0:5 - Configures the interrupt source into one CPU interrupt."]
     #[inline(always)]
-    pub fn core0_ecdsa_int_map(&mut self) -> CORE0_ECDSA_INT_MAP_W<'_, ECDSA_INT_MAP_SPEC> {
-        CORE0_ECDSA_INT_MAP_W::new(self, 0)
+    pub fn ecdsa_int_map(&mut self) -> ECDSA_INT_MAP_W<'_, ECDSA_INT_MAP_SPEC> {
+        ECDSA_INT_MAP_W::new(self, 0)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn ecdsa_int_src_pass_in_sec(
+        &mut self,
+    ) -> ECDSA_INT_SRC_PASS_IN_SEC_W<'_, ECDSA_INT_MAP_SPEC> {
+        ECDSA_INT_SRC_PASS_IN_SEC_W::new(self, 6)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn ecdsa_int_src_in_sec_flag(
+        &mut self,
+    ) -> ECDSA_INT_SRC_IN_SEC_FLAG_W<'_, ECDSA_INT_MAP_SPEC> {
+        ECDSA_INT_SRC_IN_SEC_FLAG_W::new(self, 7)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`ecdsa_int_map::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ecdsa_int_map::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

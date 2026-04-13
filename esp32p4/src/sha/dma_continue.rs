@@ -1,6 +1,6 @@
 #[doc = "Register `DMA_CONTINUE` writer"]
 pub type W = crate::W<DMA_CONTINUE_SPEC>;
-#[doc = "Field `DMA_CONTINUE` writer - Continue dma-sha."]
+#[doc = "Field `DMA_CONTINUE` writer - Write 1 to continue DMA-SHA calculation."]
 pub type DMA_CONTINUE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<DMA_CONTINUE_SPEC> {
@@ -9,13 +9,13 @@ impl core::fmt::Debug for crate::generic::Reg<DMA_CONTINUE_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Continue dma-sha."]
+    #[doc = "Bit 0 - Write 1 to continue DMA-SHA calculation."]
     #[inline(always)]
     pub fn dma_continue(&mut self) -> DMA_CONTINUE_W<'_, DMA_CONTINUE_SPEC> {
         DMA_CONTINUE_W::new(self, 0)
     }
 }
-#[doc = "DMA configuration register 2.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_continue::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Continues SHA operation (only effective in DMA-SHA mode)\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_continue::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_CONTINUE_SPEC;
 impl crate::RegisterSpec for DMA_CONTINUE_SPEC {
     type Ux = u32;

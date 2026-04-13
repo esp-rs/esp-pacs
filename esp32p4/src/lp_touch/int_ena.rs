@@ -26,6 +26,10 @@ pub type TIMEOUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type APPROACH_LOOP_DONE_R = crate::BitReader;
 #[doc = "Field `APPROACH_LOOP_DONE` writer - need_des"]
 pub type APPROACH_LOOP_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BASELINE_UPDATE` reader - need_des"]
+pub type BASELINE_UPDATE_R = crate::BitReader;
+#[doc = "Field `BASELINE_UPDATE` writer - need_des"]
+pub type BASELINE_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -57,6 +61,11 @@ impl R {
     pub fn approach_loop_done(&self) -> APPROACH_LOOP_DONE_R {
         APPROACH_LOOP_DONE_R::new(((self.bits >> 5) & 1) != 0)
     }
+    #[doc = "Bit 6 - need_des"]
+    #[inline(always)]
+    pub fn baseline_update(&self) -> BASELINE_UPDATE_R {
+        BASELINE_UPDATE_R::new(((self.bits >> 6) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -68,6 +77,7 @@ impl core::fmt::Debug for R {
             .field("inactive", &self.inactive())
             .field("timeout", &self.timeout())
             .field("approach_loop_done", &self.approach_loop_done())
+            .field("baseline_update", &self.baseline_update())
             .finish()
     }
 }
@@ -101,6 +111,11 @@ impl W {
     #[inline(always)]
     pub fn approach_loop_done(&mut self) -> APPROACH_LOOP_DONE_W<'_, INT_ENA_SPEC> {
         APPROACH_LOOP_DONE_W::new(self, 5)
+    }
+    #[doc = "Bit 6 - need_des"]
+    #[inline(always)]
+    pub fn baseline_update(&mut self) -> BASELINE_UPDATE_W<'_, INT_ENA_SPEC> {
+        BASELINE_UPDATE_W::new(self, 6)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

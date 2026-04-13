@@ -135,7 +135,19 @@ pub struct RegisterBlock {
     intr_status_reg_2: INTR_STATUS_REG_2,
     intr_status_reg_3: INTR_STATUS_REG_3,
     clock_gate: CLOCK_GATE,
-    _reserved133: [u8; 0x01e8],
+    dma2d_in_ch2_int_map: DMA2D_IN_CH2_INT_MAP,
+    dma2d_out_ch3_int_map: DMA2D_OUT_CH3_INT_MAP,
+    axi_perf_mon_int_map: AXI_PERF_MON_INT_MAP,
+    intr_status_reg_4: INTR_STATUS_REG_4,
+    _reserved137: [u8; 0x04],
+    intr_sig_idx_assert_in_sec: INTR_SIG_IDX_ASSERT_IN_SEC,
+    intr_sec_status: INTR_SEC_STATUS,
+    intr_src_pass_in_sec_status_0: INTR_SRC_PASS_IN_SEC_STATUS_0,
+    intr_src_pass_in_sec_status_1: INTR_SRC_PASS_IN_SEC_STATUS_1,
+    intr_src_pass_in_sec_status_2: INTR_SRC_PASS_IN_SEC_STATUS_2,
+    intr_src_pass_in_sec_status_3: INTR_SRC_PASS_IN_SEC_STATUS_3,
+    intr_src_pass_in_sec_status_4: INTR_SRC_PASS_IN_SEC_STATUS_4,
+    _reserved144: [u8; 0x01b8],
     interrupt_reg_date: INTERRUPT_REG_DATE,
 }
 impl RegisterBlock {
@@ -804,6 +816,61 @@ impl RegisterBlock {
     pub const fn clock_gate(&self) -> &CLOCK_GATE {
         &self.clock_gate
     }
+    #[doc = "0x214 - NA"]
+    #[inline(always)]
+    pub const fn dma2d_in_ch2_int_map(&self) -> &DMA2D_IN_CH2_INT_MAP {
+        &self.dma2d_in_ch2_int_map
+    }
+    #[doc = "0x218 - NA"]
+    #[inline(always)]
+    pub const fn dma2d_out_ch3_int_map(&self) -> &DMA2D_OUT_CH3_INT_MAP {
+        &self.dma2d_out_ch3_int_map
+    }
+    #[doc = "0x21c - NA"]
+    #[inline(always)]
+    pub const fn axi_perf_mon_int_map(&self) -> &AXI_PERF_MON_INT_MAP {
+        &self.axi_perf_mon_int_map
+    }
+    #[doc = "0x220 - NA"]
+    #[inline(always)]
+    pub const fn intr_status_reg_4(&self) -> &INTR_STATUS_REG_4 {
+        &self.intr_status_reg_4
+    }
+    #[doc = "0x228 - NA"]
+    #[inline(always)]
+    pub const fn intr_sig_idx_assert_in_sec(&self) -> &INTR_SIG_IDX_ASSERT_IN_SEC {
+        &self.intr_sig_idx_assert_in_sec
+    }
+    #[doc = "0x22c - NA"]
+    #[inline(always)]
+    pub const fn intr_sec_status(&self) -> &INTR_SEC_STATUS {
+        &self.intr_sec_status
+    }
+    #[doc = "0x230 - NA"]
+    #[inline(always)]
+    pub const fn intr_src_pass_in_sec_status_0(&self) -> &INTR_SRC_PASS_IN_SEC_STATUS_0 {
+        &self.intr_src_pass_in_sec_status_0
+    }
+    #[doc = "0x234 - NA"]
+    #[inline(always)]
+    pub const fn intr_src_pass_in_sec_status_1(&self) -> &INTR_SRC_PASS_IN_SEC_STATUS_1 {
+        &self.intr_src_pass_in_sec_status_1
+    }
+    #[doc = "0x238 - NA"]
+    #[inline(always)]
+    pub const fn intr_src_pass_in_sec_status_2(&self) -> &INTR_SRC_PASS_IN_SEC_STATUS_2 {
+        &self.intr_src_pass_in_sec_status_2
+    }
+    #[doc = "0x23c - NA"]
+    #[inline(always)]
+    pub const fn intr_src_pass_in_sec_status_3(&self) -> &INTR_SRC_PASS_IN_SEC_STATUS_3 {
+        &self.intr_src_pass_in_sec_status_3
+    }
+    #[doc = "0x240 - NA"]
+    #[inline(always)]
+    pub const fn intr_src_pass_in_sec_status_4(&self) -> &INTR_SRC_PASS_IN_SEC_STATUS_4 {
+        &self.intr_src_pass_in_sec_status_4
+    }
     #[doc = "0x3fc - NA"]
     #[inline(always)]
     pub const fn interrupt_reg_date(&self) -> &INTERRUPT_REG_DATE {
@@ -1369,6 +1436,56 @@ pub mod intr_status_reg_3;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "NA"]
 pub mod clock_gate;
+#[doc = "DMA2D_IN_CH2_INT_MAP (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`dma2d_in_ch2_int_map::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma2d_in_ch2_int_map::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma2d_in_ch2_int_map`] module"]
+pub type DMA2D_IN_CH2_INT_MAP = crate::Reg<dma2d_in_ch2_int_map::DMA2D_IN_CH2_INT_MAP_SPEC>;
+#[doc = "NA"]
+pub mod dma2d_in_ch2_int_map;
+#[doc = "DMA2D_OUT_CH3_INT_MAP (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`dma2d_out_ch3_int_map::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma2d_out_ch3_int_map::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma2d_out_ch3_int_map`] module"]
+pub type DMA2D_OUT_CH3_INT_MAP = crate::Reg<dma2d_out_ch3_int_map::DMA2D_OUT_CH3_INT_MAP_SPEC>;
+#[doc = "NA"]
+pub mod dma2d_out_ch3_int_map;
+#[doc = "AXI_PERF_MON_INT_MAP (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`axi_perf_mon_int_map::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`axi_perf_mon_int_map::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@axi_perf_mon_int_map`] module"]
+pub type AXI_PERF_MON_INT_MAP = crate::Reg<axi_perf_mon_int_map::AXI_PERF_MON_INT_MAP_SPEC>;
+#[doc = "NA"]
+pub mod axi_perf_mon_int_map;
+#[doc = "INTR_STATUS_REG_4 (r) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_status_reg_4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_status_reg_4`] module"]
+pub type INTR_STATUS_REG_4 = crate::Reg<intr_status_reg_4::INTR_STATUS_REG_4_SPEC>;
+#[doc = "NA"]
+pub mod intr_status_reg_4;
+#[doc = "INTR_SIG_IDX_ASSERT_IN_SEC (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_sig_idx_assert_in_sec::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intr_sig_idx_assert_in_sec::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_sig_idx_assert_in_sec`] module"]
+pub type INTR_SIG_IDX_ASSERT_IN_SEC =
+    crate::Reg<intr_sig_idx_assert_in_sec::INTR_SIG_IDX_ASSERT_IN_SEC_SPEC>;
+#[doc = "NA"]
+pub mod intr_sig_idx_assert_in_sec;
+#[doc = "INTR_SEC_STATUS (r) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_sec_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_sec_status`] module"]
+pub type INTR_SEC_STATUS = crate::Reg<intr_sec_status::INTR_SEC_STATUS_SPEC>;
+#[doc = "NA"]
+pub mod intr_sec_status;
+#[doc = "INTR_SRC_PASS_IN_SEC_STATUS_0 (r) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_src_pass_in_sec_status_0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_src_pass_in_sec_status_0`] module"]
+pub type INTR_SRC_PASS_IN_SEC_STATUS_0 =
+    crate::Reg<intr_src_pass_in_sec_status_0::INTR_SRC_PASS_IN_SEC_STATUS_0_SPEC>;
+#[doc = "NA"]
+pub mod intr_src_pass_in_sec_status_0;
+#[doc = "INTR_SRC_PASS_IN_SEC_STATUS_1 (r) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_src_pass_in_sec_status_1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_src_pass_in_sec_status_1`] module"]
+pub type INTR_SRC_PASS_IN_SEC_STATUS_1 =
+    crate::Reg<intr_src_pass_in_sec_status_1::INTR_SRC_PASS_IN_SEC_STATUS_1_SPEC>;
+#[doc = "NA"]
+pub mod intr_src_pass_in_sec_status_1;
+#[doc = "INTR_SRC_PASS_IN_SEC_STATUS_2 (r) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_src_pass_in_sec_status_2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_src_pass_in_sec_status_2`] module"]
+pub type INTR_SRC_PASS_IN_SEC_STATUS_2 =
+    crate::Reg<intr_src_pass_in_sec_status_2::INTR_SRC_PASS_IN_SEC_STATUS_2_SPEC>;
+#[doc = "NA"]
+pub mod intr_src_pass_in_sec_status_2;
+#[doc = "INTR_SRC_PASS_IN_SEC_STATUS_3 (r) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_src_pass_in_sec_status_3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_src_pass_in_sec_status_3`] module"]
+pub type INTR_SRC_PASS_IN_SEC_STATUS_3 =
+    crate::Reg<intr_src_pass_in_sec_status_3::INTR_SRC_PASS_IN_SEC_STATUS_3_SPEC>;
+#[doc = "NA"]
+pub mod intr_src_pass_in_sec_status_3;
+#[doc = "INTR_SRC_PASS_IN_SEC_STATUS_4 (r) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_src_pass_in_sec_status_4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_src_pass_in_sec_status_4`] module"]
+pub type INTR_SRC_PASS_IN_SEC_STATUS_4 =
+    crate::Reg<intr_src_pass_in_sec_status_4::INTR_SRC_PASS_IN_SEC_STATUS_4_SPEC>;
+#[doc = "NA"]
+pub mod intr_src_pass_in_sec_status_4;
 #[doc = "INTERRUPT_REG_DATE (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`interrupt_reg_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`interrupt_reg_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@interrupt_reg_date`] module"]
 pub type INTERRUPT_REG_DATE = crate::Reg<interrupt_reg_date::INTERRUPT_REG_DATE_SPEC>;
 #[doc = "NA"]

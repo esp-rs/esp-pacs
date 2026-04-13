@@ -6,7 +6,6 @@ PROVIDE(PMU1 = DefaultHandler);
 PROVIDE(LP_ANA = DefaultHandler);
 PROVIDE(LP_ADC = DefaultHandler);
 PROVIDE(LP_GPIO = DefaultHandler);
-PROVIDE(LP_I2C0 = DefaultHandler);
 PROVIDE(LP_I2S0 = DefaultHandler);
 PROVIDE(LP_TOUCH = DefaultHandler);
 PROVIDE(LP_TSENS = DefaultHandler);

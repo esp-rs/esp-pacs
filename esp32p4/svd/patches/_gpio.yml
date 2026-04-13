@@ -3,7 +3,7 @@ GPIO:
     - FUNC*_IN_SEL_CFG
   _add:
     FUNC%s_IN_SEL_CFG:
-      dim: 254
+      dim: 255
       dimIncrement: 0x04
       dimIndex: 1-255
       description: GPIO input function configuration register

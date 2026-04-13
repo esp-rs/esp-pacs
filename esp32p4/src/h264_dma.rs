@@ -28,6 +28,30 @@ pub struct RegisterBlock {
     rx_ch1_counter: RX_CH1_COUNTER,
     rx_ch2_counter: RX_CH2_COUNTER,
     rx_ch5_counter: RX_CH5_COUNTER,
+    pbyte: PBYTE,
+    ch_dbg_en: CH_DBG_EN,
+    out_ch0_dbg_data_l: OUT_CH0_DBG_DATA_L,
+    out_ch0_dbg_data_h: OUT_CH0_DBG_DATA_H,
+    out_ch1_dbg_data_l: OUT_CH1_DBG_DATA_L,
+    out_ch1_dbg_data_h: OUT_CH1_DBG_DATA_H,
+    out_ch2_dbg_data_l: OUT_CH2_DBG_DATA_L,
+    out_ch2_dbg_data_h: OUT_CH2_DBG_DATA_H,
+    out_ch3_dbg_data_l: OUT_CH3_DBG_DATA_L,
+    out_ch3_dbg_data_h: OUT_CH3_DBG_DATA_H,
+    out_ch4_dbg_data_l: OUT_CH4_DBG_DATA_L,
+    out_ch4_dbg_data_h: OUT_CH4_DBG_DATA_H,
+    in_ch0_dbg_data_l: IN_CH0_DBG_DATA_L,
+    in_ch0_dbg_data_h: IN_CH0_DBG_DATA_H,
+    in_ch1_dbg_data_l: IN_CH1_DBG_DATA_L,
+    in_ch1_dbg_data_h: IN_CH1_DBG_DATA_H,
+    in_ch2_dbg_data_l: IN_CH2_DBG_DATA_L,
+    in_ch2_dbg_data_h: IN_CH2_DBG_DATA_H,
+    in_ch3_dbg_data_l: IN_CH3_DBG_DATA_L,
+    in_ch3_dbg_data_h: IN_CH3_DBG_DATA_H,
+    in_ch4_dbg_data_l: IN_CH4_DBG_DATA_L,
+    in_ch4_dbg_data_h: IN_CH4_DBG_DATA_H,
+    in_ch5_dbg_data_l: IN_CH5_DBG_DATA_L,
+    in_ch5_dbg_data_h: IN_CH5_DBG_DATA_H,
 }
 impl RegisterBlock {
     #[doc = "0x00..0x500 - Cluster OUT_CH%s, containing OUT_CONF0_CH?, OUT_INT_RAW_CH?, OUT_INT_ENA_CH?, OUT_INT_ST_CH?, OUT_INT_CLR_CH?, OUTFIFO_STATUS_CH?, OUT_PUSH_CH?, OUT_LINK_CONF_CH?, OUT_LINK_ADDR_CH?, OUT_STATE_CH?, OUT_EOF_DES_ADDR_CH?, OUT_DSCR_CH?, OUT_DSCR_BF0_CH?, OUT_DSCR_BF1_CH?, OUT_ARB_CH?, OUT_RO_STATUS_CH?, OUT_RO_PD_CONF_CH?, OUT_MODE_ENABLE_CH?, OUT_MODE_YUV_CH?, OUT_ETM_CONF_CH?, OUT_BUF_LEN_CH?, OUT_FIFO_BCNT_CH?, OUT_PUSH_BYTECNT_CH?, OUT_XADDR_CH?, OUT_BLOCK_BUF_LEN_CH?"]
@@ -152,6 +176,126 @@ impl RegisterBlock {
     pub const fn rx_ch5_counter(&self) -> &RX_CH5_COUNTER {
         &self.rx_ch5_counter
     }
+    #[doc = "0xb64 - image pbyte register"]
+    #[inline(always)]
+    pub const fn pbyte(&self) -> &PBYTE {
+        &self.pbyte
+    }
+    #[doc = "0xb68 - channel debug enable register"]
+    #[inline(always)]
+    pub const fn ch_dbg_en(&self) -> &CH_DBG_EN {
+        &self.ch_dbg_en
+    }
+    #[doc = "0xb6c - out channel 0 debug data register"]
+    #[inline(always)]
+    pub const fn out_ch0_dbg_data_l(&self) -> &OUT_CH0_DBG_DATA_L {
+        &self.out_ch0_dbg_data_l
+    }
+    #[doc = "0xb70 - out channel 0 debug data register"]
+    #[inline(always)]
+    pub const fn out_ch0_dbg_data_h(&self) -> &OUT_CH0_DBG_DATA_H {
+        &self.out_ch0_dbg_data_h
+    }
+    #[doc = "0xb74 - out channel 1 debug data register"]
+    #[inline(always)]
+    pub const fn out_ch1_dbg_data_l(&self) -> &OUT_CH1_DBG_DATA_L {
+        &self.out_ch1_dbg_data_l
+    }
+    #[doc = "0xb78 - out channel 1 debug data register"]
+    #[inline(always)]
+    pub const fn out_ch1_dbg_data_h(&self) -> &OUT_CH1_DBG_DATA_H {
+        &self.out_ch1_dbg_data_h
+    }
+    #[doc = "0xb7c - out channel 2 debug data register"]
+    #[inline(always)]
+    pub const fn out_ch2_dbg_data_l(&self) -> &OUT_CH2_DBG_DATA_L {
+        &self.out_ch2_dbg_data_l
+    }
+    #[doc = "0xb80 - out channel 2 debug data register"]
+    #[inline(always)]
+    pub const fn out_ch2_dbg_data_h(&self) -> &OUT_CH2_DBG_DATA_H {
+        &self.out_ch2_dbg_data_h
+    }
+    #[doc = "0xb84 - out channel 3 debug data register"]
+    #[inline(always)]
+    pub const fn out_ch3_dbg_data_l(&self) -> &OUT_CH3_DBG_DATA_L {
+        &self.out_ch3_dbg_data_l
+    }
+    #[doc = "0xb88 - out channel 3 debug data register"]
+    #[inline(always)]
+    pub const fn out_ch3_dbg_data_h(&self) -> &OUT_CH3_DBG_DATA_H {
+        &self.out_ch3_dbg_data_h
+    }
+    #[doc = "0xb8c - out channel 4 debug data register"]
+    #[inline(always)]
+    pub const fn out_ch4_dbg_data_l(&self) -> &OUT_CH4_DBG_DATA_L {
+        &self.out_ch4_dbg_data_l
+    }
+    #[doc = "0xb90 - out channel 4 debug data register"]
+    #[inline(always)]
+    pub const fn out_ch4_dbg_data_h(&self) -> &OUT_CH4_DBG_DATA_H {
+        &self.out_ch4_dbg_data_h
+    }
+    #[doc = "0xb94 - in channel 0 debug data register"]
+    #[inline(always)]
+    pub const fn in_ch0_dbg_data_l(&self) -> &IN_CH0_DBG_DATA_L {
+        &self.in_ch0_dbg_data_l
+    }
+    #[doc = "0xb98 - in channel 0 debug data register"]
+    #[inline(always)]
+    pub const fn in_ch0_dbg_data_h(&self) -> &IN_CH0_DBG_DATA_H {
+        &self.in_ch0_dbg_data_h
+    }
+    #[doc = "0xb9c - in channel 1 debug data register"]
+    #[inline(always)]
+    pub const fn in_ch1_dbg_data_l(&self) -> &IN_CH1_DBG_DATA_L {
+        &self.in_ch1_dbg_data_l
+    }
+    #[doc = "0xba0 - in channel 1 debug data register"]
+    #[inline(always)]
+    pub const fn in_ch1_dbg_data_h(&self) -> &IN_CH1_DBG_DATA_H {
+        &self.in_ch1_dbg_data_h
+    }
+    #[doc = "0xba4 - in channel 2 debug data register"]
+    #[inline(always)]
+    pub const fn in_ch2_dbg_data_l(&self) -> &IN_CH2_DBG_DATA_L {
+        &self.in_ch2_dbg_data_l
+    }
+    #[doc = "0xba8 - in channel 2 debug data register"]
+    #[inline(always)]
+    pub const fn in_ch2_dbg_data_h(&self) -> &IN_CH2_DBG_DATA_H {
+        &self.in_ch2_dbg_data_h
+    }
+    #[doc = "0xbac - in channel 3 debug data register"]
+    #[inline(always)]
+    pub const fn in_ch3_dbg_data_l(&self) -> &IN_CH3_DBG_DATA_L {
+        &self.in_ch3_dbg_data_l
+    }
+    #[doc = "0xbb0 - in channel 3 debug data register"]
+    #[inline(always)]
+    pub const fn in_ch3_dbg_data_h(&self) -> &IN_CH3_DBG_DATA_H {
+        &self.in_ch3_dbg_data_h
+    }
+    #[doc = "0xbb4 - in channel 4 debug data register"]
+    #[inline(always)]
+    pub const fn in_ch4_dbg_data_l(&self) -> &IN_CH4_DBG_DATA_L {
+        &self.in_ch4_dbg_data_l
+    }
+    #[doc = "0xbb8 - in channel 4 debug data register"]
+    #[inline(always)]
+    pub const fn in_ch4_dbg_data_h(&self) -> &IN_CH4_DBG_DATA_H {
+        &self.in_ch4_dbg_data_h
+    }
+    #[doc = "0xbbc - in channel 5 debug data register"]
+    #[inline(always)]
+    pub const fn in_ch5_dbg_data_l(&self) -> &IN_CH5_DBG_DATA_L {
+        &self.in_ch5_dbg_data_l
+    }
+    #[doc = "0xbc0 - in channel 5 debug data register"]
+    #[inline(always)]
+    pub const fn in_ch5_dbg_data_h(&self) -> &IN_CH5_DBG_DATA_H {
+        &self.in_ch5_dbg_data_h
+    }
 }
 #[doc = "Cluster OUT_CH%s, containing OUT_CONF0_CH?, OUT_INT_RAW_CH?, OUT_INT_ENA_CH?, OUT_INT_ST_CH?, OUT_INT_CLR_CH?, OUTFIFO_STATUS_CH?, OUT_PUSH_CH?, OUT_LINK_CONF_CH?, OUT_LINK_ADDR_CH?, OUT_STATE_CH?, OUT_EOF_DES_ADDR_CH?, OUT_DSCR_CH?, OUT_DSCR_BF0_CH?, OUT_DSCR_BF1_CH?, OUT_ARB_CH?, OUT_RO_STATUS_CH?, OUT_RO_PD_CONF_CH?, OUT_MODE_ENABLE_CH?, OUT_MODE_YUV_CH?, OUT_ETM_CONF_CH?, OUT_BUF_LEN_CH?, OUT_FIFO_BCNT_CH?, OUT_PUSH_BYTECNT_CH?, OUT_XADDR_CH?, OUT_BLOCK_BUF_LEN_CH?"]
 pub use self::out_ch::OUT_CH;
@@ -244,3 +388,99 @@ pub mod rx_ch2_counter;
 pub type RX_CH5_COUNTER = crate::Reg<rx_ch5_counter::RX_CH5_COUNTER_SPEC>;
 #[doc = "rx ch5 counter register"]
 pub mod rx_ch5_counter;
+#[doc = "PBYTE (rw) register accessor: image pbyte register\n\nYou can [`read`](crate::Reg::read) this register and get [`pbyte::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pbyte::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pbyte`] module"]
+pub type PBYTE = crate::Reg<pbyte::PBYTE_SPEC>;
+#[doc = "image pbyte register"]
+pub mod pbyte;
+#[doc = "CH_DBG_EN (rw) register accessor: channel debug enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_dbg_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_dbg_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_dbg_en`] module"]
+pub type CH_DBG_EN = crate::Reg<ch_dbg_en::CH_DBG_EN_SPEC>;
+#[doc = "channel debug enable register"]
+pub mod ch_dbg_en;
+#[doc = "OUT_CH0_DBG_DATA_L (rw) register accessor: out channel 0 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`out_ch0_dbg_data_l::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_ch0_dbg_data_l::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_ch0_dbg_data_l`] module"]
+pub type OUT_CH0_DBG_DATA_L = crate::Reg<out_ch0_dbg_data_l::OUT_CH0_DBG_DATA_L_SPEC>;
+#[doc = "out channel 0 debug data register"]
+pub mod out_ch0_dbg_data_l;
+#[doc = "OUT_CH0_DBG_DATA_H (rw) register accessor: out channel 0 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`out_ch0_dbg_data_h::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_ch0_dbg_data_h::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_ch0_dbg_data_h`] module"]
+pub type OUT_CH0_DBG_DATA_H = crate::Reg<out_ch0_dbg_data_h::OUT_CH0_DBG_DATA_H_SPEC>;
+#[doc = "out channel 0 debug data register"]
+pub mod out_ch0_dbg_data_h;
+#[doc = "OUT_CH1_DBG_DATA_L (rw) register accessor: out channel 1 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`out_ch1_dbg_data_l::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_ch1_dbg_data_l::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_ch1_dbg_data_l`] module"]
+pub type OUT_CH1_DBG_DATA_L = crate::Reg<out_ch1_dbg_data_l::OUT_CH1_DBG_DATA_L_SPEC>;
+#[doc = "out channel 1 debug data register"]
+pub mod out_ch1_dbg_data_l;
+#[doc = "OUT_CH1_DBG_DATA_H (rw) register accessor: out channel 1 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`out_ch1_dbg_data_h::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_ch1_dbg_data_h::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_ch1_dbg_data_h`] module"]
+pub type OUT_CH1_DBG_DATA_H = crate::Reg<out_ch1_dbg_data_h::OUT_CH1_DBG_DATA_H_SPEC>;
+#[doc = "out channel 1 debug data register"]
+pub mod out_ch1_dbg_data_h;
+#[doc = "OUT_CH2_DBG_DATA_L (rw) register accessor: out channel 2 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`out_ch2_dbg_data_l::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_ch2_dbg_data_l::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_ch2_dbg_data_l`] module"]
+pub type OUT_CH2_DBG_DATA_L = crate::Reg<out_ch2_dbg_data_l::OUT_CH2_DBG_DATA_L_SPEC>;
+#[doc = "out channel 2 debug data register"]
+pub mod out_ch2_dbg_data_l;
+#[doc = "OUT_CH2_DBG_DATA_H (rw) register accessor: out channel 2 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`out_ch2_dbg_data_h::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_ch2_dbg_data_h::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_ch2_dbg_data_h`] module"]
+pub type OUT_CH2_DBG_DATA_H = crate::Reg<out_ch2_dbg_data_h::OUT_CH2_DBG_DATA_H_SPEC>;
+#[doc = "out channel 2 debug data register"]
+pub mod out_ch2_dbg_data_h;
+#[doc = "OUT_CH3_DBG_DATA_L (rw) register accessor: out channel 3 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`out_ch3_dbg_data_l::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_ch3_dbg_data_l::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_ch3_dbg_data_l`] module"]
+pub type OUT_CH3_DBG_DATA_L = crate::Reg<out_ch3_dbg_data_l::OUT_CH3_DBG_DATA_L_SPEC>;
+#[doc = "out channel 3 debug data register"]
+pub mod out_ch3_dbg_data_l;
+#[doc = "OUT_CH3_DBG_DATA_H (rw) register accessor: out channel 3 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`out_ch3_dbg_data_h::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_ch3_dbg_data_h::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_ch3_dbg_data_h`] module"]
+pub type OUT_CH3_DBG_DATA_H = crate::Reg<out_ch3_dbg_data_h::OUT_CH3_DBG_DATA_H_SPEC>;
+#[doc = "out channel 3 debug data register"]
+pub mod out_ch3_dbg_data_h;
+#[doc = "OUT_CH4_DBG_DATA_L (rw) register accessor: out channel 4 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`out_ch4_dbg_data_l::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_ch4_dbg_data_l::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_ch4_dbg_data_l`] module"]
+pub type OUT_CH4_DBG_DATA_L = crate::Reg<out_ch4_dbg_data_l::OUT_CH4_DBG_DATA_L_SPEC>;
+#[doc = "out channel 4 debug data register"]
+pub mod out_ch4_dbg_data_l;
+#[doc = "OUT_CH4_DBG_DATA_H (rw) register accessor: out channel 4 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`out_ch4_dbg_data_h::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_ch4_dbg_data_h::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_ch4_dbg_data_h`] module"]
+pub type OUT_CH4_DBG_DATA_H = crate::Reg<out_ch4_dbg_data_h::OUT_CH4_DBG_DATA_H_SPEC>;
+#[doc = "out channel 4 debug data register"]
+pub mod out_ch4_dbg_data_h;
+#[doc = "IN_CH0_DBG_DATA_L (rw) register accessor: in channel 0 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ch0_dbg_data_l::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_ch0_dbg_data_l::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_ch0_dbg_data_l`] module"]
+pub type IN_CH0_DBG_DATA_L = crate::Reg<in_ch0_dbg_data_l::IN_CH0_DBG_DATA_L_SPEC>;
+#[doc = "in channel 0 debug data register"]
+pub mod in_ch0_dbg_data_l;
+#[doc = "IN_CH0_DBG_DATA_H (rw) register accessor: in channel 0 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ch0_dbg_data_h::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_ch0_dbg_data_h::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_ch0_dbg_data_h`] module"]
+pub type IN_CH0_DBG_DATA_H = crate::Reg<in_ch0_dbg_data_h::IN_CH0_DBG_DATA_H_SPEC>;
+#[doc = "in channel 0 debug data register"]
+pub mod in_ch0_dbg_data_h;
+#[doc = "IN_CH1_DBG_DATA_L (rw) register accessor: in channel 1 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ch1_dbg_data_l::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_ch1_dbg_data_l::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_ch1_dbg_data_l`] module"]
+pub type IN_CH1_DBG_DATA_L = crate::Reg<in_ch1_dbg_data_l::IN_CH1_DBG_DATA_L_SPEC>;
+#[doc = "in channel 1 debug data register"]
+pub mod in_ch1_dbg_data_l;
+#[doc = "IN_CH1_DBG_DATA_H (rw) register accessor: in channel 1 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ch1_dbg_data_h::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_ch1_dbg_data_h::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_ch1_dbg_data_h`] module"]
+pub type IN_CH1_DBG_DATA_H = crate::Reg<in_ch1_dbg_data_h::IN_CH1_DBG_DATA_H_SPEC>;
+#[doc = "in channel 1 debug data register"]
+pub mod in_ch1_dbg_data_h;
+#[doc = "IN_CH2_DBG_DATA_L (rw) register accessor: in channel 2 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ch2_dbg_data_l::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_ch2_dbg_data_l::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_ch2_dbg_data_l`] module"]
+pub type IN_CH2_DBG_DATA_L = crate::Reg<in_ch2_dbg_data_l::IN_CH2_DBG_DATA_L_SPEC>;
+#[doc = "in channel 2 debug data register"]
+pub mod in_ch2_dbg_data_l;
+#[doc = "IN_CH2_DBG_DATA_H (rw) register accessor: in channel 2 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ch2_dbg_data_h::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_ch2_dbg_data_h::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_ch2_dbg_data_h`] module"]
+pub type IN_CH2_DBG_DATA_H = crate::Reg<in_ch2_dbg_data_h::IN_CH2_DBG_DATA_H_SPEC>;
+#[doc = "in channel 2 debug data register"]
+pub mod in_ch2_dbg_data_h;
+#[doc = "IN_CH3_DBG_DATA_L (rw) register accessor: in channel 3 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ch3_dbg_data_l::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_ch3_dbg_data_l::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_ch3_dbg_data_l`] module"]
+pub type IN_CH3_DBG_DATA_L = crate::Reg<in_ch3_dbg_data_l::IN_CH3_DBG_DATA_L_SPEC>;
+#[doc = "in channel 3 debug data register"]
+pub mod in_ch3_dbg_data_l;
+#[doc = "IN_CH3_DBG_DATA_H (rw) register accessor: in channel 3 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ch3_dbg_data_h::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_ch3_dbg_data_h::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_ch3_dbg_data_h`] module"]
+pub type IN_CH3_DBG_DATA_H = crate::Reg<in_ch3_dbg_data_h::IN_CH3_DBG_DATA_H_SPEC>;
+#[doc = "in channel 3 debug data register"]
+pub mod in_ch3_dbg_data_h;
+#[doc = "IN_CH4_DBG_DATA_L (rw) register accessor: in channel 4 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ch4_dbg_data_l::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_ch4_dbg_data_l::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_ch4_dbg_data_l`] module"]
+pub type IN_CH4_DBG_DATA_L = crate::Reg<in_ch4_dbg_data_l::IN_CH4_DBG_DATA_L_SPEC>;
+#[doc = "in channel 4 debug data register"]
+pub mod in_ch4_dbg_data_l;
+#[doc = "IN_CH4_DBG_DATA_H (rw) register accessor: in channel 4 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ch4_dbg_data_h::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_ch4_dbg_data_h::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_ch4_dbg_data_h`] module"]
+pub type IN_CH4_DBG_DATA_H = crate::Reg<in_ch4_dbg_data_h::IN_CH4_DBG_DATA_H_SPEC>;
+#[doc = "in channel 4 debug data register"]
+pub mod in_ch4_dbg_data_h;
+#[doc = "IN_CH5_DBG_DATA_L (rw) register accessor: in channel 5 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ch5_dbg_data_l::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_ch5_dbg_data_l::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_ch5_dbg_data_l`] module"]
+pub type IN_CH5_DBG_DATA_L = crate::Reg<in_ch5_dbg_data_l::IN_CH5_DBG_DATA_L_SPEC>;
+#[doc = "in channel 5 debug data register"]
+pub mod in_ch5_dbg_data_l;
+#[doc = "IN_CH5_DBG_DATA_H (rw) register accessor: in channel 5 debug data register\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ch5_dbg_data_h::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_ch5_dbg_data_h::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_ch5_dbg_data_h`] module"]
+pub type IN_CH5_DBG_DATA_H = crate::Reg<in_ch5_dbg_data_h::IN_CH5_DBG_DATA_H_SPEC>;
+#[doc = "in channel 5 debug data register"]
+pub mod in_ch5_dbg_data_h;

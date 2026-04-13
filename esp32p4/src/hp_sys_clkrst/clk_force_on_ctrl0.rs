@@ -74,6 +74,10 @@ pub type SAR2_CLK_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type GMAC_TX_CLK_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `GMAC_TX_CLK_FORCE_ON` writer - Reserved"]
 pub type GMAC_TX_CLK_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L2CACHE_L2MEM_CLK_FORCE_ON` reader - Reserved"]
+pub type L2CACHE_L2MEM_CLK_FORCE_ON_R = crate::BitReader;
+#[doc = "Field `L2CACHE_L2MEM_CLK_FORCE_ON` writer - Reserved"]
+pub type L2CACHE_L2MEM_CLK_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
@@ -165,6 +169,11 @@ impl R {
     pub fn gmac_tx_clk_force_on(&self) -> GMAC_TX_CLK_FORCE_ON_R {
         GMAC_TX_CLK_FORCE_ON_R::new(((self.bits >> 17) & 1) != 0)
     }
+    #[doc = "Bit 18 - Reserved"]
+    #[inline(always)]
+    pub fn l2cache_l2mem_clk_force_on(&self) -> L2CACHE_L2MEM_CLK_FORCE_ON_R {
+        L2CACHE_L2MEM_CLK_FORCE_ON_R::new(((self.bits >> 18) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -209,6 +218,10 @@ impl core::fmt::Debug for R {
             .field("sar1_clk_force_on", &self.sar1_clk_force_on())
             .field("sar2_clk_force_on", &self.sar2_clk_force_on())
             .field("gmac_tx_clk_force_on", &self.gmac_tx_clk_force_on())
+            .field(
+                "l2cache_l2mem_clk_force_on",
+                &self.l2cache_l2mem_clk_force_on(),
+            )
             .finish()
     }
 }
@@ -331,6 +344,13 @@ impl W {
     pub fn gmac_tx_clk_force_on(&mut self) -> GMAC_TX_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         GMAC_TX_CLK_FORCE_ON_W::new(self, 17)
     }
+    #[doc = "Bit 18 - Reserved"]
+    #[inline(always)]
+    pub fn l2cache_l2mem_clk_force_on(
+        &mut self,
+    ) -> L2CACHE_L2MEM_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
+        L2CACHE_L2MEM_CLK_FORCE_ON_W::new(self, 18)
+    }
 }
 #[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`clk_force_on_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_force_on_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLK_FORCE_ON_CTRL0_SPEC;
@@ -343,7 +363,7 @@ impl crate::Readable for CLK_FORCE_ON_CTRL0_SPEC {}
 impl crate::Writable for CLK_FORCE_ON_CTRL0_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets CLK_FORCE_ON_CTRL0 to value 0x0003_ffff"]
+#[doc = "`reset()` method sets CLK_FORCE_ON_CTRL0 to value 0x0007_ffff"]
 impl crate::Resettable for CLK_FORCE_ON_CTRL0_SPEC {
-    const RESET_VALUE: u32 = 0x0003_ffff;
+    const RESET_VALUE: u32 = 0x0007_ffff;
 }

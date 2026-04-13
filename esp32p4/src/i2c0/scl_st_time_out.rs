@@ -2,12 +2,12 @@
 pub type R = crate::R<SCL_ST_TIME_OUT_SPEC>;
 #[doc = "Register `SCL_ST_TIME_OUT` writer"]
 pub type W = crate::W<SCL_ST_TIME_OUT_SPEC>;
-#[doc = "Field `SCL_ST_TO` reader - Configures the threshold value of SCL_FSM state unchanged period. It should be no more than 23. Measurement unit: i2c_sclk"]
+#[doc = "Field `SCL_ST_TO` reader - Configures the threshold value of SCL_FSM state unchanged period. It should be no more than 23.\\\\ Measurement unit: i2c_sclk \\\\"]
 pub type SCL_ST_TO_R = crate::FieldReader;
-#[doc = "Field `SCL_ST_TO` writer - Configures the threshold value of SCL_FSM state unchanged period. It should be no more than 23. Measurement unit: i2c_sclk"]
+#[doc = "Field `SCL_ST_TO` writer - Configures the threshold value of SCL_FSM state unchanged period. It should be no more than 23.\\\\ Measurement unit: i2c_sclk \\\\"]
 pub type SCL_ST_TO_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
-    #[doc = "Bits 0:4 - Configures the threshold value of SCL_FSM state unchanged period. It should be no more than 23. Measurement unit: i2c_sclk"]
+    #[doc = "Bits 0:4 - Configures the threshold value of SCL_FSM state unchanged period. It should be no more than 23.\\\\ Measurement unit: i2c_sclk \\\\"]
     #[inline(always)]
     pub fn scl_st_to(&self) -> SCL_ST_TO_R {
         SCL_ST_TO_R::new((self.bits & 0x1f) as u8)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:4 - Configures the threshold value of SCL_FSM state unchanged period. It should be no more than 23. Measurement unit: i2c_sclk"]
+    #[doc = "Bits 0:4 - Configures the threshold value of SCL_FSM state unchanged period. It should be no more than 23.\\\\ Measurement unit: i2c_sclk \\\\"]
     #[inline(always)]
     pub fn scl_st_to(&mut self) -> SCL_ST_TO_W<'_, SCL_ST_TIME_OUT_SPEC> {
         SCL_ST_TO_W::new(self, 0)

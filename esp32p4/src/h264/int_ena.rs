@@ -2,34 +2,38 @@
 pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
 pub type W = crate::W<INT_ENA_SPEC>;
-#[doc = "Field `DB_TMP_READY` reader - Write 1 to enable H264_DB_TMP_READY_INT."]
+#[doc = "Field `DB_TMP_READY` reader - Enable bit: Write 1 to enable H264_DB_TMP_READY_INT."]
 pub type DB_TMP_READY_R = crate::BitReader;
-#[doc = "Field `DB_TMP_READY` writer - Write 1 to enable H264_DB_TMP_READY_INT."]
+#[doc = "Field `DB_TMP_READY` writer - Enable bit: Write 1 to enable H264_DB_TMP_READY_INT."]
 pub type DB_TMP_READY_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REC_READY` reader - Write 1 to enable H264_REC_READY_INT."]
+#[doc = "Field `REC_READY` reader - Enable bit: Write 1 to enable H264_REC_READY_INT."]
 pub type REC_READY_R = crate::BitReader;
-#[doc = "Field `REC_READY` writer - Write 1 to enable H264_REC_READY_INT."]
+#[doc = "Field `REC_READY` writer - Enable bit: Write 1 to enable H264_REC_READY_INT."]
 pub type REC_READY_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FRAME_DONE` reader - Write 1 to enable H264_FRAME_DONE_INT."]
+#[doc = "Field `FRAME_DONE` reader - Enable bit: Write 1 to enable H264_FRAME_DONE_INT."]
 pub type FRAME_DONE_R = crate::BitReader;
-#[doc = "Field `FRAME_DONE` writer - Write 1 to enable H264_FRAME_DONE_INT."]
+#[doc = "Field `FRAME_DONE` writer - Enable bit: Write 1 to enable H264_FRAME_DONE_INT."]
 pub type FRAME_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_MOVE_2MB_LINE_DONE` reader - Enable bit: Write 1 to enable H264_DMA_MOVE_2MB_LINE_DONE_INT."]
 pub type DMA_MOVE_2MB_LINE_DONE_R = crate::BitReader;
 #[doc = "Field `DMA_MOVE_2MB_LINE_DONE` writer - Enable bit: Write 1 to enable H264_DMA_MOVE_2MB_LINE_DONE_INT."]
 pub type DMA_MOVE_2MB_LINE_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BS_BUFFER_OVERFLOW` reader - Enable bit: Write 1 to enable H264_BS_BUFFER_OVERFLOW_INT."]
+pub type BS_BUFFER_OVERFLOW_R = crate::BitReader;
+#[doc = "Field `BS_BUFFER_OVERFLOW` writer - Enable bit: Write 1 to enable H264_BS_BUFFER_OVERFLOW_INT."]
+pub type BS_BUFFER_OVERFLOW_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - Write 1 to enable H264_DB_TMP_READY_INT."]
+    #[doc = "Bit 0 - Enable bit: Write 1 to enable H264_DB_TMP_READY_INT."]
     #[inline(always)]
     pub fn db_tmp_ready(&self) -> DB_TMP_READY_R {
         DB_TMP_READY_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - Write 1 to enable H264_REC_READY_INT."]
+    #[doc = "Bit 1 - Enable bit: Write 1 to enable H264_REC_READY_INT."]
     #[inline(always)]
     pub fn rec_ready(&self) -> REC_READY_R {
         REC_READY_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - Write 1 to enable H264_FRAME_DONE_INT."]
+    #[doc = "Bit 2 - Enable bit: Write 1 to enable H264_FRAME_DONE_INT."]
     #[inline(always)]
     pub fn frame_done(&self) -> FRAME_DONE_R {
         FRAME_DONE_R::new(((self.bits >> 2) & 1) != 0)
@@ -38,6 +42,11 @@ impl R {
     #[inline(always)]
     pub fn dma_move_2mb_line_done(&self) -> DMA_MOVE_2MB_LINE_DONE_R {
         DMA_MOVE_2MB_LINE_DONE_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Enable bit: Write 1 to enable H264_BS_BUFFER_OVERFLOW_INT."]
+    #[inline(always)]
+    pub fn bs_buffer_overflow(&self) -> BS_BUFFER_OVERFLOW_R {
+        BS_BUFFER_OVERFLOW_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -48,21 +57,22 @@ impl core::fmt::Debug for R {
             .field("rec_ready", &self.rec_ready())
             .field("frame_done", &self.frame_done())
             .field("dma_move_2mb_line_done", &self.dma_move_2mb_line_done())
+            .field("bs_buffer_overflow", &self.bs_buffer_overflow())
             .finish()
     }
 }
 impl W {
-    #[doc = "Bit 0 - Write 1 to enable H264_DB_TMP_READY_INT."]
+    #[doc = "Bit 0 - Enable bit: Write 1 to enable H264_DB_TMP_READY_INT."]
     #[inline(always)]
     pub fn db_tmp_ready(&mut self) -> DB_TMP_READY_W<'_, INT_ENA_SPEC> {
         DB_TMP_READY_W::new(self, 0)
     }
-    #[doc = "Bit 1 - Write 1 to enable H264_REC_READY_INT."]
+    #[doc = "Bit 1 - Enable bit: Write 1 to enable H264_REC_READY_INT."]
     #[inline(always)]
     pub fn rec_ready(&mut self) -> REC_READY_W<'_, INT_ENA_SPEC> {
         REC_READY_W::new(self, 1)
     }
-    #[doc = "Bit 2 - Write 1 to enable H264_FRAME_DONE_INT."]
+    #[doc = "Bit 2 - Enable bit: Write 1 to enable H264_FRAME_DONE_INT."]
     #[inline(always)]
     pub fn frame_done(&mut self) -> FRAME_DONE_W<'_, INT_ENA_SPEC> {
         FRAME_DONE_W::new(self, 2)
@@ -71,6 +81,11 @@ impl W {
     #[inline(always)]
     pub fn dma_move_2mb_line_done(&mut self) -> DMA_MOVE_2MB_LINE_DONE_W<'_, INT_ENA_SPEC> {
         DMA_MOVE_2MB_LINE_DONE_W::new(self, 3)
+    }
+    #[doc = "Bit 4 - Enable bit: Write 1 to enable H264_BS_BUFFER_OVERFLOW_INT."]
+    #[inline(always)]
+    pub fn bs_buffer_overflow(&mut self) -> BS_BUFFER_OVERFLOW_W<'_, INT_ENA_SPEC> {
+        BS_BUFFER_OVERFLOW_W::new(self, 4)
     }
 }
 #[doc = "Interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

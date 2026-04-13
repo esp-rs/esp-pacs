@@ -41,7 +41,7 @@ impl crate::Readable for INTERRUPT_REG_DATE_SPEC {}
 impl crate::Writable for INTERRUPT_REG_DATE_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets INTERRUPT_REG_DATE to value 0x0200_3020"]
+#[doc = "`reset()` method sets INTERRUPT_REG_DATE to value 0x0250_2280"]
 impl crate::Resettable for INTERRUPT_REG_DATE_SPEC {
-    const RESET_VALUE: u32 = 0x0200_3020;
+    const RESET_VALUE: u32 = 0x0250_2280;
 }

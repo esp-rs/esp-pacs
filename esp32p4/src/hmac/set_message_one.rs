@@ -1,6 +1,6 @@
 #[doc = "Register `SET_MESSAGE_ONE` writer"]
 pub type W = crate::W<SET_MESSAGE_ONE_SPEC>;
-#[doc = "Field `SET_TEXT_ONE` writer - Call SHA to calculate one message block."]
+#[doc = "Field `SET_TEXT_ONE` writer - Calls SHA to calculate one message block."]
 pub type SET_TEXT_ONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SET_MESSAGE_ONE_SPEC> {
@@ -9,13 +9,13 @@ impl core::fmt::Debug for crate::generic::Reg<SET_MESSAGE_ONE_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Call SHA to calculate one message block."]
+    #[doc = "Bit 0 - Calls SHA to calculate one message block."]
     #[inline(always)]
     pub fn set_text_one(&mut self) -> SET_TEXT_ONE_W<'_, SET_MESSAGE_ONE_SPEC> {
         SET_TEXT_ONE_W::new(self, 0)
     }
 }
-#[doc = "Process control register 1.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_message_one::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "HMAC message control register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_message_one::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SET_MESSAGE_ONE_SPEC;
 impl crate::RegisterSpec for SET_MESSAGE_ONE_SPEC {
     type Ux = u32;

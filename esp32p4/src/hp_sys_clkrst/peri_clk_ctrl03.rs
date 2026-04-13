@@ -30,6 +30,14 @@ pub type MIPI_DSI_DPICLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type MIPI_DSI_DPICLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `MIPI_DSI_DPICLK_DIV_NUM` writer - Reserved"]
 pub type MIPI_DSI_DPICLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `MIPI_DSI_DPHY_PLL_REFCLK_SRC_SEL` reader - Reserved"]
+pub type MIPI_DSI_DPHY_PLL_REFCLK_SRC_SEL_R = crate::FieldReader;
+#[doc = "Field `MIPI_DSI_DPHY_PLL_REFCLK_SRC_SEL` writer - Reserved"]
+pub type MIPI_DSI_DPHY_PLL_REFCLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Field `MIPI_DSI_DPHY_PLL_REFCLK_DIV_NUM` reader - Reserved"]
+pub type MIPI_DSI_DPHY_PLL_REFCLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `MIPI_DSI_DPHY_PLL_REFCLK_DIV_NUM` writer - Reserved"]
+pub type MIPI_DSI_DPHY_PLL_REFCLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
@@ -66,6 +74,16 @@ impl R {
     pub fn mipi_dsi_dpiclk_div_num(&self) -> MIPI_DSI_DPICLK_DIV_NUM_R {
         MIPI_DSI_DPICLK_DIV_NUM_R::new(((self.bits >> 8) & 0xff) as u8)
     }
+    #[doc = "Bits 16:18 - Reserved"]
+    #[inline(always)]
+    pub fn mipi_dsi_dphy_pll_refclk_src_sel(&self) -> MIPI_DSI_DPHY_PLL_REFCLK_SRC_SEL_R {
+        MIPI_DSI_DPHY_PLL_REFCLK_SRC_SEL_R::new(((self.bits >> 16) & 7) as u8)
+    }
+    #[doc = "Bits 19:26 - Reserved"]
+    #[inline(always)]
+    pub fn mipi_dsi_dphy_pll_refclk_div_num(&self) -> MIPI_DSI_DPHY_PLL_REFCLK_DIV_NUM_R {
+        MIPI_DSI_DPHY_PLL_REFCLK_DIV_NUM_R::new(((self.bits >> 19) & 0xff) as u8)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -84,6 +102,14 @@ impl core::fmt::Debug for R {
             .field("mipi_dsi_dpiclk_src_sel", &self.mipi_dsi_dpiclk_src_sel())
             .field("mipi_dsi_dpiclk_en", &self.mipi_dsi_dpiclk_en())
             .field("mipi_dsi_dpiclk_div_num", &self.mipi_dsi_dpiclk_div_num())
+            .field(
+                "mipi_dsi_dphy_pll_refclk_src_sel",
+                &self.mipi_dsi_dphy_pll_refclk_src_sel(),
+            )
+            .field(
+                "mipi_dsi_dphy_pll_refclk_div_num",
+                &self.mipi_dsi_dphy_pll_refclk_div_num(),
+            )
             .finish()
     }
 }
@@ -135,6 +161,20 @@ impl W {
     ) -> MIPI_DSI_DPICLK_DIV_NUM_W<'_, PERI_CLK_CTRL03_SPEC> {
         MIPI_DSI_DPICLK_DIV_NUM_W::new(self, 8)
     }
+    #[doc = "Bits 16:18 - Reserved"]
+    #[inline(always)]
+    pub fn mipi_dsi_dphy_pll_refclk_src_sel(
+        &mut self,
+    ) -> MIPI_DSI_DPHY_PLL_REFCLK_SRC_SEL_W<'_, PERI_CLK_CTRL03_SPEC> {
+        MIPI_DSI_DPHY_PLL_REFCLK_SRC_SEL_W::new(self, 16)
+    }
+    #[doc = "Bits 19:26 - Reserved"]
+    #[inline(always)]
+    pub fn mipi_dsi_dphy_pll_refclk_div_num(
+        &mut self,
+    ) -> MIPI_DSI_DPHY_PLL_REFCLK_DIV_NUM_W<'_, PERI_CLK_CTRL03_SPEC> {
+        MIPI_DSI_DPHY_PLL_REFCLK_DIV_NUM_W::new(self, 19)
+    }
 }
 #[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_clk_ctrl03::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri_clk_ctrl03::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PERI_CLK_CTRL03_SPEC;
@@ -147,5 +187,7 @@ impl crate::Readable for PERI_CLK_CTRL03_SPEC {}
 impl crate::Writable for PERI_CLK_CTRL03_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets PERI_CLK_CTRL03 to value 0"]
-impl crate::Resettable for PERI_CLK_CTRL03_SPEC {}
+#[doc = "`reset()` method sets PERI_CLK_CTRL03 to value 0x0008_0000"]
+impl crate::Resettable for PERI_CLK_CTRL03_SPEC {
+    const RESET_VALUE: u32 = 0x0008_0000;
+}

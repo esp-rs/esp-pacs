@@ -54,7 +54,7 @@ impl crate::Readable for CCM_COEF3_SPEC {}
 impl crate::Writable for CCM_COEF3_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets CCM_COEF3 to value 0x0220_0680"]
+#[doc = "`reset()` method sets CCM_COEF3 to value 0x0100"]
 impl crate::Resettable for CCM_COEF3_SPEC {
-    const RESET_VALUE: u32 = 0x0220_0680;
+    const RESET_VALUE: u32 = 0x0100;
 }

@@ -2,12 +2,12 @@
 pub type R = crate::R<IRQ_ENA_SPEC>;
 #[doc = "Register `IRQ_ENA` writer"]
 pub type W = crate::W<IRQ_ENA_SPEC>;
-#[doc = "Field `INTERRUPT_ENA` reader - Sha interrupt enable register. 1'b0: disable(default). 1'b1: enable."]
+#[doc = "Field `INTERRUPT_ENA` reader - Write 1 to enable DMA-SHA interrupt."]
 pub type INTERRUPT_ENA_R = crate::BitReader;
-#[doc = "Field `INTERRUPT_ENA` writer - Sha interrupt enable register. 1'b0: disable(default). 1'b1: enable."]
+#[doc = "Field `INTERRUPT_ENA` writer - Write 1 to enable DMA-SHA interrupt."]
 pub type INTERRUPT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - Sha interrupt enable register. 1'b0: disable(default). 1'b1: enable."]
+    #[doc = "Bit 0 - Write 1 to enable DMA-SHA interrupt."]
     #[inline(always)]
     pub fn interrupt_ena(&self) -> INTERRUPT_ENA_R {
         INTERRUPT_ENA_R::new((self.bits & 1) != 0)
@@ -22,13 +22,13 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Sha interrupt enable register. 1'b0: disable(default). 1'b1: enable."]
+    #[doc = "Bit 0 - Write 1 to enable DMA-SHA interrupt."]
     #[inline(always)]
     pub fn interrupt_ena(&mut self) -> INTERRUPT_ENA_W<'_, IRQ_ENA_SPEC> {
         INTERRUPT_ENA_W::new(self, 0)
     }
 }
-#[doc = "Interrupt enable register.\n\nYou can [`read`](crate::Reg::read) this register and get [`irq_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`irq_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA-SHA interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`irq_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`irq_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IRQ_ENA_SPEC;
 impl crate::RegisterSpec for IRQ_ENA_SPEC {
     type Ux = u32;

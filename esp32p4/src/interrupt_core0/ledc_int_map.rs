@@ -2,30 +2,64 @@
 pub type R = crate::R<LEDC_INT_MAP_SPEC>;
 #[doc = "Register `LEDC_INT_MAP` writer"]
 pub type W = crate::W<LEDC_INT_MAP_SPEC>;
-#[doc = "Field `CORE0_LEDC_INT_MAP` reader - NA"]
-pub type CORE0_LEDC_INT_MAP_R = crate::FieldReader;
-#[doc = "Field `CORE0_LEDC_INT_MAP` writer - NA"]
-pub type CORE0_LEDC_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `LEDC_INT_MAP` reader - Configures the interrupt source into one CPU interrupt."]
+pub type LEDC_INT_MAP_R = crate::FieldReader;
+#[doc = "Field `LEDC_INT_MAP` writer - Configures the interrupt source into one CPU interrupt."]
+pub type LEDC_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `LEDC_INT_SRC_PASS_IN_SEC` reader - NA"]
+pub type LEDC_INT_SRC_PASS_IN_SEC_R = crate::BitReader;
+#[doc = "Field `LEDC_INT_SRC_PASS_IN_SEC` writer - NA"]
+pub type LEDC_INT_SRC_PASS_IN_SEC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LEDC_INT_SRC_IN_SEC_FLAG` reader - NA"]
+pub type LEDC_INT_SRC_IN_SEC_FLAG_R = crate::BitReader;
+#[doc = "Field `LEDC_INT_SRC_IN_SEC_FLAG` writer - NA"]
+pub type LEDC_INT_SRC_IN_SEC_FLAG_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:5 - NA"]
+    #[doc = "Bits 0:5 - Configures the interrupt source into one CPU interrupt."]
     #[inline(always)]
-    pub fn core0_ledc_int_map(&self) -> CORE0_LEDC_INT_MAP_R {
-        CORE0_LEDC_INT_MAP_R::new((self.bits & 0x3f) as u8)
+    pub fn ledc_int_map(&self) -> LEDC_INT_MAP_R {
+        LEDC_INT_MAP_R::new((self.bits & 0x3f) as u8)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn ledc_int_src_pass_in_sec(&self) -> LEDC_INT_SRC_PASS_IN_SEC_R {
+        LEDC_INT_SRC_PASS_IN_SEC_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn ledc_int_src_in_sec_flag(&self) -> LEDC_INT_SRC_IN_SEC_FLAG_R {
+        LEDC_INT_SRC_IN_SEC_FLAG_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LEDC_INT_MAP")
-            .field("core0_ledc_int_map", &self.core0_ledc_int_map())
+            .field("ledc_int_map", &self.ledc_int_map())
+            .field("ledc_int_src_pass_in_sec", &self.ledc_int_src_pass_in_sec())
+            .field("ledc_int_src_in_sec_flag", &self.ledc_int_src_in_sec_flag())
             .finish()
     }
 }
 impl W {
-    #[doc = "Bits 0:5 - NA"]
+    #[doc = "Bits 0:5 - Configures the interrupt source into one CPU interrupt."]
     #[inline(always)]
-    pub fn core0_ledc_int_map(&mut self) -> CORE0_LEDC_INT_MAP_W<'_, LEDC_INT_MAP_SPEC> {
-        CORE0_LEDC_INT_MAP_W::new(self, 0)
+    pub fn ledc_int_map(&mut self) -> LEDC_INT_MAP_W<'_, LEDC_INT_MAP_SPEC> {
+        LEDC_INT_MAP_W::new(self, 0)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn ledc_int_src_pass_in_sec(
+        &mut self,
+    ) -> LEDC_INT_SRC_PASS_IN_SEC_W<'_, LEDC_INT_MAP_SPEC> {
+        LEDC_INT_SRC_PASS_IN_SEC_W::new(self, 6)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn ledc_int_src_in_sec_flag(
+        &mut self,
+    ) -> LEDC_INT_SRC_IN_SEC_FLAG_W<'_, LEDC_INT_MAP_SPEC> {
+        LEDC_INT_SRC_IN_SEC_FLAG_W::new(self, 7)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`ledc_int_map::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ledc_int_map::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -63,6 +63,15 @@ pub struct RegisterBlock {
     debug_info1: DEBUG_INFO1,
     debug_info2: DEBUG_INFO2,
     date: DATE,
+    a_ori_conf: A_ORI_CONF,
+    b_ori_conf: B_ORI_CONF,
+    ori_debug_conf: ORI_DEBUG_CONF,
+    mv_merge_debug_conf: MV_MERGE_DEBUG_CONF,
+    bs_debug_cong: BS_DEBUG_CONG,
+    db_wr_temp_debug_cong: DB_WR_TEMP_DEBUG_CONG,
+    db_rd_temp_debug_cong: DB_RD_TEMP_DEBUG_CONG,
+    db_wr_debug_cong: DB_WR_DEBUG_CONG,
+    ref_debug_cong: REF_DEBUG_CONG,
 }
 impl RegisterBlock {
     #[doc = "0x00 - H264 system level control register."]
@@ -370,6 +379,51 @@ impl RegisterBlock {
     pub const fn date(&self) -> &DATE {
         &self.date
     }
+    #[doc = "0xf4 - Video A original picture configuration register."]
+    #[inline(always)]
+    pub const fn a_ori_conf(&self) -> &A_ORI_CONF {
+        &self.a_ori_conf
+    }
+    #[doc = "0xf8 - Video B original picture configuration register."]
+    #[inline(always)]
+    pub const fn b_ori_conf(&self) -> &B_ORI_CONF {
+        &self.b_ori_conf
+    }
+    #[doc = "0xfc - Original picture debug configuration register."]
+    #[inline(always)]
+    pub const fn ori_debug_conf(&self) -> &ORI_DEBUG_CONF {
+        &self.ori_debug_conf
+    }
+    #[doc = "0x100 - Original picture debug configuration register."]
+    #[inline(always)]
+    pub const fn mv_merge_debug_conf(&self) -> &MV_MERGE_DEBUG_CONF {
+        &self.mv_merge_debug_conf
+    }
+    #[doc = "0x104 - Encode bitstream debug configuration register"]
+    #[inline(always)]
+    pub const fn bs_debug_cong(&self) -> &BS_DEBUG_CONG {
+        &self.bs_debug_cong
+    }
+    #[doc = "0x108 - Deblocking filter write temp debug configuration register"]
+    #[inline(always)]
+    pub const fn db_wr_temp_debug_cong(&self) -> &DB_WR_TEMP_DEBUG_CONG {
+        &self.db_wr_temp_debug_cong
+    }
+    #[doc = "0x10c - Deblocking filter read temp debug configuration register"]
+    #[inline(always)]
+    pub const fn db_rd_temp_debug_cong(&self) -> &DB_RD_TEMP_DEBUG_CONG {
+        &self.db_rd_temp_debug_cong
+    }
+    #[doc = "0x110 - Deblocking filter final data debug configuration register"]
+    #[inline(always)]
+    pub const fn db_wr_debug_cong(&self) -> &DB_WR_DEBUG_CONG {
+        &self.db_wr_debug_cong
+    }
+    #[doc = "0x114 - Deblocking filter final data debug configuration register"]
+    #[inline(always)]
+    pub const fn ref_debug_cong(&self) -> &REF_DEBUG_CONG {
+        &self.ref_debug_cong
+    }
 }
 #[doc = "SYS_CTRL (rw) register accessor: H264 system level control register.\n\nYou can [`read`](crate::Reg::read) this register and get [`sys_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sys_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sys_ctrl`] module"]
 pub type SYS_CTRL = crate::Reg<sys_ctrl::SYS_CTRL_SPEC>;
@@ -618,3 +672,39 @@ pub mod debug_info2;
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version control register"]
 pub mod date;
+#[doc = "A_ORI_CONF (rw) register accessor: Video A original picture configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`a_ori_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`a_ori_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@a_ori_conf`] module"]
+pub type A_ORI_CONF = crate::Reg<a_ori_conf::A_ORI_CONF_SPEC>;
+#[doc = "Video A original picture configuration register."]
+pub mod a_ori_conf;
+#[doc = "B_ORI_CONF (rw) register accessor: Video B original picture configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`b_ori_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`b_ori_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@b_ori_conf`] module"]
+pub type B_ORI_CONF = crate::Reg<b_ori_conf::B_ORI_CONF_SPEC>;
+#[doc = "Video B original picture configuration register."]
+pub mod b_ori_conf;
+#[doc = "ORI_DEBUG_CONF (rw) register accessor: Original picture debug configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`ori_debug_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ori_debug_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ori_debug_conf`] module"]
+pub type ORI_DEBUG_CONF = crate::Reg<ori_debug_conf::ORI_DEBUG_CONF_SPEC>;
+#[doc = "Original picture debug configuration register."]
+pub mod ori_debug_conf;
+#[doc = "MV_MERGE_DEBUG_CONF (rw) register accessor: Original picture debug configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`mv_merge_debug_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mv_merge_debug_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mv_merge_debug_conf`] module"]
+pub type MV_MERGE_DEBUG_CONF = crate::Reg<mv_merge_debug_conf::MV_MERGE_DEBUG_CONF_SPEC>;
+#[doc = "Original picture debug configuration register."]
+pub mod mv_merge_debug_conf;
+#[doc = "BS_DEBUG_CONG (rw) register accessor: Encode bitstream debug configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`bs_debug_cong::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bs_debug_cong::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@bs_debug_cong`] module"]
+pub type BS_DEBUG_CONG = crate::Reg<bs_debug_cong::BS_DEBUG_CONG_SPEC>;
+#[doc = "Encode bitstream debug configuration register"]
+pub mod bs_debug_cong;
+#[doc = "DB_WR_TEMP_DEBUG_CONG (rw) register accessor: Deblocking filter write temp debug configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`db_wr_temp_debug_cong::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`db_wr_temp_debug_cong::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@db_wr_temp_debug_cong`] module"]
+pub type DB_WR_TEMP_DEBUG_CONG = crate::Reg<db_wr_temp_debug_cong::DB_WR_TEMP_DEBUG_CONG_SPEC>;
+#[doc = "Deblocking filter write temp debug configuration register"]
+pub mod db_wr_temp_debug_cong;
+#[doc = "DB_RD_TEMP_DEBUG_CONG (rw) register accessor: Deblocking filter read temp debug configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`db_rd_temp_debug_cong::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`db_rd_temp_debug_cong::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@db_rd_temp_debug_cong`] module"]
+pub type DB_RD_TEMP_DEBUG_CONG = crate::Reg<db_rd_temp_debug_cong::DB_RD_TEMP_DEBUG_CONG_SPEC>;
+#[doc = "Deblocking filter read temp debug configuration register"]
+pub mod db_rd_temp_debug_cong;
+#[doc = "DB_WR_DEBUG_CONG (rw) register accessor: Deblocking filter final data debug configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`db_wr_debug_cong::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`db_wr_debug_cong::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@db_wr_debug_cong`] module"]
+pub type DB_WR_DEBUG_CONG = crate::Reg<db_wr_debug_cong::DB_WR_DEBUG_CONG_SPEC>;
+#[doc = "Deblocking filter final data debug configuration register"]
+pub mod db_wr_debug_cong;
+#[doc = "REF_DEBUG_CONG (rw) register accessor: Deblocking filter final data debug configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`ref_debug_cong::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ref_debug_cong::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ref_debug_cong`] module"]
+pub type REF_DEBUG_CONG = crate::Reg<ref_debug_cong::REF_DEBUG_CONG_SPEC>;
+#[doc = "Deblocking filter final data debug configuration register"]
+pub mod ref_debug_cong;

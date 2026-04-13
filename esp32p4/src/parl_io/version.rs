@@ -39,7 +39,7 @@ impl crate::Readable for VERSION_SPEC {}
 impl crate::Writable for VERSION_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets VERSION to value 0x0221_2260"]
+#[doc = "`reset()` method sets VERSION to value 0x0240_9230"]
 impl crate::Resettable for VERSION_SPEC {
-    const RESET_VALUE: u32 = 0x0221_2260;
+    const RESET_VALUE: u32 = 0x0240_9230;
 }

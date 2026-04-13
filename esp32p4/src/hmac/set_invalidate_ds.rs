@@ -1,6 +1,6 @@
 #[doc = "Register `SET_INVALIDATE_DS` writer"]
 pub type W = crate::W<SET_INVALIDATE_DS_SPEC>;
-#[doc = "Field `SET_INVALIDATE_DS` writer - Clear result from hmac downstream DS."]
+#[doc = "Field `SET_INVALIDATE_DS` writer - Configures whether or not to clear calculation results of the DS module in downstream mode. \\\\0: Not clear \\\\1: Clear calculation results"]
 pub type SET_INVALIDATE_DS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SET_INVALIDATE_DS_SPEC> {
@@ -9,13 +9,13 @@ impl core::fmt::Debug for crate::generic::Reg<SET_INVALIDATE_DS_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Clear result from hmac downstream DS."]
+    #[doc = "Bit 0 - Configures whether or not to clear calculation results of the DS module in downstream mode. \\\\0: Not clear \\\\1: Clear calculation results"]
     #[inline(always)]
     pub fn set_invalidate_ds(&mut self) -> SET_INVALIDATE_DS_W<'_, SET_INVALIDATE_DS_SPEC> {
         SET_INVALIDATE_DS_W::new(self, 0)
     }
 }
-#[doc = "Invalidate register 1.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_invalidate_ds::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Invalidate digital signature result register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_invalidate_ds::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SET_INVALIDATE_DS_SPEC;
 impl crate::RegisterSpec for SET_INVALIDATE_DS_SPEC {
     type Ux = u32;

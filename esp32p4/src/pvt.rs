@@ -125,7 +125,17 @@ pub struct RegisterBlock {
     comb_pd_site3_unit2_vt2_conf2: COMB_PD_SITE3_UNIT2_VT2_CONF2,
     comb_pd_site3_unit3_vt2_conf2: COMB_PD_SITE3_UNIT3_VT2_CONF2,
     value_update: VALUE_UPDATE,
-    _reserved123: [u8; 0x0e10],
+    bypass_chain: BYPASS_CHAIN,
+    dly_num_rec0: DLY_NUM_REC0,
+    dly_num_rec1: DLY_NUM_REC1,
+    dly_num_rec2: DLY_NUM_REC2,
+    dly_num_rec3: DLY_NUM_REC3,
+    dly_num_rec4: DLY_NUM_REC4,
+    dly_num_rec5: DLY_NUM_REC5,
+    dly_num_rec6: DLY_NUM_REC6,
+    dly_num_rec7: DLY_NUM_REC7,
+    dly_num_rec_clr: DLY_NUM_REC_CLR,
+    _reserved133: [u8; 0x0de8],
     date: DATE,
 }
 impl RegisterBlock {
@@ -744,6 +754,56 @@ impl RegisterBlock {
     pub const fn value_update(&self) -> &VALUE_UPDATE {
         &self.value_update
     }
+    #[doc = "0x1ec - needs field desc"]
+    #[inline(always)]
+    pub const fn bypass_chain(&self) -> &BYPASS_CHAIN {
+        &self.bypass_chain
+    }
+    #[doc = "0x1f0 - needs field desc"]
+    #[inline(always)]
+    pub const fn dly_num_rec0(&self) -> &DLY_NUM_REC0 {
+        &self.dly_num_rec0
+    }
+    #[doc = "0x1f4 - needs field desc"]
+    #[inline(always)]
+    pub const fn dly_num_rec1(&self) -> &DLY_NUM_REC1 {
+        &self.dly_num_rec1
+    }
+    #[doc = "0x1f8 - needs field desc"]
+    #[inline(always)]
+    pub const fn dly_num_rec2(&self) -> &DLY_NUM_REC2 {
+        &self.dly_num_rec2
+    }
+    #[doc = "0x1fc - needs field desc"]
+    #[inline(always)]
+    pub const fn dly_num_rec3(&self) -> &DLY_NUM_REC3 {
+        &self.dly_num_rec3
+    }
+    #[doc = "0x200 - needs field desc"]
+    #[inline(always)]
+    pub const fn dly_num_rec4(&self) -> &DLY_NUM_REC4 {
+        &self.dly_num_rec4
+    }
+    #[doc = "0x204 - needs field desc"]
+    #[inline(always)]
+    pub const fn dly_num_rec5(&self) -> &DLY_NUM_REC5 {
+        &self.dly_num_rec5
+    }
+    #[doc = "0x208 - needs field desc"]
+    #[inline(always)]
+    pub const fn dly_num_rec6(&self) -> &DLY_NUM_REC6 {
+        &self.dly_num_rec6
+    }
+    #[doc = "0x20c - needs field desc"]
+    #[inline(always)]
+    pub const fn dly_num_rec7(&self) -> &DLY_NUM_REC7 {
+        &self.dly_num_rec7
+    }
+    #[doc = "0x210 - needs field desc"]
+    #[inline(always)]
+    pub const fn dly_num_rec_clr(&self) -> &DLY_NUM_REC_CLR {
+        &self.dly_num_rec_clr
+    }
     #[doc = "0xffc - version register"]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {
@@ -1338,6 +1398,46 @@ pub mod comb_pd_site3_unit3_vt2_conf2;
 pub type VALUE_UPDATE = crate::Reg<value_update::VALUE_UPDATE_SPEC>;
 #[doc = "needs field desc"]
 pub mod value_update;
+#[doc = "BYPASS_CHAIN (rw) register accessor: needs field desc\n\nYou can [`read`](crate::Reg::read) this register and get [`bypass_chain::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bypass_chain::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@bypass_chain`] module"]
+pub type BYPASS_CHAIN = crate::Reg<bypass_chain::BYPASS_CHAIN_SPEC>;
+#[doc = "needs field desc"]
+pub mod bypass_chain;
+#[doc = "DLY_NUM_REC0 (r) register accessor: needs field desc\n\nYou can [`read`](crate::Reg::read) this register and get [`dly_num_rec0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dly_num_rec0`] module"]
+pub type DLY_NUM_REC0 = crate::Reg<dly_num_rec0::DLY_NUM_REC0_SPEC>;
+#[doc = "needs field desc"]
+pub mod dly_num_rec0;
+#[doc = "DLY_NUM_REC1 (r) register accessor: needs field desc\n\nYou can [`read`](crate::Reg::read) this register and get [`dly_num_rec1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dly_num_rec1`] module"]
+pub type DLY_NUM_REC1 = crate::Reg<dly_num_rec1::DLY_NUM_REC1_SPEC>;
+#[doc = "needs field desc"]
+pub mod dly_num_rec1;
+#[doc = "DLY_NUM_REC2 (r) register accessor: needs field desc\n\nYou can [`read`](crate::Reg::read) this register and get [`dly_num_rec2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dly_num_rec2`] module"]
+pub type DLY_NUM_REC2 = crate::Reg<dly_num_rec2::DLY_NUM_REC2_SPEC>;
+#[doc = "needs field desc"]
+pub mod dly_num_rec2;
+#[doc = "DLY_NUM_REC3 (r) register accessor: needs field desc\n\nYou can [`read`](crate::Reg::read) this register and get [`dly_num_rec3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dly_num_rec3`] module"]
+pub type DLY_NUM_REC3 = crate::Reg<dly_num_rec3::DLY_NUM_REC3_SPEC>;
+#[doc = "needs field desc"]
+pub mod dly_num_rec3;
+#[doc = "DLY_NUM_REC4 (r) register accessor: needs field desc\n\nYou can [`read`](crate::Reg::read) this register and get [`dly_num_rec4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dly_num_rec4`] module"]
+pub type DLY_NUM_REC4 = crate::Reg<dly_num_rec4::DLY_NUM_REC4_SPEC>;
+#[doc = "needs field desc"]
+pub mod dly_num_rec4;
+#[doc = "DLY_NUM_REC5 (r) register accessor: needs field desc\n\nYou can [`read`](crate::Reg::read) this register and get [`dly_num_rec5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dly_num_rec5`] module"]
+pub type DLY_NUM_REC5 = crate::Reg<dly_num_rec5::DLY_NUM_REC5_SPEC>;
+#[doc = "needs field desc"]
+pub mod dly_num_rec5;
+#[doc = "DLY_NUM_REC6 (r) register accessor: needs field desc\n\nYou can [`read`](crate::Reg::read) this register and get [`dly_num_rec6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dly_num_rec6`] module"]
+pub type DLY_NUM_REC6 = crate::Reg<dly_num_rec6::DLY_NUM_REC6_SPEC>;
+#[doc = "needs field desc"]
+pub mod dly_num_rec6;
+#[doc = "DLY_NUM_REC7 (r) register accessor: needs field desc\n\nYou can [`read`](crate::Reg::read) this register and get [`dly_num_rec7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dly_num_rec7`] module"]
+pub type DLY_NUM_REC7 = crate::Reg<dly_num_rec7::DLY_NUM_REC7_SPEC>;
+#[doc = "needs field desc"]
+pub mod dly_num_rec7;
+#[doc = "DLY_NUM_REC_CLR (w) register accessor: needs field desc\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dly_num_rec_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dly_num_rec_clr`] module"]
+pub type DLY_NUM_REC_CLR = crate::Reg<dly_num_rec_clr::DLY_NUM_REC_CLR_SPEC>;
+#[doc = "needs field desc"]
+pub mod dly_num_rec_clr;
 #[doc = "DATE (rw) register accessor: version register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "version register"]

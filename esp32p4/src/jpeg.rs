@@ -5,7 +5,7 @@ pub struct RegisterBlock {
     config: CONFIG,
     dqt_info: DQT_INFO,
     pic_size: PIC_SIZE,
-    _reserved3: [u8; 0x04],
+    extd_config: EXTD_CONFIG,
     t0qnr: T0QNR,
     t1qnr: T1QNR,
     t2qnr: T2QNR,
@@ -42,7 +42,7 @@ pub struct RegisterBlock {
     status5: STATUS5,
     eco_low: ECO_LOW,
     eco_high: ECO_HIGH,
-    _reserved39: [u8; 0x4c],
+    _reserved40: [u8; 0x4c],
     sys: SYS,
     version: VERSION,
 }
@@ -61,6 +61,11 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn pic_size(&self) -> &PIC_SIZE {
         &self.pic_size
+    }
+    #[doc = "0x0c - Control and configuration registers"]
+    #[inline(always)]
+    pub const fn extd_config(&self) -> &EXTD_CONFIG {
+        &self.extd_config
     }
     #[doc = "0x10 - Control and configuration registers"]
     #[inline(always)]
@@ -271,6 +276,10 @@ pub mod dqt_info;
 pub type PIC_SIZE = crate::Reg<pic_size::PIC_SIZE_SPEC>;
 #[doc = "Control and configuration registers"]
 pub mod pic_size;
+#[doc = "EXTD_CONFIG (rw) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`extd_config::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`extd_config::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@extd_config`] module"]
+pub type EXTD_CONFIG = crate::Reg<extd_config::EXTD_CONFIG_SPEC>;
+#[doc = "Control and configuration registers"]
+pub mod extd_config;
 #[doc = "T0QNR (r) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`t0qnr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0qnr`] module"]
 pub type T0QNR = crate::Reg<t0qnr::T0QNR_SPEC>;
 #[doc = "Control and configuration registers"]

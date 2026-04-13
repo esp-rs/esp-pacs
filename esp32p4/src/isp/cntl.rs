@@ -74,6 +74,14 @@ pub type AWB_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type HIST_EN_R = crate::BitReader;
 #[doc = "Field `HIST_EN` writer - this bit configures hist enable. 0: disable, 1: enable"]
 pub type HIST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CROP_EN` reader - this bit configures crop enable. 0: disable, 1: enable"]
+pub type CROP_EN_R = crate::BitReader;
+#[doc = "Field `CROP_EN` writer - this bit configures crop enable. 0: disable, 1: enable"]
+pub type CROP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `WBG_EN` reader - this bit configures wbg enable. 0: disable, 1: enable"]
+pub type WBG_EN_R = crate::BitReader;
+#[doc = "Field `WBG_EN` writer - this bit configures wbg enable. 0: disable, 1: enable"]
+pub type WBG_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BYTE_ENDIAN_ORDER` reader - select input idi data byte_endian_order when isp is bypass, 0: csi_data\\[31:0\\], 1: {\\[7:0\\], \\[15:8\\], \\[23:16\\], \\[31:24\\]}"]
 pub type BYTE_ENDIAN_ORDER_R = crate::BitReader;
 #[doc = "Field `BYTE_ENDIAN_ORDER` writer - select input idi data byte_endian_order when isp is bypass, 0: csi_data\\[31:0\\], 1: {\\[7:0\\], \\[15:8\\], \\[23:16\\], \\[31:24\\]}"]
@@ -181,6 +189,16 @@ impl R {
     pub fn hist_en(&self) -> HIST_EN_R {
         HIST_EN_R::new(((self.bits >> 17) & 1) != 0)
     }
+    #[doc = "Bit 18 - this bit configures crop enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn crop_en(&self) -> CROP_EN_R {
+        CROP_EN_R::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "Bit 19 - this bit configures wbg enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn wbg_en(&self) -> WBG_EN_R {
+        WBG_EN_R::new(((self.bits >> 19) & 1) != 0)
+    }
     #[doc = "Bit 24 - select input idi data byte_endian_order when isp is bypass, 0: csi_data\\[31:0\\], 1: {\\[7:0\\], \\[15:8\\], \\[23:16\\], \\[31:24\\]}"]
     #[inline(always)]
     pub fn byte_endian_order(&self) -> BYTE_ENDIAN_ORDER_R {
@@ -224,6 +242,8 @@ impl core::fmt::Debug for R {
             .field("af_en", &self.af_en())
             .field("awb_en", &self.awb_en())
             .field("hist_en", &self.hist_en())
+            .field("crop_en", &self.crop_en())
+            .field("wbg_en", &self.wbg_en())
             .field("byte_endian_order", &self.byte_endian_order())
             .field("isp_data_type", &self.isp_data_type())
             .field("isp_in_src", &self.isp_in_src())
@@ -321,6 +341,16 @@ impl W {
     #[inline(always)]
     pub fn hist_en(&mut self) -> HIST_EN_W<'_, CNTL_SPEC> {
         HIST_EN_W::new(self, 17)
+    }
+    #[doc = "Bit 18 - this bit configures crop enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn crop_en(&mut self) -> CROP_EN_W<'_, CNTL_SPEC> {
+        CROP_EN_W::new(self, 18)
+    }
+    #[doc = "Bit 19 - this bit configures wbg enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn wbg_en(&mut self) -> WBG_EN_W<'_, CNTL_SPEC> {
+        WBG_EN_W::new(self, 19)
     }
     #[doc = "Bit 24 - select input idi data byte_endian_order when isp is bypass, 0: csi_data\\[31:0\\], 1: {\\[7:0\\], \\[15:8\\], \\[23:16\\], \\[31:24\\]}"]
     #[inline(always)]

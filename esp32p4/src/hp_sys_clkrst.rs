@@ -62,6 +62,8 @@ pub struct RegisterBlock {
     dbg_clk_ctrl0: DBG_CLK_CTRL0,
     dbg_clk_ctrl1: DBG_CLK_CTRL1,
     hpcore_wdt_reset_source0: HPCORE_WDT_RESET_SOURCE0,
+    axi_perf_mon_clkrst_ctrl0: AXI_PERF_MON_CLKRST_CTRL0,
+    cpu_waiti_ctrl0: CPU_WAITI_CTRL0,
 }
 impl RegisterBlock {
     #[doc = "0x00 - Reserved"]
@@ -364,6 +366,16 @@ impl RegisterBlock {
     pub const fn hpcore_wdt_reset_source0(&self) -> &HPCORE_WDT_RESET_SOURCE0 {
         &self.hpcore_wdt_reset_source0
     }
+    #[doc = "0xf0 - Reserved"]
+    #[inline(always)]
+    pub const fn axi_perf_mon_clkrst_ctrl0(&self) -> &AXI_PERF_MON_CLKRST_CTRL0 {
+        &self.axi_perf_mon_clkrst_ctrl0
+    }
+    #[doc = "0xf4 - Reserved"]
+    #[inline(always)]
+    pub const fn cpu_waiti_ctrl0(&self) -> &CPU_WAITI_CTRL0 {
+        &self.cpu_waiti_ctrl0
+    }
 }
 #[doc = "CLK_EN0 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`clk_en0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_en0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk_en0`] module"]
 pub type CLK_EN0 = crate::Reg<clk_en0::CLK_EN0_SPEC>;
@@ -606,3 +618,12 @@ pub type HPCORE_WDT_RESET_SOURCE0 =
     crate::Reg<hpcore_wdt_reset_source0::HPCORE_WDT_RESET_SOURCE0_SPEC>;
 #[doc = "Reserved"]
 pub mod hpcore_wdt_reset_source0;
+#[doc = "AXI_PERF_MON_CLKRST_CTRL0 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`axi_perf_mon_clkrst_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`axi_perf_mon_clkrst_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@axi_perf_mon_clkrst_ctrl0`] module"]
+pub type AXI_PERF_MON_CLKRST_CTRL0 =
+    crate::Reg<axi_perf_mon_clkrst_ctrl0::AXI_PERF_MON_CLKRST_CTRL0_SPEC>;
+#[doc = "Reserved"]
+pub mod axi_perf_mon_clkrst_ctrl0;
+#[doc = "CPU_WAITI_CTRL0 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_waiti_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_waiti_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_waiti_ctrl0`] module"]
+pub type CPU_WAITI_CTRL0 = crate::Reg<cpu_waiti_ctrl0::CPU_WAITI_CTRL0_SPEC>;
+#[doc = "Reserved"]
+pub mod cpu_waiti_ctrl0;

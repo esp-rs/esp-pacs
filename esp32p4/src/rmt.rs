@@ -2,15 +2,14 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    tx_chdata: [TX_CHDATA; 4],
-    rx_chdata: [RX_CHDATA; 4],
-    tx_chconf0: [TX_CHCONF0; 4],
-    rx_chconf0: (),
-    _reserved4: [u8; 0x04],
-    rx_chconf1: (),
-    _reserved5: [u8; 0x1c],
-    tx_chstatus: [TX_CHSTATUS; 4],
-    rx_chstatus: [RX_CHSTATUS; 4],
+    chdata: [CHDATA; 4],
+    _reserved1: [u8; 0x10],
+    chconf0: [CHCONF0; 4],
+    _reserved2: [u8; 0x04],
+    chconf1: (),
+    _reserved3: [u8; 0x1c],
+    chstatus: [CHSTATUS; 4],
+    _reserved4: [u8; 0x10],
     int_raw: INT_RAW,
     int_st: INT_ST,
     int_ena: INT_ENA,
@@ -27,145 +26,69 @@ pub struct RegisterBlock {
 impl RegisterBlock {
     #[doc = "0x00..0x10 - The read and write data register for CHANNEL%s by apb fifo access."]
     #[inline(always)]
-    pub const fn tx_chdata(&self, n: usize) -> &TX_CHDATA {
-        &self.tx_chdata[n]
+    pub const fn chdata(&self, n: usize) -> &CHDATA {
+        &self.chdata[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x00..0x10 - The read and write data register for CHANNEL%s by apb fifo access."]
     #[inline(always)]
-    pub fn tx_chdata_iter(&self) -> impl Iterator<Item = &TX_CHDATA> {
-        self.tx_chdata.iter()
+    pub fn chdata_iter(&self) -> impl Iterator<Item = &CHDATA> {
+        self.chdata.iter()
     }
     #[doc = "0x00 - The read and write data register for CHANNEL0 by apb fifo access."]
     #[inline(always)]
-    pub const fn tx_ch0data(&self) -> &TX_CHDATA {
-        self.tx_chdata(0)
+    pub const fn ch0data(&self) -> &CHDATA {
+        self.chdata(0)
     }
     #[doc = "0x04 - The read and write data register for CHANNEL1 by apb fifo access."]
     #[inline(always)]
-    pub const fn tx_ch1data(&self) -> &TX_CHDATA {
-        self.tx_chdata(1)
+    pub const fn ch1data(&self) -> &CHDATA {
+        self.chdata(1)
     }
     #[doc = "0x08 - The read and write data register for CHANNEL2 by apb fifo access."]
     #[inline(always)]
-    pub const fn tx_ch2data(&self) -> &TX_CHDATA {
-        self.tx_chdata(2)
+    pub const fn ch2data(&self) -> &CHDATA {
+        self.chdata(2)
     }
     #[doc = "0x0c - The read and write data register for CHANNEL3 by apb fifo access."]
     #[inline(always)]
-    pub const fn tx_ch3data(&self) -> &TX_CHDATA {
-        self.tx_chdata(3)
-    }
-    #[doc = "0x10..0x20 - The read and write data register for CHANNEL$n by apb fifo access."]
-    #[inline(always)]
-    pub const fn rx_chdata(&self, n: usize) -> &RX_CHDATA {
-        &self.rx_chdata[n]
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x10..0x20 - The read and write data register for CHANNEL$n by apb fifo access."]
-    #[inline(always)]
-    pub fn rx_chdata_iter(&self) -> impl Iterator<Item = &RX_CHDATA> {
-        self.rx_chdata.iter()
-    }
-    #[doc = "0x10 - The read and write data register for CHANNEL$n by apb fifo access."]
-    #[inline(always)]
-    pub const fn rx_ch0data(&self) -> &RX_CHDATA {
-        self.rx_chdata(0)
-    }
-    #[doc = "0x14 - The read and write data register for CHANNEL$n by apb fifo access."]
-    #[inline(always)]
-    pub const fn rx_ch1data(&self) -> &RX_CHDATA {
-        self.rx_chdata(1)
-    }
-    #[doc = "0x18 - The read and write data register for CHANNEL$n by apb fifo access."]
-    #[inline(always)]
-    pub const fn rx_ch2data(&self) -> &RX_CHDATA {
-        self.rx_chdata(2)
-    }
-    #[doc = "0x1c - The read and write data register for CHANNEL$n by apb fifo access."]
-    #[inline(always)]
-    pub const fn rx_ch3data(&self) -> &RX_CHDATA {
-        self.rx_chdata(3)
+    pub const fn ch3data(&self) -> &CHDATA {
+        self.chdata(3)
     }
     #[doc = "0x20..0x30 - Channel %s configure register 0"]
     #[inline(always)]
-    pub const fn tx_chconf0(&self, n: usize) -> &TX_CHCONF0 {
-        &self.tx_chconf0[n]
+    pub const fn chconf0(&self, n: usize) -> &CHCONF0 {
+        &self.chconf0[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x20..0x30 - Channel %s configure register 0"]
     #[inline(always)]
-    pub fn tx_chconf0_iter(&self) -> impl Iterator<Item = &TX_CHCONF0> {
-        self.tx_chconf0.iter()
+    pub fn chconf0_iter(&self) -> impl Iterator<Item = &CHCONF0> {
+        self.chconf0.iter()
     }
     #[doc = "0x20 - Channel 0 configure register 0"]
     #[inline(always)]
-    pub const fn tx_ch0conf0(&self) -> &TX_CHCONF0 {
-        self.tx_chconf0(0)
+    pub const fn ch0conf0(&self) -> &CHCONF0 {
+        self.chconf0(0)
     }
     #[doc = "0x24 - Channel 1 configure register 0"]
     #[inline(always)]
-    pub const fn tx_ch1conf0(&self) -> &TX_CHCONF0 {
-        self.tx_chconf0(1)
+    pub const fn ch1conf0(&self) -> &CHCONF0 {
+        self.chconf0(1)
     }
     #[doc = "0x28 - Channel 2 configure register 0"]
     #[inline(always)]
-    pub const fn tx_ch2conf0(&self) -> &TX_CHCONF0 {
-        self.tx_chconf0(2)
+    pub const fn ch2conf0(&self) -> &CHCONF0 {
+        self.chconf0(2)
     }
     #[doc = "0x2c - Channel 3 configure register 0"]
     #[inline(always)]
-    pub const fn tx_ch3conf0(&self) -> &TX_CHCONF0 {
-        self.tx_chconf0(3)
-    }
-    #[doc = "0x30..0x40 - Channel %s configure register 0"]
-    #[inline(always)]
-    pub const fn rx_chconf0(&self, n: usize) -> &RX_CHCONF0 {
-        #[allow(clippy::no_effect)]
-        [(); 4][n];
-        unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(48)
-                .add(8 * n)
-                .cast()
-        }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x30..0x40 - Channel %s configure register 0"]
-    #[inline(always)]
-    pub fn rx_chconf0_iter(&self) -> impl Iterator<Item = &RX_CHCONF0> {
-        (0..4).map(move |n| unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(48)
-                .add(8 * n)
-                .cast()
-        })
-    }
-    #[doc = "0x30 - Channel 0 configure register 0"]
-    #[inline(always)]
-    pub const fn rx_ch0conf0(&self) -> &RX_CHCONF0 {
-        self.rx_chconf0(0)
-    }
-    #[doc = "0x38 - Channel 1 configure register 0"]
-    #[inline(always)]
-    pub const fn rx_ch1conf0(&self) -> &RX_CHCONF0 {
-        self.rx_chconf0(1)
-    }
-    #[doc = "0x40 - Channel 2 configure register 0"]
-    #[inline(always)]
-    pub const fn rx_ch2conf0(&self) -> &RX_CHCONF0 {
-        self.rx_chconf0(2)
-    }
-    #[doc = "0x48 - Channel 3 configure register 0"]
-    #[inline(always)]
-    pub const fn rx_ch3conf0(&self) -> &RX_CHCONF0 {
-        self.rx_chconf0(3)
+    pub const fn ch3conf0(&self) -> &CHCONF0 {
+        self.chconf0(3)
     }
     #[doc = "0x34..0x44 - Channel %s configure register 1"]
     #[inline(always)]
-    pub const fn rx_chconf1(&self, n: usize) -> &RX_CHCONF1 {
+    pub const fn chconf1(&self, n: usize) -> &CHCONF1 {
         #[allow(clippy::no_effect)]
         [(); 4][n];
         unsafe {
@@ -179,7 +102,7 @@ impl RegisterBlock {
     #[doc = "Iterator for array of:"]
     #[doc = "0x34..0x44 - Channel %s configure register 1"]
     #[inline(always)]
-    pub fn rx_chconf1_iter(&self) -> impl Iterator<Item = &RX_CHCONF1> {
+    pub fn chconf1_iter(&self) -> impl Iterator<Item = &CHCONF1> {
         (0..4).map(move |n| unsafe {
             &*core::ptr::from_ref(self)
                 .cast::<u8>()
@@ -190,85 +113,54 @@ impl RegisterBlock {
     }
     #[doc = "0x34 - Channel 0 configure register 1"]
     #[inline(always)]
-    pub const fn rx_ch0conf1(&self) -> &RX_CHCONF1 {
-        self.rx_chconf1(0)
+    pub const fn ch0conf1(&self) -> &CHCONF1 {
+        self.chconf1(0)
     }
     #[doc = "0x3c - Channel 1 configure register 1"]
     #[inline(always)]
-    pub const fn rx_ch1conf1(&self) -> &RX_CHCONF1 {
-        self.rx_chconf1(1)
+    pub const fn ch1conf1(&self) -> &CHCONF1 {
+        self.chconf1(1)
     }
     #[doc = "0x44 - Channel 2 configure register 1"]
     #[inline(always)]
-    pub const fn rx_ch2conf1(&self) -> &RX_CHCONF1 {
-        self.rx_chconf1(2)
+    pub const fn ch2conf1(&self) -> &CHCONF1 {
+        self.chconf1(2)
     }
     #[doc = "0x4c - Channel 3 configure register 1"]
     #[inline(always)]
-    pub const fn rx_ch3conf1(&self) -> &RX_CHCONF1 {
-        self.rx_chconf1(3)
+    pub const fn ch3conf1(&self) -> &CHCONF1 {
+        self.chconf1(3)
     }
     #[doc = "0x50..0x60 - Channel %s status register"]
     #[inline(always)]
-    pub const fn tx_chstatus(&self, n: usize) -> &TX_CHSTATUS {
-        &self.tx_chstatus[n]
+    pub const fn chstatus(&self, n: usize) -> &CHSTATUS {
+        &self.chstatus[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x50..0x60 - Channel %s status register"]
     #[inline(always)]
-    pub fn tx_chstatus_iter(&self) -> impl Iterator<Item = &TX_CHSTATUS> {
-        self.tx_chstatus.iter()
+    pub fn chstatus_iter(&self) -> impl Iterator<Item = &CHSTATUS> {
+        self.chstatus.iter()
     }
     #[doc = "0x50 - Channel 0 status register"]
     #[inline(always)]
-    pub const fn tx_ch0status(&self) -> &TX_CHSTATUS {
-        self.tx_chstatus(0)
+    pub const fn ch0status(&self) -> &CHSTATUS {
+        self.chstatus(0)
     }
     #[doc = "0x54 - Channel 1 status register"]
     #[inline(always)]
-    pub const fn tx_ch1status(&self) -> &TX_CHSTATUS {
-        self.tx_chstatus(1)
+    pub const fn ch1status(&self) -> &CHSTATUS {
+        self.chstatus(1)
     }
     #[doc = "0x58 - Channel 2 status register"]
     #[inline(always)]
-    pub const fn tx_ch2status(&self) -> &TX_CHSTATUS {
-        self.tx_chstatus(2)
+    pub const fn ch2status(&self) -> &CHSTATUS {
+        self.chstatus(2)
     }
     #[doc = "0x5c - Channel 3 status register"]
     #[inline(always)]
-    pub const fn tx_ch3status(&self) -> &TX_CHSTATUS {
-        self.tx_chstatus(3)
-    }
-    #[doc = "0x60..0x70 - Channel %s status register"]
-    #[inline(always)]
-    pub const fn rx_chstatus(&self, n: usize) -> &RX_CHSTATUS {
-        &self.rx_chstatus[n]
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x60..0x70 - Channel %s status register"]
-    #[inline(always)]
-    pub fn rx_chstatus_iter(&self) -> impl Iterator<Item = &RX_CHSTATUS> {
-        self.rx_chstatus.iter()
-    }
-    #[doc = "0x60 - Channel 0 status register"]
-    #[inline(always)]
-    pub const fn rx_ch0status(&self) -> &RX_CHSTATUS {
-        self.rx_chstatus(0)
-    }
-    #[doc = "0x64 - Channel 1 status register"]
-    #[inline(always)]
-    pub const fn rx_ch1status(&self) -> &RX_CHSTATUS {
-        self.rx_chstatus(1)
-    }
-    #[doc = "0x68 - Channel 2 status register"]
-    #[inline(always)]
-    pub const fn rx_ch2status(&self) -> &RX_CHSTATUS {
-        self.rx_chstatus(2)
-    }
-    #[doc = "0x6c - Channel 3 status register"]
-    #[inline(always)]
-    pub const fn rx_ch3status(&self) -> &RX_CHSTATUS {
-        self.rx_chstatus(3)
+    pub const fn ch3status(&self) -> &CHSTATUS {
+        self.chstatus(3)
     }
     #[doc = "0x70 - Raw interrupt status"]
     #[inline(always)]
@@ -435,34 +327,22 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "TX_CHDATA (r) register accessor: The read and write data register for CHANNEL%s by apb fifo access.\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_chdata::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_chdata`] module"]
-pub type TX_CHDATA = crate::Reg<tx_chdata::TX_CHDATA_SPEC>;
+#[doc = "CHDATA (r) register accessor: The read and write data register for CHANNEL%s by apb fifo access.\n\nYou can [`read`](crate::Reg::read) this register and get [`chdata::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@chdata`] module"]
+pub type CHDATA = crate::Reg<chdata::CHDATA_SPEC>;
 #[doc = "The read and write data register for CHANNEL%s by apb fifo access."]
-pub mod tx_chdata;
-#[doc = "RX_CHDATA (r) register accessor: The read and write data register for CHANNEL$n by apb fifo access.\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_chdata::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_chdata`] module"]
-pub type RX_CHDATA = crate::Reg<rx_chdata::RX_CHDATA_SPEC>;
-#[doc = "The read and write data register for CHANNEL$n by apb fifo access."]
-pub mod rx_chdata;
-#[doc = "TX_CHCONF0 (rw) register accessor: Channel %s configure register 0\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_chconf0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_chconf0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_chconf0`] module"]
-pub type TX_CHCONF0 = crate::Reg<tx_chconf0::TX_CHCONF0_SPEC>;
+pub mod chdata;
+#[doc = "CHCONF0 (rw) register accessor: Channel %s configure register 0\n\nYou can [`read`](crate::Reg::read) this register and get [`chconf0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`chconf0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@chconf0`] module"]
+pub type CHCONF0 = crate::Reg<chconf0::CHCONF0_SPEC>;
 #[doc = "Channel %s configure register 0"]
-pub mod tx_chconf0;
-#[doc = "RX_CHCONF0 (rw) register accessor: Channel %s configure register 0\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_chconf0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_chconf0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_chconf0`] module"]
-pub type RX_CHCONF0 = crate::Reg<rx_chconf0::RX_CHCONF0_SPEC>;
-#[doc = "Channel %s configure register 0"]
-pub mod rx_chconf0;
-#[doc = "RX_CHCONF1 (rw) register accessor: Channel %s configure register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_chconf1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_chconf1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_chconf1`] module"]
-pub type RX_CHCONF1 = crate::Reg<rx_chconf1::RX_CHCONF1_SPEC>;
+pub mod chconf0;
+#[doc = "CHCONF1 (rw) register accessor: Channel %s configure register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`chconf1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`chconf1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@chconf1`] module"]
+pub type CHCONF1 = crate::Reg<chconf1::CHCONF1_SPEC>;
 #[doc = "Channel %s configure register 1"]
-pub mod rx_chconf1;
-#[doc = "TX_CHSTATUS (r) register accessor: Channel %s status register\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_chstatus::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_chstatus`] module"]
-pub type TX_CHSTATUS = crate::Reg<tx_chstatus::TX_CHSTATUS_SPEC>;
+pub mod chconf1;
+#[doc = "CHSTATUS (r) register accessor: Channel %s status register\n\nYou can [`read`](crate::Reg::read) this register and get [`chstatus::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@chstatus`] module"]
+pub type CHSTATUS = crate::Reg<chstatus::CHSTATUS_SPEC>;
 #[doc = "Channel %s status register"]
-pub mod tx_chstatus;
-#[doc = "RX_CHSTATUS (r) register accessor: Channel %s status register\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_chstatus::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_chstatus`] module"]
-pub type RX_CHSTATUS = crate::Reg<rx_chstatus::RX_CHSTATUS_SPEC>;
-#[doc = "Channel %s status register"]
-pub mod rx_chstatus;
+pub mod chstatus;
 #[doc = "INT_RAW (rw) register accessor: Raw interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_raw::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "Raw interrupt status"]

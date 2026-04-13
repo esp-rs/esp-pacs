@@ -78,6 +78,14 @@ pub type CLK_MIPI_IDI_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type ISP_MEM_CLK_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `ISP_MEM_CLK_FORCE_ON` writer - this bit configures the clk force on of all isp memory. 0: disable, 1: enable"]
 pub type ISP_MEM_CLK_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_CROP_FORCE_ON` reader - this bit configures the clk force on of crop. 0: disable, 1: enable"]
+pub type CLK_CROP_FORCE_ON_R = crate::BitReader;
+#[doc = "Field `CLK_CROP_FORCE_ON` writer - this bit configures the clk force on of crop. 0: disable, 1: enable"]
+pub type CLK_CROP_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_WBG_FORCE_ON` reader - this bit configures the clk force on of wbg. 0: disable, 1: enable"]
+pub type CLK_WBG_FORCE_ON_R = crate::BitReader;
+#[doc = "Field `CLK_WBG_FORCE_ON` writer - this bit configures the clk force on of wbg. 0: disable, 1: enable"]
+pub type CLK_WBG_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - this bit configures the clk force on of isp reg. 0: disable, 1: enable"]
     #[inline(always)]
@@ -174,6 +182,16 @@ impl R {
     pub fn isp_mem_clk_force_on(&self) -> ISP_MEM_CLK_FORCE_ON_R {
         ISP_MEM_CLK_FORCE_ON_R::new(((self.bits >> 18) & 1) != 0)
     }
+    #[doc = "Bit 19 - this bit configures the clk force on of crop. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_crop_force_on(&self) -> CLK_CROP_FORCE_ON_R {
+        CLK_CROP_FORCE_ON_R::new(((self.bits >> 19) & 1) != 0)
+    }
+    #[doc = "Bit 20 - this bit configures the clk force on of wbg. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_wbg_force_on(&self) -> CLK_WBG_FORCE_ON_R {
+        CLK_WBG_FORCE_ON_R::new(((self.bits >> 20) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -198,6 +216,8 @@ impl core::fmt::Debug for R {
             .field("clk_hist_force_on", &self.clk_hist_force_on())
             .field("clk_mipi_idi_force_on", &self.clk_mipi_idi_force_on())
             .field("isp_mem_clk_force_on", &self.isp_mem_clk_force_on())
+            .field("clk_crop_force_on", &self.clk_crop_force_on())
+            .field("clk_wbg_force_on", &self.clk_wbg_force_on())
             .finish()
     }
 }
@@ -296,6 +316,16 @@ impl W {
     #[inline(always)]
     pub fn isp_mem_clk_force_on(&mut self) -> ISP_MEM_CLK_FORCE_ON_W<'_, CLK_EN_SPEC> {
         ISP_MEM_CLK_FORCE_ON_W::new(self, 18)
+    }
+    #[doc = "Bit 19 - this bit configures the clk force on of crop. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_crop_force_on(&mut self) -> CLK_CROP_FORCE_ON_W<'_, CLK_EN_SPEC> {
+        CLK_CROP_FORCE_ON_W::new(self, 19)
+    }
+    #[doc = "Bit 20 - this bit configures the clk force on of wbg. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn clk_wbg_force_on(&mut self) -> CLK_WBG_FORCE_ON_W<'_, CLK_EN_SPEC> {
+        CLK_WBG_FORCE_ON_W::new(self, 20)
     }
 }
 #[doc = "isp clk control register\n\nYou can [`read`](crate::Reg::read) this register and get [`clk_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -2,9 +2,9 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    key: [KEY; 8],
-    text_in: [TEXT_IN; 4],
-    text_out: [TEXT_OUT; 4],
+    key_: [KEY_; 8],
+    text_in_: [TEXT_IN_; 4],
+    text_out_: [TEXT_OUT_; 4],
     mode: MODE,
     endian: ENDIAN,
     trigger: TRIGGER,
@@ -20,46 +20,51 @@ pub struct RegisterBlock {
     aad_block_num: AAD_BLOCK_NUM,
     remainder_bit_num: REMAINDER_BIT_NUM,
     continue_: CONTINUE,
-    int_clr: INT_CLR,
+    int_clear: INT_CLEAR,
     int_ena: INT_ENA,
     date: DATE,
     dma_exit: DMA_EXIT,
+    _reserved22: [u8; 0x04],
+    rx_reset: RX_RESET,
+    tx_reset: TX_RESET,
+    _reserved24: [u8; 0x08],
+    pseudo: PSEUDO,
 }
 impl RegisterBlock {
-    #[doc = "0x00..0x20 - Key material key_%s configure register"]
+    #[doc = "0x00..0x20 - AES key data register %s"]
     #[inline(always)]
-    pub const fn key(&self, n: usize) -> &KEY {
-        &self.key[n]
+    pub const fn key_(&self, n: usize) -> &KEY_ {
+        &self.key_[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x00..0x20 - Key material key_%s configure register"]
+    #[doc = "0x00..0x20 - AES key data register %s"]
     #[inline(always)]
-    pub fn key_iter(&self) -> impl Iterator<Item = &KEY> {
-        self.key.iter()
+    pub fn key__iter(&self) -> impl Iterator<Item = &KEY_> {
+        self.key_.iter()
     }
-    #[doc = "0x20..0x30 - source text material text_in_%s configure register"]
+    #[doc = "0x20..0x30 - Source text data register %s"]
     #[inline(always)]
-    pub const fn text_in(&self, n: usize) -> &TEXT_IN {
-        &self.text_in[n]
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x20..0x30 - source text material text_in_%s configure register"]
-    #[inline(always)]
-    pub fn text_in_iter(&self) -> impl Iterator<Item = &TEXT_IN> {
-        self.text_in.iter()
-    }
-    #[doc = "0x30..0x40 - result text material text_out_%s configure register"]
-    #[inline(always)]
-    pub const fn text_out(&self, n: usize) -> &TEXT_OUT {
-        &self.text_out[n]
+    pub const fn text_in_(&self, n: usize) -> &TEXT_IN_ {
+        &self.text_in_[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x30..0x40 - result text material text_out_%s configure register"]
+    #[doc = "0x20..0x30 - Source text data register %s"]
     #[inline(always)]
-    pub fn text_out_iter(&self) -> impl Iterator<Item = &TEXT_OUT> {
-        self.text_out.iter()
+    pub fn text_in__iter(&self) -> impl Iterator<Item = &TEXT_IN_> {
+        self.text_in_.iter()
     }
-    #[doc = "0x40 - AES Mode register"]
+    #[doc = "0x30..0x40 - Result text data register %s"]
+    #[inline(always)]
+    pub const fn text_out_(&self, n: usize) -> &TEXT_OUT_ {
+        &self.text_out_[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x30..0x40 - Result text data register %s"]
+    #[inline(always)]
+    pub fn text_out__iter(&self) -> impl Iterator<Item = &TEXT_OUT_> {
+        self.text_out_.iter()
+    }
+    #[doc = "0x40 - Defines key length and encryption / decryption"]
     #[inline(always)]
     pub const fn mode(&self) -> &MODE {
         &self.mode
@@ -69,12 +74,12 @@ impl RegisterBlock {
     pub const fn endian(&self) -> &ENDIAN {
         &self.endian
     }
-    #[doc = "0x48 - AES trigger register"]
+    #[doc = "0x48 - Operation start controlling register"]
     #[inline(always)]
     pub const fn trigger(&self) -> &TRIGGER {
         &self.trigger
     }
-    #[doc = "0x4c - AES state register"]
+    #[doc = "0x4c - Operation status register"]
     #[inline(always)]
     pub const fn state(&self) -> &STATE {
         &self.state
@@ -123,22 +128,22 @@ impl RegisterBlock {
     pub fn t0_mem_iter(&self) -> impl Iterator<Item = &T0_MEM> {
         self.t0_mem.iter()
     }
-    #[doc = "0x90 - DMA-AES working mode register"]
+    #[doc = "0x90 - Selects the working mode of the AES accelerator"]
     #[inline(always)]
     pub const fn dma_enable(&self) -> &DMA_ENABLE {
         &self.dma_enable
     }
-    #[doc = "0x94 - AES cipher block mode register"]
+    #[doc = "0x94 - Defines the block cipher mode"]
     #[inline(always)]
     pub const fn block_mode(&self) -> &BLOCK_MODE {
         &self.block_mode
     }
-    #[doc = "0x98 - AES block number register"]
+    #[doc = "0x98 - Block number configuration register"]
     #[inline(always)]
     pub const fn block_num(&self) -> &BLOCK_NUM {
         &self.block_num
     }
-    #[doc = "0x9c - Standard incrementing function configure register"]
+    #[doc = "0x9c - Standard incrementing function register"]
     #[inline(always)]
     pub const fn inc_sel(&self) -> &INC_SEL {
         &self.inc_sel
@@ -158,12 +163,12 @@ impl RegisterBlock {
     pub const fn continue_(&self) -> &CONTINUE {
         &self.continue_
     }
-    #[doc = "0xac - AES Interrupt clear register"]
+    #[doc = "0xac - DMA-AES interrupt clear register"]
     #[inline(always)]
-    pub const fn int_clr(&self) -> &INT_CLR {
-        &self.int_clr
+    pub const fn int_clear(&self) -> &INT_CLEAR {
+        &self.int_clear
     }
-    #[doc = "0xb0 - AES Interrupt enable register"]
+    #[doc = "0xb0 - DMA-AES interrupt enable register"]
     #[inline(always)]
     pub const fn int_ena(&self) -> &INT_ENA {
         &self.int_ena
@@ -173,39 +178,54 @@ impl RegisterBlock {
     pub const fn date(&self) -> &DATE {
         &self.date
     }
-    #[doc = "0xb8 - AES-DMA exit config"]
+    #[doc = "0xb8 - Operation exit controlling register"]
     #[inline(always)]
     pub const fn dma_exit(&self) -> &DMA_EXIT {
         &self.dma_exit
     }
+    #[doc = "0xc0 - AES-DMA reset rx-fifo register"]
+    #[inline(always)]
+    pub const fn rx_reset(&self) -> &RX_RESET {
+        &self.rx_reset
+    }
+    #[doc = "0xc4 - AES-DMA reset tx-fifo register"]
+    #[inline(always)]
+    pub const fn tx_reset(&self) -> &TX_RESET {
+        &self.tx_reset
+    }
+    #[doc = "0xd0 - AES PSEUDO function configure register"]
+    #[inline(always)]
+    pub const fn pseudo(&self) -> &PSEUDO {
+        &self.pseudo
+    }
 }
-#[doc = "KEY (rw) register accessor: Key material key_%s configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`key::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`key::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key`] module"]
-pub type KEY = crate::Reg<key::KEY_SPEC>;
-#[doc = "Key material key_%s configure register"]
-pub mod key;
-#[doc = "TEXT_IN (rw) register accessor: source text material text_in_%s configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`text_in::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`text_in::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_in`] module"]
-pub type TEXT_IN = crate::Reg<text_in::TEXT_IN_SPEC>;
-#[doc = "source text material text_in_%s configure register"]
-pub mod text_in;
-#[doc = "TEXT_OUT (rw) register accessor: result text material text_out_%s configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`text_out::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`text_out::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_out`] module"]
-pub type TEXT_OUT = crate::Reg<text_out::TEXT_OUT_SPEC>;
-#[doc = "result text material text_out_%s configure register"]
-pub mod text_out;
-#[doc = "MODE (rw) register accessor: AES Mode register\n\nYou can [`read`](crate::Reg::read) this register and get [`mode::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mode::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mode`] module"]
+#[doc = "KEY_ (rw) register accessor: AES key data register %s\n\nYou can [`read`](crate::Reg::read) this register and get [`key_::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`key_::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key_`] module"]
+pub type KEY_ = crate::Reg<key_::KEY__SPEC>;
+#[doc = "AES key data register %s"]
+pub mod key_;
+#[doc = "TEXT_IN_ (rw) register accessor: Source text data register %s\n\nYou can [`read`](crate::Reg::read) this register and get [`text_in_::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`text_in_::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_in_`] module"]
+pub type TEXT_IN_ = crate::Reg<text_in_::TEXT_IN__SPEC>;
+#[doc = "Source text data register %s"]
+pub mod text_in_;
+#[doc = "TEXT_OUT_ (rw) register accessor: Result text data register %s\n\nYou can [`read`](crate::Reg::read) this register and get [`text_out_::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`text_out_::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@text_out_`] module"]
+pub type TEXT_OUT_ = crate::Reg<text_out_::TEXT_OUT__SPEC>;
+#[doc = "Result text data register %s"]
+pub mod text_out_;
+#[doc = "MODE (rw) register accessor: Defines key length and encryption / decryption\n\nYou can [`read`](crate::Reg::read) this register and get [`mode::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mode::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mode`] module"]
 pub type MODE = crate::Reg<mode::MODE_SPEC>;
-#[doc = "AES Mode register"]
+#[doc = "Defines key length and encryption / decryption"]
 pub mod mode;
 #[doc = "ENDIAN (rw) register accessor: AES Endian configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`endian::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`endian::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@endian`] module"]
 pub type ENDIAN = crate::Reg<endian::ENDIAN_SPEC>;
 #[doc = "AES Endian configure register"]
 pub mod endian;
-#[doc = "TRIGGER (w) register accessor: AES trigger register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`trigger::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@trigger`] module"]
+#[doc = "TRIGGER (w) register accessor: Operation start controlling register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`trigger::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@trigger`] module"]
 pub type TRIGGER = crate::Reg<trigger::TRIGGER_SPEC>;
-#[doc = "AES trigger register"]
+#[doc = "Operation start controlling register"]
 pub mod trigger;
-#[doc = "STATE (r) register accessor: AES state register\n\nYou can [`read`](crate::Reg::read) this register and get [`state::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@state`] module"]
+#[doc = "STATE (r) register accessor: Operation status register\n\nYou can [`read`](crate::Reg::read) this register and get [`state::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@state`] module"]
 pub type STATE = crate::Reg<state::STATE_SPEC>;
-#[doc = "AES state register"]
+#[doc = "Operation status register"]
 pub mod state;
 #[doc = "IV_MEM (rw) register accessor: The memory that stores initialization vector\n\nYou can [`read`](crate::Reg::read) this register and get [`iv_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`iv_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@iv_mem`] module"]
 pub type IV_MEM = crate::Reg<iv_mem::IV_MEM_SPEC>;
@@ -223,21 +243,21 @@ pub mod j0_mem;
 pub type T0_MEM = crate::Reg<t0_mem::T0_MEM_SPEC>;
 #[doc = "The memory that stores T0"]
 pub mod t0_mem;
-#[doc = "DMA_ENABLE (rw) register accessor: DMA-AES working mode register\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_enable::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_enable::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_enable`] module"]
+#[doc = "DMA_ENABLE (rw) register accessor: Selects the working mode of the AES accelerator\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_enable::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_enable::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_enable`] module"]
 pub type DMA_ENABLE = crate::Reg<dma_enable::DMA_ENABLE_SPEC>;
-#[doc = "DMA-AES working mode register"]
+#[doc = "Selects the working mode of the AES accelerator"]
 pub mod dma_enable;
-#[doc = "BLOCK_MODE (rw) register accessor: AES cipher block mode register\n\nYou can [`read`](crate::Reg::read) this register and get [`block_mode::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`block_mode::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@block_mode`] module"]
+#[doc = "BLOCK_MODE (rw) register accessor: Defines the block cipher mode\n\nYou can [`read`](crate::Reg::read) this register and get [`block_mode::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`block_mode::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@block_mode`] module"]
 pub type BLOCK_MODE = crate::Reg<block_mode::BLOCK_MODE_SPEC>;
-#[doc = "AES cipher block mode register"]
+#[doc = "Defines the block cipher mode"]
 pub mod block_mode;
-#[doc = "BLOCK_NUM (rw) register accessor: AES block number register\n\nYou can [`read`](crate::Reg::read) this register and get [`block_num::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`block_num::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@block_num`] module"]
+#[doc = "BLOCK_NUM (rw) register accessor: Block number configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`block_num::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`block_num::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@block_num`] module"]
 pub type BLOCK_NUM = crate::Reg<block_num::BLOCK_NUM_SPEC>;
-#[doc = "AES block number register"]
+#[doc = "Block number configuration register"]
 pub mod block_num;
-#[doc = "INC_SEL (rw) register accessor: Standard incrementing function configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`inc_sel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inc_sel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inc_sel`] module"]
+#[doc = "INC_SEL (rw) register accessor: Standard incrementing function register\n\nYou can [`read`](crate::Reg::read) this register and get [`inc_sel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inc_sel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inc_sel`] module"]
 pub type INC_SEL = crate::Reg<inc_sel::INC_SEL_SPEC>;
-#[doc = "Standard incrementing function configure register"]
+#[doc = "Standard incrementing function register"]
 pub mod inc_sel;
 #[doc = "AAD_BLOCK_NUM (rw) register accessor: Additional Authential Data block number register\n\nYou can [`read`](crate::Reg::read) this register and get [`aad_block_num::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`aad_block_num::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@aad_block_num`] module"]
 pub type AAD_BLOCK_NUM = crate::Reg<aad_block_num::AAD_BLOCK_NUM_SPEC>;
@@ -251,19 +271,31 @@ pub mod remainder_bit_num;
 pub type CONTINUE = crate::Reg<continue_::CONTINUE_SPEC>;
 #[doc = "AES continue register"]
 pub mod continue_;
-#[doc = "INT_CLR (w) register accessor: AES Interrupt clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
-pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
-#[doc = "AES Interrupt clear register"]
-pub mod int_clr;
-#[doc = "INT_ENA (rw) register accessor: AES Interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+#[doc = "INT_CLEAR (w) register accessor: DMA-AES interrupt clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clear::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clear`] module"]
+pub type INT_CLEAR = crate::Reg<int_clear::INT_CLEAR_SPEC>;
+#[doc = "DMA-AES interrupt clear register"]
+pub mod int_clear;
+#[doc = "INT_ENA (rw) register accessor: DMA-AES interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
-#[doc = "AES Interrupt enable register"]
+#[doc = "DMA-AES interrupt enable register"]
 pub mod int_ena;
 #[doc = "DATE (rw) register accessor: AES version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "AES version control register"]
 pub mod date;
-#[doc = "DMA_EXIT (w) register accessor: AES-DMA exit config\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_exit::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_exit`] module"]
+#[doc = "DMA_EXIT (w) register accessor: Operation exit controlling register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_exit::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_exit`] module"]
 pub type DMA_EXIT = crate::Reg<dma_exit::DMA_EXIT_SPEC>;
-#[doc = "AES-DMA exit config"]
+#[doc = "Operation exit controlling register"]
 pub mod dma_exit;
+#[doc = "RX_RESET (w) register accessor: AES-DMA reset rx-fifo register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_reset::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_reset`] module"]
+pub type RX_RESET = crate::Reg<rx_reset::RX_RESET_SPEC>;
+#[doc = "AES-DMA reset rx-fifo register"]
+pub mod rx_reset;
+#[doc = "TX_RESET (w) register accessor: AES-DMA reset tx-fifo register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_reset::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_reset`] module"]
+pub type TX_RESET = crate::Reg<tx_reset::TX_RESET_SPEC>;
+#[doc = "AES-DMA reset tx-fifo register"]
+pub mod tx_reset;
+#[doc = "PSEUDO (rw) register accessor: AES PSEUDO function configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`pseudo::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pseudo::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pseudo`] module"]
+pub type PSEUDO = crate::Reg<pseudo::PSEUDO_SPEC>;
+#[doc = "AES PSEUDO function configure register"]
+pub mod pseudo;

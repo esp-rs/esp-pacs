@@ -20,6 +20,10 @@ pub type UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type BLEND_RST_R = crate::BitReader;
 #[doc = "Field `BLEND_RST` writer - write 1 then write 0 to reset blending engine."]
 pub type BLEND_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BLEND_TX_INF_SEL` reader - unused ! Configures blend tx interface. 0: dma2d only, 1: le_enc only, 2: dma2d and ls_enc"]
+pub type BLEND_TX_INF_SEL_R = crate::FieldReader;
+#[doc = "Field `BLEND_TX_INF_SEL` writer - unused ! Configures blend tx interface. 0: dma2d only, 1: le_enc only, 2: dma2d and ls_enc"]
+pub type BLEND_TX_INF_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable alpha blending."]
     #[inline(always)]
@@ -41,6 +45,11 @@ impl R {
     pub fn blend_rst(&self) -> BLEND_RST_R {
         BLEND_RST_R::new(((self.bits >> 4) & 1) != 0)
     }
+    #[doc = "Bits 5:6 - unused ! Configures blend tx interface. 0: dma2d only, 1: le_enc only, 2: dma2d and ls_enc"]
+    #[inline(always)]
+    pub fn blend_tx_inf_sel(&self) -> BLEND_TX_INF_SEL_R {
+        BLEND_TX_INF_SEL_R::new(((self.bits >> 5) & 3) as u8)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -50,6 +59,7 @@ impl core::fmt::Debug for R {
             .field("blend_bypass", &self.blend_bypass())
             .field("blend_fix_pixel_fill_en", &self.blend_fix_pixel_fill_en())
             .field("blend_rst", &self.blend_rst())
+            .field("blend_tx_inf_sel", &self.blend_tx_inf_sel())
             .finish()
     }
 }
@@ -80,6 +90,11 @@ impl W {
     #[inline(always)]
     pub fn blend_rst(&mut self) -> BLEND_RST_W<'_, BLEND_TRANS_MODE_SPEC> {
         BLEND_RST_W::new(self, 4)
+    }
+    #[doc = "Bits 5:6 - unused ! Configures blend tx interface. 0: dma2d only, 1: le_enc only, 2: dma2d and ls_enc"]
+    #[inline(always)]
+    pub fn blend_tx_inf_sel(&mut self) -> BLEND_TX_INF_SEL_W<'_, BLEND_TRANS_MODE_SPEC> {
+        BLEND_TX_INF_SEL_W::new(self, 5)
     }
 }
 #[doc = "Blending engine mode configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`blend_trans_mode::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`blend_trans_mode::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

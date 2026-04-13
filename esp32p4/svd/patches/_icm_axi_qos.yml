@@ -1,0 +1,114 @@
+_add:
+  ICM_AXI_QOS:
+    description: AXI ICM QoS indirect-access window (base + 0x400)
+    groupName: ICM_AXI
+    baseAddress: 0x500a4400
+    addressBlock:
+      offset: 0x0
+      size: 0x10
+      usage: registers
+    registers:
+      VERID_FILEDS:
+        description: QoS block version ID (typo matches IDF symbol)
+        addressOffset: 0x0
+        size: 0x20
+        access: read-only
+        fields:
+          VERID:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+      HW_CFG:
+        description: QoS hardware configuration
+        addressOffset: 0x4
+        size: 0x20
+        access: read-only
+        fields:
+          QOS_SUPPORT:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-only
+          APB3_SUPPORT:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-only
+          AXI4_SUPPORT:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-only
+          LOCK_EN:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-only
+          TRUST_ZONE_EN:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-only
+          DECODER_TYPE:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-only
+          REMAP_EN:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-only
+          BI_DIR_CMD_EN:
+            bitOffset: 7
+            bitWidth: 1
+            access: read-only
+          LOW_POWER_INF_EN:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-only
+          AXI_NUM_MASTERS:
+            bitOffset: 12
+            bitWidth: 5
+            access: read-only
+          AXI_NUM_SLAVES:
+            bitOffset: 20
+            bitWidth: 5
+            access: read-only
+      CMD:
+        description: QoS indirect command
+        addressOffset: 0x8
+        size: 0x20
+        access: read-write
+        fields:
+          AXI_CMD:
+            bitOffset: 0
+            bitWidth: 3
+            access: read-write
+          RD_WR_CHAN:
+            bitOffset: 7
+            bitWidth: 1
+            access: read-write
+          AXI_MASTER_PORT:
+            bitOffset: 8
+            bitWidth: 4
+            access: read-write
+          AXI_ERR_BIT:
+            bitOffset: 28
+            bitWidth: 1
+            access: read-only
+          AXI_SOFT_RESET_BIT:
+            bitOffset: 29
+            bitWidth: 1
+            access: read-write
+          AXI_RD_WR_CMD:
+            bitOffset: 30
+            bitWidth: 1
+            access: read-write
+          AXI_CMD_EN:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+      DATA:
+        description: QoS indirect data
+        addressOffset: 0xc
+        size: 0x20
+        access: read-write
+        fields:
+          VAL:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
