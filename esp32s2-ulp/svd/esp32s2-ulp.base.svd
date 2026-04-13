@@ -201,6 +201,7 @@
         <register>
           <dim>22</dim>
           <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-21</dimIndex>
           <name>RTC_GPIO_PIN%s</name>
           <description>RTC configuration for pin %s</description>
           <addressOffset>0x28</addressOffset>
