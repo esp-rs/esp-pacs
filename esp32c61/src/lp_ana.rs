@@ -132,5 +132,4 @@ pub mod lp_int_ena;
 pub type LP_INT_CLR = crate::Reg<lp_int_clr::LP_INT_CLR_SPEC>;
 #[doc = "need_des"]
 pub mod lp_int_clr;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

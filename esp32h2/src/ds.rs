@@ -186,5 +186,4 @@ pub mod query_key_wrong;
 pub type QUERY_CHECK = crate::Reg<query_check::QUERY_CHECK_SPEC>;
 #[doc = "DS query check result register"]
 pub mod query_check;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

@@ -493,5 +493,4 @@ pub mod timer_cnt_cap;
 pub type CONF = crate::Reg<conf::CONF_SPEC>;
 #[doc = "Global ledc configuration register"]
 pub mod conf;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

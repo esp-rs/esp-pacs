@@ -184,8 +184,7 @@ pub mod int_clr;
 pub type RTCCALICFG2 = crate::Reg<rtccalicfg2::RTCCALICFG2_SPEC>;
 #[doc = "TIMG_RTCCALICFG2_REG."]
 pub mod rtccalicfg2;
-pub use crate::aes::date as ntimg_date;
-pub use crate::aes::DATE as NTIMG_DATE;
+pub use crate::aes::{date as ntimg_date, DATE as NTIMG_DATE};
 #[doc = "REGCLK (rw) register accessor: TIMG_REGCLK_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`regclk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`regclk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@regclk`] module"]
 pub type REGCLK = crate::Reg<regclk::REGCLK_SPEC>;
 #[doc = "TIMG_REGCLK_REG."]

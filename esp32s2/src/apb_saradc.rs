@@ -262,5 +262,4 @@ pub mod clkm_conf;
 pub type APB_DAC_CTRL = crate::Reg<apb_dac_ctrl::APB_DAC_CTRL_SPEC>;
 #[doc = "Configure DAC settings"]
 pub mod apb_dac_ctrl;
-pub use crate::aes::date as ctrl_date;
-pub use crate::aes::DATE as CTRL_DATE;
+pub use crate::aes::{date as ctrl_date, DATE as CTRL_DATE};

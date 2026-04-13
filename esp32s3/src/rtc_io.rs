@@ -264,5 +264,4 @@ pub mod sar_i2c_io;
 pub type TOUCH_CTRL = crate::Reg<touch_ctrl::TOUCH_CTRL_SPEC>;
 #[doc = "configure touch pad bufmode"]
 pub mod touch_ctrl;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

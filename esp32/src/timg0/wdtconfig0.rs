@@ -12,17 +12,17 @@ pub type WDT_FLASHBOOT_MOD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[repr(u8)]
 pub enum WDT_SYS_RESET_LENGTH {
     #[doc = "0: 100ns"]
-    Ns100 = 0,
+    Ns100  = 0,
     #[doc = "1: 200ns"]
-    Ns200 = 1,
+    Ns200  = 1,
     #[doc = "2: 300ns"]
-    Ns300 = 2,
+    Ns300  = 2,
     #[doc = "3: 400ns"]
-    Ns400 = 3,
+    Ns400  = 3,
     #[doc = "4: 500ns"]
-    Ns500 = 4,
+    Ns500  = 4,
     #[doc = "5: 800ns"]
-    Ns800 = 5,
+    Ns800  = 5,
     #[doc = "6: 1.6us"]
     Ns1600 = 6,
     #[doc = "7: 3.2us"]
@@ -152,17 +152,17 @@ where
 #[repr(u8)]
 pub enum WDT_CPU_RESET_LENGTH {
     #[doc = "0: 100ns"]
-    Ns100 = 0,
+    Ns100  = 0,
     #[doc = "1: 200ns"]
-    Ns200 = 1,
+    Ns200  = 1,
     #[doc = "2: 300ns"]
-    Ns300 = 2,
+    Ns300  = 2,
     #[doc = "3: 400ns"]
-    Ns400 = 3,
+    Ns400  = 3,
     #[doc = "4: 500ns"]
-    Ns500 = 4,
+    Ns500  = 4,
     #[doc = "5: 800ns"]
-    Ns800 = 5,
+    Ns800  = 5,
     #[doc = "6: 1.6us"]
     Ns1600 = 6,
     #[doc = "7: 3.2us"]
@@ -300,13 +300,13 @@ pub type WDT_EDGE_INT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[repr(u8)]
 pub enum WDT_STG3 {
     #[doc = "0: Off"]
-    Off = 0,
+    Off       = 0,
     #[doc = "1: Interrupt"]
     Interrupt = 1,
     #[doc = "2: Reset CPU"]
-    Reset = 2,
+    Reset     = 2,
     #[doc = "3: Reset system"]
-    ResetSys = 3,
+    ResetSys  = 3,
 }
 impl From<WDT_STG3> for u8 {
     #[inline(always)]

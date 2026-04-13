@@ -101,5 +101,4 @@ pub mod wifi_bb_cfg;
 pub type MEM_CONF = crate::Reg<mem_conf::MEM_CONF_SPEC>;
 #[doc = ""]
 pub mod mem_conf;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

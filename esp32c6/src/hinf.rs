@@ -151,5 +151,4 @@ pub mod sdio_slave_eco_conf;
 pub type SDIO_SLAVE_LDO_CONF = crate::Reg<sdio_slave_ldo_conf::SDIO_SLAVE_LDO_CONF_SPEC>;
 #[doc = "sdio slave ldo control register"]
 pub mod sdio_slave_ldo_conf;
-pub use crate::aes::date as sdio_date;
-pub use crate::aes::DATE as SDIO_DATE;
+pub use crate::aes::{date as sdio_date, DATE as SDIO_DATE};

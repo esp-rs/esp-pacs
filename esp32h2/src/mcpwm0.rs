@@ -242,5 +242,4 @@ pub mod task_en;
 pub type CLK = crate::Reg<clk::CLK_SPEC>;
 #[doc = "MCPWM APB configuration register"]
 pub mod clk;
-pub use crate::dma::date as version;
-pub use crate::dma::DATE as VERSION;
+pub use crate::dma::{date as version, DATE as VERSION};

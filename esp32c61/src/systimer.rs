@@ -264,5 +264,4 @@ pub use self::real_target::REAL_TARGET;
 #[doc = r"Cluster"]
 #[doc = "Cluster REAL_TARGET%s, containing REAL_TARGET?_LO, REAL_TARGET?_HI"]
 pub mod real_target;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

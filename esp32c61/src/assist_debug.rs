@@ -84,5 +84,4 @@ pub mod core_x_iram0_dram0_exception_monitor;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "Register clock control"]
 pub mod clock_gate;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

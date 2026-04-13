@@ -199,5 +199,4 @@ pub mod search_pos;
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "Enables the RSA interrupt"]
 pub mod int_ena;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

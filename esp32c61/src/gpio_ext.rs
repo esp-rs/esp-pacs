@@ -212,5 +212,4 @@ pub mod int_clr;
 pub type PIN_CTRL = crate::Reg<pin_ctrl::PIN_CTRL_SPEC>;
 #[doc = "Clock Output Configuration Register"]
 pub mod pin_ctrl;
-pub use crate::dma::date as version;
-pub use crate::dma::DATE as VERSION;
+pub use crate::dma::{date as version, DATE as VERSION};

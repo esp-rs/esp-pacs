@@ -214,5 +214,4 @@ pub mod lpcore;
 pub type SAR_CCT = crate::Reg<sar_cct::SAR_CCT_SPEC>;
 #[doc = "need_des"]
 pub mod sar_cct;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

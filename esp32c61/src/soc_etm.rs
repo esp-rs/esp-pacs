@@ -278,5 +278,4 @@ pub mod task_st4_clr;
 pub type CLK_EN = crate::Reg<clk_en::CLK_EN_SPEC>;
 #[doc = "ETM clock enable register"]
 pub mod clk_en;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

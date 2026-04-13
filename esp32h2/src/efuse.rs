@@ -1162,5 +1162,4 @@ pub mod wr_tim_conf2;
 pub type WR_TIM_CONF0_RS_BYPASS = crate::Reg<wr_tim_conf0_rs_bypass::WR_TIM_CONF0_RS_BYPASS_SPEC>;
 #[doc = "Configurarion register0 of eFuse programming time parameters and rs bypass operation."]
 pub mod wr_tim_conf0_rs_bypass;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

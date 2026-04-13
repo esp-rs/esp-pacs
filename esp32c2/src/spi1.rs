@@ -282,5 +282,4 @@ pub mod int_st;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "SPI1 clk_gate register"]
 pub mod clock_gate;
-pub use crate::apb_ctrl::date;
-pub use crate::apb_ctrl::DATE;
+pub use crate::apb_ctrl::{date, DATE};

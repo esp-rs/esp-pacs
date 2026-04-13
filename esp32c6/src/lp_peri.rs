@@ -102,5 +102,4 @@ pub mod mem_ctrl;
 pub type INTERRUPT_SOURCE = crate::Reg<interrupt_source::INTERRUPT_SOURCE_SPEC>;
 #[doc = "need_des"]
 pub mod interrupt_source;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

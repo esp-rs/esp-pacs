@@ -766,5 +766,4 @@ pub mod slp_wakeup_cause;
 pub type ULP_CP_TIMER_1 = crate::Reg<ulp_cp_timer_1::ULP_CP_TIMER_1_SPEC>;
 #[doc = "Configure sleep cycle of the timer"]
 pub mod ulp_cp_timer_1;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

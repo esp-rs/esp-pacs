@@ -193,5 +193,4 @@ pub mod int_clr;
 pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = "Read only register for error and done"]
 pub mod int_st;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

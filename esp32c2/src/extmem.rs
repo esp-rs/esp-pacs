@@ -390,5 +390,4 @@ pub mod cache_request;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "This description will be updated in the near future."]
 pub mod clock_gate;
-pub use crate::apb_ctrl::date as reg_date;
-pub use crate::apb_ctrl::DATE as REG_DATE;
+pub use crate::apb_ctrl::{date as reg_date, DATE as REG_DATE};

@@ -536,5 +536,4 @@ pub mod ext_wakeup1_status;
 pub type BROWN_OUT = crate::Reg<brown_out::BROWN_OUT_SPEC>;
 #[doc = ""]
 pub mod brown_out;
-pub use crate::apb_ctrl::date;
-pub use crate::apb_ctrl::DATE;
+pub use crate::apb_ctrl::{date, DATE};
