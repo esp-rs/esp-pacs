@@ -1,4 +1,3 @@
-# EFUSE ECDSA block configuration.
 EFUSE:
   _add:
     ECDSA:

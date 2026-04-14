@@ -15,7 +15,8 @@ HP_SYS:
       name: CPU_INTR_FROM_CPU_3
 
   _add:
-    SYSTEM_USB_OTGHS_PHY_ST:
+    # Short names (HP_ stripped by rules above) match other HP_SYS tail registers.
+    USB_OTGHS_PHY_ST:
       description: USB OTG HS PHY status
       addressOffset: 0x1e8
       size: 0x20
@@ -25,7 +26,7 @@ HP_SYS:
           bitOffset: 0
           bitWidth: 32
           access: read-write
-    SYSTEM_CPU_WAKEUP_EVENT:
+    CPU_WAKEUP_EVENT:
       description: CPU wakeup event
       addressOffset: 0x1ec
       size: 0x20
@@ -35,7 +36,7 @@ HP_SYS:
           bitOffset: 0
           bitWidth: 32
           access: read-write
-    SYSTEM_HP2LP_INTR_GROUP%s_EN:
+    HP2LP_INTR_GROUP%s_EN:
       description: HP to LP interrupt group %s enable
       addressOffset: 0x1f0
       dim: 4
@@ -47,7 +48,7 @@ HP_SYS:
           bitOffset: 0
           bitWidth: 32
           access: read-write
-    SYSTEM_HP2LP_INTR_GROUP%s_ST:
+    HP2LP_INTR_GROUP%s_ST:
       description: HP to LP interrupt group %s status
       addressOffset: 0x200
       dim: 4
@@ -59,7 +60,7 @@ HP_SYS:
           bitOffset: 0
           bitWidth: 32
           access: read-only
-    SYSTEM_HP2LP_WAKEUP_GROUP%s_EN:
+    HP2LP_WAKEUP_GROUP%s_EN:
       description: HP to LP wakeup group %s enable
       addressOffset: 0x210
       dim: 4

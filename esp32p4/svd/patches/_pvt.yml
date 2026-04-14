@@ -1,4 +1,3 @@
-# PVT tail registers vs vendor SVD.
 PVT:
   _add:
     BYPASS_CHAIN:

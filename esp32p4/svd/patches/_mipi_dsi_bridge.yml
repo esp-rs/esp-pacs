@@ -1,4 +1,3 @@
-# MIPI_DSI_BRIDGE tail register vs vendor SVD.
 MIPI_DSI_BRIDGE:
   _add:
     DSI_BRG_VER_DATE:

@@ -1,5 +1,7 @@
-# System ICM block at DR_REG_AXI_ICM_BASE (replaces vendor QoS-only stub at same base).
 AXI_ICM:
+  "*":
+    _strip: ""
+
   _delete:
     - VERID_FILEDS
     - HW_CFG
@@ -12,7 +14,7 @@ AXI_ICM:
       size: 0x20
       access: read-write
       fields:
-        ICM_REG_VER_DATE:
+        VER_DATE:
           bitOffset: 0
           bitWidth: 32
           access: read-write
@@ -22,7 +24,7 @@ AXI_ICM:
       size: 0x20
       access: read-write
       fields:
-        ICM_REG_CLK_EN:
+        CLK_EN:
           bitOffset: 0
           bitWidth: 1
           access: read-write
@@ -32,19 +34,19 @@ AXI_ICM:
       size: 0x20
       access: read-only
       fields:
-        ICM_REG_DLOCK_MST:
+        DLOCK_MST:
           bitOffset: 0
           bitWidth: 4
           access: read-only
-        ICM_REG_DLOCK_SLV:
+        DLOCK_SLV:
           bitOffset: 4
           bitWidth: 3
           access: read-only
-        ICM_REG_DLOCK_ID:
+        DLOCK_ID:
           bitOffset: 7
           bitWidth: 4
           access: read-only
-        ICM_REG_DLOCK_WR:
+        DLOCK_WR:
           bitOffset: 11
           bitWidth: 1
           access: read-only
@@ -54,15 +56,15 @@ AXI_ICM:
       size: 0x20
       access: read-write
       fields:
-        ICM_REG_DLOCK_INT_RAW:
+        DLOCK_INT_RAW:
           bitOffset: 0
           bitWidth: 1
           access: read-write
-        ICM_REG_ICM_SYS_ADDRHOLE_INT_RAW:
+        ICM_SYS_ADDRHOLE_INT_RAW:
           bitOffset: 1
           bitWidth: 1
           access: read-write
-        ICM_REG_ICM_CPU_ADDRHOLE_INT_RAW:
+        ICM_CPU_ADDRHOLE_INT_RAW:
           bitOffset: 2
           bitWidth: 1
           access: read-write
@@ -72,15 +74,15 @@ AXI_ICM:
       size: 0x20
       access: read-only
       fields:
-        ICM_REG_DLOCK_INT_ST:
+        DLOCK_INT_ST:
           bitOffset: 0
           bitWidth: 1
           access: read-only
-        ICM_REG_ICM_SYS_ADDRHOLE_INT_ST:
+        ICM_SYS_ADDRHOLE_INT_ST:
           bitOffset: 1
           bitWidth: 1
           access: read-only
-        ICM_REG_ICM_CPU_ADDRHOLE_INT_ST:
+        ICM_CPU_ADDRHOLE_INT_ST:
           bitOffset: 2
           bitWidth: 1
           access: read-only
@@ -90,15 +92,15 @@ AXI_ICM:
       size: 0x20
       access: read-write
       fields:
-        ICM_REG_DLOCK_INT_ENA:
+        DLOCK_INT_ENA:
           bitOffset: 0
           bitWidth: 1
           access: read-write
-        ICM_REG_ICM_SYS_ADDRHOLE_INT_ENA:
+        ICM_SYS_ADDRHOLE_INT_ENA:
           bitOffset: 1
           bitWidth: 1
           access: read-write
-        ICM_REG_ICM_CPU_ADDRHOLE_INT_ENA:
+        ICM_CPU_ADDRHOLE_INT_ENA:
           bitOffset: 2
           bitWidth: 1
           access: read-write
@@ -108,53 +110,53 @@ AXI_ICM:
       size: 0x20
       access: write-only
       fields:
-        ICM_REG_DLOCK_INT_CLR:
+        DLOCK_INT_CLR:
           bitOffset: 0
           bitWidth: 1
           access: write-only
-        ICM_REG_ICM_SYS_ADDRHOLE_INT_CLR:
+        ICM_SYS_ADDRHOLE_INT_CLR:
           bitOffset: 1
           bitWidth: 1
           access: write-only
-        ICM_REG_ICM_CPU_ADDRHOLE_INT_CLR:
+        ICM_CPU_ADDRHOLE_INT_CLR:
           bitOffset: 2
           bitWidth: 1
           access: write-only
-    ICM_MST_ARB_PRIORITY_REG0:
+    ICM_MST_ARB_PRIORITY:
       description: Master arbitration priority
       addressOffset: 0x1c
       size: 0x20
       access: read-write
       fields:
-        ICM_REG_CPU_PRIORITY:
+        CPU_PRIORITY:
           bitOffset: 0
           bitWidth: 4
           access: read-write
-        ICM_REG_CACHE_PRIORITY:
+        CACHE_PRIORITY:
           bitOffset: 4
           bitWidth: 4
           access: read-write
-        ICM_REG_DMA2D_PRIORITY:
+        DMA2D_PRIORITY:
           bitOffset: 8
           bitWidth: 4
           access: read-write
-        ICM_REG_GDMA_MST1_PRIORITY:
+        GDMA_MST1_PRIORITY:
           bitOffset: 12
           bitWidth: 4
           access: read-write
-        ICM_REG_GDMA_MST2_PRIORITY:
+        GDMA_MST2_PRIORITY:
           bitOffset: 16
           bitWidth: 4
           access: read-write
-        ICM_REG_H264_M1_PRIORITY:
+        H264_M1_PRIORITY:
           bitOffset: 20
           bitWidth: 4
           access: read-write
-        ICM_REG_H264_M2_PRIORITY:
+        H264_M2_PRIORITY:
           bitOffset: 24
           bitWidth: 4
           access: read-write
-        ICM_REG_AXI_PDMA_PRIORITY:
+        AXI_PDMA_PRIORITY:
           bitOffset: 28
           bitWidth: 4
           access: read-write
@@ -164,109 +166,109 @@ AXI_ICM:
       size: 0x20
       access: read-write
       fields:
-        ICM_REG_L2MEM_PRIORITY:
+        L2MEM_PRIORITY:
           bitOffset: 3
           bitWidth: 3
           access: read-write
-        ICM_REG_FLASH_MSPI_PRIORITY:
+        FLASH_MSPI_PRIORITY:
           bitOffset: 12
           bitWidth: 3
           access: read-write
-        ICM_REG_PSRAM_MSPI_PRIORITY:
+        PSRAM_MSPI_PRIORITY:
           bitOffset: 15
           bitWidth: 3
           access: read-write
-        ICM_REG_LCD_PRIORITY:
+        LCD_PRIORITY:
           bitOffset: 18
           bitWidth: 3
           access: read-write
-        ICM_REG_CAM_PRIORITY:
+        CAM_PRIORITY:
           bitOffset: 21
           bitWidth: 3
           access: read-write
-    ICM_MST_ARQOS_REG0:
+    ICM_MST_ARQOS:
       description: Master read QoS
       addressOffset: 0x28
       size: 0x20
       access: read-write
       fields:
-        ICM_REG_CPU_ARQOS:
+        CPU_ARQOS:
           bitOffset: 0
           bitWidth: 4
           access: read-write
-        ICM_REG_CACHE_ARQOS:
+        CACHE_ARQOS:
           bitOffset: 4
           bitWidth: 4
           access: read-write
-        ICM_REG_DMA2D_ARQOS:
+        DMA2D_ARQOS:
           bitOffset: 8
           bitWidth: 4
           access: read-write
-        ICM_REG_GDMA_MST1_ARQOS:
+        GDMA_MST1_ARQOS:
           bitOffset: 12
           bitWidth: 4
           access: read-write
-        ICM_REG_GDMA_MST2_ARQOS:
+        GDMA_MST2_ARQOS:
           bitOffset: 16
           bitWidth: 4
           access: read-write
-        ICM_REG_H264_DMA2D_M1_ARQOS:
+        H264_DMA2D_M1_ARQOS:
           bitOffset: 20
           bitWidth: 4
           access: read-write
-        ICM_REG_H264_DMA2D_M2_ARQOS:
+        H264_DMA2D_M2_ARQOS:
           bitOffset: 24
           bitWidth: 4
           access: read-write
-        ICM_REG_AXI_PDMA_INT_ARQOS:
+        AXI_PDMA_INT_ARQOS:
           bitOffset: 28
           bitWidth: 4
           access: read-write
-    ICM_MST_AWQOS_REG0:
+    ICM_MST_AWQOS:
       description: Master write QoS
       addressOffset: 0x30
       size: 0x20
       access: read-write
       fields:
-        ICM_REG_CPU_AWQOS:
+        CPU_AWQOS:
           bitOffset: 0
           bitWidth: 4
           access: read-write
-        ICM_REG_CACHE_AWQOS:
+        CACHE_AWQOS:
           bitOffset: 4
           bitWidth: 4
           access: read-write
-        ICM_REG_DMA2D_AWQOS:
+        DMA2D_AWQOS:
           bitOffset: 8
           bitWidth: 4
           access: read-write
-        ICM_REG_GDMA_MST1_AWQOS:
+        GDMA_MST1_AWQOS:
           bitOffset: 12
           bitWidth: 4
           access: read-write
-        ICM_REG_GDMA_MST2_AWQOS:
+        GDMA_MST2_AWQOS:
           bitOffset: 16
           bitWidth: 4
           access: read-write
-        ICM_REG_H264_DMA2D_M1_AWQOS:
+        H264_DMA2D_M1_AWQOS:
           bitOffset: 20
           bitWidth: 4
           access: read-write
-        ICM_REG_H264_DMA2D_M2_AWQOS:
+        H264_DMA2D_M2_AWQOS:
           bitOffset: 24
           bitWidth: 4
           access: read-write
-        ICM_REG_PDMA_INT_AWQOS:
+        PDMA_INT_AWQOS:
           bitOffset: 28
           bitWidth: 4
           access: read-write
     ICM_SYS_ADDRHOLE_ADDR:
       description: SYS address hole address
-      addressOffset: 0x38
+      addressOffset: 0x38f
       size: 0x20
       access: read-only
       fields:
-        ICM_REG_ICM_SYS_ADDRHOLE_ADDR:
+        ICM_SYS_ADDRHOLE_ADDR:
           bitOffset: 0
           bitWidth: 32
           access: read-only
@@ -276,15 +278,15 @@ AXI_ICM:
       size: 0x20
       access: read-only
       fields:
-        ICM_REG_ICM_SYS_ADDRHOLE_ID:
+        ICM_SYS_ADDRHOLE_ID:
           bitOffset: 0
           bitWidth: 8
           access: read-only
-        ICM_REG_ICM_SYS_ADDRHOLE_WR:
+        ICM_SYS_ADDRHOLE_WR:
           bitOffset: 8
           bitWidth: 1
           access: read-only
-        ICM_REG_ICM_SYS_ADDRHOLE_SECURE:
+        ICM_SYS_ADDRHOLE_SECURE:
           bitOffset: 9
           bitWidth: 1
           access: read-only
@@ -294,7 +296,7 @@ AXI_ICM:
       size: 0x20
       access: read-only
       fields:
-        ICM_REG_ICM_CPU_ADDRHOLE_ADDR:
+        ICM_CPU_ADDRHOLE_ADDR:
           bitOffset: 0
           bitWidth: 32
           access: read-only
@@ -304,15 +306,15 @@ AXI_ICM:
       size: 0x20
       access: read-only
       fields:
-        ICM_REG_ICM_CPU_ADDRHOLE_ID:
+        ICM_CPU_ADDRHOLE_ID:
           bitOffset: 0
           bitWidth: 5
           access: read-only
-        ICM_REG_ICM_CPU_ADDRHOLE_WR:
+        ICM_CPU_ADDRHOLE_WR:
           bitOffset: 8
           bitWidth: 1
           access: read-only
-        ICM_REG_ICM_CPU_ADDRHOLE_SECURE:
+        ICM_CPU_ADDRHOLE_SECURE:
           bitOffset: 9
           bitWidth: 1
           access: read-only
@@ -322,7 +324,7 @@ AXI_ICM:
       size: 0x20
       access: read-write
       fields:
-        ICM_REG_DLOCK_TIMEOUT:
+        DLOCK_TIMEOUT:
           bitOffset: 0
           bitWidth: 13
           access: read-write
@@ -332,11 +334,11 @@ AXI_ICM:
       size: 0x20
       access: read-write
       fields:
-        ICM_REG_RDN_ECO_EN:
+        RDN_ECO_EN:
           bitOffset: 0
           bitWidth: 1
           access: read-write
-        ICM_REG_RDN_ECO_RESULT:
+        RDN_ECO_RESULT:
           bitOffset: 1
           bitWidth: 1
           access: read-only
@@ -346,7 +348,7 @@ AXI_ICM:
       size: 0x20
       access: read-write
       fields:
-        ICM_RDN_ECO_LOW:
+        RDN_ECO_LOW:
           bitOffset: 0
           bitWidth: 32
           access: read-write
@@ -356,7 +358,7 @@ AXI_ICM:
       size: 0x20
       access: read-write
       fields:
-        ICM_RDN_ECO_HIGH:
+        RDN_ECO_HIGH:
           bitOffset: 0
           bitWidth: 32
           access: read-write

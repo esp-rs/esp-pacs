@@ -1,44 +1,35 @@
 #[doc = "Register `ICM_SYS_ADDRHOLE_INFO` reader"]
 pub type R = crate::R<ICM_SYS_ADDRHOLE_INFO_SPEC>;
-#[doc = "Field `ICM_REG_ICM_SYS_ADDRHOLE_ID` reader - "]
-pub type ICM_REG_ICM_SYS_ADDRHOLE_ID_R = crate::FieldReader;
-#[doc = "Field `ICM_REG_ICM_SYS_ADDRHOLE_WR` reader - "]
-pub type ICM_REG_ICM_SYS_ADDRHOLE_WR_R = crate::BitReader;
-#[doc = "Field `ICM_REG_ICM_SYS_ADDRHOLE_SECURE` reader - "]
-pub type ICM_REG_ICM_SYS_ADDRHOLE_SECURE_R = crate::BitReader;
+#[doc = "Field `ICM_SYS_ADDRHOLE_ID` reader - "]
+pub type ICM_SYS_ADDRHOLE_ID_R = crate::FieldReader;
+#[doc = "Field `ICM_SYS_ADDRHOLE_WR` reader - "]
+pub type ICM_SYS_ADDRHOLE_WR_R = crate::BitReader;
+#[doc = "Field `ICM_SYS_ADDRHOLE_SECURE` reader - "]
+pub type ICM_SYS_ADDRHOLE_SECURE_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn icm_reg_icm_sys_addrhole_id(&self) -> ICM_REG_ICM_SYS_ADDRHOLE_ID_R {
-        ICM_REG_ICM_SYS_ADDRHOLE_ID_R::new((self.bits & 0xff) as u8)
+    pub fn icm_sys_addrhole_id(&self) -> ICM_SYS_ADDRHOLE_ID_R {
+        ICM_SYS_ADDRHOLE_ID_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn icm_reg_icm_sys_addrhole_wr(&self) -> ICM_REG_ICM_SYS_ADDRHOLE_WR_R {
-        ICM_REG_ICM_SYS_ADDRHOLE_WR_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn icm_sys_addrhole_wr(&self) -> ICM_SYS_ADDRHOLE_WR_R {
+        ICM_SYS_ADDRHOLE_WR_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn icm_reg_icm_sys_addrhole_secure(&self) -> ICM_REG_ICM_SYS_ADDRHOLE_SECURE_R {
-        ICM_REG_ICM_SYS_ADDRHOLE_SECURE_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn icm_sys_addrhole_secure(&self) -> ICM_SYS_ADDRHOLE_SECURE_R {
+        ICM_SYS_ADDRHOLE_SECURE_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICM_SYS_ADDRHOLE_INFO")
-            .field(
-                "icm_reg_icm_sys_addrhole_id",
-                &self.icm_reg_icm_sys_addrhole_id(),
-            )
-            .field(
-                "icm_reg_icm_sys_addrhole_wr",
-                &self.icm_reg_icm_sys_addrhole_wr(),
-            )
-            .field(
-                "icm_reg_icm_sys_addrhole_secure",
-                &self.icm_reg_icm_sys_addrhole_secure(),
-            )
+            .field("icm_sys_addrhole_id", &self.icm_sys_addrhole_id())
+            .field("icm_sys_addrhole_wr", &self.icm_sys_addrhole_wr())
+            .field("icm_sys_addrhole_secure", &self.icm_sys_addrhole_secure())
             .finish()
     }
 }

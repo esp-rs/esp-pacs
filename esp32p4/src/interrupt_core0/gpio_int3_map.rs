@@ -2,30 +2,30 @@
 pub type R = crate::R<GPIO_INT3_MAP_SPEC>;
 #[doc = "Register `GPIO_INT3_MAP` writer"]
 pub type W = crate::W<GPIO_INT3_MAP_SPEC>;
-#[doc = "Field `CORE0_GPIO_INT3_MAP` reader - NA"]
-pub type CORE0_GPIO_INT3_MAP_R = crate::FieldReader;
-#[doc = "Field `CORE0_GPIO_INT3_MAP` writer - NA"]
-pub type CORE0_GPIO_INT3_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `GPIO_INT3_MAP` reader - NA"]
+pub type GPIO_INT3_MAP_R = crate::FieldReader;
+#[doc = "Field `GPIO_INT3_MAP` writer - NA"]
+pub type GPIO_INT3_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core0_gpio_int3_map(&self) -> CORE0_GPIO_INT3_MAP_R {
-        CORE0_GPIO_INT3_MAP_R::new((self.bits & 0x3f) as u8)
+    pub fn gpio_int3_map(&self) -> GPIO_INT3_MAP_R {
+        GPIO_INT3_MAP_R::new((self.bits & 0x3f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIO_INT3_MAP")
-            .field("core0_gpio_int3_map", &self.core0_gpio_int3_map())
+            .field("gpio_int3_map", &self.gpio_int3_map())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core0_gpio_int3_map(&mut self) -> CORE0_GPIO_INT3_MAP_W<'_, GPIO_INT3_MAP_SPEC> {
-        CORE0_GPIO_INT3_MAP_W::new(self, 0)
+    pub fn gpio_int3_map(&mut self) -> GPIO_INT3_MAP_W<'_, GPIO_INT3_MAP_SPEC> {
+        GPIO_INT3_MAP_W::new(self, 0)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`gpio_int3_map::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpio_int3_map::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

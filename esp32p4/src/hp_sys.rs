@@ -108,11 +108,11 @@ pub struct RegisterBlock {
     uart_pd_ctrl: UART_PD_CTRL,
     peri_mem_clk_force_on: PERI_MEM_CLK_FORCE_ON,
     _reserved91: [u8; 0x04],
-    system_usb_otghs_phy_st: SYSTEM_USB_OTGHS_PHY_ST,
-    system_cpu_wakeup_event: SYSTEM_CPU_WAKEUP_EVENT,
-    system_hp2lp_intr_group_en: [SYSTEM_HP2LP_INTR_GROUP_EN; 4],
-    system_hp2lp_intr_group_st: [SYSTEM_HP2LP_INTR_GROUP_ST; 4],
-    system_hp2lp_wakeup_group_en: [SYSTEM_HP2LP_WAKEUP_GROUP_EN; 4],
+    usb_otghs_phy_st: USB_OTGHS_PHY_ST,
+    cpu_wakeup_event: CPU_WAKEUP_EVENT,
+    hp2lp_intr_group_en: [HP2LP_INTR_GROUP_EN; 4],
+    hp2lp_intr_group_st: [HP2LP_INTR_GROUP_ST; 4],
+    hp2lp_wakeup_group_en: [HP2LP_WAKEUP_GROUP_EN; 4],
 }
 impl RegisterBlock {
     #[doc = "0x00 - NA"]
@@ -572,112 +572,106 @@ impl RegisterBlock {
     }
     #[doc = "0x1e8 - USB OTG HS PHY status"]
     #[inline(always)]
-    pub const fn system_usb_otghs_phy_st(&self) -> &SYSTEM_USB_OTGHS_PHY_ST {
-        &self.system_usb_otghs_phy_st
+    pub const fn usb_otghs_phy_st(&self) -> &USB_OTGHS_PHY_ST {
+        &self.usb_otghs_phy_st
     }
     #[doc = "0x1ec - CPU wakeup event"]
     #[inline(always)]
-    pub const fn system_cpu_wakeup_event(&self) -> &SYSTEM_CPU_WAKEUP_EVENT {
-        &self.system_cpu_wakeup_event
+    pub const fn cpu_wakeup_event(&self) -> &CPU_WAKEUP_EVENT {
+        &self.cpu_wakeup_event
     }
     #[doc = "0x1f0..0x200 - HP to LP interrupt group %s enable"]
     #[inline(always)]
-    pub const fn system_hp2lp_intr_group_en(&self, n: usize) -> &SYSTEM_HP2LP_INTR_GROUP_EN {
-        &self.system_hp2lp_intr_group_en[n]
+    pub const fn hp2lp_intr_group_en(&self, n: usize) -> &HP2LP_INTR_GROUP_EN {
+        &self.hp2lp_intr_group_en[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x1f0..0x200 - HP to LP interrupt group %s enable"]
     #[inline(always)]
-    pub fn system_hp2lp_intr_group_en_iter(
-        &self,
-    ) -> impl Iterator<Item = &SYSTEM_HP2LP_INTR_GROUP_EN> {
-        self.system_hp2lp_intr_group_en.iter()
+    pub fn hp2lp_intr_group_en_iter(&self) -> impl Iterator<Item = &HP2LP_INTR_GROUP_EN> {
+        self.hp2lp_intr_group_en.iter()
     }
     #[doc = "0x1f0 - HP to LP interrupt group 0 enable"]
     #[inline(always)]
-    pub const fn system_hp2lp_intr_group0_en(&self) -> &SYSTEM_HP2LP_INTR_GROUP_EN {
-        self.system_hp2lp_intr_group_en(0)
+    pub const fn hp2lp_intr_group0_en(&self) -> &HP2LP_INTR_GROUP_EN {
+        self.hp2lp_intr_group_en(0)
     }
     #[doc = "0x1f4 - HP to LP interrupt group 1 enable"]
     #[inline(always)]
-    pub const fn system_hp2lp_intr_group1_en(&self) -> &SYSTEM_HP2LP_INTR_GROUP_EN {
-        self.system_hp2lp_intr_group_en(1)
+    pub const fn hp2lp_intr_group1_en(&self) -> &HP2LP_INTR_GROUP_EN {
+        self.hp2lp_intr_group_en(1)
     }
     #[doc = "0x1f8 - HP to LP interrupt group 2 enable"]
     #[inline(always)]
-    pub const fn system_hp2lp_intr_group2_en(&self) -> &SYSTEM_HP2LP_INTR_GROUP_EN {
-        self.system_hp2lp_intr_group_en(2)
+    pub const fn hp2lp_intr_group2_en(&self) -> &HP2LP_INTR_GROUP_EN {
+        self.hp2lp_intr_group_en(2)
     }
     #[doc = "0x1fc - HP to LP interrupt group 3 enable"]
     #[inline(always)]
-    pub const fn system_hp2lp_intr_group3_en(&self) -> &SYSTEM_HP2LP_INTR_GROUP_EN {
-        self.system_hp2lp_intr_group_en(3)
+    pub const fn hp2lp_intr_group3_en(&self) -> &HP2LP_INTR_GROUP_EN {
+        self.hp2lp_intr_group_en(3)
     }
     #[doc = "0x200..0x210 - HP to LP interrupt group %s status"]
     #[inline(always)]
-    pub const fn system_hp2lp_intr_group_st(&self, n: usize) -> &SYSTEM_HP2LP_INTR_GROUP_ST {
-        &self.system_hp2lp_intr_group_st[n]
+    pub const fn hp2lp_intr_group_st(&self, n: usize) -> &HP2LP_INTR_GROUP_ST {
+        &self.hp2lp_intr_group_st[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x200..0x210 - HP to LP interrupt group %s status"]
     #[inline(always)]
-    pub fn system_hp2lp_intr_group_st_iter(
-        &self,
-    ) -> impl Iterator<Item = &SYSTEM_HP2LP_INTR_GROUP_ST> {
-        self.system_hp2lp_intr_group_st.iter()
+    pub fn hp2lp_intr_group_st_iter(&self) -> impl Iterator<Item = &HP2LP_INTR_GROUP_ST> {
+        self.hp2lp_intr_group_st.iter()
     }
     #[doc = "0x200 - HP to LP interrupt group 0 status"]
     #[inline(always)]
-    pub const fn system_hp2lp_intr_group0_st(&self) -> &SYSTEM_HP2LP_INTR_GROUP_ST {
-        self.system_hp2lp_intr_group_st(0)
+    pub const fn hp2lp_intr_group0_st(&self) -> &HP2LP_INTR_GROUP_ST {
+        self.hp2lp_intr_group_st(0)
     }
     #[doc = "0x204 - HP to LP interrupt group 1 status"]
     #[inline(always)]
-    pub const fn system_hp2lp_intr_group1_st(&self) -> &SYSTEM_HP2LP_INTR_GROUP_ST {
-        self.system_hp2lp_intr_group_st(1)
+    pub const fn hp2lp_intr_group1_st(&self) -> &HP2LP_INTR_GROUP_ST {
+        self.hp2lp_intr_group_st(1)
     }
     #[doc = "0x208 - HP to LP interrupt group 2 status"]
     #[inline(always)]
-    pub const fn system_hp2lp_intr_group2_st(&self) -> &SYSTEM_HP2LP_INTR_GROUP_ST {
-        self.system_hp2lp_intr_group_st(2)
+    pub const fn hp2lp_intr_group2_st(&self) -> &HP2LP_INTR_GROUP_ST {
+        self.hp2lp_intr_group_st(2)
     }
     #[doc = "0x20c - HP to LP interrupt group 3 status"]
     #[inline(always)]
-    pub const fn system_hp2lp_intr_group3_st(&self) -> &SYSTEM_HP2LP_INTR_GROUP_ST {
-        self.system_hp2lp_intr_group_st(3)
+    pub const fn hp2lp_intr_group3_st(&self) -> &HP2LP_INTR_GROUP_ST {
+        self.hp2lp_intr_group_st(3)
     }
     #[doc = "0x210..0x220 - HP to LP wakeup group %s enable"]
     #[inline(always)]
-    pub const fn system_hp2lp_wakeup_group_en(&self, n: usize) -> &SYSTEM_HP2LP_WAKEUP_GROUP_EN {
-        &self.system_hp2lp_wakeup_group_en[n]
+    pub const fn hp2lp_wakeup_group_en(&self, n: usize) -> &HP2LP_WAKEUP_GROUP_EN {
+        &self.hp2lp_wakeup_group_en[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x210..0x220 - HP to LP wakeup group %s enable"]
     #[inline(always)]
-    pub fn system_hp2lp_wakeup_group_en_iter(
-        &self,
-    ) -> impl Iterator<Item = &SYSTEM_HP2LP_WAKEUP_GROUP_EN> {
-        self.system_hp2lp_wakeup_group_en.iter()
+    pub fn hp2lp_wakeup_group_en_iter(&self) -> impl Iterator<Item = &HP2LP_WAKEUP_GROUP_EN> {
+        self.hp2lp_wakeup_group_en.iter()
     }
     #[doc = "0x210 - HP to LP wakeup group 0 enable"]
     #[inline(always)]
-    pub const fn system_hp2lp_wakeup_group0_en(&self) -> &SYSTEM_HP2LP_WAKEUP_GROUP_EN {
-        self.system_hp2lp_wakeup_group_en(0)
+    pub const fn hp2lp_wakeup_group0_en(&self) -> &HP2LP_WAKEUP_GROUP_EN {
+        self.hp2lp_wakeup_group_en(0)
     }
     #[doc = "0x214 - HP to LP wakeup group 1 enable"]
     #[inline(always)]
-    pub const fn system_hp2lp_wakeup_group1_en(&self) -> &SYSTEM_HP2LP_WAKEUP_GROUP_EN {
-        self.system_hp2lp_wakeup_group_en(1)
+    pub const fn hp2lp_wakeup_group1_en(&self) -> &HP2LP_WAKEUP_GROUP_EN {
+        self.hp2lp_wakeup_group_en(1)
     }
     #[doc = "0x218 - HP to LP wakeup group 2 enable"]
     #[inline(always)]
-    pub const fn system_hp2lp_wakeup_group2_en(&self) -> &SYSTEM_HP2LP_WAKEUP_GROUP_EN {
-        self.system_hp2lp_wakeup_group_en(2)
+    pub const fn hp2lp_wakeup_group2_en(&self) -> &HP2LP_WAKEUP_GROUP_EN {
+        self.hp2lp_wakeup_group_en(2)
     }
     #[doc = "0x21c - HP to LP wakeup group 3 enable"]
     #[inline(always)]
-    pub const fn system_hp2lp_wakeup_group3_en(&self) -> &SYSTEM_HP2LP_WAKEUP_GROUP_EN {
-        self.system_hp2lp_wakeup_group_en(3)
+    pub const fn hp2lp_wakeup_group3_en(&self) -> &HP2LP_WAKEUP_GROUP_EN {
+        self.hp2lp_wakeup_group_en(3)
     }
 }
 #[doc = "VER_DATE (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`ver_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ver_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ver_date`] module"]
@@ -1052,28 +1046,23 @@ pub mod uart_pd_ctrl;
 pub type PERI_MEM_CLK_FORCE_ON = crate::Reg<peri_mem_clk_force_on::PERI_MEM_CLK_FORCE_ON_SPEC>;
 #[doc = "hp peri mem clk force on regpster"]
 pub mod peri_mem_clk_force_on;
-#[doc = "SYSTEM_USB_OTGHS_PHY_ST (rw) register accessor: USB OTG HS PHY status\n\nYou can [`read`](crate::Reg::read) this register and get [`system_usb_otghs_phy_st::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`system_usb_otghs_phy_st::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@system_usb_otghs_phy_st`] module"]
-pub type SYSTEM_USB_OTGHS_PHY_ST =
-    crate::Reg<system_usb_otghs_phy_st::SYSTEM_USB_OTGHS_PHY_ST_SPEC>;
+#[doc = "USB_OTGHS_PHY_ST (rw) register accessor: USB OTG HS PHY status\n\nYou can [`read`](crate::Reg::read) this register and get [`usb_otghs_phy_st::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`usb_otghs_phy_st::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@usb_otghs_phy_st`] module"]
+pub type USB_OTGHS_PHY_ST = crate::Reg<usb_otghs_phy_st::USB_OTGHS_PHY_ST_SPEC>;
 #[doc = "USB OTG HS PHY status"]
-pub mod system_usb_otghs_phy_st;
-#[doc = "SYSTEM_CPU_WAKEUP_EVENT (rw) register accessor: CPU wakeup event\n\nYou can [`read`](crate::Reg::read) this register and get [`system_cpu_wakeup_event::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`system_cpu_wakeup_event::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@system_cpu_wakeup_event`] module"]
-pub type SYSTEM_CPU_WAKEUP_EVENT =
-    crate::Reg<system_cpu_wakeup_event::SYSTEM_CPU_WAKEUP_EVENT_SPEC>;
+pub mod usb_otghs_phy_st;
+#[doc = "CPU_WAKEUP_EVENT (rw) register accessor: CPU wakeup event\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_wakeup_event::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_wakeup_event::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_wakeup_event`] module"]
+pub type CPU_WAKEUP_EVENT = crate::Reg<cpu_wakeup_event::CPU_WAKEUP_EVENT_SPEC>;
 #[doc = "CPU wakeup event"]
-pub mod system_cpu_wakeup_event;
-#[doc = "SYSTEM_HP2LP_INTR_GROUP_EN (rw) register accessor: HP to LP interrupt group %s enable\n\nYou can [`read`](crate::Reg::read) this register and get [`system_hp2lp_intr_group_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`system_hp2lp_intr_group_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@system_hp2lp_intr_group_en`] module"]
-pub type SYSTEM_HP2LP_INTR_GROUP_EN =
-    crate::Reg<system_hp2lp_intr_group_en::SYSTEM_HP2LP_INTR_GROUP_EN_SPEC>;
+pub mod cpu_wakeup_event;
+#[doc = "HP2LP_INTR_GROUP_EN (rw) register accessor: HP to LP interrupt group %s enable\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_intr_group_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp2lp_intr_group_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp2lp_intr_group_en`] module"]
+pub type HP2LP_INTR_GROUP_EN = crate::Reg<hp2lp_intr_group_en::HP2LP_INTR_GROUP_EN_SPEC>;
 #[doc = "HP to LP interrupt group %s enable"]
-pub mod system_hp2lp_intr_group_en;
-#[doc = "SYSTEM_HP2LP_INTR_GROUP_ST (r) register accessor: HP to LP interrupt group %s status\n\nYou can [`read`](crate::Reg::read) this register and get [`system_hp2lp_intr_group_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@system_hp2lp_intr_group_st`] module"]
-pub type SYSTEM_HP2LP_INTR_GROUP_ST =
-    crate::Reg<system_hp2lp_intr_group_st::SYSTEM_HP2LP_INTR_GROUP_ST_SPEC>;
+pub mod hp2lp_intr_group_en;
+#[doc = "HP2LP_INTR_GROUP_ST (r) register accessor: HP to LP interrupt group %s status\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_intr_group_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp2lp_intr_group_st`] module"]
+pub type HP2LP_INTR_GROUP_ST = crate::Reg<hp2lp_intr_group_st::HP2LP_INTR_GROUP_ST_SPEC>;
 #[doc = "HP to LP interrupt group %s status"]
-pub mod system_hp2lp_intr_group_st;
-#[doc = "SYSTEM_HP2LP_WAKEUP_GROUP_EN (rw) register accessor: HP to LP wakeup group %s enable\n\nYou can [`read`](crate::Reg::read) this register and get [`system_hp2lp_wakeup_group_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`system_hp2lp_wakeup_group_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@system_hp2lp_wakeup_group_en`] module"]
-pub type SYSTEM_HP2LP_WAKEUP_GROUP_EN =
-    crate::Reg<system_hp2lp_wakeup_group_en::SYSTEM_HP2LP_WAKEUP_GROUP_EN_SPEC>;
+pub mod hp2lp_intr_group_st;
+#[doc = "HP2LP_WAKEUP_GROUP_EN (rw) register accessor: HP to LP wakeup group %s enable\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_wakeup_group_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp2lp_wakeup_group_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp2lp_wakeup_group_en`] module"]
+pub type HP2LP_WAKEUP_GROUP_EN = crate::Reg<hp2lp_wakeup_group_en::HP2LP_WAKEUP_GROUP_EN_SPEC>;
 #[doc = "HP to LP wakeup group %s enable"]
-pub mod system_hp2lp_wakeup_group_en;
+pub mod hp2lp_wakeup_group_en;

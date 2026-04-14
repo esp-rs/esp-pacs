@@ -1,4 +1,3 @@
-# QoS indirect-access window at AXI_ICM base + 0x400.
 _add:
   ICM_AXI_QOS:
     description: AXI ICM QoS indirect-access window (base + 0x400)
@@ -15,7 +14,7 @@ _add:
         size: 0x20
         access: read-only
         fields:
-          ICM_AXI_REG_VERID:
+          VERID:
             bitOffset: 0
             bitWidth: 32
             access: read-only
@@ -25,47 +24,47 @@ _add:
         size: 0x20
         access: read-only
         fields:
-          ICM_AXI_REG_AXI_HWCFG_QOS_SUPPORT:
+          QOS_SUPPORT:
             bitOffset: 0
             bitWidth: 1
             access: read-only
-          ICM_AXI_REG_AXI_HWCFG_APB3_SUPPORT:
+          APB3_SUPPORT:
             bitOffset: 1
             bitWidth: 1
             access: read-only
-          ICM_AXI_REG_AXI_HWCFG_AXI4_SUPPORT:
+          AXI4_SUPPORT:
             bitOffset: 2
             bitWidth: 1
             access: read-only
-          ICM_AXI_REG_AXI_HWCFG_LOCK_EN:
+          LOCK_EN:
             bitOffset: 3
             bitWidth: 1
             access: read-only
-          ICM_AXI_REG_AXI_HWCFG_TRUST_ZONE_EN:
+          TRUST_ZONE_EN:
             bitOffset: 4
             bitWidth: 1
             access: read-only
-          ICM_AXI_REG_AXI_HWCFG_DECODER_TYPE:
+          DECODER_TYPE:
             bitOffset: 5
             bitWidth: 1
             access: read-only
-          ICM_AXI_REG_AXI_HWCFG_REMAP_EN:
+          REMAP_EN:
             bitOffset: 6
             bitWidth: 1
             access: read-only
-          ICM_AXI_REG_AXI_HWCFG_BI_DIR_CMD_EN:
+          BI_DIR_CMD_EN:
             bitOffset: 7
             bitWidth: 1
             access: read-only
-          ICM_AXI_REG_AXI_HWCFG_LOW_POWER_INF_EN:
+          LOW_POWER_INF_EN:
             bitOffset: 8
             bitWidth: 1
             access: read-only
-          ICM_AXI_REG_AXI_HWCFG_AXI_NUM_MASTERS:
+          AXI_NUM_MASTERS:
             bitOffset: 12
             bitWidth: 5
             access: read-only
-          ICM_AXI_REG_AXI_HWCFG_AXI_NUM_SLAVES:
+          AXI_NUM_SLAVES:
             bitOffset: 20
             bitWidth: 5
             access: read-only
@@ -75,31 +74,31 @@ _add:
         size: 0x20
         access: read-write
         fields:
-          ICM_AXI_REG_AXI_CMD:
+          AXI_CMD:
             bitOffset: 0
             bitWidth: 3
             access: read-write
-          ICM_AXI_REG_RD_WR_CHAN:
+          RD_WR_CHAN:
             bitOffset: 7
             bitWidth: 1
             access: read-write
-          ICM_AXI_REG_AXI_MASTER_PORT:
+          AXI_MASTER_PORT:
             bitOffset: 8
             bitWidth: 4
             access: read-write
-          ICM_AXI_REG_AXI_ERR_BIT:
+          AXI_ERR_BIT:
             bitOffset: 28
             bitWidth: 1
             access: read-only
-          ICM_AXI_REG_AXI_SOFT_RESET_BIT:
+          AXI_SOFT_RESET_BIT:
             bitOffset: 29
             bitWidth: 1
             access: read-write
-          ICM_AXI_REG_AXI_RD_WR_CMD:
+          AXI_RD_WR_CMD:
             bitOffset: 30
             bitWidth: 1
             access: read-write
-          ICM_AXI_REG_AXI_CMD_EN:
+          AXI_CMD_EN:
             bitOffset: 31
             bitWidth: 1
             access: read-write
@@ -109,7 +108,7 @@ _add:
         size: 0x20
         access: read-write
         fields:
-          ICM_AXI_REG_DATA:
+          VAL:
             bitOffset: 0
             bitWidth: 32
             access: read-write

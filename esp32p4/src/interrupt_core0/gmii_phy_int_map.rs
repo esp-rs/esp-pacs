@@ -2,32 +2,30 @@
 pub type R = crate::R<GMII_PHY_INT_MAP_SPEC>;
 #[doc = "Register `GMII_PHY_INT_MAP` writer"]
 pub type W = crate::W<GMII_PHY_INT_MAP_SPEC>;
-#[doc = "Field `CORE0_GMII_PHY_INT_MAP` reader - NA"]
-pub type CORE0_GMII_PHY_INT_MAP_R = crate::FieldReader;
-#[doc = "Field `CORE0_GMII_PHY_INT_MAP` writer - NA"]
-pub type CORE0_GMII_PHY_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `GMII_PHY_INT_MAP` reader - NA"]
+pub type GMII_PHY_INT_MAP_R = crate::FieldReader;
+#[doc = "Field `GMII_PHY_INT_MAP` writer - NA"]
+pub type GMII_PHY_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core0_gmii_phy_int_map(&self) -> CORE0_GMII_PHY_INT_MAP_R {
-        CORE0_GMII_PHY_INT_MAP_R::new((self.bits & 0x3f) as u8)
+    pub fn gmii_phy_int_map(&self) -> GMII_PHY_INT_MAP_R {
+        GMII_PHY_INT_MAP_R::new((self.bits & 0x3f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GMII_PHY_INT_MAP")
-            .field("core0_gmii_phy_int_map", &self.core0_gmii_phy_int_map())
+            .field("gmii_phy_int_map", &self.gmii_phy_int_map())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core0_gmii_phy_int_map(
-        &mut self,
-    ) -> CORE0_GMII_PHY_INT_MAP_W<'_, GMII_PHY_INT_MAP_SPEC> {
-        CORE0_GMII_PHY_INT_MAP_W::new(self, 0)
+    pub fn gmii_phy_int_map(&mut self) -> GMII_PHY_INT_MAP_W<'_, GMII_PHY_INT_MAP_SPEC> {
+        GMII_PHY_INT_MAP_W::new(self, 0)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`gmii_phy_int_map::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gmii_phy_int_map::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

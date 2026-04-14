@@ -2,35 +2,32 @@
 pub type R = crate::R<CPU_INT_FROM_CPU_0_MAP_SPEC>;
 #[doc = "Register `CPU_INT_FROM_CPU_0_MAP` writer"]
 pub type W = crate::W<CPU_INT_FROM_CPU_0_MAP_SPEC>;
-#[doc = "Field `CORE0_CPU_INT_FROM_CPU_0_MAP` reader - NA"]
-pub type CORE0_CPU_INT_FROM_CPU_0_MAP_R = crate::FieldReader;
-#[doc = "Field `CORE0_CPU_INT_FROM_CPU_0_MAP` writer - NA"]
-pub type CORE0_CPU_INT_FROM_CPU_0_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `CPU_INT_FROM_CPU_0_MAP` reader - NA"]
+pub type CPU_INT_FROM_CPU_0_MAP_R = crate::FieldReader;
+#[doc = "Field `CPU_INT_FROM_CPU_0_MAP` writer - NA"]
+pub type CPU_INT_FROM_CPU_0_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core0_cpu_int_from_cpu_0_map(&self) -> CORE0_CPU_INT_FROM_CPU_0_MAP_R {
-        CORE0_CPU_INT_FROM_CPU_0_MAP_R::new((self.bits & 0x3f) as u8)
+    pub fn cpu_int_from_cpu_0_map(&self) -> CPU_INT_FROM_CPU_0_MAP_R {
+        CPU_INT_FROM_CPU_0_MAP_R::new((self.bits & 0x3f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_INT_FROM_CPU_0_MAP")
-            .field(
-                "core0_cpu_int_from_cpu_0_map",
-                &self.core0_cpu_int_from_cpu_0_map(),
-            )
+            .field("cpu_int_from_cpu_0_map", &self.cpu_int_from_cpu_0_map())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core0_cpu_int_from_cpu_0_map(
+    pub fn cpu_int_from_cpu_0_map(
         &mut self,
-    ) -> CORE0_CPU_INT_FROM_CPU_0_MAP_W<'_, CPU_INT_FROM_CPU_0_MAP_SPEC> {
-        CORE0_CPU_INT_FROM_CPU_0_MAP_W::new(self, 0)
+    ) -> CPU_INT_FROM_CPU_0_MAP_W<'_, CPU_INT_FROM_CPU_0_MAP_SPEC> {
+        CPU_INT_FROM_CPU_0_MAP_W::new(self, 0)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_int_from_cpu_0_map::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_int_from_cpu_0_map::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

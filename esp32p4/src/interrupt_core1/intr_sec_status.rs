@@ -1,19 +1,19 @@
 #[doc = "Register `INTR_SEC_STATUS` reader"]
 pub type R = crate::R<INTR_SEC_STATUS_SPEC>;
-#[doc = "Field `CORE1_INTR_SEC_STATUS` reader - "]
-pub type CORE1_INTR_SEC_STATUS_R = crate::FieldReader<u32>;
+#[doc = "Field `INTR_SEC_STATUS` reader - "]
+pub type INTR_SEC_STATUS_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn core1_intr_sec_status(&self) -> CORE1_INTR_SEC_STATUS_R {
-        CORE1_INTR_SEC_STATUS_R::new(self.bits)
+    pub fn intr_sec_status(&self) -> INTR_SEC_STATUS_R {
+        INTR_SEC_STATUS_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTR_SEC_STATUS")
-            .field("core1_intr_sec_status", &self.core1_intr_sec_status())
+            .field("intr_sec_status", &self.intr_sec_status())
             .finish()
     }
 }

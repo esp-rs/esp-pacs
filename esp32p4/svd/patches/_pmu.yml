@@ -1,4 +1,3 @@
-# PMU tail registers vs vendor SVD.
 PMU:
   _add:
     POWER_PD_HP_CPU_CNTL:

@@ -1,4 +1,3 @@
-# AHB_DMA tail registers.
 AHB_DMA:
   _add:
     ARB_TIMEOUT:

@@ -1,5 +1,7 @@
-# INTERRUPT_CORE0 tail registers after 0x210.
 INTERRUPT_CORE0:
+  "*":
+    _strip: "CORE0_"
+
   _add:
     DMA2D_IN_CH2_INT_MAP:
       description: DMA2D IN channel 2 interrupt map

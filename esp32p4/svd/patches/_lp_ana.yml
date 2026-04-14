@@ -1,4 +1,3 @@
-# LP_ANA tail register vs vendor SVD.
 LP_ANA:
   _add:
     TOUCH_CTRL:

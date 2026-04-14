@@ -1,4 +1,3 @@
-# AXI_DMA tail registers.
 AXI_DMA:
   _add:
     LINK_SWITCH_STATE:

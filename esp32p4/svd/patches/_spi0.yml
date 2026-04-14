@@ -1,4 +1,3 @@
-# SPI0 (SPI_MEM) tail registers vs vendor SVD.
 SPI0:
   _add:
     SPI_MEM_C_DLL_DLY_DB:

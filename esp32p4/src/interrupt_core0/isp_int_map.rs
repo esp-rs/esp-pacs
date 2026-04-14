@@ -2,30 +2,30 @@
 pub type R = crate::R<ISP_INT_MAP_SPEC>;
 #[doc = "Register `ISP_INT_MAP` writer"]
 pub type W = crate::W<ISP_INT_MAP_SPEC>;
-#[doc = "Field `CORE0_ISP_INT_MAP` reader - NA"]
-pub type CORE0_ISP_INT_MAP_R = crate::FieldReader;
-#[doc = "Field `CORE0_ISP_INT_MAP` writer - NA"]
-pub type CORE0_ISP_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `ISP_INT_MAP` reader - NA"]
+pub type ISP_INT_MAP_R = crate::FieldReader;
+#[doc = "Field `ISP_INT_MAP` writer - NA"]
+pub type ISP_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core0_isp_int_map(&self) -> CORE0_ISP_INT_MAP_R {
-        CORE0_ISP_INT_MAP_R::new((self.bits & 0x3f) as u8)
+    pub fn isp_int_map(&self) -> ISP_INT_MAP_R {
+        ISP_INT_MAP_R::new((self.bits & 0x3f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ISP_INT_MAP")
-            .field("core0_isp_int_map", &self.core0_isp_int_map())
+            .field("isp_int_map", &self.isp_int_map())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core0_isp_int_map(&mut self) -> CORE0_ISP_INT_MAP_W<'_, ISP_INT_MAP_SPEC> {
-        CORE0_ISP_INT_MAP_W::new(self, 0)
+    pub fn isp_int_map(&mut self) -> ISP_INT_MAP_W<'_, ISP_INT_MAP_SPEC> {
+        ISP_INT_MAP_W::new(self, 0)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`isp_int_map::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`isp_int_map::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

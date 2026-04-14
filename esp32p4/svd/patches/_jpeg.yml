@@ -1,4 +1,3 @@
-# JPEG extra register vs vendor SVD.
 JPEG:
   _add:
     EXTD_CONFIG:

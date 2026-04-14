@@ -1,4 +1,3 @@
-# LEDC gamma RAM: 8 channels × 16 range words (linear index = channel * 16 + range).
 LEDC:
   _add:
     CH_GAMMA_RANGE%s:

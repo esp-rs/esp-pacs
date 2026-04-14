@@ -1,4 +1,3 @@
-# PARL_IO tail register vs vendor SVD.
 PARL_IO:
   _add:
     TX_CS_CFG:

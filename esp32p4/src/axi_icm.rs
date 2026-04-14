@@ -9,22 +9,23 @@ pub struct RegisterBlock {
     icm_int_st: ICM_INT_ST,
     icm_int_ena: ICM_INT_ENA,
     icm_int_clr: ICM_INT_CLR,
-    icm_mst_arb_priority_reg0: ICM_MST_ARB_PRIORITY_REG0,
+    icm_mst_arb_priority: ICM_MST_ARB_PRIORITY,
     _reserved8: [u8; 0x04],
     icm_slv_arb_priority: ICM_SLV_ARB_PRIORITY,
-    icm_mst_arqos_reg0: ICM_MST_ARQOS_REG0,
+    icm_mst_arqos: ICM_MST_ARQOS,
     _reserved10: [u8; 0x04],
-    icm_mst_awqos_reg0: ICM_MST_AWQOS_REG0,
-    _reserved11: [u8; 0x04],
-    icm_sys_addrhole_addr: ICM_SYS_ADDRHOLE_ADDR,
+    icm_mst_awqos: ICM_MST_AWQOS,
+    _reserved11: [u8; 0x08],
     icm_sys_addrhole_info: ICM_SYS_ADDRHOLE_INFO,
     icm_cpu_addrhole_addr: ICM_CPU_ADDRHOLE_ADDR,
     icm_cpu_addrhole_info: ICM_CPU_ADDRHOLE_INFO,
     icm_dlock_timeout: ICM_DLOCK_TIMEOUT,
-    _reserved16: [u8; 0x04],
+    _reserved15: [u8; 0x04],
     icm_rdn_eco_cs: ICM_RDN_ECO_CS,
     icm_rdn_eco_low: ICM_RDN_ECO_LOW,
     icm_rdn_eco_high: ICM_RDN_ECO_HIGH,
+    _reserved18: [u8; 0x0333],
+    icm_sys_addrhole_addr: ICM_SYS_ADDRHOLE_ADDR,
 }
 impl RegisterBlock {
     #[doc = "0x00 - ICM version / date"]
@@ -64,8 +65,8 @@ impl RegisterBlock {
     }
     #[doc = "0x1c - Master arbitration priority"]
     #[inline(always)]
-    pub const fn icm_mst_arb_priority_reg0(&self) -> &ICM_MST_ARB_PRIORITY_REG0 {
-        &self.icm_mst_arb_priority_reg0
+    pub const fn icm_mst_arb_priority(&self) -> &ICM_MST_ARB_PRIORITY {
+        &self.icm_mst_arb_priority
     }
     #[doc = "0x24 - Slave arbitration priority"]
     #[inline(always)]
@@ -74,18 +75,13 @@ impl RegisterBlock {
     }
     #[doc = "0x28 - Master read QoS"]
     #[inline(always)]
-    pub const fn icm_mst_arqos_reg0(&self) -> &ICM_MST_ARQOS_REG0 {
-        &self.icm_mst_arqos_reg0
+    pub const fn icm_mst_arqos(&self) -> &ICM_MST_ARQOS {
+        &self.icm_mst_arqos
     }
     #[doc = "0x30 - Master write QoS"]
     #[inline(always)]
-    pub const fn icm_mst_awqos_reg0(&self) -> &ICM_MST_AWQOS_REG0 {
-        &self.icm_mst_awqos_reg0
-    }
-    #[doc = "0x38 - SYS address hole address"]
-    #[inline(always)]
-    pub const fn icm_sys_addrhole_addr(&self) -> &ICM_SYS_ADDRHOLE_ADDR {
-        &self.icm_sys_addrhole_addr
+    pub const fn icm_mst_awqos(&self) -> &ICM_MST_AWQOS {
+        &self.icm_mst_awqos
     }
     #[doc = "0x3c - SYS address hole info"]
     #[inline(always)]
@@ -122,6 +118,11 @@ impl RegisterBlock {
     pub const fn icm_rdn_eco_high(&self) -> &ICM_RDN_ECO_HIGH {
         &self.icm_rdn_eco_high
     }
+    #[doc = "0x38f - SYS address hole address"]
+    #[inline(always)]
+    pub const fn icm_sys_addrhole_addr(&self) -> &ICM_SYS_ADDRHOLE_ADDR {
+        &self.icm_sys_addrhole_addr
+    }
 }
 #[doc = "ICM_VER_DATE (rw) register accessor: ICM version / date\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_ver_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_ver_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_ver_date`] module"]
 pub type ICM_VER_DATE = crate::Reg<icm_ver_date::ICM_VER_DATE_SPEC>;
@@ -151,27 +152,22 @@ pub mod icm_int_ena;
 pub type ICM_INT_CLR = crate::Reg<icm_int_clr::ICM_INT_CLR_SPEC>;
 #[doc = "ICM interrupt clear"]
 pub mod icm_int_clr;
-#[doc = "ICM_MST_ARB_PRIORITY_REG0 (rw) register accessor: Master arbitration priority\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_mst_arb_priority_reg0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_mst_arb_priority_reg0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_mst_arb_priority_reg0`] module"]
-pub type ICM_MST_ARB_PRIORITY_REG0 =
-    crate::Reg<icm_mst_arb_priority_reg0::ICM_MST_ARB_PRIORITY_REG0_SPEC>;
+#[doc = "ICM_MST_ARB_PRIORITY (rw) register accessor: Master arbitration priority\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_mst_arb_priority::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_mst_arb_priority::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_mst_arb_priority`] module"]
+pub type ICM_MST_ARB_PRIORITY = crate::Reg<icm_mst_arb_priority::ICM_MST_ARB_PRIORITY_SPEC>;
 #[doc = "Master arbitration priority"]
-pub mod icm_mst_arb_priority_reg0;
+pub mod icm_mst_arb_priority;
 #[doc = "ICM_SLV_ARB_PRIORITY (rw) register accessor: Slave arbitration priority\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_slv_arb_priority::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_slv_arb_priority::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_slv_arb_priority`] module"]
 pub type ICM_SLV_ARB_PRIORITY = crate::Reg<icm_slv_arb_priority::ICM_SLV_ARB_PRIORITY_SPEC>;
 #[doc = "Slave arbitration priority"]
 pub mod icm_slv_arb_priority;
-#[doc = "ICM_MST_ARQOS_REG0 (rw) register accessor: Master read QoS\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_mst_arqos_reg0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_mst_arqos_reg0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_mst_arqos_reg0`] module"]
-pub type ICM_MST_ARQOS_REG0 = crate::Reg<icm_mst_arqos_reg0::ICM_MST_ARQOS_REG0_SPEC>;
+#[doc = "ICM_MST_ARQOS (rw) register accessor: Master read QoS\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_mst_arqos::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_mst_arqos::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_mst_arqos`] module"]
+pub type ICM_MST_ARQOS = crate::Reg<icm_mst_arqos::ICM_MST_ARQOS_SPEC>;
 #[doc = "Master read QoS"]
-pub mod icm_mst_arqos_reg0;
-#[doc = "ICM_MST_AWQOS_REG0 (rw) register accessor: Master write QoS\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_mst_awqos_reg0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_mst_awqos_reg0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_mst_awqos_reg0`] module"]
-pub type ICM_MST_AWQOS_REG0 = crate::Reg<icm_mst_awqos_reg0::ICM_MST_AWQOS_REG0_SPEC>;
+pub mod icm_mst_arqos;
+#[doc = "ICM_MST_AWQOS (rw) register accessor: Master write QoS\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_mst_awqos::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_mst_awqos::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_mst_awqos`] module"]
+pub type ICM_MST_AWQOS = crate::Reg<icm_mst_awqos::ICM_MST_AWQOS_SPEC>;
 #[doc = "Master write QoS"]
-pub mod icm_mst_awqos_reg0;
-#[doc = "ICM_SYS_ADDRHOLE_ADDR (r) register accessor: SYS address hole address\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_sys_addrhole_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_sys_addrhole_addr`] module"]
-pub type ICM_SYS_ADDRHOLE_ADDR = crate::Reg<icm_sys_addrhole_addr::ICM_SYS_ADDRHOLE_ADDR_SPEC>;
-#[doc = "SYS address hole address"]
-pub mod icm_sys_addrhole_addr;
+pub mod icm_mst_awqos;
 #[doc = "ICM_SYS_ADDRHOLE_INFO (r) register accessor: SYS address hole info\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_sys_addrhole_info::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_sys_addrhole_info`] module"]
 pub type ICM_SYS_ADDRHOLE_INFO = crate::Reg<icm_sys_addrhole_info::ICM_SYS_ADDRHOLE_INFO_SPEC>;
 #[doc = "SYS address hole info"]
@@ -200,3 +196,7 @@ pub mod icm_rdn_eco_low;
 pub type ICM_RDN_ECO_HIGH = crate::Reg<icm_rdn_eco_high::ICM_RDN_ECO_HIGH_SPEC>;
 #[doc = "RDN ECO high"]
 pub mod icm_rdn_eco_high;
+#[doc = "ICM_SYS_ADDRHOLE_ADDR (r) register accessor: SYS address hole address\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_sys_addrhole_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_sys_addrhole_addr`] module"]
+pub type ICM_SYS_ADDRHOLE_ADDR = crate::Reg<icm_sys_addrhole_addr::ICM_SYS_ADDRHOLE_ADDR_SPEC>;
+#[doc = "SYS address hole address"]
+pub mod icm_sys_addrhole_addr;

@@ -1,4 +1,3 @@
-# ISP tail registers vs vendor SVD (placeholder VAL fields; refine as needed).
 ISP:
   _add:
     CROP_CTRL:

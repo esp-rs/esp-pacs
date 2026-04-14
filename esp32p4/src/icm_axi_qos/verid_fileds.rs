@@ -1,19 +1,19 @@
 #[doc = "Register `VERID_FILEDS` reader"]
 pub type R = crate::R<VERID_FILEDS_SPEC>;
-#[doc = "Field `ICM_AXI_REG_VERID` reader - "]
-pub type ICM_AXI_REG_VERID_R = crate::FieldReader<u32>;
+#[doc = "Field `VERID` reader - "]
+pub type VERID_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn icm_axi_reg_verid(&self) -> ICM_AXI_REG_VERID_R {
-        ICM_AXI_REG_VERID_R::new(self.bits)
+    pub fn verid(&self) -> VERID_R {
+        VERID_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VERID_FILEDS")
-            .field("icm_axi_reg_verid", &self.icm_axi_reg_verid())
+            .field("verid", &self.verid())
             .finish()
     }
 }

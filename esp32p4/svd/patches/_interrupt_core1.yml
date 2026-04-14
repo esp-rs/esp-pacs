@@ -1,5 +1,7 @@
-# INTERRUPT_CORE1 tail registers after 0x210.
 INTERRUPT_CORE1:
+  "*":
+    _strip: ""
+
   _add:
     DMA2D_IN_CH2_INT_MAP:
       description: DMA2D IN channel 2 interrupt map
@@ -7,15 +9,15 @@ INTERRUPT_CORE1:
       size: 0x20
       access: read-write
       fields:
-        CORE1_DMA2D_IN_CH2_INT_MAP:
+        DMA2D_IN_CH2_INT_MAP:
           bitOffset: 0
           bitWidth: 6
           access: read-write
-        CORE1_DMA2D_IN_CH2_INT_SRC_PASS_IN_SEC:
+        DMA2D_IN_CH2_INT_SRC_PASS_IN_SEC:
           bitOffset: 6
           bitWidth: 1
           access: read-write
-        CORE1_DMA2D_IN_CH2_INT_SRC_IN_SEC_FLAG:
+        DMA2D_IN_CH2_INT_SRC_IN_SEC_FLAG:
           bitOffset: 7
           bitWidth: 1
           access: read-write
@@ -25,15 +27,15 @@ INTERRUPT_CORE1:
       size: 0x20
       access: read-write
       fields:
-        CORE1_DMA2D_OUT_CH3_INT_MAP:
+        DMA2D_OUT_CH3_INT_MAP:
           bitOffset: 0
           bitWidth: 6
           access: read-write
-        CORE1_DMA2D_OUT_CH3_INT_SRC_PASS_IN_SEC:
+        DMA2D_OUT_CH3_INT_SRC_PASS_IN_SEC:
           bitOffset: 6
           bitWidth: 1
           access: read-write
-        CORE1_DMA2D_OUT_CH3_INT_SRC_IN_SEC_FLAG:
+        DMA2D_OUT_CH3_INT_SRC_IN_SEC_FLAG:
           bitOffset: 7
           bitWidth: 1
           access: read-write
@@ -43,15 +45,15 @@ INTERRUPT_CORE1:
       size: 0x20
       access: read-write
       fields:
-        CORE1_AXI_PERF_MON_INT_MAP:
+        AXI_PERF_MON_INT_MAP:
           bitOffset: 0
           bitWidth: 6
           access: read-write
-        CORE1_AXI_PERF_MON_INT_SRC_PASS_IN_SEC:
+        AXI_PERF_MON_INT_SRC_PASS_IN_SEC:
           bitOffset: 6
           bitWidth: 1
           access: read-write
-        CORE1_AXI_PERF_MON_INT_SRC_IN_SEC_FLAG:
+        AXI_PERF_MON_INT_SRC_IN_SEC_FLAG:
           bitOffset: 7
           bitWidth: 1
           access: read-write
@@ -61,7 +63,7 @@ INTERRUPT_CORE1:
       size: 0x20
       access: read-only
       fields:
-        CORE1_INTR_STATUS_4:
+        INTR_STATUS_4:
           bitOffset: 0
           bitWidth: 32
           access: read-only
@@ -71,7 +73,7 @@ INTERRUPT_CORE1:
       size: 0x20
       access: read-write
       fields:
-        CORE1_INTR_SIG_IDX_ASSERT_IN_SEC:
+        INTR_SIG_IDX_ASSERT_IN_SEC:
           bitOffset: 0
           bitWidth: 6
           access: read-write
@@ -81,7 +83,7 @@ INTERRUPT_CORE1:
       size: 0x20
       access: read-only
       fields:
-        CORE1_INTR_SEC_STATUS:
+        INTR_SEC_STATUS:
           bitOffset: 0
           bitWidth: 32
           access: read-only

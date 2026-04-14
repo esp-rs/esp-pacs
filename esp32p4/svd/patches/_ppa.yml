@@ -1,4 +1,3 @@
-# PPA tail registers vs vendor SVD.
 PPA:
   _add:
     DEBUG_CTRL0:

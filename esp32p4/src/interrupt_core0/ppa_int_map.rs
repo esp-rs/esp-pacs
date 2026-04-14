@@ -2,30 +2,30 @@
 pub type R = crate::R<PPA_INT_MAP_SPEC>;
 #[doc = "Register `PPA_INT_MAP` writer"]
 pub type W = crate::W<PPA_INT_MAP_SPEC>;
-#[doc = "Field `CORE0_PPA_INT_MAP` reader - NA"]
-pub type CORE0_PPA_INT_MAP_R = crate::FieldReader;
-#[doc = "Field `CORE0_PPA_INT_MAP` writer - NA"]
-pub type CORE0_PPA_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `PPA_INT_MAP` reader - NA"]
+pub type PPA_INT_MAP_R = crate::FieldReader;
+#[doc = "Field `PPA_INT_MAP` writer - NA"]
+pub type PPA_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core0_ppa_int_map(&self) -> CORE0_PPA_INT_MAP_R {
-        CORE0_PPA_INT_MAP_R::new((self.bits & 0x3f) as u8)
+    pub fn ppa_int_map(&self) -> PPA_INT_MAP_R {
+        PPA_INT_MAP_R::new((self.bits & 0x3f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PPA_INT_MAP")
-            .field("core0_ppa_int_map", &self.core0_ppa_int_map())
+            .field("ppa_int_map", &self.ppa_int_map())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core0_ppa_int_map(&mut self) -> CORE0_PPA_INT_MAP_W<'_, PPA_INT_MAP_SPEC> {
-        CORE0_PPA_INT_MAP_W::new(self, 0)
+    pub fn ppa_int_map(&mut self) -> PPA_INT_MAP_W<'_, PPA_INT_MAP_SPEC> {
+        PPA_INT_MAP_W::new(self, 0)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`ppa_int_map::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ppa_int_map::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
