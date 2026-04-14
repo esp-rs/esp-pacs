@@ -105,6 +105,14 @@ pub enum Interrupt {
     SYSTIMER_TARGET2 = 54,
     #[doc = "55 - APB_SARADC"]
     APB_SARADC       = 55,
+    #[doc = "58 - DMA_IN_CH0"]
+    DMA_IN_CH0       = 58,
+    #[doc = "59 - DMA_IN_CH1"]
+    DMA_IN_CH1       = 59,
+    #[doc = "60 - DMA_OUT_CH0"]
+    DMA_OUT_CH0      = 60,
+    #[doc = "61 - DMA_OUT_CH1"]
+    DMA_OUT_CH1      = 61,
     #[doc = "62 - SPI2"]
     SPI2             = 62,
     #[doc = "63 - SHA"]
@@ -174,6 +182,10 @@ impl Interrupt {
             53 => Ok(Interrupt::SYSTIMER_TARGET1),
             54 => Ok(Interrupt::SYSTIMER_TARGET2),
             55 => Ok(Interrupt::APB_SARADC),
+            58 => Ok(Interrupt::DMA_IN_CH0),
+            59 => Ok(Interrupt::DMA_IN_CH1),
+            60 => Ok(Interrupt::DMA_OUT_CH0),
+            61 => Ok(Interrupt::DMA_OUT_CH1),
             62 => Ok(Interrupt::SPI2),
             63 => Ok(Interrupt::SHA),
             64 => Ok(Interrupt::ECC),

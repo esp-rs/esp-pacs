@@ -1,6 +1,6 @@
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
-#[doc = "Cluster CH%s, containing IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PERI_SEL_CH?, OUT_CONF0_CH?, OUT_CONF1_CH?, OUTFIFO_STATUS_CH?, OUT_PUSH_CH?, OUT_LINK_CH?, OUT_STATE_CH?, OUT_EOF_DES_ADDR_CH?, OUT_EOF_BFR_DES_ADDR_CH?, OUT_DSCR_CH?, OUT_DSCR_BF0_CH?, OUT_DSCR_BF1_CH?, OUT_PERI_SEL_CH?"]
+#[doc = "Cluster CH%s, containing IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PRI_CH?, IN_PERI_SEL_CH?, OUT_CONF0_CH?, OUT_CONF1_CH?, OUTFIFO_STATUS_CH?, OUT_PUSH_CH?, OUT_LINK_CH?, OUT_STATE_CH?, OUT_EOF_DES_ADDR_CH?, OUT_EOF_BFR_DES_ADDR_CH?, OUT_DSCR_CH?, OUT_DSCR_BF0_CH?, OUT_DSCR_BF1_CH?, OUT_PRI_CH?, OUT_PERI_SEL_CH?"]
 pub struct CH {
     in_conf0: IN_CONF0,
     in_conf1: IN_CONF1,
@@ -13,9 +13,9 @@ pub struct CH {
     in_dscr: IN_DSCR,
     in_dscr_bf0: IN_DSCR_BF0,
     in_dscr_bf1: IN_DSCR_BF1,
-    _reserved11: [u8; 0x04],
+    in_pri: IN_PRI,
     in_peri_sel: IN_PERI_SEL,
-    _reserved12: [u8; 0x2c],
+    _reserved13: [u8; 0x2c],
     out_conf0: OUT_CONF0,
     out_conf1: OUT_CONF1,
     outfifo_status: OUTFIFO_STATUS,
@@ -27,7 +27,7 @@ pub struct CH {
     out_dscr: OUT_DSCR,
     out_dscr_bf0: OUT_DSCR_BF0,
     out_dscr_bf1: OUT_DSCR_BF1,
-    _reserved23: [u8; 0x04],
+    out_pri: OUT_PRI,
     out_peri_sel: OUT_PERI_SEL,
     _reserved_end: [u8; 0x2c],
 }
@@ -86,6 +86,11 @@ impl CH {
     #[inline(always)]
     pub const fn in_dscr_bf1(&self) -> &IN_DSCR_BF1 {
         &self.in_dscr_bf1
+    }
+    #[doc = "0x2c - Priority register of RX channel 0"]
+    #[inline(always)]
+    pub const fn in_pri(&self) -> &IN_PRI {
+        &self.in_pri
     }
     #[doc = "0x30 - Peripheral selection register of RX channel 0"]
     #[inline(always)]
@@ -147,6 +152,11 @@ impl CH {
     pub const fn out_dscr_bf1(&self) -> &OUT_DSCR_BF1 {
         &self.out_dscr_bf1
     }
+    #[doc = "0x8c - Priority register of TX channel 0"]
+    #[inline(always)]
+    pub const fn out_pri(&self) -> &OUT_PRI {
+        &self.out_pri
+    }
     #[doc = "0x90 - Peripheral selection register of TX channel 0"]
     #[inline(always)]
     pub const fn out_peri_sel(&self) -> &OUT_PERI_SEL {
@@ -197,6 +207,10 @@ pub mod in_dscr_bf0;
 pub type IN_DSCR_BF1 = crate::Reg<in_dscr_bf1::IN_DSCR_BF1_SPEC>;
 #[doc = "The second-to-last receive descriptor address of RX channel 0"]
 pub mod in_dscr_bf1;
+#[doc = "IN_PRI (rw) register accessor: Priority register of RX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_pri::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_pri::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_pri`] module"]
+pub type IN_PRI = crate::Reg<in_pri::IN_PRI_SPEC>;
+#[doc = "Priority register of RX channel 0"]
+pub mod in_pri;
 #[doc = "IN_PERI_SEL (rw) register accessor: Peripheral selection register of RX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_peri_sel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_peri_sel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_peri_sel`] module"]
 pub type IN_PERI_SEL = crate::Reg<in_peri_sel::IN_PERI_SEL_SPEC>;
 #[doc = "Peripheral selection register of RX channel 0"]
@@ -245,6 +259,10 @@ pub mod out_dscr_bf0;
 pub type OUT_DSCR_BF1 = crate::Reg<out_dscr_bf1::OUT_DSCR_BF1_SPEC>;
 #[doc = "The second-to-last transmit descriptor address of TX channel 0"]
 pub mod out_dscr_bf1;
+#[doc = "OUT_PRI (rw) register accessor: Priority register of TX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_pri::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_pri::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_pri`] module"]
+pub type OUT_PRI = crate::Reg<out_pri::OUT_PRI_SPEC>;
+#[doc = "Priority register of TX channel 0"]
+pub mod out_pri;
 #[doc = "OUT_PERI_SEL (rw) register accessor: Peripheral selection register of TX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_peri_sel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_peri_sel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_peri_sel`] module"]
 pub type OUT_PERI_SEL = crate::Reg<out_peri_sel::OUT_PERI_SEL_SPEC>;
 #[doc = "Peripheral selection register of TX channel 0"]

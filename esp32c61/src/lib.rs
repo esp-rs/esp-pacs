@@ -63,6 +63,10 @@ extern "C" {
     fn SYSTIMER_TARGET1();
     fn SYSTIMER_TARGET2();
     fn APB_SARADC();
+    fn DMA_IN_CH0();
+    fn DMA_IN_CH1();
+    fn DMA_OUT_CH0();
+    fn DMA_OUT_CH1();
     fn SPI2();
     fn SHA();
     fn ECC();
@@ -191,10 +195,18 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 66] = [
     },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: DMA_IN_CH0,
+    },
+    Vector {
+        _handler: DMA_IN_CH1,
+    },
+    Vector {
+        _handler: DMA_OUT_CH0,
+    },
+    Vector {
+        _handler: DMA_OUT_CH1,
+    },
     Vector { _handler: SPI2 },
     Vector { _handler: SHA },
     Vector { _handler: ECC },

@@ -1383,7 +1383,7 @@
           </fields>
         </register>
         <register>
-          <name>IN_PERI_CH0</name>
+          <name>IN_PRI_CH0</name>
           <description>Priority register of RX channel 0</description>
           <addressOffset>0x9c</addressOffset>
           <size>32</size>
@@ -1723,7 +1723,7 @@
           </fields>
         </register>
         <register>
-          <name>OUT_PERI_CH0</name>
+          <name>OUT_PRI_CH0</name>
           <description>Priority register of TX channel 0</description>
           <addressOffset>0xfc</addressOffset>
           <size>32</size>
@@ -2070,7 +2070,7 @@
           </fields>
         </register>
         <register>
-          <name>IN_PERI_CH1</name>
+          <name>IN_PRI_CH1</name>
           <description>Priority register of RX channel 1</description>
           <addressOffset>0x15c</addressOffset>
           <size>32</size>
@@ -2410,7 +2410,7 @@
           </fields>
         </register>
         <register>
-          <name>OUT_PERI_CH1</name>
+          <name>OUT_PRI_CH1</name>
           <description>Priority register of TX channel 1</description>
           <addressOffset>0x1bc</addressOffset>
           <size>32</size>
