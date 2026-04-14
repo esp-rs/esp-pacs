@@ -11486,52 +11486,52 @@ Other: Inactive status\\</description>
           </fields>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>K_MEM[%s]</name>
           <description>The memory that stores k.</description>
           <addressOffset>0x100</addressOffset>
-          <size>8</size>
+          <size>32</size>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>PX_MEM[%s]</name>
           <description>The memory that stores Px.</description>
           <addressOffset>0x120</addressOffset>
-          <size>8</size>
+          <size>32</size>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>PY_MEM[%s]</name>
           <description>The memory that stores Py.</description>
           <addressOffset>0x140</addressOffset>
-          <size>8</size>
+          <size>32</size>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>QX_MEM[%s]</name>
           <description>The memory that stores Qx.</description>
           <addressOffset>0x160</addressOffset>
-          <size>8</size>
+          <size>32</size>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>QY_MEM[%s]</name>
           <description>The memory that stores Qy.</description>
           <addressOffset>0x180</addressOffset>
-          <size>8</size>
+          <size>32</size>
         </register>
         <register>
-          <dim>32</dim>
-          <dimIncrement>0x1</dimIncrement>
+          <dim>8</dim>
+          <dimIncrement>0x4</dimIncrement>
           <name>QZ_MEM[%s]</name>
           <description>The memory that stores Qz.</description>
           <addressOffset>0x1a0</addressOffset>
-          <size>8</size>
+          <size>32</size>
         </register>
       </registers>
     </peripheral>
@@ -16909,8 +16909,8 @@ Other: Inactive status\\</description>
           <fields>
             <field>
               <name>REGION_FILTER_EN</name>
-              <description>Configure bit 0 (0-15) to enable region 0.\\ 
-0: disable \\ 
+              <description>Configure bit 0 (0-15) to enable region 0.\\
+0: disable \\
 1: enable  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
@@ -17078,8 +17078,8 @@ Other: Inactive status\\</description>
           <fields>
             <field>
               <name>M0_EXCEPTION_STATUS</name>
-              <description>Represents exception status.\\ 
-bit0: 1 represents authority_exception \\ 
+              <description>Represents exception status.\\
+bit0: 1 represents authority_exception \\
 bit1: 1 represents space_exception  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -17154,8 +17154,8 @@ bit1: 1 represents space_exception  \\</description>
           <fields>
             <field>
               <name>M1_EXCEPTION_STATUS</name>
-              <description>Represents exception status.\\ 
-bit0: 1 represents authority_exception \\ 
+              <description>Represents exception status.\\
+bit0: 1 represents authority_exception \\
 bit1: 1 represents space_exception  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -17230,8 +17230,8 @@ bit1: 1 represents space_exception  \\</description>
           <fields>
             <field>
               <name>M2_EXCEPTION_STATUS</name>
-              <description>Represents exception status.\\ 
-bit0: 1 represents authority_exception \\ 
+              <description>Represents exception status.\\
+bit0: 1 represents authority_exception \\
 bit1: 1 represents space_exception  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -17306,8 +17306,8 @@ bit1: 1 represents space_exception  \\</description>
           <fields>
             <field>
               <name>M3_EXCEPTION_STATUS</name>
-              <description>Represents exception status.\\ 
-bit0: 1 represents authority_exception \\ 
+              <description>Represents exception status.\\
+bit0: 1 represents authority_exception \\
 bit1: 1 represents space_exception  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -17382,8 +17382,8 @@ bit1: 1 represents space_exception  \\</description>
           <fields>
             <field>
               <name>M0_APM_INT_EN</name>
-              <description>Configures to enable APM M0 interrupt.\\ 
-0: disable \\ 
+              <description>Configures to enable APM M0 interrupt.\\
+0: disable \\
 1: enable  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17391,8 +17391,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>M1_APM_INT_EN</name>
-              <description>Configures to enable APM M1 interrupt.\\ 
-0: disable \\ 
+              <description>Configures to enable APM M1 interrupt.\\
+0: disable \\
 1: enable  \\</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17400,8 +17400,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>M2_APM_INT_EN</name>
-              <description>Configures to enable APM M2 interrupt.\\ 
-0: disable \\ 
+              <description>Configures to enable APM M2 interrupt.\\
+0: disable \\
 1: enable  \\</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17409,8 +17409,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>M3_APM_INT_EN</name>
-              <description>Configures to enable APM M3 interrupt.\\ 
-0: disable \\ 
+              <description>Configures to enable APM M3 interrupt.\\
+0: disable \\
 1: enable  \\</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17427,8 +17427,8 @@ bit1: 1 represents space_exception  \\</description>
           <fields>
             <field>
               <name>CLK_EN</name>
-              <description>Configures whether to keep the clock always on.\\ 
-0: enable automatic clock gating \\ 
+              <description>Configures whether to keep the clock always on.\\
+0: enable automatic clock gating \\
 1: keep the clock always on  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -18052,7 +18052,7 @@ Measurement unit: i2c_sclk \\</description>
             <field>
               <name>SDA_FORCE_OUT</name>
               <description>Configures the SDA output mode.\\
-0: Open drain output \\ 
+0: Open drain output \\
 1: Direct output \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -18061,7 +18061,7 @@ Measurement unit: i2c_sclk \\</description>
             <field>
               <name>SCL_FORCE_OUT</name>
               <description>Configures the SCL output mode.\\
-0: Open drain output \\ 
+0: Open drain output \\
 1: Direct output \\</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -18085,7 +18085,7 @@ Measurement unit: i2c_sclk \\</description>
             </field>
             <field>
               <name>MS_MODE</name>
-              <description>Configures the module as an I2C Master or Slave.\\ 
+              <description>Configures the module as an I2C Master or Slave.\\
 0: Slave \\
 1: Master \\</description>
               <bitOffset>4</bitOffset>
@@ -18094,7 +18094,7 @@ Measurement unit: i2c_sclk \\</description>
             </field>
             <field>
               <name>TRANS_START</name>
-              <description>Configures whether the slave starts sending the data in txfifo.\\ 
+              <description>Configures whether the slave starts sending the data in txfifo.\\
 0: No effect \\
 1: Start</description>
               <bitOffset>5</bitOffset>
@@ -18103,7 +18103,7 @@ Measurement unit: i2c_sclk \\</description>
             </field>
             <field>
               <name>TX_LSB_FIRST</name>
-              <description>Configures to control the sending order for data needing to be sent.\\ 
+              <description>Configures to control the sending order for data needing to be sent.\\
 0: send data from the most significant bit \\
 1: send data from the least significant bit \\</description>
               <bitOffset>6</bitOffset>
@@ -18113,7 +18113,7 @@ Measurement unit: i2c_sclk \\</description>
             <field>
               <name>RX_LSB_FIRST</name>
               <description>Configures to control the storage order for received data.\\
-0: receive data from the most significant bit \\ 
+0: receive data from the most significant bit \\
 1: receive data from the least significant bit \\</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
@@ -18175,7 +18175,7 @@ Measurement unit: i2c_sclk \\</description>
             </field>
             <field>
               <name>ADDR_BROADCASTING_EN</name>
-              <description>Configures to support the 7 bit general call function.\\ 
+              <description>Configures to support the 7 bit general call function.\\
 0: Not support \\
 1: Support \\</description>
               <bitOffset>14</bitOffset>
@@ -18221,7 +18221,7 @@ Measurement unit: i2c_sclk \\</description>
             <field>
               <name>BUS_BUSY</name>
               <description>Represents the I2C bus state.\\
-1: The I2C bus is busy transferring data\\ 
+1: The I2C bus is busy transferring data\\
 0: The I2C bus is in idle state.\\</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -18263,7 +18263,7 @@ Valid only when the module is configured as an I2C Slave.\\
             </field>
             <field>
               <name>SCL_MAIN_STATE_LAST</name>
-              <description>Represents the states of the I2C module state machine.\\ 
+              <description>Represents the states of the I2C module state machine.\\
 0: Idle\\
 1: Address shift\\
 2: ACK address\\
@@ -18332,7 +18332,7 @@ Measurement unit: i2c_sclk \\</description>
             </field>
             <field>
               <name>ADDR_10BIT_EN</name>
-              <description>Configures to enable the slave 10-bit addressing mode in master mode.\\ 
+              <description>Configures to enable the slave 10-bit addressing mode in master mode.\\
 0: No effect \\
 1: Enable \\</description>
               <bitOffset>31</bitOffset>
@@ -18393,7 +18393,7 @@ Measurement unit: i2c_sclk \\</description>
           <fields>
             <field>
               <name>RXFIFO_WM_THRHD</name>
-              <description>Configures the water mark threshold of RXFIFO in nonfifo access mode. When I2C_FIFO_PRT_EN is 1 and RX FIFO counter is bigger than I2C_RXFIFO_WM_THRHD[4:0], I2C_RXFIFO_WM_INT_RAW bit will be valid. 
+              <description>Configures the water mark threshold of RXFIFO in nonfifo access mode. When I2C_FIFO_PRT_EN is 1 and RX FIFO counter is bigger than I2C_RXFIFO_WM_THRHD[4:0], I2C_RXFIFO_WM_INT_RAW bit will be valid.
 \tododone{For CJ, please check this description. I habe doubt about reg_reg_fifo_prt_en.CJ: modified}</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -19166,7 +19166,7 @@ SCL positive edge for a stop condition</description>
           <fields>
             <field>
               <name>SCL_FILTER_THRES</name>
-              <description>Configures the threshold pulse width to be filtered on SCL. When a pulse on the SCL input has smaller width than this register value, the I2C controller will ignore that pulse. 
+              <description>Configures the threshold pulse width to be filtered on SCL. When a pulse on the SCL input has smaller width than this register value, the I2C controller will ignore that pulse.
 Measurement unit: i2c_sclk \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
@@ -19174,7 +19174,7 @@ Measurement unit: i2c_sclk \\</description>
             </field>
             <field>
               <name>SDA_FILTER_THRES</name>
-              <description>Configures the threshold pulse width to be filtered on SDA. When a pulse on the SDA input has smaller width than this register value, the I2C controller will ignore that pulse. 
+              <description>Configures the threshold pulse width to be filtered on SDA. When a pulse on the SDA input has smaller width than this register value, the I2C controller will ignore that pulse.
 Measurement unit: i2c_sclk \\</description>
               <bitOffset>4</bitOffset>
               <bitWidth>4</bitWidth>
@@ -19253,7 +19253,7 @@ Measurement unit: i2c_sclk \\</description>
             <field>
               <name>COMMAND0</name>
               <description>Configures command 0. \\
-It consists of three parts:\\ 
+It consists of three parts:\\
 op_code is the command\\
 1: WRITE\\
 2: STOP\\
@@ -19285,7 +19285,7 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
           <fields>
             <field>
               <name>COMMAND1</name>
-              <description>Configures command 1.\\ 
+              <description>Configures command 1.\\
 See details in I2C_CMD0_REG[13:0].</description>
               <bitOffset>0</bitOffset>
               <bitWidth>14</bitWidth>
@@ -28458,8 +28458,8 @@ Measurement unit: i2c_sclk \\</description>
           <fields>
             <field>
               <name>REGION_FILTER_EN</name>
-              <description>Configure bit 0 (0-3) to enable region 0.\\ 
-0: disable \\ 
+              <description>Configure bit 0 (0-3) to enable region 0.\\
+0: disable \\
 1: enable  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
@@ -28606,8 +28606,8 @@ Measurement unit: i2c_sclk \\</description>
           <fields>
             <field>
               <name>M0_EXCEPTION_STATUS</name>
-              <description>Represents exception status.\\ 
-bit0: 1 represents authority_exception \\ 
+              <description>Represents exception status.\\
+bit0: 1 represents authority_exception \\
 bit1: 1 represents space_exception  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -28682,8 +28682,8 @@ bit1: 1 represents space_exception  \\</description>
           <fields>
             <field>
               <name>M0_APM_INT_EN</name>
-              <description>Configures to enable APM M0 interrupt.\\ 
-0: disable \\ 
+              <description>Configures to enable APM M0 interrupt.\\
+0: disable \\
 1: enable  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -28700,8 +28700,8 @@ bit1: 1 represents space_exception  \\</description>
           <fields>
             <field>
               <name>CLK_EN</name>
-              <description>Configures whether to keep the clock always on.\\ 
-0: enable automatic clock gating \\ 
+              <description>Configures whether to keep the clock always on.\\
+0: enable automatic clock gating \\
 1: keep the clock always on  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -28749,7 +28749,7 @@ bit1: 1 represents space_exception  \\</description>
               <name>SLOW_CLK_SEL</name>
               <description>Configures the source of LP_SLOW_CLK.
 0: RC_SLOW_CLK
-1: XTAL32K_CLK 
+1: XTAL32K_CLK
 2: RC32K_CLK
 3:OSC_SLOW_CLK</description>
               <bitOffset>0</bitOffset>
@@ -28793,8 +28793,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>AON_FAST_OEN</name>
-              <description>Configures the clock gate to pad of the LP_DYN_FAST_CLK. 
-0: Disable the clk pass clock gate  
+              <description>Configures the clock gate to pad of the LP_DYN_FAST_CLK.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -28802,8 +28802,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>SOSC_OEN</name>
-              <description>Configures the clock gate to pad of the OSC_SLOW_CLK.  
-0: Disable the clk pass clock gate 
+              <description>Configures the clock gate to pad of the OSC_SLOW_CLK.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -28811,8 +28811,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>FOSC_OEN</name>
-              <description>Configures the clock gate to pad of the RC_FAST_CLK. 
-0: Disable the clk pass clock gate  
+              <description>Configures the clock gate to pad of the RC_FAST_CLK.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -28820,8 +28820,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>OSC32K_OEN</name>
-              <description>Configures the clock gate to pad of the RC32K_CLK. 
-0: Disable the clk pass clock gate  
+              <description>Configures the clock gate to pad of the RC32K_CLK.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -28829,8 +28829,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>XTAL32K_OEN</name>
-              <description>Configures the clock gate to pad of the XTAL32K_CLK. 
-0: Disable the clk pass clock gate 
+              <description>Configures the clock gate to pad of the XTAL32K_CLK.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate </description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
@@ -28838,8 +28838,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>CORE_EFUSE_OEN</name>
-              <description>Configures the clock gate to pad of the EFUSE_CTRL clock. 
-0: Disable the clk pass clock gate  
+              <description>Configures the clock gate to pad of the EFUSE_CTRL clock.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -28848,7 +28848,7 @@ bit1: 1 represents space_exception  \\</description>
             <field>
               <name>SLOW_OEN</name>
               <description>Configures the clock gate to pad of the LP_SLOW_CLK.
-0: Disable the clk pass clock gate 
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
@@ -28856,8 +28856,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>FAST_OEN</name>
-              <description>Configures the clock gate to pad of the LP_FAST_CLK. 
-0: Disable the clk pass clock gate 
+              <description>Configures the clock gate to pad of the LP_FAST_CLK.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
@@ -28865,8 +28865,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>RNG_OEN</name>
-              <description>Configures the clock gate to pad of the RNG clk. 
-0: Disable the clk pass clock gate 
+              <description>Configures the clock gate to pad of the RNG clk.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
@@ -28874,8 +28874,8 @@ bit1: 1 represents space_exception  \\</description>
             </field>
             <field>
               <name>LPBUS_OEN</name>
-              <description>Configures the clock gate to pad of the LP bus clk. 
-0: Disable the clk pass clock gate 
+              <description>Configures the clock gate to pad of the LP bus clk.
+0: Disable the clk pass clock gate
 1: Enable the clk pass clock gate</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
@@ -28934,7 +28934,7 @@ bit1: 1 represents space_exception  \\</description>
             <field>
               <name>WDT_RESET_EN</name>
               <description>Configures whether or not to reset LP_WDT and super watch dog
-0: Invalid.No effect 
+0: Invalid.No effect
 1: Reset</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
@@ -29024,7 +29024,7 @@ Measurement unit: LP_DYN_FAST_CLK</description>
             <field>
               <name>RTC_WDT_CPU_RESET_EN</name>
               <description>Configures whether or not LP_WDT can reset CPU
-0: LP_WDT could not reset CPU when LP_WDT timeout 
+0: LP_WDT could not reset CPU when LP_WDT timeout
 1: LP_WDT could reset CPU when LP_WDT timeout</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
@@ -29041,7 +29041,7 @@ Measurement unit: LP_DYN_FAST_CLK</description>
             <field>
               <name>CPU_STALL_EN</name>
               <description>Configures whether or not CPU entry stall state before LP_WDT and software reset CPU
-0: CPU will not entry stall state before LP_WDT and software reset CPU 
+0: CPU will not entry stall state before LP_WDT and software reset CPU
 1: CPU will entry stall state before LP_WDT and software reset CPU</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -29354,11 +29354,11 @@ Bit0 ~ bit6 are corresponding to LP_GPIO0 ~ LP_GPIO6. Bit7 ~ bit31 are invalid.\
           <fields>
             <field>
               <name>INTERRUPT</name>
-              <description>The interrupt status of LP_GPIO0 ~ LP_GPIO6, can be configured by the software. 
+              <description>The interrupt status of LP_GPIO0 ~ LP_GPIO6, can be configured by the software.
 
-    - Bit0 ~ bit6 are corresponding to LP_GPIO0 ~ LP_GPIO6. Bit7 ~ bit31 are invalid. 
+    - Bit0 ~ bit6 are corresponding to LP_GPIO0 ~ LP_GPIO6. Bit7 ~ bit31 are invalid.
     - Each bit represents the status of its corresponding LP_GPIO:
-    
+
         - 0: Represents the LP_GPIO does not generate the interrupt configured by LP_GPIO_PIN0_INT_TYPE, or this bit is configured to 0 by the software.
         - 1: Represents the LP_GPIO generates the interrupt configured by LP_GPIO_PIN0_INT_TYPE, or this bit is configured to 1 by the software.
     </description>
@@ -29376,9 +29376,9 @@ Bit0 ~ bit6 are corresponding to LP_GPIO0 ~ LP_GPIO6. Bit7 ~ bit31 are invalid.\
           <fields>
             <field>
               <name>STATUS_W1TS</name>
-              <description>Configures whether or not to set the interrupt status register LP_GPIO_STATUS_INTERRUPT of LP_GPIO0 ~ LP_GPIO6. 
+              <description>Configures whether or not to set the interrupt status register LP_GPIO_STATUS_INTERRUPT of LP_GPIO0 ~ LP_GPIO6.
 
-    - Bit0 ~ bit6 are corresponding to LP_GPIO0 ~ LP_GPIO6. Bit7 ~ bit31 are invalid. 
+    - Bit0 ~ bit6 are corresponding to LP_GPIO0 ~ LP_GPIO6. Bit7 ~ bit31 are invalid.
     - If the value 1 is written to a bit here, the corresponding bit in LP_GPIO_STATUS_INTERRUPT will be set to 1. \item Recommended operation: use this register to set LP_GPIO_STATUS_INTERRUPT. </description>
               <bitOffset>0</bitOffset>
               <bitWidth>7</bitWidth>
@@ -29394,9 +29394,9 @@ Bit0 ~ bit6 are corresponding to LP_GPIO0 ~ LP_GPIO6. Bit7 ~ bit31 are invalid.\
           <fields>
             <field>
               <name>STATUS_W1TC</name>
-              <description>Configures whether or not to clear the interrupt status register LP_GPIO_STATUS_INTERRUPT of LP_GPIO0 ~ LP_GPIO6. 
+              <description>Configures whether or not to clear the interrupt status register LP_GPIO_STATUS_INTERRUPT of LP_GPIO0 ~ LP_GPIO6.
 
-    - Bit0 ~ bit6 are corresponding to LP_GPIO0 ~ LP_GPIO6. Bit7 ~ bit31 are invalid. 
+    - Bit0 ~ bit6 are corresponding to LP_GPIO0 ~ LP_GPIO6. Bit7 ~ bit31 are invalid.
     - If the value 1 is written to a bit here, the corresponding bit in LP_GPIO_STATUS_INTERRUPT will be cleared. \item Recommended operation: use this register to clear LP_GPIO_STATUS_INTERRUPT.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>7</bitWidth>
@@ -29580,7 +29580,7 @@ This function only wakes up the CPU from Light-sleep. \\</description>
           <fields>
             <field>
               <name>MCU_OE</name>
-              <description>Configures whether or not to enable the output of LP_GPIO%s in sleep mode. 
+              <description>Configures whether or not to enable the output of LP_GPIO%s in sleep mode.
 0: Disable\\
 1: Enable\\</description>
               <bitOffset>0</bitOffset>
@@ -29749,10 +29749,10 @@ This function only wakes up the CPU from Light-sleep. \\</description>
           <fields>
             <field>
               <name>M0_MODE</name>
-              <description>Configures M0 security level mode.\\ 
-0: tee_mode \\ 
-1: ree_mode0 \\ 
-2: ree_mode1 \\ 
+              <description>Configures M0 security level mode.\\
+0: tee_mode \\
+1: ree_mode0 \\
+2: ree_mode1 \\
 3: ree_mode2  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -29776,8 +29776,8 @@ This function only wakes up the CPU from Light-sleep. \\</description>
           <fields>
             <field>
               <name>CLK_EN</name>
-              <description>Configures whether to keep the clock always on.\\ 
-0: enable automatic clock gating \\ 
+              <description>Configures whether to keep the clock always on.\\
+0: enable automatic clock gating \\
 1: keep the clock always on  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -53226,7 +53226,7 @@ Can be configured in CONF state.</description>
             <field>
               <name>SPI_SLV_RX_SEG_TRANS_CLR_EN</name>
               <description>In slave segmented transfer, if the size of the DMA RX buffer is smaller than the size of the received data, \\1: the data in all the following Wr_DMA transactions will not be received\\ 0: the data in this Wr_DMA transaction will not be received, but in the following transactions,\\
-    
+
         - if the size of DMA RX buffer is not 0, the data in following Wr_DMA transactions will be received.
         - if the size of DMA RX buffer is 0, the data in following Wr_DMA transactions will not be received.</description>
               <bitOffset>19</bitOffset>
@@ -53238,7 +53238,7 @@ Can be configured in CONF state.</description>
               <description>In slave segmented transfer, if the size of the DMA TX buffer is smaller than the size of the transmitted data,\\
 1: the data in the following transactions will not be updated, i.e. the old data is transmitted repeatedly.\\
 0: the data in this transaction will not be updated. But in the following transactions,\\
-    
+
         - if new data is filled in DMA TX FIFO, new data will be transmitted.
         - if no new data is filled in DMA TX FIFO, no new data will be transmitted.</description>
               <bitOffset>20</bitOffset>
@@ -56898,10 +56898,10 @@ Can be configured in CONF state.</description>
           <fields>
             <field>
               <name>M_MODE</name>
-              <description>Configures M%s security level mode.\\ 
-0: tee_mode \\ 
-1: ree_mode0 \\ 
-2: ree_mode1 \\ 
+              <description>Configures M%s security level mode.\\
+0: tee_mode \\
+1: ree_mode0 \\
+2: ree_mode1 \\
 3: ree_mode2  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -56925,8 +56925,8 @@ Can be configured in CONF state.</description>
           <fields>
             <field>
               <name>CLK_EN</name>
-              <description>Configures whether to keep the clock always on.\\ 
-0: enable automatic clock gating \\ 
+              <description>Configures whether to keep the clock always on.\\
+0: enable automatic clock gating \\
 1: keep the clock always on  \\</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -59438,7 +59438,7 @@ Measurement unit: byte.</description>
             <field>
               <name>CLK_EN</name>
               <description>Configures clock gating.\\
-0: Support clock only when the application writes registers.\\ 
+0: Support clock only when the application writes registers.\\
 1: Always force the clock on for registers.\\</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
