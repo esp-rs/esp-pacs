@@ -11,6 +11,7 @@ _include:
   - _modem_syscon.yml
   - _interrupt.yml
   - _date.yml
+  - _sha.yml
   - _uart.yml
 
 TIMG0:
@@ -78,7 +79,7 @@ IO_MUX:
 
 # _IN_SEL_CFG were manually rewritten into a big array because
 # it was impossible to gather them automatically
-GPIO: 
+GPIO:
   _modify:
     PROCPU_INT:
       name: PCPU_INT
@@ -197,7 +198,7 @@ SPI2:
   "*":
     _strip: SPI_
   _include: ../../../common_patches/spi_dma_int_strip.yaml
-  
+
   CMD:
     _modify:
       UPDATE:
@@ -293,7 +294,7 @@ SYSTIMER:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/systimer.yaml
     - ../../../common_patches/systimer_real_target.yaml
-    
+
 UART0:
   _strip_end: "_SYNC"
 
