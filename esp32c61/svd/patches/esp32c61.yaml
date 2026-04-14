@@ -6,6 +6,7 @@ _include:
   - ../../../common_patches/i2c_ana_mst.yaml
   - ../../../common_patches/slc.yaml
   - _assist_debug.yml
+  - _ecc.yml
   - _modem_lpcon.yml
   - _modem_syscon.yml
   - _interrupt.yml
@@ -51,7 +52,7 @@ APB_SARADC:
 INTPRI:
   CPU_INTR_FROM_CPU%s:
     _strip_end: _FROM_CPU
-  
+
 I2C0:
   _modify:
     INT_STATUS:
