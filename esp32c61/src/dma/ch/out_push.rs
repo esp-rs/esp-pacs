@@ -2,37 +2,37 @@
 pub type R = crate::R<OUT_PUSH_SPEC>;
 #[doc = "Register `OUT_PUSH` writer"]
 pub type W = crate::W<OUT_PUSH_SPEC>;
-#[doc = "Field `OUTFIFO_WDATA_CH0` reader - Configures whether to push data into AHB_DMA FIFO.\\\\0: Invalid. No effect\\\\1: Push\\\\"]
-pub type OUTFIFO_WDATA_CH0_R = crate::FieldReader<u16>;
-#[doc = "Field `OUTFIFO_WDATA_CH0` writer - Configures whether to push data into AHB_DMA FIFO.\\\\0: Invalid. No effect\\\\1: Push\\\\"]
-pub type OUTFIFO_WDATA_CH0_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
-#[doc = "Field `OUTFIFO_PUSH_CH0` writer - Configures the data that need to be pushed into AHB_DMA FIFO."]
-pub type OUTFIFO_PUSH_CH0_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OUTFIFO_WDATA` reader - Configures whether to push data into AHB_DMA FIFO.\\\\0: Invalid. No effect\\\\1: Push\\\\"]
+pub type OUTFIFO_WDATA_R = crate::FieldReader<u16>;
+#[doc = "Field `OUTFIFO_WDATA` writer - Configures whether to push data into AHB_DMA FIFO.\\\\0: Invalid. No effect\\\\1: Push\\\\"]
+pub type OUTFIFO_WDATA_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
+#[doc = "Field `OUTFIFO_PUSH` writer - Configures the data that need to be pushed into AHB_DMA FIFO."]
+pub type OUTFIFO_PUSH_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:8 - Configures whether to push data into AHB_DMA FIFO.\\\\0: Invalid. No effect\\\\1: Push\\\\"]
     #[inline(always)]
-    pub fn outfifo_wdata_ch0(&self) -> OUTFIFO_WDATA_CH0_R {
-        OUTFIFO_WDATA_CH0_R::new((self.bits & 0x01ff) as u16)
+    pub fn outfifo_wdata(&self) -> OUTFIFO_WDATA_R {
+        OUTFIFO_WDATA_R::new((self.bits & 0x01ff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_PUSH")
-            .field("outfifo_wdata_ch0", &self.outfifo_wdata_ch0())
+            .field("outfifo_wdata", &self.outfifo_wdata())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:8 - Configures whether to push data into AHB_DMA FIFO.\\\\0: Invalid. No effect\\\\1: Push\\\\"]
     #[inline(always)]
-    pub fn outfifo_wdata_ch0(&mut self) -> OUTFIFO_WDATA_CH0_W<'_, OUT_PUSH_SPEC> {
-        OUTFIFO_WDATA_CH0_W::new(self, 0)
+    pub fn outfifo_wdata(&mut self) -> OUTFIFO_WDATA_W<'_, OUT_PUSH_SPEC> {
+        OUTFIFO_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 9 - Configures the data that need to be pushed into AHB_DMA FIFO."]
     #[inline(always)]
-    pub fn outfifo_push_ch0(&mut self) -> OUTFIFO_PUSH_CH0_W<'_, OUT_PUSH_SPEC> {
-        OUTFIFO_PUSH_CH0_W::new(self, 9)
+    pub fn outfifo_push(&mut self) -> OUTFIFO_PUSH_W<'_, OUT_PUSH_SPEC> {
+        OUTFIFO_PUSH_W::new(self, 9)
     }
 }
 #[doc = "Push control register of TX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_push::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_push::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

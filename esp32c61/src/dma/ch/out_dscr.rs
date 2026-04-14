@@ -1,19 +1,19 @@
 #[doc = "Register `OUT_DSCR` reader"]
 pub type R = crate::R<OUT_DSCR_SPEC>;
-#[doc = "Field `OUTLINK_DSCR_CH0` reader - Represents the address of the next transmit descriptor y+1 pointed by the current transmit descriptor that has already been fetched."]
-pub type OUTLINK_DSCR_CH0_R = crate::FieldReader<u32>;
+#[doc = "Field `OUTLINK_DSCR` reader - Represents the address of the next transmit descriptor y+1 pointed by the current transmit descriptor that has already been fetched."]
+pub type OUTLINK_DSCR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Represents the address of the next transmit descriptor y+1 pointed by the current transmit descriptor that has already been fetched."]
     #[inline(always)]
-    pub fn outlink_dscr_ch0(&self) -> OUTLINK_DSCR_CH0_R {
-        OUTLINK_DSCR_CH0_R::new(self.bits)
+    pub fn outlink_dscr(&self) -> OUTLINK_DSCR_R {
+        OUTLINK_DSCR_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_DSCR")
-            .field("outlink_dscr_ch0", &self.outlink_dscr_ch0())
+            .field("outlink_dscr", &self.outlink_dscr())
             .finish()
     }
 }
