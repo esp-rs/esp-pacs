@@ -20,7 +20,6 @@ extern "C" {
     fn LP_ANA();
     fn LP_ADC();
     fn LP_GPIO();
-    fn LP_I2C0();
     fn LP_I2S0();
     fn LP_TOUCH();
     fn LP_TSENS();
@@ -138,7 +137,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 128] = [
     Vector { _handler: LP_ANA },
     Vector { _handler: LP_ADC },
     Vector { _handler: LP_GPIO },
-    Vector { _handler: LP_I2C0 },
+    Vector { _reserved: 0 },
     Vector { _handler: LP_I2S0 },
     Vector { _reserved: 0 },
     Vector { _handler: LP_TOUCH },
@@ -684,6 +683,15 @@ impl core::fmt::Debug for AXI_ICM {
 }
 #[doc = "AXI_ICM Peripheral"]
 pub mod axi_icm;
+#[doc = "AXI ICM QoS indirect-access window (base + 0x400)"]
+pub type ICM_AXI_QOS = crate::Periph<icm_axi_qos::RegisterBlock, 0x500a_4400>;
+impl core::fmt::Debug for ICM_AXI_QOS {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ICM_AXI_QOS").finish()
+    }
+}
+#[doc = "AXI ICM QoS indirect-access window (base + 0x400)"]
+pub mod icm_axi_qos;
 #[doc = "Input/Output Multiplexer"]
 pub type IO_MUX = crate::Periph<io_mux::RegisterBlock, 0x500e_1000>;
 impl core::fmt::Debug for IO_MUX {
@@ -783,15 +791,6 @@ impl core::fmt::Debug for LP_GPIO {
 }
 #[doc = "Low-power General Purpose Input/Output"]
 pub mod lp_gpio;
-#[doc = "Low-power I2C (Inter-Integrated Circuit) Controller 0"]
-pub type LP_I2C0 = crate::Periph<lp_i2c0::RegisterBlock, 0x5012_2000>;
-impl core::fmt::Debug for LP_I2C0 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("LP_I2C0").finish()
-    }
-}
-#[doc = "Low-power I2C (Inter-Integrated Circuit) Controller 0"]
-pub mod lp_i2c0;
 #[doc = "Low-power I2S (Inter-IC Sound) Controller 0"]
 pub type LP_I2S0 = crate::Periph<lp_i2s0::RegisterBlock, 0x5012_5000>;
 impl core::fmt::Debug for LP_I2S0 {
@@ -847,7 +846,7 @@ impl core::fmt::Debug for PARL_IO {
 #[doc = "Parallel IO Controller"]
 pub mod parl_io;
 #[doc = "PAU Peripheral"]
-pub type PAU = crate::Periph<pau::RegisterBlock, 0x6009_3000>;
+pub type PAU = crate::Periph<pau::RegisterBlock, 0x5008_2000>;
 impl core::fmt::Debug for PAU {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PAU").finish()
@@ -892,7 +891,7 @@ impl core::fmt::Debug for PVT {
 #[doc = "PVT Peripheral"]
 pub mod pvt;
 #[doc = "Remote Control"]
-pub type RMT = crate::Periph<rmt::RegisterBlock, 0x500d_4000>;
+pub type RMT = crate::Periph<rmt::RegisterBlock, 0x500a_2000>;
 impl core::fmt::Debug for RMT {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RMT").finish()
@@ -1240,6 +1239,8 @@ pub struct Peripherals {
     pub I3C_SLV: I3C_SLV,
     #[doc = "AXI_ICM"]
     pub AXI_ICM: AXI_ICM,
+    #[doc = "ICM_AXI_QOS"]
+    pub ICM_AXI_QOS: ICM_AXI_QOS,
     #[doc = "IO_MUX"]
     pub IO_MUX: IO_MUX,
     #[doc = "ISP"]
@@ -1262,8 +1263,6 @@ pub struct Peripherals {
     pub LP_AON_CLKRST: LP_AON_CLKRST,
     #[doc = "LP_GPIO"]
     pub LP_GPIO: LP_GPIO,
-    #[doc = "LP_I2C0"]
-    pub LP_I2C0: LP_I2C0,
     #[doc = "LP_I2S0"]
     pub LP_I2S0: LP_I2S0,
     #[doc = "LP_IO_MUX"]
@@ -1405,6 +1404,7 @@ impl Peripherals {
             I3C_MST_MEM: I3C_MST_MEM::steal(),
             I3C_SLV: I3C_SLV::steal(),
             AXI_ICM: AXI_ICM::steal(),
+            ICM_AXI_QOS: ICM_AXI_QOS::steal(),
             IO_MUX: IO_MUX::steal(),
             ISP: ISP::steal(),
             JPEG: JPEG::steal(),
@@ -1416,7 +1416,6 @@ impl Peripherals {
             LP_ANA: LP_ANA::steal(),
             LP_AON_CLKRST: LP_AON_CLKRST::steal(),
             LP_GPIO: LP_GPIO::steal(),
-            LP_I2C0: LP_I2C0::steal(),
             LP_I2S0: LP_I2S0::steal(),
             LP_IO_MUX: LP_IO_MUX::steal(),
             LP_UART: LP_UART::steal(),

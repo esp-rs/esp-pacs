@@ -4,8 +4,10 @@ pub type R = crate::R<INT_ST_SPEC>;
 pub type SR_EOF_R = crate::BitReader;
 #[doc = "Field `BLEND_EOF` reader - The raw interrupt status bit for the PPA_BLEND_EOF_INT interrupt."]
 pub type BLEND_EOF_R = crate::BitReader;
-#[doc = "Field `SR_PARAM_CFG_ERR` reader - The raw interrupt status bit for the PPA_SR_RX_YSCAL_ERR_INT interrupt."]
+#[doc = "Field `SR_PARAM_CFG_ERR` reader - The raw interrupt status bit for the PPA_SR_PARAM_CFG_ERR_INT interrupt."]
 pub type SR_PARAM_CFG_ERR_R = crate::BitReader;
+#[doc = "Field `BLEND_PARAM_CFG_ERR` reader - The raw interrupt status bit for the PPA_BLEND_PARAM_CFG_ERR_INT interrupt."]
+pub type BLEND_PARAM_CFG_ERR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the PPA_SR_EOF_INT interrupt."]
     #[inline(always)]
@@ -17,10 +19,15 @@ impl R {
     pub fn blend_eof(&self) -> BLEND_EOF_R {
         BLEND_EOF_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - The raw interrupt status bit for the PPA_SR_RX_YSCAL_ERR_INT interrupt."]
+    #[doc = "Bit 2 - The raw interrupt status bit for the PPA_SR_PARAM_CFG_ERR_INT interrupt."]
     #[inline(always)]
     pub fn sr_param_cfg_err(&self) -> SR_PARAM_CFG_ERR_R {
         SR_PARAM_CFG_ERR_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - The raw interrupt status bit for the PPA_BLEND_PARAM_CFG_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn blend_param_cfg_err(&self) -> BLEND_PARAM_CFG_ERR_R {
+        BLEND_PARAM_CFG_ERR_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -30,6 +37,7 @@ impl core::fmt::Debug for R {
             .field("sr_eof", &self.sr_eof())
             .field("blend_eof", &self.blend_eof())
             .field("sr_param_cfg_err", &self.sr_param_cfg_err())
+            .field("blend_param_cfg_err", &self.blend_param_cfg_err())
             .finish()
     }
 }

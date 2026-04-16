@@ -34,6 +34,10 @@ pub type CAM_VSYNC_FILTER_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 pub type CAM_VSYNC_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `CAM_VSYNC_FILTER_EN` writer - this bit configures vsync filter en"]
 pub type CAM_VSYNC_FILTER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CAM_DE_ONLY` reader - configures whether cam inf only has de, no hsync data. 0: has hsync, 1: no hsync"]
+pub type CAM_DE_ONLY_R = crate::BitReader;
+#[doc = "Field `CAM_DE_ONLY` writer - configures whether cam inf only has de, no hsync data. 0: has hsync, 1: no hsync"]
+pub type CAM_DE_ONLY_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - this field configures data order of cam port, 0: cam_data_in, 1:{cam_data_in\\[7:0\\], cam_data_in\\[15:8\\]}"]
     #[inline(always)]
@@ -75,6 +79,11 @@ impl R {
     pub fn cam_vsync_filter_en(&self) -> CAM_VSYNC_FILTER_EN_R {
         CAM_VSYNC_FILTER_EN_R::new(((self.bits >> 14) & 1) != 0)
     }
+    #[doc = "Bit 15 - configures whether cam inf only has de, no hsync data. 0: has hsync, 1: no hsync"]
+    #[inline(always)]
+    pub fn cam_de_only(&self) -> CAM_DE_ONLY_R {
+        CAM_DE_ONLY_R::new(((self.bits >> 15) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -88,6 +97,7 @@ impl core::fmt::Debug for R {
             .field("cam_vsync_inv", &self.cam_vsync_inv())
             .field("cam_vsync_filter_thres", &self.cam_vsync_filter_thres())
             .field("cam_vsync_filter_en", &self.cam_vsync_filter_en())
+            .field("cam_de_only", &self.cam_de_only())
             .finish()
     }
 }
@@ -131,6 +141,11 @@ impl W {
     #[inline(always)]
     pub fn cam_vsync_filter_en(&mut self) -> CAM_VSYNC_FILTER_EN_W<'_, CAM_CONF_SPEC> {
         CAM_VSYNC_FILTER_EN_W::new(self, 14)
+    }
+    #[doc = "Bit 15 - configures whether cam inf only has de, no hsync data. 0: has hsync, 1: no hsync"]
+    #[inline(always)]
+    pub fn cam_de_only(&mut self) -> CAM_DE_ONLY_W<'_, CAM_CONF_SPEC> {
+        CAM_DE_ONLY_W::new(self, 15)
     }
 }
 #[doc = "isp cam source config register\n\nYou can [`read`](crate::Reg::read) this register and get [`cam_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cam_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

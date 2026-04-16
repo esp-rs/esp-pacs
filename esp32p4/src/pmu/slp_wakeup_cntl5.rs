@@ -6,6 +6,10 @@ pub type W = crate::W<SLP_WAKEUP_CNTL5_SPEC>;
 pub type MODEM_WAIT_TARGET_R = crate::FieldReader<u32>;
 #[doc = "Field `MODEM_WAIT_TARGET` writer - need_des"]
 pub type MODEM_WAIT_TARGET_W<'a, REG> = crate::FieldWriter<'a, REG, 20, u32>;
+#[doc = "Field `LP_ANA_WAIT_TARGET_EXPAND` reader - need_des"]
+pub type LP_ANA_WAIT_TARGET_EXPAND_R = crate::FieldReader;
+#[doc = "Field `LP_ANA_WAIT_TARGET_EXPAND` writer - need_des"]
+pub type LP_ANA_WAIT_TARGET_EXPAND_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `LP_ANA_WAIT_TARGET` reader - need_des"]
 pub type LP_ANA_WAIT_TARGET_R = crate::FieldReader;
 #[doc = "Field `LP_ANA_WAIT_TARGET` writer - need_des"]
@@ -15,6 +19,11 @@ impl R {
     #[inline(always)]
     pub fn modem_wait_target(&self) -> MODEM_WAIT_TARGET_R {
         MODEM_WAIT_TARGET_R::new(self.bits & 0x000f_ffff)
+    }
+    #[doc = "Bits 22:23 - need_des"]
+    #[inline(always)]
+    pub fn lp_ana_wait_target_expand(&self) -> LP_ANA_WAIT_TARGET_EXPAND_R {
+        LP_ANA_WAIT_TARGET_EXPAND_R::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bits 24:31 - need_des"]
     #[inline(always)]
@@ -27,6 +36,10 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLP_WAKEUP_CNTL5")
             .field("modem_wait_target", &self.modem_wait_target())
+            .field(
+                "lp_ana_wait_target_expand",
+                &self.lp_ana_wait_target_expand(),
+            )
             .field("lp_ana_wait_target", &self.lp_ana_wait_target())
             .finish()
     }
@@ -36,6 +49,13 @@ impl W {
     #[inline(always)]
     pub fn modem_wait_target(&mut self) -> MODEM_WAIT_TARGET_W<'_, SLP_WAKEUP_CNTL5_SPEC> {
         MODEM_WAIT_TARGET_W::new(self, 0)
+    }
+    #[doc = "Bits 22:23 - need_des"]
+    #[inline(always)]
+    pub fn lp_ana_wait_target_expand(
+        &mut self,
+    ) -> LP_ANA_WAIT_TARGET_EXPAND_W<'_, SLP_WAKEUP_CNTL5_SPEC> {
+        LP_ANA_WAIT_TARGET_EXPAND_W::new(self, 22)
     }
     #[doc = "Bits 24:31 - need_des"]
     #[inline(always)]

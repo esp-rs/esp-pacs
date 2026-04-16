@@ -2,30 +2,30 @@
 pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
 pub type W = crate::W<INT_ENA_SPEC>;
-#[doc = "Field `TX_FIFO_REMPTY` reader - Set this bit to enable TX_FIFO_REMPTY_INT."]
+#[doc = "Field `TX_FIFO_REMPTY` reader - Write 1 to enable TX_FIFO_REMPTY_INT."]
 pub type TX_FIFO_REMPTY_R = crate::BitReader;
-#[doc = "Field `TX_FIFO_REMPTY` writer - Set this bit to enable TX_FIFO_REMPTY_INT."]
+#[doc = "Field `TX_FIFO_REMPTY` writer - Write 1 to enable TX_FIFO_REMPTY_INT."]
 pub type TX_FIFO_REMPTY_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RX_FIFO_WOVF` reader - Set this bit to enable RX_FIFO_WOVF_INT."]
+#[doc = "Field `RX_FIFO_WOVF` reader - Write 1 to enable RX_FIFO_WOVF_INT."]
 pub type RX_FIFO_WOVF_R = crate::BitReader;
-#[doc = "Field `RX_FIFO_WOVF` writer - Set this bit to enable RX_FIFO_WOVF_INT."]
+#[doc = "Field `RX_FIFO_WOVF` writer - Write 1 to enable RX_FIFO_WOVF_INT."]
 pub type RX_FIFO_WOVF_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TX_EOF` reader - Set this bit to enable TX_EOF_INT."]
+#[doc = "Field `TX_EOF` reader - Write 1 to enable TX_EOF_INT."]
 pub type TX_EOF_R = crate::BitReader;
-#[doc = "Field `TX_EOF` writer - Set this bit to enable TX_EOF_INT."]
+#[doc = "Field `TX_EOF` writer - Write 1 to enable TX_EOF_INT."]
 pub type TX_EOF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - Set this bit to enable TX_FIFO_REMPTY_INT."]
+    #[doc = "Bit 0 - Write 1 to enable TX_FIFO_REMPTY_INT."]
     #[inline(always)]
     pub fn tx_fifo_rempty(&self) -> TX_FIFO_REMPTY_R {
         TX_FIFO_REMPTY_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - Set this bit to enable RX_FIFO_WOVF_INT."]
+    #[doc = "Bit 1 - Write 1 to enable RX_FIFO_WOVF_INT."]
     #[inline(always)]
     pub fn rx_fifo_wovf(&self) -> RX_FIFO_WOVF_R {
         RX_FIFO_WOVF_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - Set this bit to enable TX_EOF_INT."]
+    #[doc = "Bit 2 - Write 1 to enable TX_EOF_INT."]
     #[inline(always)]
     pub fn tx_eof(&self) -> TX_EOF_R {
         TX_EOF_R::new(((self.bits >> 2) & 1) != 0)
@@ -42,17 +42,17 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Set this bit to enable TX_FIFO_REMPTY_INT."]
+    #[doc = "Bit 0 - Write 1 to enable TX_FIFO_REMPTY_INT."]
     #[inline(always)]
     pub fn tx_fifo_rempty(&mut self) -> TX_FIFO_REMPTY_W<'_, INT_ENA_SPEC> {
         TX_FIFO_REMPTY_W::new(self, 0)
     }
-    #[doc = "Bit 1 - Set this bit to enable RX_FIFO_WOVF_INT."]
+    #[doc = "Bit 1 - Write 1 to enable RX_FIFO_WOVF_INT."]
     #[inline(always)]
     pub fn rx_fifo_wovf(&mut self) -> RX_FIFO_WOVF_W<'_, INT_ENA_SPEC> {
         RX_FIFO_WOVF_W::new(self, 1)
     }
-    #[doc = "Bit 2 - Set this bit to enable TX_EOF_INT."]
+    #[doc = "Bit 2 - Write 1 to enable TX_EOF_INT."]
     #[inline(always)]
     pub fn tx_eof(&mut self) -> TX_EOF_W<'_, INT_ENA_SPEC> {
         TX_EOF_W::new(self, 2)

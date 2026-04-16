@@ -2,35 +2,72 @@
 pub type R = crate::R<CPU_INT_FROM_CPU_1_MAP_SPEC>;
 #[doc = "Register `CPU_INT_FROM_CPU_1_MAP` writer"]
 pub type W = crate::W<CPU_INT_FROM_CPU_1_MAP_SPEC>;
-#[doc = "Field `CORE0_CPU_INT_FROM_CPU_1_MAP` reader - NA"]
-pub type CORE0_CPU_INT_FROM_CPU_1_MAP_R = crate::FieldReader;
-#[doc = "Field `CORE0_CPU_INT_FROM_CPU_1_MAP` writer - NA"]
-pub type CORE0_CPU_INT_FROM_CPU_1_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `CPU_INT_FROM_CPU_1_MAP` reader - Configures the interrupt source into one CPU interrupt."]
+pub type CPU_INT_FROM_CPU_1_MAP_R = crate::FieldReader;
+#[doc = "Field `CPU_INT_FROM_CPU_1_MAP` writer - Configures the interrupt source into one CPU interrupt."]
+pub type CPU_INT_FROM_CPU_1_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `CPU_INT_FROM_CPU_1_SRC_PASS_IN_SEC` reader - NA"]
+pub type CPU_INT_FROM_CPU_1_SRC_PASS_IN_SEC_R = crate::BitReader;
+#[doc = "Field `CPU_INT_FROM_CPU_1_SRC_PASS_IN_SEC` writer - NA"]
+pub type CPU_INT_FROM_CPU_1_SRC_PASS_IN_SEC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CPU_INT_FROM_CPU_1_SRC_IN_SEC_FLAG` reader - NA"]
+pub type CPU_INT_FROM_CPU_1_SRC_IN_SEC_FLAG_R = crate::BitReader;
+#[doc = "Field `CPU_INT_FROM_CPU_1_SRC_IN_SEC_FLAG` writer - NA"]
+pub type CPU_INT_FROM_CPU_1_SRC_IN_SEC_FLAG_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:5 - NA"]
+    #[doc = "Bits 0:5 - Configures the interrupt source into one CPU interrupt."]
     #[inline(always)]
-    pub fn core0_cpu_int_from_cpu_1_map(&self) -> CORE0_CPU_INT_FROM_CPU_1_MAP_R {
-        CORE0_CPU_INT_FROM_CPU_1_MAP_R::new((self.bits & 0x3f) as u8)
+    pub fn cpu_int_from_cpu_1_map(&self) -> CPU_INT_FROM_CPU_1_MAP_R {
+        CPU_INT_FROM_CPU_1_MAP_R::new((self.bits & 0x3f) as u8)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn cpu_int_from_cpu_1_src_pass_in_sec(&self) -> CPU_INT_FROM_CPU_1_SRC_PASS_IN_SEC_R {
+        CPU_INT_FROM_CPU_1_SRC_PASS_IN_SEC_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn cpu_int_from_cpu_1_src_in_sec_flag(&self) -> CPU_INT_FROM_CPU_1_SRC_IN_SEC_FLAG_R {
+        CPU_INT_FROM_CPU_1_SRC_IN_SEC_FLAG_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_INT_FROM_CPU_1_MAP")
+            .field("cpu_int_from_cpu_1_map", &self.cpu_int_from_cpu_1_map())
             .field(
-                "core0_cpu_int_from_cpu_1_map",
-                &self.core0_cpu_int_from_cpu_1_map(),
+                "cpu_int_from_cpu_1_src_pass_in_sec",
+                &self.cpu_int_from_cpu_1_src_pass_in_sec(),
+            )
+            .field(
+                "cpu_int_from_cpu_1_src_in_sec_flag",
+                &self.cpu_int_from_cpu_1_src_in_sec_flag(),
             )
             .finish()
     }
 }
 impl W {
-    #[doc = "Bits 0:5 - NA"]
+    #[doc = "Bits 0:5 - Configures the interrupt source into one CPU interrupt."]
     #[inline(always)]
-    pub fn core0_cpu_int_from_cpu_1_map(
+    pub fn cpu_int_from_cpu_1_map(
         &mut self,
-    ) -> CORE0_CPU_INT_FROM_CPU_1_MAP_W<'_, CPU_INT_FROM_CPU_1_MAP_SPEC> {
-        CORE0_CPU_INT_FROM_CPU_1_MAP_W::new(self, 0)
+    ) -> CPU_INT_FROM_CPU_1_MAP_W<'_, CPU_INT_FROM_CPU_1_MAP_SPEC> {
+        CPU_INT_FROM_CPU_1_MAP_W::new(self, 0)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn cpu_int_from_cpu_1_src_pass_in_sec(
+        &mut self,
+    ) -> CPU_INT_FROM_CPU_1_SRC_PASS_IN_SEC_W<'_, CPU_INT_FROM_CPU_1_MAP_SPEC> {
+        CPU_INT_FROM_CPU_1_SRC_PASS_IN_SEC_W::new(self, 6)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn cpu_int_from_cpu_1_src_in_sec_flag(
+        &mut self,
+    ) -> CPU_INT_FROM_CPU_1_SRC_IN_SEC_FLAG_W<'_, CPU_INT_FROM_CPU_1_MAP_SPEC> {
+        CPU_INT_FROM_CPU_1_SRC_IN_SEC_FLAG_W::new(self, 7)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_int_from_cpu_1_map::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_int_from_cpu_1_map::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

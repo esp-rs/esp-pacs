@@ -1,6 +1,6 @@
 #[doc = "Register `REG_UPDATE` writer"]
 pub type W = crate::W<REG_UPDATE_SPEC>;
-#[doc = "Field `RX_REG_UPDATE` writer - Set this bit to update rx register configuration."]
+#[doc = "Field `RX_REG_UPDATE` writer - Write 1 to update rx register configuration."]
 pub type RX_REG_UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<REG_UPDATE_SPEC> {
@@ -9,7 +9,7 @@ impl core::fmt::Debug for crate::generic::Reg<REG_UPDATE_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 31 - Set this bit to update rx register configuration."]
+    #[doc = "Bit 31 - Write 1 to update rx register configuration."]
     #[inline(always)]
     pub fn rx_reg_update(&mut self) -> RX_REG_UPDATE_W<'_, REG_UPDATE_SPEC> {
         RX_REG_UPDATE_W::new(self, 31)

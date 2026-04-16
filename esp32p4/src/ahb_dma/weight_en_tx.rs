@@ -2,12 +2,12 @@
 pub type R = crate::R<WEIGHT_EN_TX_SPEC>;
 #[doc = "Register `WEIGHT_EN_TX` writer"]
 pub type W = crate::W<WEIGHT_EN_TX_SPEC>;
-#[doc = "Field `WEIGHT_EN_TX` reader - This register is used to config arbiter weight function off/on"]
+#[doc = "Field `WEIGHT_EN_TX` reader - Configures whether to enable weight arbitration for TX.\\\\0: Disable\\\\1: Enable\\\\"]
 pub type WEIGHT_EN_TX_R = crate::BitReader;
-#[doc = "Field `WEIGHT_EN_TX` writer - This register is used to config arbiter weight function off/on"]
+#[doc = "Field `WEIGHT_EN_TX` writer - Configures whether to enable weight arbitration for TX.\\\\0: Disable\\\\1: Enable\\\\"]
 pub type WEIGHT_EN_TX_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - This register is used to config arbiter weight function off/on"]
+    #[doc = "Bit 0 - Configures whether to enable weight arbitration for TX.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
     pub fn weight_en_tx(&self) -> WEIGHT_EN_TX_R {
         WEIGHT_EN_TX_R::new((self.bits & 1) != 0)
@@ -22,13 +22,13 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - This register is used to config arbiter weight function off/on"]
+    #[doc = "Bit 0 - Configures whether to enable weight arbitration for TX.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
     pub fn weight_en_tx(&mut self) -> WEIGHT_EN_TX_W<'_, WEIGHT_EN_TX_SPEC> {
         WEIGHT_EN_TX_W::new(self, 0)
     }
 }
-#[doc = "This register is used to config arbiter weigh function to on or off for tx dir\n\nYou can [`read`](crate::Reg::read) this register and get [`weight_en_tx::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`weight_en_tx::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "TX weight arbitration enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`weight_en_tx::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`weight_en_tx::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct WEIGHT_EN_TX_SPEC;
 impl crate::RegisterSpec for WEIGHT_EN_TX_SPEC {
     type Ux = u32;

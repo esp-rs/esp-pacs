@@ -159,7 +159,7 @@ impl crate::RegisterSpec for CLK_STATE0_SPEC {
 }
 #[doc = "`read()` method returns [`clk_state0::R`](R) reader structure"]
 impl crate::Readable for CLK_STATE0_SPEC {}
-#[doc = "`reset()` method sets CLK_STATE0 to value 0x0f"]
+#[doc = "`reset()` method sets CLK_STATE0 to value 0x8000_4000"]
 impl crate::Resettable for CLK_STATE0_SPEC {
-    const RESET_VALUE: u32 = 0x0f;
+    const RESET_VALUE: u32 = 0x8000_4000;
 }

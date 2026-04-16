@@ -2,11 +2,25 @@
 pub type R = crate::R<BLEND_ST_SPEC>;
 #[doc = "Field `BLEND_SIZE_DIFF_ST` reader - 1: indicate the size of two image is different."]
 pub type BLEND_SIZE_DIFF_ST_R = crate::BitReader;
+#[doc = "Field `BLEND_YUV_X_SCALE_ERR_ST` reader - Represents that x param is an odd num when enable yuv422 or yuv420"]
+pub type BLEND_YUV_X_SCALE_ERR_ST_R = crate::BitReader;
+#[doc = "Field `BLEND_YUV_Y_SCALE_ERR_ST` reader - Represents that y param is an odd num when enable yuv420"]
+pub type BLEND_YUV_Y_SCALE_ERR_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - 1: indicate the size of two image is different."]
     #[inline(always)]
     pub fn blend_size_diff_st(&self) -> BLEND_SIZE_DIFF_ST_R {
         BLEND_SIZE_DIFF_ST_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Represents that x param is an odd num when enable yuv422 or yuv420"]
+    #[inline(always)]
+    pub fn blend_yuv_x_scale_err_st(&self) -> BLEND_YUV_X_SCALE_ERR_ST_R {
+        BLEND_YUV_X_SCALE_ERR_ST_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Represents that y param is an odd num when enable yuv420"]
+    #[inline(always)]
+    pub fn blend_yuv_y_scale_err_st(&self) -> BLEND_YUV_Y_SCALE_ERR_ST_R {
+        BLEND_YUV_Y_SCALE_ERR_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -14,6 +28,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLEND_ST")
             .field("blend_size_diff_st", &self.blend_size_diff_st())
+            .field("blend_yuv_x_scale_err_st", &self.blend_yuv_x_scale_err_st())
+            .field("blend_yuv_y_scale_err_st", &self.blend_yuv_y_scale_err_st())
             .finish()
     }
 }

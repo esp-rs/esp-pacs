@@ -14,6 +14,10 @@ pub type HP_SLEEP_HP_MEM_DSLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type HP_SLEEP_PD_HP_MEM_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_PD_HP_MEM_PD_EN` writer - need_des"]
 pub type HP_SLEEP_PD_HP_MEM_PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HP_SLEEP_PD_HP_CPU_PD_EN` reader - need_des"]
+pub type HP_SLEEP_PD_HP_CPU_PD_EN_R = crate::BitReader;
+#[doc = "Field `HP_SLEEP_PD_HP_CPU_PD_EN` writer - need_des"]
+pub type HP_SLEEP_PD_HP_CPU_PD_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HP_SLEEP_PD_CNNT_PD_EN` reader - need_des"]
 pub type HP_SLEEP_PD_CNNT_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_PD_CNNT_PD_EN` writer - need_des"]
@@ -38,6 +42,11 @@ impl R {
     pub fn hp_sleep_pd_hp_mem_pd_en(&self) -> HP_SLEEP_PD_HP_MEM_PD_EN_R {
         HP_SLEEP_PD_HP_MEM_PD_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
+    #[doc = "Bit 29 - need_des"]
+    #[inline(always)]
+    pub fn hp_sleep_pd_hp_cpu_pd_en(&self) -> HP_SLEEP_PD_HP_CPU_PD_EN_R {
+        HP_SLEEP_PD_HP_CPU_PD_EN_R::new(((self.bits >> 29) & 1) != 0)
+    }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     pub fn hp_sleep_pd_cnnt_pd_en(&self) -> HP_SLEEP_PD_CNNT_PD_EN_R {
@@ -59,6 +68,7 @@ impl core::fmt::Debug for R {
             )
             .field("hp_sleep_hp_mem_dslp", &self.hp_sleep_hp_mem_dslp())
             .field("hp_sleep_pd_hp_mem_pd_en", &self.hp_sleep_pd_hp_mem_pd_en())
+            .field("hp_sleep_pd_hp_cpu_pd_en", &self.hp_sleep_pd_hp_cpu_pd_en())
             .field("hp_sleep_pd_cnnt_pd_en", &self.hp_sleep_pd_cnnt_pd_en())
             .field("hp_sleep_pd_top_pd_en", &self.hp_sleep_pd_top_pd_en())
             .finish()
@@ -83,6 +93,13 @@ impl W {
         &mut self,
     ) -> HP_SLEEP_PD_HP_MEM_PD_EN_W<'_, HP_SLEEP_DIG_POWER_SPEC> {
         HP_SLEEP_PD_HP_MEM_PD_EN_W::new(self, 23)
+    }
+    #[doc = "Bit 29 - need_des"]
+    #[inline(always)]
+    pub fn hp_sleep_pd_hp_cpu_pd_en(
+        &mut self,
+    ) -> HP_SLEEP_PD_HP_CPU_PD_EN_W<'_, HP_SLEEP_DIG_POWER_SPEC> {
+        HP_SLEEP_PD_HP_CPU_PD_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]

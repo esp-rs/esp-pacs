@@ -6,13 +6,13 @@ pub type W = crate::W<CONFIG_SPEC>;
 pub type FSM_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `JPEG_START` writer - start to compress a new pic(in dma reg mode)"]
 pub type JPEG_START_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `QNR_PRESITION` reader - 0:8bit qnr,1:12bit qnr(TBD)"]
-pub type QNR_PRESITION_R = crate::BitReader;
-#[doc = "Field `QNR_PRESITION` writer - 0:8bit qnr,1:12bit qnr(TBD)"]
-pub type QNR_PRESITION_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FF_CHECK_EN` reader - enable whether to add \"00\" after \"ff\""]
+#[doc = "Field `QNR_PRECISION` reader - 0:8bit qnr,1:12bit qnr(TBD)"]
+pub type QNR_PRECISION_R = crate::BitReader;
+#[doc = "Field `QNR_PRECISION` writer - 0:8bit qnr,1:12bit qnr(TBD)"]
+pub type QNR_PRECISION_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FF_CHECK_EN` reader - enable whether to add '00' after 'ff'"]
 pub type FF_CHECK_EN_R = crate::BitReader;
-#[doc = "Field `FF_CHECK_EN` writer - enable whether to add \"00\" after \"ff\""]
+#[doc = "Field `FF_CHECK_EN` writer - enable whether to add '00' after 'ff'"]
 pub type FF_CHECK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAMPLE_SEL` reader - 0:yuv444,1:yuv422, 2:yuv420"]
 pub type SAMPLE_SEL_R = crate::FieldReader;
@@ -24,10 +24,10 @@ pub type DMA_LINKLIST_MODE_R = crate::BitReader;
 pub type DEBUG_DIRECT_OUT_EN_R = crate::BitReader;
 #[doc = "Field `DEBUG_DIRECT_OUT_EN` writer - 0:normal mode,1:debug mode for direct output from input"]
 pub type DEBUG_DIRECT_OUT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `GRAY_SEL` reader - 0:use non-fifo way to access qnr ram,1:use fifo way to access qnr ram"]
-pub type GRAY_SEL_R = crate::BitReader;
-#[doc = "Field `GRAY_SEL` writer - 0:use non-fifo way to access qnr ram,1:use fifo way to access qnr ram"]
-pub type GRAY_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `QNR_FIFO_EN` reader - 0:use non-fifo way to access qnr ram,1:use fifo way to access qnr ram"]
+pub type QNR_FIFO_EN_R = crate::BitReader;
+#[doc = "Field `QNR_FIFO_EN` writer - 0:use non-fifo way to access qnr ram,1:use fifo way to access qnr ram"]
+pub type QNR_FIFO_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LQNR_TBL_SEL` reader - choose luminance quntization table id(TBD)"]
 pub type LQNR_TBL_SEL_R = crate::FieldReader;
 #[doc = "Field `LQNR_TBL_SEL` writer - choose luminance quntization table id(TBD)"]
@@ -48,10 +48,10 @@ pub type DHT_FIFO_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type MEM_CLK_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `MEM_CLK_FORCE_ON` writer - force memory's clock enabled"]
 pub type MEM_CLK_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `JFIF_VER` reader - decode pause period to trigger decode_timeout int, the timeout periods =2 power (reg_decode_timeout_thres) -1"]
-pub type JFIF_VER_R = crate::FieldReader;
-#[doc = "Field `JFIF_VER` writer - decode pause period to trigger decode_timeout int, the timeout periods =2 power (reg_decode_timeout_thres) -1"]
-pub type JFIF_VER_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `DECODE_TIMEOUT_THRES` reader - decode pause period to trigger decode_timeout int, the timeout periods =2 power (reg_decode_timeout_thres) -1"]
+pub type DECODE_TIMEOUT_THRES_R = crate::FieldReader;
+#[doc = "Field `DECODE_TIMEOUT_THRES` writer - decode pause period to trigger decode_timeout int, the timeout periods =2 power (reg_decode_timeout_thres) -1"]
+pub type DECODE_TIMEOUT_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `DECODE_TIMEOUT_TASK_SEL` reader - 0: software use reset to abort decode process ,1: decoder abort decode process by itself"]
 pub type DECODE_TIMEOUT_TASK_SEL_R = crate::BitReader;
 #[doc = "Field `DECODE_TIMEOUT_TASK_SEL` writer - 0: software use reset to abort decode process ,1: decoder abort decode process by itself"]
@@ -68,9 +68,9 @@ pub type FIFO_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type PIXEL_REV_R = crate::BitReader;
 #[doc = "Field `PIXEL_REV` writer - reverse the source color pixel"]
 pub type PIXEL_REV_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TAILER_EN` reader - set this bit to add EOI of \"0xffd9\" at the end of bitstream"]
+#[doc = "Field `TAILER_EN` reader - set this bit to add EOI of '0xffd9' at the end of bitstream"]
 pub type TAILER_EN_R = crate::BitReader;
-#[doc = "Field `TAILER_EN` writer - set this bit to add EOI of \"0xffd9\" at the end of bitstream"]
+#[doc = "Field `TAILER_EN` writer - set this bit to add EOI of '0xffd9' at the end of bitstream"]
 pub type TAILER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PAUSE_EN` reader - set this bit to pause jpeg encoding"]
 pub type PAUSE_EN_R = crate::BitReader;
@@ -91,10 +91,10 @@ pub type MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 2 - 0:8bit qnr,1:12bit qnr(TBD)"]
     #[inline(always)]
-    pub fn qnr_presition(&self) -> QNR_PRESITION_R {
-        QNR_PRESITION_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn qnr_precision(&self) -> QNR_PRECISION_R {
+        QNR_PRECISION_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - enable whether to add \"00\" after \"ff\""]
+    #[doc = "Bit 3 - enable whether to add '00' after 'ff'"]
     #[inline(always)]
     pub fn ff_check_en(&self) -> FF_CHECK_EN_R {
         FF_CHECK_EN_R::new(((self.bits >> 3) & 1) != 0)
@@ -116,8 +116,8 @@ impl R {
     }
     #[doc = "Bit 8 - 0:use non-fifo way to access qnr ram,1:use fifo way to access qnr ram"]
     #[inline(always)]
-    pub fn gray_sel(&self) -> GRAY_SEL_R {
-        GRAY_SEL_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn qnr_fifo_en(&self) -> QNR_FIFO_EN_R {
+        QNR_FIFO_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 9:10 - choose luminance quntization table id(TBD)"]
     #[inline(always)]
@@ -146,8 +146,8 @@ impl R {
     }
     #[doc = "Bits 17:22 - decode pause period to trigger decode_timeout int, the timeout periods =2 power (reg_decode_timeout_thres) -1"]
     #[inline(always)]
-    pub fn jfif_ver(&self) -> JFIF_VER_R {
-        JFIF_VER_R::new(((self.bits >> 17) & 0x3f) as u8)
+    pub fn decode_timeout_thres(&self) -> DECODE_TIMEOUT_THRES_R {
+        DECODE_TIMEOUT_THRES_R::new(((self.bits >> 17) & 0x3f) as u8)
     }
     #[doc = "Bit 23 - 0: software use reset to abort decode process ,1: decoder abort decode process by itself"]
     #[inline(always)]
@@ -169,7 +169,7 @@ impl R {
     pub fn pixel_rev(&self) -> PIXEL_REV_R {
         PIXEL_REV_R::new(((self.bits >> 26) & 1) != 0)
     }
-    #[doc = "Bit 27 - set this bit to add EOI of \"0xffd9\" at the end of bitstream"]
+    #[doc = "Bit 27 - set this bit to add EOI of '0xffd9' at the end of bitstream"]
     #[inline(always)]
     pub fn tailer_en(&self) -> TAILER_EN_R {
         TAILER_EN_R::new(((self.bits >> 27) & 1) != 0)
@@ -199,18 +199,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONFIG")
-            .field("qnr_presition", &self.qnr_presition())
+            .field("qnr_precision", &self.qnr_precision())
             .field("ff_check_en", &self.ff_check_en())
             .field("sample_sel", &self.sample_sel())
             .field("dma_linklist_mode", &self.dma_linklist_mode())
             .field("debug_direct_out_en", &self.debug_direct_out_en())
-            .field("gray_sel", &self.gray_sel())
+            .field("qnr_fifo_en", &self.qnr_fifo_en())
             .field("lqnr_tbl_sel", &self.lqnr_tbl_sel())
             .field("cqnr_tbl_sel", &self.cqnr_tbl_sel())
             .field("color_space", &self.color_space())
             .field("dht_fifo_en", &self.dht_fifo_en())
             .field("mem_clk_force_on", &self.mem_clk_force_on())
-            .field("jfif_ver", &self.jfif_ver())
+            .field("decode_timeout_thres", &self.decode_timeout_thres())
             .field("decode_timeout_task_sel", &self.decode_timeout_task_sel())
             .field("soft_rst", &self.soft_rst())
             .field("fifo_rst", &self.fifo_rst())
@@ -236,10 +236,10 @@ impl W {
     }
     #[doc = "Bit 2 - 0:8bit qnr,1:12bit qnr(TBD)"]
     #[inline(always)]
-    pub fn qnr_presition(&mut self) -> QNR_PRESITION_W<'_, CONFIG_SPEC> {
-        QNR_PRESITION_W::new(self, 2)
+    pub fn qnr_precision(&mut self) -> QNR_PRECISION_W<'_, CONFIG_SPEC> {
+        QNR_PRECISION_W::new(self, 2)
     }
-    #[doc = "Bit 3 - enable whether to add \"00\" after \"ff\""]
+    #[doc = "Bit 3 - enable whether to add '00' after 'ff'"]
     #[inline(always)]
     pub fn ff_check_en(&mut self) -> FF_CHECK_EN_W<'_, CONFIG_SPEC> {
         FF_CHECK_EN_W::new(self, 3)
@@ -256,8 +256,8 @@ impl W {
     }
     #[doc = "Bit 8 - 0:use non-fifo way to access qnr ram,1:use fifo way to access qnr ram"]
     #[inline(always)]
-    pub fn gray_sel(&mut self) -> GRAY_SEL_W<'_, CONFIG_SPEC> {
-        GRAY_SEL_W::new(self, 8)
+    pub fn qnr_fifo_en(&mut self) -> QNR_FIFO_EN_W<'_, CONFIG_SPEC> {
+        QNR_FIFO_EN_W::new(self, 8)
     }
     #[doc = "Bits 9:10 - choose luminance quntization table id(TBD)"]
     #[inline(always)]
@@ -286,8 +286,8 @@ impl W {
     }
     #[doc = "Bits 17:22 - decode pause period to trigger decode_timeout int, the timeout periods =2 power (reg_decode_timeout_thres) -1"]
     #[inline(always)]
-    pub fn jfif_ver(&mut self) -> JFIF_VER_W<'_, CONFIG_SPEC> {
-        JFIF_VER_W::new(self, 17)
+    pub fn decode_timeout_thres(&mut self) -> DECODE_TIMEOUT_THRES_W<'_, CONFIG_SPEC> {
+        DECODE_TIMEOUT_THRES_W::new(self, 17)
     }
     #[doc = "Bit 23 - 0: software use reset to abort decode process ,1: decoder abort decode process by itself"]
     #[inline(always)]
@@ -309,7 +309,7 @@ impl W {
     pub fn pixel_rev(&mut self) -> PIXEL_REV_W<'_, CONFIG_SPEC> {
         PIXEL_REV_W::new(self, 26)
     }
-    #[doc = "Bit 27 - set this bit to add EOI of \"0xffd9\" at the end of bitstream"]
+    #[doc = "Bit 27 - set this bit to add EOI of '0xffd9' at the end of bitstream"]
     #[inline(always)]
     pub fn tailer_en(&mut self) -> TAILER_EN_W<'_, CONFIG_SPEC> {
         TAILER_EN_W::new(self, 27)

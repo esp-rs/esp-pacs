@@ -20,6 +20,8 @@ pub struct RegisterBlock {
     rdn_eco_high: RDN_ECO_HIGH,
     host_ctrl: HOST_CTRL,
     mem_ctrl: MEM_CTRL,
+    host_cm_ctrl: HOST_CM_CTRL,
+    host_size_ctrl: HOST_SIZE_CTRL,
 }
 impl RegisterBlock {
     #[doc = "0x00 - csi bridge register mapping unit clock gating."]
@@ -112,6 +114,16 @@ impl RegisterBlock {
     pub const fn mem_ctrl(&self) -> &MEM_CTRL {
         &self.mem_ctrl
     }
+    #[doc = "0x48 - CSI HOST color mode convert configuration."]
+    #[inline(always)]
+    pub const fn host_cm_ctrl(&self) -> &HOST_CM_CTRL {
+        &self.host_cm_ctrl
+    }
+    #[doc = "0x4c - CSI HOST color mode convert configuration."]
+    #[inline(always)]
+    pub const fn host_size_ctrl(&self) -> &HOST_SIZE_CTRL {
+        &self.host_size_ctrl
+    }
 }
 #[doc = "CLK_EN (rw) register accessor: csi bridge register mapping unit clock gating.\n\nYou can [`read`](crate::Reg::read) this register and get [`clk_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk_en`] module"]
 pub type CLK_EN = crate::Reg<clk_en::CLK_EN_SPEC>;
@@ -185,3 +197,11 @@ pub mod host_ctrl;
 pub type MEM_CTRL = crate::Reg<mem_ctrl::MEM_CTRL_SPEC>;
 #[doc = "csi bridge buffer control."]
 pub mod mem_ctrl;
+#[doc = "HOST_CM_CTRL (rw) register accessor: CSI HOST color mode convert configuration.\n\nYou can [`read`](crate::Reg::read) this register and get [`host_cm_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`host_cm_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@host_cm_ctrl`] module"]
+pub type HOST_CM_CTRL = crate::Reg<host_cm_ctrl::HOST_CM_CTRL_SPEC>;
+#[doc = "CSI HOST color mode convert configuration."]
+pub mod host_cm_ctrl;
+#[doc = "HOST_SIZE_CTRL (rw) register accessor: CSI HOST color mode convert configuration.\n\nYou can [`read`](crate::Reg::read) this register and get [`host_size_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`host_size_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@host_size_ctrl`] module"]
+pub type HOST_SIZE_CTRL = crate::Reg<host_size_ctrl::HOST_SIZE_CTRL_SPEC>;
+#[doc = "CSI HOST color mode convert configuration."]
+pub mod host_size_ctrl;

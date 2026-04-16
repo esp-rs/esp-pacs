@@ -2,12 +2,12 @@
 pub type R = crate::R<SHA_MODE_SPEC>;
 #[doc = "Register `SHA_MODE` writer"]
 pub type W = crate::W<SHA_MODE_SPEC>;
-#[doc = "Field `SHA_MODE` reader - The work mode bits of SHA Calculator in ECDSA Accelerator. 1: SHA-224. 2: SHA-256. Others: invalid."]
+#[doc = "Field `SHA_MODE` reader - The work mode bits of SHA Calculator in ECDSA Accelerator. 0: SHA1. 1: SHA-224. 2: SHA-256. 3: SHA-384 4: SHA-512. 5: SHA-512224. 6: SHA-512256. 7: invalid."]
 pub type SHA_MODE_R = crate::FieldReader;
-#[doc = "Field `SHA_MODE` writer - The work mode bits of SHA Calculator in ECDSA Accelerator. 1: SHA-224. 2: SHA-256. Others: invalid."]
+#[doc = "Field `SHA_MODE` writer - The work mode bits of SHA Calculator in ECDSA Accelerator. 0: SHA1. 1: SHA-224. 2: SHA-256. 3: SHA-384 4: SHA-512. 5: SHA-512224. 6: SHA-512256. 7: invalid."]
 pub type SHA_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
-    #[doc = "Bits 0:2 - The work mode bits of SHA Calculator in ECDSA Accelerator. 1: SHA-224. 2: SHA-256. Others: invalid."]
+    #[doc = "Bits 0:2 - The work mode bits of SHA Calculator in ECDSA Accelerator. 0: SHA1. 1: SHA-224. 2: SHA-256. 3: SHA-384 4: SHA-512. 5: SHA-512224. 6: SHA-512256. 7: invalid."]
     #[inline(always)]
     pub fn sha_mode(&self) -> SHA_MODE_R {
         SHA_MODE_R::new((self.bits & 7) as u8)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:2 - The work mode bits of SHA Calculator in ECDSA Accelerator. 1: SHA-224. 2: SHA-256. Others: invalid."]
+    #[doc = "Bits 0:2 - The work mode bits of SHA Calculator in ECDSA Accelerator. 0: SHA1. 1: SHA-224. 2: SHA-256. 3: SHA-384 4: SHA-512. 5: SHA-512224. 6: SHA-512256. 7: invalid."]
     #[inline(always)]
     pub fn sha_mode(&mut self) -> SHA_MODE_W<'_, SHA_MODE_SPEC> {
         SHA_MODE_W::new(self, 0)

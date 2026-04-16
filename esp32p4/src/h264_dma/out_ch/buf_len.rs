@@ -1,12 +1,12 @@
 #[doc = "Register `BUF_LEN` reader"]
 pub type R = crate::R<BUF_LEN_SPEC>;
 #[doc = "Field `OUT_CMDFIFO_BUF_LEN_HB` reader - only for debug"]
-pub type OUT_CMDFIFO_BUF_LEN_HB_R = crate::FieldReader<u16>;
+pub type OUT_CMDFIFO_BUF_LEN_HB_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:12 - only for debug"]
+    #[doc = "Bits 0:27 - only for debug"]
     #[inline(always)]
     pub fn out_cmdfifo_buf_len_hb(&self) -> OUT_CMDFIFO_BUF_LEN_HB_R {
-        OUT_CMDFIFO_BUF_LEN_HB_R::new((self.bits & 0x1fff) as u16)
+        OUT_CMDFIFO_BUF_LEN_HB_R::new(self.bits & 0x0fff_ffff)
     }
 }
 #[cfg(feature = "impl-register-debug")]

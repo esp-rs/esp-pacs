@@ -16,6 +16,10 @@ pub type USBOTG20_WAKEUP_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type USBOTG20_IN_SUSPEND_R = crate::BitReader;
 #[doc = "Field `USBOTG20_IN_SUSPEND` writer - indicate usb otg2.0 is in suspend state."]
 pub type USBOTG20_IN_SUSPEND_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `USBOTG20_LS_MODE` reader - indicate current mode of usb otg2.0."]
+pub type USBOTG20_LS_MODE_R = crate::BitReader;
+#[doc = "Field `USBOTG20_LS_MODE` writer - indicate current mode of usb otg2.0."]
+pub type USBOTG20_LS_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -32,6 +36,11 @@ impl R {
     pub fn usbotg20_in_suspend(&self) -> USBOTG20_IN_SUSPEND_R {
         USBOTG20_IN_SUSPEND_R::new(((self.bits >> 3) & 1) != 0)
     }
+    #[doc = "Bit 4 - indicate current mode of usb otg2.0."]
+    #[inline(always)]
+    pub fn usbotg20_ls_mode(&self) -> USBOTG20_LS_MODE_R {
+        USBOTG20_LS_MODE_R::new(((self.bits >> 4) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -40,6 +49,7 @@ impl core::fmt::Debug for R {
             .field("sw_hw_usb_phy_sel", &self.sw_hw_usb_phy_sel())
             .field("sw_usb_phy_sel", &self.sw_usb_phy_sel())
             .field("usbotg20_in_suspend", &self.usbotg20_in_suspend())
+            .field("usbotg20_ls_mode", &self.usbotg20_ls_mode())
             .finish()
     }
 }
@@ -63,6 +73,11 @@ impl W {
     #[inline(always)]
     pub fn usbotg20_in_suspend(&mut self) -> USBOTG20_IN_SUSPEND_W<'_, USB_CTRL_SPEC> {
         USBOTG20_IN_SUSPEND_W::new(self, 3)
+    }
+    #[doc = "Bit 4 - indicate current mode of usb otg2.0."]
+    #[inline(always)]
+    pub fn usbotg20_ls_mode(&mut self) -> USBOTG20_LS_MODE_W<'_, USB_CTRL_SPEC> {
+        USBOTG20_LS_MODE_W::new(self, 4)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`usb_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`usb_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

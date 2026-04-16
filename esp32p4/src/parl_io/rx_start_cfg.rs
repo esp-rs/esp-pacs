@@ -2,12 +2,12 @@
 pub type R = crate::R<RX_START_CFG_SPEC>;
 #[doc = "Register `RX_START_CFG` writer"]
 pub type W = crate::W<RX_START_CFG_SPEC>;
-#[doc = "Field `RX_START` reader - Set this bit to start rx data sampling."]
+#[doc = "Field `RX_START` reader - Write 1 to start rx data sampling."]
 pub type RX_START_R = crate::BitReader;
-#[doc = "Field `RX_START` writer - Set this bit to start rx data sampling."]
+#[doc = "Field `RX_START` writer - Write 1 to start rx data sampling."]
 pub type RX_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 31 - Set this bit to start rx data sampling."]
+    #[doc = "Bit 31 - Write 1 to start rx data sampling."]
     #[inline(always)]
     pub fn rx_start(&self) -> RX_START_R {
         RX_START_R::new(((self.bits >> 31) & 1) != 0)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 31 - Set this bit to start rx data sampling."]
+    #[doc = "Bit 31 - Write 1 to start rx data sampling."]
     #[inline(always)]
     pub fn rx_start(&mut self) -> RX_START_W<'_, RX_START_CFG_SPEC> {
         RX_START_W::new(self, 31)

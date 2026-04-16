@@ -1,0 +1,364 @@
+AXI_ICM:
+  "*":
+    _strip: ""
+
+  _delete:
+    - VERID_FILEDS
+    - HW_CFG
+    - CMD
+    - DATA
+  _add:
+    ICM_VER_DATE:
+      description: ICM version / date
+      addressOffset: 0x0
+      size: 0x20
+      access: read-write
+      fields:
+        VER_DATE:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    ICM_CLK_EN:
+      description: ICM clock enable
+      addressOffset: 0x4
+      size: 0x20
+      access: read-write
+      fields:
+        CLK_EN:
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+    ICM_DLOCK_STATUS:
+      description: Deadlock status
+      addressOffset: 0x8
+      size: 0x20
+      access: read-only
+      fields:
+        DLOCK_MST:
+          bitOffset: 0
+          bitWidth: 4
+          access: read-only
+        DLOCK_SLV:
+          bitOffset: 4
+          bitWidth: 3
+          access: read-only
+        DLOCK_ID:
+          bitOffset: 7
+          bitWidth: 4
+          access: read-only
+        DLOCK_WR:
+          bitOffset: 11
+          bitWidth: 1
+          access: read-only
+    ICM_INT_RAW:
+      description: ICM interrupt raw
+      addressOffset: 0xc
+      size: 0x20
+      access: read-write
+      fields:
+        DLOCK_INT_RAW:
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+        ICM_SYS_ADDRHOLE_INT_RAW:
+          bitOffset: 1
+          bitWidth: 1
+          access: read-write
+        ICM_CPU_ADDRHOLE_INT_RAW:
+          bitOffset: 2
+          bitWidth: 1
+          access: read-write
+    ICM_INT_ST:
+      description: ICM interrupt status
+      addressOffset: 0x10
+      size: 0x20
+      access: read-only
+      fields:
+        DLOCK_INT_ST:
+          bitOffset: 0
+          bitWidth: 1
+          access: read-only
+        ICM_SYS_ADDRHOLE_INT_ST:
+          bitOffset: 1
+          bitWidth: 1
+          access: read-only
+        ICM_CPU_ADDRHOLE_INT_ST:
+          bitOffset: 2
+          bitWidth: 1
+          access: read-only
+    ICM_INT_ENA:
+      description: ICM interrupt enable
+      addressOffset: 0x14
+      size: 0x20
+      access: read-write
+      fields:
+        DLOCK_INT_ENA:
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+        ICM_SYS_ADDRHOLE_INT_ENA:
+          bitOffset: 1
+          bitWidth: 1
+          access: read-write
+        ICM_CPU_ADDRHOLE_INT_ENA:
+          bitOffset: 2
+          bitWidth: 1
+          access: read-write
+    ICM_INT_CLR:
+      description: ICM interrupt clear
+      addressOffset: 0x18
+      size: 0x20
+      access: write-only
+      fields:
+        DLOCK_INT_CLR:
+          bitOffset: 0
+          bitWidth: 1
+          access: write-only
+        ICM_SYS_ADDRHOLE_INT_CLR:
+          bitOffset: 1
+          bitWidth: 1
+          access: write-only
+        ICM_CPU_ADDRHOLE_INT_CLR:
+          bitOffset: 2
+          bitWidth: 1
+          access: write-only
+    ICM_MST_ARB_PRIORITY:
+      description: Master arbitration priority
+      addressOffset: 0x1c
+      size: 0x20
+      access: read-write
+      fields:
+        CPU_PRIORITY:
+          bitOffset: 0
+          bitWidth: 4
+          access: read-write
+        CACHE_PRIORITY:
+          bitOffset: 4
+          bitWidth: 4
+          access: read-write
+        DMA2D_PRIORITY:
+          bitOffset: 8
+          bitWidth: 4
+          access: read-write
+        GDMA_MST1_PRIORITY:
+          bitOffset: 12
+          bitWidth: 4
+          access: read-write
+        GDMA_MST2_PRIORITY:
+          bitOffset: 16
+          bitWidth: 4
+          access: read-write
+        H264_M1_PRIORITY:
+          bitOffset: 20
+          bitWidth: 4
+          access: read-write
+        H264_M2_PRIORITY:
+          bitOffset: 24
+          bitWidth: 4
+          access: read-write
+        AXI_PDMA_PRIORITY:
+          bitOffset: 28
+          bitWidth: 4
+          access: read-write
+    ICM_SLV_ARB_PRIORITY:
+      description: Slave arbitration priority
+      addressOffset: 0x24
+      size: 0x20
+      access: read-write
+      fields:
+        L2MEM_PRIORITY:
+          bitOffset: 3
+          bitWidth: 3
+          access: read-write
+        FLASH_MSPI_PRIORITY:
+          bitOffset: 12
+          bitWidth: 3
+          access: read-write
+        PSRAM_MSPI_PRIORITY:
+          bitOffset: 15
+          bitWidth: 3
+          access: read-write
+        LCD_PRIORITY:
+          bitOffset: 18
+          bitWidth: 3
+          access: read-write
+        CAM_PRIORITY:
+          bitOffset: 21
+          bitWidth: 3
+          access: read-write
+    ICM_MST_ARQOS:
+      description: Master read QoS
+      addressOffset: 0x28
+      size: 0x20
+      access: read-write
+      fields:
+        CPU_ARQOS:
+          bitOffset: 0
+          bitWidth: 4
+          access: read-write
+        CACHE_ARQOS:
+          bitOffset: 4
+          bitWidth: 4
+          access: read-write
+        DMA2D_ARQOS:
+          bitOffset: 8
+          bitWidth: 4
+          access: read-write
+        GDMA_MST1_ARQOS:
+          bitOffset: 12
+          bitWidth: 4
+          access: read-write
+        GDMA_MST2_ARQOS:
+          bitOffset: 16
+          bitWidth: 4
+          access: read-write
+        H264_DMA2D_M1_ARQOS:
+          bitOffset: 20
+          bitWidth: 4
+          access: read-write
+        H264_DMA2D_M2_ARQOS:
+          bitOffset: 24
+          bitWidth: 4
+          access: read-write
+        AXI_PDMA_INT_ARQOS:
+          bitOffset: 28
+          bitWidth: 4
+          access: read-write
+    ICM_MST_AWQOS:
+      description: Master write QoS
+      addressOffset: 0x30
+      size: 0x20
+      access: read-write
+      fields:
+        CPU_AWQOS:
+          bitOffset: 0
+          bitWidth: 4
+          access: read-write
+        CACHE_AWQOS:
+          bitOffset: 4
+          bitWidth: 4
+          access: read-write
+        DMA2D_AWQOS:
+          bitOffset: 8
+          bitWidth: 4
+          access: read-write
+        GDMA_MST1_AWQOS:
+          bitOffset: 12
+          bitWidth: 4
+          access: read-write
+        GDMA_MST2_AWQOS:
+          bitOffset: 16
+          bitWidth: 4
+          access: read-write
+        H264_DMA2D_M1_AWQOS:
+          bitOffset: 20
+          bitWidth: 4
+          access: read-write
+        H264_DMA2D_M2_AWQOS:
+          bitOffset: 24
+          bitWidth: 4
+          access: read-write
+        PDMA_INT_AWQOS:
+          bitOffset: 28
+          bitWidth: 4
+          access: read-write
+    ICM_SYS_ADDRHOLE_ADDR:
+      description: SYS address hole address
+      addressOffset: 0x38f
+      size: 0x20
+      access: read-only
+      fields:
+        ICM_SYS_ADDRHOLE_ADDR:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-only
+    ICM_SYS_ADDRHOLE_INFO:
+      description: SYS address hole info
+      addressOffset: 0x3c
+      size: 0x20
+      access: read-only
+      fields:
+        ICM_SYS_ADDRHOLE_ID:
+          bitOffset: 0
+          bitWidth: 8
+          access: read-only
+        ICM_SYS_ADDRHOLE_WR:
+          bitOffset: 8
+          bitWidth: 1
+          access: read-only
+        ICM_SYS_ADDRHOLE_SECURE:
+          bitOffset: 9
+          bitWidth: 1
+          access: read-only
+    ICM_CPU_ADDRHOLE_ADDR:
+      description: CPU address hole address
+      addressOffset: 0x40
+      size: 0x20
+      access: read-only
+      fields:
+        ICM_CPU_ADDRHOLE_ADDR:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-only
+    ICM_CPU_ADDRHOLE_INFO:
+      description: CPU address hole info
+      addressOffset: 0x44
+      size: 0x20
+      access: read-only
+      fields:
+        ICM_CPU_ADDRHOLE_ID:
+          bitOffset: 0
+          bitWidth: 5
+          access: read-only
+        ICM_CPU_ADDRHOLE_WR:
+          bitOffset: 8
+          bitWidth: 1
+          access: read-only
+        ICM_CPU_ADDRHOLE_SECURE:
+          bitOffset: 9
+          bitWidth: 1
+          access: read-only
+    ICM_DLOCK_TIMEOUT:
+      description: Deadlock timeout
+      addressOffset: 0x48
+      size: 0x20
+      access: read-write
+      fields:
+        DLOCK_TIMEOUT:
+          bitOffset: 0
+          bitWidth: 13
+          access: read-write
+    ICM_RDN_ECO_CS:
+      description: RDN ECO control/status
+      addressOffset: 0x50
+      size: 0x20
+      access: read-write
+      fields:
+        RDN_ECO_EN:
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+        RDN_ECO_RESULT:
+          bitOffset: 1
+          bitWidth: 1
+          access: read-only
+    ICM_RDN_ECO_LOW:
+      description: RDN ECO low
+      addressOffset: 0x54
+      size: 0x20
+      access: read-write
+      fields:
+        RDN_ECO_LOW:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    ICM_RDN_ECO_HIGH:
+      description: RDN ECO high
+      addressOffset: 0x58
+      size: 0x20
+      access: read-write
+      fields:
+        RDN_ECO_HIGH:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write

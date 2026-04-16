@@ -14,6 +14,10 @@ pub type YUV_PIX_ENDIAN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type YUV422_FORMAT_R = crate::FieldReader;
 #[doc = "Field `YUV422_FORMAT` writer - this field configures yuv422 store format, 0: yuyv, 1: yvyu, 2: uyvy, 3: vyuy"]
 pub type YUV422_FORMAT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `YUV_RANGE` reader - Configures yuv pixel range, 0: limit range, 1: full range"]
+pub type YUV_RANGE_R = crate::BitReader;
+#[doc = "Field `YUV_RANGE` writer - Configures yuv pixel range, 0: limit range, 1: full range"]
+pub type YUV_RANGE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - this bit configures yuv protoocl, 0: bt.601, 1: bt.709"]
     #[inline(always)]
@@ -30,6 +34,11 @@ impl R {
     pub fn yuv422_format(&self) -> YUV422_FORMAT_R {
         YUV422_FORMAT_R::new(((self.bits >> 2) & 3) as u8)
     }
+    #[doc = "Bit 4 - Configures yuv pixel range, 0: limit range, 1: full range"]
+    #[inline(always)]
+    pub fn yuv_range(&self) -> YUV_RANGE_R {
+        YUV_RANGE_R::new(((self.bits >> 4) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -38,6 +47,7 @@ impl core::fmt::Debug for R {
             .field("protocal", &self.protocal())
             .field("yuv_pix_endian", &self.yuv_pix_endian())
             .field("yuv422_format", &self.yuv422_format())
+            .field("yuv_range", &self.yuv_range())
             .finish()
     }
 }
@@ -56,6 +66,11 @@ impl W {
     #[inline(always)]
     pub fn yuv422_format(&mut self) -> YUV422_FORMAT_W<'_, YUV_CFG_SPEC> {
         YUV422_FORMAT_W::new(self, 2)
+    }
+    #[doc = "Bit 4 - Configures yuv pixel range, 0: limit range, 1: full range"]
+    #[inline(always)]
+    pub fn yuv_range(&mut self) -> YUV_RANGE_W<'_, YUV_CFG_SPEC> {
+        YUV_RANGE_W::new(self, 4)
     }
 }
 #[doc = "dsi_bridge yuv format config register\n\nYou can [`read`](crate::Reg::read) this register and get [`yuv_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`yuv_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -2,34 +2,34 @@
 pub type R = crate::R<CLOCK_SPEC>;
 #[doc = "Register `CLOCK` writer"]
 pub type W = crate::W<CLOCK_SPEC>;
-#[doc = "Field `CLKCNT_L` reader - In the master mode it must be equal to spi_mem_clkcnt_N."]
+#[doc = "Field `CLKCNT_L` reader - In the master mode it must be equal to SPI_MEM_CLKCNT_N."]
 pub type CLKCNT_L_R = crate::FieldReader;
-#[doc = "Field `CLKCNT_L` writer - In the master mode it must be equal to spi_mem_clkcnt_N."]
+#[doc = "Field `CLKCNT_L` writer - In the master mode it must be equal to SPI_MEM_CLKCNT_N."]
 pub type CLKCNT_L_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `CLKCNT_H` reader - In the master mode it must be floor((spi_mem_clkcnt_N+1)/2-1)."]
+#[doc = "Field `CLKCNT_H` reader - In the master mode it must be floor((SPI_MEM_CLKCNT_N+1)/2-1)."]
 pub type CLKCNT_H_R = crate::FieldReader;
-#[doc = "Field `CLKCNT_H` writer - In the master mode it must be floor((spi_mem_clkcnt_N+1)/2-1)."]
+#[doc = "Field `CLKCNT_H` writer - In the master mode it must be floor((SPI_MEM_CLKCNT_N+1)/2-1)."]
 pub type CLKCNT_H_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `CLKCNT_N` reader - In the master mode it is the divider of spi_mem_clk. So spi_mem_clk frequency is system/(spi_mem_clkcnt_N+1)"]
+#[doc = "Field `CLKCNT_N` reader - In the master mode it is the divider of spi_mem_clk. So spi_mem_clk frequency is system/(SPI_MEM_CLKCNT_N+1)"]
 pub type CLKCNT_N_R = crate::FieldReader;
-#[doc = "Field `CLKCNT_N` writer - In the master mode it is the divider of spi_mem_clk. So spi_mem_clk frequency is system/(spi_mem_clkcnt_N+1)"]
+#[doc = "Field `CLKCNT_N` writer - In the master mode it is the divider of spi_mem_clk. So spi_mem_clk frequency is system/(SPI_MEM_CLKCNT_N+1)"]
 pub type CLKCNT_N_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CLK_EQU_SYSCLK` reader - reserved"]
 pub type CLK_EQU_SYSCLK_R = crate::BitReader;
 #[doc = "Field `CLK_EQU_SYSCLK` writer - reserved"]
 pub type CLK_EQU_SYSCLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:7 - In the master mode it must be equal to spi_mem_clkcnt_N."]
+    #[doc = "Bits 0:7 - In the master mode it must be equal to SPI_MEM_CLKCNT_N."]
     #[inline(always)]
     pub fn clkcnt_l(&self) -> CLKCNT_L_R {
         CLKCNT_L_R::new((self.bits & 0xff) as u8)
     }
-    #[doc = "Bits 8:15 - In the master mode it must be floor((spi_mem_clkcnt_N+1)/2-1)."]
+    #[doc = "Bits 8:15 - In the master mode it must be floor((SPI_MEM_CLKCNT_N+1)/2-1)."]
     #[inline(always)]
     pub fn clkcnt_h(&self) -> CLKCNT_H_R {
         CLKCNT_H_R::new(((self.bits >> 8) & 0xff) as u8)
     }
-    #[doc = "Bits 16:23 - In the master mode it is the divider of spi_mem_clk. So spi_mem_clk frequency is system/(spi_mem_clkcnt_N+1)"]
+    #[doc = "Bits 16:23 - In the master mode it is the divider of spi_mem_clk. So spi_mem_clk frequency is system/(SPI_MEM_CLKCNT_N+1)"]
     #[inline(always)]
     pub fn clkcnt_n(&self) -> CLKCNT_N_R {
         CLKCNT_N_R::new(((self.bits >> 16) & 0xff) as u8)
@@ -52,17 +52,17 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:7 - In the master mode it must be equal to spi_mem_clkcnt_N."]
+    #[doc = "Bits 0:7 - In the master mode it must be equal to SPI_MEM_CLKCNT_N."]
     #[inline(always)]
     pub fn clkcnt_l(&mut self) -> CLKCNT_L_W<'_, CLOCK_SPEC> {
         CLKCNT_L_W::new(self, 0)
     }
-    #[doc = "Bits 8:15 - In the master mode it must be floor((spi_mem_clkcnt_N+1)/2-1)."]
+    #[doc = "Bits 8:15 - In the master mode it must be floor((SPI_MEM_CLKCNT_N+1)/2-1)."]
     #[inline(always)]
     pub fn clkcnt_h(&mut self) -> CLKCNT_H_W<'_, CLOCK_SPEC> {
         CLKCNT_H_W::new(self, 8)
     }
-    #[doc = "Bits 16:23 - In the master mode it is the divider of spi_mem_clk. So spi_mem_clk frequency is system/(spi_mem_clkcnt_N+1)"]
+    #[doc = "Bits 16:23 - In the master mode it is the divider of spi_mem_clk. So spi_mem_clk frequency is system/(SPI_MEM_CLKCNT_N+1)"]
     #[inline(always)]
     pub fn clkcnt_n(&mut self) -> CLKCNT_N_W<'_, CLOCK_SPEC> {
         CLKCNT_N_W::new(self, 16)

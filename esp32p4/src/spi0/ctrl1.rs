@@ -14,10 +14,6 @@ pub type SPI_AR_SIZE0_1_SUPPORT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type SPI_AW_SIZE0_1_SUPPORT_EN_R = crate::BitReader;
 #[doc = "Field `SPI_AW_SIZE0_1_SUPPORT_EN` writer - 1: MSPI supports AWSIZE 0~3. 0: When AWSIZE 0~1, MSPI reply SLV_ERR."]
 pub type SPI_AW_SIZE0_1_SUPPORT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SPI_AXI_RDATA_BACK_FAST` reader - 1: Reply AXI read data to AXI bus when one AXI read beat data is available. 0: Reply AXI read data to AXI bus when all the read data is available."]
-pub type SPI_AXI_RDATA_BACK_FAST_R = crate::BitReader;
-#[doc = "Field `SPI_AXI_RDATA_BACK_FAST` writer - 1: Reply AXI read data to AXI bus when one AXI read beat data is available. 0: Reply AXI read data to AXI bus when all the read data is available."]
-pub type SPI_AXI_RDATA_BACK_FAST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RRESP_ECC_ERR_EN` reader - 1: RRESP is SLV_ERR when there is a ECC error in AXI read data. 0: RRESP is OKAY when there is a ECC error in AXI read data. The ECC error information is recorded in SPI_MEM_ECC_ERR_ADDR_REG."]
 pub type RRESP_ECC_ERR_EN_R = crate::BitReader;
 #[doc = "Field `RRESP_ECC_ERR_EN` writer - 1: RRESP is SLV_ERR when there is a ECC error in AXI read data. 0: RRESP is OKAY when there is a ECC error in AXI read data. The ECC error information is recorded in SPI_MEM_ECC_ERR_ADDR_REG."]
@@ -57,11 +53,6 @@ impl R {
     #[inline(always)]
     pub fn spi_aw_size0_1_support_en(&self) -> SPI_AW_SIZE0_1_SUPPORT_EN_R {
         SPI_AW_SIZE0_1_SUPPORT_EN_R::new(((self.bits >> 22) & 1) != 0)
-    }
-    #[doc = "Bit 23 - 1: Reply AXI read data to AXI bus when one AXI read beat data is available. 0: Reply AXI read data to AXI bus when all the read data is available."]
-    #[inline(always)]
-    pub fn spi_axi_rdata_back_fast(&self) -> SPI_AXI_RDATA_BACK_FAST_R {
-        SPI_AXI_RDATA_BACK_FAST_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - 1: RRESP is SLV_ERR when there is a ECC error in AXI read data. 0: RRESP is OKAY when there is a ECC error in AXI read data. The ECC error information is recorded in SPI_MEM_ECC_ERR_ADDR_REG."]
     #[inline(always)]
@@ -107,7 +98,6 @@ impl core::fmt::Debug for R {
                 "spi_aw_size0_1_support_en",
                 &self.spi_aw_size0_1_support_en(),
             )
-            .field("spi_axi_rdata_back_fast", &self.spi_axi_rdata_back_fast())
             .field("rresp_ecc_err_en", &self.rresp_ecc_err_en())
             .field("ar_splice_en", &self.ar_splice_en())
             .field("aw_splice_en", &self.aw_splice_en())
@@ -132,11 +122,6 @@ impl W {
     #[inline(always)]
     pub fn spi_aw_size0_1_support_en(&mut self) -> SPI_AW_SIZE0_1_SUPPORT_EN_W<'_, CTRL1_SPEC> {
         SPI_AW_SIZE0_1_SUPPORT_EN_W::new(self, 22)
-    }
-    #[doc = "Bit 23 - 1: Reply AXI read data to AXI bus when one AXI read beat data is available. 0: Reply AXI read data to AXI bus when all the read data is available."]
-    #[inline(always)]
-    pub fn spi_axi_rdata_back_fast(&mut self) -> SPI_AXI_RDATA_BACK_FAST_W<'_, CTRL1_SPEC> {
-        SPI_AXI_RDATA_BACK_FAST_W::new(self, 23)
     }
     #[doc = "Bit 24 - 1: RRESP is SLV_ERR when there is a ECC error in AXI read data. 0: RRESP is OKAY when there is a ECC error in AXI read data. The ECC error information is recorded in SPI_MEM_ECC_ERR_ADDR_REG."]
     #[inline(always)]
@@ -180,7 +165,7 @@ impl crate::Readable for CTRL1_SPEC {}
 impl crate::Writable for CTRL1_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets CTRL1 to value 0x28e0_0000"]
+#[doc = "`reset()` method sets CTRL1 to value 0x2860_0000"]
 impl crate::Resettable for CTRL1_SPEC {
-    const RESET_VALUE: u32 = 0x28e0_0000;
+    const RESET_VALUE: u32 = 0x2860_0000;
 }

@@ -39,7 +39,7 @@ impl crate::Readable for VER_DATE_SPEC {}
 impl crate::Writable for VER_DATE_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets VER_DATE to value 0x2023_0519"]
+#[doc = "`reset()` method sets VER_DATE to value 0x2025_0307"]
 impl crate::Resettable for VER_DATE_SPEC {
-    const RESET_VALUE: u32 = 0x2023_0519;
+    const RESET_VALUE: u32 = 0x2025_0307;
 }

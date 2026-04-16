@@ -2,18 +2,11 @@
 pub type R = crate::R<RESULT_SPEC>;
 #[doc = "Field `OPERATION_RESULT` reader - The operation result bit of ECDSA Accelerator, only valid when ECDSA calculation is done."]
 pub type OPERATION_RESULT_R = crate::BitReader;
-#[doc = "Field `K_VALUE_WARNING` reader - The k value warning bit of ECDSA Accelerator, valid when k value is bigger than the curve order, then actually taken k = k mod n."]
-pub type K_VALUE_WARNING_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The operation result bit of ECDSA Accelerator, only valid when ECDSA calculation is done."]
     #[inline(always)]
     pub fn operation_result(&self) -> OPERATION_RESULT_R {
         OPERATION_RESULT_R::new((self.bits & 1) != 0)
-    }
-    #[doc = "Bit 1 - The k value warning bit of ECDSA Accelerator, valid when k value is bigger than the curve order, then actually taken k = k mod n."]
-    #[inline(always)]
-    pub fn k_value_warning(&self) -> K_VALUE_WARNING_R {
-        K_VALUE_WARNING_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -21,7 +14,6 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RESULT")
             .field("operation_result", &self.operation_result())
-            .field("k_value_warning", &self.k_value_warning())
             .finish()
     }
 }

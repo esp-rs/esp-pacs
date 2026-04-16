@@ -31,14 +31,20 @@ pub struct RegisterBlock {
     _reserved21: [u8; 0x04],
     ddr: DDR,
     spi_smem_ddr: SPI_SMEM_DDR,
-    _reserved23: [u8; 0x24],
+    dll_dly_db: DLL_DLY_DB,
+    dll_db_st0: DLL_DB_ST0,
+    dll_db_st1: DLL_DB_ST1,
+    _reserved26: [u8; 0x18],
     spi_fmem_pms_attr: [SPI_FMEM_PMS_ATTR; 4],
     spi_fmem_pms_addr: [SPI_FMEM_PMS_ADDR; 4],
     spi_fmem_pms_size: [SPI_FMEM_PMS_SIZE; 4],
-    spi_smem_pms_attr: [SPI_SMEM_PMS_ATTR; 4],
+    spi_smem_pms0_attr: SPI_SMEM_PMS0_ATTR,
+    spi_smem_pms1_attr: SPI_SMEM_PMS1_ATTR,
+    spi_smem_pms2_attr: SPI_SMEM_PMS2_ATTR,
+    spi_smem_pms3_attr: SPI_SMEM_PMS3_ATTR,
     spi_smem_pms_addr: [SPI_SMEM_PMS_ADDR; 4],
     spi_smem_pms_size: [SPI_SMEM_PMS_SIZE; 4],
-    _reserved29: [u8; 0x04],
+    _reserved35: [u8; 0x04],
     pms_reject: PMS_REJECT,
     ecc_ctrl: ECC_CTRL,
     ecc_err_addr: ECC_ERR_ADDR,
@@ -58,11 +64,11 @@ pub struct RegisterBlock {
     spi_smem_din_hex_mode: SPI_SMEM_DIN_HEX_MODE,
     spi_smem_din_hex_num: SPI_SMEM_DIN_HEX_NUM,
     spi_smem_dout_hex_mode: SPI_SMEM_DOUT_HEX_MODE,
-    _reserved48: [u8; 0x50],
+    _reserved54: [u8; 0x50],
     clock_gate: CLOCK_GATE,
-    _reserved49: [u8; 0xfc],
+    _reserved55: [u8; 0xfc],
     xts_plain_base: XTS_PLAIN_BASE,
-    _reserved50: [u8; 0x3c],
+    _reserved56: [u8; 0x3c],
     xts_linesize: XTS_LINESIZE,
     xts_destination: XTS_DESTINATION,
     xts_physical_address: XTS_PHYSICAL_ADDRESS,
@@ -71,15 +77,16 @@ pub struct RegisterBlock {
     xts_destroy: XTS_DESTROY,
     xts_state: XTS_STATE,
     xts_date: XTS_DATE,
-    _reserved58: [u8; 0x1c],
+    _reserved64: [u8; 0x1c],
     mmu_item_content: MMU_ITEM_CONTENT,
     mmu_item_index: MMU_ITEM_INDEX,
     mmu_power_ctrl: MMU_POWER_CTRL,
     dpa_ctrl: DPA_CTRL,
-    _reserved62: [u8; 0x64],
+    xts_pseudo_round_conf: XTS_PSEUDO_ROUND_CONF,
+    _reserved69: [u8; 0x60],
     registerrnd_eco_high: REGISTERRND_ECO_HIGH,
     registerrnd_eco_low: REGISTERRND_ECO_LOW,
-    _reserved64: [u8; 0x04],
+    _reserved71: [u8; 0x04],
     date: DATE,
 }
 impl RegisterBlock {
@@ -198,33 +205,48 @@ impl RegisterBlock {
     pub const fn spi_smem_ddr(&self) -> &SPI_SMEM_DDR {
         &self.spi_smem_ddr
     }
-    #[doc = "0x100..0x110 - MSPI flash PMS section %s attribute register"]
+    #[doc = "0xdc - MSPI DLL function and debug configuration register"]
+    #[inline(always)]
+    pub const fn dll_dly_db(&self) -> &DLL_DLY_DB {
+        &self.dll_dly_db
+    }
+    #[doc = "0xe0 - MSPI DLL debug status0 register"]
+    #[inline(always)]
+    pub const fn dll_db_st0(&self) -> &DLL_DB_ST0 {
+        &self.dll_db_st0
+    }
+    #[doc = "0xe4 - MSPI DLL debug status1 register"]
+    #[inline(always)]
+    pub const fn dll_db_st1(&self) -> &DLL_DB_ST1 {
+        &self.dll_db_st1
+    }
+    #[doc = "0x100..0x110 - SPI1 flash PMS section %s attribute register"]
     #[inline(always)]
     pub const fn spi_fmem_pms_attr(&self, n: usize) -> &SPI_FMEM_PMS_ATTR {
         &self.spi_fmem_pms_attr[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x100..0x110 - MSPI flash PMS section %s attribute register"]
+    #[doc = "0x100..0x110 - SPI1 flash PMS section %s attribute register"]
     #[inline(always)]
     pub fn spi_fmem_pms_attr_iter(&self) -> impl Iterator<Item = &SPI_FMEM_PMS_ATTR> {
         self.spi_fmem_pms_attr.iter()
     }
-    #[doc = "0x100 - MSPI flash PMS section 0 attribute register"]
+    #[doc = "0x100 - SPI1 flash PMS section 0 attribute register"]
     #[inline(always)]
     pub const fn spi_fmem_pms0_attr(&self) -> &SPI_FMEM_PMS_ATTR {
         self.spi_fmem_pms_attr(0)
     }
-    #[doc = "0x104 - MSPI flash PMS section 1 attribute register"]
+    #[doc = "0x104 - SPI1 flash PMS section 1 attribute register"]
     #[inline(always)]
     pub const fn spi_fmem_pms1_attr(&self) -> &SPI_FMEM_PMS_ATTR {
         self.spi_fmem_pms_attr(1)
     }
-    #[doc = "0x108 - MSPI flash PMS section 2 attribute register"]
+    #[doc = "0x108 - SPI1 flash PMS section 2 attribute register"]
     #[inline(always)]
     pub const fn spi_fmem_pms2_attr(&self) -> &SPI_FMEM_PMS_ATTR {
         self.spi_fmem_pms_attr(2)
     }
-    #[doc = "0x10c - MSPI flash PMS section 3 attribute register"]
+    #[doc = "0x10c - SPI1 flash PMS section 3 attribute register"]
     #[inline(always)]
     pub const fn spi_fmem_pms3_attr(&self) -> &SPI_FMEM_PMS_ATTR {
         self.spi_fmem_pms_attr(3)
@@ -291,36 +313,25 @@ impl RegisterBlock {
     pub const fn spi_fmem_pms3_size(&self) -> &SPI_FMEM_PMS_SIZE {
         self.spi_fmem_pms_size(3)
     }
-    #[doc = "0x130..0x140 - SPI1 flash PMS section %s start address register"]
+    #[doc = "0x130 - SPI1 flash PMS section $n start address register"]
     #[inline(always)]
-    pub const fn spi_smem_pms_attr(&self, n: usize) -> &SPI_SMEM_PMS_ATTR {
-        &self.spi_smem_pms_attr[n]
+    pub const fn spi_smem_pms0_attr(&self) -> &SPI_SMEM_PMS0_ATTR {
+        &self.spi_smem_pms0_attr
     }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x130..0x140 - SPI1 flash PMS section %s start address register"]
+    #[doc = "0x134 - SPI1 external RAM PMS section $n attribute register"]
     #[inline(always)]
-    pub fn spi_smem_pms_attr_iter(&self) -> impl Iterator<Item = &SPI_SMEM_PMS_ATTR> {
-        self.spi_smem_pms_attr.iter()
+    pub const fn spi_smem_pms1_attr(&self) -> &SPI_SMEM_PMS1_ATTR {
+        &self.spi_smem_pms1_attr
     }
-    #[doc = "0x130 - SPI1 flash PMS section 0 start address register"]
+    #[doc = "0x138 - SPI1 external RAM PMS section $n attribute register"]
     #[inline(always)]
-    pub const fn spi_smem_pms0_attr(&self) -> &SPI_SMEM_PMS_ATTR {
-        self.spi_smem_pms_attr(0)
+    pub const fn spi_smem_pms2_attr(&self) -> &SPI_SMEM_PMS2_ATTR {
+        &self.spi_smem_pms2_attr
     }
-    #[doc = "0x134 - SPI1 flash PMS section 1 start address register"]
+    #[doc = "0x13c - SPI1 external RAM PMS section $n attribute register"]
     #[inline(always)]
-    pub const fn spi_smem_pms1_attr(&self) -> &SPI_SMEM_PMS_ATTR {
-        self.spi_smem_pms_attr(1)
-    }
-    #[doc = "0x138 - SPI1 flash PMS section 2 start address register"]
-    #[inline(always)]
-    pub const fn spi_smem_pms2_attr(&self) -> &SPI_SMEM_PMS_ATTR {
-        self.spi_smem_pms_attr(2)
-    }
-    #[doc = "0x13c - SPI1 flash PMS section 3 start address register"]
-    #[inline(always)]
-    pub const fn spi_smem_pms3_attr(&self) -> &SPI_SMEM_PMS_ATTR {
-        self.spi_smem_pms_attr(3)
+    pub const fn spi_smem_pms3_attr(&self) -> &SPI_SMEM_PMS3_ATTR {
+        &self.spi_smem_pms3_attr
     }
     #[doc = "0x140..0x150 - SPI1 external RAM PMS section %s start address register"]
     #[inline(always)]
@@ -549,6 +560,11 @@ impl RegisterBlock {
     pub const fn dpa_ctrl(&self) -> &DPA_CTRL {
         &self.dpa_ctrl
     }
+    #[doc = "0x38c - SPI memory cryption PSEUDO register"]
+    #[inline(always)]
+    pub const fn xts_pseudo_round_conf(&self) -> &XTS_PSEUDO_ROUND_CONF {
+        &self.xts_pseudo_round_conf
+    }
     #[doc = "0x3f0 - MSPI ECO high register"]
     #[inline(always)]
     pub const fn registerrnd_eco_high(&self) -> &REGISTERRND_ECO_HIGH {
@@ -657,9 +673,21 @@ pub mod ddr;
 pub type SPI_SMEM_DDR = crate::Reg<spi_smem_ddr::SPI_SMEM_DDR_SPEC>;
 #[doc = "SPI0 external RAM DDR mode control register"]
 pub mod spi_smem_ddr;
-#[doc = "SPI_FMEM_PMS_ATTR (rw) register accessor: MSPI flash PMS section %s attribute register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_fmem_pms_attr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_fmem_pms_attr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi_fmem_pms_attr`] module"]
+#[doc = "DLL_DLY_DB (rw) register accessor: MSPI DLL function and debug configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`dll_dly_db::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dll_dly_db::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dll_dly_db`] module"]
+pub type DLL_DLY_DB = crate::Reg<dll_dly_db::DLL_DLY_DB_SPEC>;
+#[doc = "MSPI DLL function and debug configuration register"]
+pub mod dll_dly_db;
+#[doc = "DLL_DB_ST0 (r) register accessor: MSPI DLL debug status0 register\n\nYou can [`read`](crate::Reg::read) this register and get [`dll_db_st0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dll_db_st0`] module"]
+pub type DLL_DB_ST0 = crate::Reg<dll_db_st0::DLL_DB_ST0_SPEC>;
+#[doc = "MSPI DLL debug status0 register"]
+pub mod dll_db_st0;
+#[doc = "DLL_DB_ST1 (r) register accessor: MSPI DLL debug status1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`dll_db_st1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dll_db_st1`] module"]
+pub type DLL_DB_ST1 = crate::Reg<dll_db_st1::DLL_DB_ST1_SPEC>;
+#[doc = "MSPI DLL debug status1 register"]
+pub mod dll_db_st1;
+#[doc = "SPI_FMEM_PMS_ATTR (rw) register accessor: SPI1 flash PMS section %s attribute register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_fmem_pms_attr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_fmem_pms_attr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi_fmem_pms_attr`] module"]
 pub type SPI_FMEM_PMS_ATTR = crate::Reg<spi_fmem_pms_attr::SPI_FMEM_PMS_ATTR_SPEC>;
-#[doc = "MSPI flash PMS section %s attribute register"]
+#[doc = "SPI1 flash PMS section %s attribute register"]
 pub mod spi_fmem_pms_attr;
 #[doc = "SPI_FMEM_PMS_ADDR (rw) register accessor: SPI1 flash PMS section %s start address register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_fmem_pms_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_fmem_pms_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi_fmem_pms_addr`] module"]
 pub type SPI_FMEM_PMS_ADDR = crate::Reg<spi_fmem_pms_addr::SPI_FMEM_PMS_ADDR_SPEC>;
@@ -669,10 +697,22 @@ pub mod spi_fmem_pms_addr;
 pub type SPI_FMEM_PMS_SIZE = crate::Reg<spi_fmem_pms_size::SPI_FMEM_PMS_SIZE_SPEC>;
 #[doc = "SPI1 flash PMS section %s start address register"]
 pub mod spi_fmem_pms_size;
-#[doc = "SPI_SMEM_PMS_ATTR (rw) register accessor: SPI1 flash PMS section %s start address register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_smem_pms_attr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_smem_pms_attr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi_smem_pms_attr`] module"]
-pub type SPI_SMEM_PMS_ATTR = crate::Reg<spi_smem_pms_attr::SPI_SMEM_PMS_ATTR_SPEC>;
-#[doc = "SPI1 flash PMS section %s start address register"]
-pub mod spi_smem_pms_attr;
+#[doc = "SPI_SMEM_PMS0_ATTR (rw) register accessor: SPI1 flash PMS section $n start address register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_smem_pms0_attr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_smem_pms0_attr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi_smem_pms0_attr`] module"]
+pub type SPI_SMEM_PMS0_ATTR = crate::Reg<spi_smem_pms0_attr::SPI_SMEM_PMS0_ATTR_SPEC>;
+#[doc = "SPI1 flash PMS section $n start address register"]
+pub mod spi_smem_pms0_attr;
+#[doc = "SPI_SMEM_PMS1_ATTR (rw) register accessor: SPI1 external RAM PMS section $n attribute register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_smem_pms1_attr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_smem_pms1_attr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi_smem_pms1_attr`] module"]
+pub type SPI_SMEM_PMS1_ATTR = crate::Reg<spi_smem_pms1_attr::SPI_SMEM_PMS1_ATTR_SPEC>;
+#[doc = "SPI1 external RAM PMS section $n attribute register"]
+pub mod spi_smem_pms1_attr;
+#[doc = "SPI_SMEM_PMS2_ATTR (rw) register accessor: SPI1 external RAM PMS section $n attribute register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_smem_pms2_attr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_smem_pms2_attr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi_smem_pms2_attr`] module"]
+pub type SPI_SMEM_PMS2_ATTR = crate::Reg<spi_smem_pms2_attr::SPI_SMEM_PMS2_ATTR_SPEC>;
+#[doc = "SPI1 external RAM PMS section $n attribute register"]
+pub mod spi_smem_pms2_attr;
+#[doc = "SPI_SMEM_PMS3_ATTR (rw) register accessor: SPI1 external RAM PMS section $n attribute register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_smem_pms3_attr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_smem_pms3_attr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi_smem_pms3_attr`] module"]
+pub type SPI_SMEM_PMS3_ATTR = crate::Reg<spi_smem_pms3_attr::SPI_SMEM_PMS3_ATTR_SPEC>;
+#[doc = "SPI1 external RAM PMS section $n attribute register"]
+pub mod spi_smem_pms3_attr;
 #[doc = "SPI_SMEM_PMS_ADDR (rw) register accessor: SPI1 external RAM PMS section %s start address register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_smem_pms_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_smem_pms_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi_smem_pms_addr`] module"]
 pub type SPI_SMEM_PMS_ADDR = crate::Reg<spi_smem_pms_addr::SPI_SMEM_PMS_ADDR_SPEC>;
 #[doc = "SPI1 external RAM PMS section %s start address register"]
@@ -813,6 +853,10 @@ pub mod mmu_power_ctrl;
 pub type DPA_CTRL = crate::Reg<dpa_ctrl::DPA_CTRL_SPEC>;
 #[doc = "SPI memory cryption DPA register"]
 pub mod dpa_ctrl;
+#[doc = "XTS_PSEUDO_ROUND_CONF (rw) register accessor: SPI memory cryption PSEUDO register\n\nYou can [`read`](crate::Reg::read) this register and get [`xts_pseudo_round_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`xts_pseudo_round_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@xts_pseudo_round_conf`] module"]
+pub type XTS_PSEUDO_ROUND_CONF = crate::Reg<xts_pseudo_round_conf::XTS_PSEUDO_ROUND_CONF_SPEC>;
+#[doc = "SPI memory cryption PSEUDO register"]
+pub mod xts_pseudo_round_conf;
 #[doc = "REGISTERRND_ECO_HIGH (rw) register accessor: MSPI ECO high register\n\nYou can [`read`](crate::Reg::read) this register and get [`registerrnd_eco_high::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`registerrnd_eco_high::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@registerrnd_eco_high`] module"]
 pub type REGISTERRND_ECO_HIGH = crate::Reg<registerrnd_eco_high::REGISTERRND_ECO_HIGH_SPEC>;
 #[doc = "MSPI ECO high register"]

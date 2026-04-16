@@ -14,6 +14,10 @@ pub type DMA_CFG_UPD_BY_BLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type DMA_FORCE_RD_STATUS_R = crate::BitReader;
 #[doc = "Field `DMA_FORCE_RD_STATUS` writer - 1: mask dma request when reading frame info. 0: disable mask."]
 pub type DMA_FORCE_RD_STATUS_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CSI_DMA_FLOW_CONTROLLER` reader - 0: dma as flow controller. 1: csi_bridge as flow controller"]
+pub type CSI_DMA_FLOW_CONTROLLER_R = crate::BitReader;
+#[doc = "Field `CSI_DMA_FLOW_CONTROLLER` writer - 0: dma as flow controller. 1: csi_bridge as flow controller"]
+pub type CSI_DMA_FLOW_CONTROLLER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:11 - DMA burst length."]
     #[inline(always)]
@@ -30,6 +34,11 @@ impl R {
     pub fn dma_force_rd_status(&self) -> DMA_FORCE_RD_STATUS_R {
         DMA_FORCE_RD_STATUS_R::new(((self.bits >> 16) & 1) != 0)
     }
+    #[doc = "Bit 17 - 0: dma as flow controller. 1: csi_bridge as flow controller"]
+    #[inline(always)]
+    pub fn csi_dma_flow_controller(&self) -> CSI_DMA_FLOW_CONTROLLER_R {
+        CSI_DMA_FLOW_CONTROLLER_R::new(((self.bits >> 17) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -38,6 +47,7 @@ impl core::fmt::Debug for R {
             .field("dma_burst_len", &self.dma_burst_len())
             .field("dma_cfg_upd_by_blk", &self.dma_cfg_upd_by_blk())
             .field("dma_force_rd_status", &self.dma_force_rd_status())
+            .field("csi_dma_flow_controller", &self.csi_dma_flow_controller())
             .finish()
     }
 }
@@ -57,6 +67,11 @@ impl W {
     pub fn dma_force_rd_status(&mut self) -> DMA_FORCE_RD_STATUS_W<'_, DMA_REQ_CFG_SPEC> {
         DMA_FORCE_RD_STATUS_W::new(self, 16)
     }
+    #[doc = "Bit 17 - 0: dma as flow controller. 1: csi_bridge as flow controller"]
+    #[inline(always)]
+    pub fn csi_dma_flow_controller(&mut self) -> CSI_DMA_FLOW_CONTROLLER_W<'_, DMA_REQ_CFG_SPEC> {
+        CSI_DMA_FLOW_CONTROLLER_W::new(self, 17)
+    }
 }
 #[doc = "dma request configuration.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_req_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_req_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_REQ_CFG_SPEC;
@@ -69,7 +84,7 @@ impl crate::Readable for DMA_REQ_CFG_SPEC {}
 impl crate::Writable for DMA_REQ_CFG_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets DMA_REQ_CFG to value 0x80"]
+#[doc = "`reset()` method sets DMA_REQ_CFG to value 0x0002_0080"]
 impl crate::Resettable for DMA_REQ_CFG_SPEC {
-    const RESET_VALUE: u32 = 0x80;
+    const RESET_VALUE: u32 = 0x0002_0080;
 }

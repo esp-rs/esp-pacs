@@ -2,6 +2,10 @@
 pub type R = crate::R<PMUP_DRV_CFG_SPEC>;
 #[doc = "Register `PMUP_DRV_CFG` writer"]
 pub type W = crate::W<PMUP_DRV_CFG_SPEC>;
+#[doc = "Field `BYPASS_EFUSE_CTRL` reader - needs desc"]
+pub type BYPASS_EFUSE_CTRL_R = crate::BitReader;
+#[doc = "Field `BYPASS_EFUSE_CTRL` writer - needs desc"]
+pub type BYPASS_EFUSE_CTRL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PUMP_EN` reader - configure pvt charge xpd"]
 pub type PUMP_EN_R = crate::BitReader;
 #[doc = "Field `PUMP_EN` writer - configure pvt charge xpd"]
@@ -31,6 +35,11 @@ pub type PUMP_DRV0_R = crate::FieldReader;
 #[doc = "Field `PUMP_DRV0` writer - configure cmd0 drv"]
 pub type PUMP_DRV0_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
+    #[doc = "Bit 8 - needs desc"]
+    #[inline(always)]
+    pub fn bypass_efuse_ctrl(&self) -> BYPASS_EFUSE_CTRL_R {
+        BYPASS_EFUSE_CTRL_R::new(((self.bits >> 8) & 1) != 0)
+    }
     #[doc = "Bit 9 - configure pvt charge xpd"]
     #[inline(always)]
     pub fn pump_en(&self) -> PUMP_EN_R {
@@ -71,6 +80,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PMUP_DRV_CFG")
+            .field("bypass_efuse_ctrl", &self.bypass_efuse_ctrl())
             .field("pump_en", &self.pump_en())
             .field("clk_en", &self.clk_en())
             .field("pump_drv4", &self.pump_drv4())
@@ -82,6 +92,11 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
+    #[doc = "Bit 8 - needs desc"]
+    #[inline(always)]
+    pub fn bypass_efuse_ctrl(&mut self) -> BYPASS_EFUSE_CTRL_W<'_, PMUP_DRV_CFG_SPEC> {
+        BYPASS_EFUSE_CTRL_W::new(self, 8)
+    }
     #[doc = "Bit 9 - configure pvt charge xpd"]
     #[inline(always)]
     pub fn pump_en(&mut self) -> PUMP_EN_W<'_, PMUP_DRV_CFG_SPEC> {
@@ -129,5 +144,7 @@ impl crate::Readable for PMUP_DRV_CFG_SPEC {}
 impl crate::Writable for PMUP_DRV_CFG_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets PMUP_DRV_CFG to value 0"]
-impl crate::Resettable for PMUP_DRV_CFG_SPEC {}
+#[doc = "`reset()` method sets PMUP_DRV_CFG to value 0x0100"]
+impl crate::Resettable for PMUP_DRV_CFG_SPEC {
+    const RESET_VALUE: u32 = 0x0100;
+}

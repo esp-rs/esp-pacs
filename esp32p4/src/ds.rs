@@ -17,7 +17,8 @@ pub struct RegisterBlock {
     query_busy: QUERY_BUSY,
     query_key_wrong: QUERY_KEY_WRONG,
     query_check: QUERY_CHECK,
-    _reserved13: [u8; 0x08],
+    key_source: KEY_SOURCE,
+    _reserved14: [u8; 0x04],
     date: DATE,
 }
 impl RegisterBlock {
@@ -98,7 +99,7 @@ impl RegisterBlock {
     pub fn z_mem_iter(&self) -> impl Iterator<Item = &Z_MEM> {
         self.z_mem.iter()
     }
-    #[doc = "0xe00 - DS start control register"]
+    #[doc = "0xe00 - Activates the DS module"]
     #[inline(always)]
     pub const fn set_start(&self) -> &SET_START {
         &self.set_start
@@ -108,25 +109,30 @@ impl RegisterBlock {
     pub const fn set_continue(&self) -> &SET_CONTINUE {
         &self.set_continue
     }
-    #[doc = "0xe08 - DS finish control register"]
+    #[doc = "0xe08 - Ends DS operation"]
     #[inline(always)]
     pub const fn set_finish(&self) -> &SET_FINISH {
         &self.set_finish
     }
-    #[doc = "0xe0c - DS query busy register"]
+    #[doc = "0xe0c - Status of the DS module"]
     #[inline(always)]
     pub const fn query_busy(&self) -> &QUERY_BUSY {
         &self.query_busy
     }
-    #[doc = "0xe10 - DS query key-wrong counter register"]
+    #[doc = "0xe10 - Checks the reason why \\begin{math}DS_KEY\\end{math} is not ready"]
     #[inline(always)]
     pub const fn query_key_wrong(&self) -> &QUERY_KEY_WRONG {
         &self.query_key_wrong
     }
-    #[doc = "0xe14 - DS query check result register"]
+    #[doc = "0xe14 - Queries DS check result"]
     #[inline(always)]
     pub const fn query_check(&self) -> &QUERY_CHECK {
         &self.query_check
+    }
+    #[doc = "0xe18 - DS configure key source register"]
+    #[inline(always)]
+    pub const fn key_source(&self) -> &KEY_SOURCE {
+        &self.key_source
     }
     #[doc = "0xe20 - DS version control register"]
     #[inline(always)]
@@ -162,30 +168,34 @@ pub mod x_mem;
 pub type Z_MEM = crate::Reg<z_mem::Z_MEM_SPEC>;
 #[doc = "memory that stores Z"]
 pub mod z_mem;
-#[doc = "SET_START (w) register accessor: DS start control register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_start::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@set_start`] module"]
+#[doc = "SET_START (w) register accessor: Activates the DS module\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_start::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@set_start`] module"]
 pub type SET_START = crate::Reg<set_start::SET_START_SPEC>;
-#[doc = "DS start control register"]
+#[doc = "Activates the DS module"]
 pub mod set_start;
 #[doc = "SET_CONTINUE (w) register accessor: DS continue control register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_continue::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@set_continue`] module"]
 pub type SET_CONTINUE = crate::Reg<set_continue::SET_CONTINUE_SPEC>;
 #[doc = "DS continue control register"]
 pub mod set_continue;
-#[doc = "SET_FINISH (w) register accessor: DS finish control register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_finish::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@set_finish`] module"]
+#[doc = "SET_FINISH (w) register accessor: Ends DS operation\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_finish::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@set_finish`] module"]
 pub type SET_FINISH = crate::Reg<set_finish::SET_FINISH_SPEC>;
-#[doc = "DS finish control register"]
+#[doc = "Ends DS operation"]
 pub mod set_finish;
-#[doc = "QUERY_BUSY (r) register accessor: DS query busy register\n\nYou can [`read`](crate::Reg::read) this register and get [`query_busy::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@query_busy`] module"]
+#[doc = "QUERY_BUSY (r) register accessor: Status of the DS module\n\nYou can [`read`](crate::Reg::read) this register and get [`query_busy::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@query_busy`] module"]
 pub type QUERY_BUSY = crate::Reg<query_busy::QUERY_BUSY_SPEC>;
-#[doc = "DS query busy register"]
+#[doc = "Status of the DS module"]
 pub mod query_busy;
-#[doc = "QUERY_KEY_WRONG (r) register accessor: DS query key-wrong counter register\n\nYou can [`read`](crate::Reg::read) this register and get [`query_key_wrong::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@query_key_wrong`] module"]
+#[doc = "QUERY_KEY_WRONG (r) register accessor: Checks the reason why \\begin{math}DS_KEY\\end{math} is not ready\n\nYou can [`read`](crate::Reg::read) this register and get [`query_key_wrong::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@query_key_wrong`] module"]
 pub type QUERY_KEY_WRONG = crate::Reg<query_key_wrong::QUERY_KEY_WRONG_SPEC>;
-#[doc = "DS query key-wrong counter register"]
+#[doc = "Checks the reason why \\begin{math}DS_KEY\\end{math} is not ready"]
 pub mod query_key_wrong;
-#[doc = "QUERY_CHECK (r) register accessor: DS query check result register\n\nYou can [`read`](crate::Reg::read) this register and get [`query_check::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@query_check`] module"]
+#[doc = "QUERY_CHECK (r) register accessor: Queries DS check result\n\nYou can [`read`](crate::Reg::read) this register and get [`query_check::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@query_check`] module"]
 pub type QUERY_CHECK = crate::Reg<query_check::QUERY_CHECK_SPEC>;
-#[doc = "DS query check result register"]
+#[doc = "Queries DS check result"]
 pub mod query_check;
+#[doc = "KEY_SOURCE (rw) register accessor: DS configure key source register\n\nYou can [`read`](crate::Reg::read) this register and get [`key_source::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`key_source::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@key_source`] module"]
+pub type KEY_SOURCE = crate::Reg<key_source::KEY_SOURCE_SPEC>;
+#[doc = "DS configure key source register"]
+pub mod key_source;
 #[doc = "DATE (rw) register accessor: DS version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "DS version control register"]
