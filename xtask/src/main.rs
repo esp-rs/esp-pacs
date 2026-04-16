@@ -8,6 +8,7 @@ use std::{
 
 use anyhow::{Error, Result};
 use clap::{Parser, Subcommand, ValueEnum};
+use quote::ToTokens;
 use rayon::prelude::*;
 use strum::{Display, EnumIter, IntoEnumIterator};
 use svd2rust::{
@@ -238,7 +239,33 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
 
     let mut device_x = String::new();
     let items = svd2rust::generate::device::render(&device, &config, &mut device_x)?;
-    let data = items.to_string();
+    let mut file = syn::parse2::<syn::File>(items)?;
+
+    // Strip unused `DEVICE_PERIPHERALS` and `Peripherals`
+    let mut removed = 0;
+    file.items.retain(|item| {
+        let strip = match item {
+            syn::Item::Static(item) => item.ident == "DEVICE_PERIPHERALS",
+            syn::Item::Struct(item) => item.ident == "Peripherals",
+            syn::Item::Impl(item) => {
+                item.trait_.is_none()
+                    && matches!(
+                        item.self_ty.as_ref(),
+                        syn::Type::Path(ty) if ty.qself.is_none() && ty.path.is_ident("Peripherals")
+                    )
+            }
+            _ => false,
+        };
+
+        removed += usize::from(strip);
+        !strip
+    });
+
+    if removed != 3 {
+        return Err(Error::msg("failed to remove generated `Peripherals` API"));
+    }
+
+    let data = file.into_token_stream().to_string();
 
     // Here we will sneakily patch in our own logo for the documentation :)
     let data = data.replace(

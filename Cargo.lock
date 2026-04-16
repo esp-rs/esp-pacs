@@ -1584,11 +1584,13 @@ dependencies = [
  "env_logger 0.11.8",
  "form",
  "log",
+ "quote",
  "rayon",
  "semver",
  "strum",
  "svd2rust",
  "svdtools",
+ "syn",
  "toml_edit",
 ]
 
