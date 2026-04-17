@@ -34,5 +34,7 @@ defmt = { version = "1.0.1", optional = true }
 [features]
 default = []
 rt = []
+# Remove next minor: https://github.com/esp-rs/esp-pacs/issues/428
+critical-section = []
 impl-register-debug = []
 defmt = ["dep:defmt"]
