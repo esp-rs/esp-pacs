@@ -1,6 +1,6 @@
 [package]
 name = "esp32s3"
-version = "0.35.1"
+version = "0.35.2"
 edition = "2021"
 rust-version = "1.76"
 description = "Peripheral access crate for the ESP32-S3"
@@ -34,5 +34,7 @@ defmt = { version = "1.0.1", optional = true }
 [features]
 default = []
 rt = []
+# Remove next minor: https://github.com/esp-rs/esp-pacs/issues/428
+critical-section = []
 impl-register-debug = []
 defmt = ["dep:defmt"]
