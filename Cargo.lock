@@ -1117,9 +1117,8 @@ dependencies = [
 
 [[package]]
 name = "svd2rust"
-version = "0.37.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2dce3b3cdf5336adc65c36b1cb6d9b920368fb5dfc530e690bb5a4234e5a6bb2"
+version = "0.37.1"
+source = "git+https://github.com/MabezDev/svd2rust?branch=skip-peripherals-struct-0.37.1#f74f0b32f87e7d079499e0d0be5d9cbc4ea07f75"
 dependencies = [
  "anyhow",
  "inflections",

@@ -218,6 +218,7 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
     config.ident_formats_theme = Some(IdentFormatsTheme::Legacy);
     config.max_cluster_size = true;
     config.impl_defmt = Some("defmt".into());
+    config.skip_peripherals_struct = true;
 
     let input = fs::read_to_string(svd_file)?;
     let device = svd2rust::load_from(&input, &config)?;
