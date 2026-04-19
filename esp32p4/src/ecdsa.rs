@@ -22,11 +22,15 @@ pub struct RegisterBlock {
     sha_busy: SHA_BUSY,
     _reserved14: [u8; 0x64],
     message_mem: [MESSAGE_MEM; 8],
-    _reserved15: [u8; 0x0760],
+    _reserved15: [u8; 0x0140],
     r_mem: [R_MEM; 8],
+    _reserved16: [u8; 0x10],
     s_mem: [S_MEM; 8],
+    _reserved17: [u8; 0x10],
     z_mem: [Z_MEM; 8],
+    _reserved18: [u8; 0x10],
     qax_mem: [QAX_MEM; 8],
+    _reserved19: [u8; 0x10],
     qay_mem: [QAY_MEM; 8],
 }
 impl RegisterBlock {
@@ -111,57 +115,57 @@ impl RegisterBlock {
     pub fn message_mem_iter(&self) -> impl Iterator<Item = &MESSAGE_MEM> {
         self.message_mem.iter()
     }
-    #[doc = "0xa00..0xa20 - The memory that stores r."]
+    #[doc = "0x3e0..0x400 - The memory that stores r."]
     #[inline(always)]
     pub const fn r_mem(&self, n: usize) -> &R_MEM {
         &self.r_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xa00..0xa20 - The memory that stores r."]
+    #[doc = "0x3e0..0x400 - The memory that stores r."]
     #[inline(always)]
     pub fn r_mem_iter(&self) -> impl Iterator<Item = &R_MEM> {
         self.r_mem.iter()
     }
-    #[doc = "0xa20..0xa40 - The memory that stores s."]
+    #[doc = "0x410..0x430 - The memory that stores s."]
     #[inline(always)]
     pub const fn s_mem(&self, n: usize) -> &S_MEM {
         &self.s_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xa20..0xa40 - The memory that stores s."]
+    #[doc = "0x410..0x430 - The memory that stores s."]
     #[inline(always)]
     pub fn s_mem_iter(&self) -> impl Iterator<Item = &S_MEM> {
         self.s_mem.iter()
     }
-    #[doc = "0xa40..0xa60 - The memory that stores software written z."]
+    #[doc = "0x440..0x460 - The memory that stores software written z."]
     #[inline(always)]
     pub const fn z_mem(&self, n: usize) -> &Z_MEM {
         &self.z_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xa40..0xa60 - The memory that stores software written z."]
+    #[doc = "0x440..0x460 - The memory that stores software written z."]
     #[inline(always)]
     pub fn z_mem_iter(&self) -> impl Iterator<Item = &Z_MEM> {
         self.z_mem.iter()
     }
-    #[doc = "0xa60..0xa80 - The memory that stores x coordinates of QA or software written k."]
+    #[doc = "0x470..0x490 - The memory that stores x coordinates of QA or software written k."]
     #[inline(always)]
     pub const fn qax_mem(&self, n: usize) -> &QAX_MEM {
         &self.qax_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xa60..0xa80 - The memory that stores x coordinates of QA or software written k."]
+    #[doc = "0x470..0x490 - The memory that stores x coordinates of QA or software written k."]
     #[inline(always)]
     pub fn qax_mem_iter(&self) -> impl Iterator<Item = &QAX_MEM> {
         self.qax_mem.iter()
     }
-    #[doc = "0xa80..0xaa0 - The memory that stores y coordinates of QA."]
+    #[doc = "0x4a0..0x4c0 - The memory that stores y coordinates of QA."]
     #[inline(always)]
     pub const fn qay_mem(&self, n: usize) -> &QAY_MEM {
         &self.qay_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xa80..0xaa0 - The memory that stores y coordinates of QA."]
+    #[doc = "0x4a0..0x4c0 - The memory that stores y coordinates of QA."]
     #[inline(always)]
     pub fn qay_mem_iter(&self) -> impl Iterator<Item = &QAY_MEM> {
         self.qay_mem.iter()

@@ -18,6 +18,10 @@ pub type CAM_VSYNC_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type CAM_HS_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CAM_HS_INT_ENA` writer - The enable bit for Camera line interrupt."]
 pub type CAM_HS_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LCD_UNDERRUN_INT_ENA` reader - The enable bit for LCD underrun interrupt"]
+pub type LCD_UNDERRUN_INT_ENA_R = crate::BitReader;
+#[doc = "Field `LCD_UNDERRUN_INT_ENA` writer - The enable bit for LCD underrun interrupt"]
+pub type LCD_UNDERRUN_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The enable bit for LCD frame end interrupt."]
     #[inline(always)]
@@ -39,6 +43,11 @@ impl R {
     pub fn cam_hs_int_ena(&self) -> CAM_HS_INT_ENA_R {
         CAM_HS_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
+    #[doc = "Bit 4 - The enable bit for LCD underrun interrupt"]
+    #[inline(always)]
+    pub fn lcd_underrun_int_ena(&self) -> LCD_UNDERRUN_INT_ENA_R {
+        LCD_UNDERRUN_INT_ENA_R::new(((self.bits >> 4) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -48,6 +57,7 @@ impl core::fmt::Debug for R {
             .field("lcd_trans_done_int_ena", &self.lcd_trans_done_int_ena())
             .field("cam_vsync_int_ena", &self.cam_vsync_int_ena())
             .field("cam_hs_int_ena", &self.cam_hs_int_ena())
+            .field("lcd_underrun_int_ena", &self.lcd_underrun_int_ena())
             .finish()
     }
 }
@@ -71,6 +81,11 @@ impl W {
     #[inline(always)]
     pub fn cam_hs_int_ena(&mut self) -> CAM_HS_INT_ENA_W<'_, LC_DMA_INT_ENA_SPEC> {
         CAM_HS_INT_ENA_W::new(self, 3)
+    }
+    #[doc = "Bit 4 - The enable bit for LCD underrun interrupt"]
+    #[inline(always)]
+    pub fn lcd_underrun_int_ena(&mut self) -> LCD_UNDERRUN_INT_ENA_W<'_, LC_DMA_INT_ENA_SPEC> {
+        LCD_UNDERRUN_INT_ENA_W::new(self, 4)
     }
 }
 #[doc = "LCDCAM interrupt enable register.\n\nYou can [`read`](crate::Reg::read) this register and get [`lc_dma_int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lc_dma_int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

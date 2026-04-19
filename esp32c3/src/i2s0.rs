@@ -235,5 +235,4 @@ pub mod conf_sigle_data;
 pub type STATE = crate::Reg<state::STATE_SPEC>;
 #[doc = "I2S TX status register"]
 pub mod state;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

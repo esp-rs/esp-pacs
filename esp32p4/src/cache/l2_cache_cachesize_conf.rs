@@ -155,7 +155,7 @@ impl crate::Readable for L2_CACHE_CACHESIZE_CONF_SPEC {}
 impl crate::Writable for L2_CACHE_CACHESIZE_CONF_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets L2_CACHE_CACHESIZE_CONF to value 0x0400"]
+#[doc = "`reset()` method sets L2_CACHE_CACHESIZE_CONF to value 0x0200"]
 impl crate::Resettable for L2_CACHE_CACHESIZE_CONF_SPEC {
-    const RESET_VALUE: u32 = 0x0400;
+    const RESET_VALUE: u32 = 0x0200;
 }

@@ -186,5 +186,4 @@ pub mod set_message_pad;
 pub type ONE_BLOCK = crate::Reg<one_block::ONE_BLOCK_SPEC>;
 #[doc = "One block message register."]
 pub mod one_block;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

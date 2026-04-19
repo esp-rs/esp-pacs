@@ -8,7 +8,7 @@ pub type W = crate::W<LCD_DLY_MODE_CFG1_SPEC>;
 #[repr(u8)]
 pub enum DELAY_MODE {
     #[doc = "0: Output without delay"]
-    None = 0,
+    None        = 0,
     #[doc = "1: Delayed by the rising edge of LCD_CLK"]
     RaisingEdge = 1,
     #[doc = "2: Delayed by the falling edge of LCD_CLK"]

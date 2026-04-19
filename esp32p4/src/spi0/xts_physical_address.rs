@@ -5,12 +5,12 @@ pub type W = crate::W<XTS_PHYSICAL_ADDRESS_SPEC>;
 #[doc = "Field `SPI_XTS_PHYSICAL_ADDRESS` reader - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
 pub type SPI_XTS_PHYSICAL_ADDRESS_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_XTS_PHYSICAL_ADDRESS` writer - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
-pub type SPI_XTS_PHYSICAL_ADDRESS_W<'a, REG> = crate::FieldWriter<'a, REG, 26, u32>;
+pub type SPI_XTS_PHYSICAL_ADDRESS_W<'a, REG> = crate::FieldWriter<'a, REG, 30, u32>;
 impl R {
-    #[doc = "Bits 0:25 - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
+    #[doc = "Bits 0:29 - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
     #[inline(always)]
     pub fn spi_xts_physical_address(&self) -> SPI_XTS_PHYSICAL_ADDRESS_R {
-        SPI_XTS_PHYSICAL_ADDRESS_R::new(self.bits & 0x03ff_ffff)
+        SPI_XTS_PHYSICAL_ADDRESS_R::new(self.bits & 0x3fff_ffff)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:25 - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
+    #[doc = "Bits 0:29 - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
     #[inline(always)]
     pub fn spi_xts_physical_address(
         &mut self,

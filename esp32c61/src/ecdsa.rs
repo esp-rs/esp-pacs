@@ -203,8 +203,7 @@ pub mod state;
 pub type RESULT = crate::Reg<result::RESULT_SPEC>;
 #[doc = "ECDSA result register"]
 pub mod result;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};
 #[doc = "SHA_MODE (rw) register accessor: ECDSA control SHA register\n\nYou can [`read`](crate::Reg::read) this register and get [`sha_mode::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sha_mode::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha_mode`] module"]
 pub type SHA_MODE = crate::Reg<sha_mode::SHA_MODE_SPEC>;
 #[doc = "ECDSA control SHA register"]

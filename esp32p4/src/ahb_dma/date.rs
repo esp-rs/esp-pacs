@@ -2,12 +2,12 @@
 pub type R = crate::R<DATE_SPEC>;
 #[doc = "Register `DATE` writer"]
 pub type W = crate::W<DATE_SPEC>;
-#[doc = "Field `DATE` reader - register version."]
+#[doc = "Field `DATE` reader - Version control register"]
 pub type DATE_R = crate::FieldReader<u32>;
-#[doc = "Field `DATE` writer - register version."]
+#[doc = "Field `DATE` writer - Version control register"]
 pub type DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - register version."]
+    #[doc = "Bits 0:31 - Version control register"]
     #[inline(always)]
     pub fn date(&self) -> DATE_R {
         DATE_R::new(self.bits)
@@ -20,7 +20,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - register version."]
+    #[doc = "Bits 0:31 - Version control register"]
     #[inline(always)]
     pub fn date(&mut self) -> DATE_W<'_, DATE_SPEC> {
         DATE_W::new(self, 0)
@@ -37,7 +37,7 @@ impl crate::Readable for DATE_SPEC {}
 impl crate::Writable for DATE_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets DATE to value 0x0230_3140"]
+#[doc = "`reset()` method sets DATE to value 0x0025_0220"]
 impl crate::Resettable for DATE_SPEC {
-    const RESET_VALUE: u32 = 0x0230_3140;
+    const RESET_VALUE: u32 = 0x0025_0220;
 }

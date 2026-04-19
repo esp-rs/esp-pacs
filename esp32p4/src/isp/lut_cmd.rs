@@ -2,7 +2,7 @@
 pub type W = crate::W<LUT_CMD_SPEC>;
 #[doc = "Field `LUT_ADDR` writer - this field configures the lut access addr, when select lsc lut, \\[11:10\\]:00 sel gb_b lut, 01 sel r_gr lut"]
 pub type LUT_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
-#[doc = "Field `LUT_NUM` writer - this field configures the lut selection. 0000:LSC LUT 0001:DPC LUT"]
+#[doc = "Field `LUT_NUM` writer - this field configures the lut selection. 0000:LSC LUT. 0001:DPC LUT. 0010:AWB LUT"]
 pub type LUT_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `LUT_CMD` writer - this bit configures the access event of lut. 0:rd 1: wr"]
 pub type LUT_CMD_W<'a, REG> = crate::BitWriter<'a, REG>;
@@ -18,7 +18,7 @@ impl W {
     pub fn lut_addr(&mut self) -> LUT_ADDR_W<'_, LUT_CMD_SPEC> {
         LUT_ADDR_W::new(self, 0)
     }
-    #[doc = "Bits 12:15 - this field configures the lut selection. 0000:LSC LUT 0001:DPC LUT"]
+    #[doc = "Bits 12:15 - this field configures the lut selection. 0000:LSC LUT. 0001:DPC LUT. 0010:AWB LUT"]
     #[inline(always)]
     pub fn lut_num(&mut self) -> LUT_NUM_W<'_, LUT_CMD_SPEC> {
         LUT_NUM_W::new(self, 12)

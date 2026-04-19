@@ -26,7 +26,5 @@ impl crate::RegisterSpec for HP_MODEM_ICG_HP_FUNC_SPEC {
 impl crate::Writable for HP_MODEM_ICG_HP_FUNC_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets HP_MODEM_ICG_HP_FUNC to value 0xffff_ffff"]
-impl crate::Resettable for HP_MODEM_ICG_HP_FUNC_SPEC {
-    const RESET_VALUE: u32 = 0xffff_ffff;
-}
+#[doc = "`reset()` method sets HP_MODEM_ICG_HP_FUNC to value 0"]
+impl crate::Resettable for HP_MODEM_ICG_HP_FUNC_SPEC {}

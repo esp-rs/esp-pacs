@@ -2,30 +2,60 @@
 pub type R = crate::R<SBD_INT_MAP_SPEC>;
 #[doc = "Register `SBD_INT_MAP` writer"]
 pub type W = crate::W<SBD_INT_MAP_SPEC>;
-#[doc = "Field `CORE0_SBD_INT_MAP` reader - NA"]
-pub type CORE0_SBD_INT_MAP_R = crate::FieldReader;
-#[doc = "Field `CORE0_SBD_INT_MAP` writer - NA"]
-pub type CORE0_SBD_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `SBD_INT_MAP` reader - Configures the interrupt source into one CPU interrupt."]
+pub type SBD_INT_MAP_R = crate::FieldReader;
+#[doc = "Field `SBD_INT_MAP` writer - Configures the interrupt source into one CPU interrupt."]
+pub type SBD_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `SBD_INT_SRC_PASS_IN_SEC` reader - NA"]
+pub type SBD_INT_SRC_PASS_IN_SEC_R = crate::BitReader;
+#[doc = "Field `SBD_INT_SRC_PASS_IN_SEC` writer - NA"]
+pub type SBD_INT_SRC_PASS_IN_SEC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SBD_INT_SRC_IN_SEC_FLAG` reader - NA"]
+pub type SBD_INT_SRC_IN_SEC_FLAG_R = crate::BitReader;
+#[doc = "Field `SBD_INT_SRC_IN_SEC_FLAG` writer - NA"]
+pub type SBD_INT_SRC_IN_SEC_FLAG_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:5 - NA"]
+    #[doc = "Bits 0:5 - Configures the interrupt source into one CPU interrupt."]
     #[inline(always)]
-    pub fn core0_sbd_int_map(&self) -> CORE0_SBD_INT_MAP_R {
-        CORE0_SBD_INT_MAP_R::new((self.bits & 0x3f) as u8)
+    pub fn sbd_int_map(&self) -> SBD_INT_MAP_R {
+        SBD_INT_MAP_R::new((self.bits & 0x3f) as u8)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn sbd_int_src_pass_in_sec(&self) -> SBD_INT_SRC_PASS_IN_SEC_R {
+        SBD_INT_SRC_PASS_IN_SEC_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn sbd_int_src_in_sec_flag(&self) -> SBD_INT_SRC_IN_SEC_FLAG_R {
+        SBD_INT_SRC_IN_SEC_FLAG_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SBD_INT_MAP")
-            .field("core0_sbd_int_map", &self.core0_sbd_int_map())
+            .field("sbd_int_map", &self.sbd_int_map())
+            .field("sbd_int_src_pass_in_sec", &self.sbd_int_src_pass_in_sec())
+            .field("sbd_int_src_in_sec_flag", &self.sbd_int_src_in_sec_flag())
             .finish()
     }
 }
 impl W {
-    #[doc = "Bits 0:5 - NA"]
+    #[doc = "Bits 0:5 - Configures the interrupt source into one CPU interrupt."]
     #[inline(always)]
-    pub fn core0_sbd_int_map(&mut self) -> CORE0_SBD_INT_MAP_W<'_, SBD_INT_MAP_SPEC> {
-        CORE0_SBD_INT_MAP_W::new(self, 0)
+    pub fn sbd_int_map(&mut self) -> SBD_INT_MAP_W<'_, SBD_INT_MAP_SPEC> {
+        SBD_INT_MAP_W::new(self, 0)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn sbd_int_src_pass_in_sec(&mut self) -> SBD_INT_SRC_PASS_IN_SEC_W<'_, SBD_INT_MAP_SPEC> {
+        SBD_INT_SRC_PASS_IN_SEC_W::new(self, 6)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn sbd_int_src_in_sec_flag(&mut self) -> SBD_INT_SRC_IN_SEC_FLAG_W<'_, SBD_INT_MAP_SPEC> {
+        SBD_INT_SRC_IN_SEC_FLAG_W::new(self, 7)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`sbd_int_map::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sbd_int_map::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

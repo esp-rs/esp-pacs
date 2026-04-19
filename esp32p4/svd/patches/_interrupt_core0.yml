@@ -1,0 +1,3 @@
+INTERRUPT_CORE0:
+  "*":
+    _strip: "CORE0_"

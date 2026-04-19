@@ -282,5 +282,4 @@ pub mod ser_afifo_config;
 pub type BUS_RESET_ST = crate::Reg<bus_reset_st::BUS_RESET_ST_SPEC>;
 #[doc = "USB Bus reset status register"]
 pub mod bus_reset_st;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

@@ -327,8 +327,7 @@ pub mod negpulse;
 pub type CLK_CONF = crate::Reg<clk_conf::CLK_CONF_SPEC>;
 #[doc = "UART core clock configuration"]
 pub mod clk_conf;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};
 #[doc = "ID (rw) register accessor: UART ID register\n\nYou can [`read`](crate::Reg::read) this register and get [`id::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`id::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@id`] module"]
 pub type ID = crate::Reg<id::ID_SPEC>;
 #[doc = "UART ID register"]

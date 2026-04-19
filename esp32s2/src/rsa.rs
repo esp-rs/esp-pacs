@@ -195,5 +195,4 @@ pub mod search_pos;
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "RSA interrupt enable register"]
 pub mod int_ena;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

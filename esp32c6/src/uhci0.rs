@@ -184,5 +184,4 @@ pub mod esc_conf;
 pub type PKT_THRES = crate::Reg<pkt_thres::PKT_THRES_SPEC>;
 #[doc = "UCHI Packet Length Configuration Register"]
 pub mod pkt_thres;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

@@ -2,12 +2,12 @@
 pub type R = crate::R<INT_THRESH_SPEC>;
 #[doc = "Register `INT_THRESH` writer"]
 pub type W = crate::W<INT_THRESH_SPEC>;
-#[doc = "Field `CPU_INT_THRESH` reader - CPU interrupt threshold level"]
+#[doc = "Field `CPU_INT_THRESH` reader - Threshold for machine-mode interruption."]
 pub type CPU_INT_THRESH_R = crate::FieldReader;
-#[doc = "Field `CPU_INT_THRESH` writer - CPU interrupt threshold level"]
+#[doc = "Field `CPU_INT_THRESH` writer - Threshold for machine-mode interruption."]
 pub type CPU_INT_THRESH_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
-    #[doc = "Bits 24:31 - CPU interrupt threshold level"]
+    #[doc = "Bits 24:31 - Threshold for machine-mode interruption."]
     #[inline(always)]
     pub fn cpu_int_thresh(&self) -> CPU_INT_THRESH_R {
         CPU_INT_THRESH_R::new(((self.bits >> 24) & 0xff) as u8)
@@ -22,13 +22,13 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 24:31 - CPU interrupt threshold level"]
+    #[doc = "Bits 24:31 - Threshold for machine-mode interruption."]
     #[inline(always)]
     pub fn cpu_int_thresh(&mut self) -> CPU_INT_THRESH_W<'_, INT_THRESH_SPEC> {
         CPU_INT_THRESH_W::new(self, 24)
     }
 }
-#[doc = "Interrupt threshold register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_thresh::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_thresh::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CLIC interrupt threshold register.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_thresh::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_thresh::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_THRESH_SPEC;
 impl crate::RegisterSpec for INT_THRESH_SPEC {
     type Ux = u32;

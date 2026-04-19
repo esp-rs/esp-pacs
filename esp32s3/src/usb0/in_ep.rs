@@ -47,15 +47,9 @@ impl IN_EP {
 pub type DIEPCTL = crate::Reg<diepctl::DIEPCTL_SPEC>;
 #[doc = ""]
 pub mod diepctl;
-pub use crate::usb0::in_ep0::diepint;
-pub use crate::usb0::in_ep0::DIEPINT;
+pub use crate::usb0::in_ep0::{diepint, DIEPINT};
 #[doc = "DIEPTSIZ (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dieptsiz::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dieptsiz::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dieptsiz`] module"]
 pub type DIEPTSIZ = crate::Reg<dieptsiz::DIEPTSIZ_SPEC>;
 #[doc = ""]
 pub mod dieptsiz;
-pub use crate::usb0::in_ep0::diepdma;
-pub use crate::usb0::in_ep0::diepdmab;
-pub use crate::usb0::in_ep0::dtxfsts;
-pub use crate::usb0::in_ep0::DIEPDMA;
-pub use crate::usb0::in_ep0::DIEPDMAB;
-pub use crate::usb0::in_ep0::DTXFSTS;
+pub use crate::usb0::in_ep0::{diepdma, diepdmab, dtxfsts, DIEPDMA, DIEPDMAB, DTXFSTS};

@@ -1,6 +1,6 @@
 #[doc = "Register `ONE_BLOCK` writer"]
 pub type W = crate::W<ONE_BLOCK_SPEC>;
-#[doc = "Field `SET_ONE_BLOCK` writer - Don't have to do padding."]
+#[doc = "Field `SET_ONE_BLOCK` writer - Write 1 to indicate there is only one block which already contains padding bits and there is no need for padding."]
 pub type SET_ONE_BLOCK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ONE_BLOCK_SPEC> {
@@ -9,13 +9,13 @@ impl core::fmt::Debug for crate::generic::Reg<ONE_BLOCK_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Don't have to do padding."]
+    #[doc = "Bit 0 - Write 1 to indicate there is only one block which already contains padding bits and there is no need for padding."]
     #[inline(always)]
     pub fn set_one_block(&mut self) -> SET_ONE_BLOCK_W<'_, ONE_BLOCK_SPEC> {
         SET_ONE_BLOCK_W::new(self, 0)
     }
 }
-#[doc = "Process control register 6.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`one_block::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "One block message register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`one_block::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ONE_BLOCK_SPEC;
 impl crate::RegisterSpec for ONE_BLOCK_SPEC {
     type Ux = u32;

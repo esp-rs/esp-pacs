@@ -222,5 +222,4 @@ pub mod int_clr;
 pub type CLK = crate::Reg<clk::CLK_SPEC>;
 #[doc = ""]
 pub mod clk;
-pub use crate::apb_ctrl::date as version;
-pub use crate::apb_ctrl::DATE as VERSION;
+pub use crate::apb_ctrl::{date as version, DATE as VERSION};

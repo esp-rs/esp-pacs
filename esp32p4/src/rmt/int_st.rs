@@ -8,14 +8,14 @@ pub type CH1_TX_END_R = crate::BitReader;
 pub type CH2_TX_END_R = crate::BitReader;
 #[doc = "Field `CH3_TX_END` reader - The masked interrupt status bit for CH3_TX_END_INT."]
 pub type CH3_TX_END_R = crate::BitReader;
-#[doc = "Field `TX_CH0_ERR` reader - The masked interrupt status bit for CH0_ERR_INT."]
-pub type TX_CH0_ERR_R = crate::BitReader;
-#[doc = "Field `TX_CH1_ERR` reader - The masked interrupt status bit for CH1_ERR_INT."]
-pub type TX_CH1_ERR_R = crate::BitReader;
-#[doc = "Field `TX_CH2_ERR` reader - The masked interrupt status bit for CH2_ERR_INT."]
-pub type TX_CH2_ERR_R = crate::BitReader;
-#[doc = "Field `TX_CH3_ERR` reader - The masked interrupt status bit for CH3_ERR_INT."]
-pub type TX_CH3_ERR_R = crate::BitReader;
+#[doc = "Field `CH0_ERR` reader - The masked interrupt status bit for CH0_ERR_INT."]
+pub type CH0_ERR_R = crate::BitReader;
+#[doc = "Field `CH1_ERR` reader - The masked interrupt status bit for CH1_ERR_INT."]
+pub type CH1_ERR_R = crate::BitReader;
+#[doc = "Field `CH2_ERR` reader - The masked interrupt status bit for CH2_ERR_INT."]
+pub type CH2_ERR_R = crate::BitReader;
+#[doc = "Field `CH3_ERR` reader - The masked interrupt status bit for CH3_ERR_INT."]
+pub type CH3_ERR_R = crate::BitReader;
 #[doc = "Field `CH0_TX_THR_EVENT` reader - The masked interrupt status bit for CH0_TX_THR_EVENT_INT."]
 pub type CH0_TX_THR_EVENT_R = crate::BitReader;
 #[doc = "Field `CH1_TX_THR_EVENT` reader - The masked interrupt status bit for CH1_TX_THR_EVENT_INT."]
@@ -40,14 +40,14 @@ pub type CH5_RX_END_R = crate::BitReader;
 pub type CH6_RX_END_R = crate::BitReader;
 #[doc = "Field `CH7_RX_END` reader - The masked interrupt status bit for CH7_RX_END_INT."]
 pub type CH7_RX_END_R = crate::BitReader;
-#[doc = "Field `RX_CH4_ERR` reader - The masked interrupt status bit for CH4_ERR_INT."]
-pub type RX_CH4_ERR_R = crate::BitReader;
-#[doc = "Field `RX_CH5_ERR` reader - The masked interrupt status bit for CH5_ERR_INT."]
-pub type RX_CH5_ERR_R = crate::BitReader;
-#[doc = "Field `RX_CH6_ERR` reader - The masked interrupt status bit for CH6_ERR_INT."]
-pub type RX_CH6_ERR_R = crate::BitReader;
-#[doc = "Field `RX_CH7_ERR` reader - The masked interrupt status bit for CH7_ERR_INT."]
-pub type RX_CH7_ERR_R = crate::BitReader;
+#[doc = "Field `CH4_ERR` reader - The masked interrupt status bit for CH4_ERR_INT."]
+pub type CH4_ERR_R = crate::BitReader;
+#[doc = "Field `CH5_ERR` reader - The masked interrupt status bit for CH5_ERR_INT."]
+pub type CH5_ERR_R = crate::BitReader;
+#[doc = "Field `CH6_ERR` reader - The masked interrupt status bit for CH6_ERR_INT."]
+pub type CH6_ERR_R = crate::BitReader;
+#[doc = "Field `CH7_ERR` reader - The masked interrupt status bit for CH7_ERR_INT."]
+pub type CH7_ERR_R = crate::BitReader;
 #[doc = "Field `CH4_RX_THR_EVENT` reader - The masked interrupt status bit for CH4_RX_THR_EVENT_INT."]
 pub type CH4_RX_THR_EVENT_R = crate::BitReader;
 #[doc = "Field `CH5_RX_THR_EVENT` reader - The masked interrupt status bit for CH5_RX_THR_EVENT_INT."]
@@ -56,10 +56,10 @@ pub type CH5_RX_THR_EVENT_R = crate::BitReader;
 pub type CH6_RX_THR_EVENT_R = crate::BitReader;
 #[doc = "Field `CH7_RX_THR_EVENT` reader - The masked interrupt status bit for CH7_RX_THR_EVENT_INT."]
 pub type CH7_RX_THR_EVENT_R = crate::BitReader;
-#[doc = "Field `TX_CH3_DMA_ACCESS_FAIL` reader - The masked interrupt status bit for CH3_DMA_ACCESS_FAIL_INT."]
-pub type TX_CH3_DMA_ACCESS_FAIL_R = crate::BitReader;
-#[doc = "Field `RX_CH7_DMA_ACCESS_FAIL` reader - The masked interrupt status bit for CH7_DMA_ACCESS_FAIL_INT."]
-pub type RX_CH7_DMA_ACCESS_FAIL_R = crate::BitReader;
+#[doc = "Field `CH3_DMA_ACCESS_FAIL` reader - The masked interrupt status bit for CH3_DMA_ACCESS_FAIL_INT."]
+pub type CH3_DMA_ACCESS_FAIL_R = crate::BitReader;
+#[doc = "Field `CH7_DMA_ACCESS_FAIL` reader - The masked interrupt status bit for CH7_DMA_ACCESS_FAIL_INT."]
+pub type CH7_DMA_ACCESS_FAIL_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The masked interrupt status bit for CH0_TX_END_INT."]
     #[inline(always)]
@@ -83,23 +83,23 @@ impl R {
     }
     #[doc = "Bit 4 - The masked interrupt status bit for CH0_ERR_INT."]
     #[inline(always)]
-    pub fn tx_ch0_err(&self) -> TX_CH0_ERR_R {
-        TX_CH0_ERR_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn ch0_err(&self) -> CH0_ERR_R {
+        CH0_ERR_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - The masked interrupt status bit for CH1_ERR_INT."]
     #[inline(always)]
-    pub fn tx_ch1_err(&self) -> TX_CH1_ERR_R {
-        TX_CH1_ERR_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn ch1_err(&self) -> CH1_ERR_R {
+        CH1_ERR_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - The masked interrupt status bit for CH2_ERR_INT."]
     #[inline(always)]
-    pub fn tx_ch2_err(&self) -> TX_CH2_ERR_R {
-        TX_CH2_ERR_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn ch2_err(&self) -> CH2_ERR_R {
+        CH2_ERR_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - The masked interrupt status bit for CH3_ERR_INT."]
     #[inline(always)]
-    pub fn tx_ch3_err(&self) -> TX_CH3_ERR_R {
-        TX_CH3_ERR_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn ch3_err(&self) -> CH3_ERR_R {
+        CH3_ERR_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - The masked interrupt status bit for CH0_TX_THR_EVENT_INT."]
     #[inline(always)]
@@ -163,23 +163,23 @@ impl R {
     }
     #[doc = "Bit 20 - The masked interrupt status bit for CH4_ERR_INT."]
     #[inline(always)]
-    pub fn rx_ch4_err(&self) -> RX_CH4_ERR_R {
-        RX_CH4_ERR_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn ch4_err(&self) -> CH4_ERR_R {
+        CH4_ERR_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - The masked interrupt status bit for CH5_ERR_INT."]
     #[inline(always)]
-    pub fn rx_ch5_err(&self) -> RX_CH5_ERR_R {
-        RX_CH5_ERR_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn ch5_err(&self) -> CH5_ERR_R {
+        CH5_ERR_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - The masked interrupt status bit for CH6_ERR_INT."]
     #[inline(always)]
-    pub fn rx_ch6_err(&self) -> RX_CH6_ERR_R {
-        RX_CH6_ERR_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn ch6_err(&self) -> CH6_ERR_R {
+        CH6_ERR_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - The masked interrupt status bit for CH7_ERR_INT."]
     #[inline(always)]
-    pub fn rx_ch7_err(&self) -> RX_CH7_ERR_R {
-        RX_CH7_ERR_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn ch7_err(&self) -> CH7_ERR_R {
+        CH7_ERR_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - The masked interrupt status bit for CH4_RX_THR_EVENT_INT."]
     #[inline(always)]
@@ -203,13 +203,13 @@ impl R {
     }
     #[doc = "Bit 28 - The masked interrupt status bit for CH3_DMA_ACCESS_FAIL_INT."]
     #[inline(always)]
-    pub fn tx_ch3_dma_access_fail(&self) -> TX_CH3_DMA_ACCESS_FAIL_R {
-        TX_CH3_DMA_ACCESS_FAIL_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn ch3_dma_access_fail(&self) -> CH3_DMA_ACCESS_FAIL_R {
+        CH3_DMA_ACCESS_FAIL_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - The masked interrupt status bit for CH7_DMA_ACCESS_FAIL_INT."]
     #[inline(always)]
-    pub fn rx_ch7_dma_access_fail(&self) -> RX_CH7_DMA_ACCESS_FAIL_R {
-        RX_CH7_DMA_ACCESS_FAIL_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn ch7_dma_access_fail(&self) -> CH7_DMA_ACCESS_FAIL_R {
+        CH7_DMA_ACCESS_FAIL_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -220,10 +220,10 @@ impl core::fmt::Debug for R {
             .field("ch1_tx_end", &self.ch1_tx_end())
             .field("ch2_tx_end", &self.ch2_tx_end())
             .field("ch3_tx_end", &self.ch3_tx_end())
-            .field("tx_ch0_err", &self.tx_ch0_err())
-            .field("tx_ch1_err", &self.tx_ch1_err())
-            .field("tx_ch2_err", &self.tx_ch2_err())
-            .field("tx_ch3_err", &self.tx_ch3_err())
+            .field("ch0_err", &self.ch0_err())
+            .field("ch1_err", &self.ch1_err())
+            .field("ch2_err", &self.ch2_err())
+            .field("ch3_err", &self.ch3_err())
             .field("ch0_tx_thr_event", &self.ch0_tx_thr_event())
             .field("ch1_tx_thr_event", &self.ch1_tx_thr_event())
             .field("ch2_tx_thr_event", &self.ch2_tx_thr_event())
@@ -236,16 +236,16 @@ impl core::fmt::Debug for R {
             .field("ch5_rx_end", &self.ch5_rx_end())
             .field("ch6_rx_end", &self.ch6_rx_end())
             .field("ch7_rx_end", &self.ch7_rx_end())
-            .field("rx_ch4_err", &self.rx_ch4_err())
-            .field("rx_ch5_err", &self.rx_ch5_err())
-            .field("rx_ch6_err", &self.rx_ch6_err())
-            .field("rx_ch7_err", &self.rx_ch7_err())
+            .field("ch4_err", &self.ch4_err())
+            .field("ch5_err", &self.ch5_err())
+            .field("ch6_err", &self.ch6_err())
+            .field("ch7_err", &self.ch7_err())
             .field("ch4_rx_thr_event", &self.ch4_rx_thr_event())
             .field("ch5_rx_thr_event", &self.ch5_rx_thr_event())
             .field("ch6_rx_thr_event", &self.ch6_rx_thr_event())
             .field("ch7_rx_thr_event", &self.ch7_rx_thr_event())
-            .field("tx_ch3_dma_access_fail", &self.tx_ch3_dma_access_fail())
-            .field("rx_ch7_dma_access_fail", &self.rx_ch7_dma_access_fail())
+            .field("ch3_dma_access_fail", &self.ch3_dma_access_fail())
+            .field("ch7_dma_access_fail", &self.ch7_dma_access_fail())
             .finish()
     }
 }

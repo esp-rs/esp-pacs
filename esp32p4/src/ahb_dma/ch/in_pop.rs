@@ -2,33 +2,33 @@
 pub type R = crate::R<IN_POP_SPEC>;
 #[doc = "Register `IN_POP` writer"]
 pub type W = crate::W<IN_POP_SPEC>;
-#[doc = "Field `INFIFO_RDATA` reader - This register stores the data popping from AHB_DMA FIFO."]
-pub type INFIFO_RDATA_R = crate::FieldReader<u16>;
-#[doc = "Field `INFIFO_POP` writer - Set this bit to pop data from AHB_DMA FIFO."]
-pub type INFIFO_POP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `INFIFO_RDATA_CH0` reader - Represents the data popped from AHB_DMA FIFO."]
+pub type INFIFO_RDATA_CH0_R = crate::FieldReader<u16>;
+#[doc = "Field `INFIFO_POP_CH0` writer - Configures whether to pop data from AHB_DMA FIFO.\\\\0: Invalid. No effect\\\\1: Pop\\\\"]
+pub type INFIFO_POP_CH0_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:11 - This register stores the data popping from AHB_DMA FIFO."]
+    #[doc = "Bits 0:11 - Represents the data popped from AHB_DMA FIFO."]
     #[inline(always)]
-    pub fn infifo_rdata(&self) -> INFIFO_RDATA_R {
-        INFIFO_RDATA_R::new((self.bits & 0x0fff) as u16)
+    pub fn infifo_rdata_ch0(&self) -> INFIFO_RDATA_CH0_R {
+        INFIFO_RDATA_CH0_R::new((self.bits & 0x0fff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_POP")
-            .field("infifo_rdata", &self.infifo_rdata())
+            .field("infifo_rdata_ch0", &self.infifo_rdata_ch0())
             .finish()
     }
 }
 impl W {
-    #[doc = "Bit 12 - Set this bit to pop data from AHB_DMA FIFO."]
+    #[doc = "Bit 12 - Configures whether to pop data from AHB_DMA FIFO.\\\\0: Invalid. No effect\\\\1: Pop\\\\"]
     #[inline(always)]
-    pub fn infifo_pop(&mut self) -> INFIFO_POP_W<'_, IN_POP_SPEC> {
-        INFIFO_POP_W::new(self, 12)
+    pub fn infifo_pop_ch0(&mut self) -> INFIFO_POP_CH0_W<'_, IN_POP_SPEC> {
+        INFIFO_POP_CH0_W::new(self, 12)
     }
 }
-#[doc = "Pop control register of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_pop::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_pop::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Receive FIFO status of RX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_pop::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_pop::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN_POP_SPEC;
 impl crate::RegisterSpec for IN_POP_SPEC {
     type Ux = u32;

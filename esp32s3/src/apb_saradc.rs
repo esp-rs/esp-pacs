@@ -286,5 +286,4 @@ pub type APB_SARADC2_DATA_STATUS =
     crate::Reg<apb_saradc2_data_status::APB_SARADC2_DATA_STATUS_SPEC>;
 #[doc = "get apb saradc2 sample data"]
 pub mod apb_saradc2_data_status;
-pub use crate::aes::date as ctrl_date;
-pub use crate::aes::DATE as CTRL_DATE;
+pub use crate::aes::{date as ctrl_date, DATE as CTRL_DATE};

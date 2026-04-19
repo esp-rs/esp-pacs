@@ -2,41 +2,41 @@
 pub type R = crate::R<SCL_STRETCH_CONF_SPEC>;
 #[doc = "Register `SCL_STRETCH_CONF` writer"]
 pub type W = crate::W<SCL_STRETCH_CONF_SPEC>;
-#[doc = "Field `STRETCH_PROTECT_NUM` reader - Configures the time period to release the SCL line from stretching to avoid timing violation. Usually it should be larger than the SDA setup time. Measurement unit: i2c_sclk"]
+#[doc = "Field `STRETCH_PROTECT_NUM` reader - Configures the time period to release the SCL line from stretching to avoid timing violation. Usually it should be larger than the SDA setup time.\\\\ Measurement unit: i2c_sclk \\\\"]
 pub type STRETCH_PROTECT_NUM_R = crate::FieldReader<u16>;
-#[doc = "Field `STRETCH_PROTECT_NUM` writer - Configures the time period to release the SCL line from stretching to avoid timing violation. Usually it should be larger than the SDA setup time. Measurement unit: i2c_sclk"]
+#[doc = "Field `STRETCH_PROTECT_NUM` writer - Configures the time period to release the SCL line from stretching to avoid timing violation. Usually it should be larger than the SDA setup time.\\\\ Measurement unit: i2c_sclk \\\\"]
 pub type STRETCH_PROTECT_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
-#[doc = "Field `SLAVE_SCL_STRETCH_EN` reader - Configures to enable slave SCL stretch function. 0: Disable 1: Enable The SCL output line will be stretched low when reg_slave_scl_stretch_en is 1 and stretch event happens. The stretch cause can be seen in reg_stretch_cause."]
+#[doc = "Field `SLAVE_SCL_STRETCH_EN` reader - Configures to enable slave SCL stretch function. The SCL output line will be stretched low when I2C_SLAVE_SCL_STRETCH_EN is 1 and stretch event happens. The stretch cause can be seen in I2C_STRETCH_CAUSE.\\\\ 0: Disable \\\\ 1: Enable \\\\"]
 pub type SLAVE_SCL_STRETCH_EN_R = crate::BitReader;
-#[doc = "Field `SLAVE_SCL_STRETCH_EN` writer - Configures to enable slave SCL stretch function. 0: Disable 1: Enable The SCL output line will be stretched low when reg_slave_scl_stretch_en is 1 and stretch event happens. The stretch cause can be seen in reg_stretch_cause."]
+#[doc = "Field `SLAVE_SCL_STRETCH_EN` writer - Configures to enable slave SCL stretch function. The SCL output line will be stretched low when I2C_SLAVE_SCL_STRETCH_EN is 1 and stretch event happens. The stretch cause can be seen in I2C_STRETCH_CAUSE.\\\\ 0: Disable \\\\ 1: Enable \\\\"]
 pub type SLAVE_SCL_STRETCH_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SLAVE_SCL_STRETCH_CLR` writer - Configures to clear the I2C slave SCL stretch function. 0: No effect 1: Clear"]
+#[doc = "Field `SLAVE_SCL_STRETCH_CLR` writer - Configures to clear the I2C slave SCL stretch function.\\\\ 0: No effect \\\\ 1: Clear\\\\"]
 pub type SLAVE_SCL_STRETCH_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SLAVE_BYTE_ACK_CTL_EN` reader - Configures to enable the function for slave to control ACK level. 0: Disable 1: Enable"]
+#[doc = "Field `SLAVE_BYTE_ACK_CTL_EN` reader - Configures to enable the function for slave to control ACK level.\\\\ 0: Disable \\\\ 1: Enable \\\\"]
 pub type SLAVE_BYTE_ACK_CTL_EN_R = crate::BitReader;
-#[doc = "Field `SLAVE_BYTE_ACK_CTL_EN` writer - Configures to enable the function for slave to control ACK level. 0: Disable 1: Enable"]
+#[doc = "Field `SLAVE_BYTE_ACK_CTL_EN` writer - Configures to enable the function for slave to control ACK level.\\\\ 0: Disable \\\\ 1: Enable \\\\"]
 pub type SLAVE_BYTE_ACK_CTL_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SLAVE_BYTE_ACK_LVL` reader - Set the ACK level when slave controlling ACK level function enables. 0: Low level 1: High level"]
+#[doc = "Field `SLAVE_BYTE_ACK_LVL` reader - Set the ACK level when slave controlling ACK level function enables.\\\\ 0: Low level\\\\ 1: High level \\\\"]
 pub type SLAVE_BYTE_ACK_LVL_R = crate::BitReader;
-#[doc = "Field `SLAVE_BYTE_ACK_LVL` writer - Set the ACK level when slave controlling ACK level function enables. 0: Low level 1: High level"]
+#[doc = "Field `SLAVE_BYTE_ACK_LVL` writer - Set the ACK level when slave controlling ACK level function enables.\\\\ 0: Low level\\\\ 1: High level \\\\"]
 pub type SLAVE_BYTE_ACK_LVL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:9 - Configures the time period to release the SCL line from stretching to avoid timing violation. Usually it should be larger than the SDA setup time. Measurement unit: i2c_sclk"]
+    #[doc = "Bits 0:9 - Configures the time period to release the SCL line from stretching to avoid timing violation. Usually it should be larger than the SDA setup time.\\\\ Measurement unit: i2c_sclk \\\\"]
     #[inline(always)]
     pub fn stretch_protect_num(&self) -> STRETCH_PROTECT_NUM_R {
         STRETCH_PROTECT_NUM_R::new((self.bits & 0x03ff) as u16)
     }
-    #[doc = "Bit 10 - Configures to enable slave SCL stretch function. 0: Disable 1: Enable The SCL output line will be stretched low when reg_slave_scl_stretch_en is 1 and stretch event happens. The stretch cause can be seen in reg_stretch_cause."]
+    #[doc = "Bit 10 - Configures to enable slave SCL stretch function. The SCL output line will be stretched low when I2C_SLAVE_SCL_STRETCH_EN is 1 and stretch event happens. The stretch cause can be seen in I2C_STRETCH_CAUSE.\\\\ 0: Disable \\\\ 1: Enable \\\\"]
     #[inline(always)]
     pub fn slave_scl_stretch_en(&self) -> SLAVE_SCL_STRETCH_EN_R {
         SLAVE_SCL_STRETCH_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bit 12 - Configures to enable the function for slave to control ACK level. 0: Disable 1: Enable"]
+    #[doc = "Bit 12 - Configures to enable the function for slave to control ACK level.\\\\ 0: Disable \\\\ 1: Enable \\\\"]
     #[inline(always)]
     pub fn slave_byte_ack_ctl_en(&self) -> SLAVE_BYTE_ACK_CTL_EN_R {
         SLAVE_BYTE_ACK_CTL_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
-    #[doc = "Bit 13 - Set the ACK level when slave controlling ACK level function enables. 0: Low level 1: High level"]
+    #[doc = "Bit 13 - Set the ACK level when slave controlling ACK level function enables.\\\\ 0: Low level\\\\ 1: High level \\\\"]
     #[inline(always)]
     pub fn slave_byte_ack_lvl(&self) -> SLAVE_BYTE_ACK_LVL_R {
         SLAVE_BYTE_ACK_LVL_R::new(((self.bits >> 13) & 1) != 0)
@@ -54,27 +54,27 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:9 - Configures the time period to release the SCL line from stretching to avoid timing violation. Usually it should be larger than the SDA setup time. Measurement unit: i2c_sclk"]
+    #[doc = "Bits 0:9 - Configures the time period to release the SCL line from stretching to avoid timing violation. Usually it should be larger than the SDA setup time.\\\\ Measurement unit: i2c_sclk \\\\"]
     #[inline(always)]
     pub fn stretch_protect_num(&mut self) -> STRETCH_PROTECT_NUM_W<'_, SCL_STRETCH_CONF_SPEC> {
         STRETCH_PROTECT_NUM_W::new(self, 0)
     }
-    #[doc = "Bit 10 - Configures to enable slave SCL stretch function. 0: Disable 1: Enable The SCL output line will be stretched low when reg_slave_scl_stretch_en is 1 and stretch event happens. The stretch cause can be seen in reg_stretch_cause."]
+    #[doc = "Bit 10 - Configures to enable slave SCL stretch function. The SCL output line will be stretched low when I2C_SLAVE_SCL_STRETCH_EN is 1 and stretch event happens. The stretch cause can be seen in I2C_STRETCH_CAUSE.\\\\ 0: Disable \\\\ 1: Enable \\\\"]
     #[inline(always)]
     pub fn slave_scl_stretch_en(&mut self) -> SLAVE_SCL_STRETCH_EN_W<'_, SCL_STRETCH_CONF_SPEC> {
         SLAVE_SCL_STRETCH_EN_W::new(self, 10)
     }
-    #[doc = "Bit 11 - Configures to clear the I2C slave SCL stretch function. 0: No effect 1: Clear"]
+    #[doc = "Bit 11 - Configures to clear the I2C slave SCL stretch function.\\\\ 0: No effect \\\\ 1: Clear\\\\"]
     #[inline(always)]
     pub fn slave_scl_stretch_clr(&mut self) -> SLAVE_SCL_STRETCH_CLR_W<'_, SCL_STRETCH_CONF_SPEC> {
         SLAVE_SCL_STRETCH_CLR_W::new(self, 11)
     }
-    #[doc = "Bit 12 - Configures to enable the function for slave to control ACK level. 0: Disable 1: Enable"]
+    #[doc = "Bit 12 - Configures to enable the function for slave to control ACK level.\\\\ 0: Disable \\\\ 1: Enable \\\\"]
     #[inline(always)]
     pub fn slave_byte_ack_ctl_en(&mut self) -> SLAVE_BYTE_ACK_CTL_EN_W<'_, SCL_STRETCH_CONF_SPEC> {
         SLAVE_BYTE_ACK_CTL_EN_W::new(self, 12)
     }
-    #[doc = "Bit 13 - Set the ACK level when slave controlling ACK level function enables. 0: Low level 1: High level"]
+    #[doc = "Bit 13 - Set the ACK level when slave controlling ACK level function enables.\\\\ 0: Low level\\\\ 1: High level \\\\"]
     #[inline(always)]
     pub fn slave_byte_ack_lvl(&mut self) -> SLAVE_BYTE_ACK_LVL_W<'_, SCL_STRETCH_CONF_SPEC> {
         SLAVE_BYTE_ACK_LVL_W::new(self, 13)

@@ -245,5 +245,4 @@ pub mod bck_cnt;
 pub type CLK_GATE = crate::Reg<clk_gate::CLK_GATE_SPEC>;
 #[doc = "Clock gate register"]
 pub mod clk_gate;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

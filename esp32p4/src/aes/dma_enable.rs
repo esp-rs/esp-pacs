@@ -2,12 +2,12 @@
 pub type R = crate::R<DMA_ENABLE_SPEC>;
 #[doc = "Register `DMA_ENABLE` writer"]
 pub type W = crate::W<DMA_ENABLE_SPEC>;
-#[doc = "Field `DMA_ENABLE` reader - 1'b0: typical AES working mode, 1'b1: DMA-AES working mode."]
+#[doc = "Field `DMA_ENABLE` reader - Configures the working mode of the AES accelerator. \\\\ 0: Typical AES\\\\ 1: DMA-AES\\\\"]
 pub type DMA_ENABLE_R = crate::BitReader;
-#[doc = "Field `DMA_ENABLE` writer - 1'b0: typical AES working mode, 1'b1: DMA-AES working mode."]
+#[doc = "Field `DMA_ENABLE` writer - Configures the working mode of the AES accelerator. \\\\ 0: Typical AES\\\\ 1: DMA-AES\\\\"]
 pub type DMA_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - 1'b0: typical AES working mode, 1'b1: DMA-AES working mode."]
+    #[doc = "Bit 0 - Configures the working mode of the AES accelerator. \\\\ 0: Typical AES\\\\ 1: DMA-AES\\\\"]
     #[inline(always)]
     pub fn dma_enable(&self) -> DMA_ENABLE_R {
         DMA_ENABLE_R::new((self.bits & 1) != 0)
@@ -22,13 +22,13 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - 1'b0: typical AES working mode, 1'b1: DMA-AES working mode."]
+    #[doc = "Bit 0 - Configures the working mode of the AES accelerator. \\\\ 0: Typical AES\\\\ 1: DMA-AES\\\\"]
     #[inline(always)]
     pub fn dma_enable(&mut self) -> DMA_ENABLE_W<'_, DMA_ENABLE_SPEC> {
         DMA_ENABLE_W::new(self, 0)
     }
 }
-#[doc = "DMA-AES working mode register\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_enable::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_enable::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Selects the working mode of the AES accelerator\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_enable::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_enable::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_ENABLE_SPEC;
 impl crate::RegisterSpec for DMA_ENABLE_SPEC {
     type Ux = u32;

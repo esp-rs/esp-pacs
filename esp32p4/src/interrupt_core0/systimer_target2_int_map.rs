@@ -2,35 +2,72 @@
 pub type R = crate::R<SYSTIMER_TARGET2_INT_MAP_SPEC>;
 #[doc = "Register `SYSTIMER_TARGET2_INT_MAP` writer"]
 pub type W = crate::W<SYSTIMER_TARGET2_INT_MAP_SPEC>;
-#[doc = "Field `CORE0_SYSTIMER_TARGET2_INT_MAP` reader - NA"]
-pub type CORE0_SYSTIMER_TARGET2_INT_MAP_R = crate::FieldReader;
-#[doc = "Field `CORE0_SYSTIMER_TARGET2_INT_MAP` writer - NA"]
-pub type CORE0_SYSTIMER_TARGET2_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `SYSTIMER_TARGET2_INT_MAP` reader - Configures the interrupt source into one CPU interrupt."]
+pub type SYSTIMER_TARGET2_INT_MAP_R = crate::FieldReader;
+#[doc = "Field `SYSTIMER_TARGET2_INT_MAP` writer - Configures the interrupt source into one CPU interrupt."]
+pub type SYSTIMER_TARGET2_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `SYSTIMER_TARGET2_INT_SRC_PASS_IN_SEC` reader - NA"]
+pub type SYSTIMER_TARGET2_INT_SRC_PASS_IN_SEC_R = crate::BitReader;
+#[doc = "Field `SYSTIMER_TARGET2_INT_SRC_PASS_IN_SEC` writer - NA"]
+pub type SYSTIMER_TARGET2_INT_SRC_PASS_IN_SEC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SYSTIMER_TARGET2_INT_SRC_IN_SEC_FLAG` reader - NA"]
+pub type SYSTIMER_TARGET2_INT_SRC_IN_SEC_FLAG_R = crate::BitReader;
+#[doc = "Field `SYSTIMER_TARGET2_INT_SRC_IN_SEC_FLAG` writer - NA"]
+pub type SYSTIMER_TARGET2_INT_SRC_IN_SEC_FLAG_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:5 - NA"]
+    #[doc = "Bits 0:5 - Configures the interrupt source into one CPU interrupt."]
     #[inline(always)]
-    pub fn core0_systimer_target2_int_map(&self) -> CORE0_SYSTIMER_TARGET2_INT_MAP_R {
-        CORE0_SYSTIMER_TARGET2_INT_MAP_R::new((self.bits & 0x3f) as u8)
+    pub fn systimer_target2_int_map(&self) -> SYSTIMER_TARGET2_INT_MAP_R {
+        SYSTIMER_TARGET2_INT_MAP_R::new((self.bits & 0x3f) as u8)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn systimer_target2_int_src_pass_in_sec(&self) -> SYSTIMER_TARGET2_INT_SRC_PASS_IN_SEC_R {
+        SYSTIMER_TARGET2_INT_SRC_PASS_IN_SEC_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn systimer_target2_int_src_in_sec_flag(&self) -> SYSTIMER_TARGET2_INT_SRC_IN_SEC_FLAG_R {
+        SYSTIMER_TARGET2_INT_SRC_IN_SEC_FLAG_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYSTIMER_TARGET2_INT_MAP")
+            .field("systimer_target2_int_map", &self.systimer_target2_int_map())
             .field(
-                "core0_systimer_target2_int_map",
-                &self.core0_systimer_target2_int_map(),
+                "systimer_target2_int_src_pass_in_sec",
+                &self.systimer_target2_int_src_pass_in_sec(),
+            )
+            .field(
+                "systimer_target2_int_src_in_sec_flag",
+                &self.systimer_target2_int_src_in_sec_flag(),
             )
             .finish()
     }
 }
 impl W {
-    #[doc = "Bits 0:5 - NA"]
+    #[doc = "Bits 0:5 - Configures the interrupt source into one CPU interrupt."]
     #[inline(always)]
-    pub fn core0_systimer_target2_int_map(
+    pub fn systimer_target2_int_map(
         &mut self,
-    ) -> CORE0_SYSTIMER_TARGET2_INT_MAP_W<'_, SYSTIMER_TARGET2_INT_MAP_SPEC> {
-        CORE0_SYSTIMER_TARGET2_INT_MAP_W::new(self, 0)
+    ) -> SYSTIMER_TARGET2_INT_MAP_W<'_, SYSTIMER_TARGET2_INT_MAP_SPEC> {
+        SYSTIMER_TARGET2_INT_MAP_W::new(self, 0)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn systimer_target2_int_src_pass_in_sec(
+        &mut self,
+    ) -> SYSTIMER_TARGET2_INT_SRC_PASS_IN_SEC_W<'_, SYSTIMER_TARGET2_INT_MAP_SPEC> {
+        SYSTIMER_TARGET2_INT_SRC_PASS_IN_SEC_W::new(self, 6)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn systimer_target2_int_src_in_sec_flag(
+        &mut self,
+    ) -> SYSTIMER_TARGET2_INT_SRC_IN_SEC_FLAG_W<'_, SYSTIMER_TARGET2_INT_MAP_SPEC> {
+        SYSTIMER_TARGET2_INT_SRC_IN_SEC_FLAG_W::new(self, 7)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`systimer_target2_int_map::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`systimer_target2_int_map::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

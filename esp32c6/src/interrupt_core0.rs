@@ -54,5 +54,4 @@ pub mod core_0_intr_status;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "register description"]
 pub mod clock_gate;
-pub use crate::aes::date as interrupt_reg_date;
-pub use crate::aes::DATE as INTERRUPT_REG_DATE;
+pub use crate::aes::{date as interrupt_reg_date, DATE as INTERRUPT_REG_DATE};

@@ -13,6 +13,6 @@ log        = "0.4.27"
 rayon      = "1.11.0"
 semver     = "1.0.26"
 strum      = { version = "0.27.2", features = ["derive"] }
-svd2rust   = { version = "0.37.0", features = ["serde", "yaml"], default-features = false }
+svd2rust   = { git = "https://github.com/MabezDev/svd2rust", branch = "skip-peripherals-struct-0.37.1", features = ["serde", "yaml"], default-features = false }
 svdtools   = "0.5.0"
 toml_edit  = "0.23.3"

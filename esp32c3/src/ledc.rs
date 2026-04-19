@@ -97,5 +97,4 @@ pub mod int_clr;
 pub type CONF = crate::Reg<conf::CONF_SPEC>;
 #[doc = "LEDC_CONF."]
 pub mod conf;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

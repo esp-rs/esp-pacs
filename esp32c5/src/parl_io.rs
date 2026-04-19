@@ -213,5 +213,4 @@ pub mod tx_clk_cfg;
 pub type CLK = crate::Reg<clk::CLK_SPEC>;
 #[doc = "Parallel IO clk configuration register"]
 pub mod clk;
-pub use crate::aes::date as version;
-pub use crate::aes::DATE as VERSION;
+pub use crate::aes::{date as version, DATE as VERSION};

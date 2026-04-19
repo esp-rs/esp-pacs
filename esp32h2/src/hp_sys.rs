@@ -177,5 +177,4 @@ pub mod rnd_eco_high;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "HP-SYSTEM clock gating configure register"]
 pub mod clock_gate;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

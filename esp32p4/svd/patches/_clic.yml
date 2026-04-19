@@ -1,0 +1,104 @@
+# IDF CLIC description slightly differs from the common_patch/clic.yml,
+# that is why this file exists.
+_add:
+  CLIC:
+    description: Core Local Interrupt Controller (CLIC)
+    baseAddress: 0x20800000
+    groupName: CLIC
+    addressBlock:
+      offset: 0x0
+      size: 0x10C0
+      usage: registers
+    registers:
+      INT_CONFIG:
+        description: CLIC interrupt configuration register.
+        addressOffset: 0x0
+        size: 32
+        fields:
+          NMBITS:
+            description: Effective number of privilege-state bits.
+            bitOffset: 5
+            bitWidth: 2
+            access: read-only
+          MNLBITS:
+            description: Interrupt priority effective digits, maximum value is 8.
+            bitOffset: 1
+            bitWidth: 4
+            access: read-write
+          NVBITS:
+            description: Hardware vector interrupt implementation flag.
+            bitOffset: 0
+            bitWidth: 1
+            access: read-only
+
+      INT_INFO:
+        description: CLIC interrupt information register.
+        addressOffset: 0x4
+        size: 32
+        access: read-only
+        fields:
+          CTLBITS:
+            description: Effective bits of priority in CLICINTCTL.
+            bitOffset: 21
+            bitWidth: 4
+            access: read-only
+          VERSION:
+            description: CLIC hardware/architecture version.
+            bitOffset: 13
+            bitWidth: 8
+            access: read-only
+          NUM_INT:
+            description: Number of interrupt sources.
+            bitOffset: 0
+            bitWidth: 13
+            access: read-only
+
+      INT_THRESH:
+        description: CLIC interrupt threshold register.
+        addressOffset: 0x8
+        size: 32
+        fields:
+          CPU_INT_THRESH:
+            description: Threshold for machine-mode interruption.
+            bitOffset: 24
+            bitWidth: 8
+            access: read-write
+
+      INT_CTRL%s:
+        description: Interrupt control register for source %s.
+        addressOffset: 0x1000
+        size: 32
+        dim: 48
+        dimIncrement: 0x4
+        dimIndex: 0-47
+        fields:
+          INT_CTL:
+            description: Interrupt priority/level control.
+            bitOffset: 24
+            bitWidth: 8
+            access: read-write
+          INT_ATTR_MODE:
+            description: Privilege mode of the interrupt (fixed by hardware).
+            bitOffset: 22
+            bitWidth: 2
+            access: read-only
+          INT_ATTR_TRIG:
+            description: Trigger type/polarity.
+            bitOffset: 17
+            bitWidth: 2
+            access: read-write
+          INT_ATTR_SHV:
+            description: 1 means hardware-vectored interrupt.
+            bitOffset: 16
+            bitWidth: 1
+            access: read-write
+          INT_IE:
+            description: Interrupt enable bit.
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+          INT_IP:
+            description: Interrupt pending bit.
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write

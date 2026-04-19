@@ -184,5 +184,4 @@ pub mod debug_sel1;
 pub type LPI2C = crate::Reg<lpi2c::LPI2C_SPEC>;
 #[doc = "need des"]
 pub mod lpi2c;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

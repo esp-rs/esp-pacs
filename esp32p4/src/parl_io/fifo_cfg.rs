@@ -2,21 +2,21 @@
 pub type R = crate::R<FIFO_CFG_SPEC>;
 #[doc = "Register `FIFO_CFG` writer"]
 pub type W = crate::W<FIFO_CFG_SPEC>;
-#[doc = "Field `TX_FIFO_SRST` reader - Set this bit to reset async fifo in tx module."]
+#[doc = "Field `TX_FIFO_SRST` reader - Write 1 to reset async fifo in tx module."]
 pub type TX_FIFO_SRST_R = crate::BitReader;
-#[doc = "Field `TX_FIFO_SRST` writer - Set this bit to reset async fifo in tx module."]
+#[doc = "Field `TX_FIFO_SRST` writer - Write 1 to reset async fifo in tx module."]
 pub type TX_FIFO_SRST_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RX_FIFO_SRST` reader - Set this bit to reset async fifo in rx module."]
+#[doc = "Field `RX_FIFO_SRST` reader - Write 1 to reset async fifo in rx module."]
 pub type RX_FIFO_SRST_R = crate::BitReader;
-#[doc = "Field `RX_FIFO_SRST` writer - Set this bit to reset async fifo in rx module."]
+#[doc = "Field `RX_FIFO_SRST` writer - Write 1 to reset async fifo in rx module."]
 pub type RX_FIFO_SRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 30 - Set this bit to reset async fifo in tx module."]
+    #[doc = "Bit 30 - Write 1 to reset async fifo in tx module."]
     #[inline(always)]
     pub fn tx_fifo_srst(&self) -> TX_FIFO_SRST_R {
         TX_FIFO_SRST_R::new(((self.bits >> 30) & 1) != 0)
     }
-    #[doc = "Bit 31 - Set this bit to reset async fifo in rx module."]
+    #[doc = "Bit 31 - Write 1 to reset async fifo in rx module."]
     #[inline(always)]
     pub fn rx_fifo_srst(&self) -> RX_FIFO_SRST_R {
         RX_FIFO_SRST_R::new(((self.bits >> 31) & 1) != 0)
@@ -32,12 +32,12 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 30 - Set this bit to reset async fifo in tx module."]
+    #[doc = "Bit 30 - Write 1 to reset async fifo in tx module."]
     #[inline(always)]
     pub fn tx_fifo_srst(&mut self) -> TX_FIFO_SRST_W<'_, FIFO_CFG_SPEC> {
         TX_FIFO_SRST_W::new(self, 30)
     }
-    #[doc = "Bit 31 - Set this bit to reset async fifo in rx module."]
+    #[doc = "Bit 31 - Write 1 to reset async fifo in rx module."]
     #[inline(always)]
     pub fn rx_fifo_srst(&mut self) -> RX_FIFO_SRST_W<'_, FIFO_CFG_SPEC> {
         RX_FIFO_SRST_W::new(self, 31)

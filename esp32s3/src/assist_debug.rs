@@ -147,5 +147,4 @@ pub mod log_mem_writing_addr;
 pub type LOG_MEM_FULL_FLAG = crate::Reg<log_mem_full_flag::LOG_MEM_FULL_FLAG_SPEC>;
 #[doc = "log mem status register"]
 pub mod log_mem_full_flag;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

@@ -400,5 +400,4 @@ pub mod ref_cnt_rst;
 pub type CH_RX_CARRIER_RM = crate::Reg<ch_rx_carrier_rm::CH_RX_CARRIER_RM_SPEC>;
 #[doc = "Channel %s carrier remove register"]
 pub mod ch_rx_carrier_rm;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

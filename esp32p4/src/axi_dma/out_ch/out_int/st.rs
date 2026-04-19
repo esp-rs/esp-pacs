@@ -20,6 +20,8 @@ pub type OUTFIFO_L1_UDF_R = crate::BitReader;
 pub type OUTFIFO_L3_OVF_R = crate::BitReader;
 #[doc = "Field `OUTFIFO_L3_UDF` reader - The raw interrupt status bit for the OUTFIFO_UDF_L3_CH_INT interrupt."]
 pub type OUTFIFO_L3_UDF_R = crate::BitReader;
+#[doc = "Field `OUT_LINK_SWITCH` reader - The raw interrupt status bit for the OUT_LINK_SWITCH_CH_INT interrupt."]
+pub type OUT_LINK_SWITCH_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the OUT_DONE_CH_INT interrupt."]
     #[inline(always)]
@@ -71,6 +73,11 @@ impl R {
     pub fn outfifo_l3_udf(&self) -> OUTFIFO_L3_UDF_R {
         OUTFIFO_L3_UDF_R::new(((self.bits >> 9) & 1) != 0)
     }
+    #[doc = "Bit 10 - The raw interrupt status bit for the OUT_LINK_SWITCH_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn out_link_switch(&self) -> OUT_LINK_SWITCH_R {
+        OUT_LINK_SWITCH_R::new(((self.bits >> 10) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -86,6 +93,7 @@ impl core::fmt::Debug for R {
             .field("outfifo_l1_udf", &self.outfifo_l1_udf())
             .field("outfifo_l3_ovf", &self.outfifo_l3_ovf())
             .field("outfifo_l3_udf", &self.outfifo_l3_udf())
+            .field("out_link_switch", &self.out_link_switch())
             .finish()
     }
 }

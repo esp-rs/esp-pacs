@@ -42,6 +42,10 @@ pub type OUTFIFO_L3_OVF_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type OUTFIFO_L3_UDF_R = crate::BitReader;
 #[doc = "Field `OUTFIFO_L3_UDF` writer - The interrupt enable bit for the OUTFIFO_UDF_L3_CH_INT interrupt."]
 pub type OUTFIFO_L3_UDF_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OUT_LINK_SWITCH` reader - The interrupt enable bit for the OUT_LINK_SWITCH_CH_INT interrupt."]
+pub type OUT_LINK_SWITCH_R = crate::BitReader;
+#[doc = "Field `OUT_LINK_SWITCH` writer - The interrupt enable bit for the OUT_LINK_SWITCH_CH_INT interrupt."]
+pub type OUT_LINK_SWITCH_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The interrupt enable bit for the OUT_DONE_CH_INT interrupt."]
     #[inline(always)]
@@ -93,6 +97,11 @@ impl R {
     pub fn outfifo_l3_udf(&self) -> OUTFIFO_L3_UDF_R {
         OUTFIFO_L3_UDF_R::new(((self.bits >> 9) & 1) != 0)
     }
+    #[doc = "Bit 10 - The interrupt enable bit for the OUT_LINK_SWITCH_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn out_link_switch(&self) -> OUT_LINK_SWITCH_R {
+        OUT_LINK_SWITCH_R::new(((self.bits >> 10) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -108,6 +117,7 @@ impl core::fmt::Debug for R {
             .field("outfifo_l2_udf", &self.outfifo_l2_udf())
             .field("outfifo_l3_ovf", &self.outfifo_l3_ovf())
             .field("outfifo_l3_udf", &self.outfifo_l3_udf())
+            .field("out_link_switch", &self.out_link_switch())
             .finish()
     }
 }
@@ -161,6 +171,11 @@ impl W {
     #[inline(always)]
     pub fn outfifo_l3_udf(&mut self) -> OUTFIFO_L3_UDF_W<'_, ENA_SPEC> {
         OUTFIFO_L3_UDF_W::new(self, 9)
+    }
+    #[doc = "Bit 10 - The interrupt enable bit for the OUT_LINK_SWITCH_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn out_link_switch(&mut self) -> OUT_LINK_SWITCH_W<'_, ENA_SPEC> {
+        OUT_LINK_SWITCH_W::new(self, 10)
     }
 }
 #[doc = "Interrupt enable bits of channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

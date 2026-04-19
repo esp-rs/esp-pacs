@@ -262,5 +262,4 @@ pub mod tsens_ctrl2;
 pub type CALI = crate::Reg<cali::CALI_SPEC>;
 #[doc = "digital saradc configure register"]
 pub mod cali;
-pub use crate::aes::date as ctrl_date;
-pub use crate::aes::DATE as CTRL_DATE;
+pub use crate::aes::{date as ctrl_date, DATE as CTRL_DATE};

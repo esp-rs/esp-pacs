@@ -2,30 +2,70 @@
 pub type R = crate::R<GPIO_INT2_MAP_SPEC>;
 #[doc = "Register `GPIO_INT2_MAP` writer"]
 pub type W = crate::W<GPIO_INT2_MAP_SPEC>;
-#[doc = "Field `CORE0_GPIO_INT2_MAP` reader - NA"]
-pub type CORE0_GPIO_INT2_MAP_R = crate::FieldReader;
-#[doc = "Field `CORE0_GPIO_INT2_MAP` writer - NA"]
-pub type CORE0_GPIO_INT2_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `GPIO_INT2_MAP` reader - Configures the interrupt source into one CPU interrupt."]
+pub type GPIO_INT2_MAP_R = crate::FieldReader;
+#[doc = "Field `GPIO_INT2_MAP` writer - Configures the interrupt source into one CPU interrupt."]
+pub type GPIO_INT2_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `GPIO_INT2_SRC_PASS_IN_SEC` reader - NA"]
+pub type GPIO_INT2_SRC_PASS_IN_SEC_R = crate::BitReader;
+#[doc = "Field `GPIO_INT2_SRC_PASS_IN_SEC` writer - NA"]
+pub type GPIO_INT2_SRC_PASS_IN_SEC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GPIO_INT2_SRC_IN_SEC_FLAG` reader - NA"]
+pub type GPIO_INT2_SRC_IN_SEC_FLAG_R = crate::BitReader;
+#[doc = "Field `GPIO_INT2_SRC_IN_SEC_FLAG` writer - NA"]
+pub type GPIO_INT2_SRC_IN_SEC_FLAG_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:5 - NA"]
+    #[doc = "Bits 0:5 - Configures the interrupt source into one CPU interrupt."]
     #[inline(always)]
-    pub fn core0_gpio_int2_map(&self) -> CORE0_GPIO_INT2_MAP_R {
-        CORE0_GPIO_INT2_MAP_R::new((self.bits & 0x3f) as u8)
+    pub fn gpio_int2_map(&self) -> GPIO_INT2_MAP_R {
+        GPIO_INT2_MAP_R::new((self.bits & 0x3f) as u8)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn gpio_int2_src_pass_in_sec(&self) -> GPIO_INT2_SRC_PASS_IN_SEC_R {
+        GPIO_INT2_SRC_PASS_IN_SEC_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn gpio_int2_src_in_sec_flag(&self) -> GPIO_INT2_SRC_IN_SEC_FLAG_R {
+        GPIO_INT2_SRC_IN_SEC_FLAG_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIO_INT2_MAP")
-            .field("core0_gpio_int2_map", &self.core0_gpio_int2_map())
+            .field("gpio_int2_map", &self.gpio_int2_map())
+            .field(
+                "gpio_int2_src_pass_in_sec",
+                &self.gpio_int2_src_pass_in_sec(),
+            )
+            .field(
+                "gpio_int2_src_in_sec_flag",
+                &self.gpio_int2_src_in_sec_flag(),
+            )
             .finish()
     }
 }
 impl W {
-    #[doc = "Bits 0:5 - NA"]
+    #[doc = "Bits 0:5 - Configures the interrupt source into one CPU interrupt."]
     #[inline(always)]
-    pub fn core0_gpio_int2_map(&mut self) -> CORE0_GPIO_INT2_MAP_W<'_, GPIO_INT2_MAP_SPEC> {
-        CORE0_GPIO_INT2_MAP_W::new(self, 0)
+    pub fn gpio_int2_map(&mut self) -> GPIO_INT2_MAP_W<'_, GPIO_INT2_MAP_SPEC> {
+        GPIO_INT2_MAP_W::new(self, 0)
+    }
+    #[doc = "Bit 6 - NA"]
+    #[inline(always)]
+    pub fn gpio_int2_src_pass_in_sec(
+        &mut self,
+    ) -> GPIO_INT2_SRC_PASS_IN_SEC_W<'_, GPIO_INT2_MAP_SPEC> {
+        GPIO_INT2_SRC_PASS_IN_SEC_W::new(self, 6)
+    }
+    #[doc = "Bit 7 - NA"]
+    #[inline(always)]
+    pub fn gpio_int2_src_in_sec_flag(
+        &mut self,
+    ) -> GPIO_INT2_SRC_IN_SEC_FLAG_W<'_, GPIO_INT2_MAP_SPEC> {
+        GPIO_INT2_SRC_IN_SEC_FLAG_W::new(self, 7)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`gpio_int2_map::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpio_int2_map::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -334,8 +334,6 @@ pub use COMB_PVT_LVT_CONF as COMB_PVT_HVT_CONF;
 pub type COMB_PVT_ERR_LVT_SITE0 = crate::Reg<comb_pvt_err_lvt_site0::COMB_PVT_ERR_LVT_SITE0_SPEC>;
 #[doc = "mem pvt register"]
 pub mod comb_pvt_err_lvt_site0;
-pub use crate::apb_ctrl::date as reg_date;
-pub use crate::apb_ctrl::DATE as REG_DATE;
 pub use comb_pvt_err_lvt_site0 as comb_pvt_err_nvt_site0;
 pub use comb_pvt_err_lvt_site0 as comb_pvt_err_hvt_site0;
 pub use comb_pvt_err_lvt_site0 as comb_pvt_err_lvt_site1;
@@ -358,3 +356,5 @@ pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_HVT_SITE2;
 pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_LVT_SITE3;
 pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_NVT_SITE3;
 pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_HVT_SITE3;
+
+pub use crate::apb_ctrl::{date as reg_date, DATE as REG_DATE};

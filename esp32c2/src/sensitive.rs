@@ -184,5 +184,4 @@ pub mod xts_aes_key_update;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "register description"]
 pub mod clock_gate;
-pub use crate::apb_ctrl::date as sensitive_reg_date;
-pub use crate::apb_ctrl::DATE as SENSITIVE_REG_DATE;
+pub use crate::apb_ctrl::{date as sensitive_reg_date, DATE as SENSITIVE_REG_DATE};

@@ -6,11 +6,20 @@ pub type W = crate::W<INT_ENA_SPEC>;
 pub type UNDERRUN_R = crate::BitReader;
 #[doc = "Field `UNDERRUN` writer - write 1 to enables dpi_underrun_int_st field of MIPI_DSI_BRG_INT_ST_REG controlled by dpi_underrun interrupt signal"]
 pub type UNDERRUN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `VSYNC` reader - write 1 to enables dpi_vsync_int_st field of MIPI_DSI_BRG_INT_ST_REG controlled by dpi_vsync interrupt signal"]
+pub type VSYNC_R = crate::BitReader;
+#[doc = "Field `VSYNC` writer - write 1 to enables dpi_vsync_int_st field of MIPI_DSI_BRG_INT_ST_REG controlled by dpi_vsync interrupt signal"]
+pub type VSYNC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - write 1 to enables dpi_underrun_int_st field of MIPI_DSI_BRG_INT_ST_REG controlled by dpi_underrun interrupt signal"]
     #[inline(always)]
     pub fn underrun(&self) -> UNDERRUN_R {
         UNDERRUN_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - write 1 to enables dpi_vsync_int_st field of MIPI_DSI_BRG_INT_ST_REG controlled by dpi_vsync interrupt signal"]
+    #[inline(always)]
+    pub fn vsync(&self) -> VSYNC_R {
+        VSYNC_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -18,6 +27,7 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
             .field("underrun", &self.underrun())
+            .field("vsync", &self.vsync())
             .finish()
     }
 }
@@ -26,6 +36,11 @@ impl W {
     #[inline(always)]
     pub fn underrun(&mut self) -> UNDERRUN_W<'_, INT_ENA_SPEC> {
         UNDERRUN_W::new(self, 0)
+    }
+    #[doc = "Bit 1 - write 1 to enables dpi_vsync_int_st field of MIPI_DSI_BRG_INT_ST_REG controlled by dpi_vsync interrupt signal"]
+    #[inline(always)]
+    pub fn vsync(&mut self) -> VSYNC_W<'_, INT_ENA_SPEC> {
+        VSYNC_W::new(self, 1)
     }
 }
 #[doc = "dsi_bridge interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

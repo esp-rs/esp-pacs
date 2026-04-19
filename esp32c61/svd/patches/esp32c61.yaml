@@ -6,10 +6,12 @@ _include:
   - ../../../common_patches/i2c_ana_mst.yaml
   - ../../../common_patches/slc.yaml
   - _assist_debug.yml
+  - _ecc.yml
   - _modem_lpcon.yml
   - _modem_syscon.yml
   - _interrupt.yml
   - _date.yml
+  - _sha.yml
   - _uart.yml
 
 TIMG0:
@@ -51,7 +53,7 @@ APB_SARADC:
 INTPRI:
   CPU_INTR_FROM_CPU%s:
     _strip_end: _FROM_CPU
-  
+
 I2C0:
   _modify:
     INT_STATUS:
@@ -77,7 +79,7 @@ IO_MUX:
 
 # _IN_SEL_CFG were manually rewritten into a big array because
 # it was impossible to gather them automatically
-GPIO: 
+GPIO:
   _modify:
     PROCPU_INT:
       name: PCPU_INT
@@ -196,7 +198,7 @@ SPI2:
   "*":
     _strip: SPI_
   _include: ../../../common_patches/spi_dma_int_strip.yaml
-  
+
   CMD:
     _modify:
       UPDATE:
@@ -292,7 +294,7 @@ SYSTIMER:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/systimer.yaml
     - ../../../common_patches/systimer_real_target.yaml
-    
+
 UART0:
   _strip_end: "_SYNC"
 
@@ -308,6 +310,125 @@ UART0:
   _include: ../../../common_patches/int_strip.yaml
 
 DMA:
+  _add:
+    _interrupts:
+      DMA_IN_CH0:
+        value: 58
+      DMA_IN_CH1:
+        value: 59
+      DMA_OUT_CH0:
+        value: 60
+      DMA_OUT_CH1:
+        value: 61
+
+  IN_INT_RAW_CH?:
+    _strip_end:
+      - _CH_INT_RAW
+      - _CH?_INT_RAW
+  IN_INT_ST_CH?:
+    _strip_end:
+      - _CH_INT_ST
+      - _CH?_INT_ST
+  IN_INT_ENA_CH?:
+    _strip_end:
+      - _CH_INT_ENA
+      - _CH?_INT_ENA
+  IN_INT_CLR_CH?:
+    _strip_end:
+      - _CH_INT_CLR
+      - _CH?_INT_CLR
+  OUT_INT_RAW_CH?:
+    _strip_end:
+      - _CH_INT_RAW
+      - _CH?_INT_RAW
+  OUT_INT_ST_CH?:
+    _strip_end:
+      - _CH_INT_ST
+      - _CH?_INT_ST
+  OUT_INT_ENA_CH?:
+    _strip_end:
+      - _CH_INT_ENA
+      - _CH?_INT_ENA
+  OUT_INT_CLR_CH?:
+    _strip_end:
+      - _CH_INT_CLR
+      - _CH?_INT_CLR
+
+  IN_CONF0_CH?:
+    _strip_end: _CH?
+    _add:
+      IN_DATA_BURST_EN:
+        bitOffset: 3
+        bitWidth: 1
+        description: Configures whether or not to enable INCR burst transfer for RX channel %s
+  IN_CONF1_CH?:
+    _strip_end: _CH?
+  INFIFO_STATUS_CH?:
+    _strip_end: _CH?
+  IN_POP_CH?:
+    _strip_end: _CH?
+  IN_STATE_CH?:
+    _strip_end: _CH?
+  IN_SUC_EOF_DES_ADDR_CH?:
+    _strip_end: _CH?
+  IN_ERR_EOF_DES_ADDR_CH?:
+    _strip_end: _CH?
+  IN_DSCR_CH?:
+    _strip_end: _CH?
+  IN_DSCR_BF0_CH?:
+    _strip_end: _CH?
+  IN_DSCR_BF1_CH?:
+    _strip_end: _CH?
+  IN_LINK_CH?:
+    _strip_end: _CH?
+  IN_PRI_CH?:
+    _strip_end: _CH?
+  IN_PERI_SEL_CH?:
+    _strip_end: _CH?
+  OUT_CONF0_CH?:
+    _strip_end: _CH?
+    _add:
+      OUT_DATA_BURST_EN:
+        bitOffset: 5
+        bitWidth: 1
+        description: Configures whether or not to enable INCR burst transfer for TX channel %s
+
+  OUT_CONF1_CH?:
+    _strip_end: _CH?
+  OUTFIFO_STATUS_CH?:
+    _strip_end: _CH?
+  OUT_PUSH_CH?:
+    _strip_end: _CH?
+  OUT_LINK_CH?:
+    _strip_end: _CH?
+  OUT_STATE_CH?:
+    _strip_end: _CH?
+  OUT_EOF_DES_ADDR_CH?:
+    _strip_end: _CH?
+  OUT_EOF_BFR_DES_ADDR_CH?:
+    _strip_end: _CH?
+  OUT_DSCR_CH?:
+    _strip_end: _CH?
+  OUT_DSCR_BF0_CH?:
+    _strip_end: _CH?
+  OUT_DSCR_BF1_CH?:
+    _strip_end: _CH?
+  OUT_PRI_CH?:
+    _strip_end: _CH?
+  OUT_PERI_SEL_CH?:
+    _strip_end: _CH?
+
+  IN_LINK_ADDR_CH?:
+    _strip_end: _CH?
+  OUT_LINK_ADDR_CH?:
+    _strip_end: _CH?
+
+  _array:
+    IN_LINK_ADDR_CH?:
+      name: IN_LINK_ADDR_CH%s
+    OUT_LINK_ADDR_CH?:
+      name: OUT_LINK_ADDR_CH%s
+
   _cluster:
     IN_INT_CH%s:
       IN_INT_RAW_CH?:
@@ -358,6 +479,8 @@ DMA:
         name: IN_DSCR_BF0
       IN_DSCR_BF1_CH?:
         name: IN_DSCR_BF1
+      IN_PRI_CH?:
+        name: IN_PRI
       IN_PERI_SEL_CH?:
         name: IN_PERI_SEL
       OUT_CONF0_CH?:
@@ -382,6 +505,8 @@ DMA:
         name: OUT_DSCR_BF0
       OUT_DSCR_BF1_CH?:
         name: OUT_DSCR_BF1
+      OUT_PRI_CH?:
+        name: OUT_PRI
       OUT_PERI_SEL_CH?:
         name: OUT_PERI_SEL
 

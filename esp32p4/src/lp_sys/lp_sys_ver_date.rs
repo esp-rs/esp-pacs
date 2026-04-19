@@ -39,7 +39,7 @@ impl crate::Readable for LP_SYS_VER_DATE_SPEC {}
 impl crate::Writable for LP_SYS_VER_DATE_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets LP_SYS_VER_DATE to value 0x2023_0509"]
+#[doc = "`reset()` method sets LP_SYS_VER_DATE to value 0x2025_0214"]
 impl crate::Resettable for LP_SYS_VER_DATE_SPEC {
-    const RESET_VALUE: u32 = 0x2023_0509;
+    const RESET_VALUE: u32 = 0x2025_0214;
 }

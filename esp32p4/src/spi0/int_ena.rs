@@ -30,6 +30,14 @@ pub type AXI_WR_FLASH_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type AXI_WADDR_ERR_INT__ENA_R = crate::BitReader;
 #[doc = "Field `AXI_WADDR_ERR_INT__ENA` writer - The enable bit for SPI_MEM_AXI_WADDR_ERR_INT interrupt."]
 pub type AXI_WADDR_ERR_INT__ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RX_TRANS_OVF` reader - The enable bit for SPI_MEM_RX_TRANS_OVF_INT interrupt."]
+pub type RX_TRANS_OVF_R = crate::BitReader;
+#[doc = "Field `RX_TRANS_OVF` writer - The enable bit for SPI_MEM_RX_TRANS_OVF_INT interrupt."]
+pub type RX_TRANS_OVF_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TX_TRANS_UDF` reader - The enable bit for SPI_MEM_TX_TRANS_UDF_INT interrupt."]
+pub type TX_TRANS_UDF_R = crate::BitReader;
+#[doc = "Field `TX_TRANS_UDF` writer - The enable bit for SPI_MEM_TX_TRANS_UDF_INT interrupt."]
+pub type TX_TRANS_UDF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DQS0_AFIFO_OVF` reader - The enable bit for SPI_MEM_DQS0_AFIFO_OVF_INT interrupt."]
 pub type DQS0_AFIFO_OVF_R = crate::BitReader;
 #[doc = "Field `DQS0_AFIFO_OVF` writer - The enable bit for SPI_MEM_DQS0_AFIFO_OVF_INT interrupt."]
@@ -82,6 +90,16 @@ impl R {
     pub fn axi_waddr_err_int__ena(&self) -> AXI_WADDR_ERR_INT__ENA_R {
         AXI_WADDR_ERR_INT__ENA_R::new(((self.bits >> 9) & 1) != 0)
     }
+    #[doc = "Bit 26 - The enable bit for SPI_MEM_RX_TRANS_OVF_INT interrupt."]
+    #[inline(always)]
+    pub fn rx_trans_ovf(&self) -> RX_TRANS_OVF_R {
+        RX_TRANS_OVF_R::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27 - The enable bit for SPI_MEM_TX_TRANS_UDF_INT interrupt."]
+    #[inline(always)]
+    pub fn tx_trans_udf(&self) -> TX_TRANS_UDF_R {
+        TX_TRANS_UDF_R::new(((self.bits >> 27) & 1) != 0)
+    }
     #[doc = "Bit 28 - The enable bit for SPI_MEM_DQS0_AFIFO_OVF_INT interrupt."]
     #[inline(always)]
     pub fn dqs0_afifo_ovf(&self) -> DQS0_AFIFO_OVF_R {
@@ -114,6 +132,8 @@ impl core::fmt::Debug for R {
             .field("axi_raddr_err", &self.axi_raddr_err())
             .field("axi_wr_flash_err", &self.axi_wr_flash_err())
             .field("axi_waddr_err_int__ena", &self.axi_waddr_err_int__ena())
+            .field("rx_trans_ovf", &self.rx_trans_ovf())
+            .field("tx_trans_udf", &self.tx_trans_udf())
             .field("dqs0_afifo_ovf", &self.dqs0_afifo_ovf())
             .field("dqs1_afifo_ovf", &self.dqs1_afifo_ovf())
             .field("bus_fifo1_udf", &self.bus_fifo1_udf())
@@ -156,6 +176,16 @@ impl W {
     #[inline(always)]
     pub fn axi_waddr_err_int__ena(&mut self) -> AXI_WADDR_ERR_INT__ENA_W<'_, INT_ENA_SPEC> {
         AXI_WADDR_ERR_INT__ENA_W::new(self, 9)
+    }
+    #[doc = "Bit 26 - The enable bit for SPI_MEM_RX_TRANS_OVF_INT interrupt."]
+    #[inline(always)]
+    pub fn rx_trans_ovf(&mut self) -> RX_TRANS_OVF_W<'_, INT_ENA_SPEC> {
+        RX_TRANS_OVF_W::new(self, 26)
+    }
+    #[doc = "Bit 27 - The enable bit for SPI_MEM_TX_TRANS_UDF_INT interrupt."]
+    #[inline(always)]
+    pub fn tx_trans_udf(&mut self) -> TX_TRANS_UDF_W<'_, INT_ENA_SPEC> {
+        TX_TRANS_UDF_W::new(self, 27)
     }
     #[doc = "Bit 28 - The enable bit for SPI_MEM_DQS0_AFIFO_OVF_INT interrupt."]
     #[inline(always)]

@@ -392,5 +392,4 @@ pub mod tx_sim;
 pub type REF_CNT_RST = crate::Reg<ref_cnt_rst::REF_CNT_RST_SPEC>;
 #[doc = "RMT_REF_CNT_RST_REG."]
 pub mod ref_cnt_rst;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

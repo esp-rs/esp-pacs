@@ -25,7 +25,7 @@ pub enum INLINK_PARK {
     #[doc = "0: The receive descriptor’s FSM is working."]
     Working = 0,
     #[doc = "1: The receive descriptor’s FSM is in idle state"]
-    Idle = 1,
+    Idle    = 1,
 }
 impl From<INLINK_PARK> for bool {
     #[inline(always)]

@@ -30,6 +30,14 @@ pub type AXI_WR_FLASH_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type AXI_WADDR_ERR_R = crate::BitReader;
 #[doc = "Field `AXI_WADDR_ERR` writer - The raw bit for SPI_MEM_AXI_WADDR_ERR_INT interrupt. 1: Triggered when AXI write address is invalid by compared to MMU configuration. 0: Others."]
 pub type AXI_WADDR_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RX_TRANS_OVF` reader - The raw bit for SPI_MEM_RX_TRANS_OVF_INT interrupt. 1: Triggered when the rx fifo to spi bus is overrflow."]
+pub type RX_TRANS_OVF_R = crate::BitReader;
+#[doc = "Field `RX_TRANS_OVF` writer - The raw bit for SPI_MEM_RX_TRANS_OVF_INT interrupt. 1: Triggered when the rx fifo to spi bus is overrflow."]
+pub type RX_TRANS_OVF_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TX_TRANS_UDF` reader - The raw bit for SPI_MEM_TX_TRANS_UDF_INT interrupt. 1: Triggered when the tx fifo to spi bus is underflow."]
+pub type TX_TRANS_UDF_R = crate::BitReader;
+#[doc = "Field `TX_TRANS_UDF` writer - The raw bit for SPI_MEM_TX_TRANS_UDF_INT interrupt. 1: Triggered when the tx fifo to spi bus is underflow."]
+pub type TX_TRANS_UDF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DQS0_AFIFO_OVF` reader - The raw bit for SPI_MEM_DQS0_AFIFO_OVF_INT interrupt. 1: Triggered when the AFIFO connected to SPI_DQS1 is overflow."]
 pub type DQS0_AFIFO_OVF_R = crate::BitReader;
 #[doc = "Field `DQS0_AFIFO_OVF` writer - The raw bit for SPI_MEM_DQS0_AFIFO_OVF_INT interrupt. 1: Triggered when the AFIFO connected to SPI_DQS1 is overflow."]
@@ -82,6 +90,16 @@ impl R {
     pub fn axi_waddr_err(&self) -> AXI_WADDR_ERR_R {
         AXI_WADDR_ERR_R::new(((self.bits >> 9) & 1) != 0)
     }
+    #[doc = "Bit 26 - The raw bit for SPI_MEM_RX_TRANS_OVF_INT interrupt. 1: Triggered when the rx fifo to spi bus is overrflow."]
+    #[inline(always)]
+    pub fn rx_trans_ovf(&self) -> RX_TRANS_OVF_R {
+        RX_TRANS_OVF_R::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27 - The raw bit for SPI_MEM_TX_TRANS_UDF_INT interrupt. 1: Triggered when the tx fifo to spi bus is underflow."]
+    #[inline(always)]
+    pub fn tx_trans_udf(&self) -> TX_TRANS_UDF_R {
+        TX_TRANS_UDF_R::new(((self.bits >> 27) & 1) != 0)
+    }
     #[doc = "Bit 28 - The raw bit for SPI_MEM_DQS0_AFIFO_OVF_INT interrupt. 1: Triggered when the AFIFO connected to SPI_DQS1 is overflow."]
     #[inline(always)]
     pub fn dqs0_afifo_ovf(&self) -> DQS0_AFIFO_OVF_R {
@@ -114,6 +132,8 @@ impl core::fmt::Debug for R {
             .field("axi_raddr_err", &self.axi_raddr_err())
             .field("axi_wr_flash_err", &self.axi_wr_flash_err())
             .field("axi_waddr_err", &self.axi_waddr_err())
+            .field("rx_trans_ovf", &self.rx_trans_ovf())
+            .field("tx_trans_udf", &self.tx_trans_udf())
             .field("dqs0_afifo_ovf", &self.dqs0_afifo_ovf())
             .field("dqs1_afifo_ovf", &self.dqs1_afifo_ovf())
             .field("bus_fifo1_udf", &self.bus_fifo1_udf())
@@ -156,6 +176,16 @@ impl W {
     #[inline(always)]
     pub fn axi_waddr_err(&mut self) -> AXI_WADDR_ERR_W<'_, INT_RAW_SPEC> {
         AXI_WADDR_ERR_W::new(self, 9)
+    }
+    #[doc = "Bit 26 - The raw bit for SPI_MEM_RX_TRANS_OVF_INT interrupt. 1: Triggered when the rx fifo to spi bus is overrflow."]
+    #[inline(always)]
+    pub fn rx_trans_ovf(&mut self) -> RX_TRANS_OVF_W<'_, INT_RAW_SPEC> {
+        RX_TRANS_OVF_W::new(self, 26)
+    }
+    #[doc = "Bit 27 - The raw bit for SPI_MEM_TX_TRANS_UDF_INT interrupt. 1: Triggered when the tx fifo to spi bus is underflow."]
+    #[inline(always)]
+    pub fn tx_trans_udf(&mut self) -> TX_TRANS_UDF_W<'_, INT_RAW_SPEC> {
+        TX_TRANS_UDF_W::new(self, 27)
     }
     #[doc = "Bit 28 - The raw bit for SPI_MEM_DQS0_AFIFO_OVF_INT interrupt. 1: Triggered when the AFIFO connected to SPI_DQS1 is overflow."]
     #[inline(always)]

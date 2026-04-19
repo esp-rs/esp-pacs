@@ -54,7 +54,7 @@ impl crate::Readable for DATE_SPEC {}
 impl crate::Writable for DATE_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets DATE to value 0x0023_0420"]
+#[doc = "`reset()` method sets DATE to value 0x0025_0220"]
 impl crate::Resettable for DATE_SPEC {
-    const RESET_VALUE: u32 = 0x0023_0420;
+    const RESET_VALUE: u32 = 0x0025_0220;
 }

@@ -1,6 +1,6 @@
 #[doc = "Register `SOFT_JTAG_CTRL` writer"]
 pub type W = crate::W<SOFT_JTAG_CTRL_SPEC>;
-#[doc = "Field `SOFT_JTAG_CTRL` writer - Turn on JTAG verification."]
+#[doc = "Field `SOFT_JTAG_CTRL` writer - Configures whether or not to enable JTAG authentication mode. \\\\0: Disable \\\\1: Enable \\\\"]
 pub type SOFT_JTAG_CTRL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SOFT_JTAG_CTRL_SPEC> {
@@ -9,7 +9,7 @@ impl core::fmt::Debug for crate::generic::Reg<SOFT_JTAG_CTRL_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Turn on JTAG verification."]
+    #[doc = "Bit 0 - Configures whether or not to enable JTAG authentication mode. \\\\0: Disable \\\\1: Enable \\\\"]
     #[inline(always)]
     pub fn soft_jtag_ctrl(&mut self) -> SOFT_JTAG_CTRL_W<'_, SOFT_JTAG_CTRL_SPEC> {
         SOFT_JTAG_CTRL_W::new(self, 0)

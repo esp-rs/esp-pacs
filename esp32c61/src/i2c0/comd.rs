@@ -24,13 +24,13 @@ pub type ACK_VALUE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[repr(u8)]
 pub enum OPCODE {
     #[doc = "1: WRITE opcode"]
-    Write = 1,
+    Write  = 1,
     #[doc = "2: STOP opcode"]
-    Stop = 2,
+    Stop   = 2,
     #[doc = "3: READ opcode"]
-    Read = 3,
+    Read   = 3,
     #[doc = "4: END opcode"]
-    End = 4,
+    End    = 4,
     #[doc = "6: RSTART opcode"]
     Rstart = 6,
 }

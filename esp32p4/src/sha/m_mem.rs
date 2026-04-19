@@ -12,7 +12,7 @@ impl W {}
 #[doc = "Sha M memory which contains message.\n\nYou can [`read`](crate::Reg::read) this register and get [`m_mem::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m_mem::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct M_MEM_SPEC;
 impl crate::RegisterSpec for M_MEM_SPEC {
-    type Ux = u32;
+    type Ux = u8;
 }
 #[doc = "`read()` method returns [`m_mem::R`](R) reader structure"]
 impl crate::Readable for M_MEM_SPEC {}

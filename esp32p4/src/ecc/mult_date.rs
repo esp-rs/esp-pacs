@@ -2,30 +2,30 @@
 pub type R = crate::R<MULT_DATE_SPEC>;
 #[doc = "Register `MULT_DATE` writer"]
 pub type W = crate::W<MULT_DATE_SPEC>;
-#[doc = "Field `DATE` reader - ECC mult version control register"]
-pub type DATE_R = crate::FieldReader<u32>;
-#[doc = "Field `DATE` writer - ECC mult version control register"]
-pub type DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 28, u32>;
+#[doc = "Field `MULT_DATE` reader - ECC mult version control register"]
+pub type MULT_DATE_R = crate::FieldReader<u32>;
+#[doc = "Field `MULT_DATE` writer - ECC mult version control register"]
+pub type MULT_DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 28, u32>;
 impl R {
     #[doc = "Bits 0:27 - ECC mult version control register"]
     #[inline(always)]
-    pub fn date(&self) -> DATE_R {
-        DATE_R::new(self.bits & 0x0fff_ffff)
+    pub fn mult_date(&self) -> MULT_DATE_R {
+        MULT_DATE_R::new(self.bits & 0x0fff_ffff)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MULT_DATE")
-            .field("date", &self.date())
+            .field("mult_date", &self.mult_date())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:27 - ECC mult version control register"]
     #[inline(always)]
-    pub fn date(&mut self) -> DATE_W<'_, MULT_DATE_SPEC> {
-        DATE_W::new(self, 0)
+    pub fn mult_date(&mut self) -> MULT_DATE_W<'_, MULT_DATE_SPEC> {
+        MULT_DATE_W::new(self, 0)
     }
 }
 #[doc = "Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`mult_date::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mult_date::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -39,7 +39,7 @@ impl crate::Readable for MULT_DATE_SPEC {}
 impl crate::Writable for MULT_DATE_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets MULT_DATE to value 0x0230_5040"]
+#[doc = "`reset()` method sets MULT_DATE to value 0x0240_8120"]
 impl crate::Resettable for MULT_DATE_SPEC {
-    const RESET_VALUE: u32 = 0x0230_5040;
+    const RESET_VALUE: u32 = 0x0240_8120;
 }

@@ -133,5 +133,4 @@ pub mod cpu_int_pri;
 pub type CPU_INT_THRESH = crate::Reg<cpu_int_thresh::CPU_INT_THRESH_SPEC>;
 #[doc = "register description"]
 pub mod cpu_int_thresh;
-pub use crate::apb_ctrl::date as interrupt_reg_date;
-pub use crate::apb_ctrl::DATE as INTERRUPT_REG_DATE;
+pub use crate::apb_ctrl::{date as interrupt_reg_date, DATE as INTERRUPT_REG_DATE};

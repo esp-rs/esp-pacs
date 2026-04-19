@@ -1,82 +1,82 @@
 #[doc = "Register `RD_REPEAT_DATA4` reader"]
 pub type R = crate::R<RD_REPEAT_DATA4_SPEC>;
-#[doc = "Field `_0PXA_TIEH_SEL_0` reader - TBD"]
+#[doc = "Field `_0PXA_TIEH_SEL_0` reader - Output LDO VO0 tieh source select. 0: 1'b1 1: sdmmc1 2: reg 3:sdmmc0"]
 pub type _0PXA_TIEH_SEL_0_R = crate::FieldReader;
-#[doc = "Field `_0PXA_TIEH_SEL_1` reader - TBD."]
-pub type _0PXA_TIEH_SEL_1_R = crate::FieldReader;
-#[doc = "Field `_0PXA_TIEH_SEL_2` reader - TBD."]
-pub type _0PXA_TIEH_SEL_2_R = crate::FieldReader;
-#[doc = "Field `_0PXA_TIEH_SEL_3` reader - TBD."]
-pub type _0PXA_TIEH_SEL_3_R = crate::FieldReader;
-#[doc = "Field `KM_DISABLE_DEPLOY_MODE` reader - TBD."]
+#[doc = "Field `PVT_GLITCH_EN` reader - Represents whether to enable PVT power glitch monitor function.\\\\1:Enable. \\\\0:Disable"]
+pub type PVT_GLITCH_EN_R = crate::BitReader;
+#[doc = "Field `KEY_PURPOSE_5_H` reader - Purpose of Key5. The 5-th bit."]
+pub type KEY_PURPOSE_5_H_R = crate::BitReader;
+#[doc = "Field `KM_DISABLE_DEPLOY_MODE_H` reader - EFUSE_KM_DISABLE_DEPLOY_MODE and EFUSE_KM_DISABLE_DEPLOY_MODE_H together form one field: {EFUSE_KM_DISABLE_DEPLOY_MODE_H, EFUSE_KM_DISABLE_DEPLOY_MODE\\[3:0\\]}. Set each bit to control whether corresponding key's deploy mode of new value deployment is disabled. 1 is true, 0 is false. bit 0: ecsda, bit 1: xts, bit2: hmac, bit3: ds, bit4:psram"]
+pub type KM_DISABLE_DEPLOY_MODE_H_R = crate::BitReader;
+#[doc = "Field `KM_DISABLE_DEPLOY_MODE` reader - EFUSE_KM_DISABLE_DEPLOY_MODE and EFUSE_KM_DISABLE_DEPLOY_MODE_H together form one field: {EFUSE_KM_DISABLE_DEPLOY_MODE_H, EFUSE_KM_DISABLE_DEPLOY_MODE\\[3:0\\]}. Set each bit to control whether corresponding key's deploy mode of new value deployment is disabled. 1 is true, 0 is false. bit 0: ecsda, bit 1: xts, bit2: hmac, bit3: ds, bit4:psram"]
 pub type KM_DISABLE_DEPLOY_MODE_R = crate::FieldReader;
-#[doc = "Field `USB_DEVICE_DREFL` reader - Represents the usb device single-end input low threhold, 0.8 V to 1.04 V with step of 80 mV."]
-pub type USB_DEVICE_DREFL_R = crate::FieldReader;
-#[doc = "Field `USB_OTG11_DREFL` reader - Represents the usb otg11 single-end input low threhold, 0.8 V to 1.04 V with step of 80 mV."]
-pub type USB_OTG11_DREFL_R = crate::FieldReader;
-#[doc = "Field `HP_PWR_SRC_SEL` reader - HP system power source select. 0:LDO. 1: DCDC."]
+#[doc = "Field `XTS_DPA_PSEUDO_LEVEL` reader - Sets this bit to control the xts pseudo-round anti-dpa attack function. 0: controlled by register. 1-3: the higer the value is, the more pseudo-rounds are inserted to the xts-aes calculation"]
+pub type XTS_DPA_PSEUDO_LEVEL_R = crate::FieldReader;
+#[doc = "Field `HP_PWR_SRC_SEL` reader - HP system power source select. 0:LDO 1: DCDC"]
 pub type HP_PWR_SRC_SEL_R = crate::BitReader;
-#[doc = "Field `DCDC_VSET_EN` reader - Select dcdc vset use efuse_dcdc_vset."]
-pub type DCDC_VSET_EN_R = crate::BitReader;
+#[doc = "Field `SECURE_BOOT_SHA384_EN` reader - Represents whether secure boot using SHA-384 is enabled. 0: disable 1: enable"]
+pub type SECURE_BOOT_SHA384_EN_R = crate::BitReader;
 #[doc = "Field `DIS_WDT` reader - Set this bit to disable watch dog."]
 pub type DIS_WDT_R = crate::BitReader;
-#[doc = "Field `DIS_SWD` reader - Set this bit to disable super-watchdog."]
+#[doc = "Field `DIS_SWD` reader - Set bit to disable super-watchdog"]
 pub type DIS_SWD_R = crate::BitReader;
+#[doc = "Field `PVT_GLITCH_MODE` reader - Use to configure glitch mode"]
+pub type PVT_GLITCH_MODE_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:1 - TBD"]
+    #[doc = "Bits 0:1 - Output LDO VO0 tieh source select. 0: 1'b1 1: sdmmc1 2: reg 3:sdmmc0"]
     #[inline(always)]
     pub fn _0pxa_tieh_sel_0(&self) -> _0PXA_TIEH_SEL_0_R {
         _0PXA_TIEH_SEL_0_R::new((self.bits & 3) as u8)
     }
-    #[doc = "Bits 2:3 - TBD."]
+    #[doc = "Bit 2 - Represents whether to enable PVT power glitch monitor function.\\\\1:Enable. \\\\0:Disable"]
     #[inline(always)]
-    pub fn _0pxa_tieh_sel_1(&self) -> _0PXA_TIEH_SEL_1_R {
-        _0PXA_TIEH_SEL_1_R::new(((self.bits >> 2) & 3) as u8)
+    pub fn pvt_glitch_en(&self) -> PVT_GLITCH_EN_R {
+        PVT_GLITCH_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bits 4:5 - TBD."]
+    #[doc = "Bit 4 - Purpose of Key5. The 5-th bit."]
     #[inline(always)]
-    pub fn _0pxa_tieh_sel_2(&self) -> _0PXA_TIEH_SEL_2_R {
-        _0PXA_TIEH_SEL_2_R::new(((self.bits >> 4) & 3) as u8)
+    pub fn key_purpose_5_h(&self) -> KEY_PURPOSE_5_H_R {
+        KEY_PURPOSE_5_H_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bits 6:7 - TBD."]
+    #[doc = "Bit 7 - EFUSE_KM_DISABLE_DEPLOY_MODE and EFUSE_KM_DISABLE_DEPLOY_MODE_H together form one field: {EFUSE_KM_DISABLE_DEPLOY_MODE_H, EFUSE_KM_DISABLE_DEPLOY_MODE\\[3:0\\]}. Set each bit to control whether corresponding key's deploy mode of new value deployment is disabled. 1 is true, 0 is false. bit 0: ecsda, bit 1: xts, bit2: hmac, bit3: ds, bit4:psram"]
     #[inline(always)]
-    pub fn _0pxa_tieh_sel_3(&self) -> _0PXA_TIEH_SEL_3_R {
-        _0PXA_TIEH_SEL_3_R::new(((self.bits >> 6) & 3) as u8)
+    pub fn km_disable_deploy_mode_h(&self) -> KM_DISABLE_DEPLOY_MODE_H_R {
+        KM_DISABLE_DEPLOY_MODE_H_R::new(((self.bits >> 7) & 1) != 0)
     }
-    #[doc = "Bits 8:11 - TBD."]
+    #[doc = "Bits 8:11 - EFUSE_KM_DISABLE_DEPLOY_MODE and EFUSE_KM_DISABLE_DEPLOY_MODE_H together form one field: {EFUSE_KM_DISABLE_DEPLOY_MODE_H, EFUSE_KM_DISABLE_DEPLOY_MODE\\[3:0\\]}. Set each bit to control whether corresponding key's deploy mode of new value deployment is disabled. 1 is true, 0 is false. bit 0: ecsda, bit 1: xts, bit2: hmac, bit3: ds, bit4:psram"]
     #[inline(always)]
     pub fn km_disable_deploy_mode(&self) -> KM_DISABLE_DEPLOY_MODE_R {
         KM_DISABLE_DEPLOY_MODE_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
-    #[doc = "Bits 12:13 - Represents the usb device single-end input low threhold, 0.8 V to 1.04 V with step of 80 mV."]
+    #[doc = "Bits 16:17 - Sets this bit to control the xts pseudo-round anti-dpa attack function. 0: controlled by register. 1-3: the higer the value is, the more pseudo-rounds are inserted to the xts-aes calculation"]
     #[inline(always)]
-    pub fn usb_device_drefl(&self) -> USB_DEVICE_DREFL_R {
-        USB_DEVICE_DREFL_R::new(((self.bits >> 12) & 3) as u8)
+    pub fn xts_dpa_pseudo_level(&self) -> XTS_DPA_PSEUDO_LEVEL_R {
+        XTS_DPA_PSEUDO_LEVEL_R::new(((self.bits >> 16) & 3) as u8)
     }
-    #[doc = "Bits 14:15 - Represents the usb otg11 single-end input low threhold, 0.8 V to 1.04 V with step of 80 mV."]
-    #[inline(always)]
-    pub fn usb_otg11_drefl(&self) -> USB_OTG11_DREFL_R {
-        USB_OTG11_DREFL_R::new(((self.bits >> 14) & 3) as u8)
-    }
-    #[doc = "Bit 18 - HP system power source select. 0:LDO. 1: DCDC."]
+    #[doc = "Bit 18 - HP system power source select. 0:LDO 1: DCDC"]
     #[inline(always)]
     pub fn hp_pwr_src_sel(&self) -> HP_PWR_SRC_SEL_R {
         HP_PWR_SRC_SEL_R::new(((self.bits >> 18) & 1) != 0)
     }
-    #[doc = "Bit 19 - Select dcdc vset use efuse_dcdc_vset."]
+    #[doc = "Bit 19 - Represents whether secure boot using SHA-384 is enabled. 0: disable 1: enable"]
     #[inline(always)]
-    pub fn dcdc_vset_en(&self) -> DCDC_VSET_EN_R {
-        DCDC_VSET_EN_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn secure_boot_sha384_en(&self) -> SECURE_BOOT_SHA384_EN_R {
+        SECURE_BOOT_SHA384_EN_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Set this bit to disable watch dog."]
     #[inline(always)]
     pub fn dis_wdt(&self) -> DIS_WDT_R {
         DIS_WDT_R::new(((self.bits >> 20) & 1) != 0)
     }
-    #[doc = "Bit 21 - Set this bit to disable super-watchdog."]
+    #[doc = "Bit 21 - Set bit to disable super-watchdog"]
     #[inline(always)]
     pub fn dis_swd(&self) -> DIS_SWD_R {
         DIS_SWD_R::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bits 22:23 - Use to configure glitch mode"]
+    #[inline(always)]
+    pub fn pvt_glitch_mode(&self) -> PVT_GLITCH_MODE_R {
+        PVT_GLITCH_MODE_R::new(((self.bits >> 22) & 3) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -84,20 +84,20 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_DATA4")
             .field("_0pxa_tieh_sel_0", &self._0pxa_tieh_sel_0())
-            .field("_0pxa_tieh_sel_1", &self._0pxa_tieh_sel_1())
-            .field("_0pxa_tieh_sel_2", &self._0pxa_tieh_sel_2())
-            .field("_0pxa_tieh_sel_3", &self._0pxa_tieh_sel_3())
+            .field("pvt_glitch_en", &self.pvt_glitch_en())
+            .field("key_purpose_5_h", &self.key_purpose_5_h())
+            .field("km_disable_deploy_mode_h", &self.km_disable_deploy_mode_h())
             .field("km_disable_deploy_mode", &self.km_disable_deploy_mode())
-            .field("usb_device_drefl", &self.usb_device_drefl())
-            .field("usb_otg11_drefl", &self.usb_otg11_drefl())
+            .field("xts_dpa_pseudo_level", &self.xts_dpa_pseudo_level())
             .field("hp_pwr_src_sel", &self.hp_pwr_src_sel())
-            .field("dcdc_vset_en", &self.dcdc_vset_en())
+            .field("secure_boot_sha384_en", &self.secure_boot_sha384_en())
             .field("dis_wdt", &self.dis_wdt())
             .field("dis_swd", &self.dis_swd())
+            .field("pvt_glitch_mode", &self.pvt_glitch_mode())
             .finish()
     }
 }
-#[doc = "BLOCK0 data register 5.\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data4::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data4::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_REPEAT_DATA4_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_DATA4_SPEC {
     type Ux = u32;
