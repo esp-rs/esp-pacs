@@ -1,5 +1,80 @@
+
 MCPWM0:
+  # Define a unified Event enum covering all 10 event types
+  _enums:
+    EVENT:
+      description: |
+        MCPWM event types representing all interrupt sources
+        Maps to register field bit positions across INT_RAW, INT_ST, INT_ENA, INT_CLR
+      variants:
+        TIMER_STOP:
+          value: 0
+          description: Timer stop event
+        TIMER_TEZ:
+          value: 1
+          description: Timer equal zero event
+        TIMER_TEP:
+          value: 2
+          description: Timer equal period event
+        CAPTURE:
+          value: 3
+          description: Capture event
+        CMPR_TEA:
+          value: 4
+          description: Compare A event
+        CMPR_TEB:
+          value: 5
+          description: Compare B event
+        FAULT:
+          value: 6
+          description: Fault event
+        FAULT_CLR:
+          value: 7
+          description: Fault clear event
+        TZ_CBC:
+          value: 8
+          description: Fault cycle-by-cycle event
+        TZ_OST:
+          value: 9
+          description: Fault one-shot event
+
+  # INT_RAW: Raw interrupt status (read-only)
   INT_RAW:
+    _field_lookup:
+      # Tells the SVD/PAC generator to create a helper method
+      enum: EVENT
+      
+      # This mapping tells the generator how to convert Event variants to register fields
+      mapping:
+        TIMER_STOP: TIMER?_STOP
+        TIMER_TEZ: TIMER?_TEZ
+        TIMER_TEP: TIMER?_TEP
+        CAPTURE: CAP?
+        CMPR_TEA: CMPR?_TEA
+        CMPR_TEB: CMPR?_TEB
+        FAULT: FAULT?
+        FAULT_CLR: FAULT?_CLR
+        TZ_CBC: TZ?_CBC
+        TZ_OST: TZ?_OST
+      
+      # Helper method generation directive
+      generate_helpers:
+        # Generate: pub fn event_bit(&self, event: Event, unit: u8) -> bool
+        - name: event_bit
+          signature: "fn event_bit(&self, event: Event, unit: u8) -> bool"
+          implementation: |
+            match event {
+                Event::TimerStop => self.timer_stop(unit).bit(),
+                Event::TimerTez => self.timer_tez(unit).bit(),
+                Event::TimerTep => self.timer_tep(unit).bit(),
+                Event::Capture => self.cap(unit).bit(),
+                Event::CmprTea => self.cmpr_tea(unit).bit(),
+                Event::CmprTeb => self.cmpr_teb(unit).bit(),
+                Event::Fault => self.fault(unit).bit(),
+                Event::FaultClr => self.fault_clr(unit).bit(),
+                Event::TzCbc => self.tz_cbc(unit).bit(),
+                Event::TzOst => self.tz_ost(unit).bit(),
+            }
     _array:
       TIMER?_STOP:
         description: The interrupt raw bit for the timer%s stop event.
@@ -22,7 +97,29 @@ MCPWM0:
       TZ?_OST:
         description: The interrupt raw bit for the fault handler%s one-shot mode action.
 
+  # INT_ST: Status register (read-only)
   INT_ST:
+    _field_lookup:
+      enum: EVENT
+      mapping:
+        TIMER_STOP: TIMER?_STOP
+        TIMER_TEZ: TIMER?_TEZ
+        TIMER_TEP: TIMER?_TEP
+        CAPTURE: CAP?
+        CMPR_TEA: CMPR?_TEA
+        CMPR_TEB: CMPR?_TEB
+        FAULT: FAULT?
+        FAULT_CLR: FAULT?_CLR
+        TZ_CBC: TZ?_CBC
+        TZ_OST: TZ?_OST
+      
+      generate_helpers:
+        - name: event_bit
+          signature: "pub fn event_bit(&self, event: Event, unit: u8) -> bool"
+          description: |
+            Get interrupt status bit for the specified event and unit.
+            Returns true if the interrupt for this event is pending on the given unit.
+    
     _array:
       TIMER?_STOP:
         description: The interrupt status bit for the timer%s stop event.
@@ -45,7 +142,29 @@ MCPWM0:
       TZ?_OST:
         description: The interrupt status bit for the fault handler%s one-shot mode action.
 
+  # INT_ENA: Enable register (read-write)
   INT_ENA:
+    _field_lookup:
+      enum: EVENT
+      mapping:
+        TIMER_STOP: TIMER?_STOP
+        TIMER_TEZ: TIMER?_TEZ
+        TIMER_TEP: TIMER?_TEP
+        CAPTURE: CAP?
+        CMPR_TEA: CMPR?_TEA
+        CMPR_TEB: CMPR?_TEB
+        FAULT: FAULT?
+        FAULT_CLR: FAULT?_CLR
+        TZ_CBC: TZ?_CBC
+        TZ_OST: TZ?_OST
+      
+      generate_helpers:
+        - name: set_event_enable
+          signature: "pub fn set_event_enable(&mut self, event: Event, unit: u8, value: bool) -> &mut Self"
+          description: |
+            Enable or disable interrupt for the specified event and unit.
+            Returns self for method chaining in register writer context.
+    
     _array:
       TIMER?_STOP:
         description: The interrupt enable bit for the timer%s stop event.
@@ -68,7 +187,29 @@ MCPWM0:
       TZ?_OST:
         description: The interrupt enable bit for the fault handler%s one-shot mode action.
 
+  # INT_CLR: Clear register (write-only)
   INT_CLR:
+    _field_lookup:
+      enum: EVENT
+      mapping:
+        TIMER_STOP: TIMER?_STOP
+        TIMER_TEZ: TIMER?_TEZ
+        TIMER_TEP: TIMER?_TEP
+        CAPTURE: CAP?
+        CMPR_TEA: CMPR?_TEA
+        CMPR_TEB: CMPR?_TEB
+        FAULT: FAULT?
+        FAULT_CLR: FAULT?_CLR
+        TZ_CBC: TZ?_CBC
+        TZ_OST: TZ?_OST
+      
+      generate_helpers:
+        - name: clear_event
+          signature: "pub fn clear_event(&mut self, event: Event, unit: u8) -> &mut Self"
+          description: |
+            Clear interrupt status for the specified event and unit.
+            Returns self for method chaining in register writer context.
+    
     _array:
       TIMER?_STOP:
         description: The interrupt clear bit for the timer%s stop event.
