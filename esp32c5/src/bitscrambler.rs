@@ -162,5 +162,4 @@ pub mod rx_state;
 pub type SYS = crate::Reg<sys::SYS_SPEC>;
 #[doc = "Control and configuration registers"]
 pub mod sys;
-pub use crate::aes::date as version;
-pub use crate::aes::DATE as VERSION;
+pub use crate::aes::{date as version, DATE as VERSION};

@@ -43,5 +43,4 @@ pub mod clock_gate;
 pub type FORCE_ACC_HP = crate::Reg<force_acc_hp::FORCE_ACC_HP_SPEC>;
 #[doc = "Force access to hpmem configuration register"]
 pub mod force_acc_hp;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

@@ -28,5 +28,4 @@ impl RegisterBlock {
 pub type GPIO = crate::Reg<gpio::GPIO_SPEC>;
 #[doc = "IO MUX configuration register for GPIO%s"]
 pub mod gpio;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

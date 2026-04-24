@@ -122,5 +122,4 @@ pub mod rng_cfg;
 pub type RNG_DATA_SYNC = crate::Reg<rng_data_sync::RNG_DATA_SYNC_SPEC>;
 #[doc = "rng result sync register"]
 pub mod rng_data_sync;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

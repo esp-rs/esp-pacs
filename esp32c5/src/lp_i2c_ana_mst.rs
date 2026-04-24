@@ -72,5 +72,4 @@ pub mod nouse;
 pub type DEVICE_EN = crate::Reg<device_en::DEVICE_EN_SPEC>;
 #[doc = "need_des"]
 pub mod device_en;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};
