@@ -8,7 +8,7 @@ pub type W = crate::W<M_MODE_CTRL_SPEC>;
 #[repr(u8)]
 pub enum SECURITY_MODE {
     #[doc = "0: Tee mode"]
-    Tee = 0,
+    Tee  = 0,
     #[doc = "1: Ree0 mode"]
     Ree0 = 1,
     #[doc = "2: Ree1 mode"]

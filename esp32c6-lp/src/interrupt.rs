@@ -3,22 +3,16 @@
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum Interrupt {
-    #[doc = "7 - LP_TIMER"]
-    LP_TIMER = 7,
-    #[doc = "13 - PMU"]
-    PMU = 13,
-    #[doc = "16 - LP_UART"]
-    LP_UART = 16,
-    #[doc = "17 - LP_I2C"]
-    LP_I2C = 17,
-    #[doc = "18 - LP_WDT"]
-    LP_WDT = 18,
-    #[doc = "19 - LP_PERI_TIMEOUT"]
-    LP_PERI_TIMEOUT = 19,
-    #[doc = "20 - LP_APM_M0"]
-    LP_APM_M0 = 20,
-    #[doc = "21 - LP_APM_M1"]
-    LP_APM_M1 = 21,
+    #[doc = "0 - LP_IO_INT"]
+    LP_IO_INT    = 0,
+    #[doc = "1 - LP_I2C_INT"]
+    LP_I2C_INT   = 1,
+    #[doc = "2 - LP_UART_INT"]
+    LP_UART_INT  = 2,
+    #[doc = "3 - LP_TIMER_INT"]
+    LP_TIMER_INT = 3,
+    #[doc = "5 - PMU_LP_INT"]
+    PMU_LP_INT   = 5,
 }
 #[doc = r" TryFromInterruptError"]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
@@ -29,14 +23,11 @@ impl Interrupt {
     #[inline]
     pub fn try_from(value: u8) -> Result<Self, TryFromInterruptError> {
         match value {
-            7 => Ok(Interrupt::LP_TIMER),
-            13 => Ok(Interrupt::PMU),
-            16 => Ok(Interrupt::LP_UART),
-            17 => Ok(Interrupt::LP_I2C),
-            18 => Ok(Interrupt::LP_WDT),
-            19 => Ok(Interrupt::LP_PERI_TIMEOUT),
-            20 => Ok(Interrupt::LP_APM_M0),
-            21 => Ok(Interrupt::LP_APM_M1),
+            0 => Ok(Interrupt::LP_IO_INT),
+            1 => Ok(Interrupt::LP_I2C_INT),
+            2 => Ok(Interrupt::LP_UART_INT),
+            3 => Ok(Interrupt::LP_TIMER_INT),
+            5 => Ok(Interrupt::PMU_LP_INT),
             _ => Err(TryFromInterruptError(())),
         }
     }
