@@ -9,3 +9,9 @@ PMU:
       size: 0x20
       access: read-write
       resetValue: 0x0
+  
+  _modify:
+    _interrupts:
+        PMU:
+            name: PMU_LP_INT
+            value: 5

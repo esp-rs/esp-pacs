@@ -1,9 +1,6 @@
-PROVIDE(LP_TIMER = DefaultHandler);
-PROVIDE(PMU = DefaultHandler);
-PROVIDE(LP_UART = DefaultHandler);
-PROVIDE(LP_I2C = DefaultHandler);
-PROVIDE(LP_WDT = DefaultHandler);
-PROVIDE(LP_PERI_TIMEOUT = DefaultHandler);
-PROVIDE(LP_APM_M0 = DefaultHandler);
-PROVIDE(LP_APM_M1 = DefaultHandler);
+PROVIDE(LP_IO_INT = DefaultHandler);
+PROVIDE(LP_I2C_INT = DefaultHandler);
+PROVIDE(LP_UART_INT = DefaultHandler);
+PROVIDE(LP_TIMER_INT = DefaultHandler);
+PROVIDE(PMU_LP_INT = DefaultHandler);
 

@@ -12,14 +12,11 @@ use generic::*;
 pub mod generic;
 #[cfg(feature = "rt")]
 extern "C" {
-    fn LP_TIMER();
-    fn PMU();
-    fn LP_UART();
-    fn LP_I2C();
-    fn LP_WDT();
-    fn LP_PERI_TIMEOUT();
-    fn LP_APM_M0();
-    fn LP_APM_M1();
+    fn LP_IO_INT();
+    fn LP_I2C_INT();
+    fn LP_UART_INT();
+    fn LP_TIMER_INT();
+    fn PMU_LP_INT();
 }
 #[doc(hidden)]
 #[repr(C)]
@@ -31,34 +28,22 @@ pub union Vector {
 #[doc(hidden)]
 #[link_section = ".rwtext.interrupt"]
 #[no_mangle]
-pub static __EXTERNAL_INTERRUPTS: [Vector; 22] = [
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _handler: LP_TIMER },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _handler: PMU },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _handler: LP_UART },
-    Vector { _handler: LP_I2C },
-    Vector { _handler: LP_WDT },
+pub static __EXTERNAL_INTERRUPTS: [Vector; 6] = [
     Vector {
-        _handler: LP_PERI_TIMEOUT,
+        _handler: LP_IO_INT,
     },
     Vector {
-        _handler: LP_APM_M0,
+        _handler: LP_I2C_INT,
     },
     Vector {
-        _handler: LP_APM_M1,
+        _handler: LP_UART_INT,
+    },
+    Vector {
+        _handler: LP_TIMER_INT,
+    },
+    Vector { _reserved: 0 },
+    Vector {
+        _handler: PMU_LP_INT,
     },
 ];
 #[doc(hidden)]
