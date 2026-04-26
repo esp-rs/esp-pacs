@@ -218,7 +218,10 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
     config.ident_formats_theme = Some(IdentFormatsTheme::Legacy);
     config.max_cluster_size = true;
     config.impl_defmt = Some("defmt".into());
-    config.skip_peripherals_struct = true;
+    config.skip_peripherals_struct = match chip {
+      Chip::Esp32s3Ulp | Chip::Esp32s2Ulp | Chip::Esp32c6Lp => false,
+      _ => true
+    };
 
     let input = fs::read_to_string(svd_file)?;
     let device = svd2rust::load_from(&input, &config)?;
