@@ -7,4 +7,5 @@ PROVIDE(TSENS_DONE_INT = DefaultHandler);
 PROVIDE(RISCV_START_INT = DefaultHandler);
 PROVIDE(SW_INT = DefaultHandler);
 PROVIDE(SWD_INT = DefaultHandler);
+PROVIDE(GPIO_INT = DefaultHandler);
 
