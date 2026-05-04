@@ -207,4 +207,4 @@ HP_SYS:
         value: 81
       FROM_CPU_INTR3:
         value: 82
- 
+  _include: ../../../common_patches/sw_interrupts.yaml
