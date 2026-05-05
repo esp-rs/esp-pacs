@@ -5,34 +5,31 @@ pub struct RegisterBlock {
     ver_date: VER_DATE,
     clk_en: CLK_EN,
     _reserved2: [u8; 0x08],
-    cpu_intr_from_cpu_0: CPU_INTR_FROM_CPU_0,
-    cpu_intr_from_cpu_1: CPU_INTR_FROM_CPU_1,
-    cpu_intr_from_cpu_2: CPU_INTR_FROM_CPU_2,
-    cpu_intr_from_cpu_3: CPU_INTR_FROM_CPU_3,
+    cpu_intr_from_cpu: [CPU_INTR_FROM_CPU; 4],
     cache_clk_config: CACHE_CLK_CONFIG,
     cache_reset_config: CACHE_RESET_CONFIG,
-    _reserved8: [u8; 0x04],
+    _reserved5: [u8; 0x04],
     dma_addr_ctrl: DMA_ADDR_CTRL,
-    _reserved9: [u8; 0x04],
+    _reserved6: [u8; 0x04],
     tcm_ram_wrr_config: TCM_RAM_WRR_CONFIG,
     tcm_sw_parity_bwe_mask: TCM_SW_PARITY_BWE_MASK,
     tcm_ram_pwr_ctrl0: TCM_RAM_PWR_CTRL0,
     l2_rom_pwr_ctrl0: L2_ROM_PWR_CTRL0,
-    _reserved13: [u8; 0x0c],
+    _reserved10: [u8; 0x0c],
     probea_ctrl: PROBEA_CTRL,
     probeb_ctrl: PROBEB_CTRL,
-    _reserved15: [u8; 0x04],
+    _reserved12: [u8; 0x04],
     probe_out: PROBE_OUT,
     l2_mem_ram_pwr_ctrl0: L2_MEM_RAM_PWR_CTRL0,
     cpu_corestalled_st: CPU_CORESTALLED_ST,
-    _reserved18: [u8; 0x08],
+    _reserved15: [u8; 0x08],
     crypto_ctrl: CRYPTO_CTRL,
     gpio_o_hold_ctrl0: GPIO_O_HOLD_CTRL0,
     gpio_o_hold_ctrl1: GPIO_O_HOLD_CTRL1,
     rdn_eco_cs: RDN_ECO_CS,
     cache_apb_postw_en: CACHE_APB_POSTW_EN,
     l2_mem_subsize: L2_MEM_SUBSIZE,
-    _reserved24: [u8; 0x14],
+    _reserved21: [u8; 0x14],
     l2_mem_int_raw: L2_MEM_INT_RAW,
     l2_mem_int_st: L2_MEM_INT_ST,
     l2_mem_int_ena: L2_MEM_INT_ENA,
@@ -40,11 +37,11 @@ pub struct RegisterBlock {
     l2_mem_l2_ram_ecc: L2_MEM_L2_RAM_ECC,
     l2_mem_int_record0: L2_MEM_INT_RECORD0,
     l2_mem_int_record1: L2_MEM_INT_RECORD1,
-    _reserved31: [u8; 0x0c],
+    _reserved28: [u8; 0x0c],
     l2_mem_l2_cache_ecc: L2_MEM_L2_CACHE_ECC,
     l1cache_bus0_id: L1CACHE_BUS0_ID,
     l1cache_bus1_id: L1CACHE_BUS1_ID,
-    _reserved34: [u8; 0x08],
+    _reserved31: [u8; 0x08],
     l2_mem_rdn_eco_cs: L2_MEM_RDN_ECO_CS,
     l2_mem_rdn_eco_low: L2_MEM_RDN_ECO_LOW,
     l2_mem_rdn_eco_high: L2_MEM_RDN_ECO_HIGH,
@@ -66,7 +63,7 @@ pub struct RegisterBlock {
     core_ahb_timeout: CORE_AHB_TIMEOUT,
     core_ibus_timeout: CORE_IBUS_TIMEOUT,
     core_dbus_timeout: CORE_DBUS_TIMEOUT,
-    _reserved55: [u8; 0x0c],
+    _reserved52: [u8; 0x0c],
     icm_cpu_h2x_cfg: ICM_CPU_H2X_CFG,
     peri1_apb_postw_en: PERI1_APB_POSTW_EN,
     bitscrambler_peri_sel: BITSCRAMBLER_PERI_SEL,
@@ -83,9 +80,9 @@ pub struct RegisterBlock {
     tcm_parity_check_ctrl: TCM_PARITY_CHECK_CTRL,
     design_for_verification0: DESIGN_FOR_VERIFICATION0,
     design_for_verification1: DESIGN_FOR_VERIFICATION1,
-    _reserved71: [u8; 0x08],
+    _reserved68: [u8; 0x08],
     psram_flash_addr_interchange: PSRAM_FLASH_ADDR_INTERCHANGE,
-    _reserved72: [u8; 0x04],
+    _reserved69: [u8; 0x04],
     ahb2axi_bresp_err_int_raw: AHB2AXI_BRESP_ERR_INT_RAW,
     ahb2axi_bresp_err_int_st: AHB2AXI_BRESP_ERR_INT_ST,
     ahb2axi_bresp_err_int_ena: AHB2AXI_BRESP_ERR_INT_ENA,
@@ -98,16 +95,16 @@ pub struct RegisterBlock {
     core_timeout_int_st: CORE_TIMEOUT_INT_ST,
     core_timeout_int_ena: CORE_TIMEOUT_INT_ENA,
     core_timeout_int_clr: CORE_TIMEOUT_INT_CLR,
-    _reserved84: [u8; 0x08],
+    _reserved81: [u8; 0x08],
     gpio_o_hys_ctrl0: GPIO_O_HYS_CTRL0,
     gpio_o_hys_ctrl1: GPIO_O_HYS_CTRL1,
-    _reserved86: [u8; 0x08],
+    _reserved83: [u8; 0x08],
     rsa_pd_ctrl: RSA_PD_CTRL,
     ecc_pd_ctrl: ECC_PD_CTRL,
     rng_cfg: RNG_CFG,
     uart_pd_ctrl: UART_PD_CTRL,
     peri_mem_clk_force_on: PERI_MEM_CLK_FORCE_ON,
-    _reserved91: [u8; 0x04],
+    _reserved88: [u8; 0x04],
     usb_otghs_phy_st: USB_OTGHS_PHY_ST,
     cpu_wakeup_event: CPU_WAKEUP_EVENT,
     hp2lp_intr_group0_en: HP2LP_INTR_GROUP0_EN,
@@ -134,25 +131,16 @@ impl RegisterBlock {
     pub const fn clk_en(&self) -> &CLK_EN {
         &self.clk_en
     }
-    #[doc = "0x10 - NA"]
+    #[doc = "0x10..0x20 - NA"]
     #[inline(always)]
-    pub const fn cpu_intr_from_cpu_0(&self) -> &CPU_INTR_FROM_CPU_0 {
-        &self.cpu_intr_from_cpu_0
+    pub const fn cpu_intr_from_cpu(&self, n: usize) -> &CPU_INTR_FROM_CPU {
+        &self.cpu_intr_from_cpu[n]
     }
-    #[doc = "0x14 - NA"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x10..0x20 - NA"]
     #[inline(always)]
-    pub const fn cpu_intr_from_cpu_1(&self) -> &CPU_INTR_FROM_CPU_1 {
-        &self.cpu_intr_from_cpu_1
-    }
-    #[doc = "0x18 - NA"]
-    #[inline(always)]
-    pub const fn cpu_intr_from_cpu_2(&self) -> &CPU_INTR_FROM_CPU_2 {
-        &self.cpu_intr_from_cpu_2
-    }
-    #[doc = "0x1c - NA"]
-    #[inline(always)]
-    pub const fn cpu_intr_from_cpu_3(&self) -> &CPU_INTR_FROM_CPU_3 {
-        &self.cpu_intr_from_cpu_3
+    pub fn cpu_intr_from_cpu_iter(&self) -> impl Iterator<Item = &CPU_INTR_FROM_CPU> {
+        self.cpu_intr_from_cpu.iter()
     }
     #[doc = "0x20 - NA"]
     #[inline(always)]
@@ -658,22 +646,10 @@ pub mod ver_date;
 pub type CLK_EN = crate::Reg<clk_en::CLK_EN_SPEC>;
 #[doc = "NA"]
 pub mod clk_en;
-#[doc = "CPU_INTR_FROM_CPU_0 (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu_0`] module"]
-pub type CPU_INTR_FROM_CPU_0 = crate::Reg<cpu_intr_from_cpu_0::CPU_INTR_FROM_CPU_0_SPEC>;
+#[doc = "CPU_INTR_FROM_CPU (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu`] module"]
+pub type CPU_INTR_FROM_CPU = crate::Reg<cpu_intr_from_cpu::CPU_INTR_FROM_CPU_SPEC>;
 #[doc = "NA"]
-pub mod cpu_intr_from_cpu_0;
-#[doc = "CPU_INTR_FROM_CPU_1 (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu_1`] module"]
-pub type CPU_INTR_FROM_CPU_1 = crate::Reg<cpu_intr_from_cpu_1::CPU_INTR_FROM_CPU_1_SPEC>;
-#[doc = "NA"]
-pub mod cpu_intr_from_cpu_1;
-#[doc = "CPU_INTR_FROM_CPU_2 (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu_2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu_2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu_2`] module"]
-pub type CPU_INTR_FROM_CPU_2 = crate::Reg<cpu_intr_from_cpu_2::CPU_INTR_FROM_CPU_2_SPEC>;
-#[doc = "NA"]
-pub mod cpu_intr_from_cpu_2;
-#[doc = "CPU_INTR_FROM_CPU_3 (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu_3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu_3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu_3`] module"]
-pub type CPU_INTR_FROM_CPU_3 = crate::Reg<cpu_intr_from_cpu_3::CPU_INTR_FROM_CPU_3_SPEC>;
-#[doc = "NA"]
-pub mod cpu_intr_from_cpu_3;
+pub mod cpu_intr_from_cpu;
 #[doc = "CACHE_CLK_CONFIG (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cache_clk_config::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cache_clk_config::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cache_clk_config`] module"]
 pub type CACHE_CLK_CONFIG = crate::Reg<cache_clk_config::CACHE_CLK_CONFIG_SPEC>;
 #[doc = "NA"]

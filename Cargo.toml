@@ -11,6 +11,7 @@ exclude  = [
     "esp32c6-lp",
     "esp32h2",
     "esp32p4",
+    "esp32p4-lp",
     "esp32s2",
     "esp32s2-ulp",
     "esp32s3",

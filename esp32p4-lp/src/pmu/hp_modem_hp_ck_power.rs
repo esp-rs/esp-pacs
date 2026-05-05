@@ -1,0 +1,53 @@
+#[doc = "Register `HP_MODEM_HP_CK_POWER` writer"]
+pub type W = crate::W<HP_MODEM_HP_CK_POWER_SPEC>;
+#[doc = "Field `HP_MODEM_I2C_ISO_EN` writer - PMU_HP_MODEM_I2C_ISO_EN"]
+pub type HP_MODEM_I2C_ISO_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HP_MODEM_I2C_RETENTION` writer - PMU_HP_MODEM_I2C_RETENTION"]
+pub type HP_MODEM_I2C_RETENTION_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HP_MODEM_XPD_PLL_I2C` writer - PMU_HP_MODEM_XPD_PLL_I2C"]
+pub type HP_MODEM_XPD_PLL_I2C_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `HP_MODEM_XPD_PLL` writer - PMU_HP_MODEM_XPD_PLL"]
+pub type HP_MODEM_XPD_PLL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_HP_CK_POWER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
+impl W {
+    #[doc = "Bit 21 - PMU_HP_MODEM_I2C_ISO_EN"]
+    #[inline(always)]
+    pub fn hp_modem_i2c_iso_en(&mut self) -> HP_MODEM_I2C_ISO_EN_W<'_, HP_MODEM_HP_CK_POWER_SPEC> {
+        HP_MODEM_I2C_ISO_EN_W::new(self, 21)
+    }
+    #[doc = "Bit 22 - PMU_HP_MODEM_I2C_RETENTION"]
+    #[inline(always)]
+    pub fn hp_modem_i2c_retention(
+        &mut self,
+    ) -> HP_MODEM_I2C_RETENTION_W<'_, HP_MODEM_HP_CK_POWER_SPEC> {
+        HP_MODEM_I2C_RETENTION_W::new(self, 22)
+    }
+    #[doc = "Bits 23:26 - PMU_HP_MODEM_XPD_PLL_I2C"]
+    #[inline(always)]
+    pub fn hp_modem_xpd_pll_i2c(
+        &mut self,
+    ) -> HP_MODEM_XPD_PLL_I2C_W<'_, HP_MODEM_HP_CK_POWER_SPEC> {
+        HP_MODEM_XPD_PLL_I2C_W::new(self, 23)
+    }
+    #[doc = "Bits 27:30 - PMU_HP_MODEM_XPD_PLL"]
+    #[inline(always)]
+    pub fn hp_modem_xpd_pll(&mut self) -> HP_MODEM_XPD_PLL_W<'_, HP_MODEM_HP_CK_POWER_SPEC> {
+        HP_MODEM_XPD_PLL_W::new(self, 27)
+    }
+}
+#[doc = "PMU_HP_MODEM_HP_CK_POWER\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_modem_hp_ck_power::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct HP_MODEM_HP_CK_POWER_SPEC;
+impl crate::RegisterSpec for HP_MODEM_HP_CK_POWER_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`hp_modem_hp_ck_power::W`](W) writer structure"]
+impl crate::Writable for HP_MODEM_HP_CK_POWER_SPEC {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets HP_MODEM_HP_CK_POWER to value 0"]
+impl crate::Resettable for HP_MODEM_HP_CK_POWER_SPEC {}

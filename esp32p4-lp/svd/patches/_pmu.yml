@@ -1,0 +1,5 @@
+PMU:
+  _strip: "PMU_"
+  "*":
+    _strip: "PMU_"
+  _include: ../../../common_patches/pmu_int_strip.yaml

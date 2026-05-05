@@ -1,0 +1,2 @@
+LP_TIMER:
+  _include: ../../../common_patches/lptim_int_strip.yaml
