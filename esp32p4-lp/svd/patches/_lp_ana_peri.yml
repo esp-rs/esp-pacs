@@ -1,0 +1,5 @@
+LP_ANA_PERI:
+  _strip: "LP_ANA_"
+  "*":
+    _strip: "LP_ANA_"
+  _include: ../../../common_patches/lpana_int_strip.yaml

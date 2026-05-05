@@ -1,0 +1,4 @@
+LP_INTR:
+  _strip: "LP_"
+  "*":
+    _strip: "LP_"

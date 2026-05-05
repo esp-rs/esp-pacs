@@ -1,0 +1,6 @@
+LP_MAILBOX:
+  # MASSEGE -> MESSAGE rename and 16-MESSAGE array collapse done at base
+  # SVD assembly time (svdtools cannot match single+two-digit indices).
+  _strip: "MB_"
+  "*":
+    _strip: "MB_"

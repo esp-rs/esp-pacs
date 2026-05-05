@@ -1,0 +1,14 @@
+_svd: "../esp32p4-lp.base.svd"
+
+_include:
+  - _lp_ana_peri.yml
+  - _lp_i2c.yml
+  - _lp_intr.yml
+  - _lp_mailbox.yml
+  - _lp_pms.yml
+  - _lp_spi.yml
+  - _lp_timer.yml
+  - _pmu.yml
+
+"LP_UART,LP_WDT,LP_HUK":
+  _include: ../../../common_patches/int_strip.yaml

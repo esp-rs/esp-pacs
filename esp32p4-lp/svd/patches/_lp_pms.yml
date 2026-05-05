@@ -1,0 +1,14 @@
+LP_PERI_PMS:
+  _strip: "TEE_"
+  "*":
+    _strip: "TEE_"
+
+HP2LP_PERI_PMS:
+  _strip: "TEE_"
+  "*":
+    _strip: "TEE_"
+
+LP2HP_PERI_PMS:
+  _strip: "TEE_"
+  "*":
+    _strip: "TEE_"

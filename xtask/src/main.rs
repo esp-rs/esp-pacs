@@ -30,6 +30,7 @@ enum Chip {
     Esp32c6Lp,
     Esp32h2,
     Esp32p4,
+    Esp32p4Lp,
     Esp32s2,
     Esp32s2Ulp,
     Esp32s3,
@@ -218,7 +219,7 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
     config.max_cluster_size = true;
     config.impl_defmt = Some("defmt".into());
     config.skip_peripherals_struct = match chip {
-        Chip::Esp32s3Ulp | Chip::Esp32s2Ulp | Chip::Esp32c6Lp => false,
+        Chip::Esp32s3Ulp | Chip::Esp32s2Ulp | Chip::Esp32c6Lp | Chip::Esp32p4Lp => false,
         _ => true,
     };
 

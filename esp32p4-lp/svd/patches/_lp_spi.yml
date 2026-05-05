@@ -1,0 +1,4 @@
+LP_SPI:
+  _strip: "LP_SPI_"
+  "*":
+    _strip: "LP_SPI_"
