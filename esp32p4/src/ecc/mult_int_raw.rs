@@ -1,19 +1,19 @@
 #[doc = "Register `MULT_INT_RAW` reader"]
 pub type R = crate::R<MULT_INT_RAW_SPEC>;
-#[doc = "Field `MULT_CALC_DONE` reader - The raw interrupt status of the ECC_CALC_DONE_INT interrupt."]
-pub type MULT_CALC_DONE_R = crate::BitReader;
+#[doc = "Field `CALC_DONE` reader - The raw interrupt status of the ECC_CALC_DONE_INT interrupt."]
+pub type CALC_DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status of the ECC_CALC_DONE_INT interrupt."]
     #[inline(always)]
-    pub fn mult_calc_done(&self) -> MULT_CALC_DONE_R {
-        MULT_CALC_DONE_R::new((self.bits & 1) != 0)
+    pub fn calc_done(&self) -> CALC_DONE_R {
+        CALC_DONE_R::new((self.bits & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MULT_INT_RAW")
-            .field("mult_calc_done", &self.mult_calc_done())
+            .field("calc_done", &self.calc_done())
             .finish()
     }
 }
