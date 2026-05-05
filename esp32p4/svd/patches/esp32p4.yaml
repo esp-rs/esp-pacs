@@ -1,9 +1,9 @@
 _svd: "../esp32p4.base.svd"
 
 _include:
+  - ../../../common_patches/clic.yaml
   - ../../../common_patches/twai.yaml
   - "_axi_icm.yml"
-  - "_clic.yml"
   - "_icm_axi_qos.yml"
   - "_interrupt_core0.yml"
   - "_interrupt_core1.yml"

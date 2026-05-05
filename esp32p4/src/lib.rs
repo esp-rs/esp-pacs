@@ -350,14 +350,14 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 128] = [
 #[doc(hidden)]
 pub mod interrupt;
 pub use self::interrupt::Interrupt;
-#[doc = "Core Local Interrupt Controller (CLIC)"]
+#[doc = "Core Local Interrupt Controller"]
 pub type CLIC = crate::Periph<clic::RegisterBlock, 0x2080_0000>;
 impl core::fmt::Debug for CLIC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLIC").finish()
     }
 }
-#[doc = "Core Local Interrupt Controller (CLIC)"]
+#[doc = "Core Local Interrupt Controller"]
 pub mod clic;
 #[doc = "ADC (Analog to Digital Converter)"]
 pub type ADC = crate::Periph<adc::RegisterBlock, 0x500d_e000>;
