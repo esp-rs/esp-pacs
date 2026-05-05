@@ -1,0 +1,43 @@
+#[doc = "Register `W9` reader"]
+pub type R = crate::R<W9_SPEC>;
+#[doc = "Register `W9` writer"]
+pub type W = crate::W<W9_SPEC>;
+#[doc = "Field `LP_REG_BUF9` reader - data buffer"]
+pub type LP_REG_BUF9_R = crate::FieldReader<u32>;
+#[doc = "Field `LP_REG_BUF9` writer - data buffer"]
+pub type LP_REG_BUF9_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - data buffer"]
+    #[inline(always)]
+    pub fn lp_reg_buf9(&self) -> LP_REG_BUF9_R {
+        LP_REG_BUF9_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("W9")
+            .field("lp_reg_buf9", &self.lp_reg_buf9())
+            .finish()
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - data buffer"]
+    #[inline(always)]
+    pub fn lp_reg_buf9(&mut self) -> LP_REG_BUF9_W<'_, W9_SPEC> {
+        LP_REG_BUF9_W::new(self, 0)
+    }
+}
+#[doc = "SPI CPU-controlled buffer9\n\nYou can [`read`](crate::Reg::read) this register and get [`w9::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`w9::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct W9_SPEC;
+impl crate::RegisterSpec for W9_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`w9::R`](R) reader structure"]
+impl crate::Readable for W9_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`w9::W`](W) writer structure"]
+impl crate::Writable for W9_SPEC {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets W9 to value 0"]
+impl crate::Resettable for W9_SPEC {}

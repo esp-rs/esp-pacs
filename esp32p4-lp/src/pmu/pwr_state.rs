@@ -1,0 +1,44 @@
+#[doc = "Register `PWR_STATE` reader"]
+pub type R = crate::R<PWR_STATE_SPEC>;
+#[doc = "Field `PMU_BACKUP_ST_STATE` reader - PMU_PMU_BACKUP_ST_STATE"]
+pub type PMU_BACKUP_ST_STATE_R = crate::FieldReader;
+#[doc = "Field `PMU_LP_PWR_ST_STATE` reader - PMU_PMU_LP_PWR_ST_STATE"]
+pub type PMU_LP_PWR_ST_STATE_R = crate::FieldReader;
+#[doc = "Field `PMU_HP_PWR_ST_STATE` reader - PMU_PMU_HP_PWR_ST_STATE"]
+pub type PMU_HP_PWR_ST_STATE_R = crate::FieldReader<u16>;
+impl R {
+    #[doc = "Bits 13:17 - PMU_PMU_BACKUP_ST_STATE"]
+    #[inline(always)]
+    pub fn pmu_backup_st_state(&self) -> PMU_BACKUP_ST_STATE_R {
+        PMU_BACKUP_ST_STATE_R::new(((self.bits >> 13) & 0x1f) as u8)
+    }
+    #[doc = "Bits 18:22 - PMU_PMU_LP_PWR_ST_STATE"]
+    #[inline(always)]
+    pub fn pmu_lp_pwr_st_state(&self) -> PMU_LP_PWR_ST_STATE_R {
+        PMU_LP_PWR_ST_STATE_R::new(((self.bits >> 18) & 0x1f) as u8)
+    }
+    #[doc = "Bits 23:31 - PMU_PMU_HP_PWR_ST_STATE"]
+    #[inline(always)]
+    pub fn pmu_hp_pwr_st_state(&self) -> PMU_HP_PWR_ST_STATE_R {
+        PMU_HP_PWR_ST_STATE_R::new(((self.bits >> 23) & 0x01ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PWR_STATE")
+            .field("pmu_backup_st_state", &self.pmu_backup_st_state())
+            .field("pmu_lp_pwr_st_state", &self.pmu_lp_pwr_st_state())
+            .field("pmu_hp_pwr_st_state", &self.pmu_hp_pwr_st_state())
+            .finish()
+    }
+}
+#[doc = "PMU_PWR_STATE\n\nYou can [`read`](crate::Reg::read) this register and get [`pwr_state::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PWR_STATE_SPEC;
+impl crate::RegisterSpec for PWR_STATE_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`pwr_state::R`](R) reader structure"]
+impl crate::Readable for PWR_STATE_SPEC {}
+#[doc = "`reset()` method sets PWR_STATE to value 0"]
+impl crate::Resettable for PWR_STATE_SPEC {}

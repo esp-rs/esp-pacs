@@ -1,0 +1,214 @@
+#[doc = "Register `DCM_CTRL` reader"]
+pub type R = crate::R<DCM_CTRL_SPEC>;
+#[doc = "Register `DCM_CTRL` writer"]
+pub type W = crate::W<DCM_CTRL_SPEC>;
+#[doc = "Field `DCDC_ON_REQ` writer - SW trigger dcdc on"]
+pub type DCDC_ON_REQ_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DCDC_OFF_REQ` writer - SW trigger dcdc off"]
+pub type DCDC_OFF_REQ_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DCDC_LIGHTSLP_REQ` writer - SW trigger dcdc enter lightsleep"]
+pub type DCDC_LIGHTSLP_REQ_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DCDC_DEEPSLP_REQ` writer - SW trigger dcdc enter deepsleep"]
+pub type DCDC_DEEPSLP_REQ_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DCDC_DONE_FORCE` reader - PMU_DCDC_DONE_FORCE"]
+pub type DCDC_DONE_FORCE_R = crate::BitReader;
+#[doc = "Field `DCDC_DONE_FORCE` writer - PMU_DCDC_DONE_FORCE"]
+pub type DCDC_DONE_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DCDC_ON_FORCE_PU` reader - PMU_DCDC_ON_FORCE_PU"]
+pub type DCDC_ON_FORCE_PU_R = crate::BitReader;
+#[doc = "Field `DCDC_ON_FORCE_PU` writer - PMU_DCDC_ON_FORCE_PU"]
+pub type DCDC_ON_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DCDC_ON_FORCE_PD` reader - PMU_DCDC_ON_FORCE_PD"]
+pub type DCDC_ON_FORCE_PD_R = crate::BitReader;
+#[doc = "Field `DCDC_ON_FORCE_PD` writer - PMU_DCDC_ON_FORCE_PD"]
+pub type DCDC_ON_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DCDC_FB_RES_FORCE_PU` reader - PMU_DCDC_FB_RES_FORCE_PU"]
+pub type DCDC_FB_RES_FORCE_PU_R = crate::BitReader;
+#[doc = "Field `DCDC_FB_RES_FORCE_PU` writer - PMU_DCDC_FB_RES_FORCE_PU"]
+pub type DCDC_FB_RES_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DCDC_FB_RES_FORCE_PD` reader - PMU_DCDC_FB_RES_FORCE_PD"]
+pub type DCDC_FB_RES_FORCE_PD_R = crate::BitReader;
+#[doc = "Field `DCDC_FB_RES_FORCE_PD` writer - PMU_DCDC_FB_RES_FORCE_PD"]
+pub type DCDC_FB_RES_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DCDC_LS_FORCE_PU` reader - PMU_DCDC_LS_FORCE_PU"]
+pub type DCDC_LS_FORCE_PU_R = crate::BitReader;
+#[doc = "Field `DCDC_LS_FORCE_PU` writer - PMU_DCDC_LS_FORCE_PU"]
+pub type DCDC_LS_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DCDC_LS_FORCE_PD` reader - PMU_DCDC_LS_FORCE_PD"]
+pub type DCDC_LS_FORCE_PD_R = crate::BitReader;
+#[doc = "Field `DCDC_LS_FORCE_PD` writer - PMU_DCDC_LS_FORCE_PD"]
+pub type DCDC_LS_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DCDC_DS_FORCE_PU` reader - PMU_DCDC_DS_FORCE_PU"]
+pub type DCDC_DS_FORCE_PU_R = crate::BitReader;
+#[doc = "Field `DCDC_DS_FORCE_PU` writer - PMU_DCDC_DS_FORCE_PU"]
+pub type DCDC_DS_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DCDC_DS_FORCE_PD` reader - PMU_DCDC_DS_FORCE_PD"]
+pub type DCDC_DS_FORCE_PD_R = crate::BitReader;
+#[doc = "Field `DCDC_DS_FORCE_PD` writer - PMU_DCDC_DS_FORCE_PD"]
+pub type DCDC_DS_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DCM_CUR_ST` reader - PMU_DCM_CUR_ST"]
+pub type DCM_CUR_ST_R = crate::FieldReader;
+#[doc = "Field `DCDC_EN_AMUX_TEST` reader - Enable analog mux to pull PAD TEST_DCDC voltage signal"]
+pub type DCDC_EN_AMUX_TEST_R = crate::BitReader;
+#[doc = "Field `DCDC_EN_AMUX_TEST` writer - Enable analog mux to pull PAD TEST_DCDC voltage signal"]
+pub type DCDC_EN_AMUX_TEST_W<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 7 - PMU_DCDC_DONE_FORCE"]
+    #[inline(always)]
+    pub fn dcdc_done_force(&self) -> DCDC_DONE_FORCE_R {
+        DCDC_DONE_FORCE_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - PMU_DCDC_ON_FORCE_PU"]
+    #[inline(always)]
+    pub fn dcdc_on_force_pu(&self) -> DCDC_ON_FORCE_PU_R {
+        DCDC_ON_FORCE_PU_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - PMU_DCDC_ON_FORCE_PD"]
+    #[inline(always)]
+    pub fn dcdc_on_force_pd(&self) -> DCDC_ON_FORCE_PD_R {
+        DCDC_ON_FORCE_PD_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - PMU_DCDC_FB_RES_FORCE_PU"]
+    #[inline(always)]
+    pub fn dcdc_fb_res_force_pu(&self) -> DCDC_FB_RES_FORCE_PU_R {
+        DCDC_FB_RES_FORCE_PU_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - PMU_DCDC_FB_RES_FORCE_PD"]
+    #[inline(always)]
+    pub fn dcdc_fb_res_force_pd(&self) -> DCDC_FB_RES_FORCE_PD_R {
+        DCDC_FB_RES_FORCE_PD_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - PMU_DCDC_LS_FORCE_PU"]
+    #[inline(always)]
+    pub fn dcdc_ls_force_pu(&self) -> DCDC_LS_FORCE_PU_R {
+        DCDC_LS_FORCE_PU_R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13 - PMU_DCDC_LS_FORCE_PD"]
+    #[inline(always)]
+    pub fn dcdc_ls_force_pd(&self) -> DCDC_LS_FORCE_PD_R {
+        DCDC_LS_FORCE_PD_R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14 - PMU_DCDC_DS_FORCE_PU"]
+    #[inline(always)]
+    pub fn dcdc_ds_force_pu(&self) -> DCDC_DS_FORCE_PU_R {
+        DCDC_DS_FORCE_PU_R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - PMU_DCDC_DS_FORCE_PD"]
+    #[inline(always)]
+    pub fn dcdc_ds_force_pd(&self) -> DCDC_DS_FORCE_PD_R {
+        DCDC_DS_FORCE_PD_R::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bits 16:23 - PMU_DCM_CUR_ST"]
+    #[inline(always)]
+    pub fn dcm_cur_st(&self) -> DCM_CUR_ST_R {
+        DCM_CUR_ST_R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bit 29 - Enable analog mux to pull PAD TEST_DCDC voltage signal"]
+    #[inline(always)]
+    pub fn dcdc_en_amux_test(&self) -> DCDC_EN_AMUX_TEST_R {
+        DCDC_EN_AMUX_TEST_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCM_CTRL")
+            .field("dcdc_done_force", &self.dcdc_done_force())
+            .field("dcdc_on_force_pu", &self.dcdc_on_force_pu())
+            .field("dcdc_on_force_pd", &self.dcdc_on_force_pd())
+            .field("dcdc_fb_res_force_pu", &self.dcdc_fb_res_force_pu())
+            .field("dcdc_fb_res_force_pd", &self.dcdc_fb_res_force_pd())
+            .field("dcdc_ls_force_pu", &self.dcdc_ls_force_pu())
+            .field("dcdc_ls_force_pd", &self.dcdc_ls_force_pd())
+            .field("dcdc_ds_force_pu", &self.dcdc_ds_force_pu())
+            .field("dcdc_ds_force_pd", &self.dcdc_ds_force_pd())
+            .field("dcm_cur_st", &self.dcm_cur_st())
+            .field("dcdc_en_amux_test", &self.dcdc_en_amux_test())
+            .finish()
+    }
+}
+impl W {
+    #[doc = "Bit 0 - SW trigger dcdc on"]
+    #[inline(always)]
+    pub fn dcdc_on_req(&mut self) -> DCDC_ON_REQ_W<'_, DCM_CTRL_SPEC> {
+        DCDC_ON_REQ_W::new(self, 0)
+    }
+    #[doc = "Bit 1 - SW trigger dcdc off"]
+    #[inline(always)]
+    pub fn dcdc_off_req(&mut self) -> DCDC_OFF_REQ_W<'_, DCM_CTRL_SPEC> {
+        DCDC_OFF_REQ_W::new(self, 1)
+    }
+    #[doc = "Bit 2 - SW trigger dcdc enter lightsleep"]
+    #[inline(always)]
+    pub fn dcdc_lightslp_req(&mut self) -> DCDC_LIGHTSLP_REQ_W<'_, DCM_CTRL_SPEC> {
+        DCDC_LIGHTSLP_REQ_W::new(self, 2)
+    }
+    #[doc = "Bit 3 - SW trigger dcdc enter deepsleep"]
+    #[inline(always)]
+    pub fn dcdc_deepslp_req(&mut self) -> DCDC_DEEPSLP_REQ_W<'_, DCM_CTRL_SPEC> {
+        DCDC_DEEPSLP_REQ_W::new(self, 3)
+    }
+    #[doc = "Bit 7 - PMU_DCDC_DONE_FORCE"]
+    #[inline(always)]
+    pub fn dcdc_done_force(&mut self) -> DCDC_DONE_FORCE_W<'_, DCM_CTRL_SPEC> {
+        DCDC_DONE_FORCE_W::new(self, 7)
+    }
+    #[doc = "Bit 8 - PMU_DCDC_ON_FORCE_PU"]
+    #[inline(always)]
+    pub fn dcdc_on_force_pu(&mut self) -> DCDC_ON_FORCE_PU_W<'_, DCM_CTRL_SPEC> {
+        DCDC_ON_FORCE_PU_W::new(self, 8)
+    }
+    #[doc = "Bit 9 - PMU_DCDC_ON_FORCE_PD"]
+    #[inline(always)]
+    pub fn dcdc_on_force_pd(&mut self) -> DCDC_ON_FORCE_PD_W<'_, DCM_CTRL_SPEC> {
+        DCDC_ON_FORCE_PD_W::new(self, 9)
+    }
+    #[doc = "Bit 10 - PMU_DCDC_FB_RES_FORCE_PU"]
+    #[inline(always)]
+    pub fn dcdc_fb_res_force_pu(&mut self) -> DCDC_FB_RES_FORCE_PU_W<'_, DCM_CTRL_SPEC> {
+        DCDC_FB_RES_FORCE_PU_W::new(self, 10)
+    }
+    #[doc = "Bit 11 - PMU_DCDC_FB_RES_FORCE_PD"]
+    #[inline(always)]
+    pub fn dcdc_fb_res_force_pd(&mut self) -> DCDC_FB_RES_FORCE_PD_W<'_, DCM_CTRL_SPEC> {
+        DCDC_FB_RES_FORCE_PD_W::new(self, 11)
+    }
+    #[doc = "Bit 12 - PMU_DCDC_LS_FORCE_PU"]
+    #[inline(always)]
+    pub fn dcdc_ls_force_pu(&mut self) -> DCDC_LS_FORCE_PU_W<'_, DCM_CTRL_SPEC> {
+        DCDC_LS_FORCE_PU_W::new(self, 12)
+    }
+    #[doc = "Bit 13 - PMU_DCDC_LS_FORCE_PD"]
+    #[inline(always)]
+    pub fn dcdc_ls_force_pd(&mut self) -> DCDC_LS_FORCE_PD_W<'_, DCM_CTRL_SPEC> {
+        DCDC_LS_FORCE_PD_W::new(self, 13)
+    }
+    #[doc = "Bit 14 - PMU_DCDC_DS_FORCE_PU"]
+    #[inline(always)]
+    pub fn dcdc_ds_force_pu(&mut self) -> DCDC_DS_FORCE_PU_W<'_, DCM_CTRL_SPEC> {
+        DCDC_DS_FORCE_PU_W::new(self, 14)
+    }
+    #[doc = "Bit 15 - PMU_DCDC_DS_FORCE_PD"]
+    #[inline(always)]
+    pub fn dcdc_ds_force_pd(&mut self) -> DCDC_DS_FORCE_PD_W<'_, DCM_CTRL_SPEC> {
+        DCDC_DS_FORCE_PD_W::new(self, 15)
+    }
+    #[doc = "Bit 29 - Enable analog mux to pull PAD TEST_DCDC voltage signal"]
+    #[inline(always)]
+    pub fn dcdc_en_amux_test(&mut self) -> DCDC_EN_AMUX_TEST_W<'_, DCM_CTRL_SPEC> {
+        DCDC_EN_AMUX_TEST_W::new(self, 29)
+    }
+}
+#[doc = "PMU_DCM_CTRL\n\nYou can [`read`](crate::Reg::read) this register and get [`dcm_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dcm_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DCM_CTRL_SPEC;
+impl crate::RegisterSpec for DCM_CTRL_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`dcm_ctrl::R`](R) reader structure"]
+impl crate::Readable for DCM_CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dcm_ctrl::W`](W) writer structure"]
+impl crate::Writable for DCM_CTRL_SPEC {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets DCM_CTRL to value 0"]
+impl crate::Resettable for DCM_CTRL_SPEC {}
