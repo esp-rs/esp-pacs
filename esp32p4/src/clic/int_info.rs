@@ -1,26 +1,26 @@
 #[doc = "Register `INT_INFO` reader"]
 pub type R = crate::R<INT_INFO_SPEC>;
-#[doc = "Field `NUM_INT` reader - Number of interrupt sources."]
+#[doc = "Field `NUM_INT` reader - The number of interrupt sources."]
 pub type NUM_INT_R = crate::FieldReader<u16>;
-#[doc = "Field `VERSION` reader - CLIC hardware/architecture version."]
+#[doc = "Field `VERSION` reader - The lower 4 bits are the modified version of the hardware implementation; the upper 4 bits are the CLIC architecture version information."]
 pub type VERSION_R = crate::FieldReader;
-#[doc = "Field `CTLBITS` reader - Effective bits of priority in CLICINTCTL."]
+#[doc = "Field `CTLBITS` reader - The effective bits of priority in the CLICINTCTL register."]
 pub type CTLBITS_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:12 - Number of interrupt sources."]
+    #[doc = "Bits 0:12 - The number of interrupt sources."]
     #[inline(always)]
     pub fn num_int(&self) -> NUM_INT_R {
         NUM_INT_R::new((self.bits & 0x1fff) as u16)
     }
-    #[doc = "Bits 13:20 - CLIC hardware/architecture version."]
+    #[doc = "Bits 13:20 - The lower 4 bits are the modified version of the hardware implementation; the upper 4 bits are the CLIC architecture version information."]
     #[inline(always)]
     pub fn version(&self) -> VERSION_R {
         VERSION_R::new(((self.bits >> 13) & 0xff) as u8)
     }
-    #[doc = "Bits 21:24 - Effective bits of priority in CLICINTCTL."]
+    #[doc = "Bits 21:28 - The effective bits of priority in the CLICINTCTL register."]
     #[inline(always)]
     pub fn ctlbits(&self) -> CTLBITS_R {
-        CTLBITS_R::new(((self.bits >> 21) & 0x0f) as u8)
+        CTLBITS_R::new(((self.bits >> 21) & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -33,7 +33,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "CLIC interrupt information register.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_info::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`int_info::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_INFO_SPEC;
 impl crate::RegisterSpec for INT_INFO_SPEC {
     type Ux = u32;
