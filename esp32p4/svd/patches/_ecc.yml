@@ -1,0 +1,43 @@
+ECC:
+  _modify:
+    "MULT_K_MEM*":
+        name: "K_MEM%s"
+        dim: 12
+        dimIncrement: 0x4
+        size: 0x20
+    "MULT_PX_MEM*":
+        name: "PX_MEM%s"
+        dim: 12
+        dimIncrement: 0x4
+        size: 0x20
+    "MULT_PY_MEM*":
+        name: "PY_MEM%s"
+        dim: 12
+        dimIncrement: 0x4
+        size: 0x20
+    "MULT_QX_MEM*":
+        name: "QX_MEM%s"
+        dim: 12
+        dimIncrement: 0x4
+        size: 0x20
+    "MULT_QY_MEM*":
+        name: "QY_MEM%s"
+        dim: 12
+        dimIncrement: 0x4
+        size: 0x20
+    "MULT_QZ_MEM*":
+        name: "QZ_MEM%s"
+        dim: 12
+        dimIncrement: 0x4
+        size: 0x20
+  MULT_CONF:
+    _strip:
+      - "MULT_"
+    KEY_LENGTH:
+      P192: [0, "P-192 elliptic curve"]
+      P256: [1, "P-256 elliptic curve"]
+      P384: [2, "P-384 elliptic curve"]
+
+  MULT_INT_*:
+    _strip:
+      - "MULT_"

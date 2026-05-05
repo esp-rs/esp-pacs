@@ -7,6 +7,7 @@ _include:
   - "_icm_axi_qos.yml"
   - "_interrupt_core0.yml"
   - "_interrupt_core1.yml"
+  - "_ecc.yml"
   - "_efuse.yml"
   - "_ledc_gamma.yml"
   - "_aes.yml"
