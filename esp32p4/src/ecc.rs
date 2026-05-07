@@ -10,12 +10,12 @@ pub struct RegisterBlock {
     mult_conf: MULT_CONF,
     _reserved5: [u8; 0xdc],
     mult_date: MULT_DATE,
-    mult_k_mem: [MULT_K_MEM; 48],
-    mult_px_mem: [MULT_PX_MEM; 48],
-    mult_py_mem: [MULT_PY_MEM; 48],
-    mult_qx_mem: [MULT_QX_MEM; 48],
-    mult_qy_mem: [MULT_QY_MEM; 48],
-    mult_qz_mem: [MULT_QZ_MEM; 48],
+    k_mem: [K_MEM; 12],
+    px_mem: [PX_MEM; 12],
+    py_mem: [PY_MEM; 12],
+    qx_mem: [QX_MEM; 12],
+    qy_mem: [QY_MEM; 12],
+    qz_mem: [QZ_MEM; 12],
 }
 impl RegisterBlock {
     #[doc = "0x0c - ECC raw interrupt status register"]
@@ -50,69 +50,69 @@ impl RegisterBlock {
     }
     #[doc = "0x100..0x130 - The memory that stores k."]
     #[inline(always)]
-    pub const fn mult_k_mem(&self, n: usize) -> &MULT_K_MEM {
-        &self.mult_k_mem[n]
+    pub const fn k_mem(&self, n: usize) -> &K_MEM {
+        &self.k_mem[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x100..0x130 - The memory that stores k."]
     #[inline(always)]
-    pub fn mult_k_mem_iter(&self) -> impl Iterator<Item = &MULT_K_MEM> {
-        self.mult_k_mem.iter()
+    pub fn k_mem_iter(&self) -> impl Iterator<Item = &K_MEM> {
+        self.k_mem.iter()
     }
     #[doc = "0x130..0x160 - The memory that stores Px."]
     #[inline(always)]
-    pub const fn mult_px_mem(&self, n: usize) -> &MULT_PX_MEM {
-        &self.mult_px_mem[n]
+    pub const fn px_mem(&self, n: usize) -> &PX_MEM {
+        &self.px_mem[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x130..0x160 - The memory that stores Px."]
     #[inline(always)]
-    pub fn mult_px_mem_iter(&self) -> impl Iterator<Item = &MULT_PX_MEM> {
-        self.mult_px_mem.iter()
+    pub fn px_mem_iter(&self) -> impl Iterator<Item = &PX_MEM> {
+        self.px_mem.iter()
     }
     #[doc = "0x160..0x190 - The memory that stores Py."]
     #[inline(always)]
-    pub const fn mult_py_mem(&self, n: usize) -> &MULT_PY_MEM {
-        &self.mult_py_mem[n]
+    pub const fn py_mem(&self, n: usize) -> &PY_MEM {
+        &self.py_mem[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x160..0x190 - The memory that stores Py."]
     #[inline(always)]
-    pub fn mult_py_mem_iter(&self) -> impl Iterator<Item = &MULT_PY_MEM> {
-        self.mult_py_mem.iter()
+    pub fn py_mem_iter(&self) -> impl Iterator<Item = &PY_MEM> {
+        self.py_mem.iter()
     }
     #[doc = "0x190..0x1c0 - The memory that stores Qx."]
     #[inline(always)]
-    pub const fn mult_qx_mem(&self, n: usize) -> &MULT_QX_MEM {
-        &self.mult_qx_mem[n]
+    pub const fn qx_mem(&self, n: usize) -> &QX_MEM {
+        &self.qx_mem[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x190..0x1c0 - The memory that stores Qx."]
     #[inline(always)]
-    pub fn mult_qx_mem_iter(&self) -> impl Iterator<Item = &MULT_QX_MEM> {
-        self.mult_qx_mem.iter()
+    pub fn qx_mem_iter(&self) -> impl Iterator<Item = &QX_MEM> {
+        self.qx_mem.iter()
     }
     #[doc = "0x1c0..0x1f0 - The memory that stores Qy."]
     #[inline(always)]
-    pub const fn mult_qy_mem(&self, n: usize) -> &MULT_QY_MEM {
-        &self.mult_qy_mem[n]
+    pub const fn qy_mem(&self, n: usize) -> &QY_MEM {
+        &self.qy_mem[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x1c0..0x1f0 - The memory that stores Qy."]
     #[inline(always)]
-    pub fn mult_qy_mem_iter(&self) -> impl Iterator<Item = &MULT_QY_MEM> {
-        self.mult_qy_mem.iter()
+    pub fn qy_mem_iter(&self) -> impl Iterator<Item = &QY_MEM> {
+        self.qy_mem.iter()
     }
     #[doc = "0x1f0..0x220 - The memory that stores Qz."]
     #[inline(always)]
-    pub const fn mult_qz_mem(&self, n: usize) -> &MULT_QZ_MEM {
-        &self.mult_qz_mem[n]
+    pub const fn qz_mem(&self, n: usize) -> &QZ_MEM {
+        &self.qz_mem[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x1f0..0x220 - The memory that stores Qz."]
     #[inline(always)]
-    pub fn mult_qz_mem_iter(&self) -> impl Iterator<Item = &MULT_QZ_MEM> {
-        self.mult_qz_mem.iter()
+    pub fn qz_mem_iter(&self) -> impl Iterator<Item = &QZ_MEM> {
+        self.qz_mem.iter()
     }
 }
 #[doc = "MULT_INT_RAW (r) register accessor: ECC raw interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`mult_int_raw::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mult_int_raw`] module"]
@@ -139,27 +139,27 @@ pub mod mult_conf;
 pub type MULT_DATE = crate::Reg<mult_date::MULT_DATE_SPEC>;
 #[doc = "Version control register"]
 pub mod mult_date;
-#[doc = "MULT_K_MEM (rw) register accessor: The memory that stores k.\n\nYou can [`read`](crate::Reg::read) this register and get [`mult_k_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mult_k_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mult_k_mem`] module"]
-pub type MULT_K_MEM = crate::Reg<mult_k_mem::MULT_K_MEM_SPEC>;
+#[doc = "K_MEM (rw) register accessor: The memory that stores k.\n\nYou can [`read`](crate::Reg::read) this register and get [`k_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`k_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@k_mem`] module"]
+pub type K_MEM = crate::Reg<k_mem::K_MEM_SPEC>;
 #[doc = "The memory that stores k."]
-pub mod mult_k_mem;
-#[doc = "MULT_PX_MEM (rw) register accessor: The memory that stores Px.\n\nYou can [`read`](crate::Reg::read) this register and get [`mult_px_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mult_px_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mult_px_mem`] module"]
-pub type MULT_PX_MEM = crate::Reg<mult_px_mem::MULT_PX_MEM_SPEC>;
+pub mod k_mem;
+#[doc = "PX_MEM (rw) register accessor: The memory that stores Px.\n\nYou can [`read`](crate::Reg::read) this register and get [`px_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`px_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@px_mem`] module"]
+pub type PX_MEM = crate::Reg<px_mem::PX_MEM_SPEC>;
 #[doc = "The memory that stores Px."]
-pub mod mult_px_mem;
-#[doc = "MULT_PY_MEM (rw) register accessor: The memory that stores Py.\n\nYou can [`read`](crate::Reg::read) this register and get [`mult_py_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mult_py_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mult_py_mem`] module"]
-pub type MULT_PY_MEM = crate::Reg<mult_py_mem::MULT_PY_MEM_SPEC>;
+pub mod px_mem;
+#[doc = "PY_MEM (rw) register accessor: The memory that stores Py.\n\nYou can [`read`](crate::Reg::read) this register and get [`py_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`py_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@py_mem`] module"]
+pub type PY_MEM = crate::Reg<py_mem::PY_MEM_SPEC>;
 #[doc = "The memory that stores Py."]
-pub mod mult_py_mem;
-#[doc = "MULT_QX_MEM (rw) register accessor: The memory that stores Qx.\n\nYou can [`read`](crate::Reg::read) this register and get [`mult_qx_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mult_qx_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mult_qx_mem`] module"]
-pub type MULT_QX_MEM = crate::Reg<mult_qx_mem::MULT_QX_MEM_SPEC>;
+pub mod py_mem;
+#[doc = "QX_MEM (rw) register accessor: The memory that stores Qx.\n\nYou can [`read`](crate::Reg::read) this register and get [`qx_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`qx_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@qx_mem`] module"]
+pub type QX_MEM = crate::Reg<qx_mem::QX_MEM_SPEC>;
 #[doc = "The memory that stores Qx."]
-pub mod mult_qx_mem;
-#[doc = "MULT_QY_MEM (rw) register accessor: The memory that stores Qy.\n\nYou can [`read`](crate::Reg::read) this register and get [`mult_qy_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mult_qy_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mult_qy_mem`] module"]
-pub type MULT_QY_MEM = crate::Reg<mult_qy_mem::MULT_QY_MEM_SPEC>;
+pub mod qx_mem;
+#[doc = "QY_MEM (rw) register accessor: The memory that stores Qy.\n\nYou can [`read`](crate::Reg::read) this register and get [`qy_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`qy_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@qy_mem`] module"]
+pub type QY_MEM = crate::Reg<qy_mem::QY_MEM_SPEC>;
 #[doc = "The memory that stores Qy."]
-pub mod mult_qy_mem;
-#[doc = "MULT_QZ_MEM (rw) register accessor: The memory that stores Qz.\n\nYou can [`read`](crate::Reg::read) this register and get [`mult_qz_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mult_qz_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mult_qz_mem`] module"]
-pub type MULT_QZ_MEM = crate::Reg<mult_qz_mem::MULT_QZ_MEM_SPEC>;
+pub mod qy_mem;
+#[doc = "QZ_MEM (rw) register accessor: The memory that stores Qz.\n\nYou can [`read`](crate::Reg::read) this register and get [`qz_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`qz_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@qz_mem`] module"]
+pub type QZ_MEM = crate::Reg<qz_mem::QZ_MEM_SPEC>;
 #[doc = "The memory that stores Qz."]
-pub mod mult_qz_mem;
+pub mod qz_mem;
