@@ -1000,14 +1000,14 @@ impl core::fmt::Debug for SPI2 {
 #[doc = "SPI (Serial Peripheral Interface) Controller 2"]
 pub mod spi2;
 #[doc = "SPI (Serial Peripheral Interface) Controller 3"]
-pub type SPI3 = crate::Periph<spi3::RegisterBlock, 0x500d_1000>;
+pub type SPI3 = crate::Periph<spi2::RegisterBlock, 0x500d_1000>;
 impl core::fmt::Debug for SPI3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI3").finish()
     }
 }
 #[doc = "SPI (Serial Peripheral Interface) Controller 3"]
-pub mod spi3;
+pub use self::spi2 as spi3;
 #[doc = "System Timer"]
 pub type SYSTIMER = crate::Periph<systimer::RegisterBlock, 0x500e_2000>;
 impl core::fmt::Debug for SYSTIMER {
