@@ -2,6 +2,7 @@ _svd: ../esp32.base.svd
 
 _include:
   - ../../../common_patches/twai.yaml
+  - ../../../common_patches/emac.yaml
   - "_apb_ctrl.yml"
   - "_date.yml"
   - "_emac.yml"
