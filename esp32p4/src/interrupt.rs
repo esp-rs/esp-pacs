@@ -153,6 +153,8 @@ pub enum Interrupt {
     CSI                = 87,
     #[doc = "88 - DSI"]
     DSI                = 88,
+    #[doc = "92 - ETH_MAC"]
+    ETH_MAC            = 92,
     #[doc = "95 - JPEG"]
     JPEG               = 95,
     #[doc = "96 - PPA"]
@@ -284,6 +286,7 @@ impl Interrupt {
             86 => Ok(Interrupt::DSI_BRIDGE),
             87 => Ok(Interrupt::CSI),
             88 => Ok(Interrupt::DSI),
+            92 => Ok(Interrupt::ETH_MAC),
             95 => Ok(Interrupt::JPEG),
             96 => Ok(Interrupt::PPA),
             100 => Ok(Interrupt::ISP),
