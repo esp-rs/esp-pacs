@@ -87,6 +87,7 @@ extern "C" {
     fn DSI_BRIDGE();
     fn CSI();
     fn DSI();
+    fn ETH_MAC();
     fn JPEG();
     fn PPA();
     fn ISP();
@@ -282,7 +283,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 128] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: ETH_MAC },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: JPEG },
@@ -1160,3 +1161,21 @@ impl core::fmt::Debug for USB_WRAP {
 }
 #[doc = "USB_WRAP Peripheral"]
 pub mod usb_wrap;
+#[doc = "Ethernet DMA configuration and control registers"]
+pub type EMAC_DMA = crate::Periph<emac_dma::RegisterBlock, 0x5009_9000>;
+impl core::fmt::Debug for EMAC_DMA {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EMAC_DMA").finish()
+    }
+}
+#[doc = "Ethernet DMA configuration and control registers"]
+pub mod emac_dma;
+#[doc = "Ethernet MAC configuration and control registers"]
+pub type EMAC_MAC = crate::Periph<emac_mac::RegisterBlock, 0x5009_8000>;
+impl core::fmt::Debug for EMAC_MAC {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EMAC_MAC").finish()
+    }
+}
+#[doc = "Ethernet MAC configuration and control registers"]
+pub mod emac_mac;

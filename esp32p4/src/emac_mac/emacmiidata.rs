@@ -1,0 +1,43 @@
+#[doc = "Register `EMACMIIDATA` reader"]
+pub type R = crate::R<EMACMIIDATA_SPEC>;
+#[doc = "Register `EMACMIIDATA` writer"]
+pub type W = crate::W<EMACMIIDATA_SPEC>;
+#[doc = "Field `MII_DATA` reader - This field contains the 16-bit data value read from the PHY after a Management Read operation or the 16-bit data value to be written to the PHY before a Management Write operation."]
+pub type MII_DATA_R = crate::FieldReader<u16>;
+#[doc = "Field `MII_DATA` writer - This field contains the 16-bit data value read from the PHY after a Management Read operation or the 16-bit data value to be written to the PHY before a Management Write operation."]
+pub type MII_DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+impl R {
+    #[doc = "Bits 0:15 - This field contains the 16-bit data value read from the PHY after a Management Read operation or the 16-bit data value to be written to the PHY before a Management Write operation."]
+    #[inline(always)]
+    pub fn mii_data(&self) -> MII_DATA_R {
+        MII_DATA_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EMACMIIDATA")
+            .field("mii_data", &self.mii_data())
+            .finish()
+    }
+}
+impl W {
+    #[doc = "Bits 0:15 - This field contains the 16-bit data value read from the PHY after a Management Read operation or the 16-bit data value to be written to the PHY before a Management Write operation."]
+    #[inline(always)]
+    pub fn mii_data(&mut self) -> MII_DATA_W<'_, EMACMIIDATA_SPEC> {
+        MII_DATA_W::new(self, 0)
+    }
+}
+#[doc = "PHY data read write\n\nYou can [`read`](crate::Reg::read) this register and get [`emacmiidata::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`emacmiidata::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct EMACMIIDATA_SPEC;
+impl crate::RegisterSpec for EMACMIIDATA_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`emacmiidata::R`](R) reader structure"]
+impl crate::Readable for EMACMIIDATA_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`emacmiidata::W`](W) writer structure"]
+impl crate::Writable for EMACMIIDATA_SPEC {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets EMACMIIDATA to value 0"]
+impl crate::Resettable for EMACMIIDATA_SPEC {}

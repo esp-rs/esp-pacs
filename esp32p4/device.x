@@ -73,6 +73,7 @@ PROVIDE(CSI_BRIDGE = DefaultHandler);
 PROVIDE(DSI_BRIDGE = DefaultHandler);
 PROVIDE(CSI = DefaultHandler);
 PROVIDE(DSI = DefaultHandler);
+PROVIDE(ETH_MAC = DefaultHandler);
 PROVIDE(JPEG = DefaultHandler);
 PROVIDE(PPA = DefaultHandler);
 PROVIDE(ISP = DefaultHandler);
