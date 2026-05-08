@@ -296,6 +296,32 @@ DPORT:
         bitOffset: 2
         bitWidth: 1
         access: read-write
+  WIFI_CLK_EN:
+    _delete:
+      WIFI_CLK_EN
+    _strip:
+      - WIFI_CLK_
+    _add:
+      SDIO_CLK_EN:
+        description: "Set the bit to enable the clock of SDIO module. Clear the bit to disable the clock of SDIO module."
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      SDIO_HOST_CLK_EN:
+        description: "Set the bit to enable the clock of SD/MMC module. Clear the bit to disable the clock of SD/MMC module."
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+      EMAC_CLK_EN:
+        description: "Set the bit to enable the clock of Ethernet MAC module. Clear the bit to disable the clock of Ethernet MAC module."
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+      RNG_CLK_EN:
+        description: "Set the bit to enable the clock of RNG module. Clear the bit to disable the clock of RNG module."
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
 
   _array:
     PRO_INTR_STATUS_*:
