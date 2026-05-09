@@ -2,15 +2,15 @@
 pub type R = crate::R<INTR_SIG_IDX_ASSERT_IN_SEC_SPEC>;
 #[doc = "Register `INTR_SIG_IDX_ASSERT_IN_SEC` writer"]
 pub type W = crate::W<INTR_SIG_IDX_ASSERT_IN_SEC_SPEC>;
-#[doc = "Field `INTR_SIG_IDX_ASSERT_IN_SEC` reader - NA"]
-pub type INTR_SIG_IDX_ASSERT_IN_SEC_R = crate::FieldReader;
-#[doc = "Field `INTR_SIG_IDX_ASSERT_IN_SEC` writer - NA"]
-pub type INTR_SIG_IDX_ASSERT_IN_SEC_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `CORE0_INTR_SIG_IDX_ASSERT_IN_SEC` reader - NA"]
+pub type CORE0_INTR_SIG_IDX_ASSERT_IN_SEC_R = crate::FieldReader;
+#[doc = "Field `CORE0_INTR_SIG_IDX_ASSERT_IN_SEC` writer - NA"]
+pub type CORE0_INTR_SIG_IDX_ASSERT_IN_SEC_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn intr_sig_idx_assert_in_sec(&self) -> INTR_SIG_IDX_ASSERT_IN_SEC_R {
-        INTR_SIG_IDX_ASSERT_IN_SEC_R::new((self.bits & 0x3f) as u8)
+    pub fn core0_intr_sig_idx_assert_in_sec(&self) -> CORE0_INTR_SIG_IDX_ASSERT_IN_SEC_R {
+        CORE0_INTR_SIG_IDX_ASSERT_IN_SEC_R::new((self.bits & 0x3f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -18,8 +18,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTR_SIG_IDX_ASSERT_IN_SEC")
             .field(
-                "intr_sig_idx_assert_in_sec",
-                &self.intr_sig_idx_assert_in_sec(),
+                "core0_intr_sig_idx_assert_in_sec",
+                &self.core0_intr_sig_idx_assert_in_sec(),
             )
             .finish()
     }
@@ -27,10 +27,10 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn intr_sig_idx_assert_in_sec(
+    pub fn core0_intr_sig_idx_assert_in_sec(
         &mut self,
-    ) -> INTR_SIG_IDX_ASSERT_IN_SEC_W<'_, INTR_SIG_IDX_ASSERT_IN_SEC_SPEC> {
-        INTR_SIG_IDX_ASSERT_IN_SEC_W::new(self, 0)
+    ) -> CORE0_INTR_SIG_IDX_ASSERT_IN_SEC_W<'_, INTR_SIG_IDX_ASSERT_IN_SEC_SPEC> {
+        CORE0_INTR_SIG_IDX_ASSERT_IN_SEC_W::new(self, 0)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_sig_idx_assert_in_sec::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intr_sig_idx_assert_in_sec::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

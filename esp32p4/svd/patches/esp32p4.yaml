@@ -6,8 +6,7 @@ _include:
   - ../../../common_patches/twai.yaml
   - "_axi_icm.yml"
   - "_icm_axi_qos.yml"
-  - "_interrupt_core0.yml"
-  - "_interrupt_core1.yml"
+  - "_interrupt.yml"
   - "_ecc.yml"
   - "_efuse.yml"
   - "_ledc_gamma.yml"
