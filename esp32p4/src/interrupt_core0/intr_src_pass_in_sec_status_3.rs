@@ -1,12 +1,12 @@
 #[doc = "Register `INTR_SRC_PASS_IN_SEC_STATUS_3` reader"]
 pub type R = crate::R<INTR_SRC_PASS_IN_SEC_STATUS_3_SPEC>;
-#[doc = "Field `INTR_SRC_PASS_IN_SEC_STATUS_3` reader - NA"]
-pub type INTR_SRC_PASS_IN_SEC_STATUS_3_R = crate::FieldReader<u32>;
+#[doc = "Field `CORE0_INTR_SRC_PASS_IN_SEC_STATUS_3` reader - NA"]
+pub type CORE0_INTR_SRC_PASS_IN_SEC_STATUS_3_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - NA"]
     #[inline(always)]
-    pub fn intr_src_pass_in_sec_status_3(&self) -> INTR_SRC_PASS_IN_SEC_STATUS_3_R {
-        INTR_SRC_PASS_IN_SEC_STATUS_3_R::new(self.bits)
+    pub fn core0_intr_src_pass_in_sec_status_3(&self) -> CORE0_INTR_SRC_PASS_IN_SEC_STATUS_3_R {
+        CORE0_INTR_SRC_PASS_IN_SEC_STATUS_3_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -14,8 +14,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTR_SRC_PASS_IN_SEC_STATUS_3")
             .field(
-                "intr_src_pass_in_sec_status_3",
-                &self.intr_src_pass_in_sec_status_3(),
+                "core0_intr_src_pass_in_sec_status_3",
+                &self.core0_intr_src_pass_in_sec_status_3(),
             )
             .finish()
     }
