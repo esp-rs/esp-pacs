@@ -1,0 +1,40 @@
+INTERRUPT_CORE0:
+  _array:
+    INTR_STATUS_REG_[0123]:
+      name: CORE_0_INTR_STATUS%s
+  _modify:
+    INTR_STATUS_REG_4:
+      name: CORE_0_INTR_STATUS4
+
+  _delete:
+    - "*_MAP"
+
+  _add:
+    CORE_0_INTR_MAP%s:
+      addressOffset: 0
+      dim: 131
+      dimIncrement: 4
+      access: read-write
+      size: 32
+      reset-value: 0
+
+
+INTERRUPT_CORE1:
+  _array:
+    INTR_STATUS_REG_[0123]:
+      name: CORE_1_INTR_STATUS%s
+  _modify:
+    INTR_STATUS_REG_4:
+      name: CORE_1_INTR_STATUS4
+
+  _delete:
+    - "*_MAP"
+
+  _add:
+    CORE_1_INTR_MAP%s:
+      addressOffset: 0
+      dim: 131
+      dimIncrement: 4
+      access: read-write
+      size: 32
+      reset-value: 0
