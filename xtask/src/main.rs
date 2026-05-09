@@ -13,7 +13,8 @@ use strum::{Display, EnumIter, IntoEnumIterator};
 use svd2rust::{
     config::{IdentFormats, IdentFormatsTheme},
     util::IdentFormat,
-    Config, Target,
+    Config,
+    Target,
 };
 use svdtools::{html::html_cli::svd2html, patch::Config as PatchConfig};
 use toml_edit::DocumentMut;
@@ -406,11 +407,20 @@ fn format(path: &Path, chip: &Chip) -> Result<()> {
 
     fs::remove_file(&lib_file)?;
 
-    let mut command = Command::new("cargo");
-    command.arg("fmt").current_dir(path);
-    run_command(&mut command)?;
+    let mut result = Ok(());
 
-    Ok(())
+    // Retry a few times in case IDEs lock the files while formatting.
+    for _ in 0..5 {
+        let mut command = Command::new("cargo");
+        command.arg("fmt").current_dir(path);
+        result = run_command(&mut command);
+        if result.is_ok() {
+            break;
+        }
+        std::thread::sleep(std::time::Duration::from_millis(500));
+    }
+
+    result
 }
 
 fn clean(path: &Path) -> Result<()> {
