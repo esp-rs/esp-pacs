@@ -42,9 +42,9 @@ impl OUT_EP {
 pub type DOEPCTL = crate::Reg<doepctl::DOEPCTL_SPEC>;
 #[doc = ""]
 pub mod doepctl;
-pub use crate::usb0::out_ep0::{doepint, DOEPINT};
+pub use crate::usb_fs::out_ep0::{doepint, DOEPINT};
 #[doc = "DOEPTSIZ (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`doeptsiz::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doeptsiz::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doeptsiz`] module"]
 pub type DOEPTSIZ = crate::Reg<doeptsiz::DOEPTSIZ_SPEC>;
 #[doc = ""]
 pub mod doeptsiz;
-pub use crate::usb0::out_ep0::{doepdma, doepdmab, DOEPDMA, DOEPDMAB};
+pub use crate::usb_fs::out_ep0::{doepdma, doepdmab, DOEPDMA, DOEPDMAB};

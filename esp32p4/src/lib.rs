@@ -88,11 +88,14 @@ extern "C" {
     fn CSI();
     fn DSI();
     fn ETH_MAC();
+    fn USB_HS();
+    fn USB_HS_ENDP_MULTI_PROC();
     fn JPEG();
     fn PPA();
     fn ISP();
     fn I3C();
     fn I3C_SLV();
+    fn USB_FS();
     fn HP_SYS();
     fn PCNT();
     fn PAU();
@@ -284,8 +287,10 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 128] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: ETH_MAC },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: USB_HS },
+    Vector {
+        _handler: USB_HS_ENDP_MULTI_PROC,
+    },
     Vector { _handler: JPEG },
     Vector { _handler: PPA },
     Vector { _reserved: 0 },
@@ -294,7 +299,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 128] = [
     Vector { _handler: ISP },
     Vector { _handler: I3C },
     Vector { _handler: I3C_SLV },
-    Vector { _reserved: 0 },
+    Vector { _handler: USB_FS },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -432,6 +437,24 @@ impl core::fmt::Debug for CACHE {
 }
 #[doc = "CACHE Peripheral"]
 pub mod cache;
+#[doc = "USB_HS"]
+pub type USB_HS = crate::Periph<usb_hs::RegisterBlock, 0x5000_0000>;
+impl core::fmt::Debug for USB_HS {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USB_HS").finish()
+    }
+}
+#[doc = "USB_HS"]
+pub mod usb_hs;
+#[doc = "USB_FS"]
+pub type USB_FS = crate::Periph<usb_fs::RegisterBlock, 0x5004_0000>;
+impl core::fmt::Debug for USB_FS {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USB_FS").finish()
+    }
+}
+#[doc = "USB_FS"]
+pub mod usb_fs;
 #[doc = "Interrupt Controller (Core 0)"]
 pub type INTERRUPT_CORE0 = crate::Periph<interrupt_core0::RegisterBlock, 0x500d_6000>;
 impl core::fmt::Debug for INTERRUPT_CORE0 {
