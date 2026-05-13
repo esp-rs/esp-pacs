@@ -164,7 +164,7 @@ TIMG1:
 SPI1:
   _include: ../../../common_patches/spi_w.yaml
 
-SPI[23]:
+SPI2:
   _strip: SPI_
   "*":
     _strip: SPI_
