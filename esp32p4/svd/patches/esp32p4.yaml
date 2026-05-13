@@ -215,3 +215,35 @@ HP_SYS:
       FROM_CPU_INTR3:
         value: 82
   _include: ../../../common_patches/sw_interrupts.yaml
+
+_add:
+  USB_FS:
+    baseAddress: 0x5004_0000
+    addressBlock:
+      - offset: 0x0
+        size: 0x2A0
+        usage: "Registers"
+    registers:
+      DUMMY:
+        addressOffset: 0
+        size: 0x20
+        resetValue: 0x0
+    interrupts:
+      USB_FS:
+        value: 103
+  USB_HS:
+    baseAddress: 0x5000_0000
+    addressBlock:
+      - offset: 0x0
+        size: 0x2A0
+        usage: "Registers"
+    registers:
+      DUMMY:
+        addressOffset: 0
+        size: 0x20
+        resetValue: 0x0
+    interrupts:
+      USB_HS:
+        value: 93
+      USB_HS_ENDP_MULTI_PROC:
+        value: 94

@@ -148,10 +148,10 @@ _cluster:
             writeConstraint: [0, 0x3ff]
             access: read-write
     _derive:
-      DIEPINT: USB0.IN_EP0.DIEPINT
-      DTXFSTS: USB0.IN_EP0.DTXFSTS
-      DIEPDMA: USB0.IN_EP0.DIEPDMA
-      DIEPDMAB: USB0.IN_EP0.DIEPDMAB
+      DIEPINT: USB_FS.IN_EP0.DIEPINT
+      DTXFSTS: USB_FS.IN_EP0.DTXFSTS
+      DIEPDMA: USB_FS.IN_EP0.DIEPDMA
+      DIEPDMAB: USB_FS.IN_EP0.DIEPDMAB
   OUT_EP0:
     description: "Device OUT endpoint 0"
     DOEPCTL0:
@@ -253,9 +253,9 @@ _cluster:
             access: read-write
             writeConstraint: [0, 3]
     _derive:
-      DOEPINT: USB0.OUT_EP0.DOEPINT
-      DOEPDMA: USB0.OUT_EP0.DOEPDMA
-      DOEPDMAB: USB0.OUT_EP0.DOEPDMAB
+      DOEPINT: USB_FS.OUT_EP0.DOEPINT
+      DOEPDMA: USB_FS.OUT_EP0.DOEPDMA
+      DOEPDMAB: USB_FS.OUT_EP0.DOEPDMAB
 
 _add:
   FIFO%s:

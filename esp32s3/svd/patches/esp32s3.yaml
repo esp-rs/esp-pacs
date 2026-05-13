@@ -196,6 +196,8 @@ _modify:
     groupName: I2S
   MCPWM0:
     groupName: MCPWM
+  USB0:
+    name: USB_FS
 
 SHA:
   _modify:
@@ -504,7 +506,7 @@ MCPWM0:
 
   _include: ../../../common_patches/int_strip.yaml
 
-USB0:
+USB_FS:
   _include: ../../../common_patches/usb0.yaml
 
 LCD_CAM:

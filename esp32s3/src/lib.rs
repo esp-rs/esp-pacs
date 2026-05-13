@@ -1088,14 +1088,14 @@ impl core::fmt::Debug for UHCI0 {
 #[doc = "Universal Host Controller Interface 0"]
 pub mod uhci0;
 #[doc = "USB OTG (On-The-Go)"]
-pub type USB0 = crate::Periph<usb0::RegisterBlock, 0x6008_0000>;
-impl core::fmt::Debug for USB0 {
+pub type USB_FS = crate::Periph<usb_fs::RegisterBlock, 0x6008_0000>;
+impl core::fmt::Debug for USB_FS {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("USB0").finish()
+        f.debug_struct("USB_FS").finish()
     }
 }
 #[doc = "USB OTG (On-The-Go)"]
-pub mod usb0;
+pub mod usb_fs;
 #[doc = "Full-speed USB Serial/JTAG Controller"]
 pub type USB_DEVICE = crate::Periph<usb_device::RegisterBlock, 0x6003_8000>;
 impl core::fmt::Debug for USB_DEVICE {
