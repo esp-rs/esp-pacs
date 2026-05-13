@@ -36,6 +36,8 @@ _include:
 _modify:
   SPI?:
     groupName: SPI
+  SPI3:
+    derivedFrom: SPI2
   RMT:
     baseAddress: 0x500a2000
   PAU:
