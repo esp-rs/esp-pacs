@@ -164,10 +164,14 @@ TIMG1:
 SPI1:
   _include: ../../../common_patches/spi_w.yaml
 
-SPI[23]:
+SPI2:
   _strip: SPI_
   "*":
     _strip: SPI_
+  CMD:
+    _modify:
+      UPDATE:
+        access: read-write
   _include:
     - ../../../common_patches/spi_dma_int_strip.yaml
     - ../../../common_patches/spi_w.yaml
