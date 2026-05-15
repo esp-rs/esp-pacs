@@ -44,8 +44,8 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>LP_I2C</name>
-        <value>17</value>
+        <name>LP_I2C_INT</name>
+        <value>1</value>
       </interrupt>
       <registers>
         <register>
@@ -1368,10 +1368,6 @@ Information.</description>
         <size>0x28</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>LP_PERI_TIMEOUT</name>
-        <value>19</value>
-      </interrupt>
       <registers>
         <register>
           <name>CLK_EN</name>
@@ -2456,14 +2452,6 @@ Information.</description>
         <size>0x64</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>LP_APM_M0</name>
-        <value>20</value>
-      </interrupt>
-      <interrupt>
-        <name>LP_APM_M1</name>
-        <value>21</value>
-      </interrupt>
       <registers>
         <register>
           <name>REGION_FILTER_EN</name>
@@ -3709,6 +3697,10 @@ Information.</description>
         <size>0x7C</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>LP_IO_INT</name>
+        <value>0</value>
+      </interrupt>
       <registers>
         <register>
           <name>OUT_DATA</name>
@@ -5141,8 +5133,8 @@ Information.</description>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>LP_TIMER</name>
-        <value>7</value>
+        <name>LP_TIMER_INT</name>
+        <value>3</value>
       </interrupt>
       <registers>
         <register>
@@ -5542,8 +5534,8 @@ Information.</description>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>LP_UART</name>
-        <value>16</value>
+        <name>LP_UART_INT</name>
+        <value>2</value>
       </interrupt>
       <registers>
         <register>
@@ -6998,10 +6990,6 @@ Information.</description>
         <size>0x38</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>LP_WDT</name>
-        <value>18</value>
-      </interrupt>
       <registers>
         <register>
           <name>CONFIG0</name>
