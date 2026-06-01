@@ -592,24 +592,24 @@ impl RegisterBlock {
     pub const fn rx_arb_weight_opt_dir_ch2(&self) -> &RX_ARB_WEIGHT_OPT_DIR_CH2 {
         &self.rx_arb_weight_opt_dir_ch2
     }
-    #[doc = "0x3ac..0x3b8 - Cluster IN_LINK_ADDR_CH%s, containing IN_LINK_ADDR_CH?"]
+    #[doc = "0x3ac..0x3b8 - Link list descriptor address configuration of RX channel %s"]
     #[inline(always)]
     pub const fn in_link_addr_ch(&self, n: usize) -> &IN_LINK_ADDR_CH {
         &self.in_link_addr_ch[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x3ac..0x3b8 - Cluster IN_LINK_ADDR_CH%s, containing IN_LINK_ADDR_CH?"]
+    #[doc = "0x3ac..0x3b8 - Link list descriptor address configuration of RX channel %s"]
     #[inline(always)]
     pub fn in_link_addr_ch_iter(&self) -> impl Iterator<Item = &IN_LINK_ADDR_CH> {
         self.in_link_addr_ch.iter()
     }
-    #[doc = "0x3b8..0x3c4 - Cluster OUT_LINK_ADDR_CH%s, containing OUT_LINK_ADDR_CH?"]
+    #[doc = "0x3b8..0x3c4 - Link list descriptor address configuration of TX channel %s"]
     #[inline(always)]
     pub const fn out_link_addr_ch(&self, n: usize) -> &OUT_LINK_ADDR_CH {
         &self.out_link_addr_ch[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x3b8..0x3c4 - Cluster OUT_LINK_ADDR_CH%s, containing OUT_LINK_ADDR_CH?"]
+    #[doc = "0x3b8..0x3c4 - Link list descriptor address configuration of TX channel %s"]
     #[inline(always)]
     pub fn out_link_addr_ch_iter(&self) -> impl Iterator<Item = &OUT_LINK_ADDR_CH> {
         self.out_link_addr_ch.iter()
@@ -848,15 +848,13 @@ pub type RX_ARB_WEIGHT_OPT_DIR_CH2 =
     crate::Reg<rx_arb_weight_opt_dir_ch2::RX_ARB_WEIGHT_OPT_DIR_CH2_SPEC>;
 #[doc = "RX channel 2 weight arbitration optimization enable register"]
 pub mod rx_arb_weight_opt_dir_ch2;
-#[doc = "Cluster IN_LINK_ADDR_CH%s, containing IN_LINK_ADDR_CH?"]
-pub use self::in_link_addr_ch::IN_LINK_ADDR_CH;
-#[doc = r"Cluster"]
-#[doc = "Cluster IN_LINK_ADDR_CH%s, containing IN_LINK_ADDR_CH?"]
+#[doc = "IN_LINK_ADDR_CH (rw) register accessor: Link list descriptor address configuration of RX channel %s\n\nYou can [`read`](crate::Reg::read) this register and get [`in_link_addr_ch::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_link_addr_ch::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_link_addr_ch`] module"]
+pub type IN_LINK_ADDR_CH = crate::Reg<in_link_addr_ch::IN_LINK_ADDR_CH_SPEC>;
+#[doc = "Link list descriptor address configuration of RX channel %s"]
 pub mod in_link_addr_ch;
-#[doc = "Cluster OUT_LINK_ADDR_CH%s, containing OUT_LINK_ADDR_CH?"]
-pub use self::out_link_addr_ch::OUT_LINK_ADDR_CH;
-#[doc = r"Cluster"]
-#[doc = "Cluster OUT_LINK_ADDR_CH%s, containing OUT_LINK_ADDR_CH?"]
+#[doc = "OUT_LINK_ADDR_CH (rw) register accessor: Link list descriptor address configuration of TX channel %s\n\nYou can [`read`](crate::Reg::read) this register and get [`out_link_addr_ch::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_link_addr_ch::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_link_addr_ch`] module"]
+pub type OUT_LINK_ADDR_CH = crate::Reg<out_link_addr_ch::OUT_LINK_ADDR_CH_SPEC>;
+#[doc = "Link list descriptor address configuration of TX channel %s"]
 pub mod out_link_addr_ch;
 #[doc = "INTR_MEM_START_ADDR (rw) register accessor: Accessible address space start address configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_mem_start_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intr_mem_start_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_mem_start_addr`] module"]
 pub type INTR_MEM_START_ADDR = crate::Reg<intr_mem_start_addr::INTR_MEM_START_ADDR_SPEC>;
