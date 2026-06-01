@@ -31,6 +31,7 @@ _include:
   - "_timg.yml"
   - "_uart.yml"
   - "_usb_device.yml"
+  - "_dma.yml"
   - "_collect.yml"
 
 _modify:
