@@ -8,6 +8,9 @@ AHB_DMA:
     _strip_end: [_CH_INT_ENA, _CH?_INT_ENA]
   "IN_INT_CLR_CH?":
     _strip_end: [_CH_INT_CLR, _CH?_INT_CLR]
+    _modify:
+      "*":
+        modifiedWriteValues: oneToClear
   "OUT_INT_RAW_CH?":
     _strip_end: [_CH_INT_RAW, _CH?_INT_RAW]
   "OUT_INT_ST_CH?":
@@ -16,6 +19,9 @@ AHB_DMA:
     _strip_end: [_CH_INT_ENA, _CH?_INT_ENA]
   "OUT_INT_CLR_CH?":
     _strip_end: [_CH_INT_CLR, _CH?_INT_CLR]
+    _modify:
+      "*":
+        modifiedWriteValues: oneToClear
 
   # Strip _CH? suffix from channel register field names
   "IN_CONF0_CH?":
@@ -257,6 +263,9 @@ AXI_DMA:
             name: ENA
           IN_INT_CLR:
             name: CLR
+            _modify:
+              "*":
+                modifiedWriteValues: oneToClear
 
         CRC:
           IN_CRC_INIT_DATA: {}
@@ -280,6 +289,9 @@ AXI_DMA:
       IN_INT_CLR_CH?:
         name: IN_INT_CLR
         _strip_end: _CH_INT_CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
       IN_CONF0_CH?:
         name: IN_CONF0
         _strip_end: _CH
@@ -358,6 +370,9 @@ AXI_DMA:
             name: ENA
           OUT_INT_CLR:
             name: CLR
+            _modify:
+              "*":
+                modifiedWriteValues: oneToClear
 
         CRC:
           OUT_CRC_INIT_DATA: {}
