@@ -10,4 +10,5 @@ PROVIDE(SWD_INT = DefaultHandler);
 PROVIDE(TOUCH_TIME_OUT_INT = DefaultHandler);
 PROVIDE(TOUCH_APPROACH_LOOP_DONE_INT = DefaultHandler);
 PROVIDE(TOUCH_SCAN_DONE_INT = DefaultHandler);
+PROVIDE(GPIO_INT = DefaultHandler);
 
