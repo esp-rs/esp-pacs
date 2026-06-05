@@ -26,11 +26,7 @@ _include:
   - "_timg.yml"
   - "_uart.yml"
 
-RNG:
-  _modify:
-    DATA:
-      access: read-only
-      addressOffset: 8
+_delete: RNG
 
 _add:
   CLINT:
@@ -1125,7 +1121,7 @@ TWAI0:
     _modify:
       ERR_CAPTURE_CODE_DIRECTION:
         name: ECC_DIRECTION
-  
+
   INT_ENA:
     _modify:
       EXT_RECEIVE_INT_ENA:
