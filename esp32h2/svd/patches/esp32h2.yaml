@@ -26,7 +26,11 @@ _include:
   - "_timg.yml"
   - "_uart.yml"
 
-_delete: RNG
+RNG:
+  _modify:
+    DATA:
+      access: read-only
+      addressOffset: 8
 
 _add:
   CLINT:
