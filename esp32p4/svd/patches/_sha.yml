@@ -1,1 +1,10 @@
-SHA: {}
+SHA:
+  _modify:
+    "H_MEM*":
+      dim: 16
+      dimIncrement: 0x4
+      size: 0x20
+    "M_MEM*":
+      dim: 32
+      dimIncrement: 0x4
+      size: 0x20

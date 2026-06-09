@@ -16,8 +16,8 @@ pub struct RegisterBlock {
     date: DATE,
     dma_rx_reset: DMA_RX_RESET,
     _reserved13: [u8; 0x0c],
-    h_mem: [H_MEM; 64],
-    m_mem: [M_MEM; 128],
+    h_mem: [H_MEM; 16],
+    m_mem: [M_MEM; 32],
 }
 impl RegisterBlock {
     #[doc = "0x00 - Configures SHA algorithm"]

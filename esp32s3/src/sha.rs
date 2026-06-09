@@ -16,7 +16,7 @@ pub struct RegisterBlock {
     date: DATE,
     _reserved12: [u8; 0x10],
     h_mem: [H_MEM; 16],
-    m_mem: [M_MEM; 16],
+    m_mem: [M_MEM; 32],
 }
 impl RegisterBlock {
     #[doc = "0x00 - Initial configuration register."]
@@ -90,13 +90,13 @@ impl RegisterBlock {
     pub fn h_mem_iter(&self) -> impl Iterator<Item = &H_MEM> {
         self.h_mem.iter()
     }
-    #[doc = "0x80..0xc0 - Sha M memory which contains message."]
+    #[doc = "0x80..0x100 - Sha M memory which contains message."]
     #[inline(always)]
     pub const fn m_mem(&self, n: usize) -> &M_MEM {
         &self.m_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x80..0xc0 - Sha M memory which contains message."]
+    #[doc = "0x80..0x100 - Sha M memory which contains message."]
     #[inline(always)]
     pub fn m_mem_iter(&self) -> impl Iterator<Item = &M_MEM> {
         self.m_mem.iter()

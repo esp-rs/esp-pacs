@@ -2,14 +2,10 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    m_mem: [M_MEM; 4],
-    _reserved1: [u8; 0x01f0],
-    z_mem: [Z_MEM; 4],
-    _reserved2: [u8; 0x01f0],
-    y_mem: [Y_MEM; 4],
-    _reserved3: [u8; 0x01f0],
-    x_mem: [X_MEM; 4],
-    _reserved4: [u8; 0x01f0],
+    m_mem: [M_MEM; 128],
+    z_mem: [Z_MEM; 128],
+    y_mem: [Y_MEM; 128],
+    x_mem: [X_MEM; 128],
     m_prime: M_PRIME,
     mode: MODE,
     query_clean: QUERY_CLEAN,
@@ -25,46 +21,46 @@ pub struct RegisterBlock {
     date: DATE,
 }
 impl RegisterBlock {
-    #[doc = "0x00..0x10 - Represents M"]
+    #[doc = "0x00..0x200 - Represents M"]
     #[inline(always)]
     pub const fn m_mem(&self, n: usize) -> &M_MEM {
         &self.m_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x00..0x10 - Represents M"]
+    #[doc = "0x00..0x200 - Represents M"]
     #[inline(always)]
     pub fn m_mem_iter(&self) -> impl Iterator<Item = &M_MEM> {
         self.m_mem.iter()
     }
-    #[doc = "0x200..0x210 - Represents Z"]
+    #[doc = "0x200..0x400 - Represents Z"]
     #[inline(always)]
     pub const fn z_mem(&self, n: usize) -> &Z_MEM {
         &self.z_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x200..0x210 - Represents Z"]
+    #[doc = "0x200..0x400 - Represents Z"]
     #[inline(always)]
     pub fn z_mem_iter(&self) -> impl Iterator<Item = &Z_MEM> {
         self.z_mem.iter()
     }
-    #[doc = "0x400..0x410 - Represents Y"]
+    #[doc = "0x400..0x600 - Represents Y"]
     #[inline(always)]
     pub const fn y_mem(&self, n: usize) -> &Y_MEM {
         &self.y_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x400..0x410 - Represents Y"]
+    #[doc = "0x400..0x600 - Represents Y"]
     #[inline(always)]
     pub fn y_mem_iter(&self) -> impl Iterator<Item = &Y_MEM> {
         self.y_mem.iter()
     }
-    #[doc = "0x600..0x610 - Represents X"]
+    #[doc = "0x600..0x800 - Represents X"]
     #[inline(always)]
     pub const fn x_mem(&self, n: usize) -> &X_MEM {
         &self.x_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x600..0x610 - Represents X"]
+    #[doc = "0x600..0x800 - Represents X"]
     #[inline(always)]
     pub fn x_mem_iter(&self) -> impl Iterator<Item = &X_MEM> {
         self.x_mem.iter()
@@ -135,7 +131,7 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "M_MEM (rw) register accessor: Represents M\n\nYou can [`read`](crate::Reg::read) this register and get [`m_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m_mem`] module"]
+#[doc = "M_MEM (w) register accessor: Represents M\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m_mem::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m_mem`] module"]
 pub type M_MEM = crate::Reg<m_mem::M_MEM_SPEC>;
 #[doc = "Represents M"]
 pub mod m_mem;
@@ -143,11 +139,11 @@ pub mod m_mem;
 pub type Z_MEM = crate::Reg<z_mem::Z_MEM_SPEC>;
 #[doc = "Represents Z"]
 pub mod z_mem;
-#[doc = "Y_MEM (rw) register accessor: Represents Y\n\nYou can [`read`](crate::Reg::read) this register and get [`y_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`y_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@y_mem`] module"]
+#[doc = "Y_MEM (w) register accessor: Represents Y\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`y_mem::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@y_mem`] module"]
 pub type Y_MEM = crate::Reg<y_mem::Y_MEM_SPEC>;
 #[doc = "Represents Y"]
 pub mod y_mem;
-#[doc = "X_MEM (rw) register accessor: Represents X\n\nYou can [`read`](crate::Reg::read) this register and get [`x_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`x_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@x_mem`] module"]
+#[doc = "X_MEM (w) register accessor: Represents X\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`x_mem::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@x_mem`] module"]
 pub type X_MEM = crate::Reg<x_mem::X_MEM_SPEC>;
 #[doc = "Represents X"]
 pub mod x_mem;
