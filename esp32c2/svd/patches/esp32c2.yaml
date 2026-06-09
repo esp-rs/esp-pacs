@@ -72,6 +72,14 @@ APB_CTRL:
   WIFI_RST_EN:
     _delete: WIFI_RST
     _add:
+      WIFIBB_RST:
+        description: "Set this bit to reset Wi-Fi baseband. Clear the bit to release Wi-Fi baseband."
+        bitOffset: 0
+        bitWidth: 1
+      FE_RST:
+        description: "Set this bit to reset RF frontend. Clear the bit to release RF frontend."
+        bitOffset: 1
+        bitWidth: 1
       MAC_RST:
         description: "Set this bit to reset MAC module. Clear the bit to release MAC module."
         bitOffset: 2
@@ -131,7 +139,6 @@ SYSTEM:
       _from: COMB_PVT_ERR_LVT_SITE0
     COMB_PVT_ERR_HVT_SITE?:
       _from: COMB_PVT_ERR_LVT_SITE0
-
 
 _add:
   I2C_ANA_MST:
