@@ -2,6 +2,14 @@
 pub type R = crate::R<WIFI_RST_EN_SPEC>;
 #[doc = "Register `WIFI_RST_EN` writer"]
 pub type W = crate::W<WIFI_RST_EN_SPEC>;
+#[doc = "Field `WIFIBB_RST` reader - Set this bit to reset Wi-Fi baseband. Clear the bit to release Wi-Fi baseband."]
+pub type WIFIBB_RST_R = crate::BitReader;
+#[doc = "Field `WIFIBB_RST` writer - Set this bit to reset Wi-Fi baseband. Clear the bit to release Wi-Fi baseband."]
+pub type WIFIBB_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FE_RST` reader - Set this bit to reset RF frontend. Clear the bit to release RF frontend."]
+pub type FE_RST_R = crate::BitReader;
+#[doc = "Field `FE_RST` writer - Set this bit to reset RF frontend. Clear the bit to release RF frontend."]
+pub type FE_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MAC_RST` reader - Set this bit to reset MAC module. Clear the bit to release MAC module."]
 pub type MAC_RST_R = crate::BitReader;
 #[doc = "Field `MAC_RST` writer - Set this bit to reset MAC module. Clear the bit to release MAC module."]
@@ -11,6 +19,16 @@ pub type BLE_RPA_RST_R = crate::BitReader;
 #[doc = "Field `BLE_RPA_RST` writer - Set this bit to reset BLE RPA module. Clear the bit to release BLE RPA module."]
 pub type BLE_RPA_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
+    #[doc = "Bit 0 - Set this bit to reset Wi-Fi baseband. Clear the bit to release Wi-Fi baseband."]
+    #[inline(always)]
+    pub fn wifibb_rst(&self) -> WIFIBB_RST_R {
+        WIFIBB_RST_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Set this bit to reset RF frontend. Clear the bit to release RF frontend."]
+    #[inline(always)]
+    pub fn fe_rst(&self) -> FE_RST_R {
+        FE_RST_R::new(((self.bits >> 1) & 1) != 0)
+    }
     #[doc = "Bit 2 - Set this bit to reset MAC module. Clear the bit to release MAC module."]
     #[inline(always)]
     pub fn mac_rst(&self) -> MAC_RST_R {
@@ -26,12 +44,24 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WIFI_RST_EN")
+            .field("wifibb_rst", &self.wifibb_rst())
+            .field("fe_rst", &self.fe_rst())
             .field("mac_rst", &self.mac_rst())
             .field("ble_rpa_rst", &self.ble_rpa_rst())
             .finish()
     }
 }
 impl W {
+    #[doc = "Bit 0 - Set this bit to reset Wi-Fi baseband. Clear the bit to release Wi-Fi baseband."]
+    #[inline(always)]
+    pub fn wifibb_rst(&mut self) -> WIFIBB_RST_W<'_, WIFI_RST_EN_SPEC> {
+        WIFIBB_RST_W::new(self, 0)
+    }
+    #[doc = "Bit 1 - Set this bit to reset RF frontend. Clear the bit to release RF frontend."]
+    #[inline(always)]
+    pub fn fe_rst(&mut self) -> FE_RST_W<'_, WIFI_RST_EN_SPEC> {
+        FE_RST_W::new(self, 1)
+    }
     #[doc = "Bit 2 - Set this bit to reset MAC module. Clear the bit to release MAC module."]
     #[inline(always)]
     pub fn mac_rst(&mut self) -> MAC_RST_W<'_, WIFI_RST_EN_SPEC> {
