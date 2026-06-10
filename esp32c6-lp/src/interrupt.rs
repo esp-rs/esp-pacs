@@ -4,21 +4,21 @@
 #[repr(u16)]
 pub enum Interrupt {
     #[doc = "7 - LP_TIMER"]
-    LP_TIMER = 7,
+    LP_TIMER        = 7,
     #[doc = "13 - PMU"]
-    PMU = 13,
+    PMU             = 13,
     #[doc = "16 - LP_UART"]
-    LP_UART = 16,
+    LP_UART         = 16,
     #[doc = "17 - LP_I2C"]
-    LP_I2C = 17,
+    LP_I2C          = 17,
     #[doc = "18 - LP_WDT"]
-    LP_WDT = 18,
+    LP_WDT          = 18,
     #[doc = "19 - LP_PERI_TIMEOUT"]
     LP_PERI_TIMEOUT = 19,
     #[doc = "20 - LP_APM_M0"]
-    LP_APM_M0 = 20,
+    LP_APM_M0       = 20,
     #[doc = "21 - LP_APM_M1"]
-    LP_APM_M1 = 21,
+    LP_APM_M1       = 21,
 }
 #[doc = r" TryFromInterruptError"]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]

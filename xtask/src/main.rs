@@ -214,7 +214,7 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
     config.output_dir = Some(path.clone());
     config.impl_debug = true;
     config.impl_debug_feature = Some("impl-register-debug".to_owned());
-    config.interrupt_link_section = Some(".rwtext".to_owned());
+    config.interrupt_link_section = Some(".rwtext.interrupt".to_owned());
     config.ident_formats_theme = Some(IdentFormatsTheme::Legacy);
     config.max_cluster_size = true;
     config.impl_defmt = Some("defmt".into());

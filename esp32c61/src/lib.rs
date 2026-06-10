@@ -80,7 +80,7 @@ pub union Vector {
 }
 #[cfg(feature = "rt")]
 #[doc(hidden)]
-#[link_section = ".rwtext"]
+#[link_section = ".rwtext.interrupt"]
 #[no_mangle]
 pub static __EXTERNAL_INTERRUPTS: [Vector; 66] = [
     Vector { _handler: WIFI_MAC },
