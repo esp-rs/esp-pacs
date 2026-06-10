@@ -115,7 +115,7 @@ pub union Vector {
 }
 #[cfg(feature = "rt")]
 #[doc(hidden)]
-#[link_section = ".rwtext"]
+#[link_section = ".rwtext.interrupt"]
 #[no_mangle]
 pub static __INTERRUPTS: [Vector; 99] = [
     Vector { _handler: WIFI_MAC },
