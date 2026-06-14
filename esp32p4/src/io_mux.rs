@@ -3,18 +3,18 @@
 #[doc = "Register block"]
 pub struct RegisterBlock {
     _reserved0: [u8; 0x04],
-    gpio: [GPIO; 54],
-    _reserved1: [u8; 0x28],
+    gpio: [GPIO; 55],
+    _reserved1: [u8; 0x24],
     date: DATE,
 }
 impl RegisterBlock {
-    #[doc = "0x04..0xdc - IO_MUX Control Register"]
+    #[doc = "0x04..0xe0 - IO_MUX Control Register"]
     #[inline(always)]
     pub const fn gpio(&self, n: usize) -> &GPIO {
         &self.gpio[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x04..0xdc - IO_MUX Control Register"]
+    #[doc = "0x04..0xe0 - IO_MUX Control Register"]
     #[inline(always)]
     pub fn gpio_iter(&self) -> impl Iterator<Item = &GPIO> {
         self.gpio.iter()
