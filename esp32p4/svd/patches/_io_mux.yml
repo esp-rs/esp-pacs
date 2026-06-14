@@ -3,7 +3,7 @@ IO_MUX:
     - gpio*
   _add:
     GPIO%s:
-      dim: 54
+      dim: 55
       dimIncrement: 0x04
       dimIndex: 0-54
       description: IO_MUX Control Register
