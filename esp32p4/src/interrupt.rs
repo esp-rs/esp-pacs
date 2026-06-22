@@ -33,6 +33,8 @@ pub enum Interrupt {
     LP_HUK                 = 20,
     #[doc = "22 - USB_DEVICE"]
     USB_DEVICE             = 22,
+    #[doc = "23 - SDIO_HOST"]
+    SDIO_HOST              = 23,
     #[doc = "24 - DMA"]
     DMA                    = 24,
     #[doc = "25 - SPI2"]
@@ -232,6 +234,7 @@ impl Interrupt {
             19 => Ok(Interrupt::LP_SYS),
             20 => Ok(Interrupt::LP_HUK),
             22 => Ok(Interrupt::USB_DEVICE),
+            23 => Ok(Interrupt::SDIO_HOST),
             24 => Ok(Interrupt::DMA),
             25 => Ok(Interrupt::SPI2),
             26 => Ok(Interrupt::SPI3),

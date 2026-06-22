@@ -13,6 +13,7 @@ PROVIDE(LP_UART = DefaultHandler);
 PROVIDE(LP_SYS = DefaultHandler);
 PROVIDE(LP_HUK = DefaultHandler);
 PROVIDE(USB_DEVICE = DefaultHandler);
+PROVIDE(SDIO_HOST = DefaultHandler);
 PROVIDE(DMA = DefaultHandler);
 PROVIDE(SPI2 = DefaultHandler);
 PROVIDE(SPI3 = DefaultHandler);

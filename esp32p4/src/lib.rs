@@ -27,6 +27,7 @@ extern "C" {
     fn LP_SYS();
     fn LP_HUK();
     fn USB_DEVICE();
+    fn SDIO_HOST();
     fn DMA();
     fn SPI2();
     fn SPI3();
@@ -155,7 +156,9 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 128] = [
     Vector {
         _handler: USB_DEVICE,
     },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: SDIO_HOST,
+    },
     Vector { _handler: DMA },
     Vector { _handler: SPI2 },
     Vector { _handler: SPI3 },
