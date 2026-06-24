@@ -1,4 +1,7 @@
 I2C0:
+  _include:
+    - ../../../common_patches/i2c_force_out_normal.yaml
+    - ../../../common_patches/int_strip.yaml
   INT_ENA:
     _modify:
       ACK_ERR:
@@ -18,8 +21,6 @@ I2C0:
 
   _array:
     COMD*: {}
-
-  _include: ../../../common_patches/int_strip.yaml
 
   COMD*:
     _delete: COMMAND0

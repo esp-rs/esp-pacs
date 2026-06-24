@@ -1,17 +1,18 @@
 I2C0:
+  _include:
+    - ../../../common_patches/i2c_force_out_normal.yaml
+    - ../../../common_patches/int_strip.yaml
   _modify:
     INT_STATUS:
       name: INT_ST
 
   _array:
     COMD*: {}
-    
+
   DATA:
     _modify:
       FIFO_RDATA:
         access: "read-write"
-  
-  _include: ../../../common_patches/int_strip.yaml
 
   COMD*:
     _delete: COMMAND0

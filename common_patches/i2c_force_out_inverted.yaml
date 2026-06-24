@@ -1,0 +1,9 @@
+# Inverted chips (C5, C6, C61, H2, P4): force_out=0 selects open-drain,
+# force_out=1 selects direct output.
+CTR:
+  SDA_FORCE_OUT:
+    OpenDrain: [0, "Open-drain output."]
+    DirectOutput: [1, "Direct output."]
+  SCL_FORCE_OUT:
+    OpenDrain: [0, "Open-drain output."]
+    DirectOutput: [1, "Direct output."]
