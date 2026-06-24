@@ -63,6 +63,7 @@ I2C0:
       FIFO_RDATA:
         access: read-write
   _include:
+    - ../../../common_patches/i2c_force_out.yaml
     - ../../../common_patches/i2c0.yaml
     - ../../../common_patches/i2c_st_timeouts.yaml
 
