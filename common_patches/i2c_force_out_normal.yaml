@@ -1,9 +1,0 @@
-# Non-inverted chips (ESP32, S2, S3, C2, C3): force_out=1 selects open-drain,
-# force_out=0 selects direct output.
-CTR:
-  SDA_FORCE_OUT:
-    OpenDrain: [1, "Open-drain output."]
-    DirectOutput: [0, "Direct output."]
-  SCL_FORCE_OUT:
-    OpenDrain: [1, "Open-drain output."]
-    DirectOutput: [0, "Direct output."]

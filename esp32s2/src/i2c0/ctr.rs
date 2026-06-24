@@ -6,10 +6,10 @@ pub type W = crate::W<CTR_SPEC>;
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SDA_FORCE_OUT {
-    #[doc = "0: Direct output."]
-    DirectOutput = 0,
-    #[doc = "1: Open-drain output."]
-    OpenDrain    = 1,
+    #[doc = "0: Open-drain output."]
+    OpenDrain    = 0,
+    #[doc = "1: Direct output."]
+    DirectOutput = 1,
 }
 impl From<SDA_FORCE_OUT> for bool {
     #[inline(always)]
@@ -24,19 +24,19 @@ impl SDA_FORCE_OUT_R {
     #[inline(always)]
     pub const fn variant(&self) -> SDA_FORCE_OUT {
         match self.bits {
-            false => SDA_FORCE_OUT::DirectOutput,
-            true => SDA_FORCE_OUT::OpenDrain,
+            false => SDA_FORCE_OUT::OpenDrain,
+            true => SDA_FORCE_OUT::DirectOutput,
         }
-    }
-    #[doc = "Direct output."]
-    #[inline(always)]
-    pub fn is_direct_output(&self) -> bool {
-        *self == SDA_FORCE_OUT::DirectOutput
     }
     #[doc = "Open-drain output."]
     #[inline(always)]
     pub fn is_open_drain(&self) -> bool {
         *self == SDA_FORCE_OUT::OpenDrain
+    }
+    #[doc = "Direct output."]
+    #[inline(always)]
+    pub fn is_direct_output(&self) -> bool {
+        *self == SDA_FORCE_OUT::DirectOutput
     }
 }
 #[doc = "Field `SDA_FORCE_OUT` writer - 0: direct output. 1: open drain output."]
@@ -45,25 +45,25 @@ impl<'a, REG> SDA_FORCE_OUT_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
-    #[doc = "Direct output."]
-    #[inline(always)]
-    pub fn direct_output(self) -> &'a mut crate::W<REG> {
-        self.variant(SDA_FORCE_OUT::DirectOutput)
-    }
     #[doc = "Open-drain output."]
     #[inline(always)]
     pub fn open_drain(self) -> &'a mut crate::W<REG> {
         self.variant(SDA_FORCE_OUT::OpenDrain)
+    }
+    #[doc = "Direct output."]
+    #[inline(always)]
+    pub fn direct_output(self) -> &'a mut crate::W<REG> {
+        self.variant(SDA_FORCE_OUT::DirectOutput)
     }
 }
 #[doc = "0: direct output. 1: open drain output.\n\nValue on reset: 1"]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SCL_FORCE_OUT {
-    #[doc = "0: Direct output."]
-    DirectOutput = 0,
-    #[doc = "1: Open-drain output."]
-    OpenDrain    = 1,
+    #[doc = "0: Open-drain output."]
+    OpenDrain    = 0,
+    #[doc = "1: Direct output."]
+    DirectOutput = 1,
 }
 impl From<SCL_FORCE_OUT> for bool {
     #[inline(always)]
@@ -78,19 +78,19 @@ impl SCL_FORCE_OUT_R {
     #[inline(always)]
     pub const fn variant(&self) -> SCL_FORCE_OUT {
         match self.bits {
-            false => SCL_FORCE_OUT::DirectOutput,
-            true => SCL_FORCE_OUT::OpenDrain,
+            false => SCL_FORCE_OUT::OpenDrain,
+            true => SCL_FORCE_OUT::DirectOutput,
         }
-    }
-    #[doc = "Direct output."]
-    #[inline(always)]
-    pub fn is_direct_output(&self) -> bool {
-        *self == SCL_FORCE_OUT::DirectOutput
     }
     #[doc = "Open-drain output."]
     #[inline(always)]
     pub fn is_open_drain(&self) -> bool {
         *self == SCL_FORCE_OUT::OpenDrain
+    }
+    #[doc = "Direct output."]
+    #[inline(always)]
+    pub fn is_direct_output(&self) -> bool {
+        *self == SCL_FORCE_OUT::DirectOutput
     }
 }
 #[doc = "Field `SCL_FORCE_OUT` writer - 0: direct output. 1: open drain output."]
@@ -99,15 +99,15 @@ impl<'a, REG> SCL_FORCE_OUT_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
-    #[doc = "Direct output."]
-    #[inline(always)]
-    pub fn direct_output(self) -> &'a mut crate::W<REG> {
-        self.variant(SCL_FORCE_OUT::DirectOutput)
-    }
     #[doc = "Open-drain output."]
     #[inline(always)]
     pub fn open_drain(self) -> &'a mut crate::W<REG> {
         self.variant(SCL_FORCE_OUT::OpenDrain)
+    }
+    #[doc = "Direct output."]
+    #[inline(always)]
+    pub fn direct_output(self) -> &'a mut crate::W<REG> {
+        self.variant(SCL_FORCE_OUT::DirectOutput)
     }
 }
 #[doc = "Field `SAMPLE_SCL_LEVEL` reader - This register is used to select the sample mode. 1: sample SDA data on the SCL low level. 0: sample SDA data on the SCL high level."]

@@ -1,5 +1,5 @@
 I2C0:
-  _include: ../../../common_patches/i2c_force_out_normal.yaml
+  _include: ../../../common_patches/i2c_force_out.yaml
   _modify:
     FIFO_DATA:
       name: DATA

@@ -1,6 +1,6 @@
 I2C0:
   _include:
-    - ../../../common_patches/i2c_force_out_normal.yaml
+    - ../../../common_patches/i2c_force_out.yaml
     - ../../../common_patches/int_strip.yaml
   _modify:
     INT_STATUS:
