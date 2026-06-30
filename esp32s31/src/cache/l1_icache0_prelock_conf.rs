@@ -1,0 +1,85 @@
+#[doc = "Register `L1_ICACHE0_PRELOCK_CONF` reader"]
+pub type R = crate::R<L1_ICACHE0_PRELOCK_CONF_SPEC>;
+#[doc = "Register `L1_ICACHE0_PRELOCK_CONF` writer"]
+pub type W = crate::W<L1_ICACHE0_PRELOCK_CONF_SPEC>;
+#[doc = "Field `L1_ICACHE0_PRELOCK_SCT0_EN` reader - Configures whether to enable the prelocking function in Section 0 of icache.\\\\1: Enable\\\\"]
+pub type L1_ICACHE0_PRELOCK_SCT0_EN_R = crate::BitReader;
+#[doc = "Field `L1_ICACHE0_PRELOCK_SCT0_EN` writer - Configures whether to enable the prelocking function in Section 0 of icache.\\\\1: Enable\\\\"]
+pub type L1_ICACHE0_PRELOCK_SCT0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L1_ICACHE0_PRELOCK_SCT1_EN` reader - Configures whether to enable the prelocking function in Section 1 of icache.\\\\1: Enable\\\\"]
+pub type L1_ICACHE0_PRELOCK_SCT1_EN_R = crate::BitReader;
+#[doc = "Field `L1_ICACHE0_PRELOCK_SCT1_EN` writer - Configures whether to enable the prelocking function in Section 1 of icache.\\\\1: Enable\\\\"]
+pub type L1_ICACHE0_PRELOCK_SCT1_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L1_ICACHE0_PRELOCK_RGID` reader - Configures the gid of l1 icache0 prelock."]
+pub type L1_ICACHE0_PRELOCK_RGID_R = crate::FieldReader;
+#[doc = "Field `L1_ICACHE0_PRELOCK_RGID` writer - Configures the gid of l1 icache0 prelock."]
+pub type L1_ICACHE0_PRELOCK_RGID_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+impl R {
+    #[doc = "Bit 0 - Configures whether to enable the prelocking function in Section 0 of icache.\\\\1: Enable\\\\"]
+    #[inline(always)]
+    pub fn l1_icache0_prelock_sct0_en(&self) -> L1_ICACHE0_PRELOCK_SCT0_EN_R {
+        L1_ICACHE0_PRELOCK_SCT0_EN_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Configures whether to enable the prelocking function in Section 1 of icache.\\\\1: Enable\\\\"]
+    #[inline(always)]
+    pub fn l1_icache0_prelock_sct1_en(&self) -> L1_ICACHE0_PRELOCK_SCT1_EN_R {
+        L1_ICACHE0_PRELOCK_SCT1_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bits 2:5 - Configures the gid of l1 icache0 prelock."]
+    #[inline(always)]
+    pub fn l1_icache0_prelock_rgid(&self) -> L1_ICACHE0_PRELOCK_RGID_R {
+        L1_ICACHE0_PRELOCK_RGID_R::new(((self.bits >> 2) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_ICACHE0_PRELOCK_CONF")
+            .field(
+                "l1_icache0_prelock_sct0_en",
+                &self.l1_icache0_prelock_sct0_en(),
+            )
+            .field(
+                "l1_icache0_prelock_sct1_en",
+                &self.l1_icache0_prelock_sct1_en(),
+            )
+            .field("l1_icache0_prelock_rgid", &self.l1_icache0_prelock_rgid())
+            .finish()
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Configures whether to enable the prelocking function in Section 0 of icache.\\\\1: Enable\\\\"]
+    #[inline(always)]
+    pub fn l1_icache0_prelock_sct0_en(
+        &mut self,
+    ) -> L1_ICACHE0_PRELOCK_SCT0_EN_W<'_, L1_ICACHE0_PRELOCK_CONF_SPEC> {
+        L1_ICACHE0_PRELOCK_SCT0_EN_W::new(self, 0)
+    }
+    #[doc = "Bit 1 - Configures whether to enable the prelocking function in Section 1 of icache.\\\\1: Enable\\\\"]
+    #[inline(always)]
+    pub fn l1_icache0_prelock_sct1_en(
+        &mut self,
+    ) -> L1_ICACHE0_PRELOCK_SCT1_EN_W<'_, L1_ICACHE0_PRELOCK_CONF_SPEC> {
+        L1_ICACHE0_PRELOCK_SCT1_EN_W::new(self, 1)
+    }
+    #[doc = "Bits 2:5 - Configures the gid of l1 icache0 prelock."]
+    #[inline(always)]
+    pub fn l1_icache0_prelock_rgid(
+        &mut self,
+    ) -> L1_ICACHE0_PRELOCK_RGID_W<'_, L1_ICACHE0_PRELOCK_CONF_SPEC> {
+        L1_ICACHE0_PRELOCK_RGID_W::new(self, 2)
+    }
+}
+#[doc = "L1 instruction Cache 0 prelock configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_icache0_prelock_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`l1_icache0_prelock_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct L1_ICACHE0_PRELOCK_CONF_SPEC;
+impl crate::RegisterSpec for L1_ICACHE0_PRELOCK_CONF_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`l1_icache0_prelock_conf::R`](R) reader structure"]
+impl crate::Readable for L1_ICACHE0_PRELOCK_CONF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`l1_icache0_prelock_conf::W`](W) writer structure"]
+impl crate::Writable for L1_ICACHE0_PRELOCK_CONF_SPEC {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets L1_ICACHE0_PRELOCK_CONF to value 0"]
+impl crate::Resettable for L1_ICACHE0_PRELOCK_CONF_SPEC {}

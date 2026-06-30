@@ -1,0 +1,60 @@
+#[doc = "Register `FSM_WAIT` reader"]
+pub type R = crate::R<FSM_WAIT_SPEC>;
+#[doc = "Register `FSM_WAIT` writer"]
+pub type W = crate::W<FSM_WAIT_SPEC>;
+#[doc = "Field `XPD_WAIT` reader - need_des"]
+pub type XPD_WAIT_R = crate::FieldReader;
+#[doc = "Field `XPD_WAIT` writer - need_des"]
+pub type XPD_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `RSTB_WAIT` reader - need_des"]
+pub type RSTB_WAIT_R = crate::FieldReader;
+#[doc = "Field `RSTB_WAIT` writer - need_des"]
+pub type RSTB_WAIT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+impl R {
+    #[doc = "Bits 0:3 - need_des"]
+    #[inline(always)]
+    pub fn xpd_wait(&self) -> XPD_WAIT_R {
+        XPD_WAIT_R::new((self.bits & 0x0f) as u8)
+    }
+    #[doc = "Bits 4:7 - need_des"]
+    #[inline(always)]
+    pub fn rstb_wait(&self) -> RSTB_WAIT_R {
+        RSTB_WAIT_R::new(((self.bits >> 4) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FSM_WAIT")
+            .field("xpd_wait", &self.xpd_wait())
+            .field("rstb_wait", &self.rstb_wait())
+            .finish()
+    }
+}
+impl W {
+    #[doc = "Bits 0:3 - need_des"]
+    #[inline(always)]
+    pub fn xpd_wait(&mut self) -> XPD_WAIT_W<'_, FSM_WAIT_SPEC> {
+        XPD_WAIT_W::new(self, 0)
+    }
+    #[doc = "Bits 4:7 - need_des"]
+    #[inline(always)]
+    pub fn rstb_wait(&mut self) -> RSTB_WAIT_W<'_, FSM_WAIT_SPEC> {
+        RSTB_WAIT_W::new(self, 4)
+    }
+}
+#[doc = "Register\n\nYou can [`read`](crate::Reg::read) this register and get [`fsm_wait::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fsm_wait::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct FSM_WAIT_SPEC;
+impl crate::RegisterSpec for FSM_WAIT_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`fsm_wait::R`](R) reader structure"]
+impl crate::Readable for FSM_WAIT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`fsm_wait::W`](W) writer structure"]
+impl crate::Writable for FSM_WAIT_SPEC {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets FSM_WAIT to value 0x88"]
+impl crate::Resettable for FSM_WAIT_SPEC {
+    const RESET_VALUE: u32 = 0x88;
+}

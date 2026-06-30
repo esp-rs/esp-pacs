@@ -1,0 +1,51 @@
+#[doc = "Register `INT_CLR` writer"]
+pub type W = crate::W<INT_CLR_SPEC>;
+#[doc = "Field `SRM_EOF_INT_CLR` writer - Set this bit to clear the PPA_SRM_EOF_INT interrupt."]
+pub type SRM_EOF_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BLEND_EOF_INT_CLR` writer - Set this bit to clear the PPA_BLEND_EOF_INT interrupt."]
+pub type BLEND_EOF_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SRM_PARAM_CFG_ERR_INT_CLR` writer - Set this bit to clear the PPA_SRM_RX_YSCAL_ERR_INT interrupt."]
+pub type SRM_PARAM_CFG_ERR_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BLEND_PARAM_CFG_ERR_INT_CLR` writer - Set this bit to clear the PPA_BLEND_PARAM_CFG_ERR_INT interrupt."]
+pub type BLEND_PARAM_CFG_ERR_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Set this bit to clear the PPA_SRM_EOF_INT interrupt."]
+    #[inline(always)]
+    pub fn srm_eof_int_clr(&mut self) -> SRM_EOF_INT_CLR_W<'_, INT_CLR_SPEC> {
+        SRM_EOF_INT_CLR_W::new(self, 0)
+    }
+    #[doc = "Bit 1 - Set this bit to clear the PPA_BLEND_EOF_INT interrupt."]
+    #[inline(always)]
+    pub fn blend_eof_int_clr(&mut self) -> BLEND_EOF_INT_CLR_W<'_, INT_CLR_SPEC> {
+        BLEND_EOF_INT_CLR_W::new(self, 1)
+    }
+    #[doc = "Bit 2 - Set this bit to clear the PPA_SRM_RX_YSCAL_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn srm_param_cfg_err_int_clr(&mut self) -> SRM_PARAM_CFG_ERR_INT_CLR_W<'_, INT_CLR_SPEC> {
+        SRM_PARAM_CFG_ERR_INT_CLR_W::new(self, 2)
+    }
+    #[doc = "Bit 3 - Set this bit to clear the PPA_BLEND_PARAM_CFG_ERR_INT interrupt."]
+    #[inline(always)]
+    pub fn blend_param_cfg_err_int_clr(
+        &mut self,
+    ) -> BLEND_PARAM_CFG_ERR_INT_CLR_W<'_, INT_CLR_SPEC> {
+        BLEND_PARAM_CFG_ERR_INT_CLR_W::new(self, 3)
+    }
+}
+#[doc = "Interrupt clear bits\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct INT_CLR_SPEC;
+impl crate::RegisterSpec for INT_CLR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`int_clr::W`](W) writer structure"]
+impl crate::Writable for INT_CLR_SPEC {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets INT_CLR to value 0"]
+impl crate::Resettable for INT_CLR_SPEC {}

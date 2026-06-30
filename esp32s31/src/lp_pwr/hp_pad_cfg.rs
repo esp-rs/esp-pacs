@@ -1,0 +1,73 @@
+#[doc = "Register `HP_PAD_CFG` reader"]
+pub type R = crate::R<HP_PAD_CFG_SPEC>;
+#[doc = "Register `HP_PAD_CFG` writer"]
+pub type W = crate::W<HP_PAD_CFG_SPEC>;
+#[doc = "Field `HPPAD_HOLD_CPU_PAUSE_EN` reader - 1: hold hppad when hpcpu stalls 0: not hold hppad when hpcpu stalls"]
+pub type HPPAD_HOLD_CPU_PAUSE_EN_R = crate::BitReader;
+#[doc = "Field `HPPAD_HOLD_CPU_PAUSE_EN` writer - 1: hold hppad when hpcpu stalls 0: not hold hppad when hpcpu stalls"]
+pub type HPPAD_HOLD_CPU_PAUSE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_HIGH_HP_PAD_HOLD` reader - 1:force pull up hppad hold signal 0:no effect"]
+pub type FORCE_HIGH_HP_PAD_HOLD_R = crate::BitReader;
+#[doc = "Field `FORCE_HIGH_HP_PAD_HOLD` writer - 1:force pull up hppad hold signal 0:no effect"]
+pub type FORCE_HIGH_HP_PAD_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_LOW_HP_PAD_HOLD` reader - 1:force pull low hppad hold signal 0:no effect"]
+pub type FORCE_LOW_HP_PAD_HOLD_R = crate::BitReader;
+#[doc = "Field `FORCE_LOW_HP_PAD_HOLD` writer - 1:force pull low hppad hold signal 0:no effect"]
+pub type FORCE_LOW_HP_PAD_HOLD_W<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0 - 1: hold hppad when hpcpu stalls 0: not hold hppad when hpcpu stalls"]
+    #[inline(always)]
+    pub fn hppad_hold_cpu_pause_en(&self) -> HPPAD_HOLD_CPU_PAUSE_EN_R {
+        HPPAD_HOLD_CPU_PAUSE_EN_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - 1:force pull up hppad hold signal 0:no effect"]
+    #[inline(always)]
+    pub fn force_high_hp_pad_hold(&self) -> FORCE_HIGH_HP_PAD_HOLD_R {
+        FORCE_HIGH_HP_PAD_HOLD_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - 1:force pull low hppad hold signal 0:no effect"]
+    #[inline(always)]
+    pub fn force_low_hp_pad_hold(&self) -> FORCE_LOW_HP_PAD_HOLD_R {
+        FORCE_LOW_HP_PAD_HOLD_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_PAD_CFG")
+            .field("hppad_hold_cpu_pause_en", &self.hppad_hold_cpu_pause_en())
+            .field("force_high_hp_pad_hold", &self.force_high_hp_pad_hold())
+            .field("force_low_hp_pad_hold", &self.force_low_hp_pad_hold())
+            .finish()
+    }
+}
+impl W {
+    #[doc = "Bit 0 - 1: hold hppad when hpcpu stalls 0: not hold hppad when hpcpu stalls"]
+    #[inline(always)]
+    pub fn hppad_hold_cpu_pause_en(&mut self) -> HPPAD_HOLD_CPU_PAUSE_EN_W<'_, HP_PAD_CFG_SPEC> {
+        HPPAD_HOLD_CPU_PAUSE_EN_W::new(self, 0)
+    }
+    #[doc = "Bit 1 - 1:force pull up hppad hold signal 0:no effect"]
+    #[inline(always)]
+    pub fn force_high_hp_pad_hold(&mut self) -> FORCE_HIGH_HP_PAD_HOLD_W<'_, HP_PAD_CFG_SPEC> {
+        FORCE_HIGH_HP_PAD_HOLD_W::new(self, 1)
+    }
+    #[doc = "Bit 2 - 1:force pull low hppad hold signal 0:no effect"]
+    #[inline(always)]
+    pub fn force_low_hp_pad_hold(&mut self) -> FORCE_LOW_HP_PAD_HOLD_W<'_, HP_PAD_CFG_SPEC> {
+        FORCE_LOW_HP_PAD_HOLD_W::new(self, 2)
+    }
+}
+#[doc = "config register for hppad hold signal\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_pad_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_pad_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct HP_PAD_CFG_SPEC;
+impl crate::RegisterSpec for HP_PAD_CFG_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`hp_pad_cfg::R`](R) reader structure"]
+impl crate::Readable for HP_PAD_CFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hp_pad_cfg::W`](W) writer structure"]
+impl crate::Writable for HP_PAD_CFG_SPEC {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets HP_PAD_CFG to value 0"]
+impl crate::Resettable for HP_PAD_CFG_SPEC {}

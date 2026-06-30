@@ -1,0 +1,30 @@
+#[doc = "Register `GSNPSID` reader"]
+pub type R = crate::R<GSNPSID_SPEC>;
+#[doc = "Field `SYNOPSYSID` reader - Release number of the controller being used currently. Bits \\[31:16\\]: - 0x4f54: ASCII Value for OT Bits \\[15:0\\]: Current Release Number. For example, 0x400a corresponds to v4.00a Release number."]
+pub type SYNOPSYSID_R = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31 - Release number of the controller being used currently. Bits \\[31:16\\]: - 0x4f54: ASCII Value for OT Bits \\[15:0\\]: Current Release Number. For example, 0x400a corresponds to v4.00a Release number."]
+    #[inline(always)]
+    pub fn synopsysid(&self) -> SYNOPSYSID_R {
+        SYNOPSYSID_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GSNPSID")
+            .field("synopsysid", &self.synopsysid())
+            .finish()
+    }
+}
+#[doc = "This read-only register contains the release number of the core being used.\n\nYou can [`read`](crate::Reg::read) this register and get [`gsnpsid::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GSNPSID_SPEC;
+impl crate::RegisterSpec for GSNPSID_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`gsnpsid::R`](R) reader structure"]
+impl crate::Readable for GSNPSID_SPEC {}
+#[doc = "`reset()` method sets GSNPSID to value 0x4f54_430a"]
+impl crate::Resettable for GSNPSID_SPEC {
+    const RESET_VALUE: u32 = 0x4f54_430a;
+}

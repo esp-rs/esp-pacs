@@ -1,0 +1,4 @@
+# The LP_AHB_DMA block was incorrectly named AHB_DMA in the SVD generator output.
+# The base SVD has been corrected directly (name, baseAddress, interrupts, and the
+# dimless AHB_DMA_OUT_CONF0_CH%s register renamed to AHB_DMA_OUT_CONF0_CH1).
+# No further YAML patches needed for DMA at this time.
