@@ -14,6 +14,8 @@ _include:
   - _sha.yml
   - _uart.yml
 
+_delete: RNG
+
 TIMG0:
   "*":
     _strip: "T_"
@@ -510,7 +512,6 @@ DMA:
         name: OUT_PRI
       OUT_PERI_SEL_CH?:
         name: OUT_PERI_SEL
-
 
 I2C_ANA_MST:
   _array:

@@ -1125,7 +1125,7 @@ TWAI0:
     _modify:
       ERR_CAPTURE_CODE_DIRECTION:
         name: ECC_DIRECTION
-  
+
   INT_ENA:
     _modify:
       EXT_RECEIVE_INT_ENA:

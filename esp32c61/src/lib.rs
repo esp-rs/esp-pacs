@@ -557,15 +557,6 @@ impl core::fmt::Debug for SHA {
 }
 #[doc = "SHA (Secure Hash Algorithm) Accelerator"]
 pub mod sha;
-#[doc = "Hardware Random Number Generator"]
-pub type RNG = crate::Periph<rng::RegisterBlock, 0x600b_2800>;
-impl core::fmt::Debug for RNG {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("RNG").finish()
-    }
-}
-#[doc = "Hardware Random Number Generator"]
-pub mod rng;
 #[doc = "Event Task Matrix"]
 pub type SOC_ETM = crate::Periph<soc_etm::RegisterBlock, 0x6001_3000>;
 impl core::fmt::Debug for SOC_ETM {

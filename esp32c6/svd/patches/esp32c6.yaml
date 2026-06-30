@@ -29,10 +29,7 @@ _include:
   - "_uart.yml"
   - "_wdt.yml"
 
-RNG:
-  _modify:
-    DATA:
-      access: read-only
+_delete: RNG
 
 _modify:
   SPI?:
