@@ -2,6 +2,7 @@ _svd: "../esp32s31.base.svd"
 
 _include:
   - "_gpio.yml"
+  - "_ecc.yml"
 
 PMU:
   _include: ../../../common_patches/pmu_int_strip.yaml
@@ -35,10 +36,27 @@ AES:
       INT_CLEAR:
         name: INT_CLR
 
+ECC:
+  _include: ../../../common_patches/ecc_int_strip.yaml
+
 EFUSE:
   _strip: APB2OTP_
   "*":
     _strip: APB2OTP_
+
+GPIO:
+  _modify:
+    _interrupts:
+      GPIO_INT0:
+        name: GPIO
+
+GPIO_EXT:
+  _include: ../../../common_patches/gpiosd_ext.yaml
+
+JPEG:
+  _include: ../../../common_patches/int_strip.yaml
+  _array:
+    C?: {}
 
 "SPI[01]":
   _strip: SPI_MEM_
@@ -55,6 +73,36 @@ SPI2:
     _modify:
       UPDATE:
         access: read-write
+
+SOC_ETM:
+  CH_ENA_AD?:
+    _array:
+      CH_ENABLED*:
+        name: CH_ENA%s
+  CH_ENA_AD?_SET:
+    _array:
+      CH_ENABLE*:
+        name: CH_SET%s
+  CH_ENA_AD?_CLR:
+    _array:
+      CH_DISABLE*:
+        name: CH_CLR%s
+  _expand_array:
+    CH%s_EVT_ID: {}
+    CH%s_TASK_ID: {}
+
+  _cluster:
+    CH%s:
+      "CH*_EVT_ID":
+        name: EVT_ID
+        _modify:
+          "CH*_EVT_ID":
+            name: EVT_ID
+      "CH*_TASK_ID":
+        name: TASK_ID
+        _modify:
+          "CH*_TASK_ID":
+            name: TASK_ID
 
 
 I2C0:
@@ -76,6 +124,74 @@ LEDC0:
     - ../../../common_patches/ledc_collect.yaml
     - ../../../common_patches/ledc_int.yaml
 
+LP_APM:
+  _cluster:
+    M%s:
+      dimIncrement: 16
+      M?_STATUS:
+        name: STATUS
+        _strip: M0_
+      M?_STATUS_CLR:
+        name: STATUS_CLR
+        _strip: M0_
+      M?_EXCEPTION_INFO0:
+        name: EXCEPTION_INFO0
+        _strip: M0_
+      M?_EXCEPTION_INFO1:
+        name: EXCEPTION_INFO1
+        _strip: M0_
 
-"EFUSE,I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
+  FUNC_CTRL:
+    _array:
+      M?_FUNC_EN: {}
+  INT_EN:
+    _array:
+      M?_APM_INT_EN:
+        name: M%s_APM
+
+LP_TIMER:
+  _include: ../../../common_patches/lptim_int_strip.yaml
+
+UART0:
+  _strip_end: "_SYNC"
+
+  CLKDIV:
+    _modify:
+      CLKDIV_FRAG:
+        name: FRAG
+
+  FIFO:
+    _modify:
+      RXFIFO_RD_BYTE:
+        access: read-write
   _include: ../../../common_patches/int_strip.yaml
+
+
+UHCI0:
+  _include:
+    - ../../../common_patches/uhci_collect.yaml
+    - ../../../common_patches/int_strip.yaml
+
+TIMG0:
+  _include: ../../../common_patches/tim_collect.yaml
+  _modify:
+    _interrupts:
+      TG0_T0:
+        name: TG0_T0_LEVEL
+      TG0_T1:
+        name: TG0_T1_LEVEL
+      TG0_WDT:
+        name: TG0_WDT_LEVEL
+
+
+"EFUSE,I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU,MCPWM0":
+  _include: ../../../common_patches/int_strip.yaml
+
+
+_modify:
+  BUS_MONITOR:
+    name: ASSIST_DEBUG
+    description: ASSIST_DEBUG (BUS_MONITOR) Peripheral
+    groupName: ASSIST_DEBUG
+  SPI?:
+    groupName: SPI

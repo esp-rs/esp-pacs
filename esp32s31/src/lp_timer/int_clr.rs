@@ -1,13 +1,13 @@
 #[doc = "Register `INT_CLR` writer"]
 pub type W = crate::W<INT_CLR_SPEC>;
-#[doc = "Field `TICK_INT_CLR` writer - need_des"]
-pub type TICK_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `UPDTAE_DONE_INT_CLR` writer - need_des"]
-pub type UPDTAE_DONE_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OVERFLOW_CLR` writer - need_des"]
-pub type OVERFLOW_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SOC_WAKEUP_INT_CLR` writer - need_des"]
-pub type SOC_WAKEUP_INT_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TICK` writer - need_des"]
+pub type TICK_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `UPDTAE_DONE` writer - need_des"]
+pub type UPDTAE_DONE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `OVERFLOW` writer - need_des"]
+pub type OVERFLOW_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `SOC_WAKEUP` writer - need_des"]
+pub type SOC_WAKEUP_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -17,23 +17,23 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn tick_int_clr(&mut self) -> TICK_INT_CLR_W<'_, INT_CLR_SPEC> {
-        TICK_INT_CLR_W::new(self, 28)
+    pub fn tick(&mut self) -> TICK_W<'_, INT_CLR_SPEC> {
+        TICK_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn updtae_done_int_clr(&mut self) -> UPDTAE_DONE_INT_CLR_W<'_, INT_CLR_SPEC> {
-        UPDTAE_DONE_INT_CLR_W::new(self, 29)
+    pub fn updtae_done(&mut self) -> UPDTAE_DONE_W<'_, INT_CLR_SPEC> {
+        UPDTAE_DONE_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn overflow_clr(&mut self) -> OVERFLOW_CLR_W<'_, INT_CLR_SPEC> {
-        OVERFLOW_CLR_W::new(self, 30)
+    pub fn overflow(&mut self) -> OVERFLOW_W<'_, INT_CLR_SPEC> {
+        OVERFLOW_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn soc_wakeup_int_clr(&mut self) -> SOC_WAKEUP_INT_CLR_W<'_, INT_CLR_SPEC> {
-        SOC_WAKEUP_INT_CLR_W::new(self, 31)
+    pub fn soc_wakeup(&mut self) -> SOC_WAKEUP_W<'_, INT_CLR_SPEC> {
+        SOC_WAKEUP_W::new(self, 31)
     }
 }
 #[doc = "need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -44,6 +44,7 @@ impl crate::RegisterSpec for INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [`int_clr::W`](W) writer structure"]
 impl crate::Writable for INT_CLR_SPEC {
     type Safety = crate::Unsafe;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xf000_0000;
 }
 #[doc = "`reset()` method sets INT_CLR to value 0"]
 impl crate::Resettable for INT_CLR_SPEC {}

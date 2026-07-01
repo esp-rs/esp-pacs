@@ -10,28 +10,9 @@ pub struct RegisterBlock {
     region_attr: (),
     _reserved4: [u8; 0xb0],
     func_ctrl: FUNC_CTRL,
-    m0_status: M0_STATUS,
-    m0_status_clr: M0_STATUS_CLR,
-    m0_exception_info0: M0_EXCEPTION_INFO0,
-    m0_exception_info1: M0_EXCEPTION_INFO1,
-    _reserved9: [u8; 0x04],
-    m1_status: M1_STATUS,
-    m1_status_clr: M1_STATUS_CLR,
-    m1_exception_info0: M1_EXCEPTION_INFO0,
-    m1_exception_info1: M1_EXCEPTION_INFO1,
-    _reserved13: [u8; 0x04],
-    m2_status: M2_STATUS,
-    m2_status_clr: M2_STATUS_CLR,
-    m2_exception_info0: M2_EXCEPTION_INFO0,
-    m2_exception_info1: M2_EXCEPTION_INFO1,
-    _reserved17: [u8; 0x04],
-    m3_status: M3_STATUS,
-    m3_status_clr: M3_STATUS_CLR,
-    m3_exception_info0: M3_EXCEPTION_INFO0,
-    m3_exception_info1: M3_EXCEPTION_INFO1,
-    int_en: INT_EN,
+    _reserved_5_m: [u8; 0x50],
     bus_err_conf: BUS_ERR_CONF,
-    _reserved23: [u8; 0x02e4],
+    _reserved7: [u8; 0x02e4],
     clock_gate: CLOCK_GATE,
     date: DATE,
 }
@@ -241,90 +222,35 @@ impl RegisterBlock {
     pub const fn func_ctrl(&self) -> &FUNC_CTRL {
         &self.func_ctrl
     }
-    #[doc = "0xc0 - M0 status register"]
+    #[doc = "0xc0..0x110 - Cluster M%s, containing M?_STATUS, M?_STATUS_CLR, M?_EXCEPTION_INFO0, M?_EXCEPTION_INFO1"]
     #[inline(always)]
-    pub const fn m0_status(&self) -> &M0_STATUS {
-        &self.m0_status
+    pub const fn m(&self, n: usize) -> &M {
+        #[allow(clippy::no_effect)]
+        [(); 4][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(192)
+                .add(20 * n)
+                .cast()
+        }
     }
-    #[doc = "0xc4 - M0 status clear register"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xc0..0x110 - Cluster M%s, containing M?_STATUS, M?_STATUS_CLR, M?_EXCEPTION_INFO0, M?_EXCEPTION_INFO1"]
     #[inline(always)]
-    pub const fn m0_status_clr(&self) -> &M0_STATUS_CLR {
-        &self.m0_status_clr
-    }
-    #[doc = "0xc8 - M0 exception_info0 register"]
-    #[inline(always)]
-    pub const fn m0_exception_info0(&self) -> &M0_EXCEPTION_INFO0 {
-        &self.m0_exception_info0
-    }
-    #[doc = "0xcc - M0 exception_info1 register"]
-    #[inline(always)]
-    pub const fn m0_exception_info1(&self) -> &M0_EXCEPTION_INFO1 {
-        &self.m0_exception_info1
-    }
-    #[doc = "0xd4 - M1 status register"]
-    #[inline(always)]
-    pub const fn m1_status(&self) -> &M1_STATUS {
-        &self.m1_status
-    }
-    #[doc = "0xd8 - M1 status clear register"]
-    #[inline(always)]
-    pub const fn m1_status_clr(&self) -> &M1_STATUS_CLR {
-        &self.m1_status_clr
-    }
-    #[doc = "0xdc - M1 exception_info0 register"]
-    #[inline(always)]
-    pub const fn m1_exception_info0(&self) -> &M1_EXCEPTION_INFO0 {
-        &self.m1_exception_info0
-    }
-    #[doc = "0xe0 - M1 exception_info1 register"]
-    #[inline(always)]
-    pub const fn m1_exception_info1(&self) -> &M1_EXCEPTION_INFO1 {
-        &self.m1_exception_info1
-    }
-    #[doc = "0xe8 - M2 status register"]
-    #[inline(always)]
-    pub const fn m2_status(&self) -> &M2_STATUS {
-        &self.m2_status
-    }
-    #[doc = "0xec - M2 status clear register"]
-    #[inline(always)]
-    pub const fn m2_status_clr(&self) -> &M2_STATUS_CLR {
-        &self.m2_status_clr
-    }
-    #[doc = "0xf0 - M2 exception_info0 register"]
-    #[inline(always)]
-    pub const fn m2_exception_info0(&self) -> &M2_EXCEPTION_INFO0 {
-        &self.m2_exception_info0
-    }
-    #[doc = "0xf4 - M2 exception_info1 register"]
-    #[inline(always)]
-    pub const fn m2_exception_info1(&self) -> &M2_EXCEPTION_INFO1 {
-        &self.m2_exception_info1
-    }
-    #[doc = "0xfc - M3 status register"]
-    #[inline(always)]
-    pub const fn m3_status(&self) -> &M3_STATUS {
-        &self.m3_status
-    }
-    #[doc = "0x100 - M3 status clear register"]
-    #[inline(always)]
-    pub const fn m3_status_clr(&self) -> &M3_STATUS_CLR {
-        &self.m3_status_clr
-    }
-    #[doc = "0x104 - M3 exception_info0 register"]
-    #[inline(always)]
-    pub const fn m3_exception_info0(&self) -> &M3_EXCEPTION_INFO0 {
-        &self.m3_exception_info0
-    }
-    #[doc = "0x108 - M3 exception_info1 register"]
-    #[inline(always)]
-    pub const fn m3_exception_info1(&self) -> &M3_EXCEPTION_INFO1 {
-        &self.m3_exception_info1
+    pub fn m_iter(&self) -> impl Iterator<Item = &M> {
+        (0..4).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(192)
+                .add(20 * n)
+                .cast()
+        })
     }
     #[doc = "0x10c - APM interrupt enable register"]
     #[inline(always)]
     pub const fn int_en(&self) -> &INT_EN {
-        &self.int_en
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(268).cast() }
     }
     #[doc = "0x110 - APM interrupt enable register"]
     #[inline(always)]
@@ -362,70 +288,11 @@ pub mod region_attr;
 pub type FUNC_CTRL = crate::Reg<func_ctrl::FUNC_CTRL_SPEC>;
 #[doc = "APM function control register"]
 pub mod func_ctrl;
-#[doc = "M0_STATUS (r) register accessor: M0 status register\n\nYou can [`read`](crate::Reg::read) this register and get [`m0_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m0_status`] module"]
-pub type M0_STATUS = crate::Reg<m0_status::M0_STATUS_SPEC>;
-#[doc = "M0 status register"]
-pub mod m0_status;
-#[doc = "M0_STATUS_CLR (w) register accessor: M0 status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m0_status_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m0_status_clr`] module"]
-pub type M0_STATUS_CLR = crate::Reg<m0_status_clr::M0_STATUS_CLR_SPEC>;
-#[doc = "M0 status clear register"]
-pub mod m0_status_clr;
-#[doc = "M0_EXCEPTION_INFO0 (r) register accessor: M0 exception_info0 register\n\nYou can [`read`](crate::Reg::read) this register and get [`m0_exception_info0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m0_exception_info0`] module"]
-pub type M0_EXCEPTION_INFO0 = crate::Reg<m0_exception_info0::M0_EXCEPTION_INFO0_SPEC>;
-#[doc = "M0 exception_info0 register"]
-pub mod m0_exception_info0;
-#[doc = "M0_EXCEPTION_INFO1 (r) register accessor: M0 exception_info1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`m0_exception_info1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m0_exception_info1`] module"]
-pub type M0_EXCEPTION_INFO1 = crate::Reg<m0_exception_info1::M0_EXCEPTION_INFO1_SPEC>;
-#[doc = "M0 exception_info1 register"]
-pub mod m0_exception_info1;
-#[doc = "M1_STATUS (r) register accessor: M1 status register\n\nYou can [`read`](crate::Reg::read) this register and get [`m1_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m1_status`] module"]
-pub type M1_STATUS = crate::Reg<m1_status::M1_STATUS_SPEC>;
-#[doc = "M1 status register"]
-pub mod m1_status;
-#[doc = "M1_STATUS_CLR (w) register accessor: M1 status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m1_status_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m1_status_clr`] module"]
-pub type M1_STATUS_CLR = crate::Reg<m1_status_clr::M1_STATUS_CLR_SPEC>;
-#[doc = "M1 status clear register"]
-pub mod m1_status_clr;
-#[doc = "M1_EXCEPTION_INFO0 (r) register accessor: M1 exception_info0 register\n\nYou can [`read`](crate::Reg::read) this register and get [`m1_exception_info0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m1_exception_info0`] module"]
-pub type M1_EXCEPTION_INFO0 = crate::Reg<m1_exception_info0::M1_EXCEPTION_INFO0_SPEC>;
-#[doc = "M1 exception_info0 register"]
-pub mod m1_exception_info0;
-#[doc = "M1_EXCEPTION_INFO1 (r) register accessor: M1 exception_info1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`m1_exception_info1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m1_exception_info1`] module"]
-pub type M1_EXCEPTION_INFO1 = crate::Reg<m1_exception_info1::M1_EXCEPTION_INFO1_SPEC>;
-#[doc = "M1 exception_info1 register"]
-pub mod m1_exception_info1;
-#[doc = "M2_STATUS (r) register accessor: M2 status register\n\nYou can [`read`](crate::Reg::read) this register and get [`m2_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m2_status`] module"]
-pub type M2_STATUS = crate::Reg<m2_status::M2_STATUS_SPEC>;
-#[doc = "M2 status register"]
-pub mod m2_status;
-#[doc = "M2_STATUS_CLR (w) register accessor: M2 status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m2_status_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m2_status_clr`] module"]
-pub type M2_STATUS_CLR = crate::Reg<m2_status_clr::M2_STATUS_CLR_SPEC>;
-#[doc = "M2 status clear register"]
-pub mod m2_status_clr;
-#[doc = "M2_EXCEPTION_INFO0 (r) register accessor: M2 exception_info0 register\n\nYou can [`read`](crate::Reg::read) this register and get [`m2_exception_info0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m2_exception_info0`] module"]
-pub type M2_EXCEPTION_INFO0 = crate::Reg<m2_exception_info0::M2_EXCEPTION_INFO0_SPEC>;
-#[doc = "M2 exception_info0 register"]
-pub mod m2_exception_info0;
-#[doc = "M2_EXCEPTION_INFO1 (r) register accessor: M2 exception_info1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`m2_exception_info1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m2_exception_info1`] module"]
-pub type M2_EXCEPTION_INFO1 = crate::Reg<m2_exception_info1::M2_EXCEPTION_INFO1_SPEC>;
-#[doc = "M2 exception_info1 register"]
-pub mod m2_exception_info1;
-#[doc = "M3_STATUS (r) register accessor: M3 status register\n\nYou can [`read`](crate::Reg::read) this register and get [`m3_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m3_status`] module"]
-pub type M3_STATUS = crate::Reg<m3_status::M3_STATUS_SPEC>;
-#[doc = "M3 status register"]
-pub mod m3_status;
-#[doc = "M3_STATUS_CLR (w) register accessor: M3 status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m3_status_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m3_status_clr`] module"]
-pub type M3_STATUS_CLR = crate::Reg<m3_status_clr::M3_STATUS_CLR_SPEC>;
-#[doc = "M3 status clear register"]
-pub mod m3_status_clr;
-#[doc = "M3_EXCEPTION_INFO0 (r) register accessor: M3 exception_info0 register\n\nYou can [`read`](crate::Reg::read) this register and get [`m3_exception_info0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m3_exception_info0`] module"]
-pub type M3_EXCEPTION_INFO0 = crate::Reg<m3_exception_info0::M3_EXCEPTION_INFO0_SPEC>;
-#[doc = "M3 exception_info0 register"]
-pub mod m3_exception_info0;
-#[doc = "M3_EXCEPTION_INFO1 (r) register accessor: M3 exception_info1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`m3_exception_info1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m3_exception_info1`] module"]
-pub type M3_EXCEPTION_INFO1 = crate::Reg<m3_exception_info1::M3_EXCEPTION_INFO1_SPEC>;
-#[doc = "M3 exception_info1 register"]
-pub mod m3_exception_info1;
+#[doc = "Cluster M%s, containing M?_STATUS, M?_STATUS_CLR, M?_EXCEPTION_INFO0, M?_EXCEPTION_INFO1"]
+pub use self::m::M;
+#[doc = r"Cluster"]
+#[doc = "Cluster M%s, containing M?_STATUS, M?_STATUS_CLR, M?_EXCEPTION_INFO0, M?_EXCEPTION_INFO1"]
+pub mod m;
 #[doc = "INT_EN (rw) register accessor: APM interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_en`] module"]
 pub type INT_EN = crate::Reg<int_en::INT_EN_SPEC>;
 #[doc = "APM interrupt enable register"]

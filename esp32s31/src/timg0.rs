@@ -2,133 +2,34 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    t0config: T0CONFIG,
-    t0lo: T0LO,
-    t0hi: T0HI,
-    t0update: T0UPDATE,
-    t0alarmlo: T0ALARMLO,
-    t0alarmhi: T0ALARMHI,
-    t0loadlo: T0LOADLO,
-    t0loadhi: T0LOADHI,
-    t0load: T0LOAD,
-    t1config: T1CONFIG,
-    t1lo: T1LO,
-    t1hi: T1HI,
-    t1update: T1UPDATE,
-    t1alarmlo: T1ALARMLO,
-    t1alarmhi: T1ALARMHI,
-    t1loadlo: T1LOADLO,
-    t1loadhi: T1LOADHI,
-    t1load: T1LOAD,
+    t: [T; 2],
     wdtconfig0: WDTCONFIG0,
     wdtconfig1: WDTCONFIG1,
-    wdtconfig2: WDTCONFIG2,
-    wdtconfig3: WDTCONFIG3,
-    wdtconfig4: WDTCONFIG4,
-    wdtconfig5: WDTCONFIG5,
+    wdtconfig: [WDTCONFIG; 4],
     wdtfeed: WDTFEED,
     wdtwprotect: WDTWPROTECT,
     rtccalicfg: RTCCALICFG,
     rtccalicfg1: RTCCALICFG1,
-    int_ena_timers: INT_ENA_TIMERS,
-    int_raw_timers: INT_RAW_TIMERS,
-    int_st_timers: INT_ST_TIMERS,
-    int_clr_timers: INT_CLR_TIMERS,
+    int_ena: INT_ENA,
+    int_raw: INT_RAW,
+    int_st: INT_ST,
+    int_clr: INT_CLR,
     rtccalicfg2: RTCCALICFG2,
-    _reserved33: [u8; 0x74],
+    _reserved13: [u8; 0x74],
     ntimers_date: NTIMERS_DATE,
     regclk: REGCLK,
 }
 impl RegisterBlock {
-    #[doc = "0x00 - Timer 0 configuration register"]
+    #[doc = "0x00..0x48 - Cluster T%s, containing T?CONFIG, T?LO, T?HI, T?UPDATE, T?ALARMLO, T?ALARMHI, T?LOADLO, T?LOADHI, T?LOAD"]
     #[inline(always)]
-    pub const fn t0config(&self) -> &T0CONFIG {
-        &self.t0config
+    pub const fn t(&self, n: usize) -> &T {
+        &self.t[n]
     }
-    #[doc = "0x04 - Timer 0 current value, low 32 bits"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x48 - Cluster T%s, containing T?CONFIG, T?LO, T?HI, T?UPDATE, T?ALARMLO, T?ALARMHI, T?LOADLO, T?LOADHI, T?LOAD"]
     #[inline(always)]
-    pub const fn t0lo(&self) -> &T0LO {
-        &self.t0lo
-    }
-    #[doc = "0x08 - Timer 0 current value, high 22 bits"]
-    #[inline(always)]
-    pub const fn t0hi(&self) -> &T0HI {
-        &self.t0hi
-    }
-    #[doc = "0x0c - Write to copy current timer value to TIMGn_T0LO_REG or TIMGn_T0HI_REG"]
-    #[inline(always)]
-    pub const fn t0update(&self) -> &T0UPDATE {
-        &self.t0update
-    }
-    #[doc = "0x10 - Timer 0 alarm value, low 32 bits"]
-    #[inline(always)]
-    pub const fn t0alarmlo(&self) -> &T0ALARMLO {
-        &self.t0alarmlo
-    }
-    #[doc = "0x14 - Timer 0 alarm value, high bits"]
-    #[inline(always)]
-    pub const fn t0alarmhi(&self) -> &T0ALARMHI {
-        &self.t0alarmhi
-    }
-    #[doc = "0x18 - Timer 0 reload value, low 32 bits"]
-    #[inline(always)]
-    pub const fn t0loadlo(&self) -> &T0LOADLO {
-        &self.t0loadlo
-    }
-    #[doc = "0x1c - Timer 0 reload value, high 22 bits"]
-    #[inline(always)]
-    pub const fn t0loadhi(&self) -> &T0LOADHI {
-        &self.t0loadhi
-    }
-    #[doc = "0x20 - Write to reload timer from TIMG_T0LOADLO_REG or TIMG_T0LOADHI_REG"]
-    #[inline(always)]
-    pub const fn t0load(&self) -> &T0LOAD {
-        &self.t0load
-    }
-    #[doc = "0x24 - Timer 1 configuration register"]
-    #[inline(always)]
-    pub const fn t1config(&self) -> &T1CONFIG {
-        &self.t1config
-    }
-    #[doc = "0x28 - Timer 1 current value, low 32 bits"]
-    #[inline(always)]
-    pub const fn t1lo(&self) -> &T1LO {
-        &self.t1lo
-    }
-    #[doc = "0x2c - Timer 1 current value, high 22 bits"]
-    #[inline(always)]
-    pub const fn t1hi(&self) -> &T1HI {
-        &self.t1hi
-    }
-    #[doc = "0x30 - Write to copy current timer value to TIMGn_T0LO_REG or TIMGn_T0HI_REG"]
-    #[inline(always)]
-    pub const fn t1update(&self) -> &T1UPDATE {
-        &self.t1update
-    }
-    #[doc = "0x34 - Timer 1 alarm value, low 32 bits"]
-    #[inline(always)]
-    pub const fn t1alarmlo(&self) -> &T1ALARMLO {
-        &self.t1alarmlo
-    }
-    #[doc = "0x38 - Timer 1 alarm value, high bits"]
-    #[inline(always)]
-    pub const fn t1alarmhi(&self) -> &T1ALARMHI {
-        &self.t1alarmhi
-    }
-    #[doc = "0x3c - Timer 1 reload value, low 32 bits"]
-    #[inline(always)]
-    pub const fn t1loadlo(&self) -> &T1LOADLO {
-        &self.t1loadlo
-    }
-    #[doc = "0x40 - Timer 1 reload value, high 22 bits"]
-    #[inline(always)]
-    pub const fn t1loadhi(&self) -> &T1LOADHI {
-        &self.t1loadhi
-    }
-    #[doc = "0x44 - Write to reload timer from TIMG_T1LOADLO_REG or TIMG_T1LOADHI_REG"]
-    #[inline(always)]
-    pub const fn t1load(&self) -> &T1LOAD {
-        &self.t1load
+    pub fn t_iter(&self) -> impl Iterator<Item = &T> {
+        self.t.iter()
     }
     #[doc = "0x48 - Watchdog timer configuration register"]
     #[inline(always)]
@@ -140,25 +41,38 @@ impl RegisterBlock {
     pub const fn wdtconfig1(&self) -> &WDTCONFIG1 {
         &self.wdtconfig1
     }
-    #[doc = "0x50 - Watchdog timer stage 0 timeout value"]
+    #[doc = "0x50..0x60 - Watchdog timer stage timeout value"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `WDTCONFIG2` register.</div>"]
     #[inline(always)]
-    pub const fn wdtconfig2(&self) -> &WDTCONFIG2 {
-        &self.wdtconfig2
+    pub const fn wdtconfig(&self, n: usize) -> &WDTCONFIG {
+        &self.wdtconfig[n]
     }
-    #[doc = "0x54 - Watchdog timer stage 1 timeout value"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x50..0x60 - Watchdog timer stage timeout value"]
     #[inline(always)]
-    pub const fn wdtconfig3(&self) -> &WDTCONFIG3 {
-        &self.wdtconfig3
+    pub fn wdtconfig_iter(&self) -> impl Iterator<Item = &WDTCONFIG> {
+        self.wdtconfig.iter()
     }
-    #[doc = "0x58 - Watchdog timer stage 2 timeout value"]
+    #[doc = "0x50 - Watchdog timer stage timeout value"]
     #[inline(always)]
-    pub const fn wdtconfig4(&self) -> &WDTCONFIG4 {
-        &self.wdtconfig4
+    pub const fn wdtconfig2(&self) -> &WDTCONFIG {
+        self.wdtconfig(0)
     }
-    #[doc = "0x5c - Watchdog timer stage 3 timeout value"]
+    #[doc = "0x54 - Watchdog timer stage timeout value"]
     #[inline(always)]
-    pub const fn wdtconfig5(&self) -> &WDTCONFIG5 {
-        &self.wdtconfig5
+    pub const fn wdtconfig3(&self) -> &WDTCONFIG {
+        self.wdtconfig(1)
+    }
+    #[doc = "0x58 - Watchdog timer stage timeout value"]
+    #[inline(always)]
+    pub const fn wdtconfig4(&self) -> &WDTCONFIG {
+        self.wdtconfig(2)
+    }
+    #[doc = "0x5c - Watchdog timer stage timeout value"]
+    #[inline(always)]
+    pub const fn wdtconfig5(&self) -> &WDTCONFIG {
+        self.wdtconfig(3)
     }
     #[doc = "0x60 - Write to feed the watchdog timer"]
     #[inline(always)]
@@ -182,23 +96,23 @@ impl RegisterBlock {
     }
     #[doc = "0x70 - Interrupt enable bits"]
     #[inline(always)]
-    pub const fn int_ena_timers(&self) -> &INT_ENA_TIMERS {
-        &self.int_ena_timers
+    pub const fn int_ena(&self) -> &INT_ENA {
+        &self.int_ena
     }
     #[doc = "0x74 - Raw interrupt status"]
     #[inline(always)]
-    pub const fn int_raw_timers(&self) -> &INT_RAW_TIMERS {
-        &self.int_raw_timers
+    pub const fn int_raw(&self) -> &INT_RAW {
+        &self.int_raw
     }
     #[doc = "0x78 - Masked interrupt status"]
     #[inline(always)]
-    pub const fn int_st_timers(&self) -> &INT_ST_TIMERS {
-        &self.int_st_timers
+    pub const fn int_st(&self) -> &INT_ST {
+        &self.int_st
     }
     #[doc = "0x7c - Interrupt clear bits"]
     #[inline(always)]
-    pub const fn int_clr_timers(&self) -> &INT_CLR_TIMERS {
-        &self.int_clr_timers
+    pub const fn int_clr(&self) -> &INT_CLR {
+        &self.int_clr
     }
     #[doc = "0x80 - RTC frequency calculation configuration register 2"]
     #[inline(always)]
@@ -216,78 +130,11 @@ impl RegisterBlock {
         &self.regclk
     }
 }
-#[doc = "T0CONFIG (rw) register accessor: Timer 0 configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`t0config::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t0config::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0config`] module"]
-pub type T0CONFIG = crate::Reg<t0config::T0CONFIG_SPEC>;
-#[doc = "Timer 0 configuration register"]
-pub mod t0config;
-#[doc = "T0LO (r) register accessor: Timer 0 current value, low 32 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`t0lo::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0lo`] module"]
-pub type T0LO = crate::Reg<t0lo::T0LO_SPEC>;
-#[doc = "Timer 0 current value, low 32 bits"]
-pub mod t0lo;
-#[doc = "T0HI (r) register accessor: Timer 0 current value, high 22 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`t0hi::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0hi`] module"]
-pub type T0HI = crate::Reg<t0hi::T0HI_SPEC>;
-#[doc = "Timer 0 current value, high 22 bits"]
-pub mod t0hi;
-#[doc = "T0UPDATE (rw) register accessor: Write to copy current timer value to TIMGn_T0LO_REG or TIMGn_T0HI_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`t0update::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t0update::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0update`] module"]
-pub type T0UPDATE = crate::Reg<t0update::T0UPDATE_SPEC>;
-#[doc = "Write to copy current timer value to TIMGn_T0LO_REG or TIMGn_T0HI_REG"]
-pub mod t0update;
-#[doc = "T0ALARMLO (rw) register accessor: Timer 0 alarm value, low 32 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`t0alarmlo::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t0alarmlo::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0alarmlo`] module"]
-pub type T0ALARMLO = crate::Reg<t0alarmlo::T0ALARMLO_SPEC>;
-#[doc = "Timer 0 alarm value, low 32 bits"]
-pub mod t0alarmlo;
-#[doc = "T0ALARMHI (rw) register accessor: Timer 0 alarm value, high bits\n\nYou can [`read`](crate::Reg::read) this register and get [`t0alarmhi::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t0alarmhi::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0alarmhi`] module"]
-pub type T0ALARMHI = crate::Reg<t0alarmhi::T0ALARMHI_SPEC>;
-#[doc = "Timer 0 alarm value, high bits"]
-pub mod t0alarmhi;
-#[doc = "T0LOADLO (rw) register accessor: Timer 0 reload value, low 32 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`t0loadlo::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t0loadlo::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0loadlo`] module"]
-pub type T0LOADLO = crate::Reg<t0loadlo::T0LOADLO_SPEC>;
-#[doc = "Timer 0 reload value, low 32 bits"]
-pub mod t0loadlo;
-#[doc = "T0LOADHI (rw) register accessor: Timer 0 reload value, high 22 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`t0loadhi::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t0loadhi::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0loadhi`] module"]
-pub type T0LOADHI = crate::Reg<t0loadhi::T0LOADHI_SPEC>;
-#[doc = "Timer 0 reload value, high 22 bits"]
-pub mod t0loadhi;
-#[doc = "T0LOAD (w) register accessor: Write to reload timer from TIMG_T0LOADLO_REG or TIMG_T0LOADHI_REG\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t0load::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0load`] module"]
-pub type T0LOAD = crate::Reg<t0load::T0LOAD_SPEC>;
-#[doc = "Write to reload timer from TIMG_T0LOADLO_REG or TIMG_T0LOADHI_REG"]
-pub mod t0load;
-#[doc = "T1CONFIG (rw) register accessor: Timer 1 configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`t1config::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t1config::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1config`] module"]
-pub type T1CONFIG = crate::Reg<t1config::T1CONFIG_SPEC>;
-#[doc = "Timer 1 configuration register"]
-pub mod t1config;
-#[doc = "T1LO (r) register accessor: Timer 1 current value, low 32 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`t1lo::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1lo`] module"]
-pub type T1LO = crate::Reg<t1lo::T1LO_SPEC>;
-#[doc = "Timer 1 current value, low 32 bits"]
-pub mod t1lo;
-#[doc = "T1HI (r) register accessor: Timer 1 current value, high 22 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`t1hi::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1hi`] module"]
-pub type T1HI = crate::Reg<t1hi::T1HI_SPEC>;
-#[doc = "Timer 1 current value, high 22 bits"]
-pub mod t1hi;
-#[doc = "T1UPDATE (rw) register accessor: Write to copy current timer value to TIMGn_T0LO_REG or TIMGn_T0HI_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`t1update::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t1update::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1update`] module"]
-pub type T1UPDATE = crate::Reg<t1update::T1UPDATE_SPEC>;
-#[doc = "Write to copy current timer value to TIMGn_T0LO_REG or TIMGn_T0HI_REG"]
-pub mod t1update;
-#[doc = "T1ALARMLO (rw) register accessor: Timer 1 alarm value, low 32 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`t1alarmlo::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t1alarmlo::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1alarmlo`] module"]
-pub type T1ALARMLO = crate::Reg<t1alarmlo::T1ALARMLO_SPEC>;
-#[doc = "Timer 1 alarm value, low 32 bits"]
-pub mod t1alarmlo;
-#[doc = "T1ALARMHI (rw) register accessor: Timer 1 alarm value, high bits\n\nYou can [`read`](crate::Reg::read) this register and get [`t1alarmhi::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t1alarmhi::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1alarmhi`] module"]
-pub type T1ALARMHI = crate::Reg<t1alarmhi::T1ALARMHI_SPEC>;
-#[doc = "Timer 1 alarm value, high bits"]
-pub mod t1alarmhi;
-#[doc = "T1LOADLO (rw) register accessor: Timer 1 reload value, low 32 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`t1loadlo::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t1loadlo::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1loadlo`] module"]
-pub type T1LOADLO = crate::Reg<t1loadlo::T1LOADLO_SPEC>;
-#[doc = "Timer 1 reload value, low 32 bits"]
-pub mod t1loadlo;
-#[doc = "T1LOADHI (rw) register accessor: Timer 1 reload value, high 22 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`t1loadhi::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t1loadhi::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1loadhi`] module"]
-pub type T1LOADHI = crate::Reg<t1loadhi::T1LOADHI_SPEC>;
-#[doc = "Timer 1 reload value, high 22 bits"]
-pub mod t1loadhi;
-#[doc = "T1LOAD (w) register accessor: Write to reload timer from TIMG_T1LOADLO_REG or TIMG_T1LOADHI_REG\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t1load::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1load`] module"]
-pub type T1LOAD = crate::Reg<t1load::T1LOAD_SPEC>;
-#[doc = "Write to reload timer from TIMG_T1LOADLO_REG or TIMG_T1LOADHI_REG"]
-pub mod t1load;
+#[doc = "Cluster T%s, containing T?CONFIG, T?LO, T?HI, T?UPDATE, T?ALARMLO, T?ALARMHI, T?LOADLO, T?LOADHI, T?LOAD"]
+pub use self::t::T;
+#[doc = r"Cluster"]
+#[doc = "Cluster T%s, containing T?CONFIG, T?LO, T?HI, T?UPDATE, T?ALARMLO, T?ALARMHI, T?LOADLO, T?LOADHI, T?LOAD"]
+pub mod t;
 #[doc = "WDTCONFIG0 (rw) register accessor: Watchdog timer configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig0`] module"]
 pub type WDTCONFIG0 = crate::Reg<wdtconfig0::WDTCONFIG0_SPEC>;
 #[doc = "Watchdog timer configuration register"]
@@ -296,22 +143,10 @@ pub mod wdtconfig0;
 pub type WDTCONFIG1 = crate::Reg<wdtconfig1::WDTCONFIG1_SPEC>;
 #[doc = "Watchdog timer prescaler register"]
 pub mod wdtconfig1;
-#[doc = "WDTCONFIG2 (rw) register accessor: Watchdog timer stage 0 timeout value\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig2`] module"]
-pub type WDTCONFIG2 = crate::Reg<wdtconfig2::WDTCONFIG2_SPEC>;
-#[doc = "Watchdog timer stage 0 timeout value"]
-pub mod wdtconfig2;
-#[doc = "WDTCONFIG3 (rw) register accessor: Watchdog timer stage 1 timeout value\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig3`] module"]
-pub type WDTCONFIG3 = crate::Reg<wdtconfig3::WDTCONFIG3_SPEC>;
-#[doc = "Watchdog timer stage 1 timeout value"]
-pub mod wdtconfig3;
-#[doc = "WDTCONFIG4 (rw) register accessor: Watchdog timer stage 2 timeout value\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig4`] module"]
-pub type WDTCONFIG4 = crate::Reg<wdtconfig4::WDTCONFIG4_SPEC>;
-#[doc = "Watchdog timer stage 2 timeout value"]
-pub mod wdtconfig4;
-#[doc = "WDTCONFIG5 (rw) register accessor: Watchdog timer stage 3 timeout value\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig5`] module"]
-pub type WDTCONFIG5 = crate::Reg<wdtconfig5::WDTCONFIG5_SPEC>;
-#[doc = "Watchdog timer stage 3 timeout value"]
-pub mod wdtconfig5;
+#[doc = "WDTCONFIG (rw) register accessor: Watchdog timer stage timeout value\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig`] module"]
+pub type WDTCONFIG = crate::Reg<wdtconfig::WDTCONFIG_SPEC>;
+#[doc = "Watchdog timer stage timeout value"]
+pub mod wdtconfig;
 #[doc = "WDTFEED (w) register accessor: Write to feed the watchdog timer\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtfeed::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtfeed`] module"]
 pub type WDTFEED = crate::Reg<wdtfeed::WDTFEED_SPEC>;
 #[doc = "Write to feed the watchdog timer"]
@@ -328,22 +163,22 @@ pub mod rtccalicfg;
 pub type RTCCALICFG1 = crate::Reg<rtccalicfg1::RTCCALICFG1_SPEC>;
 #[doc = "RTC frequency calculation configuration register 1"]
 pub mod rtccalicfg1;
-#[doc = "INT_ENA_TIMERS (rw) register accessor: Interrupt enable bits\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena_timers::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena_timers::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena_timers`] module"]
-pub type INT_ENA_TIMERS = crate::Reg<int_ena_timers::INT_ENA_TIMERS_SPEC>;
+#[doc = "INT_ENA (rw) register accessor: Interrupt enable bits\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "Interrupt enable bits"]
-pub mod int_ena_timers;
-#[doc = "INT_RAW_TIMERS (r) register accessor: Raw interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw_timers::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw_timers`] module"]
-pub type INT_RAW_TIMERS = crate::Reg<int_raw_timers::INT_RAW_TIMERS_SPEC>;
+pub mod int_ena;
+#[doc = "INT_RAW (r) register accessor: Raw interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
+pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "Raw interrupt status"]
-pub mod int_raw_timers;
-#[doc = "INT_ST_TIMERS (r) register accessor: Masked interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st_timers::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st_timers`] module"]
-pub type INT_ST_TIMERS = crate::Reg<int_st_timers::INT_ST_TIMERS_SPEC>;
+pub mod int_raw;
+#[doc = "INT_ST (r) register accessor: Masked interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
+pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = "Masked interrupt status"]
-pub mod int_st_timers;
-#[doc = "INT_CLR_TIMERS (w) register accessor: Interrupt clear bits\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr_timers::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr_timers`] module"]
-pub type INT_CLR_TIMERS = crate::Reg<int_clr_timers::INT_CLR_TIMERS_SPEC>;
+pub mod int_st;
+#[doc = "INT_CLR (w) register accessor: Interrupt clear bits\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "Interrupt clear bits"]
-pub mod int_clr_timers;
+pub mod int_clr;
 #[doc = "RTCCALICFG2 (rw) register accessor: RTC frequency calculation configuration register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`rtccalicfg2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rtccalicfg2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtccalicfg2`] module"]
 pub type RTCCALICFG2 = crate::Reg<rtccalicfg2::RTCCALICFG2_SPEC>;
 #[doc = "RTC frequency calculation configuration register 2"]

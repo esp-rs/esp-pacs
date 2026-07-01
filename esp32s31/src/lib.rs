@@ -36,9 +36,9 @@ extern "C" {
     fn RMT();
     fn I2C0();
     fn I2C1();
-    fn TG0_T0();
-    fn TG0_T1();
-    fn TG0_WDT();
+    fn TG0_T0_LEVEL();
+    fn TG0_T1_LEVEL();
+    fn TG0_WDT_LEVEL();
     fn TG1_T0();
     fn TG1_T1();
     fn TG1_WDT();
@@ -72,7 +72,7 @@ extern "C" {
     fn ECDSA();
     fn KM();
     fn RMA();
-    fn GPIO_INT0();
+    fn GPIO();
     fn GPIO_INT1();
     fn GPIO_INT2();
     fn GPIO_INT3();
@@ -191,9 +191,15 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 168] = [
     Vector { _handler: RMT },
     Vector { _handler: I2C0 },
     Vector { _handler: I2C1 },
-    Vector { _handler: TG0_T0 },
-    Vector { _handler: TG0_T1 },
-    Vector { _handler: TG0_WDT },
+    Vector {
+        _handler: TG0_T0_LEVEL,
+    },
+    Vector {
+        _handler: TG0_T1_LEVEL,
+    },
+    Vector {
+        _handler: TG0_WDT_LEVEL,
+    },
     Vector { _handler: TG1_T0 },
     Vector { _handler: TG1_T1 },
     Vector { _handler: TG1_WDT },
@@ -269,9 +275,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 168] = [
     Vector { _handler: ECDSA },
     Vector { _handler: KM },
     Vector { _handler: RMA },
-    Vector {
-        _handler: GPIO_INT0,
-    },
+    Vector { _handler: GPIO },
     Vector {
         _handler: GPIO_INT1,
     },
@@ -541,15 +545,15 @@ impl core::fmt::Debug for BITSCRAMBLER {
 }
 #[doc = "BITSCRAMBLER Peripheral"]
 pub mod bitscrambler;
-#[doc = "BUS_MONITOR Peripheral"]
-pub type BUS_MONITOR = crate::Periph<bus_monitor::RegisterBlock, 0x2d00_2000>;
-impl core::fmt::Debug for BUS_MONITOR {
+#[doc = "ASSIST_DEBUG (BUS_MONITOR) Peripheral"]
+pub type ASSIST_DEBUG = crate::Periph<assist_debug::RegisterBlock, 0x2d00_2000>;
+impl core::fmt::Debug for ASSIST_DEBUG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("BUS_MONITOR").finish()
+        f.debug_struct("ASSIST_DEBUG").finish()
     }
 }
-#[doc = "BUS_MONITOR Peripheral"]
-pub mod bus_monitor;
+#[doc = "ASSIST_DEBUG (BUS_MONITOR) Peripheral"]
+pub mod assist_debug;
 #[doc = "CACHE Peripheral"]
 pub type CACHE = crate::Periph<cache::RegisterBlock, 0x2c00_0000>;
 impl core::fmt::Debug for CACHE {

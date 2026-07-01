@@ -2,75 +2,75 @@
 pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
 pub type W = crate::W<INT_ENA_SPEC>;
-#[doc = "Field `TICK_INT_ENA` reader - need_des"]
-pub type TICK_INT_ENA_R = crate::BitReader;
-#[doc = "Field `TICK_INT_ENA` writer - need_des"]
-pub type TICK_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `UPDTAE_DONE_INT_ENA` reader - need_des"]
-pub type UPDTAE_DONE_INT_ENA_R = crate::BitReader;
-#[doc = "Field `UPDTAE_DONE_INT_ENA` writer - need_des"]
-pub type UPDTAE_DONE_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OVERFLOW_ENA` reader - need_des"]
-pub type OVERFLOW_ENA_R = crate::BitReader;
-#[doc = "Field `OVERFLOW_ENA` writer - need_des"]
-pub type OVERFLOW_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SOC_WAKEUP_INT_ENA` reader - need_des"]
-pub type SOC_WAKEUP_INT_ENA_R = crate::BitReader;
-#[doc = "Field `SOC_WAKEUP_INT_ENA` writer - need_des"]
-pub type SOC_WAKEUP_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TICK` reader - need_des"]
+pub type TICK_R = crate::BitReader;
+#[doc = "Field `TICK` writer - need_des"]
+pub type TICK_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `UPDTAE_DONE` reader - need_des"]
+pub type UPDTAE_DONE_R = crate::BitReader;
+#[doc = "Field `UPDTAE_DONE` writer - need_des"]
+pub type UPDTAE_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OVERFLOW` reader - need_des"]
+pub type OVERFLOW_R = crate::BitReader;
+#[doc = "Field `OVERFLOW` writer - need_des"]
+pub type OVERFLOW_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SOC_WAKEUP` reader - need_des"]
+pub type SOC_WAKEUP_R = crate::BitReader;
+#[doc = "Field `SOC_WAKEUP` writer - need_des"]
+pub type SOC_WAKEUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn tick_int_ena(&self) -> TICK_INT_ENA_R {
-        TICK_INT_ENA_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn tick(&self) -> TICK_R {
+        TICK_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn updtae_done_int_ena(&self) -> UPDTAE_DONE_INT_ENA_R {
-        UPDTAE_DONE_INT_ENA_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn updtae_done(&self) -> UPDTAE_DONE_R {
+        UPDTAE_DONE_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn overflow_ena(&self) -> OVERFLOW_ENA_R {
-        OVERFLOW_ENA_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn overflow(&self) -> OVERFLOW_R {
+        OVERFLOW_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn soc_wakeup_int_ena(&self) -> SOC_WAKEUP_INT_ENA_R {
-        SOC_WAKEUP_INT_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn soc_wakeup(&self) -> SOC_WAKEUP_R {
+        SOC_WAKEUP_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field("tick_int_ena", &self.tick_int_ena())
-            .field("updtae_done_int_ena", &self.updtae_done_int_ena())
-            .field("overflow_ena", &self.overflow_ena())
-            .field("soc_wakeup_int_ena", &self.soc_wakeup_int_ena())
+            .field("tick", &self.tick())
+            .field("updtae_done", &self.updtae_done())
+            .field("overflow", &self.overflow())
+            .field("soc_wakeup", &self.soc_wakeup())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn tick_int_ena(&mut self) -> TICK_INT_ENA_W<'_, INT_ENA_SPEC> {
-        TICK_INT_ENA_W::new(self, 28)
+    pub fn tick(&mut self) -> TICK_W<'_, INT_ENA_SPEC> {
+        TICK_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn updtae_done_int_ena(&mut self) -> UPDTAE_DONE_INT_ENA_W<'_, INT_ENA_SPEC> {
-        UPDTAE_DONE_INT_ENA_W::new(self, 29)
+    pub fn updtae_done(&mut self) -> UPDTAE_DONE_W<'_, INT_ENA_SPEC> {
+        UPDTAE_DONE_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn overflow_ena(&mut self) -> OVERFLOW_ENA_W<'_, INT_ENA_SPEC> {
-        OVERFLOW_ENA_W::new(self, 30)
+    pub fn overflow(&mut self) -> OVERFLOW_W<'_, INT_ENA_SPEC> {
+        OVERFLOW_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn soc_wakeup_int_ena(&mut self) -> SOC_WAKEUP_INT_ENA_W<'_, INT_ENA_SPEC> {
-        SOC_WAKEUP_INT_ENA_W::new(self, 31)
+    pub fn soc_wakeup(&mut self) -> SOC_WAKEUP_W<'_, INT_ENA_SPEC> {
+        SOC_WAKEUP_W::new(self, 31)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

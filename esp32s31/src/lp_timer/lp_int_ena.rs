@@ -2,80 +2,75 @@
 pub type R = crate::R<LP_INT_ENA_SPEC>;
 #[doc = "Register `LP_INT_ENA` writer"]
 pub type W = crate::W<LP_INT_ENA_SPEC>;
-#[doc = "Field `TICK_LP_INT_ENA` reader - need_des"]
-pub type TICK_LP_INT_ENA_R = crate::BitReader;
-#[doc = "Field `TICK_LP_INT_ENA` writer - need_des"]
-pub type TICK_LP_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `UPDTAE_DONE_LP_INT_ENA` reader - need_des"]
-pub type UPDTAE_DONE_LP_INT_ENA_R = crate::BitReader;
-#[doc = "Field `UPDTAE_DONE_LP_INT_ENA` writer - need_des"]
-pub type UPDTAE_DONE_LP_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `MAIN_TIMER_OVERFLOW_LP_INT_ENA` reader - need_des"]
-pub type MAIN_TIMER_OVERFLOW_LP_INT_ENA_R = crate::BitReader;
-#[doc = "Field `MAIN_TIMER_OVERFLOW_LP_INT_ENA` writer - need_des"]
-pub type MAIN_TIMER_OVERFLOW_LP_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `MAIN_TIMER_LP_INT_ENA` reader - need_des"]
-pub type MAIN_TIMER_LP_INT_ENA_R = crate::BitReader;
-#[doc = "Field `MAIN_TIMER_LP_INT_ENA` writer - need_des"]
-pub type MAIN_TIMER_LP_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TICK` reader - need_des"]
+pub type TICK_R = crate::BitReader;
+#[doc = "Field `TICK` writer - need_des"]
+pub type TICK_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `UPDTAE_DONE` reader - need_des"]
+pub type UPDTAE_DONE_R = crate::BitReader;
+#[doc = "Field `UPDTAE_DONE` writer - need_des"]
+pub type UPDTAE_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MAIN_TIMER_OVERFLOW` reader - need_des"]
+pub type MAIN_TIMER_OVERFLOW_R = crate::BitReader;
+#[doc = "Field `MAIN_TIMER_OVERFLOW` writer - need_des"]
+pub type MAIN_TIMER_OVERFLOW_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MAIN_TIMER` reader - need_des"]
+pub type MAIN_TIMER_R = crate::BitReader;
+#[doc = "Field `MAIN_TIMER` writer - need_des"]
+pub type MAIN_TIMER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn tick_lp_int_ena(&self) -> TICK_LP_INT_ENA_R {
-        TICK_LP_INT_ENA_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn tick(&self) -> TICK_R {
+        TICK_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn updtae_done_lp_int_ena(&self) -> UPDTAE_DONE_LP_INT_ENA_R {
-        UPDTAE_DONE_LP_INT_ENA_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn updtae_done(&self) -> UPDTAE_DONE_R {
+        UPDTAE_DONE_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn main_timer_overflow_lp_int_ena(&self) -> MAIN_TIMER_OVERFLOW_LP_INT_ENA_R {
-        MAIN_TIMER_OVERFLOW_LP_INT_ENA_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn main_timer_overflow(&self) -> MAIN_TIMER_OVERFLOW_R {
+        MAIN_TIMER_OVERFLOW_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn main_timer_lp_int_ena(&self) -> MAIN_TIMER_LP_INT_ENA_R {
-        MAIN_TIMER_LP_INT_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn main_timer(&self) -> MAIN_TIMER_R {
+        MAIN_TIMER_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_INT_ENA")
-            .field("tick_lp_int_ena", &self.tick_lp_int_ena())
-            .field("updtae_done_lp_int_ena", &self.updtae_done_lp_int_ena())
-            .field(
-                "main_timer_overflow_lp_int_ena",
-                &self.main_timer_overflow_lp_int_ena(),
-            )
-            .field("main_timer_lp_int_ena", &self.main_timer_lp_int_ena())
+            .field("tick", &self.tick())
+            .field("updtae_done", &self.updtae_done())
+            .field("main_timer_overflow", &self.main_timer_overflow())
+            .field("main_timer", &self.main_timer())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn tick_lp_int_ena(&mut self) -> TICK_LP_INT_ENA_W<'_, LP_INT_ENA_SPEC> {
-        TICK_LP_INT_ENA_W::new(self, 28)
+    pub fn tick(&mut self) -> TICK_W<'_, LP_INT_ENA_SPEC> {
+        TICK_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn updtae_done_lp_int_ena(&mut self) -> UPDTAE_DONE_LP_INT_ENA_W<'_, LP_INT_ENA_SPEC> {
-        UPDTAE_DONE_LP_INT_ENA_W::new(self, 29)
+    pub fn updtae_done(&mut self) -> UPDTAE_DONE_W<'_, LP_INT_ENA_SPEC> {
+        UPDTAE_DONE_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn main_timer_overflow_lp_int_ena(
-        &mut self,
-    ) -> MAIN_TIMER_OVERFLOW_LP_INT_ENA_W<'_, LP_INT_ENA_SPEC> {
-        MAIN_TIMER_OVERFLOW_LP_INT_ENA_W::new(self, 30)
+    pub fn main_timer_overflow(&mut self) -> MAIN_TIMER_OVERFLOW_W<'_, LP_INT_ENA_SPEC> {
+        MAIN_TIMER_OVERFLOW_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn main_timer_lp_int_ena(&mut self) -> MAIN_TIMER_LP_INT_ENA_W<'_, LP_INT_ENA_SPEC> {
-        MAIN_TIMER_LP_INT_ENA_W::new(self, 31)
+    pub fn main_timer(&mut self) -> MAIN_TIMER_W<'_, LP_INT_ENA_SPEC> {
+        MAIN_TIMER_W::new(self, 31)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
