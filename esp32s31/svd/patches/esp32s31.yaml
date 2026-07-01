@@ -1,4 +1,81 @@
 _svd: "../esp32s31.base.svd"
 
-# _include:
-#   - "_dma.yml"
+_include:
+  - "_gpio.yml"
+
+PMU:
+  _include: ../../../common_patches/pmu_int_strip.yaml
+
+ADC:
+  DMA_CONF:
+    _strip: APB_
+  _include: ../../../common_patches/int_strip.yaml
+
+AES:
+  _modify:
+    INT_CLEAR:
+      name: INT_CLR
+
+  KEY_%s:
+    _modify:
+      KEY_0:
+        name: KEY
+    KEY: [0, 0xffff_ffff]
+  TEXT_IN_%s:
+    _modify:
+      TEXT_IN_0:
+        name: TEXT_IN
+    TEXT_IN: [0, 0xffff_ffff]
+  TEXT_OUT_%s:
+    _modify:
+      TEXT_OUT_0:
+        name: TEXT_OUT
+  INT_CLR:
+    _modify:
+      INT_CLEAR:
+        name: INT_CLR
+
+EFUSE:
+  _strip: APB2OTP_
+  "*":
+    _strip: APB2OTP_
+
+"SPI[01]":
+  _strip: SPI_MEM_
+  "*":
+    _strip: SPI_MEM_
+
+SPI2:
+  _strip: SPI_
+  "*":
+    _strip: SPI_
+  _include: ../../../common_patches/spi_dma_int_strip.yaml
+
+  CMD:
+    _modify:
+      UPDATE:
+        access: read-write
+
+
+I2C0:
+  _modify:
+    INT_STATUS:
+      name: INT_ST
+
+  DATA:
+    _modify:
+      FIFO_RDATA:
+        access: read-write
+  _include:
+    - ../../../common_patches/i2c_force_out.yaml
+    - ../../../common_patches/i2c0.yaml
+    - ../../../common_patches/i2c_st_timeouts.yaml
+
+LEDC0:
+  _include:
+    - ../../../common_patches/ledc_collect.yaml
+    - ../../../common_patches/ledc_int.yaml
+
+
+"EFUSE,I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
+  _include: ../../../common_patches/int_strip.yaml

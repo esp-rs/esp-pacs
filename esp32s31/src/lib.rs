@@ -766,24 +766,6 @@ impl core::fmt::Debug for I2C1 {
 }
 #[doc = "I2C (Inter-Integrated Circuit) Controller 1"]
 pub use self::i2c0 as i2c1;
-#[doc = "I2C (Inter-Integrated Circuit) Controller 0"]
-pub type I2C0 = crate::Periph<i2c0::RegisterBlock, 0x2038_5000>;
-impl core::fmt::Debug for I2C0 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("I2C0").finish()
-    }
-}
-#[doc = "I2C (Inter-Integrated Circuit) Controller 0"]
-pub mod i2c0;
-#[doc = "I2C (Inter-Integrated Circuit) Controller 1"]
-pub type I2C1 = crate::Periph<i2c0::RegisterBlock, 0x2038_6000>;
-impl core::fmt::Debug for I2C1 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("I2C1").finish()
-    }
-}
-#[doc = "I2C (Inter-Integrated Circuit) Controller 1"]
-pub use self::i2c0 as i2c1;
 #[doc = "I2S (Inter-IC Sound) Controller 0"]
 pub type I2S0 = crate::Periph<i2s0::RegisterBlock, 0x2038_7000>;
 impl core::fmt::Debug for I2S0 {

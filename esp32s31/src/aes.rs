@@ -20,7 +20,7 @@ pub struct RegisterBlock {
     aad_block_num: AAD_BLOCK_NUM,
     remainder_bit_num: REMAINDER_BIT_NUM,
     continue_: CONTINUE,
-    int_clear: INT_CLEAR,
+    int_clr: INT_CLR,
     int_ena: INT_ENA,
     date: DATE,
     dma_exit: DMA_EXIT,
@@ -166,8 +166,8 @@ impl RegisterBlock {
     }
     #[doc = "0xac - DMA-AES interrupt clear register"]
     #[inline(always)]
-    pub const fn int_clear(&self) -> &INT_CLEAR {
-        &self.int_clear
+    pub const fn int_clr(&self) -> &INT_CLR {
+        &self.int_clr
     }
     #[doc = "0xb0 - DMA-AES interrupt enable register"]
     #[inline(always)]
@@ -277,10 +277,10 @@ pub mod remainder_bit_num;
 pub type CONTINUE = crate::Reg<continue_::CONTINUE_SPEC>;
 #[doc = "AES continue register"]
 pub mod continue_;
-#[doc = "INT_CLEAR (w) register accessor: DMA-AES interrupt clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clear::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clear`] module"]
-pub type INT_CLEAR = crate::Reg<int_clear::INT_CLEAR_SPEC>;
+#[doc = "INT_CLR (w) register accessor: DMA-AES interrupt clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "DMA-AES interrupt clear register"]
-pub mod int_clear;
+pub mod int_clr;
 #[doc = "INT_ENA (rw) register accessor: DMA-AES interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "DMA-AES interrupt enable register"]

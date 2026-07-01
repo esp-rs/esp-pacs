@@ -6,40 +6,34 @@ pub struct RegisterBlock {
     ctr: CTR,
     sr: SR,
     to: TO,
-    _reserved4: [u8; 0x04],
+    slave_addr: SLAVE_ADDR,
     fifo_st: FIFO_ST,
     fifo_conf: FIFO_CONF,
     data: DATA,
     int_raw: INT_RAW,
     int_clr: INT_CLR,
     int_ena: INT_ENA,
-    int_status: INT_STATUS,
+    int_st: INT_ST,
     sda_hold: SDA_HOLD,
     sda_sample: SDA_SAMPLE,
     scl_high_period: SCL_HIGH_PERIOD,
-    _reserved14: [u8; 0x04],
+    _reserved15: [u8; 0x04],
     scl_start_hold: SCL_START_HOLD,
     scl_rstart_setup: SCL_RSTART_SETUP,
     scl_stop_hold: SCL_STOP_HOLD,
     scl_stop_setup: SCL_STOP_SETUP,
     filter_cfg: FILTER_CFG,
     clk_conf: CLK_CONF,
-    comd0: COMD0,
-    comd1: COMD1,
-    comd2: COMD2,
-    comd3: COMD3,
-    comd4: COMD4,
-    comd5: COMD5,
-    comd6: COMD6,
-    comd7: COMD7,
+    comd: [COMD; 8],
     scl_st_time_out: SCL_ST_TIME_OUT,
     scl_main_st_time_out: SCL_MAIN_ST_TIME_OUT,
     scl_sp_conf: SCL_SP_CONF,
-    _reserved31: [u8; 0x74],
+    scl_stretch_conf: SCL_STRETCH_CONF,
+    _reserved26: [u8; 0x70],
     date: DATE,
-    _reserved32: [u8; 0x04],
+    _reserved27: [u8; 0x04],
     txfifo_start_addr: TXFIFO_START_ADDR,
-    _reserved33: [u8; 0x7c],
+    _reserved28: [u8; 0x7c],
     rxfifo_start_addr: RXFIFO_START_ADDR,
 }
 impl RegisterBlock {
@@ -48,62 +42,67 @@ impl RegisterBlock {
     pub const fn scl_low_period(&self) -> &SCL_LOW_PERIOD {
         &self.scl_low_period
     }
-    #[doc = "0x04 - Transmission setting"]
+    #[doc = "0x04 - Transmission setting register"]
     #[inline(always)]
     pub const fn ctr(&self) -> &CTR {
         &self.ctr
     }
-    #[doc = "0x08 - Describe I2C work status."]
+    #[doc = "0x08 - I2C working status register"]
     #[inline(always)]
     pub const fn sr(&self) -> &SR {
         &self.sr
     }
-    #[doc = "0x0c - Setting time out control for receiving data."]
+    #[doc = "0x0c - Timeout control register for receiving data"]
     #[inline(always)]
     pub const fn to(&self) -> &TO {
         &self.to
     }
-    #[doc = "0x14 - FIFO status register."]
+    #[doc = "0x10 - Local slave address setting register"]
+    #[inline(always)]
+    pub const fn slave_addr(&self) -> &SLAVE_ADDR {
+        &self.slave_addr
+    }
+    #[doc = "0x14 - FIFO status register"]
     #[inline(always)]
     pub const fn fifo_st(&self) -> &FIFO_ST {
         &self.fifo_st
     }
-    #[doc = "0x18 - FIFO configuration register."]
+    #[doc = "0x18 - FIFO configuration register"]
     #[inline(always)]
     pub const fn fifo_conf(&self) -> &FIFO_CONF {
         &self.fifo_conf
     }
-    #[doc = "0x1c - Rx FIFO read data."]
+    #[doc = "0x1c - Rx FIFO read data"]
     #[inline(always)]
     pub const fn data(&self) -> &DATA {
         &self.data
     }
-    #[doc = "0x20 - Raw interrupt status"]
+    #[doc = "0x20 - Raw interrupt status register"]
     #[inline(always)]
     pub const fn int_raw(&self) -> &INT_RAW {
         &self.int_raw
     }
-    #[doc = "0x24 - Interrupt clear bits"]
+    #[doc = "0x24 - Interrupt clear register"]
     #[inline(always)]
     pub const fn int_clr(&self) -> &INT_CLR {
         &self.int_clr
     }
-    #[doc = "0x28 - Interrupt enable bits"]
+    #[doc = "0x28 - Interrupt enable register"]
     #[inline(always)]
     pub const fn int_ena(&self) -> &INT_ENA {
         &self.int_ena
     }
-    #[doc = "0x2c - Status of captured I2C communication events"]
+    #[doc = "0x2c - Status register of captured I2C communication events"]
     #[inline(always)]
-    pub const fn int_status(&self) -> &INT_STATUS {
-        &self.int_status
+    pub const fn int_st(&self) -> &INT_ST {
+        &self.int_st
     }
-    #[doc = "0x30 - Configures the hold time after a negative SCL edge."]
+    #[doc = "0x30 - Configures the hold time after a negative SCL edge"]
     #[inline(always)]
     pub const fn sda_hold(&self) -> &SDA_HOLD {
         &self.sda_hold
     }
-    #[doc = "0x34 - Configures the sample time after a positive SCL edge."]
+    #[doc = "0x34 - Configures the sample time after a positive SCL edge"]
     #[inline(always)]
     pub const fn sda_sample(&self) -> &SDA_SAMPLE {
         &self.sda_sample
@@ -128,7 +127,7 @@ impl RegisterBlock {
     pub const fn scl_stop_hold(&self) -> &SCL_STOP_HOLD {
         &self.scl_stop_hold
     }
-    #[doc = "0x4c - Configures the delay between the SDA and SCL positive edge for a stop condition"]
+    #[doc = "0x4c - Configures the delay between the SDA and SCL rising edge for a stop condition. Measurement unit: I2C_SCLK"]
     #[inline(always)]
     pub const fn scl_stop_setup(&self) -> &SCL_STOP_SETUP {
         &self.scl_stop_setup
@@ -143,52 +142,23 @@ impl RegisterBlock {
     pub const fn clk_conf(&self) -> &CLK_CONF {
         &self.clk_conf
     }
-    #[doc = "0x58 - I2C command register 0"]
+    #[doc = "0x58..0x78 - I2C command register %s"]
     #[inline(always)]
-    pub const fn comd0(&self) -> &COMD0 {
-        &self.comd0
+    pub const fn comd(&self, n: usize) -> &COMD {
+        &self.comd[n]
     }
-    #[doc = "0x5c - I2C command register 1"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x58..0x78 - I2C command register %s"]
     #[inline(always)]
-    pub const fn comd1(&self) -> &COMD1 {
-        &self.comd1
+    pub fn comd_iter(&self) -> impl Iterator<Item = &COMD> {
+        self.comd.iter()
     }
-    #[doc = "0x60 - I2C command register 2"]
-    #[inline(always)]
-    pub const fn comd2(&self) -> &COMD2 {
-        &self.comd2
-    }
-    #[doc = "0x64 - I2C command register 3"]
-    #[inline(always)]
-    pub const fn comd3(&self) -> &COMD3 {
-        &self.comd3
-    }
-    #[doc = "0x68 - I2C command register 4"]
-    #[inline(always)]
-    pub const fn comd4(&self) -> &COMD4 {
-        &self.comd4
-    }
-    #[doc = "0x6c - I2C command register 5"]
-    #[inline(always)]
-    pub const fn comd5(&self) -> &COMD5 {
-        &self.comd5
-    }
-    #[doc = "0x70 - I2C command register 6"]
-    #[inline(always)]
-    pub const fn comd6(&self) -> &COMD6 {
-        &self.comd6
-    }
-    #[doc = "0x74 - I2C command register 7"]
-    #[inline(always)]
-    pub const fn comd7(&self) -> &COMD7 {
-        &self.comd7
-    }
-    #[doc = "0x78 - SCL status time out register"]
+    #[doc = "0x78 - SCL status timeout register"]
     #[inline(always)]
     pub const fn scl_st_time_out(&self) -> &SCL_ST_TIME_OUT {
         &self.scl_st_time_out
     }
-    #[doc = "0x7c - SCL main status time out register"]
+    #[doc = "0x7c - SCL main status timeout register"]
     #[inline(always)]
     pub const fn scl_main_st_time_out(&self) -> &SCL_MAIN_ST_TIME_OUT {
         &self.scl_main_st_time_out
@@ -198,7 +168,12 @@ impl RegisterBlock {
     pub const fn scl_sp_conf(&self) -> &SCL_SP_CONF {
         &self.scl_sp_conf
     }
-    #[doc = "0xf8 - Version register"]
+    #[doc = "0x84 - SCL stretch setting register of I2C slave"]
+    #[inline(always)]
+    pub const fn scl_stretch_conf(&self) -> &SCL_STRETCH_CONF {
+        &self.scl_stretch_conf
+    }
+    #[doc = "0xf8 - Version control register"]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {
         &self.date
@@ -218,53 +193,57 @@ impl RegisterBlock {
 pub type SCL_LOW_PERIOD = crate::Reg<scl_low_period::SCL_LOW_PERIOD_SPEC>;
 #[doc = "Configures the low level width of the SCL Clock"]
 pub mod scl_low_period;
-#[doc = "CTR (rw) register accessor: Transmission setting\n\nYou can [`read`](crate::Reg::read) this register and get [`ctr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctr`] module"]
+#[doc = "CTR (rw) register accessor: Transmission setting register\n\nYou can [`read`](crate::Reg::read) this register and get [`ctr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctr`] module"]
 pub type CTR = crate::Reg<ctr::CTR_SPEC>;
-#[doc = "Transmission setting"]
+#[doc = "Transmission setting register"]
 pub mod ctr;
-#[doc = "SR (r) register accessor: Describe I2C work status.\n\nYou can [`read`](crate::Reg::read) this register and get [`sr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sr`] module"]
+#[doc = "SR (r) register accessor: I2C working status register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sr`] module"]
 pub type SR = crate::Reg<sr::SR_SPEC>;
-#[doc = "Describe I2C work status."]
+#[doc = "I2C working status register"]
 pub mod sr;
-#[doc = "TO (rw) register accessor: Setting time out control for receiving data.\n\nYou can [`read`](crate::Reg::read) this register and get [`to::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`to::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@to`] module"]
+#[doc = "TO (rw) register accessor: Timeout control register for receiving data\n\nYou can [`read`](crate::Reg::read) this register and get [`to::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`to::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@to`] module"]
 pub type TO = crate::Reg<to::TO_SPEC>;
-#[doc = "Setting time out control for receiving data."]
+#[doc = "Timeout control register for receiving data"]
 pub mod to;
-#[doc = "FIFO_ST (r) register accessor: FIFO status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`fifo_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fifo_st`] module"]
+#[doc = "SLAVE_ADDR (rw) register accessor: Local slave address setting register\n\nYou can [`read`](crate::Reg::read) this register and get [`slave_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`slave_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@slave_addr`] module"]
+pub type SLAVE_ADDR = crate::Reg<slave_addr::SLAVE_ADDR_SPEC>;
+#[doc = "Local slave address setting register"]
+pub mod slave_addr;
+#[doc = "FIFO_ST (r) register accessor: FIFO status register\n\nYou can [`read`](crate::Reg::read) this register and get [`fifo_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fifo_st`] module"]
 pub type FIFO_ST = crate::Reg<fifo_st::FIFO_ST_SPEC>;
-#[doc = "FIFO status register."]
+#[doc = "FIFO status register"]
 pub mod fifo_st;
-#[doc = "FIFO_CONF (rw) register accessor: FIFO configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`fifo_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fifo_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fifo_conf`] module"]
+#[doc = "FIFO_CONF (rw) register accessor: FIFO configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`fifo_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fifo_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fifo_conf`] module"]
 pub type FIFO_CONF = crate::Reg<fifo_conf::FIFO_CONF_SPEC>;
-#[doc = "FIFO configuration register."]
+#[doc = "FIFO configuration register"]
 pub mod fifo_conf;
-#[doc = "DATA (r) register accessor: Rx FIFO read data.\n\nYou can [`read`](crate::Reg::read) this register and get [`data::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data`] module"]
+#[doc = "DATA (rw) register accessor: Rx FIFO read data\n\nYou can [`read`](crate::Reg::read) this register and get [`data::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data`] module"]
 pub type DATA = crate::Reg<data::DATA_SPEC>;
-#[doc = "Rx FIFO read data."]
+#[doc = "Rx FIFO read data"]
 pub mod data;
-#[doc = "INT_RAW (r) register accessor: Raw interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
+#[doc = "INT_RAW (r) register accessor: Raw interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
-#[doc = "Raw interrupt status"]
+#[doc = "Raw interrupt status register"]
 pub mod int_raw;
-#[doc = "INT_CLR (w) register accessor: Interrupt clear bits\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+#[doc = "INT_CLR (w) register accessor: Interrupt clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
-#[doc = "Interrupt clear bits"]
+#[doc = "Interrupt clear register"]
 pub mod int_clr;
-#[doc = "INT_ENA (rw) register accessor: Interrupt enable bits\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+#[doc = "INT_ENA (rw) register accessor: Interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
-#[doc = "Interrupt enable bits"]
+#[doc = "Interrupt enable register"]
 pub mod int_ena;
-#[doc = "INT_STATUS (r) register accessor: Status of captured I2C communication events\n\nYou can [`read`](crate::Reg::read) this register and get [`int_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_status`] module"]
-pub type INT_STATUS = crate::Reg<int_status::INT_STATUS_SPEC>;
-#[doc = "Status of captured I2C communication events"]
-pub mod int_status;
-#[doc = "SDA_HOLD (rw) register accessor: Configures the hold time after a negative SCL edge.\n\nYou can [`read`](crate::Reg::read) this register and get [`sda_hold::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sda_hold::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sda_hold`] module"]
+#[doc = "INT_ST (r) register accessor: Status register of captured I2C communication events\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
+pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
+#[doc = "Status register of captured I2C communication events"]
+pub mod int_st;
+#[doc = "SDA_HOLD (rw) register accessor: Configures the hold time after a negative SCL edge\n\nYou can [`read`](crate::Reg::read) this register and get [`sda_hold::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sda_hold::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sda_hold`] module"]
 pub type SDA_HOLD = crate::Reg<sda_hold::SDA_HOLD_SPEC>;
-#[doc = "Configures the hold time after a negative SCL edge."]
+#[doc = "Configures the hold time after a negative SCL edge"]
 pub mod sda_hold;
-#[doc = "SDA_SAMPLE (rw) register accessor: Configures the sample time after a positive SCL edge.\n\nYou can [`read`](crate::Reg::read) this register and get [`sda_sample::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sda_sample::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sda_sample`] module"]
+#[doc = "SDA_SAMPLE (rw) register accessor: Configures the sample time after a positive SCL edge\n\nYou can [`read`](crate::Reg::read) this register and get [`sda_sample::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sda_sample::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sda_sample`] module"]
 pub type SDA_SAMPLE = crate::Reg<sda_sample::SDA_SAMPLE_SPEC>;
-#[doc = "Configures the sample time after a positive SCL edge."]
+#[doc = "Configures the sample time after a positive SCL edge"]
 pub mod sda_sample;
 #[doc = "SCL_HIGH_PERIOD (rw) register accessor: Configures the high level width of SCL\n\nYou can [`read`](crate::Reg::read) this register and get [`scl_high_period::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scl_high_period::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scl_high_period`] module"]
 pub type SCL_HIGH_PERIOD = crate::Reg<scl_high_period::SCL_HIGH_PERIOD_SPEC>;
@@ -282,9 +261,9 @@ pub mod scl_rstart_setup;
 pub type SCL_STOP_HOLD = crate::Reg<scl_stop_hold::SCL_STOP_HOLD_SPEC>;
 #[doc = "Configures the delay after the SCL clock edge for a stop condition"]
 pub mod scl_stop_hold;
-#[doc = "SCL_STOP_SETUP (rw) register accessor: Configures the delay between the SDA and SCL positive edge for a stop condition\n\nYou can [`read`](crate::Reg::read) this register and get [`scl_stop_setup::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scl_stop_setup::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scl_stop_setup`] module"]
+#[doc = "SCL_STOP_SETUP (rw) register accessor: Configures the delay between the SDA and SCL rising edge for a stop condition. Measurement unit: I2C_SCLK\n\nYou can [`read`](crate::Reg::read) this register and get [`scl_stop_setup::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scl_stop_setup::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scl_stop_setup`] module"]
 pub type SCL_STOP_SETUP = crate::Reg<scl_stop_setup::SCL_STOP_SETUP_SPEC>;
-#[doc = "Configures the delay between the SDA and SCL positive edge for a stop condition"]
+#[doc = "Configures the delay between the SDA and SCL rising edge for a stop condition. Measurement unit: I2C_SCLK"]
 pub mod scl_stop_setup;
 #[doc = "FILTER_CFG (rw) register accessor: SCL and SDA filter configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`filter_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`filter_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@filter_cfg`] module"]
 pub type FILTER_CFG = crate::Reg<filter_cfg::FILTER_CFG_SPEC>;
@@ -294,53 +273,29 @@ pub mod filter_cfg;
 pub type CLK_CONF = crate::Reg<clk_conf::CLK_CONF_SPEC>;
 #[doc = "I2C CLK configuration register"]
 pub mod clk_conf;
-#[doc = "COMD0 (rw) register accessor: I2C command register 0\n\nYou can [`read`](crate::Reg::read) this register and get [`comd0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comd0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comd0`] module"]
-pub type COMD0 = crate::Reg<comd0::COMD0_SPEC>;
-#[doc = "I2C command register 0"]
-pub mod comd0;
-#[doc = "COMD1 (rw) register accessor: I2C command register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`comd1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comd1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comd1`] module"]
-pub type COMD1 = crate::Reg<comd1::COMD1_SPEC>;
-#[doc = "I2C command register 1"]
-pub mod comd1;
-#[doc = "COMD2 (rw) register accessor: I2C command register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`comd2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comd2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comd2`] module"]
-pub type COMD2 = crate::Reg<comd2::COMD2_SPEC>;
-#[doc = "I2C command register 2"]
-pub mod comd2;
-#[doc = "COMD3 (rw) register accessor: I2C command register 3\n\nYou can [`read`](crate::Reg::read) this register and get [`comd3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comd3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comd3`] module"]
-pub type COMD3 = crate::Reg<comd3::COMD3_SPEC>;
-#[doc = "I2C command register 3"]
-pub mod comd3;
-#[doc = "COMD4 (rw) register accessor: I2C command register 4\n\nYou can [`read`](crate::Reg::read) this register and get [`comd4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comd4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comd4`] module"]
-pub type COMD4 = crate::Reg<comd4::COMD4_SPEC>;
-#[doc = "I2C command register 4"]
-pub mod comd4;
-#[doc = "COMD5 (rw) register accessor: I2C command register 5\n\nYou can [`read`](crate::Reg::read) this register and get [`comd5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comd5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comd5`] module"]
-pub type COMD5 = crate::Reg<comd5::COMD5_SPEC>;
-#[doc = "I2C command register 5"]
-pub mod comd5;
-#[doc = "COMD6 (rw) register accessor: I2C command register 6\n\nYou can [`read`](crate::Reg::read) this register and get [`comd6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comd6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comd6`] module"]
-pub type COMD6 = crate::Reg<comd6::COMD6_SPEC>;
-#[doc = "I2C command register 6"]
-pub mod comd6;
-#[doc = "COMD7 (rw) register accessor: I2C command register 7\n\nYou can [`read`](crate::Reg::read) this register and get [`comd7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comd7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comd7`] module"]
-pub type COMD7 = crate::Reg<comd7::COMD7_SPEC>;
-#[doc = "I2C command register 7"]
-pub mod comd7;
-#[doc = "SCL_ST_TIME_OUT (rw) register accessor: SCL status time out register\n\nYou can [`read`](crate::Reg::read) this register and get [`scl_st_time_out::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scl_st_time_out::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scl_st_time_out`] module"]
+#[doc = "COMD (rw) register accessor: I2C command register %s\n\nYou can [`read`](crate::Reg::read) this register and get [`comd::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comd::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comd`] module"]
+pub type COMD = crate::Reg<comd::COMD_SPEC>;
+#[doc = "I2C command register %s"]
+pub mod comd;
+#[doc = "SCL_ST_TIME_OUT (rw) register accessor: SCL status timeout register\n\nYou can [`read`](crate::Reg::read) this register and get [`scl_st_time_out::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scl_st_time_out::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scl_st_time_out`] module"]
 pub type SCL_ST_TIME_OUT = crate::Reg<scl_st_time_out::SCL_ST_TIME_OUT_SPEC>;
-#[doc = "SCL status time out register"]
+#[doc = "SCL status timeout register"]
 pub mod scl_st_time_out;
-#[doc = "SCL_MAIN_ST_TIME_OUT (rw) register accessor: SCL main status time out register\n\nYou can [`read`](crate::Reg::read) this register and get [`scl_main_st_time_out::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scl_main_st_time_out::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scl_main_st_time_out`] module"]
+#[doc = "SCL_MAIN_ST_TIME_OUT (rw) register accessor: SCL main status timeout register\n\nYou can [`read`](crate::Reg::read) this register and get [`scl_main_st_time_out::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scl_main_st_time_out::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scl_main_st_time_out`] module"]
 pub type SCL_MAIN_ST_TIME_OUT = crate::Reg<scl_main_st_time_out::SCL_MAIN_ST_TIME_OUT_SPEC>;
-#[doc = "SCL main status time out register"]
+#[doc = "SCL main status timeout register"]
 pub mod scl_main_st_time_out;
 #[doc = "SCL_SP_CONF (rw) register accessor: Power configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`scl_sp_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scl_sp_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scl_sp_conf`] module"]
 pub type SCL_SP_CONF = crate::Reg<scl_sp_conf::SCL_SP_CONF_SPEC>;
 #[doc = "Power configuration register"]
 pub mod scl_sp_conf;
-#[doc = "DATE (rw) register accessor: Version register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
+#[doc = "SCL_STRETCH_CONF (rw) register accessor: SCL stretch setting register of I2C slave\n\nYou can [`read`](crate::Reg::read) this register and get [`scl_stretch_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scl_stretch_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scl_stretch_conf`] module"]
+pub type SCL_STRETCH_CONF = crate::Reg<scl_stretch_conf::SCL_STRETCH_CONF_SPEC>;
+#[doc = "SCL stretch setting register of I2C slave"]
+pub mod scl_stretch_conf;
+#[doc = "DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "Version register"]
+#[doc = "Version control register"]
 pub mod date;
 #[doc = "TXFIFO_START_ADDR (r) register accessor: I2C TXFIFO base address register\n\nYou can [`read`](crate::Reg::read) this register and get [`txfifo_start_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@txfifo_start_addr`] module"]
 pub type TXFIFO_START_ADDR = crate::Reg<txfifo_start_addr::TXFIFO_START_ADDR_SPEC>;

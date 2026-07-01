@@ -1,9 +1,9 @@
 #[doc = "Register `TXFIFO_START_ADDR` reader"]
 pub type R = crate::R<TXFIFO_START_ADDR_SPEC>;
-#[doc = "Field `TXFIFO_START_ADDR` reader - This is the I2C txfifo first address."]
+#[doc = "Field `TXFIFO_START_ADDR` reader - Represents the I2C TX FIFO first address."]
 pub type TXFIFO_START_ADDR_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - This is the I2C txfifo first address."]
+    #[doc = "Bits 0:31 - Represents the I2C TX FIFO first address."]
     #[inline(always)]
     pub fn txfifo_start_addr(&self) -> TXFIFO_START_ADDR_R {
         TXFIFO_START_ADDR_R::new(self.bits)

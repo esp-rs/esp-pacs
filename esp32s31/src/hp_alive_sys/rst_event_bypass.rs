@@ -18,10 +18,10 @@ pub type ICMCPU_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type CLKRST_R = crate::BitReader;
 #[doc = "Field `CLKRST` writer - Set 1 to bypass none-power_on reset source"]
 pub type CLKRST_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CLKRST` reader - Set 1 to bypass none-power_on reset source"]
-pub type CLKRST_R = crate::BitReader;
-#[doc = "Field `CLKRST` writer - Set 1 to bypass none-power_on reset source"]
-pub type CLKRST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLKRST_REG` reader - Set 1 to bypass none-power_on reset source"]
+pub type CLKRST_REG_R = crate::BitReader;
+#[doc = "Field `CLKRST_REG` writer - Set 1 to bypass none-power_on reset source"]
+pub type CLKRST_REG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IOMUX` reader - Set 1 to bypass none-power_on reset source"]
 pub type IOMUX_R = crate::BitReader;
 #[doc = "Field `IOMUX` writer - Set 1 to bypass none-power_on reset source"]
@@ -53,8 +53,8 @@ impl R {
     }
     #[doc = "Bit 4 - Set 1 to bypass none-power_on reset source"]
     #[inline(always)]
-    pub fn clkrst(&self) -> CLKRST_R {
-        CLKRST_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn clkrst_reg(&self) -> CLKRST_REG_R {
+        CLKRST_REG_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set 1 to bypass none-power_on reset source"]
     #[inline(always)]
@@ -75,7 +75,7 @@ impl core::fmt::Debug for R {
             .field("icmsys", &self.icmsys())
             .field("icmcpu", &self.icmcpu())
             .field("clkrst", &self.clkrst())
-            .field("clkrst", &self.clkrst())
+            .field("clkrst_reg", &self.clkrst_reg())
             .field("iomux", &self.iomux())
             .field("rst_bypass_lock", &self.rst_bypass_lock())
             .finish()
@@ -104,8 +104,8 @@ impl W {
     }
     #[doc = "Bit 4 - Set 1 to bypass none-power_on reset source"]
     #[inline(always)]
-    pub fn clkrst(&mut self) -> CLKRST_W<'_, RST_EVENT_BYPASS_SPEC> {
-        CLKRST_W::new(self, 4)
+    pub fn clkrst_reg(&mut self) -> CLKRST_REG_W<'_, RST_EVENT_BYPASS_SPEC> {
+        CLKRST_REG_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set 1 to bypass none-power_on reset source"]
     #[inline(always)]

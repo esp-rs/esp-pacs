@@ -3,25 +3,25 @@
 #[doc = "Register block"]
 pub struct RegisterBlock {
     chdata: [CHDATA; 4],
-    ch0data: CH0DATA,
-    ch1data: CH0DATA,
-    ch2data: CH0DATA,
-    ch3data: CH0DATA,
+    ch4data: CH4DATA,
+    ch5data: CH4DATA,
+    ch6data: CH4DATA,
+    ch7data: CH4DATA,
     chconf0: [CHCONF0; 4],
-    ch0conf0: CH0CONF0,
+    ch4conf0: CH4CONF0,
     chconf1: (),
     _reserved8: [u8; 0x04],
-    ch1conf0: CH0CONF0,
+    ch5conf0: CH4CONF0,
     _reserved9: [u8; 0x04],
-    ch2conf0: CH0CONF0,
+    ch6conf0: CH4CONF0,
     _reserved10: [u8; 0x04],
-    ch3conf0: CH0CONF0,
+    ch7conf0: CH4CONF0,
     _reserved11: [u8; 0x04],
     chstatus: [CHSTATUS; 4],
-    ch0status: CH0STATUS,
-    ch1status: CH0STATUS,
-    ch2status: CH0STATUS,
-    ch3status: CH0STATUS,
+    ch4status: CH4STATUS,
+    ch5status: CH4STATUS,
+    ch6status: CH4STATUS,
+    ch7status: CH4STATUS,
     int_raw: INT_RAW,
     int_st: INT_ST,
     int_ena: INT_ENA,
@@ -69,23 +69,23 @@ impl RegisterBlock {
     }
     #[doc = "0x10 - The read and write data register for CHANNEL$n by apb fifo access."]
     #[inline(always)]
-    pub const fn ch0data(&self) -> &CH0DATA {
-        &self.ch0data
+    pub const fn ch4data(&self) -> &CH4DATA {
+        &self.ch4data
     }
     #[doc = "0x10 - The read and write data register for CHANNEL$n by apb fifo access."]
     #[inline(always)]
-    pub const fn ch1data(&self) -> &CH0DATA {
-        &self.ch1data
+    pub const fn ch5data(&self) -> &CH4DATA {
+        &self.ch5data
     }
     #[doc = "0x10 - The read and write data register for CHANNEL$n by apb fifo access."]
     #[inline(always)]
-    pub const fn ch2data(&self) -> &CH0DATA {
-        &self.ch2data
+    pub const fn ch6data(&self) -> &CH4DATA {
+        &self.ch6data
     }
     #[doc = "0x10 - The read and write data register for CHANNEL$n by apb fifo access."]
     #[inline(always)]
-    pub const fn ch3data(&self) -> &CH0DATA {
-        &self.ch3data
+    pub const fn ch7data(&self) -> &CH4DATA {
+        &self.ch7data
     }
     #[doc = "0x20..0x30 - Channel %s configure register 0"]
     #[inline(always)]
@@ -118,12 +118,14 @@ impl RegisterBlock {
     pub const fn ch3conf0(&self) -> &CHCONF0 {
         self.chconf0(3)
     }
-    #[doc = "0x30 - Channel 0 configure register 0"]
+    #[doc = "0x30 - Channel 4 configure register 0"]
     #[inline(always)]
-    pub const fn ch0conf0(&self) -> &CH0CONF0 {
-        &self.ch0conf0
+    pub const fn ch4conf0(&self) -> &CH4CONF0 {
+        &self.ch4conf0
     }
     #[doc = "0x34..0x44 - Channel %s configure register 1"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `CH4CONF1` register.</div>"]
     #[inline(always)]
     pub const fn chconf1(&self, n: usize) -> &CHCONF1 {
         #[allow(clippy::no_effect)]
@@ -148,40 +150,40 @@ impl RegisterBlock {
                 .cast()
         })
     }
-    #[doc = "0x34 - Channel 0 configure register 1"]
+    #[doc = "0x34 - Channel 4 configure register 1"]
     #[inline(always)]
-    pub const fn ch0conf1(&self) -> &CHCONF1 {
+    pub const fn ch4conf1(&self) -> &CHCONF1 {
         self.chconf1(0)
     }
-    #[doc = "0x3c - Channel 1 configure register 1"]
+    #[doc = "0x3c - Channel 5 configure register 1"]
     #[inline(always)]
-    pub const fn ch1conf1(&self) -> &CHCONF1 {
+    pub const fn ch5conf1(&self) -> &CHCONF1 {
         self.chconf1(1)
     }
-    #[doc = "0x44 - Channel 2 configure register 1"]
+    #[doc = "0x44 - Channel 6 configure register 1"]
     #[inline(always)]
-    pub const fn ch2conf1(&self) -> &CHCONF1 {
+    pub const fn ch6conf1(&self) -> &CHCONF1 {
         self.chconf1(2)
     }
-    #[doc = "0x4c - Channel 3 configure register 1"]
+    #[doc = "0x4c - Channel 7 configure register 1"]
     #[inline(always)]
-    pub const fn ch3conf1(&self) -> &CHCONF1 {
+    pub const fn ch7conf1(&self) -> &CHCONF1 {
         self.chconf1(3)
     }
-    #[doc = "0x30 - Channel 1 configure register 0"]
+    #[doc = "0x30 - Channel 5 configure register 0"]
     #[inline(always)]
-    pub const fn ch1conf0(&self) -> &CH0CONF0 {
-        &self.ch1conf0
+    pub const fn ch5conf0(&self) -> &CH4CONF0 {
+        &self.ch5conf0
     }
-    #[doc = "0x30 - Channel 2 configure register 0"]
+    #[doc = "0x30 - Channel 6 configure register 0"]
     #[inline(always)]
-    pub const fn ch2conf0(&self) -> &CH0CONF0 {
-        &self.ch2conf0
+    pub const fn ch6conf0(&self) -> &CH4CONF0 {
+        &self.ch6conf0
     }
-    #[doc = "0x30 - Channel 3 configure register 0"]
+    #[doc = "0x30 - Channel 7 configure register 0"]
     #[inline(always)]
-    pub const fn ch3conf0(&self) -> &CH0CONF0 {
-        &self.ch3conf0
+    pub const fn ch7conf0(&self) -> &CH4CONF0 {
+        &self.ch7conf0
     }
     #[doc = "0x50..0x60 - Channel %s status register"]
     #[inline(always)]
@@ -214,25 +216,25 @@ impl RegisterBlock {
     pub const fn ch3status(&self) -> &CHSTATUS {
         self.chstatus(3)
     }
-    #[doc = "0x60 - Channel 0 status register"]
+    #[doc = "0x60 - Channel 4 status register"]
     #[inline(always)]
-    pub const fn ch0status(&self) -> &CH0STATUS {
-        &self.ch0status
+    pub const fn ch4status(&self) -> &CH4STATUS {
+        &self.ch4status
     }
-    #[doc = "0x60 - Channel 1 status register"]
+    #[doc = "0x60 - Channel 5 status register"]
     #[inline(always)]
-    pub const fn ch1status(&self) -> &CH0STATUS {
-        &self.ch1status
+    pub const fn ch5status(&self) -> &CH4STATUS {
+        &self.ch5status
     }
-    #[doc = "0x60 - Channel 2 status register"]
+    #[doc = "0x60 - Channel 6 status register"]
     #[inline(always)]
-    pub const fn ch2status(&self) -> &CH0STATUS {
-        &self.ch2status
+    pub const fn ch6status(&self) -> &CH4STATUS {
+        &self.ch6status
     }
-    #[doc = "0x60 - Channel 3 status register"]
+    #[doc = "0x60 - Channel 7 status register"]
     #[inline(always)]
-    pub const fn ch3status(&self) -> &CH0STATUS {
-        &self.ch3status
+    pub const fn ch7status(&self) -> &CH4STATUS {
+        &self.ch7status
     }
     #[doc = "0x70 - Raw interrupt status"]
     #[inline(always)]
@@ -403,14 +405,14 @@ impl RegisterBlock {
 pub type CHDATA = crate::Reg<chdata::CHDATA_SPEC>;
 #[doc = "The read and write data register for CHANNEL%s by apb fifo access."]
 pub mod chdata;
-pub use chdata;
-pub use CHDATA;
+pub use chdata as ch4data;
+pub use CHDATA as CH4DATA;
 #[doc = "CHCONF0 (rw) register accessor: Channel %s configure register 0\n\nYou can [`read`](crate::Reg::read) this register and get [`chconf0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`chconf0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@chconf0`] module"]
 pub type CHCONF0 = crate::Reg<chconf0::CHCONF0_SPEC>;
 #[doc = "Channel %s configure register 0"]
 pub mod chconf0;
-pub use chconf0;
-pub use CHCONF0;
+pub use chconf0 as ch4conf0;
+pub use CHCONF0 as CH4CONF0;
 #[doc = "CHCONF1 (rw) register accessor: Channel %s configure register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`chconf1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`chconf1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@chconf1`] module"]
 pub type CHCONF1 = crate::Reg<chconf1::CHCONF1_SPEC>;
 #[doc = "Channel %s configure register 1"]
@@ -419,8 +421,8 @@ pub mod chconf1;
 pub type CHSTATUS = crate::Reg<chstatus::CHSTATUS_SPEC>;
 #[doc = "Channel %s status register"]
 pub mod chstatus;
-pub use chstatus;
-pub use CHSTATUS;
+pub use chstatus as ch4status;
+pub use CHSTATUS as CH4STATUS;
 #[doc = "INT_RAW (rw) register accessor: Raw interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_raw::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "Raw interrupt status"]

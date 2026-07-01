@@ -1,27 +1,27 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `SUPER_WDT_INT_ST` reader - need_des"]
-pub type SUPER_WDT_INT_ST_R = crate::BitReader;
-#[doc = "Field `LP_WDT_INT_ST` reader - need_des"]
-pub type LP_WDT_INT_ST_R = crate::BitReader;
+#[doc = "Field `SUPER_WDT` reader - need_des"]
+pub type SUPER_WDT_R = crate::BitReader;
+#[doc = "Field `LP_WDT` reader - need_des"]
+pub type LP_WDT_R = crate::BitReader;
 impl R {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn super_wdt_int_st(&self) -> SUPER_WDT_INT_ST_R {
-        SUPER_WDT_INT_ST_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn super_wdt(&self) -> SUPER_WDT_R {
+        SUPER_WDT_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn lp_wdt_int_st(&self) -> LP_WDT_INT_ST_R {
-        LP_WDT_INT_ST_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn lp_wdt(&self) -> LP_WDT_R {
+        LP_WDT_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("super_wdt_int_st", &self.super_wdt_int_st())
-            .field("lp_wdt_int_st", &self.lp_wdt_int_st())
+            .field("super_wdt", &self.super_wdt())
+            .field("lp_wdt", &self.lp_wdt())
             .finish()
     }
 }

@@ -2,21 +2,21 @@
 pub type R = crate::R<SCL_HIGH_PERIOD_SPEC>;
 #[doc = "Register `SCL_HIGH_PERIOD` writer"]
 pub type W = crate::W<SCL_HIGH_PERIOD_SPEC>;
-#[doc = "Field `SCL_HIGH_PERIOD` reader - This register is used to configure for how long SCL setup to high level and remains high in master mode, in I2C module clock cycles."]
+#[doc = "Field `SCL_HIGH_PERIOD` reader - Configures for how long SCL remains high in Master mode.\\\\ Measurement unit: I2C_SCLK \\\\"]
 pub type SCL_HIGH_PERIOD_R = crate::FieldReader<u16>;
-#[doc = "Field `SCL_HIGH_PERIOD` writer - This register is used to configure for how long SCL setup to high level and remains high in master mode, in I2C module clock cycles."]
+#[doc = "Field `SCL_HIGH_PERIOD` writer - Configures for how long SCL remains high in Master mode.\\\\ Measurement unit: I2C_SCLK \\\\"]
 pub type SCL_HIGH_PERIOD_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
-#[doc = "Field `SCL_WAIT_HIGH_PERIOD` reader - This register is used to configure for the SCL_FSM's waiting period for SCL high level in master mode, in I2C module clock cycles."]
+#[doc = "Field `SCL_WAIT_HIGH_PERIOD` reader - Configures the SCL_FSM's waiting period for SCL high level in Master mode.\\\\ Measurement unit: I2C_SCLK \\\\"]
 pub type SCL_WAIT_HIGH_PERIOD_R = crate::FieldReader;
-#[doc = "Field `SCL_WAIT_HIGH_PERIOD` writer - This register is used to configure for the SCL_FSM's waiting period for SCL high level in master mode, in I2C module clock cycles."]
+#[doc = "Field `SCL_WAIT_HIGH_PERIOD` writer - Configures the SCL_FSM's waiting period for SCL high level in Master mode.\\\\ Measurement unit: I2C_SCLK \\\\"]
 pub type SCL_WAIT_HIGH_PERIOD_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
-    #[doc = "Bits 0:8 - This register is used to configure for how long SCL setup to high level and remains high in master mode, in I2C module clock cycles."]
+    #[doc = "Bits 0:8 - Configures for how long SCL remains high in Master mode.\\\\ Measurement unit: I2C_SCLK \\\\"]
     #[inline(always)]
     pub fn scl_high_period(&self) -> SCL_HIGH_PERIOD_R {
         SCL_HIGH_PERIOD_R::new((self.bits & 0x01ff) as u16)
     }
-    #[doc = "Bits 9:15 - This register is used to configure for the SCL_FSM's waiting period for SCL high level in master mode, in I2C module clock cycles."]
+    #[doc = "Bits 9:15 - Configures the SCL_FSM's waiting period for SCL high level in Master mode.\\\\ Measurement unit: I2C_SCLK \\\\"]
     #[inline(always)]
     pub fn scl_wait_high_period(&self) -> SCL_WAIT_HIGH_PERIOD_R {
         SCL_WAIT_HIGH_PERIOD_R::new(((self.bits >> 9) & 0x7f) as u8)
@@ -32,12 +32,12 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:8 - This register is used to configure for how long SCL setup to high level and remains high in master mode, in I2C module clock cycles."]
+    #[doc = "Bits 0:8 - Configures for how long SCL remains high in Master mode.\\\\ Measurement unit: I2C_SCLK \\\\"]
     #[inline(always)]
     pub fn scl_high_period(&mut self) -> SCL_HIGH_PERIOD_W<'_, SCL_HIGH_PERIOD_SPEC> {
         SCL_HIGH_PERIOD_W::new(self, 0)
     }
-    #[doc = "Bits 9:15 - This register is used to configure for the SCL_FSM's waiting period for SCL high level in master mode, in I2C module clock cycles."]
+    #[doc = "Bits 9:15 - Configures the SCL_FSM's waiting period for SCL high level in Master mode.\\\\ Measurement unit: I2C_SCLK \\\\"]
     #[inline(always)]
     pub fn scl_wait_high_period(&mut self) -> SCL_WAIT_HIGH_PERIOD_W<'_, SCL_HIGH_PERIOD_SPEC> {
         SCL_WAIT_HIGH_PERIOD_W::new(self, 9)

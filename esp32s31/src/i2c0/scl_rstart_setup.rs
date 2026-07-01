@@ -2,12 +2,12 @@
 pub type R = crate::R<SCL_RSTART_SETUP_SPEC>;
 #[doc = "Register `SCL_RSTART_SETUP` writer"]
 pub type W = crate::W<SCL_RSTART_SETUP_SPEC>;
-#[doc = "Field `TIME` reader - This register is used to configure the time between the positiveedge of SCL and the negative edge of SDA for a RESTART condition, in I2C module clock cycles."]
+#[doc = "Field `TIME` reader - Configures the time between the positive edge of SCL and the negative edge of SDA for a RESTART condition.\\\\ Measurement unit: I2C_SCLK \\\\"]
 pub type TIME_R = crate::FieldReader<u16>;
-#[doc = "Field `TIME` writer - This register is used to configure the time between the positiveedge of SCL and the negative edge of SDA for a RESTART condition, in I2C module clock cycles."]
+#[doc = "Field `TIME` writer - Configures the time between the positive edge of SCL and the negative edge of SDA for a RESTART condition.\\\\ Measurement unit: I2C_SCLK \\\\"]
 pub type TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 impl R {
-    #[doc = "Bits 0:8 - This register is used to configure the time between the positiveedge of SCL and the negative edge of SDA for a RESTART condition, in I2C module clock cycles."]
+    #[doc = "Bits 0:8 - Configures the time between the positive edge of SCL and the negative edge of SDA for a RESTART condition.\\\\ Measurement unit: I2C_SCLK \\\\"]
     #[inline(always)]
     pub fn time(&self) -> TIME_R {
         TIME_R::new((self.bits & 0x01ff) as u16)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:8 - This register is used to configure the time between the positiveedge of SCL and the negative edge of SDA for a RESTART condition, in I2C module clock cycles."]
+    #[doc = "Bits 0:8 - Configures the time between the positive edge of SCL and the negative edge of SDA for a RESTART condition.\\\\ Measurement unit: I2C_SCLK \\\\"]
     #[inline(always)]
     pub fn time(&mut self) -> TIME_W<'_, SCL_RSTART_SETUP_SPEC> {
         TIME_W::new(self, 0)
