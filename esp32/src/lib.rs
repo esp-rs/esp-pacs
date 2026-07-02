@@ -715,6 +715,24 @@ impl core::fmt::Debug for SHA {
 }
 #[doc = "SHA (Secure Hash Algorithm) Accelerator"]
 pub mod sha;
+#[doc = "PRO CPU flash cache MMU table"]
+pub type MMU_TABLE = crate::Periph<mmu_table::RegisterBlock, 0x3ff1_0000>;
+impl core::fmt::Debug for MMU_TABLE {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MMU_TABLE").finish()
+    }
+}
+#[doc = "PRO CPU flash cache MMU table"]
+pub mod mmu_table;
+#[doc = "APP CPU flash cache MMU table"]
+pub type APP_MMU_TABLE = crate::Periph<app_mmu_table::RegisterBlock, 0x3ff1_2000>;
+impl core::fmt::Debug for APP_MMU_TABLE {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APP_MMU_TABLE").finish()
+    }
+}
+#[doc = "APP CPU flash cache MMU table"]
+pub mod app_mmu_table;
 #[doc = "SLC Peripheral"]
 pub type SLC = crate::Periph<slc::RegisterBlock, 0x3ff5_8000>;
 impl core::fmt::Debug for SLC {

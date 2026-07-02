@@ -1,0 +1,19 @@
+SPI0:
+  MMU_ITEM_CONTENT:
+    _delete: [SPI_MMU_ITEM_CONTENT]
+    _add:
+      PADDR:
+        description: Physical page number
+        bitOffset: 0
+        bitWidth: 9
+        access: read-write
+      VALID:
+        description: Entry is valid when set
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      SENSITIVE:
+        description: Decrypt via flash encryption when set
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write

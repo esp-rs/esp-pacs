@@ -13,6 +13,7 @@ _include:
   - _date.yml
   - _sha.yml
   - _uart.yml
+  - _mmu_item_content.yml
 
 _delete: RNG
 

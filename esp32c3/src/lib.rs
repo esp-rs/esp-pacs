@@ -287,6 +287,15 @@ impl core::fmt::Debug for EXTMEM {
 }
 #[doc = "External Memory"]
 pub mod extmem;
+#[doc = "External memory cache MMU table"]
+pub type MMU_TABLE = crate::Periph<mmu_table::RegisterBlock, 0x600c_5000>;
+impl core::fmt::Debug for MMU_TABLE {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MMU_TABLE").finish()
+    }
+}
+#[doc = "External memory cache MMU table"]
+pub mod mmu_table;
 #[doc = "General Purpose Input/Output"]
 pub type GPIO = crate::Periph<gpio::RegisterBlock, 0x6000_4000>;
 impl core::fmt::Debug for GPIO {

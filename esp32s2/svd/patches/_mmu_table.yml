@@ -1,0 +1,40 @@
+# External memory cache MMU table (DR_REG_MMU_TABLE).
+_add:
+  MMU_TABLE:
+    description: External memory cache MMU table
+    groupName: MMU
+    baseAddress: 0x61801000
+    addressBlock:
+      offset: 0x0
+      size: 0x600
+      usage: registers
+    registers:
+      ENTRY%s:
+        description: MMU table entry
+        addressOffset: 0x0
+        dim: 384
+        dimIndex: 0-383
+        dimIncrement: 0x4
+        size: 0x20
+        access: read-write
+        fields:
+          PADDR:
+            description: Physical page number
+            bitOffset: 0
+            bitWidth: 14
+            access: read-write
+          INVALID:
+            description: Set to mark this entry invalid
+            bitOffset: 14
+            bitWidth: 1
+            access: read-write
+          ACCESS_FLASH:
+            description: Map to flash when set
+            bitOffset: 15
+            bitWidth: 1
+            access: read-write
+          ACCESS_SPIRAM:
+            description: Map to SPIRAM/PSRAM when set
+            bitOffset: 16
+            bitWidth: 1
+            access: read-write

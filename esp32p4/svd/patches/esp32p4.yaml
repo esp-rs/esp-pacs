@@ -250,3 +250,23 @@ _add:
         value: 93
       USB_HS_ENDP_MULTI_PROC:
         value: 94
+
+SPI0:
+  MMU_ITEM_CONTENT:
+    _delete: [SPI_MMU_ITEM_CONTENT]
+    _add:
+      PADDR:
+        description: Physical page number
+        bitOffset: 0
+        bitWidth: 11
+        access: read-write
+      VALID:
+        description: Entry is valid when set
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      SENSITIVE:
+        description: Decrypt via flash encryption when set
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write

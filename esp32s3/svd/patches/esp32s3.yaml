@@ -28,6 +28,7 @@ _include:
   - _timg.yml
   - _uart.yml
   - _wcl.yml
+  - _mmu_table.yml
 
 _add:
   NRX:

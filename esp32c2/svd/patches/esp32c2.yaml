@@ -15,6 +15,7 @@ _include:
   - "_spi.yml"
   - "_timg.yml"
   - "_xts_aes.yml"
+  - "_mmu_table.yml"
 
 RNG:
   _modify:
