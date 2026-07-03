@@ -250,3 +250,12 @@ _add:
         value: 93
       USB_HS_ENDP_MULTI_PROC:
         value: 94
+
+LP_WDT:
+  _array:
+    CONFIG[1-4]:
+      name: CONFIG%s
+      description: WDT configuration register
+      _modify:
+        WDT_STG?_HOLD:
+          name: HOLD
