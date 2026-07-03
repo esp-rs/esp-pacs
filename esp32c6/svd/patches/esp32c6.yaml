@@ -29,6 +29,7 @@ _include:
   - "_uart.yml"
   - "_wdt.yml"
   - "_mmu_item_content.yml"
+  - "_mmu_item_index.yml"
 
 _delete: RNG
 

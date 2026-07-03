@@ -26,6 +26,7 @@ _include:
   - "_timg.yml"
   - "_uart.yml"
   - "_mmu_item_content.yml"
+  - "_mmu_item_index.yml"
 
 RNG:
   _modify:
