@@ -3,10 +3,7 @@
 #[doc = "Register block"]
 pub struct RegisterBlock {
     config0: CONFIG0,
-    config1: CONFIG1,
-    config2: CONFIG2,
-    config3: CONFIG3,
-    config4: CONFIG4,
+    config: [CONFIG; 4],
     feed: FEED,
     wprotect: WPROTECT,
     swd_config: SWD_CONFIG,
@@ -15,7 +12,7 @@ pub struct RegisterBlock {
     int_st: INT_ST,
     int_ena: INT_ENA,
     int_clr: INT_CLR,
-    _reserved13: [u8; 0x03c8],
+    _reserved10: [u8; 0x03c8],
     date: DATE,
 }
 impl RegisterBlock {
@@ -24,25 +21,38 @@ impl RegisterBlock {
     pub const fn config0(&self) -> &CONFIG0 {
         &self.config0
     }
-    #[doc = "0x04 - need_des"]
+    #[doc = "0x04..0x14 - WDT configuration register"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `CONFIG1` register.</div>"]
     #[inline(always)]
-    pub const fn config1(&self) -> &CONFIG1 {
-        &self.config1
+    pub const fn config(&self, n: usize) -> &CONFIG {
+        &self.config[n]
     }
-    #[doc = "0x08 - need_des"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x04..0x14 - WDT configuration register"]
     #[inline(always)]
-    pub const fn config2(&self) -> &CONFIG2 {
-        &self.config2
+    pub fn config_iter(&self) -> impl Iterator<Item = &CONFIG> {
+        self.config.iter()
     }
-    #[doc = "0x0c - need_des"]
+    #[doc = "0x04 - WDT configuration register"]
     #[inline(always)]
-    pub const fn config3(&self) -> &CONFIG3 {
-        &self.config3
+    pub const fn config1(&self) -> &CONFIG {
+        self.config(0)
     }
-    #[doc = "0x10 - need_des"]
+    #[doc = "0x08 - WDT configuration register"]
     #[inline(always)]
-    pub const fn config4(&self) -> &CONFIG4 {
-        &self.config4
+    pub const fn config2(&self) -> &CONFIG {
+        self.config(1)
+    }
+    #[doc = "0x0c - WDT configuration register"]
+    #[inline(always)]
+    pub const fn config3(&self) -> &CONFIG {
+        self.config(2)
+    }
+    #[doc = "0x10 - WDT configuration register"]
+    #[inline(always)]
+    pub const fn config4(&self) -> &CONFIG {
+        self.config(3)
     }
     #[doc = "0x14 - need_des"]
     #[inline(always)]
@@ -94,22 +104,10 @@ impl RegisterBlock {
 pub type CONFIG0 = crate::Reg<config0::CONFIG0_SPEC>;
 #[doc = "need_des"]
 pub mod config0;
-#[doc = "CONFIG1 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`config1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`config1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@config1`] module"]
-pub type CONFIG1 = crate::Reg<config1::CONFIG1_SPEC>;
-#[doc = "need_des"]
-pub mod config1;
-#[doc = "CONFIG2 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`config2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`config2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@config2`] module"]
-pub type CONFIG2 = crate::Reg<config2::CONFIG2_SPEC>;
-#[doc = "need_des"]
-pub mod config2;
-#[doc = "CONFIG3 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`config3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`config3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@config3`] module"]
-pub type CONFIG3 = crate::Reg<config3::CONFIG3_SPEC>;
-#[doc = "need_des"]
-pub mod config3;
-#[doc = "CONFIG4 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`config4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`config4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@config4`] module"]
-pub type CONFIG4 = crate::Reg<config4::CONFIG4_SPEC>;
-#[doc = "need_des"]
-pub mod config4;
+#[doc = "CONFIG (rw) register accessor: WDT configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`config::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`config::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@config`] module"]
+pub type CONFIG = crate::Reg<config::CONFIG_SPEC>;
+#[doc = "WDT configuration register"]
+pub mod config;
 #[doc = "FEED (w) register accessor: need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`feed::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@feed`] module"]
 pub type FEED = crate::Reg<feed::FEED_SPEC>;
 #[doc = "need_des"]
