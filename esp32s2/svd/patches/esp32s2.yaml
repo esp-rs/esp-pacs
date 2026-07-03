@@ -24,6 +24,7 @@ _include:
   - "_timg.yml"
   - "_uart.yml"
   - "wifi.yaml"
+  - "_mmu_table.yml"
 
 RNG:
   _modify:

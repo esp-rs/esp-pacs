@@ -28,6 +28,7 @@ _include:
   - "_rsa.yml"
   - "_sha.yml"
   - "_spi0.yml"
+  - "_mmu_item_content.yml"
   - "_timg.yml"
   - "_uart.yml"
   - "_usb_device.yml"

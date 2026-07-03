@@ -18,6 +18,7 @@ _include:
   - "_timg.yml"
   - "wifi.yaml"
   - "btdm.yml"
+  - "_mmu_table.yml"
 
 RNG:
   _modify:

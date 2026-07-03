@@ -25,6 +25,7 @@ _include:
   - "_spi.yml"
   - "_timg.yml"
   - "_uart.yml"
+  - "_mmu_item_content.yml"
 
 RNG:
   _modify:

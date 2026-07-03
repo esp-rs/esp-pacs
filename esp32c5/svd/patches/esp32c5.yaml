@@ -24,6 +24,7 @@ _include:
   - _sha.yml
   - _rmt.yml
   - _uart.yml
+  - _mmu_item_content.yml
 
 _delete: RNG
 
