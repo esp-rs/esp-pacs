@@ -5,10 +5,15 @@ SPI0:
       PADDR:
         description: Physical page number
         bitOffset: 0
-        bitWidth: 11
+        bitWidth: 10
         access: read-write
-      PSRAM_VALID:
-        description: Entry is valid when set (PSRAM MMU)
+      ACCESS_SPIRAM:
+        description: Map to SPIRAM/PSRAM when set (flash when clear)
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+      SPIRAM_VALID:
+        description: Entry is valid when set (SPIRAM MMU)
         bitOffset: 11
         bitWidth: 1
         access: read-write
@@ -17,8 +22,13 @@ SPI0:
         bitOffset: 12
         bitWidth: 1
         access: read-write
+      SPIRAM_SENSITIVE:
+        description: Decrypt via cache encryption when set (SPIRAM MMU)
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
       SENSITIVE:
-        description: Decrypt via flash encryption when set
+        description: Decrypt via flash encryption when set (flash MMU)
         bitOffset: 13
         bitWidth: 1
         access: read-write
