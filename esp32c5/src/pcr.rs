@@ -6,7 +6,7 @@ pub struct RegisterBlock {
     mspi_conf: MSPI_CONF,
     mspi_clk_conf: MSPI_CLK_CONF,
     i2c0_conf: I2C0_CONF,
-    i2c_sclk_conf: I2C_SCLK_CONF,
+    i2c_sclk_conf: [I2C_SCLK_CONF; 1],
     twai0_conf: TWAI0_CONF,
     twai0_func_clk_conf: TWAI0_FUNC_CLK_CONF,
     twai1_conf: TWAI1_CONF,
@@ -121,8 +121,19 @@ impl RegisterBlock {
     }
     #[doc = "0x24 - I2C_SCLK configuration register"]
     #[inline(always)]
-    pub const fn i2c_sclk_conf(&self) -> &I2C_SCLK_CONF {
-        &self.i2c_sclk_conf
+    pub const fn i2c_sclk_conf(&self, n: usize) -> &I2C_SCLK_CONF {
+        &self.i2c_sclk_conf[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x24 - I2C_SCLK configuration register"]
+    #[inline(always)]
+    pub fn i2c_sclk_conf_iter(&self) -> impl Iterator<Item = &I2C_SCLK_CONF> {
+        self.i2c_sclk_conf.iter()
+    }
+    #[doc = "0x24 - I2C_SCLK configuration register"]
+    #[inline(always)]
+    pub const fn i2c0_sclk_conf(&self) -> &I2C_SCLK_CONF {
+        self.i2c_sclk_conf(0)
     }
     #[doc = "0x28 - TWAI0 configuration register"]
     #[inline(always)]

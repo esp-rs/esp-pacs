@@ -213,6 +213,8 @@ PCR:
   _modify:
     I2C_CONF:
       name: I2C0_CONF
+    I2C_SCLK_CONF:
+      name: I2C0_SCLK_CONF
 
   I2C0_CONF:
     _modify:
