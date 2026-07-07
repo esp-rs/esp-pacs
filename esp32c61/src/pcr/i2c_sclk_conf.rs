@@ -1,6 +1,6 @@
-#[doc = "Register `I2C_SCLK_CONF` reader"]
+#[doc = "Register `I2C%s_SCLK_CONF` reader"]
 pub type R = crate::R<I2C_SCLK_CONF_SPEC>;
-#[doc = "Register `I2C_SCLK_CONF` writer"]
+#[doc = "Register `I2C%s_SCLK_CONF` writer"]
 pub type W = crate::W<I2C_SCLK_CONF_SPEC>;
 #[doc = "Field `I2C_SCLK_DIV_A` reader - The denominator of the frequency divider factor of the i2c function clock."]
 pub type I2C_SCLK_DIV_A_R = crate::FieldReader;
@@ -99,7 +99,7 @@ impl crate::Readable for I2C_SCLK_CONF_SPEC {}
 impl crate::Writable for I2C_SCLK_CONF_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets I2C_SCLK_CONF to value 0x0040_0000"]
+#[doc = "`reset()` method sets I2C%s_SCLK_CONF to value 0x0040_0000"]
 impl crate::Resettable for I2C_SCLK_CONF_SPEC {
     const RESET_VALUE: u32 = 0x0040_0000;
 }
