@@ -18,6 +18,10 @@ pub type CLKCNT_N_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 pub type CLKDIV_PRE_R = crate::FieldReader;
 #[doc = "Field `CLKDIV_PRE` writer - In the master mode it is pre-divider of spi_clk. Can be configured in CONF state."]
 pub type CLKDIV_PRE_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `CLK_EDGE_SEL` reader - Configures use standard clock sampling edge or delay the sampling edge by half a cycle in master transfer.\\\\ 0: clock sampling edge is delayed by half a cycle.\\\\ 1: clock sampling edge is standard.\\\\ Can be configured in CONF state."]
+pub type CLK_EDGE_SEL_R = crate::BitReader;
+#[doc = "Field `CLK_EDGE_SEL` writer - Configures use standard clock sampling edge or delay the sampling edge by half a cycle in master transfer.\\\\ 0: clock sampling edge is delayed by half a cycle.\\\\ 1: clock sampling edge is standard.\\\\ Can be configured in CONF state."]
+pub type CLK_EDGE_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_EQU_SYSCLK` reader - In the master mode 1: spi_clk is eqaul to system 0: spi_clk is divided from system clock. Can be configured in CONF state."]
 pub type CLK_EQU_SYSCLK_R = crate::BitReader;
 #[doc = "Field `CLK_EQU_SYSCLK` writer - In the master mode 1: spi_clk is eqaul to system 0: spi_clk is divided from system clock. Can be configured in CONF state."]
@@ -43,6 +47,11 @@ impl R {
     pub fn clkdiv_pre(&self) -> CLKDIV_PRE_R {
         CLKDIV_PRE_R::new(((self.bits >> 18) & 0x0f) as u8)
     }
+    #[doc = "Bit 30 - Configures use standard clock sampling edge or delay the sampling edge by half a cycle in master transfer.\\\\ 0: clock sampling edge is delayed by half a cycle.\\\\ 1: clock sampling edge is standard.\\\\ Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn clk_edge_sel(&self) -> CLK_EDGE_SEL_R {
+        CLK_EDGE_SEL_R::new(((self.bits >> 30) & 1) != 0)
+    }
     #[doc = "Bit 31 - In the master mode 1: spi_clk is eqaul to system 0: spi_clk is divided from system clock. Can be configured in CONF state."]
     #[inline(always)]
     pub fn clk_equ_sysclk(&self) -> CLK_EQU_SYSCLK_R {
@@ -57,6 +66,7 @@ impl core::fmt::Debug for R {
             .field("clkcnt_h", &self.clkcnt_h())
             .field("clkcnt_n", &self.clkcnt_n())
             .field("clkdiv_pre", &self.clkdiv_pre())
+            .field("clk_edge_sel", &self.clk_edge_sel())
             .field("clk_equ_sysclk", &self.clk_equ_sysclk())
             .finish()
     }
@@ -81,6 +91,11 @@ impl W {
     #[inline(always)]
     pub fn clkdiv_pre(&mut self) -> CLKDIV_PRE_W<'_, CLOCK_SPEC> {
         CLKDIV_PRE_W::new(self, 18)
+    }
+    #[doc = "Bit 30 - Configures use standard clock sampling edge or delay the sampling edge by half a cycle in master transfer.\\\\ 0: clock sampling edge is delayed by half a cycle.\\\\ 1: clock sampling edge is standard.\\\\ Can be configured in CONF state."]
+    #[inline(always)]
+    pub fn clk_edge_sel(&mut self) -> CLK_EDGE_SEL_W<'_, CLOCK_SPEC> {
+        CLK_EDGE_SEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - In the master mode 1: spi_clk is eqaul to system 0: spi_clk is divided from system clock. Can be configured in CONF state."]
     #[inline(always)]

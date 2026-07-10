@@ -2,12 +2,12 @@
 pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
 pub type W = crate::W<INT_ENA_SPEC>;
-#[doc = "Field `INT_ENA` reader - Set this bit to enable interrupt that occurs when DMA-AES calculation is done."]
+#[doc = "Field `INT_ENA` reader - Configures whether or not to enable AES interrupt.\\\\ 0: Disable\\\\ 1: Enable \\\\"]
 pub type INT_ENA_R = crate::BitReader;
-#[doc = "Field `INT_ENA` writer - Set this bit to enable interrupt that occurs when DMA-AES calculation is done."]
+#[doc = "Field `INT_ENA` writer - Configures whether or not to enable AES interrupt.\\\\ 0: Disable\\\\ 1: Enable \\\\"]
 pub type INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - Set this bit to enable interrupt that occurs when DMA-AES calculation is done."]
+    #[doc = "Bit 0 - Configures whether or not to enable AES interrupt.\\\\ 0: Disable\\\\ 1: Enable \\\\"]
     #[inline(always)]
     pub fn int_ena(&self) -> INT_ENA_R {
         INT_ENA_R::new((self.bits & 1) != 0)
@@ -22,13 +22,13 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Set this bit to enable interrupt that occurs when DMA-AES calculation is done."]
+    #[doc = "Bit 0 - Configures whether or not to enable AES interrupt.\\\\ 0: Disable\\\\ 1: Enable \\\\"]
     #[inline(always)]
     pub fn int_ena(&mut self) -> INT_ENA_W<'_, INT_ENA_SPEC> {
         INT_ENA_W::new(self, 0)
     }
 }
-#[doc = "AES Interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA-AES interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ENA_SPEC;
 impl crate::RegisterSpec for INT_ENA_SPEC {
     type Ux = u32;

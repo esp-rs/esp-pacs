@@ -1,19 +1,19 @@
 #[doc = "Register `T1QNR` reader"]
 pub type R = crate::R<T1QNR_SPEC>;
-#[doc = "Field `CHROMINANCE_QNR_VAL` reader - write this reg to configure 64 quantization coefficient in t1 table"]
-pub type CHROMINANCE_QNR_VAL_R = crate::FieldReader<u32>;
+#[doc = "Field `T1_QNR_VAL` reader - write this reg to configure 64 quantization coefficient in t1 table"]
+pub type T1_QNR_VAL_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - write this reg to configure 64 quantization coefficient in t1 table"]
     #[inline(always)]
-    pub fn chrominance_qnr_val(&self) -> CHROMINANCE_QNR_VAL_R {
-        CHROMINANCE_QNR_VAL_R::new(self.bits)
+    pub fn t1_qnr_val(&self) -> T1_QNR_VAL_R {
+        T1_QNR_VAL_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("T1QNR")
-            .field("chrominance_qnr_val", &self.chrominance_qnr_val())
+            .field("t1_qnr_val", &self.t1_qnr_val())
             .finish()
     }
 }

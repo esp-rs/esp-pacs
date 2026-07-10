@@ -3,14 +3,14 @@ pub type R = crate::R<FSM_SPEC>;
 #[doc = "Register `FSM` writer"]
 pub type W = crate::W<FSM_SPEC>;
 #[doc = "Field `LOCK_DELAY_TIME` reader - The lock delay time of SPI0/1 arbiter by spi0_slv_st, after PER is sent by SPI1."]
-pub type LOCK_DELAY_TIME_R = crate::FieldReader;
+pub type LOCK_DELAY_TIME_R = crate::FieldReader<u16>;
 #[doc = "Field `LOCK_DELAY_TIME` writer - The lock delay time of SPI0/1 arbiter by spi0_slv_st, after PER is sent by SPI1."]
-pub type LOCK_DELAY_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
+pub type LOCK_DELAY_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
-    #[doc = "Bits 7:11 - The lock delay time of SPI0/1 arbiter by spi0_slv_st, after PER is sent by SPI1."]
+    #[doc = "Bits 7:18 - The lock delay time of SPI0/1 arbiter by spi0_slv_st, after PER is sent by SPI1."]
     #[inline(always)]
     pub fn lock_delay_time(&self) -> LOCK_DELAY_TIME_R {
-        LOCK_DELAY_TIME_R::new(((self.bits >> 7) & 0x1f) as u8)
+        LOCK_DELAY_TIME_R::new(((self.bits >> 7) & 0x0fff) as u16)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 7:11 - The lock delay time of SPI0/1 arbiter by spi0_slv_st, after PER is sent by SPI1."]
+    #[doc = "Bits 7:18 - The lock delay time of SPI0/1 arbiter by spi0_slv_st, after PER is sent by SPI1."]
     #[inline(always)]
     pub fn lock_delay_time(&mut self) -> LOCK_DELAY_TIME_W<'_, FSM_SPEC> {
         LOCK_DELAY_TIME_W::new(self, 7)

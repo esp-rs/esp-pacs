@@ -1,13 +1,13 @@
 #[doc = "Register `OUT_STATE` reader"]
 pub type R = crate::R<OUT_STATE_SPEC>;
-#[doc = "Field `OUTLINK_DSCR_ADDR` reader - This register stores the current outlink descriptor's address."]
+#[doc = "Field `OUTLINK_DSCR_ADDR` reader - Represents the lower 18 bits of the address of the next transmit descriptor to be processed."]
 pub type OUTLINK_DSCR_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `OUT_DSCR_STATE` reader - reserved"]
 pub type OUT_DSCR_STATE_R = crate::FieldReader;
 #[doc = "Field `OUT_STATE` reader - reserved"]
 pub type OUT_STATE_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:17 - This register stores the current outlink descriptor's address."]
+    #[doc = "Bits 0:17 - Represents the lower 18 bits of the address of the next transmit descriptor to be processed."]
     #[inline(always)]
     pub fn outlink_dscr_addr(&self) -> OUTLINK_DSCR_ADDR_R {
         OUTLINK_DSCR_ADDR_R::new(self.bits & 0x0003_ffff)
@@ -33,7 +33,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Transmit status of Tx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_state::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Transmit status of TX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_state::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_STATE_SPEC;
 impl crate::RegisterSpec for OUT_STATE_SPEC {
     type Ux = u32;

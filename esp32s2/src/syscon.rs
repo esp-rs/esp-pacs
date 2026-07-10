@@ -384,5 +384,4 @@ pub mod wifi_rst_en;
 pub type FRONT_END_MEM_PD = crate::Reg<front_end_mem_pd::FRONT_END_MEM_PD_SPEC>;
 #[doc = ""]
 pub mod front_end_mem_pd;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

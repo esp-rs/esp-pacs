@@ -358,5 +358,4 @@ pub mod esc_conf;
 pub type PKT_THRES = crate::Reg<pkt_thres::PKT_THRES_SPEC>;
 #[doc = ""]
 pub mod pkt_thres;
-pub use crate::apb_ctrl::date;
-pub use crate::apb_ctrl::DATE;
+pub use crate::apb_ctrl::{date, DATE};

@@ -540,5 +540,4 @@ pub mod dma_rstatus;
 pub type DMA_TSTATUS = crate::Reg<dma_tstatus::DMA_TSTATUS_SPEC>;
 #[doc = ""]
 pub mod dma_tstatus;
-pub use crate::apb_ctrl::date;
-pub use crate::apb_ctrl::DATE;
+pub use crate::apb_ctrl::{date, DATE};

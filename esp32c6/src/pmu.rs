@@ -1067,5 +1067,4 @@ pub mod clk_state2;
 pub type VDD_SPI_STATUS = crate::Reg<vdd_spi_status::VDD_SPI_STATUS_SPEC>;
 #[doc = "need_des"]
 pub mod vdd_spi_status;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

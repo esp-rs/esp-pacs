@@ -47,5 +47,4 @@ pub mod clock_gate;
 pub type SIGMADELTA_MISC = crate::Reg<sigmadelta_misc::SIGMADELTA_MISC_SPEC>;
 #[doc = "MISC Register"]
 pub mod sigmadelta_misc;
-pub use crate::aes::date as version;
-pub use crate::aes::DATE as VERSION;
+pub use crate::aes::{date as version, DATE as VERSION};

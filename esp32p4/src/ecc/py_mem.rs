@@ -1,6 +1,6 @@
-#[doc = "Register `PY_MEM[%s]` reader"]
+#[doc = "Register `PY_MEM%s` reader"]
 pub type R = crate::R<PY_MEM_SPEC>;
-#[doc = "Register `PY_MEM[%s]` writer"]
+#[doc = "Register `PY_MEM%s` writer"]
 pub type W = crate::W<PY_MEM_SPEC>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -20,5 +20,5 @@ impl crate::Readable for PY_MEM_SPEC {}
 impl crate::Writable for PY_MEM_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets PY_MEM[%s] to value 0"]
+#[doc = "`reset()` method sets PY_MEM%s to value 0"]
 impl crate::Resettable for PY_MEM_SPEC {}

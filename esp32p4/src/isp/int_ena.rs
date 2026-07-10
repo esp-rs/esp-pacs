@@ -118,6 +118,18 @@ pub type TAIL_IDI_FRAME_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type HEADER_IDI_FRAME_R = crate::BitReader;
 #[doc = "Field `HEADER_IDI_FRAME` writer - write 1 to enable real input frame end of isp_input"]
 pub type HEADER_IDI_FRAME_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CROP_FRAME` reader - write 1 to enable crop frame done"]
+pub type CROP_FRAME_R = crate::BitReader;
+#[doc = "Field `CROP_FRAME` writer - write 1 to enable crop frame done"]
+pub type CROP_FRAME_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `WBG_FRAME` reader - write 1 to enable wbg frame done"]
+pub type WBG_FRAME_R = crate::BitReader;
+#[doc = "Field `WBG_FRAME` writer - write 1 to enable wbg frame done"]
+pub type WBG_FRAME_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CROP_ERR` reader - write 1 to enable crop error"]
+pub type CROP_ERR_R = crate::BitReader;
+#[doc = "Field `CROP_ERR` writer - write 1 to enable crop error"]
+pub type CROP_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - write 1 to enable input data type error"]
     #[inline(always)]
@@ -264,6 +276,21 @@ impl R {
     pub fn header_idi_frame(&self) -> HEADER_IDI_FRAME_R {
         HEADER_IDI_FRAME_R::new(((self.bits >> 28) & 1) != 0)
     }
+    #[doc = "Bit 29 - write 1 to enable crop frame done"]
+    #[inline(always)]
+    pub fn crop_frame(&self) -> CROP_FRAME_R {
+        CROP_FRAME_R::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - write 1 to enable wbg frame done"]
+    #[inline(always)]
+    pub fn wbg_frame(&self) -> WBG_FRAME_R {
+        WBG_FRAME_R::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - write 1 to enable crop error"]
+    #[inline(always)]
+    pub fn crop_err(&self) -> CROP_ERR_R {
+        CROP_ERR_R::new(((self.bits >> 31) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -301,6 +328,9 @@ impl core::fmt::Debug for R {
             .field("yuv2rgb_frame", &self.yuv2rgb_frame())
             .field("tail_idi_frame", &self.tail_idi_frame())
             .field("header_idi_frame", &self.header_idi_frame())
+            .field("crop_frame", &self.crop_frame())
+            .field("wbg_frame", &self.wbg_frame())
+            .field("crop_err", &self.crop_err())
             .finish()
     }
 }
@@ -449,6 +479,21 @@ impl W {
     #[inline(always)]
     pub fn header_idi_frame(&mut self) -> HEADER_IDI_FRAME_W<'_, INT_ENA_SPEC> {
         HEADER_IDI_FRAME_W::new(self, 28)
+    }
+    #[doc = "Bit 29 - write 1 to enable crop frame done"]
+    #[inline(always)]
+    pub fn crop_frame(&mut self) -> CROP_FRAME_W<'_, INT_ENA_SPEC> {
+        CROP_FRAME_W::new(self, 29)
+    }
+    #[doc = "Bit 30 - write 1 to enable wbg frame done"]
+    #[inline(always)]
+    pub fn wbg_frame(&mut self) -> WBG_FRAME_W<'_, INT_ENA_SPEC> {
+        WBG_FRAME_W::new(self, 30)
+    }
+    #[doc = "Bit 31 - write 1 to enable crop error"]
+    #[inline(always)]
+    pub fn crop_err(&mut self) -> CROP_ERR_W<'_, INT_ENA_SPEC> {
+        CROP_ERR_W::new(self, 31)
     }
 }
 #[doc = "interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

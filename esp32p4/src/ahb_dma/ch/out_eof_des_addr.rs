@@ -1,9 +1,9 @@
 #[doc = "Register `OUT_EOF_DES_ADDR` reader"]
 pub type R = crate::R<OUT_EOF_DES_ADDR_SPEC>;
-#[doc = "Field `OUT_EOF_DES_ADDR` reader - This register stores the address of the outlink descriptor when the EOF bit in this descriptor is 1."]
+#[doc = "Field `OUT_EOF_DES_ADDR` reader - Represents the address of the transmit descriptor when the EOF bit in this descriptor is 1."]
 pub type OUT_EOF_DES_ADDR_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - This register stores the address of the outlink descriptor when the EOF bit in this descriptor is 1."]
+    #[doc = "Bits 0:31 - Represents the address of the transmit descriptor when the EOF bit in this descriptor is 1."]
     #[inline(always)]
     pub fn out_eof_des_addr(&self) -> OUT_EOF_DES_ADDR_R {
         OUT_EOF_DES_ADDR_R::new(self.bits)
@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Outlink descriptor address when EOF occurs of Tx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_eof_des_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Transmit descriptor address when EOF occurs on TX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_eof_des_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_EOF_DES_ADDR_SPEC;
 impl crate::RegisterSpec for OUT_EOF_DES_ADDR_SPEC {
     type Ux = u32;

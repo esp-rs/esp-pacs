@@ -81,5 +81,4 @@ pub mod clk_conf1_force_on;
 pub type MEM_CONF = crate::Reg<mem_conf::MEM_CONF_SPEC>;
 #[doc = ""]
 pub mod mem_conf;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

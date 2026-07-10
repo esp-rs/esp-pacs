@@ -454,5 +454,4 @@ pub mod pdm_freq_conf;
 pub type STATE = crate::Reg<state::STATE_SPEC>;
 #[doc = ""]
 pub mod state;
-pub use crate::apb_ctrl::date;
-pub use crate::apb_ctrl::DATE;
+pub use crate::apb_ctrl::{date, DATE};

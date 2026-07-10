@@ -732,5 +732,4 @@ pub mod dac_conf;
 pub type DEC_STATUS = crate::Reg<dec_status::DEC_STATUS_SPEC>;
 #[doc = ""]
 pub mod dec_status;
-pub use crate::apb_ctrl::date;
-pub use crate::apb_ctrl::DATE;
+pub use crate::apb_ctrl::{date, DATE};

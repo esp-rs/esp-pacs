@@ -107,5 +107,4 @@ pub mod secure_status;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "Interrupt clock gating configure register"]
 pub mod clock_gate;
-pub use crate::dma::date as interrupt_date;
-pub use crate::dma::DATE as INTERRUPT_DATE;
+pub use crate::dma::{date as interrupt_date, DATE as INTERRUPT_DATE};

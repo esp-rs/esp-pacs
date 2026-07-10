@@ -1,10 +1,10 @@
 #[doc = "Register `OUTFIFO_STATUS` reader"]
 pub type R = crate::R<OUTFIFO_STATUS_SPEC>;
-#[doc = "Field `OUTFIFO_FULL` reader - L1 Tx FIFO full signal for Tx channel 0."]
+#[doc = "Field `OUTFIFO_FULL` reader - Represents whether L1 TX FIFO is full.\\\\0: Not Full\\\\1: Full\\\\"]
 pub type OUTFIFO_FULL_R = crate::BitReader;
-#[doc = "Field `OUTFIFO_EMPTY` reader - L1 Tx FIFO empty signal for Tx channel 0."]
+#[doc = "Field `OUTFIFO_EMPTY` reader - Represents whether L1 TX FIFO is empty.\\\\0: Not empty\\\\1: Empty\\\\"]
 pub type OUTFIFO_EMPTY_R = crate::BitReader;
-#[doc = "Field `OUTFIFO_CNT` reader - The register stores the byte number of the data in L1 Tx FIFO for Tx channel 0."]
+#[doc = "Field `OUTFIFO_CNT` reader - Represents the number of data bytes in L1 TX FIFO for TX channel 0"]
 pub type OUTFIFO_CNT_R = crate::FieldReader;
 #[doc = "Field `OUT_REMAIN_UNDER_1B` reader - reserved"]
 pub type OUT_REMAIN_UNDER_1B_R = crate::BitReader;
@@ -15,20 +15,20 @@ pub type OUT_REMAIN_UNDER_3B_R = crate::BitReader;
 #[doc = "Field `OUT_REMAIN_UNDER_4B` reader - reserved"]
 pub type OUT_REMAIN_UNDER_4B_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - L1 Tx FIFO full signal for Tx channel 0."]
+    #[doc = "Bit 0 - Represents whether L1 TX FIFO is full.\\\\0: Not Full\\\\1: Full\\\\"]
     #[inline(always)]
     pub fn outfifo_full(&self) -> OUTFIFO_FULL_R {
         OUTFIFO_FULL_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - L1 Tx FIFO empty signal for Tx channel 0."]
+    #[doc = "Bit 1 - Represents whether L1 TX FIFO is empty.\\\\0: Not empty\\\\1: Empty\\\\"]
     #[inline(always)]
     pub fn outfifo_empty(&self) -> OUTFIFO_EMPTY_R {
         OUTFIFO_EMPTY_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bits 2:7 - The register stores the byte number of the data in L1 Tx FIFO for Tx channel 0."]
+    #[doc = "Bits 8:14 - Represents the number of data bytes in L1 TX FIFO for TX channel 0"]
     #[inline(always)]
     pub fn outfifo_cnt(&self) -> OUTFIFO_CNT_R {
-        OUTFIFO_CNT_R::new(((self.bits >> 2) & 0x3f) as u8)
+        OUTFIFO_CNT_R::new(((self.bits >> 8) & 0x7f) as u8)
     }
     #[doc = "Bit 23 - reserved"]
     #[inline(always)]
@@ -65,7 +65,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Transmit FIFO status of Tx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`outfifo_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Receive FIFO status of RX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`outfifo_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUTFIFO_STATUS_SPEC;
 impl crate::RegisterSpec for OUTFIFO_STATUS_SPEC {
     type Ux = u32;

@@ -1321,5 +1321,4 @@ pub mod clk;
 pub type APB2OTP_EN = crate::Reg<apb2otp_en::APB2OTP_EN_SPEC>;
 #[doc = "Otp_debuger apb2otp enable configuration register."]
 pub mod apb2otp_en;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

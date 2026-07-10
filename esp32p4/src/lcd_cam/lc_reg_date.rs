@@ -39,7 +39,7 @@ impl crate::Readable for LC_REG_DATE_SPEC {}
 impl crate::Writable for LC_REG_DATE_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets LC_REG_DATE to value 0x0230_3090"]
+#[doc = "`reset()` method sets LC_REG_DATE to value 0x0250_2226"]
 impl crate::Resettable for LC_REG_DATE_SPEC {
-    const RESET_VALUE: u32 = 0x0230_3090;
+    const RESET_VALUE: u32 = 0x0250_2226;
 }

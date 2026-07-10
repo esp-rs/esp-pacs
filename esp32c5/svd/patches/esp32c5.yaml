@@ -25,6 +25,9 @@ _include:
   - _sha.yml
   - _rmt.yml
   - _uart.yml
+  - _mmu_item_content.yml
+
+_delete: RNG
 
 PCR:
   _include: ../../../common_patches/pcr.yaml
@@ -32,6 +35,8 @@ PCR:
   _modify:
     I2C_CONF:
       name: I2C0_CONF
+    I2C_SCLK_CONF:
+      name: I2C0_SCLK_CONF
 
   I2C0_CONF:
     _modify:
@@ -352,10 +357,9 @@ ECDSA:
   _include: ../../../common_patches/int_strip.yaml
 
 EFUSE:
+  _strip: APB2OTP_
+  "*":
     _strip: APB2OTP_
-    "*":
-      _strip: APB2OTP_
-
 
 GPIO:
   FUNC*_IN_SEL_CFG:
@@ -434,7 +438,6 @@ LP_APM:
       M?_APM_INT_EN:
         name: M%s_APM
 
-
 HP_APM:
   _cluster:
     M%s:
@@ -504,7 +507,6 @@ LP_WDT:
       _modify:
         WDT_STG0_HOLD:
           name: HOLD
-
 
 RSA:
   _modify:

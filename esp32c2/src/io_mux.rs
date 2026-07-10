@@ -38,5 +38,4 @@ pub mod pin_ctrl;
 pub type GPIO = crate::Reg<gpio::GPIO_SPEC>;
 #[doc = "IO MUX Configure Register for pad XTAL_32K_P"]
 pub mod gpio;
-pub use crate::apb_ctrl::date;
-pub use crate::apb_ctrl::DATE;
+pub use crate::apb_ctrl::{date, DATE};

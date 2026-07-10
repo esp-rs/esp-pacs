@@ -676,5 +676,4 @@ pub mod cntl_sensor_ctrl;
 pub type CNTL_DBG_SAR_SEL = crate::Reg<cntl_dbg_sar_sel::CNTL_DBG_SAR_SEL_SPEC>;
 #[doc = "register description"]
 pub mod cntl_dbg_sar_sel;
-pub use crate::apb_ctrl::date as cntl_date;
-pub use crate::apb_ctrl::DATE as CNTL_DATE;
+pub use crate::apb_ctrl::{date as cntl_date, DATE as CNTL_DATE};

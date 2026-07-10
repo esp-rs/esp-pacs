@@ -20,11 +20,11 @@ pub type RX_DSCR_HB_ERR_ST_R = crate::BitReader;
 pub type XDST_LEN_TOO_SAMLL_ERR_ST_R = crate::BitReader;
 #[doc = "Field `XDST_LEN_TOO_LARGE_ERR_ST` reader - The error is that the scaled image height is larger than (2^13 - 1)."]
 pub type XDST_LEN_TOO_LARGE_ERR_ST_R = crate::BitReader;
-#[doc = "Field `X_YUV420_RX_SCALE_ERR_ST` reader - The error is that the ha/hb/x param in dma2d descriptor is an odd num when enable yuv420 rx"]
+#[doc = "Field `X_YUV420_RX_SCALE_ERR_ST` reader - The error is that the ha/hb/x param in dma2d descriptor is an odd num when enable yuv422 or yuv420 rx"]
 pub type X_YUV420_RX_SCALE_ERR_ST_R = crate::BitReader;
 #[doc = "Field `Y_YUV420_RX_SCALE_ERR_ST` reader - The error is that the va/vb/y param in dma2d descriptor is an odd num when enable yuv420 rx"]
 pub type Y_YUV420_RX_SCALE_ERR_ST_R = crate::BitReader;
-#[doc = "Field `X_YUV420_TX_SCALE_ERR_ST` reader - The error is that the ha/hb/x param in dma2d descriptor is an odd num when enable yuv420 tx"]
+#[doc = "Field `X_YUV420_TX_SCALE_ERR_ST` reader - The error is that the ha/hb/x param in dma2d descriptor is an odd num when enable yuv422 or yuv420 tx"]
 pub type X_YUV420_TX_SCALE_ERR_ST_R = crate::BitReader;
 #[doc = "Field `Y_YUV420_TX_SCALE_ERR_ST` reader - The error is that the va/vb/y param in dma2d descriptor is an odd num when enable yuv420 tx"]
 pub type Y_YUV420_TX_SCALE_ERR_ST_R = crate::BitReader;
@@ -79,7 +79,7 @@ impl R {
     pub fn xdst_len_too_large_err_st(&self) -> XDST_LEN_TOO_LARGE_ERR_ST_R {
         XDST_LEN_TOO_LARGE_ERR_ST_R::new(((self.bits >> 9) & 1) != 0)
     }
-    #[doc = "Bit 10 - The error is that the ha/hb/x param in dma2d descriptor is an odd num when enable yuv420 rx"]
+    #[doc = "Bit 10 - The error is that the ha/hb/x param in dma2d descriptor is an odd num when enable yuv422 or yuv420 rx"]
     #[inline(always)]
     pub fn x_yuv420_rx_scale_err_st(&self) -> X_YUV420_RX_SCALE_ERR_ST_R {
         X_YUV420_RX_SCALE_ERR_ST_R::new(((self.bits >> 10) & 1) != 0)
@@ -89,7 +89,7 @@ impl R {
     pub fn y_yuv420_rx_scale_err_st(&self) -> Y_YUV420_RX_SCALE_ERR_ST_R {
         Y_YUV420_RX_SCALE_ERR_ST_R::new(((self.bits >> 11) & 1) != 0)
     }
-    #[doc = "Bit 12 - The error is that the ha/hb/x param in dma2d descriptor is an odd num when enable yuv420 tx"]
+    #[doc = "Bit 12 - The error is that the ha/hb/x param in dma2d descriptor is an odd num when enable yuv422 or yuv420 tx"]
     #[inline(always)]
     pub fn x_yuv420_tx_scale_err_st(&self) -> X_YUV420_TX_SCALE_ERR_ST_R {
         X_YUV420_TX_SCALE_ERR_ST_R::new(((self.bits >> 12) & 1) != 0)

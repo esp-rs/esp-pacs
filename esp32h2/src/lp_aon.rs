@@ -224,5 +224,4 @@ pub mod sar_cct;
 pub type JTAG_SEL = crate::Reg<jtag_sel::JTAG_SEL_SPEC>;
 #[doc = "need_des"]
 pub mod jtag_sel;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

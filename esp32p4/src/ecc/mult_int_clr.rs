@@ -1,6 +1,6 @@
 #[doc = "Register `MULT_INT_CLR` writer"]
 pub type W = crate::W<MULT_INT_CLR_SPEC>;
-#[doc = "Field `CALC_DONE` writer - Set this bit to clear the ecc_calc_done_int interrupt"]
+#[doc = "Field `CALC_DONE` writer - Write 1 to clear the ECC_CALC_DONE_INT interrupt."]
 pub type CALC_DONE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<MULT_INT_CLR_SPEC> {
@@ -9,13 +9,13 @@ impl core::fmt::Debug for crate::generic::Reg<MULT_INT_CLR_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Set this bit to clear the ecc_calc_done_int interrupt"]
+    #[doc = "Bit 0 - Write 1 to clear the ECC_CALC_DONE_INT interrupt."]
     #[inline(always)]
     pub fn calc_done(&mut self) -> CALC_DONE_W<'_, MULT_INT_CLR_SPEC> {
         CALC_DONE_W::new(self, 0)
     }
 }
-#[doc = "ECC interrupt clear register.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mult_int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ECC interrupt clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mult_int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MULT_INT_CLR_SPEC;
 impl crate::RegisterSpec for MULT_INT_CLR_SPEC {
     type Ux = u32;

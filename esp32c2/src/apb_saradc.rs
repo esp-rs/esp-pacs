@@ -262,5 +262,4 @@ pub mod tsens_ctrl2;
 pub type CALI = crate::Reg<cali::CALI_SPEC>;
 #[doc = "register description"]
 pub mod cali;
-pub use crate::apb_ctrl::date as ctrl_date;
-pub use crate::apb_ctrl::DATE as CTRL_DATE;
+pub use crate::apb_ctrl::{date as ctrl_date, DATE as CTRL_DATE};

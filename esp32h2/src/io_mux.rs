@@ -49,5 +49,4 @@ pub mod gpio;
 pub type MODEM_DIAG_EN = crate::Reg<modem_diag_en::MODEM_DIAG_EN_SPEC>;
 #[doc = "GPIO MATRIX Configure Register for modem diag"]
 pub mod modem_diag_en;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

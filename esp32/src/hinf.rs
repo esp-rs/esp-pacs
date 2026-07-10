@@ -133,5 +133,4 @@ pub mod cis_conf7;
 pub type CFG_DATA16 = crate::Reg<cfg_data16::CFG_DATA16_SPEC>;
 #[doc = ""]
 pub mod cfg_data16;
-pub use crate::apb_ctrl::date;
-pub use crate::apb_ctrl::DATE;
+pub use crate::apb_ctrl::{date, DATE};

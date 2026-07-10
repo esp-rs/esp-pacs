@@ -41,7 +41,7 @@ pub enum OUT_EOF_MODE {
     #[doc = "0: EOF flag is generated when the last data with EOF would be transmitted has been pushed into FIFO of Crypto DMA"]
     OnPush = 0,
     #[doc = "1: EOF flag is generated when the last data with EOF would be transmitted has been popped from FIFO of Crypto DMA"]
-    OnPop = 1,
+    OnPop  = 1,
 }
 impl From<OUT_EOF_MODE> for bool {
     #[inline(always)]

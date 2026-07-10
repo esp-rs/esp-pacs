@@ -12,8 +12,6 @@ pub type CAVLC_ENC_DEBUG_STATE_R = crate::FieldReader;
 pub type CAVLC_SCAN_DEBUG_STATE_R = crate::FieldReader;
 #[doc = "Field `CAVLC_CTRL_DEBUG_STATE` reader - Represents cavlc module ctrl FSM info."]
 pub type CAVLC_CTRL_DEBUG_STATE_R = crate::FieldReader;
-#[doc = "Field `BS_BUFFER_DEBUG_STATE` reader - Represents bs buffer overflow info."]
-pub type BS_BUFFER_DEBUG_STATE_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:2 - Represents fme_ctrl module FSM info."]
     #[inline(always)]
@@ -45,11 +43,6 @@ impl R {
     pub fn cavlc_ctrl_debug_state(&self) -> CAVLC_CTRL_DEBUG_STATE_R {
         CAVLC_CTRL_DEBUG_STATE_R::new(((self.bits >> 16) & 3) as u8)
     }
-    #[doc = "Bit 18 - Represents bs buffer overflow info."]
-    #[inline(always)]
-    pub fn bs_buffer_debug_state(&self) -> BS_BUFFER_DEBUG_STATE_R {
-        BS_BUFFER_DEBUG_STATE_R::new(((self.bits >> 18) & 1) != 0)
-    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -61,7 +54,6 @@ impl core::fmt::Debug for R {
             .field("cavlc_enc_debug_state", &self.cavlc_enc_debug_state())
             .field("cavlc_scan_debug_state", &self.cavlc_scan_debug_state())
             .field("cavlc_ctrl_debug_state", &self.cavlc_ctrl_debug_state())
-            .field("bs_buffer_debug_state", &self.bs_buffer_debug_state())
             .finish()
     }
 }

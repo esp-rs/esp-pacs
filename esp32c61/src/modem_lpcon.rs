@@ -201,5 +201,4 @@ pub mod dcmem_valid_2;
 pub type DCMEM_VALID_3 = crate::Reg<dcmem_valid_3::DCMEM_VALID_3_SPEC>;
 #[doc = "DCMEM_VALID_3"]
 pub mod dcmem_valid_3;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

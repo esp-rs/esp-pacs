@@ -1650,5 +1650,4 @@ pub mod app_vecbase_ctrl;
 pub type APP_VECBASE_SET = crate::Reg<app_vecbase_set::APP_VECBASE_SET_SPEC>;
 #[doc = ""]
 pub mod app_vecbase_set;
-pub use crate::apb_ctrl::date;
-pub use crate::apb_ctrl::DATE;
+pub use crate::apb_ctrl::{date, DATE};

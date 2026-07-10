@@ -6,13 +6,13 @@ pub type W = crate::W<RX_DATA_CFG_SPEC>;
 pub type RX_BITLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `RX_BITLEN` writer - Configures expected byte number of received data."]
 pub type RX_BITLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 19, u32>;
-#[doc = "Field `RX_DATA_ORDER_INV` reader - Set this bit to invert bit order of one byte sent from RX_FIFO to DMA."]
+#[doc = "Field `RX_DATA_ORDER_INV` reader - Write 1 to invert bit order of one byte sent from RX_FIFO to DMA."]
 pub type RX_DATA_ORDER_INV_R = crate::BitReader;
-#[doc = "Field `RX_DATA_ORDER_INV` writer - Set this bit to invert bit order of one byte sent from RX_FIFO to DMA."]
+#[doc = "Field `RX_DATA_ORDER_INV` writer - Write 1 to invert bit order of one byte sent from RX_FIFO to DMA."]
 pub type RX_DATA_ORDER_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RX_BUS_WID_SEL` reader - Configures the rxd bus width. 3'd0: bus width is 1. 3'd1: bus width is 2. 3'd2: bus width is 4. 3'd3: bus width is 8."]
+#[doc = "Field `RX_BUS_WID_SEL` reader - Configures the rxd bus width. 0: bus width is 1. 1: bus width is 2. 2: bus width is 4. 3: bus width is 8."]
 pub type RX_BUS_WID_SEL_R = crate::FieldReader;
-#[doc = "Field `RX_BUS_WID_SEL` writer - Configures the rxd bus width. 3'd0: bus width is 1. 3'd1: bus width is 2. 3'd2: bus width is 4. 3'd3: bus width is 8."]
+#[doc = "Field `RX_BUS_WID_SEL` writer - Configures the rxd bus width. 0: bus width is 1. 1: bus width is 2. 2: bus width is 4. 3: bus width is 8."]
 pub type RX_BUS_WID_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 9:27 - Configures expected byte number of received data."]
@@ -20,12 +20,12 @@ impl R {
     pub fn rx_bitlen(&self) -> RX_BITLEN_R {
         RX_BITLEN_R::new((self.bits >> 9) & 0x0007_ffff)
     }
-    #[doc = "Bit 28 - Set this bit to invert bit order of one byte sent from RX_FIFO to DMA."]
+    #[doc = "Bit 28 - Write 1 to invert bit order of one byte sent from RX_FIFO to DMA."]
     #[inline(always)]
     pub fn rx_data_order_inv(&self) -> RX_DATA_ORDER_INV_R {
         RX_DATA_ORDER_INV_R::new(((self.bits >> 28) & 1) != 0)
     }
-    #[doc = "Bits 29:31 - Configures the rxd bus width. 3'd0: bus width is 1. 3'd1: bus width is 2. 3'd2: bus width is 4. 3'd3: bus width is 8."]
+    #[doc = "Bits 29:31 - Configures the rxd bus width. 0: bus width is 1. 1: bus width is 2. 2: bus width is 4. 3: bus width is 8."]
     #[inline(always)]
     pub fn rx_bus_wid_sel(&self) -> RX_BUS_WID_SEL_R {
         RX_BUS_WID_SEL_R::new(((self.bits >> 29) & 7) as u8)
@@ -47,12 +47,12 @@ impl W {
     pub fn rx_bitlen(&mut self) -> RX_BITLEN_W<'_, RX_DATA_CFG_SPEC> {
         RX_BITLEN_W::new(self, 9)
     }
-    #[doc = "Bit 28 - Set this bit to invert bit order of one byte sent from RX_FIFO to DMA."]
+    #[doc = "Bit 28 - Write 1 to invert bit order of one byte sent from RX_FIFO to DMA."]
     #[inline(always)]
     pub fn rx_data_order_inv(&mut self) -> RX_DATA_ORDER_INV_W<'_, RX_DATA_CFG_SPEC> {
         RX_DATA_ORDER_INV_W::new(self, 28)
     }
-    #[doc = "Bits 29:31 - Configures the rxd bus width. 3'd0: bus width is 1. 3'd1: bus width is 2. 3'd2: bus width is 4. 3'd3: bus width is 8."]
+    #[doc = "Bits 29:31 - Configures the rxd bus width. 0: bus width is 1. 1: bus width is 2. 2: bus width is 4. 3: bus width is 8."]
     #[inline(always)]
     pub fn rx_bus_wid_sel(&mut self) -> RX_BUS_WID_SEL_W<'_, RX_DATA_CFG_SPEC> {
         RX_BUS_WID_SEL_W::new(self, 29)

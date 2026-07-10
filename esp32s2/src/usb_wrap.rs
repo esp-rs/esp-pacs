@@ -32,5 +32,4 @@ pub mod otg_conf;
 pub type TEST_CONF = crate::Reg<test_conf::TEST_CONF_SPEC>;
 #[doc = "USB Internal PHY Testing Register"]
 pub mod test_conf;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

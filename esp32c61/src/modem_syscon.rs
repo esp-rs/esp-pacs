@@ -111,5 +111,4 @@ pub mod mem_rf1_conf;
 pub type MEM_RF2_CONF = crate::Reg<mem_rf2_conf::MEM_RF2_CONF_SPEC>;
 #[doc = "MEM_RF2_CONF"]
 pub mod mem_rf2_conf;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

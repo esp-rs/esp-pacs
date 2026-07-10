@@ -744,8 +744,7 @@ pub mod xts_destroy;
 pub type XTS_STATE = crate::Reg<xts_state::XTS_STATE_SPEC>;
 #[doc = "Manual Encryption physical address register"]
 pub mod xts_state;
-pub use crate::aes::date as xts_date;
-pub use crate::aes::DATE as XTS_DATE;
+pub use crate::aes::{date as xts_date, DATE as XTS_DATE};
 #[doc = "MMU_ITEM_CONTENT (rw) register accessor: MSPI-MMU item content register\n\nYou can [`read`](crate::Reg::read) this register and get [`mmu_item_content::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mmu_item_content::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mmu_item_content`] module"]
 pub type MMU_ITEM_CONTENT = crate::Reg<mmu_item_content::MMU_ITEM_CONTENT_SPEC>;
 #[doc = "MSPI-MMU item content register"]
@@ -770,5 +769,4 @@ pub mod registerrnd_eco_high;
 pub type REGISTERRND_ECO_LOW = crate::Reg<registerrnd_eco_low::REGISTERRND_ECO_LOW_SPEC>;
 #[doc = "MSPI ECO low register"]
 pub mod registerrnd_eco_low;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

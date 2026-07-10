@@ -8,11 +8,11 @@ pub type W = crate::W<CLK_CONF_SPEC>;
 #[repr(u8)]
 pub enum CK8M_DIV {
     #[doc = "0: DIV128"]
-    Div128 = 0,
+    Div128  = 0,
     #[doc = "1: DIV256"]
-    Div256 = 1,
+    Div256  = 1,
     #[doc = "2: DIV512"]
-    Div512 = 2,
+    Div512  = 2,
     #[doc = "3: DIV1024"]
     Div1024 = 3,
 }
@@ -100,7 +100,7 @@ pub enum ENB_CK8M_DIV {
     #[doc = "0: CK8M_DIV_256"]
     Ck8mDiv256 = 0,
     #[doc = "1: CK8M"]
-    Ck8m = 1,
+    Ck8m       = 1,
 }
 impl From<ENB_CK8M_DIV> for bool {
     #[inline(always)]
@@ -195,7 +195,7 @@ pub enum SOC_CLK_SEL {
     #[doc = "0: XTAL"]
     Xtal = 0,
     #[doc = "1: PLL"]
-    Pll = 1,
+    Pll  = 1,
     #[doc = "2: CK8M"]
     Ck8m = 2,
     #[doc = "3: APLL"]
@@ -281,7 +281,7 @@ pub enum FAST_CLK_RTC_SEL {
     #[doc = "0: XTAL_DIV_4"]
     XtalDiv4 = 0,
     #[doc = "1: CK8M"]
-    Ck8m = 1,
+    Ck8m     = 1,
 }
 impl From<FAST_CLK_RTC_SEL> for bool {
     #[inline(always)]
@@ -334,9 +334,9 @@ where
 #[repr(u8)]
 pub enum ANA_CLK_RTC_SEL {
     #[doc = "0: SLOW_CK"]
-    SlowCk = 0,
+    SlowCk      = 0,
     #[doc = "1: CK_XTAL_32K"]
-    CkXtal32k = 1,
+    CkXtal32k   = 1,
     #[doc = "2: CK8M_D256_OUT"]
     Ck8mD256Out = 2,
 }

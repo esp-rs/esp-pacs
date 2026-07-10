@@ -207,5 +207,4 @@ pub mod soft_jtag_ctrl;
 pub type WR_JTAG = crate::Reg<wr_jtag::WR_JTAG_SPEC>;
 #[doc = "Jtag register 1."]
 pub mod wr_jtag;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

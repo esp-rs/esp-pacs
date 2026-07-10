@@ -496,5 +496,4 @@ pub mod retention_ctrl4;
 pub type RETENTION_CTRL5 = crate::Reg<retention_ctrl5::RETENTION_CTRL5_SPEC>;
 #[doc = "******* Description ***********"]
 pub mod retention_ctrl5;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

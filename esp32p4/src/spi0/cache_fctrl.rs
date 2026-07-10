@@ -38,6 +38,26 @@ pub type FDOUT_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type FADDR_QUAD_R = crate::BitReader;
 #[doc = "Field `FADDR_QUAD` writer - For SPI0 flash, address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
 pub type FADDR_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ARB_WEI_EN` reader - To enable SPI0 arbiter weight func while AXI read/write access SPI0 1: enable 0: disable."]
+pub type ARB_WEI_EN_R = crate::BitReader;
+#[doc = "Field `ARB_WEI_EN` writer - To enable SPI0 arbiter weight func while AXI read/write access SPI0 1: enable 0: disable."]
+pub type ARB_WEI_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ARB_REQ0_PRI` reader - To set AXI read priority in SPI0 arbiter. The larger the value, the greater the priority."]
+pub type ARB_REQ0_PRI_R = crate::BitReader;
+#[doc = "Field `ARB_REQ0_PRI` writer - To set AXI read priority in SPI0 arbiter. The larger the value, the greater the priority."]
+pub type ARB_REQ0_PRI_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ARB_REQ1_PRI` reader - To set AXI write priority in SPI0 arbiter. The larger the value, the greater the priority."]
+pub type ARB_REQ1_PRI_R = crate::BitReader;
+#[doc = "Field `ARB_REQ1_PRI` writer - To set AXI write priority in SPI0 arbiter. The larger the value, the greater the priority."]
+pub type ARB_REQ1_PRI_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ARB_REQ0_WEI` reader - To set AXI read priority weight in SPI0 arbiter. While the priority are same, the larger the value, the greater the weight."]
+pub type ARB_REQ0_WEI_R = crate::FieldReader;
+#[doc = "Field `ARB_REQ0_WEI` writer - To set AXI read priority weight in SPI0 arbiter. While the priority are same, the larger the value, the greater the weight."]
+pub type ARB_REQ0_WEI_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `ARB_REQ1_WEI` reader - To set AXI write priority weight in SPI0 arbiter. While the priority are same, the larger the value, the greater the weight."]
+pub type ARB_REQ1_WEI_R = crate::FieldReader;
+#[doc = "Field `ARB_REQ1_WEI` writer - To set AXI write priority weight in SPI0 arbiter. While the priority are same, the larger the value, the greater the weight."]
+pub type ARB_REQ1_WEI_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SPI_SAME_AW_AR_ADDR_CHK_EN` reader - Set this bit to check AXI read/write the same address region."]
 pub type SPI_SAME_AW_AR_ADDR_CHK_EN_R = crate::BitReader;
 #[doc = "Field `SPI_SAME_AW_AR_ADDR_CHK_EN` writer - Set this bit to check AXI read/write the same address region."]
@@ -92,6 +112,31 @@ impl R {
     pub fn faddr_quad(&self) -> FADDR_QUAD_R {
         FADDR_QUAD_R::new(((self.bits >> 8) & 1) != 0)
     }
+    #[doc = "Bit 9 - To enable SPI0 arbiter weight func while AXI read/write access SPI0 1: enable 0: disable."]
+    #[inline(always)]
+    pub fn arb_wei_en(&self) -> ARB_WEI_EN_R {
+        ARB_WEI_EN_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - To set AXI read priority in SPI0 arbiter. The larger the value, the greater the priority."]
+    #[inline(always)]
+    pub fn arb_req0_pri(&self) -> ARB_REQ0_PRI_R {
+        ARB_REQ0_PRI_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - To set AXI write priority in SPI0 arbiter. The larger the value, the greater the priority."]
+    #[inline(always)]
+    pub fn arb_req1_pri(&self) -> ARB_REQ1_PRI_R {
+        ARB_REQ1_PRI_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bits 12:15 - To set AXI read priority weight in SPI0 arbiter. While the priority are same, the larger the value, the greater the weight."]
+    #[inline(always)]
+    pub fn arb_req0_wei(&self) -> ARB_REQ0_WEI_R {
+        ARB_REQ0_WEI_R::new(((self.bits >> 12) & 0x0f) as u8)
+    }
+    #[doc = "Bits 16:19 - To set AXI write priority weight in SPI0 arbiter. While the priority are same, the larger the value, the greater the weight."]
+    #[inline(always)]
+    pub fn arb_req1_wei(&self) -> ARB_REQ1_WEI_R {
+        ARB_REQ1_WEI_R::new(((self.bits >> 16) & 0x0f) as u8)
+    }
     #[doc = "Bit 30 - Set this bit to check AXI read/write the same address region."]
     #[inline(always)]
     pub fn spi_same_aw_ar_addr_chk_en(&self) -> SPI_SAME_AW_AR_ADDR_CHK_EN_R {
@@ -116,6 +161,11 @@ impl core::fmt::Debug for R {
             .field("fdin_quad", &self.fdin_quad())
             .field("fdout_quad", &self.fdout_quad())
             .field("faddr_quad", &self.faddr_quad())
+            .field("arb_wei_en", &self.arb_wei_en())
+            .field("arb_req0_pri", &self.arb_req0_pri())
+            .field("arb_req1_pri", &self.arb_req1_pri())
+            .field("arb_req0_wei", &self.arb_req0_wei())
+            .field("arb_req1_wei", &self.arb_req1_wei())
             .field(
                 "spi_same_aw_ar_addr_chk_en",
                 &self.spi_same_aw_ar_addr_chk_en(),
@@ -169,6 +219,31 @@ impl W {
     #[inline(always)]
     pub fn faddr_quad(&mut self) -> FADDR_QUAD_W<'_, CACHE_FCTRL_SPEC> {
         FADDR_QUAD_W::new(self, 8)
+    }
+    #[doc = "Bit 9 - To enable SPI0 arbiter weight func while AXI read/write access SPI0 1: enable 0: disable."]
+    #[inline(always)]
+    pub fn arb_wei_en(&mut self) -> ARB_WEI_EN_W<'_, CACHE_FCTRL_SPEC> {
+        ARB_WEI_EN_W::new(self, 9)
+    }
+    #[doc = "Bit 10 - To set AXI read priority in SPI0 arbiter. The larger the value, the greater the priority."]
+    #[inline(always)]
+    pub fn arb_req0_pri(&mut self) -> ARB_REQ0_PRI_W<'_, CACHE_FCTRL_SPEC> {
+        ARB_REQ0_PRI_W::new(self, 10)
+    }
+    #[doc = "Bit 11 - To set AXI write priority in SPI0 arbiter. The larger the value, the greater the priority."]
+    #[inline(always)]
+    pub fn arb_req1_pri(&mut self) -> ARB_REQ1_PRI_W<'_, CACHE_FCTRL_SPEC> {
+        ARB_REQ1_PRI_W::new(self, 11)
+    }
+    #[doc = "Bits 12:15 - To set AXI read priority weight in SPI0 arbiter. While the priority are same, the larger the value, the greater the weight."]
+    #[inline(always)]
+    pub fn arb_req0_wei(&mut self) -> ARB_REQ0_WEI_W<'_, CACHE_FCTRL_SPEC> {
+        ARB_REQ0_WEI_W::new(self, 12)
+    }
+    #[doc = "Bits 16:19 - To set AXI write priority weight in SPI0 arbiter. While the priority are same, the larger the value, the greater the weight."]
+    #[inline(always)]
+    pub fn arb_req1_wei(&mut self) -> ARB_REQ1_WEI_W<'_, CACHE_FCTRL_SPEC> {
+        ARB_REQ1_WEI_W::new(self, 16)
     }
     #[doc = "Bit 30 - Set this bit to check AXI read/write the same address region."]
     #[inline(always)]

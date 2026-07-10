@@ -2,63 +2,78 @@
 pub type R = crate::R<INT_CONFIG_SPEC>;
 #[doc = "Register `INT_CONFIG` writer"]
 pub type W = crate::W<INT_CONFIG_SPEC>;
-#[doc = "Field `INT_CONFIG_NVBITS` reader - Number of vector bits for interrupt"]
-pub type INT_CONFIG_NVBITS_R = crate::BitReader;
-#[doc = "Field `INT_CONFIG_NVBITS` writer - Number of vector bits for interrupt"]
-pub type INT_CONFIG_NVBITS_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `INT_CONFIG_NLBITS` reader - Number of level bits for interrupt"]
-pub type INT_CONFIG_NLBITS_R = crate::FieldReader;
-#[doc = "Field `INT_CONFIG_NLBITS` writer - Number of level bits for interrupt"]
-pub type INT_CONFIG_NLBITS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
-#[doc = "Field `INT_CONFIG_NMBITS` reader - Number of mode bits for interrupt"]
-pub type INT_CONFIG_NMBITS_R = crate::FieldReader;
-#[doc = "Field `INT_CONFIG_NMBITS` writer - Number of mode bits for interrupt"]
-pub type INT_CONFIG_NMBITS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `MNLBITS` reader - Machine mode interrupt priority effective digits, the maximum value is 8."]
+pub type MNLBITS_R = crate::FieldReader;
+#[doc = "Field `MNLBITS` writer - Machine mode interrupt priority effective digits, the maximum value is 8."]
+pub type MNLBITS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `NMBITS` reader - The effective number of bits in the privileged state."]
+pub type NMBITS_R = crate::FieldReader;
+#[doc = "Field `NMBITS` writer - The effective number of bits in the privileged state."]
+pub type NMBITS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `SNLBITS` reader - Supervisor mode interrupt priority effective digits, the maximum value is 8."]
+pub type SNLBITS_R = crate::FieldReader;
+#[doc = "Field `SNLBITS` writer - Supervisor mode interrupt priority effective digits, the maximum value is 8."]
+pub type SNLBITS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `UNLBITS` reader - User mode interrupt priority effective digits, the maximum value is 8."]
+pub type UNLBITS_R = crate::FieldReader;
+#[doc = "Field `UNLBITS` writer - User mode interrupt priority effective digits, the maximum value is 8."]
+pub type UNLBITS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
-    #[doc = "Bit 0 - Number of vector bits for interrupt"]
+    #[doc = "Bits 0:3 - Machine mode interrupt priority effective digits, the maximum value is 8."]
     #[inline(always)]
-    pub fn int_config_nvbits(&self) -> INT_CONFIG_NVBITS_R {
-        INT_CONFIG_NVBITS_R::new((self.bits & 1) != 0)
+    pub fn mnlbits(&self) -> MNLBITS_R {
+        MNLBITS_R::new((self.bits & 0x0f) as u8)
     }
-    #[doc = "Bits 1:4 - Number of level bits for interrupt"]
+    #[doc = "Bits 4:5 - The effective number of bits in the privileged state."]
     #[inline(always)]
-    pub fn int_config_nlbits(&self) -> INT_CONFIG_NLBITS_R {
-        INT_CONFIG_NLBITS_R::new(((self.bits >> 1) & 0x0f) as u8)
+    pub fn nmbits(&self) -> NMBITS_R {
+        NMBITS_R::new(((self.bits >> 4) & 3) as u8)
     }
-    #[doc = "Bits 5:6 - Number of mode bits for interrupt"]
+    #[doc = "Bits 16:19 - Supervisor mode interrupt priority effective digits, the maximum value is 8."]
     #[inline(always)]
-    pub fn int_config_nmbits(&self) -> INT_CONFIG_NMBITS_R {
-        INT_CONFIG_NMBITS_R::new(((self.bits >> 5) & 3) as u8)
+    pub fn snlbits(&self) -> SNLBITS_R {
+        SNLBITS_R::new(((self.bits >> 16) & 0x0f) as u8)
+    }
+    #[doc = "Bits 24:27 - User mode interrupt priority effective digits, the maximum value is 8."]
+    #[inline(always)]
+    pub fn unlbits(&self) -> UNLBITS_R {
+        UNLBITS_R::new(((self.bits >> 24) & 0x0f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_CONFIG")
-            .field("int_config_nmbits", &self.int_config_nmbits())
-            .field("int_config_nlbits", &self.int_config_nlbits())
-            .field("int_config_nvbits", &self.int_config_nvbits())
+            .field("unlbits", &self.unlbits())
+            .field("snlbits", &self.snlbits())
+            .field("nmbits", &self.nmbits())
+            .field("mnlbits", &self.mnlbits())
             .finish()
     }
 }
 impl W {
-    #[doc = "Bit 0 - Number of vector bits for interrupt"]
+    #[doc = "Bits 0:3 - Machine mode interrupt priority effective digits, the maximum value is 8."]
     #[inline(always)]
-    pub fn int_config_nvbits(&mut self) -> INT_CONFIG_NVBITS_W<'_, INT_CONFIG_SPEC> {
-        INT_CONFIG_NVBITS_W::new(self, 0)
+    pub fn mnlbits(&mut self) -> MNLBITS_W<'_, INT_CONFIG_SPEC> {
+        MNLBITS_W::new(self, 0)
     }
-    #[doc = "Bits 1:4 - Number of level bits for interrupt"]
+    #[doc = "Bits 4:5 - The effective number of bits in the privileged state."]
     #[inline(always)]
-    pub fn int_config_nlbits(&mut self) -> INT_CONFIG_NLBITS_W<'_, INT_CONFIG_SPEC> {
-        INT_CONFIG_NLBITS_W::new(self, 1)
+    pub fn nmbits(&mut self) -> NMBITS_W<'_, INT_CONFIG_SPEC> {
+        NMBITS_W::new(self, 4)
     }
-    #[doc = "Bits 5:6 - Number of mode bits for interrupt"]
+    #[doc = "Bits 16:19 - Supervisor mode interrupt priority effective digits, the maximum value is 8."]
     #[inline(always)]
-    pub fn int_config_nmbits(&mut self) -> INT_CONFIG_NMBITS_W<'_, INT_CONFIG_SPEC> {
-        INT_CONFIG_NMBITS_W::new(self, 5)
+    pub fn snlbits(&mut self) -> SNLBITS_W<'_, INT_CONFIG_SPEC> {
+        SNLBITS_W::new(self, 16)
+    }
+    #[doc = "Bits 24:27 - User mode interrupt priority effective digits, the maximum value is 8."]
+    #[inline(always)]
+    pub fn unlbits(&mut self) -> UNLBITS_W<'_, INT_CONFIG_SPEC> {
+        UNLBITS_W::new(self, 24)
     }
 }
-#[doc = "Interrupt configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_config::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_config::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`int_config::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_config::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_CONFIG_SPEC;
 impl crate::RegisterSpec for INT_CONFIG_SPEC {
     type Ux = u32;

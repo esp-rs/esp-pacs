@@ -514,7 +514,7 @@ impl crate::Readable for SOC_CLK_CTRL1_SPEC {}
 impl crate::Writable for SOC_CLK_CTRL1_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets SOC_CLK_CTRL1 to value 0x7c7f_801f"]
+#[doc = "`reset()` method sets SOC_CLK_CTRL1 to value 0x7c7f_001f"]
 impl crate::Resettable for SOC_CLK_CTRL1_SPEC {
-    const RESET_VALUE: u32 = 0x7c7f_801f;
+    const RESET_VALUE: u32 = 0x7c7f_001f;
 }

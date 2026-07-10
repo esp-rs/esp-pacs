@@ -222,5 +222,4 @@ pub mod int_clr;
 pub type CLK = crate::Reg<clk::CLK_SPEC>;
 #[doc = "MCPWM APB configuration register"]
 pub mod clk;
-pub use crate::aes::date as version;
-pub use crate::aes::DATE as VERSION;
+pub use crate::aes::{date as version, DATE as VERSION};

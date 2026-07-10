@@ -2,12 +2,12 @@
 pub type R = crate::R<MODE_SPEC>;
 #[doc = "Register `MODE` writer"]
 pub type W = crate::W<MODE_SPEC>;
-#[doc = "Field `MODE` reader - Sha mode."]
+#[doc = "Field `MODE` reader - Configures the SHA algorithm. \\\\ 0: SHA-1\\\\ 1: SHA-224\\\\ 2: SHA-256\\\\ 3: SHA2-384\\\\ 4: SHA2-512\\\\ 5: SHA2-512/224\\\\ 6: SHA2-512/256\\\\ 7: SHA2-512/t\\\\"]
 pub type MODE_R = crate::FieldReader;
-#[doc = "Field `MODE` writer - Sha mode."]
+#[doc = "Field `MODE` writer - Configures the SHA algorithm. \\\\ 0: SHA-1\\\\ 1: SHA-224\\\\ 2: SHA-256\\\\ 3: SHA2-384\\\\ 4: SHA2-512\\\\ 5: SHA2-512/224\\\\ 6: SHA2-512/256\\\\ 7: SHA2-512/t\\\\"]
 pub type MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
-    #[doc = "Bits 0:2 - Sha mode."]
+    #[doc = "Bits 0:2 - Configures the SHA algorithm. \\\\ 0: SHA-1\\\\ 1: SHA-224\\\\ 2: SHA-256\\\\ 3: SHA2-384\\\\ 4: SHA2-512\\\\ 5: SHA2-512/224\\\\ 6: SHA2-512/256\\\\ 7: SHA2-512/t\\\\"]
     #[inline(always)]
     pub fn mode(&self) -> MODE_R {
         MODE_R::new((self.bits & 7) as u8)
@@ -20,13 +20,13 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:2 - Sha mode."]
+    #[doc = "Bits 0:2 - Configures the SHA algorithm. \\\\ 0: SHA-1\\\\ 1: SHA-224\\\\ 2: SHA-256\\\\ 3: SHA2-384\\\\ 4: SHA2-512\\\\ 5: SHA2-512/224\\\\ 6: SHA2-512/256\\\\ 7: SHA2-512/t\\\\"]
     #[inline(always)]
     pub fn mode(&mut self) -> MODE_W<'_, MODE_SPEC> {
         MODE_W::new(self, 0)
     }
 }
-#[doc = "Initial configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`mode::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mode::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Configures SHA algorithm\n\nYou can [`read`](crate::Reg::read) this register and get [`mode::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mode::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MODE_SPEC;
 impl crate::RegisterSpec for MODE_SPEC {
     type Ux = u32;

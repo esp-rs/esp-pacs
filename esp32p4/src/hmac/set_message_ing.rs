@@ -1,6 +1,6 @@
 #[doc = "Register `SET_MESSAGE_ING` writer"]
 pub type W = crate::W<SET_MESSAGE_ING_SPEC>;
-#[doc = "Field `SET_TEXT_ING` writer - Continue typical hmac."]
+#[doc = "Field `SET_TEXT_ING` writer - Configures whether or not there are unprocessed message blocks. \\\\0: No unprocessed message block \\\\1: There are still some message blocks to be processed."]
 pub type SET_TEXT_ING_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<SET_MESSAGE_ING_SPEC> {
@@ -9,13 +9,13 @@ impl core::fmt::Debug for crate::generic::Reg<SET_MESSAGE_ING_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Continue typical hmac."]
+    #[doc = "Bit 0 - Configures whether or not there are unprocessed message blocks. \\\\0: No unprocessed message block \\\\1: There are still some message blocks to be processed."]
     #[inline(always)]
     pub fn set_text_ing(&mut self) -> SET_TEXT_ING_W<'_, SET_MESSAGE_ING_SPEC> {
         SET_TEXT_ING_W::new(self, 0)
     }
 }
-#[doc = "Process control register 2.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_message_ing::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "HMAC message continue register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_message_ing::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SET_MESSAGE_ING_SPEC;
 impl crate::RegisterSpec for SET_MESSAGE_ING_SPEC {
     type Ux = u32;

@@ -106,6 +106,14 @@ pub type BS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type MV_MERGE_CLK_EN_R = crate::BitReader;
 #[doc = "Field `MV_MERGE_CLK_EN` writer - Configures whether or not to open the clock gate for mv merge.\\\\0: Open the clock gate only when mv merge work\\\\1: Force open the clock gate for mv merge"]
 pub type MV_MERGE_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CUR_MB_RDCMB_CLK_EN` reader - Configures whether or not to open the clock gate for cur_mb read macroblock.\\\\0: Open the clock gate only when cur_mb read macroblock work\\\\1: Force open the clock gate for cur_mb read macroblock"]
+pub type CUR_MB_RDCMB_CLK_EN_R = crate::BitReader;
+#[doc = "Field `CUR_MB_RDCMB_CLK_EN` writer - Configures whether or not to open the clock gate for cur_mb read macroblock.\\\\0: Open the clock gate only when cur_mb read macroblock work\\\\1: Force open the clock gate for cur_mb read macroblock"]
+pub type CUR_MB_RDCMB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CUR_MB_REFRESH_REGGROUP_CLK_EN` reader - Configures whether or not to open the clock gate for cur_mb refresh register group.\\\\0: Open the clock gate only when cur_mb refresh register group work\\\\1: Force open the clock gate for cur_mb refresh register group"]
+pub type CUR_MB_REFRESH_REGGROUP_CLK_EN_R = crate::BitReader;
+#[doc = "Field `CUR_MB_REFRESH_REGGROUP_CLK_EN` writer - Configures whether or not to open the clock gate for cur_mb refresh register group.\\\\0: Open the clock gate only when cur_mb refresh register group work\\\\1: Force open the clock gate for cur_mb refresh register group"]
+pub type CUR_MB_REFRESH_REGGROUP_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Configures whether or not to open register clock gate.\\\\0: Open the clock gate only when application writes registers\\\\1: Force open the clock gate for register"]
     #[inline(always)]
@@ -237,6 +245,16 @@ impl R {
     pub fn mv_merge_clk_en(&self) -> MV_MERGE_CLK_EN_R {
         MV_MERGE_CLK_EN_R::new(((self.bits >> 25) & 1) != 0)
     }
+    #[doc = "Bit 26 - Configures whether or not to open the clock gate for cur_mb read macroblock.\\\\0: Open the clock gate only when cur_mb read macroblock work\\\\1: Force open the clock gate for cur_mb read macroblock"]
+    #[inline(always)]
+    pub fn cur_mb_rdcmb_clk_en(&self) -> CUR_MB_RDCMB_CLK_EN_R {
+        CUR_MB_RDCMB_CLK_EN_R::new(((self.bits >> 26) & 1) != 0)
+    }
+    #[doc = "Bit 27 - Configures whether or not to open the clock gate for cur_mb refresh register group.\\\\0: Open the clock gate only when cur_mb refresh register group work\\\\1: Force open the clock gate for cur_mb refresh register group"]
+    #[inline(always)]
+    pub fn cur_mb_refresh_reggroup_clk_en(&self) -> CUR_MB_REFRESH_REGGROUP_CLK_EN_R {
+        CUR_MB_REFRESH_REGGROUP_CLK_EN_R::new(((self.bits >> 27) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -268,6 +286,11 @@ impl core::fmt::Debug for R {
             .field("deci_clk_en", &self.deci_clk_en())
             .field("bs_clk_en", &self.bs_clk_en())
             .field("mv_merge_clk_en", &self.mv_merge_clk_en())
+            .field("cur_mb_rdcmb_clk_en", &self.cur_mb_rdcmb_clk_en())
+            .field(
+                "cur_mb_refresh_reggroup_clk_en",
+                &self.cur_mb_refresh_reggroup_clk_en(),
+            )
             .finish()
     }
 }
@@ -401,6 +424,18 @@ impl W {
     #[inline(always)]
     pub fn mv_merge_clk_en(&mut self) -> MV_MERGE_CLK_EN_W<'_, CONF_SPEC> {
         MV_MERGE_CLK_EN_W::new(self, 25)
+    }
+    #[doc = "Bit 26 - Configures whether or not to open the clock gate for cur_mb read macroblock.\\\\0: Open the clock gate only when cur_mb read macroblock work\\\\1: Force open the clock gate for cur_mb read macroblock"]
+    #[inline(always)]
+    pub fn cur_mb_rdcmb_clk_en(&mut self) -> CUR_MB_RDCMB_CLK_EN_W<'_, CONF_SPEC> {
+        CUR_MB_RDCMB_CLK_EN_W::new(self, 26)
+    }
+    #[doc = "Bit 27 - Configures whether or not to open the clock gate for cur_mb refresh register group.\\\\0: Open the clock gate only when cur_mb refresh register group work\\\\1: Force open the clock gate for cur_mb refresh register group"]
+    #[inline(always)]
+    pub fn cur_mb_refresh_reggroup_clk_en(
+        &mut self,
+    ) -> CUR_MB_REFRESH_REGGROUP_CLK_EN_W<'_, CONF_SPEC> {
+        CUR_MB_REFRESH_REGGROUP_CLK_EN_W::new(self, 27)
     }
 }
 #[doc = "General configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

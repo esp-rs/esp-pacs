@@ -24,13 +24,13 @@ pub type ACK_VALUE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[repr(u8)]
 pub enum OPCODE {
     #[doc = "1: WRITE opcode"]
-    Write = 1,
+    Write  = 1,
     #[doc = "2: STOP opcode"]
-    Stop = 2,
+    Stop   = 2,
     #[doc = "3: READ opcode"]
-    Read = 3,
+    Read   = 3,
     #[doc = "4: END opcode"]
-    End = 4,
+    End    = 4,
     #[doc = "6: RSTART opcode"]
     Rstart = 6,
 }
@@ -118,9 +118,9 @@ where
         self.variant(OPCODE::Rstart)
     }
 }
-#[doc = "Field `COMMAND_DONE` reader - Represents whether command 0 is done in I2C Master mode. 0: Not done 1: Done"]
+#[doc = "Field `COMMAND_DONE` reader - Represents whether command 0 is done in I2C Master mode.\\\\ 0: Not done \\\\ 1: Done \\\\"]
 pub type COMMAND_DONE_R = crate::BitReader;
-#[doc = "Field `COMMAND_DONE` writer - Represents whether command 0 is done in I2C Master mode. 0: Not done 1: Done"]
+#[doc = "Field `COMMAND_DONE` writer - Represents whether command 0 is done in I2C Master mode.\\\\ 0: Not done \\\\ 1: Done \\\\"]
 pub type COMMAND_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - Number of bytes to be sent or received for command %s."]
@@ -148,7 +148,7 @@ impl R {
     pub fn opcode(&self) -> OPCODE_R {
         OPCODE_R::new(((self.bits >> 11) & 7) as u8)
     }
-    #[doc = "Bit 31 - Represents whether command 0 is done in I2C Master mode. 0: Not done 1: Done"]
+    #[doc = "Bit 31 - Represents whether command 0 is done in I2C Master mode.\\\\ 0: Not done \\\\ 1: Done \\\\"]
     #[inline(always)]
     pub fn command_done(&self) -> COMMAND_DONE_R {
         COMMAND_DONE_R::new(((self.bits >> 31) & 1) != 0)
@@ -193,7 +193,7 @@ impl W {
     pub fn opcode(&mut self) -> OPCODE_W<'_, COMD_SPEC> {
         OPCODE_W::new(self, 11)
     }
-    #[doc = "Bit 31 - Represents whether command 0 is done in I2C Master mode. 0: Not done 1: Done"]
+    #[doc = "Bit 31 - Represents whether command 0 is done in I2C Master mode.\\\\ 0: Not done \\\\ 1: Done \\\\"]
     #[inline(always)]
     pub fn command_done(&mut self) -> COMMAND_DONE_W<'_, COMD_SPEC> {
         COMMAND_DONE_W::new(self, 31)

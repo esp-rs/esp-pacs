@@ -62,5 +62,4 @@ pub mod ex_phyinf_conf;
 pub type PD_SEL = crate::Reg<pd_sel::PD_SEL_SPEC>;
 #[doc = "Ethernet RAM power-down enable"]
 pub mod pd_sel;
-pub use crate::apb_ctrl::date as ex_date;
-pub use crate::apb_ctrl::DATE as EX_DATE;
+pub use crate::apb_ctrl::{date as ex_date, DATE as EX_DATE};

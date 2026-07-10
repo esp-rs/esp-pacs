@@ -202,5 +202,4 @@ pub mod misc_conf;
 pub type MEM_CONF = crate::Reg<mem_conf::MEM_CONF_SPEC>;
 #[doc = "USB_DEVICE_MEM_CONF_REG."]
 pub mod mem_conf;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

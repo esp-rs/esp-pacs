@@ -1,6 +1,6 @@
-#[doc = "Register `K_MEM[%s]` reader"]
+#[doc = "Register `K_MEM%s` reader"]
 pub type R = crate::R<K_MEM_SPEC>;
-#[doc = "Register `K_MEM[%s]` writer"]
+#[doc = "Register `K_MEM%s` writer"]
 pub type W = crate::W<K_MEM_SPEC>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -20,5 +20,5 @@ impl crate::Readable for K_MEM_SPEC {}
 impl crate::Writable for K_MEM_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets K_MEM[%s] to value 0"]
+#[doc = "`reset()` method sets K_MEM%s to value 0"]
 impl crate::Resettable for K_MEM_SPEC {}

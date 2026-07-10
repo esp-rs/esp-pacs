@@ -1910,5 +1910,4 @@ pub mod clock_gate;
 pub type RTC_PMS = crate::Reg<rtc_pms::RTC_PMS_SPEC>;
 #[doc = "RTC coprocessor permission register."]
 pub mod rtc_pms;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

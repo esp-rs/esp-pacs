@@ -41,7 +41,7 @@ pub enum CLK_EN {
     #[doc = "0: Support clock only when application writes registers"]
     OnWrite = 0,
     #[doc = "1: Force clock on for register"]
-    Force = 1,
+    Force   = 1,
 }
 impl From<CLK_EN> for bool {
     #[inline(always)]

@@ -14,6 +14,10 @@ pub type SR_RX_RGB_SWAP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type SR_MACRO_BK_RO_BYPASS_R = crate::BitReader;
 #[doc = "Field `SR_MACRO_BK_RO_BYPASS` writer - Set this bit to 1 to bypass the macro block order function. This function is used to improve efficient accessing external memory."]
 pub type SR_MACRO_BK_RO_BYPASS_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SR_BK_SIZE_SEL` reader - sel srm pix_blk size, 0:32x32, 1:16x16"]
+pub type SR_BK_SIZE_SEL_R = crate::BitReader;
+#[doc = "Field `SR_BK_SIZE_SEL` writer - sel srm pix_blk size, 0:32x32, 1:16x16"]
+pub type SR_BK_SIZE_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Set this bit to 1 the data into Rx channel 0 would be swapped in byte. The Byte0 and Byte1 would be swapped while byte 2 and byte 3 would be swappped."]
     #[inline(always)]
@@ -30,6 +34,11 @@ impl R {
     pub fn sr_macro_bk_ro_bypass(&self) -> SR_MACRO_BK_RO_BYPASS_R {
         SR_MACRO_BK_RO_BYPASS_R::new(((self.bits >> 2) & 1) != 0)
     }
+    #[doc = "Bit 3 - sel srm pix_blk size, 0:32x32, 1:16x16"]
+    #[inline(always)]
+    pub fn sr_bk_size_sel(&self) -> SR_BK_SIZE_SEL_R {
+        SR_BK_SIZE_SEL_R::new(((self.bits >> 3) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -38,6 +47,7 @@ impl core::fmt::Debug for R {
             .field("sr_rx_byte_swap_en", &self.sr_rx_byte_swap_en())
             .field("sr_rx_rgb_swap_en", &self.sr_rx_rgb_swap_en())
             .field("sr_macro_bk_ro_bypass", &self.sr_macro_bk_ro_bypass())
+            .field("sr_bk_size_sel", &self.sr_bk_size_sel())
             .finish()
     }
 }
@@ -56,6 +66,11 @@ impl W {
     #[inline(always)]
     pub fn sr_macro_bk_ro_bypass(&mut self) -> SR_MACRO_BK_RO_BYPASS_W<'_, SR_BYTE_ORDER_SPEC> {
         SR_MACRO_BK_RO_BYPASS_W::new(self, 2)
+    }
+    #[doc = "Bit 3 - sel srm pix_blk size, 0:32x32, 1:16x16"]
+    #[inline(always)]
+    pub fn sr_bk_size_sel(&mut self) -> SR_BK_SIZE_SEL_W<'_, SR_BYTE_ORDER_SPEC> {
+        SR_BK_SIZE_SEL_W::new(self, 3)
     }
 }
 #[doc = "Scaling and rotating engine byte order register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr_byte_order::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sr_byte_order::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -184,5 +184,4 @@ pub mod esc_conf;
 pub type PKT_THRES = crate::Reg<pkt_thres::PKT_THRES_SPEC>;
 #[doc = "a"]
 pub mod pkt_thres;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

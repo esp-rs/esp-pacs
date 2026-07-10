@@ -484,5 +484,4 @@ pub mod ch_tx_lim;
 pub type APB_CONF = crate::Reg<apb_conf::APB_CONF_SPEC>;
 #[doc = ""]
 pub mod apb_conf;
-pub use crate::apb_ctrl::date;
-pub use crate::apb_ctrl::DATE;
+pub use crate::apb_ctrl::{date, DATE};

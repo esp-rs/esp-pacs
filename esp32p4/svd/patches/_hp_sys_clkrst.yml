@@ -6,3 +6,4 @@ HP_SYS_CLKRST:
     _modify:
       SOC_CLK_DIV_UPDATE:
         access: read-write
+

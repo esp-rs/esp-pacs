@@ -305,5 +305,4 @@ pub mod timing_cali;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "SPI1 clk_gate register"]
 pub mod clock_gate;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

@@ -26,6 +26,8 @@ _include:
   - "_spi.yml"
   - "_timg.yml"
   - "_uart.yml"
+  - "_mmu_item_content.yml"
+  - "_mmu_item_index.yml"
 
 RNG:
   _modify:
@@ -909,6 +911,27 @@ ECC:
 LP_ANA:
   _include: ../../../common_patches/lpana_int_strip.yaml
 
+LP_TIMER:
+  INT_RAW:
+    _strip_end:
+      - _INT_RAW
+      - _RAW
+  INT_ST:
+    _strip_end:
+      - _INT_ST
+      - _ST
+  INT_ENA:
+    _strip_end:
+      - _INT_ENA
+      - _ENA
+  INT_CLR:
+    _strip_end:
+      - _INT_CLR
+      - _CLR
+    _modify:
+      "*":
+        modifiedWriteValues: oneToClear
+
 PMU:
   _include: ../../../common_patches/pmu_int_strip.yaml
 
@@ -1128,7 +1151,7 @@ TWAI0:
     _modify:
       ERR_CAPTURE_CODE_DIRECTION:
         name: ECC_DIRECTION
-  
+
   INT_ENA:
     _modify:
       EXT_RECEIVE_INT_ENA:

@@ -14,6 +14,10 @@ pub type AXI_RADDR_ERR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 pub type AXI_WR_FLASH_ERR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `AXI_WADDR_ERR` writer - The clear bit for SPI_MEM_AXI_WADDR_ERR_INT interrupt."]
 pub type AXI_WADDR_ERR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `RX_TRANS_OVF` writer - The clear bit for SPI_MEM_RX_TRANS_OVF_INT interrupt."]
+pub type RX_TRANS_OVF_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `TX_TRANS_UDF` writer - The clear bit for SPI_MEM_TX_TRANS_UDF_INT interrupt."]
+pub type TX_TRANS_UDF_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DQS0_AFIFO_OVF` writer - The clear bit for SPI_MEM_DQS0_AFIFO_OVF_INT interrupt."]
 pub type DQS0_AFIFO_OVF_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DQS1_AFIFO_OVF` writer - The clear bit for SPI_MEM_DQS1_AFIFO_OVF_INT interrupt."]
@@ -64,6 +68,16 @@ impl W {
     pub fn axi_waddr_err(&mut self) -> AXI_WADDR_ERR_W<'_, INT_CLR_SPEC> {
         AXI_WADDR_ERR_W::new(self, 9)
     }
+    #[doc = "Bit 26 - The clear bit for SPI_MEM_RX_TRANS_OVF_INT interrupt."]
+    #[inline(always)]
+    pub fn rx_trans_ovf(&mut self) -> RX_TRANS_OVF_W<'_, INT_CLR_SPEC> {
+        RX_TRANS_OVF_W::new(self, 26)
+    }
+    #[doc = "Bit 27 - The clear bit for SPI_MEM_TX_TRANS_UDF_INT interrupt."]
+    #[inline(always)]
+    pub fn tx_trans_udf(&mut self) -> TX_TRANS_UDF_W<'_, INT_CLR_SPEC> {
+        TX_TRANS_UDF_W::new(self, 27)
+    }
     #[doc = "Bit 28 - The clear bit for SPI_MEM_DQS0_AFIFO_OVF_INT interrupt."]
     #[inline(always)]
     pub fn dqs0_afifo_ovf(&mut self) -> DQS0_AFIFO_OVF_W<'_, INT_CLR_SPEC> {
@@ -93,7 +107,7 @@ impl crate::RegisterSpec for INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [`int_clr::W`](W) writer structure"]
 impl crate::Writable for INT_CLR_SPEC {
     type Safety = crate::Unsafe;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xf000_03f8;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xfc00_03f8;
 }
 #[doc = "`reset()` method sets INT_CLR to value 0"]
 impl crate::Resettable for INT_CLR_SPEC {}

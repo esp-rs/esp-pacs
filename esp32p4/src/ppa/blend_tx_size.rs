@@ -2,21 +2,21 @@
 pub type R = crate::R<BLEND_TX_SIZE_SPEC>;
 #[doc = "Register `BLEND_TX_SIZE` writer"]
 pub type W = crate::W<BLEND_TX_SIZE_SPEC>;
-#[doc = "Field `BLEND_HB` reader - The horizontal width of image block that would be filled in fix pixel filling mode. The unit is pixel"]
+#[doc = "Field `BLEND_HB` reader - The horizontal width of image block that would be filled in fix pixel filling mode or blend mode. The unit is pixel. Must be even num when YUV422 or YUV420"]
 pub type BLEND_HB_R = crate::FieldReader<u16>;
-#[doc = "Field `BLEND_HB` writer - The horizontal width of image block that would be filled in fix pixel filling mode. The unit is pixel"]
+#[doc = "Field `BLEND_HB` writer - The horizontal width of image block that would be filled in fix pixel filling mode or blend mode. The unit is pixel. Must be even num when YUV422 or YUV420"]
 pub type BLEND_HB_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
-#[doc = "Field `BLEND_VB` reader - The vertical width of image block that would be filled in fix pixel filling mode. The unit is pixel"]
+#[doc = "Field `BLEND_VB` reader - The vertical width of image block that would be filled in fix pixel filling mode or blend mode. The unit is pixel. Must be even num when YUV420"]
 pub type BLEND_VB_R = crate::FieldReader<u16>;
-#[doc = "Field `BLEND_VB` writer - The vertical width of image block that would be filled in fix pixel filling mode. The unit is pixel"]
+#[doc = "Field `BLEND_VB` writer - The vertical width of image block that would be filled in fix pixel filling mode or blend mode. The unit is pixel. Must be even num when YUV420"]
 pub type BLEND_VB_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 impl R {
-    #[doc = "Bits 0:13 - The horizontal width of image block that would be filled in fix pixel filling mode. The unit is pixel"]
+    #[doc = "Bits 0:13 - The horizontal width of image block that would be filled in fix pixel filling mode or blend mode. The unit is pixel. Must be even num when YUV422 or YUV420"]
     #[inline(always)]
     pub fn blend_hb(&self) -> BLEND_HB_R {
         BLEND_HB_R::new((self.bits & 0x3fff) as u16)
     }
-    #[doc = "Bits 14:27 - The vertical width of image block that would be filled in fix pixel filling mode. The unit is pixel"]
+    #[doc = "Bits 14:27 - The vertical width of image block that would be filled in fix pixel filling mode or blend mode. The unit is pixel. Must be even num when YUV420"]
     #[inline(always)]
     pub fn blend_vb(&self) -> BLEND_VB_R {
         BLEND_VB_R::new(((self.bits >> 14) & 0x3fff) as u16)
@@ -32,12 +32,12 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:13 - The horizontal width of image block that would be filled in fix pixel filling mode. The unit is pixel"]
+    #[doc = "Bits 0:13 - The horizontal width of image block that would be filled in fix pixel filling mode or blend mode. The unit is pixel. Must be even num when YUV422 or YUV420"]
     #[inline(always)]
     pub fn blend_hb(&mut self) -> BLEND_HB_W<'_, BLEND_TX_SIZE_SPEC> {
         BLEND_HB_W::new(self, 0)
     }
-    #[doc = "Bits 14:27 - The vertical width of image block that would be filled in fix pixel filling mode. The unit is pixel"]
+    #[doc = "Bits 14:27 - The vertical width of image block that would be filled in fix pixel filling mode or blend mode. The unit is pixel. Must be even num when YUV420"]
     #[inline(always)]
     pub fn blend_vb(&mut self) -> BLEND_VB_W<'_, BLEND_TX_SIZE_SPEC> {
         BLEND_VB_W::new(self, 14)

@@ -1,0 +1,8 @@
+ECC:
+  _modify:
+    CONF:
+      name: MULT_CONF
+  MULT_CONF:
+    KEY_LENGTH:
+      P192: [0, "P-192 elliptic curve"]
+      P256: [1, "P-256 elliptic curve"]

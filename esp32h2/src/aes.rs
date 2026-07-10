@@ -259,8 +259,7 @@ pub mod int_clr;
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "AES Interrupt enable register"]
 pub mod int_ena;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};
 #[doc = "DMA_EXIT (w) register accessor: AES-DMA exit config\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_exit::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_exit`] module"]
 pub type DMA_EXIT = crate::Reg<dma_exit::DMA_EXIT_SPEC>;
 #[doc = "AES-DMA exit config"]

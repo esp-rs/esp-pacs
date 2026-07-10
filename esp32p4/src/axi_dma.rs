@@ -20,9 +20,14 @@ pub struct RegisterBlock {
     rdn_eco_low: RDN_ECO_LOW,
     wresp_cnt: WRESP_CNT,
     rresp_cnt: RRESP_CNT,
-    infifo_status1_ch: [INFIFO_STATUS1_CH; 3],
-    outfifo_status1_ch: [OUTFIFO_STATUS1_CH; 3],
+    infifo_status1_ch0: INFIFO_STATUS1_CH0,
+    infifo_status1_ch1: INFIFO_STATUS1_CH1,
+    infifo_status1_ch2: INFIFO_STATUS1_CH2,
+    outfifo_status1_ch0: OUTFIFO_STATUS1_CH0,
+    outfifo_status1_ch1: OUTFIFO_STATUS1_CH1,
+    outfifo_status1_ch2: OUTFIFO_STATUS1_CH2,
     date: DATE,
+    link_switch_state: LINK_SWITCH_STATE,
 }
 impl RegisterBlock {
     #[doc = "0x00..0x138 - Cluster IN_CH%s, containing IN_INT_RAW_CH?, IN_INT_ST_CH?, IN_INT_ENA_CH?, IN_INT_CLR_CH?, IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK1_CH?, IN_LINK2_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PRI_CH?, IN_PERI_SEL_CH?, IN_CRC_INIT_DATA_CH?, RX_CRC_WIDTH_CH?, IN_CRC_CLEAR_CH?, IN_CRC_FINAL_RESULT_CH?, RX_CRC_EN_WR_DATA_CH?, RX_CRC_EN_ADDR_CH?, RX_CRC_DATA_EN_WR_DATA_CH?, RX_CRC_DATA_EN_ADDR_CH?"]
@@ -82,24 +87,24 @@ impl RegisterBlock {
     pub const fn extr_mem_end_addr(&self) -> &EXTR_MEM_END_ADDR {
         &self.extr_mem_end_addr
     }
-    #[doc = "0x28c..0x298 - The rx channel 0 reset valid_flag register."]
+    #[doc = "0x28c..0x298 - The rx channel %s reset valid_flag register."]
     #[inline(always)]
     pub const fn in_reset_avail_ch(&self, n: usize) -> &IN_RESET_AVAIL_CH {
         &self.in_reset_avail_ch[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x28c..0x298 - The rx channel 0 reset valid_flag register."]
+    #[doc = "0x28c..0x298 - The rx channel %s reset valid_flag register."]
     #[inline(always)]
     pub fn in_reset_avail_ch_iter(&self) -> impl Iterator<Item = &IN_RESET_AVAIL_CH> {
         self.in_reset_avail_ch.iter()
     }
-    #[doc = "0x298..0x2a4 - The tx channel 0 reset valid_flag register."]
+    #[doc = "0x298..0x2a4 - The tx channel %s reset valid_flag register."]
     #[inline(always)]
     pub const fn out_reset_avail_ch(&self, n: usize) -> &OUT_RESET_AVAIL_CH {
         &self.out_reset_avail_ch[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x298..0x2a4 - The tx channel 0 reset valid_flag register."]
+    #[doc = "0x298..0x2a4 - The tx channel %s reset valid_flag register."]
     #[inline(always)]
     pub fn out_reset_avail_ch_iter(&self) -> impl Iterator<Item = &OUT_RESET_AVAIL_CH> {
         self.out_reset_avail_ch.iter()
@@ -134,32 +139,45 @@ impl RegisterBlock {
     pub const fn rresp_cnt(&self) -> &RRESP_CNT {
         &self.rresp_cnt
     }
-    #[doc = "0x2c0..0x2cc - Receive FIFO status of Rx channel 0"]
+    #[doc = "0x2c0 - Receive FIFO status of Rx channel 0"]
     #[inline(always)]
-    pub const fn infifo_status1_ch(&self, n: usize) -> &INFIFO_STATUS1_CH {
-        &self.infifo_status1_ch[n]
+    pub const fn infifo_status1_ch0(&self) -> &INFIFO_STATUS1_CH0 {
+        &self.infifo_status1_ch0
     }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x2c0..0x2cc - Receive FIFO status of Rx channel 0"]
+    #[doc = "0x2c4 - Receive FIFO status of Rx channel 1"]
     #[inline(always)]
-    pub fn infifo_status1_ch_iter(&self) -> impl Iterator<Item = &INFIFO_STATUS1_CH> {
-        self.infifo_status1_ch.iter()
+    pub const fn infifo_status1_ch1(&self) -> &INFIFO_STATUS1_CH1 {
+        &self.infifo_status1_ch1
     }
-    #[doc = "0x2cc..0x2d8 - Receive FIFO status of Tx channel 0"]
+    #[doc = "0x2c8 - Receive FIFO status of Rx channel 1"]
     #[inline(always)]
-    pub const fn outfifo_status1_ch(&self, n: usize) -> &OUTFIFO_STATUS1_CH {
-        &self.outfifo_status1_ch[n]
+    pub const fn infifo_status1_ch2(&self) -> &INFIFO_STATUS1_CH2 {
+        &self.infifo_status1_ch2
     }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x2cc..0x2d8 - Receive FIFO status of Tx channel 0"]
+    #[doc = "0x2cc - Receive FIFO status of Tx channel 0"]
     #[inline(always)]
-    pub fn outfifo_status1_ch_iter(&self) -> impl Iterator<Item = &OUTFIFO_STATUS1_CH> {
-        self.outfifo_status1_ch.iter()
+    pub const fn outfifo_status1_ch0(&self) -> &OUTFIFO_STATUS1_CH0 {
+        &self.outfifo_status1_ch0
+    }
+    #[doc = "0x2d0 - Receive FIFO status of Tx channel 1"]
+    #[inline(always)]
+    pub const fn outfifo_status1_ch1(&self) -> &OUTFIFO_STATUS1_CH1 {
+        &self.outfifo_status1_ch1
+    }
+    #[doc = "0x2d4 - Receive FIFO status of Tx channel 1"]
+    #[inline(always)]
+    pub const fn outfifo_status1_ch2(&self) -> &OUTFIFO_STATUS1_CH2 {
+        &self.outfifo_status1_ch2
     }
     #[doc = "0x2d8 - Version control register"]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {
         &self.date
+    }
+    #[doc = "0x2dc - Version control register"]
+    #[inline(always)]
+    pub const fn link_switch_state(&self) -> &LINK_SWITCH_STATE {
+        &self.link_switch_state
     }
 }
 #[doc = "Cluster IN_CH%s, containing IN_INT_RAW_CH?, IN_INT_ST_CH?, IN_INT_ENA_CH?, IN_INT_CLR_CH?, IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK1_CH?, IN_LINK2_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PRI_CH?, IN_PERI_SEL_CH?, IN_CRC_INIT_DATA_CH?, RX_CRC_WIDTH_CH?, IN_CRC_CLEAR_CH?, IN_CRC_FINAL_RESULT_CH?, RX_CRC_EN_WR_DATA_CH?, RX_CRC_EN_ADDR_CH?, RX_CRC_DATA_EN_WR_DATA_CH?, RX_CRC_DATA_EN_ADDR_CH?"]
@@ -200,13 +218,13 @@ pub mod extr_mem_start_addr;
 pub type EXTR_MEM_END_ADDR = crate::Reg<extr_mem_end_addr::EXTR_MEM_END_ADDR_SPEC>;
 #[doc = "The end address of accessible address space. The access address beyond this range would lead to descriptor error."]
 pub mod extr_mem_end_addr;
-#[doc = "IN_RESET_AVAIL_CH (r) register accessor: The rx channel 0 reset valid_flag register.\n\nYou can [`read`](crate::Reg::read) this register and get [`in_reset_avail_ch::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_reset_avail_ch`] module"]
+#[doc = "IN_RESET_AVAIL_CH (r) register accessor: The rx channel %s reset valid_flag register.\n\nYou can [`read`](crate::Reg::read) this register and get [`in_reset_avail_ch::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_reset_avail_ch`] module"]
 pub type IN_RESET_AVAIL_CH = crate::Reg<in_reset_avail_ch::IN_RESET_AVAIL_CH_SPEC>;
-#[doc = "The rx channel 0 reset valid_flag register."]
+#[doc = "The rx channel %s reset valid_flag register."]
 pub mod in_reset_avail_ch;
-#[doc = "OUT_RESET_AVAIL_CH (r) register accessor: The tx channel 0 reset valid_flag register.\n\nYou can [`read`](crate::Reg::read) this register and get [`out_reset_avail_ch::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_reset_avail_ch`] module"]
+#[doc = "OUT_RESET_AVAIL_CH (r) register accessor: The tx channel %s reset valid_flag register.\n\nYou can [`read`](crate::Reg::read) this register and get [`out_reset_avail_ch::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_reset_avail_ch`] module"]
 pub type OUT_RESET_AVAIL_CH = crate::Reg<out_reset_avail_ch::OUT_RESET_AVAIL_CH_SPEC>;
-#[doc = "The tx channel 0 reset valid_flag register."]
+#[doc = "The tx channel %s reset valid_flag register."]
 pub mod out_reset_avail_ch;
 #[doc = "MISC_CONF (rw) register accessor: MISC register\n\nYou can [`read`](crate::Reg::read) this register and get [`misc_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`misc_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@misc_conf`] module"]
 pub type MISC_CONF = crate::Reg<misc_conf::MISC_CONF_SPEC>;
@@ -232,15 +250,35 @@ pub mod wresp_cnt;
 pub type RRESP_CNT = crate::Reg<rresp_cnt::RRESP_CNT_SPEC>;
 #[doc = "AXI wr responce cnt register."]
 pub mod rresp_cnt;
-#[doc = "INFIFO_STATUS1_CH (r) register accessor: Receive FIFO status of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`infifo_status1_ch::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@infifo_status1_ch`] module"]
-pub type INFIFO_STATUS1_CH = crate::Reg<infifo_status1_ch::INFIFO_STATUS1_CH_SPEC>;
+#[doc = "INFIFO_STATUS1_CH0 (r) register accessor: Receive FIFO status of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`infifo_status1_ch0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@infifo_status1_ch0`] module"]
+pub type INFIFO_STATUS1_CH0 = crate::Reg<infifo_status1_ch0::INFIFO_STATUS1_CH0_SPEC>;
 #[doc = "Receive FIFO status of Rx channel 0"]
-pub mod infifo_status1_ch;
-#[doc = "OUTFIFO_STATUS1_CH (r) register accessor: Receive FIFO status of Tx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`outfifo_status1_ch::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@outfifo_status1_ch`] module"]
-pub type OUTFIFO_STATUS1_CH = crate::Reg<outfifo_status1_ch::OUTFIFO_STATUS1_CH_SPEC>;
+pub mod infifo_status1_ch0;
+#[doc = "INFIFO_STATUS1_CH1 (r) register accessor: Receive FIFO status of Rx channel 1\n\nYou can [`read`](crate::Reg::read) this register and get [`infifo_status1_ch1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@infifo_status1_ch1`] module"]
+pub type INFIFO_STATUS1_CH1 = crate::Reg<infifo_status1_ch1::INFIFO_STATUS1_CH1_SPEC>;
+#[doc = "Receive FIFO status of Rx channel 1"]
+pub mod infifo_status1_ch1;
+#[doc = "INFIFO_STATUS1_CH2 (r) register accessor: Receive FIFO status of Rx channel 1\n\nYou can [`read`](crate::Reg::read) this register and get [`infifo_status1_ch2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@infifo_status1_ch2`] module"]
+pub type INFIFO_STATUS1_CH2 = crate::Reg<infifo_status1_ch2::INFIFO_STATUS1_CH2_SPEC>;
+#[doc = "Receive FIFO status of Rx channel 1"]
+pub mod infifo_status1_ch2;
+#[doc = "OUTFIFO_STATUS1_CH0 (r) register accessor: Receive FIFO status of Tx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`outfifo_status1_ch0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@outfifo_status1_ch0`] module"]
+pub type OUTFIFO_STATUS1_CH0 = crate::Reg<outfifo_status1_ch0::OUTFIFO_STATUS1_CH0_SPEC>;
 #[doc = "Receive FIFO status of Tx channel 0"]
-pub mod outfifo_status1_ch;
+pub mod outfifo_status1_ch0;
+#[doc = "OUTFIFO_STATUS1_CH1 (r) register accessor: Receive FIFO status of Tx channel 1\n\nYou can [`read`](crate::Reg::read) this register and get [`outfifo_status1_ch1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@outfifo_status1_ch1`] module"]
+pub type OUTFIFO_STATUS1_CH1 = crate::Reg<outfifo_status1_ch1::OUTFIFO_STATUS1_CH1_SPEC>;
+#[doc = "Receive FIFO status of Tx channel 1"]
+pub mod outfifo_status1_ch1;
+#[doc = "OUTFIFO_STATUS1_CH2 (r) register accessor: Receive FIFO status of Tx channel 1\n\nYou can [`read`](crate::Reg::read) this register and get [`outfifo_status1_ch2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@outfifo_status1_ch2`] module"]
+pub type OUTFIFO_STATUS1_CH2 = crate::Reg<outfifo_status1_ch2::OUTFIFO_STATUS1_CH2_SPEC>;
+#[doc = "Receive FIFO status of Tx channel 1"]
+pub mod outfifo_status1_ch2;
 #[doc = "DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version control register"]
 pub mod date;
+#[doc = "LINK_SWITCH_STATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`link_switch_state::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`link_switch_state::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@link_switch_state`] module"]
+pub type LINK_SWITCH_STATE = crate::Reg<link_switch_state::LINK_SWITCH_STATE_SPEC>;
+#[doc = "Version control register"]
+pub mod link_switch_state;

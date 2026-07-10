@@ -28,5 +28,4 @@ impl RegisterBlock {
 pub type GPIO = crate::Reg<gpio::GPIO_SPEC>;
 #[doc = "IO_MUX Configure Registers for different pads"]
 pub mod gpio;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

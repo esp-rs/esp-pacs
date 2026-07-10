@@ -1,4 +1,13 @@
 I2C0:
+  CTR:
+    SDA_FORCE_OUT:
+      OpenDrain: [1, "Open-drain output."]
+      DirectOutput: [0, "Direct output."]
+    SCL_FORCE_OUT:
+      OpenDrain: [1, "Open-drain output."]
+      DirectOutput: [0, "Direct output."]
+  _include:
+    - ../../../common_patches/int_strip.yaml
   INT_ENA:
     _modify:
       ACK_ERR:
@@ -18,8 +27,6 @@ I2C0:
 
   _array:
     COMD*: {}
-
-  _include: ../../../common_patches/int_strip.yaml
 
   COMD*:
     _delete: COMMAND0

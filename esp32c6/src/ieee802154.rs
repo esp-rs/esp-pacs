@@ -746,5 +746,4 @@ pub mod cca_busy_cnt;
 pub type ERROR_CNT_CLEAR = crate::Reg<error_cnt_clear::ERROR_CNT_CLEAR_SPEC>;
 #[doc = ""]
 pub mod error_cnt_clear;
-pub use crate::aes::date as mac_date;
-pub use crate::aes::DATE as MAC_DATE;
+pub use crate::aes::{date as mac_date, DATE as MAC_DATE};

@@ -80,6 +80,12 @@ pub struct RegisterBlock {
     lp_core_dbus_timeout: LP_CORE_DBUS_TIMEOUT,
     lp_core_err_resp_dis: LP_CORE_ERR_RESP_DIS,
     rng_cfg: RNG_CFG,
+    pad_rtc_hold_ctrl0: PAD_RTC_HOLD_CTRL0,
+    pad_rtc_hold_ctrl1: PAD_RTC_HOLD_CTRL1,
+    ded_pad_rtc_hold_ctrl: DED_PAD_RTC_HOLD_CTRL,
+    _reserved71: [u8; 0x30],
+    discharge: DISCHARGE,
+    hp_usb_otghs_phy_ctrl: HP_USB_OTGHS_PHY_CTRL,
 }
 impl RegisterBlock {
     #[doc = "0x00 - need_des"]
@@ -422,6 +428,31 @@ impl RegisterBlock {
     pub const fn rng_cfg(&self) -> &RNG_CFG {
         &self.rng_cfg
     }
+    #[doc = "0x1c4 - enable pad hold ctrl"]
+    #[inline(always)]
+    pub const fn pad_rtc_hold_ctrl0(&self) -> &PAD_RTC_HOLD_CTRL0 {
+        &self.pad_rtc_hold_ctrl0
+    }
+    #[doc = "0x1c8 - enable pad hold ctrl"]
+    #[inline(always)]
+    pub const fn pad_rtc_hold_ctrl1(&self) -> &PAD_RTC_HOLD_CTRL1 {
+        &self.pad_rtc_hold_ctrl1
+    }
+    #[doc = "0x1cc - enable pad hold ctrl"]
+    #[inline(always)]
+    pub const fn ded_pad_rtc_hold_ctrl(&self) -> &DED_PAD_RTC_HOLD_CTRL {
+        &self.ded_pad_rtc_hold_ctrl
+    }
+    #[doc = "0x200 - pufmem / ldo flash power discharge control"]
+    #[inline(always)]
+    pub const fn discharge(&self) -> &DISCHARGE {
+        &self.discharge
+    }
+    #[doc = "0x204 - Usb otg2.0 PHY control register"]
+    #[inline(always)]
+    pub const fn hp_usb_otghs_phy_ctrl(&self) -> &HP_USB_OTGHS_PHY_CTRL {
+        &self.hp_usb_otghs_phy_ctrl
+    }
 }
 #[doc = "LP_SYS_VER_DATE (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_sys_ver_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_sys_ver_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@lp_sys_ver_date`] module"]
 pub type LP_SYS_VER_DATE = crate::Reg<lp_sys_ver_date::LP_SYS_VER_DATE_SPEC>;
@@ -697,3 +728,23 @@ pub mod lp_core_err_resp_dis;
 pub type RNG_CFG = crate::Reg<rng_cfg::RNG_CFG_SPEC>;
 #[doc = "rng cfg register"]
 pub mod rng_cfg;
+#[doc = "PAD_RTC_HOLD_CTRL0 (rw) register accessor: enable pad hold ctrl\n\nYou can [`read`](crate::Reg::read) this register and get [`pad_rtc_hold_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pad_rtc_hold_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pad_rtc_hold_ctrl0`] module"]
+pub type PAD_RTC_HOLD_CTRL0 = crate::Reg<pad_rtc_hold_ctrl0::PAD_RTC_HOLD_CTRL0_SPEC>;
+#[doc = "enable pad hold ctrl"]
+pub mod pad_rtc_hold_ctrl0;
+#[doc = "PAD_RTC_HOLD_CTRL1 (rw) register accessor: enable pad hold ctrl\n\nYou can [`read`](crate::Reg::read) this register and get [`pad_rtc_hold_ctrl1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pad_rtc_hold_ctrl1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pad_rtc_hold_ctrl1`] module"]
+pub type PAD_RTC_HOLD_CTRL1 = crate::Reg<pad_rtc_hold_ctrl1::PAD_RTC_HOLD_CTRL1_SPEC>;
+#[doc = "enable pad hold ctrl"]
+pub mod pad_rtc_hold_ctrl1;
+#[doc = "DED_PAD_RTC_HOLD_CTRL (rw) register accessor: enable pad hold ctrl\n\nYou can [`read`](crate::Reg::read) this register and get [`ded_pad_rtc_hold_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ded_pad_rtc_hold_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ded_pad_rtc_hold_ctrl`] module"]
+pub type DED_PAD_RTC_HOLD_CTRL = crate::Reg<ded_pad_rtc_hold_ctrl::DED_PAD_RTC_HOLD_CTRL_SPEC>;
+#[doc = "enable pad hold ctrl"]
+pub mod ded_pad_rtc_hold_ctrl;
+#[doc = "DISCHARGE (rw) register accessor: pufmem / ldo flash power discharge control\n\nYou can [`read`](crate::Reg::read) this register and get [`discharge::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`discharge::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@discharge`] module"]
+pub type DISCHARGE = crate::Reg<discharge::DISCHARGE_SPEC>;
+#[doc = "pufmem / ldo flash power discharge control"]
+pub mod discharge;
+#[doc = "HP_USB_OTGHS_PHY_CTRL (rw) register accessor: Usb otg2.0 PHY control register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_usb_otghs_phy_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_usb_otghs_phy_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_usb_otghs_phy_ctrl`] module"]
+pub type HP_USB_OTGHS_PHY_CTRL = crate::Reg<hp_usb_otghs_phy_ctrl::HP_USB_OTGHS_PHY_CTRL_SPEC>;
+#[doc = "Usb otg2.0 PHY control register"]
+pub mod hp_usb_otghs_phy_ctrl;

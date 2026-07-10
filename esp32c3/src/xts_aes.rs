@@ -98,5 +98,4 @@ pub mod destroy;
 pub type STATE = crate::Reg<state::STATE_SPEC>;
 #[doc = "XTS-AES status register"]
 pub mod state;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

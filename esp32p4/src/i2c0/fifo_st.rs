@@ -1,6 +1,6 @@
 #[doc = "Register `FIFO_ST` reader"]
 pub type R = crate::R<FIFO_ST_SPEC>;
-#[doc = "Field `RXFIFO_RADDR` reader - Represents the offset address of the APB reading from RXFIFO"]
+#[doc = "Field `RXFIFO_RADDR` reader - Represents the offset address of the APB reading from RXFIFO."]
 pub type RXFIFO_RADDR_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_WADDR` reader - Represents the offset address of i2c module receiving data and writing to RXFIFO."]
 pub type RXFIFO_WADDR_R = crate::FieldReader;
@@ -11,7 +11,7 @@ pub type TXFIFO_WADDR_R = crate::FieldReader;
 #[doc = "Field `SLAVE_RW_POINT` reader - Represents the offset address in the I2C Slave RAM addressed by I2C Master when in I2C slave mode."]
 pub type SLAVE_RW_POINT_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:4 - Represents the offset address of the APB reading from RXFIFO"]
+    #[doc = "Bits 0:4 - Represents the offset address of the APB reading from RXFIFO."]
     #[inline(always)]
     pub fn rxfifo_raddr(&self) -> RXFIFO_RADDR_R {
         RXFIFO_RADDR_R::new((self.bits & 0x1f) as u8)
@@ -49,7 +49,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "FIFO status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`fifo_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "FIFO status register\n\nYou can [`read`](crate::Reg::read) this register and get [`fifo_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FIFO_ST_SPEC;
 impl crate::RegisterSpec for FIFO_ST_SPEC {
     type Ux = u32;

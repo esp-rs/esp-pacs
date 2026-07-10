@@ -16,6 +16,10 @@ pub type L1_ICACHE0_PRELOAD_ORDER_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type L1_ICACHE0_PRELOAD_RGID_R = crate::FieldReader;
 #[doc = "Field `L1_ICACHE0_PRELOAD_RGID` writer - The bit is used to set the gid of l1 icache0 preload."]
 pub type L1_ICACHE0_PRELOAD_RGID_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `L1_ICACHE0_PRELOAD_MODE` reader - The bit is used to configure the mode of l1 icache0 preload, 0: load data from next level memory, 1: not load data from next level memory."]
+pub type L1_ICACHE0_PRELOAD_MODE_R = crate::BitReader;
+#[doc = "Field `L1_ICACHE0_PRELOAD_MODE` writer - The bit is used to configure the mode of l1 icache0 preload, 0: load data from next level memory, 1: not load data from next level memory."]
+pub type L1_ICACHE0_PRELOAD_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable preload operation on L1-ICache0. It will be cleared by hardware automatically after preload operation is done."]
     #[inline(always)]
@@ -37,6 +41,11 @@ impl R {
     pub fn l1_icache0_preload_rgid(&self) -> L1_ICACHE0_PRELOAD_RGID_R {
         L1_ICACHE0_PRELOAD_RGID_R::new(((self.bits >> 3) & 0x0f) as u8)
     }
+    #[doc = "Bit 7 - The bit is used to configure the mode of l1 icache0 preload, 0: load data from next level memory, 1: not load data from next level memory."]
+    #[inline(always)]
+    pub fn l1_icache0_preload_mode(&self) -> L1_ICACHE0_PRELOAD_MODE_R {
+        L1_ICACHE0_PRELOAD_MODE_R::new(((self.bits >> 7) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -46,6 +55,7 @@ impl core::fmt::Debug for R {
             .field("l1_icache0_preload_done", &self.l1_icache0_preload_done())
             .field("l1_icache0_preload_order", &self.l1_icache0_preload_order())
             .field("l1_icache0_preload_rgid", &self.l1_icache0_preload_rgid())
+            .field("l1_icache0_preload_mode", &self.l1_icache0_preload_mode())
             .finish()
     }
 }
@@ -70,6 +80,13 @@ impl W {
         &mut self,
     ) -> L1_ICACHE0_PRELOAD_RGID_W<'_, L1_ICACHE0_PRELOAD_CTRL_SPEC> {
         L1_ICACHE0_PRELOAD_RGID_W::new(self, 3)
+    }
+    #[doc = "Bit 7 - The bit is used to configure the mode of l1 icache0 preload, 0: load data from next level memory, 1: not load data from next level memory."]
+    #[inline(always)]
+    pub fn l1_icache0_preload_mode(
+        &mut self,
+    ) -> L1_ICACHE0_PRELOAD_MODE_W<'_, L1_ICACHE0_PRELOAD_CTRL_SPEC> {
+        L1_ICACHE0_PRELOAD_MODE_W::new(self, 7)
     }
 }
 #[doc = "L1 instruction Cache 0 preload-operation control register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_icache0_preload_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`l1_icache0_preload_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

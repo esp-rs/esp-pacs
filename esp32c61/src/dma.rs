@@ -24,12 +24,10 @@ pub struct RegisterBlock {
     rx_ch_arb_weight_ch1: RX_CH_ARB_WEIGHT_CH1,
     rx_arb_weight_opt_dir_ch1: RX_ARB_WEIGHT_OPT_DIR_CH1,
     _reserved14: [u8; 0x28],
-    in_link_addr_ch0: IN_LINK_ADDR_CH0,
-    in_link_addr_ch1: IN_LINK_ADDR_CH1,
+    in_link_addr_ch: [IN_LINK_ADDR_CH; 2],
+    _reserved15: [u8; 0x04],
+    out_link_addr_ch: [OUT_LINK_ADDR_CH; 2],
     _reserved16: [u8; 0x04],
-    out_link_addr_ch0: OUT_LINK_ADDR_CH0,
-    out_link_addr_ch1: OUT_LINK_ADDR_CH1,
-    _reserved18: [u8; 0x04],
     intr_mem_start_addr: INTR_MEM_START_ADDR,
     intr_mem_end_addr: INTR_MEM_END_ADDR,
     arb_timeout_tx: ARB_TIMEOUT_TX,
@@ -37,7 +35,7 @@ pub struct RegisterBlock {
     weight_en_tx: WEIGHT_EN_TX,
     weight_en_rx: WEIGHT_EN_RX,
     arb_timeout: ARB_TIMEOUT,
-    _reserved25: [u8; 0x20],
+    _reserved23: [u8; 0x20],
     weight_en: WEIGHT_EN,
     module_clk_en: MODULE_CLK_EN,
     ahbinf_resp_err_status0: AHBINF_RESP_ERR_STATUS0,
@@ -81,7 +79,7 @@ impl RegisterBlock {
     pub const fn date(&self) -> &DATE {
         &self.date
     }
-    #[doc = "0x70..0x1f0 - Cluster CH%s, containing IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PERI_SEL_CH?, OUT_CONF0_CH?, OUT_CONF1_CH?, OUTFIFO_STATUS_CH?, OUT_PUSH_CH?, OUT_LINK_CH?, OUT_STATE_CH?, OUT_EOF_DES_ADDR_CH?, OUT_EOF_BFR_DES_ADDR_CH?, OUT_DSCR_CH?, OUT_DSCR_BF0_CH?, OUT_DSCR_BF1_CH?, OUT_PERI_SEL_CH?"]
+    #[doc = "0x70..0x1f0 - Cluster CH%s, containing IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PRI_CH?, IN_PERI_SEL_CH?, OUT_CONF0_CH?, OUT_CONF1_CH?, OUTFIFO_STATUS_CH?, OUT_PUSH_CH?, OUT_LINK_CH?, OUT_STATE_CH?, OUT_EOF_DES_ADDR_CH?, OUT_EOF_BFR_DES_ADDR_CH?, OUT_DSCR_CH?, OUT_DSCR_BF0_CH?, OUT_DSCR_BF1_CH?, OUT_PRI_CH?, OUT_PERI_SEL_CH?"]
     #[inline(always)]
     pub const fn ch(&self, n: usize) -> &CH {
         #[allow(clippy::no_effect)]
@@ -95,7 +93,7 @@ impl RegisterBlock {
         }
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x70..0x1f0 - Cluster CH%s, containing IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PERI_SEL_CH?, OUT_CONF0_CH?, OUT_CONF1_CH?, OUTFIFO_STATUS_CH?, OUT_PUSH_CH?, OUT_LINK_CH?, OUT_STATE_CH?, OUT_EOF_DES_ADDR_CH?, OUT_EOF_BFR_DES_ADDR_CH?, OUT_DSCR_CH?, OUT_DSCR_BF0_CH?, OUT_DSCR_BF1_CH?, OUT_PERI_SEL_CH?"]
+    #[doc = "0x70..0x1f0 - Cluster CH%s, containing IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PRI_CH?, IN_PERI_SEL_CH?, OUT_CONF0_CH?, OUT_CONF1_CH?, OUTFIFO_STATUS_CH?, OUT_PUSH_CH?, OUT_LINK_CH?, OUT_STATE_CH?, OUT_EOF_DES_ADDR_CH?, OUT_EOF_BFR_DES_ADDR_CH?, OUT_DSCR_CH?, OUT_DSCR_BF0_CH?, OUT_DSCR_BF1_CH?, OUT_PRI_CH?, OUT_PERI_SEL_CH?"]
     #[inline(always)]
     pub fn ch_iter(&self) -> impl Iterator<Item = &CH> {
         (0..2).map(move |n| unsafe {
@@ -106,40 +104,20 @@ impl RegisterBlock {
                 .cast()
         })
     }
-    #[doc = "0x9c - Priority register of RX channel 0"]
-    #[inline(always)]
-    pub const fn in_peri_ch0(&self) -> &IN_PERI_CH0 {
-        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(156).cast() }
-    }
     #[doc = "0xb0 - RX_done Inlink descriptor address of RX channel 0"]
     #[inline(always)]
     pub const fn in_done_des_addr_ch0(&self) -> &IN_DONE_DES_ADDR_CH0 {
         unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(176).cast() }
-    }
-    #[doc = "0xfc - Priority register of TX channel 0"]
-    #[inline(always)]
-    pub const fn out_peri_ch0(&self) -> &OUT_PERI_CH0 {
-        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(252).cast() }
     }
     #[doc = "0x110 - TX done outlink descriptor address of TX channel 0"]
     #[inline(always)]
     pub const fn out_done_des_addr_ch0(&self) -> &OUT_DONE_DES_ADDR_CH0 {
         unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(272).cast() }
     }
-    #[doc = "0x15c - Priority register of RX channel 1"]
-    #[inline(always)]
-    pub const fn in_peri_ch1(&self) -> &IN_PERI_CH1 {
-        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(348).cast() }
-    }
     #[doc = "0x170 - RX_done Inlink descriptor address of RX channel 1"]
     #[inline(always)]
     pub const fn in_done_des_addr_ch1(&self) -> &IN_DONE_DES_ADDR_CH1 {
         unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(368).cast() }
-    }
-    #[doc = "0x1bc - Priority register of TX channel 1"]
-    #[inline(always)]
-    pub const fn out_peri_ch1(&self) -> &OUT_PERI_CH1 {
-        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(444).cast() }
     }
     #[doc = "0x1d0 - TX done outlink descriptor address of TX channel 1"]
     #[inline(always)]
@@ -186,25 +164,27 @@ impl RegisterBlock {
     pub const fn rx_arb_weight_opt_dir_ch1(&self) -> &RX_ARB_WEIGHT_OPT_DIR_CH1 {
         &self.rx_arb_weight_opt_dir_ch1
     }
-    #[doc = "0x3ac - Link list descriptor address configuration of RX channel 0"]
+    #[doc = "0x3ac..0x3b4 - Link list descriptor address configuration of RX channel %s"]
     #[inline(always)]
-    pub const fn in_link_addr_ch0(&self) -> &IN_LINK_ADDR_CH0 {
-        &self.in_link_addr_ch0
+    pub const fn in_link_addr_ch(&self, n: usize) -> &IN_LINK_ADDR_CH {
+        &self.in_link_addr_ch[n]
     }
-    #[doc = "0x3b0 - Link list descriptor address configuration of RX channel 1"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x3ac..0x3b4 - Link list descriptor address configuration of RX channel %s"]
     #[inline(always)]
-    pub const fn in_link_addr_ch1(&self) -> &IN_LINK_ADDR_CH1 {
-        &self.in_link_addr_ch1
+    pub fn in_link_addr_ch_iter(&self) -> impl Iterator<Item = &IN_LINK_ADDR_CH> {
+        self.in_link_addr_ch.iter()
     }
-    #[doc = "0x3b8 - Link list descriptor address configuration of TX channel 0"]
+    #[doc = "0x3b8..0x3c0 - Link list descriptor address configuration of TX channel %s"]
     #[inline(always)]
-    pub const fn out_link_addr_ch0(&self) -> &OUT_LINK_ADDR_CH0 {
-        &self.out_link_addr_ch0
+    pub const fn out_link_addr_ch(&self, n: usize) -> &OUT_LINK_ADDR_CH {
+        &self.out_link_addr_ch[n]
     }
-    #[doc = "0x3bc - Link list descriptor address configuration of TX channel 1"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x3b8..0x3c0 - Link list descriptor address configuration of TX channel %s"]
     #[inline(always)]
-    pub const fn out_link_addr_ch1(&self) -> &OUT_LINK_ADDR_CH1 {
-        &self.out_link_addr_ch1
+    pub fn out_link_addr_ch_iter(&self) -> impl Iterator<Item = &OUT_LINK_ADDR_CH> {
+        self.out_link_addr_ch.iter()
     }
     #[doc = "0x3c4 - Accessible address space start address configuration register"]
     #[inline(always)]
@@ -284,39 +264,23 @@ pub mod misc_conf;
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version control register"]
 pub mod date;
-#[doc = "Cluster CH%s, containing IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PERI_SEL_CH?, OUT_CONF0_CH?, OUT_CONF1_CH?, OUTFIFO_STATUS_CH?, OUT_PUSH_CH?, OUT_LINK_CH?, OUT_STATE_CH?, OUT_EOF_DES_ADDR_CH?, OUT_EOF_BFR_DES_ADDR_CH?, OUT_DSCR_CH?, OUT_DSCR_BF0_CH?, OUT_DSCR_BF1_CH?, OUT_PERI_SEL_CH?"]
+#[doc = "Cluster CH%s, containing IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PRI_CH?, IN_PERI_SEL_CH?, OUT_CONF0_CH?, OUT_CONF1_CH?, OUTFIFO_STATUS_CH?, OUT_PUSH_CH?, OUT_LINK_CH?, OUT_STATE_CH?, OUT_EOF_DES_ADDR_CH?, OUT_EOF_BFR_DES_ADDR_CH?, OUT_DSCR_CH?, OUT_DSCR_BF0_CH?, OUT_DSCR_BF1_CH?, OUT_PRI_CH?, OUT_PERI_SEL_CH?"]
 pub use self::ch::CH;
 #[doc = r"Cluster"]
-#[doc = "Cluster CH%s, containing IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PERI_SEL_CH?, OUT_CONF0_CH?, OUT_CONF1_CH?, OUTFIFO_STATUS_CH?, OUT_PUSH_CH?, OUT_LINK_CH?, OUT_STATE_CH?, OUT_EOF_DES_ADDR_CH?, OUT_EOF_BFR_DES_ADDR_CH?, OUT_DSCR_CH?, OUT_DSCR_BF0_CH?, OUT_DSCR_BF1_CH?, OUT_PERI_SEL_CH?"]
+#[doc = "Cluster CH%s, containing IN_CONF0_CH?, IN_CONF1_CH?, INFIFO_STATUS_CH?, IN_POP_CH?, IN_LINK_CH?, IN_STATE_CH?, IN_SUC_EOF_DES_ADDR_CH?, IN_ERR_EOF_DES_ADDR_CH?, IN_DSCR_CH?, IN_DSCR_BF0_CH?, IN_DSCR_BF1_CH?, IN_PRI_CH?, IN_PERI_SEL_CH?, OUT_CONF0_CH?, OUT_CONF1_CH?, OUTFIFO_STATUS_CH?, OUT_PUSH_CH?, OUT_LINK_CH?, OUT_STATE_CH?, OUT_EOF_DES_ADDR_CH?, OUT_EOF_BFR_DES_ADDR_CH?, OUT_DSCR_CH?, OUT_DSCR_BF0_CH?, OUT_DSCR_BF1_CH?, OUT_PRI_CH?, OUT_PERI_SEL_CH?"]
 pub mod ch;
-#[doc = "IN_PERI_CH0 (rw) register accessor: Priority register of RX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_peri_ch0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_peri_ch0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_peri_ch0`] module"]
-pub type IN_PERI_CH0 = crate::Reg<in_peri_ch0::IN_PERI_CH0_SPEC>;
-#[doc = "Priority register of RX channel 0"]
-pub mod in_peri_ch0;
 #[doc = "IN_DONE_DES_ADDR_CH0 (r) register accessor: RX_done Inlink descriptor address of RX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_done_des_addr_ch0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_done_des_addr_ch0`] module"]
 pub type IN_DONE_DES_ADDR_CH0 = crate::Reg<in_done_des_addr_ch0::IN_DONE_DES_ADDR_CH0_SPEC>;
 #[doc = "RX_done Inlink descriptor address of RX channel 0"]
 pub mod in_done_des_addr_ch0;
-#[doc = "OUT_PERI_CH0 (rw) register accessor: Priority register of TX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_peri_ch0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_peri_ch0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_peri_ch0`] module"]
-pub type OUT_PERI_CH0 = crate::Reg<out_peri_ch0::OUT_PERI_CH0_SPEC>;
-#[doc = "Priority register of TX channel 0"]
-pub mod out_peri_ch0;
 #[doc = "OUT_DONE_DES_ADDR_CH0 (r) register accessor: TX done outlink descriptor address of TX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_done_des_addr_ch0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_done_des_addr_ch0`] module"]
 pub type OUT_DONE_DES_ADDR_CH0 = crate::Reg<out_done_des_addr_ch0::OUT_DONE_DES_ADDR_CH0_SPEC>;
 #[doc = "TX done outlink descriptor address of TX channel 0"]
 pub mod out_done_des_addr_ch0;
-#[doc = "IN_PERI_CH1 (rw) register accessor: Priority register of RX channel 1\n\nYou can [`read`](crate::Reg::read) this register and get [`in_peri_ch1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_peri_ch1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_peri_ch1`] module"]
-pub type IN_PERI_CH1 = crate::Reg<in_peri_ch1::IN_PERI_CH1_SPEC>;
-#[doc = "Priority register of RX channel 1"]
-pub mod in_peri_ch1;
 #[doc = "IN_DONE_DES_ADDR_CH1 (r) register accessor: RX_done Inlink descriptor address of RX channel 1\n\nYou can [`read`](crate::Reg::read) this register and get [`in_done_des_addr_ch1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_done_des_addr_ch1`] module"]
 pub type IN_DONE_DES_ADDR_CH1 = crate::Reg<in_done_des_addr_ch1::IN_DONE_DES_ADDR_CH1_SPEC>;
 #[doc = "RX_done Inlink descriptor address of RX channel 1"]
 pub mod in_done_des_addr_ch1;
-#[doc = "OUT_PERI_CH1 (rw) register accessor: Priority register of TX channel 1\n\nYou can [`read`](crate::Reg::read) this register and get [`out_peri_ch1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_peri_ch1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_peri_ch1`] module"]
-pub type OUT_PERI_CH1 = crate::Reg<out_peri_ch1::OUT_PERI_CH1_SPEC>;
-#[doc = "Priority register of TX channel 1"]
-pub mod out_peri_ch1;
 #[doc = "OUT_DONE_DES_ADDR_CH1 (r) register accessor: TX done outlink descriptor address of TX channel 1\n\nYou can [`read`](crate::Reg::read) this register and get [`out_done_des_addr_ch1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_done_des_addr_ch1`] module"]
 pub type OUT_DONE_DES_ADDR_CH1 = crate::Reg<out_done_des_addr_ch1::OUT_DONE_DES_ADDR_CH1_SPEC>;
 #[doc = "TX done outlink descriptor address of TX channel 1"]
@@ -357,22 +321,14 @@ pub type RX_ARB_WEIGHT_OPT_DIR_CH1 =
     crate::Reg<rx_arb_weight_opt_dir_ch1::RX_ARB_WEIGHT_OPT_DIR_CH1_SPEC>;
 #[doc = "RX channel 1 weight arbitration optimization enable register"]
 pub mod rx_arb_weight_opt_dir_ch1;
-#[doc = "IN_LINK_ADDR_CH0 (rw) register accessor: Link list descriptor address configuration of RX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_link_addr_ch0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_link_addr_ch0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_link_addr_ch0`] module"]
-pub type IN_LINK_ADDR_CH0 = crate::Reg<in_link_addr_ch0::IN_LINK_ADDR_CH0_SPEC>;
-#[doc = "Link list descriptor address configuration of RX channel 0"]
-pub mod in_link_addr_ch0;
-#[doc = "IN_LINK_ADDR_CH1 (rw) register accessor: Link list descriptor address configuration of RX channel 1\n\nYou can [`read`](crate::Reg::read) this register and get [`in_link_addr_ch1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_link_addr_ch1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_link_addr_ch1`] module"]
-pub type IN_LINK_ADDR_CH1 = crate::Reg<in_link_addr_ch1::IN_LINK_ADDR_CH1_SPEC>;
-#[doc = "Link list descriptor address configuration of RX channel 1"]
-pub mod in_link_addr_ch1;
-#[doc = "OUT_LINK_ADDR_CH0 (rw) register accessor: Link list descriptor address configuration of TX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_link_addr_ch0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_link_addr_ch0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_link_addr_ch0`] module"]
-pub type OUT_LINK_ADDR_CH0 = crate::Reg<out_link_addr_ch0::OUT_LINK_ADDR_CH0_SPEC>;
-#[doc = "Link list descriptor address configuration of TX channel 0"]
-pub mod out_link_addr_ch0;
-#[doc = "OUT_LINK_ADDR_CH1 (rw) register accessor: Link list descriptor address configuration of TX channel 1\n\nYou can [`read`](crate::Reg::read) this register and get [`out_link_addr_ch1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_link_addr_ch1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_link_addr_ch1`] module"]
-pub type OUT_LINK_ADDR_CH1 = crate::Reg<out_link_addr_ch1::OUT_LINK_ADDR_CH1_SPEC>;
-#[doc = "Link list descriptor address configuration of TX channel 1"]
-pub mod out_link_addr_ch1;
+#[doc = "IN_LINK_ADDR_CH (rw) register accessor: Link list descriptor address configuration of RX channel %s\n\nYou can [`read`](crate::Reg::read) this register and get [`in_link_addr_ch::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_link_addr_ch::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_link_addr_ch`] module"]
+pub type IN_LINK_ADDR_CH = crate::Reg<in_link_addr_ch::IN_LINK_ADDR_CH_SPEC>;
+#[doc = "Link list descriptor address configuration of RX channel %s"]
+pub mod in_link_addr_ch;
+#[doc = "OUT_LINK_ADDR_CH (rw) register accessor: Link list descriptor address configuration of TX channel %s\n\nYou can [`read`](crate::Reg::read) this register and get [`out_link_addr_ch::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_link_addr_ch::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_link_addr_ch`] module"]
+pub type OUT_LINK_ADDR_CH = crate::Reg<out_link_addr_ch::OUT_LINK_ADDR_CH_SPEC>;
+#[doc = "Link list descriptor address configuration of TX channel %s"]
+pub mod out_link_addr_ch;
 #[doc = "INTR_MEM_START_ADDR (rw) register accessor: Accessible address space start address configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_mem_start_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intr_mem_start_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_mem_start_addr`] module"]
 pub type INTR_MEM_START_ADDR = crate::Reg<intr_mem_start_addr::INTR_MEM_START_ADDR_SPEC>;
 #[doc = "Accessible address space start address configuration register"]

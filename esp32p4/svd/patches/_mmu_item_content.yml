@@ -1,0 +1,34 @@
+SPI0:
+  MMU_ITEM_CONTENT:
+    _delete: [SPI_MMU_ITEM_CONTENT]
+    _add:
+      PADDR:
+        description: Physical page number
+        bitOffset: 0
+        bitWidth: 10
+        access: read-write
+      ACCESS_SPIRAM:
+        description: Map to SPIRAM/PSRAM when set (flash when clear)
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+      SPIRAM_VALID:
+        description: Entry is valid when set (SPIRAM MMU)
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+      VALID:
+        description: Entry is valid when set (flash MMU)
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      SPIRAM_SENSITIVE:
+        description: Decrypt via cache encryption when set (SPIRAM MMU)
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      SENSITIVE:
+        description: Decrypt via flash encryption when set (flash MMU)
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write

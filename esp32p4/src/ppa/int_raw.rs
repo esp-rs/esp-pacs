@@ -14,6 +14,10 @@ pub type BLEND_EOF_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type SR_PARAM_CFG_ERR_R = crate::BitReader;
 #[doc = "Field `SR_PARAM_CFG_ERR` writer - The raw interrupt bit turns to high level when the configured scaling and rotating coefficient is wrong. User can check the reasons through register PPA_SR_PARAM_ERR_ST_REG."]
 pub type SR_PARAM_CFG_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BLEND_PARAM_CFG_ERR` reader - The raw interrupt bit turns to high level when the configured blending coefficient is wrong. User can check the reasons through register PPA_BLEND_ST_REG."]
+pub type BLEND_PARAM_CFG_ERR_R = crate::BitReader;
+#[doc = "Field `BLEND_PARAM_CFG_ERR` writer - The raw interrupt bit turns to high level when the configured blending coefficient is wrong. User can check the reasons through register PPA_BLEND_ST_REG."]
+pub type BLEND_PARAM_CFG_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when scaling and rotating engine calculate one frame image."]
     #[inline(always)]
@@ -30,6 +34,11 @@ impl R {
     pub fn sr_param_cfg_err(&self) -> SR_PARAM_CFG_ERR_R {
         SR_PARAM_CFG_ERR_R::new(((self.bits >> 2) & 1) != 0)
     }
+    #[doc = "Bit 3 - The raw interrupt bit turns to high level when the configured blending coefficient is wrong. User can check the reasons through register PPA_BLEND_ST_REG."]
+    #[inline(always)]
+    pub fn blend_param_cfg_err(&self) -> BLEND_PARAM_CFG_ERR_R {
+        BLEND_PARAM_CFG_ERR_R::new(((self.bits >> 3) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -38,6 +47,7 @@ impl core::fmt::Debug for R {
             .field("sr_eof", &self.sr_eof())
             .field("blend_eof", &self.blend_eof())
             .field("sr_param_cfg_err", &self.sr_param_cfg_err())
+            .field("blend_param_cfg_err", &self.blend_param_cfg_err())
             .finish()
     }
 }
@@ -56,6 +66,11 @@ impl W {
     #[inline(always)]
     pub fn sr_param_cfg_err(&mut self) -> SR_PARAM_CFG_ERR_W<'_, INT_RAW_SPEC> {
         SR_PARAM_CFG_ERR_W::new(self, 2)
+    }
+    #[doc = "Bit 3 - The raw interrupt bit turns to high level when the configured blending coefficient is wrong. User can check the reasons through register PPA_BLEND_ST_REG."]
+    #[inline(always)]
+    pub fn blend_param_cfg_err(&mut self) -> BLEND_PARAM_CFG_ERR_W<'_, INT_RAW_SPEC> {
+        BLEND_PARAM_CFG_ERR_W::new(self, 3)
     }
 }
 #[doc = "Raw status interrupt\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_raw::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

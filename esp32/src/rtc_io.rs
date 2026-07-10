@@ -339,5 +339,4 @@ pub mod xtl_ext_ctr;
 pub type SAR_I2C_IO = crate::Reg<sar_i2c_io::SAR_I2C_IO_SPEC>;
 #[doc = ""]
 pub mod sar_i2c_io;
-pub use crate::apb_ctrl::date;
-pub use crate::apb_ctrl::DATE;
+pub use crate::apb_ctrl::{date, DATE};

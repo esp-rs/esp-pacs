@@ -201,5 +201,4 @@ pub mod func_out_sel_cfg;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "LP_GPIO clock gate register"]
 pub mod clock_gate;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

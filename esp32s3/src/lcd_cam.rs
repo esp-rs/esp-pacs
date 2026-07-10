@@ -185,5 +185,4 @@ pub mod lc_dma_int_st;
 pub type LC_DMA_INT_CLR = crate::Reg<lc_dma_int_clr::LC_DMA_INT_CLR_SPEC>;
 #[doc = "LCD_CAM GDMA interrupt clear register"]
 pub mod lc_dma_int_clr;
-pub use crate::aes::date as lc_reg_date;
-pub use crate::aes::DATE as LC_REG_DATE;
+pub use crate::aes::{date as lc_reg_date, DATE as LC_REG_DATE};

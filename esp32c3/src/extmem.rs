@@ -684,5 +684,4 @@ pub mod dbus_pms_tbl_attr;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "This description will be updated in the near future."]
 pub mod clock_gate;
-pub use crate::aes::date as reg_date;
-pub use crate::aes::DATE as REG_DATE;
+pub use crate::aes::{date as reg_date, DATE as REG_DATE};

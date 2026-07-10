@@ -183,5 +183,4 @@ pub mod int_raw;
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "System timer interrupt clear"]
 pub mod int_clr;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

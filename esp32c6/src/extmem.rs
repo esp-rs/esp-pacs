@@ -2582,5 +2582,4 @@ pub mod redundancy_sig3;
 pub type REDUNDANCY_SIG4 = crate::Reg<redundancy_sig4::REDUNDANCY_SIG4_SPEC>;
 #[doc = "Cache redundancy signal 0 register"]
 pub mod redundancy_sig4;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

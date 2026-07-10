@@ -24,6 +24,7 @@ _include:
   - "_timg.yml"
   - "_uart.yml"
   - "wifi.yaml"
+  - "_mmu_table.yml"
 
 RNG:
   _modify:
@@ -41,6 +42,9 @@ _modify:
     derivedFrom: SPI0
   SPI[34]:
     derivedFrom: SPI2
+
+  USB0:
+    name: USB_FS
 
 _add:
   SPI0:
@@ -691,7 +695,7 @@ _add:
             bitOffset: 0
             bitWidth: 3
             access: read-only
-      
+
       W%s:
         size: 32
         addressOffset: 0x058
@@ -705,7 +709,7 @@ _add:
             bitWidth: 32
             access: read-write
             writeConstraint: [0, 0xFFFFFFFF]
-    
+
       FLASH_WAITI_CTRL:
         description: "SPI Memory Flash Wait Idle Control Register"
         addressOffset: 0x098
@@ -2847,7 +2851,7 @@ UHCI0:
     ESC_CONF?: {}
 
 
-USB0:
+USB_FS:
   _include: ../../../common_patches/usb0.yaml
 
 RSA:
@@ -2906,4 +2910,3 @@ IO_MUX:
   _array:
     GPIO*:
       dimIncrement: 4
-

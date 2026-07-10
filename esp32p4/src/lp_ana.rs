@@ -82,7 +82,9 @@ pub struct RegisterBlock {
     touch_pad14_th0: TOUCH_PAD14_TH0,
     touch_pad14_th1: TOUCH_PAD14_TH1,
     touch_pad14_th2: TOUCH_PAD14_TH2,
-    _reserved79: [u8; 0x0204],
+    _reserved79: [u8; 0x04],
+    touch_ctrl: TOUCH_CTRL,
+    _reserved80: [u8; 0x01fc],
     date: DATE,
 }
 impl RegisterBlock {
@@ -481,6 +483,11 @@ impl RegisterBlock {
     pub const fn touch_pad14_th2(&self) -> &TOUCH_PAD14_TH2 {
         &self.touch_pad14_th2
     }
+    #[doc = "0x1fc - Touch Control Register"]
+    #[inline(always)]
+    pub const fn touch_ctrl(&self) -> &TOUCH_CTRL {
+        &self.touch_ctrl
+    }
     #[doc = "0x3fc - need_des"]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {
@@ -804,6 +811,10 @@ pub mod touch_pad14_th1;
 pub type TOUCH_PAD14_TH2 = crate::Reg<touch_pad14_th2::TOUCH_PAD14_TH2_SPEC>;
 #[doc = "need_des"]
 pub mod touch_pad14_th2;
+#[doc = "TOUCH_CTRL (rw) register accessor: Touch Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_ctrl`] module"]
+pub type TOUCH_CTRL = crate::Reg<touch_ctrl::TOUCH_CTRL_SPEC>;
+#[doc = "Touch Control Register"]
+pub mod touch_ctrl;
 #[doc = "DATE (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "need_des"]

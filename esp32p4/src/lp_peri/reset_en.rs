@@ -2,6 +2,10 @@
 pub type R = crate::R<RESET_EN_SPEC>;
 #[doc = "Register `RESET_EN` writer"]
 pub type W = crate::W<RESET_EN_SPEC>;
+#[doc = "Field `RST_EN_LP_RNG` reader - need_des"]
+pub type RST_EN_LP_RNG_R = crate::BitReader;
+#[doc = "Field `RST_EN_LP_RNG` writer - need_des"]
+pub type RST_EN_LP_RNG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_EN_LP_TSENS` reader - need_des"]
 pub type RST_EN_LP_TSENS_R = crate::BitReader;
 #[doc = "Field `RST_EN_LP_TSENS` writer - need_des"]
@@ -57,6 +61,11 @@ pub type RST_EN_LP_ROM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_EN_LP_CORE` writer - need_des"]
 pub type RST_EN_LP_CORE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
+    #[doc = "Bit 17 - need_des"]
+    #[inline(always)]
+    pub fn rst_en_lp_rng(&self) -> RST_EN_LP_RNG_R {
+        RST_EN_LP_RNG_R::new(((self.bits >> 17) & 1) != 0)
+    }
     #[doc = "Bit 18 - need_des"]
     #[inline(always)]
     pub fn rst_en_lp_tsens(&self) -> RST_EN_LP_TSENS_R {
@@ -127,6 +136,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RESET_EN")
+            .field("rst_en_lp_rng", &self.rst_en_lp_rng())
             .field("rst_en_lp_tsens", &self.rst_en_lp_tsens())
             .field("rst_en_lp_pms", &self.rst_en_lp_pms())
             .field("rst_en_lp_efuse", &self.rst_en_lp_efuse())
@@ -144,6 +154,11 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
+    #[doc = "Bit 17 - need_des"]
+    #[inline(always)]
+    pub fn rst_en_lp_rng(&mut self) -> RST_EN_LP_RNG_W<'_, RESET_EN_SPEC> {
+        RST_EN_LP_RNG_W::new(self, 17)
+    }
     #[doc = "Bit 18 - need_des"]
     #[inline(always)]
     pub fn rst_en_lp_tsens(&mut self) -> RST_EN_LP_TSENS_W<'_, RESET_EN_SPEC> {

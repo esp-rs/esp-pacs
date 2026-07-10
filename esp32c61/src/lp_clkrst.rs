@@ -123,5 +123,4 @@ pub mod lpmem_force;
 pub type XTAL32K = crate::Reg<xtal32k::XTAL32K_SPEC>;
 #[doc = "Configures the XTAL32K parameter"]
 pub mod xtal32k;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

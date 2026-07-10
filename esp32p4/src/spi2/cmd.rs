@@ -6,6 +6,8 @@ pub type W = crate::W<CMD_SPEC>;
 pub type CONF_BITLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `CONF_BITLEN` writer - Define the APB cycles of SPI_CONF state. Can be configured in CONF state."]
 pub type CONF_BITLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 18, u32>;
+#[doc = "Field `UPDATE` reader - Set this bit to synchronize SPI registers from APB clock domain into SPI module clock domain, which is only used in SPI master mode."]
+pub type UPDATE_R = crate::BitReader;
 #[doc = "Field `UPDATE` writer - Set this bit to synchronize SPI registers from APB clock domain into SPI module clock domain, which is only used in SPI master mode."]
 pub type UPDATE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USR` reader - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable. Can not be changed by CONF_buf."]
@@ -18,6 +20,11 @@ impl R {
     pub fn conf_bitlen(&self) -> CONF_BITLEN_R {
         CONF_BITLEN_R::new(self.bits & 0x0003_ffff)
     }
+    #[doc = "Bit 23 - Set this bit to synchronize SPI registers from APB clock domain into SPI module clock domain, which is only used in SPI master mode."]
+    #[inline(always)]
+    pub fn update(&self) -> UPDATE_R {
+        UPDATE_R::new(((self.bits >> 23) & 1) != 0)
+    }
     #[doc = "Bit 24 - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable. Can not be changed by CONF_buf."]
     #[inline(always)]
     pub fn usr(&self) -> USR_R {
@@ -29,6 +36,7 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CMD")
             .field("conf_bitlen", &self.conf_bitlen())
+            .field("update", &self.update())
             .field("usr", &self.usr())
             .finish()
     }

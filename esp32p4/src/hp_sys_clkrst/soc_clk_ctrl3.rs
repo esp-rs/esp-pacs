@@ -18,6 +18,10 @@ pub type ETM_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type IOMUX_APB_CLK_EN_R = crate::BitReader;
 #[doc = "Field `IOMUX_APB_CLK_EN` writer - Reserved"]
 pub type IOMUX_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `L2CACHE_L2MEM_CLK_EN` reader - Reserved"]
+pub type L2CACHE_L2MEM_CLK_EN_R = crate::BitReader;
+#[doc = "Field `L2CACHE_L2MEM_CLK_EN` writer - Reserved"]
+pub type L2CACHE_L2MEM_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
@@ -39,6 +43,11 @@ impl R {
     pub fn iomux_apb_clk_en(&self) -> IOMUX_APB_CLK_EN_R {
         IOMUX_APB_CLK_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
+    #[doc = "Bit 4 - Reserved"]
+    #[inline(always)]
+    pub fn l2cache_l2mem_clk_en(&self) -> L2CACHE_L2MEM_CLK_EN_R {
+        L2CACHE_L2MEM_CLK_EN_R::new(((self.bits >> 4) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -48,6 +57,7 @@ impl core::fmt::Debug for R {
             .field("lcdcam_apb_clk_en", &self.lcdcam_apb_clk_en())
             .field("etm_apb_clk_en", &self.etm_apb_clk_en())
             .field("iomux_apb_clk_en", &self.iomux_apb_clk_en())
+            .field("l2cache_l2mem_clk_en", &self.l2cache_l2mem_clk_en())
             .finish()
     }
 }
@@ -72,6 +82,11 @@ impl W {
     pub fn iomux_apb_clk_en(&mut self) -> IOMUX_APB_CLK_EN_W<'_, SOC_CLK_CTRL3_SPEC> {
         IOMUX_APB_CLK_EN_W::new(self, 3)
     }
+    #[doc = "Bit 4 - Reserved"]
+    #[inline(always)]
+    pub fn l2cache_l2mem_clk_en(&mut self) -> L2CACHE_L2MEM_CLK_EN_W<'_, SOC_CLK_CTRL3_SPEC> {
+        L2CACHE_L2MEM_CLK_EN_W::new(self, 4)
+    }
 }
 #[doc = "Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`soc_clk_ctrl3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`soc_clk_ctrl3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SOC_CLK_CTRL3_SPEC;
@@ -84,7 +99,7 @@ impl crate::Readable for SOC_CLK_CTRL3_SPEC {}
 impl crate::Writable for SOC_CLK_CTRL3_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets SOC_CLK_CTRL3 to value 0x08"]
+#[doc = "`reset()` method sets SOC_CLK_CTRL3 to value 0x18"]
 impl crate::Resettable for SOC_CLK_CTRL3_SPEC {
-    const RESET_VALUE: u32 = 0x08;
+    const RESET_VALUE: u32 = 0x18;
 }

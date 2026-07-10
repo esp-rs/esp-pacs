@@ -20,6 +20,8 @@ pub type OUTFIFO_L2_UDF_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 pub type OUTFIFO_L3_OVF_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `OUTFIFO_L3_UDF` writer - Set this bit to clear the OUTFIFO_UDF_L3_CH_INT interrupt."]
 pub type OUTFIFO_L3_UDF_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `OUT_LINK_SWITCH` writer - Set this bit to clear the OUT_LINK_SWITCH_CH_INT interrupt."]
+pub type OUT_LINK_SWITCH_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -77,6 +79,11 @@ impl W {
     pub fn outfifo_l3_udf(&mut self) -> OUTFIFO_L3_UDF_W<'_, CLR_SPEC> {
         OUTFIFO_L3_UDF_W::new(self, 9)
     }
+    #[doc = "Bit 10 - Set this bit to clear the OUT_LINK_SWITCH_CH_INT interrupt."]
+    #[inline(always)]
+    pub fn out_link_switch(&mut self) -> OUT_LINK_SWITCH_W<'_, CLR_SPEC> {
+        OUT_LINK_SWITCH_W::new(self, 10)
+    }
 }
 #[doc = "Interrupt clear bits of channel0\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLR_SPEC;
@@ -86,7 +93,7 @@ impl crate::RegisterSpec for CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [`clr::W`](W) writer structure"]
 impl crate::Writable for CLR_SPEC {
     type Safety = crate::Unsafe;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x03ff;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x07ff;
 }
 #[doc = "`reset()` method sets CLR to value 0"]
 impl crate::Resettable for CLR_SPEC {}

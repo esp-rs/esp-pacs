@@ -18,22 +18,22 @@ pub type CH2_TX_END_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type CH3_TX_END_R = crate::BitReader;
 #[doc = "Field `CH3_TX_END` writer - The interrupt enable bit for CH3_TX_END_INT."]
 pub type CH3_TX_END_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TX_CH0_ERR` reader - The interrupt enable bit for CH0_ERR_INT."]
-pub type TX_CH0_ERR_R = crate::BitReader;
-#[doc = "Field `TX_CH0_ERR` writer - The interrupt enable bit for CH0_ERR_INT."]
-pub type TX_CH0_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TX_CH1_ERR` reader - The interrupt enable bit for CH1_ERR_INT."]
-pub type TX_CH1_ERR_R = crate::BitReader;
-#[doc = "Field `TX_CH1_ERR` writer - The interrupt enable bit for CH1_ERR_INT."]
-pub type TX_CH1_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TX_CH2_ERR` reader - The interrupt enable bit for CH2_ERR_INT."]
-pub type TX_CH2_ERR_R = crate::BitReader;
-#[doc = "Field `TX_CH2_ERR` writer - The interrupt enable bit for CH2_ERR_INT."]
-pub type TX_CH2_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TX_CH3_ERR` reader - The interrupt enable bit for CH3_ERR_INT."]
-pub type TX_CH3_ERR_R = crate::BitReader;
-#[doc = "Field `TX_CH3_ERR` writer - The interrupt enable bit for CH3_ERR_INT."]
-pub type TX_CH3_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH0_ERR` reader - The interrupt enable bit for CH0_ERR_INT."]
+pub type CH0_ERR_R = crate::BitReader;
+#[doc = "Field `CH0_ERR` writer - The interrupt enable bit for CH0_ERR_INT."]
+pub type CH0_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH1_ERR` reader - The interrupt enable bit for CH1_ERR_INT."]
+pub type CH1_ERR_R = crate::BitReader;
+#[doc = "Field `CH1_ERR` writer - The interrupt enable bit for CH1_ERR_INT."]
+pub type CH1_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH2_ERR` reader - The interrupt enable bit for CH2_ERR_INT."]
+pub type CH2_ERR_R = crate::BitReader;
+#[doc = "Field `CH2_ERR` writer - The interrupt enable bit for CH2_ERR_INT."]
+pub type CH2_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH3_ERR` reader - The interrupt enable bit for CH3_ERR_INT."]
+pub type CH3_ERR_R = crate::BitReader;
+#[doc = "Field `CH3_ERR` writer - The interrupt enable bit for CH3_ERR_INT."]
+pub type CH3_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH0_TX_THR_EVENT` reader - The interrupt enable bit for CH0_TX_THR_EVENT_INT."]
 pub type CH0_TX_THR_EVENT_R = crate::BitReader;
 #[doc = "Field `CH0_TX_THR_EVENT` writer - The interrupt enable bit for CH0_TX_THR_EVENT_INT."]
@@ -114,14 +114,14 @@ pub type CH6_RX_THR_EVENT_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type CH7_RX_THR_EVENT_R = crate::BitReader;
 #[doc = "Field `CH7_RX_THR_EVENT` writer - The interrupt enable bit for CH7_RX_THR_EVENT_INT."]
 pub type CH7_RX_THR_EVENT_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TX_CH3_DMA_ACCESS_FAIL` reader - The interrupt enable bit for CH3_DMA_ACCESS_FAIL_INT."]
-pub type TX_CH3_DMA_ACCESS_FAIL_R = crate::BitReader;
-#[doc = "Field `TX_CH3_DMA_ACCESS_FAIL` writer - The interrupt enable bit for CH3_DMA_ACCESS_FAIL_INT."]
-pub type TX_CH3_DMA_ACCESS_FAIL_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RX_CH7_DMA_ACCESS_FAIL` reader - The interrupt enable bit for CH7_DMA_ACCESS_FAIL_INT."]
-pub type RX_CH7_DMA_ACCESS_FAIL_R = crate::BitReader;
-#[doc = "Field `RX_CH7_DMA_ACCESS_FAIL` writer - The interrupt enable bit for CH7_DMA_ACCESS_FAIL_INT."]
-pub type RX_CH7_DMA_ACCESS_FAIL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH3_DMA_ACCESS_FAIL` reader - The interrupt enable bit for CH3_DMA_ACCESS_FAIL_INT."]
+pub type CH3_DMA_ACCESS_FAIL_R = crate::BitReader;
+#[doc = "Field `CH3_DMA_ACCESS_FAIL` writer - The interrupt enable bit for CH3_DMA_ACCESS_FAIL_INT."]
+pub type CH3_DMA_ACCESS_FAIL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH7_DMA_ACCESS_FAIL` reader - The interrupt enable bit for CH7_DMA_ACCESS_FAIL_INT."]
+pub type CH7_DMA_ACCESS_FAIL_R = crate::BitReader;
+#[doc = "Field `CH7_DMA_ACCESS_FAIL` writer - The interrupt enable bit for CH7_DMA_ACCESS_FAIL_INT."]
+pub type CH7_DMA_ACCESS_FAIL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The interrupt enable bit for CH0_TX_END_INT."]
     #[inline(always)]
@@ -145,23 +145,23 @@ impl R {
     }
     #[doc = "Bit 4 - The interrupt enable bit for CH0_ERR_INT."]
     #[inline(always)]
-    pub fn tx_ch0_err(&self) -> TX_CH0_ERR_R {
-        TX_CH0_ERR_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn ch0_err(&self) -> CH0_ERR_R {
+        CH0_ERR_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - The interrupt enable bit for CH1_ERR_INT."]
     #[inline(always)]
-    pub fn tx_ch1_err(&self) -> TX_CH1_ERR_R {
-        TX_CH1_ERR_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn ch1_err(&self) -> CH1_ERR_R {
+        CH1_ERR_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - The interrupt enable bit for CH2_ERR_INT."]
     #[inline(always)]
-    pub fn tx_ch2_err(&self) -> TX_CH2_ERR_R {
-        TX_CH2_ERR_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn ch2_err(&self) -> CH2_ERR_R {
+        CH2_ERR_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - The interrupt enable bit for CH3_ERR_INT."]
     #[inline(always)]
-    pub fn tx_ch3_err(&self) -> TX_CH3_ERR_R {
-        TX_CH3_ERR_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn ch3_err(&self) -> CH3_ERR_R {
+        CH3_ERR_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - The interrupt enable bit for CH0_TX_THR_EVENT_INT."]
     #[inline(always)]
@@ -265,13 +265,13 @@ impl R {
     }
     #[doc = "Bit 28 - The interrupt enable bit for CH3_DMA_ACCESS_FAIL_INT."]
     #[inline(always)]
-    pub fn tx_ch3_dma_access_fail(&self) -> TX_CH3_DMA_ACCESS_FAIL_R {
-        TX_CH3_DMA_ACCESS_FAIL_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn ch3_dma_access_fail(&self) -> CH3_DMA_ACCESS_FAIL_R {
+        CH3_DMA_ACCESS_FAIL_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - The interrupt enable bit for CH7_DMA_ACCESS_FAIL_INT."]
     #[inline(always)]
-    pub fn rx_ch7_dma_access_fail(&self) -> RX_CH7_DMA_ACCESS_FAIL_R {
-        RX_CH7_DMA_ACCESS_FAIL_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn ch7_dma_access_fail(&self) -> CH7_DMA_ACCESS_FAIL_R {
+        CH7_DMA_ACCESS_FAIL_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -282,10 +282,10 @@ impl core::fmt::Debug for R {
             .field("ch1_tx_end", &self.ch1_tx_end())
             .field("ch2_tx_end", &self.ch2_tx_end())
             .field("ch3_tx_end", &self.ch3_tx_end())
-            .field("tx_ch0_err", &self.tx_ch0_err())
-            .field("tx_ch1_err", &self.tx_ch1_err())
-            .field("tx_ch2_err", &self.tx_ch2_err())
-            .field("tx_ch3_err", &self.tx_ch3_err())
+            .field("ch0_err", &self.ch0_err())
+            .field("ch1_err", &self.ch1_err())
+            .field("ch2_err", &self.ch2_err())
+            .field("ch3_err", &self.ch3_err())
             .field("ch0_tx_thr_event", &self.ch0_tx_thr_event())
             .field("ch1_tx_thr_event", &self.ch1_tx_thr_event())
             .field("ch2_tx_thr_event", &self.ch2_tx_thr_event())
@@ -306,8 +306,8 @@ impl core::fmt::Debug for R {
             .field("ch5_rx_thr_event", &self.ch5_rx_thr_event())
             .field("ch6_rx_thr_event", &self.ch6_rx_thr_event())
             .field("ch7_rx_thr_event", &self.ch7_rx_thr_event())
-            .field("tx_ch3_dma_access_fail", &self.tx_ch3_dma_access_fail())
-            .field("rx_ch7_dma_access_fail", &self.rx_ch7_dma_access_fail())
+            .field("ch3_dma_access_fail", &self.ch3_dma_access_fail())
+            .field("ch7_dma_access_fail", &self.ch7_dma_access_fail())
             .finish()
     }
 }
@@ -334,23 +334,23 @@ impl W {
     }
     #[doc = "Bit 4 - The interrupt enable bit for CH0_ERR_INT."]
     #[inline(always)]
-    pub fn tx_ch0_err(&mut self) -> TX_CH0_ERR_W<'_, INT_ENA_SPEC> {
-        TX_CH0_ERR_W::new(self, 4)
+    pub fn ch0_err(&mut self) -> CH0_ERR_W<'_, INT_ENA_SPEC> {
+        CH0_ERR_W::new(self, 4)
     }
     #[doc = "Bit 5 - The interrupt enable bit for CH1_ERR_INT."]
     #[inline(always)]
-    pub fn tx_ch1_err(&mut self) -> TX_CH1_ERR_W<'_, INT_ENA_SPEC> {
-        TX_CH1_ERR_W::new(self, 5)
+    pub fn ch1_err(&mut self) -> CH1_ERR_W<'_, INT_ENA_SPEC> {
+        CH1_ERR_W::new(self, 5)
     }
     #[doc = "Bit 6 - The interrupt enable bit for CH2_ERR_INT."]
     #[inline(always)]
-    pub fn tx_ch2_err(&mut self) -> TX_CH2_ERR_W<'_, INT_ENA_SPEC> {
-        TX_CH2_ERR_W::new(self, 6)
+    pub fn ch2_err(&mut self) -> CH2_ERR_W<'_, INT_ENA_SPEC> {
+        CH2_ERR_W::new(self, 6)
     }
     #[doc = "Bit 7 - The interrupt enable bit for CH3_ERR_INT."]
     #[inline(always)]
-    pub fn tx_ch3_err(&mut self) -> TX_CH3_ERR_W<'_, INT_ENA_SPEC> {
-        TX_CH3_ERR_W::new(self, 7)
+    pub fn ch3_err(&mut self) -> CH3_ERR_W<'_, INT_ENA_SPEC> {
+        CH3_ERR_W::new(self, 7)
     }
     #[doc = "Bit 8 - The interrupt enable bit for CH0_TX_THR_EVENT_INT."]
     #[inline(always)]
@@ -454,13 +454,13 @@ impl W {
     }
     #[doc = "Bit 28 - The interrupt enable bit for CH3_DMA_ACCESS_FAIL_INT."]
     #[inline(always)]
-    pub fn tx_ch3_dma_access_fail(&mut self) -> TX_CH3_DMA_ACCESS_FAIL_W<'_, INT_ENA_SPEC> {
-        TX_CH3_DMA_ACCESS_FAIL_W::new(self, 28)
+    pub fn ch3_dma_access_fail(&mut self) -> CH3_DMA_ACCESS_FAIL_W<'_, INT_ENA_SPEC> {
+        CH3_DMA_ACCESS_FAIL_W::new(self, 28)
     }
     #[doc = "Bit 29 - The interrupt enable bit for CH7_DMA_ACCESS_FAIL_INT."]
     #[inline(always)]
-    pub fn rx_ch7_dma_access_fail(&mut self) -> RX_CH7_DMA_ACCESS_FAIL_W<'_, INT_ENA_SPEC> {
-        RX_CH7_DMA_ACCESS_FAIL_W::new(self, 29)
+    pub fn ch7_dma_access_fail(&mut self) -> CH7_DMA_ACCESS_FAIL_W<'_, INT_ENA_SPEC> {
+        CH7_DMA_ACCESS_FAIL_W::new(self, 29)
     }
 }
 #[doc = "Interrupt enable bits\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

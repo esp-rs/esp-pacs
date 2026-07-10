@@ -2,18 +2,16 @@
 pub type R = crate::R<RNG_CFG_SPEC>;
 #[doc = "Register `RNG_CFG` writer"]
 pub type W = crate::W<RNG_CFG_SPEC>;
-#[doc = "Field `RNG_SAMPLE_ENABLE` reader - enable rng sample chain"]
+#[doc = "Field `RNG_SAMPLE_ENABLE` reader - reserved"]
 pub type RNG_SAMPLE_ENABLE_R = crate::BitReader;
-#[doc = "Field `RNG_SAMPLE_ENABLE` writer - enable rng sample chain"]
+#[doc = "Field `RNG_SAMPLE_ENABLE` writer - reserved"]
 pub type RNG_SAMPLE_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RNG_CHAIN_CLK_DIV_NUM` reader - chain clk div num to pad for debug"]
 pub type RNG_CHAIN_CLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `RNG_CHAIN_CLK_DIV_NUM` writer - chain clk div num to pad for debug"]
 pub type RNG_CHAIN_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `RNG_SAMPLE_CNT` reader - debug rng sample cnt"]
-pub type RNG_SAMPLE_CNT_R = crate::FieldReader;
 impl R {
-    #[doc = "Bit 0 - enable rng sample chain"]
+    #[doc = "Bit 0 - reserved"]
     #[inline(always)]
     pub fn rng_sample_enable(&self) -> RNG_SAMPLE_ENABLE_R {
         RNG_SAMPLE_ENABLE_R::new((self.bits & 1) != 0)
@@ -23,11 +21,6 @@ impl R {
     pub fn rng_chain_clk_div_num(&self) -> RNG_CHAIN_CLK_DIV_NUM_R {
         RNG_CHAIN_CLK_DIV_NUM_R::new(((self.bits >> 16) & 0xff) as u8)
     }
-    #[doc = "Bits 24:31 - debug rng sample cnt"]
-    #[inline(always)]
-    pub fn rng_sample_cnt(&self) -> RNG_SAMPLE_CNT_R {
-        RNG_SAMPLE_CNT_R::new(((self.bits >> 24) & 0xff) as u8)
-    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -35,12 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("RNG_CFG")
             .field("rng_sample_enable", &self.rng_sample_enable())
             .field("rng_chain_clk_div_num", &self.rng_chain_clk_div_num())
-            .field("rng_sample_cnt", &self.rng_sample_cnt())
             .finish()
     }
 }
 impl W {
-    #[doc = "Bit 0 - enable rng sample chain"]
+    #[doc = "Bit 0 - reserved"]
     #[inline(always)]
     pub fn rng_sample_enable(&mut self) -> RNG_SAMPLE_ENABLE_W<'_, RNG_CFG_SPEC> {
         RNG_SAMPLE_ENABLE_W::new(self, 0)

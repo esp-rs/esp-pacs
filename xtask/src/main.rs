@@ -6,7 +6,7 @@ use std::{
     process::{Command, Stdio},
 };
 
-use anyhow::{Error, Result};
+use anyhow::{bail, Error, Result};
 use clap::{Parser, Subcommand, ValueEnum};
 use rayon::prelude::*;
 use strum::{Display, EnumIter, IntoEnumIterator};
@@ -214,10 +214,14 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
     config.output_dir = Some(path.clone());
     config.impl_debug = true;
     config.impl_debug_feature = Some("impl-register-debug".to_owned());
-    config.interrupt_link_section = Some(".rwtext".to_owned());
+    config.interrupt_link_section = Some(".rwtext.interrupt".to_owned());
     config.ident_formats_theme = Some(IdentFormatsTheme::Legacy);
     config.max_cluster_size = true;
     config.impl_defmt = Some("defmt".into());
+    config.skip_peripherals_struct = match chip {
+        Chip::Esp32s3Ulp | Chip::Esp32s2Ulp | Chip::Esp32c6Lp => false,
+        _ => true,
+    };
 
     let input = fs::read_to_string(svd_file)?;
     let device = svd2rust::load_from(&input, &config)?;
@@ -277,20 +281,20 @@ fn build_package(workspace: &Path, chip: &Chip) -> Result<()> {
     log::info!("building PAC using '{channel}' channel and targeting '{target}'");
 
     if target.starts_with("riscv") {
-        Command::new("rustup")
-            .args(["target", "add", &target])
-            .current_dir(&path)
-            .stdout(Stdio::inherit())
-            .stderr(Stdio::inherit())
-            .output()?;
-        Command::new("cargo")
+        let mut command = Command::new("rustup");
+        command
+            .args(["target", "add", "--toolchain", &channel, &target])
+            .current_dir(&path);
+        run_command(&mut command)?;
+
+        let mut command = Command::new("cargo");
+        command
             .args([&format!("+{channel}"), "build", "--target", &target])
-            .current_dir(path)
-            .stdout(Stdio::inherit())
-            .stderr(Stdio::inherit())
-            .output()?;
+            .current_dir(path);
+        run_command(&mut command)?;
     } else {
-        Command::new("cargo")
+        let mut command = Command::new("cargo");
+        command
             .args([
                 &format!("+{channel}"),
                 "build",
@@ -299,10 +303,8 @@ fn build_package(workspace: &Path, chip: &Chip) -> Result<()> {
                 "--target",
                 &target,
             ])
-            .current_dir(path)
-            .stdout(Stdio::inherit())
-            .stderr(Stdio::inherit())
-            .output()?;
+            .current_dir(path);
+        run_command(&mut command)?;
     }
 
     Ok(())
@@ -353,10 +355,13 @@ fn publish_package(workspace: &Path, chip: &Chip, dry_run: bool) -> Result<()> {
     clean(&path)?;
 
     log::info!("publishing package '{chip}', dry run: {dry_run}");
-    Command::new("cargo")
-        .args(&["publish", if dry_run { "--dry-run" } else { "" }])
-        .current_dir(path)
-        .output()?;
+    let mut command = Command::new("cargo");
+    command.arg("publish");
+    if dry_run {
+        command.arg("--dry-run");
+    }
+    command.current_dir(path);
+    run_command(&mut command)?;
 
     Ok(())
 }
@@ -402,19 +407,54 @@ fn format(path: &Path, chip: &Chip) -> Result<()> {
 
     fs::remove_file(&lib_file)?;
 
-    Command::new("cargo")
-        .arg("fmt")
-        .current_dir(path)
-        .output()?;
+    let mut result = Ok(());
+
+    // Retry a few times in case IDEs lock the files while formatting.
+    for _ in 0..5 {
+        let mut command = Command::new("cargo");
+        command.arg("fmt").current_dir(path);
+        result = run_command(&mut command);
+        if result.is_ok() {
+            break;
+        }
+        std::thread::sleep(std::time::Duration::from_millis(500));
+    }
+
+    result
+}
+
+fn clean(path: &Path) -> Result<()> {
+    let mut command = Command::new("cargo");
+    command.arg("clean").current_dir(path);
+    run_command(&mut command)?;
 
     Ok(())
 }
 
-fn clean(path: &Path) -> Result<()> {
-    Command::new("cargo")
-        .arg("clean")
-        .current_dir(path)
-        .output()?;
+fn run_command(command: &mut Command) -> Result<()> {
+    let rendered = format_command(command);
+    let status = command
+        .stdout(Stdio::inherit())
+        .stderr(Stdio::inherit())
+        .status()?;
+
+    if !status.success() {
+        bail!("command failed: `{rendered}`");
+    }
 
     Ok(())
+}
+
+fn format_command(command: &Command) -> String {
+    let program = command.get_program().to_string_lossy().into_owned();
+    let args = command
+        .get_args()
+        .map(|arg| arg.to_string_lossy().into_owned())
+        .collect::<Vec<_>>();
+
+    if args.is_empty() {
+        program
+    } else {
+        format!("{} {}", program, args.join(" "))
+    }
 }

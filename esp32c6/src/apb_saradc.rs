@@ -282,5 +282,4 @@ pub mod tsens_wake;
 pub type TSENS_SAMPLE = crate::Reg<tsens_sample::TSENS_SAMPLE_SPEC>;
 #[doc = "digital tsens configure register"]
 pub mod tsens_sample;
-pub use crate::aes::date as ctrl_date;
-pub use crate::aes::DATE as CTRL_DATE;
+pub use crate::aes::{date as ctrl_date, DATE as CTRL_DATE};

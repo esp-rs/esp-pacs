@@ -1,9 +1,9 @@
 #[doc = "Register `IN_DSCR` reader"]
 pub type R = crate::R<IN_DSCR_SPEC>;
-#[doc = "Field `INLINK_DSCR` reader - The address of the current inlink descriptor x."]
+#[doc = "Field `INLINK_DSCR` reader - Represents the address of the next receive descriptor x+1 pointed by the current receive descriptor that has already been fetched."]
 pub type INLINK_DSCR_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - The address of the current inlink descriptor x."]
+    #[doc = "Bits 0:31 - Represents the address of the next receive descriptor x+1 pointed by the current receive descriptor that has already been fetched."]
     #[inline(always)]
     pub fn inlink_dscr(&self) -> INLINK_DSCR_R {
         INLINK_DSCR_R::new(self.bits)
@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Current inlink descriptor address of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_dscr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Current receive descriptor address of RX channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_dscr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN_DSCR_SPEC;
 impl crate::RegisterSpec for IN_DSCR_SPEC {
     type Ux = u32;

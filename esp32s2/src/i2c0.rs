@@ -279,5 +279,4 @@ pub mod scl_sp_conf;
 pub type SCL_STRETCH_CONF = crate::Reg<scl_stretch_conf::SCL_STRETCH_CONF_SPEC>;
 #[doc = "Set SCL stretch of I2C slave"]
 pub mod scl_stretch_conf;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

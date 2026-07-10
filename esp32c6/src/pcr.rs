@@ -6,7 +6,7 @@ pub struct RegisterBlock {
     mspi_conf: MSPI_CONF,
     mspi_clk_conf: MSPI_CLK_CONF,
     i2c0_conf: I2C0_CONF,
-    i2c_sclk_conf: I2C_SCLK_CONF,
+    i2c_sclk_conf: [I2C_SCLK_CONF; 1],
     uhci_conf: UHCI_CONF,
     rmt_conf: RMT_CONF,
     rmt_sclk_conf: RMT_SCLK_CONF,
@@ -106,8 +106,19 @@ impl RegisterBlock {
     }
     #[doc = "0x24 - I2C_SCLK configuration register"]
     #[inline(always)]
-    pub const fn i2c_sclk_conf(&self) -> &I2C_SCLK_CONF {
-        &self.i2c_sclk_conf
+    pub const fn i2c_sclk_conf(&self, n: usize) -> &I2C_SCLK_CONF {
+        &self.i2c_sclk_conf[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x24 - I2C_SCLK configuration register"]
+    #[inline(always)]
+    pub fn i2c_sclk_conf_iter(&self) -> impl Iterator<Item = &I2C_SCLK_CONF> {
+        self.i2c_sclk_conf.iter()
+    }
+    #[doc = "0x24 - I2C_SCLK configuration register"]
+    #[inline(always)]
+    pub const fn i2c0_sclk_conf(&self) -> &I2C_SCLK_CONF {
+        self.i2c_sclk_conf(0)
     }
     #[doc = "0x28 - UHCI configuration register"]
     #[inline(always)]
@@ -747,5 +758,4 @@ pub mod fpga_debug;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "PCR clock gating configure register"]
 pub mod clock_gate;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

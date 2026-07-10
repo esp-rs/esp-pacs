@@ -2,21 +2,21 @@
 pub type R = crate::R<TX_CLK_CFG_SPEC>;
 #[doc = "Register `TX_CLK_CFG` writer"]
 pub type W = crate::W<TX_CLK_CFG_SPEC>;
-#[doc = "Field `TX_CLK_I_INV` reader - Set this bit to invert the input Tx core clock."]
+#[doc = "Field `TX_CLK_I_INV` reader - Write 1 to invert the input Tx core clock."]
 pub type TX_CLK_I_INV_R = crate::BitReader;
-#[doc = "Field `TX_CLK_I_INV` writer - Set this bit to invert the input Tx core clock."]
+#[doc = "Field `TX_CLK_I_INV` writer - Write 1 to invert the input Tx core clock."]
 pub type TX_CLK_I_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TX_CLK_O_INV` reader - Set this bit to invert the output Tx core clock."]
+#[doc = "Field `TX_CLK_O_INV` reader - Write 1 to invert the output Tx core clock."]
 pub type TX_CLK_O_INV_R = crate::BitReader;
-#[doc = "Field `TX_CLK_O_INV` writer - Set this bit to invert the output Tx core clock."]
+#[doc = "Field `TX_CLK_O_INV` writer - Write 1 to invert the output Tx core clock."]
 pub type TX_CLK_O_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 30 - Set this bit to invert the input Tx core clock."]
+    #[doc = "Bit 30 - Write 1 to invert the input Tx core clock."]
     #[inline(always)]
     pub fn tx_clk_i_inv(&self) -> TX_CLK_I_INV_R {
         TX_CLK_I_INV_R::new(((self.bits >> 30) & 1) != 0)
     }
-    #[doc = "Bit 31 - Set this bit to invert the output Tx core clock."]
+    #[doc = "Bit 31 - Write 1 to invert the output Tx core clock."]
     #[inline(always)]
     pub fn tx_clk_o_inv(&self) -> TX_CLK_O_INV_R {
         TX_CLK_O_INV_R::new(((self.bits >> 31) & 1) != 0)
@@ -32,12 +32,12 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 30 - Set this bit to invert the input Tx core clock."]
+    #[doc = "Bit 30 - Write 1 to invert the input Tx core clock."]
     #[inline(always)]
     pub fn tx_clk_i_inv(&mut self) -> TX_CLK_I_INV_W<'_, TX_CLK_CFG_SPEC> {
         TX_CLK_I_INV_W::new(self, 30)
     }
-    #[doc = "Bit 31 - Set this bit to invert the output Tx core clock."]
+    #[doc = "Bit 31 - Write 1 to invert the output Tx core clock."]
     #[inline(always)]
     pub fn tx_clk_o_inv(&mut self) -> TX_CLK_O_INV_W<'_, TX_CLK_CFG_SPEC> {
         TX_CLK_O_INV_W::new(self, 31)

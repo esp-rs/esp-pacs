@@ -168,5 +168,4 @@ pub mod data;
 pub type CMD = crate::Reg<cmd::CMD_SPEC>;
 #[doc = "RTC I2C Command %s"]
 pub mod cmd;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

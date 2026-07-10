@@ -5,34 +5,31 @@ pub struct RegisterBlock {
     ver_date: VER_DATE,
     clk_en: CLK_EN,
     _reserved2: [u8; 0x08],
-    cpu_intr_from_cpu_0: CPU_INTR_FROM_CPU_0,
-    cpu_intr_from_cpu_1: CPU_INTR_FROM_CPU_1,
-    cpu_intr_from_cpu_2: CPU_INTR_FROM_CPU_2,
-    cpu_intr_from_cpu_3: CPU_INTR_FROM_CPU_3,
+    cpu_intr_from_cpu: [CPU_INTR_FROM_CPU; 4],
     cache_clk_config: CACHE_CLK_CONFIG,
     cache_reset_config: CACHE_RESET_CONFIG,
-    _reserved8: [u8; 0x04],
+    _reserved5: [u8; 0x04],
     dma_addr_ctrl: DMA_ADDR_CTRL,
-    _reserved9: [u8; 0x04],
+    _reserved6: [u8; 0x04],
     tcm_ram_wrr_config: TCM_RAM_WRR_CONFIG,
     tcm_sw_parity_bwe_mask: TCM_SW_PARITY_BWE_MASK,
     tcm_ram_pwr_ctrl0: TCM_RAM_PWR_CTRL0,
     l2_rom_pwr_ctrl0: L2_ROM_PWR_CTRL0,
-    _reserved13: [u8; 0x0c],
+    _reserved10: [u8; 0x0c],
     probea_ctrl: PROBEA_CTRL,
     probeb_ctrl: PROBEB_CTRL,
-    _reserved15: [u8; 0x04],
+    _reserved12: [u8; 0x04],
     probe_out: PROBE_OUT,
     l2_mem_ram_pwr_ctrl0: L2_MEM_RAM_PWR_CTRL0,
     cpu_corestalled_st: CPU_CORESTALLED_ST,
-    _reserved18: [u8; 0x08],
+    _reserved15: [u8; 0x08],
     crypto_ctrl: CRYPTO_CTRL,
     gpio_o_hold_ctrl0: GPIO_O_HOLD_CTRL0,
     gpio_o_hold_ctrl1: GPIO_O_HOLD_CTRL1,
     rdn_eco_cs: RDN_ECO_CS,
     cache_apb_postw_en: CACHE_APB_POSTW_EN,
     l2_mem_subsize: L2_MEM_SUBSIZE,
-    _reserved24: [u8; 0x14],
+    _reserved21: [u8; 0x14],
     l2_mem_int_raw: L2_MEM_INT_RAW,
     l2_mem_int_st: L2_MEM_INT_ST,
     l2_mem_int_ena: L2_MEM_INT_ENA,
@@ -40,11 +37,11 @@ pub struct RegisterBlock {
     l2_mem_l2_ram_ecc: L2_MEM_L2_RAM_ECC,
     l2_mem_int_record0: L2_MEM_INT_RECORD0,
     l2_mem_int_record1: L2_MEM_INT_RECORD1,
-    _reserved31: [u8; 0x0c],
+    _reserved28: [u8; 0x0c],
     l2_mem_l2_cache_ecc: L2_MEM_L2_CACHE_ECC,
     l1cache_bus0_id: L1CACHE_BUS0_ID,
     l1cache_bus1_id: L1CACHE_BUS1_ID,
-    _reserved34: [u8; 0x08],
+    _reserved31: [u8; 0x08],
     l2_mem_rdn_eco_cs: L2_MEM_RDN_ECO_CS,
     l2_mem_rdn_eco_low: L2_MEM_RDN_ECO_LOW,
     l2_mem_rdn_eco_high: L2_MEM_RDN_ECO_HIGH,
@@ -66,7 +63,7 @@ pub struct RegisterBlock {
     core_ahb_timeout: CORE_AHB_TIMEOUT,
     core_ibus_timeout: CORE_IBUS_TIMEOUT,
     core_dbus_timeout: CORE_DBUS_TIMEOUT,
-    _reserved55: [u8; 0x0c],
+    _reserved52: [u8; 0x0c],
     icm_cpu_h2x_cfg: ICM_CPU_H2X_CFG,
     peri1_apb_postw_en: PERI1_APB_POSTW_EN,
     bitscrambler_peri_sel: BITSCRAMBLER_PERI_SEL,
@@ -83,9 +80,9 @@ pub struct RegisterBlock {
     tcm_parity_check_ctrl: TCM_PARITY_CHECK_CTRL,
     design_for_verification0: DESIGN_FOR_VERIFICATION0,
     design_for_verification1: DESIGN_FOR_VERIFICATION1,
-    _reserved71: [u8; 0x08],
+    _reserved68: [u8; 0x08],
     psram_flash_addr_interchange: PSRAM_FLASH_ADDR_INTERCHANGE,
-    _reserved72: [u8; 0x04],
+    _reserved69: [u8; 0x04],
     ahb2axi_bresp_err_int_raw: AHB2AXI_BRESP_ERR_INT_RAW,
     ahb2axi_bresp_err_int_st: AHB2AXI_BRESP_ERR_INT_ST,
     ahb2axi_bresp_err_int_ena: AHB2AXI_BRESP_ERR_INT_ENA,
@@ -98,15 +95,30 @@ pub struct RegisterBlock {
     core_timeout_int_st: CORE_TIMEOUT_INT_ST,
     core_timeout_int_ena: CORE_TIMEOUT_INT_ENA,
     core_timeout_int_clr: CORE_TIMEOUT_INT_CLR,
-    _reserved84: [u8; 0x08],
+    _reserved81: [u8; 0x08],
     gpio_o_hys_ctrl0: GPIO_O_HYS_CTRL0,
     gpio_o_hys_ctrl1: GPIO_O_HYS_CTRL1,
-    _reserved86: [u8; 0x08],
+    _reserved83: [u8; 0x08],
     rsa_pd_ctrl: RSA_PD_CTRL,
     ecc_pd_ctrl: ECC_PD_CTRL,
     rng_cfg: RNG_CFG,
     uart_pd_ctrl: UART_PD_CTRL,
     peri_mem_clk_force_on: PERI_MEM_CLK_FORCE_ON,
+    _reserved88: [u8; 0x04],
+    usb_otghs_phy_st: USB_OTGHS_PHY_ST,
+    cpu_wakeup_event: CPU_WAKEUP_EVENT,
+    hp2lp_intr_group0_en: HP2LP_INTR_GROUP0_EN,
+    hp2lp_intr_group1_en: HP2LP_INTR_GROUP1_EN,
+    hp2lp_intr_group2_en: HP2LP_INTR_GROUP2_EN,
+    hp2lp_intr_group3_en: HP2LP_INTR_GROUP3_EN,
+    hp2lp_intr_group0_st: HP2LP_INTR_GROUP0_ST,
+    hp2lp_intr_group1_st: HP2LP_INTR_GROUP1_ST,
+    hp2lp_intr_group2_st: HP2LP_INTR_GROUP2_ST,
+    hp2lp_intr_group3_st: HP2LP_INTR_GROUP3_ST,
+    hp2lp_wakeup_group0_en: HP2LP_WAKEUP_GROUP0_EN,
+    hp2lp_wakeup_group1_en: HP2LP_WAKEUP_GROUP1_EN,
+    hp2lp_wakeup_group2_en: HP2LP_WAKEUP_GROUP2_EN,
+    hp2lp_wakeup_group3_en: HP2LP_WAKEUP_GROUP3_EN,
 }
 impl RegisterBlock {
     #[doc = "0x00 - NA"]
@@ -119,25 +131,16 @@ impl RegisterBlock {
     pub const fn clk_en(&self) -> &CLK_EN {
         &self.clk_en
     }
-    #[doc = "0x10 - NA"]
+    #[doc = "0x10..0x20 - NA"]
     #[inline(always)]
-    pub const fn cpu_intr_from_cpu_0(&self) -> &CPU_INTR_FROM_CPU_0 {
-        &self.cpu_intr_from_cpu_0
+    pub const fn cpu_intr_from_cpu(&self, n: usize) -> &CPU_INTR_FROM_CPU {
+        &self.cpu_intr_from_cpu[n]
     }
-    #[doc = "0x14 - NA"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x10..0x20 - NA"]
     #[inline(always)]
-    pub const fn cpu_intr_from_cpu_1(&self) -> &CPU_INTR_FROM_CPU_1 {
-        &self.cpu_intr_from_cpu_1
-    }
-    #[doc = "0x18 - NA"]
-    #[inline(always)]
-    pub const fn cpu_intr_from_cpu_2(&self) -> &CPU_INTR_FROM_CPU_2 {
-        &self.cpu_intr_from_cpu_2
-    }
-    #[doc = "0x1c - NA"]
-    #[inline(always)]
-    pub const fn cpu_intr_from_cpu_3(&self) -> &CPU_INTR_FROM_CPU_3 {
-        &self.cpu_intr_from_cpu_3
+    pub fn cpu_intr_from_cpu_iter(&self) -> impl Iterator<Item = &CPU_INTR_FROM_CPU> {
+        self.cpu_intr_from_cpu.iter()
     }
     #[doc = "0x20 - NA"]
     #[inline(always)]
@@ -564,6 +567,76 @@ impl RegisterBlock {
     pub const fn peri_mem_clk_force_on(&self) -> &PERI_MEM_CLK_FORCE_ON {
         &self.peri_mem_clk_force_on
     }
+    #[doc = "0x1e8 - Usb otg2.0 PHY status register"]
+    #[inline(always)]
+    pub const fn usb_otghs_phy_st(&self) -> &USB_OTGHS_PHY_ST {
+        &self.usb_otghs_phy_st
+    }
+    #[doc = "0x1ec - cpu wakeup event ctrl register"]
+    #[inline(always)]
+    pub const fn cpu_wakeup_event(&self) -> &CPU_WAKEUP_EVENT {
+        &self.cpu_wakeup_event
+    }
+    #[doc = "0x1f0 - HpP2LP Interrupt Enable Register Group0"]
+    #[inline(always)]
+    pub const fn hp2lp_intr_group0_en(&self) -> &HP2LP_INTR_GROUP0_EN {
+        &self.hp2lp_intr_group0_en
+    }
+    #[doc = "0x1f4 - HpP2LP Interrupt Enable Register Group1"]
+    #[inline(always)]
+    pub const fn hp2lp_intr_group1_en(&self) -> &HP2LP_INTR_GROUP1_EN {
+        &self.hp2lp_intr_group1_en
+    }
+    #[doc = "0x1f8 - HpP2LP Interrupt Enable Register Group2"]
+    #[inline(always)]
+    pub const fn hp2lp_intr_group2_en(&self) -> &HP2LP_INTR_GROUP2_EN {
+        &self.hp2lp_intr_group2_en
+    }
+    #[doc = "0x1fc - HpP2LP Interrupt Enable Register Group3"]
+    #[inline(always)]
+    pub const fn hp2lp_intr_group3_en(&self) -> &HP2LP_INTR_GROUP3_EN {
+        &self.hp2lp_intr_group3_en
+    }
+    #[doc = "0x200 - HpP2LP Interrupt Status Register Group0"]
+    #[inline(always)]
+    pub const fn hp2lp_intr_group0_st(&self) -> &HP2LP_INTR_GROUP0_ST {
+        &self.hp2lp_intr_group0_st
+    }
+    #[doc = "0x204 - HpP2LP Interrupt Enable Register Group1"]
+    #[inline(always)]
+    pub const fn hp2lp_intr_group1_st(&self) -> &HP2LP_INTR_GROUP1_ST {
+        &self.hp2lp_intr_group1_st
+    }
+    #[doc = "0x208 - HpP2LP Interrupt Enable Register Group2"]
+    #[inline(always)]
+    pub const fn hp2lp_intr_group2_st(&self) -> &HP2LP_INTR_GROUP2_ST {
+        &self.hp2lp_intr_group2_st
+    }
+    #[doc = "0x20c - HpP2LP Interrupt Enable Register Group3"]
+    #[inline(always)]
+    pub const fn hp2lp_intr_group3_st(&self) -> &HP2LP_INTR_GROUP3_ST {
+        &self.hp2lp_intr_group3_st
+    }
+    #[doc = "0x210 - HpP2LP Wakeup Enable Register Group0"]
+    #[inline(always)]
+    pub const fn hp2lp_wakeup_group0_en(&self) -> &HP2LP_WAKEUP_GROUP0_EN {
+        &self.hp2lp_wakeup_group0_en
+    }
+    #[doc = "0x214 - HpP2LP Wakeup Enable Register Group1"]
+    #[inline(always)]
+    pub const fn hp2lp_wakeup_group1_en(&self) -> &HP2LP_WAKEUP_GROUP1_EN {
+        &self.hp2lp_wakeup_group1_en
+    }
+    #[doc = "0x218 - HpP2LP Wakeup Enable Register Group2"]
+    #[inline(always)]
+    pub const fn hp2lp_wakeup_group2_en(&self) -> &HP2LP_WAKEUP_GROUP2_EN {
+        &self.hp2lp_wakeup_group2_en
+    }
+    #[doc = "0x21c - HpP2LP Wakeup Enable Register Group3"]
+    #[inline(always)]
+    pub const fn hp2lp_wakeup_group3_en(&self) -> &HP2LP_WAKEUP_GROUP3_EN {
+        &self.hp2lp_wakeup_group3_en
+    }
 }
 #[doc = "VER_DATE (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`ver_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ver_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ver_date`] module"]
 pub type VER_DATE = crate::Reg<ver_date::VER_DATE_SPEC>;
@@ -573,22 +646,10 @@ pub mod ver_date;
 pub type CLK_EN = crate::Reg<clk_en::CLK_EN_SPEC>;
 #[doc = "NA"]
 pub mod clk_en;
-#[doc = "CPU_INTR_FROM_CPU_0 (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu_0`] module"]
-pub type CPU_INTR_FROM_CPU_0 = crate::Reg<cpu_intr_from_cpu_0::CPU_INTR_FROM_CPU_0_SPEC>;
+#[doc = "CPU_INTR_FROM_CPU (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu`] module"]
+pub type CPU_INTR_FROM_CPU = crate::Reg<cpu_intr_from_cpu::CPU_INTR_FROM_CPU_SPEC>;
 #[doc = "NA"]
-pub mod cpu_intr_from_cpu_0;
-#[doc = "CPU_INTR_FROM_CPU_1 (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu_1`] module"]
-pub type CPU_INTR_FROM_CPU_1 = crate::Reg<cpu_intr_from_cpu_1::CPU_INTR_FROM_CPU_1_SPEC>;
-#[doc = "NA"]
-pub mod cpu_intr_from_cpu_1;
-#[doc = "CPU_INTR_FROM_CPU_2 (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu_2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu_2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu_2`] module"]
-pub type CPU_INTR_FROM_CPU_2 = crate::Reg<cpu_intr_from_cpu_2::CPU_INTR_FROM_CPU_2_SPEC>;
-#[doc = "NA"]
-pub mod cpu_intr_from_cpu_2;
-#[doc = "CPU_INTR_FROM_CPU_3 (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu_3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu_3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu_3`] module"]
-pub type CPU_INTR_FROM_CPU_3 = crate::Reg<cpu_intr_from_cpu_3::CPU_INTR_FROM_CPU_3_SPEC>;
-#[doc = "NA"]
-pub mod cpu_intr_from_cpu_3;
+pub mod cpu_intr_from_cpu;
 #[doc = "CACHE_CLK_CONFIG (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cache_clk_config::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cache_clk_config::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cache_clk_config`] module"]
 pub type CACHE_CLK_CONFIG = crate::Reg<cache_clk_config::CACHE_CLK_CONFIG_SPEC>;
 #[doc = "NA"]
@@ -937,3 +998,59 @@ pub mod uart_pd_ctrl;
 pub type PERI_MEM_CLK_FORCE_ON = crate::Reg<peri_mem_clk_force_on::PERI_MEM_CLK_FORCE_ON_SPEC>;
 #[doc = "hp peri mem clk force on regpster"]
 pub mod peri_mem_clk_force_on;
+#[doc = "USB_OTGHS_PHY_ST (r) register accessor: Usb otg2.0 PHY status register\n\nYou can [`read`](crate::Reg::read) this register and get [`usb_otghs_phy_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@usb_otghs_phy_st`] module"]
+pub type USB_OTGHS_PHY_ST = crate::Reg<usb_otghs_phy_st::USB_OTGHS_PHY_ST_SPEC>;
+#[doc = "Usb otg2.0 PHY status register"]
+pub mod usb_otghs_phy_st;
+#[doc = "CPU_WAKEUP_EVENT (rw) register accessor: cpu wakeup event ctrl register\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_wakeup_event::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_wakeup_event::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_wakeup_event`] module"]
+pub type CPU_WAKEUP_EVENT = crate::Reg<cpu_wakeup_event::CPU_WAKEUP_EVENT_SPEC>;
+#[doc = "cpu wakeup event ctrl register"]
+pub mod cpu_wakeup_event;
+#[doc = "HP2LP_INTR_GROUP0_EN (rw) register accessor: HpP2LP Interrupt Enable Register Group0\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_intr_group0_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp2lp_intr_group0_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp2lp_intr_group0_en`] module"]
+pub type HP2LP_INTR_GROUP0_EN = crate::Reg<hp2lp_intr_group0_en::HP2LP_INTR_GROUP0_EN_SPEC>;
+#[doc = "HpP2LP Interrupt Enable Register Group0"]
+pub mod hp2lp_intr_group0_en;
+#[doc = "HP2LP_INTR_GROUP1_EN (rw) register accessor: HpP2LP Interrupt Enable Register Group1\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_intr_group1_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp2lp_intr_group1_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp2lp_intr_group1_en`] module"]
+pub type HP2LP_INTR_GROUP1_EN = crate::Reg<hp2lp_intr_group1_en::HP2LP_INTR_GROUP1_EN_SPEC>;
+#[doc = "HpP2LP Interrupt Enable Register Group1"]
+pub mod hp2lp_intr_group1_en;
+#[doc = "HP2LP_INTR_GROUP2_EN (rw) register accessor: HpP2LP Interrupt Enable Register Group2\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_intr_group2_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp2lp_intr_group2_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp2lp_intr_group2_en`] module"]
+pub type HP2LP_INTR_GROUP2_EN = crate::Reg<hp2lp_intr_group2_en::HP2LP_INTR_GROUP2_EN_SPEC>;
+#[doc = "HpP2LP Interrupt Enable Register Group2"]
+pub mod hp2lp_intr_group2_en;
+#[doc = "HP2LP_INTR_GROUP3_EN (rw) register accessor: HpP2LP Interrupt Enable Register Group3\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_intr_group3_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp2lp_intr_group3_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp2lp_intr_group3_en`] module"]
+pub type HP2LP_INTR_GROUP3_EN = crate::Reg<hp2lp_intr_group3_en::HP2LP_INTR_GROUP3_EN_SPEC>;
+#[doc = "HpP2LP Interrupt Enable Register Group3"]
+pub mod hp2lp_intr_group3_en;
+#[doc = "HP2LP_INTR_GROUP0_ST (r) register accessor: HpP2LP Interrupt Status Register Group0\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_intr_group0_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp2lp_intr_group0_st`] module"]
+pub type HP2LP_INTR_GROUP0_ST = crate::Reg<hp2lp_intr_group0_st::HP2LP_INTR_GROUP0_ST_SPEC>;
+#[doc = "HpP2LP Interrupt Status Register Group0"]
+pub mod hp2lp_intr_group0_st;
+#[doc = "HP2LP_INTR_GROUP1_ST (r) register accessor: HpP2LP Interrupt Enable Register Group1\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_intr_group1_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp2lp_intr_group1_st`] module"]
+pub type HP2LP_INTR_GROUP1_ST = crate::Reg<hp2lp_intr_group1_st::HP2LP_INTR_GROUP1_ST_SPEC>;
+#[doc = "HpP2LP Interrupt Enable Register Group1"]
+pub mod hp2lp_intr_group1_st;
+#[doc = "HP2LP_INTR_GROUP2_ST (r) register accessor: HpP2LP Interrupt Enable Register Group2\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_intr_group2_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp2lp_intr_group2_st`] module"]
+pub type HP2LP_INTR_GROUP2_ST = crate::Reg<hp2lp_intr_group2_st::HP2LP_INTR_GROUP2_ST_SPEC>;
+#[doc = "HpP2LP Interrupt Enable Register Group2"]
+pub mod hp2lp_intr_group2_st;
+#[doc = "HP2LP_INTR_GROUP3_ST (r) register accessor: HpP2LP Interrupt Enable Register Group3\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_intr_group3_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp2lp_intr_group3_st`] module"]
+pub type HP2LP_INTR_GROUP3_ST = crate::Reg<hp2lp_intr_group3_st::HP2LP_INTR_GROUP3_ST_SPEC>;
+#[doc = "HpP2LP Interrupt Enable Register Group3"]
+pub mod hp2lp_intr_group3_st;
+#[doc = "HP2LP_WAKEUP_GROUP0_EN (rw) register accessor: HpP2LP Wakeup Enable Register Group0\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_wakeup_group0_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp2lp_wakeup_group0_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp2lp_wakeup_group0_en`] module"]
+pub type HP2LP_WAKEUP_GROUP0_EN = crate::Reg<hp2lp_wakeup_group0_en::HP2LP_WAKEUP_GROUP0_EN_SPEC>;
+#[doc = "HpP2LP Wakeup Enable Register Group0"]
+pub mod hp2lp_wakeup_group0_en;
+#[doc = "HP2LP_WAKEUP_GROUP1_EN (rw) register accessor: HpP2LP Wakeup Enable Register Group1\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_wakeup_group1_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp2lp_wakeup_group1_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp2lp_wakeup_group1_en`] module"]
+pub type HP2LP_WAKEUP_GROUP1_EN = crate::Reg<hp2lp_wakeup_group1_en::HP2LP_WAKEUP_GROUP1_EN_SPEC>;
+#[doc = "HpP2LP Wakeup Enable Register Group1"]
+pub mod hp2lp_wakeup_group1_en;
+#[doc = "HP2LP_WAKEUP_GROUP2_EN (rw) register accessor: HpP2LP Wakeup Enable Register Group2\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_wakeup_group2_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp2lp_wakeup_group2_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp2lp_wakeup_group2_en`] module"]
+pub type HP2LP_WAKEUP_GROUP2_EN = crate::Reg<hp2lp_wakeup_group2_en::HP2LP_WAKEUP_GROUP2_EN_SPEC>;
+#[doc = "HpP2LP Wakeup Enable Register Group2"]
+pub mod hp2lp_wakeup_group2_en;
+#[doc = "HP2LP_WAKEUP_GROUP3_EN (rw) register accessor: HpP2LP Wakeup Enable Register Group3\n\nYou can [`read`](crate::Reg::read) this register and get [`hp2lp_wakeup_group3_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp2lp_wakeup_group3_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp2lp_wakeup_group3_en`] module"]
+pub type HP2LP_WAKEUP_GROUP3_EN = crate::Reg<hp2lp_wakeup_group3_en::HP2LP_WAKEUP_GROUP3_EN_SPEC>;
+#[doc = "HpP2LP Wakeup Enable Register Group3"]
+pub mod hp2lp_wakeup_group3_en;

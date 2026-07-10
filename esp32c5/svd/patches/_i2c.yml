@@ -1,4 +1,5 @@
 I2C0:
+  _include: ../../../common_patches/i2c_force_out.yaml
   COMD*:
     _delete: ["COMMAND?"]
     _add:

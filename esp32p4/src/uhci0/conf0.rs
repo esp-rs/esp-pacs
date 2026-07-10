@@ -189,7 +189,7 @@ impl crate::Readable for CONF0_SPEC {}
 impl crate::Writable for CONF0_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets CONF0 to value 0x06e0"]
+#[doc = "`reset()` method sets CONF0 to value 0x06fc"]
 impl crate::Resettable for CONF0_SPEC {
-    const RESET_VALUE: u32 = 0x06e0;
+    const RESET_VALUE: u32 = 0x06fc;
 }

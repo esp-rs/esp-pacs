@@ -766,5 +766,4 @@ pub mod debug_sel_cfg0;
 pub type DEBUG_SEL_CFG1 = crate::Reg<debug_sel_cfg1::DEBUG_SEL_CFG1_SPEC>;
 #[doc = ""]
 pub mod debug_sel_cfg1;
-pub use crate::dma::date as mac_date;
-pub use crate::dma::DATE as MAC_DATE;
+pub use crate::dma::{date as mac_date, DATE as MAC_DATE};

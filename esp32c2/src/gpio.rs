@@ -1014,5 +1014,4 @@ pub mod func_out_sel_cfg;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "GPIO clock gate register"]
 pub mod clock_gate;
-pub use crate::apb_ctrl::date as reg_date;
-pub use crate::apb_ctrl::DATE as REG_DATE;
+pub use crate::apb_ctrl::{date as reg_date, DATE as REG_DATE};

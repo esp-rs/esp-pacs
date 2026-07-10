@@ -28,6 +28,7 @@ _include:
   - _timg.yml
   - _uart.yml
   - _wcl.yml
+  - _mmu_table.yml
 
 _add:
   NRX:
@@ -196,6 +197,8 @@ _modify:
     groupName: I2S
   MCPWM0:
     groupName: MCPWM
+  USB0:
+    name: USB_FS
 
 SHA:
   _modify:
@@ -506,7 +509,7 @@ MCPWM0:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/mcpwm.yaml
 
-USB0:
+USB_FS:
   _include: ../../../common_patches/usb0.yaml
 
 LCD_CAM:

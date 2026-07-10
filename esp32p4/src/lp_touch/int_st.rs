@@ -12,6 +12,8 @@ pub type INACTIVE_R = crate::BitReader;
 pub type TIMEOUT_R = crate::BitReader;
 #[doc = "Field `APPROACH_LOOP_DONE` reader - need_des"]
 pub type APPROACH_LOOP_DONE_R = crate::BitReader;
+#[doc = "Field `BASELINE_UPDATE` reader - need_des"]
+pub type BASELINE_UPDATE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -43,6 +45,11 @@ impl R {
     pub fn approach_loop_done(&self) -> APPROACH_LOOP_DONE_R {
         APPROACH_LOOP_DONE_R::new(((self.bits >> 5) & 1) != 0)
     }
+    #[doc = "Bit 6 - need_des"]
+    #[inline(always)]
+    pub fn baseline_update(&self) -> BASELINE_UPDATE_R {
+        BASELINE_UPDATE_R::new(((self.bits >> 6) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -54,6 +61,7 @@ impl core::fmt::Debug for R {
             .field("inactive", &self.inactive())
             .field("timeout", &self.timeout())
             .field("approach_loop_done", &self.approach_loop_done())
+            .field("baseline_update", &self.baseline_update())
             .finish()
     }
 }

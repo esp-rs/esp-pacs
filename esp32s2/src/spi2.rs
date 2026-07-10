@@ -557,5 +557,4 @@ pub mod lcd_d_mode;
 pub type LCD_D_NUM = crate::Reg<lcd_d_num::LCD_D_NUM_SPEC>;
 #[doc = "LCD delay mode"]
 pub mod lcd_d_num;
-pub use crate::aes::date as reg_date;
-pub use crate::aes::DATE as REG_DATE;
+pub use crate::aes::{date as reg_date, DATE as REG_DATE};

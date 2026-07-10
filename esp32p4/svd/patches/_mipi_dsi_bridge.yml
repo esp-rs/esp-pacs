@@ -1,0 +1,11 @@
+MIPI_DSI_BRIDGE:
+  _add:
+    DSI_BRG_VER_DATE:
+      addressOffset: 0x100
+      size: 0x20
+      access: read-write
+      fields:
+        VAL:
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write

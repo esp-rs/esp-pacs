@@ -386,5 +386,4 @@ pub mod tx_sim;
 pub type REF_CNT_RST = crate::Reg<ref_cnt_rst::REF_CNT_RST_SPEC>;
 #[doc = "RMT clock divider reset register"]
 pub mod ref_cnt_rst;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

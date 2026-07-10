@@ -38,5 +38,4 @@ pub mod pin_ctrl;
 pub type GPIO = crate::Reg<gpio::GPIO_SPEC>;
 #[doc = "Configuration register for pin GPIO%s"]
 pub mod gpio;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

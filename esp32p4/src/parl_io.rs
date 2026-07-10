@@ -21,9 +21,10 @@ pub struct RegisterBlock {
     tx_st0: TX_ST0,
     rx_clk_cfg: RX_CLK_CFG,
     tx_clk_cfg: TX_CLK_CFG,
-    _reserved19: [u8; 0xd4],
+    tx_cs_cfg: TX_CS_CFG,
+    _reserved20: [u8; 0xd0],
     clk: CLK,
-    _reserved20: [u8; 0x02d8],
+    _reserved21: [u8; 0x02d8],
     version: VERSION,
 }
 impl RegisterBlock {
@@ -122,6 +123,11 @@ impl RegisterBlock {
     pub const fn tx_clk_cfg(&self) -> &TX_CLK_CFG {
         &self.tx_clk_cfg
     }
+    #[doc = "0x4c - Parallel IO tx_cs_o generate configuration"]
+    #[inline(always)]
+    pub const fn tx_cs_cfg(&self) -> &TX_CS_CFG {
+        &self.tx_cs_cfg
+    }
     #[doc = "0x120 - Parallel IO clk configuration register"]
     #[inline(always)]
     pub const fn clk(&self) -> &CLK {
@@ -177,7 +183,7 @@ pub mod st;
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "Parallel IO interrupt enable singal configuration register."]
 pub mod int_ena;
-#[doc = "INT_RAW (rw) register accessor: Parallel IO interrupt raw singal status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_raw::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
+#[doc = "INT_RAW (r) register accessor: Parallel IO interrupt raw singal status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "Parallel IO interrupt raw singal status register."]
 pub mod int_raw;
@@ -209,6 +215,10 @@ pub mod rx_clk_cfg;
 pub type TX_CLK_CFG = crate::Reg<tx_clk_cfg::TX_CLK_CFG_SPEC>;
 #[doc = "Parallel IO TX clk configuration register"]
 pub mod tx_clk_cfg;
+#[doc = "TX_CS_CFG (rw) register accessor: Parallel IO tx_cs_o generate configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_cs_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_cs_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_cs_cfg`] module"]
+pub type TX_CS_CFG = crate::Reg<tx_cs_cfg::TX_CS_CFG_SPEC>;
+#[doc = "Parallel IO tx_cs_o generate configuration"]
+pub mod tx_cs_cfg;
 #[doc = "CLK (rw) register accessor: Parallel IO clk configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`clk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk`] module"]
 pub type CLK = crate::Reg<clk::CLK_SPEC>;
 #[doc = "Parallel IO clk configuration register"]

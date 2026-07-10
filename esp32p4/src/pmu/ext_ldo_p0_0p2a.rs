@@ -2,6 +2,8 @@
 pub type R = crate::R<EXT_LDO_P0_0P2A_SPEC>;
 #[doc = "Register `EXT_LDO_P0_0P2A` writer"]
 pub type W = crate::W<EXT_LDO_P0_0P2A_SPEC>;
+#[doc = "Field `_0P2A_CNT_CLR_0` writer - need_des"]
+pub type _0P2A_CNT_CLR_0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `_0P2A_FORCE_TIEH_SEL_0` reader - need_des"]
 pub type _0P2A_FORCE_TIEH_SEL_0_R = crate::BitReader;
 #[doc = "Field `_0P2A_FORCE_TIEH_SEL_0` writer - need_des"]
@@ -105,6 +107,11 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
+    #[doc = "Bit 6 - need_des"]
+    #[inline(always)]
+    pub fn _0p2a_cnt_clr_0(&mut self) -> _0P2A_CNT_CLR_0_W<'_, EXT_LDO_P0_0P2A_SPEC> {
+        _0P2A_CNT_CLR_0_W::new(self, 6)
+    }
     #[doc = "Bit 7 - need_des"]
     #[inline(always)]
     pub fn _0p2a_force_tieh_sel_0(&mut self) -> _0P2A_FORCE_TIEH_SEL_0_W<'_, EXT_LDO_P0_0P2A_SPEC> {

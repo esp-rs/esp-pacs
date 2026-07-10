@@ -10,6 +10,14 @@ pub type CLK_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 pub type CS_HOLD_DLY_RES_R = crate::FieldReader<u16>;
 #[doc = "Field `CS_HOLD_DLY_RES` writer - After RES/DP/HPM command is sent, SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 512) SPI_CLK cycles."]
 pub type CS_HOLD_DLY_RES_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
+#[doc = "Field `CS_HOLD_DLY_PER` reader - After PER command is sent, SPI1 waits (SPI_MEM_CS_HOLD_DLY_PER\\[8:0\\] * 128) SPI_CLK cycles."]
+pub type CS_HOLD_DLY_PER_R = crate::FieldReader<u16>;
+#[doc = "Field `CS_HOLD_DLY_PER` writer - After PER command is sent, SPI1 waits (SPI_MEM_CS_HOLD_DLY_PER\\[8:0\\] * 128) SPI_CLK cycles."]
+pub type CS_HOLD_DLY_PER_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
+#[doc = "Field `CS_HOLD_DLY_PER_EN` reader - 1: use SPI_MEM_CS_HOLD_DLY_PER for per, use SPI_MEM_CS_HOLD_DELAY_RES for pes/dp/hpm . 0: use SPI_MEM_CS_HOLD_DELAY_RES for pes/dp/hpm/per ."]
+pub type CS_HOLD_DLY_PER_EN_R = crate::BitReader;
+#[doc = "Field `CS_HOLD_DLY_PER_EN` writer - 1: use SPI_MEM_CS_HOLD_DLY_PER for per, use SPI_MEM_CS_HOLD_DELAY_RES for pes/dp/hpm . 0: use SPI_MEM_CS_HOLD_DELAY_RES for pes/dp/hpm/per ."]
+pub type CS_HOLD_DLY_PER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on."]
     #[inline(always)]
@@ -21,6 +29,16 @@ impl R {
     pub fn cs_hold_dly_res(&self) -> CS_HOLD_DLY_RES_R {
         CS_HOLD_DLY_RES_R::new(((self.bits >> 2) & 0x03ff) as u16)
     }
+    #[doc = "Bits 12:20 - After PER command is sent, SPI1 waits (SPI_MEM_CS_HOLD_DLY_PER\\[8:0\\] * 128) SPI_CLK cycles."]
+    #[inline(always)]
+    pub fn cs_hold_dly_per(&self) -> CS_HOLD_DLY_PER_R {
+        CS_HOLD_DLY_PER_R::new(((self.bits >> 12) & 0x01ff) as u16)
+    }
+    #[doc = "Bit 23 - 1: use SPI_MEM_CS_HOLD_DLY_PER for per, use SPI_MEM_CS_HOLD_DELAY_RES for pes/dp/hpm . 0: use SPI_MEM_CS_HOLD_DELAY_RES for pes/dp/hpm/per ."]
+    #[inline(always)]
+    pub fn cs_hold_dly_per_en(&self) -> CS_HOLD_DLY_PER_EN_R {
+        CS_HOLD_DLY_PER_EN_R::new(((self.bits >> 23) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -28,6 +46,8 @@ impl core::fmt::Debug for R {
         f.debug_struct("CTRL1")
             .field("clk_mode", &self.clk_mode())
             .field("cs_hold_dly_res", &self.cs_hold_dly_res())
+            .field("cs_hold_dly_per", &self.cs_hold_dly_per())
+            .field("cs_hold_dly_per_en", &self.cs_hold_dly_per_en())
             .finish()
     }
 }
@@ -42,6 +62,16 @@ impl W {
     pub fn cs_hold_dly_res(&mut self) -> CS_HOLD_DLY_RES_W<'_, CTRL1_SPEC> {
         CS_HOLD_DLY_RES_W::new(self, 2)
     }
+    #[doc = "Bits 12:20 - After PER command is sent, SPI1 waits (SPI_MEM_CS_HOLD_DLY_PER\\[8:0\\] * 128) SPI_CLK cycles."]
+    #[inline(always)]
+    pub fn cs_hold_dly_per(&mut self) -> CS_HOLD_DLY_PER_W<'_, CTRL1_SPEC> {
+        CS_HOLD_DLY_PER_W::new(self, 12)
+    }
+    #[doc = "Bit 23 - 1: use SPI_MEM_CS_HOLD_DLY_PER for per, use SPI_MEM_CS_HOLD_DELAY_RES for pes/dp/hpm . 0: use SPI_MEM_CS_HOLD_DELAY_RES for pes/dp/hpm/per ."]
+    #[inline(always)]
+    pub fn cs_hold_dly_per_en(&mut self) -> CS_HOLD_DLY_PER_EN_W<'_, CTRL1_SPEC> {
+        CS_HOLD_DLY_PER_EN_W::new(self, 23)
+    }
 }
 #[doc = "SPI1 control1 register.\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL1_SPEC;
@@ -54,7 +84,7 @@ impl crate::Readable for CTRL1_SPEC {}
 impl crate::Writable for CTRL1_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets CTRL1 to value 0x0ffc"]
+#[doc = "`reset()` method sets CTRL1 to value 0x001f_fffc"]
 impl crate::Resettable for CTRL1_SPEC {
-    const RESET_VALUE: u32 = 0x0ffc;
+    const RESET_VALUE: u32 = 0x001f_fffc;
 }

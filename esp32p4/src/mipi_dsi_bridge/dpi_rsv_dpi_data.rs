@@ -6,11 +6,20 @@ pub type W = crate::W<DPI_RSV_DPI_DATA_SPEC>;
 pub type DPI_RSV_DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `DPI_RSV_DATA` writer - this field controls the pixel data sent to dsi_host when dsi_bridge fifo underflow"]
 pub type DPI_RSV_DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 30, u32>;
+#[doc = "Field `DPI_DBG_EN` reader - Configures data debug feature enable. 0: disable, 1: enable"]
+pub type DPI_DBG_EN_R = crate::BitReader;
+#[doc = "Field `DPI_DBG_EN` writer - Configures data debug feature enable. 0: disable, 1: enable"]
+pub type DPI_DBG_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:29 - this field controls the pixel data sent to dsi_host when dsi_bridge fifo underflow"]
     #[inline(always)]
     pub fn dpi_rsv_data(&self) -> DPI_RSV_DATA_R {
         DPI_RSV_DATA_R::new(self.bits & 0x3fff_ffff)
+    }
+    #[doc = "Bit 30 - Configures data debug feature enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn dpi_dbg_en(&self) -> DPI_DBG_EN_R {
+        DPI_DBG_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -18,6 +27,7 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPI_RSV_DPI_DATA")
             .field("dpi_rsv_data", &self.dpi_rsv_data())
+            .field("dpi_dbg_en", &self.dpi_dbg_en())
             .finish()
     }
 }
@@ -26,6 +36,11 @@ impl W {
     #[inline(always)]
     pub fn dpi_rsv_data(&mut self) -> DPI_RSV_DATA_W<'_, DPI_RSV_DPI_DATA_SPEC> {
         DPI_RSV_DATA_W::new(self, 0)
+    }
+    #[doc = "Bit 30 - Configures data debug feature enable. 0: disable, 1: enable"]
+    #[inline(always)]
+    pub fn dpi_dbg_en(&mut self) -> DPI_DBG_EN_W<'_, DPI_RSV_DPI_DATA_SPEC> {
+        DPI_DBG_EN_W::new(self, 30)
     }
 }
 #[doc = "dsi bridge dpi reserved data register\n\nYou can [`read`](crate::Reg::read) this register and get [`dpi_rsv_dpi_data::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dpi_rsv_dpi_data::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

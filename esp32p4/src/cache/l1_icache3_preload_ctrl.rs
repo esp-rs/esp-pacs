@@ -8,6 +8,8 @@ pub type L1_ICACHE3_PRELOAD_DONE_R = crate::BitReader;
 pub type L1_ICACHE3_PRELOAD_ORDER_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_PRELOAD_RGID` reader - The bit is used to set the gid of l1 icache3 preload."]
 pub type L1_ICACHE3_PRELOAD_RGID_R = crate::FieldReader;
+#[doc = "Field `L1_ICACHE3_PRELOAD_MODE` reader - The bit is used to configure the mode of l1 icache3 preload, 0: load data from next level memory, 1: not load data from next level memory."]
+pub type L1_ICACHE3_PRELOAD_MODE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable preload operation on L1-ICache3. It will be cleared by hardware automatically after preload operation is done."]
     #[inline(always)]
@@ -29,6 +31,11 @@ impl R {
     pub fn l1_icache3_preload_rgid(&self) -> L1_ICACHE3_PRELOAD_RGID_R {
         L1_ICACHE3_PRELOAD_RGID_R::new(((self.bits >> 3) & 0x0f) as u8)
     }
+    #[doc = "Bit 7 - The bit is used to configure the mode of l1 icache3 preload, 0: load data from next level memory, 1: not load data from next level memory."]
+    #[inline(always)]
+    pub fn l1_icache3_preload_mode(&self) -> L1_ICACHE3_PRELOAD_MODE_R {
+        L1_ICACHE3_PRELOAD_MODE_R::new(((self.bits >> 7) & 1) != 0)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -38,6 +45,7 @@ impl core::fmt::Debug for R {
             .field("l1_icache3_preload_done", &self.l1_icache3_preload_done())
             .field("l1_icache3_preload_order", &self.l1_icache3_preload_order())
             .field("l1_icache3_preload_rgid", &self.l1_icache3_preload_rgid())
+            .field("l1_icache3_preload_mode", &self.l1_icache3_preload_mode())
             .finish()
     }
 }

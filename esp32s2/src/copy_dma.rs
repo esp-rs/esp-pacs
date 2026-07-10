@@ -174,5 +174,4 @@ pub mod in_st;
 pub type OUT_ST = crate::Reg<out_st::OUT_ST_SPEC>;
 #[doc = "Status register of transmitting data"]
 pub mod out_st;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

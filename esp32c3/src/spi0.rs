@@ -189,5 +189,4 @@ pub mod clock_gate;
 pub type CORE_CLK_SEL = crate::Reg<core_clk_sel::CORE_CLK_SEL_SPEC>;
 #[doc = "SPI0 module clock select register"]
 pub mod core_clk_sel;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

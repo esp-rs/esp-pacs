@@ -16,3 +16,18 @@ AES:
       dim: 4
       dimIncrement: 0x4
       size: 0x20
+
+    KEY_%s:
+      name: "KEY[%s]"
+    TEXT_IN_%s:
+      name: "TEXT_IN[%s]"
+    TEXT_OUT_%s:
+      name: "TEXT_OUT[%s]"
+
+    INT_CLEAR:
+      name: "INT_CLR"
+
+  INT_CLR:
+    _modify:
+      INT_CLEAR:
+        name: INT_CLR

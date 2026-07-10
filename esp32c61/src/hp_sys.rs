@@ -279,5 +279,4 @@ pub mod axi_mst_pri;
 pub type SDIO_CTRL = crate::Reg<sdio_ctrl::SDIO_CTRL_SPEC>;
 #[doc = "SDIO Control configuration register"]
 pub mod sdio_ctrl;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

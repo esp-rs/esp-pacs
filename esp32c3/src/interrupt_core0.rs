@@ -132,5 +132,4 @@ pub mod cpu_int_pri;
 pub type CPU_INT_THRESH = crate::Reg<cpu_int_thresh::CPU_INT_THRESH_SPEC>;
 #[doc = "mac intr map register"]
 pub mod cpu_int_thresh;
-pub use crate::aes::date as interrupt_reg_date;
-pub use crate::aes::DATE as INTERRUPT_REG_DATE;
+pub use crate::aes::{date as interrupt_reg_date, DATE as INTERRUPT_REG_DATE};

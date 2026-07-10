@@ -71,7 +71,5 @@ impl crate::RegisterSpec for HP_MODEM_HP_REGULATOR0_SPEC {
 impl crate::Writable for HP_MODEM_HP_REGULATOR0_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets HP_MODEM_HP_REGULATOR0 to value 0xc667_0000"]
-impl crate::Resettable for HP_MODEM_HP_REGULATOR0_SPEC {
-    const RESET_VALUE: u32 = 0xc667_0000;
-}
+#[doc = "`reset()` method sets HP_MODEM_HP_REGULATOR0 to value 0"]
+impl crate::Resettable for HP_MODEM_HP_REGULATOR0_SPEC {}

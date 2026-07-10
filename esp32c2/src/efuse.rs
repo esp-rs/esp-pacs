@@ -483,5 +483,4 @@ pub mod wr_tim_conf1;
 pub type WR_TIM_CONF2 = crate::Reg<wr_tim_conf2::WR_TIM_CONF2_SPEC>;
 #[doc = "Configurarion register 2 of eFuse programming timing parameters."]
 pub mod wr_tim_conf2;
-pub use crate::apb_ctrl::date;
-pub use crate::apb_ctrl::DATE;
+pub use crate::apb_ctrl::{date, DATE};

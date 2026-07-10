@@ -248,5 +248,4 @@ pub mod timer_cnt_cap;
 pub type CONF = crate::Reg<conf::CONF_SPEC>;
 #[doc = "LEDC global configuration register"]
 pub mod conf;
-pub use crate::dma::date;
-pub use crate::dma::DATE;
+pub use crate::dma::{date, DATE};

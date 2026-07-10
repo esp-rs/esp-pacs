@@ -26,13 +26,13 @@ pub enum OPCODE {
     #[doc = "0: RSTART opcode"]
     Rstart = 0,
     #[doc = "1: WRITE opcode"]
-    Write = 1,
+    Write  = 1,
     #[doc = "2: READ opcode"]
-    Read = 2,
+    Read   = 2,
     #[doc = "3: STOP opcode"]
-    Stop = 3,
+    Stop   = 3,
     #[doc = "4: END opcode"]
-    End = 4,
+    End    = 4,
 }
 impl From<OPCODE> for u8 {
     #[inline(always)]

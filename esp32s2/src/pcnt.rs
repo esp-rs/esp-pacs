@@ -151,5 +151,4 @@ pub mod u_status;
 pub type CTRL = crate::Reg<ctrl::CTRL_SPEC>;
 #[doc = "Control register for all counters"]
 pub mod ctrl;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};

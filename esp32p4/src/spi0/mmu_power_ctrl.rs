@@ -14,6 +14,10 @@ pub type SPI_MMU_MEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type SPI_MMU_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `SPI_MMU_MEM_FORCE_PU` writer - Set this bit to force mmu-memory powerup, in this case, the power should also be controlled by rtc."]
 pub type SPI_MMU_MEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SPI_MMU_PAGE_SIZE` reader - 0: Max page size , 1: Max page size/2 , 2: Max page size/4, 3: Max page size/8"]
+pub type SPI_MMU_PAGE_SIZE_R = crate::FieldReader;
+#[doc = "Field `SPI_MMU_PAGE_SIZE` writer - 0: Max page size , 1: Max page size/2 , 2: Max page size/4, 3: Max page size/8"]
+pub type SPI_MMU_PAGE_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `AUX_CTRL` reader - MMU PSRAM aux control register"]
 pub type AUX_CTRL_R = crate::FieldReader<u16>;
 #[doc = "Field `AUX_CTRL` writer - MMU PSRAM aux control register"]
@@ -40,6 +44,11 @@ impl R {
     pub fn spi_mmu_mem_force_pu(&self) -> SPI_MMU_MEM_FORCE_PU_R {
         SPI_MMU_MEM_FORCE_PU_R::new(((self.bits >> 2) & 1) != 0)
     }
+    #[doc = "Bits 3:4 - 0: Max page size , 1: Max page size/2 , 2: Max page size/4, 3: Max page size/8"]
+    #[inline(always)]
+    pub fn spi_mmu_page_size(&self) -> SPI_MMU_PAGE_SIZE_R {
+        SPI_MMU_PAGE_SIZE_R::new(((self.bits >> 3) & 3) as u8)
+    }
     #[doc = "Bits 16:29 - MMU PSRAM aux control register"]
     #[inline(always)]
     pub fn aux_ctrl(&self) -> AUX_CTRL_R {
@@ -63,6 +72,7 @@ impl core::fmt::Debug for R {
             .field("spi_mmu_mem_force_on", &self.spi_mmu_mem_force_on())
             .field("spi_mmu_mem_force_pd", &self.spi_mmu_mem_force_pd())
             .field("spi_mmu_mem_force_pu", &self.spi_mmu_mem_force_pu())
+            .field("spi_mmu_page_size", &self.spi_mmu_page_size())
             .field("aux_ctrl", &self.aux_ctrl())
             .field("rdn_ena", &self.rdn_ena())
             .field("rdn_result", &self.rdn_result())
@@ -84,6 +94,11 @@ impl W {
     #[inline(always)]
     pub fn spi_mmu_mem_force_pu(&mut self) -> SPI_MMU_MEM_FORCE_PU_W<'_, MMU_POWER_CTRL_SPEC> {
         SPI_MMU_MEM_FORCE_PU_W::new(self, 2)
+    }
+    #[doc = "Bits 3:4 - 0: Max page size , 1: Max page size/2 , 2: Max page size/4, 3: Max page size/8"]
+    #[inline(always)]
+    pub fn spi_mmu_page_size(&mut self) -> SPI_MMU_PAGE_SIZE_W<'_, MMU_POWER_CTRL_SPEC> {
+        SPI_MMU_PAGE_SIZE_W::new(self, 3)
     }
     #[doc = "Bits 16:29 - MMU PSRAM aux control register"]
     #[inline(always)]

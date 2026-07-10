@@ -6,11 +6,20 @@ pub type W = crate::W<INT_RAW_SPEC>;
 pub type UNDERRUN_R = crate::BitReader;
 #[doc = "Field `UNDERRUN` writer - the raw interrupt status of dpi_underrun"]
 pub type UNDERRUN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `VSYNC` reader - the raw interrupt status of dpi_vsync"]
+pub type VSYNC_R = crate::BitReader;
+#[doc = "Field `VSYNC` writer - the raw interrupt status of dpi_vsync"]
+pub type VSYNC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - the raw interrupt status of dpi_underrun"]
     #[inline(always)]
     pub fn underrun(&self) -> UNDERRUN_R {
         UNDERRUN_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - the raw interrupt status of dpi_vsync"]
+    #[inline(always)]
+    pub fn vsync(&self) -> VSYNC_R {
+        VSYNC_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -18,6 +27,7 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
             .field("underrun", &self.underrun())
+            .field("vsync", &self.vsync())
             .finish()
     }
 }
@@ -26,6 +36,11 @@ impl W {
     #[inline(always)]
     pub fn underrun(&mut self) -> UNDERRUN_W<'_, INT_RAW_SPEC> {
         UNDERRUN_W::new(self, 0)
+    }
+    #[doc = "Bit 1 - the raw interrupt status of dpi_vsync"]
+    #[inline(always)]
+    pub fn vsync(&mut self) -> VSYNC_W<'_, INT_RAW_SPEC> {
+        VSYNC_W::new(self, 1)
     }
 }
 #[doc = "dsi_bridge raw interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_raw::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

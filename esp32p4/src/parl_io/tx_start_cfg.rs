@@ -2,12 +2,12 @@
 pub type R = crate::R<TX_START_CFG_SPEC>;
 #[doc = "Register `TX_START_CFG` writer"]
 pub type W = crate::W<TX_START_CFG_SPEC>;
-#[doc = "Field `TX_START` reader - Set this bit to start tx data transmit."]
+#[doc = "Field `TX_START` reader - Write 1 to start tx data transmit."]
 pub type TX_START_R = crate::BitReader;
-#[doc = "Field `TX_START` writer - Set this bit to start tx data transmit."]
+#[doc = "Field `TX_START` writer - Write 1 to start tx data transmit."]
 pub type TX_START_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 31 - Set this bit to start tx data transmit."]
+    #[doc = "Bit 31 - Write 1 to start tx data transmit."]
     #[inline(always)]
     pub fn tx_start(&self) -> TX_START_R {
         TX_START_R::new(((self.bits >> 31) & 1) != 0)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 31 - Set this bit to start tx data transmit."]
+    #[doc = "Bit 31 - Write 1 to start tx data transmit."]
     #[inline(always)]
     pub fn tx_start(&mut self) -> TX_START_W<'_, TX_START_CFG_SPEC> {
         TX_START_W::new(self, 31)

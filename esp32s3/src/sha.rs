@@ -16,7 +16,7 @@ pub struct RegisterBlock {
     date: DATE,
     _reserved12: [u8; 0x10],
     h_mem: [H_MEM; 16],
-    m_mem: [M_MEM; 16],
+    m_mem: [M_MEM; 32],
 }
 impl RegisterBlock {
     #[doc = "0x00 - Initial configuration register."]
@@ -90,13 +90,13 @@ impl RegisterBlock {
     pub fn h_mem_iter(&self) -> impl Iterator<Item = &H_MEM> {
         self.h_mem.iter()
     }
-    #[doc = "0x80..0xc0 - Sha M memory which contains message."]
+    #[doc = "0x80..0x100 - Sha M memory which contains message."]
     #[inline(always)]
     pub const fn m_mem(&self, n: usize) -> &M_MEM {
         &self.m_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x80..0xc0 - Sha M memory which contains message."]
+    #[doc = "0x80..0x100 - Sha M memory which contains message."]
     #[inline(always)]
     pub fn m_mem_iter(&self) -> impl Iterator<Item = &M_MEM> {
         self.m_mem.iter()
@@ -146,8 +146,7 @@ pub mod clear_irq;
 pub type IRQ_ENA = crate::Reg<irq_ena::IRQ_ENA_SPEC>;
 #[doc = "Interrupt enable register."]
 pub mod irq_ena;
-pub use crate::aes::date;
-pub use crate::aes::DATE;
+pub use crate::aes::{date, DATE};
 #[doc = "H_MEM (rw) register accessor: Sha H memory which contains intermediate hash or finial hash.\n\nYou can [`read`](crate::Reg::read) this register and get [`h_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`h_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@h_mem`] module"]
 pub type H_MEM = crate::Reg<h_mem::H_MEM_SPEC>;
 #[doc = "Sha H memory which contains intermediate hash or finial hash."]

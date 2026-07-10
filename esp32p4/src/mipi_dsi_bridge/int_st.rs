@@ -2,11 +2,18 @@
 pub type R = crate::R<INT_ST_SPEC>;
 #[doc = "Field `UNDERRUN` reader - the masked interrupt status of dpi_underrun"]
 pub type UNDERRUN_R = crate::BitReader;
+#[doc = "Field `VSYNC` reader - the masked interrupt status of dpi_vsync"]
+pub type VSYNC_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - the masked interrupt status of dpi_underrun"]
     #[inline(always)]
     pub fn underrun(&self) -> UNDERRUN_R {
         UNDERRUN_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - the masked interrupt status of dpi_vsync"]
+    #[inline(always)]
+    pub fn vsync(&self) -> VSYNC_R {
+        VSYNC_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -14,6 +21,7 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
             .field("underrun", &self.underrun())
+            .field("vsync", &self.vsync())
             .finish()
     }
 }

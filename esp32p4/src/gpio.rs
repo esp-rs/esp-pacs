@@ -33,8 +33,7 @@ pub struct RegisterBlock {
     status_next1: STATUS_NEXT1,
     pin: [PIN; 57],
     _reserved29: [u8; 0x04],
-    func_in_sel_cfg: [FUNC_IN_SEL_CFG; 254],
-    _reserved30: [u8; 0x04],
+    func_in_sel_cfg: [FUNC_IN_SEL_CFG; 255],
     func_out_sel_cfg: [FUNC_OUT_SEL_CFG; 57],
     intr_2: INTR_2,
     intr1_2: INTR1_2,
@@ -207,7 +206,7 @@ impl RegisterBlock {
     pub fn pin_iter(&self) -> impl Iterator<Item = &PIN> {
         self.pin.iter()
     }
-    #[doc = "0x15c..0x554 - GPIO input function configuration register"]
+    #[doc = "0x15c..0x558 - GPIO input function configuration register"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `FUNC1_IN_SEL_CFG` register.</div>"]
     #[inline(always)]
@@ -215,7 +214,7 @@ impl RegisterBlock {
         &self.func_in_sel_cfg[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x15c..0x554 - GPIO input function configuration register"]
+    #[doc = "0x15c..0x558 - GPIO input function configuration register"]
     #[inline(always)]
     pub fn func_in_sel_cfg_iter(&self) -> impl Iterator<Item = &FUNC_IN_SEL_CFG> {
         self.func_in_sel_cfg.iter()
@@ -1489,6 +1488,11 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn func254_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(253)
+    }
+    #[doc = "0x554 - GPIO input function configuration register"]
+    #[inline(always)]
+    pub const fn func255_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
+        self.func_in_sel_cfg(254)
     }
     #[doc = "0x558..0x63c - GPIO output function select register"]
     #[inline(always)]

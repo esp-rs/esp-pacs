@@ -829,8 +829,7 @@ pub mod _1int_st1;
 pub type _1INT_ENA1 = crate::Reg<_1int_ena1::_1INT_ENA1_SPEC>;
 #[doc = ""]
 pub mod _1int_ena1;
-pub use crate::apb_ctrl::date;
-pub use crate::apb_ctrl::DATE;
+pub use crate::apb_ctrl::{date, DATE};
 #[doc = "ID (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`id::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`id::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@id`] module"]
 pub type ID = crate::Reg<id::ID_SPEC>;
 #[doc = ""]

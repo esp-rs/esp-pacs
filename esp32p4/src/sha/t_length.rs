@@ -5,12 +5,12 @@ pub type W = crate::W<T_LENGTH_SPEC>;
 #[doc = "Field `T_LENGTH` reader - Sha t_length (used if and only if mode == SHA_512/t)."]
 pub type T_LENGTH_R = crate::FieldReader;
 #[doc = "Field `T_LENGTH` writer - Sha t_length (used if and only if mode == SHA_512/t)."]
-pub type T_LENGTH_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+pub type T_LENGTH_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
-    #[doc = "Bits 0:5 - Sha t_length (used if and only if mode == SHA_512/t)."]
+    #[doc = "Bits 0:6 - Sha t_length (used if and only if mode == SHA_512/t)."]
     #[inline(always)]
     pub fn t_length(&self) -> T_LENGTH_R {
-        T_LENGTH_R::new((self.bits & 0x3f) as u8)
+        T_LENGTH_R::new((self.bits & 0x7f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:5 - Sha t_length (used if and only if mode == SHA_512/t)."]
+    #[doc = "Bits 0:6 - Sha t_length (used if and only if mode == SHA_512/t)."]
     #[inline(always)]
     pub fn t_length(&mut self) -> T_LENGTH_W<'_, T_LENGTH_SPEC> {
         T_LENGTH_W::new(self, 0)

@@ -63,7 +63,7 @@ impl crate::Readable for MAIN_STATE_SPEC {}
 impl crate::Writable for MAIN_STATE_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets MAIN_STATE to value 0x0810_0801"]
+#[doc = "`reset()` method sets MAIN_STATE to value 0x0210_0801"]
 impl crate::Resettable for MAIN_STATE_SPEC {
-    const RESET_VALUE: u32 = 0x0810_0801;
+    const RESET_VALUE: u32 = 0x0210_0801;
 }
