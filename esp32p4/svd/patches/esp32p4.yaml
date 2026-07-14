@@ -34,6 +34,7 @@ _include:
   - "_uart.yml"
   - "_usb_device.yml"
   - "_dma.yml"
+  - "_i2s.yml"
   - "_collect.yml"
 
 _modify:
@@ -99,7 +100,7 @@ SPI[01]:
   "*":
     _strip: SPI_MEM_
 
-"EFUSE,I2S0,UART0,SPI[01],LP_WDT,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS,ISP,LP_HUK,LP_I2S0,LP_UART":
+"EFUSE,I2S0,I2S1,I2S2,UART0,SPI[01],LP_WDT,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS,ISP,LP_HUK,LP_I2S0,LP_UART":
   _include: ../../../common_patches/int_strip.yaml
 
 UART0:

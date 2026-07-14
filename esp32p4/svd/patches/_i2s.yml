@@ -1,0 +1,27 @@
+_copy:
+  I2S1:
+    from: I2S0
+  I2S2:
+    from: I2S0
+
+_modify:
+  I2S1:
+    groupName: I2S
+    description: I2S (Inter-IC Sound) Controller 1
+    baseAddress: 0x500c7000
+  I2S2:
+    groupName: I2S
+    description: I2S (Inter-IC Sound) Controller 2
+    baseAddress: 0x500c8000
+
+I2S1:
+  _delete:
+    - TX_PCM2PDM_CONF
+    - TX_PCM2PDM_CONF1
+    - RX_PDM2PCM_CONF
+
+I2S2:
+  _delete:
+    - TX_PCM2PDM_CONF
+    - TX_PCM2PDM_CONF1
+    - RX_PDM2PCM_CONF

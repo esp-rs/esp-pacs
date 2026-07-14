@@ -657,23 +657,23 @@ impl core::fmt::Debug for I2S0 {
 #[doc = "I2S (Inter-IC Sound) Controller 0"]
 pub mod i2s0;
 #[doc = "I2S (Inter-IC Sound) Controller 1"]
-pub type I2S1 = crate::Periph<i2s0::RegisterBlock, 0x500c_7000>;
+pub type I2S1 = crate::Periph<i2s1::RegisterBlock, 0x500c_7000>;
 impl core::fmt::Debug for I2S1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2S1").finish()
     }
 }
 #[doc = "I2S (Inter-IC Sound) Controller 1"]
-pub use self::i2s0 as i2s1;
+pub mod i2s1;
 #[doc = "I2S (Inter-IC Sound) Controller 2"]
-pub type I2S2 = crate::Periph<i2s0::RegisterBlock, 0x500c_8000>;
+pub type I2S2 = crate::Periph<i2s2::RegisterBlock, 0x500c_8000>;
 impl core::fmt::Debug for I2S2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2S2").finish()
     }
 }
 #[doc = "I2S (Inter-IC Sound) Controller 2"]
-pub use self::i2s0 as i2s2;
+pub mod i2s2;
 #[doc = "I3C Controller (Master)"]
 pub type I3C_MST = crate::Periph<i3c_mst::RegisterBlock, 0x500d_a000>;
 impl core::fmt::Debug for I3C_MST {
