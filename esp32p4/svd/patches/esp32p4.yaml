@@ -34,6 +34,7 @@ _include:
   - "_uart.yml"
   - "_usb_device.yml"
   - "_dma.yml"
+  - "_i2s.yml"
   - "_collect.yml"
 
 _modify:

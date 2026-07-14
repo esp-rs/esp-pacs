@@ -1,0 +1,37 @@
+_delete:
+  - I2S1
+  - I2S2
+
+_add:
+  I2S1:
+    baseAddress: 0x500c7000
+    description: I2S (Inter-IC Sound) Controller 1
+    groupName: I2S
+    addressBlock:
+      - offset: 0x0
+        size: 0x60
+        usage: registers
+    registers:
+      DUMMY:
+        addressOffset: 0
+        size: 0x20
+        resetValue: 0x0
+    interrupts:
+      I2S1:
+        value: 28
+  I2S2:
+    baseAddress: 0x500c8000
+    description: I2S (Inter-IC Sound) Controller 2
+    groupName: I2S
+    addressBlock:
+      - offset: 0x0
+        size: 0x60
+        usage: registers
+    registers:
+      DUMMY:
+        addressOffset: 0
+        size: 0x20
+        resetValue: 0x0
+    interrupts:
+      I2S2:
+        value: 29
