@@ -1,0 +1,54 @@
+LP_IO_MUX:
+  _delete:
+    - PAD*
+  _add:
+    PAD%s:
+      dim: 16
+      dimIncrement: 0x04
+      dimIndex: 0-15
+      description: LP IO MUX configuration register for pad %s
+      addressOffset: 0x08
+      access: read-write
+      reset-value: 0x02
+      size: 0x20
+      fields:
+        DRV:
+          description: Reserved
+          bitOffset: 0
+          bitWidth: 2
+        RDE:
+          description: Reserved
+          bitOffset: 2
+          bitWidth: 1
+        RUE:
+          description: Reserved
+          bitOffset: 3
+          bitWidth: 1
+        MUX_SEL:
+          description: "1:use LP GPIO,0: use digital GPIO"
+          bitOffset: 4
+          bitWidth: 1
+        FUN_SEL:
+          description: function sel
+          bitOffset: 5
+          bitWidth: 2
+        SLP_SEL:
+          description: "1: enable sleep mode during sleep,0: no sleep mode"
+          bitOffset: 7
+          bitWidth: 1
+        SLP_IE:
+          description: input enable in sleep mode
+          bitOffset: 8
+          bitWidth: 1
+        SLP_OE:
+          description: output enable in sleep mode
+          bitOffset: 9
+          bitWidth: 1
+        FUN_IE:
+          description: input enable in work mode
+          bitOffset: 10
+          bitWidth: 1
+        FILTER_EN:
+          description: need des
+          bitOffset: 11
+          bitWidth: 1
