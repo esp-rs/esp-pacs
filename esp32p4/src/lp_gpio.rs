@@ -15,53 +15,10 @@ pub struct RegisterBlock {
     status_w1tc: STATUS_W1TC,
     status_next: STATUS_NEXT,
     in_: IN,
-    pin0: PIN0,
-    pin1: PIN1,
-    pin2: PIN2,
-    pin3: PIN3,
-    pin4: PIN4,
-    pin5: PIN5,
-    pin6: PIN6,
-    pin7: PIN7,
-    pin8: PIN8,
-    pin9: PIN9,
-    pin10: PIN10,
-    pin11: PIN11,
-    pin12: PIN12,
-    pin13: PIN13,
-    pin14: PIN14,
-    pin15: PIN15,
-    func0_in_sel_cfg: FUNC0_IN_SEL_CFG,
-    func1_in_sel_cfg: FUNC1_IN_SEL_CFG,
-    func2_in_sel_cfg: FUNC2_IN_SEL_CFG,
-    func3_in_sel_cfg: FUNC3_IN_SEL_CFG,
-    func4_in_sel_cfg: FUNC4_IN_SEL_CFG,
-    func5_in_sel_cfg: FUNC5_IN_SEL_CFG,
-    func6_in_sel_cfg: FUNC6_IN_SEL_CFG,
-    func7_in_sel_cfg: FUNC7_IN_SEL_CFG,
-    func8_in_sel_cfg: FUNC8_IN_SEL_CFG,
-    func9_in_sel_cfg: FUNC9_IN_SEL_CFG,
-    func10_in_sel_cfg: FUNC10_IN_SEL_CFG,
-    func11_in_sel_cfg: FUNC11_IN_SEL_CFG,
-    func12_in_sel_cfg: FUNC12_IN_SEL_CFG,
-    func13_in_sel_cfg: FUNC13_IN_SEL_CFG,
-    _reserved43: [u8; 0x48],
-    func0_out_sel_cfg: FUNC0_OUT_SEL_CFG,
-    func1_out_sel_cfg: FUNC1_OUT_SEL_CFG,
-    func2_out_sel_cfg: FUNC2_OUT_SEL_CFG,
-    func3_out_sel_cfg: FUNC3_OUT_SEL_CFG,
-    func4_out_sel_cfg: FUNC4_OUT_SEL_CFG,
-    func5_out_sel_cfg: FUNC5_OUT_SEL_CFG,
-    func6_out_sel_cfg: FUNC6_OUT_SEL_CFG,
-    func7_out_sel_cfg: FUNC7_OUT_SEL_CFG,
-    func8_out_sel_cfg: FUNC8_OUT_SEL_CFG,
-    func9_out_sel_cfg: FUNC9_OUT_SEL_CFG,
-    func10_out_sel_cfg: FUNC10_OUT_SEL_CFG,
-    func11_out_sel_cfg: FUNC11_OUT_SEL_CFG,
-    func12_out_sel_cfg: FUNC12_OUT_SEL_CFG,
-    func13_out_sel_cfg: FUNC13_OUT_SEL_CFG,
-    func14_out_sel_cfg: FUNC14_OUT_SEL_CFG,
-    func15_out_sel_cfg: FUNC15_OUT_SEL_CFG,
+    pin: [PIN; 16],
+    func_in_sel_cfg: [FUNC_IN_SEL_CFG; 14],
+    _reserved15: [u8; 0x48],
+    func_out_sel_cfg: [FUNC_OUT_SEL_CFG; 16],
 }
 impl RegisterBlock {
     #[doc = "0x00 - Reserved"]
@@ -129,235 +86,188 @@ impl RegisterBlock {
     pub const fn in_(&self) -> &IN {
         &self.in_
     }
-    #[doc = "0x34 - Reserved"]
+    #[doc = "0x34..0x74 - LP GPIO pin configuration register"]
     #[inline(always)]
-    pub const fn pin0(&self) -> &PIN0 {
-        &self.pin0
+    pub const fn pin(&self, n: usize) -> &PIN {
+        &self.pin[n]
     }
-    #[doc = "0x38 - Reserved"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x34..0x74 - LP GPIO pin configuration register"]
     #[inline(always)]
-    pub const fn pin1(&self) -> &PIN1 {
-        &self.pin1
+    pub fn pin_iter(&self) -> impl Iterator<Item = &PIN> {
+        self.pin.iter()
     }
-    #[doc = "0x3c - Reserved"]
+    #[doc = "0x74..0xac - LP GPIO input function configuration register"]
     #[inline(always)]
-    pub const fn pin2(&self) -> &PIN2 {
-        &self.pin2
+    pub const fn func_in_sel_cfg(&self, n: usize) -> &FUNC_IN_SEL_CFG {
+        &self.func_in_sel_cfg[n]
     }
-    #[doc = "0x40 - Reserved"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x74..0xac - LP GPIO input function configuration register"]
     #[inline(always)]
-    pub const fn pin3(&self) -> &PIN3 {
-        &self.pin3
+    pub fn func_in_sel_cfg_iter(&self) -> impl Iterator<Item = &FUNC_IN_SEL_CFG> {
+        self.func_in_sel_cfg.iter()
     }
-    #[doc = "0x44 - Reserved"]
+    #[doc = "0x74 - LP GPIO input function configuration register"]
     #[inline(always)]
-    pub const fn pin4(&self) -> &PIN4 {
-        &self.pin4
+    pub const fn func0_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
+        self.func_in_sel_cfg(0)
     }
-    #[doc = "0x48 - Reserved"]
+    #[doc = "0x78 - LP GPIO input function configuration register"]
     #[inline(always)]
-    pub const fn pin5(&self) -> &PIN5 {
-        &self.pin5
+    pub const fn func1_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
+        self.func_in_sel_cfg(1)
     }
-    #[doc = "0x4c - Reserved"]
+    #[doc = "0x7c - LP GPIO input function configuration register"]
     #[inline(always)]
-    pub const fn pin6(&self) -> &PIN6 {
-        &self.pin6
+    pub const fn func2_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
+        self.func_in_sel_cfg(2)
     }
-    #[doc = "0x50 - Reserved"]
+    #[doc = "0x80 - LP GPIO input function configuration register"]
     #[inline(always)]
-    pub const fn pin7(&self) -> &PIN7 {
-        &self.pin7
+    pub const fn func3_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
+        self.func_in_sel_cfg(3)
     }
-    #[doc = "0x54 - Reserved"]
+    #[doc = "0x84 - LP GPIO input function configuration register"]
     #[inline(always)]
-    pub const fn pin8(&self) -> &PIN8 {
-        &self.pin8
+    pub const fn func4_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
+        self.func_in_sel_cfg(4)
     }
-    #[doc = "0x58 - Reserved"]
+    #[doc = "0x88 - LP GPIO input function configuration register"]
     #[inline(always)]
-    pub const fn pin9(&self) -> &PIN9 {
-        &self.pin9
+    pub const fn func5_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
+        self.func_in_sel_cfg(5)
     }
-    #[doc = "0x5c - Reserved"]
+    #[doc = "0x8c - LP GPIO input function configuration register"]
     #[inline(always)]
-    pub const fn pin10(&self) -> &PIN10 {
-        &self.pin10
+    pub const fn func6_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
+        self.func_in_sel_cfg(6)
     }
-    #[doc = "0x60 - Reserved"]
+    #[doc = "0x90 - LP GPIO input function configuration register"]
     #[inline(always)]
-    pub const fn pin11(&self) -> &PIN11 {
-        &self.pin11
+    pub const fn func7_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
+        self.func_in_sel_cfg(7)
     }
-    #[doc = "0x64 - Reserved"]
+    #[doc = "0x94 - LP GPIO input function configuration register"]
     #[inline(always)]
-    pub const fn pin12(&self) -> &PIN12 {
-        &self.pin12
+    pub const fn func8_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
+        self.func_in_sel_cfg(8)
     }
-    #[doc = "0x68 - Reserved"]
+    #[doc = "0x98 - LP GPIO input function configuration register"]
     #[inline(always)]
-    pub const fn pin13(&self) -> &PIN13 {
-        &self.pin13
+    pub const fn func9_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
+        self.func_in_sel_cfg(9)
     }
-    #[doc = "0x6c - Reserved"]
+    #[doc = "0x9c - LP GPIO input function configuration register"]
     #[inline(always)]
-    pub const fn pin14(&self) -> &PIN14 {
-        &self.pin14
+    pub const fn func10_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
+        self.func_in_sel_cfg(10)
     }
-    #[doc = "0x70 - Reserved"]
+    #[doc = "0xa0 - LP GPIO input function configuration register"]
     #[inline(always)]
-    pub const fn pin15(&self) -> &PIN15 {
-        &self.pin15
+    pub const fn func11_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
+        self.func_in_sel_cfg(11)
     }
-    #[doc = "0x74 - Reserved"]
+    #[doc = "0xa4 - LP GPIO input function configuration register"]
     #[inline(always)]
-    pub const fn func0_in_sel_cfg(&self) -> &FUNC0_IN_SEL_CFG {
-        &self.func0_in_sel_cfg
+    pub const fn func12_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
+        self.func_in_sel_cfg(12)
     }
-    #[doc = "0x78 - Reserved"]
+    #[doc = "0xa8 - LP GPIO input function configuration register"]
     #[inline(always)]
-    pub const fn func1_in_sel_cfg(&self) -> &FUNC1_IN_SEL_CFG {
-        &self.func1_in_sel_cfg
+    pub const fn func13_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
+        self.func_in_sel_cfg(13)
     }
-    #[doc = "0x7c - Reserved"]
+    #[doc = "0xf4..0x134 - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func2_in_sel_cfg(&self) -> &FUNC2_IN_SEL_CFG {
-        &self.func2_in_sel_cfg
+    pub const fn func_out_sel_cfg(&self, n: usize) -> &FUNC_OUT_SEL_CFG {
+        &self.func_out_sel_cfg[n]
     }
-    #[doc = "0x80 - Reserved"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xf4..0x134 - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func3_in_sel_cfg(&self) -> &FUNC3_IN_SEL_CFG {
-        &self.func3_in_sel_cfg
+    pub fn func_out_sel_cfg_iter(&self) -> impl Iterator<Item = &FUNC_OUT_SEL_CFG> {
+        self.func_out_sel_cfg.iter()
     }
-    #[doc = "0x84 - Reserved"]
+    #[doc = "0xf4 - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func4_in_sel_cfg(&self) -> &FUNC4_IN_SEL_CFG {
-        &self.func4_in_sel_cfg
+    pub const fn func0_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(0)
     }
-    #[doc = "0x88 - Reserved"]
+    #[doc = "0xf8 - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func5_in_sel_cfg(&self) -> &FUNC5_IN_SEL_CFG {
-        &self.func5_in_sel_cfg
+    pub const fn func1_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(1)
     }
-    #[doc = "0x8c - Reserved"]
+    #[doc = "0xfc - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func6_in_sel_cfg(&self) -> &FUNC6_IN_SEL_CFG {
-        &self.func6_in_sel_cfg
+    pub const fn func2_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(2)
     }
-    #[doc = "0x90 - Reserved"]
+    #[doc = "0x100 - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func7_in_sel_cfg(&self) -> &FUNC7_IN_SEL_CFG {
-        &self.func7_in_sel_cfg
+    pub const fn func3_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(3)
     }
-    #[doc = "0x94 - Reserved"]
+    #[doc = "0x104 - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func8_in_sel_cfg(&self) -> &FUNC8_IN_SEL_CFG {
-        &self.func8_in_sel_cfg
+    pub const fn func4_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(4)
     }
-    #[doc = "0x98 - Reserved"]
+    #[doc = "0x108 - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func9_in_sel_cfg(&self) -> &FUNC9_IN_SEL_CFG {
-        &self.func9_in_sel_cfg
+    pub const fn func5_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(5)
     }
-    #[doc = "0x9c - Reserved"]
+    #[doc = "0x10c - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func10_in_sel_cfg(&self) -> &FUNC10_IN_SEL_CFG {
-        &self.func10_in_sel_cfg
+    pub const fn func6_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(6)
     }
-    #[doc = "0xa0 - Reserved"]
+    #[doc = "0x110 - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func11_in_sel_cfg(&self) -> &FUNC11_IN_SEL_CFG {
-        &self.func11_in_sel_cfg
+    pub const fn func7_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(7)
     }
-    #[doc = "0xa4 - Reserved"]
+    #[doc = "0x114 - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func12_in_sel_cfg(&self) -> &FUNC12_IN_SEL_CFG {
-        &self.func12_in_sel_cfg
+    pub const fn func8_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(8)
     }
-    #[doc = "0xa8 - Reserved"]
+    #[doc = "0x118 - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func13_in_sel_cfg(&self) -> &FUNC13_IN_SEL_CFG {
-        &self.func13_in_sel_cfg
+    pub const fn func9_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(9)
     }
-    #[doc = "0xf4 - Reserved"]
+    #[doc = "0x11c - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func0_out_sel_cfg(&self) -> &FUNC0_OUT_SEL_CFG {
-        &self.func0_out_sel_cfg
+    pub const fn func10_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(10)
     }
-    #[doc = "0xf8 - Reserved"]
+    #[doc = "0x120 - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func1_out_sel_cfg(&self) -> &FUNC1_OUT_SEL_CFG {
-        &self.func1_out_sel_cfg
+    pub const fn func11_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(11)
     }
-    #[doc = "0xfc - Reserved"]
+    #[doc = "0x124 - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func2_out_sel_cfg(&self) -> &FUNC2_OUT_SEL_CFG {
-        &self.func2_out_sel_cfg
+    pub const fn func12_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(12)
     }
-    #[doc = "0x100 - Reserved"]
+    #[doc = "0x128 - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func3_out_sel_cfg(&self) -> &FUNC3_OUT_SEL_CFG {
-        &self.func3_out_sel_cfg
+    pub const fn func13_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(13)
     }
-    #[doc = "0x104 - Reserved"]
+    #[doc = "0x12c - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func4_out_sel_cfg(&self) -> &FUNC4_OUT_SEL_CFG {
-        &self.func4_out_sel_cfg
+    pub const fn func14_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(14)
     }
-    #[doc = "0x108 - Reserved"]
+    #[doc = "0x130 - LP GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func5_out_sel_cfg(&self) -> &FUNC5_OUT_SEL_CFG {
-        &self.func5_out_sel_cfg
-    }
-    #[doc = "0x10c - Reserved"]
-    #[inline(always)]
-    pub const fn func6_out_sel_cfg(&self) -> &FUNC6_OUT_SEL_CFG {
-        &self.func6_out_sel_cfg
-    }
-    #[doc = "0x110 - Reserved"]
-    #[inline(always)]
-    pub const fn func7_out_sel_cfg(&self) -> &FUNC7_OUT_SEL_CFG {
-        &self.func7_out_sel_cfg
-    }
-    #[doc = "0x114 - Reserved"]
-    #[inline(always)]
-    pub const fn func8_out_sel_cfg(&self) -> &FUNC8_OUT_SEL_CFG {
-        &self.func8_out_sel_cfg
-    }
-    #[doc = "0x118 - Reserved"]
-    #[inline(always)]
-    pub const fn func9_out_sel_cfg(&self) -> &FUNC9_OUT_SEL_CFG {
-        &self.func9_out_sel_cfg
-    }
-    #[doc = "0x11c - Reserved"]
-    #[inline(always)]
-    pub const fn func10_out_sel_cfg(&self) -> &FUNC10_OUT_SEL_CFG {
-        &self.func10_out_sel_cfg
-    }
-    #[doc = "0x120 - Reserved"]
-    #[inline(always)]
-    pub const fn func11_out_sel_cfg(&self) -> &FUNC11_OUT_SEL_CFG {
-        &self.func11_out_sel_cfg
-    }
-    #[doc = "0x124 - Reserved"]
-    #[inline(always)]
-    pub const fn func12_out_sel_cfg(&self) -> &FUNC12_OUT_SEL_CFG {
-        &self.func12_out_sel_cfg
-    }
-    #[doc = "0x128 - Reserved"]
-    #[inline(always)]
-    pub const fn func13_out_sel_cfg(&self) -> &FUNC13_OUT_SEL_CFG {
-        &self.func13_out_sel_cfg
-    }
-    #[doc = "0x12c - Reserved"]
-    #[inline(always)]
-    pub const fn func14_out_sel_cfg(&self) -> &FUNC14_OUT_SEL_CFG {
-        &self.func14_out_sel_cfg
-    }
-    #[doc = "0x130 - Reserved"]
-    #[inline(always)]
-    pub const fn func15_out_sel_cfg(&self) -> &FUNC15_OUT_SEL_CFG {
-        &self.func15_out_sel_cfg
+    pub const fn func15_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(15)
     }
 }
 #[doc = "CLK_EN (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`clk_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk_en`] module"]
@@ -412,187 +322,15 @@ pub mod status_next;
 pub type IN = crate::Reg<in_::IN_SPEC>;
 #[doc = "Reserved"]
 pub mod in_;
-#[doc = "PIN0 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin0`] module"]
-pub type PIN0 = crate::Reg<pin0::PIN0_SPEC>;
-#[doc = "Reserved"]
-pub mod pin0;
-#[doc = "PIN1 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin1`] module"]
-pub type PIN1 = crate::Reg<pin1::PIN1_SPEC>;
-#[doc = "Reserved"]
-pub mod pin1;
-#[doc = "PIN2 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin2`] module"]
-pub type PIN2 = crate::Reg<pin2::PIN2_SPEC>;
-#[doc = "Reserved"]
-pub mod pin2;
-#[doc = "PIN3 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin3`] module"]
-pub type PIN3 = crate::Reg<pin3::PIN3_SPEC>;
-#[doc = "Reserved"]
-pub mod pin3;
-#[doc = "PIN4 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin4`] module"]
-pub type PIN4 = crate::Reg<pin4::PIN4_SPEC>;
-#[doc = "Reserved"]
-pub mod pin4;
-#[doc = "PIN5 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin5`] module"]
-pub type PIN5 = crate::Reg<pin5::PIN5_SPEC>;
-#[doc = "Reserved"]
-pub mod pin5;
-#[doc = "PIN6 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin6`] module"]
-pub type PIN6 = crate::Reg<pin6::PIN6_SPEC>;
-#[doc = "Reserved"]
-pub mod pin6;
-#[doc = "PIN7 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin7`] module"]
-pub type PIN7 = crate::Reg<pin7::PIN7_SPEC>;
-#[doc = "Reserved"]
-pub mod pin7;
-#[doc = "PIN8 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin8`] module"]
-pub type PIN8 = crate::Reg<pin8::PIN8_SPEC>;
-#[doc = "Reserved"]
-pub mod pin8;
-#[doc = "PIN9 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin9::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin9::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin9`] module"]
-pub type PIN9 = crate::Reg<pin9::PIN9_SPEC>;
-#[doc = "Reserved"]
-pub mod pin9;
-#[doc = "PIN10 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin10::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin10::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin10`] module"]
-pub type PIN10 = crate::Reg<pin10::PIN10_SPEC>;
-#[doc = "Reserved"]
-pub mod pin10;
-#[doc = "PIN11 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin11::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin11::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin11`] module"]
-pub type PIN11 = crate::Reg<pin11::PIN11_SPEC>;
-#[doc = "Reserved"]
-pub mod pin11;
-#[doc = "PIN12 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin12::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin12::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin12`] module"]
-pub type PIN12 = crate::Reg<pin12::PIN12_SPEC>;
-#[doc = "Reserved"]
-pub mod pin12;
-#[doc = "PIN13 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin13::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin13::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin13`] module"]
-pub type PIN13 = crate::Reg<pin13::PIN13_SPEC>;
-#[doc = "Reserved"]
-pub mod pin13;
-#[doc = "PIN14 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin14::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin14::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin14`] module"]
-pub type PIN14 = crate::Reg<pin14::PIN14_SPEC>;
-#[doc = "Reserved"]
-pub mod pin14;
-#[doc = "PIN15 (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`pin15::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin15::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin15`] module"]
-pub type PIN15 = crate::Reg<pin15::PIN15_SPEC>;
-#[doc = "Reserved"]
-pub mod pin15;
-#[doc = "FUNC0_IN_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func0_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func0_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func0_in_sel_cfg`] module"]
-pub type FUNC0_IN_SEL_CFG = crate::Reg<func0_in_sel_cfg::FUNC0_IN_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func0_in_sel_cfg;
-#[doc = "FUNC1_IN_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func1_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func1_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func1_in_sel_cfg`] module"]
-pub type FUNC1_IN_SEL_CFG = crate::Reg<func1_in_sel_cfg::FUNC1_IN_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func1_in_sel_cfg;
-#[doc = "FUNC2_IN_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func2_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func2_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func2_in_sel_cfg`] module"]
-pub type FUNC2_IN_SEL_CFG = crate::Reg<func2_in_sel_cfg::FUNC2_IN_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func2_in_sel_cfg;
-#[doc = "FUNC3_IN_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func3_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func3_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func3_in_sel_cfg`] module"]
-pub type FUNC3_IN_SEL_CFG = crate::Reg<func3_in_sel_cfg::FUNC3_IN_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func3_in_sel_cfg;
-#[doc = "FUNC4_IN_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func4_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func4_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func4_in_sel_cfg`] module"]
-pub type FUNC4_IN_SEL_CFG = crate::Reg<func4_in_sel_cfg::FUNC4_IN_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func4_in_sel_cfg;
-#[doc = "FUNC5_IN_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func5_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func5_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func5_in_sel_cfg`] module"]
-pub type FUNC5_IN_SEL_CFG = crate::Reg<func5_in_sel_cfg::FUNC5_IN_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func5_in_sel_cfg;
-#[doc = "FUNC6_IN_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func6_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func6_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func6_in_sel_cfg`] module"]
-pub type FUNC6_IN_SEL_CFG = crate::Reg<func6_in_sel_cfg::FUNC6_IN_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func6_in_sel_cfg;
-#[doc = "FUNC7_IN_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func7_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func7_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func7_in_sel_cfg`] module"]
-pub type FUNC7_IN_SEL_CFG = crate::Reg<func7_in_sel_cfg::FUNC7_IN_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func7_in_sel_cfg;
-#[doc = "FUNC8_IN_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func8_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func8_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func8_in_sel_cfg`] module"]
-pub type FUNC8_IN_SEL_CFG = crate::Reg<func8_in_sel_cfg::FUNC8_IN_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func8_in_sel_cfg;
-#[doc = "FUNC9_IN_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func9_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func9_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func9_in_sel_cfg`] module"]
-pub type FUNC9_IN_SEL_CFG = crate::Reg<func9_in_sel_cfg::FUNC9_IN_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func9_in_sel_cfg;
-#[doc = "FUNC10_IN_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func10_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func10_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func10_in_sel_cfg`] module"]
-pub type FUNC10_IN_SEL_CFG = crate::Reg<func10_in_sel_cfg::FUNC10_IN_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func10_in_sel_cfg;
-#[doc = "FUNC11_IN_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func11_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func11_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func11_in_sel_cfg`] module"]
-pub type FUNC11_IN_SEL_CFG = crate::Reg<func11_in_sel_cfg::FUNC11_IN_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func11_in_sel_cfg;
-#[doc = "FUNC12_IN_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func12_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func12_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func12_in_sel_cfg`] module"]
-pub type FUNC12_IN_SEL_CFG = crate::Reg<func12_in_sel_cfg::FUNC12_IN_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func12_in_sel_cfg;
-#[doc = "FUNC13_IN_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func13_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func13_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func13_in_sel_cfg`] module"]
-pub type FUNC13_IN_SEL_CFG = crate::Reg<func13_in_sel_cfg::FUNC13_IN_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func13_in_sel_cfg;
-#[doc = "FUNC0_OUT_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func0_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func0_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func0_out_sel_cfg`] module"]
-pub type FUNC0_OUT_SEL_CFG = crate::Reg<func0_out_sel_cfg::FUNC0_OUT_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func0_out_sel_cfg;
-#[doc = "FUNC1_OUT_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func1_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func1_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func1_out_sel_cfg`] module"]
-pub type FUNC1_OUT_SEL_CFG = crate::Reg<func1_out_sel_cfg::FUNC1_OUT_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func1_out_sel_cfg;
-#[doc = "FUNC2_OUT_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func2_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func2_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func2_out_sel_cfg`] module"]
-pub type FUNC2_OUT_SEL_CFG = crate::Reg<func2_out_sel_cfg::FUNC2_OUT_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func2_out_sel_cfg;
-#[doc = "FUNC3_OUT_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func3_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func3_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func3_out_sel_cfg`] module"]
-pub type FUNC3_OUT_SEL_CFG = crate::Reg<func3_out_sel_cfg::FUNC3_OUT_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func3_out_sel_cfg;
-#[doc = "FUNC4_OUT_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func4_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func4_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func4_out_sel_cfg`] module"]
-pub type FUNC4_OUT_SEL_CFG = crate::Reg<func4_out_sel_cfg::FUNC4_OUT_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func4_out_sel_cfg;
-#[doc = "FUNC5_OUT_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func5_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func5_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func5_out_sel_cfg`] module"]
-pub type FUNC5_OUT_SEL_CFG = crate::Reg<func5_out_sel_cfg::FUNC5_OUT_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func5_out_sel_cfg;
-#[doc = "FUNC6_OUT_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func6_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func6_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func6_out_sel_cfg`] module"]
-pub type FUNC6_OUT_SEL_CFG = crate::Reg<func6_out_sel_cfg::FUNC6_OUT_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func6_out_sel_cfg;
-#[doc = "FUNC7_OUT_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func7_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func7_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func7_out_sel_cfg`] module"]
-pub type FUNC7_OUT_SEL_CFG = crate::Reg<func7_out_sel_cfg::FUNC7_OUT_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func7_out_sel_cfg;
-#[doc = "FUNC8_OUT_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func8_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func8_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func8_out_sel_cfg`] module"]
-pub type FUNC8_OUT_SEL_CFG = crate::Reg<func8_out_sel_cfg::FUNC8_OUT_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func8_out_sel_cfg;
-#[doc = "FUNC9_OUT_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func9_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func9_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func9_out_sel_cfg`] module"]
-pub type FUNC9_OUT_SEL_CFG = crate::Reg<func9_out_sel_cfg::FUNC9_OUT_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func9_out_sel_cfg;
-#[doc = "FUNC10_OUT_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func10_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func10_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func10_out_sel_cfg`] module"]
-pub type FUNC10_OUT_SEL_CFG = crate::Reg<func10_out_sel_cfg::FUNC10_OUT_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func10_out_sel_cfg;
-#[doc = "FUNC11_OUT_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func11_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func11_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func11_out_sel_cfg`] module"]
-pub type FUNC11_OUT_SEL_CFG = crate::Reg<func11_out_sel_cfg::FUNC11_OUT_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func11_out_sel_cfg;
-#[doc = "FUNC12_OUT_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func12_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func12_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func12_out_sel_cfg`] module"]
-pub type FUNC12_OUT_SEL_CFG = crate::Reg<func12_out_sel_cfg::FUNC12_OUT_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func12_out_sel_cfg;
-#[doc = "FUNC13_OUT_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func13_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func13_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func13_out_sel_cfg`] module"]
-pub type FUNC13_OUT_SEL_CFG = crate::Reg<func13_out_sel_cfg::FUNC13_OUT_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func13_out_sel_cfg;
-#[doc = "FUNC14_OUT_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func14_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func14_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func14_out_sel_cfg`] module"]
-pub type FUNC14_OUT_SEL_CFG = crate::Reg<func14_out_sel_cfg::FUNC14_OUT_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func14_out_sel_cfg;
-#[doc = "FUNC15_OUT_SEL_CFG (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`func15_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func15_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func15_out_sel_cfg`] module"]
-pub type FUNC15_OUT_SEL_CFG = crate::Reg<func15_out_sel_cfg::FUNC15_OUT_SEL_CFG_SPEC>;
-#[doc = "Reserved"]
-pub mod func15_out_sel_cfg;
+#[doc = "PIN (rw) register accessor: LP GPIO pin configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`pin::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin`] module"]
+pub type PIN = crate::Reg<pin::PIN_SPEC>;
+#[doc = "LP GPIO pin configuration register"]
+pub mod pin;
+#[doc = "FUNC_IN_SEL_CFG (rw) register accessor: LP GPIO input function configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`func_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func_in_sel_cfg`] module"]
+pub type FUNC_IN_SEL_CFG = crate::Reg<func_in_sel_cfg::FUNC_IN_SEL_CFG_SPEC>;
+#[doc = "LP GPIO input function configuration register"]
+pub mod func_in_sel_cfg;
+#[doc = "FUNC_OUT_SEL_CFG (rw) register accessor: LP GPIO output function configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`func_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func_out_sel_cfg`] module"]
+pub type FUNC_OUT_SEL_CFG = crate::Reg<func_out_sel_cfg::FUNC_OUT_SEL_CFG_SPEC>;
+#[doc = "LP GPIO output function configuration register"]
+pub mod func_out_sel_cfg;
