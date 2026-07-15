@@ -1,0 +1,80 @@
+LP_GPIO:
+  _delete:
+    - PIN*
+    - FUNC*_IN_SEL_CFG
+    - FUNC*_OUT_SEL_CFG
+  _add:
+    PIN%s:
+      dim: 16
+      dimIncrement: 0x04
+      dimIndex: 0-15
+      description: LP GPIO pin configuration register
+      addressOffset: 0x34
+      access: read-write
+      size: 0x20
+      fields:
+        WAKEUP_ENABLE:
+          description: Reserved
+          bitOffset: 0
+          bitWidth: 1
+        INT_TYPE:
+          description: Reserved
+          bitOffset: 1
+          bitWidth: 3
+        PAD_DRIVER:
+          description: Reserved
+          bitOffset: 4
+          bitWidth: 1
+        EDGE_WAKEUP_CLR:
+          description: need des
+          bitOffset: 5
+          bitWidth: 1
+          access: write-only
+    FUNC%s_IN_SEL_CFG:
+      dim: 14
+      dimIncrement: 0x04
+      dimIndex: 0-13
+      description: LP GPIO input function configuration register
+      addressOffset: 0x74
+      access: read-write
+      reset-value: 0x80
+      size: 0x20
+      fields:
+        IN_INV_SEL:
+          description: Reserved
+          bitOffset: 0
+          bitWidth: 1
+        SIG_IN_SEL:
+          description: Reserved
+          bitOffset: 1
+          bitWidth: 1
+        IN_SEL:
+          description: "reg_gpio_func_in_sel[5:4]==2'b11->constant 1,reg_gpio_func_in_sel[5:4]==2'b10->constant 0"
+          bitOffset: 2
+          bitWidth: 6
+    FUNC%s_OUT_SEL_CFG:
+      dim: 16
+      dimIncrement: 0x04
+      dimIndex: 0-15
+      description: LP GPIO output function configuration register
+      addressOffset: 0xf4
+      access: read-write
+      reset-value: 0x0100
+      size: 0x20
+      fields:
+        OE_INV_SEL:
+          description: Reserved
+          bitOffset: 0
+          bitWidth: 1
+        OE_SEL:
+          description: Reserved
+          bitOffset: 1
+          bitWidth: 1
+        OUT_INV_SEL:
+          description: Reserved
+          bitOffset: 2
+          bitWidth: 1
+        OUT_SEL:
+          description: "reg_gpio_func_out_sel[5:1]==16 -> output gpio register value to pad"
+          bitOffset: 3
+          bitWidth: 6

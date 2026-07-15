@@ -19,6 +19,8 @@ _include:
   - "_hp_sys.yml"
   - "_io_mux.yml"
   - "_isp.yml"
+  - "_lp_gpio.yml"
+  - "_lp_io_mux.yml"
   - "_lp_huk.yml"
   - "_lp_sys.yml"
   - "_mipi_dsi_bridge.yml"
