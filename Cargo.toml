@@ -15,4 +15,5 @@ exclude  = [
     "esp32s2-ulp",
     "esp32s3",
     "esp32s3-ulp",
+    "esp32s31",
 ]

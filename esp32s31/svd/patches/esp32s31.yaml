@@ -1,0 +1,305 @@
+_svd: "../esp32s31.base.svd"
+
+_include:
+  - "_clic.yml"
+  - "_hp_sys.yml"
+  - "_hp_sys_clkrst.yml"
+  - "_ecc.yml"
+  - "_gpio.yml"
+  - "_interrupt.yml"
+  - "_lp_sys.yml"
+  - "_lp_io_mux.yml"
+  - "_lp_intr.yml"
+  - "_lp_spi.yml"
+  - "_lp_mailbox.yml"
+  - "_cnnt_sys.yml"
+  - "_icm.yml"
+  - "_psram.yml"
+  - "_efuse.yml"
+  - "_pmu.yml"
+  - "_modem_syscon.yml"
+  - "_modem_lpcon.yml"
+  - "_i2c_ana_mst.yml"
+  - "_ieee802154.yml"
+  - "../../../common_patches/ieee802154.yaml"
+
+_modify:
+  "AHB_DMA,AXI_DMA":
+    groupName: DMA
+  LP_ANA_PERI:
+    name: LP_ANA
+    groupName: LP_ANA
+  BUS_MONITOR:
+    name: ASSIST_DEBUG
+    description: ASSIST_DEBUG (BUS_MONITOR) Peripheral
+    groupName: ASSIST_DEBUG
+  SPI?:
+    groupName: SPI
+
+ASSIST_DEBUG:
+  _include: "_assist_debug.yml"
+
+LP_ANA:
+  _strip: LP_ANA_
+  "*":
+    _strip: LP_ANA_
+
+  _include: "../../../common_patches/lpana_int_strip.yaml"
+
+SYSTIMER:
+  _include:
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/systimer.yaml
+    - ../../../common_patches/systimer_real_target.yaml
+
+PMU:
+  _include: ../../../common_patches/pmu_int_strip.yaml
+
+ADC:
+  DMA_CONF:
+    _strip: APB_
+  _include: ../../../common_patches/int_strip.yaml
+
+AES:
+  _modify:
+    INT_CLEAR:
+      name: INT_CLR
+
+  KEY_%s:
+    _modify:
+      KEY_0:
+        name: KEY
+    KEY: [0, 0xffff_ffff]
+  TEXT_IN_%s:
+    _modify:
+      TEXT_IN_0:
+        name: TEXT_IN
+    TEXT_IN: [0, 0xffff_ffff]
+  TEXT_OUT_%s:
+    _modify:
+      TEXT_OUT_0:
+        name: TEXT_OUT
+  INT_CLR:
+    _modify:
+      INT_CLEAR:
+        name: INT_CLR
+
+ECC:
+  _include: ../../../common_patches/ecc_int_strip.yaml
+
+EFUSE:
+  _strip: APB2OTP_
+  "*":
+    _strip: APB2OTP_
+
+GPIO:
+  _modify:
+    _interrupts:
+      GPIO_INT0:
+        name: GPIO
+
+GPIO_EXT:
+  _include: ../../../common_patches/gpiosd_ext.yaml
+
+HP_SYS:
+  _add:
+    _interrupts:
+      FROM_CPU_INTR0:
+        value: 65
+      FROM_CPU_INTR1:
+        value: 66
+      FROM_CPU_INTR2:
+        value: 67
+      FROM_CPU_INTR3:
+        value: 68
+  _include: ../../../common_patches/sw_interrupts.yaml
+
+JPEG:
+  _include: ../../../common_patches/int_strip.yaml
+  _array:
+    C?: {}
+
+SPI0:
+  _include: "./_spi0_mspi.yml"
+
+"SPI[01]":
+  _strip: SPI_MEM_
+  "*":
+    _strip: ["SPI_MEM_", "SPI_"]
+
+SPI2:
+  _strip: SPI_
+  "*":
+    _strip: SPI_
+  _include: ../../../common_patches/spi_dma_int_strip.yaml
+
+  CMD:
+    _modify:
+      UPDATE:
+        access: read-write
+
+"SPI[12]":
+  _include: ../../../common_patches/spi_w.yaml
+
+SOC_ETM:
+  CH_ENA_AD?:
+    _array:
+      CH_ENABLED*:
+        name: CH_ENA%s
+  CH_ENA_AD?_SET:
+    _array:
+      CH_ENABLE*:
+        name: CH_SET%s
+  CH_ENA_AD?_CLR:
+    _array:
+      CH_DISABLE*:
+        name: CH_CLR%s
+  _expand_array:
+    CH%s_EVT_ID: {}
+    CH%s_TASK_ID: {}
+
+  _cluster:
+    CH%s:
+      "CH*_EVT_ID":
+        name: EVT_ID
+        _modify:
+          "CH*_EVT_ID":
+            name: EVT_ID
+      "CH*_TASK_ID":
+        name: TASK_ID
+        _modify:
+          "CH*_TASK_ID":
+            name: TASK_ID
+
+
+I2C0:
+  _modify:
+    INT_STATUS:
+      name: INT_ST
+
+  DATA:
+    _modify:
+      FIFO_RDATA:
+        access: read-write
+  _include:
+    - ../../../common_patches/i2c_force_out.yaml
+    - ../../../common_patches/i2c0.yaml
+    - ../../../common_patches/i2c_st_timeouts.yaml
+
+LEDC0:
+  _include:
+    - ../../../common_patches/ledc_collect.yaml
+    - ../../../common_patches/ledc_int.yaml
+
+LP_AON_CLKRST:
+  _strip: LP_AONCLKRST_
+  "*":
+    _strip: LP_AONCLKRST_
+
+LP_APM:
+  _cluster:
+    M%s:
+      dimIncrement: 16
+      M?_STATUS:
+        name: STATUS
+        _strip: M0_
+      M?_STATUS_CLR:
+        name: STATUS_CLR
+        _strip: M0_
+      M?_EXCEPTION_INFO0:
+        name: EXCEPTION_INFO0
+        _strip: M0_
+      M?_EXCEPTION_INFO1:
+        name: EXCEPTION_INFO1
+        _strip: M0_
+
+  FUNC_CTRL:
+    _array:
+      M?_FUNC_EN: {}
+  INT_EN:
+    _array:
+      M?_APM_INT_EN:
+        name: M%s_APM
+
+LP_WDT:
+  _modify:
+    CONFIG0:
+      name: WDTCONFIG0
+    WPROTECT:
+      name: WDTWPROTECT
+    SWD_CONFIG:
+      name: SWD_CONF
+    FEED:
+      name: WDTFEED
+  WDTFEED:
+    _modify:
+      FEED:
+        name: WDT_FEED
+  INT_ENA:
+    _modify:
+      LP_WDT_INT_ENA:
+        name: WDT_INT_ENA
+  INT_CLR:
+    _modify:
+      LP_WDT_INT_CLR:
+        name: WDT_INT_CLR
+  INT_ST:
+    _modify:
+      LP_WDT_INT_ST:
+        name: WDT_INT_ST
+  _array:
+    CONFIG[1-4]:
+      name: WDTCONFIG%s
+      description: WDT configuration register
+      _modify:
+        WDT_STG0_HOLD:
+          name: HOLD
+
+LP_TIMER:
+  _include: ../../../common_patches/lptim_int_strip.yaml
+
+UART0:
+  _strip_end: "_SYNC"
+
+  CLKDIV:
+    _modify:
+      CLKDIV_FRAG:
+        name: FRAG
+
+  FIFO:
+    _modify:
+      RXFIFO_RD_BYTE:
+        access: read-write
+  _include: ../../../common_patches/int_strip.yaml
+
+
+UHCI0:
+  _include:
+    - ../../../common_patches/uhci_collect.yaml
+    - ../../../common_patches/int_strip.yaml
+
+TIMG0:
+  _include: ../../../common_patches/tim_collect.yaml
+  "*":
+    _strip: "T_"
+  _modify:
+    _interrupts:
+      TG0_T0:
+        name: TG0_T0_LEVEL
+      TG0_T1:
+        name: TG0_T1_LEVEL
+      TG0_WDT:
+        name: TG0_WDT_LEVEL
+
+TIMG1:
+  _modify:
+    _interrupts:
+      TG1_T0:
+        name: TG1_T0_LEVEL
+      TG1_T1:
+        name: TG1_T1_LEVEL
+      TG1_WDT:
+        name: TG1_WDT_LEVEL
+
+"EFUSE,I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU,MCPWM0":
+  _include: ../../../common_patches/int_strip.yaml

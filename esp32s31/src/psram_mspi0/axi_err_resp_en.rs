@@ -1,0 +1,208 @@
+#[doc = "Register `AXI_ERR_RESP_EN` reader"]
+pub type R = crate::R<AXI_ERR_RESP_EN_SPEC>;
+#[doc = "Register `AXI_ERR_RESP_EN` writer"]
+pub type W = crate::W<AXI_ERR_RESP_EN_SPEC>;
+#[doc = "Field `AW_RESP_EN_MMU_VLD` reader - "]
+pub type AW_RESP_EN_MMU_VLD_R = crate::BitReader;
+#[doc = "Field `AW_RESP_EN_MMU_VLD` writer - "]
+pub type AW_RESP_EN_MMU_VLD_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AW_RESP_EN_MMU_GID` reader - "]
+pub type AW_RESP_EN_MMU_GID_R = crate::BitReader;
+#[doc = "Field `AW_RESP_EN_MMU_GID` writer - "]
+pub type AW_RESP_EN_MMU_GID_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AW_RESP_EN_AXI_SIZE` reader - "]
+pub type AW_RESP_EN_AXI_SIZE_R = crate::BitReader;
+#[doc = "Field `AW_RESP_EN_AXI_SIZE` writer - "]
+pub type AW_RESP_EN_AXI_SIZE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AW_RESP_EN_AXI_FLASH` reader - "]
+pub type AW_RESP_EN_AXI_FLASH_R = crate::BitReader;
+#[doc = "Field `AW_RESP_EN_AXI_FLASH` writer - "]
+pub type AW_RESP_EN_AXI_FLASH_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AW_RESP_EN_MMU_ECC` reader - "]
+pub type AW_RESP_EN_MMU_ECC_R = crate::BitReader;
+#[doc = "Field `AW_RESP_EN_MMU_ECC` writer - "]
+pub type AW_RESP_EN_MMU_ECC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AW_RESP_EN_MMU_SENS` reader - "]
+pub type AW_RESP_EN_MMU_SENS_R = crate::BitReader;
+#[doc = "Field `AW_RESP_EN_MMU_SENS` writer - "]
+pub type AW_RESP_EN_MMU_SENS_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AW_RESP_EN_AXI_WSTRB` reader - "]
+pub type AW_RESP_EN_AXI_WSTRB_R = crate::BitReader;
+#[doc = "Field `AW_RESP_EN_AXI_WSTRB` writer - "]
+pub type AW_RESP_EN_AXI_WSTRB_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AR_RESP_EN_MMU_VLD` reader - "]
+pub type AR_RESP_EN_MMU_VLD_R = crate::BitReader;
+#[doc = "Field `AR_RESP_EN_MMU_VLD` writer - "]
+pub type AR_RESP_EN_MMU_VLD_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AR_RESP_EN_MMU_GID` reader - "]
+pub type AR_RESP_EN_MMU_GID_R = crate::BitReader;
+#[doc = "Field `AR_RESP_EN_MMU_GID` writer - "]
+pub type AR_RESP_EN_MMU_GID_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AR_RESP_EN_MMU_ECC` reader - "]
+pub type AR_RESP_EN_MMU_ECC_R = crate::BitReader;
+#[doc = "Field `AR_RESP_EN_MMU_ECC` writer - "]
+pub type AR_RESP_EN_MMU_ECC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AR_RESP_EN_MMU_SENS` reader - "]
+pub type AR_RESP_EN_MMU_SENS_R = crate::BitReader;
+#[doc = "Field `AR_RESP_EN_MMU_SENS` writer - "]
+pub type AR_RESP_EN_MMU_SENS_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AR_RESP_EN_AXI_SIZE` reader - "]
+pub type AR_RESP_EN_AXI_SIZE_R = crate::BitReader;
+#[doc = "Field `AR_RESP_EN_AXI_SIZE` writer - "]
+pub type AR_RESP_EN_AXI_SIZE_W<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    pub fn aw_resp_en_mmu_vld(&self) -> AW_RESP_EN_MMU_VLD_R {
+        AW_RESP_EN_MMU_VLD_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn aw_resp_en_mmu_gid(&self) -> AW_RESP_EN_MMU_GID_R {
+        AW_RESP_EN_MMU_GID_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2"]
+    #[inline(always)]
+    pub fn aw_resp_en_axi_size(&self) -> AW_RESP_EN_AXI_SIZE_R {
+        AW_RESP_EN_AXI_SIZE_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    pub fn aw_resp_en_axi_flash(&self) -> AW_RESP_EN_AXI_FLASH_R {
+        AW_RESP_EN_AXI_FLASH_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4"]
+    #[inline(always)]
+    pub fn aw_resp_en_mmu_ecc(&self) -> AW_RESP_EN_MMU_ECC_R {
+        AW_RESP_EN_MMU_ECC_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5"]
+    #[inline(always)]
+    pub fn aw_resp_en_mmu_sens(&self) -> AW_RESP_EN_MMU_SENS_R {
+        AW_RESP_EN_MMU_SENS_R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6"]
+    #[inline(always)]
+    pub fn aw_resp_en_axi_wstrb(&self) -> AW_RESP_EN_AXI_WSTRB_R {
+        AW_RESP_EN_AXI_WSTRB_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7"]
+    #[inline(always)]
+    pub fn ar_resp_en_mmu_vld(&self) -> AR_RESP_EN_MMU_VLD_R {
+        AR_RESP_EN_MMU_VLD_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8"]
+    #[inline(always)]
+    pub fn ar_resp_en_mmu_gid(&self) -> AR_RESP_EN_MMU_GID_R {
+        AR_RESP_EN_MMU_GID_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9"]
+    #[inline(always)]
+    pub fn ar_resp_en_mmu_ecc(&self) -> AR_RESP_EN_MMU_ECC_R {
+        AR_RESP_EN_MMU_ECC_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    pub fn ar_resp_en_mmu_sens(&self) -> AR_RESP_EN_MMU_SENS_R {
+        AR_RESP_EN_MMU_SENS_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11"]
+    #[inline(always)]
+    pub fn ar_resp_en_axi_size(&self) -> AR_RESP_EN_AXI_SIZE_R {
+        AR_RESP_EN_AXI_SIZE_R::new(((self.bits >> 11) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AXI_ERR_RESP_EN")
+            .field("aw_resp_en_mmu_vld", &self.aw_resp_en_mmu_vld())
+            .field("aw_resp_en_mmu_gid", &self.aw_resp_en_mmu_gid())
+            .field("aw_resp_en_axi_size", &self.aw_resp_en_axi_size())
+            .field("aw_resp_en_axi_flash", &self.aw_resp_en_axi_flash())
+            .field("aw_resp_en_mmu_ecc", &self.aw_resp_en_mmu_ecc())
+            .field("aw_resp_en_mmu_sens", &self.aw_resp_en_mmu_sens())
+            .field("aw_resp_en_axi_wstrb", &self.aw_resp_en_axi_wstrb())
+            .field("ar_resp_en_mmu_vld", &self.ar_resp_en_mmu_vld())
+            .field("ar_resp_en_mmu_gid", &self.ar_resp_en_mmu_gid())
+            .field("ar_resp_en_mmu_ecc", &self.ar_resp_en_mmu_ecc())
+            .field("ar_resp_en_mmu_sens", &self.ar_resp_en_mmu_sens())
+            .field("ar_resp_en_axi_size", &self.ar_resp_en_axi_size())
+            .finish()
+    }
+}
+impl W {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    pub fn aw_resp_en_mmu_vld(&mut self) -> AW_RESP_EN_MMU_VLD_W<'_, AXI_ERR_RESP_EN_SPEC> {
+        AW_RESP_EN_MMU_VLD_W::new(self, 0)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn aw_resp_en_mmu_gid(&mut self) -> AW_RESP_EN_MMU_GID_W<'_, AXI_ERR_RESP_EN_SPEC> {
+        AW_RESP_EN_MMU_GID_W::new(self, 1)
+    }
+    #[doc = "Bit 2"]
+    #[inline(always)]
+    pub fn aw_resp_en_axi_size(&mut self) -> AW_RESP_EN_AXI_SIZE_W<'_, AXI_ERR_RESP_EN_SPEC> {
+        AW_RESP_EN_AXI_SIZE_W::new(self, 2)
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    pub fn aw_resp_en_axi_flash(&mut self) -> AW_RESP_EN_AXI_FLASH_W<'_, AXI_ERR_RESP_EN_SPEC> {
+        AW_RESP_EN_AXI_FLASH_W::new(self, 3)
+    }
+    #[doc = "Bit 4"]
+    #[inline(always)]
+    pub fn aw_resp_en_mmu_ecc(&mut self) -> AW_RESP_EN_MMU_ECC_W<'_, AXI_ERR_RESP_EN_SPEC> {
+        AW_RESP_EN_MMU_ECC_W::new(self, 4)
+    }
+    #[doc = "Bit 5"]
+    #[inline(always)]
+    pub fn aw_resp_en_mmu_sens(&mut self) -> AW_RESP_EN_MMU_SENS_W<'_, AXI_ERR_RESP_EN_SPEC> {
+        AW_RESP_EN_MMU_SENS_W::new(self, 5)
+    }
+    #[doc = "Bit 6"]
+    #[inline(always)]
+    pub fn aw_resp_en_axi_wstrb(&mut self) -> AW_RESP_EN_AXI_WSTRB_W<'_, AXI_ERR_RESP_EN_SPEC> {
+        AW_RESP_EN_AXI_WSTRB_W::new(self, 6)
+    }
+    #[doc = "Bit 7"]
+    #[inline(always)]
+    pub fn ar_resp_en_mmu_vld(&mut self) -> AR_RESP_EN_MMU_VLD_W<'_, AXI_ERR_RESP_EN_SPEC> {
+        AR_RESP_EN_MMU_VLD_W::new(self, 7)
+    }
+    #[doc = "Bit 8"]
+    #[inline(always)]
+    pub fn ar_resp_en_mmu_gid(&mut self) -> AR_RESP_EN_MMU_GID_W<'_, AXI_ERR_RESP_EN_SPEC> {
+        AR_RESP_EN_MMU_GID_W::new(self, 8)
+    }
+    #[doc = "Bit 9"]
+    #[inline(always)]
+    pub fn ar_resp_en_mmu_ecc(&mut self) -> AR_RESP_EN_MMU_ECC_W<'_, AXI_ERR_RESP_EN_SPEC> {
+        AR_RESP_EN_MMU_ECC_W::new(self, 9)
+    }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    pub fn ar_resp_en_mmu_sens(&mut self) -> AR_RESP_EN_MMU_SENS_W<'_, AXI_ERR_RESP_EN_SPEC> {
+        AR_RESP_EN_MMU_SENS_W::new(self, 10)
+    }
+    #[doc = "Bit 11"]
+    #[inline(always)]
+    pub fn ar_resp_en_axi_size(&mut self) -> AR_RESP_EN_AXI_SIZE_W<'_, AXI_ERR_RESP_EN_SPEC> {
+        AR_RESP_EN_AXI_SIZE_W::new(self, 11)
+    }
+}
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`axi_err_resp_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`axi_err_resp_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct AXI_ERR_RESP_EN_SPEC;
+impl crate::RegisterSpec for AXI_ERR_RESP_EN_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`axi_err_resp_en::R`](R) reader structure"]
+impl crate::Readable for AXI_ERR_RESP_EN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`axi_err_resp_en::W`](W) writer structure"]
+impl crate::Writable for AXI_ERR_RESP_EN_SPEC {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets AXI_ERR_RESP_EN to value 0"]
+impl crate::Resettable for AXI_ERR_RESP_EN_SPEC {}

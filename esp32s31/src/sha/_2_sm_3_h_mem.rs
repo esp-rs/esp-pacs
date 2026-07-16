@@ -1,0 +1,24 @@
+#[doc = "Register `_2_SM_3_H_MEM[%s]` reader"]
+pub type R = crate::R<_2_SM_3_H_MEM_SPEC>;
+#[doc = "Register `_2_SM_3_H_MEM[%s]` writer"]
+pub type W = crate::W<_2_SM_3_H_MEM_SPEC>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+impl W {}
+#[doc = "SHA1, SHA2-256, SM3 H memory which contains intermediate hash or final hash. \\\\ SHA1, SHA2-256, SM3 : 0x00~0x20 (R/W) \\\\ SHA2-512 : 0x00~0x40 (R/W) \\\\\n\nYou can [`read`](crate::Reg::read) this register and get [`_2_sm_3_h_mem::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`_2_sm_3_h_mem::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct _2_SM_3_H_MEM_SPEC;
+impl crate::RegisterSpec for _2_SM_3_H_MEM_SPEC {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [`_2_sm_3_h_mem::R`](R) reader structure"]
+impl crate::Readable for _2_SM_3_H_MEM_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`_2_sm_3_h_mem::W`](W) writer structure"]
+impl crate::Writable for _2_SM_3_H_MEM_SPEC {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets _2_SM_3_H_MEM[%s] to value 0"]
+impl crate::Resettable for _2_SM_3_H_MEM_SPEC {}

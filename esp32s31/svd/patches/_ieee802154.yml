@@ -1,0 +1,1270 @@
+_add:
+  IEEE802154:
+    description: IEEE802154 Peripheral
+    baseAddress: 0x20103000
+    addressBlock:
+      - offset: 0x0
+        size: 0x1A4
+        usage: Registers
+    registers:
+
+      COMMAND:
+        description: COMMAND
+        addressOffset: 0x0
+        size: 32
+        access: read-write
+        fields:
+          OPCODE:
+            bitOffset: 0
+            bitWidth: 8
+
+      CTRL_CFG:
+        description: CTRL_CFG
+        addressOffset: 0x4
+        size: 32
+        access: read-write
+        fields:
+          HW_AUTO_ACK_TX_EN:
+            bitOffset: 0
+            bitWidth: 1
+          HW_ENHANCE_ACK_TX_EN:
+            bitOffset: 1
+            bitWidth: 1
+          HW_AUTO_ACK_RX_EN:
+            bitOffset: 3
+            bitWidth: 1
+          DIS_IFS_CONTROL:
+            bitOffset: 5
+            bitWidth: 1
+          PAN_COORDINATOR:
+            bitOffset: 6
+            bitWidth: 1
+          PROMISCUOUS_MODE:
+            bitOffset: 7
+            bitWidth: 1
+          DIS_FRAME_VERSION_RSV_FILTER:
+            bitOffset: 11
+            bitWidth: 1
+          AUTOPEND_ENHANCE:
+            bitOffset: 12
+            bitWidth: 1
+          TX_WAIT_ACK_TIMEOUT_EN:
+            bitOffset: 13
+            bitWidth: 1
+          FILTER_ENHANCE:
+            bitOffset: 14
+            bitWidth: 1
+          RX_FILTER_MULTIPAN_CROSS_CHECK:
+            bitOffset: 15
+            bitWidth: 1
+          COEX_ARB_DELAY:
+            bitOffset: 16
+            bitWidth: 8
+          BIT_ORDER:
+            bitOffset: 24
+            bitWidth: 1
+          NO_RSS_TRK_ENB:
+            bitOffset: 25
+            bitWidth: 1
+          FORCE_RX_ENB:
+            bitOffset: 26
+            bitWidth: 1
+          RX_DONE_TRIGGER_IDLE:
+            bitOffset: 27
+            bitWidth: 1
+          MAC_INF0_ENABLE:
+            bitOffset: 28
+            bitWidth: 1
+          MAC_INF1_ENABLE:
+            bitOffset: 29
+            bitWidth: 1
+          MAC_INF2_ENABLE:
+            bitOffset: 30
+            bitWidth: 1
+          MAC_INF3_ENABLE:
+            bitOffset: 31
+            bitWidth: 1
+
+      INF0_SHORT_ADDR:
+        description: INF0_SHORT_ADDR
+        addressOffset: 0x8
+        size: 32
+        access: read-write
+        fields:
+          MAC_INF0_SHORT_ADDR:
+            bitOffset: 0
+            bitWidth: 16
+
+      INF0_PAN_ID:
+        description: INF0_PAN_ID
+        addressOffset: 0xC
+        size: 32
+        access: read-write
+        fields:
+          MAC_INF0_PAN_ID:
+            bitOffset: 0
+            bitWidth: 16
+
+      INF0_EXTEND_ADDR0:
+        description: INF0_EXTEND_ADDR0
+        addressOffset: 0x10
+        size: 32
+        access: read-write
+        fields:
+          MAC_INF0_EXTEND_ADDR0:
+            bitOffset: 0
+            bitWidth: 32
+
+      INF0_EXTEND_ADDR1:
+        description: INF0_EXTEND_ADDR1
+        addressOffset: 0x14
+        size: 32
+        access: read-write
+        fields:
+          MAC_INF0_EXTEND_ADDR1:
+            bitOffset: 0
+            bitWidth: 32
+
+      INF1_SHORT_ADDR:
+        description: INF1_SHORT_ADDR
+        addressOffset: 0x18
+        size: 32
+        access: read-write
+        fields:
+          MAC_INF1_SHORT_ADDR:
+            bitOffset: 0
+            bitWidth: 16
+
+      INF1_PAN_ID:
+        description: INF1_PAN_ID
+        addressOffset: 0x1C
+        size: 32
+        access: read-write
+        fields:
+          MAC_INF1_PAN_ID:
+            bitOffset: 0
+            bitWidth: 16
+
+      INF1_EXTEND_ADDR0:
+        description: INF1_EXTEND_ADDR0
+        addressOffset: 0x20
+        size: 32
+        access: read-write
+        fields:
+          MAC_INF1_EXTEND_ADDR0:
+            bitOffset: 0
+            bitWidth: 32
+
+      INF1_EXTEND_ADDR1:
+        description: INF1_EXTEND_ADDR1
+        addressOffset: 0x24
+        size: 32
+        access: read-write
+        fields:
+          MAC_INF1_EXTEND_ADDR1:
+            bitOffset: 0
+            bitWidth: 32
+
+      INF2_SHORT_ADDR:
+        description: INF2_SHORT_ADDR
+        addressOffset: 0x28
+        size: 32
+        access: read-write
+        fields:
+          MAC_INF2_SHORT_ADDR:
+            bitOffset: 0
+            bitWidth: 16
+
+      INF2_PAN_ID:
+        description: INF2_PAN_ID
+        addressOffset: 0x2C
+        size: 32
+        access: read-write
+        fields:
+          MAC_INF2_PAN_ID:
+            bitOffset: 0
+            bitWidth: 16
+
+      INF2_EXTEND_ADDR0:
+        description: INF2_EXTEND_ADDR0
+        addressOffset: 0x30
+        size: 32
+        access: read-write
+        fields:
+          MAC_INF2_EXTEND_ADDR0:
+            bitOffset: 0
+            bitWidth: 32
+
+      INF2_EXTEND_ADDR1:
+        description: INF2_EXTEND_ADDR1
+        addressOffset: 0x34
+        size: 32
+        access: read-write
+        fields:
+          MAC_INF2_EXTEND_ADDR1:
+            bitOffset: 0
+            bitWidth: 32
+
+      INF3_SHORT_ADDR:
+        description: INF3_SHORT_ADDR
+        addressOffset: 0x38
+        size: 32
+        access: read-write
+        fields:
+          MAC_INF3_SHORT_ADDR:
+            bitOffset: 0
+            bitWidth: 16
+
+      INF3_PAN_ID:
+        description: INF3_PAN_ID
+        addressOffset: 0x3C
+        size: 32
+        access: read-write
+        fields:
+          MAC_INF3_PAN_ID:
+            bitOffset: 0
+            bitWidth: 16
+
+      INF3_EXTEND_ADDR0:
+        description: INF3_EXTEND_ADDR0
+        addressOffset: 0x40
+        size: 32
+        access: read-write
+        fields:
+          MAC_INF3_EXTEND_ADDR0:
+            bitOffset: 0
+            bitWidth: 32
+
+      INF3_EXTEND_ADDR1:
+        description: INF3_EXTEND_ADDR1
+        addressOffset: 0x44
+        size: 32
+        access: read-write
+        fields:
+          MAC_INF3_EXTEND_ADDR1:
+            bitOffset: 0
+            bitWidth: 32
+
+      CHANNEL:
+        description: CHANNEL
+        addressOffset: 0x48
+        size: 32
+        access: read-write
+        fields:
+          HOP:
+            bitOffset: 0
+            bitWidth: 8
+          SEC_HOP:
+            bitOffset: 8
+            bitWidth: 8
+          RX_MULTI_CH_EN:
+            bitOffset: 16
+            bitWidth: 1
+          RX_WAIT_PREMABLE_TIME:
+            bitOffset: 17
+            bitWidth: 7
+          RX_PREAMBLE_PATTERN_SEL:
+            bitOffset: 24
+            bitWidth: 2
+          PRI_CH_I2C_SEL:
+            bitOffset: 26
+            bitWidth: 1
+          SEC_CH_I2C_SEL:
+            bitOffset: 27
+            bitWidth: 1
+          FAST_FREQHOP_ENA:
+            bitOffset: 28
+            bitWidth: 1
+          FREQ_BASE_SEL:
+            bitOffset: 29
+            bitWidth: 1
+
+      TX_POWER:
+        description: TX_POWER
+        addressOffset: 0x4C
+        size: 32
+        access: read-write
+        fields:
+          TX_POWER:
+            bitOffset: 0
+            bitWidth: 8
+
+      ED_SCAN_DURATION:
+        description: ED_SCAN_DURATION
+        addressOffset: 0x50
+        size: 32
+        access: read-write
+        fields:
+          ED_SCAN_DURATION:
+            bitOffset: 0
+            bitWidth: 24
+          ED_SCAN_WAIT_DLY:
+            bitOffset: 24
+            bitWidth: 4
+
+      ED_SCAN_CFG:
+        description: ED_SCAN_CFG
+        addressOffset: 0x54
+        size: 32
+        access: read-write
+        fields:
+          CCA_ED_THRESHOLD:
+            bitOffset: 0
+            bitWidth: 8
+          ED_SAMPLE_MODE:
+            bitOffset: 11
+            bitWidth: 2
+          DIS_ED_POWER_SEL:
+            bitOffset: 13
+            bitWidth: 1
+          CCA_MODE:
+            bitOffset: 14
+            bitWidth: 2
+          ED_RSS:
+            bitOffset: 16
+            bitWidth: 8
+          CCA_BUSY:
+            bitOffset: 24
+            bitWidth: 1
+
+      IFS:
+        description: IFS
+        addressOffset: 0x58
+        size: 32
+        access: read-write
+        fields:
+          SIFS:
+            bitOffset: 0
+            bitWidth: 8
+          RX_WAIT_SYMDEC_ON_TIME:
+            bitOffset: 8
+            bitWidth: 7
+          RX_WAIT_SYMDEC_ON_ENA:
+            bitOffset: 15
+            bitWidth: 1
+          LIFS:
+            bitOffset: 16
+            bitWidth: 10
+
+      ACK_TIMEOUT:
+        description: ACK_TIMEOUT
+        addressOffset: 0x5C
+        size: 32
+        access: read-write
+        fields:
+          ACK_TIMEOUT:
+            bitOffset: 0
+            bitWidth: 16
+
+      EVENT_EN:
+        description: EVENT_EN
+        addressOffset: 0x60
+        size: 32
+        access: read-write
+        fields:
+          EVENT_EN:
+            bitOffset: 0
+            bitWidth: 14
+
+      EVENT_STATUS:
+        description: EVENT_STATUS
+        addressOffset: 0x64
+        size: 32
+        access: read-write
+        fields:
+          EVENT_STATUS:
+            bitOffset: 0
+            bitWidth: 14
+
+      RX_ABORT_INTR_CTRL:
+        description: RX_ABORT_INTR_CTRL
+        addressOffset: 0x68
+        size: 32
+        access: read-write
+        fields:
+          RX_ABORT_INTR_CTRL:
+            bitOffset: 0
+            bitWidth: 31
+
+      ACK_FRAME_PENDING_EN:
+        description: ACK_FRAME_PENDING_EN
+        addressOffset: 0x6C
+        size: 32
+        access: read-write
+        fields:
+          ACK_FRAME_PENDING_EN:
+            bitOffset: 0
+            bitWidth: 1
+          ACK_TX_ACK_TIMEOUT:
+            bitOffset: 16
+            bitWidth: 16
+
+      COEX_PTI:
+        description: COEX_PTI
+        addressOffset: 0x70
+        size: 32
+        access: read-write
+        fields:
+          COEX_PTI:
+            bitOffset: 0
+            bitWidth: 5
+          COEX_ACK_PTI:
+            bitOffset: 5
+            bitWidth: 5
+          CLOSE_RF_SEL:
+            bitOffset: 10
+            bitWidth: 1
+          ANT_MODE:
+            bitOffset: 11
+            bitWidth: 3
+          HW_TX_ACK_ANT_MODE:
+            bitOffset: 14
+            bitWidth: 3
+          STBY_COEX_GRANT_MASK:
+            bitOffset: 17
+            bitWidth: 1
+
+      TX_ABORT_INTERRUPT_CONTROL:
+        description: TX_ABORT_INTERRUPT_CONTROL
+        addressOffset: 0x78
+        size: 32
+        access: read-write
+        fields:
+          TX_ABORT_INTERRUPT_CONTROL:
+            bitOffset: 0
+            bitWidth: 31
+
+      ENHANCE_ACK_CFG:
+        description: ENHANCE_ACK_CFG
+        addressOffset: 0x7C
+        size: 32
+        access: read-write
+        fields:
+          TX_ENH_ACK_GENERATE_DONE_NOTIFY:
+            bitOffset: 0
+            bitWidth: 32
+
+      RX_STATUS:
+        description: RX_STATUS
+        addressOffset: 0x80
+        size: 32
+        access: read-write
+        fields:
+          FILTER_FAIL_STATUS:
+            bitOffset: 0
+            bitWidth: 4
+          RX_ABORT_STATUS:
+            bitOffset: 4
+            bitWidth: 5
+          RX_STATE:
+            bitOffset: 16
+            bitWidth: 3
+          CUR_CH_INDEX:
+            bitOffset: 19
+            bitWidth: 1
+          PREAMBLE_MATCH:
+            bitOffset: 20
+            bitWidth: 1
+          SFD_MATCH:
+            bitOffset: 21
+            bitWidth: 1
+
+      TX_STATUS:
+        description: TX_STATUS
+        addressOffset: 0x84
+        size: 32
+        access: read-write
+        fields:
+          TX_STATE:
+            bitOffset: 0
+            bitWidth: 4
+          TX_ABORT_STATUS:
+            bitOffset: 4
+            bitWidth: 5
+          TX_SEC_ERROR_CODE:
+            bitOffset: 16
+            bitWidth: 4
+
+      TXRX_STATUS:
+        description: TXRX_STATUS
+        addressOffset: 0x88
+        size: 32
+        access: read-write
+        fields:
+          TXRX_STATE:
+            bitOffset: 0
+            bitWidth: 4
+          TX_PROC:
+            bitOffset: 8
+            bitWidth: 1
+          RX_PROC:
+            bitOffset: 9
+            bitWidth: 1
+          ED_PROC:
+            bitOffset: 10
+            bitWidth: 1
+          ED_TRIGGER_TX_PROC:
+            bitOffset: 11
+            bitWidth: 1
+          RX_TIMEOUT:
+            bitOffset: 12
+            bitWidth: 1
+          RF_CTRL_STATE:
+            bitOffset: 16
+            bitWidth: 4
+          LAST_TX_ANT:
+            bitOffset: 20
+            bitWidth: 1
+          LAST_RX_ANT:
+            bitOffset: 21
+            bitWidth: 1
+
+      TX_CCM_SCHEDULE_STATUS:
+        description: TX_CCM_SCHEDULE_STATUS
+        addressOffset: 0x8C
+        size: 32
+        access: read-write
+        fields:
+          TX_CCM_SCHEDULE_STATUS:
+            bitOffset: 0
+            bitWidth: 31
+
+      RX_LENGTH:
+        description: RX_LENGTH
+        addressOffset: 0xA4
+        size: 32
+        access: read-write
+        fields:
+          RX_LENGTH:
+            bitOffset: 0
+            bitWidth: 7
+
+      TIME0_THRESHOLD:
+        description: TIME0_THRESHOLD
+        addressOffset: 0xA8
+        size: 32
+        access: read-write
+        fields:
+          TIMER0_THRESHOLD:
+            bitOffset: 0
+            bitWidth: 32
+
+      TIME0_VALUE:
+        description: TIME0_VALUE
+        addressOffset: 0xAC
+        size: 32
+        access: read-write
+        fields:
+          TIMER0_VALUE:
+            bitOffset: 0
+            bitWidth: 32
+
+      TIME1_THRESHOLD:
+        description: TIME1_THRESHOLD
+        addressOffset: 0xB0
+        size: 32
+        access: read-write
+        fields:
+          TIMER1_THRESHOLD:
+            bitOffset: 0
+            bitWidth: 32
+
+      TIME1_VALUE:
+        description: TIME1_VALUE
+        addressOffset: 0xB4
+        size: 32
+        access: read-write
+        fields:
+          TIMER1_VALUE:
+            bitOffset: 0
+            bitWidth: 32
+
+      CLK_COUNTER_MATCH_VAL:
+        description: CLK_COUNTER_MATCH_VAL
+        addressOffset: 0xB8
+        size: 32
+        access: read-write
+        fields:
+          CLK_COUNT_MATCH_VAL:
+            bitOffset: 0
+            bitWidth: 16
+
+      CLK_COUNTER:
+        description: CLK_COUNTER
+        addressOffset: 0xBC
+        size: 32
+        access: read-write
+        fields:
+          CLK_625US_CNT:
+            bitOffset: 0
+            bitWidth: 16
+
+      IFS_COUNTER:
+        description: IFS_COUNTER
+        addressOffset: 0xC0
+        size: 32
+        access: read-write
+        fields:
+          IFS_COUNTER:
+            bitOffset: 0
+            bitWidth: 10
+          IFS_COUNTER_EN:
+            bitOffset: 16
+            bitWidth: 1
+
+      SFD_WAIT_SYMBOL:
+        description: SFD_WAIT_SYMBOL
+        addressOffset: 0xC4
+        size: 32
+        access: read-write
+        fields:
+          SFD_WAIT_SYMBOL_NUM:
+            bitOffset: 0
+            bitWidth: 4
+
+      TXRX_PATH_DELAY:
+        description: TXRX_PATH_DELAY
+        addressOffset: 0xC8
+        size: 32
+        access: read-write
+        fields:
+          TX_PATH_DELAY:
+            bitOffset: 0
+            bitWidth: 7
+          RX_PATH_DELAY:
+            bitOffset: 16
+            bitWidth: 7
+
+      BB_CLK:
+        description: BB_CLK
+        addressOffset: 0xCC
+        size: 32
+        access: read-write
+        fields:
+          BB_CLK_FREQ_MINUS_1:
+            bitOffset: 0
+            bitWidth: 5
+
+      TXDMA_ADDR:
+        description: TXDMA_ADDR
+        addressOffset: 0xD0
+        size: 32
+        access: read-write
+        fields:
+          TXDMA_ADDR:
+            bitOffset: 0
+            bitWidth: 32
+
+      TXDMA_CTRL_STATE:
+        description: TXDMA_CTRL_STATE
+        addressOffset: 0xD4
+        size: 32
+        access: read-write
+        fields:
+          TXDMA_WATER_LEVEL:
+            bitOffset: 0
+            bitWidth: 3
+          TXDMA_FILL_ENTRY:
+            bitOffset: 4
+            bitWidth: 3
+          TXDMA_STATE:
+            bitOffset: 16
+            bitWidth: 5
+          TXDMA_FETCH_BYTE_CNT:
+            bitOffset: 24
+            bitWidth: 7
+
+      TXDMA_ERR:
+        description: TXDMA_ERR
+        addressOffset: 0xD8
+        size: 32
+        access: read-write
+        fields:
+          TXDMA_ERR:
+            bitOffset: 0
+            bitWidth: 4
+
+      RXDMA_ADDR:
+        description: RXDMA_ADDR
+        addressOffset: 0xE0
+        size: 32
+        access: read-write
+        fields:
+          RXDMA_ADDR:
+            bitOffset: 0
+            bitWidth: 32
+
+      RXDMA_CTRL_STATE:
+        description: RXDMA_CTRL_STATE
+        addressOffset: 0xE4
+        size: 32
+        access: read-write
+        fields:
+          RXDMA_WATER_LEVEL:
+            bitOffset: 0
+            bitWidth: 3
+          RXDMA_STATE:
+            bitOffset: 16
+            bitWidth: 5
+          RXDMA_APPEND_LQI_OFFSET:
+            bitOffset: 24
+            bitWidth: 1
+          RXDMA_APPEND_FREQ_OFFSET:
+            bitOffset: 25
+            bitWidth: 1
+
+      RXDMA_ERR:
+        description: RXDMA_ERR
+        addressOffset: 0xE8
+        size: 32
+        access: read-write
+        fields:
+          RXDMA_ERR:
+            bitOffset: 0
+            bitWidth: 4
+
+      DMA_GCK_CFG:
+        description: DMA_GCK_CFG
+        addressOffset: 0xF0
+        size: 32
+        access: read-write
+        fields:
+          DMA_GCK_CFG:
+            bitOffset: 0
+            bitWidth: 1
+
+      DMA_DUMMY:
+        description: DMA_DUMMY
+        addressOffset: 0xF4
+        size: 32
+        access: read-write
+        fields:
+          DMA_DUMMY_DATA:
+            bitOffset: 0
+            bitWidth: 32
+
+      PAON_DELAY:
+        description: PAON_DELAY
+        addressOffset: 0x100
+        size: 32
+        access: read-write
+        fields:
+          PAON_DELAY:
+            bitOffset: 0
+            bitWidth: 10
+
+      TXON_DELAY:
+        description: TXON_DELAY
+        addressOffset: 0x104
+        size: 32
+        access: read-write
+        fields:
+          TXON_DELAY:
+            bitOffset: 0
+            bitWidth: 10
+
+      TXEN_STOP_DELAY:
+        description: TXEN_STOP_DELAY
+        addressOffset: 0x108
+        size: 32
+        access: read-write
+        fields:
+          TXEN_STOP_DLY:
+            bitOffset: 0
+            bitWidth: 6
+
+      TXOFF_DELAY:
+        description: TXOFF_DELAY
+        addressOffset: 0x10C
+        size: 32
+        access: read-write
+        fields:
+          TXOFF_DELAY:
+            bitOffset: 0
+            bitWidth: 6
+
+      RXON_DELAY:
+        description: RXON_DELAY
+        addressOffset: 0x110
+        size: 32
+        access: read-write
+        fields:
+          RXON_DELAY:
+            bitOffset: 0
+            bitWidth: 11
+
+      TXRX_SWITCH_DELAY:
+        description: TXRX_SWITCH_DELAY
+        addressOffset: 0x114
+        size: 32
+        access: read-write
+        fields:
+          TXRX_SWITCH_DELAY:
+            bitOffset: 0
+            bitWidth: 10
+
+      CONT_RX_DELAY:
+        description: CONT_RX_DELAY
+        addressOffset: 0x118
+        size: 32
+        access: read-write
+        fields:
+          CONT_RX_DELAY:
+            bitOffset: 0
+            bitWidth: 6
+
+      DCDC_CTRL:
+        description: DCDC_CTRL
+        addressOffset: 0x11C
+        size: 32
+        access: read-write
+        fields:
+          DCDC_PRE_UP_DELAY:
+            bitOffset: 0
+            bitWidth: 8
+          DCDC_DOWN_DELAY:
+            bitOffset: 8
+            bitWidth: 8
+          DCDC_CTRL_EN:
+            bitOffset: 16
+            bitWidth: 1
+          TX_DCDC_UP:
+            bitOffset: 31
+            bitWidth: 1
+
+      DEBUG_CTRL:
+        description: DEBUG_CTRL
+        addressOffset: 0x120
+        size: 32
+        access: read-write
+        fields:
+          DEBUG_SIGNAL_SEL:
+            bitOffset: 0
+            bitWidth: 3
+          DEBUG_TRIGGER_STATE_SELECT:
+            bitOffset: 8
+            bitWidth: 4
+          DEBUG_SER_DEBUG_SEL:
+            bitOffset: 12
+            bitWidth: 4
+          DEBUG_TRIGGER_STATE_MATCH_VALUE:
+            bitOffset: 16
+            bitWidth: 5
+          DEBUG_TRIGGER_PULSE_SELECT:
+            bitOffset: 24
+            bitWidth: 3
+          DEBUG_STATE_MATCH_DUMP_EN:
+            bitOffset: 30
+            bitWidth: 1
+          DEBUG_TRIGGER_DUMP_EN:
+            bitOffset: 31
+            bitWidth: 1
+
+      SEC_CTRL:
+        description: SEC_CTRL
+        addressOffset: 0x128
+        size: 32
+        access: read-write
+        fields:
+          SEC_EN:
+            bitOffset: 0
+            bitWidth: 1
+          SEC_PAYLOAD_OFFSET:
+            bitOffset: 8
+            bitWidth: 7
+
+      SEC_EXTEND_ADDRESS0:
+        description: SEC_EXTEND_ADDRESS0
+        addressOffset: 0x12C
+        size: 32
+        access: read-write
+        fields:
+          SEC_EXTEND_ADDRESS0:
+            bitOffset: 0
+            bitWidth: 32
+
+      SEC_EXTEND_ADDRESS1:
+        description: SEC_EXTEND_ADDRESS1
+        addressOffset: 0x130
+        size: 32
+        access: read-write
+        fields:
+          SEC_EXTEND_ADDRESS1:
+            bitOffset: 0
+            bitWidth: 32
+
+      SEC_KEY0:
+        description: SEC_KEY0
+        addressOffset: 0x134
+        size: 32
+        access: read-write
+        fields:
+          SEC_KEY0:
+            bitOffset: 0
+            bitWidth: 32
+
+      SEC_KEY1:
+        description: SEC_KEY1
+        addressOffset: 0x138
+        size: 32
+        access: read-write
+        fields:
+          SEC_KEY1:
+            bitOffset: 0
+            bitWidth: 32
+
+      SEC_KEY2:
+        description: SEC_KEY2
+        addressOffset: 0x13C
+        size: 32
+        access: read-write
+        fields:
+          SEC_KEY2:
+            bitOffset: 0
+            bitWidth: 32
+
+      SEC_KEY3:
+        description: SEC_KEY3
+        addressOffset: 0x140
+        size: 32
+        access: read-write
+        fields:
+          SEC_KEY3:
+            bitOffset: 0
+            bitWidth: 32
+
+      SFD_TIMEOUT_CNT:
+        description: SFD_TIMEOUT_CNT
+        addressOffset: 0x144
+        size: 32
+        access: read-write
+        fields:
+          SFD_TIMEOUT_CNT:
+            bitOffset: 0
+            bitWidth: 16
+          RX_FILTER_NOT_WORK_CNT:
+            bitOffset: 16
+            bitWidth: 16
+
+      CRC_ERROR_CNT:
+        description: CRC_ERROR_CNT
+        addressOffset: 0x148
+        size: 32
+        access: read-write
+        fields:
+          CRC_ERROR_CNT:
+            bitOffset: 0
+            bitWidth: 16
+          RX_PREAMBLE_DETECT_ERR_CNT:
+            bitOffset: 16
+            bitWidth: 16
+
+      ED_ABORT_CNT:
+        description: ED_ABORT_CNT
+        addressOffset: 0x14C
+        size: 32
+        access: read-write
+        fields:
+          ED_ABORT_CNT:
+            bitOffset: 0
+            bitWidth: 16
+
+      CCA_FAIL_CNT:
+        description: CCA_FAIL_CNT
+        addressOffset: 0x150
+        size: 32
+        access: read-write
+        fields:
+          CCA_FAIL_CNT:
+            bitOffset: 0
+            bitWidth: 16
+
+      RX_FILTER_FAIL_CNT:
+        description: RX_FILTER_FAIL_CNT
+        addressOffset: 0x154
+        size: 32
+        access: read-write
+        fields:
+          RX_FILTER_FAIL_CNT:
+            bitOffset: 0
+            bitWidth: 16
+
+      NO_RSS_DETECT_CNT:
+        description: NO_RSS_DETECT_CNT
+        addressOffset: 0x158
+        size: 32
+        access: read-write
+        fields:
+          NO_RSS_DETECT_CNT:
+            bitOffset: 0
+            bitWidth: 16
+
+      RX_ABORT_COEX_CNT:
+        description: RX_ABORT_COEX_CNT
+        addressOffset: 0x15C
+        size: 32
+        access: read-write
+        fields:
+          RX_ABORT_COEX_CNT:
+            bitOffset: 0
+            bitWidth: 16
+
+      RX_RESTART_CNT:
+        description: RX_RESTART_CNT
+        addressOffset: 0x160
+        size: 32
+        access: read-write
+        fields:
+          RX_RESTART_CNT:
+            bitOffset: 0
+            bitWidth: 16
+
+      TX_ACK_ABORT_COEX_CNT:
+        description: TX_ACK_ABORT_COEX_CNT
+        addressOffset: 0x164
+        size: 32
+        access: read-write
+        fields:
+          TX_ACK_ABORT_COEX_CNT:
+            bitOffset: 0
+            bitWidth: 16
+
+      ED_SCAN_COEX_CNT:
+        description: ED_SCAN_COEX_CNT
+        addressOffset: 0x168
+        size: 32
+        access: read-write
+        fields:
+          ED_SCAN_COEX_CNT:
+            bitOffset: 0
+            bitWidth: 16
+
+      RX_ACK_ABORT_COEX_CNT:
+        description: RX_ACK_ABORT_COEX_CNT
+        addressOffset: 0x16C
+        size: 32
+        access: read-write
+        fields:
+          RX_ACK_ABORT_COEX_CNT:
+            bitOffset: 0
+            bitWidth: 16
+
+      RX_ACK_TIMEOUT_CNT:
+        description: RX_ACK_TIMEOUT_CNT
+        addressOffset: 0x170
+        size: 32
+        access: read-write
+        fields:
+          RX_ACK_TIMEOUT_CNT:
+            bitOffset: 0
+            bitWidth: 16
+
+      TX_BREAK_COEX_CNT:
+        description: TX_BREAK_COEX_CNT
+        addressOffset: 0x174
+        size: 32
+        access: read-write
+        fields:
+          TX_BREAK_COEX_CNT:
+            bitOffset: 0
+            bitWidth: 16
+
+      TX_SECURITY_ERROR_CNT:
+        description: TX_SECURITY_ERROR_CNT
+        addressOffset: 0x178
+        size: 32
+        access: read-write
+        fields:
+          TX_SECURITY_ERROR_CNT:
+            bitOffset: 0
+            bitWidth: 16
+
+      CCA_BUSY_CNT:
+        description: CCA_BUSY_CNT
+        addressOffset: 0x17C
+        size: 32
+        access: read-write
+        fields:
+          CCA_BUSY_CNT:
+            bitOffset: 0
+            bitWidth: 16
+
+      ERROR_CNT_CLEAR:
+        description: ERROR_CNT_CLEAR
+        addressOffset: 0x180
+        size: 32
+        access: read-write
+        fields:
+          ED_SCAN_COEX_CNT_CLEAR:
+            bitOffset: 0
+            bitWidth: 1
+          CCA_BUSY_CNT_CLEAR:
+            bitOffset: 1
+            bitWidth: 1
+          CCA_FAIL_CNT_CLEAR:
+            bitOffset: 2
+            bitWidth: 1
+          ED_ABORT_CNT_CLEAR:
+            bitOffset: 3
+            bitWidth: 1
+          TX_SECURITY_ERROR_CNT_CLEAR:
+            bitOffset: 4
+            bitWidth: 1
+          TX_BREAK_COEX_CNT_CLEAR:
+            bitOffset: 5
+            bitWidth: 1
+          TX_ACK_ABORT_COEX_CNT_CLEAR:
+            bitOffset: 6
+            bitWidth: 1
+          RX_ACK_TIMEOUT_CNT_CLEAR:
+            bitOffset: 7
+            bitWidth: 1
+          RX_RESTART_CNT_CLEAR:
+            bitOffset: 8
+            bitWidth: 1
+          RX_ACK_ABORT_COEX_CNT_CLEAR:
+            bitOffset: 9
+            bitWidth: 1
+          RX_ABORT_COEX_CNT_CLEAR:
+            bitOffset: 10
+            bitWidth: 1
+          NO_RSS_DETECT_CNT_CLEAR:
+            bitOffset: 11
+            bitWidth: 1
+          RX_FILTER_FAIL_CNT_CLEAR:
+            bitOffset: 12
+            bitWidth: 1
+          CRC_ERROR_CNT_CLEAR:
+            bitOffset: 13
+            bitWidth: 1
+          SFD_TIMEOUT_CNT_CLEAR:
+            bitOffset: 14
+            bitWidth: 1
+          RX_FILTER_NOT_WORK_CNT_CLEAR:
+            bitOffset: 15
+            bitWidth: 1
+          RX_PREAMBLE_DETECT_ERR_CNT_CLEAR:
+            bitOffset: 16
+            bitWidth: 1
+
+      DEBUG_SEL_CFG0:
+        description: DEBUG_SEL_CFG0
+        addressOffset: 0x184
+        size: 32
+        access: read-write
+        fields:
+          DEBUG_FIELD0_SEL:
+            bitOffset: 0
+            bitWidth: 5
+          DEBUG_FIELD1_SEL:
+            bitOffset: 8
+            bitWidth: 5
+          DEBUG_FIELD2_SEL:
+            bitOffset: 16
+            bitWidth: 5
+          DEBUG_FIELD3_SEL:
+            bitOffset: 24
+            bitWidth: 5
+
+      DEBUG_SEL_CFG1:
+        description: DEBUG_SEL_CFG1
+        addressOffset: 0x188
+        size: 32
+        access: read-write
+        fields:
+          DEBUG_FIELD4_SEL:
+            bitOffset: 0
+            bitWidth: 5
+          DEBUG_FIELD5_SEL:
+            bitOffset: 8
+            bitWidth: 5
+          DEBUG_FIELD6_SEL:
+            bitOffset: 16
+            bitWidth: 5
+          DEBUG_FIELD7_SEL:
+            bitOffset: 24
+            bitWidth: 5
+
+      RX_TIMEOUT_TARGET_CNT:
+        description: RX_TIMEOUT_TARGET_CNT
+        addressOffset: 0x18C
+        size: 32
+        access: read-write
+        fields:
+          RX_TIMEOUT_TARGET_CNT:
+            bitOffset: 0
+            bitWidth: 24
+
+      MODSLP_CONFIG:
+        description: MODSLP_CONFIG
+        addressOffset: 0x190
+        size: 32
+        access: read-write
+        fields:
+          MODSLP_MODE_ENA:
+            bitOffset: 0
+            bitWidth: 1
+          MODSLP_RUN_TIME_WAKE_EN:
+            bitOffset: 1
+            bitWidth: 1
+          MODSLP_RFOFF_WAKE_EN:
+            bitOffset: 2
+            bitWidth: 1
+          MODSLP_INTR_WAKE_EN:
+            bitOffset: 3
+            bitWidth: 1
+          MODSLP_RUN_TIME_LIMIT:
+            bitOffset: 4
+            bitWidth: 4
+
+      MODSLP_STATUS:
+        description: MODSLP_STATUS
+        addressOffset: 0x194
+        size: 32
+        access: read-write
+        fields:
+          MODSLP_RUN_TIME_WAKE:
+            bitOffset: 1
+            bitWidth: 1
+          MODSLP_RFOFF_WAKE:
+            bitOffset: 2
+            bitWidth: 1
+          MODSLP_INTR_WAKE:
+            bitOffset: 3
+            bitWidth: 1
+          MODSLP_RUN_TIME_CNT:
+            bitOffset: 4
+            bitWidth: 4
+
+      MODSLP_WW:
+        description: MODSLP_WW
+        addressOffset: 0x198
+        size: 32
+        access: read-write
+        fields:
+          MODSLP_WW_INI:
+            bitOffset: 0
+            bitWidth: 16
+          MODSLP_WW_DELTA:
+            bitOffset: 16
+            bitWidth: 16
+
+      MODSLP_INTR_WAKE_CONFIG:
+        description: MODSLP_INTR_WAKE_CONFIG
+        addressOffset: 0x19C
+        size: 32
+        access: read-write
+        fields:
+          MODSLP_INTR_WAKE_CONFIG:
+            bitOffset: 0
+            bitWidth: 14
+
+      MAC_DATE:
+        description: MAC_DATE
+        addressOffset: 0x1A0
+        size: 32
+        access: read-write
+        fields:
+          MAC_DATE:
+            bitOffset: 0
+            bitWidth: 32

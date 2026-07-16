@@ -1,0 +1,275 @@
+_add:
+  LP_INTR:
+    description: LP Interrupt Controller
+    groupName: LP_INTR
+    baseAddress: 0x20714000
+    addressBlocks:
+      - offset: 0x0
+        size: 0x1000
+        usage: registers
+    registers:
+      SW_INT_RAW:
+        addressOffset: 0x0
+        size: 0x20
+        fields:
+          LP_SW_INT_RAW:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+      SW_INT_ST:
+        addressOffset: 0x4
+        size: 0x20
+        access: read-only
+        fields:
+          LP_SW_INT_ST:
+            bitOffset: 31
+            bitWidth: 1
+      SW_INT_ENA:
+        addressOffset: 0x8
+        size: 0x20
+        fields:
+          LP_SW_INT_ENA:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+      SW_INT_CLR:
+        addressOffset: 0xc
+        size: 0x20
+        access: write-only
+        fields:
+          LP_SW_INT_CLR:
+            bitOffset: 31
+            bitWidth: 1
+      STATUS:
+        addressOffset: 0x10
+        size: 0x20
+        access: read-only
+        fields:
+          LP_DAC_INTR_ST:
+            bitOffset: 2
+            bitWidth: 1
+          LP_SW_INVALID_SLEEP_INTR_ST:
+            bitOffset: 3
+            bitWidth: 1
+          LP_AHB_PDMA_OUT_CH1_INTR_ST:
+            bitOffset: 4
+            bitWidth: 1
+          LP_AHB_PDMA_OUT_CH0_INTR_ST:
+            bitOffset: 5
+            bitWidth: 1
+          LP_AHB_PDMA_IN_CH1_INTR_ST:
+            bitOffset: 6
+            bitWidth: 1
+          LP_AHB_PDMA_IN_CH0_INTR_ST:
+            bitOffset: 7
+            bitWidth: 1
+          LP_PERI_PMS_INTR_ST:
+            bitOffset: 8
+            bitWidth: 1
+          LP_PERI_TIMEOUT_INTR_ST:
+            bitOffset: 9
+            bitWidth: 1
+          LP_TRNG_INTR_ST:
+            bitOffset: 10
+            bitWidth: 1
+          LP_HUK_INTR_ST:
+            bitOffset: 11
+            bitWidth: 1
+          SYSREG_INTR_ST:
+            bitOffset: 12
+            bitWidth: 1
+          LP_SW_INTR_ST:
+            bitOffset: 13
+            bitWidth: 1
+          LP_EFUSE_INTR_ST:
+            bitOffset: 14
+            bitWidth: 1
+          LP_UART_INTR_ST:
+            bitOffset: 15
+            bitWidth: 1
+          LP_TSENS_INTR_ST:
+            bitOffset: 16
+            bitWidth: 1
+          LP_TOUCH_INTR_ST:
+            bitOffset: 17
+            bitWidth: 1
+          LP_SPI_INTR_ST:
+            bitOffset: 18
+            bitWidth: 1
+          LP_I2C_INTR_ST:
+            bitOffset: 19
+            bitWidth: 1
+          LP_GPIO_INTR_ST:
+            bitOffset: 20
+            bitWidth: 1
+          LP_ADC_INTR_ST:
+            bitOffset: 21
+            bitWidth: 1
+          ANAPERI_INTR_ST:
+            bitOffset: 22
+            bitWidth: 1
+          PMU_REG_1_INTR_ST:
+            bitOffset: 23
+            bitWidth: 1
+          PMU_REG_0_INTR_ST:
+            bitOffset: 24
+            bitWidth: 1
+          MB_LP_INTR_ST:
+            bitOffset: 25
+            bitWidth: 1
+          MB_HP_INTR_ST:
+            bitOffset: 26
+            bitWidth: 1
+          LP_TIMER_REG_1_INTR_ST:
+            bitOffset: 27
+            bitWidth: 1
+          LP_TIMER_REG_0_INTR_ST:
+            bitOffset: 28
+            bitWidth: 1
+          LP_WDT_INTR_ST:
+            bitOffset: 29
+            bitWidth: 1
+          APM_INTR_ST:
+            bitOffset: 30
+            bitWidth: 1
+          HP_INTR_ST:
+            bitOffset: 31
+            bitWidth: 1
+      ENABLE:
+        addressOffset: 0x14
+        size: 0x20
+        resetValue: 0xfffffffc
+        fields:
+          LP_DAC_INTR_EN:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          LP_SW_INVALID_SLEEP_INTR_EN:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          LP_AHB_PDMA_OUT_CH1_INTR_EN:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          LP_AHB_PDMA_OUT_CH0_INTR_EN:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          LP_AHB_PDMA_IN_CH1_INTR_EN:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+          LP_AHB_PDMA_IN_CH0_INTR_EN:
+            bitOffset: 7
+            bitWidth: 1
+            access: read-write
+          LP_PERI_PMS_INTR_EN:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+          LP_PERI_TIMEOUT_INTR_EN:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+          LP_TRNG_INTR_EN:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+          LP_HUK_INTR_EN:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+          SYSREG_INTR_EN:
+            bitOffset: 12
+            bitWidth: 1
+            access: read-write
+          LP_SW_INTR_EN:
+            bitOffset: 13
+            bitWidth: 1
+            access: read-write
+          LP_EFUSE_INTR_EN:
+            bitOffset: 14
+            bitWidth: 1
+            access: read-write
+          LP_UART_INTR_EN:
+            bitOffset: 15
+            bitWidth: 1
+            access: read-write
+          LP_TSENS_INTR_EN:
+            bitOffset: 16
+            bitWidth: 1
+            access: read-write
+          LP_TOUCH_INTR_EN:
+            bitOffset: 17
+            bitWidth: 1
+            access: read-write
+          LP_SPI_INTR_EN:
+            bitOffset: 18
+            bitWidth: 1
+            access: read-write
+          LP_I2C_INTR_EN:
+            bitOffset: 19
+            bitWidth: 1
+            access: read-write
+          LP_GPIO_INTR_EN:
+            bitOffset: 20
+            bitWidth: 1
+            access: read-write
+          LP_ADC_INTR_EN:
+            bitOffset: 21
+            bitWidth: 1
+            access: read-write
+          ANAPERI_INTR_EN:
+            bitOffset: 22
+            bitWidth: 1
+            access: read-write
+          PMU_REG_1_INTR_EN:
+            bitOffset: 23
+            bitWidth: 1
+            access: read-write
+          PMU_REG_0_INTR_EN:
+            bitOffset: 24
+            bitWidth: 1
+            access: read-write
+          MB_LP_INTR_EN:
+            bitOffset: 25
+            bitWidth: 1
+            access: read-write
+          MB_HP_INTR_EN:
+            bitOffset: 26
+            bitWidth: 1
+            access: read-write
+          LP_TIMER_REG_1_INTR_EN:
+            bitOffset: 27
+            bitWidth: 1
+            access: read-write
+          LP_TIMER_REG_0_INTR_EN:
+            bitOffset: 28
+            bitWidth: 1
+            access: read-write
+          LP_WDT_INTR_EN:
+            bitOffset: 29
+            bitWidth: 1
+            access: read-write
+          APM_INTR_EN:
+            bitOffset: 30
+            bitWidth: 1
+            access: read-write
+          HP_INTR_EN:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+      DATE:
+        addressOffset: 0x3fc
+        size: 0x20
+        resetValue: 0x2504030
+        fields:
+          DATE:
+            bitOffset: 0
+            bitWidth: 31
+            access: read-write
+          CLK_EN:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write

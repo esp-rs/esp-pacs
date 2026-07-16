@@ -1,0 +1,28 @@
+#[doc = "Register `INT_22` reader"]
+pub type R = crate::R<INT_22_SPEC>;
+#[doc = "Field `INT_22` reader - Represents the GPIO_INT_2 interrupt status of GPIO64 ~ GPIO66. Each bit represents:(need update in different project)\\\\ 0: Represents GPIO_INT_2 interrupt is not enabled, or the GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE.\\\\ 1: Represents the GPIO generates an interrupt configured by GPIO_PIN0_INT_TYPE after the GPIO_INT_2 interrupt is enabled.\\\\ Bit64 ~ bit66 are corresponding to GPIO64 ~ GPIO66. Bitxx ~ bitxx is invalid. This interrupt status is corresponding to the bit in GPIO_STATUS2_REG when assert (high) enable signal (bit13 of GPIO_PIN0_REG). \\\\"]
+pub type INT_22_R = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:2 - Represents the GPIO_INT_2 interrupt status of GPIO64 ~ GPIO66. Each bit represents:(need update in different project)\\\\ 0: Represents GPIO_INT_2 interrupt is not enabled, or the GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE.\\\\ 1: Represents the GPIO generates an interrupt configured by GPIO_PIN0_INT_TYPE after the GPIO_INT_2 interrupt is enabled.\\\\ Bit64 ~ bit66 are corresponding to GPIO64 ~ GPIO66. Bitxx ~ bitxx is invalid. This interrupt status is corresponding to the bit in GPIO_STATUS2_REG when assert (high) enable signal (bit13 of GPIO_PIN0_REG). \\\\"]
+    #[inline(always)]
+    pub fn int_22(&self) -> INT_22_R {
+        INT_22_R::new((self.bits & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_22")
+            .field("int_22", &self.int_22())
+            .finish()
+    }
+}
+#[doc = "GPIO_INT_2 interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_22::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct INT_22_SPEC;
+impl crate::RegisterSpec for INT_22_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`int_22::R`](R) reader structure"]
+impl crate::Readable for INT_22_SPEC {}
+#[doc = "`reset()` method sets INT_22 to value 0"]
+impl crate::Resettable for INT_22_SPEC {}

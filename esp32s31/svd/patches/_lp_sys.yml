@@ -1,0 +1,828 @@
+_add:
+  LP_SYS:
+    description: LP System Registers
+    groupName: LP_SYS
+    baseAddress: 0x20700000
+    addressBlocks:
+      - offset: 0x0
+        size: 0x1000
+        usage: registers
+    registers:
+      VER_DATE:
+        addressOffset: 0x0
+        size: 0x20
+        resetValue: 0x20250923
+        fields:
+          VER_DATE:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      CLK_SEL_CTRL:
+        addressOffset: 0x4
+        size: 0x20
+        fields:
+          ENA_SW_SEL_SYS_CLK:
+            bitOffset: 16
+            bitWidth: 1
+            access: read-write
+          SW_SYS_CLK_SRC_SEL:
+            bitOffset: 17
+            bitWidth: 1
+            access: read-write
+      SYS_CTRL:
+        addressOffset: 0x8
+        size: 0x20
+        resetValue: 0x1fffc7f8
+        fields:
+          LP_CORE_DISABLE:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          SYS_SW_RST:
+            bitOffset: 1
+            bitWidth: 1
+            access: write-only
+          FORCE_DOWNLOAD_BOOT:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          DIG_FIB:
+            bitOffset: 3
+            bitWidth: 8
+            access: read-write
+          IO_MUX_RESET_DISABLE:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+          ANA_FIB:
+            bitOffset: 14
+            bitWidth: 7
+            access: read-only
+          LP_FIB_SEL:
+            bitOffset: 21
+            bitWidth: 8
+            access: read-write
+          LP_CORE_ETM_WAKEUP_FLAG_CLR:
+            bitOffset: 29
+            bitWidth: 1
+            access: write-only
+          LP_CORE_ETM_WAKEUP_FLAG:
+            bitOffset: 30
+            bitWidth: 1
+            access: read-write
+          SYSTIMER_STALL_SEL:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+      LP_CLK_CTRL:
+        addressOffset: 0xc
+        size: 0x20
+        resetValue: 0x4001
+        fields:
+          CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          LP_FOSC_HP_CKEN:
+            bitOffset: 14
+            bitWidth: 1
+            access: read-write
+      LP_CORE_BOOT_ADDR:
+        addressOffset: 0x18
+        size: 0x20
+        resetValue: 0x2e000000
+        fields:
+          LP_CPU_BOOT_ADDR:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      EXT_WAKEUP1:
+        addressOffset: 0x1c
+        size: 0x20
+        fields:
+          SEL:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+          STATUS_CLR:
+            bitOffset: 8
+            bitWidth: 1
+            access: write-only
+      EXT_WAKEUP1_STATUS:
+        addressOffset: 0x20
+        size: 0x20
+        access: read-only
+        fields:
+          EXT_WAKEUP1_STATUS:
+            bitOffset: 0
+            bitWidth: 8
+      LP_TCM_PWR_CTRL:
+        addressOffset: 0x24
+        size: 0x20
+        fields:
+          LP_TCM_ROM_CLK_FORCE_ON:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          LP_TCM_RAM_CLK_FORCE_ON:
+            bitOffset: 7
+            bitWidth: 1
+            access: read-write
+      BOOT_ADDR_HP_LP_REG:
+        addressOffset: 0x28
+        size: 0x20
+        fields:
+          BOOT_ADDR_HP_LP:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      LP_STORE%s:
+        dim: 16
+        dimIncrement: 0x4
+        dimIndex: 0-15
+        addressOffset: 0x2c
+        size: 0x20
+        fields:
+          LP_SCRATCH0:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      LP_PROBEA_CTRL:
+        addressOffset: 0x6c
+        size: 0x20
+        fields:
+          PROBE_A_MOD_SEL:
+            bitOffset: 0
+            bitWidth: 16
+            access: read-write
+          PROBE_A_TOP_SEL:
+            bitOffset: 16
+            bitWidth: 8
+            access: read-write
+          PROBE_L_SEL:
+            bitOffset: 24
+            bitWidth: 2
+            access: read-write
+          PROBE_H_SEL:
+            bitOffset: 26
+            bitWidth: 2
+            access: read-write
+          PROBE_GLOBAL_EN:
+            bitOffset: 28
+            bitWidth: 1
+            access: read-write
+      LP_PROBEB_CTRL:
+        addressOffset: 0x70
+        size: 0x20
+        fields:
+          PROBE_B_MOD_SEL:
+            bitOffset: 0
+            bitWidth: 16
+            access: read-write
+          PROBE_B_TOP_SEL:
+            bitOffset: 16
+            bitWidth: 8
+            access: read-write
+          PROBE_B_EN:
+            bitOffset: 24
+            bitWidth: 1
+            access: read-write
+      LP_PROBE_OUT:
+        addressOffset: 0x74
+        size: 0x20
+        access: read-only
+        fields:
+          PROBE_TOP_OUT:
+            bitOffset: 0
+            bitWidth: 32
+      F2S_APB_BRG_CNTL:
+        addressOffset: 0x9c
+        size: 0x20
+        fields:
+          F2S_APB_POSTW_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      USB_CTRL:
+        addressOffset: 0x100
+        size: 0x20
+        fields:
+          SW_HW_USB_PHY_SEL:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          SW_USB_PHY_SEL:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          USBOTGHS_WAKEUP_CLR:
+            bitOffset: 2
+            bitWidth: 1
+            access: write-only
+          USBOTGHS_IN_SUSPEND:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          USBOTGHS_LS_MODE:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+      ANA_XPD_PAD_GROUP:
+        addressOffset: 0x10c
+        size: 0x20
+        resetValue: 0xff
+        fields:
+          ANA_REG_XPD_PAD_GROUP:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+      LP_TCM_RAM_RDN_ECO_CS:
+        addressOffset: 0x110
+        size: 0x20
+        fields:
+          LP_TCM_RAM_RDN_ECO_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          LP_TCM_RAM_RDN_ECO_RESULT:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-only
+      LP_TCM_RAM_RDN_ECO_LOW:
+        addressOffset: 0x114
+        size: 0x20
+        fields:
+          LP_TCM_RAM_RDN_ECO_LOW:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      LP_TCM_RAM_RDN_ECO_HIGH:
+        addressOffset: 0x118
+        size: 0x20
+        resetValue: 0xffffffff
+        fields:
+          LP_TCM_RAM_RDN_ECO_HIGH:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      LP_TCM_ROM_RDN_ECO_CS:
+        addressOffset: 0x11c
+        size: 0x20
+        fields:
+          LP_TCM_ROM_RDN_ECO_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          LP_TCM_ROM_RDN_ECO_RESULT:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-only
+      LP_TCM_ROM_RDN_ECO_LOW:
+        addressOffset: 0x120
+        size: 0x20
+        fields:
+          LP_TCM_ROM_RDN_ECO_LOW:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      LP_TCM_ROM_RDN_ECO_HIGH:
+        addressOffset: 0x124
+        size: 0x20
+        resetValue: 0xffffffff
+        fields:
+          LP_TCM_ROM_RDN_ECO_HIGH:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      HP_ROOT_CLK_CTRL:
+        addressOffset: 0x130
+        size: 0x20
+        resetValue: 0x3
+        fields:
+          CPU_CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          SYS_CLK_EN:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+      LP_PMU_RDN_ECO_LOW:
+        addressOffset: 0x138
+        size: 0x20
+        fields:
+          PMU_RDN_ECO_LOW:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      LP_PMU_RDN_ECO_HIGH:
+        addressOffset: 0x13c
+        size: 0x20
+        resetValue: 0xffffffff
+        fields:
+          PMU_RDN_ECO_HIGH:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      BACKUP_DMA_CFG0:
+        addressOffset: 0x154
+        size: 0x20
+        resetValue: 0x6414a
+        fields:
+          BURST_LIMIT_AON:
+            bitOffset: 0
+            bitWidth: 5
+            access: read-write
+          READ_INTERVAL_AON:
+            bitOffset: 5
+            bitWidth: 7
+            access: read-write
+          LINK_BACKUP_TOUT_THRES_AON:
+            bitOffset: 12
+            bitWidth: 10
+            access: read-write
+          REGDMA_ERROR:
+            bitOffset: 22
+            bitWidth: 3
+            access: read-only
+      BACKUP_DMA_CFG1:
+        addressOffset: 0x158
+        size: 0x20
+        resetValue: 0x19064
+        fields:
+          LINK_WAIT_TOUT_THRES_AON:
+            bitOffset: 0
+            bitWidth: 10
+            access: read-write
+          LINK_WORK_TOUT_THRES_AON:
+            bitOffset: 10
+            bitWidth: 10
+            access: read-write
+          BRANCH_LINK_LENGTH_AON:
+            bitOffset: 20
+            bitWidth: 4
+            access: read-write
+          AON_BYPASS:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+      BACKUP_DMA_CFG2:
+        addressOffset: 0x15c
+        size: 0x20
+        fields:
+          LINK_ADDR_AON:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      BOOT_ADDR_HP_CORE1:
+        addressOffset: 0x164
+        size: 0x20
+        fields:
+          BOOT_ADDR_HP_CORE1:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      INT_RAW:
+        addressOffset: 0x170
+        size: 0x20
+        fields:
+          LP_CORE_IBUS_TIMEOUT_INT_RAW:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          LP_CORE_DBUS_TIMEOUT_INT_RAW:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          ETM_TASK_ULP_INT_RAW:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          SLOW_CLK_TICK_INT_RAW:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+      INT_ST:
+        addressOffset: 0x174
+        size: 0x20
+        access: read-only
+        fields:
+          LP_CORE_IBUS_TIMEOUT_INT_ST:
+            bitOffset: 3
+            bitWidth: 1
+          LP_CORE_DBUS_TIMEOUT_INT_ST:
+            bitOffset: 4
+            bitWidth: 1
+          ETM_TASK_ULP_INT_ST:
+            bitOffset: 5
+            bitWidth: 1
+          SLOW_CLK_TICK_INT_ST:
+            bitOffset: 6
+            bitWidth: 1
+      INT_ENA:
+        addressOffset: 0x178
+        size: 0x20
+        fields:
+          LP_CORE_IBUS_TIMEOUT_INT_ENA:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          LP_CORE_DBUS_TIMEOUT_INT_ENA:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          ETM_TASK_ULP_INT_ENA:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          SLOW_CLK_TICK_INT_ENA:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+      INT_CLR:
+        addressOffset: 0x17c
+        size: 0x20
+        access: write-only
+        fields:
+          LP_CORE_IBUS_TIMEOUT_INT_CLR:
+            bitOffset: 3
+            bitWidth: 1
+          LP_CORE_DBUS_TIMEOUT_INT_CLR:
+            bitOffset: 4
+            bitWidth: 1
+          ETM_TASK_ULP_INT_CLR:
+            bitOffset: 5
+            bitWidth: 1
+          SLOW_CLK_TICK_INT_CLR:
+            bitOffset: 6
+            bitWidth: 1
+      SPRF_MEM_AUX_CTRL:
+        addressOffset: 0x180
+        size: 0x20
+        resetValue: 0x2070
+        fields:
+          SPRF_MEM_AUX_CTRL:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      LP_CPU_DBG_PC:
+        addressOffset: 0x190
+        size: 0x20
+        access: read-only
+        fields:
+          LP_CPU_DBG_PC:
+            bitOffset: 0
+            bitWidth: 32
+      LP_CPU_EXC_PC:
+        addressOffset: 0x194
+        size: 0x20
+        access: read-only
+        fields:
+          LP_CPU_EXC_PC:
+            bitOffset: 0
+            bitWidth: 32
+      HP_POR_RST_BYPASS_CTRL:
+        addressOffset: 0x1a0
+        size: 0x20
+        resetValue: 0xffffffff
+        fields:
+          HP_PO_CPU_RSTN_BYPASS_CTRL:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+          HP_PO_CNNT_RSTN_BYPASS_CTRL:
+            bitOffset: 8
+            bitWidth: 8
+            access: read-write
+          HP_PO_ALIVE_RSTN_BYPASS_CTRL:
+            bitOffset: 16
+            bitWidth: 8
+            access: read-write
+          HP_PO_RSTN_BYPASS_CTRL:
+            bitOffset: 24
+            bitWidth: 8
+            access: read-write
+      RNG_DATA:
+        addressOffset: 0x1a4
+        size: 0x20
+        access: read-only
+        fields:
+          RND_DATA:
+            bitOffset: 0
+            bitWidth: 32
+      LP_CORE_IBUS_TIMEOUT_CONF:
+        addressOffset: 0x1b4
+        size: 0x20
+        resetValue: 0x1ffff
+        fields:
+          LP_CORE_IBUS_TIMEOUT_PROTECT_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          LP_CORE_IBUS_TIMEOUT_THRES:
+            bitOffset: 1
+            bitWidth: 16
+            access: read-write
+      LP_CORE_DBUS_TIMEOUT_CONF:
+        addressOffset: 0x1b8
+        size: 0x20
+        resetValue: 0x1ffff
+        fields:
+          LP_CORE_DBUS_TIMEOUT_PROTECT_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          LP_CORE_DBUS_TIMEOUT_THRES:
+            bitOffset: 1
+            bitWidth: 16
+            access: read-write
+      LP_CORE_ERR_RESP_DIS:
+        addressOffset: 0x1bc
+        size: 0x20
+        fields:
+          LP_CORE_ERR_RESP_DIS:
+            bitOffset: 0
+            bitWidth: 3
+            access: read-write
+      RNG_CFG:
+        addressOffset: 0x1c0
+        size: 0x20
+        resetValue: 0x3
+        fields:
+          RNG_TIMER_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          RNG_TIMER_PSCALE:
+            bitOffset: 1
+            bitWidth: 8
+            access: read-write
+          RNG_SAR_ENABLE:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+          RNG_SAR_DATA:
+            bitOffset: 16
+            bitWidth: 13
+            access: read-only
+      PADCTRL:
+        addressOffset: 0x1c4
+        size: 0x20
+        fields:
+          PAD_MUX_SEL:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+          PAD_HOLD:
+            bitOffset: 8
+            bitWidth: 8
+            access: read-write
+      SYS_POWER_STATUS:
+        addressOffset: 0x1e8
+        size: 0x20
+        resetValue: 0x1f
+        access: read-only
+        fields:
+          LP_TCM_RAM_PRDYN:
+            bitOffset: 0
+            bitWidth: 1
+          LP_TCM_ROM_PRDYN:
+            bitOffset: 1
+            bitWidth: 1
+          LP_HUK_MEM_PRDYN:
+            bitOffset: 2
+            bitWidth: 1
+          LP_EFUSE_MEM_PRDYN:
+            bitOffset: 3
+            bitWidth: 1
+          LP_UART_MEM_PRDYN:
+            bitOffset: 4
+            bitWidth: 1
+      ANA_DCDC:
+        addressOffset: 0x1ec
+        size: 0x20
+        resetValue: 0x800
+        fields:
+          RAMPLEVEL_DCDC:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          RAMP_DCDC:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          DCM2ENB_DCDC:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          DCMLEVEL_DCDC:
+            bitOffset: 3
+            bitWidth: 2
+            access: read-write
+          FSW_DCDC:
+            bitOffset: 5
+            bitWidth: 3
+            access: read-write
+          CCM_DCDC:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+          SSTIME_DCDC:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+          POCPENB_DCDC:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+          ENABLE_TRX_MODE_DCDC:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+      POR_CUR_ST:
+        addressOffset: 0x1f0
+        size: 0x20
+        access: read-only
+        fields:
+          POR_CUR_ST:
+            bitOffset: 0
+            bitWidth: 9
+      SPRAM_MEM_AUX_CTRL:
+        addressOffset: 0x1f8
+        size: 0x20
+        resetValue: 0x2070
+        fields:
+          SPRAM_MEM_AUX_CTRL:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      UART_MEM_LP_CTRL:
+        addressOffset: 0x1fc
+        size: 0x20
+        resetValue: 0x2
+        fields:
+          UART_MEM_LP_MODE:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+          UART_MEM_LP_EN:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          UART_MEM_LP_FORCE_CTRL:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+      HUK_MEM_LP_CTRL:
+        addressOffset: 0x200
+        size: 0x20
+        fields:
+          HUK_MEM_LP_MODE:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+          HUK_MEM_LP_EN:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          HUK_MEM_LP_FORCE_CTRL:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+      EFUSE_MEM_LP_CTRL:
+        addressOffset: 0x204
+        size: 0x20
+        fields:
+          EFUSE_MEM_LP_MODE:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+          EFUSE_MEM_LP_EN:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          EFUSE_MEM_LP_FORCE_CTRL:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+      LP_TCM_MEM_LP_CTRL:
+        addressOffset: 0x208
+        size: 0x20
+        fields:
+          LP_TCM_MEM_LP_MODE:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+          LP_TCM_MEM_LP_EN:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          LP_TCM_MEM_LP_FORCE_CTRL:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+      MODEM_MEM_CLK_SEL:
+        addressOffset: 0x218
+        size: 0x20
+        fields:
+          MODEM_MEM_CLK_SEL:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      LP_PERI_TIMEOUT_CONF:
+        addressOffset: 0x21c
+        size: 0x20
+        resetValue: 0x2ffff
+        fields:
+          LP_PERI_TIMEOUT_THRES:
+            bitOffset: 0
+            bitWidth: 16
+            access: read-write
+          LP_PERI_TIMEOUT_INT_CLEAR:
+            bitOffset: 16
+            bitWidth: 1
+            access: write-only
+          LP_PERI_TIMEOUT_PROTECT_EN:
+            bitOffset: 17
+            bitWidth: 1
+            access: read-write
+      LP_PERI_TIMEOUT_ADDR:
+        addressOffset: 0x220
+        size: 0x20
+        access: read-only
+        fields:
+          LP_PERI_TIMEOUT_ADDR:
+            bitOffset: 0
+            bitWidth: 32
+      LP_PERI_TIMEOUT_UID:
+        addressOffset: 0x224
+        size: 0x20
+        access: read-only
+        fields:
+          LP_PERI_TIMEOUT_UID:
+            bitOffset: 0
+            bitWidth: 8
+      RTC_EN_AMUX:
+        addressOffset: 0x228
+        size: 0x20
+        fields:
+          RTC_EN_AMUX:
+            bitOffset: 0
+            bitWidth: 18
+            access: read-write
+      RTC_EN_DMUX:
+        addressOffset: 0x22c
+        size: 0x20
+        fields:
+          RTC_EN_DMUX:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+      DIGMUX_PAD_DSEL:
+        addressOffset: 0x230
+        size: 0x20
+        fields:
+          DIGMUX_PAD_DSEL:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+      JTAG_TDIO_MUX_SEL:
+        addressOffset: 0x234
+        size: 0x20
+        fields:
+          JTAG_TDIO_MUX_SEL:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+      LP_CORE_DMACTIVE_LPCORE:
+        addressOffset: 0x238
+        size: 0x20
+        access: read-only
+        fields:
+          LP_CORE_DMACTIVE_LPCORE:
+            bitOffset: 0
+            bitWidth: 1
+      TOUCH_PAD_RTC_EN_AMUX:
+        addressOffset: 0x23c
+        size: 0x20
+        fields:
+          TOUCH_PAD_RTC_EN_AMUX:
+            bitOffset: 0
+            bitWidth: 14
+            access: read-write
+      HP_GPIO_O_HOLD_CTRL1:
+        addressOffset: 0x270
+        size: 0x20
+        fields:
+          HP_GPIO_0_HOLD_CTRL1:
+            bitOffset: 0
+            bitWidth: 23
+            access: read-write
+      HP_GPIO_O_HOLD_CTRL0:
+        addressOffset: 0x274
+        size: 0x20
+        fields:
+          HP_GPIO_0_HOLD_CTRL0:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write

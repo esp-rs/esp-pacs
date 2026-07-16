@@ -1,0 +1,133 @@
+#[doc = "Register `ZERO_DET_CTRL0` reader"]
+pub type R = crate::R<ZERO_DET_CTRL0_SPEC>;
+#[doc = "Register `ZERO_DET_CTRL0` writer"]
+pub type W = crate::W<ZERO_DET_CTRL0_SPEC>;
+#[doc = "Field `ZERO_DET_APB_CLK_EN` reader - need_des"]
+pub type ZERO_DET_APB_CLK_EN_R = crate::BitReader;
+#[doc = "Field `ZERO_DET_APB_CLK_EN` writer - need_des"]
+pub type ZERO_DET_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ZERO_DET_APB_RST_EN` reader - need_des"]
+pub type ZERO_DET_APB_RST_EN_R = crate::BitReader;
+#[doc = "Field `ZERO_DET_APB_RST_EN` writer - need_des"]
+pub type ZERO_DET_APB_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ZERO_DET_CLK_EN` reader - need_des"]
+pub type ZERO_DET_CLK_EN_R = crate::BitReader;
+#[doc = "Field `ZERO_DET_CLK_EN` writer - need_des"]
+pub type ZERO_DET_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ZERO_DET_CORE_RST_EN` reader - need_des"]
+pub type ZERO_DET_CORE_RST_EN_R = crate::BitReader;
+#[doc = "Field `ZERO_DET_CORE_RST_EN` writer - need_des"]
+pub type ZERO_DET_CORE_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ZERO_DET_FORCE_NORST` reader - need_des"]
+pub type ZERO_DET_FORCE_NORST_R = crate::BitReader;
+#[doc = "Field `ZERO_DET_FORCE_NORST` writer - need_des"]
+pub type ZERO_DET_FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ZERO_DET_CLK_SRC_SEL` reader - need_des"]
+pub type ZERO_DET_CLK_SRC_SEL_R = crate::FieldReader;
+#[doc = "Field `ZERO_DET_CLK_SRC_SEL` writer - need_des"]
+pub type ZERO_DET_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `ZERO_DET_CLK_DIV_NUM` reader - need_des"]
+pub type ZERO_DET_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `ZERO_DET_CLK_DIV_NUM` writer - need_des"]
+pub type ZERO_DET_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn zero_det_apb_clk_en(&self) -> ZERO_DET_APB_CLK_EN_R {
+        ZERO_DET_APB_CLK_EN_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - need_des"]
+    #[inline(always)]
+    pub fn zero_det_apb_rst_en(&self) -> ZERO_DET_APB_RST_EN_R {
+        ZERO_DET_APB_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - need_des"]
+    #[inline(always)]
+    pub fn zero_det_clk_en(&self) -> ZERO_DET_CLK_EN_R {
+        ZERO_DET_CLK_EN_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - need_des"]
+    #[inline(always)]
+    pub fn zero_det_core_rst_en(&self) -> ZERO_DET_CORE_RST_EN_R {
+        ZERO_DET_CORE_RST_EN_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - need_des"]
+    #[inline(always)]
+    pub fn zero_det_force_norst(&self) -> ZERO_DET_FORCE_NORST_R {
+        ZERO_DET_FORCE_NORST_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bits 5:6 - need_des"]
+    #[inline(always)]
+    pub fn zero_det_clk_src_sel(&self) -> ZERO_DET_CLK_SRC_SEL_R {
+        ZERO_DET_CLK_SRC_SEL_R::new(((self.bits >> 5) & 3) as u8)
+    }
+    #[doc = "Bits 7:14 - need_des"]
+    #[inline(always)]
+    pub fn zero_det_clk_div_num(&self) -> ZERO_DET_CLK_DIV_NUM_R {
+        ZERO_DET_CLK_DIV_NUM_R::new(((self.bits >> 7) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ZERO_DET_CTRL0")
+            .field("zero_det_apb_clk_en", &self.zero_det_apb_clk_en())
+            .field("zero_det_apb_rst_en", &self.zero_det_apb_rst_en())
+            .field("zero_det_clk_en", &self.zero_det_clk_en())
+            .field("zero_det_core_rst_en", &self.zero_det_core_rst_en())
+            .field("zero_det_force_norst", &self.zero_det_force_norst())
+            .field("zero_det_clk_src_sel", &self.zero_det_clk_src_sel())
+            .field("zero_det_clk_div_num", &self.zero_det_clk_div_num())
+            .finish()
+    }
+}
+impl W {
+    #[doc = "Bit 0 - need_des"]
+    #[inline(always)]
+    pub fn zero_det_apb_clk_en(&mut self) -> ZERO_DET_APB_CLK_EN_W<'_, ZERO_DET_CTRL0_SPEC> {
+        ZERO_DET_APB_CLK_EN_W::new(self, 0)
+    }
+    #[doc = "Bit 1 - need_des"]
+    #[inline(always)]
+    pub fn zero_det_apb_rst_en(&mut self) -> ZERO_DET_APB_RST_EN_W<'_, ZERO_DET_CTRL0_SPEC> {
+        ZERO_DET_APB_RST_EN_W::new(self, 1)
+    }
+    #[doc = "Bit 2 - need_des"]
+    #[inline(always)]
+    pub fn zero_det_clk_en(&mut self) -> ZERO_DET_CLK_EN_W<'_, ZERO_DET_CTRL0_SPEC> {
+        ZERO_DET_CLK_EN_W::new(self, 2)
+    }
+    #[doc = "Bit 3 - need_des"]
+    #[inline(always)]
+    pub fn zero_det_core_rst_en(&mut self) -> ZERO_DET_CORE_RST_EN_W<'_, ZERO_DET_CTRL0_SPEC> {
+        ZERO_DET_CORE_RST_EN_W::new(self, 3)
+    }
+    #[doc = "Bit 4 - need_des"]
+    #[inline(always)]
+    pub fn zero_det_force_norst(&mut self) -> ZERO_DET_FORCE_NORST_W<'_, ZERO_DET_CTRL0_SPEC> {
+        ZERO_DET_FORCE_NORST_W::new(self, 4)
+    }
+    #[doc = "Bits 5:6 - need_des"]
+    #[inline(always)]
+    pub fn zero_det_clk_src_sel(&mut self) -> ZERO_DET_CLK_SRC_SEL_W<'_, ZERO_DET_CTRL0_SPEC> {
+        ZERO_DET_CLK_SRC_SEL_W::new(self, 5)
+    }
+    #[doc = "Bits 7:14 - need_des"]
+    #[inline(always)]
+    pub fn zero_det_clk_div_num(&mut self) -> ZERO_DET_CLK_DIV_NUM_W<'_, ZERO_DET_CTRL0_SPEC> {
+        ZERO_DET_CLK_DIV_NUM_W::new(self, 7)
+    }
+}
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`zero_det_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`zero_det_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ZERO_DET_CTRL0_SPEC;
+impl crate::RegisterSpec for ZERO_DET_CTRL0_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`zero_det_ctrl0::R`](R) reader structure"]
+impl crate::Readable for ZERO_DET_CTRL0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`zero_det_ctrl0::W`](W) writer structure"]
+impl crate::Writable for ZERO_DET_CTRL0_SPEC {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets ZERO_DET_CTRL0 to value 0"]
+impl crate::Resettable for ZERO_DET_CTRL0_SPEC {}

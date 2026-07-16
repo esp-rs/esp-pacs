@@ -1,0 +1,4977 @@
+_add:
+  INTERRUPT_CORE0:
+    description: Interrupt Controller for Core 0
+    groupName: INTERRUPT_CORE0
+    baseAddress: 0x20585000
+    addressBlocks:
+      - offset: 0x0
+        size: 0x800
+        usage: registers
+    registers:
+      SYS_ICM_INTR_MAP:
+        addressOffset: 0x0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AXI_PERF_MON_INTR_MAP:
+        addressOffset: 0x4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      USB_DEVICE_INTR_MAP:
+        addressOffset: 0x8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SDIO_HOST_INTR_MAP:
+        addressOffset: 0xc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SPI2_INTR_MAP:
+        addressOffset: 0x10
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SPI3_INTR_MAP:
+        addressOffset: 0x14
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      I2S0_INTR_MAP:
+        addressOffset: 0x18
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      I2S1_INTR_MAP:
+        addressOffset: 0x1c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      UHCI0_INTR_MAP:
+        addressOffset: 0x20
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      UART0_INTR_MAP:
+        addressOffset: 0x24
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      UART1_INTR_MAP:
+        addressOffset: 0x28
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      UART2_INTR_MAP:
+        addressOffset: 0x2c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      UART3_INTR_MAP:
+        addressOffset: 0x30
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LCD_CAM_INTR_MAP:
+        addressOffset: 0x34
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PWM0_INTR_MAP:
+        addressOffset: 0x38
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PWM1_INTR_MAP:
+        addressOffset: 0x3c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PWM2_INTR_MAP:
+        addressOffset: 0x40
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PWM3_INTR_MAP:
+        addressOffset: 0x44
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CAN0_INTR_MAP:
+        addressOffset: 0x48
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CAN0_TIMER_INTR_MAP:
+        addressOffset: 0x4c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CAN1_INTR_MAP:
+        addressOffset: 0x50
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CAN1_TIMER_INTR_MAP:
+        addressOffset: 0x54
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      RMT_INTR_MAP:
+        addressOffset: 0x58
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      I2C0_INTR_MAP:
+        addressOffset: 0x5c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      I2C1_INTR_MAP:
+        addressOffset: 0x60
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      TIMERGRP0_T0_INTR_MAP:
+        addressOffset: 0x64
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      TIMERGRP0_T1_INTR_MAP:
+        addressOffset: 0x68
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      TIMERGRP0_WDT_INTR_MAP:
+        addressOffset: 0x6c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      TIMERGRP1_T0_INTR_MAP:
+        addressOffset: 0x70
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      TIMERGRP1_T1_INTR_MAP:
+        addressOffset: 0x74
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      TIMERGRP1_WDT_INTR_MAP:
+        addressOffset: 0x78
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LEDC0_INTR_MAP:
+        addressOffset: 0x7c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LEDC1_INTR_MAP:
+        addressOffset: 0x80
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SYSTIMER_TARGET0_INTR_MAP:
+        addressOffset: 0x84
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SYSTIMER_TARGET1_INTR_MAP:
+        addressOffset: 0x88
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SYSTIMER_TARGET2_INTR_MAP:
+        addressOffset: 0x8c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_IN_CH0_INTR_MAP:
+        addressOffset: 0x90
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_IN_CH1_INTR_MAP:
+        addressOffset: 0x94
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_IN_CH2_INTR_MAP:
+        addressOffset: 0x98
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_IN_CH3_INTR_MAP:
+        addressOffset: 0x9c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_IN_CH4_INTR_MAP:
+        addressOffset: 0xa0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_OUT_CH0_INTR_MAP:
+        addressOffset: 0xa4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_OUT_CH1_INTR_MAP:
+        addressOffset: 0xa8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_OUT_CH2_INTR_MAP:
+        addressOffset: 0xac
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_OUT_CH3_INTR_MAP:
+        addressOffset: 0xb0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_OUT_CH4_INTR_MAP:
+        addressOffset: 0xb4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      ASRC_CHNL0_INTR_MAP:
+        addressOffset: 0xb8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      ASRC_CHNL1_INTR_MAP:
+        addressOffset: 0xbc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AXI_PDMA_IN_CH0_INTR_MAP:
+        addressOffset: 0xc0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AXI_PDMA_IN_CH1_INTR_MAP:
+        addressOffset: 0xc4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AXI_PDMA_IN_CH2_INTR_MAP:
+        addressOffset: 0xc8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AXI_PDMA_OUT_CH0_INTR_MAP:
+        addressOffset: 0xcc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AXI_PDMA_OUT_CH1_INTR_MAP:
+        addressOffset: 0xd0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AXI_PDMA_OUT_CH2_INTR_MAP:
+        addressOffset: 0xd4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      RSA_INTR_MAP:
+        addressOffset: 0xd8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AES_INTR_MAP:
+        addressOffset: 0xdc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SHA_INTR_MAP:
+        addressOffset: 0xe0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      ECC_INTR_MAP:
+        addressOffset: 0xe4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      ECDSA_INTR_MAP:
+        addressOffset: 0xe8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      KM_INTR_MAP:
+        addressOffset: 0xec
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      RMA_INTR_MAP:
+        addressOffset: 0xf0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      GPIO_INTR0_MAP:
+        addressOffset: 0xf4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      GPIO_INTR1_MAP:
+        addressOffset: 0xf8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      GPIO_INTR2_MAP:
+        addressOffset: 0xfc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      GPIO_INTR3_MAP:
+        addressOffset: 0x100
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_INTR_FROM_CPU_0_MAP:
+        addressOffset: 0x104
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_INTR_FROM_CPU_1_MAP:
+        addressOffset: 0x108
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_INTR_FROM_CPU_2_MAP:
+        addressOffset: 0x10c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_INTR_FROM_CPU_3_MAP:
+        addressOffset: 0x110
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CACHE_INTR_MAP:
+        addressOffset: 0x114
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_APM_M0_INTR_MAP:
+        addressOffset: 0x118
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_APM_M1_INTR_MAP:
+        addressOffset: 0x11c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_APM_M2_INTR_MAP:
+        addressOffset: 0x120
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_APM_M3_INTR_MAP:
+        addressOffset: 0x124
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_MEM_APM_M0_INTR_MAP:
+        addressOffset: 0x128
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_MEM_APM_M1_INTR_MAP:
+        addressOffset: 0x12c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_MEM_APM_M2_INTR_MAP:
+        addressOffset: 0x130
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_MEM_APM_M3_INTR_MAP:
+        addressOffset: 0x134
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_MEM_APM_M4_INTR_MAP:
+        addressOffset: 0x138
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_MEM_APM_M5_INTR_MAP:
+        addressOffset: 0x13c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_PERI0_TIMEOUT_INTR_MAP:
+        addressOffset: 0x140
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_PERI1_TIMEOUT_INTR_MAP:
+        addressOffset: 0x144
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_PERI0_TIMEOUT_INTR_MAP:
+        addressOffset: 0x148
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_PERI1_TIMEOUT_INTR_MAP:
+        addressOffset: 0x14c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_APM_M0_INTR_MAP:
+        addressOffset: 0x150
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_APM_M1_INTR_MAP:
+        addressOffset: 0x154
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_APM_M2_INTR_MAP:
+        addressOffset: 0x158
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_APM_M3_INTR_MAP:
+        addressOffset: 0x15c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_APM_M4_INTR_MAP:
+        addressOffset: 0x160
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_APM_M5_INTR_MAP:
+        addressOffset: 0x164
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_APM_M6_INTR_MAP:
+        addressOffset: 0x168
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_PERI0_PMS_INTR_MAP:
+        addressOffset: 0x16c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_PERI1_PMS_INTR_MAP:
+        addressOffset: 0x170
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU0_PERI_PMS_INTR_MAP:
+        addressOffset: 0x174
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU1_PERI_PMS_INTR_MAP:
+        addressOffset: 0x178
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      FLASH_MSPI_INTR_MAP:
+        addressOffset: 0x17c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LPI_INTR_MAP:
+        addressOffset: 0x180
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PMT_INTR_MAP:
+        addressOffset: 0x184
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SBD_INTR_MAP:
+        addressOffset: 0x188
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      USB_OTGHS_INTR_MAP:
+        addressOffset: 0x18c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      USB_OTGHS_ENDP_MULTI_PROC_INTR_MAP:
+        addressOffset: 0x190
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      JPEG_INTR_MAP:
+        addressOffset: 0x194
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PPA_INTR_MAP:
+        addressOffset: 0x198
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CORE0_TRACE_INTR_MAP:
+        addressOffset: 0x19c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CORE1_TRACE_INTR_MAP:
+        addressOffset: 0x1a0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      DMA2D_IN_CH0_INTR_MAP:
+        addressOffset: 0x1a4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      DMA2D_IN_CH1_INTR_MAP:
+        addressOffset: 0x1a8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      DMA2D_IN_CH2_INTR_MAP:
+        addressOffset: 0x1ac
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      DMA2D_OUT_CH0_INTR_MAP:
+        addressOffset: 0x1b0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      DMA2D_OUT_CH1_INTR_MAP:
+        addressOffset: 0x1b4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      DMA2D_OUT_CH2_INTR_MAP:
+        addressOffset: 0x1b8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      DMA2D_OUT_CH3_INTR_MAP:
+        addressOffset: 0x1bc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PSRAM_MSPI_INTR_MAP:
+        addressOffset: 0x1c0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_SYSREG_INTR_MAP:
+        addressOffset: 0x1c4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PCNT0_INTR_MAP:
+        addressOffset: 0x1c8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PCNT1_INTR_MAP:
+        addressOffset: 0x1cc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_PAU_INTR_MAP:
+        addressOffset: 0x1d0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_PARLIO_RX_INTR_MAP:
+        addressOffset: 0x1d4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_PARLIO_TX_INTR_MAP:
+        addressOffset: 0x1d8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      BUS_MONITOR_INTR_MAP:
+        addressOffset: 0x1dc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_WIFI_MAC_INTR_MAP:
+        addressOffset: 0x1e0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_WIFI_MAC_NMI_INTR_MAP:
+        addressOffset: 0x1e4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_WIFI_PWR_INTR_MAP:
+        addressOffset: 0x1e8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_WIFI_BB_INTR_MAP:
+        addressOffset: 0x1ec
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_BT_MAC_INTR_MAP:
+        addressOffset: 0x1f0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_BT_BB_INTR_MAP:
+        addressOffset: 0x1f4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_BT_BB_NMI_INTR_MAP:
+        addressOffset: 0x1f8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_LP_TIMER_INTR_MAP:
+        addressOffset: 0x1fc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_COEX_INTR_MAP:
+        addressOffset: 0x200
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_BLE_TIMER_INTR_MAP:
+        addressOffset: 0x204
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_BLE_SEC_INTR_MAP:
+        addressOffset: 0x208
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_I2C_MST_INTR_MAP:
+        addressOffset: 0x20c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_ZB_MAC_INTR_MAP:
+        addressOffset: 0x210
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_BT_MAC_INT1_INTR_MAP:
+        addressOffset: 0x214
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CORDIC_INTR_MAP:
+        addressOffset: 0x218
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      ZERO_DET_INTR_MAP:
+        addressOffset: 0x21c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_WDT_INTR_MAP:
+        addressOffset: 0x220
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_TIMER_REG_0_INTR_MAP:
+        addressOffset: 0x224
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_TIMER_REG_1_INTR_MAP:
+        addressOffset: 0x228
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MB_HP_INTR_MAP:
+        addressOffset: 0x22c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MB_LP_INTR_MAP:
+        addressOffset: 0x230
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PMU_REG_0_INTR_MAP:
+        addressOffset: 0x234
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PMU_REG_1_INTR_MAP:
+        addressOffset: 0x238
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_ANAPERI_INTR_MAP:
+        addressOffset: 0x23c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_ADC_INTR_MAP:
+        addressOffset: 0x240
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_DAC_INTR_MAP:
+        addressOffset: 0x244
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_GPIO_INTR_MAP:
+        addressOffset: 0x248
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_I2C_INTR_MAP:
+        addressOffset: 0x24c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_SPI_INTR_MAP:
+        addressOffset: 0x250
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_TOUCH_INTR_MAP:
+        addressOffset: 0x254
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_TSENS_INTR_MAP:
+        addressOffset: 0x258
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_UART_INTR_MAP:
+        addressOffset: 0x25c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_EFUSE_INTR_MAP:
+        addressOffset: 0x260
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_SW_INTR_MAP:
+        addressOffset: 0x264
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_TRNG_INTR_MAP:
+        addressOffset: 0x268
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_SYSREG_INTR_MAP:
+        addressOffset: 0x26c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_APM_M0_INTR_MAP:
+        addressOffset: 0x270
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_APM_M1_INTR_MAP:
+        addressOffset: 0x274
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_APM_M2_INTR_MAP:
+        addressOffset: 0x278
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_APM_M3_INTR_MAP:
+        addressOffset: 0x27c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_PERI0_PMS_INTR_MAP:
+        addressOffset: 0x280
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_PERI1_PMS_INTR_MAP:
+        addressOffset: 0x284
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_HUK_INTR_MAP:
+        addressOffset: 0x288
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_PERI_TIMEOUT_INTR_MAP:
+        addressOffset: 0x28c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_AHB_PDMA_IN_CH0_INTR_MAP:
+        addressOffset: 0x290
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_AHB_PDMA_IN_CH1_INTR_MAP:
+        addressOffset: 0x294
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_AHB_PDMA_OUT_CH0_INTR_MAP:
+        addressOffset: 0x298
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_AHB_PDMA_OUT_CH1_INTR_MAP:
+        addressOffset: 0x29c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_SW_INVALID_SLEEP_INTR_MAP:
+        addressOffset: 0x2a0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SIG_IDX_ASSERT_IN_SEC:
+        addressOffset: 0x2a4
+        size: 0x20
+        fields:
+          INT_SIG_IDX_ASSERT_IN_S:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          INT_SIG_IDX_ASSERT_IN_M:
+            bitOffset: 6
+            bitWidth: 6
+            access: read-write
+      CORE_0_INTR_STATUS%s:
+        dim: 5
+        dimIncrement: 0x4
+        dimIndex: 0-4
+        addressOffset: 0x2a8
+        size: 0x20
+        access: read-only
+        fields:
+          INT_STATUS_0:
+            bitOffset: 0
+            bitWidth: 32
+      CORE_0_INTR_STATUS5:
+        addressOffset: 0x2bc
+        size: 0x20
+        access: read-only
+        fields:
+          INT_STATUS_5:
+            bitOffset: 0
+            bitWidth: 9
+      SRC_PASS_IN_S_STATUS%s:
+        dim: 5
+        dimIncrement: 0x4
+        dimIndex: 0-4
+        addressOffset: 0x2c0
+        size: 0x20
+        access: read-only
+        fields:
+          INT_SRC_PASS_IN_S_STATUS_0:
+            bitOffset: 0
+            bitWidth: 32
+      SRC_PASS_IN_S_STATUS_5:
+        addressOffset: 0x2d4
+        size: 0x20
+        access: read-only
+        fields:
+          INT_SRC_PASS_IN_S_STATUS_5:
+            bitOffset: 0
+            bitWidth: 9
+      SRC_PASS_IN_M_STATUS%s:
+        dim: 5
+        dimIncrement: 0x4
+        dimIndex: 0-4
+        addressOffset: 0x2d8
+        size: 0x20
+        access: read-only
+        fields:
+          INT_SRC_PASS_IN_M_STATUS_0:
+            bitOffset: 0
+            bitWidth: 32
+      SRC_PASS_IN_M_STATUS_5:
+        addressOffset: 0x2ec
+        size: 0x20
+        access: read-only
+        fields:
+          INT_SRC_PASS_IN_M_STATUS_5:
+            bitOffset: 0
+            bitWidth: 9
+      CONFIG_STATE:
+        addressOffset: 0x2f0
+        size: 0x20
+        access: read-only
+        fields:
+          SIG_IDX_ASSERT_S_ERR:
+            bitOffset: 0
+            bitWidth: 1
+          SIG_IDX_ASSERT_M_ERR:
+            bitOffset: 1
+            bitWidth: 1
+      S_STATUS:
+        addressOffset: 0x2f4
+        size: 0x20
+        access: read-only
+        fields:
+          INT_S_STATUS:
+            bitOffset: 0
+            bitWidth: 32
+      M_STATUS:
+        addressOffset: 0x2f8
+        size: 0x20
+        access: read-only
+        fields:
+          INT_M_STATUS:
+            bitOffset: 0
+            bitWidth: 32
+      CLOCK_GATE:
+        addressOffset: 0x2fc
+        size: 0x20
+        fields:
+          REG_CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      INTERRUPT_DATE:
+        addressOffset: 0x7fc
+        size: 0x20
+        resetValue: 0x2509110
+        fields:
+          INTERRUPT_DATE:
+            bitOffset: 0
+            bitWidth: 28
+            access: read-write
+  INTERRUPT_CORE1:
+    description: Interrupt Controller for Core 1
+    groupName: INTERRUPT_CORE1
+    baseAddress: 0x20585800
+    addressBlocks:
+      - offset: 0x0
+        size: 0x800
+        usage: registers
+    registers:
+      SYS_ICM_INTR_MAP:
+        addressOffset: 0x0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AXI_PERF_MON_INTR_MAP:
+        addressOffset: 0x4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      USB_DEVICE_INTR_MAP:
+        addressOffset: 0x8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SDIO_HOST_INTR_MAP:
+        addressOffset: 0xc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SPI2_INTR_MAP:
+        addressOffset: 0x10
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SPI3_INTR_MAP:
+        addressOffset: 0x14
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      I2S0_INTR_MAP:
+        addressOffset: 0x18
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      I2S1_INTR_MAP:
+        addressOffset: 0x1c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      UHCI0_INTR_MAP:
+        addressOffset: 0x20
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      UART0_INTR_MAP:
+        addressOffset: 0x24
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      UART1_INTR_MAP:
+        addressOffset: 0x28
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      UART2_INTR_MAP:
+        addressOffset: 0x2c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      UART3_INTR_MAP:
+        addressOffset: 0x30
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LCD_CAM_INTR_MAP:
+        addressOffset: 0x34
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PWM0_INTR_MAP:
+        addressOffset: 0x38
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PWM1_INTR_MAP:
+        addressOffset: 0x3c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PWM2_INTR_MAP:
+        addressOffset: 0x40
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PWM3_INTR_MAP:
+        addressOffset: 0x44
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CAN0_INTR_MAP:
+        addressOffset: 0x48
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CAN0_TIMER_INTR_MAP:
+        addressOffset: 0x4c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CAN1_INTR_MAP:
+        addressOffset: 0x50
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CAN1_TIMER_INTR_MAP:
+        addressOffset: 0x54
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      RMT_INTR_MAP:
+        addressOffset: 0x58
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      I2C0_INTR_MAP:
+        addressOffset: 0x5c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      I2C1_INTR_MAP:
+        addressOffset: 0x60
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      TIMERGRP0_T0_INTR_MAP:
+        addressOffset: 0x64
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      TIMERGRP0_T1_INTR_MAP:
+        addressOffset: 0x68
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      TIMERGRP0_WDT_INTR_MAP:
+        addressOffset: 0x6c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      TIMERGRP1_T0_INTR_MAP:
+        addressOffset: 0x70
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      TIMERGRP1_T1_INTR_MAP:
+        addressOffset: 0x74
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      TIMERGRP1_WDT_INTR_MAP:
+        addressOffset: 0x78
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LEDC0_INTR_MAP:
+        addressOffset: 0x7c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LEDC1_INTR_MAP:
+        addressOffset: 0x80
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SYSTIMER_TARGET0_INTR_MAP:
+        addressOffset: 0x84
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SYSTIMER_TARGET1_INTR_MAP:
+        addressOffset: 0x88
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SYSTIMER_TARGET2_INTR_MAP:
+        addressOffset: 0x8c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_IN_CH0_INTR_MAP:
+        addressOffset: 0x90
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_IN_CH1_INTR_MAP:
+        addressOffset: 0x94
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_IN_CH2_INTR_MAP:
+        addressOffset: 0x98
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_IN_CH3_INTR_MAP:
+        addressOffset: 0x9c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_IN_CH4_INTR_MAP:
+        addressOffset: 0xa0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_OUT_CH0_INTR_MAP:
+        addressOffset: 0xa4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_OUT_CH1_INTR_MAP:
+        addressOffset: 0xa8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_OUT_CH2_INTR_MAP:
+        addressOffset: 0xac
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_OUT_CH3_INTR_MAP:
+        addressOffset: 0xb0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AHB_PDMA_OUT_CH4_INTR_MAP:
+        addressOffset: 0xb4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      ASRC_CHNL0_INTR_MAP:
+        addressOffset: 0xb8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      ASRC_CHNL1_INTR_MAP:
+        addressOffset: 0xbc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AXI_PDMA_IN_CH0_INTR_MAP:
+        addressOffset: 0xc0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AXI_PDMA_IN_CH1_INTR_MAP:
+        addressOffset: 0xc4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AXI_PDMA_IN_CH2_INTR_MAP:
+        addressOffset: 0xc8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AXI_PDMA_OUT_CH0_INTR_MAP:
+        addressOffset: 0xcc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AXI_PDMA_OUT_CH1_INTR_MAP:
+        addressOffset: 0xd0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AXI_PDMA_OUT_CH2_INTR_MAP:
+        addressOffset: 0xd4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      RSA_INTR_MAP:
+        addressOffset: 0xd8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      AES_INTR_MAP:
+        addressOffset: 0xdc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SHA_INTR_MAP:
+        addressOffset: 0xe0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      ECC_INTR_MAP:
+        addressOffset: 0xe4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      ECDSA_INTR_MAP:
+        addressOffset: 0xe8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      KM_INTR_MAP:
+        addressOffset: 0xec
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      RMA_INTR_MAP:
+        addressOffset: 0xf0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      GPIO_INTR0_MAP:
+        addressOffset: 0xf4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      GPIO_INTR1_MAP:
+        addressOffset: 0xf8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      GPIO_INTR2_MAP:
+        addressOffset: 0xfc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      GPIO_INTR3_MAP:
+        addressOffset: 0x100
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_INTR_FROM_CPU_0_MAP:
+        addressOffset: 0x104
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_INTR_FROM_CPU_1_MAP:
+        addressOffset: 0x108
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_INTR_FROM_CPU_2_MAP:
+        addressOffset: 0x10c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_INTR_FROM_CPU_3_MAP:
+        addressOffset: 0x110
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CACHE_INTR_MAP:
+        addressOffset: 0x114
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_APM_M0_INTR_MAP:
+        addressOffset: 0x118
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_APM_M1_INTR_MAP:
+        addressOffset: 0x11c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_APM_M2_INTR_MAP:
+        addressOffset: 0x120
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_APM_M3_INTR_MAP:
+        addressOffset: 0x124
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_MEM_APM_M0_INTR_MAP:
+        addressOffset: 0x128
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_MEM_APM_M1_INTR_MAP:
+        addressOffset: 0x12c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_MEM_APM_M2_INTR_MAP:
+        addressOffset: 0x130
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_MEM_APM_M3_INTR_MAP:
+        addressOffset: 0x134
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_MEM_APM_M4_INTR_MAP:
+        addressOffset: 0x138
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_MEM_APM_M5_INTR_MAP:
+        addressOffset: 0x13c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_PERI0_TIMEOUT_INTR_MAP:
+        addressOffset: 0x140
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU_PERI1_TIMEOUT_INTR_MAP:
+        addressOffset: 0x144
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_PERI0_TIMEOUT_INTR_MAP:
+        addressOffset: 0x148
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_PERI1_TIMEOUT_INTR_MAP:
+        addressOffset: 0x14c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_APM_M0_INTR_MAP:
+        addressOffset: 0x150
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_APM_M1_INTR_MAP:
+        addressOffset: 0x154
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_APM_M2_INTR_MAP:
+        addressOffset: 0x158
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_APM_M3_INTR_MAP:
+        addressOffset: 0x15c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_APM_M4_INTR_MAP:
+        addressOffset: 0x160
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_APM_M5_INTR_MAP:
+        addressOffset: 0x164
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_APM_M6_INTR_MAP:
+        addressOffset: 0x168
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_PERI0_PMS_INTR_MAP:
+        addressOffset: 0x16c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_PERI1_PMS_INTR_MAP:
+        addressOffset: 0x170
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU0_PERI_PMS_INTR_MAP:
+        addressOffset: 0x174
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CPU1_PERI_PMS_INTR_MAP:
+        addressOffset: 0x178
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      FLASH_MSPI_INTR_MAP:
+        addressOffset: 0x17c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LPI_INTR_MAP:
+        addressOffset: 0x180
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PMT_INTR_MAP:
+        addressOffset: 0x184
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SBD_INTR_MAP:
+        addressOffset: 0x188
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      USB_OTGHS_INTR_MAP:
+        addressOffset: 0x18c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      USB_OTGHS_ENDP_MULTI_PROC_INTR_MAP:
+        addressOffset: 0x190
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      JPEG_INTR_MAP:
+        addressOffset: 0x194
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PPA_INTR_MAP:
+        addressOffset: 0x198
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CORE0_TRACE_INTR_MAP:
+        addressOffset: 0x19c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CORE1_TRACE_INTR_MAP:
+        addressOffset: 0x1a0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      DMA2D_IN_CH0_INTR_MAP:
+        addressOffset: 0x1a4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      DMA2D_IN_CH1_INTR_MAP:
+        addressOffset: 0x1a8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      DMA2D_IN_CH2_INTR_MAP:
+        addressOffset: 0x1ac
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      DMA2D_OUT_CH0_INTR_MAP:
+        addressOffset: 0x1b0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      DMA2D_OUT_CH1_INTR_MAP:
+        addressOffset: 0x1b4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      DMA2D_OUT_CH2_INTR_MAP:
+        addressOffset: 0x1b8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      DMA2D_OUT_CH3_INTR_MAP:
+        addressOffset: 0x1bc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PSRAM_MSPI_INTR_MAP:
+        addressOffset: 0x1c0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_SYSREG_INTR_MAP:
+        addressOffset: 0x1c4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PCNT0_INTR_MAP:
+        addressOffset: 0x1c8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PCNT1_INTR_MAP:
+        addressOffset: 0x1cc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_PAU_INTR_MAP:
+        addressOffset: 0x1d0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_PARLIO_RX_INTR_MAP:
+        addressOffset: 0x1d4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      HP_PARLIO_TX_INTR_MAP:
+        addressOffset: 0x1d8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      BUS_MONITOR_INTR_MAP:
+        addressOffset: 0x1dc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_WIFI_MAC_INTR_MAP:
+        addressOffset: 0x1e0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_WIFI_MAC_NMI_INTR_MAP:
+        addressOffset: 0x1e4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_WIFI_PWR_INTR_MAP:
+        addressOffset: 0x1e8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_WIFI_BB_INTR_MAP:
+        addressOffset: 0x1ec
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_BT_MAC_INTR_MAP:
+        addressOffset: 0x1f0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_BT_BB_INTR_MAP:
+        addressOffset: 0x1f4
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_BT_BB_NMI_INTR_MAP:
+        addressOffset: 0x1f8
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_LP_TIMER_INTR_MAP:
+        addressOffset: 0x1fc
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_COEX_INTR_MAP:
+        addressOffset: 0x200
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_BLE_TIMER_INTR_MAP:
+        addressOffset: 0x204
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_BLE_SEC_INTR_MAP:
+        addressOffset: 0x208
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_I2C_MST_INTR_MAP:
+        addressOffset: 0x20c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_ZB_MAC_INTR_MAP:
+        addressOffset: 0x210
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MODEM_BT_MAC_INT1_INTR_MAP:
+        addressOffset: 0x214
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      CORDIC_INTR_MAP:
+        addressOffset: 0x218
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      ZERO_DET_INTR_MAP:
+        addressOffset: 0x21c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_WDT_INTR_MAP:
+        addressOffset: 0x220
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_TIMER_REG_0_INTR_MAP:
+        addressOffset: 0x224
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_TIMER_REG_1_INTR_MAP:
+        addressOffset: 0x228
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MB_HP_INTR_MAP:
+        addressOffset: 0x22c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      MB_LP_INTR_MAP:
+        addressOffset: 0x230
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PMU_REG_0_INTR_MAP:
+        addressOffset: 0x234
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      PMU_REG_1_INTR_MAP:
+        addressOffset: 0x238
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_ANAPERI_INTR_MAP:
+        addressOffset: 0x23c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_ADC_INTR_MAP:
+        addressOffset: 0x240
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_DAC_INTR_MAP:
+        addressOffset: 0x244
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_GPIO_INTR_MAP:
+        addressOffset: 0x248
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_I2C_INTR_MAP:
+        addressOffset: 0x24c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_SPI_INTR_MAP:
+        addressOffset: 0x250
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_TOUCH_INTR_MAP:
+        addressOffset: 0x254
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_TSENS_INTR_MAP:
+        addressOffset: 0x258
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_UART_INTR_MAP:
+        addressOffset: 0x25c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_EFUSE_INTR_MAP:
+        addressOffset: 0x260
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_SW_INTR_MAP:
+        addressOffset: 0x264
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_TRNG_INTR_MAP:
+        addressOffset: 0x268
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_SYSREG_INTR_MAP:
+        addressOffset: 0x26c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_APM_M0_INTR_MAP:
+        addressOffset: 0x270
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_APM_M1_INTR_MAP:
+        addressOffset: 0x274
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_APM_M2_INTR_MAP:
+        addressOffset: 0x278
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_APM_M3_INTR_MAP:
+        addressOffset: 0x27c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_PERI0_PMS_INTR_MAP:
+        addressOffset: 0x280
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_PERI1_PMS_INTR_MAP:
+        addressOffset: 0x284
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_HUK_INTR_MAP:
+        addressOffset: 0x288
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_PERI_TIMEOUT_INTR_MAP:
+        addressOffset: 0x28c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_AHB_PDMA_IN_CH0_INTR_MAP:
+        addressOffset: 0x290
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_AHB_PDMA_IN_CH1_INTR_MAP:
+        addressOffset: 0x294
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_AHB_PDMA_OUT_CH0_INTR_MAP:
+        addressOffset: 0x298
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_AHB_PDMA_OUT_CH1_INTR_MAP:
+        addressOffset: 0x29c
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      LP_SW_INVALID_SLEEP_INTR_MAP:
+        addressOffset: 0x2a0
+        size: 0x20
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_LEVEL:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+      SIG_IDX_ASSERT_IN_SEC:
+        addressOffset: 0x2a4
+        size: 0x20
+        fields:
+          INT_SIG_IDX_ASSERT_IN_S:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          INT_SIG_IDX_ASSERT_IN_M:
+            bitOffset: 6
+            bitWidth: 6
+            access: read-write
+      CORE_1_INTR_STATUS%s:
+        dim: 5
+        dimIncrement: 0x4
+        dimIndex: 0-4
+        addressOffset: 0x2a8
+        size: 0x20
+        access: read-only
+        fields:
+          INT_STATUS_0:
+            bitOffset: 0
+            bitWidth: 32
+      CORE_1_INTR_STATUS5:
+        addressOffset: 0x2bc
+        size: 0x20
+        access: read-only
+        fields:
+          INT_STATUS_5:
+            bitOffset: 0
+            bitWidth: 9
+      SRC_PASS_IN_S_STATUS%s:
+        dim: 5
+        dimIncrement: 0x4
+        dimIndex: 0-4
+        addressOffset: 0x2c0
+        size: 0x20
+        access: read-only
+        fields:
+          INT_SRC_PASS_IN_S_STATUS_0:
+            bitOffset: 0
+            bitWidth: 32
+      SRC_PASS_IN_S_STATUS_5:
+        addressOffset: 0x2d4
+        size: 0x20
+        access: read-only
+        fields:
+          INT_SRC_PASS_IN_S_STATUS_5:
+            bitOffset: 0
+            bitWidth: 9
+      SRC_PASS_IN_M_STATUS%s:
+        dim: 5
+        dimIncrement: 0x4
+        dimIndex: 0-4
+        addressOffset: 0x2d8
+        size: 0x20
+        access: read-only
+        fields:
+          INT_SRC_PASS_IN_M_STATUS_0:
+            bitOffset: 0
+            bitWidth: 32
+      SRC_PASS_IN_M_STATUS_5:
+        addressOffset: 0x2ec
+        size: 0x20
+        access: read-only
+        fields:
+          INT_SRC_PASS_IN_M_STATUS_5:
+            bitOffset: 0
+            bitWidth: 9
+      CONFIG_STATE:
+        addressOffset: 0x2f0
+        size: 0x20
+        access: read-only
+        fields:
+          SIG_IDX_ASSERT_S_ERR:
+            bitOffset: 0
+            bitWidth: 1
+          SIG_IDX_ASSERT_M_ERR:
+            bitOffset: 1
+            bitWidth: 1
+      S_STATUS:
+        addressOffset: 0x2f4
+        size: 0x20
+        access: read-only
+        fields:
+          INT_S_STATUS:
+            bitOffset: 0
+            bitWidth: 32
+      M_STATUS:
+        addressOffset: 0x2f8
+        size: 0x20
+        access: read-only
+        fields:
+          INT_M_STATUS:
+            bitOffset: 0
+            bitWidth: 32
+      CLOCK_GATE:
+        addressOffset: 0x2fc
+        size: 0x20
+        fields:
+          REG_CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      INTERRUPT_DATE:
+        addressOffset: 0x7fc
+        size: 0x20
+        resetValue: 0x2509110
+        fields:
+          INTERRUPT_DATE:
+            bitOffset: 0
+            bitWidth: 28
+            access: read-write

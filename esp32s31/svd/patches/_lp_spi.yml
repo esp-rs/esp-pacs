@@ -1,0 +1,655 @@
+_add:
+  LP_SPI:
+    description: LP SPI Controller
+    groupName: LP_SPI
+    baseAddress: 0x20812000
+    addressBlocks:
+      - offset: 0x0
+        size: 0x1000
+        usage: registers
+    registers:
+      CMD:
+        addressOffset: 0x0
+        size: 0x20
+        fields:
+          UPDATE:
+            bitOffset: 23
+            bitWidth: 1
+            access: write-only
+          USR:
+            bitOffset: 24
+            bitWidth: 1
+            access: read-write
+      ADDR:
+        addressOffset: 0x4
+        size: 0x20
+        fields:
+          USR_ADDR_VALUE:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      CTRL:
+        addressOffset: 0x8
+        size: 0x20
+        resetValue: 0xc0000
+        fields:
+          DUMMY_OUT:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          Q_POL:
+            bitOffset: 18
+            bitWidth: 1
+            access: read-write
+          D_POL:
+            bitOffset: 19
+            bitWidth: 1
+            access: read-write
+          RD_BIT_ORDER:
+            bitOffset: 25
+            bitWidth: 1
+            access: read-write
+          WR_BIT_ORDER:
+            bitOffset: 26
+            bitWidth: 1
+            access: read-write
+      CLOCK:
+        addressOffset: 0xc
+        size: 0x20
+        resetValue: 0x80003043
+        fields:
+          CLKCNT_L:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          CLKCNT_H:
+            bitOffset: 6
+            bitWidth: 6
+            access: read-write
+          CLKCNT_N:
+            bitOffset: 12
+            bitWidth: 6
+            access: read-write
+          CLKDIV_PRE:
+            bitOffset: 18
+            bitWidth: 4
+            access: read-write
+          CLK_EQU_SYSCLK:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+      USER:
+        addressOffset: 0x10
+        size: 0x20
+        resetValue: 0x800000c0
+        fields:
+          DOUTDIN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          TSCK_I_EDGE:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          CS_HOLD:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+          CS_SETUP:
+            bitOffset: 7
+            bitWidth: 1
+            access: read-write
+          RSCK_I_EDGE:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+          CK_OUT_EDGE:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+          SIO:
+            bitOffset: 17
+            bitWidth: 1
+            access: read-write
+          USR_MISO_HIGHPART:
+            bitOffset: 24
+            bitWidth: 1
+            access: read-write
+          USR_MOSI_HIGHPART:
+            bitOffset: 25
+            bitWidth: 1
+            access: read-write
+          USR_DUMMY_IDLE:
+            bitOffset: 26
+            bitWidth: 1
+            access: read-write
+          USR_MOSI:
+            bitOffset: 27
+            bitWidth: 1
+            access: read-write
+          USR_MISO:
+            bitOffset: 28
+            bitWidth: 1
+            access: read-write
+          USR_DUMMY:
+            bitOffset: 29
+            bitWidth: 1
+            access: read-write
+          USR_ADDR:
+            bitOffset: 30
+            bitWidth: 1
+            access: read-write
+          USR_COMMAND:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+      USER1:
+        addressOffset: 0x14
+        size: 0x20
+        resetValue: 0xb8410007
+        fields:
+          USR_DUMMY_CYCLELEN:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+          MST_WFULL_ERR_END_EN:
+            bitOffset: 16
+            bitWidth: 1
+            access: read-write
+          CS_SETUP_TIME:
+            bitOffset: 17
+            bitWidth: 5
+            access: read-write
+          CS_HOLD_TIME:
+            bitOffset: 22
+            bitWidth: 5
+            access: read-write
+          USR_ADDR_BITLEN:
+            bitOffset: 27
+            bitWidth: 5
+            access: read-write
+      USER2:
+        addressOffset: 0x18
+        size: 0x20
+        resetValue: 0x78000000
+        fields:
+          USR_COMMAND_VALUE:
+            bitOffset: 0
+            bitWidth: 16
+            access: read-write
+          MST_REMPTY_ERR_END_EN:
+            bitOffset: 27
+            bitWidth: 1
+            access: read-write
+          USR_COMMAND_BITLEN:
+            bitOffset: 28
+            bitWidth: 4
+            access: read-write
+      MS_DLEN:
+        addressOffset: 0x1c
+        size: 0x20
+        fields:
+          MS_DATA_BITLEN:
+            bitOffset: 0
+            bitWidth: 18
+            access: read-write
+      MISC:
+        addressOffset: 0x20
+        size: 0x20
+        fields:
+          CS0_DIS:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          CK_DIS:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+          MASTER_CS_POL:
+            bitOffset: 7
+            bitWidth: 3
+            access: read-write
+          SLAVE_CS_POL:
+            bitOffset: 23
+            bitWidth: 1
+            access: read-write
+          CK_IDLE_EDGE:
+            bitOffset: 29
+            bitWidth: 1
+            access: read-write
+          CS_KEEP_ACTIVE:
+            bitOffset: 30
+            bitWidth: 1
+            access: read-write
+      DIN_MODE:
+        addressOffset: 0x24
+        size: 0x20
+        fields:
+          DIN0_MODE:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+          DIN1_MODE:
+            bitOffset: 2
+            bitWidth: 2
+            access: read-write
+          DIN2_MODE:
+            bitOffset: 4
+            bitWidth: 2
+            access: read-write
+          DIN3_MODE:
+            bitOffset: 6
+            bitWidth: 2
+            access: read-write
+          TIMING_HCLK_ACTIVE:
+            bitOffset: 16
+            bitWidth: 1
+            access: read-write
+      DIN_NUM:
+        addressOffset: 0x28
+        size: 0x20
+        fields:
+          DIN0_NUM:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+          DIN1_NUM:
+            bitOffset: 2
+            bitWidth: 2
+            access: read-write
+          DIN2_NUM:
+            bitOffset: 4
+            bitWidth: 2
+            access: read-write
+          DIN3_NUM:
+            bitOffset: 6
+            bitWidth: 2
+            access: read-write
+      DOUT_MODE:
+        addressOffset: 0x2c
+        size: 0x20
+        fields:
+          DOUT0_MODE:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          DOUT1_MODE:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          DOUT2_MODE:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          DOUT3_MODE:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+      DMA_CONF:
+        addressOffset: 0x30
+        size: 0x20
+        access: write-only
+        fields:
+          RX_AFIFO_RST:
+            bitOffset: 29
+            bitWidth: 1
+          BUF_AFIFO_RST:
+            bitOffset: 30
+            bitWidth: 1
+      DMA_INT_ENA:
+        addressOffset: 0x34
+        size: 0x20
+        fields:
+          SLV_RD_BUF_DONE_INT_ENA:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+          SLV_WR_BUF_DONE_INT_ENA:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+          TRANS_DONE_INT_ENA:
+            bitOffset: 12
+            bitWidth: 1
+            access: read-write
+          SPI_WAKEUP_INT_ENA:
+            bitOffset: 14
+            bitWidth: 1
+            access: read-write
+          SLV_BUF_ADDR_ERR_INT_ENA:
+            bitOffset: 15
+            bitWidth: 1
+            access: read-write
+          SLV_CMD_ERR_INT_ENA:
+            bitOffset: 16
+            bitWidth: 1
+            access: read-write
+          MST_RX_AFIFO_WFULL_ERR_INT_ENA:
+            bitOffset: 17
+            bitWidth: 1
+            access: read-write
+          MST_TX_AFIFO_REMPTY_ERR_INT_ENA:
+            bitOffset: 18
+            bitWidth: 1
+            access: read-write
+          APP2_INT_ENA:
+            bitOffset: 19
+            bitWidth: 1
+            access: read-write
+          APP1_INT_ENA:
+            bitOffset: 20
+            bitWidth: 1
+            access: read-write
+      DMA_INT_CLR:
+        addressOffset: 0x38
+        size: 0x20
+        access: write-only
+        fields:
+          SLV_RD_BUF_DONE_INT_CLR:
+            bitOffset: 10
+            bitWidth: 1
+          SLV_WR_BUF_DONE_INT_CLR:
+            bitOffset: 11
+            bitWidth: 1
+          TRANS_DONE_INT_CLR:
+            bitOffset: 12
+            bitWidth: 1
+          SPI_WAKEUP_INT_CLR:
+            bitOffset: 14
+            bitWidth: 1
+          SLV_BUF_ADDR_ERR_INT_CLR:
+            bitOffset: 15
+            bitWidth: 1
+          SLV_CMD_ERR_INT_CLR:
+            bitOffset: 16
+            bitWidth: 1
+          MST_RX_AFIFO_WFULL_ERR_INT_CLR:
+            bitOffset: 17
+            bitWidth: 1
+          MST_TX_AFIFO_REMPTY_ERR_INT_CLR:
+            bitOffset: 18
+            bitWidth: 1
+          APP2_INT_CLR:
+            bitOffset: 19
+            bitWidth: 1
+          APP1_INT_CLR:
+            bitOffset: 20
+            bitWidth: 1
+      DMA_INT_RAW:
+        addressOffset: 0x3c
+        size: 0x20
+        fields:
+          SLV_RD_BUF_DONE_INT_RAW:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+          SLV_WR_BUF_DONE_INT_RAW:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+          TRANS_DONE_INT_RAW:
+            bitOffset: 12
+            bitWidth: 1
+            access: read-write
+          SPI_WAKEUP_INT_RAW:
+            bitOffset: 14
+            bitWidth: 1
+            access: read-write
+          SLV_BUF_ADDR_ERR_INT_RAW:
+            bitOffset: 15
+            bitWidth: 1
+            access: read-write
+          SLV_CMD_ERR_INT_RAW:
+            bitOffset: 16
+            bitWidth: 1
+            access: read-write
+          MST_RX_AFIFO_WFULL_ERR_INT_RAW:
+            bitOffset: 17
+            bitWidth: 1
+            access: read-write
+          MST_TX_AFIFO_REMPTY_ERR_INT_RAW:
+            bitOffset: 18
+            bitWidth: 1
+            access: read-write
+          APP2_INT_RAW:
+            bitOffset: 19
+            bitWidth: 1
+            access: read-write
+          APP1_INT_RAW:
+            bitOffset: 20
+            bitWidth: 1
+            access: read-write
+      DMA_INT_ST:
+        addressOffset: 0x40
+        size: 0x20
+        access: read-only
+        fields:
+          SLV_RD_BUF_DONE_INT_ST:
+            bitOffset: 10
+            bitWidth: 1
+          SLV_WR_BUF_DONE_INT_ST:
+            bitOffset: 11
+            bitWidth: 1
+          TRANS_DONE_INT_ST:
+            bitOffset: 12
+            bitWidth: 1
+          SPI_WAKEUP_INT_ST:
+            bitOffset: 14
+            bitWidth: 1
+          SLV_BUF_ADDR_ERR_INT_ST:
+            bitOffset: 15
+            bitWidth: 1
+          SLV_CMD_ERR_INT_ST:
+            bitOffset: 16
+            bitWidth: 1
+          MST_RX_AFIFO_WFULL_ERR_INT_ST:
+            bitOffset: 17
+            bitWidth: 1
+          MST_TX_AFIFO_REMPTY_ERR_INT_ST:
+            bitOffset: 18
+            bitWidth: 1
+          APP2_INT_ST:
+            bitOffset: 19
+            bitWidth: 1
+          APP1_INT_ST:
+            bitOffset: 20
+            bitWidth: 1
+      SLEEP_CONF0:
+        addressOffset: 0x44
+        size: 0x20
+        resetValue: 0xa
+        fields:
+          SLV_WK_CHAR0:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+          SLV_WK_CHAR_NUM:
+            bitOffset: 8
+            bitWidth: 3
+            access: read-write
+          SLV_WK_CHAR_MASK:
+            bitOffset: 11
+            bitWidth: 5
+            access: read-write
+          SLV_WK_MODE_SEL:
+            bitOffset: 16
+            bitWidth: 1
+            access: read-write
+          SLEEP_EN:
+            bitOffset: 17
+            bitWidth: 1
+            access: read-write
+          SLEEP_DIS_RXFIFO_WR_EN:
+            bitOffset: 18
+            bitWidth: 1
+            access: read-write
+          SLEEP_WK_DATA_SEL:
+            bitOffset: 19
+            bitWidth: 1
+            access: read-write
+      SLEEP_CONF1:
+        addressOffset: 0x48
+        size: 0x20
+        resetValue: 0xe0d0c0b
+        fields:
+          SLV_WK_CHAR1:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+          SLV_WK_CHAR2:
+            bitOffset: 8
+            bitWidth: 8
+            access: read-write
+          SLV_WK_CHAR3:
+            bitOffset: 16
+            bitWidth: 8
+            access: read-write
+          SLV_WK_CHAR4:
+            bitOffset: 24
+            bitWidth: 8
+            access: read-write
+      DMA_INT_SET:
+        addressOffset: 0x4c
+        size: 0x20
+        access: write-only
+        fields:
+          LP_SPI_SLV_RD_BUF_DONE_INT_SET:
+            bitOffset: 10
+            bitWidth: 1
+          LP_SPI_SLV_WR_BUF_DONE_INT_SET:
+            bitOffset: 11
+            bitWidth: 1
+          LP_SPI_TRANS_DONE_INT_SET:
+            bitOffset: 12
+            bitWidth: 1
+          LP_SPI_SLV_BUF_ADDR_ERR_INT_SET:
+            bitOffset: 15
+            bitWidth: 1
+          LP_SPI_SLV_CMD_ERR_INT_SET:
+            bitOffset: 16
+            bitWidth: 1
+          LP_SPI_MST_RX_AFIFO_WFULL_ERR_INT_SET:
+            bitOffset: 17
+            bitWidth: 1
+          LP_SPI_MST_TX_AFIFO_REMPTY_ERR_INT_SET:
+            bitOffset: 18
+            bitWidth: 1
+          LP_SPI_APP2_INT_SET:
+            bitOffset: 19
+            bitWidth: 1
+          LP_SPI_APP1_INT_SET:
+            bitOffset: 20
+            bitWidth: 1
+      W%s:
+        dim: 16
+        dimIncrement: 0x4
+        dimIndex: 0-15
+        addressOffset: 0x98
+        size: 0x20
+        fields:
+          BUF0:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      SLAVE:
+        addressOffset: 0xe0
+        size: 0x20
+        fields:
+          CLK_MODE:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+          CLK_MODE_13:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          RSCK_DATA_OUT:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          SLV_RDBUF_BITLEN_EN:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+          SLV_WRBUF_BITLEN_EN:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+          MODE:
+            bitOffset: 26
+            bitWidth: 1
+            access: read-write
+          SOFT_RESET:
+            bitOffset: 27
+            bitWidth: 1
+            access: write-only
+      SLAVE1:
+        addressOffset: 0xe4
+        size: 0x20
+        fields:
+          SLV_DATA_BITLEN:
+            bitOffset: 0
+            bitWidth: 18
+            access: read-write
+          SLV_LAST_COMMAND:
+            bitOffset: 18
+            bitWidth: 8
+            access: read-write
+          SLV_LAST_ADDR:
+            bitOffset: 26
+            bitWidth: 6
+            access: read-write
+      CLK_GATE:
+        addressOffset: 0xe8
+        size: 0x20
+        fields:
+          CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          MST_CLK_ACTIVE:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          MST_CLK_SEL:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+      DATE:
+        addressOffset: 0xf0
+        size: 0x20
+        resetValue: 0x2009040
+        fields:
+          DATE:
+            bitOffset: 0
+            bitWidth: 28
+            access: read-write
+      LP_RND_ECO_CS:
+        addressOffset: 0xf4
+        size: 0x20
+        fields:
+          RND_ECO_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          LP_RND_ECO_RESULT:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-only
+      LP_RND_ECO_LOW:
+        addressOffset: 0xf8
+        size: 0x20
+        fields:
+          RND_ECO_LOW:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      LP_RND_ECO_HIGH:
+        addressOffset: 0xfc
+        size: 0x20
+        resetValue: 0xffff
+        fields:
+          RND_ECO_HIGH:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write

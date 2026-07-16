@@ -1,0 +1,485 @@
+_add:
+  LP_MAILBOX:
+    description: LP Mailbox
+    groupName: LP_MAILBOX
+    baseAddress: 0x20817000
+    addressBlocks:
+      - offset: 0x0
+        size: 0x1000
+        usage: registers
+    registers:
+      MASSEGE%s:
+        dim: 16
+        dimIncrement: 0x4
+        dimIndex: 0-15
+        addressOffset: 0x0
+        size: 0x20
+        fields:
+          MASSEGE:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      LP_INT_RAW:
+        addressOffset: 0x40
+        size: 0x20
+        access: read-only
+        fields:
+          LP_0_INT_RAW:
+            bitOffset: 0
+            bitWidth: 1
+          LP_1_INT_RAW:
+            bitOffset: 1
+            bitWidth: 1
+          LP_2_INT_RAW:
+            bitOffset: 2
+            bitWidth: 1
+          LP_3_INT_RAW:
+            bitOffset: 3
+            bitWidth: 1
+          LP_4_INT_RAW:
+            bitOffset: 4
+            bitWidth: 1
+          LP_5_INT_RAW:
+            bitOffset: 5
+            bitWidth: 1
+          LP_6_INT_RAW:
+            bitOffset: 6
+            bitWidth: 1
+          LP_7_INT_RAW:
+            bitOffset: 7
+            bitWidth: 1
+          LP_8_INT_RAW:
+            bitOffset: 8
+            bitWidth: 1
+          LP_9_INT_RAW:
+            bitOffset: 9
+            bitWidth: 1
+          LP_10_INT_RAW:
+            bitOffset: 10
+            bitWidth: 1
+          LP_11_INT_RAW:
+            bitOffset: 11
+            bitWidth: 1
+          LP_12_INT_RAW:
+            bitOffset: 12
+            bitWidth: 1
+          LP_13_INT_RAW:
+            bitOffset: 13
+            bitWidth: 1
+          LP_14_INT_RAW:
+            bitOffset: 14
+            bitWidth: 1
+          LP_15_INT_RAW:
+            bitOffset: 15
+            bitWidth: 1
+      LP_INT_ST:
+        addressOffset: 0x44
+        size: 0x20
+        access: read-only
+        fields:
+          LP_0_INT_ST:
+            bitOffset: 0
+            bitWidth: 1
+          LP_1_INT_ST:
+            bitOffset: 1
+            bitWidth: 1
+          LP_2_INT_ST:
+            bitOffset: 2
+            bitWidth: 1
+          LP_3_INT_ST:
+            bitOffset: 3
+            bitWidth: 1
+          LP_4_INT_ST:
+            bitOffset: 4
+            bitWidth: 1
+          LP_5_INT_ST:
+            bitOffset: 5
+            bitWidth: 1
+          LP_6_INT_ST:
+            bitOffset: 6
+            bitWidth: 1
+          LP_7_INT_ST:
+            bitOffset: 7
+            bitWidth: 1
+          LP_8_INT_ST:
+            bitOffset: 8
+            bitWidth: 1
+          LP_9_INT_ST:
+            bitOffset: 9
+            bitWidth: 1
+          LP_10_INT_ST:
+            bitOffset: 10
+            bitWidth: 1
+          LP_11_INT_ST:
+            bitOffset: 11
+            bitWidth: 1
+          LP_12_INT_ST:
+            bitOffset: 12
+            bitWidth: 1
+          LP_13_INT_ST:
+            bitOffset: 13
+            bitWidth: 1
+          LP_14_INT_ST:
+            bitOffset: 14
+            bitWidth: 1
+          LP_15_INT_ST:
+            bitOffset: 15
+            bitWidth: 1
+      LP_INT_ENA:
+        addressOffset: 0x48
+        size: 0x20
+        resetValue: 0xff
+        fields:
+          LP_0_INT_ENA:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          LP_1_INT_ENA:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          LP_2_INT_ENA:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          LP_3_INT_ENA:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          LP_4_INT_ENA:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          LP_5_INT_ENA:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          LP_6_INT_ENA:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+          LP_7_INT_ENA:
+            bitOffset: 7
+            bitWidth: 1
+            access: read-write
+          LP_8_INT_ENA:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+          LP_9_INT_ENA:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+          LP_10_INT_ENA:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+          LP_11_INT_ENA:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+          LP_12_INT_ENA:
+            bitOffset: 12
+            bitWidth: 1
+            access: read-write
+          LP_13_INT_ENA:
+            bitOffset: 13
+            bitWidth: 1
+            access: read-write
+          LP_14_INT_ENA:
+            bitOffset: 14
+            bitWidth: 1
+            access: read-write
+          LP_15_INT_ENA:
+            bitOffset: 15
+            bitWidth: 1
+            access: read-write
+      LP_INT_CLR:
+        addressOffset: 0x4c
+        size: 0x20
+        access: write-only
+        fields:
+          LP_0_INT_CLR:
+            bitOffset: 0
+            bitWidth: 1
+          LP_1_INT_CLR:
+            bitOffset: 1
+            bitWidth: 1
+          LP_2_INT_CLR:
+            bitOffset: 2
+            bitWidth: 1
+          LP_3_INT_CLR:
+            bitOffset: 3
+            bitWidth: 1
+          LP_4_INT_CLR:
+            bitOffset: 4
+            bitWidth: 1
+          LP_5_INT_CLR:
+            bitOffset: 5
+            bitWidth: 1
+          LP_6_INT_CLR:
+            bitOffset: 6
+            bitWidth: 1
+          LP_7_INT_CLR:
+            bitOffset: 7
+            bitWidth: 1
+          LP_8_INT_CLR:
+            bitOffset: 8
+            bitWidth: 1
+          LP_9_INT_CLR:
+            bitOffset: 9
+            bitWidth: 1
+          LP_10_INT_CLR:
+            bitOffset: 10
+            bitWidth: 1
+          LP_11_INT_CLR:
+            bitOffset: 11
+            bitWidth: 1
+          LP_12_INT_CLR:
+            bitOffset: 12
+            bitWidth: 1
+          LP_13_INT_CLR:
+            bitOffset: 13
+            bitWidth: 1
+          LP_14_INT_CLR:
+            bitOffset: 14
+            bitWidth: 1
+          LP_15_INT_CLR:
+            bitOffset: 15
+            bitWidth: 1
+      HP_INT_RAW:
+        addressOffset: 0x50
+        size: 0x20
+        access: read-only
+        fields:
+          HP_0_INT_RAW:
+            bitOffset: 0
+            bitWidth: 1
+          HP_1_INT_RAW:
+            bitOffset: 1
+            bitWidth: 1
+          HP_2_INT_RAW:
+            bitOffset: 2
+            bitWidth: 1
+          HP_3_INT_RAW:
+            bitOffset: 3
+            bitWidth: 1
+          HP_4_INT_RAW:
+            bitOffset: 4
+            bitWidth: 1
+          HP_5_INT_RAW:
+            bitOffset: 5
+            bitWidth: 1
+          HP_6_INT_RAW:
+            bitOffset: 6
+            bitWidth: 1
+          HP_7_INT_RAW:
+            bitOffset: 7
+            bitWidth: 1
+          HP_8_INT_RAW:
+            bitOffset: 8
+            bitWidth: 1
+          HP_9_INT_RAW:
+            bitOffset: 9
+            bitWidth: 1
+          HP_10_INT_RAW:
+            bitOffset: 10
+            bitWidth: 1
+          HP_11_INT_RAW:
+            bitOffset: 11
+            bitWidth: 1
+          HP_12_INT_RAW:
+            bitOffset: 12
+            bitWidth: 1
+          HP_13_INT_RAW:
+            bitOffset: 13
+            bitWidth: 1
+          HP_14_INT_RAW:
+            bitOffset: 14
+            bitWidth: 1
+          HP_15_INT_RAW:
+            bitOffset: 15
+            bitWidth: 1
+      HP_INT_ST:
+        addressOffset: 0x54
+        size: 0x20
+        access: read-only
+        fields:
+          HP_0_INT_ST:
+            bitOffset: 0
+            bitWidth: 1
+          HP_1_INT_ST:
+            bitOffset: 1
+            bitWidth: 1
+          HP_2_INT_ST:
+            bitOffset: 2
+            bitWidth: 1
+          HP_3_INT_ST:
+            bitOffset: 3
+            bitWidth: 1
+          HP_4_INT_ST:
+            bitOffset: 4
+            bitWidth: 1
+          HP_5_INT_ST:
+            bitOffset: 5
+            bitWidth: 1
+          HP_6_INT_ST:
+            bitOffset: 6
+            bitWidth: 1
+          HP_7_INT_ST:
+            bitOffset: 7
+            bitWidth: 1
+          HP_8_INT_ST:
+            bitOffset: 8
+            bitWidth: 1
+          HP_9_INT_ST:
+            bitOffset: 9
+            bitWidth: 1
+          HP_10_INT_ST:
+            bitOffset: 10
+            bitWidth: 1
+          HP_11_INT_ST:
+            bitOffset: 11
+            bitWidth: 1
+          HP_12_INT_ST:
+            bitOffset: 12
+            bitWidth: 1
+          HP_13_INT_ST:
+            bitOffset: 13
+            bitWidth: 1
+          HP_14_INT_ST:
+            bitOffset: 14
+            bitWidth: 1
+          HP_15_INT_ST:
+            bitOffset: 15
+            bitWidth: 1
+      HP_INT_ENA:
+        addressOffset: 0x58
+        size: 0x20
+        resetValue: 0xff
+        fields:
+          HP_0_INT_ENA:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          HP_1_INT_ENA:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          HP_2_INT_ENA:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          HP_3_INT_ENA:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          HP_4_INT_ENA:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          HP_5_INT_ENA:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          HP_6_INT_ENA:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+          HP_7_INT_ENA:
+            bitOffset: 7
+            bitWidth: 1
+            access: read-write
+          HP_8_INT_ENA:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+          HP_9_INT_ENA:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+          HP_10_INT_ENA:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+          HP_11_INT_ENA:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+          HP_12_INT_ENA:
+            bitOffset: 12
+            bitWidth: 1
+            access: read-write
+          HP_13_INT_ENA:
+            bitOffset: 13
+            bitWidth: 1
+            access: read-write
+          HP_14_INT_ENA:
+            bitOffset: 14
+            bitWidth: 1
+            access: read-write
+          HP_15_INT_ENA:
+            bitOffset: 15
+            bitWidth: 1
+            access: read-write
+      HP_INT_CLR:
+        addressOffset: 0x5c
+        size: 0x20
+        access: write-only
+        fields:
+          HP_0_INT_CLR:
+            bitOffset: 0
+            bitWidth: 1
+          HP_1_INT_CLR:
+            bitOffset: 1
+            bitWidth: 1
+          HP_2_INT_CLR:
+            bitOffset: 2
+            bitWidth: 1
+          HP_3_INT_CLR:
+            bitOffset: 3
+            bitWidth: 1
+          HP_4_INT_CLR:
+            bitOffset: 4
+            bitWidth: 1
+          HP_5_INT_CLR:
+            bitOffset: 5
+            bitWidth: 1
+          HP_6_INT_CLR:
+            bitOffset: 6
+            bitWidth: 1
+          HP_7_INT_CLR:
+            bitOffset: 7
+            bitWidth: 1
+          HP_8_INT_CLR:
+            bitOffset: 8
+            bitWidth: 1
+          HP_9_INT_CLR:
+            bitOffset: 9
+            bitWidth: 1
+          HP_10_INT_CLR:
+            bitOffset: 10
+            bitWidth: 1
+          HP_11_INT_CLR:
+            bitOffset: 11
+            bitWidth: 1
+          HP_12_INT_CLR:
+            bitOffset: 12
+            bitWidth: 1
+          HP_13_INT_CLR:
+            bitOffset: 13
+            bitWidth: 1
+          HP_14_INT_CLR:
+            bitOffset: 14
+            bitWidth: 1
+          HP_15_INT_CLR:
+            bitOffset: 15
+            bitWidth: 1
+      REG_CLK_EN:
+        addressOffset: 0x60
+        size: 0x20
+        fields:
+          REG_CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write

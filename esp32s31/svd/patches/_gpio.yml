@@ -1,0 +1,53 @@
+GPIO:
+  _delete:
+    - FUNC*_IN_SEL_CFG
+    - FUNC*_OUT_SEL_CFG
+  _add:
+    FUNC%s_IN_SEL_CFG:
+      dim: 256
+      dimIncrement: 0x04
+      dimIndex: 0-255
+      description: GPIO input function configuration register
+      addressOffset: 0x2f4
+      access: read-write
+      reset-value: 0x80
+      size: 0x20
+      fields:
+        IN_SEL:
+          description: "Configures to select a pin from the 63 GPIO pins to connect the input signal %s."
+          bitOffset: 0
+          bitWidth: 8
+        IN_INV_SEL:
+          description: "Configures whether or not to invert the input value. 0: Not invert. 1: Invert."
+          bitOffset: 8
+          bitWidth: 1
+        SEL:
+          description: "Configures whether or not to route signals via GPIO matrix. 0: Bypass GPIO matrix. 1: Route via GPIO matrix."
+          bitOffset: 9
+          bitWidth: 1
+    FUNC%s_OUT_SEL_CFG:
+      dim: 67
+      dimIncrement: 0x04
+      dimIndex: 0-66
+      description: GPIO output function configuration register
+      addressOffset: 0xaf4
+      access: read-write
+      reset-value: 0x100
+      size: 0x20
+      fields:
+        OUT_SEL:
+          description: "Configures to select a signal %s to be outputted from the GPIO."
+          bitOffset: 0
+          bitWidth: 9
+        OUT_INV_SEL:
+          description: "Configures whether or not to invert the output value. 0: Not invert. 1: Invert."
+          bitOffset: 9
+          bitWidth: 1
+        OE_SEL:
+          description: "Configures to select the source of output enable signal. 0: Use output enable signal from peripheral. 1: Force the output enable signal to be sourced from bit n of GPIO_ENABLE_REG."
+          bitOffset: 10
+          bitWidth: 1
+        OE_INV_SEL:
+          description: "Configures whether or not to invert the output enable signal. 0: Not invert. 1: Invert."
+          bitOffset: 11
+          bitWidth: 1

@@ -1,0 +1,254 @@
+_add:
+  I2C_ANA_MST:
+    description: I2C_ANA_MST Peripheral
+    baseAddress: 0x2010F800
+    addressBlock:
+      - offset: 0x0
+        size: 0x40
+        usage: Registers
+    registers:
+
+      I2C0_CTRL:
+        description: I2C0_CTRL
+        addressOffset: 0x0
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          SLAVE_ADDR:
+            bitOffset: 0
+            bitWidth: 8
+          SLAVE_REG_ADDR:
+            bitOffset: 8
+            bitWidth: 8
+          DATA:
+            bitOffset: 16
+            bitWidth: 8
+          READ_WRITE:
+            bitOffset: 24
+            bitWidth: 1
+          BUSY:
+            bitOffset: 25
+            bitWidth: 1
+
+      I2C1_CTRL:
+        description: I2C1_CTRL
+        addressOffset: 0x4
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          SLAVE_ADDR:
+            bitOffset: 0
+            bitWidth: 8
+          SLAVE_REG_ADDR:
+            bitOffset: 8
+            bitWidth: 8
+          DATA:
+            bitOffset: 16
+            bitWidth: 8
+          READ_WRITE:
+            bitOffset: 24
+            bitWidth: 1
+          BUSY:
+            bitOffset: 25
+            bitWidth: 1
+
+      I2C0_CONF:
+        description: I2C0_CONF
+        addressOffset: 0x8
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          I2C0_CONF:
+            bitOffset: 0
+            bitWidth: 24
+          I2C0_STATUS:
+            bitOffset: 24
+            bitWidth: 8
+
+      I2C1_CONF:
+        description: I2C1_CONF
+        addressOffset: 0xC
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          I2C1_CONF:
+            bitOffset: 0
+            bitWidth: 24
+          I2C1_STATUS:
+            bitOffset: 24
+            bitWidth: 8
+
+      I2C_BURST_CONF:
+        description: I2C_BURST_CONF
+        addressOffset: 0x10
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          I2C_MST_BURST_CTRL:
+            bitOffset: 0
+            bitWidth: 32
+
+      I2C_BURST_STATUS:
+        description: I2C_BURST_STATUS
+        addressOffset: 0x14
+        size: 32
+        access: read-write
+        resetValue: 0x40000000
+        fields:
+          I2C_MST_BURST_DONE:
+            bitOffset: 0
+            bitWidth: 1
+          I2C_MST0_BURST_ERR_FLAG:
+            bitOffset: 1
+            bitWidth: 1
+          I2C_MST1_BURST_ERR_FLAG:
+            bitOffset: 2
+            bitWidth: 1
+          I2C_MST_BURST_TIMEOUT_CNT:
+            bitOffset: 20
+            bitWidth: 12
+
+      ANA_CONF0:
+        description: ANA_CONF0
+        addressOffset: 0x18
+        size: 32
+        access: read-write
+        resetValue: 0x0000E408
+        fields:
+          ANA_CONF0:
+            bitOffset: 0
+            bitWidth: 24
+          ANA_STATUS0:
+            bitOffset: 24
+            bitWidth: 8
+
+      ANA_CONF1:
+        description: ANA_CONF1
+        addressOffset: 0x1C
+        size: 32
+        access: read-write
+        resetValue: 0x0000002D
+        fields:
+          ANA_CONF1:
+            bitOffset: 0
+            bitWidth: 24
+          ANA_STATUS1:
+            bitOffset: 24
+            bitWidth: 8
+
+      ANA_CONF2:
+        description: ANA_CONF2
+        addressOffset: 0x20
+        size: 32
+        access: read-write
+        resetValue: 0x00000004
+        fields:
+          ANA_CONF2:
+            bitOffset: 0
+            bitWidth: 24
+          ANA_STATUS2:
+            bitOffset: 24
+            bitWidth: 8
+
+      I2C0_CTRL1:
+        description: I2C0_CTRL1
+        addressOffset: 0x24
+        size: 32
+        access: read-write
+        resetValue: 0x00000042
+        fields:
+          I2C0_SCL_PULSE_DUR:
+            bitOffset: 0
+            bitWidth: 6
+          I2C0_SDA_SIDE_GUARD:
+            bitOffset: 6
+            bitWidth: 5
+
+      I2C1_CTRL1:
+        description: I2C1_CTRL1
+        addressOffset: 0x28
+        size: 32
+        access: read-write
+        resetValue: 0x00000042
+        fields:
+          I2C1_SCL_PULSE_DUR:
+            bitOffset: 0
+            bitWidth: 6
+          I2C1_SDA_SIDE_GUARD:
+            bitOffset: 6
+            bitWidth: 5
+
+      HW_I2C_CTRL:
+        description: HW_I2C_CTRL
+        addressOffset: 0x2C
+        size: 32
+        access: read-write
+        resetValue: 0x00000042
+        fields:
+          HW_I2C_SCL_PULSE_DUR:
+            bitOffset: 0
+            bitWidth: 6
+          HW_I2C_SDA_SIDE_GUARD:
+            bitOffset: 6
+            bitWidth: 5
+          ARBITER_DIS:
+            bitOffset: 11
+            bitWidth: 1
+
+      I2C_MST_NOUSE:
+        description: I2C_MST_NOUSE
+        addressOffset: 0x30
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          I2C_MST_NOUSE:
+            bitOffset: 0
+            bitWidth: 32
+
+      EXT_I2C_MASK:
+        description: EXT_I2C_MASK
+        addressOffset: 0x34
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          EXT_I2C_SDA_I_MASK:
+            bitOffset: 0
+            bitWidth: 16
+          EXT_I2C_SDA_O_MASK:
+            bitOffset: 16
+            bitWidth: 16
+
+      I2C_MASK:
+        description: I2C_MASK
+        addressOffset: 0x38
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          I2C_SDA_I_MASK:
+            bitOffset: 0
+            bitWidth: 16
+          I2C_SDA_O_MASK:
+            bitOffset: 16
+            bitWidth: 16
+
+      DATE:
+        description: DATE
+        addressOffset: 0x3C
+        size: 32
+        access: read-write
+        resetValue: 0x02411290
+        fields:
+          DATE:
+            bitOffset: 0
+            bitWidth: 28
+          CLK_EN:
+            bitOffset: 28
+            bitWidth: 1

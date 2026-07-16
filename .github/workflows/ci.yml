@@ -46,6 +46,7 @@ jobs:
             { package: "esp32c61", target: "riscv32imac-unknown-none-elf" },
             { package: "esp32h2", target: "riscv32imac-unknown-none-elf" },
             { package: "esp32p4", target: "riscv32imafc-unknown-none-elf" },
+            { package: "esp32s31", target: "riscv32imafc-unknown-none-elf" },
 
             # RISC-V (Ultra) Low-Power:
             { package: "esp32c6-lp",  target: "riscv32imac-unknown-none-elf" },
