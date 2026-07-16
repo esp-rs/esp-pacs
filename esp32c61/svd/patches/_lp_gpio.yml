@@ -1,0 +1,6 @@
+LP_GPIO:
+  _modify:
+    ENABLE_W1TC:
+      name: OUT_ENABLE_W1TC
+    ENABLE_W1TS:
+      name: OUT_ENABLE_W1TS

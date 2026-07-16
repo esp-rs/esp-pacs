@@ -10,6 +10,7 @@ _include:
   - _modem_lpcon.yml
   - _modem_syscon.yml
   - _interrupt.yml
+  - _lp_gpio.yml
   - _date.yml
   - _sha.yml
   - _uart.yml
