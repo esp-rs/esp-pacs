@@ -2,75 +2,75 @@
 pub type R = crate::R<TCMMON_CTRL0_SPEC>;
 #[doc = "Register `TCMMON_CTRL0` writer"]
 pub type W = crate::W<TCMMON_CTRL0_SPEC>;
-#[doc = "Field `REG_TCMMON_CPU_CLK_EN` reader - need_des"]
-pub type REG_TCMMON_CPU_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_TCMMON_CPU_CLK_EN` writer - need_des"]
-pub type REG_TCMMON_CPU_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_TCMMON_SYS_CLK_EN` reader - need_des"]
-pub type REG_TCMMON_SYS_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_TCMMON_SYS_CLK_EN` writer - need_des"]
-pub type REG_TCMMON_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_TCMMON_RST_EN` reader - need_des"]
-pub type REG_TCMMON_RST_EN_R = crate::BitReader;
-#[doc = "Field `REG_TCMMON_RST_EN` writer - need_des"]
-pub type REG_TCMMON_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_TCMMON_FORCE_NORST` reader - need_des"]
-pub type REG_TCMMON_FORCE_NORST_R = crate::BitReader;
-#[doc = "Field `REG_TCMMON_FORCE_NORST` writer - need_des"]
-pub type REG_TCMMON_FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TCMMON_CPU_CLK_EN` reader - need_des"]
+pub type TCMMON_CPU_CLK_EN_R = crate::BitReader;
+#[doc = "Field `TCMMON_CPU_CLK_EN` writer - need_des"]
+pub type TCMMON_CPU_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TCMMON_SYS_CLK_EN` reader - need_des"]
+pub type TCMMON_SYS_CLK_EN_R = crate::BitReader;
+#[doc = "Field `TCMMON_SYS_CLK_EN` writer - need_des"]
+pub type TCMMON_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TCMMON_RST_EN` reader - need_des"]
+pub type TCMMON_RST_EN_R = crate::BitReader;
+#[doc = "Field `TCMMON_RST_EN` writer - need_des"]
+pub type TCMMON_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TCMMON_FORCE_NORST` reader - need_des"]
+pub type TCMMON_FORCE_NORST_R = crate::BitReader;
+#[doc = "Field `TCMMON_FORCE_NORST` writer - need_des"]
+pub type TCMMON_FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn reg_tcmmon_cpu_clk_en(&self) -> REG_TCMMON_CPU_CLK_EN_R {
-        REG_TCMMON_CPU_CLK_EN_R::new((self.bits & 1) != 0)
+    pub fn tcmmon_cpu_clk_en(&self) -> TCMMON_CPU_CLK_EN_R {
+        TCMMON_CPU_CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn reg_tcmmon_sys_clk_en(&self) -> REG_TCMMON_SYS_CLK_EN_R {
-        REG_TCMMON_SYS_CLK_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn tcmmon_sys_clk_en(&self) -> TCMMON_SYS_CLK_EN_R {
+        TCMMON_SYS_CLK_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn reg_tcmmon_rst_en(&self) -> REG_TCMMON_RST_EN_R {
-        REG_TCMMON_RST_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn tcmmon_rst_en(&self) -> TCMMON_RST_EN_R {
+        TCMMON_RST_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
-    pub fn reg_tcmmon_force_norst(&self) -> REG_TCMMON_FORCE_NORST_R {
-        REG_TCMMON_FORCE_NORST_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn tcmmon_force_norst(&self) -> TCMMON_FORCE_NORST_R {
+        TCMMON_FORCE_NORST_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TCMMON_CTRL0")
-            .field("reg_tcmmon_cpu_clk_en", &self.reg_tcmmon_cpu_clk_en())
-            .field("reg_tcmmon_sys_clk_en", &self.reg_tcmmon_sys_clk_en())
-            .field("reg_tcmmon_rst_en", &self.reg_tcmmon_rst_en())
-            .field("reg_tcmmon_force_norst", &self.reg_tcmmon_force_norst())
+            .field("tcmmon_cpu_clk_en", &self.tcmmon_cpu_clk_en())
+            .field("tcmmon_sys_clk_en", &self.tcmmon_sys_clk_en())
+            .field("tcmmon_rst_en", &self.tcmmon_rst_en())
+            .field("tcmmon_force_norst", &self.tcmmon_force_norst())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn reg_tcmmon_cpu_clk_en(&mut self) -> REG_TCMMON_CPU_CLK_EN_W<'_, TCMMON_CTRL0_SPEC> {
-        REG_TCMMON_CPU_CLK_EN_W::new(self, 0)
+    pub fn tcmmon_cpu_clk_en(&mut self) -> TCMMON_CPU_CLK_EN_W<'_, TCMMON_CTRL0_SPEC> {
+        TCMMON_CPU_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn reg_tcmmon_sys_clk_en(&mut self) -> REG_TCMMON_SYS_CLK_EN_W<'_, TCMMON_CTRL0_SPEC> {
-        REG_TCMMON_SYS_CLK_EN_W::new(self, 1)
+    pub fn tcmmon_sys_clk_en(&mut self) -> TCMMON_SYS_CLK_EN_W<'_, TCMMON_CTRL0_SPEC> {
+        TCMMON_SYS_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn reg_tcmmon_rst_en(&mut self) -> REG_TCMMON_RST_EN_W<'_, TCMMON_CTRL0_SPEC> {
-        REG_TCMMON_RST_EN_W::new(self, 2)
+    pub fn tcmmon_rst_en(&mut self) -> TCMMON_RST_EN_W<'_, TCMMON_CTRL0_SPEC> {
+        TCMMON_RST_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
-    pub fn reg_tcmmon_force_norst(&mut self) -> REG_TCMMON_FORCE_NORST_W<'_, TCMMON_CTRL0_SPEC> {
-        REG_TCMMON_FORCE_NORST_W::new(self, 3)
+    pub fn tcmmon_force_norst(&mut self) -> TCMMON_FORCE_NORST_W<'_, TCMMON_CTRL0_SPEC> {
+        TCMMON_FORCE_NORST_W::new(self, 3)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`tcmmon_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tcmmon_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

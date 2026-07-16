@@ -6,14 +6,22 @@ pub type W = crate::W<CTRL1_SPEC>;
 pub type CLK_MODE_R = crate::FieldReader;
 #[doc = "Field `CLK_MODE` writer - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on."]
 pub type CLK_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `SPI_AR_SIZE0_1_SUPPORT_EN` reader - 1: MSPI supports ARSIZE 0~3. When ARSIZE =0~2, MSPI read address is 4*n and reply the real AXI read data back. 0: When ARSIZE 0~1, MSPI reply SLV_ERR."]
-pub type SPI_AR_SIZE0_1_SUPPORT_EN_R = crate::BitReader;
-#[doc = "Field `SPI_AR_SIZE0_1_SUPPORT_EN` writer - 1: MSPI supports ARSIZE 0~3. When ARSIZE =0~2, MSPI read address is 4*n and reply the real AXI read data back. 0: When ARSIZE 0~1, MSPI reply SLV_ERR."]
-pub type SPI_AR_SIZE0_1_SUPPORT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SPI_AW_SIZE0_1_SUPPORT_EN` reader - 1: MSPI supports AWSIZE 0~3. 0: When AWSIZE 0~1, MSPI reply SLV_ERR."]
-pub type SPI_AW_SIZE0_1_SUPPORT_EN_R = crate::BitReader;
-#[doc = "Field `SPI_AW_SIZE0_1_SUPPORT_EN` writer - 1: MSPI supports AWSIZE 0~3. 0: When AWSIZE 0~1, MSPI reply SLV_ERR."]
-pub type SPI_AW_SIZE0_1_SUPPORT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CS_HOLD_DLY_RES` reader - "]
+pub type CS_HOLD_DLY_RES_R = crate::FieldReader<u16>;
+#[doc = "Field `CS_HOLD_DLY_RES` writer - "]
+pub type CS_HOLD_DLY_RES_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
+#[doc = "Field `CS_HOLD_DLY_PER` reader - "]
+pub type CS_HOLD_DLY_PER_R = crate::FieldReader<u16>;
+#[doc = "Field `CS_HOLD_DLY_PER` writer - "]
+pub type CS_HOLD_DLY_PER_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
+#[doc = "Field `AR_SIZE0_1_SUPPORT_EN` reader - 1: MSPI supports ARSIZE 0~3. When ARSIZE =0~2, MSPI read address is 4*n and reply the real AXI read data back. 0: When ARSIZE 0~1, MSPI reply SLV_ERR."]
+pub type AR_SIZE0_1_SUPPORT_EN_R = crate::BitReader;
+#[doc = "Field `AR_SIZE0_1_SUPPORT_EN` writer - 1: MSPI supports ARSIZE 0~3. When ARSIZE =0~2, MSPI read address is 4*n and reply the real AXI read data back. 0: When ARSIZE 0~1, MSPI reply SLV_ERR."]
+pub type AR_SIZE0_1_SUPPORT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AW_SIZE0_1_SUPPORT_EN` reader - 1: MSPI supports AWSIZE 0~3. 0: When AWSIZE 0~1, MSPI reply SLV_ERR."]
+pub type AW_SIZE0_1_SUPPORT_EN_R = crate::BitReader;
+#[doc = "Field `AW_SIZE0_1_SUPPORT_EN` writer - 1: MSPI supports AWSIZE 0~3. 0: When AWSIZE 0~1, MSPI reply SLV_ERR."]
+pub type AW_SIZE0_1_SUPPORT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RRESP_ECC_ERR_EN` reader - 1: RRESP is SLV_ERR when there is a ECC error in AXI read data. 0: RRESP is OKAY when there is a ECC error in AXI read data. The ECC error information is recorded in SPI_MEM_ECC_ERR_ADDR_REG."]
 pub type RRESP_ECC_ERR_EN_R = crate::BitReader;
 #[doc = "Field `RRESP_ECC_ERR_EN` writer - 1: RRESP is SLV_ERR when there is a ECC error in AXI read data. 0: RRESP is OKAY when there is a ECC error in AXI read data. The ECC error information is recorded in SPI_MEM_ECC_ERR_ADDR_REG."]
@@ -44,15 +52,25 @@ impl R {
     pub fn clk_mode(&self) -> CLK_MODE_R {
         CLK_MODE_R::new((self.bits & 3) as u8)
     }
+    #[doc = "Bits 2:11"]
+    #[inline(always)]
+    pub fn cs_hold_dly_res(&self) -> CS_HOLD_DLY_RES_R {
+        CS_HOLD_DLY_RES_R::new(((self.bits >> 2) & 0x03ff) as u16)
+    }
+    #[doc = "Bits 12:21"]
+    #[inline(always)]
+    pub fn cs_hold_dly_per(&self) -> CS_HOLD_DLY_PER_R {
+        CS_HOLD_DLY_PER_R::new(((self.bits >> 12) & 0x03ff) as u16)
+    }
     #[doc = "Bit 22 - 1: MSPI supports ARSIZE 0~3. When ARSIZE =0~2, MSPI read address is 4*n and reply the real AXI read data back. 0: When ARSIZE 0~1, MSPI reply SLV_ERR."]
     #[inline(always)]
-    pub fn spi_ar_size0_1_support_en(&self) -> SPI_AR_SIZE0_1_SUPPORT_EN_R {
-        SPI_AR_SIZE0_1_SUPPORT_EN_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn ar_size0_1_support_en(&self) -> AR_SIZE0_1_SUPPORT_EN_R {
+        AR_SIZE0_1_SUPPORT_EN_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - 1: MSPI supports AWSIZE 0~3. 0: When AWSIZE 0~1, MSPI reply SLV_ERR."]
     #[inline(always)]
-    pub fn spi_aw_size0_1_support_en(&self) -> SPI_AW_SIZE0_1_SUPPORT_EN_R {
-        SPI_AW_SIZE0_1_SUPPORT_EN_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn aw_size0_1_support_en(&self) -> AW_SIZE0_1_SUPPORT_EN_R {
+        AW_SIZE0_1_SUPPORT_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - 1: RRESP is SLV_ERR when there is a ECC error in AXI read data. 0: RRESP is OKAY when there is a ECC error in AXI read data. The ECC error information is recorded in SPI_MEM_ECC_ERR_ADDR_REG."]
     #[inline(always)]
@@ -90,20 +108,16 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL1")
             .field("clk_mode", &self.clk_mode())
-            .field(
-                "spi_ar_size0_1_support_en",
-                &self.spi_ar_size0_1_support_en(),
-            )
-            .field(
-                "spi_aw_size0_1_support_en",
-                &self.spi_aw_size0_1_support_en(),
-            )
+            .field("ar_size0_1_support_en", &self.ar_size0_1_support_en())
+            .field("aw_size0_1_support_en", &self.aw_size0_1_support_en())
             .field("rresp_ecc_err_en", &self.rresp_ecc_err_en())
             .field("ar_splice_en", &self.ar_splice_en())
             .field("aw_splice_en", &self.aw_splice_en())
             .field("ram0_en", &self.ram0_en())
             .field("dual_ram_en", &self.dual_ram_en())
             .field("fast_write_en", &self.fast_write_en())
+            .field("cs_hold_dly_res", &self.cs_hold_dly_res())
+            .field("cs_hold_dly_per", &self.cs_hold_dly_per())
             .finish()
     }
 }
@@ -113,15 +127,25 @@ impl W {
     pub fn clk_mode(&mut self) -> CLK_MODE_W<'_, CTRL1_SPEC> {
         CLK_MODE_W::new(self, 0)
     }
+    #[doc = "Bits 2:11"]
+    #[inline(always)]
+    pub fn cs_hold_dly_res(&mut self) -> CS_HOLD_DLY_RES_W<'_, CTRL1_SPEC> {
+        CS_HOLD_DLY_RES_W::new(self, 2)
+    }
+    #[doc = "Bits 12:21"]
+    #[inline(always)]
+    pub fn cs_hold_dly_per(&mut self) -> CS_HOLD_DLY_PER_W<'_, CTRL1_SPEC> {
+        CS_HOLD_DLY_PER_W::new(self, 12)
+    }
     #[doc = "Bit 22 - 1: MSPI supports ARSIZE 0~3. When ARSIZE =0~2, MSPI read address is 4*n and reply the real AXI read data back. 0: When ARSIZE 0~1, MSPI reply SLV_ERR."]
     #[inline(always)]
-    pub fn spi_ar_size0_1_support_en(&mut self) -> SPI_AR_SIZE0_1_SUPPORT_EN_W<'_, CTRL1_SPEC> {
-        SPI_AR_SIZE0_1_SUPPORT_EN_W::new(self, 22)
+    pub fn ar_size0_1_support_en(&mut self) -> AR_SIZE0_1_SUPPORT_EN_W<'_, CTRL1_SPEC> {
+        AR_SIZE0_1_SUPPORT_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - 1: MSPI supports AWSIZE 0~3. 0: When AWSIZE 0~1, MSPI reply SLV_ERR."]
     #[inline(always)]
-    pub fn spi_aw_size0_1_support_en(&mut self) -> SPI_AW_SIZE0_1_SUPPORT_EN_W<'_, CTRL1_SPEC> {
-        SPI_AW_SIZE0_1_SUPPORT_EN_W::new(self, 23)
+    pub fn aw_size0_1_support_en(&mut self) -> AW_SIZE0_1_SUPPORT_EN_W<'_, CTRL1_SPEC> {
+        AW_SIZE0_1_SUPPORT_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - 1: RRESP is SLV_ERR when there is a ECC error in AXI read data. 0: RRESP is OKAY when there is a ECC error in AXI read data. The ECC error information is recorded in SPI_MEM_ECC_ERR_ADDR_REG."]
     #[inline(always)]

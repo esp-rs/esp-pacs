@@ -62,12 +62,8 @@ pub struct RegisterBlock {
     _reserved51: [u8; 0xf4],
     func_in_sel_cfg: [FUNC_IN_SEL_CFG; 256],
     _reserved52: [u8; 0x0400],
-    func_out_sel_cfg: [FUNC_OUT_SEL_CFG; 63],
-    func63_out_sel_cfg: FUNC63_OUT_SEL_CFG,
-    func64_out_sel_cfg: FUNC64_OUT_SEL_CFG,
-    func65_out_sel_cfg: FUNC65_OUT_SEL_CFG,
-    func66_out_sel_cfg: FUNC66_OUT_SEL_CFG,
-    _reserved57: [u8; 0x01f8],
+    func_out_sel_cfg: [FUNC_OUT_SEL_CFG; 67],
+    _reserved53: [u8; 0x01f8],
     clock_gate: CLOCK_GATE,
     date: DATE,
 }
@@ -1624,351 +1620,351 @@ impl RegisterBlock {
     pub const fn func255_in_sel_cfg(&self) -> &FUNC_IN_SEL_CFG {
         self.func_in_sel_cfg(255)
     }
-    #[doc = "0xaf4..0xbf0 - Configuration register for GPIO%s output"]
+    #[doc = "0xaf4..0xc00 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func_out_sel_cfg(&self, n: usize) -> &FUNC_OUT_SEL_CFG {
         &self.func_out_sel_cfg[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xaf4..0xbf0 - Configuration register for GPIO%s output"]
+    #[doc = "0xaf4..0xc00 - GPIO output function configuration register"]
     #[inline(always)]
     pub fn func_out_sel_cfg_iter(&self) -> impl Iterator<Item = &FUNC_OUT_SEL_CFG> {
         self.func_out_sel_cfg.iter()
     }
-    #[doc = "0xaf4 - Configuration register for GPIO0 output"]
+    #[doc = "0xaf4 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func0_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(0)
     }
-    #[doc = "0xaf8 - Configuration register for GPIO1 output"]
+    #[doc = "0xaf8 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func1_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(1)
     }
-    #[doc = "0xafc - Configuration register for GPIO2 output"]
+    #[doc = "0xafc - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func2_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(2)
     }
-    #[doc = "0xb00 - Configuration register for GPIO3 output"]
+    #[doc = "0xb00 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func3_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(3)
     }
-    #[doc = "0xb04 - Configuration register for GPIO4 output"]
+    #[doc = "0xb04 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func4_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(4)
     }
-    #[doc = "0xb08 - Configuration register for GPIO5 output"]
+    #[doc = "0xb08 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func5_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(5)
     }
-    #[doc = "0xb0c - Configuration register for GPIO6 output"]
+    #[doc = "0xb0c - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func6_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(6)
     }
-    #[doc = "0xb10 - Configuration register for GPIO7 output"]
+    #[doc = "0xb10 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func7_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(7)
     }
-    #[doc = "0xb14 - Configuration register for GPIO8 output"]
+    #[doc = "0xb14 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func8_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(8)
     }
-    #[doc = "0xb18 - Configuration register for GPIO9 output"]
+    #[doc = "0xb18 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func9_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(9)
     }
-    #[doc = "0xb1c - Configuration register for GPIO10 output"]
+    #[doc = "0xb1c - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func10_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(10)
     }
-    #[doc = "0xb20 - Configuration register for GPIO11 output"]
+    #[doc = "0xb20 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func11_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(11)
     }
-    #[doc = "0xb24 - Configuration register for GPIO12 output"]
+    #[doc = "0xb24 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func12_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(12)
     }
-    #[doc = "0xb28 - Configuration register for GPIO13 output"]
+    #[doc = "0xb28 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func13_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(13)
     }
-    #[doc = "0xb2c - Configuration register for GPIO14 output"]
+    #[doc = "0xb2c - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func14_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(14)
     }
-    #[doc = "0xb30 - Configuration register for GPIO15 output"]
+    #[doc = "0xb30 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func15_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(15)
     }
-    #[doc = "0xb34 - Configuration register for GPIO16 output"]
+    #[doc = "0xb34 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func16_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(16)
     }
-    #[doc = "0xb38 - Configuration register for GPIO17 output"]
+    #[doc = "0xb38 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func17_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(17)
     }
-    #[doc = "0xb3c - Configuration register for GPIO18 output"]
+    #[doc = "0xb3c - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func18_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(18)
     }
-    #[doc = "0xb40 - Configuration register for GPIO19 output"]
+    #[doc = "0xb40 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func19_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(19)
     }
-    #[doc = "0xb44 - Configuration register for GPIO20 output"]
+    #[doc = "0xb44 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func20_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(20)
     }
-    #[doc = "0xb48 - Configuration register for GPIO21 output"]
+    #[doc = "0xb48 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func21_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(21)
     }
-    #[doc = "0xb4c - Configuration register for GPIO22 output"]
+    #[doc = "0xb4c - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func22_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(22)
     }
-    #[doc = "0xb50 - Configuration register for GPIO23 output"]
+    #[doc = "0xb50 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func23_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(23)
     }
-    #[doc = "0xb54 - Configuration register for GPIO24 output"]
+    #[doc = "0xb54 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func24_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(24)
     }
-    #[doc = "0xb58 - Configuration register for GPIO25 output"]
+    #[doc = "0xb58 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func25_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(25)
     }
-    #[doc = "0xb5c - Configuration register for GPIO26 output"]
+    #[doc = "0xb5c - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func26_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(26)
     }
-    #[doc = "0xb60 - Configuration register for GPIO27 output"]
+    #[doc = "0xb60 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func27_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(27)
     }
-    #[doc = "0xb64 - Configuration register for GPIO28 output"]
+    #[doc = "0xb64 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func28_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(28)
     }
-    #[doc = "0xb68 - Configuration register for GPIO29 output"]
+    #[doc = "0xb68 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func29_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(29)
     }
-    #[doc = "0xb6c - Configuration register for GPIO30 output"]
+    #[doc = "0xb6c - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func30_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(30)
     }
-    #[doc = "0xb70 - Configuration register for GPIO31 output"]
+    #[doc = "0xb70 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func31_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(31)
     }
-    #[doc = "0xb74 - Configuration register for GPIO32 output"]
+    #[doc = "0xb74 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func32_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(32)
     }
-    #[doc = "0xb78 - Configuration register for GPIO33 output"]
+    #[doc = "0xb78 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func33_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(33)
     }
-    #[doc = "0xb7c - Configuration register for GPIO34 output"]
+    #[doc = "0xb7c - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func34_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(34)
     }
-    #[doc = "0xb80 - Configuration register for GPIO35 output"]
+    #[doc = "0xb80 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func35_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(35)
     }
-    #[doc = "0xb84 - Configuration register for GPIO36 output"]
+    #[doc = "0xb84 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func36_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(36)
     }
-    #[doc = "0xb88 - Configuration register for GPIO37 output"]
+    #[doc = "0xb88 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func37_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(37)
     }
-    #[doc = "0xb8c - Configuration register for GPIO38 output"]
+    #[doc = "0xb8c - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func38_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(38)
     }
-    #[doc = "0xb90 - Configuration register for GPIO39 output"]
+    #[doc = "0xb90 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func39_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(39)
     }
-    #[doc = "0xb94 - Configuration register for GPIO40 output"]
+    #[doc = "0xb94 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func40_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(40)
     }
-    #[doc = "0xb98 - Configuration register for GPIO41 output"]
+    #[doc = "0xb98 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func41_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(41)
     }
-    #[doc = "0xb9c - Configuration register for GPIO42 output"]
+    #[doc = "0xb9c - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func42_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(42)
     }
-    #[doc = "0xba0 - Configuration register for GPIO43 output"]
+    #[doc = "0xba0 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func43_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(43)
     }
-    #[doc = "0xba4 - Configuration register for GPIO44 output"]
+    #[doc = "0xba4 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func44_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(44)
     }
-    #[doc = "0xba8 - Configuration register for GPIO45 output"]
+    #[doc = "0xba8 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func45_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(45)
     }
-    #[doc = "0xbac - Configuration register for GPIO46 output"]
+    #[doc = "0xbac - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func46_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(46)
     }
-    #[doc = "0xbb0 - Configuration register for GPIO47 output"]
+    #[doc = "0xbb0 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func47_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(47)
     }
-    #[doc = "0xbb4 - Configuration register for GPIO48 output"]
+    #[doc = "0xbb4 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func48_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(48)
     }
-    #[doc = "0xbb8 - Configuration register for GPIO49 output"]
+    #[doc = "0xbb8 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func49_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(49)
     }
-    #[doc = "0xbbc - Configuration register for GPIO50 output"]
+    #[doc = "0xbbc - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func50_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(50)
     }
-    #[doc = "0xbc0 - Configuration register for GPIO51 output"]
+    #[doc = "0xbc0 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func51_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(51)
     }
-    #[doc = "0xbc4 - Configuration register for GPIO52 output"]
+    #[doc = "0xbc4 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func52_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(52)
     }
-    #[doc = "0xbc8 - Configuration register for GPIO53 output"]
+    #[doc = "0xbc8 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func53_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(53)
     }
-    #[doc = "0xbcc - Configuration register for GPIO54 output"]
+    #[doc = "0xbcc - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func54_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(54)
     }
-    #[doc = "0xbd0 - Configuration register for GPIO55 output"]
+    #[doc = "0xbd0 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func55_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(55)
     }
-    #[doc = "0xbd4 - Configuration register for GPIO56 output"]
+    #[doc = "0xbd4 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func56_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(56)
     }
-    #[doc = "0xbd8 - Configuration register for GPIO57 output"]
+    #[doc = "0xbd8 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func57_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(57)
     }
-    #[doc = "0xbdc - Configuration register for GPIO58 output"]
+    #[doc = "0xbdc - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func58_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(58)
     }
-    #[doc = "0xbe0 - Configuration register for GPIO59 output"]
+    #[doc = "0xbe0 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func59_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(59)
     }
-    #[doc = "0xbe4 - Configuration register for GPIO60 output"]
+    #[doc = "0xbe4 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func60_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(60)
     }
-    #[doc = "0xbe8 - Configuration register for GPIO61 output"]
+    #[doc = "0xbe8 - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func61_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(61)
     }
-    #[doc = "0xbec - Configuration register for GPIO62 output"]
+    #[doc = "0xbec - GPIO output function configuration register"]
     #[inline(always)]
     pub const fn func62_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
         self.func_out_sel_cfg(62)
     }
-    #[doc = "0xbf0 - Configuration register for GPIO$n output"]
+    #[doc = "0xbf0 - GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func63_out_sel_cfg(&self) -> &FUNC63_OUT_SEL_CFG {
-        &self.func63_out_sel_cfg
+    pub const fn func63_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(63)
     }
-    #[doc = "0xbf4 - Configuration register for GPIO$n output"]
+    #[doc = "0xbf4 - GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func64_out_sel_cfg(&self) -> &FUNC64_OUT_SEL_CFG {
-        &self.func64_out_sel_cfg
+    pub const fn func64_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(64)
     }
-    #[doc = "0xbf8 - Configuration register for GPIO$n output"]
+    #[doc = "0xbf8 - GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func65_out_sel_cfg(&self) -> &FUNC65_OUT_SEL_CFG {
-        &self.func65_out_sel_cfg
+    pub const fn func65_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(65)
     }
-    #[doc = "0xbfc - Configuration register for GPIO$n output"]
+    #[doc = "0xbfc - GPIO output function configuration register"]
     #[inline(always)]
-    pub const fn func66_out_sel_cfg(&self) -> &FUNC66_OUT_SEL_CFG {
-        &self.func66_out_sel_cfg
+    pub const fn func66_out_sel_cfg(&self) -> &FUNC_OUT_SEL_CFG {
+        self.func_out_sel_cfg(66)
     }
     #[doc = "0xdf8 - GPIO clock gate register"]
     #[inline(always)]
@@ -2181,26 +2177,10 @@ pub use PIN as PIN66;
 pub type FUNC_IN_SEL_CFG = crate::Reg<func_in_sel_cfg::FUNC_IN_SEL_CFG_SPEC>;
 #[doc = "GPIO input function configuration register"]
 pub mod func_in_sel_cfg;
-#[doc = "FUNC_OUT_SEL_CFG (rw) register accessor: Configuration register for GPIO%s output\n\nYou can [`read`](crate::Reg::read) this register and get [`func_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func_out_sel_cfg`] module"]
+#[doc = "FUNC_OUT_SEL_CFG (rw) register accessor: GPIO output function configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`func_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func_out_sel_cfg`] module"]
 pub type FUNC_OUT_SEL_CFG = crate::Reg<func_out_sel_cfg::FUNC_OUT_SEL_CFG_SPEC>;
-#[doc = "Configuration register for GPIO%s output"]
+#[doc = "GPIO output function configuration register"]
 pub mod func_out_sel_cfg;
-#[doc = "FUNC63_OUT_SEL_CFG (rw) register accessor: Configuration register for GPIO$n output\n\nYou can [`read`](crate::Reg::read) this register and get [`func63_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func63_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func63_out_sel_cfg`] module"]
-pub type FUNC63_OUT_SEL_CFG = crate::Reg<func63_out_sel_cfg::FUNC63_OUT_SEL_CFG_SPEC>;
-#[doc = "Configuration register for GPIO$n output"]
-pub mod func63_out_sel_cfg;
-#[doc = "FUNC64_OUT_SEL_CFG (rw) register accessor: Configuration register for GPIO$n output\n\nYou can [`read`](crate::Reg::read) this register and get [`func64_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func64_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func64_out_sel_cfg`] module"]
-pub type FUNC64_OUT_SEL_CFG = crate::Reg<func64_out_sel_cfg::FUNC64_OUT_SEL_CFG_SPEC>;
-#[doc = "Configuration register for GPIO$n output"]
-pub mod func64_out_sel_cfg;
-#[doc = "FUNC65_OUT_SEL_CFG (rw) register accessor: Configuration register for GPIO$n output\n\nYou can [`read`](crate::Reg::read) this register and get [`func65_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func65_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func65_out_sel_cfg`] module"]
-pub type FUNC65_OUT_SEL_CFG = crate::Reg<func65_out_sel_cfg::FUNC65_OUT_SEL_CFG_SPEC>;
-#[doc = "Configuration register for GPIO$n output"]
-pub mod func65_out_sel_cfg;
-#[doc = "FUNC66_OUT_SEL_CFG (rw) register accessor: Configuration register for GPIO$n output\n\nYou can [`read`](crate::Reg::read) this register and get [`func66_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func66_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func66_out_sel_cfg`] module"]
-pub type FUNC66_OUT_SEL_CFG = crate::Reg<func66_out_sel_cfg::FUNC66_OUT_SEL_CFG_SPEC>;
-#[doc = "Configuration register for GPIO$n output"]
-pub mod func66_out_sel_cfg;
 #[doc = "CLOCK_GATE (rw) register accessor: GPIO clock gate register\n\nYou can [`read`](crate::Reg::read) this register and get [`clock_gate::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clock_gate`] module"]
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "GPIO clock gate register"]

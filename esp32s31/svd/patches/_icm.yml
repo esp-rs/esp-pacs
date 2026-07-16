@@ -1,0 +1,728 @@
+_add:
+  ICM_SYS:
+    description: ICM AXI Interconnect System
+    groupName: ICM_SYS
+    baseAddress: 0x20510000
+    addressBlocks:
+      - offset: 0x0
+        size: 0x1000
+        usage: registers
+    registers:
+      DATE:
+        addressOffset: 0x400
+        size: 0x20
+        resetValue: 0x15fba94
+        fields:
+          REG_DATE:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      CLK_EN:
+        addressOffset: 0x404
+        size: 0x20
+        fields:
+          REG_CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      INTERRUPT_RAW:
+        addressOffset: 0x408
+        size: 0x20
+        fields:
+          REG_DEC_FAILURE_INT_RAW:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          REG_TIMEOUT_INT_RAW:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+      INTERRUPT_CLR:
+        addressOffset: 0x40c
+        size: 0x20
+        access: write-only
+        fields:
+          REG_DEC_FAILURE_INT_CLR:
+            bitOffset: 0
+            bitWidth: 1
+          REG_TIMEOUT_INT_CLR:
+            bitOffset: 1
+            bitWidth: 1
+      INTERRUPT_ENA:
+        addressOffset: 0x410
+        size: 0x20
+        fields:
+          REG_DEC_FAILURE_INT_ENA:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          REG_TIMEOUT_INT_ENA:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+      INTERRUPT_ST:
+        addressOffset: 0x414
+        size: 0x20
+        access: read-only
+        fields:
+          REG_DEC_FAILURE_INT_ST:
+            bitOffset: 0
+            bitWidth: 1
+          REG_TIMEOUT_INT_ST:
+            bitOffset: 1
+            bitWidth: 1
+      TIMEOUT_MAX_CNT:
+        addressOffset: 0x418
+        size: 0x20
+        resetValue: 0xffffffff
+        fields:
+          REG_TIMEOUT_MAX_CNT:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      TIMEOUT_INFO:
+        addressOffset: 0x41c
+        size: 0x20
+        access: read-only
+        fields:
+          REG_TIMEOUT_SLAVE:
+            bitOffset: 0
+            bitWidth: 3
+          REG_TIMEOUT_ID:
+            bitOffset: 3
+            bitWidth: 7
+          REG_TIMEOUT_WR:
+            bitOffset: 10
+            bitWidth: 1
+      DEC_FAILURE_INFO:
+        addressOffset: 0x420
+        size: 0x20
+        fields:
+          REG_DEC_FAILURE_READ_FIRST:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          REG_DEC_FAILURE_VALID:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-only
+          REG_DEC_FAILURE_TYPE:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-only
+          REG_DEC_FAILURE_CAUSE:
+            bitOffset: 3
+            bitWidth: 3
+            access: read-only
+          REG_DEC_FAILURE_MST_ID:
+            bitOffset: 6
+            bitWidth: 7
+            access: read-only
+      QOS_DEBUG_MST_SEL:
+        addressOffset: 0x424
+        size: 0x20
+        fields:
+          REG_QOS_DEBUG_MST_SEL:
+            bitOffset: 0
+            bitWidth: 4
+            access: read-write
+      MST_ARQOS_REG0:
+        addressOffset: 0x428
+        size: 0x20
+        fields:
+          REG_CPU_ARQOS:
+            bitOffset: 0
+            bitWidth: 4
+            access: read-write
+          REG_CACHE_ARQOS:
+            bitOffset: 4
+            bitWidth: 4
+            access: read-write
+          REG_DMA2D_ARQOS:
+            bitOffset: 8
+            bitWidth: 4
+            access: read-write
+          REG_AXI_PDMA_INT_ARQOS:
+            bitOffset: 12
+            bitWidth: 4
+            access: read-write
+          REG_GMAC_ARQOS:
+            bitOffset: 16
+            bitWidth: 4
+            access: read-write
+          REG_AXI_SDMMC_INT_ARQOS:
+            bitOffset: 20
+            bitWidth: 4
+            access: read-write
+      MST_AWQOS_REG0:
+        addressOffset: 0x430
+        size: 0x20
+        fields:
+          REG_CPU_AWQOS:
+            bitOffset: 0
+            bitWidth: 4
+            access: read-write
+          REG_CACHE_AWQOS:
+            bitOffset: 4
+            bitWidth: 4
+            access: read-write
+          REG_DMA2D_AWQOS:
+            bitOffset: 8
+            bitWidth: 4
+            access: read-write
+          REG_PDMA_INT_AWQOS:
+            bitOffset: 12
+            bitWidth: 4
+            access: read-write
+          REG_GMAC_AWQOS:
+            bitOffset: 16
+            bitWidth: 4
+            access: read-write
+          REG_AXI_SDMMC_INT_AWQOS:
+            bitOffset: 20
+            bitWidth: 4
+            access: read-write
+      DEC_FAILURE_ADDR:
+        addressOffset: 0x480
+        size: 0x20
+        access: read-only
+        fields:
+          REG_DEC_FAILURE_ADDR:
+            bitOffset: 0
+            bitWidth: 32
+      REG_SLAVE_IS_SECURE:
+        addressOffset: 0x484
+        size: 0x20
+        fields:
+          REG_SLAVE_IS_SECURE_0:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          REG_SLAVE_IS_SECURE_1:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          REG_SLAVE_IS_SECURE_2:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+      SLAVE_SECURITY_OVERRIDE:
+        addressOffset: 0x488
+        size: 0x20
+        fields:
+          REG_SLAVE_SECURITY_OVERRIDE_0:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          REG_SLAVE_SECURITY_OVERRIDE_1:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          REG_SLAVE_SECURITY_OVERRIDE_2:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+      MASTER_IS_SECURE:
+        addressOffset: 0x48c
+        size: 0x20
+        fields:
+          REG_MASTER_IS_SECURE_0:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          REG_MASTER_IS_SECURE_1:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          REG_MASTER_IS_SECURE_2:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          REG_MASTER_IS_SECURE_3:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          REG_MASTER_IS_SECURE_4:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          REG_MASTER_IS_SECURE_5:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+      MASTER_SECURITY_OVERRIDE:
+        addressOffset: 0x490
+        size: 0x20
+        fields:
+          REG_MASTER_SECURITY_OVERRIDE_0:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          REG_MASTER_SECURITY_OVERRIDE_1:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          REG_MASTER_SECURITY_OVERRIDE_2:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          REG_MASTER_SECURITY_OVERRIDE_3:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          REG_MASTER_SECURITY_OVERRIDE_4:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          REG_MASTER_SECURITY_OVERRIDE_5:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+      AW_QOS_VALUE%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x494
+        size: 0x20
+        fields:
+          REG_AW_QOS_VALUE_0:
+            bitOffset: 0
+            bitWidth: 4
+            access: read-write
+      AR_QOS_VALUE%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x4ac
+        size: 0x20
+        fields:
+          REG_AR_QOS_VALUE_0:
+            bitOffset: 0
+            bitWidth: 4
+            access: read-write
+      B_PRIOR_VALUE%s:
+        dim: 3
+        dimIncrement: 0x4
+        dimIndex: 0-2
+        addressOffset: 0x4c4
+        size: 0x20
+        fields:
+          REG_B_PRIOR_VALUE_0:
+            bitOffset: 0
+            bitWidth: 4
+            access: read-write
+      R_PRIOR_VALUE%s:
+        dim: 3
+        dimIncrement: 0x4
+        dimIndex: 0-2
+        addressOffset: 0x4d0
+        size: 0x20
+        fields:
+          REG_R_PRIOR_VALUE_0:
+            bitOffset: 0
+            bitWidth: 4
+            access: read-write
+      AW_QOS_SEL%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x4dc
+        size: 0x20
+        fields:
+          REG_AW_QOS_SEL_0:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+      AR_QOS_SEL%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x4f4
+        size: 0x20
+        fields:
+          REG_AR_QOS_SEL_0:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+      AW_QOS_RECOVERY:
+        addressOffset: 0x50c
+        size: 0x20
+        fields:
+          REG_AW_QOS_RECOVERY_0:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          REG_AW_QOS_RECOVERY_1:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          REG_AW_QOS_RECOVERY_2:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+      AR_QOS_RECOVERY:
+        addressOffset: 0x510
+        size: 0x20
+        fields:
+          REG_AR_QOS_RECOVERY_0:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          REG_AR_QOS_RECOVERY_1:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          REG_AR_QOS_RECOVERY_2:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+      AW_QOS_ID_MASK%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x514
+        size: 0x20
+        resetValue: 0xf
+        fields:
+          REG_AW_QOS_ID_MASK_0:
+            bitOffset: 0
+            bitWidth: 4
+            access: read-write
+      AR_QOS_ID_MASK%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x52c
+        size: 0x20
+        resetValue: 0xf
+        fields:
+          REG_AR_QOS_ID_MASK_0:
+            bitOffset: 0
+            bitWidth: 4
+            access: read-write
+      AW_QOS_ID_FILTER%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x544
+        size: 0x20
+        resetValue: 0xf
+        fields:
+          REG_AW_QOS_ID_FILTER_0:
+            bitOffset: 0
+            bitWidth: 4
+            access: read-write
+      AR_QOS_ID_FILTER%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x55c
+        size: 0x20
+        resetValue: 0xf
+        fields:
+          REG_AR_QOS_ID_FILTER_0:
+            bitOffset: 0
+            bitWidth: 4
+            access: read-write
+      AW_QOS_CTRL_CFG%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x574
+        size: 0x20
+        resetValue: 0x2010
+        fields:
+          REG_AW_QOS_CTRL_CFG_0:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      AR_QOS_CTRL_CFG%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x58c
+        size: 0x20
+        resetValue: 0x2010
+        fields:
+          REG_AR_QOS_CTRL_CFG_0:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      AW_QOS_TRANS_RATE%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x5a4
+        size: 0x20
+        resetValue: 0x3008
+        fields:
+          REG_AW_QOS_TRANS_RATE_0:
+            bitOffset: 0
+            bitWidth: 16
+            access: read-write
+      AR_QOS_TRANS_RATE%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x5bc
+        size: 0x20
+        resetValue: 0x3008
+        fields:
+          REG_AR_QOS_TRANS_RATE_0:
+            bitOffset: 0
+            bitWidth: 16
+            access: read-write
+      AW_QOS_PEAK_RATE%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x5d4
+        size: 0x20
+        fields:
+          REG_AW_QOS_PEAK_RATE_0:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+      AR_QOS_PEAK_RATE%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x5ec
+        size: 0x20
+        fields:
+          REG_AR_QOS_PEAK_RATE_0:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+      AW_QOS_BURSTINESS%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x604
+        size: 0x20
+        resetValue: 0x80
+        fields:
+          REG_AW_QOS_BURSTINESS_0:
+            bitOffset: 0
+            bitWidth: 12
+            access: read-write
+      AR_QOS_BURSTINESS%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x61c
+        size: 0x20
+        resetValue: 0x80
+        fields:
+          REG_AR_QOS_BURSTINESS_0:
+            bitOffset: 0
+            bitWidth: 12
+            access: read-write
+      AW_QOS_CFG_VLU%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x634
+        size: 0x20
+        resetValue: 0xda62
+        fields:
+          REG_AW_QOS_CFG_VLU_0:
+            bitOffset: 0
+            bitWidth: 16
+            access: read-write
+      AR_QOS_CFG_VLU%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x64c
+        size: 0x20
+        resetValue: 0xda62
+        fields:
+          REG_AR_QOS_CFG_VLU_0:
+            bitOffset: 0
+            bitWidth: 16
+            access: read-write
+      AW_QOS_DLY_THR0%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x664
+        size: 0x20
+        resetValue: 0x20
+        fields:
+          REG_AW_QOS_DLY_THR0_0:
+            bitOffset: 0
+            bitWidth: 13
+            access: read-write
+      AW_QOS_DLY_THR1%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x67c
+        size: 0x20
+        resetValue: 0xa0
+        fields:
+          REG_AW_QOS_DLY_THR1_0:
+            bitOffset: 0
+            bitWidth: 13
+            access: read-write
+      AW_QOS_DLY_THR2%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x694
+        size: 0x20
+        resetValue: 0x1a0
+        fields:
+          REG_AW_QOS_DLY_THR2_0:
+            bitOffset: 0
+            bitWidth: 13
+            access: read-write
+      AW_QOS_DLY_THR3%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x6ac
+        size: 0x20
+        resetValue: 0x3a0
+        fields:
+          REG_AW_QOS_DLY_THR3_0:
+            bitOffset: 0
+            bitWidth: 13
+            access: read-write
+      AR_QOS_DLY_THR0%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x6c4
+        size: 0x20
+        resetValue: 0x20
+        fields:
+          REG_AR_QOS_DLY_THR0_0:
+            bitOffset: 0
+            bitWidth: 13
+            access: read-write
+      AR_QOS_DLY_THR1%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x6dc
+        size: 0x20
+        resetValue: 0xa0
+        fields:
+          REG_AR_QOS_DLY_THR1_0:
+            bitOffset: 0
+            bitWidth: 13
+            access: read-write
+      AR_QOS_DLY_THR2%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x6f4
+        size: 0x20
+        resetValue: 0x1a0
+        fields:
+          REG_AR_QOS_DLY_THR2_0:
+            bitOffset: 0
+            bitWidth: 13
+            access: read-write
+      AR_QOS_DLY_THR3%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x70c
+        size: 0x20
+        resetValue: 0x3a0
+        fields:
+          REG_AR_QOS_DLY_THR3_0:
+            bitOffset: 0
+            bitWidth: 13
+            access: read-write
+      AW_QOS_BUR_LEN_THR%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x724
+        size: 0x20
+        resetValue: 0x40
+        fields:
+          REG_AW_QOS_BUR_LEN_THR_0:
+            bitOffset: 0
+            bitWidth: 10
+            access: read-write
+      AR_QOS_BUR_LEN_THR%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x73c
+        size: 0x20
+        resetValue: 0x40
+        fields:
+          REG_AR_QOS_BUR_LEN_THR_0:
+            bitOffset: 0
+            bitWidth: 10
+            access: read-write
+      AW_QOS_DBG_TK_THR%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x754
+        size: 0x20
+        resetValue: 0x10
+        fields:
+          REG_AW_QOS_DBG_TK_THR_0:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+      AR_QOS_DBG_TK_THR%s:
+        dim: 6
+        dimIncrement: 0x4
+        dimIndex: 0-5
+        addressOffset: 0x76c
+        size: 0x20
+        resetValue: 0x10
+        fields:
+          REG_AR_QOS_DBG_TK_THR_0:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+      MAX_OST_AW_S%s:
+        dim: 3
+        dimIncrement: 0x4
+        dimIndex: 0-2
+        addressOffset: 0x784
+        size: 0x20
+        resetValue: 0xf
+        fields:
+          REG_MAX_OST_AW_S_0:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+      MAX_OST_AR_S%s:
+        dim: 3
+        dimIncrement: 0x4
+        dimIndex: 0-2
+        addressOffset: 0x790
+        size: 0x20
+        resetValue: 0xf
+        fields:
+          REG_MAX_OST_AR_S_0:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+      AW_QOS_PEAK_RATE_MODE:
+        addressOffset: 0x79c
+        size: 0x20
+        fields:
+          REG_AW_QOS_PEAK_RATE_MODE:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+      AR_QOS_PEAK_RATE_MODE:
+        addressOffset: 0x7a0
+        size: 0x20
+        fields:
+          REG_AR_QOS_PEAK_RATE_MODE:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write

@@ -1,5 +1,19 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
+#[doc = "Register `INT_ST` writer"]
+pub type W = crate::W<INT_ST_SPEC>;
+#[doc = "Field `PER_END` reader - "]
+pub type PER_END_R = crate::BitReader;
+#[doc = "Field `PER_END` writer - "]
+pub type PER_END_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PES_END` reader - "]
+pub type PES_END_R = crate::BitReader;
+#[doc = "Field `PES_END` writer - "]
+pub type PES_END_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `WPE_END` reader - "]
+pub type WPE_END_R = crate::BitReader;
+#[doc = "Field `WPE_END` writer - "]
+pub type WPE_END_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_ST_END` reader - The status bit for SPI_MEM_SLV_ST_END_INT interrupt."]
 pub type SLV_ST_END_R = crate::BitReader;
 #[doc = "Field `MST_ST_END` reader - The status bit for SPI_MEM_MST_ST_END_INT interrupt."]
@@ -14,6 +28,10 @@ pub type AXI_RADDR_ERR_R = crate::BitReader;
 pub type AXI_WR_FLASH_ERR_R = crate::BitReader;
 #[doc = "Field `AXI_WADDR_ERR` reader - The enable bit for SPI_MEM_AXI_WADDR_ERR_INT interrupt."]
 pub type AXI_WADDR_ERR_R = crate::BitReader;
+#[doc = "Field `BROWN_OUT` reader - "]
+pub type BROWN_OUT_R = crate::BitReader;
+#[doc = "Field `BROWN_OUT` writer - "]
+pub type BROWN_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XTS_FAULT_DETECTED` reader - The status bit for SPI_MEM_XTS_FAULT_DETECTED_INT interrupt."]
 pub type XTS_FAULT_DETECTED_R = crate::BitReader;
 #[doc = "Field `RX_TRANS_OVF` reader - The status bit for SPI_MEM_RX_TRANS_OVF_INT interrupt."]
@@ -29,6 +47,21 @@ pub type BUS_FIFO1_UDF_R = crate::BitReader;
 #[doc = "Field `BUS_FIFO0_UDF` reader - The status bit for SPI_MEM_BUS_FIFO0_UDF_INT interrupt."]
 pub type BUS_FIFO0_UDF_R = crate::BitReader;
 impl R {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    pub fn per_end(&self) -> PER_END_R {
+        PER_END_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn pes_end(&self) -> PES_END_R {
+        PES_END_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2"]
+    #[inline(always)]
+    pub fn wpe_end(&self) -> WPE_END_R {
+        WPE_END_R::new(((self.bits >> 2) & 1) != 0)
+    }
     #[doc = "Bit 3 - The status bit for SPI_MEM_SLV_ST_END_INT interrupt."]
     #[inline(always)]
     pub fn slv_st_end(&self) -> SLV_ST_END_R {
@@ -63,6 +96,11 @@ impl R {
     #[inline(always)]
     pub fn axi_waddr_err(&self) -> AXI_WADDR_ERR_R {
         AXI_WADDR_ERR_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    pub fn brown_out(&self) -> BROWN_OUT_R {
+        BROWN_OUT_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 13 - The status bit for SPI_MEM_XTS_FAULT_DETECTED_INT interrupt."]
     #[inline(always)]
@@ -118,15 +156,45 @@ impl core::fmt::Debug for R {
             .field("dqs1_afifo_ovf", &self.dqs1_afifo_ovf())
             .field("bus_fifo1_udf", &self.bus_fifo1_udf())
             .field("bus_fifo0_udf", &self.bus_fifo0_udf())
+            .field("per_end", &self.per_end())
+            .field("pes_end", &self.pes_end())
+            .field("wpe_end", &self.wpe_end())
+            .field("brown_out", &self.brown_out())
             .finish()
     }
 }
-#[doc = "SPI0 interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+impl W {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    pub fn per_end(&mut self) -> PER_END_W<'_, INT_ST_SPEC> {
+        PER_END_W::new(self, 0)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn pes_end(&mut self) -> PES_END_W<'_, INT_ST_SPEC> {
+        PES_END_W::new(self, 1)
+    }
+    #[doc = "Bit 2"]
+    #[inline(always)]
+    pub fn wpe_end(&mut self) -> WPE_END_W<'_, INT_ST_SPEC> {
+        WPE_END_W::new(self, 2)
+    }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    pub fn brown_out(&mut self) -> BROWN_OUT_W<'_, INT_ST_SPEC> {
+        BROWN_OUT_W::new(self, 10)
+    }
+}
+#[doc = "SPI0 interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_st::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ST_SPEC;
 impl crate::RegisterSpec for INT_ST_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`int_st::R`](R) reader structure"]
 impl crate::Readable for INT_ST_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`int_st::W`](W) writer structure"]
+impl crate::Writable for INT_ST_SPEC {
+    type Safety = crate::Unsafe;
+}
 #[doc = "`reset()` method sets INT_ST to value 0"]
 impl crate::Resettable for INT_ST_SPEC {}

@@ -2,6 +2,18 @@
 pub type R = crate::R<INT_RAW_SPEC>;
 #[doc = "Register `INT_RAW` writer"]
 pub type W = crate::W<INT_RAW_SPEC>;
+#[doc = "Field `PER_END` reader - "]
+pub type PER_END_R = crate::BitReader;
+#[doc = "Field `PER_END` writer - "]
+pub type PER_END_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PES_END` reader - "]
+pub type PES_END_R = crate::BitReader;
+#[doc = "Field `PES_END` writer - "]
+pub type PES_END_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `WPE_END` reader - "]
+pub type WPE_END_R = crate::BitReader;
+#[doc = "Field `WPE_END` writer - "]
+pub type WPE_END_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLV_ST_END` reader - The raw bit for SPI_MEM_SLV_ST_END_INT interrupt. 1: Triggered when spi0_slv_st is changed from non idle state to idle state. It means that SPI_CS raises high. 0: Others"]
 pub type SLV_ST_END_R = crate::BitReader;
 #[doc = "Field `SLV_ST_END` writer - The raw bit for SPI_MEM_SLV_ST_END_INT interrupt. 1: Triggered when spi0_slv_st is changed from non idle state to idle state. It means that SPI_CS raises high. 0: Others"]
@@ -30,6 +42,10 @@ pub type AXI_WR_FLASH_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type AXI_WADDR_ERR_R = crate::BitReader;
 #[doc = "Field `AXI_WADDR_ERR` writer - The raw bit for SPI_MEM_AXI_WADDR_ERR_INT interrupt. 1: Triggered when AXI write address is invalid by compared to MMU configuration. 0: Others."]
 pub type AXI_WADDR_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BROWN_OUT` reader - "]
+pub type BROWN_OUT_R = crate::BitReader;
+#[doc = "Field `BROWN_OUT` writer - "]
+pub type BROWN_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XTS_FAULT_DETECTED` reader - The raw bit for SPI_MEM_XTS_FAULT_DETECTED_INT interrupt. 1: Triggered when xts aes core detected fault injection attack. 0: Others."]
 pub type XTS_FAULT_DETECTED_R = crate::BitReader;
 #[doc = "Field `XTS_FAULT_DETECTED` writer - The raw bit for SPI_MEM_XTS_FAULT_DETECTED_INT interrupt. 1: Triggered when xts aes core detected fault injection attack. 0: Others."]
@@ -59,6 +75,21 @@ pub type BUS_FIFO0_UDF_R = crate::BitReader;
 #[doc = "Field `BUS_FIFO0_UDF` writer - The raw bit for SPI_MEM_BUS_FIFO0_UDF_INT interrupt. 1: Triggered when BUS0 FIFO is underflow."]
 pub type BUS_FIFO0_UDF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    pub fn per_end(&self) -> PER_END_R {
+        PER_END_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn pes_end(&self) -> PES_END_R {
+        PES_END_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2"]
+    #[inline(always)]
+    pub fn wpe_end(&self) -> WPE_END_R {
+        WPE_END_R::new(((self.bits >> 2) & 1) != 0)
+    }
     #[doc = "Bit 3 - The raw bit for SPI_MEM_SLV_ST_END_INT interrupt. 1: Triggered when spi0_slv_st is changed from non idle state to idle state. It means that SPI_CS raises high. 0: Others"]
     #[inline(always)]
     pub fn slv_st_end(&self) -> SLV_ST_END_R {
@@ -93,6 +124,11 @@ impl R {
     #[inline(always)]
     pub fn axi_waddr_err(&self) -> AXI_WADDR_ERR_R {
         AXI_WADDR_ERR_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    pub fn brown_out(&self) -> BROWN_OUT_R {
+        BROWN_OUT_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 13 - The raw bit for SPI_MEM_XTS_FAULT_DETECTED_INT interrupt. 1: Triggered when xts aes core detected fault injection attack. 0: Others."]
     #[inline(always)]
@@ -148,10 +184,29 @@ impl core::fmt::Debug for R {
             .field("dqs1_afifo_ovf", &self.dqs1_afifo_ovf())
             .field("bus_fifo1_udf", &self.bus_fifo1_udf())
             .field("bus_fifo0_udf", &self.bus_fifo0_udf())
+            .field("per_end", &self.per_end())
+            .field("pes_end", &self.pes_end())
+            .field("wpe_end", &self.wpe_end())
+            .field("brown_out", &self.brown_out())
             .finish()
     }
 }
 impl W {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    pub fn per_end(&mut self) -> PER_END_W<'_, INT_RAW_SPEC> {
+        PER_END_W::new(self, 0)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn pes_end(&mut self) -> PES_END_W<'_, INT_RAW_SPEC> {
+        PES_END_W::new(self, 1)
+    }
+    #[doc = "Bit 2"]
+    #[inline(always)]
+    pub fn wpe_end(&mut self) -> WPE_END_W<'_, INT_RAW_SPEC> {
+        WPE_END_W::new(self, 2)
+    }
     #[doc = "Bit 3 - The raw bit for SPI_MEM_SLV_ST_END_INT interrupt. 1: Triggered when spi0_slv_st is changed from non idle state to idle state. It means that SPI_CS raises high. 0: Others"]
     #[inline(always)]
     pub fn slv_st_end(&mut self) -> SLV_ST_END_W<'_, INT_RAW_SPEC> {
@@ -186,6 +241,11 @@ impl W {
     #[inline(always)]
     pub fn axi_waddr_err(&mut self) -> AXI_WADDR_ERR_W<'_, INT_RAW_SPEC> {
         AXI_WADDR_ERR_W::new(self, 9)
+    }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    pub fn brown_out(&mut self) -> BROWN_OUT_W<'_, INT_RAW_SPEC> {
+        BROWN_OUT_W::new(self, 10)
     }
     #[doc = "Bit 13 - The raw bit for SPI_MEM_XTS_FAULT_DETECTED_INT interrupt. 1: Triggered when xts aes core detected fault injection attack. 0: Others."]
     #[inline(always)]

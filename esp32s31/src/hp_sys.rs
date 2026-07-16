@@ -3,79 +3,76 @@
 #[doc = "Register block"]
 pub struct RegisterBlock {
     ver_date: VER_DATE,
-    hp_clk_en: HP_CLK_EN,
+    clk_en: CLK_EN,
     _reserved2: [u8; 0x08],
-    hp_cpu_int_from_cpu_0: HP_CPU_INT_FROM_CPU_0,
-    hp_cpu_int_from_cpu_1: HP_CPU_INT_FROM_CPU_1,
-    hp_cpu_int_from_cpu_2: HP_CPU_INT_FROM_CPU_2,
-    hp_cpu_int_from_cpu_3: HP_CPU_INT_FROM_CPU_3,
-    _reserved6: [u8; 0x08],
-    hp_modem_diag_en: HP_MODEM_DIAG_EN,
-    _reserved7: [u8; 0x10],
-    hp_tcm_ram_pwr_ctrl0: HP_TCM_RAM_PWR_CTRL0,
-    hp_rom_pwr_ctrl0: HP_ROM_PWR_CTRL0,
-    _reserved9: [u8; 0x0c],
-    hp_probea_ctrl: HP_PROBEA_CTRL,
-    hp_probeb_ctrl: HP_PROBEB_CTRL,
-    _reserved11: [u8; 0x04],
-    hp_probe_out: HP_PROBE_OUT,
-    _reserved12: [u8; 0x04],
-    hp_cpu_corestalled_st: HP_CPU_CORESTALLED_ST,
-    _reserved13: [u8; 0x08],
-    hp_crypto_ctrl: HP_CRYPTO_CTRL,
-    _reserved14: [u8; 0x08],
-    hp_iomux_fpga_debug: HP_IOMUX_FPGA_DEBUG,
+    cpu_intr_from_cpu: [CPU_INTR_FROM_CPU; 4],
+    _reserved3: [u8; 0x08],
+    modem_diag_en: MODEM_DIAG_EN,
+    _reserved4: [u8; 0x10],
+    tcm_ram_pwr_ctrl0: TCM_RAM_PWR_CTRL0,
+    rom_pwr_ctrl0: ROM_PWR_CTRL0,
+    _reserved6: [u8; 0x0c],
+    probea_ctrl: PROBEA_CTRL,
+    probeb_ctrl: PROBEB_CTRL,
+    _reserved8: [u8; 0x04],
+    probe_out: PROBE_OUT,
+    _reserved9: [u8; 0x04],
+    cpu_corestalled_st: CPU_CORESTALLED_ST,
+    _reserved10: [u8; 0x08],
+    crypto_ctrl: CRYPTO_CTRL,
+    _reserved11: [u8; 0x08],
+    iomux_fpga_debug: IOMUX_FPGA_DEBUG,
     rdn_eco_cs: RDN_ECO_CS,
-    _reserved16: [u8; 0x60],
-    hp_tcm_rdn_eco_cs: HP_TCM_RDN_ECO_CS,
-    hp_tcm_rdn_eco_low: HP_TCM_RDN_ECO_LOW,
-    hp_tcm_rdn_eco_high: HP_TCM_RDN_ECO_HIGH,
-    _reserved19: [u8; 0x20],
-    hp_cache_pwr_ctrl: HP_CACHE_PWR_CTRL,
-    hp_tcm_data_dump_ctrl: HP_TCM_DATA_DUMP_CTRL,
-    hp_cpu_waiti_conf: HP_CPU_WAITI_CONF,
+    _reserved13: [u8; 0x60],
+    tcm_rdn_eco_cs: TCM_RDN_ECO_CS,
+    tcm_rdn_eco_low: TCM_RDN_ECO_LOW,
+    tcm_rdn_eco_high: TCM_RDN_ECO_HIGH,
+    _reserved16: [u8; 0x20],
+    cache_pwr_ctrl: CACHE_PWR_CTRL,
+    tcm_data_dump_ctrl: TCM_DATA_DUMP_CTRL,
+    cpu_waiti_conf: CPU_WAITI_CONF,
     core_debug_runstall_conf: CORE_DEBUG_RUNSTALL_CONF,
+    _reserved20: [u8; 0x04],
+    core_ibus_timeout_conf: CORE_IBUS_TIMEOUT_CONF,
+    core_dbus_timeout_conf: CORE_DBUS_TIMEOUT_CONF,
+    _reserved22: [u8; 0x0c],
+    icm_h2x_cfg: ICM_H2X_CFG,
     _reserved23: [u8; 0x04],
-    hp_core_ibus_timeout_conf: HP_CORE_IBUS_TIMEOUT_CONF,
-    hp_core_dbus_timeout_conf: HP_CORE_DBUS_TIMEOUT_CONF,
-    _reserved25: [u8; 0x0c],
-    hp_icm_h2x_cfg: HP_ICM_H2X_CFG,
-    _reserved26: [u8; 0x04],
-    hp_bitscrambler_peri_sel: HP_BITSCRAMBLER_PERI_SEL,
-    _reserved27: [u8; 0x04],
+    bitscrambler_peri_sel: BITSCRAMBLER_PERI_SEL,
+    _reserved24: [u8; 0x04],
     gdma_ctrl: GDMA_CTRL,
-    _reserved28: [u8; 0x0c],
+    _reserved25: [u8; 0x0c],
     vpu_ctrl: VPU_CTRL,
-    _reserved29: [u8; 0x14],
-    hp_design_for_verification0: HP_DESIGN_FOR_VERIFICATION0,
-    hp_design_for_verification1: HP_DESIGN_FOR_VERIFICATION1,
-    _reserved31: [u8; 0x10],
-    hp_ahb2axi_bresp_err_int_raw: HP_AHB2AXI_BRESP_ERR_INT_RAW,
-    hp_ahb2axi_bresp_err_int_st: HP_AHB2AXI_BRESP_ERR_INT_ST,
-    hp_ahb2axi_bresp_err_int_ena: HP_AHB2AXI_BRESP_ERR_INT_ENA,
-    hp_ahb2axi_bresp_err_int_clr: HP_AHB2AXI_BRESP_ERR_INT_CLR,
-    _reserved35: [u8; 0x08],
-    hp_core_dmactive_lpcore: HP_CORE_DMACTIVE_LPCORE,
-    hp_core_err_resp_dis: HP_CORE_ERR_RESP_DIS,
-    hp_core_timeout_int_raw: HP_CORE_TIMEOUT_INT_RAW,
-    hp_core_timeout_int_st: HP_CORE_TIMEOUT_INT_ST,
-    hp_core_timeout_int_ena: HP_CORE_TIMEOUT_INT_ENA,
-    hp_core_timeout_int_clr: HP_CORE_TIMEOUT_INT_CLR,
-    hp_core_pad_wakeup_event: HP_CORE_PAD_WAKEUP_EVENT,
-    _reserved42: [u8; 0x04],
-    hp_twai0_timestamp_l: HP_TWAI0_TIMESTAMP_L,
-    hp_twai0_timestamp_h: HP_TWAI0_TIMESTAMP_H,
-    hp_twai1_timestamp_l: HP_TWAI1_TIMESTAMP_L,
-    hp_twai1_timestamp_h: HP_TWAI1_TIMESTAMP_H,
-    _reserved46: [u8; 0x08],
-    hp_rng_cfg: HP_RNG_CFG,
-    _reserved47: [u8; 0x04],
-    hp_peri_mem_clk_force_on: HP_PERI_MEM_CLK_FORCE_ON,
-    _reserved48: [u8; 0x04],
+    _reserved26: [u8; 0x14],
+    design_for_verification0: DESIGN_FOR_VERIFICATION0,
+    design_for_verification1: DESIGN_FOR_VERIFICATION1,
+    _reserved28: [u8; 0x10],
+    ahb2axi_bresp_err_int_raw: AHB2AXI_BRESP_ERR_INT_RAW,
+    ahb2axi_bresp_err_int_st: AHB2AXI_BRESP_ERR_INT_ST,
+    ahb2axi_bresp_err_int_ena: AHB2AXI_BRESP_ERR_INT_ENA,
+    ahb2axi_bresp_err_int_clr: AHB2AXI_BRESP_ERR_INT_CLR,
+    _reserved32: [u8; 0x08],
+    core_dmactive_lpcore: CORE_DMACTIVE_LPCORE,
+    core_err_resp_dis: CORE_ERR_RESP_DIS,
+    core_timeout_int_raw: CORE_TIMEOUT_INT_RAW,
+    core_timeout_int_st: CORE_TIMEOUT_INT_ST,
+    core_timeout_int_ena: CORE_TIMEOUT_INT_ENA,
+    core_timeout_int_clr: CORE_TIMEOUT_INT_CLR,
+    core_pad_wakeup_event: CORE_PAD_WAKEUP_EVENT,
+    _reserved39: [u8; 0x04],
+    twai0_timestamp_l: TWAI0_TIMESTAMP_L,
+    twai0_timestamp_h: TWAI0_TIMESTAMP_H,
+    twai1_timestamp_l: TWAI1_TIMESTAMP_L,
+    twai1_timestamp_h: TWAI1_TIMESTAMP_H,
+    _reserved43: [u8; 0x08],
+    rng_cfg: RNG_CFG,
+    _reserved44: [u8; 0x04],
+    peri_mem_clk_force_on: PERI_MEM_CLK_FORCE_ON,
+    _reserved45: [u8; 0x04],
     prdyn_st: PRDYN_ST,
     icm_cfg: ICM_CFG,
     uart3_mem_lp_ctrl: UART3_MEM_LP_CTRL,
-    _reserved51: [u8; 0x10],
+    _reserved48: [u8; 0x10],
     rmt_mem_lp_ctrl: RMT_MEM_LP_CTRL,
     ledc0_mem_lp_ctrl: LEDC0_MEM_LP_CTRL,
     km_mem_lp_ctrl: KM_MEM_LP_CTRL,
@@ -84,26 +81,26 @@ pub struct RegisterBlock {
     ecc_mem_lp_ctrl: ECC_MEM_LP_CTRL,
     rsa_mem_lp_ctrl: RSA_MEM_LP_CTRL,
     bitscram_mem_lp_ctrl: BITSCRAM_MEM_LP_CTRL,
-    _reserved59: [u8; 0x04],
+    _reserved56: [u8; 0x04],
     can0_mem_lp_ctrl: CAN0_MEM_LP_CTRL,
-    _reserved60: [u8; 0x08],
+    _reserved57: [u8; 0x08],
     mspi_mem_lp_ctrl: MSPI_MEM_LP_CTRL,
-    _reserved61: [u8; 0x14],
+    _reserved58: [u8; 0x14],
     hpcore_mem_lp_ctrl: HPCORE_MEM_LP_CTRL,
     rom_mem_lp_ctrl: ROM_MEM_LP_CTRL,
-    _reserved63: [u8; 0x08],
+    _reserved60: [u8; 0x08],
     l1_cache_mem_lp_ctrl: L1_CACHE_MEM_LP_CTRL,
     kyber_mem_lp_ctrl: KYBER_MEM_LP_CTRL,
     lcdcam_mem_lp_ctrl: LCDCAM_MEM_LP_CTRL,
     cpu_peri0_timeout_conf: CPU_PERI0_TIMEOUT_CONF,
     cpu_peri0_timeout_addr: CPU_PERI0_TIMEOUT_ADDR,
     cpu_peri0_timeout_uid: CPU_PERI0_TIMEOUT_UID,
-    hp_peri0_timeout_conf: HP_PERI0_TIMEOUT_CONF,
-    hp_peri0_timeout_addr: HP_PERI0_TIMEOUT_ADDR,
-    hp_peri0_timeout_uid: HP_PERI0_TIMEOUT_UID,
-    hp_peri1_timeout_conf: HP_PERI1_TIMEOUT_CONF,
-    hp_peri1_timeout_addr: HP_PERI1_TIMEOUT_ADDR,
-    hp_peri1_timeout_uid: HP_PERI1_TIMEOUT_UID,
+    peri0_timeout_conf: PERI0_TIMEOUT_CONF,
+    peri0_timeout_addr: PERI0_TIMEOUT_ADDR,
+    peri0_timeout_uid: PERI0_TIMEOUT_UID,
+    peri1_timeout_conf: PERI1_TIMEOUT_CONF,
+    peri1_timeout_addr: PERI1_TIMEOUT_ADDR,
+    peri1_timeout_uid: PERI1_TIMEOUT_UID,
     uart0_mem_lp_ctrl: UART0_MEM_LP_CTRL,
     uart1_mem_lp_ctrl: UART1_MEM_LP_CTRL,
     uart2_mem_lp_ctrl: UART2_MEM_LP_CTRL,
@@ -115,7 +112,7 @@ pub struct RegisterBlock {
     cpu_peri1_timeout_addr: CPU_PERI1_TIMEOUT_ADDR,
     cpu_peri1_timeout_uid: CPU_PERI1_TIMEOUT_UID,
     cpu_acs_cache_mem_conf: CPU_ACS_CACHE_MEM_CONF,
-    _reserved86: [u8; 0x28],
+    _reserved83: [u8; 0x28],
     tcm_performace_ctrl: TCM_PERFORMACE_CTRL,
     sdio_pad_bist_cfg: SDIO_PAD_BIST_CFG,
     sdio_pad_bist_int_raw: SDIO_PAD_BIST_INT_RAW,
@@ -148,73 +145,64 @@ impl RegisterBlock {
     }
     #[doc = "0x04 - NA"]
     #[inline(always)]
-    pub const fn hp_clk_en(&self) -> &HP_CLK_EN {
-        &self.hp_clk_en
+    pub const fn clk_en(&self) -> &CLK_EN {
+        &self.clk_en
     }
-    #[doc = "0x10 - NA"]
+    #[doc = "0x10..0x20 - NA"]
     #[inline(always)]
-    pub const fn hp_cpu_int_from_cpu_0(&self) -> &HP_CPU_INT_FROM_CPU_0 {
-        &self.hp_cpu_int_from_cpu_0
+    pub const fn cpu_intr_from_cpu(&self, n: usize) -> &CPU_INTR_FROM_CPU {
+        &self.cpu_intr_from_cpu[n]
     }
-    #[doc = "0x14 - NA"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x10..0x20 - NA"]
     #[inline(always)]
-    pub const fn hp_cpu_int_from_cpu_1(&self) -> &HP_CPU_INT_FROM_CPU_1 {
-        &self.hp_cpu_int_from_cpu_1
-    }
-    #[doc = "0x18 - NA"]
-    #[inline(always)]
-    pub const fn hp_cpu_int_from_cpu_2(&self) -> &HP_CPU_INT_FROM_CPU_2 {
-        &self.hp_cpu_int_from_cpu_2
-    }
-    #[doc = "0x1c - NA"]
-    #[inline(always)]
-    pub const fn hp_cpu_int_from_cpu_3(&self) -> &HP_CPU_INT_FROM_CPU_3 {
-        &self.hp_cpu_int_from_cpu_3
+    pub fn cpu_intr_from_cpu_iter(&self) -> impl Iterator<Item = &CPU_INTR_FROM_CPU> {
+        self.cpu_intr_from_cpu.iter()
     }
     #[doc = "0x28 - NA"]
     #[inline(always)]
-    pub const fn hp_modem_diag_en(&self) -> &HP_MODEM_DIAG_EN {
-        &self.hp_modem_diag_en
+    pub const fn modem_diag_en(&self) -> &MODEM_DIAG_EN {
+        &self.modem_diag_en
     }
     #[doc = "0x3c - NA"]
     #[inline(always)]
-    pub const fn hp_tcm_ram_pwr_ctrl0(&self) -> &HP_TCM_RAM_PWR_CTRL0 {
-        &self.hp_tcm_ram_pwr_ctrl0
+    pub const fn tcm_ram_pwr_ctrl0(&self) -> &TCM_RAM_PWR_CTRL0 {
+        &self.tcm_ram_pwr_ctrl0
     }
     #[doc = "0x40 - NA"]
     #[inline(always)]
-    pub const fn hp_rom_pwr_ctrl0(&self) -> &HP_ROM_PWR_CTRL0 {
-        &self.hp_rom_pwr_ctrl0
+    pub const fn rom_pwr_ctrl0(&self) -> &ROM_PWR_CTRL0 {
+        &self.rom_pwr_ctrl0
     }
     #[doc = "0x50 - NA"]
     #[inline(always)]
-    pub const fn hp_probea_ctrl(&self) -> &HP_PROBEA_CTRL {
-        &self.hp_probea_ctrl
+    pub const fn probea_ctrl(&self) -> &PROBEA_CTRL {
+        &self.probea_ctrl
     }
     #[doc = "0x54 - NA"]
     #[inline(always)]
-    pub const fn hp_probeb_ctrl(&self) -> &HP_PROBEB_CTRL {
-        &self.hp_probeb_ctrl
+    pub const fn probeb_ctrl(&self) -> &PROBEB_CTRL {
+        &self.probeb_ctrl
     }
     #[doc = "0x5c - NA"]
     #[inline(always)]
-    pub const fn hp_probe_out(&self) -> &HP_PROBE_OUT {
-        &self.hp_probe_out
+    pub const fn probe_out(&self) -> &PROBE_OUT {
+        &self.probe_out
     }
     #[doc = "0x64 - NA"]
     #[inline(always)]
-    pub const fn hp_cpu_corestalled_st(&self) -> &HP_CPU_CORESTALLED_ST {
-        &self.hp_cpu_corestalled_st
+    pub const fn cpu_corestalled_st(&self) -> &CPU_CORESTALLED_ST {
+        &self.cpu_corestalled_st
     }
     #[doc = "0x70 - NA"]
     #[inline(always)]
-    pub const fn hp_crypto_ctrl(&self) -> &HP_CRYPTO_CTRL {
-        &self.hp_crypto_ctrl
+    pub const fn crypto_ctrl(&self) -> &CRYPTO_CTRL {
+        &self.crypto_ctrl
     }
     #[doc = "0x7c - NA"]
     #[inline(always)]
-    pub const fn hp_iomux_fpga_debug(&self) -> &HP_IOMUX_FPGA_DEBUG {
-        &self.hp_iomux_fpga_debug
+    pub const fn iomux_fpga_debug(&self) -> &IOMUX_FPGA_DEBUG {
+        &self.iomux_fpga_debug
     }
     #[doc = "0x80 - NA"]
     #[inline(always)]
@@ -223,33 +211,33 @@ impl RegisterBlock {
     }
     #[doc = "0xe4 - NA"]
     #[inline(always)]
-    pub const fn hp_tcm_rdn_eco_cs(&self) -> &HP_TCM_RDN_ECO_CS {
-        &self.hp_tcm_rdn_eco_cs
+    pub const fn tcm_rdn_eco_cs(&self) -> &TCM_RDN_ECO_CS {
+        &self.tcm_rdn_eco_cs
     }
     #[doc = "0xe8 - NA"]
     #[inline(always)]
-    pub const fn hp_tcm_rdn_eco_low(&self) -> &HP_TCM_RDN_ECO_LOW {
-        &self.hp_tcm_rdn_eco_low
+    pub const fn tcm_rdn_eco_low(&self) -> &TCM_RDN_ECO_LOW {
+        &self.tcm_rdn_eco_low
     }
     #[doc = "0xec - NA"]
     #[inline(always)]
-    pub const fn hp_tcm_rdn_eco_high(&self) -> &HP_TCM_RDN_ECO_HIGH {
-        &self.hp_tcm_rdn_eco_high
+    pub const fn tcm_rdn_eco_high(&self) -> &TCM_RDN_ECO_HIGH {
+        &self.tcm_rdn_eco_high
     }
     #[doc = "0x110 - NA"]
     #[inline(always)]
-    pub const fn hp_cache_pwr_ctrl(&self) -> &HP_CACHE_PWR_CTRL {
-        &self.hp_cache_pwr_ctrl
+    pub const fn cache_pwr_ctrl(&self) -> &CACHE_PWR_CTRL {
+        &self.cache_pwr_ctrl
     }
     #[doc = "0x114 - need_des"]
     #[inline(always)]
-    pub const fn hp_tcm_data_dump_ctrl(&self) -> &HP_TCM_DATA_DUMP_CTRL {
-        &self.hp_tcm_data_dump_ctrl
+    pub const fn tcm_data_dump_ctrl(&self) -> &TCM_DATA_DUMP_CTRL {
+        &self.tcm_data_dump_ctrl
     }
     #[doc = "0x118 - CPU_WAITI configuration register"]
     #[inline(always)]
-    pub const fn hp_cpu_waiti_conf(&self) -> &HP_CPU_WAITI_CONF {
-        &self.hp_cpu_waiti_conf
+    pub const fn cpu_waiti_conf(&self) -> &CPU_WAITI_CONF {
+        &self.cpu_waiti_conf
     }
     #[doc = "0x11c - Core Debug runstall configure register"]
     #[inline(always)]
@@ -258,23 +246,23 @@ impl RegisterBlock {
     }
     #[doc = "0x124 - need_des"]
     #[inline(always)]
-    pub const fn hp_core_ibus_timeout_conf(&self) -> &HP_CORE_IBUS_TIMEOUT_CONF {
-        &self.hp_core_ibus_timeout_conf
+    pub const fn core_ibus_timeout_conf(&self) -> &CORE_IBUS_TIMEOUT_CONF {
+        &self.core_ibus_timeout_conf
     }
     #[doc = "0x128 - need_des"]
     #[inline(always)]
-    pub const fn hp_core_dbus_timeout_conf(&self) -> &HP_CORE_DBUS_TIMEOUT_CONF {
-        &self.hp_core_dbus_timeout_conf
+    pub const fn core_dbus_timeout_conf(&self) -> &CORE_DBUS_TIMEOUT_CONF {
+        &self.core_dbus_timeout_conf
     }
     #[doc = "0x138 - need_des"]
     #[inline(always)]
-    pub const fn hp_icm_h2x_cfg(&self) -> &HP_ICM_H2X_CFG {
-        &self.hp_icm_h2x_cfg
+    pub const fn icm_h2x_cfg(&self) -> &ICM_H2X_CFG {
+        &self.icm_h2x_cfg
     }
     #[doc = "0x140 - Bitscrambler Peri Sel"]
     #[inline(always)]
-    pub const fn hp_bitscrambler_peri_sel(&self) -> &HP_BITSCRAMBLER_PERI_SEL {
-        &self.hp_bitscrambler_peri_sel
+    pub const fn bitscrambler_peri_sel(&self) -> &BITSCRAMBLER_PERI_SEL {
+        &self.bitscrambler_peri_sel
     }
     #[doc = "0x148 - N/A"]
     #[inline(always)]
@@ -288,98 +276,98 @@ impl RegisterBlock {
     }
     #[doc = "0x170 - need_des"]
     #[inline(always)]
-    pub const fn hp_design_for_verification0(&self) -> &HP_DESIGN_FOR_VERIFICATION0 {
-        &self.hp_design_for_verification0
+    pub const fn design_for_verification0(&self) -> &DESIGN_FOR_VERIFICATION0 {
+        &self.design_for_verification0
     }
     #[doc = "0x174 - need_des"]
     #[inline(always)]
-    pub const fn hp_design_for_verification1(&self) -> &HP_DESIGN_FOR_VERIFICATION1 {
-        &self.hp_design_for_verification1
+    pub const fn design_for_verification1(&self) -> &DESIGN_FOR_VERIFICATION1 {
+        &self.design_for_verification1
     }
     #[doc = "0x188 - NA"]
     #[inline(always)]
-    pub const fn hp_ahb2axi_bresp_err_int_raw(&self) -> &HP_AHB2AXI_BRESP_ERR_INT_RAW {
-        &self.hp_ahb2axi_bresp_err_int_raw
+    pub const fn ahb2axi_bresp_err_int_raw(&self) -> &AHB2AXI_BRESP_ERR_INT_RAW {
+        &self.ahb2axi_bresp_err_int_raw
     }
     #[doc = "0x18c - need_des"]
     #[inline(always)]
-    pub const fn hp_ahb2axi_bresp_err_int_st(&self) -> &HP_AHB2AXI_BRESP_ERR_INT_ST {
-        &self.hp_ahb2axi_bresp_err_int_st
+    pub const fn ahb2axi_bresp_err_int_st(&self) -> &AHB2AXI_BRESP_ERR_INT_ST {
+        &self.ahb2axi_bresp_err_int_st
     }
     #[doc = "0x190 - need_des"]
     #[inline(always)]
-    pub const fn hp_ahb2axi_bresp_err_int_ena(&self) -> &HP_AHB2AXI_BRESP_ERR_INT_ENA {
-        &self.hp_ahb2axi_bresp_err_int_ena
+    pub const fn ahb2axi_bresp_err_int_ena(&self) -> &AHB2AXI_BRESP_ERR_INT_ENA {
+        &self.ahb2axi_bresp_err_int_ena
     }
     #[doc = "0x194 - need_des"]
     #[inline(always)]
-    pub const fn hp_ahb2axi_bresp_err_int_clr(&self) -> &HP_AHB2AXI_BRESP_ERR_INT_CLR {
-        &self.hp_ahb2axi_bresp_err_int_clr
+    pub const fn ahb2axi_bresp_err_int_clr(&self) -> &AHB2AXI_BRESP_ERR_INT_CLR {
+        &self.ahb2axi_bresp_err_int_clr
     }
     #[doc = "0x1a0 - need_des"]
     #[inline(always)]
-    pub const fn hp_core_dmactive_lpcore(&self) -> &HP_CORE_DMACTIVE_LPCORE {
-        &self.hp_core_dmactive_lpcore
+    pub const fn core_dmactive_lpcore(&self) -> &CORE_DMACTIVE_LPCORE {
+        &self.core_dmactive_lpcore
     }
     #[doc = "0x1a4 - need_des"]
     #[inline(always)]
-    pub const fn hp_core_err_resp_dis(&self) -> &HP_CORE_ERR_RESP_DIS {
-        &self.hp_core_err_resp_dis
+    pub const fn core_err_resp_dis(&self) -> &CORE_ERR_RESP_DIS {
+        &self.core_err_resp_dis
     }
     #[doc = "0x1a8 - Hp core bus timeout interrupt raw register"]
     #[inline(always)]
-    pub const fn hp_core_timeout_int_raw(&self) -> &HP_CORE_TIMEOUT_INT_RAW {
-        &self.hp_core_timeout_int_raw
+    pub const fn core_timeout_int_raw(&self) -> &CORE_TIMEOUT_INT_RAW {
+        &self.core_timeout_int_raw
     }
     #[doc = "0x1ac - masked interrupt register"]
     #[inline(always)]
-    pub const fn hp_core_timeout_int_st(&self) -> &HP_CORE_TIMEOUT_INT_ST {
-        &self.hp_core_timeout_int_st
+    pub const fn core_timeout_int_st(&self) -> &CORE_TIMEOUT_INT_ST {
+        &self.core_timeout_int_st
     }
     #[doc = "0x1b0 - masked interrupt register"]
     #[inline(always)]
-    pub const fn hp_core_timeout_int_ena(&self) -> &HP_CORE_TIMEOUT_INT_ENA {
-        &self.hp_core_timeout_int_ena
+    pub const fn core_timeout_int_ena(&self) -> &CORE_TIMEOUT_INT_ENA {
+        &self.core_timeout_int_ena
     }
     #[doc = "0x1b4 - interrupt clear register"]
     #[inline(always)]
-    pub const fn hp_core_timeout_int_clr(&self) -> &HP_CORE_TIMEOUT_INT_CLR {
-        &self.hp_core_timeout_int_clr
+    pub const fn core_timeout_int_clr(&self) -> &CORE_TIMEOUT_INT_CLR {
+        &self.core_timeout_int_clr
     }
     #[doc = "0x1b8 - pad wakeup event register"]
     #[inline(always)]
-    pub const fn hp_core_pad_wakeup_event(&self) -> &HP_CORE_PAD_WAKEUP_EVENT {
-        &self.hp_core_pad_wakeup_event
+    pub const fn core_pad_wakeup_event(&self) -> &CORE_PAD_WAKEUP_EVENT {
+        &self.core_pad_wakeup_event
     }
     #[doc = "0x1c0 - twai0 timestamp low bit reg"]
     #[inline(always)]
-    pub const fn hp_twai0_timestamp_l(&self) -> &HP_TWAI0_TIMESTAMP_L {
-        &self.hp_twai0_timestamp_l
+    pub const fn twai0_timestamp_l(&self) -> &TWAI0_TIMESTAMP_L {
+        &self.twai0_timestamp_l
     }
     #[doc = "0x1c4 - twai0 timestamp high bit reg"]
     #[inline(always)]
-    pub const fn hp_twai0_timestamp_h(&self) -> &HP_TWAI0_TIMESTAMP_H {
-        &self.hp_twai0_timestamp_h
+    pub const fn twai0_timestamp_h(&self) -> &TWAI0_TIMESTAMP_H {
+        &self.twai0_timestamp_h
     }
     #[doc = "0x1c8 - twai1 timestamp low bit reg"]
     #[inline(always)]
-    pub const fn hp_twai1_timestamp_l(&self) -> &HP_TWAI1_TIMESTAMP_L {
-        &self.hp_twai1_timestamp_l
+    pub const fn twai1_timestamp_l(&self) -> &TWAI1_TIMESTAMP_L {
+        &self.twai1_timestamp_l
     }
     #[doc = "0x1cc - twai1 timestamp high bit reg"]
     #[inline(always)]
-    pub const fn hp_twai1_timestamp_h(&self) -> &HP_TWAI1_TIMESTAMP_H {
-        &self.hp_twai1_timestamp_h
+    pub const fn twai1_timestamp_h(&self) -> &TWAI1_TIMESTAMP_H {
+        &self.twai1_timestamp_h
     }
     #[doc = "0x1d8 - rng cfg register"]
     #[inline(always)]
-    pub const fn hp_rng_cfg(&self) -> &HP_RNG_CFG {
-        &self.hp_rng_cfg
+    pub const fn rng_cfg(&self) -> &RNG_CFG {
+        &self.rng_cfg
     }
     #[doc = "0x1e0 - hp peri mem clk force on regpster"]
     #[inline(always)]
-    pub const fn hp_peri_mem_clk_force_on(&self) -> &HP_PERI_MEM_CLK_FORCE_ON {
-        &self.hp_peri_mem_clk_force_on
+    pub const fn peri_mem_clk_force_on(&self) -> &PERI_MEM_CLK_FORCE_ON {
+        &self.peri_mem_clk_force_on
     }
     #[doc = "0x1e8 - hp system prdyn status register"]
     #[inline(always)]
@@ -488,33 +476,33 @@ impl RegisterBlock {
     }
     #[doc = "0x274 - HP_PERI0_TIMEOUT configuration register"]
     #[inline(always)]
-    pub const fn hp_peri0_timeout_conf(&self) -> &HP_PERI0_TIMEOUT_CONF {
-        &self.hp_peri0_timeout_conf
+    pub const fn peri0_timeout_conf(&self) -> &PERI0_TIMEOUT_CONF {
+        &self.peri0_timeout_conf
     }
     #[doc = "0x278 - HP_PERI0_TIMEOUT_ADDR register"]
     #[inline(always)]
-    pub const fn hp_peri0_timeout_addr(&self) -> &HP_PERI0_TIMEOUT_ADDR {
-        &self.hp_peri0_timeout_addr
+    pub const fn peri0_timeout_addr(&self) -> &PERI0_TIMEOUT_ADDR {
+        &self.peri0_timeout_addr
     }
     #[doc = "0x27c - HP_PERI0_TIMEOUT_UID register"]
     #[inline(always)]
-    pub const fn hp_peri0_timeout_uid(&self) -> &HP_PERI0_TIMEOUT_UID {
-        &self.hp_peri0_timeout_uid
+    pub const fn peri0_timeout_uid(&self) -> &PERI0_TIMEOUT_UID {
+        &self.peri0_timeout_uid
     }
     #[doc = "0x280 - HP_PERI1_TIMEOUT configuration register"]
     #[inline(always)]
-    pub const fn hp_peri1_timeout_conf(&self) -> &HP_PERI1_TIMEOUT_CONF {
-        &self.hp_peri1_timeout_conf
+    pub const fn peri1_timeout_conf(&self) -> &PERI1_TIMEOUT_CONF {
+        &self.peri1_timeout_conf
     }
     #[doc = "0x284 - HP_PERI1_TIMEOUT_ADDR register"]
     #[inline(always)]
-    pub const fn hp_peri1_timeout_addr(&self) -> &HP_PERI1_TIMEOUT_ADDR {
-        &self.hp_peri1_timeout_addr
+    pub const fn peri1_timeout_addr(&self) -> &PERI1_TIMEOUT_ADDR {
+        &self.peri1_timeout_addr
     }
     #[doc = "0x288 - HP_PERI1_TIMEOUT_UID register"]
     #[inline(always)]
-    pub const fn hp_peri1_timeout_uid(&self) -> &HP_PERI1_TIMEOUT_UID {
-        &self.hp_peri1_timeout_uid
+    pub const fn peri1_timeout_uid(&self) -> &PERI1_TIMEOUT_UID {
+        &self.peri1_timeout_uid
     }
     #[doc = "0x28c - uart memory power control register"]
     #[inline(always)]
@@ -691,114 +679,99 @@ impl RegisterBlock {
 pub type VER_DATE = crate::Reg<ver_date::VER_DATE_SPEC>;
 #[doc = "NA"]
 pub mod ver_date;
-#[doc = "HP_CLK_EN (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_clk_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_clk_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_clk_en`] module"]
-pub type HP_CLK_EN = crate::Reg<hp_clk_en::HP_CLK_EN_SPEC>;
+#[doc = "CLK_EN (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`clk_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk_en`] module"]
+pub type CLK_EN = crate::Reg<clk_en::CLK_EN_SPEC>;
 #[doc = "NA"]
-pub mod hp_clk_en;
-#[doc = "HP_CPU_INT_FROM_CPU_0 (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_cpu_int_from_cpu_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_cpu_int_from_cpu_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_cpu_int_from_cpu_0`] module"]
-pub type HP_CPU_INT_FROM_CPU_0 = crate::Reg<hp_cpu_int_from_cpu_0::HP_CPU_INT_FROM_CPU_0_SPEC>;
+pub mod clk_en;
+#[doc = "CPU_INTR_FROM_CPU (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu`] module"]
+pub type CPU_INTR_FROM_CPU = crate::Reg<cpu_intr_from_cpu::CPU_INTR_FROM_CPU_SPEC>;
 #[doc = "NA"]
-pub mod hp_cpu_int_from_cpu_0;
-#[doc = "HP_CPU_INT_FROM_CPU_1 (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_cpu_int_from_cpu_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_cpu_int_from_cpu_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_cpu_int_from_cpu_1`] module"]
-pub type HP_CPU_INT_FROM_CPU_1 = crate::Reg<hp_cpu_int_from_cpu_1::HP_CPU_INT_FROM_CPU_1_SPEC>;
+pub mod cpu_intr_from_cpu;
+#[doc = "MODEM_DIAG_EN (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`modem_diag_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`modem_diag_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@modem_diag_en`] module"]
+pub type MODEM_DIAG_EN = crate::Reg<modem_diag_en::MODEM_DIAG_EN_SPEC>;
 #[doc = "NA"]
-pub mod hp_cpu_int_from_cpu_1;
-#[doc = "HP_CPU_INT_FROM_CPU_2 (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_cpu_int_from_cpu_2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_cpu_int_from_cpu_2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_cpu_int_from_cpu_2`] module"]
-pub type HP_CPU_INT_FROM_CPU_2 = crate::Reg<hp_cpu_int_from_cpu_2::HP_CPU_INT_FROM_CPU_2_SPEC>;
+pub mod modem_diag_en;
+#[doc = "TCM_RAM_PWR_CTRL0 (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`tcm_ram_pwr_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tcm_ram_pwr_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tcm_ram_pwr_ctrl0`] module"]
+pub type TCM_RAM_PWR_CTRL0 = crate::Reg<tcm_ram_pwr_ctrl0::TCM_RAM_PWR_CTRL0_SPEC>;
 #[doc = "NA"]
-pub mod hp_cpu_int_from_cpu_2;
-#[doc = "HP_CPU_INT_FROM_CPU_3 (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_cpu_int_from_cpu_3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_cpu_int_from_cpu_3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_cpu_int_from_cpu_3`] module"]
-pub type HP_CPU_INT_FROM_CPU_3 = crate::Reg<hp_cpu_int_from_cpu_3::HP_CPU_INT_FROM_CPU_3_SPEC>;
+pub mod tcm_ram_pwr_ctrl0;
+#[doc = "ROM_PWR_CTRL0 (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`rom_pwr_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rom_pwr_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rom_pwr_ctrl0`] module"]
+pub type ROM_PWR_CTRL0 = crate::Reg<rom_pwr_ctrl0::ROM_PWR_CTRL0_SPEC>;
 #[doc = "NA"]
-pub mod hp_cpu_int_from_cpu_3;
-#[doc = "HP_MODEM_DIAG_EN (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_modem_diag_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_modem_diag_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_modem_diag_en`] module"]
-pub type HP_MODEM_DIAG_EN = crate::Reg<hp_modem_diag_en::HP_MODEM_DIAG_EN_SPEC>;
+pub mod rom_pwr_ctrl0;
+#[doc = "PROBEA_CTRL (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`probea_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`probea_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@probea_ctrl`] module"]
+pub type PROBEA_CTRL = crate::Reg<probea_ctrl::PROBEA_CTRL_SPEC>;
 #[doc = "NA"]
-pub mod hp_modem_diag_en;
-#[doc = "HP_TCM_RAM_PWR_CTRL0 (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_tcm_ram_pwr_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_tcm_ram_pwr_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_tcm_ram_pwr_ctrl0`] module"]
-pub type HP_TCM_RAM_PWR_CTRL0 = crate::Reg<hp_tcm_ram_pwr_ctrl0::HP_TCM_RAM_PWR_CTRL0_SPEC>;
+pub mod probea_ctrl;
+#[doc = "PROBEB_CTRL (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`probeb_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`probeb_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@probeb_ctrl`] module"]
+pub type PROBEB_CTRL = crate::Reg<probeb_ctrl::PROBEB_CTRL_SPEC>;
 #[doc = "NA"]
-pub mod hp_tcm_ram_pwr_ctrl0;
-#[doc = "HP_ROM_PWR_CTRL0 (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_rom_pwr_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_rom_pwr_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_rom_pwr_ctrl0`] module"]
-pub type HP_ROM_PWR_CTRL0 = crate::Reg<hp_rom_pwr_ctrl0::HP_ROM_PWR_CTRL0_SPEC>;
+pub mod probeb_ctrl;
+#[doc = "PROBE_OUT (r) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`probe_out::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@probe_out`] module"]
+pub type PROBE_OUT = crate::Reg<probe_out::PROBE_OUT_SPEC>;
 #[doc = "NA"]
-pub mod hp_rom_pwr_ctrl0;
-#[doc = "HP_PROBEA_CTRL (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_probea_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_probea_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_probea_ctrl`] module"]
-pub type HP_PROBEA_CTRL = crate::Reg<hp_probea_ctrl::HP_PROBEA_CTRL_SPEC>;
+pub mod probe_out;
+#[doc = "CPU_CORESTALLED_ST (r) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_corestalled_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_corestalled_st`] module"]
+pub type CPU_CORESTALLED_ST = crate::Reg<cpu_corestalled_st::CPU_CORESTALLED_ST_SPEC>;
 #[doc = "NA"]
-pub mod hp_probea_ctrl;
-#[doc = "HP_PROBEB_CTRL (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_probeb_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_probeb_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_probeb_ctrl`] module"]
-pub type HP_PROBEB_CTRL = crate::Reg<hp_probeb_ctrl::HP_PROBEB_CTRL_SPEC>;
+pub mod cpu_corestalled_st;
+#[doc = "CRYPTO_CTRL (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`crypto_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`crypto_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@crypto_ctrl`] module"]
+pub type CRYPTO_CTRL = crate::Reg<crypto_ctrl::CRYPTO_CTRL_SPEC>;
 #[doc = "NA"]
-pub mod hp_probeb_ctrl;
-#[doc = "HP_PROBE_OUT (r) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_probe_out::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_probe_out`] module"]
-pub type HP_PROBE_OUT = crate::Reg<hp_probe_out::HP_PROBE_OUT_SPEC>;
+pub mod crypto_ctrl;
+#[doc = "IOMUX_FPGA_DEBUG (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`iomux_fpga_debug::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`iomux_fpga_debug::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@iomux_fpga_debug`] module"]
+pub type IOMUX_FPGA_DEBUG = crate::Reg<iomux_fpga_debug::IOMUX_FPGA_DEBUG_SPEC>;
 #[doc = "NA"]
-pub mod hp_probe_out;
-#[doc = "HP_CPU_CORESTALLED_ST (r) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_cpu_corestalled_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_cpu_corestalled_st`] module"]
-pub type HP_CPU_CORESTALLED_ST = crate::Reg<hp_cpu_corestalled_st::HP_CPU_CORESTALLED_ST_SPEC>;
-#[doc = "NA"]
-pub mod hp_cpu_corestalled_st;
-#[doc = "HP_CRYPTO_CTRL (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_crypto_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_crypto_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_crypto_ctrl`] module"]
-pub type HP_CRYPTO_CTRL = crate::Reg<hp_crypto_ctrl::HP_CRYPTO_CTRL_SPEC>;
-#[doc = "NA"]
-pub mod hp_crypto_ctrl;
-#[doc = "HP_IOMUX_FPGA_DEBUG (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_iomux_fpga_debug::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_iomux_fpga_debug::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_iomux_fpga_debug`] module"]
-pub type HP_IOMUX_FPGA_DEBUG = crate::Reg<hp_iomux_fpga_debug::HP_IOMUX_FPGA_DEBUG_SPEC>;
-#[doc = "NA"]
-pub mod hp_iomux_fpga_debug;
+pub mod iomux_fpga_debug;
 #[doc = "RDN_ECO_CS (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`rdn_eco_cs::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rdn_eco_cs::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rdn_eco_cs`] module"]
 pub type RDN_ECO_CS = crate::Reg<rdn_eco_cs::RDN_ECO_CS_SPEC>;
 #[doc = "NA"]
 pub mod rdn_eco_cs;
-#[doc = "HP_TCM_RDN_ECO_CS (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_tcm_rdn_eco_cs::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_tcm_rdn_eco_cs::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_tcm_rdn_eco_cs`] module"]
-pub type HP_TCM_RDN_ECO_CS = crate::Reg<hp_tcm_rdn_eco_cs::HP_TCM_RDN_ECO_CS_SPEC>;
+#[doc = "TCM_RDN_ECO_CS (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`tcm_rdn_eco_cs::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tcm_rdn_eco_cs::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tcm_rdn_eco_cs`] module"]
+pub type TCM_RDN_ECO_CS = crate::Reg<tcm_rdn_eco_cs::TCM_RDN_ECO_CS_SPEC>;
 #[doc = "NA"]
-pub mod hp_tcm_rdn_eco_cs;
-#[doc = "HP_TCM_RDN_ECO_LOW (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_tcm_rdn_eco_low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_tcm_rdn_eco_low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_tcm_rdn_eco_low`] module"]
-pub type HP_TCM_RDN_ECO_LOW = crate::Reg<hp_tcm_rdn_eco_low::HP_TCM_RDN_ECO_LOW_SPEC>;
+pub mod tcm_rdn_eco_cs;
+#[doc = "TCM_RDN_ECO_LOW (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`tcm_rdn_eco_low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tcm_rdn_eco_low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tcm_rdn_eco_low`] module"]
+pub type TCM_RDN_ECO_LOW = crate::Reg<tcm_rdn_eco_low::TCM_RDN_ECO_LOW_SPEC>;
 #[doc = "NA"]
-pub mod hp_tcm_rdn_eco_low;
-#[doc = "HP_TCM_RDN_ECO_HIGH (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_tcm_rdn_eco_high::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_tcm_rdn_eco_high::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_tcm_rdn_eco_high`] module"]
-pub type HP_TCM_RDN_ECO_HIGH = crate::Reg<hp_tcm_rdn_eco_high::HP_TCM_RDN_ECO_HIGH_SPEC>;
+pub mod tcm_rdn_eco_low;
+#[doc = "TCM_RDN_ECO_HIGH (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`tcm_rdn_eco_high::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tcm_rdn_eco_high::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tcm_rdn_eco_high`] module"]
+pub type TCM_RDN_ECO_HIGH = crate::Reg<tcm_rdn_eco_high::TCM_RDN_ECO_HIGH_SPEC>;
 #[doc = "NA"]
-pub mod hp_tcm_rdn_eco_high;
-#[doc = "HP_CACHE_PWR_CTRL (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_cache_pwr_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_cache_pwr_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_cache_pwr_ctrl`] module"]
-pub type HP_CACHE_PWR_CTRL = crate::Reg<hp_cache_pwr_ctrl::HP_CACHE_PWR_CTRL_SPEC>;
+pub mod tcm_rdn_eco_high;
+#[doc = "CACHE_PWR_CTRL (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cache_pwr_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cache_pwr_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cache_pwr_ctrl`] module"]
+pub type CACHE_PWR_CTRL = crate::Reg<cache_pwr_ctrl::CACHE_PWR_CTRL_SPEC>;
 #[doc = "NA"]
-pub mod hp_cache_pwr_ctrl;
-#[doc = "HP_TCM_DATA_DUMP_CTRL (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_tcm_data_dump_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_tcm_data_dump_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_tcm_data_dump_ctrl`] module"]
-pub type HP_TCM_DATA_DUMP_CTRL = crate::Reg<hp_tcm_data_dump_ctrl::HP_TCM_DATA_DUMP_CTRL_SPEC>;
+pub mod cache_pwr_ctrl;
+#[doc = "TCM_DATA_DUMP_CTRL (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`tcm_data_dump_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tcm_data_dump_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tcm_data_dump_ctrl`] module"]
+pub type TCM_DATA_DUMP_CTRL = crate::Reg<tcm_data_dump_ctrl::TCM_DATA_DUMP_CTRL_SPEC>;
 #[doc = "need_des"]
-pub mod hp_tcm_data_dump_ctrl;
-#[doc = "HP_CPU_WAITI_CONF (rw) register accessor: CPU_WAITI configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_cpu_waiti_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_cpu_waiti_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_cpu_waiti_conf`] module"]
-pub type HP_CPU_WAITI_CONF = crate::Reg<hp_cpu_waiti_conf::HP_CPU_WAITI_CONF_SPEC>;
+pub mod tcm_data_dump_ctrl;
+#[doc = "CPU_WAITI_CONF (rw) register accessor: CPU_WAITI configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_waiti_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_waiti_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_waiti_conf`] module"]
+pub type CPU_WAITI_CONF = crate::Reg<cpu_waiti_conf::CPU_WAITI_CONF_SPEC>;
 #[doc = "CPU_WAITI configuration register"]
-pub mod hp_cpu_waiti_conf;
+pub mod cpu_waiti_conf;
 #[doc = "CORE_DEBUG_RUNSTALL_CONF (rw) register accessor: Core Debug runstall configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_debug_runstall_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_debug_runstall_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_debug_runstall_conf`] module"]
 pub type CORE_DEBUG_RUNSTALL_CONF =
     crate::Reg<core_debug_runstall_conf::CORE_DEBUG_RUNSTALL_CONF_SPEC>;
 #[doc = "Core Debug runstall configure register"]
 pub mod core_debug_runstall_conf;
-#[doc = "HP_CORE_IBUS_TIMEOUT_CONF (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_core_ibus_timeout_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_core_ibus_timeout_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_core_ibus_timeout_conf`] module"]
-pub type HP_CORE_IBUS_TIMEOUT_CONF =
-    crate::Reg<hp_core_ibus_timeout_conf::HP_CORE_IBUS_TIMEOUT_CONF_SPEC>;
+#[doc = "CORE_IBUS_TIMEOUT_CONF (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`core_ibus_timeout_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_ibus_timeout_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_ibus_timeout_conf`] module"]
+pub type CORE_IBUS_TIMEOUT_CONF = crate::Reg<core_ibus_timeout_conf::CORE_IBUS_TIMEOUT_CONF_SPEC>;
 #[doc = "need_des"]
-pub mod hp_core_ibus_timeout_conf;
-#[doc = "HP_CORE_DBUS_TIMEOUT_CONF (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_core_dbus_timeout_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_core_dbus_timeout_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_core_dbus_timeout_conf`] module"]
-pub type HP_CORE_DBUS_TIMEOUT_CONF =
-    crate::Reg<hp_core_dbus_timeout_conf::HP_CORE_DBUS_TIMEOUT_CONF_SPEC>;
+pub mod core_ibus_timeout_conf;
+#[doc = "CORE_DBUS_TIMEOUT_CONF (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`core_dbus_timeout_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_dbus_timeout_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_dbus_timeout_conf`] module"]
+pub type CORE_DBUS_TIMEOUT_CONF = crate::Reg<core_dbus_timeout_conf::CORE_DBUS_TIMEOUT_CONF_SPEC>;
 #[doc = "need_des"]
-pub mod hp_core_dbus_timeout_conf;
-#[doc = "HP_ICM_H2X_CFG (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_icm_h2x_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_icm_h2x_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_icm_h2x_cfg`] module"]
-pub type HP_ICM_H2X_CFG = crate::Reg<hp_icm_h2x_cfg::HP_ICM_H2X_CFG_SPEC>;
+pub mod core_dbus_timeout_conf;
+#[doc = "ICM_H2X_CFG (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_h2x_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_h2x_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_h2x_cfg`] module"]
+pub type ICM_H2X_CFG = crate::Reg<icm_h2x_cfg::ICM_H2X_CFG_SPEC>;
 #[doc = "need_des"]
-pub mod hp_icm_h2x_cfg;
-#[doc = "HP_BITSCRAMBLER_PERI_SEL (rw) register accessor: Bitscrambler Peri Sel\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_bitscrambler_peri_sel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_bitscrambler_peri_sel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_bitscrambler_peri_sel`] module"]
-pub type HP_BITSCRAMBLER_PERI_SEL =
-    crate::Reg<hp_bitscrambler_peri_sel::HP_BITSCRAMBLER_PERI_SEL_SPEC>;
+pub mod icm_h2x_cfg;
+#[doc = "BITSCRAMBLER_PERI_SEL (rw) register accessor: Bitscrambler Peri Sel\n\nYou can [`read`](crate::Reg::read) this register and get [`bitscrambler_peri_sel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bitscrambler_peri_sel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@bitscrambler_peri_sel`] module"]
+pub type BITSCRAMBLER_PERI_SEL = crate::Reg<bitscrambler_peri_sel::BITSCRAMBLER_PERI_SEL_SPEC>;
 #[doc = "Bitscrambler Peri Sel"]
-pub mod hp_bitscrambler_peri_sel;
+pub mod bitscrambler_peri_sel;
 #[doc = "GDMA_CTRL (rw) register accessor: N/A\n\nYou can [`read`](crate::Reg::read) this register and get [`gdma_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gdma_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gdma_ctrl`] module"]
 pub type GDMA_CTRL = crate::Reg<gdma_ctrl::GDMA_CTRL_SPEC>;
 #[doc = "N/A"]
@@ -807,94 +780,88 @@ pub mod gdma_ctrl;
 pub type VPU_CTRL = crate::Reg<vpu_ctrl::VPU_CTRL_SPEC>;
 #[doc = "N/A"]
 pub mod vpu_ctrl;
-#[doc = "HP_DESIGN_FOR_VERIFICATION0 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_design_for_verification0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_design_for_verification0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_design_for_verification0`] module"]
-pub type HP_DESIGN_FOR_VERIFICATION0 =
-    crate::Reg<hp_design_for_verification0::HP_DESIGN_FOR_VERIFICATION0_SPEC>;
+#[doc = "DESIGN_FOR_VERIFICATION0 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`design_for_verification0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`design_for_verification0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@design_for_verification0`] module"]
+pub type DESIGN_FOR_VERIFICATION0 =
+    crate::Reg<design_for_verification0::DESIGN_FOR_VERIFICATION0_SPEC>;
 #[doc = "need_des"]
-pub mod hp_design_for_verification0;
-#[doc = "HP_DESIGN_FOR_VERIFICATION1 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_design_for_verification1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_design_for_verification1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_design_for_verification1`] module"]
-pub type HP_DESIGN_FOR_VERIFICATION1 =
-    crate::Reg<hp_design_for_verification1::HP_DESIGN_FOR_VERIFICATION1_SPEC>;
+pub mod design_for_verification0;
+#[doc = "DESIGN_FOR_VERIFICATION1 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`design_for_verification1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`design_for_verification1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@design_for_verification1`] module"]
+pub type DESIGN_FOR_VERIFICATION1 =
+    crate::Reg<design_for_verification1::DESIGN_FOR_VERIFICATION1_SPEC>;
 #[doc = "need_des"]
-pub mod hp_design_for_verification1;
-#[doc = "HP_AHB2AXI_BRESP_ERR_INT_RAW (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_ahb2axi_bresp_err_int_raw::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_ahb2axi_bresp_err_int_raw::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_ahb2axi_bresp_err_int_raw`] module"]
-pub type HP_AHB2AXI_BRESP_ERR_INT_RAW =
-    crate::Reg<hp_ahb2axi_bresp_err_int_raw::HP_AHB2AXI_BRESP_ERR_INT_RAW_SPEC>;
+pub mod design_for_verification1;
+#[doc = "AHB2AXI_BRESP_ERR_INT_RAW (rw) register accessor: NA\n\nYou can [`read`](crate::Reg::read) this register and get [`ahb2axi_bresp_err_int_raw::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ahb2axi_bresp_err_int_raw::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ahb2axi_bresp_err_int_raw`] module"]
+pub type AHB2AXI_BRESP_ERR_INT_RAW =
+    crate::Reg<ahb2axi_bresp_err_int_raw::AHB2AXI_BRESP_ERR_INT_RAW_SPEC>;
 #[doc = "NA"]
-pub mod hp_ahb2axi_bresp_err_int_raw;
-#[doc = "HP_AHB2AXI_BRESP_ERR_INT_ST (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_ahb2axi_bresp_err_int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_ahb2axi_bresp_err_int_st`] module"]
-pub type HP_AHB2AXI_BRESP_ERR_INT_ST =
-    crate::Reg<hp_ahb2axi_bresp_err_int_st::HP_AHB2AXI_BRESP_ERR_INT_ST_SPEC>;
+pub mod ahb2axi_bresp_err_int_raw;
+#[doc = "AHB2AXI_BRESP_ERR_INT_ST (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`ahb2axi_bresp_err_int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ahb2axi_bresp_err_int_st`] module"]
+pub type AHB2AXI_BRESP_ERR_INT_ST =
+    crate::Reg<ahb2axi_bresp_err_int_st::AHB2AXI_BRESP_ERR_INT_ST_SPEC>;
 #[doc = "need_des"]
-pub mod hp_ahb2axi_bresp_err_int_st;
-#[doc = "HP_AHB2AXI_BRESP_ERR_INT_ENA (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_ahb2axi_bresp_err_int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_ahb2axi_bresp_err_int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_ahb2axi_bresp_err_int_ena`] module"]
-pub type HP_AHB2AXI_BRESP_ERR_INT_ENA =
-    crate::Reg<hp_ahb2axi_bresp_err_int_ena::HP_AHB2AXI_BRESP_ERR_INT_ENA_SPEC>;
+pub mod ahb2axi_bresp_err_int_st;
+#[doc = "AHB2AXI_BRESP_ERR_INT_ENA (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`ahb2axi_bresp_err_int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ahb2axi_bresp_err_int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ahb2axi_bresp_err_int_ena`] module"]
+pub type AHB2AXI_BRESP_ERR_INT_ENA =
+    crate::Reg<ahb2axi_bresp_err_int_ena::AHB2AXI_BRESP_ERR_INT_ENA_SPEC>;
 #[doc = "need_des"]
-pub mod hp_ahb2axi_bresp_err_int_ena;
-#[doc = "HP_AHB2AXI_BRESP_ERR_INT_CLR (w) register accessor: need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_ahb2axi_bresp_err_int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_ahb2axi_bresp_err_int_clr`] module"]
-pub type HP_AHB2AXI_BRESP_ERR_INT_CLR =
-    crate::Reg<hp_ahb2axi_bresp_err_int_clr::HP_AHB2AXI_BRESP_ERR_INT_CLR_SPEC>;
+pub mod ahb2axi_bresp_err_int_ena;
+#[doc = "AHB2AXI_BRESP_ERR_INT_CLR (w) register accessor: need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ahb2axi_bresp_err_int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ahb2axi_bresp_err_int_clr`] module"]
+pub type AHB2AXI_BRESP_ERR_INT_CLR =
+    crate::Reg<ahb2axi_bresp_err_int_clr::AHB2AXI_BRESP_ERR_INT_CLR_SPEC>;
 #[doc = "need_des"]
-pub mod hp_ahb2axi_bresp_err_int_clr;
-#[doc = "HP_CORE_DMACTIVE_LPCORE (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_core_dmactive_lpcore::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_core_dmactive_lpcore`] module"]
-pub type HP_CORE_DMACTIVE_LPCORE =
-    crate::Reg<hp_core_dmactive_lpcore::HP_CORE_DMACTIVE_LPCORE_SPEC>;
+pub mod ahb2axi_bresp_err_int_clr;
+#[doc = "CORE_DMACTIVE_LPCORE (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`core_dmactive_lpcore::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_dmactive_lpcore`] module"]
+pub type CORE_DMACTIVE_LPCORE = crate::Reg<core_dmactive_lpcore::CORE_DMACTIVE_LPCORE_SPEC>;
 #[doc = "need_des"]
-pub mod hp_core_dmactive_lpcore;
-#[doc = "HP_CORE_ERR_RESP_DIS (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_core_err_resp_dis::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_core_err_resp_dis::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_core_err_resp_dis`] module"]
-pub type HP_CORE_ERR_RESP_DIS = crate::Reg<hp_core_err_resp_dis::HP_CORE_ERR_RESP_DIS_SPEC>;
+pub mod core_dmactive_lpcore;
+#[doc = "CORE_ERR_RESP_DIS (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`core_err_resp_dis::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_err_resp_dis::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_err_resp_dis`] module"]
+pub type CORE_ERR_RESP_DIS = crate::Reg<core_err_resp_dis::CORE_ERR_RESP_DIS_SPEC>;
 #[doc = "need_des"]
-pub mod hp_core_err_resp_dis;
-#[doc = "HP_CORE_TIMEOUT_INT_RAW (rw) register accessor: Hp core bus timeout interrupt raw register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_core_timeout_int_raw::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_core_timeout_int_raw::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_core_timeout_int_raw`] module"]
-pub type HP_CORE_TIMEOUT_INT_RAW =
-    crate::Reg<hp_core_timeout_int_raw::HP_CORE_TIMEOUT_INT_RAW_SPEC>;
+pub mod core_err_resp_dis;
+#[doc = "CORE_TIMEOUT_INT_RAW (rw) register accessor: Hp core bus timeout interrupt raw register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_timeout_int_raw::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_timeout_int_raw::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_timeout_int_raw`] module"]
+pub type CORE_TIMEOUT_INT_RAW = crate::Reg<core_timeout_int_raw::CORE_TIMEOUT_INT_RAW_SPEC>;
 #[doc = "Hp core bus timeout interrupt raw register"]
-pub mod hp_core_timeout_int_raw;
-#[doc = "HP_CORE_TIMEOUT_INT_ST (r) register accessor: masked interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_core_timeout_int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_core_timeout_int_st`] module"]
-pub type HP_CORE_TIMEOUT_INT_ST = crate::Reg<hp_core_timeout_int_st::HP_CORE_TIMEOUT_INT_ST_SPEC>;
+pub mod core_timeout_int_raw;
+#[doc = "CORE_TIMEOUT_INT_ST (r) register accessor: masked interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_timeout_int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_timeout_int_st`] module"]
+pub type CORE_TIMEOUT_INT_ST = crate::Reg<core_timeout_int_st::CORE_TIMEOUT_INT_ST_SPEC>;
 #[doc = "masked interrupt register"]
-pub mod hp_core_timeout_int_st;
-#[doc = "HP_CORE_TIMEOUT_INT_ENA (rw) register accessor: masked interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_core_timeout_int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_core_timeout_int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_core_timeout_int_ena`] module"]
-pub type HP_CORE_TIMEOUT_INT_ENA =
-    crate::Reg<hp_core_timeout_int_ena::HP_CORE_TIMEOUT_INT_ENA_SPEC>;
+pub mod core_timeout_int_st;
+#[doc = "CORE_TIMEOUT_INT_ENA (rw) register accessor: masked interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_timeout_int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_timeout_int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_timeout_int_ena`] module"]
+pub type CORE_TIMEOUT_INT_ENA = crate::Reg<core_timeout_int_ena::CORE_TIMEOUT_INT_ENA_SPEC>;
 #[doc = "masked interrupt register"]
-pub mod hp_core_timeout_int_ena;
-#[doc = "HP_CORE_TIMEOUT_INT_CLR (w) register accessor: interrupt clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_core_timeout_int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_core_timeout_int_clr`] module"]
-pub type HP_CORE_TIMEOUT_INT_CLR =
-    crate::Reg<hp_core_timeout_int_clr::HP_CORE_TIMEOUT_INT_CLR_SPEC>;
+pub mod core_timeout_int_ena;
+#[doc = "CORE_TIMEOUT_INT_CLR (w) register accessor: interrupt clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_timeout_int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_timeout_int_clr`] module"]
+pub type CORE_TIMEOUT_INT_CLR = crate::Reg<core_timeout_int_clr::CORE_TIMEOUT_INT_CLR_SPEC>;
 #[doc = "interrupt clear register"]
-pub mod hp_core_timeout_int_clr;
-#[doc = "HP_CORE_PAD_WAKEUP_EVENT (rw) register accessor: pad wakeup event register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_core_pad_wakeup_event::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_core_pad_wakeup_event::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_core_pad_wakeup_event`] module"]
-pub type HP_CORE_PAD_WAKEUP_EVENT =
-    crate::Reg<hp_core_pad_wakeup_event::HP_CORE_PAD_WAKEUP_EVENT_SPEC>;
+pub mod core_timeout_int_clr;
+#[doc = "CORE_PAD_WAKEUP_EVENT (rw) register accessor: pad wakeup event register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_pad_wakeup_event::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_pad_wakeup_event::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_pad_wakeup_event`] module"]
+pub type CORE_PAD_WAKEUP_EVENT = crate::Reg<core_pad_wakeup_event::CORE_PAD_WAKEUP_EVENT_SPEC>;
 #[doc = "pad wakeup event register"]
-pub mod hp_core_pad_wakeup_event;
-#[doc = "HP_TWAI0_TIMESTAMP_L (rw) register accessor: twai0 timestamp low bit reg\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_twai0_timestamp_l::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_twai0_timestamp_l::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_twai0_timestamp_l`] module"]
-pub type HP_TWAI0_TIMESTAMP_L = crate::Reg<hp_twai0_timestamp_l::HP_TWAI0_TIMESTAMP_L_SPEC>;
+pub mod core_pad_wakeup_event;
+#[doc = "TWAI0_TIMESTAMP_L (rw) register accessor: twai0 timestamp low bit reg\n\nYou can [`read`](crate::Reg::read) this register and get [`twai0_timestamp_l::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`twai0_timestamp_l::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@twai0_timestamp_l`] module"]
+pub type TWAI0_TIMESTAMP_L = crate::Reg<twai0_timestamp_l::TWAI0_TIMESTAMP_L_SPEC>;
 #[doc = "twai0 timestamp low bit reg"]
-pub mod hp_twai0_timestamp_l;
-#[doc = "HP_TWAI0_TIMESTAMP_H (rw) register accessor: twai0 timestamp high bit reg\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_twai0_timestamp_h::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_twai0_timestamp_h::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_twai0_timestamp_h`] module"]
-pub type HP_TWAI0_TIMESTAMP_H = crate::Reg<hp_twai0_timestamp_h::HP_TWAI0_TIMESTAMP_H_SPEC>;
+pub mod twai0_timestamp_l;
+#[doc = "TWAI0_TIMESTAMP_H (rw) register accessor: twai0 timestamp high bit reg\n\nYou can [`read`](crate::Reg::read) this register and get [`twai0_timestamp_h::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`twai0_timestamp_h::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@twai0_timestamp_h`] module"]
+pub type TWAI0_TIMESTAMP_H = crate::Reg<twai0_timestamp_h::TWAI0_TIMESTAMP_H_SPEC>;
 #[doc = "twai0 timestamp high bit reg"]
-pub mod hp_twai0_timestamp_h;
-#[doc = "HP_TWAI1_TIMESTAMP_L (rw) register accessor: twai1 timestamp low bit reg\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_twai1_timestamp_l::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_twai1_timestamp_l::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_twai1_timestamp_l`] module"]
-pub type HP_TWAI1_TIMESTAMP_L = crate::Reg<hp_twai1_timestamp_l::HP_TWAI1_TIMESTAMP_L_SPEC>;
+pub mod twai0_timestamp_h;
+#[doc = "TWAI1_TIMESTAMP_L (rw) register accessor: twai1 timestamp low bit reg\n\nYou can [`read`](crate::Reg::read) this register and get [`twai1_timestamp_l::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`twai1_timestamp_l::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@twai1_timestamp_l`] module"]
+pub type TWAI1_TIMESTAMP_L = crate::Reg<twai1_timestamp_l::TWAI1_TIMESTAMP_L_SPEC>;
 #[doc = "twai1 timestamp low bit reg"]
-pub mod hp_twai1_timestamp_l;
-#[doc = "HP_TWAI1_TIMESTAMP_H (rw) register accessor: twai1 timestamp high bit reg\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_twai1_timestamp_h::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_twai1_timestamp_h::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_twai1_timestamp_h`] module"]
-pub type HP_TWAI1_TIMESTAMP_H = crate::Reg<hp_twai1_timestamp_h::HP_TWAI1_TIMESTAMP_H_SPEC>;
+pub mod twai1_timestamp_l;
+#[doc = "TWAI1_TIMESTAMP_H (rw) register accessor: twai1 timestamp high bit reg\n\nYou can [`read`](crate::Reg::read) this register and get [`twai1_timestamp_h::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`twai1_timestamp_h::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@twai1_timestamp_h`] module"]
+pub type TWAI1_TIMESTAMP_H = crate::Reg<twai1_timestamp_h::TWAI1_TIMESTAMP_H_SPEC>;
 #[doc = "twai1 timestamp high bit reg"]
-pub mod hp_twai1_timestamp_h;
-#[doc = "HP_RNG_CFG (rw) register accessor: rng cfg register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_rng_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_rng_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_rng_cfg`] module"]
-pub type HP_RNG_CFG = crate::Reg<hp_rng_cfg::HP_RNG_CFG_SPEC>;
+pub mod twai1_timestamp_h;
+#[doc = "RNG_CFG (rw) register accessor: rng cfg register\n\nYou can [`read`](crate::Reg::read) this register and get [`rng_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rng_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rng_cfg`] module"]
+pub type RNG_CFG = crate::Reg<rng_cfg::RNG_CFG_SPEC>;
 #[doc = "rng cfg register"]
-pub mod hp_rng_cfg;
-#[doc = "HP_PERI_MEM_CLK_FORCE_ON (rw) register accessor: hp peri mem clk force on regpster\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_peri_mem_clk_force_on::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_peri_mem_clk_force_on::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_peri_mem_clk_force_on`] module"]
-pub type HP_PERI_MEM_CLK_FORCE_ON =
-    crate::Reg<hp_peri_mem_clk_force_on::HP_PERI_MEM_CLK_FORCE_ON_SPEC>;
+pub mod rng_cfg;
+#[doc = "PERI_MEM_CLK_FORCE_ON (rw) register accessor: hp peri mem clk force on regpster\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_mem_clk_force_on::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri_mem_clk_force_on::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@peri_mem_clk_force_on`] module"]
+pub type PERI_MEM_CLK_FORCE_ON = crate::Reg<peri_mem_clk_force_on::PERI_MEM_CLK_FORCE_ON_SPEC>;
 #[doc = "hp peri mem clk force on regpster"]
-pub mod hp_peri_mem_clk_force_on;
+pub mod peri_mem_clk_force_on;
 #[doc = "PRDYN_ST (r) register accessor: hp system prdyn status register\n\nYou can [`read`](crate::Reg::read) this register and get [`prdyn_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@prdyn_st`] module"]
 pub type PRDYN_ST = crate::Reg<prdyn_st::PRDYN_ST_SPEC>;
 #[doc = "hp system prdyn status register"]
@@ -979,30 +946,30 @@ pub mod cpu_peri0_timeout_addr;
 pub type CPU_PERI0_TIMEOUT_UID = crate::Reg<cpu_peri0_timeout_uid::CPU_PERI0_TIMEOUT_UID_SPEC>;
 #[doc = "CPU_PERI0_TIMEOUT_UID register"]
 pub mod cpu_peri0_timeout_uid;
-#[doc = "HP_PERI0_TIMEOUT_CONF (rw) register accessor: HP_PERI0_TIMEOUT configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_peri0_timeout_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_peri0_timeout_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_peri0_timeout_conf`] module"]
-pub type HP_PERI0_TIMEOUT_CONF = crate::Reg<hp_peri0_timeout_conf::HP_PERI0_TIMEOUT_CONF_SPEC>;
+#[doc = "PERI0_TIMEOUT_CONF (rw) register accessor: HP_PERI0_TIMEOUT configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`peri0_timeout_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri0_timeout_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@peri0_timeout_conf`] module"]
+pub type PERI0_TIMEOUT_CONF = crate::Reg<peri0_timeout_conf::PERI0_TIMEOUT_CONF_SPEC>;
 #[doc = "HP_PERI0_TIMEOUT configuration register"]
-pub mod hp_peri0_timeout_conf;
-#[doc = "HP_PERI0_TIMEOUT_ADDR (r) register accessor: HP_PERI0_TIMEOUT_ADDR register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_peri0_timeout_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_peri0_timeout_addr`] module"]
-pub type HP_PERI0_TIMEOUT_ADDR = crate::Reg<hp_peri0_timeout_addr::HP_PERI0_TIMEOUT_ADDR_SPEC>;
+pub mod peri0_timeout_conf;
+#[doc = "PERI0_TIMEOUT_ADDR (r) register accessor: HP_PERI0_TIMEOUT_ADDR register\n\nYou can [`read`](crate::Reg::read) this register and get [`peri0_timeout_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@peri0_timeout_addr`] module"]
+pub type PERI0_TIMEOUT_ADDR = crate::Reg<peri0_timeout_addr::PERI0_TIMEOUT_ADDR_SPEC>;
 #[doc = "HP_PERI0_TIMEOUT_ADDR register"]
-pub mod hp_peri0_timeout_addr;
-#[doc = "HP_PERI0_TIMEOUT_UID (r) register accessor: HP_PERI0_TIMEOUT_UID register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_peri0_timeout_uid::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_peri0_timeout_uid`] module"]
-pub type HP_PERI0_TIMEOUT_UID = crate::Reg<hp_peri0_timeout_uid::HP_PERI0_TIMEOUT_UID_SPEC>;
+pub mod peri0_timeout_addr;
+#[doc = "PERI0_TIMEOUT_UID (r) register accessor: HP_PERI0_TIMEOUT_UID register\n\nYou can [`read`](crate::Reg::read) this register and get [`peri0_timeout_uid::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@peri0_timeout_uid`] module"]
+pub type PERI0_TIMEOUT_UID = crate::Reg<peri0_timeout_uid::PERI0_TIMEOUT_UID_SPEC>;
 #[doc = "HP_PERI0_TIMEOUT_UID register"]
-pub mod hp_peri0_timeout_uid;
-#[doc = "HP_PERI1_TIMEOUT_CONF (rw) register accessor: HP_PERI1_TIMEOUT configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_peri1_timeout_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_peri1_timeout_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_peri1_timeout_conf`] module"]
-pub type HP_PERI1_TIMEOUT_CONF = crate::Reg<hp_peri1_timeout_conf::HP_PERI1_TIMEOUT_CONF_SPEC>;
+pub mod peri0_timeout_uid;
+#[doc = "PERI1_TIMEOUT_CONF (rw) register accessor: HP_PERI1_TIMEOUT configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`peri1_timeout_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri1_timeout_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@peri1_timeout_conf`] module"]
+pub type PERI1_TIMEOUT_CONF = crate::Reg<peri1_timeout_conf::PERI1_TIMEOUT_CONF_SPEC>;
 #[doc = "HP_PERI1_TIMEOUT configuration register"]
-pub mod hp_peri1_timeout_conf;
-#[doc = "HP_PERI1_TIMEOUT_ADDR (r) register accessor: HP_PERI1_TIMEOUT_ADDR register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_peri1_timeout_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_peri1_timeout_addr`] module"]
-pub type HP_PERI1_TIMEOUT_ADDR = crate::Reg<hp_peri1_timeout_addr::HP_PERI1_TIMEOUT_ADDR_SPEC>;
+pub mod peri1_timeout_conf;
+#[doc = "PERI1_TIMEOUT_ADDR (r) register accessor: HP_PERI1_TIMEOUT_ADDR register\n\nYou can [`read`](crate::Reg::read) this register and get [`peri1_timeout_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@peri1_timeout_addr`] module"]
+pub type PERI1_TIMEOUT_ADDR = crate::Reg<peri1_timeout_addr::PERI1_TIMEOUT_ADDR_SPEC>;
 #[doc = "HP_PERI1_TIMEOUT_ADDR register"]
-pub mod hp_peri1_timeout_addr;
-#[doc = "HP_PERI1_TIMEOUT_UID (r) register accessor: HP_PERI1_TIMEOUT_UID register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_peri1_timeout_uid::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_peri1_timeout_uid`] module"]
-pub type HP_PERI1_TIMEOUT_UID = crate::Reg<hp_peri1_timeout_uid::HP_PERI1_TIMEOUT_UID_SPEC>;
+pub mod peri1_timeout_addr;
+#[doc = "PERI1_TIMEOUT_UID (r) register accessor: HP_PERI1_TIMEOUT_UID register\n\nYou can [`read`](crate::Reg::read) this register and get [`peri1_timeout_uid::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@peri1_timeout_uid`] module"]
+pub type PERI1_TIMEOUT_UID = crate::Reg<peri1_timeout_uid::PERI1_TIMEOUT_UID_SPEC>;
 #[doc = "HP_PERI1_TIMEOUT_UID register"]
-pub mod hp_peri1_timeout_uid;
+pub mod peri1_timeout_uid;
 #[doc = "UART0_MEM_LP_CTRL (rw) register accessor: uart memory power control register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart0_mem_lp_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart0_mem_lp_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart0_mem_lp_ctrl`] module"]
 pub type UART0_MEM_LP_CTRL = crate::Reg<uart0_mem_lp_ctrl::UART0_MEM_LP_CTRL_SPEC>;
 #[doc = "uart memory power control register"]

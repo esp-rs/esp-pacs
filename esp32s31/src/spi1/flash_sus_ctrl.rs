@@ -30,10 +30,10 @@ pub type FLASH_PES_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type PESR_END_MSK_R = crate::FieldReader<u16>;
 #[doc = "Field `PESR_END_MSK` writer - The mask value when check SUS/SUS1/SUS2 status bit. If the read status value is status_in\\[15:0\\](only status_in\\[7:0\\] is valid when only one byte of data is read out, status_in\\[15:0\\] is valid when two bytes of data are read out), SUS/SUS1/SUS2 = status_in\\[15:0\\]^ SPI_MEM_PESR_END_MSK\\[15:0\\]."]
 pub type PESR_END_MSK_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
-#[doc = "Field `SPI_FMEM_RD_SUS_2B` reader - 1: Read two bytes when check flash SUS/SUS1/SUS2 status bit. 0: Read one byte when check flash SUS/SUS1/SUS2 status bit"]
-pub type SPI_FMEM_RD_SUS_2B_R = crate::BitReader;
-#[doc = "Field `SPI_FMEM_RD_SUS_2B` writer - 1: Read two bytes when check flash SUS/SUS1/SUS2 status bit. 0: Read one byte when check flash SUS/SUS1/SUS2 status bit"]
-pub type SPI_FMEM_RD_SUS_2B_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FMEM_RD_SUS_2B` reader - 1: Read two bytes when check flash SUS/SUS1/SUS2 status bit. 0: Read one byte when check flash SUS/SUS1/SUS2 status bit"]
+pub type FMEM_RD_SUS_2B_R = crate::BitReader;
+#[doc = "Field `FMEM_RD_SUS_2B` writer - 1: Read two bytes when check flash SUS/SUS1/SUS2 status bit. 0: Read one byte when check flash SUS/SUS1/SUS2 status bit"]
+pub type FMEM_RD_SUS_2B_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PER_END_EN` reader - 1: Both WIP and SUS/SUS1/SUS2 bits should be checked to insure the resume status of flash. 0: Only need to check WIP is 0."]
 pub type PER_END_EN_R = crate::BitReader;
 #[doc = "Field `PER_END_EN` writer - 1: Both WIP and SUS/SUS1/SUS2 bits should be checked to insure the resume status of flash. 0: Only need to check WIP is 0."]
@@ -84,8 +84,8 @@ impl R {
     }
     #[doc = "Bit 22 - 1: Read two bytes when check flash SUS/SUS1/SUS2 status bit. 0: Read one byte when check flash SUS/SUS1/SUS2 status bit"]
     #[inline(always)]
-    pub fn spi_fmem_rd_sus_2b(&self) -> SPI_FMEM_RD_SUS_2B_R {
-        SPI_FMEM_RD_SUS_2B_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn fmem_rd_sus_2b(&self) -> FMEM_RD_SUS_2B_R {
+        FMEM_RD_SUS_2B_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - 1: Both WIP and SUS/SUS1/SUS2 bits should be checked to insure the resume status of flash. 0: Only need to check WIP is 0."]
     #[inline(always)]
@@ -114,7 +114,7 @@ impl core::fmt::Debug for R {
             .field("pes_per_en", &self.pes_per_en())
             .field("flash_pes_en", &self.flash_pes_en())
             .field("pesr_end_msk", &self.pesr_end_msk())
-            .field("spi_fmem_rd_sus_2b", &self.spi_fmem_rd_sus_2b())
+            .field("fmem_rd_sus_2b", &self.fmem_rd_sus_2b())
             .field("per_end_en", &self.per_end_en())
             .field("pes_end_en", &self.pes_end_en())
             .field("sus_timeout_cnt", &self.sus_timeout_cnt())
@@ -159,8 +159,8 @@ impl W {
     }
     #[doc = "Bit 22 - 1: Read two bytes when check flash SUS/SUS1/SUS2 status bit. 0: Read one byte when check flash SUS/SUS1/SUS2 status bit"]
     #[inline(always)]
-    pub fn spi_fmem_rd_sus_2b(&mut self) -> SPI_FMEM_RD_SUS_2B_W<'_, FLASH_SUS_CTRL_SPEC> {
-        SPI_FMEM_RD_SUS_2B_W::new(self, 22)
+    pub fn fmem_rd_sus_2b(&mut self) -> FMEM_RD_SUS_2B_W<'_, FLASH_SUS_CTRL_SPEC> {
+        FMEM_RD_SUS_2B_W::new(self, 22)
     }
     #[doc = "Bit 23 - 1: Both WIP and SUS/SUS1/SUS2 bits should be checked to insure the resume status of flash. 0: Only need to check WIP is 0."]
     #[inline(always)]

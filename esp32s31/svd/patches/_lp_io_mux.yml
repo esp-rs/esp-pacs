@@ -1,0 +1,83 @@
+_add:
+  LP_IO_MUX:
+    description: LP IO MUX
+    groupName: LP_IO_MUX
+    baseAddress: 0x20712000
+    addressBlocks:
+      - offset: 0x0
+        size: 0x1000
+        usage: registers
+    registers:
+      GPIO%s:
+        dim: 8
+        dimIncrement: 0x4
+        dimIndex: 0-7
+        addressOffset: 0x0
+        size: 0x20
+        resetValue: 0x1800
+        fields:
+          MCU_OE:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          SLP_SEL:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          MCU_WPD:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          MCU_WPU:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          MCU_IE:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          MCU_DRV:
+            bitOffset: 5
+            bitWidth: 2
+            access: read-write
+          FUN_WPD:
+            bitOffset: 7
+            bitWidth: 1
+            access: read-write
+          FUN_WPU:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+          FUN_IE:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+          FUN_DRV:
+            bitOffset: 10
+            bitWidth: 2
+            access: read-write
+          MCU_SEL:
+            bitOffset: 12
+            bitWidth: 3
+            access: read-write
+          FILTER_EN:
+            bitOffset: 15
+            bitWidth: 1
+            access: read-write
+          HYS_EN:
+            bitOffset: 16
+            bitWidth: 1
+            access: read-write
+          HYS_SEL:
+            bitOffset: 17
+            bitWidth: 1
+            access: read-write
+      DATE:
+        addressOffset: 0x1fc
+        size: 0x20
+        resetValue: 0x2201210
+        fields:
+          REG_DATE:
+            bitOffset: 0
+            bitWidth: 28
+            access: read-write

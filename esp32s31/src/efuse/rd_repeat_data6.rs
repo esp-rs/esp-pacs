@@ -1,5 +1,7 @@
 #[doc = "Register `RD_REPEAT_DATA6` reader"]
 pub type R = crate::R<RD_REPEAT_DATA6_SPEC>;
+#[doc = "Register `RD_REPEAT_DATA6` writer"]
+pub type W = crate::W<RD_REPEAT_DATA6_SPEC>;
 #[doc = "Field `RMA_SESSION_COUNTER` reader - Represents the number of times the RMA session has been entered."]
 pub type RMA_SESSION_COUNTER_R = crate::FieldReader;
 #[doc = "Field `RMA_NONCE_ENA` reader - Represents whether random number NONCE is used in RMA and whether the KM module is used to generate the NONCE\\\\. 2'bx0: No NONCE\\\\ 2'b1x: Use KM generate NONCE.\\\\"]
@@ -28,6 +30,10 @@ pub type ENA_XTS_SHADOW_R = crate::BitReader;
 pub type ENA_SPI_BOOT_CRYPT_SCRAMBLER_R = crate::BitReader;
 #[doc = "Field `RE_ENABLE_JTAG_SOURCE` reader - Represents which Crypto peripheral is selected for renabling JTAG. \\\\ 0: RMA\\\\ 1: HMAC\\\\"]
 pub type RE_ENABLE_JTAG_SOURCE_R = crate::BitReader;
+#[doc = "Field `RD_RESERVE_0_246` reader - "]
+pub type RD_RESERVE_0_246_R = crate::FieldReader<u16>;
+#[doc = "Field `RD_RESERVE_0_246` writer - "]
+pub type RD_RESERVE_0_246_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl R {
     #[doc = "Bits 0:2 - Represents the number of times the RMA session has been entered."]
     #[inline(always)]
@@ -99,6 +105,11 @@ impl R {
     pub fn re_enable_jtag_source(&self) -> RE_ENABLE_JTAG_SOURCE_R {
         RE_ENABLE_JTAG_SOURCE_R::new(((self.bits >> 21) & 1) != 0)
     }
+    #[doc = "Bits 22:31"]
+    #[inline(always)]
+    pub fn rd_reserve_0_246(&self) -> RD_RESERVE_0_246_R {
+        RD_RESERVE_0_246_R::new(((self.bits >> 22) & 0x03ff) as u16)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -121,15 +132,27 @@ impl core::fmt::Debug for R {
                 &self.ena_spi_boot_crypt_scrambler(),
             )
             .field("re_enable_jtag_source", &self.re_enable_jtag_source())
+            .field("rd_reserve_0_246", &self.rd_reserve_0_246())
             .finish()
     }
 }
-#[doc = "Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data6::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+impl W {
+    #[doc = "Bits 22:31"]
+    #[inline(always)]
+    pub fn rd_reserve_0_246(&mut self) -> RD_RESERVE_0_246_W<'_, RD_REPEAT_DATA6_SPEC> {
+        RD_RESERVE_0_246_W::new(self, 22)
+    }
+}
+#[doc = "Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data6::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_repeat_data6::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_REPEAT_DATA6_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_DATA6_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`rd_repeat_data6::R`](R) reader structure"]
 impl crate::Readable for RD_REPEAT_DATA6_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rd_repeat_data6::W`](W) writer structure"]
+impl crate::Writable for RD_REPEAT_DATA6_SPEC {
+    type Safety = crate::Unsafe;
+}
 #[doc = "`reset()` method sets RD_REPEAT_DATA6 to value 0"]
 impl crate::Resettable for RD_REPEAT_DATA6_SPEC {}

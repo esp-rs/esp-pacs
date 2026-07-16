@@ -58,14 +58,14 @@ pub type ARB_REQ0_WEI_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 pub type ARB_REQ1_WEI_R = crate::FieldReader;
 #[doc = "Field `ARB_REQ1_WEI` writer - To set AXI write priority weight in SPI0 arbiter. While the priority are same, the larger the value, the greater the weight."]
 pub type ARB_REQ1_WEI_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
-#[doc = "Field `SPI_SAME_AW_AR_ADDR_CHK_EN` reader - Set this bit to check AXI read/write the same address region."]
-pub type SPI_SAME_AW_AR_ADDR_CHK_EN_R = crate::BitReader;
-#[doc = "Field `SPI_SAME_AW_AR_ADDR_CHK_EN` writer - Set this bit to check AXI read/write the same address region."]
-pub type SPI_SAME_AW_AR_ADDR_CHK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SPI_CLOSE_AXI_INF_EN` reader - Set this bit to close AXI read/write transfer to MSPI, which means that only SLV_ERR will be replied to BRESP/RRESP."]
-pub type SPI_CLOSE_AXI_INF_EN_R = crate::BitReader;
-#[doc = "Field `SPI_CLOSE_AXI_INF_EN` writer - Set this bit to close AXI read/write transfer to MSPI, which means that only SLV_ERR will be replied to BRESP/RRESP."]
-pub type SPI_CLOSE_AXI_INF_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SAME_AW_AR_ADDR_CHK_EN` reader - Set this bit to check AXI read/write the same address region."]
+pub type SAME_AW_AR_ADDR_CHK_EN_R = crate::BitReader;
+#[doc = "Field `SAME_AW_AR_ADDR_CHK_EN` writer - Set this bit to check AXI read/write the same address region."]
+pub type SAME_AW_AR_ADDR_CHK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLOSE_AXI_INF_EN` reader - Set this bit to close AXI read/write transfer to MSPI, which means that only SLV_ERR will be replied to BRESP/RRESP."]
+pub type CLOSE_AXI_INF_EN_R = crate::BitReader;
+#[doc = "Field `CLOSE_AXI_INF_EN` writer - Set this bit to close AXI read/write transfer to MSPI, which means that only SLV_ERR will be replied to BRESP/RRESP."]
+pub type CLOSE_AXI_INF_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - For SPI0, AXI master access enable, 1: enable, 0:disable."]
     #[inline(always)]
@@ -139,13 +139,13 @@ impl R {
     }
     #[doc = "Bit 30 - Set this bit to check AXI read/write the same address region."]
     #[inline(always)]
-    pub fn spi_same_aw_ar_addr_chk_en(&self) -> SPI_SAME_AW_AR_ADDR_CHK_EN_R {
-        SPI_SAME_AW_AR_ADDR_CHK_EN_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn same_aw_ar_addr_chk_en(&self) -> SAME_AW_AR_ADDR_CHK_EN_R {
+        SAME_AW_AR_ADDR_CHK_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Set this bit to close AXI read/write transfer to MSPI, which means that only SLV_ERR will be replied to BRESP/RRESP."]
     #[inline(always)]
-    pub fn spi_close_axi_inf_en(&self) -> SPI_CLOSE_AXI_INF_EN_R {
-        SPI_CLOSE_AXI_INF_EN_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn close_axi_inf_en(&self) -> CLOSE_AXI_INF_EN_R {
+        CLOSE_AXI_INF_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -166,11 +166,8 @@ impl core::fmt::Debug for R {
             .field("arb_req1_pri", &self.arb_req1_pri())
             .field("arb_req0_wei", &self.arb_req0_wei())
             .field("arb_req1_wei", &self.arb_req1_wei())
-            .field(
-                "spi_same_aw_ar_addr_chk_en",
-                &self.spi_same_aw_ar_addr_chk_en(),
-            )
-            .field("spi_close_axi_inf_en", &self.spi_close_axi_inf_en())
+            .field("same_aw_ar_addr_chk_en", &self.same_aw_ar_addr_chk_en())
+            .field("close_axi_inf_en", &self.close_axi_inf_en())
             .finish()
     }
 }
@@ -247,15 +244,13 @@ impl W {
     }
     #[doc = "Bit 30 - Set this bit to check AXI read/write the same address region."]
     #[inline(always)]
-    pub fn spi_same_aw_ar_addr_chk_en(
-        &mut self,
-    ) -> SPI_SAME_AW_AR_ADDR_CHK_EN_W<'_, CACHE_FCTRL_SPEC> {
-        SPI_SAME_AW_AR_ADDR_CHK_EN_W::new(self, 30)
+    pub fn same_aw_ar_addr_chk_en(&mut self) -> SAME_AW_AR_ADDR_CHK_EN_W<'_, CACHE_FCTRL_SPEC> {
+        SAME_AW_AR_ADDR_CHK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Set this bit to close AXI read/write transfer to MSPI, which means that only SLV_ERR will be replied to BRESP/RRESP."]
     #[inline(always)]
-    pub fn spi_close_axi_inf_en(&mut self) -> SPI_CLOSE_AXI_INF_EN_W<'_, CACHE_FCTRL_SPEC> {
-        SPI_CLOSE_AXI_INF_EN_W::new(self, 31)
+    pub fn close_axi_inf_en(&mut self) -> CLOSE_AXI_INF_EN_W<'_, CACHE_FCTRL_SPEC> {
+        CLOSE_AXI_INF_EN_W::new(self, 31)
     }
 }
 #[doc = "SPI0 bit mode control register.\n\nYou can [`read`](crate::Reg::read) this register and get [`cache_fctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cache_fctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

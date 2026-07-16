@@ -2,6 +2,10 @@
 pub type R = crate::R<RD_STATUS_SPEC>;
 #[doc = "Register `RD_STATUS` writer"]
 pub type W = crate::W<RD_STATUS_SPEC>;
+#[doc = "Field `STATUS` reader - "]
+pub type STATUS_R = crate::FieldReader<u16>;
+#[doc = "Field `STATUS` writer - "]
+pub type STATUS_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `WB_MODE` reader - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
 pub type WB_MODE_R = crate::FieldReader;
 #[doc = "Field `WB_MODE` writer - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
@@ -15,6 +19,11 @@ pub type WB_MODE_EN_R = crate::BitReader;
 #[doc = "Field `WB_MODE_EN` writer - Mode bits is valid while this bit is enable. 1: enable 0: disable."]
 pub type WB_MODE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
+    #[doc = "Bits 0:15"]
+    #[inline(always)]
+    pub fn status(&self) -> STATUS_R {
+        STATUS_R::new((self.bits & 0xffff) as u16)
+    }
     #[doc = "Bits 16:23 - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
     #[inline(always)]
     pub fn wb_mode(&self) -> WB_MODE_R {
@@ -38,10 +47,16 @@ impl core::fmt::Debug for R {
             .field("wb_mode", &self.wb_mode())
             .field("wb_mode_bitlen", &self.wb_mode_bitlen())
             .field("wb_mode_en", &self.wb_mode_en())
+            .field("status", &self.status())
             .finish()
     }
 }
 impl W {
+    #[doc = "Bits 0:15"]
+    #[inline(always)]
+    pub fn status(&mut self) -> STATUS_W<'_, RD_STATUS_SPEC> {
+        STATUS_W::new(self, 0)
+    }
     #[doc = "Bits 16:23 - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
     #[inline(always)]
     pub fn wb_mode(&mut self) -> WB_MODE_W<'_, RD_STATUS_SPEC> {

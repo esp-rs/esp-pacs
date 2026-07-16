@@ -2,8 +2,8 @@
 pub type W = crate::W<INT_CLR_SPEC>;
 #[doc = "Field `SUPER_WDT` writer - need_des"]
 pub type SUPER_WDT_W<'a, REG> = crate::BitWriter1C<'a, REG>;
-#[doc = "Field `LP_WDT` writer - need_des"]
-pub type LP_WDT_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `WDT` writer - need_des"]
+pub type WDT_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -18,8 +18,8 @@ impl W {
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn lp_wdt(&mut self) -> LP_WDT_W<'_, INT_CLR_SPEC> {
-        LP_WDT_W::new(self, 31)
+    pub fn wdt(&mut self) -> WDT_W<'_, INT_CLR_SPEC> {
+        WDT_W::new(self, 31)
     }
 }
 #[doc = "need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

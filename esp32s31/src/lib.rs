@@ -39,9 +39,9 @@ extern "C" {
     fn TG0_T0_LEVEL();
     fn TG0_T1_LEVEL();
     fn TG0_WDT_LEVEL();
-    fn TG1_T0();
-    fn TG1_T1();
-    fn TG1_WDT();
+    fn TG1_T0_LEVEL();
+    fn TG1_T1_LEVEL();
+    fn TG1_WDT_LEVEL();
     fn LEDC0();
     fn LEDC1();
     fn SYSTIMER_TARGET0();
@@ -76,6 +76,10 @@ extern "C" {
     fn GPIO_INT1();
     fn GPIO_INT2();
     fn GPIO_INT3();
+    fn FROM_CPU_INTR0();
+    fn FROM_CPU_INTR1();
+    fn FROM_CPU_INTR2();
+    fn FROM_CPU_INTR3();
     fn CACHE();
     fn CPU_APM_M0();
     fn CPU_APM_M1();
@@ -118,6 +122,7 @@ extern "C" {
     fn HP_PAU();
     fn HP_PARLIO_RX();
     fn HP_PARLIO_TX();
+    fn ASSIST_DEBUG();
     fn CORDIC();
     fn ZERO_DET();
     fn LP_WDT();
@@ -200,9 +205,15 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 168] = [
     Vector {
         _handler: TG0_WDT_LEVEL,
     },
-    Vector { _handler: TG1_T0 },
-    Vector { _handler: TG1_T1 },
-    Vector { _handler: TG1_WDT },
+    Vector {
+        _handler: TG1_T0_LEVEL,
+    },
+    Vector {
+        _handler: TG1_T1_LEVEL,
+    },
+    Vector {
+        _handler: TG1_WDT_LEVEL,
+    },
     Vector { _handler: LEDC0 },
     Vector { _handler: LEDC1 },
     Vector {
@@ -285,10 +296,18 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 168] = [
     Vector {
         _handler: GPIO_INT3,
     },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: FROM_CPU_INTR0,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR1,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR2,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR3,
+    },
     Vector { _handler: CACHE },
     Vector {
         _handler: CPU_APM_M0,
@@ -405,7 +424,9 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 168] = [
     Vector {
         _handler: HP_PARLIO_TX,
     },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: ASSIST_DEBUG,
+    },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -482,6 +503,51 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 168] = [
 #[doc(hidden)]
 pub mod interrupt;
 pub use self::interrupt::Interrupt;
+#[doc = "Core Local Interrupt Controller"]
+pub type CLIC = crate::Periph<clic::RegisterBlock, 0x1080_0000>;
+impl core::fmt::Debug for CLIC {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLIC").finish()
+    }
+}
+#[doc = "Core Local Interrupt Controller"]
+pub mod clic;
+#[doc = "IEEE802154 Peripheral"]
+pub type IEEE802154 = crate::Periph<ieee802154::RegisterBlock, 0x2010_3000>;
+impl core::fmt::Debug for IEEE802154 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IEEE802154").finish()
+    }
+}
+#[doc = "IEEE802154 Peripheral"]
+pub mod ieee802154;
+#[doc = "MODEM_SYSCON"]
+pub type MODEM_SYSCON = crate::Periph<modem_syscon::RegisterBlock, 0x2010_9c00>;
+impl core::fmt::Debug for MODEM_SYSCON {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MODEM_SYSCON").finish()
+    }
+}
+#[doc = "MODEM_SYSCON"]
+pub mod modem_syscon;
+#[doc = "MODEM_LPCON"]
+pub type MODEM_LPCON = crate::Periph<modem_lpcon::RegisterBlock, 0x2010_f000>;
+impl core::fmt::Debug for MODEM_LPCON {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MODEM_LPCON").finish()
+    }
+}
+#[doc = "MODEM_LPCON"]
+pub mod modem_lpcon;
+#[doc = "I2C_ANA_MST Peripheral"]
+pub type I2C_ANA_MST = crate::Periph<i2c_ana_mst::RegisterBlock, 0x2010_f800>;
+impl core::fmt::Debug for I2C_ANA_MST {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C_ANA_MST").finish()
+    }
+}
+#[doc = "I2C_ANA_MST Peripheral"]
+pub mod i2c_ana_mst;
 #[doc = "ADC (Analog to Digital Converter)"]
 pub type ADC = crate::Periph<adc::RegisterBlock, 0x2081_5000>;
 impl core::fmt::Debug for ADC {
@@ -518,6 +584,15 @@ impl core::fmt::Debug for ASRC {
 }
 #[doc = "ASRC Peripheral"]
 pub mod asrc;
+#[doc = "Connectivity System Registers"]
+pub type CNNT_SYS = crate::Periph<cnnt_sys::RegisterBlock, 0x2035_9000>;
+impl core::fmt::Debug for CNNT_SYS {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CNNT_SYS").finish()
+    }
+}
+#[doc = "Connectivity System Registers"]
+pub mod cnnt_sys;
 #[doc = "AXI_DMA Peripheral"]
 pub type AXI_DMA = crate::Periph<axi_dma::RegisterBlock, 0x2034_8000>;
 impl core::fmt::Debug for AXI_DMA {
@@ -725,6 +800,15 @@ impl core::fmt::Debug for HP_PERI1_PMS {
 }
 #[doc = "HP_PERI1_PMS Peripheral"]
 pub mod hp_peri1_pms;
+#[doc = "LP System Registers"]
+pub type LP_SYS = crate::Periph<lp_sys::RegisterBlock, 0x2070_0000>;
+impl core::fmt::Debug for LP_SYS {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_SYS").finish()
+    }
+}
+#[doc = "LP System Registers"]
+pub mod lp_sys;
 #[doc = "High-Power System"]
 pub type HP_SYS = crate::Periph<hp_sys::RegisterBlock, 0x2058_6000>;
 impl core::fmt::Debug for HP_SYS {
@@ -770,6 +854,24 @@ impl core::fmt::Debug for I2C1 {
 }
 #[doc = "I2C (Inter-Integrated Circuit) Controller 1"]
 pub use self::i2c0 as i2c1;
+#[doc = "LP I2C Controller"]
+pub type LP_I2C = crate::Periph<i2c0::RegisterBlock, 0x2081_1000>;
+impl core::fmt::Debug for LP_I2C {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_I2C").finish()
+    }
+}
+#[doc = "LP I2C Controller"]
+pub use self::i2c0 as lp_i2c;
+#[doc = "LP SPI Controller"]
+pub type LP_SPI = crate::Periph<lp_spi::RegisterBlock, 0x2081_2000>;
+impl core::fmt::Debug for LP_SPI {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_SPI").finish()
+    }
+}
+#[doc = "LP SPI Controller"]
+pub mod lp_spi;
 #[doc = "I2S (Inter-IC Sound) Controller 0"]
 pub type I2S0 = crate::Periph<i2s0::RegisterBlock, 0x2038_7000>;
 impl core::fmt::Debug for I2S0 {
@@ -797,6 +899,24 @@ impl core::fmt::Debug for IOMUX_MSPI_PIN {
 }
 #[doc = "IOMUX_MSPI_PIN Peripheral"]
 pub mod iomux_mspi_pin;
+#[doc = "Interrupt Controller for Core 0"]
+pub type INTERRUPT_CORE0 = crate::Periph<interrupt_core0::RegisterBlock, 0x2058_5000>;
+impl core::fmt::Debug for INTERRUPT_CORE0 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTERRUPT_CORE0").finish()
+    }
+}
+#[doc = "Interrupt Controller for Core 0"]
+pub mod interrupt_core0;
+#[doc = "Interrupt Controller for Core 1"]
+pub type INTERRUPT_CORE1 = crate::Periph<interrupt_core1::RegisterBlock, 0x2058_5800>;
+impl core::fmt::Debug for INTERRUPT_CORE1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTERRUPT_CORE1").finish()
+    }
+}
+#[doc = "Interrupt Controller for Core 1"]
+pub mod interrupt_core1;
 #[doc = "Input/Output Multiplexer"]
 pub type IO_MUX = crate::Periph<io_mux::RegisterBlock, 0x2058_2000>;
 impl core::fmt::Debug for IO_MUX {
@@ -870,14 +990,14 @@ impl core::fmt::Debug for LP_AHB_DMA {
 #[doc = "LP_AHB_DMA Peripheral"]
 pub mod lp_ahb_dma;
 #[doc = "LP_ANA_PERI Peripheral"]
-pub type LP_ANA_PERI = crate::Periph<lp_ana_peri::RegisterBlock, 0x2070_2000>;
-impl core::fmt::Debug for LP_ANA_PERI {
+pub type LP_ANA = crate::Periph<lp_ana::RegisterBlock, 0x2070_2000>;
+impl core::fmt::Debug for LP_ANA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("LP_ANA_PERI").finish()
+        f.debug_struct("LP_ANA").finish()
     }
 }
 #[doc = "LP_ANA_PERI Peripheral"]
-pub mod lp_ana_peri;
+pub mod lp_ana;
 #[doc = "LP_AON_CLKRST Peripheral"]
 pub type LP_AON_CLKRST = crate::Periph<lp_aon_clkrst::RegisterBlock, 0x2070_1000>;
 impl core::fmt::Debug for LP_AON_CLKRST {
@@ -905,6 +1025,15 @@ impl core::fmt::Debug for LP_GPIO {
 }
 #[doc = "Low-power General Purpose Input/Output"]
 pub mod lp_gpio;
+#[doc = "LP Interrupt Controller"]
+pub type LP_INTR = crate::Periph<lp_intr::RegisterBlock, 0x2071_4000>;
+impl core::fmt::Debug for LP_INTR {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_INTR").finish()
+    }
+}
+#[doc = "LP Interrupt Controller"]
+pub mod lp_intr;
 #[doc = "LP_I2C_ANA_MST Peripheral"]
 pub type LP_I2C_ANA_MST = crate::Periph<lp_i2c_ana_mst::RegisterBlock, 0x2081_3000>;
 impl core::fmt::Debug for LP_I2C_ANA_MST {
@@ -923,6 +1052,15 @@ impl core::fmt::Debug for LP_PERICLKRST {
 }
 #[doc = "LP_PERICLKRST Peripheral"]
 pub mod lp_periclkrst;
+#[doc = "LP IO MUX"]
+pub type LP_IO_MUX = crate::Periph<lp_io_mux::RegisterBlock, 0x2071_2000>;
+impl core::fmt::Debug for LP_IO_MUX {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_IO_MUX").finish()
+    }
+}
+#[doc = "LP IO MUX"]
+pub mod lp_io_mux;
 #[doc = "LP_PERI_PMS Peripheral"]
 pub type LP_PERI_PMS = crate::Periph<lp_peri_pms::RegisterBlock, 0x2070_6000>;
 impl core::fmt::Debug for LP_PERI_PMS {
@@ -1085,6 +1223,15 @@ impl core::fmt::Debug for RMA {
 }
 #[doc = "RMA Peripheral"]
 pub mod rma;
+#[doc = "ICM AXI Interconnect System"]
+pub type ICM_SYS = crate::Periph<icm_sys::RegisterBlock, 0x2051_0000>;
+impl core::fmt::Debug for ICM_SYS {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ICM_SYS").finish()
+    }
+}
+#[doc = "ICM AXI Interconnect System"]
+pub mod icm_sys;
 #[doc = "Remote Control"]
 pub type RMT = crate::Periph<rmt::RegisterBlock, 0x2035_5000>;
 impl core::fmt::Debug for RMT {
@@ -1112,6 +1259,15 @@ impl core::fmt::Debug for LP_CLKCALI {
 }
 #[doc = "LP_CLKCALI Peripheral"]
 pub mod lp_clkcali;
+#[doc = "RTC Clock Calibration 1"]
+pub type RTCLOCKCALI1 = crate::Periph<lp_clkcali::RegisterBlock, 0x2080_3000>;
+impl core::fmt::Debug for RTCLOCKCALI1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RTCLOCKCALI1").finish()
+    }
+}
+#[doc = "RTC Clock Calibration 1"]
+pub use self::lp_clkcali as rtclockcali1;
 #[doc = "Low-power Timer"]
 pub type LP_TIMER = crate::Periph<lp_timer::RegisterBlock, 0x2080_0000>;
 impl core::fmt::Debug for LP_TIMER {
@@ -1175,6 +1331,24 @@ impl core::fmt::Debug for SPI1 {
 }
 #[doc = "SPI (Serial Peripheral Interface) Controller 1"]
 pub mod spi1;
+#[doc = "PSRAM MSPI Controller 0"]
+pub type PSRAM_MSPI0 = crate::Periph<psram_mspi0::RegisterBlock, 0x2050_2000>;
+impl core::fmt::Debug for PSRAM_MSPI0 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PSRAM_MSPI0").finish()
+    }
+}
+#[doc = "PSRAM MSPI Controller 0"]
+pub mod psram_mspi0;
+#[doc = "PSRAM MSPI Controller 1"]
+pub type PSRAM_MSPI1 = crate::Periph<psram_mspi0::RegisterBlock, 0x2050_3000>;
+impl core::fmt::Debug for PSRAM_MSPI1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PSRAM_MSPI1").finish()
+    }
+}
+#[doc = "PSRAM MSPI Controller 1"]
+pub use self::psram_mspi0 as psram_mspi1;
 #[doc = "SPI (Serial Peripheral Interface) Controller 2"]
 pub type SPI2 = crate::Periph<spi2::RegisterBlock, 0x2038_f000>;
 impl core::fmt::Debug for SPI2 {
@@ -1238,6 +1412,15 @@ impl core::fmt::Debug for LP_TOUCH {
 }
 #[doc = "LP_TOUCH Peripheral"]
 pub mod lp_touch;
+#[doc = "LP Mailbox"]
+pub type LP_MAILBOX = crate::Periph<lp_mailbox::RegisterBlock, 0x2081_7000>;
+impl core::fmt::Debug for LP_MAILBOX {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_MAILBOX").finish()
+    }
+}
+#[doc = "LP Mailbox"]
+pub mod lp_mailbox;
 #[doc = "LP_TOUCH_AON Peripheral"]
 pub type LP_TOUCH_AON = crate::Periph<lp_touch_aon::RegisterBlock, 0x2070_5000>;
 impl core::fmt::Debug for LP_TOUCH_AON {

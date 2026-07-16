@@ -2,60 +2,60 @@
 pub type R = crate::R<JPEG_CTRL0_SPEC>;
 #[doc = "Register `JPEG_CTRL0` writer"]
 pub type W = crate::W<JPEG_CTRL0_SPEC>;
-#[doc = "Field `REG_JPEG_SYS_CLK_EN` reader - need_des"]
-pub type REG_JPEG_SYS_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_JPEG_SYS_CLK_EN` writer - need_des"]
-pub type REG_JPEG_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_JPEG_RST_EN` reader - need_des"]
-pub type REG_JPEG_RST_EN_R = crate::BitReader;
-#[doc = "Field `REG_JPEG_RST_EN` writer - need_des"]
-pub type REG_JPEG_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_JPEG_FORCE_NORST` reader - need_des"]
-pub type REG_JPEG_FORCE_NORST_R = crate::BitReader;
-#[doc = "Field `REG_JPEG_FORCE_NORST` writer - need_des"]
-pub type REG_JPEG_FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `JPEG_SYS_CLK_EN` reader - need_des"]
+pub type JPEG_SYS_CLK_EN_R = crate::BitReader;
+#[doc = "Field `JPEG_SYS_CLK_EN` writer - need_des"]
+pub type JPEG_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `JPEG_RST_EN` reader - need_des"]
+pub type JPEG_RST_EN_R = crate::BitReader;
+#[doc = "Field `JPEG_RST_EN` writer - need_des"]
+pub type JPEG_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `JPEG_FORCE_NORST` reader - need_des"]
+pub type JPEG_FORCE_NORST_R = crate::BitReader;
+#[doc = "Field `JPEG_FORCE_NORST` writer - need_des"]
+pub type JPEG_FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn reg_jpeg_sys_clk_en(&self) -> REG_JPEG_SYS_CLK_EN_R {
-        REG_JPEG_SYS_CLK_EN_R::new((self.bits & 1) != 0)
+    pub fn jpeg_sys_clk_en(&self) -> JPEG_SYS_CLK_EN_R {
+        JPEG_SYS_CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn reg_jpeg_rst_en(&self) -> REG_JPEG_RST_EN_R {
-        REG_JPEG_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn jpeg_rst_en(&self) -> JPEG_RST_EN_R {
+        JPEG_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn reg_jpeg_force_norst(&self) -> REG_JPEG_FORCE_NORST_R {
-        REG_JPEG_FORCE_NORST_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn jpeg_force_norst(&self) -> JPEG_FORCE_NORST_R {
+        JPEG_FORCE_NORST_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("JPEG_CTRL0")
-            .field("reg_jpeg_sys_clk_en", &self.reg_jpeg_sys_clk_en())
-            .field("reg_jpeg_rst_en", &self.reg_jpeg_rst_en())
-            .field("reg_jpeg_force_norst", &self.reg_jpeg_force_norst())
+            .field("jpeg_sys_clk_en", &self.jpeg_sys_clk_en())
+            .field("jpeg_rst_en", &self.jpeg_rst_en())
+            .field("jpeg_force_norst", &self.jpeg_force_norst())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn reg_jpeg_sys_clk_en(&mut self) -> REG_JPEG_SYS_CLK_EN_W<'_, JPEG_CTRL0_SPEC> {
-        REG_JPEG_SYS_CLK_EN_W::new(self, 0)
+    pub fn jpeg_sys_clk_en(&mut self) -> JPEG_SYS_CLK_EN_W<'_, JPEG_CTRL0_SPEC> {
+        JPEG_SYS_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn reg_jpeg_rst_en(&mut self) -> REG_JPEG_RST_EN_W<'_, JPEG_CTRL0_SPEC> {
-        REG_JPEG_RST_EN_W::new(self, 1)
+    pub fn jpeg_rst_en(&mut self) -> JPEG_RST_EN_W<'_, JPEG_CTRL0_SPEC> {
+        JPEG_RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn reg_jpeg_force_norst(&mut self) -> REG_JPEG_FORCE_NORST_W<'_, JPEG_CTRL0_SPEC> {
-        REG_JPEG_FORCE_NORST_W::new(self, 2)
+    pub fn jpeg_force_norst(&mut self) -> JPEG_FORCE_NORST_W<'_, JPEG_CTRL0_SPEC> {
+        JPEG_FORCE_NORST_W::new(self, 2)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`jpeg_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`jpeg_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

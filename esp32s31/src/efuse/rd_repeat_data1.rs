@@ -1,7 +1,13 @@
 #[doc = "Register `RD_REPEAT_DATA1` reader"]
 pub type R = crate::R<RD_REPEAT_DATA1_SPEC>;
+#[doc = "Register `RD_REPEAT_DATA1` writer"]
+pub type W = crate::W<RD_REPEAT_DATA1_SPEC>;
 #[doc = "Field `KM_RND_SWITCH_CYCLE` reader - Represents the control of key manager random number switch cycle. 0: control by register. 1: 8 km clk cycles. 2: 16 km cycles. 3: 32 km cycles"]
 pub type KM_RND_SWITCH_CYCLE_R = crate::BitReader;
+#[doc = "Field `RD_RESERVE_0_65` reader - "]
+pub type RD_RESERVE_0_65_R = crate::BitReader;
+#[doc = "Field `RD_RESERVE_0_65` writer - "]
+pub type RD_RESERVE_0_65_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `KM_DISABLE_DEPLOY_MODE` reader - Represents whether the deploy mode of key manager is disable or not. \\\\ 1: disabled \\\\ 0: enabled.\\\\ bit 0: ecsda, bit 1: flash & spi boot srambler, bit2: hmac & aes, bit3: ds & rma nonce, bit4: psram"]
 pub type KM_DISABLE_DEPLOY_MODE_R = crate::FieldReader;
 #[doc = "Field `KM_DEPLOY_ONLY_ONCE` reader - Represents whether corresponding key can only be deployed once. 1 is true, 0 is false. \\\\ 0: ecsda\\\\ 1: flash & spi boot srambler\\\\ 2: hmac & aes\\\\ 3: ds & rma nonce\\\\ 4: psram\\\\"]
@@ -24,11 +30,20 @@ pub type SECURE_BOOT_KEY_REVOKE0_R = crate::BitReader;
 pub type SECURE_BOOT_KEY_REVOKE1_R = crate::BitReader;
 #[doc = "Field `SECURE_BOOT_KEY_REVOKE2` reader - Represents whether revoking third secure boot key is enabled or disabled.\\\\ 1: enabled\\\\ 0: disabled\\\\"]
 pub type SECURE_BOOT_KEY_REVOKE2_R = crate::BitReader;
+#[doc = "Field `RD_RESERVE_0_91` reader - "]
+pub type RD_RESERVE_0_91_R = crate::FieldReader;
+#[doc = "Field `RD_RESERVE_0_91` writer - "]
+pub type RD_RESERVE_0_91_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bit 0 - Represents the control of key manager random number switch cycle. 0: control by register. 1: 8 km clk cycles. 2: 16 km cycles. 3: 32 km cycles"]
     #[inline(always)]
     pub fn km_rnd_switch_cycle(&self) -> KM_RND_SWITCH_CYCLE_R {
         KM_RND_SWITCH_CYCLE_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn rd_reserve_0_65(&self) -> RD_RESERVE_0_65_R {
+        RD_RESERVE_0_65_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:6 - Represents whether the deploy mode of key manager is disable or not. \\\\ 1: disabled \\\\ 0: enabled.\\\\ bit 0: ecsda, bit 1: flash & spi boot srambler, bit2: hmac & aes, bit3: ds & rma nonce, bit4: psram"]
     #[inline(always)]
@@ -85,6 +100,11 @@ impl R {
     pub fn secure_boot_key_revoke2(&self) -> SECURE_BOOT_KEY_REVOKE2_R {
         SECURE_BOOT_KEY_REVOKE2_R::new(((self.bits >> 26) & 1) != 0)
     }
+    #[doc = "Bits 27:31"]
+    #[inline(always)]
+    pub fn rd_reserve_0_91(&self) -> RD_RESERVE_0_91_R {
+        RD_RESERVE_0_91_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -108,15 +128,33 @@ impl core::fmt::Debug for R {
             .field("secure_boot_key_revoke0", &self.secure_boot_key_revoke0())
             .field("secure_boot_key_revoke1", &self.secure_boot_key_revoke1())
             .field("secure_boot_key_revoke2", &self.secure_boot_key_revoke2())
+            .field("rd_reserve_0_65", &self.rd_reserve_0_65())
+            .field("rd_reserve_0_91", &self.rd_reserve_0_91())
             .finish()
     }
 }
-#[doc = "Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+impl W {
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn rd_reserve_0_65(&mut self) -> RD_RESERVE_0_65_W<'_, RD_REPEAT_DATA1_SPEC> {
+        RD_RESERVE_0_65_W::new(self, 1)
+    }
+    #[doc = "Bits 27:31"]
+    #[inline(always)]
+    pub fn rd_reserve_0_91(&mut self) -> RD_RESERVE_0_91_W<'_, RD_REPEAT_DATA1_SPEC> {
+        RD_RESERVE_0_91_W::new(self, 27)
+    }
+}
+#[doc = "Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_repeat_data1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_REPEAT_DATA1_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_DATA1_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`rd_repeat_data1::R`](R) reader structure"]
 impl crate::Readable for RD_REPEAT_DATA1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rd_repeat_data1::W`](W) writer structure"]
+impl crate::Writable for RD_REPEAT_DATA1_SPEC {
+    type Safety = crate::Unsafe;
+}
 #[doc = "`reset()` method sets RD_REPEAT_DATA1 to value 0"]
 impl crate::Resettable for RD_REPEAT_DATA1_SPEC {}

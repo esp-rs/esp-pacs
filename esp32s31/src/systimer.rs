@@ -3,41 +3,19 @@
 #[doc = "Register block"]
 pub struct RegisterBlock {
     conf: CONF,
-    unit0_op: UNIT0_OP,
-    unit1_op: UNIT1_OP,
-    unit0_load_hi: UNIT0_LOAD_HI,
-    unit0_load_lo: UNIT0_LOAD_LO,
-    unit1_load_hi: UNIT1_LOAD_HI,
-    unit1_load_lo: UNIT1_LOAD_LO,
-    target0_hi: TARGET0_HI,
-    target0_lo: TARGET0_LO,
-    target1_hi: TARGET1_HI,
-    target1_lo: TARGET1_LO,
-    target2_hi: TARGET2_HI,
-    target2_lo: TARGET2_LO,
-    target0_conf: TARGET0_CONF,
-    target1_conf: TARGET1_CONF,
-    target2_conf: TARGET2_CONF,
-    unit0_value_hi: UNIT0_VALUE_HI,
-    unit0_value_lo: UNIT0_VALUE_LO,
-    unit1_value_hi: UNIT1_VALUE_HI,
-    unit1_value_lo: UNIT1_VALUE_LO,
-    comp0_load: COMP0_LOAD,
-    comp1_load: COMP1_LOAD,
-    comp2_load: COMP2_LOAD,
-    unit0_load: UNIT0_LOAD,
-    unit1_load: UNIT1_LOAD,
+    unit_op: [UNIT_OP; 2],
+    unitload: [UNITLOAD; 2],
+    trgt: [TRGT; 3],
+    target_conf: [TARGET_CONF; 3],
+    unit_value: [UNIT_VALUE; 2],
+    comp_load: [COMP_LOAD; 3],
+    unit_load: [UNIT_LOAD; 2],
     int_ena: INT_ENA,
     int_raw: INT_RAW,
     int_clr: INT_CLR,
     int_st: INT_ST,
-    real_target0_lo: REAL_TARGET0_LO,
-    real_target0_hi: REAL_TARGET0_HI,
-    real_target1_lo: REAL_TARGET1_LO,
-    real_target1_hi: REAL_TARGET1_HI,
-    real_target2_lo: REAL_TARGET2_LO,
-    real_target2_hi: REAL_TARGET2_HI,
-    _reserved35: [u8; 0x70],
+    real_target: [REAL_TARGET; 3],
+    _reserved13: [u8; 0x70],
     date: DATE,
 }
 impl RegisterBlock {
@@ -46,125 +24,152 @@ impl RegisterBlock {
     pub const fn conf(&self) -> &CONF {
         &self.conf
     }
+    #[doc = "0x04..0x0c - Read UNIT%s value to registers"]
+    #[inline(always)]
+    pub const fn unit_op(&self, n: usize) -> &UNIT_OP {
+        &self.unit_op[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x04..0x0c - Read UNIT%s value to registers"]
+    #[inline(always)]
+    pub fn unit_op_iter(&self) -> impl Iterator<Item = &UNIT_OP> {
+        self.unit_op.iter()
+    }
     #[doc = "0x04 - Read UNIT0 value to registers"]
     #[inline(always)]
-    pub const fn unit0_op(&self) -> &UNIT0_OP {
-        &self.unit0_op
+    pub const fn unit0_op(&self) -> &UNIT_OP {
+        self.unit_op(0)
     }
     #[doc = "0x08 - Read UNIT1 value to registers"]
     #[inline(always)]
-    pub const fn unit1_op(&self) -> &UNIT1_OP {
-        &self.unit1_op
+    pub const fn unit1_op(&self) -> &UNIT_OP {
+        self.unit_op(1)
     }
-    #[doc = "0x0c - High 20 bits to be loaded to UNIT0"]
+    #[doc = "0x0c..0x1c - Cluster UNIT%sLOAD, containing UNIT?_LOAD_HI, UNIT?_LOAD_LO"]
     #[inline(always)]
-    pub const fn unit0_load_hi(&self) -> &UNIT0_LOAD_HI {
-        &self.unit0_load_hi
+    pub const fn unitload(&self, n: usize) -> &UNITLOAD {
+        &self.unitload[n]
     }
-    #[doc = "0x10 - Low 32 bits to be loaded to UNIT0"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x0c..0x1c - Cluster UNIT%sLOAD, containing UNIT?_LOAD_HI, UNIT?_LOAD_LO"]
     #[inline(always)]
-    pub const fn unit0_load_lo(&self) -> &UNIT0_LOAD_LO {
-        &self.unit0_load_lo
+    pub fn unitload_iter(&self) -> impl Iterator<Item = &UNITLOAD> {
+        self.unitload.iter()
     }
-    #[doc = "0x14 - High 20 bits to be loaded to UNIT1"]
+    #[doc = "0x0c..0x14 - Cluster UNIT0LOAD, containing UNIT?_LOAD_HI, UNIT?_LOAD_LO"]
     #[inline(always)]
-    pub const fn unit1_load_hi(&self) -> &UNIT1_LOAD_HI {
-        &self.unit1_load_hi
+    pub const fn unit0load(&self) -> &UNITLOAD {
+        self.unitload(0)
     }
-    #[doc = "0x18 - Low 32 bits to be loaded to UNIT1"]
+    #[doc = "0x14..0x1c - Cluster UNIT1LOAD, containing UNIT?_LOAD_HI, UNIT?_LOAD_LO"]
     #[inline(always)]
-    pub const fn unit1_load_lo(&self) -> &UNIT1_LOAD_LO {
-        &self.unit1_load_lo
+    pub const fn unit1load(&self) -> &UNITLOAD {
+        self.unitload(1)
     }
-    #[doc = "0x1c - Alarm value to be loaded to COMP0, high 20 bits"]
+    #[doc = "0x1c..0x34 - Cluster TRGT%s, containing TARGET?_HI, TARGET?_LO"]
     #[inline(always)]
-    pub const fn target0_hi(&self) -> &TARGET0_HI {
-        &self.target0_hi
+    pub const fn trgt(&self, n: usize) -> &TRGT {
+        &self.trgt[n]
     }
-    #[doc = "0x20 - Alarm value to be loaded to COMP0, low 32 bits"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1c..0x34 - Cluster TRGT%s, containing TARGET?_HI, TARGET?_LO"]
     #[inline(always)]
-    pub const fn target0_lo(&self) -> &TARGET0_LO {
-        &self.target0_lo
+    pub fn trgt_iter(&self) -> impl Iterator<Item = &TRGT> {
+        self.trgt.iter()
     }
-    #[doc = "0x24 - Alarm value to be loaded to COMP1, high 20 bits"]
+    #[doc = "0x34..0x40 - Configure COMP%s alarm mode"]
     #[inline(always)]
-    pub const fn target1_hi(&self) -> &TARGET1_HI {
-        &self.target1_hi
+    pub const fn target_conf(&self, n: usize) -> &TARGET_CONF {
+        &self.target_conf[n]
     }
-    #[doc = "0x28 - Alarm value to be loaded to COMP1, low 32 bits"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x34..0x40 - Configure COMP%s alarm mode"]
     #[inline(always)]
-    pub const fn target1_lo(&self) -> &TARGET1_LO {
-        &self.target1_lo
-    }
-    #[doc = "0x2c - Alarm value to be loaded to COMP2, high 20 bits"]
-    #[inline(always)]
-    pub const fn target2_hi(&self) -> &TARGET2_HI {
-        &self.target2_hi
-    }
-    #[doc = "0x30 - Alarm value to be loaded to COMP2, low 32 bits"]
-    #[inline(always)]
-    pub const fn target2_lo(&self) -> &TARGET2_LO {
-        &self.target2_lo
+    pub fn target_conf_iter(&self) -> impl Iterator<Item = &TARGET_CONF> {
+        self.target_conf.iter()
     }
     #[doc = "0x34 - Configure COMP0 alarm mode"]
     #[inline(always)]
-    pub const fn target0_conf(&self) -> &TARGET0_CONF {
-        &self.target0_conf
+    pub const fn target0_conf(&self) -> &TARGET_CONF {
+        self.target_conf(0)
     }
     #[doc = "0x38 - Configure COMP1 alarm mode"]
     #[inline(always)]
-    pub const fn target1_conf(&self) -> &TARGET1_CONF {
-        &self.target1_conf
+    pub const fn target1_conf(&self) -> &TARGET_CONF {
+        self.target_conf(1)
     }
     #[doc = "0x3c - Configure COMP2 alarm mode"]
     #[inline(always)]
-    pub const fn target2_conf(&self) -> &TARGET2_CONF {
-        &self.target2_conf
+    pub const fn target2_conf(&self) -> &TARGET_CONF {
+        self.target_conf(2)
     }
-    #[doc = "0x40 - UNIT0 value, high 20 bits"]
+    #[doc = "0x40..0x50 - Cluster UNIT%s_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
     #[inline(always)]
-    pub const fn unit0_value_hi(&self) -> &UNIT0_VALUE_HI {
-        &self.unit0_value_hi
+    pub const fn unit_value(&self, n: usize) -> &UNIT_VALUE {
+        &self.unit_value[n]
     }
-    #[doc = "0x44 - UNIT0 value, low 32 bits"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x40..0x50 - Cluster UNIT%s_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
     #[inline(always)]
-    pub const fn unit0_value_lo(&self) -> &UNIT0_VALUE_LO {
-        &self.unit0_value_lo
+    pub fn unit_value_iter(&self) -> impl Iterator<Item = &UNIT_VALUE> {
+        self.unit_value.iter()
     }
-    #[doc = "0x48 - UNIT1 value, high 20 bits"]
+    #[doc = "0x40..0x48 - Cluster UNIT0_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
     #[inline(always)]
-    pub const fn unit1_value_hi(&self) -> &UNIT1_VALUE_HI {
-        &self.unit1_value_hi
+    pub const fn unit0_value(&self) -> &UNIT_VALUE {
+        self.unit_value(0)
     }
-    #[doc = "0x4c - UNIT1 value, low 32 bits"]
+    #[doc = "0x48..0x50 - Cluster UNIT1_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
     #[inline(always)]
-    pub const fn unit1_value_lo(&self) -> &UNIT1_VALUE_LO {
-        &self.unit1_value_lo
+    pub const fn unit1_value(&self) -> &UNIT_VALUE {
+        self.unit_value(1)
+    }
+    #[doc = "0x50..0x5c - COMP%s synchronization register"]
+    #[inline(always)]
+    pub const fn comp_load(&self, n: usize) -> &COMP_LOAD {
+        &self.comp_load[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x50..0x5c - COMP%s synchronization register"]
+    #[inline(always)]
+    pub fn comp_load_iter(&self) -> impl Iterator<Item = &COMP_LOAD> {
+        self.comp_load.iter()
     }
     #[doc = "0x50 - COMP0 synchronization register"]
     #[inline(always)]
-    pub const fn comp0_load(&self) -> &COMP0_LOAD {
-        &self.comp0_load
+    pub const fn comp0_load(&self) -> &COMP_LOAD {
+        self.comp_load(0)
     }
     #[doc = "0x54 - COMP1 synchronization register"]
     #[inline(always)]
-    pub const fn comp1_load(&self) -> &COMP1_LOAD {
-        &self.comp1_load
+    pub const fn comp1_load(&self) -> &COMP_LOAD {
+        self.comp_load(1)
     }
     #[doc = "0x58 - COMP2 synchronization register"]
     #[inline(always)]
-    pub const fn comp2_load(&self) -> &COMP2_LOAD {
-        &self.comp2_load
+    pub const fn comp2_load(&self) -> &COMP_LOAD {
+        self.comp_load(2)
+    }
+    #[doc = "0x5c..0x64 - UNIT%s synchronization register"]
+    #[inline(always)]
+    pub const fn unit_load(&self, n: usize) -> &UNIT_LOAD {
+        &self.unit_load[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x5c..0x64 - UNIT%s synchronization register"]
+    #[inline(always)]
+    pub fn unit_load_iter(&self) -> impl Iterator<Item = &UNIT_LOAD> {
+        self.unit_load.iter()
     }
     #[doc = "0x5c - UNIT0 synchronization register"]
     #[inline(always)]
-    pub const fn unit0_load(&self) -> &UNIT0_LOAD {
-        &self.unit0_load
+    pub const fn unit0_load(&self) -> &UNIT_LOAD {
+        self.unit_load(0)
     }
     #[doc = "0x60 - UNIT1 synchronization register"]
     #[inline(always)]
-    pub const fn unit1_load(&self) -> &UNIT1_LOAD {
-        &self.unit1_load
+    pub const fn unit1_load(&self) -> &UNIT_LOAD {
+        self.unit_load(1)
     }
     #[doc = "0x64 - Interrupt enable register of system timer"]
     #[inline(always)]
@@ -186,35 +191,16 @@ impl RegisterBlock {
     pub const fn int_st(&self) -> &INT_ST {
         &self.int_st
     }
-    #[doc = "0x74 - Actual target value of COMP0, low 32 bits"]
+    #[doc = "0x74..0x8c - Cluster REAL_TARGET%s, containing REAL_TARGET?_LO, REAL_TARGET?_HI"]
     #[inline(always)]
-    pub const fn real_target0_lo(&self) -> &REAL_TARGET0_LO {
-        &self.real_target0_lo
+    pub const fn real_target(&self, n: usize) -> &REAL_TARGET {
+        &self.real_target[n]
     }
-    #[doc = "0x78 - Actual target value of COMP0, high 20 bits"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x74..0x8c - Cluster REAL_TARGET%s, containing REAL_TARGET?_LO, REAL_TARGET?_HI"]
     #[inline(always)]
-    pub const fn real_target0_hi(&self) -> &REAL_TARGET0_HI {
-        &self.real_target0_hi
-    }
-    #[doc = "0x7c - Actual target value of COMP1, low 32 bits"]
-    #[inline(always)]
-    pub const fn real_target1_lo(&self) -> &REAL_TARGET1_LO {
-        &self.real_target1_lo
-    }
-    #[doc = "0x80 - Actual target value of COMP1, high 20 bits"]
-    #[inline(always)]
-    pub const fn real_target1_hi(&self) -> &REAL_TARGET1_HI {
-        &self.real_target1_hi
-    }
-    #[doc = "0x84 - Actual target value of COMP2, low 32 bits"]
-    #[inline(always)]
-    pub const fn real_target2_lo(&self) -> &REAL_TARGET2_LO {
-        &self.real_target2_lo
-    }
-    #[doc = "0x88 - Actual target value of COMP2, high 20 bits"]
-    #[inline(always)]
-    pub const fn real_target2_hi(&self) -> &REAL_TARGET2_HI {
-        &self.real_target2_hi
+    pub fn real_target_iter(&self) -> impl Iterator<Item = &REAL_TARGET> {
+        self.real_target.iter()
     }
     #[doc = "0xfc - Version control register"]
     #[inline(always)]
@@ -226,102 +212,37 @@ impl RegisterBlock {
 pub type CONF = crate::Reg<conf::CONF_SPEC>;
 #[doc = "Configure system timer clock"]
 pub mod conf;
-#[doc = "UNIT0_OP (rw) register accessor: Read UNIT0 value to registers\n\nYou can [`read`](crate::Reg::read) this register and get [`unit0_op::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`unit0_op::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit0_op`] module"]
-pub type UNIT0_OP = crate::Reg<unit0_op::UNIT0_OP_SPEC>;
-#[doc = "Read UNIT0 value to registers"]
-pub mod unit0_op;
-#[doc = "UNIT1_OP (rw) register accessor: Read UNIT1 value to registers\n\nYou can [`read`](crate::Reg::read) this register and get [`unit1_op::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`unit1_op::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit1_op`] module"]
-pub type UNIT1_OP = crate::Reg<unit1_op::UNIT1_OP_SPEC>;
-#[doc = "Read UNIT1 value to registers"]
-pub mod unit1_op;
-#[doc = "UNIT0_LOAD_HI (rw) register accessor: High 20 bits to be loaded to UNIT0\n\nYou can [`read`](crate::Reg::read) this register and get [`unit0_load_hi::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`unit0_load_hi::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit0_load_hi`] module"]
-pub type UNIT0_LOAD_HI = crate::Reg<unit0_load_hi::UNIT0_LOAD_HI_SPEC>;
-#[doc = "High 20 bits to be loaded to UNIT0"]
-pub mod unit0_load_hi;
-#[doc = "UNIT0_LOAD_LO (rw) register accessor: Low 32 bits to be loaded to UNIT0\n\nYou can [`read`](crate::Reg::read) this register and get [`unit0_load_lo::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`unit0_load_lo::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit0_load_lo`] module"]
-pub type UNIT0_LOAD_LO = crate::Reg<unit0_load_lo::UNIT0_LOAD_LO_SPEC>;
-#[doc = "Low 32 bits to be loaded to UNIT0"]
-pub mod unit0_load_lo;
-#[doc = "UNIT1_LOAD_HI (rw) register accessor: High 20 bits to be loaded to UNIT1\n\nYou can [`read`](crate::Reg::read) this register and get [`unit1_load_hi::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`unit1_load_hi::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit1_load_hi`] module"]
-pub type UNIT1_LOAD_HI = crate::Reg<unit1_load_hi::UNIT1_LOAD_HI_SPEC>;
-#[doc = "High 20 bits to be loaded to UNIT1"]
-pub mod unit1_load_hi;
-#[doc = "UNIT1_LOAD_LO (rw) register accessor: Low 32 bits to be loaded to UNIT1\n\nYou can [`read`](crate::Reg::read) this register and get [`unit1_load_lo::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`unit1_load_lo::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit1_load_lo`] module"]
-pub type UNIT1_LOAD_LO = crate::Reg<unit1_load_lo::UNIT1_LOAD_LO_SPEC>;
-#[doc = "Low 32 bits to be loaded to UNIT1"]
-pub mod unit1_load_lo;
-#[doc = "TARGET0_HI (rw) register accessor: Alarm value to be loaded to COMP0, high 20 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`target0_hi::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`target0_hi::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target0_hi`] module"]
-pub type TARGET0_HI = crate::Reg<target0_hi::TARGET0_HI_SPEC>;
-#[doc = "Alarm value to be loaded to COMP0, high 20 bits"]
-pub mod target0_hi;
-#[doc = "TARGET0_LO (rw) register accessor: Alarm value to be loaded to COMP0, low 32 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`target0_lo::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`target0_lo::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target0_lo`] module"]
-pub type TARGET0_LO = crate::Reg<target0_lo::TARGET0_LO_SPEC>;
-#[doc = "Alarm value to be loaded to COMP0, low 32 bits"]
-pub mod target0_lo;
-#[doc = "TARGET1_HI (rw) register accessor: Alarm value to be loaded to COMP1, high 20 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`target1_hi::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`target1_hi::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target1_hi`] module"]
-pub type TARGET1_HI = crate::Reg<target1_hi::TARGET1_HI_SPEC>;
-#[doc = "Alarm value to be loaded to COMP1, high 20 bits"]
-pub mod target1_hi;
-#[doc = "TARGET1_LO (rw) register accessor: Alarm value to be loaded to COMP1, low 32 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`target1_lo::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`target1_lo::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target1_lo`] module"]
-pub type TARGET1_LO = crate::Reg<target1_lo::TARGET1_LO_SPEC>;
-#[doc = "Alarm value to be loaded to COMP1, low 32 bits"]
-pub mod target1_lo;
-#[doc = "TARGET2_HI (rw) register accessor: Alarm value to be loaded to COMP2, high 20 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`target2_hi::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`target2_hi::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target2_hi`] module"]
-pub type TARGET2_HI = crate::Reg<target2_hi::TARGET2_HI_SPEC>;
-#[doc = "Alarm value to be loaded to COMP2, high 20 bits"]
-pub mod target2_hi;
-#[doc = "TARGET2_LO (rw) register accessor: Alarm value to be loaded to COMP2, low 32 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`target2_lo::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`target2_lo::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target2_lo`] module"]
-pub type TARGET2_LO = crate::Reg<target2_lo::TARGET2_LO_SPEC>;
-#[doc = "Alarm value to be loaded to COMP2, low 32 bits"]
-pub mod target2_lo;
-#[doc = "TARGET0_CONF (rw) register accessor: Configure COMP0 alarm mode\n\nYou can [`read`](crate::Reg::read) this register and get [`target0_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`target0_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target0_conf`] module"]
-pub type TARGET0_CONF = crate::Reg<target0_conf::TARGET0_CONF_SPEC>;
-#[doc = "Configure COMP0 alarm mode"]
-pub mod target0_conf;
-#[doc = "TARGET1_CONF (rw) register accessor: Configure COMP1 alarm mode\n\nYou can [`read`](crate::Reg::read) this register and get [`target1_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`target1_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target1_conf`] module"]
-pub type TARGET1_CONF = crate::Reg<target1_conf::TARGET1_CONF_SPEC>;
-#[doc = "Configure COMP1 alarm mode"]
-pub mod target1_conf;
-#[doc = "TARGET2_CONF (rw) register accessor: Configure COMP2 alarm mode\n\nYou can [`read`](crate::Reg::read) this register and get [`target2_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`target2_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target2_conf`] module"]
-pub type TARGET2_CONF = crate::Reg<target2_conf::TARGET2_CONF_SPEC>;
-#[doc = "Configure COMP2 alarm mode"]
-pub mod target2_conf;
-#[doc = "UNIT0_VALUE_HI (r) register accessor: UNIT0 value, high 20 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`unit0_value_hi::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit0_value_hi`] module"]
-pub type UNIT0_VALUE_HI = crate::Reg<unit0_value_hi::UNIT0_VALUE_HI_SPEC>;
-#[doc = "UNIT0 value, high 20 bits"]
-pub mod unit0_value_hi;
-#[doc = "UNIT0_VALUE_LO (r) register accessor: UNIT0 value, low 32 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`unit0_value_lo::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit0_value_lo`] module"]
-pub type UNIT0_VALUE_LO = crate::Reg<unit0_value_lo::UNIT0_VALUE_LO_SPEC>;
-#[doc = "UNIT0 value, low 32 bits"]
-pub mod unit0_value_lo;
-#[doc = "UNIT1_VALUE_HI (r) register accessor: UNIT1 value, high 20 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`unit1_value_hi::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit1_value_hi`] module"]
-pub type UNIT1_VALUE_HI = crate::Reg<unit1_value_hi::UNIT1_VALUE_HI_SPEC>;
-#[doc = "UNIT1 value, high 20 bits"]
-pub mod unit1_value_hi;
-#[doc = "UNIT1_VALUE_LO (r) register accessor: UNIT1 value, low 32 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`unit1_value_lo::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit1_value_lo`] module"]
-pub type UNIT1_VALUE_LO = crate::Reg<unit1_value_lo::UNIT1_VALUE_LO_SPEC>;
-#[doc = "UNIT1 value, low 32 bits"]
-pub mod unit1_value_lo;
-#[doc = "COMP0_LOAD (w) register accessor: COMP0 synchronization register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comp0_load::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comp0_load`] module"]
-pub type COMP0_LOAD = crate::Reg<comp0_load::COMP0_LOAD_SPEC>;
-#[doc = "COMP0 synchronization register"]
-pub mod comp0_load;
-#[doc = "COMP1_LOAD (w) register accessor: COMP1 synchronization register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comp1_load::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comp1_load`] module"]
-pub type COMP1_LOAD = crate::Reg<comp1_load::COMP1_LOAD_SPEC>;
-#[doc = "COMP1 synchronization register"]
-pub mod comp1_load;
-#[doc = "COMP2_LOAD (w) register accessor: COMP2 synchronization register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comp2_load::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comp2_load`] module"]
-pub type COMP2_LOAD = crate::Reg<comp2_load::COMP2_LOAD_SPEC>;
-#[doc = "COMP2 synchronization register"]
-pub mod comp2_load;
-#[doc = "UNIT0_LOAD (w) register accessor: UNIT0 synchronization register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`unit0_load::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit0_load`] module"]
-pub type UNIT0_LOAD = crate::Reg<unit0_load::UNIT0_LOAD_SPEC>;
-#[doc = "UNIT0 synchronization register"]
-pub mod unit0_load;
-#[doc = "UNIT1_LOAD (w) register accessor: UNIT1 synchronization register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`unit1_load::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit1_load`] module"]
-pub type UNIT1_LOAD = crate::Reg<unit1_load::UNIT1_LOAD_SPEC>;
-#[doc = "UNIT1 synchronization register"]
-pub mod unit1_load;
+#[doc = "UNIT_OP (rw) register accessor: Read UNIT%s value to registers\n\nYou can [`read`](crate::Reg::read) this register and get [`unit_op::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`unit_op::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit_op`] module"]
+pub type UNIT_OP = crate::Reg<unit_op::UNIT_OP_SPEC>;
+#[doc = "Read UNIT%s value to registers"]
+pub mod unit_op;
+#[doc = "Cluster UNIT%sLOAD, containing UNIT?_LOAD_HI, UNIT?_LOAD_LO"]
+pub use self::unitload::UNITLOAD;
+#[doc = r"Cluster"]
+#[doc = "Cluster UNIT%sLOAD, containing UNIT?_LOAD_HI, UNIT?_LOAD_LO"]
+pub mod unitload;
+#[doc = "Cluster TRGT%s, containing TARGET?_HI, TARGET?_LO"]
+pub use self::trgt::TRGT;
+#[doc = r"Cluster"]
+#[doc = "Cluster TRGT%s, containing TARGET?_HI, TARGET?_LO"]
+pub mod trgt;
+#[doc = "TARGET_CONF (rw) register accessor: Configure COMP%s alarm mode\n\nYou can [`read`](crate::Reg::read) this register and get [`target_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`target_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target_conf`] module"]
+pub type TARGET_CONF = crate::Reg<target_conf::TARGET_CONF_SPEC>;
+#[doc = "Configure COMP%s alarm mode"]
+pub mod target_conf;
+#[doc = "Cluster UNIT%s_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
+pub use self::unit_value::UNIT_VALUE;
+#[doc = r"Cluster"]
+#[doc = "Cluster UNIT%s_VALUE, containing UNIT?_VALUE_HI, UNIT?_VALUE_LO"]
+pub mod unit_value;
+#[doc = "COMP_LOAD (w) register accessor: COMP%s synchronization register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comp_load::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comp_load`] module"]
+pub type COMP_LOAD = crate::Reg<comp_load::COMP_LOAD_SPEC>;
+#[doc = "COMP%s synchronization register"]
+pub mod comp_load;
+#[doc = "UNIT_LOAD (w) register accessor: UNIT%s synchronization register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`unit_load::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit_load`] module"]
+pub type UNIT_LOAD = crate::Reg<unit_load::UNIT_LOAD_SPEC>;
+#[doc = "UNIT%s synchronization register"]
+pub mod unit_load;
 #[doc = "INT_ENA (rw) register accessor: Interrupt enable register of system timer\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "Interrupt enable register of system timer"]
@@ -338,30 +259,11 @@ pub mod int_clr;
 pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = "Interrupt status register of system timer"]
 pub mod int_st;
-#[doc = "REAL_TARGET0_LO (r) register accessor: Actual target value of COMP0, low 32 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`real_target0_lo::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@real_target0_lo`] module"]
-pub type REAL_TARGET0_LO = crate::Reg<real_target0_lo::REAL_TARGET0_LO_SPEC>;
-#[doc = "Actual target value of COMP0, low 32 bits"]
-pub mod real_target0_lo;
-#[doc = "REAL_TARGET0_HI (r) register accessor: Actual target value of COMP0, high 20 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`real_target0_hi::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@real_target0_hi`] module"]
-pub type REAL_TARGET0_HI = crate::Reg<real_target0_hi::REAL_TARGET0_HI_SPEC>;
-#[doc = "Actual target value of COMP0, high 20 bits"]
-pub mod real_target0_hi;
-#[doc = "REAL_TARGET1_LO (r) register accessor: Actual target value of COMP1, low 32 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`real_target1_lo::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@real_target1_lo`] module"]
-pub type REAL_TARGET1_LO = crate::Reg<real_target1_lo::REAL_TARGET1_LO_SPEC>;
-#[doc = "Actual target value of COMP1, low 32 bits"]
-pub mod real_target1_lo;
-#[doc = "REAL_TARGET1_HI (r) register accessor: Actual target value of COMP1, high 20 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`real_target1_hi::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@real_target1_hi`] module"]
-pub type REAL_TARGET1_HI = crate::Reg<real_target1_hi::REAL_TARGET1_HI_SPEC>;
-#[doc = "Actual target value of COMP1, high 20 bits"]
-pub mod real_target1_hi;
-#[doc = "REAL_TARGET2_LO (r) register accessor: Actual target value of COMP2, low 32 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`real_target2_lo::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@real_target2_lo`] module"]
-pub type REAL_TARGET2_LO = crate::Reg<real_target2_lo::REAL_TARGET2_LO_SPEC>;
-#[doc = "Actual target value of COMP2, low 32 bits"]
-pub mod real_target2_lo;
-#[doc = "REAL_TARGET2_HI (r) register accessor: Actual target value of COMP2, high 20 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`real_target2_hi::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@real_target2_hi`] module"]
-pub type REAL_TARGET2_HI = crate::Reg<real_target2_hi::REAL_TARGET2_HI_SPEC>;
-#[doc = "Actual target value of COMP2, high 20 bits"]
-pub mod real_target2_hi;
+#[doc = "Cluster REAL_TARGET%s, containing REAL_TARGET?_LO, REAL_TARGET?_HI"]
+pub use self::real_target::REAL_TARGET;
+#[doc = r"Cluster"]
+#[doc = "Cluster REAL_TARGET%s, containing REAL_TARGET?_LO, REAL_TARGET?_HI"]
+pub mod real_target;
 #[doc = "DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version control register"]

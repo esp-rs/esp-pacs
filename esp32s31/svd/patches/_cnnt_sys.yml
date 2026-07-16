@@ -1,0 +1,411 @@
+_add:
+  CNNT_SYS:
+    description: Connectivity System Registers
+    groupName: CNNT_SYS
+    baseAddress: 0x20359000
+    addressBlocks:
+      - offset: 0x0
+        size: 0x1000
+        usage: registers
+    registers:
+      SYS_VER_DATE:
+        addressOffset: 0x0
+        size: 0x20
+        resetValue: 0x20250926
+        fields:
+          SYS_VER_DATE:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      CLK_EN:
+        addressOffset: 0x4
+        size: 0x20
+        resetValue: 0x2507100
+        fields:
+          SYS_DATE:
+            bitOffset: 0
+            bitWidth: 31
+            access: read-write
+          SYS_CLK_EN:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+      SYS_SDMMC_MEM_LP_CTRL:
+        addressOffset: 0x10
+        size: 0x20
+        resetValue: 0x6
+        fields:
+          SYS_SDMMC_MEM_LP_MODE:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+          SYS_SDMMC_MEM_LP_EN:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          SYS_SDMMC_MEM_LP_FORCE_CTRL:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+      SYS_USB_OTGHS_MEM_LP_CTRL:
+        addressOffset: 0x14
+        size: 0x20
+        resetValue: 0x2
+        fields:
+          SYS_USB_OTGHS_MEM_LP_MODE:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+          SYS_USB_OTGHS_MEM_LP_EN:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          SYS_USB_OTGHS_MEM_LP_FORCE_CTRL:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+      SYS_USB_DEVICE_MEM_LP_CTRL:
+        addressOffset: 0x18
+        size: 0x20
+        resetValue: 0x2
+        fields:
+          SYS_USB_DEVICE_MEM_LP_MODE:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+          SYS_USB_DEVICE_MEM_LP_EN:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          SYS_USB_DEVICE_MEM_LP_FORCE_CTRL:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+      SYS_GMAC_MEM_LP_CTRL:
+        addressOffset: 0x1c
+        size: 0x20
+        resetValue: 0x6
+        fields:
+          SYS_GMAC_MEM_LP_MODE:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+          SYS_GMAC_MEM_LP_EN:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          SYS_GMAC_MEM_LP_FORCE_CTRL:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+      SYS_SPRF_MEM_AUX_CTRL:
+        addressOffset: 0x20
+        size: 0x20
+        resetValue: 0x2070
+        fields:
+          SYS_SPRF_MEM_AUX_CTRL:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      SYS_SDPRF_MEM_AUX_CTRL:
+        addressOffset: 0x24
+        size: 0x20
+        resetValue: 0x2070
+        fields:
+          SYS_SDPRF_MEM_AUX_CTRL:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      SYS_HP_PAD_ULPI_CTRL:
+        addressOffset: 0x28
+        size: 0x20
+        fields:
+          SYS_HP_PAD_ULPI_CLK_OUT_INV_EN:
+            bitOffset: 30
+            bitWidth: 1
+            access: read-write
+          SYS_HP_PAD_ULPI_CLK_OUT_EN:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+      SYS_USB_CLK_CTRL:
+        addressOffset: 0x2c
+        size: 0x20
+        resetValue: 0x27130900
+        fields:
+          SYS_USB_48M_DIV_NUM:
+            bitOffset: 8
+            bitWidth: 8
+            access: read-write
+          SYS_USB_25M_DIV_NUM:
+            bitOffset: 16
+            bitWidth: 8
+            access: read-write
+          SYS_USB_12M_DIV_NUM:
+            bitOffset: 24
+            bitWidth: 8
+            access: read-write
+      SYS_USB_OTG20_CTRL:
+        addressOffset: 0x30
+        size: 0x20
+        resetValue: 0xe0800000
+        fields:
+          SYS_USB_OTG20_UTMIFS_CLK_EN:
+            bitOffset: 23
+            bitWidth: 1
+            access: read-write
+          SYS_USB_OTG20_ULPI_CLK_EN:
+            bitOffset: 24
+            bitWidth: 1
+            access: read-write
+          SYS_USB_OTG20_PHYREF_CLK_SRC_SEL:
+            bitOffset: 25
+            bitWidth: 2
+            access: read-write
+          SYS_USB_OTG20_PHYREF_CLK_EN:
+            bitOffset: 27
+            bitWidth: 1
+            access: read-write
+          SYS_USB_OTG20_PHY_RST_EN:
+            bitOffset: 29
+            bitWidth: 1
+            access: read-write
+          SYS_USB_OTG20_AHB_RST_EN:
+            bitOffset: 30
+            bitWidth: 1
+            access: read-write
+          SYS_USB_OTG20_APB_RST_EN:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+      SYS_HP_USB_DEVICE_CTRL:
+        addressOffset: 0x34
+        size: 0x20
+        resetValue: 0x40000000
+        fields:
+          SYS_USB_DEVICE_48M_CLK_EN:
+            bitOffset: 30
+            bitWidth: 1
+            access: read-write
+          SYS_USB_DEVICE_RST_EN:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+      SYS_HP_SDMMC_CTRL:
+        addressOffset: 0x38
+        size: 0x20
+        fields:
+          SYS_SDMMC_AHB2AXI_POST_WRITE_EN:
+            bitOffset: 29
+            bitWidth: 1
+            access: read-write
+          SYS_SDMMC_RST_EN:
+            bitOffset: 30
+            bitWidth: 1
+            access: read-write
+          SYS_SDMMC_FORCE_NORST:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+      SYS_HP_EMAC_CTRL:
+        addressOffset: 0x3c
+        size: 0x20
+        fields:
+          SYS_EMAC_USELESS_CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          SYS_EMAC_RST_EN:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          SYS_EMAC_FORCE_NORST:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+      SYS_HP_EMAC_REF_CTRL:
+        addressOffset: 0x40
+        size: 0x20
+        fields:
+          SYS_EMAC_REF_CLK_SEL:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+          SYS_EMAC_REF_CLK_EN:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          SYS_EMAC_REF_50M_PAD_OUT_CLK_EN:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          SYS_EMAC_REF_CLK_DIV_NUM:
+            bitOffset: 8
+            bitWidth: 8
+            access: read-write
+      SYS_HP_EMAC_RMII_PAD_CTRL:
+        addressOffset: 0x44
+        size: 0x20
+        fields:
+          SYS_EMAC_RMII_PAD_CLK_EN:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          SYS_EMAC_RMII_PAD_CLK_INV_EN:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+      SYS_HP_EMAC_RMII_CTRL:
+        addressOffset: 0x48
+        size: 0x20
+        fields:
+          SYS_EMAC_RMII_CLK_SEL:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          SYS_EMAC_RMII_CLK_EN:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          SYS_EMAC_RMII_PAD_OUT_CLK_EN:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          SYS_EMAC_RXTX_CLK_DIV_NUM:
+            bitOffset: 8
+            bitWidth: 5
+            access: read-write
+      SYS_HP_EMAC_RX_CTRL:
+        addressOffset: 0x4c
+        size: 0x20
+        fields:
+          SYS_EMAC_RX_PAD_CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          SYS_EMAC_RX_PAD_CLK_INV_EN:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          SYS_EMAC_RX_CLK_SEL:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          SYS_EMAC_RX_180_CLK_EN:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+      SYS_HP_EMAC_TX_CTRL:
+        addressOffset: 0x50
+        size: 0x20
+        fields:
+          SYS_EMAC_TX_PAD_CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          SYS_EMAC_TX_PAD_CLK_INV_EN:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          SYS_EMAC_TX_CLK_SEL:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          SYS_EMAC_TX_180_CLK_EN:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+      SYS_HP_EMAC_PTP_CTRL:
+        addressOffset: 0x54
+        size: 0x20
+        fields:
+          SYS_EMAC_PTP_REF_CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          SYS_EMAC_PTP_REF_CLK_SEL:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+      SYS_CNNT_IOMUX_CTRL0:
+        addressOffset: 0x58
+        size: 0x20
+        fields:
+          SYS_REG_CNNT_IOMUX_APB_RST_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      SYS_SPRAM_MEM_AUX_CTRL:
+        addressOffset: 0x5c
+        size: 0x20
+        resetValue: 0x2070
+        fields:
+          SYS_SPRAM_MEM_AUX_CTRL:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      SYS_GMAC_CTRL0:
+        addressOffset: 0x60
+        size: 0x20
+        resetValue: 0x1000
+        fields:
+          SYS_PTP_PPS:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-only
+          SYS_SBD_FLOWCTRL:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          SYS_PHY_INTF_SEL:
+            bitOffset: 2
+            bitWidth: 3
+            access: read-write
+          SYS_GMAC_MEM_CLK_FORCE_ON:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          SYS_GMAC_RST_CLK_TX_N:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-only
+          SYS_GMAC_RST_CLK_RX_N:
+            bitOffset: 7
+            bitWidth: 1
+            access: read-only
+          SYS_GMAC_CACTIVE:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-only
+          SYS_GMAC_CSYSACK:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-only
+          SYS_GMAC_CSYSREQ:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+          SYS_GMAC_APB_POSTW_EN:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+          SYS_GMAC_MEM_PRDYN:
+            bitOffset: 12
+            bitWidth: 1
+            access: read-only
+      SYS_GMAC_CTRL1:
+        addressOffset: 0x64
+        size: 0x20
+        access: read-only
+        fields:
+          SYS_PTP_TIMESTAMP_L:
+            bitOffset: 0
+            bitWidth: 32
+      SYS_GMAC_CTRL2:
+        addressOffset: 0x68
+        size: 0x20
+        access: read-only
+        fields:
+          SYS_PTP_TIMESTAMP_H:
+            bitOffset: 0
+            bitWidth: 32

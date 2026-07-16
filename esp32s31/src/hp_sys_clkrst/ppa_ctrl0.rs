@@ -2,60 +2,60 @@
 pub type R = crate::R<PPA_CTRL0_SPEC>;
 #[doc = "Register `PPA_CTRL0` writer"]
 pub type W = crate::W<PPA_CTRL0_SPEC>;
-#[doc = "Field `REG_PPA_SYS_CLK_EN` reader - need_des"]
-pub type REG_PPA_SYS_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_PPA_SYS_CLK_EN` writer - need_des"]
-pub type REG_PPA_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_PPA_RST_EN` reader - need_des"]
-pub type REG_PPA_RST_EN_R = crate::BitReader;
-#[doc = "Field `REG_PPA_RST_EN` writer - need_des"]
-pub type REG_PPA_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_PPA_FORCE_NORST` reader - need_des"]
-pub type REG_PPA_FORCE_NORST_R = crate::BitReader;
-#[doc = "Field `REG_PPA_FORCE_NORST` writer - need_des"]
-pub type REG_PPA_FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PPA_SYS_CLK_EN` reader - need_des"]
+pub type PPA_SYS_CLK_EN_R = crate::BitReader;
+#[doc = "Field `PPA_SYS_CLK_EN` writer - need_des"]
+pub type PPA_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PPA_RST_EN` reader - need_des"]
+pub type PPA_RST_EN_R = crate::BitReader;
+#[doc = "Field `PPA_RST_EN` writer - need_des"]
+pub type PPA_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PPA_FORCE_NORST` reader - need_des"]
+pub type PPA_FORCE_NORST_R = crate::BitReader;
+#[doc = "Field `PPA_FORCE_NORST` writer - need_des"]
+pub type PPA_FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn reg_ppa_sys_clk_en(&self) -> REG_PPA_SYS_CLK_EN_R {
-        REG_PPA_SYS_CLK_EN_R::new((self.bits & 1) != 0)
+    pub fn ppa_sys_clk_en(&self) -> PPA_SYS_CLK_EN_R {
+        PPA_SYS_CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn reg_ppa_rst_en(&self) -> REG_PPA_RST_EN_R {
-        REG_PPA_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn ppa_rst_en(&self) -> PPA_RST_EN_R {
+        PPA_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn reg_ppa_force_norst(&self) -> REG_PPA_FORCE_NORST_R {
-        REG_PPA_FORCE_NORST_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn ppa_force_norst(&self) -> PPA_FORCE_NORST_R {
+        PPA_FORCE_NORST_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PPA_CTRL0")
-            .field("reg_ppa_sys_clk_en", &self.reg_ppa_sys_clk_en())
-            .field("reg_ppa_rst_en", &self.reg_ppa_rst_en())
-            .field("reg_ppa_force_norst", &self.reg_ppa_force_norst())
+            .field("ppa_sys_clk_en", &self.ppa_sys_clk_en())
+            .field("ppa_rst_en", &self.ppa_rst_en())
+            .field("ppa_force_norst", &self.ppa_force_norst())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn reg_ppa_sys_clk_en(&mut self) -> REG_PPA_SYS_CLK_EN_W<'_, PPA_CTRL0_SPEC> {
-        REG_PPA_SYS_CLK_EN_W::new(self, 0)
+    pub fn ppa_sys_clk_en(&mut self) -> PPA_SYS_CLK_EN_W<'_, PPA_CTRL0_SPEC> {
+        PPA_SYS_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn reg_ppa_rst_en(&mut self) -> REG_PPA_RST_EN_W<'_, PPA_CTRL0_SPEC> {
-        REG_PPA_RST_EN_W::new(self, 1)
+    pub fn ppa_rst_en(&mut self) -> PPA_RST_EN_W<'_, PPA_CTRL0_SPEC> {
+        PPA_RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn reg_ppa_force_norst(&mut self) -> REG_PPA_FORCE_NORST_W<'_, PPA_CTRL0_SPEC> {
-        REG_PPA_FORCE_NORST_W::new(self, 2)
+    pub fn ppa_force_norst(&mut self) -> PPA_FORCE_NORST_W<'_, PPA_CTRL0_SPEC> {
+        PPA_FORCE_NORST_W::new(self, 2)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`ppa_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ppa_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

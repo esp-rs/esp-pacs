@@ -2,64 +2,60 @@
 pub type R = crate::R<AHB_PDMA_CTRL0_SPEC>;
 #[doc = "Register `AHB_PDMA_CTRL0` writer"]
 pub type W = crate::W<AHB_PDMA_CTRL0_SPEC>;
-#[doc = "Field `REG_AHB_PDMA_SYS_CLK_EN` reader - need_des"]
-pub type REG_AHB_PDMA_SYS_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_AHB_PDMA_SYS_CLK_EN` writer - need_des"]
-pub type REG_AHB_PDMA_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_AHB_PDMA_RST_EN` reader - need_des"]
-pub type REG_AHB_PDMA_RST_EN_R = crate::BitReader;
-#[doc = "Field `REG_AHB_PDMA_RST_EN` writer - need_des"]
-pub type REG_AHB_PDMA_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_AHB_PDMA_FORCE_NORST` reader - need_des"]
-pub type REG_AHB_PDMA_FORCE_NORST_R = crate::BitReader;
-#[doc = "Field `REG_AHB_PDMA_FORCE_NORST` writer - need_des"]
-pub type REG_AHB_PDMA_FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AHB_PDMA_SYS_CLK_EN` reader - need_des"]
+pub type AHB_PDMA_SYS_CLK_EN_R = crate::BitReader;
+#[doc = "Field `AHB_PDMA_SYS_CLK_EN` writer - need_des"]
+pub type AHB_PDMA_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AHB_PDMA_RST_EN` reader - need_des"]
+pub type AHB_PDMA_RST_EN_R = crate::BitReader;
+#[doc = "Field `AHB_PDMA_RST_EN` writer - need_des"]
+pub type AHB_PDMA_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `AHB_PDMA_FORCE_NORST` reader - need_des"]
+pub type AHB_PDMA_FORCE_NORST_R = crate::BitReader;
+#[doc = "Field `AHB_PDMA_FORCE_NORST` writer - need_des"]
+pub type AHB_PDMA_FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn reg_ahb_pdma_sys_clk_en(&self) -> REG_AHB_PDMA_SYS_CLK_EN_R {
-        REG_AHB_PDMA_SYS_CLK_EN_R::new((self.bits & 1) != 0)
+    pub fn ahb_pdma_sys_clk_en(&self) -> AHB_PDMA_SYS_CLK_EN_R {
+        AHB_PDMA_SYS_CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn reg_ahb_pdma_rst_en(&self) -> REG_AHB_PDMA_RST_EN_R {
-        REG_AHB_PDMA_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn ahb_pdma_rst_en(&self) -> AHB_PDMA_RST_EN_R {
+        AHB_PDMA_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn reg_ahb_pdma_force_norst(&self) -> REG_AHB_PDMA_FORCE_NORST_R {
-        REG_AHB_PDMA_FORCE_NORST_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn ahb_pdma_force_norst(&self) -> AHB_PDMA_FORCE_NORST_R {
+        AHB_PDMA_FORCE_NORST_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AHB_PDMA_CTRL0")
-            .field("reg_ahb_pdma_sys_clk_en", &self.reg_ahb_pdma_sys_clk_en())
-            .field("reg_ahb_pdma_rst_en", &self.reg_ahb_pdma_rst_en())
-            .field("reg_ahb_pdma_force_norst", &self.reg_ahb_pdma_force_norst())
+            .field("ahb_pdma_sys_clk_en", &self.ahb_pdma_sys_clk_en())
+            .field("ahb_pdma_rst_en", &self.ahb_pdma_rst_en())
+            .field("ahb_pdma_force_norst", &self.ahb_pdma_force_norst())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn reg_ahb_pdma_sys_clk_en(
-        &mut self,
-    ) -> REG_AHB_PDMA_SYS_CLK_EN_W<'_, AHB_PDMA_CTRL0_SPEC> {
-        REG_AHB_PDMA_SYS_CLK_EN_W::new(self, 0)
+    pub fn ahb_pdma_sys_clk_en(&mut self) -> AHB_PDMA_SYS_CLK_EN_W<'_, AHB_PDMA_CTRL0_SPEC> {
+        AHB_PDMA_SYS_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn reg_ahb_pdma_rst_en(&mut self) -> REG_AHB_PDMA_RST_EN_W<'_, AHB_PDMA_CTRL0_SPEC> {
-        REG_AHB_PDMA_RST_EN_W::new(self, 1)
+    pub fn ahb_pdma_rst_en(&mut self) -> AHB_PDMA_RST_EN_W<'_, AHB_PDMA_CTRL0_SPEC> {
+        AHB_PDMA_RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn reg_ahb_pdma_force_norst(
-        &mut self,
-    ) -> REG_AHB_PDMA_FORCE_NORST_W<'_, AHB_PDMA_CTRL0_SPEC> {
-        REG_AHB_PDMA_FORCE_NORST_W::new(self, 2)
+    pub fn ahb_pdma_force_norst(&mut self) -> AHB_PDMA_FORCE_NORST_W<'_, AHB_PDMA_CTRL0_SPEC> {
+        AHB_PDMA_FORCE_NORST_W::new(self, 2)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`ahb_pdma_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ahb_pdma_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

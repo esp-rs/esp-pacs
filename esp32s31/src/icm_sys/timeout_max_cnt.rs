@@ -1,0 +1,45 @@
+#[doc = "Register `TIMEOUT_MAX_CNT` reader"]
+pub type R = crate::R<TIMEOUT_MAX_CNT_SPEC>;
+#[doc = "Register `TIMEOUT_MAX_CNT` writer"]
+pub type W = crate::W<TIMEOUT_MAX_CNT_SPEC>;
+#[doc = "Field `REG_TIMEOUT_MAX_CNT` reader - "]
+pub type REG_TIMEOUT_MAX_CNT_R = crate::FieldReader<u32>;
+#[doc = "Field `REG_TIMEOUT_MAX_CNT` writer - "]
+pub type REG_TIMEOUT_MAX_CNT_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31"]
+    #[inline(always)]
+    pub fn reg_timeout_max_cnt(&self) -> REG_TIMEOUT_MAX_CNT_R {
+        REG_TIMEOUT_MAX_CNT_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMEOUT_MAX_CNT")
+            .field("reg_timeout_max_cnt", &self.reg_timeout_max_cnt())
+            .finish()
+    }
+}
+impl W {
+    #[doc = "Bits 0:31"]
+    #[inline(always)]
+    pub fn reg_timeout_max_cnt(&mut self) -> REG_TIMEOUT_MAX_CNT_W<'_, TIMEOUT_MAX_CNT_SPEC> {
+        REG_TIMEOUT_MAX_CNT_W::new(self, 0)
+    }
+}
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`timeout_max_cnt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timeout_max_cnt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TIMEOUT_MAX_CNT_SPEC;
+impl crate::RegisterSpec for TIMEOUT_MAX_CNT_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`timeout_max_cnt::R`](R) reader structure"]
+impl crate::Readable for TIMEOUT_MAX_CNT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`timeout_max_cnt::W`](W) writer structure"]
+impl crate::Writable for TIMEOUT_MAX_CNT_SPEC {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets TIMEOUT_MAX_CNT to value 0xffff_ffff"]
+impl crate::Resettable for TIMEOUT_MAX_CNT_SPEC {
+    const RESET_VALUE: u32 = 0xffff_ffff;
+}

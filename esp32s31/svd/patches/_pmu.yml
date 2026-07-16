@@ -1,0 +1,184 @@
+PMU:
+  HP_ACTIVE_HP_CK_POWER:
+    _modify:
+      HP_ACTIVE_XPD_PLL_I2C:
+        bitWidth: 1
+      HP_ACTIVE_XPD_PLL:
+        bitWidth: 1
+    _add:
+      HP_ACTIVE_XPD_BBPLL_I2C:
+        bitOffset: 24
+        bitWidth: 1
+        access: read-write
+      HP_ACTIVE_XPD_APLL_I2C:
+        bitOffset: 25
+        bitWidth: 1
+        access: read-write
+      HP_ACTIVE_XPD_MPLL_I2C:
+        bitOffset: 26
+        bitWidth: 1
+        access: read-write
+      HP_ACTIVE_XPD_BBPLL:
+        bitOffset: 28
+        bitWidth: 1
+        access: read-write
+      HP_ACTIVE_XPD_APLL:
+        bitOffset: 29
+        bitWidth: 1
+        access: read-write
+      HP_ACTIVE_XPD_MPLL:
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+
+  HP_MODEM_HP_CK_POWER:
+    _modify:
+      HP_MODEM_XPD_PLL_I2C:
+        bitWidth: 1
+      HP_MODEM_XPD_PLL:
+        bitWidth: 1
+    _add:
+      HP_MODEM_XPD_BBPLL_I2C:
+        bitOffset: 24
+        bitWidth: 1
+        access: read-write
+      HP_MODEM_XPD_APLL_I2C:
+        bitOffset: 25
+        bitWidth: 1
+        access: read-write
+      HP_MODEM_XPD_MPLL_I2C:
+        bitOffset: 26
+        bitWidth: 1
+        access: read-write
+      HP_MODEM_XPD_BBPLL:
+        bitOffset: 28
+        bitWidth: 1
+        access: read-write
+      HP_MODEM_XPD_APLL:
+        bitOffset: 29
+        bitWidth: 1
+        access: read-write
+      HP_MODEM_XPD_MPLL:
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+
+  HP_SLEEP_HP_CK_POWER:
+    _modify:
+      HP_SLEEP_XPD_PLL_I2C:
+        bitWidth: 1
+      HP_SLEEP_XPD_PLL:
+        bitWidth: 1
+    _add:
+      HP_SLEEP_XPD_BBPLL_I2C:
+        bitOffset: 24
+        bitWidth: 1
+        access: read-write
+      HP_SLEEP_XPD_APLL_I2C:
+        bitOffset: 25
+        bitWidth: 1
+        access: read-write
+      HP_SLEEP_XPD_MPLL_I2C:
+        bitOffset: 26
+        bitWidth: 1
+        access: read-write
+      HP_SLEEP_XPD_BBPLL:
+        bitOffset: 28
+        bitWidth: 1
+        access: read-write
+      HP_SLEEP_XPD_APLL:
+        bitOffset: 29
+        bitWidth: 1
+        access: read-write
+      HP_SLEEP_XPD_MPLL:
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+
+  IMM_HP_CK_POWER_1:
+    _modify:
+      TIE_LOW_XPD_PLL_I2C:
+        bitWidth: 1
+      TIE_LOW_XPD_PLL:
+        bitWidth: 1
+      TIE_LOW_GLOBAL_PLL_ICG:
+        bitWidth: 1
+      TIE_HIGH_GLOBAL_PLL_ICG:
+        bitWidth: 1
+      TIE_HIGH_XPD_PLL_I2C:
+        bitWidth: 1
+      TIE_HIGH_XPD_PLL:
+        bitWidth: 1
+    _add:
+      TIE_LOW_XPD_BBPLL_I2C:
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      TIE_LOW_XPD_APLL_I2C:
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      TIE_LOW_XPD_MPLL_I2C:
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      TIE_LOW_XPD_BBPLL:
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      TIE_LOW_XPD_APLL:
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      TIE_LOW_XPD_MPLL:
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+      TIE_LOW_GLOBAL_BBPLL_ICG:
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      TIE_LOW_GLOBAL_APLL_ICG:
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+      TIE_LOW_GLOBAL_MPLL_ICG:
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+      TIE_HIGH_GLOBAL_BBPLL_ICG:
+        bitOffset: 20
+        bitWidth: 1
+        access: read-write
+      TIE_HIGH_GLOBAL_APLL_ICG:
+        bitOffset: 21
+        bitWidth: 1
+        access: read-write
+      TIE_HIGH_GLOBAL_MPLL_ICG:
+        bitOffset: 22
+        bitWidth: 1
+        access: read-write
+      TIE_HIGH_XPD_BBPLL_I2C:
+        bitOffset: 24
+        bitWidth: 1
+        access: read-write
+      TIE_HIGH_XPD_APLL_I2C:
+        bitOffset: 25
+        bitWidth: 1
+        access: read-write
+      TIE_HIGH_XPD_MPLL_I2C:
+        bitOffset: 26
+        bitWidth: 1
+        access: read-write
+      TIE_HIGH_XPD_BBPLL:
+        bitOffset: 28
+        bitWidth: 1
+        access: read-write
+      TIE_HIGH_XPD_APLL:
+        bitOffset: 29
+        bitWidth: 1
+        access: read-write
+      TIE_HIGH_XPD_MPLL:
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write

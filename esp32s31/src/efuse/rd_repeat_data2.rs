@@ -1,5 +1,7 @@
 #[doc = "Register `RD_REPEAT_DATA2` reader"]
 pub type R = crate::R<RD_REPEAT_DATA2_SPEC>;
+#[doc = "Register `RD_REPEAT_DATA2` writer"]
+pub type W = crate::W<RD_REPEAT_DATA2_SPEC>;
 #[doc = "Field `KEY_PURPOSE_0` reader - Represents the purpose of Key0."]
 pub type KEY_PURPOSE_0_R = crate::FieldReader;
 #[doc = "Field `KEY_PURPOSE_1` reader - Represents the purpose of Key1."]
@@ -18,6 +20,10 @@ pub type ECDSA_DISABLE_SOFT_K_R = crate::BitReader;
 pub type SEC_DPA_LEVEL_R = crate::FieldReader;
 #[doc = "Field `XTS_DPA_CLK_ENABLE` reader - Represents whether to enable xts clock anti-dpa attack function.\\\\0: Disabled. \\\\1: Enabled\\\\"]
 pub type XTS_DPA_CLK_ENABLE_R = crate::BitReader;
+#[doc = "Field `RD_RESERVE_0_126` reader - "]
+pub type RD_RESERVE_0_126_R = crate::FieldReader;
+#[doc = "Field `RD_RESERVE_0_126` writer - "]
+pub type RD_RESERVE_0_126_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:4 - Represents the purpose of Key0."]
     #[inline(always)]
@@ -64,6 +70,11 @@ impl R {
     pub fn xts_dpa_clk_enable(&self) -> XTS_DPA_CLK_ENABLE_R {
         XTS_DPA_CLK_ENABLE_R::new(((self.bits >> 29) & 1) != 0)
     }
+    #[doc = "Bits 30:31"]
+    #[inline(always)]
+    pub fn rd_reserve_0_126(&self) -> RD_RESERVE_0_126_R {
+        RD_RESERVE_0_126_R::new(((self.bits >> 30) & 3) as u8)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -78,15 +89,27 @@ impl core::fmt::Debug for R {
             .field("ecdsa_disable_soft_k", &self.ecdsa_disable_soft_k())
             .field("sec_dpa_level", &self.sec_dpa_level())
             .field("xts_dpa_clk_enable", &self.xts_dpa_clk_enable())
+            .field("rd_reserve_0_126", &self.rd_reserve_0_126())
             .finish()
     }
 }
-#[doc = "Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+impl W {
+    #[doc = "Bits 30:31"]
+    #[inline(always)]
+    pub fn rd_reserve_0_126(&mut self) -> RD_RESERVE_0_126_W<'_, RD_REPEAT_DATA2_SPEC> {
+        RD_RESERVE_0_126_W::new(self, 30)
+    }
+}
+#[doc = "Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_repeat_data2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_REPEAT_DATA2_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_DATA2_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`rd_repeat_data2::R`](R) reader structure"]
 impl crate::Readable for RD_REPEAT_DATA2_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rd_repeat_data2::W`](W) writer structure"]
+impl crate::Writable for RD_REPEAT_DATA2_SPEC {
+    type Safety = crate::Unsafe;
+}
 #[doc = "`reset()` method sets RD_REPEAT_DATA2 to value 0"]
 impl crate::Resettable for RD_REPEAT_DATA2_SPEC {}

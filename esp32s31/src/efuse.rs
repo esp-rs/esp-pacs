@@ -1202,35 +1202,35 @@ pub mod pgm_check_value;
 pub type RD_WR_DIS = crate::Reg<rd_wr_dis::RD_WR_DIS_SPEC>;
 #[doc = "Represents rd_wr_dis"]
 pub mod rd_wr_dis;
-#[doc = "RD_REPEAT_DATA0 (r) register accessor: Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_data0`] module"]
+#[doc = "RD_REPEAT_DATA0 (rw) register accessor: Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_repeat_data0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_data0`] module"]
 pub type RD_REPEAT_DATA0 = crate::Reg<rd_repeat_data0::RD_REPEAT_DATA0_SPEC>;
 #[doc = "Represents rd_repeat_data"]
 pub mod rd_repeat_data0;
-#[doc = "RD_REPEAT_DATA1 (r) register accessor: Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_data1`] module"]
+#[doc = "RD_REPEAT_DATA1 (rw) register accessor: Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_repeat_data1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_data1`] module"]
 pub type RD_REPEAT_DATA1 = crate::Reg<rd_repeat_data1::RD_REPEAT_DATA1_SPEC>;
 #[doc = "Represents rd_repeat_data"]
 pub mod rd_repeat_data1;
-#[doc = "RD_REPEAT_DATA2 (r) register accessor: Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_data2`] module"]
+#[doc = "RD_REPEAT_DATA2 (rw) register accessor: Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_repeat_data2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_data2`] module"]
 pub type RD_REPEAT_DATA2 = crate::Reg<rd_repeat_data2::RD_REPEAT_DATA2_SPEC>;
 #[doc = "Represents rd_repeat_data"]
 pub mod rd_repeat_data2;
-#[doc = "RD_REPEAT_DATA3 (r) register accessor: Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_data3`] module"]
+#[doc = "RD_REPEAT_DATA3 (rw) register accessor: Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_repeat_data3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_data3`] module"]
 pub type RD_REPEAT_DATA3 = crate::Reg<rd_repeat_data3::RD_REPEAT_DATA3_SPEC>;
 #[doc = "Represents rd_repeat_data"]
 pub mod rd_repeat_data3;
-#[doc = "RD_REPEAT_DATA4 (r) register accessor: Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_data4`] module"]
+#[doc = "RD_REPEAT_DATA4 (rw) register accessor: Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_repeat_data4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_data4`] module"]
 pub type RD_REPEAT_DATA4 = crate::Reg<rd_repeat_data4::RD_REPEAT_DATA4_SPEC>;
 #[doc = "Represents rd_repeat_data"]
 pub mod rd_repeat_data4;
-#[doc = "RD_REPEAT_DATA5 (r) register accessor: Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_data5`] module"]
+#[doc = "RD_REPEAT_DATA5 (rw) register accessor: Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_repeat_data5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_data5`] module"]
 pub type RD_REPEAT_DATA5 = crate::Reg<rd_repeat_data5::RD_REPEAT_DATA5_SPEC>;
 #[doc = "Represents rd_repeat_data"]
 pub mod rd_repeat_data5;
-#[doc = "RD_REPEAT_DATA6 (r) register accessor: Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_data6`] module"]
+#[doc = "RD_REPEAT_DATA6 (rw) register accessor: Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_repeat_data6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_data6`] module"]
 pub type RD_REPEAT_DATA6 = crate::Reg<rd_repeat_data6::RD_REPEAT_DATA6_SPEC>;
 #[doc = "Represents rd_repeat_data"]
 pub mod rd_repeat_data6;
-#[doc = "RD_REPEAT_DATA7 (r) register accessor: Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_data7`] module"]
+#[doc = "RD_REPEAT_DATA7 (rw) register accessor: Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_repeat_data7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_data7`] module"]
 pub type RD_REPEAT_DATA7 = crate::Reg<rd_repeat_data7::RD_REPEAT_DATA7_SPEC>;
 #[doc = "Represents rd_repeat_data"]
 pub mod rd_repeat_data7;
@@ -1246,11 +1246,11 @@ pub mod rd_mac_sys1;
 pub type RD_MAC_SYS2 = crate::Reg<rd_mac_sys2::RD_MAC_SYS2_SPEC>;
 #[doc = "Represents rd_mac_sys"]
 pub mod rd_mac_sys2;
-#[doc = "RD_MAC_SYS3 (r) register accessor: Represents rd_mac_sys\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_mac_sys3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_mac_sys3`] module"]
+#[doc = "RD_MAC_SYS3 (rw) register accessor: Represents rd_mac_sys\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_mac_sys3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_mac_sys3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_mac_sys3`] module"]
 pub type RD_MAC_SYS3 = crate::Reg<rd_mac_sys3::RD_MAC_SYS3_SPEC>;
 #[doc = "Represents rd_mac_sys"]
 pub mod rd_mac_sys3;
-#[doc = "RD_MAC_SYS4 (r) register accessor: Represents rd_mac_sys\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_mac_sys4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_mac_sys4`] module"]
+#[doc = "RD_MAC_SYS4 (rw) register accessor: Represents rd_mac_sys\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_mac_sys4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_mac_sys4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_mac_sys4`] module"]
 pub type RD_MAC_SYS4 = crate::Reg<rd_mac_sys4::RD_MAC_SYS4_SPEC>;
 #[doc = "Represents rd_mac_sys"]
 pub mod rd_mac_sys4;
@@ -1310,7 +1310,7 @@ pub mod rd_sys_part2_data4;
 pub type RD_SYS_PART2_DATA5 = crate::Reg<rd_sys_part2_data5::RD_SYS_PART2_DATA5_SPEC>;
 #[doc = "Represents rd_sys_part2_data"]
 pub mod rd_sys_part2_data5;
-#[doc = "RD_SYS_PART2_DATA6 (r) register accessor: Represents rd_sys_part2_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_sys_part2_data6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_sys_part2_data6`] module"]
+#[doc = "RD_SYS_PART2_DATA6 (rw) register accessor: Represents rd_sys_part2_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_sys_part2_data6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_sys_part2_data6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_sys_part2_data6`] module"]
 pub type RD_SYS_PART2_DATA6 = crate::Reg<rd_sys_part2_data6::RD_SYS_PART2_DATA6_SPEC>;
 #[doc = "Represents rd_sys_part2_data"]
 pub mod rd_sys_part2_data6;

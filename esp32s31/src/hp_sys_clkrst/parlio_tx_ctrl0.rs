@@ -2,96 +2,87 @@
 pub type R = crate::R<PARLIO_TX_CTRL0_SPEC>;
 #[doc = "Register `PARLIO_TX_CTRL0` writer"]
 pub type W = crate::W<PARLIO_TX_CTRL0_SPEC>;
-#[doc = "Field `REG_PARLIO_TX_RST_EN` reader - need_des"]
-pub type REG_PARLIO_TX_RST_EN_R = crate::BitReader;
-#[doc = "Field `REG_PARLIO_TX_RST_EN` writer - need_des"]
-pub type REG_PARLIO_TX_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_PARLIO_TX_FORCE_NORST` reader - need_des"]
-pub type REG_PARLIO_TX_FORCE_NORST_R = crate::BitReader;
-#[doc = "Field `REG_PARLIO_TX_FORCE_NORST` writer - need_des"]
-pub type REG_PARLIO_TX_FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_PARLIO_TX_CLK_SRC_SEL` reader - need_des"]
-pub type REG_PARLIO_TX_CLK_SRC_SEL_R = crate::FieldReader;
-#[doc = "Field `REG_PARLIO_TX_CLK_SRC_SEL` writer - need_des"]
-pub type REG_PARLIO_TX_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `REG_PARLIO_TX_CLK_EN` reader - need_des"]
-pub type REG_PARLIO_TX_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_PARLIO_TX_CLK_EN` writer - need_des"]
-pub type REG_PARLIO_TX_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_PARLIO_TX_CLK_DIV_NUM` reader - need_des"]
-pub type REG_PARLIO_TX_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `REG_PARLIO_TX_CLK_DIV_NUM` writer - need_des"]
-pub type REG_PARLIO_TX_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_PARLIO_TX_CLK_DIV_NUMERATOR` reader - need_des"]
-pub type REG_PARLIO_TX_CLK_DIV_NUMERATOR_R = crate::FieldReader;
-#[doc = "Field `REG_PARLIO_TX_CLK_DIV_NUMERATOR` writer - need_des"]
-pub type REG_PARLIO_TX_CLK_DIV_NUMERATOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `REG_PARLIO_TX_CLK_DIV_DENOMINATOR` reader - need_des"]
-pub type REG_PARLIO_TX_CLK_DIV_DENOMINATOR_R = crate::FieldReader;
-#[doc = "Field `REG_PARLIO_TX_CLK_DIV_DENOMINATOR` writer - need_des"]
-pub type REG_PARLIO_TX_CLK_DIV_DENOMINATOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `PARLIO_TX_RST_EN` reader - need_des"]
+pub type PARLIO_TX_RST_EN_R = crate::BitReader;
+#[doc = "Field `PARLIO_TX_RST_EN` writer - need_des"]
+pub type PARLIO_TX_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PARLIO_TX_FORCE_NORST` reader - need_des"]
+pub type PARLIO_TX_FORCE_NORST_R = crate::BitReader;
+#[doc = "Field `PARLIO_TX_FORCE_NORST` writer - need_des"]
+pub type PARLIO_TX_FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PARLIO_TX_CLK_SRC_SEL` reader - need_des"]
+pub type PARLIO_TX_CLK_SRC_SEL_R = crate::FieldReader;
+#[doc = "Field `PARLIO_TX_CLK_SRC_SEL` writer - need_des"]
+pub type PARLIO_TX_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `PARLIO_TX_CLK_EN` reader - need_des"]
+pub type PARLIO_TX_CLK_EN_R = crate::BitReader;
+#[doc = "Field `PARLIO_TX_CLK_EN` writer - need_des"]
+pub type PARLIO_TX_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PARLIO_TX_CLK_DIV_NUM` reader - need_des"]
+pub type PARLIO_TX_CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `PARLIO_TX_CLK_DIV_NUM` writer - need_des"]
+pub type PARLIO_TX_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `PARLIO_TX_CLK_DIV_NUMERATOR` reader - need_des"]
+pub type PARLIO_TX_CLK_DIV_NUMERATOR_R = crate::FieldReader;
+#[doc = "Field `PARLIO_TX_CLK_DIV_NUMERATOR` writer - need_des"]
+pub type PARLIO_TX_CLK_DIV_NUMERATOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `PARLIO_TX_CLK_DIV_DENOMINATOR` reader - need_des"]
+pub type PARLIO_TX_CLK_DIV_DENOMINATOR_R = crate::FieldReader;
+#[doc = "Field `PARLIO_TX_CLK_DIV_DENOMINATOR` writer - need_des"]
+pub type PARLIO_TX_CLK_DIV_DENOMINATOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn reg_parlio_tx_rst_en(&self) -> REG_PARLIO_TX_RST_EN_R {
-        REG_PARLIO_TX_RST_EN_R::new((self.bits & 1) != 0)
+    pub fn parlio_tx_rst_en(&self) -> PARLIO_TX_RST_EN_R {
+        PARLIO_TX_RST_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn reg_parlio_tx_force_norst(&self) -> REG_PARLIO_TX_FORCE_NORST_R {
-        REG_PARLIO_TX_FORCE_NORST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn parlio_tx_force_norst(&self) -> PARLIO_TX_FORCE_NORST_R {
+        PARLIO_TX_FORCE_NORST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:3 - need_des"]
     #[inline(always)]
-    pub fn reg_parlio_tx_clk_src_sel(&self) -> REG_PARLIO_TX_CLK_SRC_SEL_R {
-        REG_PARLIO_TX_CLK_SRC_SEL_R::new(((self.bits >> 2) & 3) as u8)
+    pub fn parlio_tx_clk_src_sel(&self) -> PARLIO_TX_CLK_SRC_SEL_R {
+        PARLIO_TX_CLK_SRC_SEL_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
-    pub fn reg_parlio_tx_clk_en(&self) -> REG_PARLIO_TX_CLK_EN_R {
-        REG_PARLIO_TX_CLK_EN_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn parlio_tx_clk_en(&self) -> PARLIO_TX_CLK_EN_R {
+        PARLIO_TX_CLK_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 5:12 - need_des"]
     #[inline(always)]
-    pub fn reg_parlio_tx_clk_div_num(&self) -> REG_PARLIO_TX_CLK_DIV_NUM_R {
-        REG_PARLIO_TX_CLK_DIV_NUM_R::new(((self.bits >> 5) & 0xff) as u8)
+    pub fn parlio_tx_clk_div_num(&self) -> PARLIO_TX_CLK_DIV_NUM_R {
+        PARLIO_TX_CLK_DIV_NUM_R::new(((self.bits >> 5) & 0xff) as u8)
     }
     #[doc = "Bits 13:20 - need_des"]
     #[inline(always)]
-    pub fn reg_parlio_tx_clk_div_numerator(&self) -> REG_PARLIO_TX_CLK_DIV_NUMERATOR_R {
-        REG_PARLIO_TX_CLK_DIV_NUMERATOR_R::new(((self.bits >> 13) & 0xff) as u8)
+    pub fn parlio_tx_clk_div_numerator(&self) -> PARLIO_TX_CLK_DIV_NUMERATOR_R {
+        PARLIO_TX_CLK_DIV_NUMERATOR_R::new(((self.bits >> 13) & 0xff) as u8)
     }
     #[doc = "Bits 21:28 - need_des"]
     #[inline(always)]
-    pub fn reg_parlio_tx_clk_div_denominator(&self) -> REG_PARLIO_TX_CLK_DIV_DENOMINATOR_R {
-        REG_PARLIO_TX_CLK_DIV_DENOMINATOR_R::new(((self.bits >> 21) & 0xff) as u8)
+    pub fn parlio_tx_clk_div_denominator(&self) -> PARLIO_TX_CLK_DIV_DENOMINATOR_R {
+        PARLIO_TX_CLK_DIV_DENOMINATOR_R::new(((self.bits >> 21) & 0xff) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PARLIO_TX_CTRL0")
-            .field("reg_parlio_tx_rst_en", &self.reg_parlio_tx_rst_en())
+            .field("parlio_tx_rst_en", &self.parlio_tx_rst_en())
+            .field("parlio_tx_force_norst", &self.parlio_tx_force_norst())
+            .field("parlio_tx_clk_src_sel", &self.parlio_tx_clk_src_sel())
+            .field("parlio_tx_clk_en", &self.parlio_tx_clk_en())
+            .field("parlio_tx_clk_div_num", &self.parlio_tx_clk_div_num())
             .field(
-                "reg_parlio_tx_force_norst",
-                &self.reg_parlio_tx_force_norst(),
+                "parlio_tx_clk_div_numerator",
+                &self.parlio_tx_clk_div_numerator(),
             )
             .field(
-                "reg_parlio_tx_clk_src_sel",
-                &self.reg_parlio_tx_clk_src_sel(),
-            )
-            .field("reg_parlio_tx_clk_en", &self.reg_parlio_tx_clk_en())
-            .field(
-                "reg_parlio_tx_clk_div_num",
-                &self.reg_parlio_tx_clk_div_num(),
-            )
-            .field(
-                "reg_parlio_tx_clk_div_numerator",
-                &self.reg_parlio_tx_clk_div_numerator(),
-            )
-            .field(
-                "reg_parlio_tx_clk_div_denominator",
-                &self.reg_parlio_tx_clk_div_denominator(),
+                "parlio_tx_clk_div_denominator",
+                &self.parlio_tx_clk_div_denominator(),
             )
             .finish()
     }
@@ -99,48 +90,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn reg_parlio_tx_rst_en(&mut self) -> REG_PARLIO_TX_RST_EN_W<'_, PARLIO_TX_CTRL0_SPEC> {
-        REG_PARLIO_TX_RST_EN_W::new(self, 0)
+    pub fn parlio_tx_rst_en(&mut self) -> PARLIO_TX_RST_EN_W<'_, PARLIO_TX_CTRL0_SPEC> {
+        PARLIO_TX_RST_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn reg_parlio_tx_force_norst(
-        &mut self,
-    ) -> REG_PARLIO_TX_FORCE_NORST_W<'_, PARLIO_TX_CTRL0_SPEC> {
-        REG_PARLIO_TX_FORCE_NORST_W::new(self, 1)
+    pub fn parlio_tx_force_norst(&mut self) -> PARLIO_TX_FORCE_NORST_W<'_, PARLIO_TX_CTRL0_SPEC> {
+        PARLIO_TX_FORCE_NORST_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - need_des"]
     #[inline(always)]
-    pub fn reg_parlio_tx_clk_src_sel(
-        &mut self,
-    ) -> REG_PARLIO_TX_CLK_SRC_SEL_W<'_, PARLIO_TX_CTRL0_SPEC> {
-        REG_PARLIO_TX_CLK_SRC_SEL_W::new(self, 2)
+    pub fn parlio_tx_clk_src_sel(&mut self) -> PARLIO_TX_CLK_SRC_SEL_W<'_, PARLIO_TX_CTRL0_SPEC> {
+        PARLIO_TX_CLK_SRC_SEL_W::new(self, 2)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
-    pub fn reg_parlio_tx_clk_en(&mut self) -> REG_PARLIO_TX_CLK_EN_W<'_, PARLIO_TX_CTRL0_SPEC> {
-        REG_PARLIO_TX_CLK_EN_W::new(self, 4)
+    pub fn parlio_tx_clk_en(&mut self) -> PARLIO_TX_CLK_EN_W<'_, PARLIO_TX_CTRL0_SPEC> {
+        PARLIO_TX_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bits 5:12 - need_des"]
     #[inline(always)]
-    pub fn reg_parlio_tx_clk_div_num(
-        &mut self,
-    ) -> REG_PARLIO_TX_CLK_DIV_NUM_W<'_, PARLIO_TX_CTRL0_SPEC> {
-        REG_PARLIO_TX_CLK_DIV_NUM_W::new(self, 5)
+    pub fn parlio_tx_clk_div_num(&mut self) -> PARLIO_TX_CLK_DIV_NUM_W<'_, PARLIO_TX_CTRL0_SPEC> {
+        PARLIO_TX_CLK_DIV_NUM_W::new(self, 5)
     }
     #[doc = "Bits 13:20 - need_des"]
     #[inline(always)]
-    pub fn reg_parlio_tx_clk_div_numerator(
+    pub fn parlio_tx_clk_div_numerator(
         &mut self,
-    ) -> REG_PARLIO_TX_CLK_DIV_NUMERATOR_W<'_, PARLIO_TX_CTRL0_SPEC> {
-        REG_PARLIO_TX_CLK_DIV_NUMERATOR_W::new(self, 13)
+    ) -> PARLIO_TX_CLK_DIV_NUMERATOR_W<'_, PARLIO_TX_CTRL0_SPEC> {
+        PARLIO_TX_CLK_DIV_NUMERATOR_W::new(self, 13)
     }
     #[doc = "Bits 21:28 - need_des"]
     #[inline(always)]
-    pub fn reg_parlio_tx_clk_div_denominator(
+    pub fn parlio_tx_clk_div_denominator(
         &mut self,
-    ) -> REG_PARLIO_TX_CLK_DIV_DENOMINATOR_W<'_, PARLIO_TX_CTRL0_SPEC> {
-        REG_PARLIO_TX_CLK_DIV_DENOMINATOR_W::new(self, 21)
+    ) -> PARLIO_TX_CLK_DIV_DENOMINATOR_W<'_, PARLIO_TX_CTRL0_SPEC> {
+        PARLIO_TX_CLK_DIV_DENOMINATOR_W::new(self, 21)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`parlio_tx_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`parlio_tx_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

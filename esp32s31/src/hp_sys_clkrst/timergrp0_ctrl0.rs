@@ -2,172 +2,150 @@
 pub type R = crate::R<TIMERGRP0_CTRL0_SPEC>;
 #[doc = "Register `TIMERGRP0_CTRL0` writer"]
 pub type W = crate::W<TIMERGRP0_CTRL0_SPEC>;
-#[doc = "Field `REG_TIMERGRP0_APB_CLK_EN` reader - need_des"]
-pub type REG_TIMERGRP0_APB_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_TIMERGRP0_APB_CLK_EN` writer - need_des"]
-pub type REG_TIMERGRP0_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_TIMERGRP0_RST_EN` reader - need_des"]
-pub type REG_TIMERGRP0_RST_EN_R = crate::BitReader;
-#[doc = "Field `REG_TIMERGRP0_RST_EN` writer - need_des"]
-pub type REG_TIMERGRP0_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_TIMERGRP0_FORCE_NORST` reader - need_des"]
-pub type REG_TIMERGRP0_FORCE_NORST_R = crate::BitReader;
-#[doc = "Field `REG_TIMERGRP0_FORCE_NORST` writer - need_des"]
-pub type REG_TIMERGRP0_FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_TIMERGRP0_T0_SRC_SEL` reader - need_des"]
-pub type REG_TIMERGRP0_T0_SRC_SEL_R = crate::FieldReader;
-#[doc = "Field `REG_TIMERGRP0_T0_SRC_SEL` writer - need_des"]
-pub type REG_TIMERGRP0_T0_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `REG_TIMERGRP0_T0_CLK_EN` reader - need_des"]
-pub type REG_TIMERGRP0_T0_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_TIMERGRP0_T0_CLK_EN` writer - need_des"]
-pub type REG_TIMERGRP0_T0_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_TIMERGRP0_T1_SRC_SEL` reader - need_des"]
-pub type REG_TIMERGRP0_T1_SRC_SEL_R = crate::FieldReader;
-#[doc = "Field `REG_TIMERGRP0_T1_SRC_SEL` writer - need_des"]
-pub type REG_TIMERGRP0_T1_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `REG_TIMERGRP0_T1_CLK_EN` reader - need_des"]
-pub type REG_TIMERGRP0_T1_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_TIMERGRP0_T1_CLK_EN` writer - need_des"]
-pub type REG_TIMERGRP0_T1_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `REG_TIMERGRP0_WDT_SRC_SEL` reader - need_des"]
-pub type REG_TIMERGRP0_WDT_SRC_SEL_R = crate::FieldReader;
-#[doc = "Field `REG_TIMERGRP0_WDT_SRC_SEL` writer - need_des"]
-pub type REG_TIMERGRP0_WDT_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `REG_TIMERGRP0_WDT_CLK_EN` reader - need_des"]
-pub type REG_TIMERGRP0_WDT_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_TIMERGRP0_WDT_CLK_EN` writer - need_des"]
-pub type REG_TIMERGRP0_WDT_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMERGRP0_APB_CLK_EN` reader - need_des"]
+pub type TIMERGRP0_APB_CLK_EN_R = crate::BitReader;
+#[doc = "Field `TIMERGRP0_APB_CLK_EN` writer - need_des"]
+pub type TIMERGRP0_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMERGRP0_RST_EN` reader - need_des"]
+pub type TIMERGRP0_RST_EN_R = crate::BitReader;
+#[doc = "Field `TIMERGRP0_RST_EN` writer - need_des"]
+pub type TIMERGRP0_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMERGRP0_FORCE_NORST` reader - need_des"]
+pub type TIMERGRP0_FORCE_NORST_R = crate::BitReader;
+#[doc = "Field `TIMERGRP0_FORCE_NORST` writer - need_des"]
+pub type TIMERGRP0_FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMERGRP0_T0_SRC_SEL` reader - need_des"]
+pub type TIMERGRP0_T0_SRC_SEL_R = crate::FieldReader;
+#[doc = "Field `TIMERGRP0_T0_SRC_SEL` writer - need_des"]
+pub type TIMERGRP0_T0_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `TIMERGRP0_T0_CLK_EN` reader - need_des"]
+pub type TIMERGRP0_T0_CLK_EN_R = crate::BitReader;
+#[doc = "Field `TIMERGRP0_T0_CLK_EN` writer - need_des"]
+pub type TIMERGRP0_T0_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMERGRP0_T1_SRC_SEL` reader - need_des"]
+pub type TIMERGRP0_T1_SRC_SEL_R = crate::FieldReader;
+#[doc = "Field `TIMERGRP0_T1_SRC_SEL` writer - need_des"]
+pub type TIMERGRP0_T1_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `TIMERGRP0_T1_CLK_EN` reader - need_des"]
+pub type TIMERGRP0_T1_CLK_EN_R = crate::BitReader;
+#[doc = "Field `TIMERGRP0_T1_CLK_EN` writer - need_des"]
+pub type TIMERGRP0_T1_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMERGRP0_WDT_SRC_SEL` reader - need_des"]
+pub type TIMERGRP0_WDT_SRC_SEL_R = crate::FieldReader;
+#[doc = "Field `TIMERGRP0_WDT_SRC_SEL` writer - need_des"]
+pub type TIMERGRP0_WDT_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `TIMERGRP0_WDT_CLK_EN` reader - need_des"]
+pub type TIMERGRP0_WDT_CLK_EN_R = crate::BitReader;
+#[doc = "Field `TIMERGRP0_WDT_CLK_EN` writer - need_des"]
+pub type TIMERGRP0_WDT_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_apb_clk_en(&self) -> REG_TIMERGRP0_APB_CLK_EN_R {
-        REG_TIMERGRP0_APB_CLK_EN_R::new((self.bits & 1) != 0)
+    pub fn timergrp0_apb_clk_en(&self) -> TIMERGRP0_APB_CLK_EN_R {
+        TIMERGRP0_APB_CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_rst_en(&self) -> REG_TIMERGRP0_RST_EN_R {
-        REG_TIMERGRP0_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn timergrp0_rst_en(&self) -> TIMERGRP0_RST_EN_R {
+        TIMERGRP0_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_force_norst(&self) -> REG_TIMERGRP0_FORCE_NORST_R {
-        REG_TIMERGRP0_FORCE_NORST_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn timergrp0_force_norst(&self) -> TIMERGRP0_FORCE_NORST_R {
+        TIMERGRP0_FORCE_NORST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 3:4 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_t0_src_sel(&self) -> REG_TIMERGRP0_T0_SRC_SEL_R {
-        REG_TIMERGRP0_T0_SRC_SEL_R::new(((self.bits >> 3) & 3) as u8)
+    pub fn timergrp0_t0_src_sel(&self) -> TIMERGRP0_T0_SRC_SEL_R {
+        TIMERGRP0_T0_SRC_SEL_R::new(((self.bits >> 3) & 3) as u8)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_t0_clk_en(&self) -> REG_TIMERGRP0_T0_CLK_EN_R {
-        REG_TIMERGRP0_T0_CLK_EN_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn timergrp0_t0_clk_en(&self) -> TIMERGRP0_T0_CLK_EN_R {
+        TIMERGRP0_T0_CLK_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:7 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_t1_src_sel(&self) -> REG_TIMERGRP0_T1_SRC_SEL_R {
-        REG_TIMERGRP0_T1_SRC_SEL_R::new(((self.bits >> 6) & 3) as u8)
+    pub fn timergrp0_t1_src_sel(&self) -> TIMERGRP0_T1_SRC_SEL_R {
+        TIMERGRP0_T1_SRC_SEL_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bit 8 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_t1_clk_en(&self) -> REG_TIMERGRP0_T1_CLK_EN_R {
-        REG_TIMERGRP0_T1_CLK_EN_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn timergrp0_t1_clk_en(&self) -> TIMERGRP0_T1_CLK_EN_R {
+        TIMERGRP0_T1_CLK_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 9:10 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_wdt_src_sel(&self) -> REG_TIMERGRP0_WDT_SRC_SEL_R {
-        REG_TIMERGRP0_WDT_SRC_SEL_R::new(((self.bits >> 9) & 3) as u8)
+    pub fn timergrp0_wdt_src_sel(&self) -> TIMERGRP0_WDT_SRC_SEL_R {
+        TIMERGRP0_WDT_SRC_SEL_R::new(((self.bits >> 9) & 3) as u8)
     }
     #[doc = "Bit 11 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_wdt_clk_en(&self) -> REG_TIMERGRP0_WDT_CLK_EN_R {
-        REG_TIMERGRP0_WDT_CLK_EN_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn timergrp0_wdt_clk_en(&self) -> TIMERGRP0_WDT_CLK_EN_R {
+        TIMERGRP0_WDT_CLK_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMERGRP0_CTRL0")
-            .field("reg_timergrp0_apb_clk_en", &self.reg_timergrp0_apb_clk_en())
-            .field("reg_timergrp0_rst_en", &self.reg_timergrp0_rst_en())
-            .field(
-                "reg_timergrp0_force_norst",
-                &self.reg_timergrp0_force_norst(),
-            )
-            .field("reg_timergrp0_t0_src_sel", &self.reg_timergrp0_t0_src_sel())
-            .field("reg_timergrp0_t0_clk_en", &self.reg_timergrp0_t0_clk_en())
-            .field("reg_timergrp0_t1_src_sel", &self.reg_timergrp0_t1_src_sel())
-            .field("reg_timergrp0_t1_clk_en", &self.reg_timergrp0_t1_clk_en())
-            .field(
-                "reg_timergrp0_wdt_src_sel",
-                &self.reg_timergrp0_wdt_src_sel(),
-            )
-            .field("reg_timergrp0_wdt_clk_en", &self.reg_timergrp0_wdt_clk_en())
+            .field("timergrp0_apb_clk_en", &self.timergrp0_apb_clk_en())
+            .field("timergrp0_rst_en", &self.timergrp0_rst_en())
+            .field("timergrp0_force_norst", &self.timergrp0_force_norst())
+            .field("timergrp0_t0_src_sel", &self.timergrp0_t0_src_sel())
+            .field("timergrp0_t0_clk_en", &self.timergrp0_t0_clk_en())
+            .field("timergrp0_t1_src_sel", &self.timergrp0_t1_src_sel())
+            .field("timergrp0_t1_clk_en", &self.timergrp0_t1_clk_en())
+            .field("timergrp0_wdt_src_sel", &self.timergrp0_wdt_src_sel())
+            .field("timergrp0_wdt_clk_en", &self.timergrp0_wdt_clk_en())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_apb_clk_en(
-        &mut self,
-    ) -> REG_TIMERGRP0_APB_CLK_EN_W<'_, TIMERGRP0_CTRL0_SPEC> {
-        REG_TIMERGRP0_APB_CLK_EN_W::new(self, 0)
+    pub fn timergrp0_apb_clk_en(&mut self) -> TIMERGRP0_APB_CLK_EN_W<'_, TIMERGRP0_CTRL0_SPEC> {
+        TIMERGRP0_APB_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_rst_en(&mut self) -> REG_TIMERGRP0_RST_EN_W<'_, TIMERGRP0_CTRL0_SPEC> {
-        REG_TIMERGRP0_RST_EN_W::new(self, 1)
+    pub fn timergrp0_rst_en(&mut self) -> TIMERGRP0_RST_EN_W<'_, TIMERGRP0_CTRL0_SPEC> {
+        TIMERGRP0_RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_force_norst(
-        &mut self,
-    ) -> REG_TIMERGRP0_FORCE_NORST_W<'_, TIMERGRP0_CTRL0_SPEC> {
-        REG_TIMERGRP0_FORCE_NORST_W::new(self, 2)
+    pub fn timergrp0_force_norst(&mut self) -> TIMERGRP0_FORCE_NORST_W<'_, TIMERGRP0_CTRL0_SPEC> {
+        TIMERGRP0_FORCE_NORST_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_t0_src_sel(
-        &mut self,
-    ) -> REG_TIMERGRP0_T0_SRC_SEL_W<'_, TIMERGRP0_CTRL0_SPEC> {
-        REG_TIMERGRP0_T0_SRC_SEL_W::new(self, 3)
+    pub fn timergrp0_t0_src_sel(&mut self) -> TIMERGRP0_T0_SRC_SEL_W<'_, TIMERGRP0_CTRL0_SPEC> {
+        TIMERGRP0_T0_SRC_SEL_W::new(self, 3)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_t0_clk_en(
-        &mut self,
-    ) -> REG_TIMERGRP0_T0_CLK_EN_W<'_, TIMERGRP0_CTRL0_SPEC> {
-        REG_TIMERGRP0_T0_CLK_EN_W::new(self, 5)
+    pub fn timergrp0_t0_clk_en(&mut self) -> TIMERGRP0_T0_CLK_EN_W<'_, TIMERGRP0_CTRL0_SPEC> {
+        TIMERGRP0_T0_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bits 6:7 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_t1_src_sel(
-        &mut self,
-    ) -> REG_TIMERGRP0_T1_SRC_SEL_W<'_, TIMERGRP0_CTRL0_SPEC> {
-        REG_TIMERGRP0_T1_SRC_SEL_W::new(self, 6)
+    pub fn timergrp0_t1_src_sel(&mut self) -> TIMERGRP0_T1_SRC_SEL_W<'_, TIMERGRP0_CTRL0_SPEC> {
+        TIMERGRP0_T1_SRC_SEL_W::new(self, 6)
     }
     #[doc = "Bit 8 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_t1_clk_en(
-        &mut self,
-    ) -> REG_TIMERGRP0_T1_CLK_EN_W<'_, TIMERGRP0_CTRL0_SPEC> {
-        REG_TIMERGRP0_T1_CLK_EN_W::new(self, 8)
+    pub fn timergrp0_t1_clk_en(&mut self) -> TIMERGRP0_T1_CLK_EN_W<'_, TIMERGRP0_CTRL0_SPEC> {
+        TIMERGRP0_T1_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bits 9:10 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_wdt_src_sel(
-        &mut self,
-    ) -> REG_TIMERGRP0_WDT_SRC_SEL_W<'_, TIMERGRP0_CTRL0_SPEC> {
-        REG_TIMERGRP0_WDT_SRC_SEL_W::new(self, 9)
+    pub fn timergrp0_wdt_src_sel(&mut self) -> TIMERGRP0_WDT_SRC_SEL_W<'_, TIMERGRP0_CTRL0_SPEC> {
+        TIMERGRP0_WDT_SRC_SEL_W::new(self, 9)
     }
     #[doc = "Bit 11 - need_des"]
     #[inline(always)]
-    pub fn reg_timergrp0_wdt_clk_en(
-        &mut self,
-    ) -> REG_TIMERGRP0_WDT_CLK_EN_W<'_, TIMERGRP0_CTRL0_SPEC> {
-        REG_TIMERGRP0_WDT_CLK_EN_W::new(self, 11)
+    pub fn timergrp0_wdt_clk_en(&mut self) -> TIMERGRP0_WDT_CLK_EN_W<'_, TIMERGRP0_CTRL0_SPEC> {
+        TIMERGRP0_WDT_CLK_EN_W::new(self, 11)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`timergrp0_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timergrp0_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

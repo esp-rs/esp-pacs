@@ -1,15 +1,29 @@
 #[doc = "Register `RD_REPEAT_DATA3` reader"]
 pub type R = crate::R<RD_REPEAT_DATA3_SPEC>;
+#[doc = "Register `RD_REPEAT_DATA3` writer"]
+pub type W = crate::W<RD_REPEAT_DATA3_SPEC>;
 #[doc = "Field `XTS_DPA_PSEUDO_LEVEL` reader - Represents the control of the xts pseudo-round anti-dpa attack function.\\\\ 0: controlled by register.\\\\ 1-3: the higer the value is, the more pseudo-rounds are inserted to the xts-aes calculation\\\\"]
 pub type XTS_DPA_PSEUDO_LEVEL_R = crate::FieldReader;
 #[doc = "Field `SECURE_BOOT_EN` reader - Represents whether secure boot is enabled or disabled.\\\\ 1: enabled\\\\ 0: disabled\\\\"]
 pub type SECURE_BOOT_EN_R = crate::BitReader;
 #[doc = "Field `SECURE_BOOT_AGGRESSIVE_REVOKE` reader - Represents whether revoking aggressive secure boot is enabled or disabled.\\\\ 1: enabled.\\\\ 0: disabled\\\\"]
 pub type SECURE_BOOT_AGGRESSIVE_REVOKE_R = crate::BitReader;
+#[doc = "Field `RD_RESERVE_0_132` reader - "]
+pub type RD_RESERVE_0_132_R = crate::BitReader;
+#[doc = "Field `RD_RESERVE_0_132` writer - "]
+pub type RD_RESERVE_0_132_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FLASH_TYPE` reader - flash type: 0: nor flash, 1: nand flash"]
 pub type FLASH_TYPE_R = crate::BitReader;
+#[doc = "Field `RD_RESERVE_0_134` reader - "]
+pub type RD_RESERVE_0_134_R = crate::FieldReader;
+#[doc = "Field `RD_RESERVE_0_134` writer - "]
+pub type RD_RESERVE_0_134_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `DIS_USB_OTG_DOWNLOAD_MODE` reader - Set this bit to disable download via USB-OTG."]
 pub type DIS_USB_OTG_DOWNLOAD_MODE_R = crate::BitReader;
+#[doc = "Field `RD_RESERVE_0_138` reader - "]
+pub type RD_RESERVE_0_138_R = crate::FieldReader;
+#[doc = "Field `RD_RESERVE_0_138` writer - "]
+pub type RD_RESERVE_0_138_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FLASH_TPUW` reader - Represents the flash waiting time after power-up, in unit of ms. When the value less than 15, the waiting time is the programmed value. Otherwise, the waiting time is 2 times the programmed value."]
 pub type FLASH_TPUW_R = crate::FieldReader;
 #[doc = "Field `DIS_DOWNLOAD_MODE` reader - Represents whether Download mode is disabled or enabled.\\\\ 1: disabled\\\\ 0: enabled\\\\"]
@@ -28,6 +42,10 @@ pub type ENABLE_SECURITY_DOWNLOAD_R = crate::BitReader;
 pub type UART_PRINT_CONTROL_R = crate::FieldReader;
 #[doc = "Field `FORCE_SEND_RESUME` reader - Represents whether ROM code is forced to send a resume command during SPI boot.\\\\ 1: forced\\\\ 0:not forced\\\\"]
 pub type FORCE_SEND_RESUME_R = crate::BitReader;
+#[doc = "Field `RD_RESERVE_0_153` reader - "]
+pub type RD_RESERVE_0_153_R = crate::FieldReader;
+#[doc = "Field `RD_RESERVE_0_153` writer - "]
+pub type RD_RESERVE_0_153_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bits 0:1 - Represents the control of the xts pseudo-round anti-dpa attack function.\\\\ 0: controlled by register.\\\\ 1-3: the higer the value is, the more pseudo-rounds are inserted to the xts-aes calculation\\\\"]
     #[inline(always)]
@@ -44,15 +62,30 @@ impl R {
     pub fn secure_boot_aggressive_revoke(&self) -> SECURE_BOOT_AGGRESSIVE_REVOKE_R {
         SECURE_BOOT_AGGRESSIVE_REVOKE_R::new(((self.bits >> 3) & 1) != 0)
     }
+    #[doc = "Bit 4"]
+    #[inline(always)]
+    pub fn rd_reserve_0_132(&self) -> RD_RESERVE_0_132_R {
+        RD_RESERVE_0_132_R::new(((self.bits >> 4) & 1) != 0)
+    }
     #[doc = "Bit 5 - flash type: 0: nor flash, 1: nand flash"]
     #[inline(always)]
     pub fn flash_type(&self) -> FLASH_TYPE_R {
         FLASH_TYPE_R::new(((self.bits >> 5) & 1) != 0)
     }
+    #[doc = "Bits 6:8"]
+    #[inline(always)]
+    pub fn rd_reserve_0_134(&self) -> RD_RESERVE_0_134_R {
+        RD_RESERVE_0_134_R::new(((self.bits >> 6) & 7) as u8)
+    }
     #[doc = "Bit 9 - Set this bit to disable download via USB-OTG."]
     #[inline(always)]
     pub fn dis_usb_otg_download_mode(&self) -> DIS_USB_OTG_DOWNLOAD_MODE_R {
         DIS_USB_OTG_DOWNLOAD_MODE_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bits 10:11"]
+    #[inline(always)]
+    pub fn rd_reserve_0_138(&self) -> RD_RESERVE_0_138_R {
+        RD_RESERVE_0_138_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:15 - Represents the flash waiting time after power-up, in unit of ms. When the value less than 15, the waiting time is the programmed value. Otherwise, the waiting time is 2 times the programmed value."]
     #[inline(always)]
@@ -99,6 +132,11 @@ impl R {
     pub fn force_send_resume(&self) -> FORCE_SEND_RESUME_R {
         FORCE_SEND_RESUME_R::new(((self.bits >> 24) & 1) != 0)
     }
+    #[doc = "Bits 25:31"]
+    #[inline(always)]
+    pub fn rd_reserve_0_153(&self) -> RD_RESERVE_0_153_R {
+        RD_RESERVE_0_153_R::new(((self.bits >> 25) & 0x7f) as u8)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -130,15 +168,45 @@ impl core::fmt::Debug for R {
             .field("enable_security_download", &self.enable_security_download())
             .field("uart_print_control", &self.uart_print_control())
             .field("force_send_resume", &self.force_send_resume())
+            .field("rd_reserve_0_132", &self.rd_reserve_0_132())
+            .field("rd_reserve_0_134", &self.rd_reserve_0_134())
+            .field("rd_reserve_0_138", &self.rd_reserve_0_138())
+            .field("rd_reserve_0_153", &self.rd_reserve_0_153())
             .finish()
     }
 }
-#[doc = "Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data3::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+impl W {
+    #[doc = "Bit 4"]
+    #[inline(always)]
+    pub fn rd_reserve_0_132(&mut self) -> RD_RESERVE_0_132_W<'_, RD_REPEAT_DATA3_SPEC> {
+        RD_RESERVE_0_132_W::new(self, 4)
+    }
+    #[doc = "Bits 6:8"]
+    #[inline(always)]
+    pub fn rd_reserve_0_134(&mut self) -> RD_RESERVE_0_134_W<'_, RD_REPEAT_DATA3_SPEC> {
+        RD_RESERVE_0_134_W::new(self, 6)
+    }
+    #[doc = "Bits 10:11"]
+    #[inline(always)]
+    pub fn rd_reserve_0_138(&mut self) -> RD_RESERVE_0_138_W<'_, RD_REPEAT_DATA3_SPEC> {
+        RD_RESERVE_0_138_W::new(self, 10)
+    }
+    #[doc = "Bits 25:31"]
+    #[inline(always)]
+    pub fn rd_reserve_0_153(&mut self) -> RD_RESERVE_0_153_W<'_, RD_REPEAT_DATA3_SPEC> {
+        RD_RESERVE_0_153_W::new(self, 25)
+    }
+}
+#[doc = "Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_repeat_data3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_REPEAT_DATA3_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_DATA3_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`rd_repeat_data3::R`](R) reader structure"]
 impl crate::Readable for RD_REPEAT_DATA3_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rd_repeat_data3::W`](W) writer structure"]
+impl crate::Writable for RD_REPEAT_DATA3_SPEC {
+    type Safety = crate::Unsafe;
+}
 #[doc = "`reset()` method sets RD_REPEAT_DATA3 to value 0"]
 impl crate::Resettable for RD_REPEAT_DATA3_SPEC {}

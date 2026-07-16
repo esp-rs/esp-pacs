@@ -2,35 +2,32 @@
 pub type R = crate::R<CNNT_SYSREG_CTRL0_SPEC>;
 #[doc = "Register `CNNT_SYSREG_CTRL0` writer"]
 pub type W = crate::W<CNNT_SYSREG_CTRL0_SPEC>;
-#[doc = "Field `REG_CNNT_SYSREG_SYS_CLK_EN` reader - cnnt_sysreg clk en"]
-pub type REG_CNNT_SYSREG_SYS_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_CNNT_SYSREG_SYS_CLK_EN` writer - cnnt_sysreg clk en"]
-pub type REG_CNNT_SYSREG_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CNNT_SYSREG_SYS_CLK_EN` reader - cnnt_sysreg clk en"]
+pub type CNNT_SYSREG_SYS_CLK_EN_R = crate::BitReader;
+#[doc = "Field `CNNT_SYSREG_SYS_CLK_EN` writer - cnnt_sysreg clk en"]
+pub type CNNT_SYSREG_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - cnnt_sysreg clk en"]
     #[inline(always)]
-    pub fn reg_cnnt_sysreg_sys_clk_en(&self) -> REG_CNNT_SYSREG_SYS_CLK_EN_R {
-        REG_CNNT_SYSREG_SYS_CLK_EN_R::new((self.bits & 1) != 0)
+    pub fn cnnt_sysreg_sys_clk_en(&self) -> CNNT_SYSREG_SYS_CLK_EN_R {
+        CNNT_SYSREG_SYS_CLK_EN_R::new((self.bits & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CNNT_SYSREG_CTRL0")
-            .field(
-                "reg_cnnt_sysreg_sys_clk_en",
-                &self.reg_cnnt_sysreg_sys_clk_en(),
-            )
+            .field("cnnt_sysreg_sys_clk_en", &self.cnnt_sysreg_sys_clk_en())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - cnnt_sysreg clk en"]
     #[inline(always)]
-    pub fn reg_cnnt_sysreg_sys_clk_en(
+    pub fn cnnt_sysreg_sys_clk_en(
         &mut self,
-    ) -> REG_CNNT_SYSREG_SYS_CLK_EN_W<'_, CNNT_SYSREG_CTRL0_SPEC> {
-        REG_CNNT_SYSREG_SYS_CLK_EN_W::new(self, 0)
+    ) -> CNNT_SYSREG_SYS_CLK_EN_W<'_, CNNT_SYSREG_CTRL0_SPEC> {
+        CNNT_SYSREG_SYS_CLK_EN_W::new(self, 0)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`cnnt_sysreg_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cnnt_sysreg_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

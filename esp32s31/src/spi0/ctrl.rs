@@ -38,6 +38,14 @@ pub type FCMD_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type FCMD_OCT_R = crate::BitReader;
 #[doc = "Field `FCMD_OCT` writer - Apply 8 signals during command phase 1:enable 0: disable"]
 pub type FCMD_OCT_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FCS_CRC_EN` reader - "]
+pub type FCS_CRC_EN_R = crate::BitReader;
+#[doc = "Field `FCS_CRC_EN` writer - "]
+pub type FCS_CRC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TX_CRC_EN` reader - "]
+pub type TX_CRC_EN_R = crate::BitReader;
+#[doc = "Field `TX_CRC_EN` writer - "]
+pub type TX_CRC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FASTRD_MODE` reader - This bit enable the bits: SPI_MEM_FREAD_QIO, SPI_MEM_FREAD_DIO, SPI_MEM_FREAD_QOUT and SPI_MEM_FREAD_DOUT. 1: enable 0: disable."]
 pub type FASTRD_MODE_R = crate::BitReader;
 #[doc = "Field `FASTRD_MODE` writer - This bit enable the bits: SPI_MEM_FREAD_QIO, SPI_MEM_FREAD_DIO, SPI_MEM_FREAD_QOUT and SPI_MEM_FREAD_DOUT. 1: enable 0: disable."]
@@ -46,6 +54,10 @@ pub type FASTRD_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type FREAD_DUAL_R = crate::BitReader;
 #[doc = "Field `FREAD_DUAL` writer - In the read operations, read-data phase apply 2 signals. 1: enable 0: disable."]
 pub type FREAD_DUAL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RESANDRES` reader - "]
+pub type RESANDRES_R = crate::BitReader;
+#[doc = "Field `RESANDRES` writer - "]
+pub type RESANDRES_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `Q_POL` reader - The bit is used to set MISO line polarity, 1: high 0, low"]
 pub type Q_POL_R = crate::BitReader;
 #[doc = "Field `Q_POL` writer - The bit is used to set MISO line polarity, 1: high 0, low"]
@@ -62,6 +74,10 @@ pub type FREAD_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type WP_R = crate::BitReader;
 #[doc = "Field `WP` writer - Write protect signal output when SPI is idle. 1: output high, 0: output low."]
 pub type WP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `WRSR_2B` reader - "]
+pub type WRSR_2B_R = crate::BitReader;
+#[doc = "Field `WRSR_2B` writer - "]
+pub type WRSR_2B_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FREAD_DIO` reader - In the read operations address phase and read-data phase apply 2 signals. 1: enable 0: disable."]
 pub type FREAD_DIO_R = crate::BitReader;
 #[doc = "Field `FREAD_DIO` writer - In the read operations address phase and read-data phase apply 2 signals. 1: enable 0: disable."]
@@ -124,6 +140,16 @@ impl R {
     pub fn fcmd_oct(&self) -> FCMD_OCT_R {
         FCMD_OCT_R::new(((self.bits >> 9) & 1) != 0)
     }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    pub fn fcs_crc_en(&self) -> FCS_CRC_EN_R {
+        FCS_CRC_EN_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11"]
+    #[inline(always)]
+    pub fn tx_crc_en(&self) -> TX_CRC_EN_R {
+        TX_CRC_EN_R::new(((self.bits >> 11) & 1) != 0)
+    }
     #[doc = "Bit 13 - This bit enable the bits: SPI_MEM_FREAD_QIO, SPI_MEM_FREAD_DIO, SPI_MEM_FREAD_QOUT and SPI_MEM_FREAD_DOUT. 1: enable 0: disable."]
     #[inline(always)]
     pub fn fastrd_mode(&self) -> FASTRD_MODE_R {
@@ -133,6 +159,11 @@ impl R {
     #[inline(always)]
     pub fn fread_dual(&self) -> FREAD_DUAL_R {
         FREAD_DUAL_R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15"]
+    #[inline(always)]
+    pub fn resandres(&self) -> RESANDRES_R {
+        RESANDRES_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 18 - The bit is used to set MISO line polarity, 1: high 0, low"]
     #[inline(always)]
@@ -153,6 +184,11 @@ impl R {
     #[inline(always)]
     pub fn wp(&self) -> WP_R {
         WP_R::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22"]
+    #[inline(always)]
+    pub fn wrsr_2b(&self) -> WRSR_2B_R {
+        WRSR_2B_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - In the read operations address phase and read-data phase apply 2 signals. 1: enable 0: disable."]
     #[inline(always)]
@@ -198,6 +234,10 @@ impl core::fmt::Debug for R {
             .field("fread_qio", &self.fread_qio())
             .field("dqs_ie_always_on", &self.dqs_ie_always_on())
             .field("data_ie_always_on", &self.data_ie_always_on())
+            .field("fcs_crc_en", &self.fcs_crc_en())
+            .field("tx_crc_en", &self.tx_crc_en())
+            .field("resandres", &self.resandres())
+            .field("wrsr_2b", &self.wrsr_2b())
             .finish()
     }
 }
@@ -247,6 +287,16 @@ impl W {
     pub fn fcmd_oct(&mut self) -> FCMD_OCT_W<'_, CTRL_SPEC> {
         FCMD_OCT_W::new(self, 9)
     }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    pub fn fcs_crc_en(&mut self) -> FCS_CRC_EN_W<'_, CTRL_SPEC> {
+        FCS_CRC_EN_W::new(self, 10)
+    }
+    #[doc = "Bit 11"]
+    #[inline(always)]
+    pub fn tx_crc_en(&mut self) -> TX_CRC_EN_W<'_, CTRL_SPEC> {
+        TX_CRC_EN_W::new(self, 11)
+    }
     #[doc = "Bit 13 - This bit enable the bits: SPI_MEM_FREAD_QIO, SPI_MEM_FREAD_DIO, SPI_MEM_FREAD_QOUT and SPI_MEM_FREAD_DOUT. 1: enable 0: disable."]
     #[inline(always)]
     pub fn fastrd_mode(&mut self) -> FASTRD_MODE_W<'_, CTRL_SPEC> {
@@ -256,6 +306,11 @@ impl W {
     #[inline(always)]
     pub fn fread_dual(&mut self) -> FREAD_DUAL_W<'_, CTRL_SPEC> {
         FREAD_DUAL_W::new(self, 14)
+    }
+    #[doc = "Bit 15"]
+    #[inline(always)]
+    pub fn resandres(&mut self) -> RESANDRES_W<'_, CTRL_SPEC> {
+        RESANDRES_W::new(self, 15)
     }
     #[doc = "Bit 18 - The bit is used to set MISO line polarity, 1: high 0, low"]
     #[inline(always)]
@@ -276,6 +331,11 @@ impl W {
     #[inline(always)]
     pub fn wp(&mut self) -> WP_W<'_, CTRL_SPEC> {
         WP_W::new(self, 21)
+    }
+    #[doc = "Bit 22"]
+    #[inline(always)]
+    pub fn wrsr_2b(&mut self) -> WRSR_2B_W<'_, CTRL_SPEC> {
+        WRSR_2B_W::new(self, 22)
     }
     #[doc = "Bit 23 - In the read operations address phase and read-data phase apply 2 signals. 1: enable 0: disable."]
     #[inline(always)]

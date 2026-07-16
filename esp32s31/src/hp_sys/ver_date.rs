@@ -2,30 +2,30 @@
 pub type R = crate::R<VER_DATE_SPEC>;
 #[doc = "Register `VER_DATE` writer"]
 pub type W = crate::W<VER_DATE_SPEC>;
-#[doc = "Field `HP_REG_VER_DATE` reader - NA"]
-pub type HP_REG_VER_DATE_R = crate::FieldReader<u32>;
-#[doc = "Field `HP_REG_VER_DATE` writer - NA"]
-pub type HP_REG_VER_DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+#[doc = "Field `REG_VER_DATE` reader - NA"]
+pub type REG_VER_DATE_R = crate::FieldReader<u32>;
+#[doc = "Field `REG_VER_DATE` writer - NA"]
+pub type REG_VER_DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - NA"]
     #[inline(always)]
-    pub fn hp_reg_ver_date(&self) -> HP_REG_VER_DATE_R {
-        HP_REG_VER_DATE_R::new(self.bits)
+    pub fn reg_ver_date(&self) -> REG_VER_DATE_R {
+        REG_VER_DATE_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VER_DATE")
-            .field("hp_reg_ver_date", &self.hp_reg_ver_date())
+            .field("reg_ver_date", &self.reg_ver_date())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:31 - NA"]
     #[inline(always)]
-    pub fn hp_reg_ver_date(&mut self) -> HP_REG_VER_DATE_W<'_, VER_DATE_SPEC> {
-        HP_REG_VER_DATE_W::new(self, 0)
+    pub fn reg_ver_date(&mut self) -> REG_VER_DATE_W<'_, VER_DATE_SPEC> {
+        REG_VER_DATE_W::new(self, 0)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`ver_date::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ver_date::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

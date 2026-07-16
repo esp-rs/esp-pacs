@@ -14,14 +14,54 @@ pub type CS_SETUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type CK_OUT_EDGE_R = crate::BitReader;
 #[doc = "Field `CK_OUT_EDGE` writer - The bit combined with SPI_MEM_CK_IDLE_EDGE bit to control SPI clock mode 0~3."]
 pub type CK_OUT_EDGE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FWRITE_DUAL` reader - "]
+pub type FWRITE_DUAL_R = crate::BitReader;
+#[doc = "Field `FWRITE_DUAL` writer - "]
+pub type FWRITE_DUAL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FWRITE_QUAD` reader - "]
+pub type FWRITE_QUAD_R = crate::BitReader;
+#[doc = "Field `FWRITE_QUAD` writer - "]
+pub type FWRITE_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FWRITE_DIO` reader - "]
+pub type FWRITE_DIO_R = crate::BitReader;
+#[doc = "Field `FWRITE_DIO` writer - "]
+pub type FWRITE_DIO_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FWRITE_QIO` reader - "]
+pub type FWRITE_QIO_R = crate::BitReader;
+#[doc = "Field `FWRITE_QIO` writer - "]
+pub type FWRITE_QIO_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `USR_MISO_HIGHPART` reader - "]
+pub type USR_MISO_HIGHPART_R = crate::BitReader;
+#[doc = "Field `USR_MISO_HIGHPART` writer - "]
+pub type USR_MISO_HIGHPART_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `USR_MOSI_HIGHPART` reader - "]
+pub type USR_MOSI_HIGHPART_R = crate::BitReader;
+#[doc = "Field `USR_MOSI_HIGHPART` writer - "]
+pub type USR_MOSI_HIGHPART_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USR_DUMMY_IDLE` reader - spi clock is disable in dummy phase when the bit is enable."]
 pub type USR_DUMMY_IDLE_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY_IDLE` writer - spi clock is disable in dummy phase when the bit is enable."]
 pub type USR_DUMMY_IDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `USR_MOSI` reader - "]
+pub type USR_MOSI_R = crate::BitReader;
+#[doc = "Field `USR_MOSI` writer - "]
+pub type USR_MOSI_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `USR_MISO` reader - "]
+pub type USR_MISO_R = crate::BitReader;
+#[doc = "Field `USR_MISO` writer - "]
+pub type USR_MISO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USR_DUMMY` reader - This bit enable the dummy phase of an operation."]
 pub type USR_DUMMY_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY` writer - This bit enable the dummy phase of an operation."]
 pub type USR_DUMMY_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `USR_ADDR` reader - "]
+pub type USR_ADDR_R = crate::BitReader;
+#[doc = "Field `USR_ADDR` writer - "]
+pub type USR_ADDR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `USR_COMMAND` reader - "]
+pub type USR_COMMAND_R = crate::BitReader;
+#[doc = "Field `USR_COMMAND` writer - "]
+pub type USR_COMMAND_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 6 - spi cs keep low when spi is in done phase. 1: enable 0: disable."]
     #[inline(always)]
@@ -38,15 +78,65 @@ impl R {
     pub fn ck_out_edge(&self) -> CK_OUT_EDGE_R {
         CK_OUT_EDGE_R::new(((self.bits >> 9) & 1) != 0)
     }
+    #[doc = "Bit 12"]
+    #[inline(always)]
+    pub fn fwrite_dual(&self) -> FWRITE_DUAL_R {
+        FWRITE_DUAL_R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 13"]
+    #[inline(always)]
+    pub fn fwrite_quad(&self) -> FWRITE_QUAD_R {
+        FWRITE_QUAD_R::new(((self.bits >> 13) & 1) != 0)
+    }
+    #[doc = "Bit 14"]
+    #[inline(always)]
+    pub fn fwrite_dio(&self) -> FWRITE_DIO_R {
+        FWRITE_DIO_R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15"]
+    #[inline(always)]
+    pub fn fwrite_qio(&self) -> FWRITE_QIO_R {
+        FWRITE_QIO_R::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 24"]
+    #[inline(always)]
+    pub fn usr_miso_highpart(&self) -> USR_MISO_HIGHPART_R {
+        USR_MISO_HIGHPART_R::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 25"]
+    #[inline(always)]
+    pub fn usr_mosi_highpart(&self) -> USR_MOSI_HIGHPART_R {
+        USR_MOSI_HIGHPART_R::new(((self.bits >> 25) & 1) != 0)
+    }
     #[doc = "Bit 26 - spi clock is disable in dummy phase when the bit is enable."]
     #[inline(always)]
     pub fn usr_dummy_idle(&self) -> USR_DUMMY_IDLE_R {
         USR_DUMMY_IDLE_R::new(((self.bits >> 26) & 1) != 0)
     }
+    #[doc = "Bit 27"]
+    #[inline(always)]
+    pub fn usr_mosi(&self) -> USR_MOSI_R {
+        USR_MOSI_R::new(((self.bits >> 27) & 1) != 0)
+    }
+    #[doc = "Bit 28"]
+    #[inline(always)]
+    pub fn usr_miso(&self) -> USR_MISO_R {
+        USR_MISO_R::new(((self.bits >> 28) & 1) != 0)
+    }
     #[doc = "Bit 29 - This bit enable the dummy phase of an operation."]
     #[inline(always)]
     pub fn usr_dummy(&self) -> USR_DUMMY_R {
         USR_DUMMY_R::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30"]
+    #[inline(always)]
+    pub fn usr_addr(&self) -> USR_ADDR_R {
+        USR_ADDR_R::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31"]
+    #[inline(always)]
+    pub fn usr_command(&self) -> USR_COMMAND_R {
+        USR_COMMAND_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -58,6 +148,16 @@ impl core::fmt::Debug for R {
             .field("ck_out_edge", &self.ck_out_edge())
             .field("usr_dummy_idle", &self.usr_dummy_idle())
             .field("usr_dummy", &self.usr_dummy())
+            .field("fwrite_dual", &self.fwrite_dual())
+            .field("fwrite_quad", &self.fwrite_quad())
+            .field("fwrite_dio", &self.fwrite_dio())
+            .field("fwrite_qio", &self.fwrite_qio())
+            .field("usr_miso_highpart", &self.usr_miso_highpart())
+            .field("usr_mosi_highpart", &self.usr_mosi_highpart())
+            .field("usr_mosi", &self.usr_mosi())
+            .field("usr_miso", &self.usr_miso())
+            .field("usr_addr", &self.usr_addr())
+            .field("usr_command", &self.usr_command())
             .finish()
     }
 }
@@ -77,15 +177,65 @@ impl W {
     pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W<'_, USER_SPEC> {
         CK_OUT_EDGE_W::new(self, 9)
     }
+    #[doc = "Bit 12"]
+    #[inline(always)]
+    pub fn fwrite_dual(&mut self) -> FWRITE_DUAL_W<'_, USER_SPEC> {
+        FWRITE_DUAL_W::new(self, 12)
+    }
+    #[doc = "Bit 13"]
+    #[inline(always)]
+    pub fn fwrite_quad(&mut self) -> FWRITE_QUAD_W<'_, USER_SPEC> {
+        FWRITE_QUAD_W::new(self, 13)
+    }
+    #[doc = "Bit 14"]
+    #[inline(always)]
+    pub fn fwrite_dio(&mut self) -> FWRITE_DIO_W<'_, USER_SPEC> {
+        FWRITE_DIO_W::new(self, 14)
+    }
+    #[doc = "Bit 15"]
+    #[inline(always)]
+    pub fn fwrite_qio(&mut self) -> FWRITE_QIO_W<'_, USER_SPEC> {
+        FWRITE_QIO_W::new(self, 15)
+    }
+    #[doc = "Bit 24"]
+    #[inline(always)]
+    pub fn usr_miso_highpart(&mut self) -> USR_MISO_HIGHPART_W<'_, USER_SPEC> {
+        USR_MISO_HIGHPART_W::new(self, 24)
+    }
+    #[doc = "Bit 25"]
+    #[inline(always)]
+    pub fn usr_mosi_highpart(&mut self) -> USR_MOSI_HIGHPART_W<'_, USER_SPEC> {
+        USR_MOSI_HIGHPART_W::new(self, 25)
+    }
     #[doc = "Bit 26 - spi clock is disable in dummy phase when the bit is enable."]
     #[inline(always)]
     pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W<'_, USER_SPEC> {
         USR_DUMMY_IDLE_W::new(self, 26)
     }
+    #[doc = "Bit 27"]
+    #[inline(always)]
+    pub fn usr_mosi(&mut self) -> USR_MOSI_W<'_, USER_SPEC> {
+        USR_MOSI_W::new(self, 27)
+    }
+    #[doc = "Bit 28"]
+    #[inline(always)]
+    pub fn usr_miso(&mut self) -> USR_MISO_W<'_, USER_SPEC> {
+        USR_MISO_W::new(self, 28)
+    }
     #[doc = "Bit 29 - This bit enable the dummy phase of an operation."]
     #[inline(always)]
     pub fn usr_dummy(&mut self) -> USR_DUMMY_W<'_, USER_SPEC> {
         USR_DUMMY_W::new(self, 29)
+    }
+    #[doc = "Bit 30"]
+    #[inline(always)]
+    pub fn usr_addr(&mut self) -> USR_ADDR_W<'_, USER_SPEC> {
+        USR_ADDR_W::new(self, 30)
+    }
+    #[doc = "Bit 31"]
+    #[inline(always)]
+    pub fn usr_command(&mut self) -> USR_COMMAND_W<'_, USER_SPEC> {
+        USR_COMMAND_W::new(self, 31)
     }
 }
 #[doc = "SPI0 user register.\n\nYou can [`read`](crate::Reg::read) this register and get [`user::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`user::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

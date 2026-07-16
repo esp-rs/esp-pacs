@@ -1,0 +1,149 @@
+EFUSE:
+  RD_REPEAT_DATA0:
+    _add:
+      RD_RESERVE_0_39:
+        bitOffset: 7
+        bitWidth: 3
+        access: read-write
+      RD_RESERVE_0_53:
+        bitOffset: 21
+        bitWidth: 1
+        access: read-write
+      RD_RESERVE_0_60:
+        bitOffset: 28
+        bitWidth: 4
+        access: read-write
+
+  RD_REPEAT_DATA1:
+    _add:
+      RD_RESERVE_0_65:
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      RD_RESERVE_0_91:
+        bitOffset: 27
+        bitWidth: 5
+        access: read-write
+
+  RD_REPEAT_DATA2:
+    _add:
+      RD_RESERVE_0_126:
+        bitOffset: 30
+        bitWidth: 2
+        access: read-write
+
+  RD_REPEAT_DATA3:
+    _add:
+      RD_RESERVE_0_132:
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      RD_RESERVE_0_134:
+        bitOffset: 6
+        bitWidth: 3
+        access: read-write
+      RD_RESERVE_0_138:
+        bitOffset: 10
+        bitWidth: 2
+        access: read-write
+      RD_RESERVE_0_153:
+        bitOffset: 25
+        bitWidth: 7
+        access: read-write
+
+  RD_REPEAT_DATA4:
+    _add:
+      RD_RESERVE_0_178:
+        bitOffset: 18
+        bitWidth: 14
+        access: read-write
+
+  RD_REPEAT_DATA5:
+    _add:
+      RD_RESERVE_0_192:
+        bitOffset: 0
+        bitWidth: 2
+        access: read-write
+      RD_RESERVE_0_197:
+        bitOffset: 5
+        bitWidth: 6
+        access: read-write
+
+  RD_REPEAT_DATA6:
+    _add:
+      RD_RESERVE_0_246:
+        bitOffset: 22
+        bitWidth: 10
+        access: read-write
+
+  RD_REPEAT_DATA7:
+    _add:
+      RD_RESERVE_0_272:
+        bitOffset: 16
+        bitWidth: 16
+        access: read-write
+
+  RD_MAC_SYS3:
+    _modify:
+      SYS_DATA_PART0_0:
+        name: WAFER_VERSION_MINOR
+        bitWidth: 4
+    _add:
+      WAFER_VERSION_MAJOR:
+        bitOffset: 22
+        bitWidth: 2
+        access: read-write
+      DISABLE_WAFER_VERSION_MAJOR:
+        bitOffset: 24
+        bitWidth: 1
+        access: read-write
+      DISABLE_BLK_VERSION_MAJOR:
+        bitOffset: 25
+        bitWidth: 1
+        access: read-write
+      BLK_VERSION_MINOR:
+        bitOffset: 26
+        bitWidth: 3
+        access: read-write
+      BLK_VERSION_MAJOR:
+        bitOffset: 29
+        bitWidth: 2
+        access: read-write
+      PSRAM_CAP:
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+
+  RD_MAC_SYS4:
+    _modify:
+      SYS_DATA_PART0_1:
+        name: PSRAM_CAP_1
+        bitWidth: 2
+    _add:
+      TEMP:
+        bitOffset: 2
+        bitWidth: 2
+        access: read-write
+      PSRAM_VENDOR:
+        bitOffset: 4
+        bitWidth: 2
+        access: read-write
+      PKG_VERSION:
+        bitOffset: 6
+        bitWidth: 2
+        access: read-write
+      RESERVED_1_136:
+        bitOffset: 8
+        bitWidth: 24
+        access: read-write
+
+  RD_SYS_PART2_DATA6:
+    _add:
+      RD_RESERVE_9_197:
+        bitOffset: 5
+        bitWidth: 12
+        access: read-write
+      RD_RESERVE_9_223:
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write

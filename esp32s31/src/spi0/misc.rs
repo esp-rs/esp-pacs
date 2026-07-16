@@ -2,6 +2,14 @@
 pub type R = crate::R<MISC_SPEC>;
 #[doc = "Register `MISC` writer"]
 pub type W = crate::W<MISC_SPEC>;
+#[doc = "Field `CS0_DIS` reader - "]
+pub type CS0_DIS_R = crate::BitReader;
+#[doc = "Field `CS0_DIS` writer - "]
+pub type CS0_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CS1_DIS` reader - "]
+pub type CS1_DIS_R = crate::BitReader;
+#[doc = "Field `CS1_DIS` writer - "]
+pub type CS1_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DQ_OE_CTRL` reader - For SPI BUS IO, APB ctrl IO DQ OE func.1: enable 0: disable."]
 pub type DQ_OE_CTRL_R = crate::BitReader;
 #[doc = "Field `DQ_OE_CTRL` writer - For SPI BUS IO, APB ctrl IO DQ OE func.1: enable 0: disable."]
@@ -27,6 +35,16 @@ pub type CS_KEEP_ACTIVE_R = crate::BitReader;
 #[doc = "Field `CS_KEEP_ACTIVE` writer - SPI_CS line keep low when the bit is set."]
 pub type CS_KEEP_ACTIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    pub fn cs0_dis(&self) -> CS0_DIS_R {
+        CS0_DIS_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn cs1_dis(&self) -> CS1_DIS_R {
+        CS1_DIS_R::new(((self.bits >> 1) & 1) != 0)
+    }
     #[doc = "Bit 4 - For SPI BUS IO, APB ctrl IO DQ OE func.1: enable 0: disable."]
     #[inline(always)]
     pub fn dq_oe_ctrl(&self) -> DQ_OE_CTRL_R {
@@ -74,10 +92,22 @@ impl core::fmt::Debug for R {
             .field("ssub_pin", &self.ssub_pin())
             .field("ck_idle_edge", &self.ck_idle_edge())
             .field("cs_keep_active", &self.cs_keep_active())
+            .field("cs0_dis", &self.cs0_dis())
+            .field("cs1_dis", &self.cs1_dis())
             .finish()
     }
 }
 impl W {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    pub fn cs0_dis(&mut self) -> CS0_DIS_W<'_, MISC_SPEC> {
+        CS0_DIS_W::new(self, 0)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn cs1_dis(&mut self) -> CS1_DIS_W<'_, MISC_SPEC> {
+        CS1_DIS_W::new(self, 1)
+    }
     #[doc = "Bit 4 - For SPI BUS IO, APB ctrl IO DQ OE func.1: enable 0: disable."]
     #[inline(always)]
     pub fn dq_oe_ctrl(&mut self) -> DQ_OE_CTRL_W<'_, MISC_SPEC> {

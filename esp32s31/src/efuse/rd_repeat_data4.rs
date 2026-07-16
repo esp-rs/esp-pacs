@@ -1,11 +1,17 @@
 #[doc = "Register `RD_REPEAT_DATA4` reader"]
 pub type R = crate::R<RD_REPEAT_DATA4_SPEC>;
+#[doc = "Register `RD_REPEAT_DATA4` writer"]
+pub type W = crate::W<RD_REPEAT_DATA4_SPEC>;
 #[doc = "Field `SECURE_VERSION` reader - Represents the version used by ESP-IDF anti-rollback feature."]
 pub type SECURE_VERSION_R = crate::FieldReader<u16>;
 #[doc = "Field `SECURE_BOOT_DISABLE_FAST_WAKE` reader - Represents whether FAST VERIFY ON WAKE is disabled or enabled when Secure Boot is enabled.\\\\ 1: disabled\\\\ 0: enabled\\\\"]
 pub type SECURE_BOOT_DISABLE_FAST_WAKE_R = crate::BitReader;
 #[doc = "Field `HYS_EN_PAD` reader - Represents whether the hysteresis function of corresponding PAD is enabled.\\\\ 1: enabled\\\\ 0:disabled\\\\"]
 pub type HYS_EN_PAD_R = crate::BitReader;
+#[doc = "Field `RD_RESERVE_0_178` reader - "]
+pub type RD_RESERVE_0_178_R = crate::FieldReader<u16>;
+#[doc = "Field `RD_RESERVE_0_178` writer - "]
+pub type RD_RESERVE_0_178_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 impl R {
     #[doc = "Bits 0:15 - Represents the version used by ESP-IDF anti-rollback feature."]
     #[inline(always)]
@@ -22,6 +28,11 @@ impl R {
     pub fn hys_en_pad(&self) -> HYS_EN_PAD_R {
         HYS_EN_PAD_R::new(((self.bits >> 17) & 1) != 0)
     }
+    #[doc = "Bits 18:31"]
+    #[inline(always)]
+    pub fn rd_reserve_0_178(&self) -> RD_RESERVE_0_178_R {
+        RD_RESERVE_0_178_R::new(((self.bits >> 18) & 0x3fff) as u16)
+    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -33,15 +44,27 @@ impl core::fmt::Debug for R {
                 &self.secure_boot_disable_fast_wake(),
             )
             .field("hys_en_pad", &self.hys_en_pad())
+            .field("rd_reserve_0_178", &self.rd_reserve_0_178())
             .finish()
     }
 }
-#[doc = "Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data4::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+impl W {
+    #[doc = "Bits 18:31"]
+    #[inline(always)]
+    pub fn rd_reserve_0_178(&mut self) -> RD_RESERVE_0_178_W<'_, RD_REPEAT_DATA4_SPEC> {
+        RD_RESERVE_0_178_W::new(self, 18)
+    }
+}
+#[doc = "Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data4::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_repeat_data4::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_REPEAT_DATA4_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_DATA4_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`rd_repeat_data4::R`](R) reader structure"]
 impl crate::Readable for RD_REPEAT_DATA4_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rd_repeat_data4::W`](W) writer structure"]
+impl crate::Writable for RD_REPEAT_DATA4_SPEC {
+    type Safety = crate::Unsafe;
+}
 #[doc = "`reset()` method sets RD_REPEAT_DATA4 to value 0"]
 impl crate::Resettable for RD_REPEAT_DATA4_SPEC {}

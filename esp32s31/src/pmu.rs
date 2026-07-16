@@ -1088,7 +1088,7 @@ pub mod lp_sleep_bias;
 pub type IMM_HP_CK_POWER_0 = crate::Reg<imm_hp_ck_power_0::IMM_HP_CK_POWER_0_SPEC>;
 #[doc = "need_des"]
 pub mod imm_hp_ck_power_0;
-#[doc = "IMM_HP_CK_POWER_1 (w) register accessor: need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`imm_hp_ck_power_1::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@imm_hp_ck_power_1`] module"]
+#[doc = "IMM_HP_CK_POWER_1 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`imm_hp_ck_power_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`imm_hp_ck_power_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@imm_hp_ck_power_1`] module"]
 pub type IMM_HP_CK_POWER_1 = crate::Reg<imm_hp_ck_power_1::IMM_HP_CK_POWER_1_SPEC>;
 #[doc = "need_des"]
 pub mod imm_hp_ck_power_1;

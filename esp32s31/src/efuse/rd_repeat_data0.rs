@@ -1,7 +1,13 @@
 #[doc = "Register `RD_REPEAT_DATA0` reader"]
 pub type R = crate::R<RD_REPEAT_DATA0_SPEC>;
+#[doc = "Register `RD_REPEAT_DATA0` writer"]
+pub type W = crate::W<RD_REPEAT_DATA0_SPEC>;
 #[doc = "Field `RD_DIS` reader - Represents whether reading of individual eFuse block(block4~block9) is disabled or enabled.\\\\ 1: disabled\\\\ 0: enabled\\\\"]
 pub type RD_DIS_R = crate::FieldReader;
+#[doc = "Field `RD_RESERVE_0_39` reader - "]
+pub type RD_RESERVE_0_39_R = crate::FieldReader;
+#[doc = "Field `RD_RESERVE_0_39` writer - "]
+pub type RD_RESERVE_0_39_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `DIS_USB_JTAG` reader - Represents whether the function of usb switch to jtag is disabled or enabled.\\\\ 1: disabled\\\\ 0: enabled\\\\"]
 pub type DIS_USB_JTAG_R = crate::BitReader;
 #[doc = "Field `DIS_USB_SERIAL_JTAG` reader - Represents whether USB-Serial-JTAG is disabled or enabled.\\\\ 1: disabled\\\\ 0: enabled\\\\"]
@@ -20,15 +26,28 @@ pub type SOFT_DIS_JTAG_R = crate::FieldReader;
 pub type DIS_PAD_JTAG_R = crate::BitReader;
 #[doc = "Field `DIS_DOWNLOAD_MANUAL_ENCRYPT` reader - Represents whether flash encrypt function is disabled or enabled(except in SPI boot mode).\\\\ 1: disabled\\\\ 0: enabled\\\\"]
 pub type DIS_DOWNLOAD_MANUAL_ENCRYPT_R = crate::BitReader;
+#[doc = "Field `RD_RESERVE_0_53` reader - "]
+pub type RD_RESERVE_0_53_R = crate::BitReader;
+#[doc = "Field `RD_RESERVE_0_53` writer - "]
+pub type RD_RESERVE_0_53_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIS_WIFI6` reader - Represents thether the WIFI6 feature is enable or disabled. 1: WIFI6 is disable, 0: WIFI6 is enabled."]
 pub type DIS_WIFI6_R = crate::BitReader;
 #[doc = "Field `HUK_GEN_STATE` reader - Represents the control of validation of HUK generate mode. Odd of 1 is invalid, even of 1 is valid."]
 pub type HUK_GEN_STATE_R = crate::FieldReader;
+#[doc = "Field `RD_RESERVE_0_60` reader - "]
+pub type RD_RESERVE_0_60_R = crate::FieldReader;
+#[doc = "Field `RD_RESERVE_0_60` writer - "]
+pub type RD_RESERVE_0_60_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:6 - Represents whether reading of individual eFuse block(block4~block9) is disabled or enabled.\\\\ 1: disabled\\\\ 0: enabled\\\\"]
     #[inline(always)]
     pub fn rd_dis(&self) -> RD_DIS_R {
         RD_DIS_R::new((self.bits & 0x7f) as u8)
+    }
+    #[doc = "Bits 7:9"]
+    #[inline(always)]
+    pub fn rd_reserve_0_39(&self) -> RD_RESERVE_0_39_R {
+        RD_RESERVE_0_39_R::new(((self.bits >> 7) & 7) as u8)
     }
     #[doc = "Bit 10 - Represents whether the function of usb switch to jtag is disabled or enabled.\\\\ 1: disabled\\\\ 0: enabled\\\\"]
     #[inline(always)]
@@ -75,6 +94,11 @@ impl R {
     pub fn dis_download_manual_encrypt(&self) -> DIS_DOWNLOAD_MANUAL_ENCRYPT_R {
         DIS_DOWNLOAD_MANUAL_ENCRYPT_R::new(((self.bits >> 20) & 1) != 0)
     }
+    #[doc = "Bit 21"]
+    #[inline(always)]
+    pub fn rd_reserve_0_53(&self) -> RD_RESERVE_0_53_R {
+        RD_RESERVE_0_53_R::new(((self.bits >> 21) & 1) != 0)
+    }
     #[doc = "Bit 22 - Represents thether the WIFI6 feature is enable or disabled. 1: WIFI6 is disable, 0: WIFI6 is enabled."]
     #[inline(always)]
     pub fn dis_wifi6(&self) -> DIS_WIFI6_R {
@@ -84,6 +108,11 @@ impl R {
     #[inline(always)]
     pub fn huk_gen_state(&self) -> HUK_GEN_STATE_R {
         HUK_GEN_STATE_R::new(((self.bits >> 23) & 0x1f) as u8)
+    }
+    #[doc = "Bits 28:31"]
+    #[inline(always)]
+    pub fn rd_reserve_0_60(&self) -> RD_RESERVE_0_60_R {
+        RD_RESERVE_0_60_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -105,15 +134,39 @@ impl core::fmt::Debug for R {
             )
             .field("dis_wifi6", &self.dis_wifi6())
             .field("huk_gen_state", &self.huk_gen_state())
+            .field("rd_reserve_0_39", &self.rd_reserve_0_39())
+            .field("rd_reserve_0_53", &self.rd_reserve_0_53())
+            .field("rd_reserve_0_60", &self.rd_reserve_0_60())
             .finish()
     }
 }
-#[doc = "Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+impl W {
+    #[doc = "Bits 7:9"]
+    #[inline(always)]
+    pub fn rd_reserve_0_39(&mut self) -> RD_RESERVE_0_39_W<'_, RD_REPEAT_DATA0_SPEC> {
+        RD_RESERVE_0_39_W::new(self, 7)
+    }
+    #[doc = "Bit 21"]
+    #[inline(always)]
+    pub fn rd_reserve_0_53(&mut self) -> RD_RESERVE_0_53_W<'_, RD_REPEAT_DATA0_SPEC> {
+        RD_RESERVE_0_53_W::new(self, 21)
+    }
+    #[doc = "Bits 28:31"]
+    #[inline(always)]
+    pub fn rd_reserve_0_60(&mut self) -> RD_RESERVE_0_60_W<'_, RD_REPEAT_DATA0_SPEC> {
+        RD_RESERVE_0_60_W::new(self, 28)
+    }
+}
+#[doc = "Represents rd_repeat_data\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rd_repeat_data0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_REPEAT_DATA0_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_DATA0_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`rd_repeat_data0::R`](R) reader structure"]
 impl crate::Readable for RD_REPEAT_DATA0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`rd_repeat_data0::W`](W) writer structure"]
+impl crate::Writable for RD_REPEAT_DATA0_SPEC {
+    type Safety = crate::Unsafe;
+}
 #[doc = "`reset()` method sets RD_REPEAT_DATA0 to value 0"]
 impl crate::Resettable for RD_REPEAT_DATA0_SPEC {}

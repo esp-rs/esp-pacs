@@ -2,30 +2,30 @@
 pub type R = crate::R<XTS_DATE_SPEC>;
 #[doc = "Register `XTS_DATE` writer"]
 pub type W = crate::W<XTS_DATE_SPEC>;
-#[doc = "Field `SPI_XTS_DATE` reader - This bits stores the last modified-time of manual encryption feature."]
-pub type SPI_XTS_DATE_R = crate::FieldReader<u32>;
-#[doc = "Field `SPI_XTS_DATE` writer - This bits stores the last modified-time of manual encryption feature."]
-pub type SPI_XTS_DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 30, u32>;
+#[doc = "Field `XTS_DATE` reader - This bits stores the last modified-time of manual encryption feature."]
+pub type XTS_DATE_R = crate::FieldReader<u32>;
+#[doc = "Field `XTS_DATE` writer - This bits stores the last modified-time of manual encryption feature."]
+pub type XTS_DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 30, u32>;
 impl R {
     #[doc = "Bits 0:29 - This bits stores the last modified-time of manual encryption feature."]
     #[inline(always)]
-    pub fn spi_xts_date(&self) -> SPI_XTS_DATE_R {
-        SPI_XTS_DATE_R::new(self.bits & 0x3fff_ffff)
+    pub fn xts_date(&self) -> XTS_DATE_R {
+        XTS_DATE_R::new(self.bits & 0x3fff_ffff)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("XTS_DATE")
-            .field("spi_xts_date", &self.spi_xts_date())
+            .field("xts_date", &self.xts_date())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:29 - This bits stores the last modified-time of manual encryption feature."]
     #[inline(always)]
-    pub fn spi_xts_date(&mut self) -> SPI_XTS_DATE_W<'_, XTS_DATE_SPEC> {
-        SPI_XTS_DATE_W::new(self, 0)
+    pub fn xts_date(&mut self) -> XTS_DATE_W<'_, XTS_DATE_SPEC> {
+        XTS_DATE_W::new(self, 0)
     }
 }
 #[doc = "Manual Encryption version register\n\nYou can [`read`](crate::Reg::read) this register and get [`xts_date::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`xts_date::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

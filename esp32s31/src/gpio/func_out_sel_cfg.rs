@@ -2,78 +2,78 @@
 pub type R = crate::R<FUNC_OUT_SEL_CFG_SPEC>;
 #[doc = "Register `FUNC%s_OUT_SEL_CFG` writer"]
 pub type W = crate::W<FUNC_OUT_SEL_CFG_SPEC>;
-#[doc = "Field `FUNC_OUT_SEL` reader - Configures to select a signal 0 (0 <= 0 < 256) from 256 peripheral signals to be output from GPIO%s.\\\\ 0: Select signal 0\\\\ 1: Select signal 1\\\\ ......\\\\ 254: Select signal 254\\\\ 255: Select signal 255\\\\ Or\\\\ 256: Bit %s of GPIO_OUT_REG and GPIO_ENABLE_REG are selected as the output value and output enable. For the detailed signal list, see Table <a href=tab:iomuxgpio-periph-signals-via-gpio-matrix\">link</a>. \""]
-pub type FUNC_OUT_SEL_R = crate::FieldReader<u16>;
-#[doc = "Field `FUNC_OUT_SEL` writer - Configures to select a signal 0 (0 <= 0 < 256) from 256 peripheral signals to be output from GPIO%s.\\\\ 0: Select signal 0\\\\ 1: Select signal 1\\\\ ......\\\\ 254: Select signal 254\\\\ 255: Select signal 255\\\\ Or\\\\ 256: Bit %s of GPIO_OUT_REG and GPIO_ENABLE_REG are selected as the output value and output enable. For the detailed signal list, see Table <a href=tab:iomuxgpio-periph-signals-via-gpio-matrix\">link</a>. \""]
-pub type FUNC_OUT_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
-#[doc = "Field `FUNC_OUT_INV_SEL` reader - Configures whether or not to invert the output value.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
-pub type FUNC_OUT_INV_SEL_R = crate::BitReader;
-#[doc = "Field `FUNC_OUT_INV_SEL` writer - Configures whether or not to invert the output value.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
-pub type FUNC_OUT_INV_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FUNC_OE_SEL` reader - Configures to select the source of output enable signal.\\\\ 0: Use output enable signal from peripheral.\\\\ 1: Force the output enable signal to be sourced from bit %s of GPIO_ENABLE_REG. \\\\"]
-pub type FUNC_OE_SEL_R = crate::BitReader;
-#[doc = "Field `FUNC_OE_SEL` writer - Configures to select the source of output enable signal.\\\\ 0: Use output enable signal from peripheral.\\\\ 1: Force the output enable signal to be sourced from bit %s of GPIO_ENABLE_REG. \\\\"]
-pub type FUNC_OE_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FUNC_OE_INV_SEL` reader - Configures whether or not to invert the output enable signal.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
-pub type FUNC_OE_INV_SEL_R = crate::BitReader;
-#[doc = "Field `FUNC_OE_INV_SEL` writer - Configures whether or not to invert the output enable signal.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
-pub type FUNC_OE_INV_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OUT_SEL` reader - Configures to select a signal %s to be outputted from the GPIO."]
+pub type OUT_SEL_R = crate::FieldReader<u16>;
+#[doc = "Field `OUT_SEL` writer - Configures to select a signal %s to be outputted from the GPIO."]
+pub type OUT_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
+#[doc = "Field `OUT_INV_SEL` reader - Configures whether or not to invert the output value. 0: Not invert. 1: Invert."]
+pub type OUT_INV_SEL_R = crate::BitReader;
+#[doc = "Field `OUT_INV_SEL` writer - Configures whether or not to invert the output value. 0: Not invert. 1: Invert."]
+pub type OUT_INV_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OE_SEL` reader - Configures to select the source of output enable signal. 0: Use output enable signal from peripheral. 1: Force the output enable signal to be sourced from bit n of GPIO_ENABLE_REG."]
+pub type OE_SEL_R = crate::BitReader;
+#[doc = "Field `OE_SEL` writer - Configures to select the source of output enable signal. 0: Use output enable signal from peripheral. 1: Force the output enable signal to be sourced from bit n of GPIO_ENABLE_REG."]
+pub type OE_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OE_INV_SEL` reader - Configures whether or not to invert the output enable signal. 0: Not invert. 1: Invert."]
+pub type OE_INV_SEL_R = crate::BitReader;
+#[doc = "Field `OE_INV_SEL` writer - Configures whether or not to invert the output enable signal. 0: Not invert. 1: Invert."]
+pub type OE_INV_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:8 - Configures to select a signal 0 (0 <= 0 < 256) from 256 peripheral signals to be output from GPIO%s.\\\\ 0: Select signal 0\\\\ 1: Select signal 1\\\\ ......\\\\ 254: Select signal 254\\\\ 255: Select signal 255\\\\ Or\\\\ 256: Bit %s of GPIO_OUT_REG and GPIO_ENABLE_REG are selected as the output value and output enable. For the detailed signal list, see Table <a href=tab:iomuxgpio-periph-signals-via-gpio-matrix\">link</a>. \""]
+    #[doc = "Bits 0:8 - Configures to select a signal %s to be outputted from the GPIO."]
     #[inline(always)]
-    pub fn func_out_sel(&self) -> FUNC_OUT_SEL_R {
-        FUNC_OUT_SEL_R::new((self.bits & 0x01ff) as u16)
+    pub fn out_sel(&self) -> OUT_SEL_R {
+        OUT_SEL_R::new((self.bits & 0x01ff) as u16)
     }
-    #[doc = "Bit 9 - Configures whether or not to invert the output value.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
+    #[doc = "Bit 9 - Configures whether or not to invert the output value. 0: Not invert. 1: Invert."]
     #[inline(always)]
-    pub fn func_out_inv_sel(&self) -> FUNC_OUT_INV_SEL_R {
-        FUNC_OUT_INV_SEL_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn out_inv_sel(&self) -> OUT_INV_SEL_R {
+        OUT_INV_SEL_R::new(((self.bits >> 9) & 1) != 0)
     }
-    #[doc = "Bit 10 - Configures to select the source of output enable signal.\\\\ 0: Use output enable signal from peripheral.\\\\ 1: Force the output enable signal to be sourced from bit %s of GPIO_ENABLE_REG. \\\\"]
+    #[doc = "Bit 10 - Configures to select the source of output enable signal. 0: Use output enable signal from peripheral. 1: Force the output enable signal to be sourced from bit n of GPIO_ENABLE_REG."]
     #[inline(always)]
-    pub fn func_oe_sel(&self) -> FUNC_OE_SEL_R {
-        FUNC_OE_SEL_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn oe_sel(&self) -> OE_SEL_R {
+        OE_SEL_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bit 11 - Configures whether or not to invert the output enable signal.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
+    #[doc = "Bit 11 - Configures whether or not to invert the output enable signal. 0: Not invert. 1: Invert."]
     #[inline(always)]
-    pub fn func_oe_inv_sel(&self) -> FUNC_OE_INV_SEL_R {
-        FUNC_OE_INV_SEL_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn oe_inv_sel(&self) -> OE_INV_SEL_R {
+        OE_INV_SEL_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FUNC_OUT_SEL_CFG")
-            .field("func_out_sel", &self.func_out_sel())
-            .field("func_out_inv_sel", &self.func_out_inv_sel())
-            .field("func_oe_sel", &self.func_oe_sel())
-            .field("func_oe_inv_sel", &self.func_oe_inv_sel())
+            .field("out_sel", &self.out_sel())
+            .field("out_inv_sel", &self.out_inv_sel())
+            .field("oe_sel", &self.oe_sel())
+            .field("oe_inv_sel", &self.oe_inv_sel())
             .finish()
     }
 }
 impl W {
-    #[doc = "Bits 0:8 - Configures to select a signal 0 (0 <= 0 < 256) from 256 peripheral signals to be output from GPIO%s.\\\\ 0: Select signal 0\\\\ 1: Select signal 1\\\\ ......\\\\ 254: Select signal 254\\\\ 255: Select signal 255\\\\ Or\\\\ 256: Bit %s of GPIO_OUT_REG and GPIO_ENABLE_REG are selected as the output value and output enable. For the detailed signal list, see Table <a href=tab:iomuxgpio-periph-signals-via-gpio-matrix\">link</a>. \""]
+    #[doc = "Bits 0:8 - Configures to select a signal %s to be outputted from the GPIO."]
     #[inline(always)]
-    pub fn func_out_sel(&mut self) -> FUNC_OUT_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
-        FUNC_OUT_SEL_W::new(self, 0)
+    pub fn out_sel(&mut self) -> OUT_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
+        OUT_SEL_W::new(self, 0)
     }
-    #[doc = "Bit 9 - Configures whether or not to invert the output value.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
+    #[doc = "Bit 9 - Configures whether or not to invert the output value. 0: Not invert. 1: Invert."]
     #[inline(always)]
-    pub fn func_out_inv_sel(&mut self) -> FUNC_OUT_INV_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
-        FUNC_OUT_INV_SEL_W::new(self, 9)
+    pub fn out_inv_sel(&mut self) -> OUT_INV_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
+        OUT_INV_SEL_W::new(self, 9)
     }
-    #[doc = "Bit 10 - Configures to select the source of output enable signal.\\\\ 0: Use output enable signal from peripheral.\\\\ 1: Force the output enable signal to be sourced from bit %s of GPIO_ENABLE_REG. \\\\"]
+    #[doc = "Bit 10 - Configures to select the source of output enable signal. 0: Use output enable signal from peripheral. 1: Force the output enable signal to be sourced from bit n of GPIO_ENABLE_REG."]
     #[inline(always)]
-    pub fn func_oe_sel(&mut self) -> FUNC_OE_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
-        FUNC_OE_SEL_W::new(self, 10)
+    pub fn oe_sel(&mut self) -> OE_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
+        OE_SEL_W::new(self, 10)
     }
-    #[doc = "Bit 11 - Configures whether or not to invert the output enable signal.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
+    #[doc = "Bit 11 - Configures whether or not to invert the output enable signal. 0: Not invert. 1: Invert."]
     #[inline(always)]
-    pub fn func_oe_inv_sel(&mut self) -> FUNC_OE_INV_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
-        FUNC_OE_INV_SEL_W::new(self, 11)
+    pub fn oe_inv_sel(&mut self) -> OE_INV_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
+        OE_INV_SEL_W::new(self, 11)
     }
 }
-#[doc = "Configuration register for GPIO%s output\n\nYou can [`read`](crate::Reg::read) this register and get [`func_out_sel_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func_out_sel_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO output function configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`func_out_sel_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func_out_sel_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FUNC_OUT_SEL_CFG_SPEC;
 impl crate::RegisterSpec for FUNC_OUT_SEL_CFG_SPEC {
     type Ux = u32;
@@ -84,7 +84,5 @@ impl crate::Readable for FUNC_OUT_SEL_CFG_SPEC {}
 impl crate::Writable for FUNC_OUT_SEL_CFG_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets FUNC%s_OUT_SEL_CFG to value 0x0100"]
-impl crate::Resettable for FUNC_OUT_SEL_CFG_SPEC {
-    const RESET_VALUE: u32 = 0x0100;
-}
+#[doc = "`reset()` method sets FUNC%s_OUT_SEL_CFG to value 0"]
+impl crate::Resettable for FUNC_OUT_SEL_CFG_SPEC {}

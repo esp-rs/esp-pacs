@@ -2,15 +2,15 @@
 pub type R = crate::R<HP_ALIVE_SYSREG_CTRL0_SPEC>;
 #[doc = "Register `HP_ALIVE_SYSREG_CTRL0` writer"]
 pub type W = crate::W<HP_ALIVE_SYSREG_CTRL0_SPEC>;
-#[doc = "Field `REG_HP_ALIVE_SYSREG_APB_CLK_EN` reader - hp alive_sysreg clk en"]
-pub type REG_HP_ALIVE_SYSREG_APB_CLK_EN_R = crate::BitReader;
-#[doc = "Field `REG_HP_ALIVE_SYSREG_APB_CLK_EN` writer - hp alive_sysreg clk en"]
-pub type REG_HP_ALIVE_SYSREG_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `HP_ALIVE_SYSREG_APB_CLK_EN` reader - hp alive_sysreg clk en"]
+pub type HP_ALIVE_SYSREG_APB_CLK_EN_R = crate::BitReader;
+#[doc = "Field `HP_ALIVE_SYSREG_APB_CLK_EN` writer - hp alive_sysreg clk en"]
+pub type HP_ALIVE_SYSREG_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - hp alive_sysreg clk en"]
     #[inline(always)]
-    pub fn reg_hp_alive_sysreg_apb_clk_en(&self) -> REG_HP_ALIVE_SYSREG_APB_CLK_EN_R {
-        REG_HP_ALIVE_SYSREG_APB_CLK_EN_R::new((self.bits & 1) != 0)
+    pub fn hp_alive_sysreg_apb_clk_en(&self) -> HP_ALIVE_SYSREG_APB_CLK_EN_R {
+        HP_ALIVE_SYSREG_APB_CLK_EN_R::new((self.bits & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -18,8 +18,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_ALIVE_SYSREG_CTRL0")
             .field(
-                "reg_hp_alive_sysreg_apb_clk_en",
-                &self.reg_hp_alive_sysreg_apb_clk_en(),
+                "hp_alive_sysreg_apb_clk_en",
+                &self.hp_alive_sysreg_apb_clk_en(),
             )
             .finish()
     }
@@ -27,10 +27,10 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - hp alive_sysreg clk en"]
     #[inline(always)]
-    pub fn reg_hp_alive_sysreg_apb_clk_en(
+    pub fn hp_alive_sysreg_apb_clk_en(
         &mut self,
-    ) -> REG_HP_ALIVE_SYSREG_APB_CLK_EN_W<'_, HP_ALIVE_SYSREG_CTRL0_SPEC> {
-        REG_HP_ALIVE_SYSREG_APB_CLK_EN_W::new(self, 0)
+    ) -> HP_ALIVE_SYSREG_APB_CLK_EN_W<'_, HP_ALIVE_SYSREG_CTRL0_SPEC> {
+        HP_ALIVE_SYSREG_APB_CLK_EN_W::new(self, 0)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_alive_sysreg_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_alive_sysreg_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
