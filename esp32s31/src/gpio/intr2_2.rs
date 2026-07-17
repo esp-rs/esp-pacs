@@ -1,5 +1,5 @@
-#[doc = "Register `INT_22` reader"]
-pub type R = crate::R<INT_22_SPEC>;
+#[doc = "Register `INTR2_2` reader"]
+pub type R = crate::R<INTR2_2_SPEC>;
 #[doc = "Field `INT_22` reader - Represents the GPIO_INT_2 interrupt status of GPIO64 ~ GPIO66. Each bit represents:(need update in different project)\\\\ 0: Represents GPIO_INT_2 interrupt is not enabled, or the GPIO does not generate the interrupt configured by GPIO_PIN0_INT_TYPE.\\\\ 1: Represents the GPIO generates an interrupt configured by GPIO_PIN0_INT_TYPE after the GPIO_INT_2 interrupt is enabled.\\\\ Bit64 ~ bit66 are corresponding to GPIO64 ~ GPIO66. Bitxx ~ bitxx is invalid. This interrupt status is corresponding to the bit in GPIO_STATUS2_REG when assert (high) enable signal (bit13 of GPIO_PIN0_REG). \\\\"]
 pub type INT_22_R = crate::FieldReader;
 impl R {
@@ -12,17 +12,17 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("INT_22")
+        f.debug_struct("INTR2_2")
             .field("int_22", &self.int_22())
             .finish()
     }
 }
-#[doc = "GPIO_INT_2 interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_22::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct INT_22_SPEC;
-impl crate::RegisterSpec for INT_22_SPEC {
+#[doc = "GPIO_INT_2 interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`intr2_2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct INTR2_2_SPEC;
+impl crate::RegisterSpec for INTR2_2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`int_22::R`](R) reader structure"]
-impl crate::Readable for INT_22_SPEC {}
-#[doc = "`reset()` method sets INT_22 to value 0"]
-impl crate::Resettable for INT_22_SPEC {}
+#[doc = "`read()` method returns [`intr2_2::R`](R) reader structure"]
+impl crate::Readable for INTR2_2_SPEC {}
+#[doc = "`reset()` method sets INTR2_2 to value 0"]
+impl crate::Resettable for INTR2_2_SPEC {}
