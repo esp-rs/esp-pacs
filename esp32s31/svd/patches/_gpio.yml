@@ -51,3 +51,32 @@ GPIO:
           description: "Configures whether or not to invert the output enable signal. 0: Not invert. 1: Invert."
           bitOffset: 11
           bitWidth: 1
+  # P4 naming scheme: INTR<bank>_<int>
+  _modify:
+    INT_0:
+      name: INTR_0
+    INT_01:
+      name: INTR1_0
+    INT_02:
+      name: INTR2_0
+
+    INT_1:
+      name: INTR_1
+    INT_11:
+      name: INTR1_1
+    INT_12:
+      name: INTR2_1
+
+    INT_2:
+      name: INTR_2
+    INT_21:
+      name: INTR1_2
+    INT_22:
+      name: INTR2_2
+
+    INT_3:
+      name: INTR_3
+    INT_31:
+      name: INTR1_3
+    INT_32:
+      name: INTR2_3
