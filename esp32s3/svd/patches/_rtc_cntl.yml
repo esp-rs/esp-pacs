@@ -4,6 +4,9 @@ RTC_CNTL:
   "*":
     _strip: "RTC_"
 
+  EXT_WAKEUP1:
+    _strip: EXT_WAKEUP1_
+
   # Make sure the STORE registers are the same type
   STORE0:
     _modify:

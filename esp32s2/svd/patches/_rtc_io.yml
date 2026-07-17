@@ -6,9 +6,7 @@ RTC_IO:
       name: "PIN%s"
 
   "PIN%s":
-    _modify:
-      GPIO_PIN_PAD_DRIVER:
-        name: PAD_DRIVER
+    _strip: GPIO_PIN_
 
   _derive:
     XTAL_32?_PAD:
