@@ -39,7 +39,7 @@ GPIO:
           description: "Configures to select a signal %s to be outputted from the GPIO."
           bitOffset: 0
           bitWidth: 9
-        OUT_INV_SEL:
+        INV_SEL:
           description: "Configures whether or not to invert the output value. 0: Not invert. 1: Invert."
           bitOffset: 9
           bitWidth: 1
