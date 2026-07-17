@@ -2,37 +2,37 @@
 pub type R = crate::R<EXT_WAKEUP1_SPEC>;
 #[doc = "Register `EXT_WAKEUP1` writer"]
 pub type W = crate::W<EXT_WAKEUP1_SPEC>;
-#[doc = "Field `EXT_WAKEUP1_SEL` reader - Bitmap to select RTC pads for ext wakeup1"]
-pub type EXT_WAKEUP1_SEL_R = crate::FieldReader<u32>;
-#[doc = "Field `EXT_WAKEUP1_SEL` writer - Bitmap to select RTC pads for ext wakeup1"]
-pub type EXT_WAKEUP1_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
-#[doc = "Field `EXT_WAKEUP1_STATUS_CLR` writer - clear ext wakeup1 status"]
-pub type EXT_WAKEUP1_STATUS_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SEL` reader - Bitmap to select RTC pads for ext wakeup1"]
+pub type SEL_R = crate::FieldReader<u32>;
+#[doc = "Field `SEL` writer - Bitmap to select RTC pads for ext wakeup1"]
+pub type SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 22, u32>;
+#[doc = "Field `STATUS_CLR` writer - clear ext wakeup1 status"]
+pub type STATUS_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:21 - Bitmap to select RTC pads for ext wakeup1"]
     #[inline(always)]
-    pub fn ext_wakeup1_sel(&self) -> EXT_WAKEUP1_SEL_R {
-        EXT_WAKEUP1_SEL_R::new(self.bits & 0x003f_ffff)
+    pub fn sel(&self) -> SEL_R {
+        SEL_R::new(self.bits & 0x003f_ffff)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT_WAKEUP1")
-            .field("ext_wakeup1_sel", &self.ext_wakeup1_sel())
+            .field("sel", &self.sel())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:21 - Bitmap to select RTC pads for ext wakeup1"]
     #[inline(always)]
-    pub fn ext_wakeup1_sel(&mut self) -> EXT_WAKEUP1_SEL_W<'_, EXT_WAKEUP1_SPEC> {
-        EXT_WAKEUP1_SEL_W::new(self, 0)
+    pub fn sel(&mut self) -> SEL_W<'_, EXT_WAKEUP1_SPEC> {
+        SEL_W::new(self, 0)
     }
     #[doc = "Bit 22 - clear ext wakeup1 status"]
     #[inline(always)]
-    pub fn ext_wakeup1_status_clr(&mut self) -> EXT_WAKEUP1_STATUS_CLR_W<'_, EXT_WAKEUP1_SPEC> {
-        EXT_WAKEUP1_STATUS_CLR_W::new(self, 22)
+    pub fn status_clr(&mut self) -> STATUS_CLR_W<'_, EXT_WAKEUP1_SPEC> {
+        STATUS_CLR_W::new(self, 22)
     }
 }
 #[doc = "configure ext1 wakeup\n\nYou can [`read`](crate::Reg::read) this register and get [`ext_wakeup1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ext_wakeup1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
