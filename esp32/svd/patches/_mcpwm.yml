@@ -1,39 +1,8 @@
 MCPWM0:
-  TIMER0_SYNC:
+  CAP_TIMER_PHASE:
     _modify:
-      TIMER0_PHASE:
-        bitWidth: 16
-
-    _add:
-      TIMER0_PHASE_DIRECTION:
-        description: "Configure the PWM timer0's direction when timer0 mode is up-down mode. 0: increase; 1: decrease."
-        bitOffset: 20
-        bitWidth: 1
-        access: read-write
-
-  TIMER1_SYNC:
-    _modify:
-      TIMER1_PHASE:
-        bitWidth: 16
-
-    _add:
-      TIMER1_PHASE_DIRECTION:
-        description: "Configure the PWM timer1's direction when timer1 mode is up-down mode. 0: increase; 1: decrease."
-        bitOffset: 20
-        bitWidth: 1
-        access: read-write
-
-  TIMER2_SYNC:
-    _modify:
-      TIMER2_PHASE:
-        bitWidth: 16
-
-    _add:
-      TIMER2_PHASE_DIRECTION:
-        description: "Configure the PWM timer2's direction when timer2 mode is up-down mode. 0: increase; 1: decrease."
-        bitOffset: 20
-        bitWidth: 1
-        access: read-write
+      CAP_TIMER_PHASE:
+        name: CAP_PHASE
 
   INT_RAW:
     _array:
@@ -49,13 +18,17 @@ MCPWM0:
         description: The interrupt raw bit for the fault%s clear event.
       CAP?:
         description: The interrupt raw bit for the capture%s event.
-      CMPR?_TEA:
+      OP?_TEA:
+        name: CMPR%s_TEA
         description: The interrupt raw bit for the operator%s compare A event.
-      CMPR?_TEB:
+      OP?_TEB:
+        name: CMPR%s_TEB
         description: The interrupt raw bit for the operator%s compare B event.
-      TZ?_CBC:
+      FH?_CBC:
+        name: TZ%s_CBC
         description: The interrupt raw bit for the fault handler%s cycle-by-cycle mode action.
-      TZ?_OST:
+      FH?_OST:
+        name: TZ%s_OST
         description: The interrupt raw bit for the fault handler%s one-shot mode action.
 
   INT_ST:
@@ -72,13 +45,17 @@ MCPWM0:
         description: The interrupt status bit for the fault%s clear event.
       CAP?:
         description: The interrupt status bit for the capture%s event.
-      CMPR?_TEA:
+      OP?_TEA:
+        name: CMPR%s_TEA
         description: The interrupt status bit for the operator%s compare A event.
-      CMPR?_TEB:
+      OP?_TEB:
+        name: CMPR%s_TEB
         description: The interrupt status bit for the operator%s compare B event.
-      TZ?_CBC:
+      FH?_CBC:
+        name: TZ%s_CBC
         description: The interrupt status bit for the fault handler%s cycle-by-cycle mode action.
-      TZ?_OST:
+      FH?_OST:
+        name: TZ%s_OST
         description: The interrupt status bit for the fault handler%s one-shot mode action.
 
   INT_ENA:
@@ -95,13 +72,17 @@ MCPWM0:
         description: The interrupt enable bit for the fault%s clear event.
       CAP?:
         description: The interrupt enable bit for the capture%s event.
-      CMPR?_TEA:
+      OP?_TEA:
+        name: CMPR%s_TEA
         description: The interrupt enable bit for the operator%s compare A event.
-      CMPR?_TEB:
+      OP?_TEB:
+        name: CMPR%s_TEB
         description: The interrupt enable bit for the operator%s compare B event.
-      TZ?_CBC:
+      FH?_CBC:
+        name: TZ%s_CBC
         description: The interrupt enable bit for the fault handler%s cycle-by-cycle mode action.
-      TZ?_OST:
+      FH?_OST:
+        name: TZ%s_OST
         description: The interrupt enable bit for the fault handler%s one-shot mode action.
 
   INT_CLR:
@@ -118,11 +99,15 @@ MCPWM0:
         description: The interrupt clear bit for the fault%s clear event.
       CAP?:
         description: The interrupt clear bit for the capture%s event.
-      CMPR?_TEA:
+      OP?_TEA:
+        name: CMPR%s_TEA
         description: The interrupt clear bit for the operator%s compare A event.
-      CMPR?_TEB:
+      OP?_TEB:
+        name: CMPR%s_TEB
         description: The interrupt clear bit for the operator%s compare B event.
-      TZ?_CBC:
+      FH?_CBC:
+        name: TZ%s_CBC
         description: The interrupt clear bit for the fault handler%s cycle-by-cycle mode action.
-      TZ?_OST:
+      FH?_OST:
+        name: TZ%s_OST
         description: The interrupt clear bit for the fault handler%s one-shot mode action.

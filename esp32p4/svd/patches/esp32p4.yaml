@@ -29,6 +29,7 @@ _include:
   - "_pvt.yml"
   - "_rsa.yml"
   - "_sha.yml"
+  - "_mcpwm.yml"
   - "_spi0.yml"
   - "_mmu_item_content.yml"
   - "_mmu_item_index.yml"
