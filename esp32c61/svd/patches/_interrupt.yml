@@ -19,3 +19,12 @@ INTERRUPT_CORE0:
       access: read-write
       size: 32
       reset-value: 0
+      fields:
+        MAP:
+          bitOffset: 0
+          bitWidth: 6
+          access: read-write
+        PASS_IN_SEC:
+          bitOffset: 8
+          bitWidth: 1
+          access: read-write

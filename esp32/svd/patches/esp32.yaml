@@ -237,6 +237,11 @@ DPORT:
       access: read-write
       size: 32
       reset-value: 16
+      fields:
+        MAP:
+          bitOffset: 0
+          bitWidth: 5
+          access: read-write
     CORE_1_INTR_MAP%s:
       addressOffset: 0x218
       dim: 69 # last register is at 0x328
@@ -244,6 +249,11 @@ DPORT:
       access: read-write
       size: 32
       reset-value: 16
+      fields:
+        MAP:
+          bitOffset: 0
+          bitWidth: 5
+          access: read-write
 
   AHBLITE_MPU_TABLE_BB:
     _strip:

@@ -14,6 +14,11 @@ INTERRUPT_CORE0:
       access: read-write
       size: 32
       reset-value: 16
+      fields:
+        MAP:
+          bitOffset: 0
+          bitWidth: 5
+          access: read-write
 
 INTERRUPT_CORE1:
   _array:
@@ -31,3 +36,8 @@ INTERRUPT_CORE1:
       access: read-write
       size: 32
       reset-value: 16
+      fields:
+        MAP:
+          bitOffset: 0
+          bitWidth: 5
+          access: read-write

@@ -17,6 +17,19 @@ INTERRUPT_CORE0:
       access: read-write
       size: 32
       reset-value: 0
+      fields:
+        MAP:
+          bitOffset: 0
+          bitWidth: 6
+          access: read-write
+        SRC_PASS_IN_SEC:
+          bitOffset: 6
+          bitWidth: 1
+          access: read-write
+        SRC_IN_SEC_FLAG:
+          bitOffset: 7
+          bitWidth: 1
+          access: read-write
 
 
 INTERRUPT_CORE1:
@@ -38,3 +51,16 @@ INTERRUPT_CORE1:
       access: read-write
       size: 32
       reset-value: 0
+      fields:
+        MAP:
+          bitOffset: 0
+          bitWidth: 6
+          access: read-write
+        SRC_PASS_IN_SEC:
+          bitOffset: 6
+          bitWidth: 1
+          access: read-write
+        SRC_IN_SEC_FLAG:
+          bitOffset: 7
+          bitWidth: 1
+          access: read-write
