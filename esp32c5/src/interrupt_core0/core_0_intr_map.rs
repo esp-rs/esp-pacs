@@ -2,13 +2,47 @@
 pub type R = crate::R<CORE_0_INTR_MAP_SPEC>;
 #[doc = "Register `CORE_0_INTR_MAP%s` writer"]
 pub type W = crate::W<CORE_0_INTR_MAP_SPEC>;
+#[doc = "Field `MAP` reader - "]
+pub type MAP_R = crate::FieldReader;
+#[doc = "Field `MAP` writer - "]
+pub type MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `PASS_IN_SEC` reader - "]
+pub type PASS_IN_SEC_R = crate::BitReader;
+#[doc = "Field `PASS_IN_SEC` writer - "]
+pub type PASS_IN_SEC_W<'a, REG> = crate::BitWriter<'a, REG>;
+impl R {
+    #[doc = "Bits 0:5"]
+    #[inline(always)]
+    pub fn map(&self) -> MAP_R {
+        MAP_R::new((self.bits & 0x3f) as u8)
+    }
+    #[doc = "Bit 8"]
+    #[inline(always)]
+    pub fn pass_in_sec(&self) -> PASS_IN_SEC_R {
+        PASS_IN_SEC_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        write!(f, "{}", self.bits())
+        f.debug_struct("CORE_0_INTR_MAP")
+            .field("map", &self.map())
+            .field("pass_in_sec", &self.pass_in_sec())
+            .finish()
     }
 }
-impl W {}
+impl W {
+    #[doc = "Bits 0:5"]
+    #[inline(always)]
+    pub fn map(&mut self) -> MAP_W<'_, CORE_0_INTR_MAP_SPEC> {
+        MAP_W::new(self, 0)
+    }
+    #[doc = "Bit 8"]
+    #[inline(always)]
+    pub fn pass_in_sec(&mut self) -> PASS_IN_SEC_W<'_, CORE_0_INTR_MAP_SPEC> {
+        PASS_IN_SEC_W::new(self, 8)
+    }
+}
 #[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_intr_map::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_0_intr_map::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_0_INTR_MAP_SPEC;
 impl crate::RegisterSpec for CORE_0_INTR_MAP_SPEC {

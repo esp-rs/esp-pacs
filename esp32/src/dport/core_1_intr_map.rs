@@ -2,13 +2,32 @@
 pub type R = crate::R<CORE_1_INTR_MAP_SPEC>;
 #[doc = "Register `CORE_1_INTR_MAP%s` writer"]
 pub type W = crate::W<CORE_1_INTR_MAP_SPEC>;
+#[doc = "Field `MAP` reader - "]
+pub type MAP_R = crate::FieldReader;
+#[doc = "Field `MAP` writer - "]
+pub type MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
+impl R {
+    #[doc = "Bits 0:4"]
+    #[inline(always)]
+    pub fn map(&self) -> MAP_R {
+        MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        write!(f, "{}", self.bits())
+        f.debug_struct("CORE_1_INTR_MAP")
+            .field("map", &self.map())
+            .finish()
     }
 }
-impl W {}
+impl W {
+    #[doc = "Bits 0:4"]
+    #[inline(always)]
+    pub fn map(&mut self) -> MAP_W<'_, CORE_1_INTR_MAP_SPEC> {
+        MAP_W::new(self, 0)
+    }
+}
 #[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`core_1_intr_map::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_1_intr_map::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_1_INTR_MAP_SPEC;
 impl crate::RegisterSpec for CORE_1_INTR_MAP_SPEC {
