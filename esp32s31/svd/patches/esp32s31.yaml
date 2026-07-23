@@ -7,6 +7,7 @@ _include:
   - "_ecc.yml"
   - "_gpio.yml"
   - "_interrupt.yml"
+  - "_uart.yml"
   - "_lp_sys.yml"
   - "_lp_io_mux.yml"
   - "_lp_intr.yml"

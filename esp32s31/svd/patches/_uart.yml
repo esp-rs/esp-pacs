@@ -1,0 +1,7 @@
+"*UART*":
+  CLK_CONF:
+    _modify:
+      RX_SCLK_EN:
+        name: SCLK_EN
+      RX_RST_CORE:
+        name: RST_CORE
