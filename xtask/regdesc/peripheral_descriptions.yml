@@ -1,0 +1,175 @@
+peripheral_descriptions:
+  - peripheral: AES
+    description: AES (Advanced Encryption Standard) Accelerator
+  - peripheral: ADC
+    description: ADC (Analog to Digital Converter)
+  - peripheral: APB_CTRL
+    description: APB (Advanced Peripheral Bus) Controller
+  - peripheral: APB_SARADC
+    description: SAR (Successive Approximation Register) Analog-to-Digital Converter
+  - peripheral: ATOMIC
+    description: Atomic Locker
+  - peripheral: ASSIST_DEBUG
+    description: Debug Assist
+  - peripheral: DMA
+    description: DMA (Direct Memory Access) Controller
+  - peripheral: DS
+    description: Digital Signature
+  - peripheral: ECC
+    description: ECC (ECC Hardware Accelerator)
+  - peripheral: ECDSA
+    description: ECDSA (Elliptic Curve Digital Signature Algorithm) Accelerator
+  - peripheral: EFUSE
+    description: eFuse Controller
+  - peripheral: EMAC_DMA
+    description: "Ethernet DMA configuration and control registers"
+  - peripheral: EMAC_EXT
+    description: "Ethernet Clock, PHY type, and SRAM configuration registers"
+  - peripheral: EMAC_MAC
+    description: "Ethernet MAC configuration and control registers"
+  - peripheral: EXTMEM
+    description: External Memory
+  - peripheral: GPIO
+    description: General Purpose Input/Output
+  - peripheral: GPIO_SD
+    description: Sigma-Delta Modulation
+  - peripheral: HMAC
+    description: HMAC (Hash-based Message Authentication Code) Accelerator
+  - peripheral: HP_SYS
+    description: High-Power System
+  - peripheral: H264
+    description: H264 Encoder (Core)
+  - peripheral: H264_DMA
+    description: H264 Encoder (DMA)
+  - peripheral: I2C0
+    description: I2C (Inter-Integrated Circuit) Controller 0
+  - peripheral: I2C1
+    description: I2C (Inter-Integrated Circuit) Controller 1
+  - peripheral: I2S0
+    description: I2S (Inter-IC Sound) Controller 0
+  - peripheral: I2S1
+    description: I2S (Inter-IC Sound) Controller 1
+  - peripheral: I2S2
+    description: I2S (Inter-IC Sound) Controller 2
+  - peripheral: I3C_MST
+    description: I3C Controller (Master)
+  - peripheral: I3C_SLV
+    description: I3C Controller (Slave)
+  - peripheral: INTERRUPT_CORE0
+    description: Interrupt Controller (Core 0)
+  - peripheral: INTERRUPT_CORE1
+    description: Interrupt Controller (Core 1)
+  - peripheral: IO_MUX
+    description: Input/Output Multiplexer
+  - peripheral: JPEG
+    description: JPEG Codec
+  - peripheral: LCD_CAM
+    description: Camera/LCD Controller
+  - peripheral: LEDC
+    description: LED Control PWM (Pulse Width Modulation)
+  - peripheral: LP_ADC
+    description: Low-power Analog to Digital Converter
+  - peripheral: LP_APM
+    description: Low-power Access Permission Management Controller
+  - peripheral: LP_GPIO
+    description: Low-power General Purpose Input/Output
+  - peripheral: LP_INTR
+    description: Low-power Interrupt Controller
+  - peripheral: LP_IO_MUX
+    description: Low-power Input/Output Multiplexer
+  - peripheral: LP_I2C0
+    description: Low-power I2C (Inter-Integrated Circuit) Controller 0
+  - peripheral: LP_I2S0
+    description: Low-power I2S (Inter-IC Sound) Controller 0
+  - peripheral: LP_TEE
+    description: Low-power Trusted Execution Environment
+  - peripheral: LP_TIMER
+    description: Low-power Timer
+  - peripheral: LP_TSENS
+    description: Low-power Temperature Sensor
+  - peripheral: LP_UART
+    description: Low-power UART (Universal Asynchronous Receiver-Transmitter) Controller
+  - peripheral: LP_WDT
+    description: Low-power Watchdog Timer
+  - peripheral: MCPWM0
+    description: Motor Control Pulse-Width Modulation 0
+  - peripheral: MCPWM1
+    description: Motor Control Pulse-Width Modulation 1
+  - peripheral: MIPI_CSI_BRIDGE
+    description: MIPI Camera Interface Bridge
+  - peripheral: MIPI_CSI_HOST
+    description: MIPI Camera Interface Host
+  - peripheral: MIPI_DSI_BRIDGE
+    description: MIPI Camera Interface Bridge
+  - peripheral: MIPI_DSI_HOST
+    description: MIPI Display Interface Host
+  - peripheral: PARL_IO
+    description: Parallel IO Controller
+  - peripheral: PCNT
+    description: Pulse Count Controller
+  - peripheral: PMS
+    description: Permissions Controller
+  - peripheral: RMT
+    description: Remote Control
+  - peripheral: RNG
+    description: Hardware Random Number Generator
+  - peripheral: RSA
+    description: RSA (Rivest Shamir Adleman) Accelerator
+  - peripheral: RTC_CNTL
+    description: Real-Time Clock Control
+  - peripheral: RTC_IO
+    description: Low-power Input/Output
+  - peripheral: RTC_I2C
+    description: Low-power I2C (Inter-Integrated Circuit) Controller
+  - peripheral: SDHOST
+    description: SD/MMC Host Controller
+  - peripheral: SHA
+    description: SHA (Secure Hash Algorithm) Accelerator
+  - peripheral: SOC_ETM
+    description: Event Task Matrix
+  - peripheral: SPI0
+    description: SPI (Serial Peripheral Interface) Controller 0
+  - peripheral: SPI1
+    description: SPI (Serial Peripheral Interface) Controller 1
+  - peripheral: SPI2
+    description: SPI (Serial Peripheral Interface) Controller 2
+  - peripheral: SPI3
+    description: SPI (Serial Peripheral Interface) Controller 3
+  - peripheral: SPI4
+    description: SPI (Serial Peripheral Interface) Controller 4
+  - peripheral: SYSTEM
+    description: System Configuration Registers
+  - peripheral: SYSTIMER
+    description: System Timer
+  - peripheral: TIMG0
+    description: Timer Group 0
+  - peripheral: TIMG1
+    description: Timer Group 1
+  - peripheral: TRACE
+    description: RISC-V Trace Encoder
+  - peripheral: TWAI0
+    description: Two-Wire Automotive Interface
+  - peripheral: TWAI1
+    description: Two-Wire Automotive Interface
+  - peripheral: TWAI2
+    description: Two-Wire Automotive Interface
+  - peripheral: UART0
+    description: UART (Universal Asynchronous Receiver-Transmitter) Controller 0
+  - peripheral: UART1
+    description: UART (Universal Asynchronous Receiver-Transmitter) Controller 1
+  - peripheral: UART2
+    description: UART (Universal Asynchronous Receiver-Transmitter) Controller 2
+  - peripheral: UART3
+    description: UART (Universal Asynchronous Receiver-Transmitter) Controller 3
+  - peripheral: UART4
+    description: UART (Universal Asynchronous Receiver-Transmitter) Controller 4
+  - peripheral: UHCI0
+    description: Universal Host Controller Interface 0
+  - peripheral: UHCI1
+    description: Universal Host Controller Interface 1
+  - peripheral: USB0
+    description: USB OTG (On-The-Go)
+  - peripheral: USB_DEVICE
+    description: Full-speed USB Serial/JTAG Controller
+  - peripheral: XTS_AES
+    description: XTS-AES-128 Flash Encryption

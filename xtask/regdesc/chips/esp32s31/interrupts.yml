@@ -1,0 +1,510 @@
+peripheral_interrupts:
+  # Source: components/soc/esp32s31/include/soc/interrupts.h
+  # value = sequential enum position (ETS_*_INTR_SOURCE = N)
+  # - name: SYS_ICM
+  #   instance:
+  #   value: 0
+  - name: AXI_PERF_MON
+    instance: AXI_PERF_MON
+    value: 1
+  - name: USB_DEVICE
+    instance: USB_DEVICE
+    value: 2
+  - name: SDIO_HOST
+    instance: SDHOST
+    value: 3
+  - name: SPI2
+    instance: SPI2
+    value: 4
+  - name: SPI3
+    instance: SPI3
+    value: 5
+  - name: I2S0
+    instance: I2S0
+    value: 6
+  - name: I2S1
+    instance: I2S1
+    value: 7
+  - name: UHCI0
+    instance: UHCI0
+    value: 8
+  - name: UART0
+    instance: UART0
+    value: 9
+  - name: UART1
+    instance: UART1
+    value: 10
+  - name: UART2
+    instance: UART2
+    value: 11
+  - name: UART3
+    instance: UART3
+    value: 12
+  - name: LCD_CAM
+    instance: LCD_CAM
+    value: 13
+  - name: PWM0
+    instance: MCPWM0
+    value: 14
+  - name: PWM1
+    instance: MCPWM1
+    value: 15
+  - name: PWM2
+    instance: MCPWM2
+    value: 16
+  - name: PWM3
+    instance: MCPWM3
+    value: 17
+  - name: TWAI0
+    instance: TWAI0
+    value: 18
+  - name: TWAI0_TIMER
+    instance: TWAI0
+    value: 19
+  - name: TWAI1
+    instance: TWAI1
+    value: 20
+  - name: TWAI1_TIMER
+    instance: TWAI1
+    value: 21
+  - name: RMT
+    instance: RMT
+    value: 22
+  - name: I2C0
+    instance: I2C0
+    value: 23
+  - name: I2C1
+    instance: I2C1
+    value: 24
+  - name: TG0_T0
+    instance: TIMG0
+    value: 25
+  - name: TG0_T1
+    instance: TIMG0
+    value: 26
+  - name: TG0_WDT
+    instance: TIMG0
+    value: 27
+  - name: TG1_T0
+    instance: TIMG1
+    value: 28
+  - name: TG1_T1
+    instance: TIMG1
+    value: 29
+  - name: TG1_WDT
+    instance: TIMG1
+    value: 30
+  - name: LEDC0
+    instance: LEDC0
+    value: 31
+  - name: LEDC1
+    instance: LEDC1
+    value: 32
+  - name: SYSTIMER_TARGET0
+    instance: SYSTIMER
+    value: 33
+  - name: SYSTIMER_TARGET1
+    instance: SYSTIMER
+    value: 34
+  - name: SYSTIMER_TARGET2
+    instance: SYSTIMER
+    value: 35
+  - name: AHB_PDMA_IN_CH0
+    instance: AHB_DMA
+    value: 36
+  - name: AHB_PDMA_IN_CH1
+    instance: AHB_DMA
+    value: 37
+  - name: AHB_PDMA_IN_CH2
+    instance: AHB_DMA
+    value: 38
+  - name: AHB_PDMA_IN_CH3
+    instance: AHB_DMA
+    value: 39
+  - name: AHB_PDMA_IN_CH4
+    instance: AHB_DMA
+    value: 40
+  - name: AHB_PDMA_OUT_CH0
+    instance: AHB_DMA
+    value: 41
+  - name: AHB_PDMA_OUT_CH1
+    instance: AHB_DMA
+    value: 42
+  - name: AHB_PDMA_OUT_CH2
+    instance: AHB_DMA
+    value: 43
+  - name: AHB_PDMA_OUT_CH3
+    instance: AHB_DMA
+    value: 44
+  - name: AHB_PDMA_OUT_CH4
+    instance: AHB_DMA
+    value: 45
+  - name: ASRC_CHNL0
+    instance: ASRC
+    value: 46
+  - name: ASRC_CHNL1
+    instance: ASRC
+    value: 47
+  - name: AXI_PDMA_IN_CH0
+    instance: AXI_DMA
+    value: 48
+  - name: AXI_PDMA_IN_CH1
+    instance: AXI_DMA
+    value: 49
+  - name: AXI_PDMA_IN_CH2
+    instance: AXI_DMA
+    value: 50
+  - name: AXI_PDMA_OUT_CH0
+    instance: AXI_DMA
+    value: 51
+  - name: AXI_PDMA_OUT_CH1
+    instance: AXI_DMA
+    value: 52
+  - name: AXI_PDMA_OUT_CH2
+    instance: AXI_DMA
+    value: 53
+  - name: RSA
+    instance: RSA
+    value: 54
+  - name: AES
+    instance: AES
+    value: 55
+  - name: SHA
+    instance: SHA
+    value: 56
+  - name: ECC
+    instance: ECC
+    value: 57
+  - name: ECDSA
+    instance: ECDSA
+    value: 58
+  - name: KM
+    instance: KEYMNG
+    value: 59
+  - name: RMA
+    instance: RMA
+    value: 60
+  - name: GPIO_INT0
+    instance: GPIO
+    value: 61
+  - name: GPIO_INT1
+    instance: GPIO
+    value: 62
+  - name: GPIO_INT2
+    instance: GPIO
+    value: 63
+  - name: GPIO_INT3
+    instance: GPIO
+    value: 64
+  # - name: CPU_INT_FROM_CPU_0
+  #   instance:
+  #   value: 65
+  # - name: CPU_INT_FROM_CPU_1
+  #   instance:
+  #   value: 66
+  # - name: CPU_INT_FROM_CPU_2
+  #   instance:
+  #   value: 67
+  # - name: CPU_INT_FROM_CPU_3
+  #   instance:
+  #   value: 68
+  - name: CACHE
+    instance: CACHE
+    value: 69
+  - name: CPU_APM_M0
+    instance: CPU_APM
+    value: 70
+  - name: CPU_APM_M1
+    instance: CPU_APM
+    value: 71
+  - name: CPU_APM_M2
+    instance: CPU_APM
+    value: 72
+  - name: CPU_APM_M3
+    instance: CPU_APM
+    value: 73
+  - name: HP_MEM_APM_M0
+    instance: HP_MEM_APM
+    value: 74
+  - name: HP_MEM_APM_M1
+    instance: HP_MEM_APM
+    value: 75
+  - name: HP_MEM_APM_M2
+    instance: HP_MEM_APM
+    value: 76
+  - name: HP_MEM_APM_M3
+    instance: HP_MEM_APM
+    value: 77
+  - name: HP_MEM_APM_M4
+    instance: HP_MEM_APM
+    value: 78
+  - name: HP_MEM_APM_M5
+    instance: HP_MEM_APM
+    value: 79
+  # - name: CPU_PERI0_TIMEOUT
+  #   instance:
+  #   value: 80
+  # - name: CPU_PERI1_TIMEOUT
+  #   instance:
+  #   value: 81
+  # - name: HP_PERI0_TIMEOUT
+  #   instance:
+  #   value: 82
+  # - name: HP_PERI1_TIMEOUT
+  #   instance:
+  #   value: 83
+  - name: HP_APM_M0
+    instance: HP_APM
+    value: 84
+  - name: HP_APM_M1
+    instance: HP_APM
+    value: 85
+  - name: HP_APM_M2
+    instance: HP_APM
+    value: 86
+  - name: HP_APM_M3
+    instance: HP_APM
+    value: 87
+  - name: HP_APM_M4
+    instance: HP_APM
+    value: 88
+  - name: HP_APM_M5
+    instance: HP_APM
+    value: 89
+  - name: HP_APM_M6
+    instance: HP_APM
+    value: 90
+  - name: HP_PERI0_PMS
+    instance: HP_PERI0_PMS
+    value: 91
+  - name: HP_PERI1_PMS
+    instance: HP_PERI1_PMS
+    value: 92
+  # - name: CPU0_PERI_PMS
+  #   instance:
+  #   value: 93
+  # - name: CPU1_PERI_PMS
+  #   instance:
+  #   value: 94
+  # - name: MSPI_FLASH
+  #   instance:
+  #   value: 95
+  - name: LPI
+    instance: GMAC
+    value: 96
+  - name: PMT
+    instance: GMAC
+    value: 97
+  - name: SBD
+    instance: GMAC
+    value: 98
+  - name: USB_OTG_HS
+    instance: USB_OTG_HS
+    value: 99
+  - name: USB_OTG_HS_ENDP_MULTI_PROC
+    instance: USB_OTG_HS
+    value: 100
+  - name: JPEG
+    instance: JPEG
+    value: 101
+  - name: PPA
+    instance: PPA
+    value: 102
+  - name: CORE0_TRACE
+    instance: TRACE0
+    value: 103
+  - name: CORE1_TRACE
+    instance: TRACE1
+    value: 104
+  - name: DMA2D_IN_CH0
+    instance: DMA2D
+    value: 105
+  - name: DMA2D_IN_CH1
+    instance: DMA2D
+    value: 106
+  - name: DMA2D_IN_CH2
+    instance: DMA2D
+    value: 107
+  - name: DMA2D_OUT_CH0
+    instance: DMA2D
+    value: 108
+  - name: DMA2D_OUT_CH1
+    instance: DMA2D
+    value: 109
+  - name: DMA2D_OUT_CH2
+    instance: DMA2D
+    value: 110
+  - name: DMA2D_OUT_CH3
+    instance: DMA2D
+    value: 111
+  # - name: MSPI_PSRAM
+  #   instance:
+  #   value: 112
+  - name: HP_SYSREG
+    instance: HP_SYS
+    value: 113
+  - name: PCNT0
+    instance: PCNT0
+    value: 114
+  - name: PCNT1
+    instance: PCNT1
+    value: 115
+  - name: HP_PAU
+    instance: PAU
+    value: 116
+  - name: HP_PARLIO_RX
+    instance: PARL_IO
+    value: 117
+  - name: HP_PARLIO_TX
+    instance: PARL_IO
+    value: 118
+  - name: ASSIST_DEBUG
+    instance:
+    value: 119
+  # - name: MODEM_WIFI_MAC
+  #   instance:
+  #   value: 120
+  # - name: MODEM_WIFI_MAC_NMI
+  #   instance:
+  #   value: 121
+  # - name: MODEM_WIFI_PWR
+  #   instance:
+  #   value: 122
+  # - name: MODEM_WIFI_BB
+  #   instance:
+  #   value: 123
+  # - name: MODEM_BT_MAC
+  #   instance:
+  #   value: 124
+  # - name: MODEM_BT_BB
+  #   instance:
+  #   value: 125
+  # - name: MODEM_BT_BB_NMI
+  #   instance:
+  #   value: 126
+  # - name: MODEM_LP_TIMER
+  #   instance:
+  #   value: 127
+  # - name: MODEM_COEX
+  #   instance:
+  #   value: 128
+  # - name: MODEM_BLE_TIMER
+  #   instance:
+  #   value: 129
+  # - name: MODEM_BLE_SEC
+  #   instance:
+  #   value: 130
+  # - name: MODEM_I2C_MST
+  #   instance:
+  #   value: 131
+  # - name: MODEM_ZB_MAC
+  #   instance:
+  #   value: 132
+  # - name: MODEM_BT_MAC_INT1
+  #   instance:
+  #   value: 133
+  - name: CORDIC
+    instance: CORDIC
+    value: 134
+  - name: ZERO_DET
+    instance: ZERO_DET
+    value: 135
+  - name: LP_WDT
+    instance: LP_WDT
+    value: 136
+  - name: LP_TIMER0
+    instance: LP_TIMER
+    value: 137
+  - name: LP_TIMER1
+    instance: LP_TIMER
+    value: 138
+  - name: MB_HP
+    instance: LP_MAILBOX
+    value: 139
+  - name: MB_LP
+    instance: LP_MAILBOX
+    value: 140
+  - name: PMU0
+    instance: PMU
+    value: 141
+  - name: PMU1
+    instance: PMU
+    value: 142
+  - name: LP_ANA
+    instance: LP_ANA_PERI
+    value: 143
+  - name: LP_ADC
+    instance: ADC
+    value: 144
+  - name: LP_DAC
+    instance: DAC
+    value: 145
+  - name: LP_GPIO
+    instance: LP_GPIO
+    value: 146
+  - name: LP_I2C
+    instance: LP_I2C0
+    value: 147
+  - name: LP_SPI
+    instance: LP_SPI
+    value: 148
+  - name: LP_TOUCH
+    instance: LP_TOUCH
+    value: 149
+  - name: LP_TSENS
+    instance: LP_TSENS
+    value: 150
+  - name: LP_UART
+    instance: LP_UART
+    value: 151
+  # - name: LP_EFUSE
+  #   instance:
+  #   value: 152
+  - name: LP_SW
+    instance: LP_SYS
+    value: 153
+  - name: LP_TRNG
+    instance: TRNG
+    value: 154
+  - name: LP_SYSREG
+    instance: LP_SYS
+    value: 155
+  - name: LP_APM_M0
+    instance: LP_APM
+    value: 156
+  - name: LP_APM_M1
+    instance: LP_APM
+    value: 157
+  - name: LP_APM_M2
+    instance: LP_APM
+    value: 158
+  - name: LP_APM_M3
+    instance: LP_APM
+    value: 159
+  - name: LP_PERI0_PMS
+    instance: LP_PERI_PMS
+    value: 160
+  - name: LP_PERI1_PMS
+    instance: LP_PERI_PMS
+    value: 161
+  - name: LP_HUK
+    instance: LP_HUK
+    value: 162
+  # - name: LP_PERI_TIMEOUT
+  #   instance:
+  #   value: 163
+  - name: LP_AHB_PDMA_IN_CH0
+    instance: LP_AHB_DMA
+    value: 164
+  - name: LP_AHB_PDMA_IN_CH1
+    instance: LP_AHB_DMA
+    value: 165
+  - name: LP_AHB_PDMA_OUT_CH0
+    instance: LP_AHB_DMA
+    value: 166
+  - name: LP_AHB_PDMA_OUT_CH1
+    instance: LP_AHB_DMA
+    value: 167
+  # - name: LP_SW_INVALID_SLEEP
+  #   instance:
+  #   value: 168

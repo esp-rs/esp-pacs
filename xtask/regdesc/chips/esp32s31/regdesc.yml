@@ -1,0 +1,106 @@
+---
+adc_reg.csv: {}
+aes_reg.csv: {}
+ahb_dma_reg.csv: {}
+asrc_reg.csv: {}
+axi_dma_reg.csv: {}
+axi_perf_mon_reg.csv: {}
+bitscrambler_reg.csv: {}
+bus_monitor_reg.csv: {}
+cache_reg.csv: {}
+cnnt_io_mux_reg.csv: {}
+cnnt_sys_reg.csv: {}
+cordic_reg.csv: {}
+core0_interrupt_reg.csv: {}
+core1_interrupt_reg.csv: {}
+cpu_apm_reg.csv: {}
+dac_reg.csv: {}
+dma2d_reg.csv: {}
+ds_reg.csv: {}
+ecc_mult_reg.csv:
+  name: ECC
+ecdsa_reg.csv: {}
+efuse_mem_reg.csv: {}
+gmac_reg.csv: {}
+gpio_ext_reg.csv: {}
+gpio_reg.csv: {}
+hmac_reg.csv: {}
+hp_alive_sys_reg.csv: {}
+hp_apm_reg.csv: {}
+hp_mem_apm_reg.csv: {}
+hp_peri0_pms_reg.csv: {}
+hp_peri1_pms_reg.csv: {}
+hp_sys_clkrst_reg.csv: {}
+hp_sys_reg.csv:
+  name: HP_SYS
+huk_reg.csv: {}
+i2c_ext_reg.csv: {}
+i2s_reg.csv: {}
+icm_sys_axi_ic_reg.csv: {}
+icm_sys_reg.csv: {}
+iomux_mspi_pin_reg.csv: {}
+iomux_reg.csv: {}
+jpeg_reg.csv: {}
+keymng_reg.csv: {}
+lcdcam_reg.csv: {}
+ledc_reg.csv: {}
+lp_adi_reg.csv: {}
+lp_ahb_dma_reg.csv: {}
+lp_analog_peri_reg.csv:
+  name: LP_ANA_PERI
+lp_aonclkrst_reg.csv:
+  name: LP_AON_CLKRST
+lp_apm_reg.csv: {}
+lp_gpio_reg.csv: {}
+lp_i2c_ana_mst_reg.csv: {}
+lp_i2c_ext_reg.csv: {}
+lp_intr_reg.csv: {}
+lp_iomux_reg.csv: {}
+lp_mailbox_reg.csv: {}
+lp_peri_pms_reg.csv: {}
+lp_periclkrst_reg.csv: {}
+lp_pwr_reg.csv: {}
+lp_spi_reg.csv: {}
+lp_sys_reg.csv: {}
+lp_tee_reg.csv: {}
+lp_uart_reg.csv: {}
+mem_monitor_reg.csv: {}
+parl_io_reg.csv: {}
+pau_reg.csv: {}
+pcnt_reg.csv: {}
+pmu_reg.csv: {}
+ppa_reg.csv: {}
+pvt_reg.csv: {}
+pwm_reg.csv:
+  name: MCPWM
+rma_reg.csv: {}
+rmt_reg.csv: {}
+rsa_reg.csv: {}
+rtc_timer_reg.csv: {}
+rtc_wdt_reg.csv: {}
+rtclockcali_reg.csv: {}
+sdio_host_reg.csv: {}
+sha_reg.csv: {}
+soc_etm_reg.csv: {}
+spi1_mem_reg_s.csv: # TODO: am I using the correct file? (c/s)
+  name: SPI1
+spi2_reg_s.csv:
+  name: SPI2
+spi3_reg.csv:
+  name: SPI3
+spi_mem_reg_s.csv: # TODO: am I using the correct file? (c/s)
+  name: SPI0
+sys_timer_reg.csv: {}
+tee_reg.csv: {}
+timers_reg.csv: {}
+touch_aon_reg.csv: {}
+touch_reg.csv: {}
+trace_reg.csv: {}
+trng_reg.csv: {}
+tsens_reg.csv: {}
+twaifd_reg.csv: {}
+uart_reg.csv: {}
+uhci_reg.csv: {}
+usb_otghs_reg.csv: {}
+usb_serial_jtag_reg.csv: {}
+zero_det_reg.csv: {}

@@ -1,0 +1,275 @@
+peripheral_instances:
+  - name: ADC
+    peripheral: ADC
+    base_addr: 0x500DE000
+  - name: AES
+    peripheral: AES
+    base_addr: 0x50090000
+  - name: AHB_DMA
+    peripheral: AHB_DMA
+    base_addr: 0x50085000
+  - name: ASSIST_DEBUG
+    peripheral: ASSIST_DEBUG
+    base_addr: 0x3FF06000
+  - name: AXI_DMA
+    peripheral: AXI_DMA
+    base_addr: 0x5008a000
+  - name: AXI_ICM
+    peripheral: ICM_AXI
+    base_addr: 0x500A4000
+  - name: BITSCRAMBLER
+    peripheral: BITSCRAMBLER
+    base_addr: 0x500A3000
+  - name: CACHE
+    peripheral: CACHE
+    base_addr: 0x3FF10000
+  - name: DMA
+    peripheral: DMAC
+    base_addr: 0x50081000
+  # FIXME: build errors in PAC
+  # - name: DMA2D
+  #   peripheral: DMA2D
+  #   base_addr: 0x50088000
+  - name: DS
+    peripheral: DS
+    base_addr: 0x50094000
+  - name: ECC
+    peripheral: ECC
+    base_addr: 0x50093000
+  - name: ECDSA
+    peripheral: ECDSA
+    base_addr: 0x50096000
+  - name: EFUSE
+    peripheral: EFUSE
+    base_addr: 0x5012D000
+  - name: GPIO
+    peripheral: GPIO
+    base_addr: 0x500E0000
+  - name: GPIO_SD
+    peripheral: GPIOSD
+    base_addr: 0x500E0F00
+  - name: H264
+    peripheral: H264
+    base_addr: 0x50084000
+  - name: H264_DMA
+    peripheral: H264_DMA
+    base_addr: 0x500A7000
+  - name: HMAC
+    peripheral: HMAC
+    base_addr: 0x50095000
+  - name: HP_SYS
+    peripheral: HP_SYS
+    base_addr: 0x500E5000
+  - name: HP_SYS_CLKRST
+    peripheral: HP_SYS_CLKRST
+    base_addr: 0x500E6000
+  - name: INTERRUPT_CORE0
+    peripheral: CORE0
+    base_addr: 0x500D6000
+  - name: INTERRUPT_CORE1
+    peripheral: CORE1
+    base_addr: 0x500D6800
+  - name: IO_MUX
+    peripheral: IO_MUX
+    base_addr: 0x500e1000
+  - name: ISP
+    peripheral: ISP
+    base_addr: 0x500A1000
+  - name: I2C0
+    peripheral: I2C
+    base_addr: 0x500C4000
+  - name: I2C1
+    peripheral: I2C
+    base_addr: 0x500C5000
+  - name: I2S0
+    peripheral: I2S
+    base_addr: 0x500C6000
+  - name: I2S1
+    peripheral: I2S
+    base_addr: 0x500C7000
+  - name: I2S2
+    peripheral: I2S
+    base_addr: 0x500C8000
+  - name: I3C_MST
+    peripheral: I3C_MST
+    base_addr: 0x500DA000
+  - name: I3C_MST_MEM
+    peripheral: I3C_MST_MEM
+    base_addr: 0x500DA000
+  - name: I3C_SLV
+    peripheral: I3C_SLV
+    base_addr: 0x500DB000
+  - name: JPEG
+    peripheral: JPEG
+    base_addr: 0x50086000
+  - name: LCD_CAM
+    peripheral: LCDCAM
+    base_addr: 0x500dc000
+  - name: LEDC
+    peripheral: LEDC
+    base_addr: 0x500D3000
+  - name: LP_ADC
+    peripheral: RTCADC
+    base_addr: 0x50127000
+  - name: LP_ANA_PERI
+    peripheral: LP_ANA_PERI
+    base_addr: 0x50113000
+  - name: LP_AON_CLKRST
+    peripheral: LP_AON_CLKRST
+    base_addr: 0x50111000
+  - name: LP_GPIO
+    peripheral: LP_GPIO
+    base_addr: 0x5012A000
+  - name: LP_HUK
+    peripheral: HUK
+    base_addr: 0x50114000
+  - name: LP_INTR
+    peripheral: LPINTR
+    base_addr: 0x5012C000
+  - name: LP_IO_MUX
+    peripheral: LP_IOMUX
+    base_addr: 0x5012B000
+  - name: LP_I2C0
+    peripheral: LP_I2C
+    base_addr: 0x50122000
+  - name: LP_I2C_ANA_MST
+    peripheral: ANA_I2C_MST
+    base_addr: 0x50124000
+  - name: LP_I2S0
+    peripheral: LP_I2S
+    base_addr: 0x50125000
+  - name: LP_PERI
+    peripheral: LPPERI
+    base_addr: 0x50120000
+  - name: LP_SYS
+    peripheral: LPSYSREG
+    base_addr: 0x50110000
+  - name: LP_TIMER
+    peripheral: RTC_TIMER
+    base_addr: 0x50112000
+  - name: LP_TOUCH
+    peripheral: RTC_TOUCH
+    base_addr: 0x50128000
+  - name: LP_TSENS
+    peripheral: TSENS
+    base_addr: 0x5012F000
+  - name: LP_UART
+    peripheral: LP_UART
+    base_addr: 0x50121000
+  - name: LP_WDT
+    peripheral: RTC_WDT
+    base_addr: 0x50116000
+  - name: MCPWM0
+    peripheral: MCPWM
+    base_addr: 0x500C0000
+  - name: MCPWM1
+    peripheral: MCPWM
+    base_addr: 0x500C1000
+  - name: MIPI_CSI_BRIDGE
+    peripheral: CSI_BRIG
+    base_addr: 0x5009F800
+  - name: MIPI_CSI_HOST
+    peripheral: CSI_HOST
+    base_addr: 0x5009F000
+  - name: MIPI_DSI_BRIDGE
+    peripheral: DSI_BRG
+    base_addr: 0x500A0800
+  - name: MIPI_DSI_HOST
+    peripheral: DSI_HOST
+    base_addr: 0x500A0000
+  - name: PARL_IO
+    peripheral: PARL_IO
+    base_addr: 0x500CF000
+  - name: PAU
+    peripheral: PAU
+    base_addr: 0x60093000
+  - name: PCNT
+    peripheral: PCNT
+    base_addr: 0x500C9000
+  - name: PMU
+    peripheral: PMU
+    base_addr: 0x50115000
+  - name: PPA
+    peripheral: PPA
+    base_addr: 0x50087000
+  - name: PVT
+    peripheral: PVT
+    base_addr: 0x5009E000
+  - name: RMT
+    peripheral: RMT
+    base_addr: 0x500D4000
+  - name: RSA
+    peripheral: RSA
+    base_addr: 0x50092000
+  - name: SDHOST
+    peripheral: SDHOST
+    base_addr: 0x50083000
+  - name: SHA
+    peripheral: SHA
+    base_addr: 0x50091000
+  - name: SOC_ETM
+    peripheral: SOC_ETM
+    base_addr: 0x500D5000
+  - name: SPI0
+    peripheral: SPI0
+    base_addr: 0x5008C000
+  - name: SPI1
+    peripheral: SPI1
+    base_addr: 0x5008D000
+  - name: SPI2
+    peripheral: SPI2
+    base_addr: 0x500D0000
+  - name: SPI3
+    peripheral: SPI3
+    base_addr: 0x500D1000
+  - name: SYSTIMER
+    peripheral: SYSTIMER
+    base_addr: 0x500E2000
+  - name: TEE
+    peripheral: TEE
+    base_addr: 0x60098000
+  - name: TIMG0
+    peripheral: TIMG
+    base_addr: 0x500C2000
+  - name: TIMG1
+    peripheral: TIMG
+    base_addr: 0x500C3000
+  - name: TRACE0
+    peripheral: TRACE
+    base_addr: 0x3FF04000
+  - name: TRACE1
+    peripheral: TRACE
+    base_addr: 0x3FF05000
+  - name: TWAI0
+    peripheral: TWAI
+    base_addr: 0x500D7000
+  - name: TWAI1
+    peripheral: TWAI
+    base_addr: 0x500D8000
+  - name: TWAI2
+    peripheral: TWAI
+    base_addr: 0x500D9000
+  - name: UART0
+    peripheral: UART
+    base_addr: 0x500CA000
+  - name: UART1
+    peripheral: UART
+    base_addr: 0x500CB000
+  - name: UART2
+    peripheral: UART
+    base_addr: 0x500CC000
+  - name: UART3
+    peripheral: UART
+    base_addr: 0x500CD000
+  - name: UART4
+    peripheral: UART
+    base_addr: 0x500CE000
+  - name: UHCI0
+    peripheral: UHCI
+    base_addr: 0x500DF000
+  - name: USB_DEVICE
+    peripheral: USB_DEVICE
+    base_addr: 0x500D2000
+  - name: USB_WRAP
+    peripheral: USB_WRAP
+    base_addr: 0x50080000

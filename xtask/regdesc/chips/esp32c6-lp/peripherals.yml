@@ -1,0 +1,40 @@
+peripheral_instances:
+  - name: LP_I2C0
+    peripheral: I2C
+    base_addr: 0x600B1800
+  - name: LP_PERI
+    peripheral: LPPERI
+    base_addr: 0x600B2800
+  - name: LP_ANA_PERI
+    peripheral: LP_ANA
+    base_addr: 0x600B2C00
+  - name: LP_AON
+    peripheral: LP_AON
+    base_addr: 0x600B1000
+  - name: LP_APM
+    peripheral: LP_APM
+    base_addr: 0x600B3800
+  # - name: LP_APM0
+  #   peripheral: LP_APM0
+  #   base_addr: 0x0
+  - name: LP_CLKRST
+    peripheral: LP_CLKRST
+    base_addr: 0x600B0400
+  - name: LP_I2C_ANA_MST
+    peripheral: LP_I2C_ANA_MST
+    base_addr: 0x600B2400
+  - name: LP_IO
+    peripheral: LP_IO
+    base_addr: 0x600B2000
+  - name: LP_TEE
+    peripheral: LP_TEE
+    base_addr: 0x600B3400
+  - name: LP_TIMER
+    peripheral: LP_TIMER
+    base_addr: 0x600B0C00
+  - name: LP_UART
+    peripheral: LP_UART
+    base_addr: 0x600B1400
+  - name: LP_WDT
+    peripheral: LP_WDT
+    base_addr: 0x600B1C00

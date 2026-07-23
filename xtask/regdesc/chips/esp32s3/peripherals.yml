@@ -1,0 +1,163 @@
+peripheral_instances:
+  - name: AES
+    peripheral: AES
+    base_addr: 0x6003A000
+  - name: APB_CTRL
+    peripheral: APB_CTRL
+    base_addr: 0x60026000
+  - name: APB_SARADC
+    peripheral: APB_SARADC
+    base_addr: 0x60040000
+  - name: ASSIST_DEBUG
+    peripheral: DEBUG_ASSIST
+    base_addr: 0x600CE000
+  - name: BB
+    peripheral: BB
+    base_addr: 0x6001D000
+  - name: DMA
+    peripheral: DMA
+    base_addr: 0x6003F000
+  - name: DS
+    peripheral: DS
+    base_addr: 0x6003D000
+  - name: EFUSE
+    peripheral: EFUSE
+    base_addr: 0x60007000
+  - name: EXTMEM
+    peripheral: EXTMEM
+    base_addr: 0x600C4000
+  - name: GPIO
+    peripheral: GPIO
+    base_addr: 0x60004000
+  - name: GPIO_SD
+    peripheral: GPIOSD
+    base_addr: 0x60004f00
+  - name: HMAC
+    peripheral: HMAC
+    base_addr: 0x6003E000
+  - name: I2C0
+    peripheral: I2C
+    base_addr: 0x60013000
+  - name: I2C1
+    peripheral: I2C
+    base_addr: 0x60027000
+  - name: I2S0
+    peripheral: I2S
+    base_addr: 0x6000F000
+  - name: I2S1
+    peripheral: I2S1
+    base_addr: 0x6002D000
+  - name: INTERRUPT_CORE0
+    peripheral: INTERRUPT_CORE0
+    base_addr: 0x600C2000
+  - name: INTERRUPT_CORE1
+    peripheral: INTERRUPT_CORE1
+    base_addr: 0x600C2000
+  - name: IO_MUX
+    peripheral: IO_MUX
+    base_addr: 0x60009000
+  - name: LCD_CAM
+    peripheral: LCD_CAM
+    base_addr: 0x60041000
+  - name: LEDC
+    peripheral: LEDC
+    base_addr: 0x60019000
+  - name: PCNT
+    peripheral: PCNT
+    base_addr: 0x60017000
+  - name: PERI_BACKUP
+    peripheral: PERI_BACKUP
+    base_addr: 0x6002A000
+  - name: MCPWM0
+    peripheral: PWM
+    base_addr: 0x6001E000
+  - name: MCPWM1
+    peripheral: PWM
+    base_addr: 0x6002C000
+  - name: RMT
+    peripheral: RMT
+    base_addr: 0x60016000
+  - name: RNG
+    peripheral: RNG
+    base_addr: 0x60034F6C
+  - name: RSA
+    peripheral: RSA
+    base_addr: 0x6003C000
+  - name: RTC_CNTL
+    peripheral: RTC_CNTL
+    base_addr: 0x60008000
+  - name: RTC_I2C
+    peripheral: RTC_I2C
+    base_addr: 0x60008C00
+  - name: RTC_IO
+    peripheral: RTC_IO
+    base_addr: 0x60008400
+  - name: SDHOST
+    peripheral: SDHOST
+    base_addr: 0x60028000
+  - name: SENS
+    peripheral: SENS
+    base_addr: 0x60008800
+  - name: SENSITIVE
+    peripheral: SENSITIVE
+    base_addr: 0x600C1000
+  - name: SHA
+    peripheral: SHA
+    base_addr: 0x6003B000
+  - name: SPI0
+    peripheral: SPI0
+    base_addr: 0x60003000
+  - name: SPI1
+    peripheral: SPI1
+    base_addr: 0x60002000
+  - name: SPI2
+    peripheral: SPI2
+    base_addr: 0x60024000
+  - name: SPI3
+    peripheral: SPI2
+    base_addr: 0x60025000
+  - name: SYSTEM
+    peripheral: SYSTEM
+    base_addr: 0x600C0000
+  - name: SYSTIMER
+    peripheral: SYSTIMER
+    base_addr: 0x60023000
+  - name: TIMG0
+    peripheral: TIMG
+    base_addr: 0x6001F000
+  - name: TIMG1
+    peripheral: TIMG
+    base_addr: 0x60020000
+  - name: TWAI0
+    peripheral: TWAI
+    base_addr: 0x6002B000
+  - name: UART0
+    peripheral: UART
+    base_addr: 0x60000000
+  - name: UART1
+    peripheral: UART
+    base_addr: 0x60010000
+  - name: UART2
+    peripheral: UART
+    base_addr: 0x6002E000
+  - name: UHCI0
+    peripheral: UHCI
+    base_addr: 0x60014000
+  - name: UHCI1
+    peripheral: UHCI
+    base_addr: 0x6000C000
+  - name: USB0
+    peripheral: USB
+    base_addr: 0x60080000
+  - name: USB_DEVICE
+    peripheral: USB_DEVICE
+    base_addr: 0x60038000
+  - name: USB_WRAP
+    peripheral: USB_WRAP
+    base_addr: 0x60039000
+  - name: WCL
+    peripheral: WCL
+    base_addr: 0x600D0000
+  - name: XTS_AES
+    peripheral: XTS_AES
+    base_addr: 0x600CC000

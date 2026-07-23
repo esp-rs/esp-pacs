@@ -1,0 +1,286 @@
+peripheral_interrupts:
+  - name: WIFI_MAC
+    instance: INTERRUPT_CORE0
+    value: 0
+  - name: WIFI_NMI
+    instance: INTERRUPT_CORE0
+    value: 1
+  - name: WIFI_PWR
+    instance: INTERRUPT_CORE0
+    value: 2
+  - name: WIFI_BB
+    instance: INTERRUPT_CORE0
+    value: 3
+  - name: BT_MAC
+    instance: INTERRUPT_CORE0
+    value: 4
+  - name: BT_BB
+    instance: INTERRUPT_CORE0
+    value: 5
+  - name: BT_BB_NMI
+    instance: INTERRUPT_CORE0
+    value: 6
+  - name: RWBT
+    instance: INTERRUPT_CORE0
+    value: 7
+  - name: RWBLE
+    instance: INTERRUPT_CORE0
+    value: 8
+  - name: RWBT_NMI
+    instance: INTERRUPT_CORE0
+    value: 9
+  - name: RWBLE_NMI
+    instance: INTERRUPT_CORE0
+    value: 10
+  - name: SLC0
+    instance: INTERRUPT_CORE0
+    value: 11
+  - name: SLC1
+    instance: INTERRUPT_CORE0
+    value: 12
+  - name: UHCI0
+    instance: UHCI0
+    value: 13
+  - name: UHCI1
+    instance: UHCI0
+    value: 14
+  - name: TG0_T0_LEVEL
+    instance: TIMG0
+    value: 15
+  - name: TG0_T1_LEVEL
+    instance: TIMG0
+    value: 16
+  - name: TG0_WDT_LEVEL
+    instance: TIMG0
+    value: 17
+  - name: TG0_LACT_LEVEL
+    instance: TIMG0
+    value: 18
+  - name: TG1_T0_LEVEL
+    instance: TIMG1
+    value: 19
+  - name: TG1_T1_LEVEL
+    instance: TIMG1
+    value: 20
+  - name: TG1_WDT_LEVEL
+    instance: TIMG1
+    value: 21
+  - name: TG1_LACT_LEVEL
+    instance: TIMG1
+    value: 22
+  - name: GPIO
+    instance: GPIO
+    value: 23
+  - name: GPIO_NMI
+    instance: GPIO
+    value: 24
+  - name: GPIO_INTR_2
+    instance: GPIO
+    value: 25
+  - name: GPIO_NMI_2
+    instance: GPIO
+    value: 26
+  - name: DEDICATED_GPIO
+    instance: DEDICATED_GPIO
+    value: 27
+  - name: FROM_CPU_INTR0
+    instance: INTERRUPT_CORE0
+    value: 28
+  - name: FROM_CPU_INTR1
+    instance: INTERRUPT_CORE0
+    value: 29
+  - name: FROM_CPU_INTR2
+    instance: INTERRUPT_CORE0
+    value: 30
+  - name: FROM_CPU_INTR3
+    instance: INTERRUPT_CORE0
+    value: 31
+  - name: SPI1
+    instance: SPI1
+    value: 32
+  - name: SPI2
+    instance: SPI2
+    value: 33
+  - name: SPI3
+    instance: SPI3
+    value: 34
+  - name: I2S0
+    instance: I2S0
+    value: 35
+  - name: I2S1
+    instance: I2S0
+    value: 36
+  - name: UART0
+    instance: UART0
+    value: 37
+  - name: UART1
+    instance: UART1
+    value: 38
+  - name: UART2
+    instance: UART1
+    value: 39
+  - name: SDIO_HOST
+    instance: INTERRUPT_CORE0
+    value: 40
+  - name: MCPWM0
+    instance: MCPWM0
+    value: 41
+  - name: MCPWM1
+    instance: MCPWM0
+    value: 42
+  - name: MCPWM2
+    instance: MCPWM1
+    value: 43
+  - name: MCPWM3
+    instance: MCPWM1
+    value: 44
+  - name: LEDC
+    instance: LEDC
+    value: 45
+  - name: EFUSE
+    instance: EFUSE
+    value: 46
+  - name: TWAI0
+    instance: TWAI0
+    value: 47
+  - name: USB
+    instance: USB0
+    value: 48
+  - name: RTC_CORE
+    instance: RTC_CNTL
+    value: 49
+  - name: RMT
+    instance: RMT
+    value: 50
+  - name: PCNT
+    instance: PCNT
+    value: 51
+  - name: I2C_EXT0
+    instance: I2C0
+    value: 52
+  - name: I2C_EXT1
+    instance: I2C1
+    value: 53
+  - name: RSA
+    instance: RSA
+    value: 54
+  - name: SHA
+    instance: SHA
+    value: 55
+  - name: AES
+    instance: AES
+    value: 56
+  - name: SPI2_DMA
+    instance: SPI2
+    value: 57
+  - name: SPI3_DMA
+    instance: SPI3
+    value: 58
+  - name: WDT
+    instance: INTERRUPT_CORE0
+    value: 59
+  - name: TIMER1
+    instance: LEDC
+    value: 60
+  - name: TIMER2
+    instance: LEDC
+    value: 61
+  - name: TG0_T0_EDGE
+    instance: TIMG0
+    value: 62
+  - name: TG0_T1_EDGE
+    instance: TIMG0
+    value: 63
+  - name: TG0_WDT_EDGE
+    instance: TIMG0
+    value: 64
+  - name: TG0_LACT_EDGE
+    instance: TIMG0
+    value: 65
+  - name: TG1_T0_EDGE
+    instance: TIMG1
+    value: 66
+  - name: TG1_T1_EDGE
+    instance: TIMG1
+    value: 67
+  - name: TG1_WDT_EDGE
+    instance: TIMG1
+    value: 68
+  - name: TG1_LACT_EDGE
+    instance: TIMG1
+    value: 69
+  - name: CACHE_IA
+    instance: INTERRUPT_CORE0
+    value: 70
+  - name: SYSTIMER_TARGET0
+    instance: SYSTIMER
+    value: 71
+  - name: SYSTIMER_TARGET1
+    instance: SYSTIMER
+    value: 72
+  - name: SYSTIMER_TARGET2
+    instance: SYSTIMER
+    value: 73
+  - name: ASSIST_DEBUG
+    instance: ASSIST_DEBUG
+    value: 74
+  - name: PMS_PRO_IRAM0_ILG
+    instance: PMS
+    value: 75
+  - name: PMS_PRO_DRAM0_ILG
+    instance: PMS
+    value: 76
+  - name: PMS_PRO_DPORT_ILG
+    instance: PMS
+    value: 77
+  - name: PMS_PRO_AHB_ILG
+    instance: PMS
+    value: 78
+  - name: PMS_PRO_CACHE_ILG
+    instance: PMS
+    value: 79
+  - name: PMS_DMA_APB_I_ILG
+    instance: PMS
+    value: 80
+  - name: PMS_DMA_RX_I_ILG
+    instance: PMS
+    value: 81
+  - name: PMS_DMA_TX_I_ILG
+    instance: PMS
+    value: 82
+  - name: SPI0_REJECT_CACHE
+    instance: SPI0
+    value: 83
+  - name: DMA_COPY
+    instance: DMA
+    value: 84
+  - name: SPI4_DMA
+    instance: SPI4
+    value: 85
+  - name: SPI4
+    instance: SPI4
+    value: 86
+  - name: ICACHE_PRELOAD
+    instance: INTERRUPT_CORE0
+    value: 87
+  - name: DCACHE_PRELOAD
+    instance: INTERRUPT_CORE0
+    value: 88
+  - name: APB_ADC
+    instance: APB_SARADC
+    value: 89
+  - name: CRYPTO_DMA
+    instance: DMA
+    value: 90
+  - name: CPU_PERI_ERR
+    instance: INTERRUPT_CORE0
+    value: 91
+  - name: APB_PERI_ERR
+    instance: INTERRUPT_CORE0
+    value: 92
+  - name: DCACHE_SYNC
+    instance: INTERRUPT_CORE0
+    value: 93
+  - name: ICACHE_SYNC
+    instance: INTERRUPT_CORE0
+    value: 94

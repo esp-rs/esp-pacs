@@ -1,0 +1,208 @@
+peripheral_interrupts:
+  - name: WIFI_MAC
+    instance: DPORT
+    value: 0
+  - name: WIFI_NMI
+    instance: DPORT
+    value: 1
+  - name: WIFI_BB
+    instance: DPORT
+    value: 2
+  - name: BT_MAC
+    instance: DPORT
+    value: 3
+  - name: BT_BB
+    instance: DPORT
+    value: 4
+  - name: BT_BB_NMI
+    instance: DPORT
+    value: 5
+  - name: RWBT
+    instance: DPORT
+    value: 6
+  - name: RWBLE
+    instance: DPORT
+    value: 7
+  - name: RWBT_NMI
+    instance: DPORT
+    value: 8
+  - name: RWBLE_NMI
+    instance: DPORT
+    value: 9
+  - name: SLC0
+    instance: SLC0
+    value: 10
+  - name: SLC1
+    instance: SLC1
+    value: 11
+  - name: UHCI0
+    instance: UHCI0
+    value: 12
+  - name: UHCI1
+    instance: UHCI1
+    value: 13
+  - name: TG0_T0_LEVEL
+    instance: TIMG0
+    value: 14
+  - name: TG0_T1_LEVEL
+    instance: TIMG0
+    value: 15
+  - name: TG0_WDT_LEVEL
+    instance: TIMG0
+    value: 16
+  - name: TG0_LACT_LEVEL
+    instance: TIMG0
+    value: 17
+  - name: TG1_T0_LEVEL
+    instance: TIMG1
+    value: 18
+  - name: TG1_T1_LEVEL
+    instance: TIMG1
+    value: 19
+  - name: TG1_WDT_LEVEL
+    instance: TIMG1
+    value: 20
+  - name: TG1_LACT_LEVEL
+    instance: TIMG1
+    value: 21
+  - name: GPIO
+    instance: GPIO
+    value: 22
+  - name: GPIO_NMI
+    instance: GPIO
+    value: 23
+  - name: FROM_CPU_INTR0
+    instance: DPORT
+    value: 24
+  - name: FROM_CPU_INTR1
+    instance: DPORT
+    value: 25
+  - name: FROM_CPU_INTR2
+    instance: DPORT
+    value: 26
+  - name: FROM_CPU_INTR3
+    instance: DPORT
+    value: 27
+  - name: SPI0
+    instance: SPI0
+    value: 28
+  - name: SPI1
+    instance: SPI1
+    value: 29
+  - name: SPI2
+    instance: SPI2
+    value: 30
+  - name: SPI3
+    instance: SPI3
+    value: 31
+  - name: I2S0
+    instance: I2S0
+    value: 32
+  - name: I2S1
+    instance: I2S1
+    value: 33
+  - name: UART0
+    instance: UART0
+    value: 34
+  - name: UART1
+    instance: UART1
+    value: 35
+  - name: UART2
+    instance: UART2
+    value: 36
+  - name: SDIO_HOST
+    instance: DPORT
+    value: 37
+  - name: ETH_MAC
+    instance: DPORT
+    value: 38
+  - name: MCPWM0
+    instance: MCPWM0
+    value: 39
+  - name: MCPWM1
+    instance: MCPWM0
+    value: 40
+  - name: MCPWM2
+    instance: MCPWM0
+    value: 41
+  - name: MCPWM3
+    instance: MCPWM0
+    value: 42
+  - name: LEDC
+    instance: LEDC
+    value: 43
+  - name: EFUSE
+    instance: EFUSE
+    value: 44
+  - name: TWAI0
+    instance: TWAI0
+    value: 45
+  - name: RTC_CORE
+    instance: RTC_CNTL
+    value: 46
+  - name: RMT
+    instance: RMT
+    value: 47
+  - name: PCNT
+    instance: PCNT
+    value: 48
+  - name: I2C_EXT0
+    instance: I2C0
+    value: 49
+  - name: I2C_EXT1
+    instance: I2C1
+    value: 50
+  - name: RSA
+    instance: RSA
+    value: 51
+  - name: SPI1_DMA
+    instance: SPI1
+    value: 52
+  - name: SPI2_DMA
+    instance: SPI2
+    value: 53
+  - name: SPI3_DMA
+    instance: SPI3
+    value: 54
+  - name: WDT
+    instance: DPORT
+    value: 55
+  - name: TIMER1
+    instance: LEDC
+    value: 56
+  - name: TIMER2
+    instance: LEDC
+    value: 57
+  - name: TG0_T0_EDGE
+    instance: TIMG0
+    value: 58
+  - name: TG0_T1_EDGE
+    instance: TIMG0
+    value: 59
+  - name: TG0_WDT_EDGE
+    instance: TIMG0
+    value: 60
+  - name: TG0_LACT_EDGE
+    instance: TIMG0
+    value: 61
+  - name: TG1_T0_EDGE
+    instance: TIMG1
+    value: 62
+  - name: TG1_T1_EDGE
+    instance: TIMG1
+    value: 63
+  - name: TG1_WDT_EDGE
+    instance: TIMG1
+    value: 64
+  - name: TG1_LACT_EDGE
+    instance: TIMG1
+    value: 65
+  - name: MMU_IA
+    instance: DPORT
+    value: 66
+  - name: MPU_IA
+    instance: DPORT
+    value: 67
+  - name: CACHE_IA
+    instance: DPORT
+    value: 68

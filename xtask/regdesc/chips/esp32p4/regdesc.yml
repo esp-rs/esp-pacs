@@ -1,0 +1,97 @@
+---
+adc_reg.csv: {}
+aes_reg.csv: {}
+ahb_dma_reg.csv: {}
+ana_i2c_mst_reg.csv: {}
+assist_debug_reg.csv: {}
+axi_dma_reg.csv: {}
+bitscrambler_reg.csv: {}
+cache_reg.csv: {}
+core0_interrupt_reg.csv: {}
+core1_interrupt_reg.csv: {}
+dma2d_reg.csv: {}
+ds_reg.csv: {}
+ecc_mult_reg.csv:
+  name: ECC
+ecdsa_reg.csv: {}
+efuse_mem_reg.csv: {}
+gdma_reg.csv: {}
+gpio_reg.csv: {}
+gpio_sd_reg.csv: {}
+h264_dma_reg.csv: {}
+h264_reg.csv: {}
+hmac_reg.csv: {}
+hp_sys_clkrst_reg.csv: {}
+hp_sys_reg.csv:
+  name: HP_SYS
+huk_reg.csv: {}
+i2c_ext_reg.csv: {}
+i2s_reg.csv: {}
+i3c_mst_mem_reg.csv: {}
+i3c_mst_reg.csv: {}
+i3c_slv_reg.csv: {}
+icm_sys_qos_reg.csv: {}
+icm_sys_reg.csv: {}
+iomux_mspi_pin_reg.csv: {}
+iomux_reg.csv: {}
+isp_reg.csv: {}
+jpeg_reg.csv: {}
+keymng_reg.csv: {}
+l2mem_monitor_reg.csv: {}
+lcdcam_reg.csv: {}
+ledc_reg.csv: {}
+lp_analog_peri_reg.csv:
+  name: LP_ANA_PERI
+lp_aonclkrst_reg.csv:
+  name: LP_AON_CLKRST
+lp_gpio_reg.csv: {}
+lp_i2c_ext_reg.csv: {}
+lp_i2s_reg.csv: {}
+lp_intr_reg.csv: {}
+lp_iomux_reg.csv: {}
+lp_mailbox_reg.csv: {}
+lp_peri_reg.csv: {}
+lp_spi_reg.csv: {}
+lp_sys_reg.csv: {}
+lp_uart_reg.csv: {}
+mipi_csi_bridge_reg.csv: {}
+mipi_csi_host_reg.csv: {}
+mipi_dsi_bridge_reg.csv: {}
+mipi_dsi_host_reg.csv: {}
+parl_io_reg.csv: {}
+pau_reg.csv: {}
+pcnt_reg.csv: {}
+pmu_reg.csv: {}
+ppa_reg.csv: {}
+pvt_reg.csv: {}
+pwm_reg.csv:
+  name: MCPWM
+rmt_reg.csv: {}
+rsa_reg.csv: {}
+rtc_timer_reg.csv: {}
+rtc_wdt_reg.csv: {}
+rtcadc_reg.csv: {}
+rtclockcali_reg.csv: {}
+sdmmc_reg.csv: {}
+sha_reg.csv: {}
+soc_etm_reg.csv: {}
+spi1_mem_reg_s.csv: # TODO: am I using the correct file? (c/s)
+  name: SPI1
+spi2_reg_s.csv:
+  name: SPI2
+spi3_reg.csv:
+  name: SPI3
+spi_mem_reg_s.csv: # TODO: am I using the correct file? (c/s)
+  name: SPI0
+sys_timer_reg.csv: {}
+tcm_monitor_reg.csv: {}
+timers_reg.csv: {}
+touch_reg.csv: {}
+trace_reg.csv: {}
+tsens_reg.csv: {}
+twai_reg.csv: {}
+twaifd_reg.csv: {}
+uart_reg.csv: {}
+uhci_reg.csv: {}
+usb_device_reg.csv: {}
+usbwrap_reg.csv: {}

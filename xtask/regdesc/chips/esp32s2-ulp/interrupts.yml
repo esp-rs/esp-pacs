@@ -1,0 +1,28 @@
+peripheral_interrupts:
+  - name: TOUCH_DONE_INT
+    instance: SENS
+    value: 0
+  - name: TOUCH_INACTIVE_INT
+    instance: SENS
+    value: 1
+  - name: TOUCH_ACTIVE_INT
+    instance: SENS
+    value: 2
+  - name: SARADC1_DONE_INT
+    instance: SENS
+    value: 3
+  - name: SARADC2_DONE_INT
+    instance: SENS
+    value: 4
+  - name: TSENS_DONE_INT
+    instance: SENS
+    value: 5
+  - name: RISCV_START_INT
+    instance: RTC_CNTL
+    value: 6
+  - name: SW_INT
+    instance: RTC_CNTL
+    value: 7
+  - name: SWD_INT
+    instance: RTC_CNTL
+    value: 8
