@@ -1,0 +1,305 @@
+AXI_DMA:
+  OUT_CONF0_CH?:
+    _strip_end: "0"
+
+  IN_PRI_CH%s:
+    _modify:
+      RX_PRI_CH:
+        name: RX_PRI
+      RX_CH_ARB_WEIGH_CH:
+        name: RX_CH_ARB_WEIGH
+      RX_ARB_WEIGH_OPT_DIR_CH:
+        name: RX_ARB_WEIGH_OPT_DIR
+  IN_PERI_SEL_CH%s:
+    _modify:
+      PERI_IN_SEL_CH:
+        name: PERI_IN_SEL
+  OUT_PRI_CH%s:
+    _modify:
+      TX_PRI_CH:
+        name: TX_PRI
+      TX_CH_ARB_WEIGH_CH:
+        name: TX_CH_ARB_WEIGH
+      TX_ARB_WEIGH_OPT_DIR_CH:
+        name: TX_ARB_WEIGH_OPT_DIR
+  OUT_PERI_SEL_CH%s:
+    _modify:
+      PERI_OUT_SEL_CH:
+        name: PERI_OUT_SEL
+
+  _expand_array:
+    IN_INT_RAW_CH%s: {}
+    IN_INT_ST_CH%s: {}
+    IN_INT_ENA_CH%s: {}
+    IN_INT_CLR_CH%s: {}
+    IN_CONF0_CH%s: {}
+    IN_CONF1_CH%s: {}
+    INFIFO_STATUS_CH%s: {}
+    IN_POP_CH%s: {}
+    IN_LINK1_CH%s: {}
+    IN_LINK2_CH%s: {}
+    IN_STATE_CH%s: {}
+    IN_SUC_EOF_DES_ADDR_CH%s: {}
+    IN_ERR_EOF_DES_ADDR_CH%s: {}
+    IN_DSCR_CH%s: {}
+    IN_DSCR_BF0_CH%s: {}
+    IN_DSCR_BF1_CH%s: {}
+    IN_PRI_CH%s: {}
+    IN_PERI_SEL_CH%s: {}
+    IN_CRC_INIT_DATA_CH%s: {}
+    RX_CRC_WIDTH_CH%s: {}
+    IN_CRC_CLEAR_CH%s: {}
+    IN_CRC_FINAL_RESULT_CH%s: {}
+    RX_CRC_EN_WR_DATA_CH%s: {}
+    RX_CRC_EN_ADDR_CH%s: {}
+    RX_CRC_DATA_EN_WR_DATA_CH%s: {}
+    RX_CRC_DATA_EN_ADDR_CH%s: {}
+    OUT_INT_RAW_CH%s: {}
+    OUT_INT_ST_CH%s: {}
+    OUT_INT_ENA_CH%s: {}
+    OUT_INT_CLR_CH%s: {}
+    OUT_CONF1_CH%s: {}
+    OUTFIFO_STATUS_CH%s: {}
+    OUT_PUSH_CH%s: {}
+    OUT_LINK1_CH%s: {}
+    OUT_LINK2_CH%s: {}
+    OUT_STATE_CH%s: {}
+    OUT_EOF_DES_ADDR_CH%s: {}
+    OUT_EOF_BFR_DES_ADDR_CH%s: {}
+    OUT_DSCR_CH%s: {}
+    OUT_DSCR_BF0_CH%s: {}
+    OUT_DSCR_BF1_CH%s: {}
+    OUT_PRI_CH%s: {}
+    OUT_PERI_SEL_CH%s: {}
+    OUT_CRC_INIT_DATA_CH%s: {}
+    TX_CRC_WIDTH_CH%s: {}
+    OUT_CRC_CLEAR_CH%s: {}
+    OUT_CRC_FINAL_RESULT_CH%s: {}
+    TX_CRC_EN_WR_DATA_CH%s: {}
+    TX_CRC_EN_ADDR_CH%s: {}
+    TX_CRC_DATA_EN_WR_DATA_CH%s: {}
+    TX_CRC_DATA_EN_ADDR_CH%s: {}
+
+  _cluster:
+    IN_CH%s:
+      _cluster:
+        IN_INT:
+          IN_INT_RAW:
+            name: RAW
+          IN_INT_ST:
+            name: ST
+          IN_INT_ENA:
+            name: ENA
+          IN_INT_CLR:
+            name: CLR
+            _modify:
+              "*":
+                modifiedWriteValues: oneToClear
+
+        CRC:
+          IN_CRC_INIT_DATA: {}
+          RX_CRC_WIDTH: {}
+          IN_CRC_CLEAR: {}
+          IN_CRC_FINAL_RESULT: {}
+          RX_CRC_EN_WR_DATA: {}
+          RX_CRC_EN_ADDR: {}
+          RX_CRC_DATA_EN_WR_DATA: {}
+          RX_CRC_DATA_EN_ADDR: {}
+
+      IN_INT_RAW_CH?:
+        name: IN_INT_RAW
+        _strip_end: _CH_INT_RAW
+      IN_INT_ST_CH?:
+        name: IN_INT_ST
+        _strip_end: _CH_INT_ST
+      IN_INT_ENA_CH?:
+        name: IN_INT_ENA
+        _strip_end: _CH_INT_ENA
+      IN_INT_CLR_CH?:
+        name: IN_INT_CLR
+        _strip_end: _CH_INT_CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
+      IN_CONF0_CH?:
+        name: IN_CONF0
+        _strip_end: _CH
+      IN_CONF1_CH?:
+        name: IN_CONF1
+        _strip_end: _CH
+      INFIFO_STATUS_CH?:
+        name: INFIFO_STATUS
+        _strip_end: _CH
+      IN_POP_CH?:
+        name: IN_POP
+        _strip_end: _CH
+      IN_LINK1_CH?:
+        name: IN_LINK1
+        _strip_end: _CH
+      IN_LINK2_CH?:
+        name: IN_LINK2
+        _strip_end: _CH
+      IN_STATE_CH?:
+        name: IN_STATE
+        _strip_end: _CH
+      IN_SUC_EOF_DES_ADDR_CH?:
+        name: IN_SUC_EOF_DES_ADDR
+        _strip_end: _CH
+      IN_ERR_EOF_DES_ADDR_CH?:
+        name: IN_ERR_EOF_DES_ADDR
+        _strip_end: _CH
+      IN_DSCR_CH?:
+        name: IN_DSCR
+        _strip_end: _CH
+      IN_DSCR_BF0_CH?:
+        name: IN_DSCR_BF0
+        _strip_end: _CH
+      IN_DSCR_BF1_CH?:
+        name: IN_DSCR_BF1
+        _strip_end: _CH
+      IN_PRI_CH?:
+        name: IN_PRI
+        _strip_end: _CH
+      IN_PERI_SEL_CH?:
+        name: IN_PERI_SEL
+        _strip_end: _CH
+      IN_CRC_INIT_DATA_CH?:
+        name: IN_CRC_INIT_DATA
+        _strip_end: _CH
+      RX_CRC_WIDTH_CH?:
+        name: RX_CRC_WIDTH
+        _strip_end: _CH
+      IN_CRC_CLEAR_CH?:
+        name: IN_CRC_CLEAR
+        _strip_end: _CH
+      IN_CRC_FINAL_RESULT_CH?:
+        name: IN_CRC_FINAL_RESULT
+        _strip_end: _CH
+      RX_CRC_EN_WR_DATA_CH?:
+        name: RX_CRC_EN_WR_DATA
+        _strip_end: _CH
+      RX_CRC_EN_ADDR_CH?:
+        name: RX_CRC_EN_ADDR
+        _strip_end: _CH
+      RX_CRC_DATA_EN_WR_DATA_CH?:
+        name: RX_CRC_DATA_EN_WR_DATA
+        _strip_end: _CH
+      RX_CRC_DATA_EN_ADDR_CH?:
+        name: RX_CRC_DATA_EN_ADDR
+        _strip_end: _CH
+
+    OUT_CH%s:
+      _cluster:
+        OUT_INT:
+          OUT_INT_RAW:
+            name: RAW
+          OUT_INT_ST:
+            name: ST
+          OUT_INT_ENA:
+            name: ENA
+          OUT_INT_CLR:
+            name: CLR
+            _modify:
+              "*":
+                modifiedWriteValues: oneToClear
+
+        CRC:
+          OUT_CRC_INIT_DATA: {}
+          TX_CRC_WIDTH: {}
+          OUT_CRC_CLEAR: {}
+          OUT_CRC_FINAL_RESULT: {}
+          TX_CRC_EN_WR_DATA: {}
+          TX_CRC_EN_ADDR: {}
+          TX_CRC_DATA_EN_WR_DATA: {}
+          TX_CRC_DATA_EN_ADDR: {}
+
+      OUT_INT_RAW_CH?:
+        name: OUT_INT_RAW
+        _strip_end: _CH_INT_RAW
+      OUT_INT_ST_CH?:
+        name: OUT_INT_ST
+        _strip_end: _CH_INT_ST
+      OUT_INT_ENA_CH?:
+        name: OUT_INT_ENA
+        _strip_end: _CH_INT_ENA
+      OUT_INT_CLR_CH?:
+        name: OUT_INT_CLR
+        _strip_end: _CH_INT_CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
+      OUT_CONF0_CH?:
+        name: OUT_CONF0
+        _strip_end: [_CH, _CH0]
+      OUT_CONF1_CH?:
+        name: OUT_CONF1
+        _strip_end: _CH
+      OUTFIFO_STATUS_CH?:
+        name: OUTFIFO_STATUS
+        _strip_end: _CH
+      OUT_PUSH_CH?:
+        name: OUT_PUSH
+        _strip_end: _CH
+      OUT_LINK1_CH?:
+        name: OUT_LINK1
+        _strip_end: _CH
+      OUT_LINK2_CH?:
+        name: OUT_LINK2
+        _strip_end: _CH
+      OUT_STATE_CH?:
+        name: OUT_STATE
+        _strip_end: _CH
+      OUT_EOF_DES_ADDR_CH?:
+        name: OUT_EOF_DES_ADDR
+        _strip_end: _CH
+      OUT_EOF_BFR_DES_ADDR_CH?:
+        name: OUT_EOF_BFR_DES_ADDR
+        _strip_end: _CH
+      OUT_DSCR_CH?:
+        name: OUT_DSCR
+        _strip_end: _CH
+      OUT_DSCR_BF0_CH?:
+        name: OUT_DSCR_BF0
+        _strip_end: _CH
+      OUT_DSCR_BF1_CH?:
+        name: OUT_DSCR_BF1
+        _strip_end: _CH
+      OUT_PRI_CH?:
+        name: OUT_PRI
+        _strip_end: _CH
+      OUT_PERI_SEL_CH?:
+        name: OUT_PERI_SEL
+        _strip_end: _CH
+      OUT_CRC_INIT_DATA_CH?:
+        name: OUT_CRC_INIT_DATA
+        _strip_end: _CH
+      TX_CRC_WIDTH_CH?:
+        name: TX_CRC_WIDTH
+        _strip_end: _CH
+      OUT_CRC_CLEAR_CH?:
+        name: OUT_CRC_CLEAR
+        _strip_end: _CH
+      OUT_CRC_FINAL_RESULT_CH?:
+        name: OUT_CRC_FINAL_RESULT
+        _strip_end: _CH
+      TX_CRC_EN_WR_DATA_CH?:
+        name: TX_CRC_EN_WR_DATA
+        _strip_end: _CH
+      TX_CRC_EN_ADDR_CH?:
+        name: TX_CRC_EN_ADDR
+        _strip_end: _CH
+      TX_CRC_DATA_EN_WR_DATA_CH?:
+        name: TX_CRC_DATA_EN_WR_DATA
+        _strip_end: _CH
+      TX_CRC_DATA_EN_ADDR_CH?:
+        name: TX_CRC_DATA_EN_ADDR
+        _strip_end: _CH
+
+  IN_RESET_AVAIL_CH%s:
+    _strip_end: _CH
+  OUT_RESET_AVAIL_CH%s:
+    _strip_end: _CH
+  INFIFO_STATUS1_CH%s:
+    _strip_end: _CH
+  OUTFIFO_STATUS1_CH%s:
+    _strip_end: _CH
