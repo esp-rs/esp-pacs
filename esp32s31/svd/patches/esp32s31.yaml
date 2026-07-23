@@ -21,11 +21,15 @@ _include:
   - "_modem_lpcon.yml"
   - "_i2c_ana_mst.yml"
   - "_ieee802154.yml"
+  - "_axi_dma.yml"
   - "../../../common_patches/ieee802154.yaml"
 
 _modify:
   "AHB_DMA,AXI_DMA":
     groupName: DMA
+  SPI3:
+    derivedFrom: SPI2
+    baseAddress: 0x20390000
   LP_ANA_PERI:
     name: LP_ANA
     groupName: LP_ANA

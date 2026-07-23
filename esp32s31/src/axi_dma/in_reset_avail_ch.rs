@@ -1,19 +1,19 @@
 #[doc = "Register `IN_RESET_AVAIL_CH%s` reader"]
 pub type R = crate::R<IN_RESET_AVAIL_CH_SPEC>;
-#[doc = "Field `IN_RESET_AVAIL_CH` reader - rx chan0 reset valid reg."]
-pub type IN_RESET_AVAIL_CH_R = crate::BitReader;
+#[doc = "Field `IN_RESET_AVAIL` reader - rx chan0 reset valid reg."]
+pub type IN_RESET_AVAIL_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - rx chan0 reset valid reg."]
     #[inline(always)]
-    pub fn in_reset_avail_ch(&self) -> IN_RESET_AVAIL_CH_R {
-        IN_RESET_AVAIL_CH_R::new((self.bits & 1) != 0)
+    pub fn in_reset_avail(&self) -> IN_RESET_AVAIL_R {
+        IN_RESET_AVAIL_R::new((self.bits & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_RESET_AVAIL_CH")
-            .field("in_reset_avail_ch", &self.in_reset_avail_ch())
+            .field("in_reset_avail", &self.in_reset_avail())
             .finish()
     }
 }
