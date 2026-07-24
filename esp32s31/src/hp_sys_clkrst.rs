@@ -36,10 +36,7 @@ pub struct RegisterBlock {
     ahb_pdma_ctrl0: AHB_PDMA_CTRL0,
     regdma_ctrl0: REGDMA_CTRL0,
     uhci_ctrl0: UHCI_CTRL0,
-    uart0_ctrl0: UART0_CTRL0,
-    uart1_ctrl0: UART1_CTRL0,
-    uart2_ctrl0: UART2_CTRL0,
-    uart3_ctrl0: UART3_CTRL0,
+    uart_ctrl0: [UART_CTRL0; 4],
     parlio_ctrl0: PARLIO_CTRL0,
     parlio_rx_ctrl0: PARLIO_RX_CTRL0,
     parlio_tx_ctrl0: PARLIO_TX_CTRL0,
@@ -81,7 +78,7 @@ pub struct RegisterBlock {
     mcpwm3_ctrl0: MCPWM3_CTRL0,
     intrmtx_ctrl0: INTRMTX_CTRL0,
     pcnt_ctrl0: PCNT_CTRL0,
-    _reserved79: [u8; 0x08],
+    _reserved76: [u8; 0x08],
     usb_device_ctrl0: USB_DEVICE_CTRL0,
     ledc_ctrl0: LEDC_CTRL0,
     lcdcam_ctrl0: LCDCAM_CTRL0,
@@ -113,7 +110,7 @@ pub struct RegisterBlock {
     cordic_ctrl0: CORDIC_CTRL0,
     zero_det_ctrl0: ZERO_DET_CTRL0,
     cordic_ctrl1: CORDIC_CTRL1,
-    _reserved110: [u8; 0x08],
+    _reserved107: [u8; 0x08],
     clk_pwr_decrease: CLK_PWR_DECREASE,
     cnnt_iomux_ctrl0: CNNT_IOMUX_CTRL0,
     hp_i2cmst_ctrl0: HP_I2CMST_CTRL0,
@@ -300,25 +297,16 @@ impl RegisterBlock {
     pub const fn uhci_ctrl0(&self) -> &UHCI_CTRL0 {
         &self.uhci_ctrl0
     }
-    #[doc = "0x88 - need_des"]
+    #[doc = "0x88..0x98 - need_des"]
     #[inline(always)]
-    pub const fn uart0_ctrl0(&self) -> &UART0_CTRL0 {
-        &self.uart0_ctrl0
+    pub const fn uart_ctrl0(&self, n: usize) -> &UART_CTRL0 {
+        &self.uart_ctrl0[n]
     }
-    #[doc = "0x8c - need_des"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x88..0x98 - need_des"]
     #[inline(always)]
-    pub const fn uart1_ctrl0(&self) -> &UART1_CTRL0 {
-        &self.uart1_ctrl0
-    }
-    #[doc = "0x90 - need_des"]
-    #[inline(always)]
-    pub const fn uart2_ctrl0(&self) -> &UART2_CTRL0 {
-        &self.uart2_ctrl0
-    }
-    #[doc = "0x94 - need_des"]
-    #[inline(always)]
-    pub const fn uart3_ctrl0(&self) -> &UART3_CTRL0 {
-        &self.uart3_ctrl0
+    pub fn uart_ctrl0_iter(&self) -> impl Iterator<Item = &UART_CTRL0> {
+        self.uart_ctrl0.iter()
     }
     #[doc = "0x98 - need_des"]
     #[inline(always)]
@@ -887,22 +875,10 @@ pub mod regdma_ctrl0;
 pub type UHCI_CTRL0 = crate::Reg<uhci_ctrl0::UHCI_CTRL0_SPEC>;
 #[doc = "need_des"]
 pub mod uhci_ctrl0;
-#[doc = "UART0_CTRL0 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`uart0_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart0_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart0_ctrl0`] module"]
-pub type UART0_CTRL0 = crate::Reg<uart0_ctrl0::UART0_CTRL0_SPEC>;
+#[doc = "UART_CTRL0 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`uart_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart_ctrl0`] module"]
+pub type UART_CTRL0 = crate::Reg<uart_ctrl0::UART_CTRL0_SPEC>;
 #[doc = "need_des"]
-pub mod uart0_ctrl0;
-#[doc = "UART1_CTRL0 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`uart1_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart1_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart1_ctrl0`] module"]
-pub type UART1_CTRL0 = crate::Reg<uart1_ctrl0::UART1_CTRL0_SPEC>;
-#[doc = "need_des"]
-pub mod uart1_ctrl0;
-#[doc = "UART2_CTRL0 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`uart2_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart2_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart2_ctrl0`] module"]
-pub type UART2_CTRL0 = crate::Reg<uart2_ctrl0::UART2_CTRL0_SPEC>;
-#[doc = "need_des"]
-pub mod uart2_ctrl0;
-#[doc = "UART3_CTRL0 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`uart3_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart3_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart3_ctrl0`] module"]
-pub type UART3_CTRL0 = crate::Reg<uart3_ctrl0::UART3_CTRL0_SPEC>;
-#[doc = "need_des"]
-pub mod uart3_ctrl0;
+pub mod uart_ctrl0;
 #[doc = "PARLIO_CTRL0 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`parlio_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`parlio_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@parlio_ctrl0`] module"]
 pub type PARLIO_CTRL0 = crate::Reg<parlio_ctrl0::PARLIO_CTRL0_SPEC>;
 #[doc = "need_des"]

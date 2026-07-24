@@ -6,3 +6,10 @@ HP_SYS_CLKRST:
     _modify:
       SOC_CLK_UPDATE:
         name: SOC_CLK_DIV_UPDATE
+
+  UART?_CTRL0:
+    _strip: UART?_
+
+  _array:
+    UART?_CTRL0:
+      name: UART_CTRL0%s

@@ -4,6 +4,9 @@ HP_SYS:
   "*":
     _strip: "HP_"
 
+  UART?_MEM_LP_CTRL:
+    _strip: UART?_
+
   _modify:
     CPU_INT_FROM_CPU_0:
       name: CPU_INTR_FROM_CPU_0
