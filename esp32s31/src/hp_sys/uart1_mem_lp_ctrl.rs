@@ -2,60 +2,60 @@
 pub type R = crate::R<UART1_MEM_LP_CTRL_SPEC>;
 #[doc = "Register `UART1_MEM_LP_CTRL` writer"]
 pub type W = crate::W<UART1_MEM_LP_CTRL_SPEC>;
-#[doc = "Field `UART1_MEM_LP_MODE` reader - Configures uart1 memory low power mode in low power stage.\\\\ 0(default): deep sleep\\\\ 1: light sleep\\\\ 2: shut down\\\\ 3: disable low power stage\\\\"]
-pub type UART1_MEM_LP_MODE_R = crate::FieldReader;
-#[doc = "Field `UART1_MEM_LP_MODE` writer - Configures uart1 memory low power mode in low power stage.\\\\ 0(default): deep sleep\\\\ 1: light sleep\\\\ 2: shut down\\\\ 3: disable low power stage\\\\"]
-pub type UART1_MEM_LP_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `UART1_MEM_LP_EN` reader - Set this bit to power down uart1 memory."]
-pub type UART1_MEM_LP_EN_R = crate::BitReader;
-#[doc = "Field `UART1_MEM_LP_EN` writer - Set this bit to power down uart1 memory."]
-pub type UART1_MEM_LP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `UART1_MEM_FORCE_CTRL` reader - Set this bit to force software control uart1 memory, disbale hardware control."]
-pub type UART1_MEM_FORCE_CTRL_R = crate::BitReader;
-#[doc = "Field `UART1_MEM_FORCE_CTRL` writer - Set this bit to force software control uart1 memory, disbale hardware control."]
-pub type UART1_MEM_FORCE_CTRL_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MEM_LP_MODE` reader - Configures uart1 memory low power mode in low power stage.\\\\ 0(default): deep sleep\\\\ 1: light sleep\\\\ 2: shut down\\\\ 3: disable low power stage\\\\"]
+pub type MEM_LP_MODE_R = crate::FieldReader;
+#[doc = "Field `MEM_LP_MODE` writer - Configures uart1 memory low power mode in low power stage.\\\\ 0(default): deep sleep\\\\ 1: light sleep\\\\ 2: shut down\\\\ 3: disable low power stage\\\\"]
+pub type MEM_LP_MODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `MEM_LP_EN` reader - Set this bit to power down uart1 memory."]
+pub type MEM_LP_EN_R = crate::BitReader;
+#[doc = "Field `MEM_LP_EN` writer - Set this bit to power down uart1 memory."]
+pub type MEM_LP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MEM_FORCE_CTRL` reader - Set this bit to force software control uart1 memory, disbale hardware control."]
+pub type MEM_FORCE_CTRL_R = crate::BitReader;
+#[doc = "Field `MEM_FORCE_CTRL` writer - Set this bit to force software control uart1 memory, disbale hardware control."]
+pub type MEM_FORCE_CTRL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - Configures uart1 memory low power mode in low power stage.\\\\ 0(default): deep sleep\\\\ 1: light sleep\\\\ 2: shut down\\\\ 3: disable low power stage\\\\"]
     #[inline(always)]
-    pub fn uart1_mem_lp_mode(&self) -> UART1_MEM_LP_MODE_R {
-        UART1_MEM_LP_MODE_R::new((self.bits & 3) as u8)
+    pub fn mem_lp_mode(&self) -> MEM_LP_MODE_R {
+        MEM_LP_MODE_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2 - Set this bit to power down uart1 memory."]
     #[inline(always)]
-    pub fn uart1_mem_lp_en(&self) -> UART1_MEM_LP_EN_R {
-        UART1_MEM_LP_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn mem_lp_en(&self) -> MEM_LP_EN_R {
+        MEM_LP_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set this bit to force software control uart1 memory, disbale hardware control."]
     #[inline(always)]
-    pub fn uart1_mem_force_ctrl(&self) -> UART1_MEM_FORCE_CTRL_R {
-        UART1_MEM_FORCE_CTRL_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn mem_force_ctrl(&self) -> MEM_FORCE_CTRL_R {
+        MEM_FORCE_CTRL_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART1_MEM_LP_CTRL")
-            .field("uart1_mem_lp_mode", &self.uart1_mem_lp_mode())
-            .field("uart1_mem_lp_en", &self.uart1_mem_lp_en())
-            .field("uart1_mem_force_ctrl", &self.uart1_mem_force_ctrl())
+            .field("mem_lp_mode", &self.mem_lp_mode())
+            .field("mem_lp_en", &self.mem_lp_en())
+            .field("mem_force_ctrl", &self.mem_force_ctrl())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:1 - Configures uart1 memory low power mode in low power stage.\\\\ 0(default): deep sleep\\\\ 1: light sleep\\\\ 2: shut down\\\\ 3: disable low power stage\\\\"]
     #[inline(always)]
-    pub fn uart1_mem_lp_mode(&mut self) -> UART1_MEM_LP_MODE_W<'_, UART1_MEM_LP_CTRL_SPEC> {
-        UART1_MEM_LP_MODE_W::new(self, 0)
+    pub fn mem_lp_mode(&mut self) -> MEM_LP_MODE_W<'_, UART1_MEM_LP_CTRL_SPEC> {
+        MEM_LP_MODE_W::new(self, 0)
     }
     #[doc = "Bit 2 - Set this bit to power down uart1 memory."]
     #[inline(always)]
-    pub fn uart1_mem_lp_en(&mut self) -> UART1_MEM_LP_EN_W<'_, UART1_MEM_LP_CTRL_SPEC> {
-        UART1_MEM_LP_EN_W::new(self, 2)
+    pub fn mem_lp_en(&mut self) -> MEM_LP_EN_W<'_, UART1_MEM_LP_CTRL_SPEC> {
+        MEM_LP_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to force software control uart1 memory, disbale hardware control."]
     #[inline(always)]
-    pub fn uart1_mem_force_ctrl(&mut self) -> UART1_MEM_FORCE_CTRL_W<'_, UART1_MEM_LP_CTRL_SPEC> {
-        UART1_MEM_FORCE_CTRL_W::new(self, 3)
+    pub fn mem_force_ctrl(&mut self) -> MEM_FORCE_CTRL_W<'_, UART1_MEM_LP_CTRL_SPEC> {
+        MEM_FORCE_CTRL_W::new(self, 3)
     }
 }
 #[doc = "uart memory power control register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart1_mem_lp_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart1_mem_lp_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
