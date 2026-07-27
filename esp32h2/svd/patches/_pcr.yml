@@ -1,3 +1,7 @@
 PCR:
   RMT_SCLK_CONF:
     _strip: "RMT_"
+  IOMUX_CLK_CONF:
+    _modify:
+      IOMUX_FUNC_CLK_SEL:
+        description: "Select clock source. 0: XTAL, 1: RC_FAST, 2: PLL_F48M, 3: No clock source."
