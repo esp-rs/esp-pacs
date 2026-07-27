@@ -10,6 +10,11 @@ HP_SYS_CLKRST:
   UART?_CTRL0:
     _strip: UART?_
 
+  I2C?_CTRL0:
+    _strip: I2C?_
+
   _array:
     UART?_CTRL0:
       name: UART_CTRL0%s
+    I2C?_CTRL0:
+      name: I2C_CTRL0%s
