@@ -54,8 +54,7 @@ pub struct RegisterBlock {
     dsi_phy_ctrl0: DSI_PHY_CTRL0,
     dsi_dpi_ctrl0: DSI_DPI_CTRL0,
     mspi_pad_ctrl0: MSPI_PAD_CTRL0,
-    i2c0_ctrl0: I2C0_CTRL0,
-    i2c1_ctrl0: I2C1_CTRL0,
+    i2c_ctrl0: [I2C_CTRL0; 2],
     i2s0_ctrl0: I2S0_CTRL0,
     i2s0_rx_ctrl0: I2S0_RX_CTRL0,
     i2s0_rx_div_ctrl0: I2S0_RX_DIV_CTRL0,
@@ -78,7 +77,7 @@ pub struct RegisterBlock {
     mcpwm3_ctrl0: MCPWM3_CTRL0,
     intrmtx_ctrl0: INTRMTX_CTRL0,
     pcnt_ctrl0: PCNT_CTRL0,
-    _reserved76: [u8; 0x08],
+    _reserved75: [u8; 0x08],
     usb_device_ctrl0: USB_DEVICE_CTRL0,
     ledc_ctrl0: LEDC_CTRL0,
     lcdcam_ctrl0: LCDCAM_CTRL0,
@@ -110,7 +109,7 @@ pub struct RegisterBlock {
     cordic_ctrl0: CORDIC_CTRL0,
     zero_det_ctrl0: ZERO_DET_CTRL0,
     cordic_ctrl1: CORDIC_CTRL1,
-    _reserved107: [u8; 0x08],
+    _reserved106: [u8; 0x08],
     clk_pwr_decrease: CLK_PWR_DECREASE,
     cnnt_iomux_ctrl0: CNNT_IOMUX_CTRL0,
     hp_i2cmst_ctrl0: HP_I2CMST_CTRL0,
@@ -393,15 +392,16 @@ impl RegisterBlock {
     pub const fn mspi_pad_ctrl0(&self) -> &MSPI_PAD_CTRL0 {
         &self.mspi_pad_ctrl0
     }
-    #[doc = "0xdc - need_des"]
+    #[doc = "0xdc..0xe4 - need_des"]
     #[inline(always)]
-    pub const fn i2c0_ctrl0(&self) -> &I2C0_CTRL0 {
-        &self.i2c0_ctrl0
+    pub const fn i2c_ctrl0(&self, n: usize) -> &I2C_CTRL0 {
+        &self.i2c_ctrl0[n]
     }
-    #[doc = "0xe0 - need_des"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xdc..0xe4 - need_des"]
     #[inline(always)]
-    pub const fn i2c1_ctrl0(&self) -> &I2C1_CTRL0 {
-        &self.i2c1_ctrl0
+    pub fn i2c_ctrl0_iter(&self) -> impl Iterator<Item = &I2C_CTRL0> {
+        self.i2c_ctrl0.iter()
     }
     #[doc = "0xe4 - need_des"]
     #[inline(always)]
@@ -947,14 +947,10 @@ pub mod dsi_dpi_ctrl0;
 pub type MSPI_PAD_CTRL0 = crate::Reg<mspi_pad_ctrl0::MSPI_PAD_CTRL0_SPEC>;
 #[doc = "need_des"]
 pub mod mspi_pad_ctrl0;
-#[doc = "I2C0_CTRL0 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c0_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c0_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c0_ctrl0`] module"]
-pub type I2C0_CTRL0 = crate::Reg<i2c0_ctrl0::I2C0_CTRL0_SPEC>;
+#[doc = "I2C_CTRL0 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c_ctrl0`] module"]
+pub type I2C_CTRL0 = crate::Reg<i2c_ctrl0::I2C_CTRL0_SPEC>;
 #[doc = "need_des"]
-pub mod i2c0_ctrl0;
-#[doc = "I2C1_CTRL0 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c1_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c1_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c1_ctrl0`] module"]
-pub type I2C1_CTRL0 = crate::Reg<i2c1_ctrl0::I2C1_CTRL0_SPEC>;
-#[doc = "need_des"]
-pub mod i2c1_ctrl0;
+pub mod i2c_ctrl0;
 #[doc = "I2S0_CTRL0 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`i2s0_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2s0_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2s0_ctrl0`] module"]
 pub type I2S0_CTRL0 = crate::Reg<i2s0_ctrl0::I2S0_CTRL0_SPEC>;
 #[doc = "need_des"]
