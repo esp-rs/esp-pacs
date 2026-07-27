@@ -7,6 +7,10 @@ HP_SYS:
   UART?_MEM_LP_CTRL:
     _strip: UART?_
 
+  _derive:
+    UART[2-3]_MEM_LP_CTRL:
+      _from: UART1_MEM_LP_CTRL
+
   _modify:
     CPU_INT_FROM_CPU_0:
       name: CPU_INTR_FROM_CPU_0
