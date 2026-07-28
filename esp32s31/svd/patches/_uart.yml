@@ -1,4 +1,4 @@
-"*UART*":
+"UART*":
   CLK_CONF:
     _modify:
       RX_SCLK_EN:
