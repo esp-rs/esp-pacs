@@ -12,7 +12,7 @@ impl W {}
 #[doc = "The memory that stores J0\n\nYou can [`read`](crate::Reg::read) this register and get [`j0_mem::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`j0_mem::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct J0_MEM_SPEC;
 impl crate::RegisterSpec for J0_MEM_SPEC {
-    type Ux = u8;
+    type Ux = u32;
 }
 #[doc = "`read()` method returns [`j0_mem::R`](R) reader structure"]
 impl crate::Readable for J0_MEM_SPEC {}
