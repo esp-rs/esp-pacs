@@ -870,10 +870,8 @@ pub mod prdyn_st;
 pub type ICM_CFG = crate::Reg<icm_cfg::ICM_CFG_SPEC>;
 #[doc = "hp system axi icm ctrl register"]
 pub mod icm_cfg;
-#[doc = "UART3_MEM_LP_CTRL (rw) register accessor: uart memory power control register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart3_mem_lp_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart3_mem_lp_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart3_mem_lp_ctrl`] module"]
-pub type UART3_MEM_LP_CTRL = crate::Reg<uart3_mem_lp_ctrl::UART3_MEM_LP_CTRL_SPEC>;
-#[doc = "uart memory power control register"]
-pub mod uart3_mem_lp_ctrl;
+pub use uart0_mem_lp_ctrl as uart3_mem_lp_ctrl;
+pub use UART0_MEM_LP_CTRL as UART3_MEM_LP_CTRL;
 #[doc = "RMT_MEM_LP_CTRL (rw) register accessor: rmt memory power control register\n\nYou can [`read`](crate::Reg::read) this register and get [`rmt_mem_lp_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rmt_mem_lp_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rmt_mem_lp_ctrl`] module"]
 pub type RMT_MEM_LP_CTRL = crate::Reg<rmt_mem_lp_ctrl::RMT_MEM_LP_CTRL_SPEC>;
 #[doc = "rmt memory power control register"]
@@ -974,14 +972,10 @@ pub mod peri1_timeout_uid;
 pub type UART0_MEM_LP_CTRL = crate::Reg<uart0_mem_lp_ctrl::UART0_MEM_LP_CTRL_SPEC>;
 #[doc = "uart memory power control register"]
 pub mod uart0_mem_lp_ctrl;
-#[doc = "UART1_MEM_LP_CTRL (rw) register accessor: uart memory power control register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart1_mem_lp_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart1_mem_lp_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart1_mem_lp_ctrl`] module"]
-pub type UART1_MEM_LP_CTRL = crate::Reg<uart1_mem_lp_ctrl::UART1_MEM_LP_CTRL_SPEC>;
-#[doc = "uart memory power control register"]
-pub mod uart1_mem_lp_ctrl;
-#[doc = "UART2_MEM_LP_CTRL (rw) register accessor: uart memory power control register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart2_mem_lp_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart2_mem_lp_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart2_mem_lp_ctrl`] module"]
-pub type UART2_MEM_LP_CTRL = crate::Reg<uart2_mem_lp_ctrl::UART2_MEM_LP_CTRL_SPEC>;
-#[doc = "uart memory power control register"]
-pub mod uart2_mem_lp_ctrl;
+pub use uart0_mem_lp_ctrl as uart1_mem_lp_ctrl;
+pub use uart0_mem_lp_ctrl as uart2_mem_lp_ctrl;
+pub use UART0_MEM_LP_CTRL as UART1_MEM_LP_CTRL;
+pub use UART0_MEM_LP_CTRL as UART2_MEM_LP_CTRL;
 #[doc = "LEDC1_MEM_LP_CTRL (rw) register accessor: ledc1 memory power control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ledc1_mem_lp_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ledc1_mem_lp_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ledc1_mem_lp_ctrl`] module"]
 pub type LEDC1_MEM_LP_CTRL = crate::Reg<ledc1_mem_lp_ctrl::LEDC1_MEM_LP_CTRL_SPEC>;
 #[doc = "ledc1 memory power control register"]
