@@ -17,12 +17,12 @@ pub struct RegisterBlock {
     dma_rx_reset: DMA_RX_RESET,
     dma_tx_reset: DMA_TX_RESET,
     free: FREE,
-    _3_shake_length: _3_SHAKE_LENGTH,
-    _2_sm_3_h_mem: [_2_SM_3_H_MEM; 64],
-    _2_sm_3_m_mem: [_2_SM_3_M_MEM; 128],
-    _3_h_mem: [_3_H_MEM; 200],
+    sha3_shake_length: SHA3_SHAKE_LENGTH,
+    h_mem: [H_MEM; 16],
+    m_mem: [M_MEM; 32],
+    sha3_h_mem: [SHA3_H_MEM; 50],
     _reserved19: [u8; 0x38],
-    _3_m_mem: [_3_M_MEM; 200],
+    sha3_m_mem: [SHA3_M_MEM; 50],
 }
 impl RegisterBlock {
     #[doc = "0x00 - Configures SHA algorithm"]
@@ -102,52 +102,52 @@ impl RegisterBlock {
     }
     #[doc = "0x3c - DMA configuration register 3."]
     #[inline(always)]
-    pub const fn _3_shake_length(&self) -> &_3_SHAKE_LENGTH {
-        &self._3_shake_length
+    pub const fn sha3_shake_length(&self) -> &SHA3_SHAKE_LENGTH {
+        &self.sha3_shake_length
     }
     #[doc = "0x40..0x80 - SHA1, SHA2-256, SM3 H memory which contains intermediate hash or final hash. \\\\ SHA1, SHA2-256, SM3 : 0x00~0x20 (R/W) \\\\ SHA2-512 : 0x00~0x40 (R/W) \\\\"]
     #[inline(always)]
-    pub const fn _2_sm_3_h_mem(&self, n: usize) -> &_2_SM_3_H_MEM {
-        &self._2_sm_3_h_mem[n]
+    pub const fn h_mem(&self, n: usize) -> &H_MEM {
+        &self.h_mem[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x40..0x80 - SHA1, SHA2-256, SM3 H memory which contains intermediate hash or final hash. \\\\ SHA1, SHA2-256, SM3 : 0x00~0x20 (R/W) \\\\ SHA2-512 : 0x00~0x40 (R/W) \\\\"]
     #[inline(always)]
-    pub fn _2_sm_3_h_mem_iter(&self) -> impl Iterator<Item = &_2_SM_3_H_MEM> {
-        self._2_sm_3_h_mem.iter()
+    pub fn h_mem_iter(&self) -> impl Iterator<Item = &H_MEM> {
+        self.h_mem.iter()
     }
     #[doc = "0x80..0x100 - SHA1, SHA2-256, SM3 M memory which contains message. \\\\ SHA1, SHA2-256, SM3 : 0x00~0x40 \\\\ SHA2-512 : 0x00~0x80 \\\\"]
     #[inline(always)]
-    pub const fn _2_sm_3_m_mem(&self, n: usize) -> &_2_SM_3_M_MEM {
-        &self._2_sm_3_m_mem[n]
+    pub const fn m_mem(&self, n: usize) -> &M_MEM {
+        &self.m_mem[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x80..0x100 - SHA1, SHA2-256, SM3 M memory which contains message. \\\\ SHA1, SHA2-256, SM3 : 0x00~0x40 \\\\ SHA2-512 : 0x00~0x80 \\\\"]
     #[inline(always)]
-    pub fn _2_sm_3_m_mem_iter(&self) -> impl Iterator<Item = &_2_SM_3_M_MEM> {
-        self._2_sm_3_m_mem.iter()
+    pub fn m_mem_iter(&self) -> impl Iterator<Item = &M_MEM> {
+        self.m_mem.iter()
     }
     #[doc = "0x100..0x1c8 - SHA3, SHAKE H memory which contains intermediate hash or final hash."]
     #[inline(always)]
-    pub const fn _3_h_mem(&self, n: usize) -> &_3_H_MEM {
-        &self._3_h_mem[n]
+    pub const fn sha3_h_mem(&self, n: usize) -> &SHA3_H_MEM {
+        &self.sha3_h_mem[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x100..0x1c8 - SHA3, SHAKE H memory which contains intermediate hash or final hash."]
     #[inline(always)]
-    pub fn _3_h_mem_iter(&self) -> impl Iterator<Item = &_3_H_MEM> {
-        self._3_h_mem.iter()
+    pub fn sha3_h_mem_iter(&self) -> impl Iterator<Item = &SHA3_H_MEM> {
+        self.sha3_h_mem.iter()
     }
     #[doc = "0x200..0x2c8 - SHA3, SHAKE M memory which contains message."]
     #[inline(always)]
-    pub const fn _3_m_mem(&self, n: usize) -> &_3_M_MEM {
-        &self._3_m_mem[n]
+    pub const fn sha3_m_mem(&self, n: usize) -> &SHA3_M_MEM {
+        &self.sha3_m_mem[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x200..0x2c8 - SHA3, SHAKE M memory which contains message."]
     #[inline(always)]
-    pub fn _3_m_mem_iter(&self) -> impl Iterator<Item = &_3_M_MEM> {
-        self._3_m_mem.iter()
+    pub fn sha3_m_mem_iter(&self) -> impl Iterator<Item = &SHA3_M_MEM> {
+        self.sha3_m_mem.iter()
     }
 }
 #[doc = "MODE (rw) register accessor: Configures SHA algorithm\n\nYou can [`read`](crate::Reg::read) this register and get [`mode::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mode::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mode`] module"]
@@ -210,23 +210,23 @@ pub mod dma_tx_reset;
 pub type FREE = crate::Reg<free::FREE_SPEC>;
 #[doc = "SHA free state"]
 pub mod free;
-#[doc = "_3_SHAKE_LENGTH (rw) register accessor: DMA configuration register 3.\n\nYou can [`read`](crate::Reg::read) this register and get [`_3_shake_length::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`_3_shake_length::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@_3_shake_length`] module"]
-pub type _3_SHAKE_LENGTH = crate::Reg<_3_shake_length::_3_SHAKE_LENGTH_SPEC>;
+#[doc = "SHA3_SHAKE_LENGTH (rw) register accessor: DMA configuration register 3.\n\nYou can [`read`](crate::Reg::read) this register and get [`sha3_shake_length::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sha3_shake_length::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha3_shake_length`] module"]
+pub type SHA3_SHAKE_LENGTH = crate::Reg<sha3_shake_length::SHA3_SHAKE_LENGTH_SPEC>;
 #[doc = "DMA configuration register 3."]
-pub mod _3_shake_length;
-#[doc = "_2_SM_3_H_MEM (rw) register accessor: SHA1, SHA2-256, SM3 H memory which contains intermediate hash or final hash. \\\\ SHA1, SHA2-256, SM3 : 0x00~0x20 (R/W) \\\\ SHA2-512 : 0x00~0x40 (R/W) \\\\\n\nYou can [`read`](crate::Reg::read) this register and get [`_2_sm_3_h_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`_2_sm_3_h_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@_2_sm_3_h_mem`] module"]
-pub type _2_SM_3_H_MEM = crate::Reg<_2_sm_3_h_mem::_2_SM_3_H_MEM_SPEC>;
+pub mod sha3_shake_length;
+#[doc = "H_MEM (rw) register accessor: SHA1, SHA2-256, SM3 H memory which contains intermediate hash or final hash. \\\\ SHA1, SHA2-256, SM3 : 0x00~0x20 (R/W) \\\\ SHA2-512 : 0x00~0x40 (R/W) \\\\\n\nYou can [`read`](crate::Reg::read) this register and get [`h_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`h_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@h_mem`] module"]
+pub type H_MEM = crate::Reg<h_mem::H_MEM_SPEC>;
 #[doc = "SHA1, SHA2-256, SM3 H memory which contains intermediate hash or final hash. \\\\ SHA1, SHA2-256, SM3 : 0x00~0x20 (R/W) \\\\ SHA2-512 : 0x00~0x40 (R/W) \\\\"]
-pub mod _2_sm_3_h_mem;
-#[doc = "_2_SM_3_M_MEM (rw) register accessor: SHA1, SHA2-256, SM3 M memory which contains message. \\\\ SHA1, SHA2-256, SM3 : 0x00~0x40 \\\\ SHA2-512 : 0x00~0x80 \\\\\n\nYou can [`read`](crate::Reg::read) this register and get [`_2_sm_3_m_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`_2_sm_3_m_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@_2_sm_3_m_mem`] module"]
-pub type _2_SM_3_M_MEM = crate::Reg<_2_sm_3_m_mem::_2_SM_3_M_MEM_SPEC>;
+pub mod h_mem;
+#[doc = "M_MEM (rw) register accessor: SHA1, SHA2-256, SM3 M memory which contains message. \\\\ SHA1, SHA2-256, SM3 : 0x00~0x40 \\\\ SHA2-512 : 0x00~0x80 \\\\\n\nYou can [`read`](crate::Reg::read) this register and get [`m_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m_mem`] module"]
+pub type M_MEM = crate::Reg<m_mem::M_MEM_SPEC>;
 #[doc = "SHA1, SHA2-256, SM3 M memory which contains message. \\\\ SHA1, SHA2-256, SM3 : 0x00~0x40 \\\\ SHA2-512 : 0x00~0x80 \\\\"]
-pub mod _2_sm_3_m_mem;
-#[doc = "_3_H_MEM (rw) register accessor: SHA3, SHAKE H memory which contains intermediate hash or final hash.\n\nYou can [`read`](crate::Reg::read) this register and get [`_3_h_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`_3_h_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@_3_h_mem`] module"]
-pub type _3_H_MEM = crate::Reg<_3_h_mem::_3_H_MEM_SPEC>;
+pub mod m_mem;
+#[doc = "SHA3_H_MEM (rw) register accessor: SHA3, SHAKE H memory which contains intermediate hash or final hash.\n\nYou can [`read`](crate::Reg::read) this register and get [`sha3_h_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sha3_h_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha3_h_mem`] module"]
+pub type SHA3_H_MEM = crate::Reg<sha3_h_mem::SHA3_H_MEM_SPEC>;
 #[doc = "SHA3, SHAKE H memory which contains intermediate hash or final hash."]
-pub mod _3_h_mem;
-#[doc = "_3_M_MEM (rw) register accessor: SHA3, SHAKE M memory which contains message.\n\nYou can [`read`](crate::Reg::read) this register and get [`_3_m_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`_3_m_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@_3_m_mem`] module"]
-pub type _3_M_MEM = crate::Reg<_3_m_mem::_3_M_MEM_SPEC>;
+pub mod sha3_h_mem;
+#[doc = "SHA3_M_MEM (rw) register accessor: SHA3, SHAKE M memory which contains message.\n\nYou can [`read`](crate::Reg::read) this register and get [`sha3_m_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sha3_m_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha3_m_mem`] module"]
+pub type SHA3_M_MEM = crate::Reg<sha3_m_mem::SHA3_M_MEM_SPEC>;
 #[doc = "SHA3, SHAKE M memory which contains message."]
-pub mod _3_m_mem;
+pub mod sha3_m_mem;

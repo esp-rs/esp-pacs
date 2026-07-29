@@ -9,7 +9,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {}
-#[doc = "The memory that stores GCM hash subkey\n\nYou can [`read`](crate::Reg::read) this register and get [`h_mem::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`h_mem::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SHA1, SHA2-256, SM3 H memory which contains intermediate hash or final hash. \\\\ SHA1, SHA2-256, SM3 : 0x00~0x20 (R/W) \\\\ SHA2-512 : 0x00~0x40 (R/W) \\\\\n\nYou can [`read`](crate::Reg::read) this register and get [`h_mem::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`h_mem::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct H_MEM_SPEC;
 impl crate::RegisterSpec for H_MEM_SPEC {
     type Ux = u32;

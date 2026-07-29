@@ -1,0 +1,29 @@
+SHA:
+  _modify:
+    "_2_SM_3_H_MEM*":
+      name: "H_MEM[%s]"
+      dim: 16
+      dimIncrement: 0x4
+      size: 0x20
+    "_2_SM_3_M_MEM*":
+      name: "M_MEM[%s]"
+      dim: 32
+      dimIncrement: 0x4
+      size: 0x20
+    "_3_H_MEM*":
+      name: "SHA3_H_MEM[%s]"
+      dim: 50
+      dimIncrement: 0x4
+      size: 0x20
+    "_3_M_MEM*":
+      name: "SHA3_M_MEM[%s]"
+      dim: 50
+      dimIncrement: 0x4
+      size: 0x20
+    _3_SHAKE_LENGTH:
+      name: SHA3_SHAKE_LENGTH
+
+  SHA3_SHAKE_LENGTH:
+    _modify:
+      _3_SHAKE_LENGTH:
+        name: SHAKE_LENGTH
