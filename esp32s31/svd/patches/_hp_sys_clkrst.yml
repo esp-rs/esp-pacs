@@ -7,11 +7,181 @@ HP_SYS_CLKRST:
       SOC_CLK_UPDATE:
         name: SOC_CLK_DIV_UPDATE
 
+  # Crypto-adjacent (single peripheral)
+  KEY_MANAGER_CTRL0:
+    _modify:
+      CRYPTO_KM_RST_EN:
+        name: RST_EN
+      CRYPTO_KM_CLK_EN:
+        name: CLK_EN
+    _strip: KEY_MANAGER_
+  DPA_CTRL0:
+    _strip: SEC_DPA_
+
+  # Memory controllers
+  FLASH_CTRL0:
+    _strip: FLASH_
+  PSRAM_CTRL0:
+    _strip: PSRAM_
+
+  # DMA / bus masters
+  GPSPI?_CTRL0:
+    _strip: GPSPI?_
+  GDMA_CTRL0:
+    _strip: GDMA_
+  AXI_PDMA_CTRL0:
+    _strip: AXI_PDMA_
+  AHB_PDMA_CTRL0:
+    _strip: AHB_PDMA_
+  REGDMA_CTRL0:
+    _strip: REGDMA_
+  UHCI_CTRL0:
+    _strip: UHCI_
+  DMA2D_CTRL0:
+    _strip: DMA2D_
+
+  # Parallel IO
+  PARLIO_CTRL0:
+    _strip: PARLIO_
+  PARLIO_RX_CTRL0:
+    _strip: PARLIO_RX_
+  PARLIO_TX_CTRL0:
+    _strip: PARLIO_TX_
+  BITSRAMBLER_CTRL0:
+    _strip: BITSRAMBLER_
+
+  # Misc peripherals
+  ETM_CTRL0:
+    _modify:
+      SOC_ETM_CLK_SEL:
+        name: CLK_SRC_SEL
+      SOC_ETM_CLK_EN:
+        name: CLK_EN
+    _strip: ETM_
+  USB_OTGHS_CTRL0:
+    _strip: USB_OTGHS_
+  PPA_CTRL0:
+    _strip: PPA_
+  JPEG_CTRL0:
+    _strip: JPEG_
+  RMT_CTRL0:
+    _strip: RMT_
+  EMAC_CTRL0:
+    _strip: EMAC_
+  DSI_CTRL0:
+    _strip: DSI_
+  DSI_PHY_CTRL0:
+    _strip: MIPI_DSI_
+  DSI_DPI_CTRL0:
+    _strip: MIPI_DSI_
+  MSPI_PAD_CTRL0:
+    _strip: MSPI_PAD_CTRL_
+
+  SDIO_HOST_CTRL0:
+    _modify:
+      SDMMC_SYS_CLK_EN:
+        name: SYS_CLK_EN
+    _strip: SDIO_
+  SDIO_HOST_FUNC_CTRL0:
+    _strip: SDIO_LS_
+
+  # UART / I2C (also collected into arrays below)
   UART?_CTRL0:
     _strip: UART?_
-
   I2C?_CTRL0:
     _strip: I2C?_
+
+  # I2S
+  I2S?_CTRL0:
+    _strip: I2S?_
+  I2S?_RX_CTRL0:
+    _strip: I2S?_
+  I2S?_RX_DIV_CTRL0:
+    _strip: I2S?_
+  I2S?_TX_CTRL0:
+    _strip: I2S?_
+  I2S?_TX_DIV_CTRL0:
+    _strip: I2S?_
+
+  # TWAI / timers / PWM
+  TWAI?_CTRL0:
+    _strip: TWAI?_
+  TIMERGRP?_CTRL0:
+    _strip: TIMERGRP?_
+  TIMERGRP0_TGRT_CTRL0:
+    _strip: TIMERGRP0_TGRT_
+  SYSTIMER_CTRL0:
+    _strip: SYSTIMER_
+  MCPWM?_CTRL0:
+    _strip: MCPWM?_
+  INTRMTX_CTRL0:
+    _strip: INTRMTX_
+  USB_DEVICE_CTRL0:
+    _strip: USB_DEVICE_
+
+  # LCD / camera / LED / IO
+  LCDCAM_CTRL0:
+    _strip: LCDCAM_
+  LCDCAM_LCD_CTRL0:
+    _strip: LCD_
+  LCDCAM_LCDCAM_CTRL0:
+    _strip: LCDCAM_
+  LCDCAM_CAM_CTRL0:
+    _strip: CAM_
+  IOMUX_CTRL0:
+    _strip: IOMUX_
+
+  # PVT
+  PVT0_CTRL0:
+    _strip: PVT0_
+  PVT0_PERI_CTRL0:
+    _strip: PVT0_PERI_
+
+  # Reference / debug / LP clocks
+  REF_500M_CTRL0:
+    _strip: REF_500M_
+  REF_240M_CTRL0:
+    _strip: REF_240M_
+  REF_160M_CTRL0:
+    _strip: REF_160M_
+  REF_120M_CTRL0:
+    _strip: REF_120M_
+  REF_80M_CTRL0:
+    _strip: REF_80M_
+  REF_60M_CTRL0:
+    _strip: REF_60M_
+  REF_20M_CTRL0:
+    _strip: REF_20M_
+  REF_50M_CTRL0:
+    _strip: REF_50M_
+  REF_25M_CTRL0:
+    _strip: REF_25M_
+  DBG?_CLK_CTRL0:
+    _strip: DBG_CH?_
+  LP_CLK_CTRL0:
+    _strip: LPAON_
+  PWDET_SAR_CLK_CONF:
+    _strip: PWDET_SAR_
+
+  # Misc single-peripheral controls
+  AHB_ASRC_CTRL0:
+    _strip: AHB_ASRC_
+  CORDIC_CTRL0:
+    _strip: CORDIC_
+  CORDIC_CTRL1:
+    _strip: CORDIC_
+  ZERO_DET_CTRL0:
+    _strip: ZERO_DET_
+  CNNT_IOMUX_CTRL0:
+    _strip: CNNT_IOMUX_
+  HP_I2CMST_CTRL0:
+    _strip: HP_I2CMST_
+  AXI_PERF_MON_CTRL0:
+    _strip: AXI_PERF_MON_
+  CNNT_SYSREG_CTRL0:
+    _strip: CNNT_SYSREG_
+  HP_ALIVE_SYSREG_CTRL0:
+    _strip: HP_ALIVE_SYSREG_
 
   _array:
     UART?_CTRL0:
