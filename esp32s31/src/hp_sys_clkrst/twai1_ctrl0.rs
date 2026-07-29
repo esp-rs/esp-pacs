@@ -2,90 +2,90 @@
 pub type R = crate::R<TWAI1_CTRL0_SPEC>;
 #[doc = "Register `TWAI1_CTRL0` writer"]
 pub type W = crate::W<TWAI1_CTRL0_SPEC>;
-#[doc = "Field `TWAI1_APB_CLK_EN` reader - need_des"]
-pub type TWAI1_APB_CLK_EN_R = crate::BitReader;
-#[doc = "Field `TWAI1_APB_CLK_EN` writer - need_des"]
-pub type TWAI1_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TWAI1_CLK_SRC_SEL` reader - need_des"]
-pub type TWAI1_CLK_SRC_SEL_R = crate::FieldReader;
-#[doc = "Field `TWAI1_CLK_SRC_SEL` writer - need_des"]
-pub type TWAI1_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `TWAI1_CLK_EN` reader - need_des"]
-pub type TWAI1_CLK_EN_R = crate::BitReader;
-#[doc = "Field `TWAI1_CLK_EN` writer - need_des"]
-pub type TWAI1_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TWAI1_RST_EN` reader - need_des"]
-pub type TWAI1_RST_EN_R = crate::BitReader;
-#[doc = "Field `TWAI1_RST_EN` writer - need_des"]
-pub type TWAI1_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TWAI1_FORCE_NORST` reader - need_des"]
-pub type TWAI1_FORCE_NORST_R = crate::BitReader;
-#[doc = "Field `TWAI1_FORCE_NORST` writer - need_des"]
-pub type TWAI1_FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `APB_CLK_EN` reader - need_des"]
+pub type APB_CLK_EN_R = crate::BitReader;
+#[doc = "Field `APB_CLK_EN` writer - need_des"]
+pub type APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_SRC_SEL` reader - need_des"]
+pub type CLK_SRC_SEL_R = crate::FieldReader;
+#[doc = "Field `CLK_SRC_SEL` writer - need_des"]
+pub type CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `CLK_EN` reader - need_des"]
+pub type CLK_EN_R = crate::BitReader;
+#[doc = "Field `CLK_EN` writer - need_des"]
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RST_EN` reader - need_des"]
+pub type RST_EN_R = crate::BitReader;
+#[doc = "Field `RST_EN` writer - need_des"]
+pub type RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_NORST` reader - need_des"]
+pub type FORCE_NORST_R = crate::BitReader;
+#[doc = "Field `FORCE_NORST` writer - need_des"]
+pub type FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn twai1_apb_clk_en(&self) -> TWAI1_APB_CLK_EN_R {
-        TWAI1_APB_CLK_EN_R::new((self.bits & 1) != 0)
+    pub fn apb_clk_en(&self) -> APB_CLK_EN_R {
+        APB_CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:2 - need_des"]
     #[inline(always)]
-    pub fn twai1_clk_src_sel(&self) -> TWAI1_CLK_SRC_SEL_R {
-        TWAI1_CLK_SRC_SEL_R::new(((self.bits >> 1) & 3) as u8)
+    pub fn clk_src_sel(&self) -> CLK_SRC_SEL_R {
+        CLK_SRC_SEL_R::new(((self.bits >> 1) & 3) as u8)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
-    pub fn twai1_clk_en(&self) -> TWAI1_CLK_EN_R {
-        TWAI1_CLK_EN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn clk_en(&self) -> CLK_EN_R {
+        CLK_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
-    pub fn twai1_rst_en(&self) -> TWAI1_RST_EN_R {
-        TWAI1_RST_EN_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn rst_en(&self) -> RST_EN_R {
+        RST_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    pub fn twai1_force_norst(&self) -> TWAI1_FORCE_NORST_R {
-        TWAI1_FORCE_NORST_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn force_norst(&self) -> FORCE_NORST_R {
+        FORCE_NORST_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TWAI1_CTRL0")
-            .field("twai1_apb_clk_en", &self.twai1_apb_clk_en())
-            .field("twai1_clk_src_sel", &self.twai1_clk_src_sel())
-            .field("twai1_clk_en", &self.twai1_clk_en())
-            .field("twai1_rst_en", &self.twai1_rst_en())
-            .field("twai1_force_norst", &self.twai1_force_norst())
+            .field("apb_clk_en", &self.apb_clk_en())
+            .field("clk_src_sel", &self.clk_src_sel())
+            .field("clk_en", &self.clk_en())
+            .field("rst_en", &self.rst_en())
+            .field("force_norst", &self.force_norst())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn twai1_apb_clk_en(&mut self) -> TWAI1_APB_CLK_EN_W<'_, TWAI1_CTRL0_SPEC> {
-        TWAI1_APB_CLK_EN_W::new(self, 0)
+    pub fn apb_clk_en(&mut self) -> APB_CLK_EN_W<'_, TWAI1_CTRL0_SPEC> {
+        APB_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - need_des"]
     #[inline(always)]
-    pub fn twai1_clk_src_sel(&mut self) -> TWAI1_CLK_SRC_SEL_W<'_, TWAI1_CTRL0_SPEC> {
-        TWAI1_CLK_SRC_SEL_W::new(self, 1)
+    pub fn clk_src_sel(&mut self) -> CLK_SRC_SEL_W<'_, TWAI1_CTRL0_SPEC> {
+        CLK_SRC_SEL_W::new(self, 1)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
-    pub fn twai1_clk_en(&mut self) -> TWAI1_CLK_EN_W<'_, TWAI1_CTRL0_SPEC> {
-        TWAI1_CLK_EN_W::new(self, 3)
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, TWAI1_CTRL0_SPEC> {
+        CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
-    pub fn twai1_rst_en(&mut self) -> TWAI1_RST_EN_W<'_, TWAI1_CTRL0_SPEC> {
-        TWAI1_RST_EN_W::new(self, 4)
+    pub fn rst_en(&mut self) -> RST_EN_W<'_, TWAI1_CTRL0_SPEC> {
+        RST_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    pub fn twai1_force_norst(&mut self) -> TWAI1_FORCE_NORST_W<'_, TWAI1_CTRL0_SPEC> {
-        TWAI1_FORCE_NORST_W::new(self, 5)
+    pub fn force_norst(&mut self) -> FORCE_NORST_W<'_, TWAI1_CTRL0_SPEC> {
+        FORCE_NORST_W::new(self, 5)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`twai1_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`twai1_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -2,135 +2,135 @@
 pub type R = crate::R<CORDIC_CTRL0_SPEC>;
 #[doc = "Register `CORDIC_CTRL0` writer"]
 pub type W = crate::W<CORDIC_CTRL0_SPEC>;
-#[doc = "Field `CORDIC_APB_CLK_EN` reader - need_des"]
-pub type CORDIC_APB_CLK_EN_R = crate::BitReader;
-#[doc = "Field `CORDIC_APB_CLK_EN` writer - need_des"]
-pub type CORDIC_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CORDIC_APB_RST_EN` reader - need_des"]
-pub type CORDIC_APB_RST_EN_R = crate::BitReader;
-#[doc = "Field `CORDIC_APB_RST_EN` writer - need_des"]
-pub type CORDIC_APB_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CORDIC_SYS_CLK_EN` reader - need_des"]
-pub type CORDIC_SYS_CLK_EN_R = crate::BitReader;
-#[doc = "Field `CORDIC_SYS_CLK_EN` writer - need_des"]
-pub type CORDIC_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CORDIC_SYS_RST_EN` reader - need_des"]
-pub type CORDIC_SYS_RST_EN_R = crate::BitReader;
-#[doc = "Field `CORDIC_SYS_RST_EN` writer - need_des"]
-pub type CORDIC_SYS_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CORDIC_CLK_EN` reader - need_des"]
-pub type CORDIC_CLK_EN_R = crate::BitReader;
-#[doc = "Field `CORDIC_CLK_EN` writer - need_des"]
-pub type CORDIC_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CORDIC_CORE_RST_EN` reader - need_des"]
-pub type CORDIC_CORE_RST_EN_R = crate::BitReader;
-#[doc = "Field `CORDIC_CORE_RST_EN` writer - need_des"]
-pub type CORDIC_CORE_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CORDIC_FORCE_NORST` reader - need_des"]
-pub type CORDIC_FORCE_NORST_R = crate::BitReader;
-#[doc = "Field `CORDIC_FORCE_NORST` writer - need_des"]
-pub type CORDIC_FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CORDIC_CLK_SRC_SEL` reader - need_des"]
-pub type CORDIC_CLK_SRC_SEL_R = crate::FieldReader;
-#[doc = "Field `CORDIC_CLK_SRC_SEL` writer - need_des"]
-pub type CORDIC_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `APB_CLK_EN` reader - need_des"]
+pub type APB_CLK_EN_R = crate::BitReader;
+#[doc = "Field `APB_CLK_EN` writer - need_des"]
+pub type APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `APB_RST_EN` reader - need_des"]
+pub type APB_RST_EN_R = crate::BitReader;
+#[doc = "Field `APB_RST_EN` writer - need_des"]
+pub type APB_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SYS_CLK_EN` reader - need_des"]
+pub type SYS_CLK_EN_R = crate::BitReader;
+#[doc = "Field `SYS_CLK_EN` writer - need_des"]
+pub type SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SYS_RST_EN` reader - need_des"]
+pub type SYS_RST_EN_R = crate::BitReader;
+#[doc = "Field `SYS_RST_EN` writer - need_des"]
+pub type SYS_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_EN` reader - need_des"]
+pub type CLK_EN_R = crate::BitReader;
+#[doc = "Field `CLK_EN` writer - need_des"]
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CORE_RST_EN` reader - need_des"]
+pub type CORE_RST_EN_R = crate::BitReader;
+#[doc = "Field `CORE_RST_EN` writer - need_des"]
+pub type CORE_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_NORST` reader - need_des"]
+pub type FORCE_NORST_R = crate::BitReader;
+#[doc = "Field `FORCE_NORST` writer - need_des"]
+pub type FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_SRC_SEL` reader - need_des"]
+pub type CLK_SRC_SEL_R = crate::FieldReader;
+#[doc = "Field `CLK_SRC_SEL` writer - need_des"]
+pub type CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn cordic_apb_clk_en(&self) -> CORDIC_APB_CLK_EN_R {
-        CORDIC_APB_CLK_EN_R::new((self.bits & 1) != 0)
+    pub fn apb_clk_en(&self) -> APB_CLK_EN_R {
+        APB_CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn cordic_apb_rst_en(&self) -> CORDIC_APB_RST_EN_R {
-        CORDIC_APB_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn apb_rst_en(&self) -> APB_RST_EN_R {
+        APB_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn cordic_sys_clk_en(&self) -> CORDIC_SYS_CLK_EN_R {
-        CORDIC_SYS_CLK_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn sys_clk_en(&self) -> SYS_CLK_EN_R {
+        SYS_CLK_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
-    pub fn cordic_sys_rst_en(&self) -> CORDIC_SYS_RST_EN_R {
-        CORDIC_SYS_RST_EN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn sys_rst_en(&self) -> SYS_RST_EN_R {
+        SYS_RST_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
-    pub fn cordic_clk_en(&self) -> CORDIC_CLK_EN_R {
-        CORDIC_CLK_EN_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn clk_en(&self) -> CLK_EN_R {
+        CLK_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    pub fn cordic_core_rst_en(&self) -> CORDIC_CORE_RST_EN_R {
-        CORDIC_CORE_RST_EN_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn core_rst_en(&self) -> CORE_RST_EN_R {
+        CORE_RST_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - need_des"]
     #[inline(always)]
-    pub fn cordic_force_norst(&self) -> CORDIC_FORCE_NORST_R {
-        CORDIC_FORCE_NORST_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn force_norst(&self) -> FORCE_NORST_R {
+        FORCE_NORST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bits 7:8 - need_des"]
     #[inline(always)]
-    pub fn cordic_clk_src_sel(&self) -> CORDIC_CLK_SRC_SEL_R {
-        CORDIC_CLK_SRC_SEL_R::new(((self.bits >> 7) & 3) as u8)
+    pub fn clk_src_sel(&self) -> CLK_SRC_SEL_R {
+        CLK_SRC_SEL_R::new(((self.bits >> 7) & 3) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORDIC_CTRL0")
-            .field("cordic_apb_clk_en", &self.cordic_apb_clk_en())
-            .field("cordic_apb_rst_en", &self.cordic_apb_rst_en())
-            .field("cordic_sys_clk_en", &self.cordic_sys_clk_en())
-            .field("cordic_sys_rst_en", &self.cordic_sys_rst_en())
-            .field("cordic_clk_en", &self.cordic_clk_en())
-            .field("cordic_core_rst_en", &self.cordic_core_rst_en())
-            .field("cordic_force_norst", &self.cordic_force_norst())
-            .field("cordic_clk_src_sel", &self.cordic_clk_src_sel())
+            .field("apb_clk_en", &self.apb_clk_en())
+            .field("apb_rst_en", &self.apb_rst_en())
+            .field("sys_clk_en", &self.sys_clk_en())
+            .field("sys_rst_en", &self.sys_rst_en())
+            .field("clk_en", &self.clk_en())
+            .field("core_rst_en", &self.core_rst_en())
+            .field("force_norst", &self.force_norst())
+            .field("clk_src_sel", &self.clk_src_sel())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn cordic_apb_clk_en(&mut self) -> CORDIC_APB_CLK_EN_W<'_, CORDIC_CTRL0_SPEC> {
-        CORDIC_APB_CLK_EN_W::new(self, 0)
+    pub fn apb_clk_en(&mut self) -> APB_CLK_EN_W<'_, CORDIC_CTRL0_SPEC> {
+        APB_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn cordic_apb_rst_en(&mut self) -> CORDIC_APB_RST_EN_W<'_, CORDIC_CTRL0_SPEC> {
-        CORDIC_APB_RST_EN_W::new(self, 1)
+    pub fn apb_rst_en(&mut self) -> APB_RST_EN_W<'_, CORDIC_CTRL0_SPEC> {
+        APB_RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn cordic_sys_clk_en(&mut self) -> CORDIC_SYS_CLK_EN_W<'_, CORDIC_CTRL0_SPEC> {
-        CORDIC_SYS_CLK_EN_W::new(self, 2)
+    pub fn sys_clk_en(&mut self) -> SYS_CLK_EN_W<'_, CORDIC_CTRL0_SPEC> {
+        SYS_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
-    pub fn cordic_sys_rst_en(&mut self) -> CORDIC_SYS_RST_EN_W<'_, CORDIC_CTRL0_SPEC> {
-        CORDIC_SYS_RST_EN_W::new(self, 3)
+    pub fn sys_rst_en(&mut self) -> SYS_RST_EN_W<'_, CORDIC_CTRL0_SPEC> {
+        SYS_RST_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
-    pub fn cordic_clk_en(&mut self) -> CORDIC_CLK_EN_W<'_, CORDIC_CTRL0_SPEC> {
-        CORDIC_CLK_EN_W::new(self, 4)
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CORDIC_CTRL0_SPEC> {
+        CLK_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    pub fn cordic_core_rst_en(&mut self) -> CORDIC_CORE_RST_EN_W<'_, CORDIC_CTRL0_SPEC> {
-        CORDIC_CORE_RST_EN_W::new(self, 5)
+    pub fn core_rst_en(&mut self) -> CORE_RST_EN_W<'_, CORDIC_CTRL0_SPEC> {
+        CORE_RST_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - need_des"]
     #[inline(always)]
-    pub fn cordic_force_norst(&mut self) -> CORDIC_FORCE_NORST_W<'_, CORDIC_CTRL0_SPEC> {
-        CORDIC_FORCE_NORST_W::new(self, 6)
+    pub fn force_norst(&mut self) -> FORCE_NORST_W<'_, CORDIC_CTRL0_SPEC> {
+        FORCE_NORST_W::new(self, 6)
     }
     #[doc = "Bits 7:8 - need_des"]
     #[inline(always)]
-    pub fn cordic_clk_src_sel(&mut self) -> CORDIC_CLK_SRC_SEL_W<'_, CORDIC_CTRL0_SPEC> {
-        CORDIC_CLK_SRC_SEL_W::new(self, 7)
+    pub fn clk_src_sel(&mut self) -> CLK_SRC_SEL_W<'_, CORDIC_CTRL0_SPEC> {
+        CLK_SRC_SEL_W::new(self, 7)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`cordic_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cordic_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

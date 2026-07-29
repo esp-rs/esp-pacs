@@ -2,60 +2,60 @@
 pub type R = crate::R<I2S1_CTRL0_SPEC>;
 #[doc = "Register `I2S1_CTRL0` writer"]
 pub type W = crate::W<I2S1_CTRL0_SPEC>;
-#[doc = "Field `I2S1_APB_CLK_EN` reader - need_des"]
-pub type I2S1_APB_CLK_EN_R = crate::BitReader;
-#[doc = "Field `I2S1_APB_CLK_EN` writer - need_des"]
-pub type I2S1_APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `I2S1_APB_RST_EN` reader - need_des"]
-pub type I2S1_APB_RST_EN_R = crate::BitReader;
-#[doc = "Field `I2S1_APB_RST_EN` writer - need_des"]
-pub type I2S1_APB_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `I2S1_FORCE_NORST` reader - need_des"]
-pub type I2S1_FORCE_NORST_R = crate::BitReader;
-#[doc = "Field `I2S1_FORCE_NORST` writer - need_des"]
-pub type I2S1_FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `APB_CLK_EN` reader - need_des"]
+pub type APB_CLK_EN_R = crate::BitReader;
+#[doc = "Field `APB_CLK_EN` writer - need_des"]
+pub type APB_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `APB_RST_EN` reader - need_des"]
+pub type APB_RST_EN_R = crate::BitReader;
+#[doc = "Field `APB_RST_EN` writer - need_des"]
+pub type APB_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_NORST` reader - need_des"]
+pub type FORCE_NORST_R = crate::BitReader;
+#[doc = "Field `FORCE_NORST` writer - need_des"]
+pub type FORCE_NORST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn i2s1_apb_clk_en(&self) -> I2S1_APB_CLK_EN_R {
-        I2S1_APB_CLK_EN_R::new((self.bits & 1) != 0)
+    pub fn apb_clk_en(&self) -> APB_CLK_EN_R {
+        APB_CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn i2s1_apb_rst_en(&self) -> I2S1_APB_RST_EN_R {
-        I2S1_APB_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn apb_rst_en(&self) -> APB_RST_EN_R {
+        APB_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn i2s1_force_norst(&self) -> I2S1_FORCE_NORST_R {
-        I2S1_FORCE_NORST_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn force_norst(&self) -> FORCE_NORST_R {
+        FORCE_NORST_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2S1_CTRL0")
-            .field("i2s1_apb_clk_en", &self.i2s1_apb_clk_en())
-            .field("i2s1_apb_rst_en", &self.i2s1_apb_rst_en())
-            .field("i2s1_force_norst", &self.i2s1_force_norst())
+            .field("apb_clk_en", &self.apb_clk_en())
+            .field("apb_rst_en", &self.apb_rst_en())
+            .field("force_norst", &self.force_norst())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn i2s1_apb_clk_en(&mut self) -> I2S1_APB_CLK_EN_W<'_, I2S1_CTRL0_SPEC> {
-        I2S1_APB_CLK_EN_W::new(self, 0)
+    pub fn apb_clk_en(&mut self) -> APB_CLK_EN_W<'_, I2S1_CTRL0_SPEC> {
+        APB_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn i2s1_apb_rst_en(&mut self) -> I2S1_APB_RST_EN_W<'_, I2S1_CTRL0_SPEC> {
-        I2S1_APB_RST_EN_W::new(self, 1)
+    pub fn apb_rst_en(&mut self) -> APB_RST_EN_W<'_, I2S1_CTRL0_SPEC> {
+        APB_RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn i2s1_force_norst(&mut self) -> I2S1_FORCE_NORST_W<'_, I2S1_CTRL0_SPEC> {
-        I2S1_FORCE_NORST_W::new(self, 2)
+    pub fn force_norst(&mut self) -> FORCE_NORST_W<'_, I2S1_CTRL0_SPEC> {
+        FORCE_NORST_W::new(self, 2)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`i2s1_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2s1_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

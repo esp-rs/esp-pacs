@@ -2,47 +2,45 @@
 pub type R = crate::R<PWDET_SAR_CLK_CONF_SPEC>;
 #[doc = "Register `PWDET_SAR_CLK_CONF` writer"]
 pub type W = crate::W<PWDET_SAR_CLK_CONF_SPEC>;
-#[doc = "Field `PWDET_SAR_CLK_DIV_NUM` reader - xxxx"]
-pub type PWDET_SAR_CLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `PWDET_SAR_CLK_DIV_NUM` writer - xxxx"]
-pub type PWDET_SAR_CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `PWDET_SAR_CLK_EN` reader - xxxx"]
-pub type PWDET_SAR_CLK_EN_R = crate::BitReader;
-#[doc = "Field `PWDET_SAR_CLK_EN` writer - xxxx"]
-pub type PWDET_SAR_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_DIV_NUM` reader - xxxx"]
+pub type CLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `CLK_DIV_NUM` writer - xxxx"]
+pub type CLK_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `CLK_EN` reader - xxxx"]
+pub type CLK_EN_R = crate::BitReader;
+#[doc = "Field `CLK_EN` writer - xxxx"]
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - xxxx"]
     #[inline(always)]
-    pub fn pwdet_sar_clk_div_num(&self) -> PWDET_SAR_CLK_DIV_NUM_R {
-        PWDET_SAR_CLK_DIV_NUM_R::new((self.bits & 0xff) as u8)
+    pub fn clk_div_num(&self) -> CLK_DIV_NUM_R {
+        CLK_DIV_NUM_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bit 8 - xxxx"]
     #[inline(always)]
-    pub fn pwdet_sar_clk_en(&self) -> PWDET_SAR_CLK_EN_R {
-        PWDET_SAR_CLK_EN_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn clk_en(&self) -> CLK_EN_R {
+        CLK_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PWDET_SAR_CLK_CONF")
-            .field("pwdet_sar_clk_div_num", &self.pwdet_sar_clk_div_num())
-            .field("pwdet_sar_clk_en", &self.pwdet_sar_clk_en())
+            .field("clk_div_num", &self.clk_div_num())
+            .field("clk_en", &self.clk_en())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:7 - xxxx"]
     #[inline(always)]
-    pub fn pwdet_sar_clk_div_num(
-        &mut self,
-    ) -> PWDET_SAR_CLK_DIV_NUM_W<'_, PWDET_SAR_CLK_CONF_SPEC> {
-        PWDET_SAR_CLK_DIV_NUM_W::new(self, 0)
+    pub fn clk_div_num(&mut self) -> CLK_DIV_NUM_W<'_, PWDET_SAR_CLK_CONF_SPEC> {
+        CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bit 8 - xxxx"]
     #[inline(always)]
-    pub fn pwdet_sar_clk_en(&mut self) -> PWDET_SAR_CLK_EN_W<'_, PWDET_SAR_CLK_CONF_SPEC> {
-        PWDET_SAR_CLK_EN_W::new(self, 8)
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, PWDET_SAR_CLK_CONF_SPEC> {
+        CLK_EN_W::new(self, 8)
     }
 }
 #[doc = "xxxx\n\nYou can [`read`](crate::Reg::read) this register and get [`pwdet_sar_clk_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pwdet_sar_clk_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
