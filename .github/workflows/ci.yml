@@ -60,3 +60,28 @@ jobs:
           packages: ${{ matrix.build.packages }}
           arch: ${{ matrix.build.arch }}
           target: ${{ matrix.build.target }}
+
+  # --------------------------------------------------------------------------
+
+  # This is the only job that should be marked as a required status check.
+  # Every other job must be listed in `needs` so that adding, removing or
+  # renaming a job never requires touching the branch protection settings.
+  ci:
+    name: CI
+    runs-on: ubuntu-latest
+    if: always()
+
+    needs:
+      - check
+
+    steps:
+      - name: Check that all jobs succeeded
+        env:
+          RESULTS: ${{ toJSON(needs) }}
+        run: |
+          echo "$RESULTS" | jq -r 'to_entries[] | "\(.key): \(.value.result)"'
+
+          if echo "$RESULTS" | jq -e 'any(.[].result; . != "success")' > /dev/null; then
+            echo "::error::One or more jobs did not succeed"
+            exit 1
+          fi
