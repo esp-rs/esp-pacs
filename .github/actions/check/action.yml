@@ -1,70 +1,88 @@
-name: Check Package
+name: Check Packages
 
 inputs:
   msrv:
     description: Minimum Supported Rust Version
     type: string
     required: true
-  package:
-    description: Name of the package to check
+  packages:
+    description: Space-separated list of packages to check
+    type: string
+    required: true
+  arch:
+    description: Architecture of the specified packages, either `xtensa` or `riscv`
     type: string
     required: true
   target:
-    description: Target to use when checking the specified package
+    description: Target shared by the specified packages, required for `riscv` only
     type: string
-    required: true
+    required: false
+    default: ""
 
 runs:
   using: composite
 
   steps:
-    # Install the newest available version of the specified toolchain,
-    # required for building the PAC:
+    # Install the newest available version of the required toolchain,
+    # required for building the PACs:
 
     - uses: dtolnay/rust-toolchain@stable
-      if: startsWith(inputs.target, 'riscv')
+      if: inputs.arch == 'riscv'
       with:
         target: ${{ inputs.target }}
         components: rust-src
 
+    # The Xtensa toolchain ships support for every Xtensa chip, so a single
+    # installation covers all of the packages in the group:
+
     - uses: esp-rs/xtensa-toolchain@v1.6
-      if: startsWith(inputs.target, 'xtensa')
+      if: inputs.arch == 'xtensa'
       with:
-        buildtargets: ${{ inputs.package }}
         override: false
 
-    # Build the PAC using the newest available version of the specified
+    # Build the PACs using the newest available version of the required
     # toolchain:
 
-    - name: Build (${{ inputs.package }})
+    - name: Build
       shell: bash
-      run: cd ${{ inputs.package }} && cargo build
+      run: |
+        for package in ${{ inputs.packages }}; do
+          echo "::group::Build ($package)"
+          (cd "$package" && cargo build)
+          echo "::endgroup::"
+        done
 
-    # Install the MSRV of the specified toolchain:
+    # Install the MSRV of the required toolchain:
 
     - uses: dtolnay/rust-toolchain@v1
-      if: startsWith(inputs.target, 'riscv')
+      if: inputs.arch == 'riscv'
       with:
         toolchain: ${{ inputs.msrv }}
         target: ${{ inputs.target }}
         components: rust-src
 
     - uses: esp-rs/xtensa-toolchain@v1.6
-      if: startsWith(inputs.target, 'xtensa')
+      if: inputs.arch == 'xtensa'
       with:
         default: true
-        buildtargets: ${{ inputs.package }}
         override: false
         version: ${{ inputs.msrv }}
 
-    # Verify that the PAC builds using the MSRV of the specified toolchain:
+    # Verify that the PACs build using the MSRV of the required toolchain.
+    # The Xtensa MSRV toolchain replaces the `esp` toolchain selected by the
+    # `rust-toolchain.toml` of each package, so it needs no override:
 
     - name: Check MSRV
-      if: startsWith(inputs.target, 'riscv')
       shell: bash
-      run: cd ${{ inputs.package }} && cargo +${{ inputs.msrv }} build
+      run: |
+        if [[ "${{ inputs.arch }}" == "riscv" ]]; then
+          toolchain="+${{ inputs.msrv }}"
+        else
+          toolchain=""
+        fi
 
-    - name: Check MSRV
-      if: startsWith(inputs.target, 'xtensa')
-      shell: bash
-      run: cd ${{ inputs.package }} && cargo build
+        for package in ${{ inputs.packages }}; do
+          echo "::group::Check MSRV ($package)"
+          (cd "$package" && cargo $toolchain build)
+          echo "::endgroup::"
+        done
