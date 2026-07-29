@@ -2,62 +2,60 @@
 pub type R = crate::R<KEY_MANAGER_CTRL0_SPEC>;
 #[doc = "Register `KEY_MANAGER_CTRL0` writer"]
 pub type W = crate::W<KEY_MANAGER_CTRL0_SPEC>;
-#[doc = "Field `KEY_MANAGER_SYS_CLK_EN` reader - need_des"]
-pub type KEY_MANAGER_SYS_CLK_EN_R = crate::BitReader;
-#[doc = "Field `KEY_MANAGER_SYS_CLK_EN` writer - need_des"]
-pub type KEY_MANAGER_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CRYPTO_KM_RST_EN` reader - need_des"]
-pub type CRYPTO_KM_RST_EN_R = crate::BitReader;
-#[doc = "Field `CRYPTO_KM_RST_EN` writer - need_des"]
-pub type CRYPTO_KM_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CRYPTO_KM_CLK_EN` reader - need_des"]
-pub type CRYPTO_KM_CLK_EN_R = crate::BitReader;
-#[doc = "Field `CRYPTO_KM_CLK_EN` writer - need_des"]
-pub type CRYPTO_KM_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SYS_CLK_EN` reader - need_des"]
+pub type SYS_CLK_EN_R = crate::BitReader;
+#[doc = "Field `SYS_CLK_EN` writer - need_des"]
+pub type SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RST_EN` reader - need_des"]
+pub type RST_EN_R = crate::BitReader;
+#[doc = "Field `RST_EN` writer - need_des"]
+pub type RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_EN` reader - need_des"]
+pub type CLK_EN_R = crate::BitReader;
+#[doc = "Field `CLK_EN` writer - need_des"]
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn key_manager_sys_clk_en(&self) -> KEY_MANAGER_SYS_CLK_EN_R {
-        KEY_MANAGER_SYS_CLK_EN_R::new((self.bits & 1) != 0)
+    pub fn sys_clk_en(&self) -> SYS_CLK_EN_R {
+        SYS_CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn crypto_km_rst_en(&self) -> CRYPTO_KM_RST_EN_R {
-        CRYPTO_KM_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn rst_en(&self) -> RST_EN_R {
+        RST_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn crypto_km_clk_en(&self) -> CRYPTO_KM_CLK_EN_R {
-        CRYPTO_KM_CLK_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn clk_en(&self) -> CLK_EN_R {
+        CLK_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("KEY_MANAGER_CTRL0")
-            .field("key_manager_sys_clk_en", &self.key_manager_sys_clk_en())
-            .field("crypto_km_rst_en", &self.crypto_km_rst_en())
-            .field("crypto_km_clk_en", &self.crypto_km_clk_en())
+            .field("sys_clk_en", &self.sys_clk_en())
+            .field("rst_en", &self.rst_en())
+            .field("clk_en", &self.clk_en())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn key_manager_sys_clk_en(
-        &mut self,
-    ) -> KEY_MANAGER_SYS_CLK_EN_W<'_, KEY_MANAGER_CTRL0_SPEC> {
-        KEY_MANAGER_SYS_CLK_EN_W::new(self, 0)
+    pub fn sys_clk_en(&mut self) -> SYS_CLK_EN_W<'_, KEY_MANAGER_CTRL0_SPEC> {
+        SYS_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn crypto_km_rst_en(&mut self) -> CRYPTO_KM_RST_EN_W<'_, KEY_MANAGER_CTRL0_SPEC> {
-        CRYPTO_KM_RST_EN_W::new(self, 1)
+    pub fn rst_en(&mut self) -> RST_EN_W<'_, KEY_MANAGER_CTRL0_SPEC> {
+        RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn crypto_km_clk_en(&mut self) -> CRYPTO_KM_CLK_EN_W<'_, KEY_MANAGER_CTRL0_SPEC> {
-        CRYPTO_KM_CLK_EN_W::new(self, 2)
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, KEY_MANAGER_CTRL0_SPEC> {
+        CLK_EN_W::new(self, 2)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`key_manager_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`key_manager_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
