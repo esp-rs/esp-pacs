@@ -9,6 +9,8 @@ pub struct RegisterBlock {
     uxint_pri: [UXINT_PRI; 32],
     uxint_thresh: UXINT_THRESH,
     uxint_claim: UXINT_CLAIM,
+    _reserved7: [u8; 0x0364],
+    uxint_conf: UXINT_CONF,
 }
 impl RegisterBlock {
     #[doc = "0x00 - PLIC UX Interrupt Enable Register"]
@@ -212,6 +214,11 @@ impl RegisterBlock {
     pub const fn uxint_claim(&self) -> &UXINT_CLAIM {
         &self.uxint_claim
     }
+    #[doc = "0x3fc - PLIC UX Interrupt Configuration Register (PLIC_UXINT_CONF_REG)"]
+    #[inline(always)]
+    pub const fn uxint_conf(&self) -> &UXINT_CONF {
+        &self.uxint_conf
+    }
 }
 #[doc = "UXINT_ENABLE (rw) register accessor: PLIC UX Interrupt Enable Register\n\nYou can [`read`](crate::Reg::read) this register and get [`uxint_enable::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uxint_enable::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uxint_enable`] module"]
 pub type UXINT_ENABLE = crate::Reg<uxint_enable::UXINT_ENABLE_SPEC>;
@@ -241,3 +248,7 @@ pub mod uxint_thresh;
 pub type UXINT_CLAIM = crate::Reg<uxint_claim::UXINT_CLAIM_SPEC>;
 #[doc = "PLIC UX Interrupt Claim Register"]
 pub mod uxint_claim;
+#[doc = "UXINT_CONF (rw) register accessor: PLIC UX Interrupt Configuration Register (PLIC_UXINT_CONF_REG)\n\nYou can [`read`](crate::Reg::read) this register and get [`uxint_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uxint_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uxint_conf`] module"]
+pub type UXINT_CONF = crate::Reg<uxint_conf::UXINT_CONF_SPEC>;
+#[doc = "PLIC UX Interrupt Configuration Register (PLIC_UXINT_CONF_REG)"]
+pub mod uxint_conf;
