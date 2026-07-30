@@ -1,0 +1,14 @@
+# The H2's L1 cache controller is missing from the upstream SVD entirely, so it
+# was unreachable by name. It is the same block as the C6's EXTMEM: ESP-IDF's
+# `esp32h2/register/soc/cache_reg.h` describes the same 242 registers at the
+# same offsets, at the same base address (0x600C_8000). Copy it from the C6's
+# SVD and name it `CACHE`, matching both ESP-IDF's `DR_REG_CACHE_BASE` and the
+# newer chips' SVDs (C5, C61, P4).
+_copy:
+  CACHE:
+    from: ../../../esp32c6/svd/esp32c6.base.svd:EXTMEM
+
+_modify:
+  CACHE:
+    description: L1 Cache Controller
+    groupName: CACHE

@@ -87,6 +87,17 @@ _add:
             bitOffset: 0
             bitWidth: 32
             access: read-write
+      MXINT_CONF:
+        description: "PLIC MX Interrupt Configuration Register (PLIC_MXINT_CONF_REG)"
+        addressOffset: 0x03FC
+        size: 32
+        access: read-write
+        fields:
+          CPU_MXINT_CONF:
+            description: ""
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
 
   PLIC_UX:
     description: PLIC Peripheral
@@ -173,6 +184,17 @@ _add:
         fields:
           CPU_UXINT_CLAIM:
             description: "hp_mb_int is generated after writing 32'h20200721 to core0_lp_intr_flag."
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      UXINT_CONF:
+        description: "PLIC UX Interrupt Configuration Register (PLIC_UXINT_CONF_REG)"
+        addressOffset: 0x03FC
+        size: 32
+        access: read-write
+        fields:
+          CPU_UXINT_CONF:
+            description: ""
             bitOffset: 0
             bitWidth: 32
             access: read-write
