@@ -1,0 +1,8 @@
+_svd: ../esp32h21.base.svd
+
+_include:
+  - "_timg.yml"
+  - "_rmt.yml"
+
+TIMG0:
+  _include: ../../../common_patches/tim_collect.yaml
