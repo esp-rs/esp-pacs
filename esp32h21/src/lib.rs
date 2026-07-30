@@ -71,7 +71,7 @@ extern "C" {
     fn DMA_OUT_CH0();
     fn DMA_OUT_CH1();
     fn DMA_OUT_CH2();
-    fn GPSPI2();
+    fn SPI2();
     fn AES();
     fn SHA();
     fn RSA();
@@ -214,7 +214,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 65] = [
     Vector {
         _handler: DMA_OUT_CH2,
     },
-    Vector { _handler: GPSPI2 },
+    Vector { _handler: SPI2 },
     Vector { _handler: AES },
     Vector { _handler: SHA },
     Vector { _handler: RSA },
@@ -224,6 +224,33 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 65] = [
 #[doc(hidden)]
 pub mod interrupt;
 pub use self::interrupt::Interrupt;
+#[doc = "Core Local Interrupts"]
+pub type CLINT = crate::Periph<clint::RegisterBlock, 0x2000_0000>;
+impl core::fmt::Debug for CLINT {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLINT").finish()
+    }
+}
+#[doc = "Core Local Interrupts"]
+pub mod clint;
+#[doc = "PLIC Peripheral"]
+pub type PLIC_MX = crate::Periph<plic_mx::RegisterBlock, 0x2000_1000>;
+impl core::fmt::Debug for PLIC_MX {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PLIC_MX").finish()
+    }
+}
+#[doc = "PLIC Peripheral"]
+pub mod plic_mx;
+#[doc = "PLIC Peripheral"]
+pub type PLIC_UX = crate::Periph<plic_ux::RegisterBlock, 0x2000_1400>;
+impl core::fmt::Debug for PLIC_UX {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PLIC_UX").finish()
+    }
+}
+#[doc = "PLIC Peripheral"]
+pub mod plic_ux;
 #[doc = "AES (Advanced Encryption Standard) Accelerator"]
 pub type AES = crate::Periph<aes::RegisterBlock, 0x6008_8000>;
 impl core::fmt::Debug for AES {
@@ -458,6 +485,15 @@ impl core::fmt::Debug for LP_APM0 {
 }
 #[doc = "LP_APM0 Peripheral"]
 pub mod lp_apm0;
+#[doc = "I2C_ANA_MST Peripheral"]
+pub type I2C_ANA_MST = crate::Periph<i2c_ana_mst::RegisterBlock, 0x600a_d800>;
+impl core::fmt::Debug for I2C_ANA_MST {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C_ANA_MST").finish()
+    }
+}
+#[doc = "I2C_ANA_MST Peripheral"]
+pub mod i2c_ana_mst;
 #[doc = "LP_CLKRST Peripheral"]
 pub type LP_CLKRST = crate::Periph<lp_clkrst::RegisterBlock, 0x600b_0400>;
 impl core::fmt::Debug for LP_CLKRST {

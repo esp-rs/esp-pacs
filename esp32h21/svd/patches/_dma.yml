@@ -1,0 +1,45 @@
+DMA:
+  # H21 CSV did not merge OUT_PRI (field names carry the channel index).
+  OUT_PRI_CH0:
+    _modify:
+      TX_PRI_CH0:
+        name: TX_PRI
+  OUT_PRI_CH1:
+    _modify:
+      TX_PRI_CH1:
+        name: TX_PRI
+  OUT_PRI_CH2:
+    _modify:
+      TX_PRI_CH2:
+        name: TX_PRI
+
+  # CH0 was left out of the OUT_CONF0 array due to `_CH0` vs `_CH` field names.
+  # Drop it and grow the remaining dim-2 array to cover all three channels.
+  _delete: OUT_CONF0_CH0
+
+  _strip_end: "_CH"
+  "*":
+    _strip_end: "_CH"
+
+  "IN_INT_RAW_CH%s":
+    _strip_end: "_CH_INT_RAW"
+  "IN_INT_CLR_CH%s":
+    _strip_end: "_CH_INT_CLR"
+  "IN_INT_ST_CH%s":
+    _strip_end: "_CH_INT_ST"
+  "IN_INT_ENA_CH%s":
+    _strip_end: "_CH_INT_ENA"
+  "OUT_INT_CLR_CH%s":
+    _strip_end: "_CH_INT_CLR"
+  "OUT_INT_RAW_CH%s":
+    _strip_end: "_CH_INT_RAW"
+  "OUT_INT_ST_CH%s":
+    _strip_end: "_CH_INT_ST"
+  "OUT_INT_ENA_CH%s":
+    _strip_end: "_CH_INT_ENA"
+
+  _modify:
+    "OUT_CONF0_CH%s":
+      dim: 3
+      dimIndex: "0,1,2"
+      addressOffset: 0xD0

@@ -1,19 +1,19 @@
 #[doc = "Register `SAR1_STATUS` reader"]
 pub type R = crate::R<SAR1_STATUS_SPEC>;
-#[doc = "Field `SARADC_SAR1_STATUS` reader - saradc1 status about data and channel"]
-pub type SARADC_SAR1_STATUS_R = crate::FieldReader<u32>;
+#[doc = "Field `SAR1_STATUS` reader - saradc1 status about data and channel"]
+pub type SAR1_STATUS_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - saradc1 status about data and channel"]
     #[inline(always)]
-    pub fn saradc_sar1_status(&self) -> SARADC_SAR1_STATUS_R {
-        SARADC_SAR1_STATUS_R::new(self.bits)
+    pub fn sar1_status(&self) -> SAR1_STATUS_R {
+        SAR1_STATUS_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR1_STATUS")
-            .field("saradc_sar1_status", &self.saradc_sar1_status())
+            .field("sar1_status", &self.sar1_status())
             .finish()
     }
 }

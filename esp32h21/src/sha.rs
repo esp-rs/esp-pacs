@@ -15,8 +15,8 @@ pub struct RegisterBlock {
     irq_ena: IRQ_ENA,
     date: DATE,
     _reserved12: [u8; 0x10],
-    h_mem: [H_MEM; 64],
-    m_mem: [M_MEM; 64],
+    h_mem: [H_MEM; 16],
+    m_mem: [M_MEM; 16],
 }
 impl RegisterBlock {
     #[doc = "0x00 - Initial configuration register."]
@@ -118,11 +118,11 @@ pub mod t_length;
 pub type DMA_BLOCK_NUM = crate::Reg<dma_block_num::DMA_BLOCK_NUM_SPEC>;
 #[doc = "DMA configuration register 0."]
 pub mod dma_block_num;
-#[doc = "START (r) register accessor: Typical SHA configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`start::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@start`] module"]
+#[doc = "START (w) register accessor: Typical SHA configuration register 0.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`start::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@start`] module"]
 pub type START = crate::Reg<start::START_SPEC>;
 #[doc = "Typical SHA configuration register 0."]
 pub mod start;
-#[doc = "CONTINUE (r) register accessor: Typical SHA configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`continue_::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@continue_`] module"]
+#[doc = "CONTINUE (w) register accessor: Typical SHA configuration register 1.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`continue_::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@continue_`] module"]
 pub type CONTINUE = crate::Reg<continue_::CONTINUE_SPEC>;
 #[doc = "Typical SHA configuration register 1."]
 pub mod continue_;
@@ -146,10 +146,7 @@ pub mod clear_irq;
 pub type IRQ_ENA = crate::Reg<irq_ena::IRQ_ENA_SPEC>;
 #[doc = "Interrupt enable register."]
 pub mod irq_ena;
-#[doc = "DATE (rw) register accessor: Date register.\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "Date register."]
-pub mod date;
+pub use crate::dma::{date, DATE};
 #[doc = "H_MEM (rw) register accessor: Sha H memory which contains intermediate hash or finial hash.\n\nYou can [`read`](crate::Reg::read) this register and get [`h_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`h_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@h_mem`] module"]
 pub type H_MEM = crate::Reg<h_mem::H_MEM_SPEC>;
 #[doc = "Sha H memory which contains intermediate hash or finial hash."]

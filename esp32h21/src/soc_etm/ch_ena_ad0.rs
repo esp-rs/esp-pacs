@@ -2,495 +2,395 @@
 pub type R = crate::R<CH_ENA_AD0_SPEC>;
 #[doc = "Register `CH_ENA_AD0` writer"]
 pub type W = crate::W<CH_ENA_AD0_SPEC>;
-#[doc = "Field `CH_ENABLED0` reader - Represents channel0 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED0_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED0` writer - Represents channel0 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED0_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED1` reader - Represents channel1 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED1_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED1` writer - Represents channel1 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED1_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED2` reader - Represents channel2 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED2_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED2` writer - Represents channel2 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED2_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED3` reader - Represents channel3 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED3_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED3` writer - Represents channel3 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED3_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED4` reader - Represents channel4 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED4_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED4` writer - Represents channel4 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED4_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED5` reader - Represents channel5 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED5_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED5` writer - Represents channel5 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED5_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED6` reader - Represents channel6 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED6_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED6` writer - Represents channel6 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED6_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED7` reader - Represents channel7 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED7_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED7` writer - Represents channel7 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED7_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED8` reader - Represents channel8 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED8_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED8` writer - Represents channel8 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED8_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED9` reader - Represents channel9 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED9_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED9` writer - Represents channel9 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED9_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED10` reader - Represents channel10 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED10_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED10` writer - Represents channel10 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED10_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED11` reader - Represents channel11 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED11_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED11` writer - Represents channel11 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED11_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED12` reader - Represents channel12 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED12_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED12` writer - Represents channel12 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED12_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED13` reader - Represents channel13 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED13_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED13` writer - Represents channel13 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED13_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED14` reader - Represents channel14 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED14_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED14` writer - Represents channel14 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED14_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED15` reader - Represents channel15 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED15_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED15` writer - Represents channel15 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED15_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED16` reader - Represents channel16 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED16_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED16` writer - Represents channel16 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED16_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED17` reader - Represents channel17 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED17_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED17` writer - Represents channel17 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED17_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED18` reader - Represents channel18 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED18_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED18` writer - Represents channel18 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED18_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED19` reader - Represents channel19 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED19_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED19` writer - Represents channel19 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED19_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED20` reader - Represents channel20 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED20_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED20` writer - Represents channel20 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED20_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED21` reader - Represents channel21 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED21_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED21` writer - Represents channel21 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED21_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED22` reader - Represents channel22 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED22_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED22` writer - Represents channel22 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED22_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED23` reader - Represents channel23 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED23_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED23` writer - Represents channel23 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED23_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED24` reader - Represents channel24 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED24_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED24` writer - Represents channel24 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED24_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED25` reader - Represents channel25 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED25_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED25` writer - Represents channel25 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED25_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED26` reader - Represents channel26 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED26_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED26` writer - Represents channel26 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED26_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED27` reader - Represents channel27 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED27_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED27` writer - Represents channel27 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED27_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED28` reader - Represents channel28 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED28_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED28` writer - Represents channel28 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED28_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED29` reader - Represents channel29 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED29_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED29` writer - Represents channel29 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED29_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED30` reader - Represents channel30 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED30_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED30` writer - Represents channel30 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED30_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_ENABLED31` reader - Represents channel31 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED31_R = crate::BitReader;
-#[doc = "Field `CH_ENABLED31` writer - Represents channel31 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type CH_ENABLED31_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CH_ENA(0-31)` reader - Channel %s enable status"]
+pub type CH_ENA_R = crate::BitReader;
+#[doc = "Field `CH_ENA(0-31)` writer - Channel %s enable status"]
+pub type CH_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - Represents channel0 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Channel (0-31) enable status"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH_ENA0` field.</div>"]
     #[inline(always)]
-    pub fn ch_enabled0(&self) -> CH_ENABLED0_R {
-        CH_ENABLED0_R::new((self.bits & 1) != 0)
+    pub fn ch_ena(&self, n: u8) -> CH_ENA_R {
+        #[allow(clippy::no_effect)]
+        [(); 32][n as usize];
+        CH_ENA_R::new(((self.bits >> n) & 1) != 0)
     }
-    #[doc = "Bit 1 - Represents channel1 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "Channel (0-31) enable status"]
     #[inline(always)]
-    pub fn ch_enabled1(&self) -> CH_ENABLED1_R {
-        CH_ENABLED1_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn ch_ena_iter(&self) -> impl Iterator<Item = CH_ENA_R> + '_ {
+        (0..32).map(move |n| CH_ENA_R::new(((self.bits >> n) & 1) != 0))
     }
-    #[doc = "Bit 2 - Represents channel2 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 0 - Channel 0 enable status"]
     #[inline(always)]
-    pub fn ch_enabled2(&self) -> CH_ENABLED2_R {
-        CH_ENABLED2_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn ch_ena0(&self) -> CH_ENA_R {
+        CH_ENA_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 3 - Represents channel3 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 1 - Channel 1 enable status"]
     #[inline(always)]
-    pub fn ch_enabled3(&self) -> CH_ENABLED3_R {
-        CH_ENABLED3_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn ch_ena1(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 4 - Represents channel4 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 2 - Channel 2 enable status"]
     #[inline(always)]
-    pub fn ch_enabled4(&self) -> CH_ENABLED4_R {
-        CH_ENABLED4_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn ch_ena2(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 5 - Represents channel5 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 3 - Channel 3 enable status"]
     #[inline(always)]
-    pub fn ch_enabled5(&self) -> CH_ENABLED5_R {
-        CH_ENABLED5_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn ch_ena3(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 6 - Represents channel6 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 4 - Channel 4 enable status"]
     #[inline(always)]
-    pub fn ch_enabled6(&self) -> CH_ENABLED6_R {
-        CH_ENABLED6_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn ch_ena4(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 7 - Represents channel7 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 5 - Channel 5 enable status"]
     #[inline(always)]
-    pub fn ch_enabled7(&self) -> CH_ENABLED7_R {
-        CH_ENABLED7_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn ch_ena5(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 8 - Represents channel8 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 6 - Channel 6 enable status"]
     #[inline(always)]
-    pub fn ch_enabled8(&self) -> CH_ENABLED8_R {
-        CH_ENABLED8_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn ch_ena6(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 9 - Represents channel9 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 7 - Channel 7 enable status"]
     #[inline(always)]
-    pub fn ch_enabled9(&self) -> CH_ENABLED9_R {
-        CH_ENABLED9_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn ch_ena7(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 7) & 1) != 0)
     }
-    #[doc = "Bit 10 - Represents channel10 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 8 - Channel 8 enable status"]
     #[inline(always)]
-    pub fn ch_enabled10(&self) -> CH_ENABLED10_R {
-        CH_ENABLED10_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn ch_ena8(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 8) & 1) != 0)
     }
-    #[doc = "Bit 11 - Represents channel11 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 9 - Channel 9 enable status"]
     #[inline(always)]
-    pub fn ch_enabled11(&self) -> CH_ENABLED11_R {
-        CH_ENABLED11_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn ch_ena9(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 9) & 1) != 0)
     }
-    #[doc = "Bit 12 - Represents channel12 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 10 - Channel 10 enable status"]
     #[inline(always)]
-    pub fn ch_enabled12(&self) -> CH_ENABLED12_R {
-        CH_ENABLED12_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn ch_ena10(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bit 13 - Represents channel13 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 11 - Channel 11 enable status"]
     #[inline(always)]
-    pub fn ch_enabled13(&self) -> CH_ENABLED13_R {
-        CH_ENABLED13_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn ch_ena11(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 11) & 1) != 0)
     }
-    #[doc = "Bit 14 - Represents channel14 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 12 - Channel 12 enable status"]
     #[inline(always)]
-    pub fn ch_enabled14(&self) -> CH_ENABLED14_R {
-        CH_ENABLED14_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn ch_ena12(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 12) & 1) != 0)
     }
-    #[doc = "Bit 15 - Represents channel15 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 13 - Channel 13 enable status"]
     #[inline(always)]
-    pub fn ch_enabled15(&self) -> CH_ENABLED15_R {
-        CH_ENABLED15_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn ch_ena13(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 13) & 1) != 0)
     }
-    #[doc = "Bit 16 - Represents channel16 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 14 - Channel 14 enable status"]
     #[inline(always)]
-    pub fn ch_enabled16(&self) -> CH_ENABLED16_R {
-        CH_ENABLED16_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn ch_ena14(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 14) & 1) != 0)
     }
-    #[doc = "Bit 17 - Represents channel17 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 15 - Channel 15 enable status"]
     #[inline(always)]
-    pub fn ch_enabled17(&self) -> CH_ENABLED17_R {
-        CH_ENABLED17_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn ch_ena15(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 15) & 1) != 0)
     }
-    #[doc = "Bit 18 - Represents channel18 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 16 - Channel 16 enable status"]
     #[inline(always)]
-    pub fn ch_enabled18(&self) -> CH_ENABLED18_R {
-        CH_ENABLED18_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn ch_ena16(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 16) & 1) != 0)
     }
-    #[doc = "Bit 19 - Represents channel19 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 17 - Channel 17 enable status"]
     #[inline(always)]
-    pub fn ch_enabled19(&self) -> CH_ENABLED19_R {
-        CH_ENABLED19_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn ch_ena17(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 17) & 1) != 0)
     }
-    #[doc = "Bit 20 - Represents channel20 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 18 - Channel 18 enable status"]
     #[inline(always)]
-    pub fn ch_enabled20(&self) -> CH_ENABLED20_R {
-        CH_ENABLED20_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn ch_ena18(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 18) & 1) != 0)
     }
-    #[doc = "Bit 21 - Represents channel21 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 19 - Channel 19 enable status"]
     #[inline(always)]
-    pub fn ch_enabled21(&self) -> CH_ENABLED21_R {
-        CH_ENABLED21_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn ch_ena19(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 19) & 1) != 0)
     }
-    #[doc = "Bit 22 - Represents channel22 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 20 - Channel 20 enable status"]
     #[inline(always)]
-    pub fn ch_enabled22(&self) -> CH_ENABLED22_R {
-        CH_ENABLED22_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn ch_ena20(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 20) & 1) != 0)
     }
-    #[doc = "Bit 23 - Represents channel23 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 21 - Channel 21 enable status"]
     #[inline(always)]
-    pub fn ch_enabled23(&self) -> CH_ENABLED23_R {
-        CH_ENABLED23_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn ch_ena21(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 21) & 1) != 0)
     }
-    #[doc = "Bit 24 - Represents channel24 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 22 - Channel 22 enable status"]
     #[inline(always)]
-    pub fn ch_enabled24(&self) -> CH_ENABLED24_R {
-        CH_ENABLED24_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn ch_ena22(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "Bit 25 - Represents channel25 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 23 - Channel 23 enable status"]
     #[inline(always)]
-    pub fn ch_enabled25(&self) -> CH_ENABLED25_R {
-        CH_ENABLED25_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn ch_ena23(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 23) & 1) != 0)
     }
-    #[doc = "Bit 26 - Represents channel26 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 24 - Channel 24 enable status"]
     #[inline(always)]
-    pub fn ch_enabled26(&self) -> CH_ENABLED26_R {
-        CH_ENABLED26_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn ch_ena24(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 24) & 1) != 0)
     }
-    #[doc = "Bit 27 - Represents channel27 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 25 - Channel 25 enable status"]
     #[inline(always)]
-    pub fn ch_enabled27(&self) -> CH_ENABLED27_R {
-        CH_ENABLED27_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn ch_ena25(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 25) & 1) != 0)
     }
-    #[doc = "Bit 28 - Represents channel28 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 26 - Channel 26 enable status"]
     #[inline(always)]
-    pub fn ch_enabled28(&self) -> CH_ENABLED28_R {
-        CH_ENABLED28_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn ch_ena26(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 26) & 1) != 0)
     }
-    #[doc = "Bit 29 - Represents channel29 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 27 - Channel 27 enable status"]
     #[inline(always)]
-    pub fn ch_enabled29(&self) -> CH_ENABLED29_R {
-        CH_ENABLED29_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn ch_ena27(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 27) & 1) != 0)
     }
-    #[doc = "Bit 30 - Represents channel30 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 28 - Channel 28 enable status"]
     #[inline(always)]
-    pub fn ch_enabled30(&self) -> CH_ENABLED30_R {
-        CH_ENABLED30_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn ch_ena28(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 28) & 1) != 0)
     }
-    #[doc = "Bit 31 - Represents channel31 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 29 - Channel 29 enable status"]
     #[inline(always)]
-    pub fn ch_enabled31(&self) -> CH_ENABLED31_R {
-        CH_ENABLED31_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn ch_ena29(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - Channel 30 enable status"]
+    #[inline(always)]
+    pub fn ch_ena30(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - Channel 31 enable status"]
+    #[inline(always)]
+    pub fn ch_ena31(&self) -> CH_ENA_R {
+        CH_ENA_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CH_ENA_AD0")
-            .field("ch_enabled0", &self.ch_enabled0())
-            .field("ch_enabled1", &self.ch_enabled1())
-            .field("ch_enabled2", &self.ch_enabled2())
-            .field("ch_enabled3", &self.ch_enabled3())
-            .field("ch_enabled4", &self.ch_enabled4())
-            .field("ch_enabled5", &self.ch_enabled5())
-            .field("ch_enabled6", &self.ch_enabled6())
-            .field("ch_enabled7", &self.ch_enabled7())
-            .field("ch_enabled8", &self.ch_enabled8())
-            .field("ch_enabled9", &self.ch_enabled9())
-            .field("ch_enabled10", &self.ch_enabled10())
-            .field("ch_enabled11", &self.ch_enabled11())
-            .field("ch_enabled12", &self.ch_enabled12())
-            .field("ch_enabled13", &self.ch_enabled13())
-            .field("ch_enabled14", &self.ch_enabled14())
-            .field("ch_enabled15", &self.ch_enabled15())
-            .field("ch_enabled16", &self.ch_enabled16())
-            .field("ch_enabled17", &self.ch_enabled17())
-            .field("ch_enabled18", &self.ch_enabled18())
-            .field("ch_enabled19", &self.ch_enabled19())
-            .field("ch_enabled20", &self.ch_enabled20())
-            .field("ch_enabled21", &self.ch_enabled21())
-            .field("ch_enabled22", &self.ch_enabled22())
-            .field("ch_enabled23", &self.ch_enabled23())
-            .field("ch_enabled24", &self.ch_enabled24())
-            .field("ch_enabled25", &self.ch_enabled25())
-            .field("ch_enabled26", &self.ch_enabled26())
-            .field("ch_enabled27", &self.ch_enabled27())
-            .field("ch_enabled28", &self.ch_enabled28())
-            .field("ch_enabled29", &self.ch_enabled29())
-            .field("ch_enabled30", &self.ch_enabled30())
-            .field("ch_enabled31", &self.ch_enabled31())
+            .field("ch_ena0", &self.ch_ena0())
+            .field("ch_ena1", &self.ch_ena1())
+            .field("ch_ena2", &self.ch_ena2())
+            .field("ch_ena3", &self.ch_ena3())
+            .field("ch_ena4", &self.ch_ena4())
+            .field("ch_ena5", &self.ch_ena5())
+            .field("ch_ena6", &self.ch_ena6())
+            .field("ch_ena7", &self.ch_ena7())
+            .field("ch_ena8", &self.ch_ena8())
+            .field("ch_ena9", &self.ch_ena9())
+            .field("ch_ena10", &self.ch_ena10())
+            .field("ch_ena11", &self.ch_ena11())
+            .field("ch_ena12", &self.ch_ena12())
+            .field("ch_ena13", &self.ch_ena13())
+            .field("ch_ena14", &self.ch_ena14())
+            .field("ch_ena15", &self.ch_ena15())
+            .field("ch_ena16", &self.ch_ena16())
+            .field("ch_ena17", &self.ch_ena17())
+            .field("ch_ena18", &self.ch_ena18())
+            .field("ch_ena19", &self.ch_ena19())
+            .field("ch_ena20", &self.ch_ena20())
+            .field("ch_ena21", &self.ch_ena21())
+            .field("ch_ena22", &self.ch_ena22())
+            .field("ch_ena23", &self.ch_ena23())
+            .field("ch_ena24", &self.ch_ena24())
+            .field("ch_ena25", &self.ch_ena25())
+            .field("ch_ena26", &self.ch_ena26())
+            .field("ch_ena27", &self.ch_ena27())
+            .field("ch_ena28", &self.ch_ena28())
+            .field("ch_ena29", &self.ch_ena29())
+            .field("ch_ena30", &self.ch_ena30())
+            .field("ch_ena31", &self.ch_ena31())
             .finish()
     }
 }
 impl W {
-    #[doc = "Bit 0 - Represents channel0 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Channel (0-31) enable status"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH_ENA0` field.</div>"]
     #[inline(always)]
-    pub fn ch_enabled0(&mut self) -> CH_ENABLED0_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED0_W::new(self, 0)
+    pub fn ch_ena(&mut self, n: u8) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 32][n as usize];
+        CH_ENA_W::new(self, n)
     }
-    #[doc = "Bit 1 - Represents channel1 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 0 - Channel 0 enable status"]
     #[inline(always)]
-    pub fn ch_enabled1(&mut self) -> CH_ENABLED1_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED1_W::new(self, 1)
+    pub fn ch_ena0(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 0)
     }
-    #[doc = "Bit 2 - Represents channel2 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 1 - Channel 1 enable status"]
     #[inline(always)]
-    pub fn ch_enabled2(&mut self) -> CH_ENABLED2_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED2_W::new(self, 2)
+    pub fn ch_ena1(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 1)
     }
-    #[doc = "Bit 3 - Represents channel3 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 2 - Channel 2 enable status"]
     #[inline(always)]
-    pub fn ch_enabled3(&mut self) -> CH_ENABLED3_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED3_W::new(self, 3)
+    pub fn ch_ena2(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 2)
     }
-    #[doc = "Bit 4 - Represents channel4 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 3 - Channel 3 enable status"]
     #[inline(always)]
-    pub fn ch_enabled4(&mut self) -> CH_ENABLED4_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED4_W::new(self, 4)
+    pub fn ch_ena3(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 3)
     }
-    #[doc = "Bit 5 - Represents channel5 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 4 - Channel 4 enable status"]
     #[inline(always)]
-    pub fn ch_enabled5(&mut self) -> CH_ENABLED5_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED5_W::new(self, 5)
+    pub fn ch_ena4(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 4)
     }
-    #[doc = "Bit 6 - Represents channel6 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 5 - Channel 5 enable status"]
     #[inline(always)]
-    pub fn ch_enabled6(&mut self) -> CH_ENABLED6_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED6_W::new(self, 6)
+    pub fn ch_ena5(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 5)
     }
-    #[doc = "Bit 7 - Represents channel7 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 6 - Channel 6 enable status"]
     #[inline(always)]
-    pub fn ch_enabled7(&mut self) -> CH_ENABLED7_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED7_W::new(self, 7)
+    pub fn ch_ena6(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 6)
     }
-    #[doc = "Bit 8 - Represents channel8 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 7 - Channel 7 enable status"]
     #[inline(always)]
-    pub fn ch_enabled8(&mut self) -> CH_ENABLED8_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED8_W::new(self, 8)
+    pub fn ch_ena7(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 7)
     }
-    #[doc = "Bit 9 - Represents channel9 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 8 - Channel 8 enable status"]
     #[inline(always)]
-    pub fn ch_enabled9(&mut self) -> CH_ENABLED9_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED9_W::new(self, 9)
+    pub fn ch_ena8(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 8)
     }
-    #[doc = "Bit 10 - Represents channel10 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 9 - Channel 9 enable status"]
     #[inline(always)]
-    pub fn ch_enabled10(&mut self) -> CH_ENABLED10_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED10_W::new(self, 10)
+    pub fn ch_ena9(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 9)
     }
-    #[doc = "Bit 11 - Represents channel11 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 10 - Channel 10 enable status"]
     #[inline(always)]
-    pub fn ch_enabled11(&mut self) -> CH_ENABLED11_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED11_W::new(self, 11)
+    pub fn ch_ena10(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 10)
     }
-    #[doc = "Bit 12 - Represents channel12 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 11 - Channel 11 enable status"]
     #[inline(always)]
-    pub fn ch_enabled12(&mut self) -> CH_ENABLED12_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED12_W::new(self, 12)
+    pub fn ch_ena11(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 11)
     }
-    #[doc = "Bit 13 - Represents channel13 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 12 - Channel 12 enable status"]
     #[inline(always)]
-    pub fn ch_enabled13(&mut self) -> CH_ENABLED13_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED13_W::new(self, 13)
+    pub fn ch_ena12(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 12)
     }
-    #[doc = "Bit 14 - Represents channel14 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 13 - Channel 13 enable status"]
     #[inline(always)]
-    pub fn ch_enabled14(&mut self) -> CH_ENABLED14_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED14_W::new(self, 14)
+    pub fn ch_ena13(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 13)
     }
-    #[doc = "Bit 15 - Represents channel15 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 14 - Channel 14 enable status"]
     #[inline(always)]
-    pub fn ch_enabled15(&mut self) -> CH_ENABLED15_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED15_W::new(self, 15)
+    pub fn ch_ena14(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 14)
     }
-    #[doc = "Bit 16 - Represents channel16 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 15 - Channel 15 enable status"]
     #[inline(always)]
-    pub fn ch_enabled16(&mut self) -> CH_ENABLED16_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED16_W::new(self, 16)
+    pub fn ch_ena15(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 15)
     }
-    #[doc = "Bit 17 - Represents channel17 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 16 - Channel 16 enable status"]
     #[inline(always)]
-    pub fn ch_enabled17(&mut self) -> CH_ENABLED17_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED17_W::new(self, 17)
+    pub fn ch_ena16(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 16)
     }
-    #[doc = "Bit 18 - Represents channel18 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 17 - Channel 17 enable status"]
     #[inline(always)]
-    pub fn ch_enabled18(&mut self) -> CH_ENABLED18_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED18_W::new(self, 18)
+    pub fn ch_ena17(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 17)
     }
-    #[doc = "Bit 19 - Represents channel19 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 18 - Channel 18 enable status"]
     #[inline(always)]
-    pub fn ch_enabled19(&mut self) -> CH_ENABLED19_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED19_W::new(self, 19)
+    pub fn ch_ena18(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 18)
     }
-    #[doc = "Bit 20 - Represents channel20 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 19 - Channel 19 enable status"]
     #[inline(always)]
-    pub fn ch_enabled20(&mut self) -> CH_ENABLED20_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED20_W::new(self, 20)
+    pub fn ch_ena19(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 19)
     }
-    #[doc = "Bit 21 - Represents channel21 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 20 - Channel 20 enable status"]
     #[inline(always)]
-    pub fn ch_enabled21(&mut self) -> CH_ENABLED21_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED21_W::new(self, 21)
+    pub fn ch_ena20(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 20)
     }
-    #[doc = "Bit 22 - Represents channel22 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 21 - Channel 21 enable status"]
     #[inline(always)]
-    pub fn ch_enabled22(&mut self) -> CH_ENABLED22_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED22_W::new(self, 22)
+    pub fn ch_ena21(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 21)
     }
-    #[doc = "Bit 23 - Represents channel23 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 22 - Channel 22 enable status"]
     #[inline(always)]
-    pub fn ch_enabled23(&mut self) -> CH_ENABLED23_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED23_W::new(self, 23)
+    pub fn ch_ena22(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 22)
     }
-    #[doc = "Bit 24 - Represents channel24 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 23 - Channel 23 enable status"]
     #[inline(always)]
-    pub fn ch_enabled24(&mut self) -> CH_ENABLED24_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED24_W::new(self, 24)
+    pub fn ch_ena23(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 23)
     }
-    #[doc = "Bit 25 - Represents channel25 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 24 - Channel 24 enable status"]
     #[inline(always)]
-    pub fn ch_enabled25(&mut self) -> CH_ENABLED25_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED25_W::new(self, 25)
+    pub fn ch_ena24(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 24)
     }
-    #[doc = "Bit 26 - Represents channel26 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 25 - Channel 25 enable status"]
     #[inline(always)]
-    pub fn ch_enabled26(&mut self) -> CH_ENABLED26_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED26_W::new(self, 26)
+    pub fn ch_ena25(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 25)
     }
-    #[doc = "Bit 27 - Represents channel27 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 26 - Channel 26 enable status"]
     #[inline(always)]
-    pub fn ch_enabled27(&mut self) -> CH_ENABLED27_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED27_W::new(self, 27)
+    pub fn ch_ena26(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 26)
     }
-    #[doc = "Bit 28 - Represents channel28 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 27 - Channel 27 enable status"]
     #[inline(always)]
-    pub fn ch_enabled28(&mut self) -> CH_ENABLED28_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED28_W::new(self, 28)
+    pub fn ch_ena27(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 27)
     }
-    #[doc = "Bit 29 - Represents channel29 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 28 - Channel 28 enable status"]
     #[inline(always)]
-    pub fn ch_enabled29(&mut self) -> CH_ENABLED29_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED29_W::new(self, 29)
+    pub fn ch_ena28(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 28)
     }
-    #[doc = "Bit 30 - Represents channel30 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 29 - Channel 29 enable status"]
     #[inline(always)]
-    pub fn ch_enabled30(&mut self) -> CH_ENABLED30_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED30_W::new(self, 30)
+    pub fn ch_ena29(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 29)
     }
-    #[doc = "Bit 31 - Represents channel31 enable status.\\\\0: Disable\\\\1: Enable\\\\"]
+    #[doc = "Bit 30 - Channel 30 enable status"]
     #[inline(always)]
-    pub fn ch_enabled31(&mut self) -> CH_ENABLED31_W<'_, CH_ENA_AD0_SPEC> {
-        CH_ENABLED31_W::new(self, 31)
+    pub fn ch_ena30(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 30)
+    }
+    #[doc = "Bit 31 - Channel 31 enable status"]
+    #[inline(always)]
+    pub fn ch_ena31(&mut self) -> CH_ENA_W<'_, CH_ENA_AD0_SPEC> {
+        CH_ENA_W::new(self, 31)
     }
 }
 #[doc = "Channel enable status register\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_ena_ad0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_ena_ad0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

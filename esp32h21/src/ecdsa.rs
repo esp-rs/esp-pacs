@@ -21,13 +21,13 @@ pub struct RegisterBlock {
     sha_continue: SHA_CONTINUE,
     sha_busy: SHA_BUSY,
     _reserved14: [u8; 0x64],
-    message_mem: [MESSAGE_MEM; 32],
+    message_mem: [MESSAGE_MEM; 8],
     _reserved15: [u8; 0xa0],
-    r_mem: [R_MEM; 32],
-    s_mem: [S_MEM; 32],
-    z_mem: [Z_MEM; 32],
-    qax_mem: [QAX_MEM; 32],
-    qay_mem: [QAY_MEM; 32],
+    r_mem: [R_MEM; 8],
+    s_mem: [S_MEM; 8],
+    z_mem: [Z_MEM; 8],
+    qax_mem: [QAX_MEM; 8],
+    qay_mem: [QAY_MEM; 8],
 }
 impl RegisterBlock {
     #[doc = "0x04 - ECDSA configuration register"]
@@ -203,10 +203,7 @@ pub mod state;
 pub type RESULT = crate::Reg<result::RESULT_SPEC>;
 #[doc = "ECDSA result register"]
 pub mod result;
-#[doc = "DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "Version control register"]
-pub mod date;
+pub use crate::dma::{date, DATE};
 #[doc = "SHA_MODE (rw) register accessor: ECDSA SHA-control register (Hash algrithm)\n\nYou can [`read`](crate::Reg::read) this register and get [`sha_mode::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sha_mode::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha_mode`] module"]
 pub type SHA_MODE = crate::Reg<sha_mode::SHA_MODE_SPEC>;
 #[doc = "ECDSA SHA-control register (Hash algrithm)"]

@@ -96,9 +96,9 @@ pub struct RegisterBlock {
     vddbat_cfg: VDDBAT_CFG,
     backup_cfg: BACKUP_CFG,
     int_raw: INT_RAW,
-    hp_int_st: HP_INT_ST,
-    hp_int_ena: HP_INT_ENA,
-    hp_int_clr: HP_INT_CLR,
+    int_st: INT_ST,
+    int_ena: INT_ENA,
+    int_clr: INT_CLR,
     lp_int_raw: LP_INT_RAW,
     lp_int_st: LP_INT_ST,
     lp_int_ena: LP_INT_ENA,
@@ -113,8 +113,10 @@ pub struct RegisterBlock {
     clk_state1: CLK_STATE1,
     clk_state2: CLK_STATE2,
     dcm_ctrl: DCM_CTRL,
+    dcm_boost_ctrl: DCM_BOOST_CTRL,
     touch_pwr_ctrl: TOUCH_PWR_CTRL,
-    _reserved112: [u8; 0x023c],
+    ble_bandgap_ctrl: BLE_BANDGAP_CTRL,
+    _reserved114: [u8; 0x0234],
     date: DATE,
 }
 impl RegisterBlock {
@@ -590,18 +592,18 @@ impl RegisterBlock {
     }
     #[doc = "0x178 - need_des"]
     #[inline(always)]
-    pub const fn hp_int_st(&self) -> &HP_INT_ST {
-        &self.hp_int_st
+    pub const fn int_st(&self) -> &INT_ST {
+        &self.int_st
     }
     #[doc = "0x17c - need_des"]
     #[inline(always)]
-    pub const fn hp_int_ena(&self) -> &HP_INT_ENA {
-        &self.hp_int_ena
+    pub const fn int_ena(&self) -> &INT_ENA {
+        &self.int_ena
     }
     #[doc = "0x180 - need_des"]
     #[inline(always)]
-    pub const fn hp_int_clr(&self) -> &HP_INT_CLR {
-        &self.hp_int_clr
+    pub const fn int_clr(&self) -> &INT_CLR {
+        &self.int_clr
     }
     #[doc = "0x184 - need_des"]
     #[inline(always)]
@@ -673,10 +675,20 @@ impl RegisterBlock {
     pub const fn dcm_ctrl(&self) -> &DCM_CTRL {
         &self.dcm_ctrl
     }
-    #[doc = "0x1bc - need_des"]
+    #[doc = "0x1bc - DCM boost control register"]
+    #[inline(always)]
+    pub const fn dcm_boost_ctrl(&self) -> &DCM_BOOST_CTRL {
+        &self.dcm_boost_ctrl
+    }
+    #[doc = "0x1c0 - need_des"]
     #[inline(always)]
     pub const fn touch_pwr_ctrl(&self) -> &TOUCH_PWR_CTRL {
         &self.touch_pwr_ctrl
+    }
+    #[doc = "0x1c4 - BLE bandgap control register"]
+    #[inline(always)]
+    pub const fn ble_bandgap_ctrl(&self) -> &BLE_BANDGAP_CTRL {
+        &self.ble_bandgap_ctrl
     }
     #[doc = "0x3fc - need_des"]
     #[inline(always)]
@@ -892,7 +904,7 @@ pub mod lp_sleep_lp_ck_power;
 pub type LP_SLEEP_BIAS = crate::Reg<lp_sleep_bias::LP_SLEEP_BIAS_SPEC>;
 #[doc = "need_des"]
 pub mod lp_sleep_bias;
-#[doc = "IMM_HP_CK_POWER (w) register accessor: need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`imm_hp_ck_power::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@imm_hp_ck_power`] module"]
+#[doc = "IMM_HP_CK_POWER (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`imm_hp_ck_power::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`imm_hp_ck_power::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@imm_hp_ck_power`] module"]
 pub type IMM_HP_CK_POWER = crate::Reg<imm_hp_ck_power::IMM_HP_CK_POWER_SPEC>;
 #[doc = "need_des"]
 pub mod imm_hp_ck_power;
@@ -1065,18 +1077,18 @@ pub mod backup_cfg;
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "need_des"]
 pub mod int_raw;
-#[doc = "HP_INT_ST (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_int_st`] module"]
-pub type HP_INT_ST = crate::Reg<hp_int_st::HP_INT_ST_SPEC>;
+#[doc = "INT_ST (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
+pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = "need_des"]
-pub mod hp_int_st;
-#[doc = "HP_INT_ENA (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_int_ena`] module"]
-pub type HP_INT_ENA = crate::Reg<hp_int_ena::HP_INT_ENA_SPEC>;
+pub mod int_st;
+#[doc = "INT_ENA (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "need_des"]
-pub mod hp_int_ena;
-#[doc = "HP_INT_CLR (w) register accessor: need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_int_clr`] module"]
-pub type HP_INT_CLR = crate::Reg<hp_int_clr::HP_INT_CLR_SPEC>;
+pub mod int_ena;
+#[doc = "INT_CLR (w) register accessor: need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "need_des"]
-pub mod hp_int_clr;
+pub mod int_clr;
 #[doc = "LP_INT_RAW (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_int_raw::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_int_raw::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@lp_int_raw`] module"]
 pub type LP_INT_RAW = crate::Reg<lp_int_raw::LP_INT_RAW_SPEC>;
 #[doc = "need_des"]
@@ -1133,11 +1145,16 @@ pub mod clk_state2;
 pub type DCM_CTRL = crate::Reg<dcm_ctrl::DCM_CTRL_SPEC>;
 #[doc = "need_des"]
 pub mod dcm_ctrl;
+#[doc = "DCM_BOOST_CTRL (rw) register accessor: DCM boost control register\n\nYou can [`read`](crate::Reg::read) this register and get [`dcm_boost_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dcm_boost_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dcm_boost_ctrl`] module"]
+pub type DCM_BOOST_CTRL = crate::Reg<dcm_boost_ctrl::DCM_BOOST_CTRL_SPEC>;
+#[doc = "DCM boost control register"]
+pub mod dcm_boost_ctrl;
 #[doc = "TOUCH_PWR_CTRL (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pwr_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pwr_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pwr_ctrl`] module"]
 pub type TOUCH_PWR_CTRL = crate::Reg<touch_pwr_ctrl::TOUCH_PWR_CTRL_SPEC>;
 #[doc = "need_des"]
 pub mod touch_pwr_ctrl;
-#[doc = "DATE (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "need_des"]
-pub mod date;
+#[doc = "BLE_BANDGAP_CTRL (rw) register accessor: BLE bandgap control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ble_bandgap_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ble_bandgap_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ble_bandgap_ctrl`] module"]
+pub type BLE_BANDGAP_CTRL = crate::Reg<ble_bandgap_ctrl::BLE_BANDGAP_CTRL_SPEC>;
+#[doc = "BLE bandgap control register"]
+pub mod ble_bandgap_ctrl;
+pub use crate::dma::{date, DATE};

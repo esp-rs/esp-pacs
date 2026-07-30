@@ -1,79 +1,67 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `APB_SARADC_TSENS_INT_ST` reader - saradc tsens interrupt state"]
-pub type APB_SARADC_TSENS_INT_ST_R = crate::BitReader;
-#[doc = "Field `APB_SARADC_THRES1_LOW_INT_ST` reader - saradc thres1 low interrupt state"]
-pub type APB_SARADC_THRES1_LOW_INT_ST_R = crate::BitReader;
-#[doc = "Field `APB_SARADC_THRES0_LOW_INT_ST` reader - saradc thres0 low interrupt state"]
-pub type APB_SARADC_THRES0_LOW_INT_ST_R = crate::BitReader;
-#[doc = "Field `APB_SARADC_THRES1_HIGH_INT_ST` reader - saradc thres1 high interrupt state"]
-pub type APB_SARADC_THRES1_HIGH_INT_ST_R = crate::BitReader;
-#[doc = "Field `APB_SARADC_THRES0_HIGH_INT_ST` reader - saradc thres0 high interrupt state"]
-pub type APB_SARADC_THRES0_HIGH_INT_ST_R = crate::BitReader;
-#[doc = "Field `APB_SARADC2_DONE_INT_ST` reader - saradc2 done interrupt state"]
-pub type APB_SARADC2_DONE_INT_ST_R = crate::BitReader;
-#[doc = "Field `APB_SARADC1_DONE_INT_ST` reader - saradc1 done interrupt state"]
-pub type APB_SARADC1_DONE_INT_ST_R = crate::BitReader;
+#[doc = "Field `TSENS` reader - saradc tsens interrupt state"]
+pub type TSENS_R = crate::BitReader;
+#[doc = "Field `THRES1_LOW` reader - saradc thres1 low interrupt state"]
+pub type THRES1_LOW_R = crate::BitReader;
+#[doc = "Field `THRES0_LOW` reader - saradc thres0 low interrupt state"]
+pub type THRES0_LOW_R = crate::BitReader;
+#[doc = "Field `THRES1_HIGH` reader - saradc thres1 high interrupt state"]
+pub type THRES1_HIGH_R = crate::BitReader;
+#[doc = "Field `THRES0_HIGH` reader - saradc thres0 high interrupt state"]
+pub type THRES0_HIGH_R = crate::BitReader;
+#[doc = "Field `ADC2_DONE` reader - saradc2 done interrupt state"]
+pub type ADC2_DONE_R = crate::BitReader;
+#[doc = "Field `ADC1_DONE` reader - saradc1 done interrupt state"]
+pub type ADC1_DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 25 - saradc tsens interrupt state"]
     #[inline(always)]
-    pub fn apb_saradc_tsens_int_st(&self) -> APB_SARADC_TSENS_INT_ST_R {
-        APB_SARADC_TSENS_INT_ST_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn tsens(&self) -> TSENS_R {
+        TSENS_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - saradc thres1 low interrupt state"]
     #[inline(always)]
-    pub fn apb_saradc_thres1_low_int_st(&self) -> APB_SARADC_THRES1_LOW_INT_ST_R {
-        APB_SARADC_THRES1_LOW_INT_ST_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn thres1_low(&self) -> THRES1_LOW_R {
+        THRES1_LOW_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - saradc thres0 low interrupt state"]
     #[inline(always)]
-    pub fn apb_saradc_thres0_low_int_st(&self) -> APB_SARADC_THRES0_LOW_INT_ST_R {
-        APB_SARADC_THRES0_LOW_INT_ST_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn thres0_low(&self) -> THRES0_LOW_R {
+        THRES0_LOW_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - saradc thres1 high interrupt state"]
     #[inline(always)]
-    pub fn apb_saradc_thres1_high_int_st(&self) -> APB_SARADC_THRES1_HIGH_INT_ST_R {
-        APB_SARADC_THRES1_HIGH_INT_ST_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn thres1_high(&self) -> THRES1_HIGH_R {
+        THRES1_HIGH_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - saradc thres0 high interrupt state"]
     #[inline(always)]
-    pub fn apb_saradc_thres0_high_int_st(&self) -> APB_SARADC_THRES0_HIGH_INT_ST_R {
-        APB_SARADC_THRES0_HIGH_INT_ST_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn thres0_high(&self) -> THRES0_HIGH_R {
+        THRES0_HIGH_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - saradc2 done interrupt state"]
     #[inline(always)]
-    pub fn apb_saradc2_done_int_st(&self) -> APB_SARADC2_DONE_INT_ST_R {
-        APB_SARADC2_DONE_INT_ST_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn adc2_done(&self) -> ADC2_DONE_R {
+        ADC2_DONE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - saradc1 done interrupt state"]
     #[inline(always)]
-    pub fn apb_saradc1_done_int_st(&self) -> APB_SARADC1_DONE_INT_ST_R {
-        APB_SARADC1_DONE_INT_ST_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn adc1_done(&self) -> ADC1_DONE_R {
+        ADC1_DONE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("apb_saradc_tsens_int_st", &self.apb_saradc_tsens_int_st())
-            .field(
-                "apb_saradc_thres1_low_int_st",
-                &self.apb_saradc_thres1_low_int_st(),
-            )
-            .field(
-                "apb_saradc_thres0_low_int_st",
-                &self.apb_saradc_thres0_low_int_st(),
-            )
-            .field(
-                "apb_saradc_thres1_high_int_st",
-                &self.apb_saradc_thres1_high_int_st(),
-            )
-            .field(
-                "apb_saradc_thres0_high_int_st",
-                &self.apb_saradc_thres0_high_int_st(),
-            )
-            .field("apb_saradc2_done_int_st", &self.apb_saradc2_done_int_st())
-            .field("apb_saradc1_done_int_st", &self.apb_saradc1_done_int_st())
+            .field("tsens", &self.tsens())
+            .field("thres1_low", &self.thres1_low())
+            .field("thres0_low", &self.thres0_low())
+            .field("thres1_high", &self.thres1_high())
+            .field("thres0_high", &self.thres0_high())
+            .field("adc2_done", &self.adc2_done())
+            .field("adc1_done", &self.adc1_done())
             .finish()
     }
 }
