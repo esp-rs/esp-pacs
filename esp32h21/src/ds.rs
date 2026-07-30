@@ -2,14 +2,14 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    y_mem: [Y_MEM; 512],
-    m_mem: [M_MEM; 512],
-    rb_mem: [RB_MEM; 512],
-    box_mem: [BOX_MEM; 48],
-    iv_mem: [IV_MEM; 16],
+    y_mem: [Y_MEM; 128],
+    m_mem: [M_MEM; 128],
+    rb_mem: [RB_MEM; 128],
+    box_mem: [BOX_MEM; 12],
+    iv_mem: [IV_MEM; 4],
     _reserved5: [u8; 0x01c0],
-    x_mem: [X_MEM; 512],
-    z_mem: [Z_MEM; 512],
+    x_mem: [X_MEM; 128],
+    z_mem: [Z_MEM; 128],
     _reserved7: [u8; 0x0200],
     set_start: SET_START,
     set_continue: SET_CONTINUE,
@@ -186,7 +186,4 @@ pub mod query_key_wrong;
 pub type QUERY_CHECK = crate::Reg<query_check::QUERY_CHECK_SPEC>;
 #[doc = "DS query check result register"]
 pub mod query_check;
-#[doc = "DATE (rw) register accessor: DS version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "DS version control register"]
-pub mod date;
+pub use crate::dma::{date, DATE};

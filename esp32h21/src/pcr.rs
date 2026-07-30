@@ -2,29 +2,20 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    uart0_conf: UART0_CONF,
-    uart0_sclk_conf: UART0_SCLK_CONF,
-    uart0_pd_ctrl: UART0_PD_CTRL,
-    uart1_conf: UART1_CONF,
-    uart1_sclk_conf: UART1_SCLK_CONF,
-    uart1_pd_ctrl: UART1_PD_CTRL,
+    uart: [UART; 2],
     mspi_conf: MSPI_CONF,
     mspi_clk_conf: MSPI_CLK_CONF,
     i2c0_conf: I2C0_CONF,
-    i2c0_sclk_conf: I2C0_SCLK_CONF,
+    i2c_sclk_conf: (),
+    _reserved5: [u8; 0x04],
     i2c1_conf: I2C1_CONF,
-    i2c1_sclk_conf: I2C1_SCLK_CONF,
+    _reserved6: [u8; 0x04],
     uhci_conf: UHCI_CONF,
     rmt_conf: RMT_CONF,
     rmt_sclk_conf: RMT_SCLK_CONF,
     ledc_conf: LEDC_CONF,
     ledc_sclk_conf: LEDC_SCLK_CONF,
-    timergroup0_conf: TIMERGROUP0_CONF,
-    timergroup0_timer_clk_conf: TIMERGROUP0_TIMER_CLK_CONF,
-    timergroup0_wdt_clk_conf: TIMERGROUP0_WDT_CLK_CONF,
-    timergroup1_conf: TIMERGROUP1_CONF,
-    timergroup1_timer_clk_conf: TIMERGROUP1_TIMER_CLK_CONF,
-    timergroup1_wdt_clk_conf: TIMERGROUP1_WDT_CLK_CONF,
+    timergroup: [TIMERGROUP; 2],
     systimer_conf: SYSTIMER_CONF,
     systimer_func_clk_conf: SYSTIMER_FUNC_CLK_CONF,
     twai0_conf: TWAI0_CONF,
@@ -87,42 +78,23 @@ pub struct RegisterBlock {
     bus_clk_update: BUS_CLK_UPDATE,
     sar_clk_div: SAR_CLK_DIV,
     pwdet_sar_clk_conf: PWDET_SAR_CLK_CONF,
-    _reserved85: [u8; 0x0e9c],
+    _reserved74: [u8; 0x0e9c],
     reset_event_bypass: RESET_EVENT_BYPASS,
     fpga_debug: FPGA_DEBUG,
     clock_gate: CLOCK_GATE,
     date: DATE,
 }
 impl RegisterBlock {
-    #[doc = "0x00 - UART0 configuration register"]
+    #[doc = "0x00..0x18 - Cluster UART%s, containing UART?_CONF, UART?_SCLK_CONF, UART?_PD_CTRL"]
     #[inline(always)]
-    pub const fn uart0_conf(&self) -> &UART0_CONF {
-        &self.uart0_conf
+    pub const fn uart(&self, n: usize) -> &UART {
+        &self.uart[n]
     }
-    #[doc = "0x04 - UART0_SCLK configuration register"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x18 - Cluster UART%s, containing UART?_CONF, UART?_SCLK_CONF, UART?_PD_CTRL"]
     #[inline(always)]
-    pub const fn uart0_sclk_conf(&self) -> &UART0_SCLK_CONF {
-        &self.uart0_sclk_conf
-    }
-    #[doc = "0x08 - UART0 power control register"]
-    #[inline(always)]
-    pub const fn uart0_pd_ctrl(&self) -> &UART0_PD_CTRL {
-        &self.uart0_pd_ctrl
-    }
-    #[doc = "0x0c - UART1 configuration register"]
-    #[inline(always)]
-    pub const fn uart1_conf(&self) -> &UART1_CONF {
-        &self.uart1_conf
-    }
-    #[doc = "0x10 - UART1_SCLK configuration register"]
-    #[inline(always)]
-    pub const fn uart1_sclk_conf(&self) -> &UART1_SCLK_CONF {
-        &self.uart1_sclk_conf
-    }
-    #[doc = "0x14 - UART1 power control register"]
-    #[inline(always)]
-    pub const fn uart1_pd_ctrl(&self) -> &UART1_PD_CTRL {
-        &self.uart1_pd_ctrl
+    pub fn uart_iter(&self) -> impl Iterator<Item = &UART> {
+        self.uart.iter()
     }
     #[doc = "0x18 - MSPI configuration register"]
     #[inline(always)]
@@ -139,20 +111,45 @@ impl RegisterBlock {
     pub const fn i2c0_conf(&self) -> &I2C0_CONF {
         &self.i2c0_conf
     }
+    #[doc = "0x24..0x2c - I2C_SCLK configuration register"]
+    #[inline(always)]
+    pub const fn i2c_sclk_conf(&self, n: usize) -> &I2C_SCLK_CONF {
+        #[allow(clippy::no_effect)]
+        [(); 2][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(36)
+                .add(8 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x24..0x2c - I2C_SCLK configuration register"]
+    #[inline(always)]
+    pub fn i2c_sclk_conf_iter(&self) -> impl Iterator<Item = &I2C_SCLK_CONF> {
+        (0..2).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(36)
+                .add(8 * n)
+                .cast()
+        })
+    }
     #[doc = "0x24 - I2C_SCLK configuration register"]
     #[inline(always)]
-    pub const fn i2c0_sclk_conf(&self) -> &I2C0_SCLK_CONF {
-        &self.i2c0_sclk_conf
+    pub const fn i2c0_sclk_conf(&self) -> &I2C_SCLK_CONF {
+        self.i2c_sclk_conf(0)
+    }
+    #[doc = "0x2c - I2C_SCLK configuration register"]
+    #[inline(always)]
+    pub const fn i2c1_sclk_conf(&self) -> &I2C_SCLK_CONF {
+        self.i2c_sclk_conf(1)
     }
     #[doc = "0x28 - I2C configuration register"]
     #[inline(always)]
     pub const fn i2c1_conf(&self) -> &I2C1_CONF {
         &self.i2c1_conf
-    }
-    #[doc = "0x2c - I2C_SCLK configuration register"]
-    #[inline(always)]
-    pub const fn i2c1_sclk_conf(&self) -> &I2C1_SCLK_CONF {
-        &self.i2c1_sclk_conf
     }
     #[doc = "0x30 - UHCI configuration register"]
     #[inline(always)]
@@ -179,35 +176,16 @@ impl RegisterBlock {
     pub const fn ledc_sclk_conf(&self) -> &LEDC_SCLK_CONF {
         &self.ledc_sclk_conf
     }
-    #[doc = "0x44 - TIMERGROUP0 configuration register"]
+    #[doc = "0x44..0x5c - Cluster TIMERGROUP%s, containing TIMERGROUP?_CONF, TIMERGROUP?_TIMER_CLK_CONF, TIMERGROUP?_WDT_CLK_CONF"]
     #[inline(always)]
-    pub const fn timergroup0_conf(&self) -> &TIMERGROUP0_CONF {
-        &self.timergroup0_conf
+    pub const fn timergroup(&self, n: usize) -> &TIMERGROUP {
+        &self.timergroup[n]
     }
-    #[doc = "0x48 - TIMERGROUP0_TIMER_CLK configuration register"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x44..0x5c - Cluster TIMERGROUP%s, containing TIMERGROUP?_CONF, TIMERGROUP?_TIMER_CLK_CONF, TIMERGROUP?_WDT_CLK_CONF"]
     #[inline(always)]
-    pub const fn timergroup0_timer_clk_conf(&self) -> &TIMERGROUP0_TIMER_CLK_CONF {
-        &self.timergroup0_timer_clk_conf
-    }
-    #[doc = "0x4c - TIMERGROUP0_WDT_CLK configuration register"]
-    #[inline(always)]
-    pub const fn timergroup0_wdt_clk_conf(&self) -> &TIMERGROUP0_WDT_CLK_CONF {
-        &self.timergroup0_wdt_clk_conf
-    }
-    #[doc = "0x50 - TIMERGROUP1 configuration register"]
-    #[inline(always)]
-    pub const fn timergroup1_conf(&self) -> &TIMERGROUP1_CONF {
-        &self.timergroup1_conf
-    }
-    #[doc = "0x54 - TIMERGROUP1_TIMER_CLK configuration register"]
-    #[inline(always)]
-    pub const fn timergroup1_timer_clk_conf(&self) -> &TIMERGROUP1_TIMER_CLK_CONF {
-        &self.timergroup1_timer_clk_conf
-    }
-    #[doc = "0x58 - TIMERGROUP1_WDT_CLK configuration register"]
-    #[inline(always)]
-    pub const fn timergroup1_wdt_clk_conf(&self) -> &TIMERGROUP1_WDT_CLK_CONF {
-        &self.timergroup1_wdt_clk_conf
+    pub fn timergroup_iter(&self) -> impl Iterator<Item = &TIMERGROUP> {
+        self.timergroup.iter()
     }
     #[doc = "0x5c - SYSTIMER configuration register"]
     #[inline(always)]
@@ -540,30 +518,11 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "UART0_CONF (rw) register accessor: UART0 configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart0_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart0_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart0_conf`] module"]
-pub type UART0_CONF = crate::Reg<uart0_conf::UART0_CONF_SPEC>;
-#[doc = "UART0 configuration register"]
-pub mod uart0_conf;
-#[doc = "UART0_SCLK_CONF (rw) register accessor: UART0_SCLK configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart0_sclk_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart0_sclk_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart0_sclk_conf`] module"]
-pub type UART0_SCLK_CONF = crate::Reg<uart0_sclk_conf::UART0_SCLK_CONF_SPEC>;
-#[doc = "UART0_SCLK configuration register"]
-pub mod uart0_sclk_conf;
-#[doc = "UART0_PD_CTRL (rw) register accessor: UART0 power control register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart0_pd_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart0_pd_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart0_pd_ctrl`] module"]
-pub type UART0_PD_CTRL = crate::Reg<uart0_pd_ctrl::UART0_PD_CTRL_SPEC>;
-#[doc = "UART0 power control register"]
-pub mod uart0_pd_ctrl;
-#[doc = "UART1_CONF (rw) register accessor: UART1 configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart1_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart1_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart1_conf`] module"]
-pub type UART1_CONF = crate::Reg<uart1_conf::UART1_CONF_SPEC>;
-#[doc = "UART1 configuration register"]
-pub mod uart1_conf;
-#[doc = "UART1_SCLK_CONF (rw) register accessor: UART1_SCLK configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart1_sclk_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart1_sclk_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart1_sclk_conf`] module"]
-pub type UART1_SCLK_CONF = crate::Reg<uart1_sclk_conf::UART1_SCLK_CONF_SPEC>;
-#[doc = "UART1_SCLK configuration register"]
-pub mod uart1_sclk_conf;
-#[doc = "UART1_PD_CTRL (rw) register accessor: UART1 power control register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart1_pd_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart1_pd_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart1_pd_ctrl`] module"]
-pub type UART1_PD_CTRL = crate::Reg<uart1_pd_ctrl::UART1_PD_CTRL_SPEC>;
-#[doc = "UART1 power control register"]
-pub mod uart1_pd_ctrl;
+#[doc = "Cluster UART%s, containing UART?_CONF, UART?_SCLK_CONF, UART?_PD_CTRL"]
+pub use self::uart::UART;
+#[doc = r"Cluster"]
+#[doc = "Cluster UART%s, containing UART?_CONF, UART?_SCLK_CONF, UART?_PD_CTRL"]
+pub mod uart;
 #[doc = "MSPI_CONF (rw) register accessor: MSPI configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`mspi_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mspi_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mspi_conf`] module"]
 pub type MSPI_CONF = crate::Reg<mspi_conf::MSPI_CONF_SPEC>;
 #[doc = "MSPI configuration register"]
@@ -576,18 +535,14 @@ pub mod mspi_clk_conf;
 pub type I2C0_CONF = crate::Reg<i2c0_conf::I2C0_CONF_SPEC>;
 #[doc = "I2C configuration register"]
 pub mod i2c0_conf;
-#[doc = "I2C0_SCLK_CONF (rw) register accessor: I2C_SCLK configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c0_sclk_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c0_sclk_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c0_sclk_conf`] module"]
-pub type I2C0_SCLK_CONF = crate::Reg<i2c0_sclk_conf::I2C0_SCLK_CONF_SPEC>;
+#[doc = "I2C_SCLK_CONF (rw) register accessor: I2C_SCLK configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c_sclk_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c_sclk_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c_sclk_conf`] module"]
+pub type I2C_SCLK_CONF = crate::Reg<i2c_sclk_conf::I2C_SCLK_CONF_SPEC>;
 #[doc = "I2C_SCLK configuration register"]
-pub mod i2c0_sclk_conf;
+pub mod i2c_sclk_conf;
 #[doc = "I2C1_CONF (rw) register accessor: I2C configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c1_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c1_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c1_conf`] module"]
 pub type I2C1_CONF = crate::Reg<i2c1_conf::I2C1_CONF_SPEC>;
 #[doc = "I2C configuration register"]
 pub mod i2c1_conf;
-#[doc = "I2C1_SCLK_CONF (rw) register accessor: I2C_SCLK configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c1_sclk_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c1_sclk_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c1_sclk_conf`] module"]
-pub type I2C1_SCLK_CONF = crate::Reg<i2c1_sclk_conf::I2C1_SCLK_CONF_SPEC>;
-#[doc = "I2C_SCLK configuration register"]
-pub mod i2c1_sclk_conf;
 #[doc = "UHCI_CONF (rw) register accessor: UHCI configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`uhci_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uhci_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uhci_conf`] module"]
 pub type UHCI_CONF = crate::Reg<uhci_conf::UHCI_CONF_SPEC>;
 #[doc = "UHCI configuration register"]
@@ -608,34 +563,11 @@ pub mod ledc_conf;
 pub type LEDC_SCLK_CONF = crate::Reg<ledc_sclk_conf::LEDC_SCLK_CONF_SPEC>;
 #[doc = "LEDC_SCLK configuration register"]
 pub mod ledc_sclk_conf;
-#[doc = "TIMERGROUP0_CONF (rw) register accessor: TIMERGROUP0 configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`timergroup0_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timergroup0_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@timergroup0_conf`] module"]
-pub type TIMERGROUP0_CONF = crate::Reg<timergroup0_conf::TIMERGROUP0_CONF_SPEC>;
-#[doc = "TIMERGROUP0 configuration register"]
-pub mod timergroup0_conf;
-#[doc = "TIMERGROUP0_TIMER_CLK_CONF (rw) register accessor: TIMERGROUP0_TIMER_CLK configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`timergroup0_timer_clk_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timergroup0_timer_clk_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@timergroup0_timer_clk_conf`] module"]
-pub type TIMERGROUP0_TIMER_CLK_CONF =
-    crate::Reg<timergroup0_timer_clk_conf::TIMERGROUP0_TIMER_CLK_CONF_SPEC>;
-#[doc = "TIMERGROUP0_TIMER_CLK configuration register"]
-pub mod timergroup0_timer_clk_conf;
-#[doc = "TIMERGROUP0_WDT_CLK_CONF (rw) register accessor: TIMERGROUP0_WDT_CLK configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`timergroup0_wdt_clk_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timergroup0_wdt_clk_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@timergroup0_wdt_clk_conf`] module"]
-pub type TIMERGROUP0_WDT_CLK_CONF =
-    crate::Reg<timergroup0_wdt_clk_conf::TIMERGROUP0_WDT_CLK_CONF_SPEC>;
-#[doc = "TIMERGROUP0_WDT_CLK configuration register"]
-pub mod timergroup0_wdt_clk_conf;
-#[doc = "TIMERGROUP1_CONF (rw) register accessor: TIMERGROUP1 configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`timergroup1_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timergroup1_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@timergroup1_conf`] module"]
-pub type TIMERGROUP1_CONF = crate::Reg<timergroup1_conf::TIMERGROUP1_CONF_SPEC>;
-#[doc = "TIMERGROUP1 configuration register"]
-pub mod timergroup1_conf;
-#[doc = "TIMERGROUP1_TIMER_CLK_CONF (rw) register accessor: TIMERGROUP1_TIMER_CLK configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`timergroup1_timer_clk_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timergroup1_timer_clk_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@timergroup1_timer_clk_conf`] module"]
-pub type TIMERGROUP1_TIMER_CLK_CONF =
-    crate::Reg<timergroup1_timer_clk_conf::TIMERGROUP1_TIMER_CLK_CONF_SPEC>;
-#[doc = "TIMERGROUP1_TIMER_CLK configuration register"]
-pub mod timergroup1_timer_clk_conf;
-#[doc = "TIMERGROUP1_WDT_CLK_CONF (rw) register accessor: TIMERGROUP1_WDT_CLK configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`timergroup1_wdt_clk_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timergroup1_wdt_clk_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@timergroup1_wdt_clk_conf`] module"]
-pub type TIMERGROUP1_WDT_CLK_CONF =
-    crate::Reg<timergroup1_wdt_clk_conf::TIMERGROUP1_WDT_CLK_CONF_SPEC>;
-#[doc = "TIMERGROUP1_WDT_CLK configuration register"]
-pub mod timergroup1_wdt_clk_conf;
+#[doc = "Cluster TIMERGROUP%s, containing TIMERGROUP?_CONF, TIMERGROUP?_TIMER_CLK_CONF, TIMERGROUP?_WDT_CLK_CONF"]
+pub use self::timergroup::TIMERGROUP;
+#[doc = r"Cluster"]
+#[doc = "Cluster TIMERGROUP%s, containing TIMERGROUP?_CONF, TIMERGROUP?_TIMER_CLK_CONF, TIMERGROUP?_WDT_CLK_CONF"]
+pub mod timergroup;
 #[doc = "SYSTIMER_CONF (rw) register accessor: SYSTIMER configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`systimer_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`systimer_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@systimer_conf`] module"]
 pub type SYSTIMER_CONF = crate::Reg<systimer_conf::SYSTIMER_CONF_SPEC>;
 #[doc = "SYSTIMER configuration register"]
@@ -897,7 +829,4 @@ pub mod fpga_debug;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "PCR clock gating configure register"]
 pub mod clock_gate;
-#[doc = "DATE (rw) register accessor: Date register.\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "Date register."]
-pub mod date;
+pub use crate::dma::{date, DATE};

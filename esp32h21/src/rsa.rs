@@ -2,13 +2,13 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    m_mem: [M_MEM; 16],
+    m_mem: [M_MEM; 4],
     _reserved1: [u8; 0x01f0],
-    z_mem: [Z_MEM; 16],
+    z_mem: [Z_MEM; 4],
     _reserved2: [u8; 0x01f0],
-    y_mem: [Y_MEM; 16],
+    y_mem: [Y_MEM; 4],
     _reserved3: [u8; 0x01f0],
-    x_mem: [X_MEM; 16],
+    x_mem: [X_MEM; 4],
     _reserved4: [u8; 0x01f0],
     m_prime: M_PRIME,
     mode: MODE,
@@ -179,7 +179,7 @@ pub mod set_start_mult;
 pub type QUERY_IDLE = crate::Reg<query_idle::QUERY_IDLE_SPEC>;
 #[doc = "Represents the RSA status"]
 pub mod query_idle;
-#[doc = "INT_CLR (w) register accessor: Clears RSA interrupt\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+#[doc = "INT_CLR (rw) register accessor: Clears RSA interrupt\n\nYou can [`read`](crate::Reg::read) this register and get [`int_clr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "Clears RSA interrupt"]
 pub mod int_clr;
@@ -199,7 +199,4 @@ pub mod search_pos;
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "Enables the RSA interrupt"]
 pub mod int_ena;
-#[doc = "DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "Version control register"]
-pub mod date;
+pub use crate::dma::{date, DATE};

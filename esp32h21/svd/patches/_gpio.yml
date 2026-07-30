@@ -1,0 +1,46 @@
+GPIO:
+  # CSV only emits used input signals; IDF exposes func_in_sel_cfg[256].
+  _delete:
+    - FUNC*_IN_SEL_CFG
+  _add:
+    FUNC%s_IN_SEL_CFG:
+      dim: 256
+      dimIncrement: 0x04
+      dimIndex: 0-255
+      description: GPIO input function configuration register
+      addressOffset: 0x2d4
+      access: read-write
+      resetValue: 0x30
+      size: 0x20
+      fields:
+        IN_SEL:
+          description: "Select a pin for input signal %s. 0-29: GPIO[s]. 0x20: high. 0x30: low."
+          bitOffset: 0
+          bitWidth: 6
+        IN_INV_SEL:
+          description: "Invert the input value. 0: not invert. 1: invert."
+          bitOffset: 6
+          bitWidth: 1
+        SEL:
+          description: "Bypass GPIO matrix. 0: bypass. 1: route via GPIO matrix."
+          bitOffset: 7
+          bitWidth: 1
+
+  FUNC*_OUT_SEL_CFG:
+    _modify:
+      FUNC_OUT_SEL:
+        name: OUT_SEL
+      FUNC_OUT_INV_SEL:
+        name: INV_SEL
+      FUNC_OE_SEL:
+        name: OEN_SEL
+      FUNC_OE_INV_SEL:
+        name: OEN_INV_SEL
+
+  _modify:
+    PROCPU_INT:
+      name: PCPU_INT
+    PROCPU_NMI_INT:
+      name: PCPU_NMI_INT
+    "FUNC%s_OUT_SEL_CFG":
+      dim: 30

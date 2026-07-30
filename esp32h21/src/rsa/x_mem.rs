@@ -12,7 +12,7 @@ impl W {}
 #[doc = "Represents X\n\nYou can [`read`](crate::Reg::read) this register and get [`x_mem::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`x_mem::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct X_MEM_SPEC;
 impl crate::RegisterSpec for X_MEM_SPEC {
-    type Ux = u8;
+    type Ux = u32;
 }
 #[doc = "`read()` method returns [`x_mem::R`](R) reader structure"]
 impl crate::Readable for X_MEM_SPEC {}

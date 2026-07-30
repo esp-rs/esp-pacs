@@ -1,3 +1,5 @@
+#[doc = "Register `IMM_HP_CK_POWER` reader"]
+pub type R = crate::R<IMM_HP_CK_POWER_SPEC>;
 #[doc = "Register `IMM_HP_CK_POWER` writer"]
 pub type W = crate::W<IMM_HP_CK_POWER_SPEC>;
 #[doc = "Field `TIE_LOW_GLOBAL_BBPLL_ICG` writer - need_des"]
@@ -37,9 +39,9 @@ pub type TIE_HIGH_XPD_BBPLL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIE_HIGH_XPD_XTAL` writer - need_des"]
 pub type TIE_HIGH_XPD_XTAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IMM_HP_CK_POWER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        write!(f, "(not readable)")
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IMM_HP_CK_POWER").finish()
     }
 }
 impl W {
@@ -146,11 +148,13 @@ impl W {
         TIE_HIGH_XPD_XTAL_W::new(self, 31)
     }
 }
-#[doc = "need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`imm_hp_ck_power::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`imm_hp_ck_power::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`imm_hp_ck_power::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IMM_HP_CK_POWER_SPEC;
 impl crate::RegisterSpec for IMM_HP_CK_POWER_SPEC {
     type Ux = u32;
 }
+#[doc = "`read()` method returns [`imm_hp_ck_power::R`](R) reader structure"]
+impl crate::Readable for IMM_HP_CK_POWER_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`imm_hp_ck_power::W`](W) writer structure"]
 impl crate::Writable for IMM_HP_CK_POWER_SPEC {
     type Safety = crate::Unsafe;

@@ -1,0 +1,39 @@
+PCNT:
+  "*":
+    _strip_end: "_U"
+
+  U%s_CNT:
+    _modify:
+      PULSE_CNT:
+        name: CNT
+
+  INT_RAW:
+    _strip_end: "_INT_RAW"
+
+  INT_ST:
+    _strip_end: "_INT_ST"
+
+  INT_ENA:
+    _strip_end: "_INT_ENA"
+
+  INT_CLR:
+    _strip_end: "_INT_CLR"
+
+  U%s_STATUS:
+    _strip: "CNT_THR_"
+    _strip_end: "_LAT"
+
+  CTRL:
+    _strip: "PULSE_CNT_"
+
+    _modify:
+      RST_U0:
+        name: CNT_RST_U0
+      RST_U1:
+        name: CNT_RST_U1
+      RST_U2:
+        name: CNT_RST_U2
+      RST_U3:
+        name: CNT_RST_U3
+
+  _include: ../../../common_patches/pcnt.yaml

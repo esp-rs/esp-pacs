@@ -14,7 +14,11 @@ pub struct RegisterBlock {
     lpmem_force: LPMEM_FORCE,
     lpperi: LPPERI,
     xtal32k: XTAL32K,
-    _reserved12: [u8; 0x03cc],
+    _reserved12: [u8; 0x08],
+    cali0: CALI0,
+    cali1: CALI1,
+    cali2: CALI2,
+    _reserved15: [u8; 0x03b8],
     date: DATE,
 }
 impl RegisterBlock {
@@ -78,6 +82,21 @@ impl RegisterBlock {
     pub const fn xtal32k(&self) -> &XTAL32K {
         &self.xtal32k
     }
+    #[doc = "0x38 - LP clock calibration register 0"]
+    #[inline(always)]
+    pub const fn cali0(&self) -> &CALI0 {
+        &self.cali0
+    }
+    #[doc = "0x3c - LP clock calibration register 1"]
+    #[inline(always)]
+    pub const fn cali1(&self) -> &CALI1 {
+        &self.cali1
+    }
+    #[doc = "0x40 - LP clock calibration register 2"]
+    #[inline(always)]
+    pub const fn cali2(&self) -> &CALI2 {
+        &self.cali2
+    }
     #[doc = "0x3fc - need_des"]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {
@@ -132,7 +151,16 @@ pub mod lpperi;
 pub type XTAL32K = crate::Reg<xtal32k::XTAL32K_SPEC>;
 #[doc = "need_des"]
 pub mod xtal32k;
-#[doc = "DATE (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "need_des"]
-pub mod date;
+#[doc = "CALI0 (rw) register accessor: LP clock calibration register 0\n\nYou can [`read`](crate::Reg::read) this register and get [`cali0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cali0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cali0`] module"]
+pub type CALI0 = crate::Reg<cali0::CALI0_SPEC>;
+#[doc = "LP clock calibration register 0"]
+pub mod cali0;
+#[doc = "CALI1 (r) register accessor: LP clock calibration register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`cali1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cali1`] module"]
+pub type CALI1 = crate::Reg<cali1::CALI1_SPEC>;
+#[doc = "LP clock calibration register 1"]
+pub mod cali1;
+#[doc = "CALI2 (rw) register accessor: LP clock calibration register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`cali2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cali2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cali2`] module"]
+pub type CALI2 = crate::Reg<cali2::CALI2_SPEC>;
+#[doc = "LP clock calibration register 2"]
+pub mod cali2;
+pub use crate::dma::{date, DATE};

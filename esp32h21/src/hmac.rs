@@ -16,8 +16,8 @@ pub struct RegisterBlock {
     query_error: QUERY_ERROR,
     query_busy: QUERY_BUSY,
     _reserved12: [u8; 0x10],
-    wr_message_mem: [WR_MESSAGE_MEM; 64],
-    rd_result_mem: [RD_RESULT_MEM; 32],
+    wr_message_mem: [WR_MESSAGE_MEM; 16],
+    rd_result_mem: [RD_RESULT_MEM; 8],
     _reserved14: [u8; 0x10],
     set_message_pad: SET_MESSAGE_PAD,
     one_block: ONE_BLOCK,
@@ -207,7 +207,4 @@ pub mod soft_jtag_ctrl;
 pub type WR_JTAG = crate::Reg<wr_jtag::WR_JTAG_SPEC>;
 #[doc = "Jtag register 1."]
 pub mod wr_jtag;
-#[doc = "DATE (rw) register accessor: Date register.\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "Date register."]
-pub mod date;
+pub use crate::dma::{date, DATE};

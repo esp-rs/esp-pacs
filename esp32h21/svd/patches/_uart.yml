@@ -1,0 +1,19 @@
+"*UART*":
+  _strip_end: "_SYNC"
+
+  CLK_CONF:
+    _modify:
+      RX_SCLK_EN:
+        name: SCLK_EN
+      RX_RST_CORE:
+        name: RST_CORE
+
+  CLKDIV:
+    _modify:
+      CLKDIV_FRAG:
+        name: FRAG
+
+  FIFO:
+    _modify:
+      RXFIFO_RD_BYTE:
+        access: read-write

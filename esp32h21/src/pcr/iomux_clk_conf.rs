@@ -2,16 +2,16 @@
 pub type R = crate::R<IOMUX_CLK_CONF_SPEC>;
 #[doc = "Register `IOMUX_CLK_CONF` writer"]
 pub type W = crate::W<IOMUX_CLK_CONF_SPEC>;
-#[doc = "Field `IOMUX_FUNC_CLK_SEL` reader - set this field to select clock-source. 0: do not select anyone clock, 1: 80MHz, 2: FOSC, 3(default): XTAL."]
+#[doc = "Field `IOMUX_FUNC_CLK_SEL` reader - Select clock source. 0: XTAL, 1: RC_FAST, 2: PLL_F48M, 3: No clock source."]
 pub type IOMUX_FUNC_CLK_SEL_R = crate::FieldReader;
-#[doc = "Field `IOMUX_FUNC_CLK_SEL` writer - set this field to select clock-source. 0: do not select anyone clock, 1: 80MHz, 2: FOSC, 3(default): XTAL."]
+#[doc = "Field `IOMUX_FUNC_CLK_SEL` writer - Select clock source. 0: XTAL, 1: RC_FAST, 2: PLL_F48M, 3: No clock source."]
 pub type IOMUX_FUNC_CLK_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `IOMUX_FUNC_CLK_EN` reader - Set 1 to enable iomux function clock"]
 pub type IOMUX_FUNC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `IOMUX_FUNC_CLK_EN` writer - Set 1 to enable iomux function clock"]
 pub type IOMUX_FUNC_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 20:21 - set this field to select clock-source. 0: do not select anyone clock, 1: 80MHz, 2: FOSC, 3(default): XTAL."]
+    #[doc = "Bits 20:21 - Select clock source. 0: XTAL, 1: RC_FAST, 2: PLL_F48M, 3: No clock source."]
     #[inline(always)]
     pub fn iomux_func_clk_sel(&self) -> IOMUX_FUNC_CLK_SEL_R {
         IOMUX_FUNC_CLK_SEL_R::new(((self.bits >> 20) & 3) as u8)
@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 20:21 - set this field to select clock-source. 0: do not select anyone clock, 1: 80MHz, 2: FOSC, 3(default): XTAL."]
+    #[doc = "Bits 20:21 - Select clock source. 0: XTAL, 1: RC_FAST, 2: PLL_F48M, 3: No clock source."]
     #[inline(always)]
     pub fn iomux_func_clk_sel(&mut self) -> IOMUX_FUNC_CLK_SEL_W<'_, IOMUX_CLK_CONF_SPEC> {
         IOMUX_FUNC_CLK_SEL_W::new(self, 20)

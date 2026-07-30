@@ -1,0 +1,6 @@
+I2C0:
+  _include: ../../../common_patches/i2c_force_out.yaml
+  DATA:
+    _modify:
+      FIFO_RDATA:
+        access: read-write

@@ -1,0 +1,5 @@
+SPI0:
+  MMU_ITEM_INDEX:
+    _modify:
+      SPI_MMU_ITEM_INDEX:
+        name: MMU_ITEM_INDEX

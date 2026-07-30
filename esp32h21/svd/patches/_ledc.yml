@@ -1,0 +1,12 @@
+LEDC:
+  "*":
+    _strip_end: "_CH"
+
+  "TIMER%s_CONF":
+    _strip: "TIMER_"
+
+    _modify:
+      TICK_SEL_TIMER:
+        name: TICK_SEL
+      CLK_DIV_TIMER:
+        name: CLK_DIV
