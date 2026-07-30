@@ -52,7 +52,7 @@ pub fn remove_index_from_strings(
     let a_chars: Vec<char> = a.chars().collect();
     let b_chars: Vec<char> = b.chars().collect();
 
-    while pos_a < a_chars.len() {
+    while pos_a < a_chars.len() && pos_b < b_chars.len() {
         if a_chars[pos_a] == b_chars[pos_b] {
             res.push(a_chars[pos_a]);
             pos_a += 1;
@@ -82,7 +82,7 @@ pub fn remove_index_from_strings(
         ));
     }
 
-    if pos_b < b_chars.len() {
+    if pos_a != a_chars.len() || pos_b != b_chars.len() {
         return Err(format!(
             "Strings '{a}' and '{b}' differ at positions {pos_a} and {pos_b}"
         ));
