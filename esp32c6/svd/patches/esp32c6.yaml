@@ -205,7 +205,9 @@ PCNT:
   _include: ../../../common_patches/pcnt.yaml
 
 SPI1:
-  _include: ../../../common_patches/spi_w.yaml
+  _include:
+    - ../../../common_patches/spi_w.yaml
+    - ../../../common_patches/spi1_mspi_shared.yaml
 
 MCPWM0:
   _include: ../../../common_patches/mcpwm_collect.yaml
