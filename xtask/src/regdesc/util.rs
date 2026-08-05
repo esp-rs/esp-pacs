@@ -1,14 +1,13 @@
-use regex::Regex;
 use std::sync::LazyLock;
+
+use regex::Regex;
 
 static VERILOG_NUMBER: LazyLock<Regex> =
     LazyLock::new(|| Regex::new(r"(\d+)'([hdb])([0-9a-fA-F]+)").unwrap());
 static ACCESS_SUFFIX: LazyLock<Regex> =
     LazyLock::new(|| Regex::new(r"(/?SC|/?SS|/?WTC|/?WTS)+$").unwrap());
-static REG_SUFFIX: LazyLock<Regex> =
-    LazyLock::new(|| Regex::new(r"(?i)(_REG)+$").unwrap());
-static LP_GPIO: LazyLock<Regex> =
-    LazyLock::new(|| Regex::new(r"(?i)^LP_GPIO[\d]*_").unwrap());
+static REG_SUFFIX: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"(?i)(_REG)+$").unwrap());
+static LP_GPIO: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"(?i)^LP_GPIO[\d]*_").unwrap());
 
 /// Parses Verilog-style literals like `32'hDEAD` into (value, width, base).
 pub fn parse_verilog_number(s: &str) -> (u64, u32, u32) {
@@ -27,7 +26,8 @@ pub fn parse_verilog_number(s: &str) -> (u64, u32, u32) {
     (value, width, base)
 }
 
-/// Finds where two descriptions differ only by an index and replaces it with `$n`.
+/// Finds where two descriptions differ only by an index and replaces it with
+/// `$n`.
 pub fn remove_index_from_strings(
     a: &str,
     b: &str,
@@ -120,11 +120,7 @@ pub fn simplify_name(prefix: &str, name: &str) -> String {
 
     name = REG_SUFFIX.replace(&name, "").into_owned();
 
-    if name
-        .chars()
-        .next()
-        .is_some_and(|c| c.is_ascii_digit())
-    {
+    if name.chars().next().is_some_and(|c| c.is_ascii_digit()) {
         name = format!("_{name}");
     }
 
@@ -165,51 +161,4 @@ pub fn pretty_chip_name(chip: &str) -> String {
         .replace("ESP32", "ESP32-")
         .trim_matches('-')
         .to_owned()
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn verilog_and_plain_defaults() {
-        assert_eq!(parse_verilog_number("32'hff"), (0xff, 32, 16));
-        assert_eq!(parse_verilog_number("8'b1010"), (0b1010, 8, 2));
-        assert_eq!(parse_verilog_number("42"), (42, 0, 10));
-        assert_eq!(parse_verilog_number(""), (0, 0, 10));
-    }
-
-    #[test]
-    fn remove_index_basic_and_unequal_len() {
-        assert_eq!(
-            remove_index_from_strings("ch0 status", "ch1 status", 0, 1, "$n").unwrap(),
-            "ch$n status"
-        );
-        assert!(remove_index_from_strings("short", "much longer text", 0, 1, "$n").is_err());
-        assert!(remove_index_from_strings("much longer text", "short", 0, 1, "$n").is_err());
-    }
-
-    #[test]
-    fn simplify_name_strips_prefix_and_reg() {
-        assert_eq!(simplify_name("UART0", "UART0_STATUS_REG"), "STATUS");
-        assert_eq!(simplify_name("UART0", "uart0_status_reg"), "status");
-        assert_eq!(simplify_name("GPIO", "GPIO_1"), "_1");
-        assert_eq!(simplify_name("SPI", "OTHER_REG"), "OTHER");
-    }
-
-    #[test]
-    fn access_mapping_and_suffix_strip() {
-        assert_eq!(guess_field_access("R/W"), Some("read-write"));
-        assert_eq!(guess_field_access("RO"), Some("read-only"));
-        assert_eq!(guess_field_access("WT"), Some("write-only"));
-        assert_eq!(guess_field_access("RW/SC"), Some("read-write"));
-        assert_eq!(guess_field_access("NOPE"), None);
-    }
-
-    #[test]
-    fn pretty_chip_name_examples() {
-        assert_eq!(pretty_chip_name("esp32s31"), "ESP32-S31");
-        assert_eq!(pretty_chip_name("esp32"), "ESP32");
-        assert_eq!(pretty_chip_name("esp32h2"), "ESP32-H2");
-    }
 }

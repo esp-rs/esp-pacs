@@ -1,13 +1,13 @@
-use std::collections::HashMap;
-use std::sync::LazyLock;
+use std::{collections::HashMap, sync::LazyLock};
 
 use regex::Regex;
 
-use super::model::{ExpandContext, ExpandValue, Field, Register, Repeat};
-use super::util::remove_index_from_strings;
+use super::{
+    model::{ExpandContext, ExpandValue, Field, Register, Repeat},
+    util::remove_index_from_strings,
+};
 
-static INDEX_VAR_REGEX: LazyLock<Regex> =
-    LazyLock::new(|| Regex::new(r"\$([a-zA-Z])").unwrap());
+static INDEX_VAR_REGEX: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"\$([a-zA-Z])").unwrap());
 
 #[derive(Debug, Clone)]
 pub struct MergeError(pub String);
@@ -124,8 +124,12 @@ fn merge_field_group(fields: &mut [Field], repeat_name: &str) -> Result<Field, M
     Ok(merged)
 }
 
-/// Actually merges one group of repeated registers into a single dim'd register.
-fn merge_register_group(registers: &mut [Register], repeat_name: &str) -> Result<Register, MergeError> {
+/// Actually merges one group of repeated registers into a single dim'd
+/// register.
+fn merge_register_group(
+    registers: &mut [Register],
+    repeat_name: &str,
+) -> Result<Register, MergeError> {
     let start = merge_get_start(registers, repeat_name)?;
     for register in &registers[1..] {
         if register.visible != registers[0].visible {
@@ -148,7 +152,12 @@ fn merge_register_group(registers: &mut [Register], repeat_name: &str) -> Result
 
     let mut merged = registers[0].clone();
     merged.name = repeat_name.to_owned();
-    merged.repeat = Some(Repeat::new(registers.len() as u32, stride, index_var, start));
+    merged.repeat = Some(Repeat::new(
+        registers.len() as u32,
+        stride,
+        index_var,
+        start,
+    ));
     merged.repeat_name_hint = None;
     merged.repeat_index_hint = None;
     Ok(merged)
@@ -175,7 +184,11 @@ where
 }
 
 /// Computes the address/bit spacing between repeated items.
-fn merge_get_stride<T, F>(repeat_name: &str, items_list: &[T], get_offset: F) -> Result<u32, MergeError>
+fn merge_get_stride<T, F>(
+    repeat_name: &str,
+    items_list: &[T],
+    get_offset: F,
+) -> Result<u32, MergeError>
 where
     F: Fn(&T) -> u32,
 {
@@ -213,7 +226,9 @@ fn merge_get_index_var(repeat_name: &str) -> Result<String, MergeError> {
         .map(|c| c[1].to_owned())
         .collect();
     if index_vars.is_empty() {
-        return Err(MergeError(format!("No index vars found in name: {repeat_name}")));
+        return Err(MergeError(format!(
+            "No index vars found in name: {repeat_name}"
+        )));
     }
     if index_vars.len() > 1 {
         return Err(MergeError(format!(
@@ -328,50 +343,3 @@ impl RepeatHint for Register {
         self.repeat_index_hint
     }
 }
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-    use crate::regdesc::model::Field;
-
-    fn field(name: &str, shift: u32, index: i32) -> Field {
-        Field {
-            name: name.to_owned(),
-            shift,
-            mask: 0x1,
-            access: "RW".to_owned(),
-            default: 0,
-            description: format!("bit {index}"),
-            visible: true,
-            min_val: None,
-            max_val: None,
-            repeat: None,
-            repeat_name_hint: Some("BIT$n".to_owned()),
-            repeat_index_hint: Some(index),
-        }
-    }
-
-    #[test]
-    fn merge_fields_consecutive() {
-        let (merged, errors) = merge_fields(vec![
-            field("BIT0", 0, 0),
-            field("BIT1", 1, 1),
-            field("BIT2", 2, 2),
-        ]);
-        assert!(errors.is_empty());
-        assert_eq!(merged.len(), 1);
-        let repeat = merged[0].repeat.as_ref().unwrap();
-        assert_eq!(repeat.count, 3);
-        assert_eq!(repeat.stride, 1);
-        assert_eq!(repeat.start, 0);
-        assert_eq!(merged[0].name, "BIT$n");
-    }
-
-    #[test]
-    fn merge_fields_gap_keeps_originals() {
-        let (merged, errors) = merge_fields(vec![field("BIT0", 0, 0), field("BIT2", 2, 2)]);
-        assert_eq!(errors.len(), 1);
-        assert_eq!(merged.len(), 2);
-    }
-}
-

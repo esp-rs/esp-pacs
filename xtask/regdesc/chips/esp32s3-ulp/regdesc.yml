@@ -1,9 +1,0 @@
----
-rtc_cntl_reg_for_trm.csv: {}
-rtc_i2c_reg_for_trm.csv: {}
-rtc_io_reg_for_trm.csv: {}
-saradc_reg_for_trm.csv:
-  name: SENS
-  wno:
-    - reg-names
-    - field-names

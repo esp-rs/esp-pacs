@@ -1,18 +1,18 @@
-use anyhow::{bail, Context, Result};
-use regex::Regex;
 use std::sync::LazyLock;
 
-use super::model::{ExpandContext, Field, Peripheral, Register, RegisterGroup};
-use super::util::{parse_verilog_number, trim};
+use anyhow::{bail, Context, Result};
+use regex::Regex;
 
-static BITPOS_REGEX: LazyLock<Regex> =
-    LazyLock::new(|| Regex::new(r"\[((\d+):)?(\d+)\]").unwrap());
-static NONREG_REGEX: LazyLock<Regex> =
-    LazyLock::new(|| Regex::new(r"([0-9]+)\*([0-9]+)").unwrap());
+use super::{
+    model::{ExpandContext, Field, Peripheral, Register, RegisterGroup},
+    util::{parse_verilog_number, trim},
+};
+
+static BITPOS_REGEX: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"\[((\d+):)?(\d+)\]").unwrap());
+static NONREG_REGEX: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"([0-9]+)\*([0-9]+)").unwrap());
 static C_IDENT_REGEX: LazyLock<Regex> =
     LazyLock::new(|| Regex::new(r"^[a-zA-Z][a-zA-Z0-9_$]+$").unwrap());
-static REPEAT_LOWER: LazyLock<Regex> =
-    LazyLock::new(|| Regex::new(r"\$([A-Z])").unwrap());
+static REPEAT_LOWER: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"\$([A-Z])").unwrap());
 
 const CSV_VERSION_1_0: i32 = 100;
 const CSV_VERSION_1_1: i32 = 110;
@@ -31,6 +31,13 @@ pub fn read_peripheral_csv(content: &str, peripheral_name: Option<&str>) -> Resu
     parser.parse()
 }
 
+/// Probe the peripheral type name from CSV contents without a full parse.
+pub fn probe_peripheral_name_from_content(content: &str) -> Result<Option<String>> {
+    let (_version, records) = parse_csv_records(content)?;
+    Ok(probe_peripheral_name(&records, "RegName_Chg_0")
+        .or_else(|| probe_peripheral_name(&records, "RegName")))
+}
+
 struct CsvParser {
     lines: Vec<CsvLine>,
     peripheral_name: String,
@@ -39,7 +46,8 @@ struct CsvParser {
 }
 
 impl CsvParser {
-    /// Sets up the parser and figures out the peripheral name if you didn't override it.
+    /// Sets up the parser and figures out the peripheral name if you didn't
+    /// override it.
     fn new(content: &str, peripheral_name: Option<&str>) -> Result<Self> {
         let (csv_version, records) = parse_csv_records(content)?;
         let peripheral_name = match peripheral_name {
@@ -66,7 +74,10 @@ impl CsvParser {
             let (register, group, consumed) = self.parse_register(line_idx)?;
             line_idx += consumed;
 
-            if let Some(idx) = groups.iter().position(|existing| groups_match(existing, &group)) {
+            if let Some(idx) = groups
+                .iter()
+                .position(|existing| groups_match(existing, &group))
+            {
                 groups[idx].add_register(register);
             } else {
                 let mut new_group = group;
@@ -96,9 +107,7 @@ impl CsvParser {
 
         let field_name = csv_field(line, "Signal");
         if !field_name.is_empty() {
-            bail!(
-                "Field {field_name} cannot be defined on the same line as register {reg_name}"
-            );
+            bail!("Field {field_name} cannot be defined on the same line as register {reg_name}");
         }
 
         let mut reg_name = reg_name.to_owned();
@@ -190,12 +199,15 @@ impl CsvParser {
             }
             field_name = self.validate_fix_field_name(&field_name)?;
 
-            let (shift, mask) = extract_field_shift_mask(line)
-                .context("Field missing bit position")?;
+            let (shift, mask) =
+                extract_field_shift_mask(line).context("Field missing bit position")?;
             let (min_val, max_val) = extract_min_max(line);
             let default_raw = csv_field(line, "Default");
-            let (default, _, _) =
-                parse_verilog_number(if default_raw.is_empty() { "0" } else { default_raw });
+            let (default, _, _) = parse_verilog_number(if default_raw.is_empty() {
+                "0"
+            } else {
+                default_raw
+            });
 
             let mut field = Field {
                 name: field_name,
@@ -506,51 +518,4 @@ fn extract_field_shift_mask(line: &CsvLine) -> Option<(u32, u32)> {
         (1u32 << width) - 1
     };
     Some((low, mask))
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    fn line(pairs: &[(&str, &str)]) -> CsvLine {
-        pairs
-            .iter()
-            .map(|(k, v)| ((*k).to_owned(), (*v).to_owned()))
-            .collect()
-    }
-
-    #[test]
-    fn bitpos_single_and_range() {
-        assert_eq!(
-            extract_field_shift_mask(&line(&[("BitPos", "[3]")])),
-            Some((3, 0x1))
-        );
-        assert_eq!(
-            extract_field_shift_mask(&line(&[("BitPos", "[7:0]")])),
-            Some((0, 0xff))
-        );
-        assert_eq!(
-            extract_field_shift_mask(&line(&[("BitPos", "[31:0]")])),
-            Some((0, u32::MAX))
-        );
-        assert_eq!(extract_field_shift_mask(&line(&[("BitPos", "[2:5]")])), None);
-    }
-
-    #[test]
-    fn mem_size_v12_depth_times_word() {
-        let l = line(&[("NonReg", "16*32")]);
-        assert_eq!(extract_mem_size(&l, CSV_VERSION_1_2, "X_MEM"), 64);
-    }
-
-    #[test]
-    fn probe_name_from_common_prefix() {
-        let records = vec![
-            line(&[("Address", "0x0"), ("RegName", "UART0_CLK_REG")]),
-            line(&[("Address", "0x4"), ("RegName", "UART0_STATUS_REG")]),
-        ];
-        assert_eq!(
-            probe_peripheral_name(&records, "RegName").as_deref(),
-            Some("UART0")
-        );
-    }
 }

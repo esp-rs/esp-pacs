@@ -98,7 +98,10 @@ impl Field {
             field.shift += repeat.stride * i;
             let mut expand_ctx = ctx.clone();
             if self.repeat.is_some() && !expand_ctx.values.contains_key(&repeat.index_var) {
-                expand_ctx.insert(repeat.index_var.clone(), ExpandValue::Int(i as i32 + repeat.start));
+                expand_ctx.insert(
+                    repeat.index_var.clone(),
+                    ExpandValue::Int(i as i32 + repeat.start),
+                );
             }
             field.name = expand_ctx.replace(&field.name);
             field.description = expand_ctx.replace(&field.description);
@@ -168,7 +171,10 @@ impl Register {
             reg.addr += repeat.stride * i;
             let mut expand_ctx = ctx.clone();
             if self.repeat.is_some() && !expand_ctx.values.contains_key(&repeat.index_var) {
-                expand_ctx.insert(repeat.index_var.clone(), ExpandValue::Int(i as i32 + repeat.start));
+                expand_ctx.insert(
+                    repeat.index_var.clone(),
+                    ExpandValue::Int(i as i32 + repeat.start),
+                );
             }
             reg.name = expand_ctx.replace(&reg.name);
             reg.description = expand_ctx.replace(&reg.description);
@@ -182,7 +188,10 @@ impl Register {
         let mut reg = self.clone();
         if let Some(repeat) = &self.repeat {
             let mut ctx = ExpandContext::default();
-            ctx.insert(repeat.index_var.clone(), ExpandValue::Str(sub_expr.to_owned()));
+            ctx.insert(
+                repeat.index_var.clone(),
+                ExpandValue::Str(sub_expr.to_owned()),
+            );
             reg.expand_context = ctx.clone();
             reg.name = ctx.replace(&reg.name);
             reg.description = ctx.replace(&reg.description);
@@ -250,7 +259,10 @@ impl RegisterGroup {
             group.offset += repeat.stride * i;
             let mut expand_ctx = ctx.clone();
             if self.repeat.is_some() && !expand_ctx.values.contains_key(&repeat.index_var) {
-                expand_ctx.insert(repeat.index_var.clone(), ExpandValue::Int(i as i32 + repeat.start));
+                expand_ctx.insert(
+                    repeat.index_var.clone(),
+                    ExpandValue::Int(i as i32 + repeat.start),
+                );
             }
             if let Some(name) = &group.name {
                 group.name = Some(expand_ctx.replace(name));
@@ -302,10 +314,9 @@ pub struct PeripheralInstance {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub struct PeripheralInterrupt {
     pub name: String,
-    pub instance: String,
     pub value: u32,
     pub description: Option<String>,
 }
@@ -324,7 +335,8 @@ pub struct ChipInfo {
 }
 
 impl ChipInfo {
-    /// Builds chip metadata (CPU type, description, FPU, etc.) from `"esp32s31"`.
+    /// Builds chip metadata (CPU type, description, FPU, etc.) from
+    /// `"esp32s31"`.
     pub fn from_chip_id(chip: &str) -> Self {
         let formal = super::util::pretty_chip_name(chip);
         let description = match formal.as_str() {
@@ -334,9 +346,7 @@ impl ChipInfo {
             "ESP32-C5" => {
                 "32-bit RISC-V MCU & 2.4 and 5 GHz Wi-Fi 6 & Bluetooth 5 (LE) & IEEE 802.15.4"
             }
-            "ESP32-C6" => {
-                "32-bit RISC-V MCU & 2.4 GHz Wi-Fi 6 & Bluetooth 5 (LE) & IEEE 802.15.4"
-            }
+            "ESP32-C6" => "32-bit RISC-V MCU & 2.4 GHz Wi-Fi 6 & Bluetooth 5 (LE) & IEEE 802.15.4",
             "ESP32-C6-LP" => "32-bit RISC-V MCU",
             "ESP32-C61" => "32-bit RISC-V MCU & 2.4 GHz Wi-Fi 6 & Bluetooth 5 (LE)",
             "ESP32-H2" => "32-bit RISC-V MCU & Bluetooth 5 (LE) & IEEE 802.15.4",
@@ -345,9 +355,7 @@ impl ChipInfo {
             "ESP32-S2-ULP" => "32-bit RISC-V MCU",
             "ESP32-S3" => "32-bit MCU & 2.4 GHz Wi-Fi & Bluetooth 5 (LE)",
             "ESP32-S3-ULP" => "32-bit RISC-V MCU",
-            "ESP32-S31" => {
-                "32-bit RISC-V MCU & 2.4 GHz Wi-Fi & Bluetooth 5 (LE) & IEEE 802.15.4"
-            }
+            "ESP32-S31" => "32-bit RISC-V MCU & 2.4 GHz Wi-Fi & Bluetooth 5 (LE) & IEEE 802.15.4",
             _ => "No Chip Description",
         }
         .to_owned();

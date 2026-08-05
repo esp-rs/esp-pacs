@@ -1,16 +1,21 @@
-use std::fmt::Write as _;
-use std::sync::LazyLock;
+use std::{fmt::Write as _, sync::LazyLock};
 
 use regex::Regex;
 
-use super::model::{
-    ChipInfo, Peripheral, PeripheralInstance, PeripheralInterrupt, Register, RegdescFragment,
-    Repeat,
+use super::{
+    model::{
+        ChipInfo,
+        Peripheral,
+        PeripheralInstance,
+        PeripheralInterrupt,
+        RegdescFragment,
+        Register,
+        Repeat,
+    },
+    util::{guess_field_access, simplify_name},
 };
-use super::util::{guess_field_access, simplify_name};
 
-static FIELD_DESC_INDEX: LazyLock<Regex> =
-    LazyLock::new(|| Regex::new(r"(?i)\$[a-z]").unwrap());
+static FIELD_DESC_INDEX: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"(?i)\$[a-z]").unwrap());
 
 /// Turns a chip model into a full SVD XML string.
 pub fn write_svd(fragment: &RegdescFragment, version: u32) -> String {
@@ -35,7 +40,11 @@ pub fn write_svd(fragment: &RegdescFragment, version: u32) -> String {
 /// Writes vendor, chip name, version, description, and the license block.
 fn write_device_preamble(out: &mut String, chip: &ChipInfo, version: u32) {
     let year = time_year();
-    writeln!(out, "  <vendor>ESPRESSIF SYSTEMS (SHANGHAI) CO., LTD.</vendor>").unwrap();
+    writeln!(
+        out,
+        "  <vendor>ESPRESSIF SYSTEMS (SHANGHAI) CO., LTD.</vendor>"
+    )
+    .unwrap();
     writeln!(out, "  <vendorID>ESPRESSIF</vendorID>").unwrap();
     writeln!(out, "  <name>{}</name>", xml_escape(&chip.name)).unwrap();
     writeln!(out, "  <series>{}</series>", xml_escape(chip.series())).unwrap();
@@ -65,11 +74,7 @@ fn write_device_preamble(out: &mut String, chip: &ChipInfo, version: u32) {
     .unwrap();
     writeln!(out, "    You may obtain a copy of the License at").unwrap();
     writeln!(out).unwrap();
-    writeln!(
-        out,
-        "        http://www.apache.org/licenses/LICENSE-2.0"
-    )
-    .unwrap();
+    writeln!(out, "        http://www.apache.org/licenses/LICENSE-2.0").unwrap();
     writeln!(out).unwrap();
     writeln!(
         out,
@@ -101,18 +106,8 @@ fn write_cpu(out: &mut String, chip: &ChipInfo) {
     writeln!(out, "    <name>{}</name>", chip.cpu_name).unwrap();
     writeln!(out, "    <revision>{}</revision>", chip.cpu_revision).unwrap();
     writeln!(out, "    <endian>{}</endian>", chip.cpu_endian).unwrap();
-    writeln!(
-        out,
-        "    <mpuPresent>{}</mpuPresent>",
-        chip.mpu_present
-    )
-    .unwrap();
-    writeln!(
-        out,
-        "    <fpuPresent>{}</fpuPresent>",
-        chip.fpu_present
-    )
-    .unwrap();
+    writeln!(out, "    <mpuPresent>{}</mpuPresent>", chip.mpu_present).unwrap();
+    writeln!(out, "    <fpuPresent>{}</fpuPresent>", chip.fpu_present).unwrap();
     writeln!(
         out,
         "    <nvicPrioBits>{}</nvicPrioBits>",
@@ -149,7 +144,10 @@ fn write_peripherals(out: &mut String, fragment: &RegdescFragment) {
             .collect();
 
         if instances.is_empty() {
-            log::warn!("no instances found for peripheral '{}', skipping", peripheral.name);
+            log::warn!(
+                "no instances found for peripheral '{}', skipping",
+                peripheral.name
+            );
             continue;
         }
 
@@ -164,7 +162,8 @@ fn write_peripherals(out: &mut String, fragment: &RegdescFragment) {
     writeln!(out, "  </peripherals>").unwrap();
 }
 
-/// Writes extra instances as `derivedFrom` stubs (same layout, different base addr).
+/// Writes extra instances as `derivedFrom` stubs (same layout, different base
+/// addr).
 fn write_derived_peripheral(
     out: &mut String,
     fragment: &RegdescFragment,
@@ -192,15 +191,7 @@ fn write_derived_peripheral(
             .unwrap();
         }
 
-        let interrupts: Vec<_> = fragment
-            .peripheral_interrupts
-            .iter()
-            .filter(|i| i.instance == instance.name)
-            .collect();
-        for interrupt in interrupts {
-            write_interrupt(out, interrupt);
-        }
-
+        // Interrupts are emitted once on the IRQ host peripheral only.
         writeln!(out, "    </peripheral>").unwrap();
     }
 }
@@ -240,17 +231,39 @@ fn write_peripheral(
 
     write_address_block(out, peripheral);
 
-    let interrupts: Vec<_> = fragment
-        .peripheral_interrupts
-        .iter()
-        .filter(|i| i.instance == instance.name)
-        .collect();
-    for interrupt in interrupts {
-        write_interrupt(out, interrupt);
+    if is_interrupt_host(fragment, &instance.name) {
+        write_instance_interrupts(out, fragment);
     }
 
     write_registers(out, peripheral);
     writeln!(out, "    </peripheral>").unwrap();
+}
+
+/// CMSIS-SVD requires interrupts under some `<peripheral>`; we park the flat
+/// list on `INTERRUPT_CORE0` (or the first instance if that is missing).
+fn interrupt_host_name(fragment: &RegdescFragment) -> Option<&str> {
+    let names: Vec<&str> = fragment
+        .peripheral_instances
+        .iter()
+        .map(|i| i.name.as_str())
+        .collect();
+    if names.iter().any(|&n| n == "INTERRUPT_CORE0") {
+        Some("INTERRUPT_CORE0")
+    } else {
+        names.first().copied()
+    }
+}
+
+fn is_interrupt_host(fragment: &RegdescFragment, instance_name: &str) -> bool {
+    interrupt_host_name(fragment) == Some(instance_name)
+}
+
+fn write_instance_interrupts(out: &mut String, fragment: &RegdescFragment) {
+    let mut interrupts = fragment.peripheral_interrupts.clone();
+    interrupts.sort_by_key(|i| i.value);
+    for interrupt in &interrupts {
+        write_interrupt(out, interrupt);
+    }
 }
 
 /// Writes the `<addressBlock>` size summary.
@@ -330,12 +343,7 @@ fn write_register(out: &mut String, peripheral: &Peripheral, register: &Register
             }
         }
     }
-    writeln!(
-        out,
-        "          <name>{}</name>",
-        xml_escape(&register.name)
-    )
-    .unwrap();
+    writeln!(out, "          <name>{}</name>", xml_escape(&register.name)).unwrap();
     writeln!(
         out,
         "          <description>{}</description>",
@@ -373,7 +381,11 @@ fn write_fields(out: &mut String, peripheral: &Peripheral, register: &Register) 
         }
 
         if field.name.contains("%s") {
-            field.name = field.name.replace("%s", "").trim_end_matches('_').to_owned();
+            field.name = field
+                .name
+                .replace("%s", "")
+                .trim_end_matches('_')
+                .to_owned();
         }
 
         let mut description = field.description.clone();
@@ -402,11 +414,19 @@ fn write_fields(out: &mut String, peripheral: &Peripheral, register: &Register) 
         )
         .unwrap();
         writeln!(out, "              <bitOffset>{}</bitOffset>", field.shift).unwrap();
-        writeln!(out, "              <bitWidth>{}</bitWidth>", field.bit_width()).unwrap();
+        writeln!(
+            out,
+            "              <bitWidth>{}</bitWidth>",
+            field.bit_width()
+        )
+        .unwrap();
         if let Some(access) = guess_field_access(&field.access) {
             writeln!(out, "              <access>{access}</access>").unwrap();
         } else {
-            log::warn!("unrecognized field access value '{}', ignoring", field.access);
+            log::warn!(
+                "unrecognized field access value '{}', ignoring",
+                field.access
+            );
         }
         writeln!(out, "            </field>").unwrap();
     }

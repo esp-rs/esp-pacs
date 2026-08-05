@@ -1,39 +1,19 @@
-use std::collections::HashMap;
-use std::fs;
-use std::path::{Path, PathBuf};
+use std::{
+    collections::HashMap,
+    fs,
+    path::{Path, PathBuf},
+};
 
 use anyhow::{Context, Result};
 use serde::Deserialize;
 
 use super::model::{
-    ChipInfo, Peripheral, PeripheralInstance, PeripheralInterrupt, RegdescFragment,
+    ChipInfo,
+    Peripheral,
+    PeripheralInstance,
+    PeripheralInterrupt,
+    RegdescFragment,
 };
-
-#[derive(Debug, Deserialize)]
-struct PeripheralsFile {
-    peripheral_instances: Vec<PeripheralInstanceRaw>,
-}
-
-#[derive(Debug, Deserialize)]
-struct PeripheralInstanceRaw {
-    name: String,
-    peripheral: String,
-    base_addr: String,
-    description: Option<String>,
-}
-
-#[derive(Debug, Deserialize)]
-struct InterruptsFile {
-    peripheral_interrupts: Vec<PeripheralInterruptRaw>,
-}
-
-#[derive(Debug, Deserialize)]
-struct PeripheralInterruptRaw {
-    name: String,
-    instance: String,
-    value: u32,
-    description: Option<String>,
-}
 
 #[derive(Debug, Deserialize)]
 struct DescriptionsFile {
@@ -46,71 +26,28 @@ struct PeripheralDescription {
     description: String,
 }
 
-#[derive(Debug, Deserialize)]
-pub struct CsvEntryOptions {
-    pub name: Option<String>,
-    /// Warning names to ignore (reserved for future use; present in YAML for compatibility).
-    #[serde(default)]
-    #[allow(dead_code)]
-    pub wno: Vec<String>,
-}
-
-/// Reads `regdesc.yml` — which CSV files to parse and any name overrides.
-pub fn load_regdesc_config(path: &Path) -> Result<HashMap<String, CsvEntryOptions>> {
-    let content = fs::read_to_string(path)
-        .with_context(|| format!("reading regdesc config {}", path.display()))?;
-    serde_yaml::from_str(&content)
-        .with_context(|| format!("parsing regdesc config {}", path.display()))
-}
-
-/// Loads `peripherals.yml` and `interrupts.yml` (base addresses, instances, IRQ numbers).
-pub fn load_metadata(
-    config_dir: &Path,
-) -> Result<(Vec<PeripheralInstance>, Vec<PeripheralInterrupt>)> {
-    let peripherals_path = config_dir.join("peripherals.yml");
-    let interrupts_path = config_dir.join("interrupts.yml");
-
-    let peripherals_content = fs::read_to_string(&peripherals_path)
-        .with_context(|| format!("reading {}", peripherals_path.display()))?;
-    let interrupts_content = fs::read_to_string(&interrupts_path)
-        .with_context(|| format!("reading {}", interrupts_path.display()))?;
-
-    let peripherals: PeripheralsFile = serde_yaml::from_str(&peripherals_content)
-        .with_context(|| format!("parsing {}", peripherals_path.display()))?;
-    let interrupts: InterruptsFile = serde_yaml::from_str(&interrupts_content)
-        .with_context(|| format!("parsing {}", interrupts_path.display()))?;
-
-    let instances = peripherals
-        .peripheral_instances
-        .into_iter()
-        .map(|raw| PeripheralInstance {
-            name: raw.name,
-            peripheral: raw.peripheral,
-            base_addr: parse_addr(&raw.base_addr),
-            description: raw.description,
-        })
-        .collect();
-
-    let peripheral_interrupts = interrupts
-        .peripheral_interrupts
-        .into_iter()
-        .map(|raw| PeripheralInterrupt {
-            name: raw.name,
-            instance: raw.instance,
-            value: raw.value,
-            description: raw.description,
-        })
-        .collect();
-
-    Ok((instances, peripheral_interrupts))
+/// Lists `*.csv` files in `csv_dir` (sorted by file name).
+pub fn discover_csv_files(csv_dir: &Path) -> Result<Vec<PathBuf>> {
+    let mut files = Vec::new();
+    for entry in fs::read_dir(csv_dir)
+        .with_context(|| format!("reading CSV directory {}", csv_dir.display()))?
+    {
+        let entry = entry?;
+        let path = entry.path();
+        if path.extension().and_then(|e| e.to_str()) == Some("csv") {
+            files.push(path);
+        }
+    }
+    files.sort();
+    Ok(files)
 }
 
 /// Loads the shared peripheral description blurbs from YAML.
 pub fn load_descriptions(path: &Path) -> Result<HashMap<String, String>> {
-    let content = fs::read_to_string(path)
-        .with_context(|| format!("reading {}", path.display()))?;
-    let file: DescriptionsFile = serde_yaml::from_str(&content)
-        .with_context(|| format!("parsing {}", path.display()))?;
+    let content =
+        fs::read_to_string(path).with_context(|| format!("reading {}", path.display()))?;
+    let file: DescriptionsFile =
+        serde_yaml::from_str(&content).with_context(|| format!("parsing {}", path.display()))?;
     Ok(file
         .peripheral_descriptions
         .into_iter()
@@ -124,13 +61,10 @@ pub fn apply_instance_descriptions(
     descriptions: &HashMap<String, String>,
 ) {
     for instance in instances.iter_mut() {
-        instance.description = descriptions
-            .get(&instance.name)
-            .cloned()
-            .or_else(|| {
-                log::warn!("{} has no description", instance.name);
-                Some(format!("{} Peripheral", instance.name))
-            });
+        instance.description = descriptions.get(&instance.name).cloned().or_else(|| {
+            log::warn!("{} has no description", instance.name);
+            Some(format!("{} Peripheral", instance.name))
+        });
     }
 }
 
@@ -149,31 +83,9 @@ pub fn build_fragment(
     }
 }
 
-/// Parses `"0x20343000"`-style addresses into a `u32`.
-fn parse_addr(value: &str) -> u32 {
-    let value = value.trim();
-    let parsed = if let Some(hex) = value.strip_prefix("0x").or_else(|| value.strip_prefix("0X")) {
-        u32::from_str_radix(hex, 16)
-    } else {
-        value.parse()
-    };
-    match parsed {
-        Ok(addr) => addr,
-        Err(_) => {
-            log::warn!("invalid peripheral base address '{value}', using 0");
-            0
-        }
-    }
-}
-
 /// Path to `xtask/regdesc/`.
 pub fn regdesc_root() -> PathBuf {
     PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("regdesc")
-}
-
-/// Path to `xtask/regdesc/chips/{chip}/`.
-pub fn chip_config_dir(chip: &str) -> PathBuf {
-    regdesc_root().join("chips").join(chip)
 }
 
 /// Path to the shared `peripheral_descriptions.yml`.
