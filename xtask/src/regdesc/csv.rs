@@ -20,6 +20,11 @@ const CSV_VERSION_1_2: i32 = 120;
 
 type CsvLine = std::collections::HashMap<String, String>;
 
+/// Trimmed column value, or `""` if the column is missing.
+fn csv_field<'a>(line: &'a CsvLine, key: &str) -> &'a str {
+    trim(line.get(key).map(String::as_str).unwrap_or(""))
+}
+
 /// Feed it CSV text, get back a parsed `Peripheral`.
 pub fn read_peripheral_csv(content: &str, peripheral_name: Option<&str>) -> Result<Peripheral> {
     let mut parser = CsvParser::new(content, peripheral_name)?;
@@ -71,7 +76,7 @@ impl CsvParser {
         }
 
         for group in &mut groups {
-            group.visible = !group.registers.iter().all(|r| !r.visible);
+            group.visible = group.registers.iter().any(|r| r.visible);
         }
 
         Ok(Peripheral {
@@ -84,12 +89,12 @@ impl CsvParser {
     /// Parses one register line (and the field rows that follow it).
     fn parse_register(&mut self, start: usize) -> Result<(Register, RegisterGroup, usize)> {
         let line = &self.lines[start];
-        let reg_name = trim(line.get("RegName").map(String::as_str).unwrap_or(""));
+        let reg_name = csv_field(line, "RegName");
         if reg_name.is_empty() {
             bail!("Expected a register definition at line {}", start + 2);
         }
 
-        let field_name = trim(line.get("Signal").map(String::as_str).unwrap_or(""));
+        let field_name = csv_field(line, "Signal");
         if !field_name.is_empty() {
             bail!(
                 "Field {field_name} cannot be defined on the same line as register {reg_name}"
@@ -106,43 +111,7 @@ impl CsvParser {
         let register_group = extract_register_group(line, self.csv_version);
 
         let mem_size = extract_mem_size(line, self.csv_version, &reg_name);
-        if mem_size == 0 {
-            self.validate_register_name(&reg_name)?;
-
-            let repeat_info = self.extract_repeat(line);
-            self.last_repeat_num = repeat_info.as_ref().map(|(_, n)| *n);
-
-            let (fields, consumed) = self.parse_fields(start + 1)?;
-            if fields.is_empty() {
-                bail!("Register {reg_name} doesn't have any fields defined");
-            }
-
-            let visible = if fields.iter().all(|f| !f.visible) {
-                false
-            } else {
-                visible
-            };
-
-            let mut register = Register {
-                name: reg_name,
-                addr: extract_reg_addr(line)?,
-                fields,
-                description,
-                visible,
-                size: 4,
-                repeat: None,
-                repeat_name_hint: None,
-                repeat_index_hint: None,
-                is_mem_region: false,
-                expand_context: ExpandContext::default(),
-            };
-
-            if let Some((repeat_name, repeat_num)) = repeat_info {
-                register.set_repeat_hint(repeat_name, repeat_num);
-            }
-
-            Ok((register, register_group, consumed + 1))
-        } else {
+        if mem_size != 0 {
             self.validate_mem_region_name(&reg_name)?;
             let register = Register {
                 name: reg_name,
@@ -157,8 +126,41 @@ impl CsvParser {
                 is_mem_region: true,
                 expand_context: ExpandContext::default(),
             };
-            Ok((register, register_group, 1))
+            return Ok((register, register_group, 1));
         }
+
+        self.validate_register_name(&reg_name)?;
+
+        let repeat_info = self.extract_repeat(line);
+        self.last_repeat_num = repeat_info.as_ref().map(|(_, n)| *n);
+
+        let (fields, consumed) = self.parse_fields(start + 1)?;
+        if fields.is_empty() {
+            bail!("Register {reg_name} doesn't have any fields defined");
+        }
+
+        // A register is hidden if the CSV marks it so, or every field is hidden.
+        let visible = visible && fields.iter().any(|f| f.visible);
+
+        let mut register = Register {
+            name: reg_name,
+            addr: extract_reg_addr(line)?,
+            fields,
+            description,
+            visible,
+            size: 4,
+            repeat: None,
+            repeat_name_hint: None,
+            repeat_index_hint: None,
+            is_mem_region: false,
+            expand_context: ExpandContext::default(),
+        };
+
+        if let Some((repeat_name, repeat_num)) = repeat_info {
+            register.set_repeat_hint(repeat_name, repeat_num);
+        }
+
+        Ok((register, register_group, consumed + 1))
     }
 
     /// Grabs all field rows belonging to the current register.
@@ -168,12 +170,13 @@ impl CsvParser {
 
         while idx < self.lines.len() {
             let line = &self.lines[idx];
-            if !trim(line.get("RegName").map(String::as_str).unwrap_or("")).is_empty() {
+            if !csv_field(line, "RegName").is_empty() {
                 break;
             }
 
-            let field_name = trim(line.get("Signal").map(String::as_str).unwrap_or(""));
+            let field_name = csv_field(line, "Signal");
             if field_name.is_empty() {
+                // Reserved/gap rows sometimes keep BitPos but no Signal name.
                 if extract_field_shift_mask(line).is_some() {
                     idx += 1;
                     continue;
@@ -190,16 +193,15 @@ impl CsvParser {
             let (shift, mask) = extract_field_shift_mask(line)
                 .context("Field missing bit position")?;
             let (min_val, max_val) = extract_min_max(line);
-            let (default, _, _) = parse_verilog_number(
-                trim(line.get("Default").map(String::as_str).unwrap_or("0")),
-            );
+            let default_raw = csv_field(line, "Default");
+            let (default, _, _) =
+                parse_verilog_number(if default_raw.is_empty() { "0" } else { default_raw });
 
             let mut field = Field {
                 name: field_name,
                 shift,
                 mask,
-                access: trim(line.get("SW(R/W)").map(String::as_str).unwrap_or(""))
-                    .to_owned(),
+                access: csv_field(line, "SW(R/W)").to_owned(),
                 default,
                 description: extract_description(line),
                 visible: extract_visible(line),
@@ -223,11 +225,12 @@ impl CsvParser {
 
     /// Pulls out repeat info like `$n` and how many times it repeats.
     fn extract_repeat(&self, line: &CsvLine) -> Option<(String, i32)> {
-        let repeat_name = trim(line.get("RepeatName").map(String::as_str).unwrap_or(""));
+        let repeat_name = csv_field(line, "RepeatName");
         if repeat_name.is_empty() {
             return None;
         }
 
+        // GDVS writes `$N`; normalize to `$n` so merge/expand share one index var.
         let mut repeat_name = repeat_name.to_ascii_uppercase();
         repeat_name = REPEAT_LOWER
             .replace_all(&repeat_name, |caps: &regex::Captures| {
@@ -235,7 +238,7 @@ impl CsvParser {
             })
             .into_owned();
 
-        let num_str = trim(line.get("RepeatNum").map(String::as_str).unwrap_or(""));
+        let num_str = csv_field(line, "RepeatNum");
         if num_str.is_empty() {
             return self.last_repeat_num.map(|n| (repeat_name, n));
         }
@@ -350,7 +353,7 @@ fn parse_csv_records(content: &str) -> Result<(i32, Vec<CsvLine>)> {
 fn probe_peripheral_name(records: &[CsvLine], column: &str) -> Option<String> {
     let names: Vec<String> = records
         .iter()
-        .filter(|line| !trim(line.get("Address").map(String::as_str).unwrap_or("")).is_empty())
+        .filter(|line| !csv_field(line, "Address").is_empty())
         .filter_map(|line| line.get(column).cloned())
         .filter(|name| !name.is_empty())
         .collect();
@@ -383,7 +386,7 @@ fn common_prefix(values: &[String]) -> String {
 
 /// Parses the address column from a CSV row.
 fn extract_reg_addr(line: &CsvLine) -> Result<u32> {
-    let addr = trim(line.get("Address").map(String::as_str).unwrap_or(""));
+    let addr = csv_field(line, "Address");
     let hex = addr
         .strip_prefix("0x")
         .or_else(|| addr.strip_prefix("0X"))
@@ -393,7 +396,7 @@ fn extract_reg_addr(line: &CsvLine) -> Result<u32> {
 
 /// Figures out memory region size from the `NonReg` column.
 fn extract_mem_size(line: &CsvLine, csv_version: i32, reg_name: &str) -> u32 {
-    let nonreg_val = trim(line.get("NonReg").map(String::as_str).unwrap_or(""));
+    let nonreg_val = csv_field(line, "NonReg");
     if nonreg_val.is_empty() {
         return 0;
     }
@@ -418,47 +421,42 @@ fn extract_mem_size(line: &CsvLine, csv_version: i32, reg_name: &str) -> u32 {
 
 /// Grabs the description text from a row.
 fn extract_description(line: &CsvLine) -> String {
-    trim(line.get("Description").map(String::as_str).unwrap_or("")).to_owned()
+    csv_field(line, "Description").to_owned()
 }
 
 /// Checks if a row is marked public/visible (empty `Public` column = yes).
 fn extract_visible(line: &CsvLine) -> bool {
-    matches!(
-        trim(line.get("Public").map(String::as_str).unwrap_or("")),
-        ""
-    )
+    csv_field(line, "Public").is_empty()
 }
 
 /// Pulls alternate register/field names from `RegName_Chg_0`.
 fn extract_alt_names(line: &CsvLine) -> Vec<String> {
-    let alt = trim(line.get("RegName_Chg_0").map(String::as_str).unwrap_or(""));
+    let alt = csv_field(line, "RegName_Chg_0");
     if alt.is_empty() {
         Vec::new()
     } else {
-        alt.split_whitespace().map(|s| s.to_ascii_uppercase()).collect()
+        alt.split_whitespace()
+            .map(|s| s.to_ascii_uppercase())
+            .collect()
     }
 }
 
 /// Reads min/max value columns if present.
 fn extract_min_max(line: &CsvLine) -> (Option<i64>, Option<i64>) {
-    let min_str = trim(line.get("Min_Value").map(String::as_str).unwrap_or(""));
-    let max_str = trim(line.get("Max_Value").map(String::as_str).unwrap_or(""));
-    let min_val = if min_str.is_empty() {
-        None
-    } else {
-        min_str.parse().ok()
+    let parse = |key| {
+        let value = csv_field(line, key);
+        if value.is_empty() {
+            None
+        } else {
+            value.parse().ok()
+        }
     };
-    let max_val = if max_str.is_empty() {
-        None
-    } else {
-        max_str.parse().ok()
-    };
-    (min_val, max_val)
+    (parse("Min_Value"), parse("Max_Value"))
 }
 
 /// Builds a register group from `GroupName` / `GroupIdentifier`.
 fn extract_register_group(line: &CsvLine, csv_version: i32) -> RegisterGroup {
-    let group_desc = trim(line.get("GroupName").map(String::as_str).unwrap_or(""));
+    let group_desc = csv_field(line, "GroupName");
     let description = if group_desc.is_empty() {
         "Default".to_owned()
     } else {
@@ -467,7 +465,7 @@ fn extract_register_group(line: &CsvLine, csv_version: i32) -> RegisterGroup {
     let name = if csv_version < CSV_VERSION_1_2 {
         None
     } else {
-        let id = trim(line.get("GroupIdentifier").map(String::as_str).unwrap_or(""));
+        let id = csv_field(line, "GroupIdentifier");
         if id.is_empty() {
             None
         } else {
@@ -487,7 +485,7 @@ fn extract_register_group(line: &CsvLine, csv_version: i32) -> RegisterGroup {
 
 /// Parses `[7:0]`-style bit positions into (shift, mask).
 fn extract_field_shift_mask(line: &CsvLine) -> Option<(u32, u32)> {
-    let bitpos = trim(line.get("BitPos").map(String::as_str).unwrap_or(""));
+    let bitpos = csv_field(line, "BitPos");
     if bitpos.is_empty() {
         return None;
     }
@@ -498,6 +496,9 @@ fn extract_field_shift_mask(line: &CsvLine) -> Option<(u32, u32)> {
     }
     let high = caps[2].parse::<u32>().ok()?;
     let low = caps[3].parse::<u32>().ok()?;
+    if high < low {
+        return None;
+    }
     let width = high - low + 1;
     let mask = if width >= 32 {
         u32::MAX
@@ -505,4 +506,51 @@ fn extract_field_shift_mask(line: &CsvLine) -> Option<(u32, u32)> {
         (1u32 << width) - 1
     };
     Some((low, mask))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn line(pairs: &[(&str, &str)]) -> CsvLine {
+        pairs
+            .iter()
+            .map(|(k, v)| ((*k).to_owned(), (*v).to_owned()))
+            .collect()
+    }
+
+    #[test]
+    fn bitpos_single_and_range() {
+        assert_eq!(
+            extract_field_shift_mask(&line(&[("BitPos", "[3]")])),
+            Some((3, 0x1))
+        );
+        assert_eq!(
+            extract_field_shift_mask(&line(&[("BitPos", "[7:0]")])),
+            Some((0, 0xff))
+        );
+        assert_eq!(
+            extract_field_shift_mask(&line(&[("BitPos", "[31:0]")])),
+            Some((0, u32::MAX))
+        );
+        assert_eq!(extract_field_shift_mask(&line(&[("BitPos", "[2:5]")])), None);
+    }
+
+    #[test]
+    fn mem_size_v12_depth_times_word() {
+        let l = line(&[("NonReg", "16*32")]);
+        assert_eq!(extract_mem_size(&l, CSV_VERSION_1_2, "X_MEM"), 64);
+    }
+
+    #[test]
+    fn probe_name_from_common_prefix() {
+        let records = vec![
+            line(&[("Address", "0x0"), ("RegName", "UART0_CLK_REG")]),
+            line(&[("Address", "0x4"), ("RegName", "UART0_STATUS_REG")]),
+        ];
+        assert_eq!(
+            probe_peripheral_name(&records, "RegName").as_deref(),
+            Some("UART0")
+        );
+    }
 }

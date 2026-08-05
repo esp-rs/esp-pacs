@@ -152,10 +152,17 @@ pub fn build_fragment(
 /// Parses `"0x20343000"`-style addresses into a `u32`.
 fn parse_addr(value: &str) -> u32 {
     let value = value.trim();
-    if let Some(hex) = value.strip_prefix("0x").or_else(|| value.strip_prefix("0X")) {
-        u32::from_str_radix(hex, 16).unwrap_or(0)
+    let parsed = if let Some(hex) = value.strip_prefix("0x").or_else(|| value.strip_prefix("0X")) {
+        u32::from_str_radix(hex, 16)
     } else {
-        value.parse().unwrap_or(0)
+        value.parse()
+    };
+    match parsed {
+        Ok(addr) => addr,
+        Err(_) => {
+            log::warn!("invalid peripheral base address '{value}', using 0");
+            0
+        }
     }
 }
 

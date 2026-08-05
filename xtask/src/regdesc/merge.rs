@@ -184,7 +184,15 @@ where
     }
     let offsets: Vec<u32> = items_list.iter().map(get_offset).collect();
     let offset_0 = offsets[0];
-    let offsets_from_0: Vec<u32> = offsets.iter().map(|v| v - offset_0).collect();
+    let mut offsets_from_0 = Vec::with_capacity(offsets.len());
+    for &offset in &offsets {
+        let Some(delta) = offset.checked_sub(offset_0) else {
+            return Err(MergeError(format!(
+                "Repeat offsets for {repeat_name} are not monotonically increasing. Got {offsets:?}"
+            )));
+        };
+        offsets_from_0.push(delta);
+    }
     let stride = offsets_from_0[1];
     if !offsets_from_0
         .iter()
@@ -320,3 +328,50 @@ impl RepeatHint for Register {
         self.repeat_index_hint
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::regdesc::model::Field;
+
+    fn field(name: &str, shift: u32, index: i32) -> Field {
+        Field {
+            name: name.to_owned(),
+            shift,
+            mask: 0x1,
+            access: "RW".to_owned(),
+            default: 0,
+            description: format!("bit {index}"),
+            visible: true,
+            min_val: None,
+            max_val: None,
+            repeat: None,
+            repeat_name_hint: Some("BIT$n".to_owned()),
+            repeat_index_hint: Some(index),
+        }
+    }
+
+    #[test]
+    fn merge_fields_consecutive() {
+        let (merged, errors) = merge_fields(vec![
+            field("BIT0", 0, 0),
+            field("BIT1", 1, 1),
+            field("BIT2", 2, 2),
+        ]);
+        assert!(errors.is_empty());
+        assert_eq!(merged.len(), 1);
+        let repeat = merged[0].repeat.as_ref().unwrap();
+        assert_eq!(repeat.count, 3);
+        assert_eq!(repeat.stride, 1);
+        assert_eq!(repeat.start, 0);
+        assert_eq!(merged[0].name, "BIT$n");
+    }
+
+    #[test]
+    fn merge_fields_gap_keeps_originals() {
+        let (merged, errors) = merge_fields(vec![field("BIT0", 0, 0), field("BIT2", 2, 2)]);
+        assert_eq!(errors.len(), 1);
+        assert_eq!(merged.len(), 2);
+    }
+}
+

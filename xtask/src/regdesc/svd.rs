@@ -322,15 +322,11 @@ fn write_register(out: &mut String, peripheral: &Peripheral, register: &Register
             // arrays that share a `%s` name (e.g. RMT TX `$n` vs RX `$m`)
             // expand to distinct register names (CH0… vs CH2…).
             if repeat.start != 0 {
-                let indices: Vec<String> = (0..repeat.count)
+                let indices: String = (0..repeat.count)
                     .map(|i| (repeat.start + i as i32).to_string())
-                    .collect();
-                writeln!(
-                    out,
-                    "          <dimIndex>{}</dimIndex>",
-                    indices.join(",")
-                )
-                .unwrap();
+                    .collect::<Vec<_>>()
+                    .join(",");
+                writeln!(out, "          <dimIndex>{indices}</dimIndex>").unwrap();
             }
         }
     }
