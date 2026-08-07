@@ -45,10 +45,6 @@
         <size>0xc8</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>AES</name>
-        <value>60</value>
-      </interrupt>
       <registers>
         <register>
           <dim>8</dim>
@@ -477,10 +473,6 @@ Only valid for DMA-AES operation.</description>
         <size>0x70</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>APB_ADC</name>
-        <value>48</value>
-      </interrupt>
       <registers>
         <register>
           <name>CTRL</name>
@@ -1466,10 +1458,6 @@ Only valid for DMA-AES operation.</description>
         <size>0x80</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>ASSIST_DEBUG</name>
-        <value>11</value>
-      </interrupt>
       <registers>
         <register>
           <name>CORE_0_INTR_ENA</name>
@@ -2348,10 +2336,6 @@ Only valid for DMA-AES operation.</description>
         <size>0x3f4</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>CACHE</name>
-        <value>13</value>
-      </interrupt>
       <registers>
         <register>
           <name>L1_ICACHE_CTRL</name>
@@ -9136,30 +9120,6 @@ This field should be one-hot with the other fields inside this register. \\</des
         <size>0x1a4</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>DMA_IN_CH0</name>
-        <value>53</value>
-      </interrupt>
-      <interrupt>
-        <name>DMA_IN_CH1</name>
-        <value>54</value>
-      </interrupt>
-      <interrupt>
-        <name>DMA_IN_CH2</name>
-        <value>55</value>
-      </interrupt>
-      <interrupt>
-        <name>DMA_OUT_CH0</name>
-        <value>56</value>
-      </interrupt>
-      <interrupt>
-        <name>DMA_OUT_CH1</name>
-        <value>57</value>
-      </interrupt>
-      <interrupt>
-        <name>DMA_OUT_CH2</name>
-        <value>58</value>
-      </interrupt>
       <registers>
         <register>
           <dim>3</dim>
@@ -10676,10 +10636,6 @@ This field should be one-hot with the other fields inside this register. \\</des
         <size>0xd8</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>ECC</name>
-        <value>63</value>
-      </interrupt>
       <registers>
         <register>
           <name>MULT_INT_RAW</name>
@@ -10914,10 +10870,6 @@ This field should be one-hot with the other fields inside this register. \\</des
         <size>0xf8</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>ECDSA</name>
-        <value>64</value>
-      </interrupt>
       <registers>
         <register>
           <name>CONF</name>
@@ -11344,10 +11296,6 @@ Others: invalid\\</description>
         <size>0x3d8</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>EFUSE</name>
-        <value>1</value>
-      </interrupt>
       <registers>
         <register>
           <dim>8</dim>
@@ -15085,14 +15033,6 @@ Others: invalid\\</description>
         <size>0x29c</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>GPIO</name>
-        <value>22</value>
-      </interrupt>
-      <interrupt>
-        <name>GPIO_NMI</name>
-        <value>23</value>
-      </interrupt>
       <registers>
         <register>
           <name>STRAP</name>
@@ -19203,22 +19143,6 @@ Others: invalid\\</description>
         <size>0x114</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>HP_APM_M0</name>
-        <value>26</value>
-      </interrupt>
-      <interrupt>
-        <name>HP_APM_M1</name>
-        <value>27</value>
-      </interrupt>
-      <interrupt>
-        <name>HP_APM_M2</name>
-        <value>28</value>
-      </interrupt>
-      <interrupt>
-        <name>HP_APM_M3</name>
-        <value>29</value>
-      </interrupt>
       <registers>
         <register>
           <name>REGION_FILTER_EN</name>
@@ -21281,10 +21205,6 @@ Others: invalid\\</description>
         <size>0x50</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>HP_PERI_TIMEOUT</name>
-        <value>25</value>
-      </interrupt>
       <registers>
         <register>
           <name>EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL</name>
@@ -21716,10 +21636,6 @@ Others: invalid\\</description>
         <size>0x8c</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>I2C_EXT0</name>
-        <value>39</value>
-      </interrupt>
       <registers>
         <register>
           <name>SCL_LOW_PERIOD</name>
@@ -23270,10 +23186,6 @@ Measurement unit: I2C_SCLK \\</description>
       <name>I2C1</name>
       <baseAddress>0x60005000</baseAddress>
       <description>I2C (Inter-Integrated Circuit) Controller 1</description>
-      <interrupt>
-        <name>I2C_EXT1</name>
-        <value>40</value>
-      </interrupt>
     </peripheral>
     <peripheral>
       <name>I2S0</name>
@@ -23285,10 +23197,6 @@ Measurement unit: I2C_SCLK \\</description>
         <size>0x60</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>I2S0</name>
-        <value>31</value>
-      </interrupt>
       <registers>
         <register>
           <name>INT_RAW</name>
@@ -24583,6 +24491,34 @@ Measurement unit: I2C_SCLK \\</description>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
+        <name>PMU</name>
+        <value>0</value>
+      </interrupt>
+      <interrupt>
+        <name>EFUSE</name>
+        <value>1</value>
+      </interrupt>
+      <interrupt>
+        <name>LP_RTC_TIMER</name>
+        <value>2</value>
+      </interrupt>
+      <interrupt>
+        <name>LP_BLE_TIMER</name>
+        <value>3</value>
+      </interrupt>
+      <interrupt>
+        <name>LP_WDT</name>
+        <value>4</value>
+      </interrupt>
+      <interrupt>
+        <name>LP_PERI_TIMEOUT</name>
+        <value>5</value>
+      </interrupt>
+      <interrupt>
+        <name>LP_APM_M0</name>
+        <value>6</value>
+      </interrupt>
+      <interrupt>
         <name>FROM_CPU_INTR0</name>
         <value>7</value>
       </interrupt>
@@ -24597,6 +24533,18 @@ Measurement unit: I2C_SCLK \\</description>
       <interrupt>
         <name>FROM_CPU_INTR3</name>
         <value>10</value>
+      </interrupt>
+      <interrupt>
+        <name>ASSIST_DEBUG</name>
+        <value>11</value>
+      </interrupt>
+      <interrupt>
+        <name>TRACE</name>
+        <value>12</value>
+      </interrupt>
+      <interrupt>
+        <name>CACHE</name>
+        <value>13</value>
       </interrupt>
       <interrupt>
         <name>CPU_PERI_TIMEOUT</name>
@@ -24629,6 +24577,178 @@ Measurement unit: I2C_SCLK \\</description>
       <interrupt>
         <name>ZB_MAC</name>
         <value>21</value>
+      </interrupt>
+      <interrupt>
+        <name>GPIO</name>
+        <value>22</value>
+      </interrupt>
+      <interrupt>
+        <name>GPIO_NMI</name>
+        <value>23</value>
+      </interrupt>
+      <interrupt>
+        <name>PAU</name>
+        <value>24</value>
+      </interrupt>
+      <interrupt>
+        <name>HP_PERI_TIMEOUT</name>
+        <value>25</value>
+      </interrupt>
+      <interrupt>
+        <name>HP_APM_M0</name>
+        <value>26</value>
+      </interrupt>
+      <interrupt>
+        <name>HP_APM_M1</name>
+        <value>27</value>
+      </interrupt>
+      <interrupt>
+        <name>HP_APM_M2</name>
+        <value>28</value>
+      </interrupt>
+      <interrupt>
+        <name>HP_APM_M3</name>
+        <value>29</value>
+      </interrupt>
+      <interrupt>
+        <name>MSPI</name>
+        <value>30</value>
+      </interrupt>
+      <interrupt>
+        <name>I2S0</name>
+        <value>31</value>
+      </interrupt>
+      <interrupt>
+        <name>UHCI0</name>
+        <value>32</value>
+      </interrupt>
+      <interrupt>
+        <name>UART0</name>
+        <value>33</value>
+      </interrupt>
+      <interrupt>
+        <name>UART1</name>
+        <value>34</value>
+      </interrupt>
+      <interrupt>
+        <name>LEDC</name>
+        <value>35</value>
+      </interrupt>
+      <interrupt>
+        <name>TWAI0</name>
+        <value>36</value>
+      </interrupt>
+      <interrupt>
+        <name>USB_DEVICE</name>
+        <value>37</value>
+      </interrupt>
+      <interrupt>
+        <name>RMT</name>
+        <value>38</value>
+      </interrupt>
+      <interrupt>
+        <name>I2C_EXT0</name>
+        <value>39</value>
+      </interrupt>
+      <interrupt>
+        <name>I2C_EXT1</name>
+        <value>40</value>
+      </interrupt>
+      <interrupt>
+        <name>TG0_T0</name>
+        <value>41</value>
+      </interrupt>
+      <interrupt>
+        <name>TG0_WDT</name>
+        <value>42</value>
+      </interrupt>
+      <interrupt>
+        <name>TG1_T0</name>
+        <value>43</value>
+      </interrupt>
+      <interrupt>
+        <name>TG1_WDT</name>
+        <value>44</value>
+      </interrupt>
+      <interrupt>
+        <name>SYSTIMER_TARGET0</name>
+        <value>45</value>
+      </interrupt>
+      <interrupt>
+        <name>SYSTIMER_TARGET1</name>
+        <value>46</value>
+      </interrupt>
+      <interrupt>
+        <name>SYSTIMER_TARGET2</name>
+        <value>47</value>
+      </interrupt>
+      <interrupt>
+        <name>APB_ADC</name>
+        <value>48</value>
+      </interrupt>
+      <interrupt>
+        <name>MCPWM0</name>
+        <value>49</value>
+      </interrupt>
+      <interrupt>
+        <name>PCNT</name>
+        <value>50</value>
+      </interrupt>
+      <interrupt>
+        <name>PARL_IO_TX</name>
+        <value>51</value>
+      </interrupt>
+      <interrupt>
+        <name>PARL_IO_RX</name>
+        <value>52</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_IN_CH0</name>
+        <value>53</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_IN_CH1</name>
+        <value>54</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_IN_CH2</name>
+        <value>55</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_OUT_CH0</name>
+        <value>56</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_OUT_CH1</name>
+        <value>57</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_OUT_CH2</name>
+        <value>58</value>
+      </interrupt>
+      <interrupt>
+        <name>GPSPI2</name>
+        <value>59</value>
+      </interrupt>
+      <interrupt>
+        <name>AES</name>
+        <value>60</value>
+      </interrupt>
+      <interrupt>
+        <name>SHA</name>
+        <value>61</value>
+      </interrupt>
+      <interrupt>
+        <name>RSA</name>
+        <value>62</value>
+      </interrupt>
+      <interrupt>
+        <name>ECC</name>
+        <value>63</value>
+      </interrupt>
+      <interrupt>
+        <name>ECDSA</name>
+        <value>64</value>
       </interrupt>
       <registers>
         <register>
@@ -29219,10 +29339,6 @@ Measurement unit: I2C_SCLK \\</description>
         <size>0x154</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>LEDC</name>
-        <value>35</value>
-      </interrupt>
       <registers>
         <register>
           <dim>6</dim>
@@ -30776,10 +30892,6 @@ The least significant eight bits represent the fractional part.</description>
         <size>0x38</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>LP_PERI_TIMEOUT</name>
-        <value>5</value>
-      </interrupt>
       <registers>
         <register>
           <name>CLK_EN</name>
@@ -32353,10 +32465,6 @@ The least significant eight bits represent the fractional part.</description>
         <size>0x3c</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>LP_APM_M0</name>
-        <value>6</value>
-      </interrupt>
       <registers>
         <register>
           <name>REGION_FILTER_EN</name>
@@ -33777,14 +33885,6 @@ The least significant eight bits represent the fractional part.</description>
         <size>0x34</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>LP_RTC_TIMER</name>
-        <value>2</value>
-      </interrupt>
-      <interrupt>
-        <name>LP_BLE_TIMER</name>
-        <value>3</value>
-      </interrupt>
       <registers>
         <register>
           <name>TAR0_LOW</name>
@@ -34064,10 +34164,6 @@ The least significant eight bits represent the fractional part.</description>
         <size>0x3c</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>LP_WDT</name>
-        <value>4</value>
-      </interrupt>
       <registers>
         <register>
           <name>CONFIG0</name>
@@ -34468,10 +34564,6 @@ The least significant eight bits represent the fractional part.</description>
         <size>0x130</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>MCPWM0</name>
-        <value>49</value>
-      </interrupt>
       <registers>
         <register>
           <name>CLK_CFG</name>
@@ -38883,14 +38975,6 @@ The least significant eight bits represent the fractional part.</description>
         <size>0x54</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>PARL_IO_TX</name>
-        <value>51</value>
-      </interrupt>
-      <interrupt>
-        <name>PARL_IO_RX</name>
-        <value>52</value>
-      </interrupt>
       <registers>
         <register>
           <name>RX_MODE_CFG</name>
@@ -39430,10 +39514,6 @@ The least significant eight bits represent the fractional part.</description>
         <size>0x2c</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>PAU</name>
-        <value>24</value>
-      </interrupt>
       <registers>
         <register>
           <name>REGDMA_CONF</name>
@@ -39739,10 +39819,6 @@ The least significant eight bits represent the fractional part.</description>
         <size>0x78</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>PCNT</name>
-        <value>50</value>
-      </interrupt>
       <registers>
         <register>
           <dim>4</dim>
@@ -43049,10 +43125,6 @@ Measurement unit: APB_CLK cycles.\\</description>
         <size>0x1c4</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>PMU</name>
-        <value>0</value>
-      </interrupt>
       <registers>
         <register>
           <name>HP_ACTIVE_DIG_POWER</name>
@@ -51717,10 +51789,6 @@ Measurement unit: APB_CLK cycles.\\</description>
         <size>0x78</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>RMT</name>
-        <value>38</value>
-      </interrupt>
       <registers>
         <register>
           <dim>4</dim>
@@ -52812,10 +52880,6 @@ Measurement unit: APB_CLK cycles.\\</description>
         <size>0x74</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>RSA</name>
-        <value>62</value>
-      </interrupt>
       <registers>
         <register>
           <dim>16</dim>
@@ -53088,10 +53152,6 @@ This option should be used together with RSA_SEARCH_POS.</description>
         <size>0xb0</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>SHA</name>
-        <value>61</value>
-      </interrupt>
       <registers>
         <register>
           <name>MODE</name>
@@ -61723,14 +61783,6 @@ This option should be used together with RSA_SEARCH_POS.</description>
         <size>0x98</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>MSPI</name>
-        <value>30</value>
-      </interrupt>
-      <interrupt>
-        <name>GPSPI2</name>
-        <value>59</value>
-      </interrupt>
       <registers>
         <register>
           <name>SPI_CMD</name>
@@ -64092,18 +64144,6 @@ Can be configured in CONF state.</description>
         <size>0x90</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>SYSTIMER_TARGET0</name>
-        <value>45</value>
-      </interrupt>
-      <interrupt>
-        <name>SYSTIMER_TARGET1</name>
-        <value>46</value>
-      </interrupt>
-      <interrupt>
-        <name>SYSTIMER_TARGET2</name>
-        <value>47</value>
-      </interrupt>
       <registers>
         <register>
           <name>CONF</name>
@@ -65403,14 +65443,6 @@ Can be configured in CONF state.</description>
         <size>0x68</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>TG0_T0_LEVEL</name>
-        <value>41</value>
-      </interrupt>
-      <interrupt>
-        <name>TG0_WDT_LEVEL</name>
-        <value>42</value>
-      </interrupt>
       <registers>
         <register>
           <name>T%sCONFIG</name>
@@ -66054,14 +66086,6 @@ protection is enabled.</description>
       <name>TIMG1</name>
       <baseAddress>0x6000a000</baseAddress>
       <description>Timer Group 1</description>
-      <interrupt>
-        <name>TG1_T0_LEVEL</name>
-        <value>43</value>
-      </interrupt>
-      <interrupt>
-        <name>TG1_WDT_LEVEL</name>
-        <value>44</value>
-      </interrupt>
     </peripheral>
     <peripheral>
       <name>TRACE</name>
@@ -66073,10 +66097,6 @@ protection is enabled.</description>
         <size>0x30</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>TRACE</name>
-        <value>12</value>
-      </interrupt>
       <registers>
         <register>
           <name>MEM_START_ADDR</name>
@@ -66332,10 +66352,6 @@ protection is enabled.</description>
         <size>0x80</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>TWAI0</name>
-        <value>36</value>
-      </interrupt>
       <registers>
         <register>
           <name>MODE</name>
@@ -67094,10 +67110,6 @@ protection is enabled.</description>
         <size>0x98</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>UART0</name>
-        <value>33</value>
-      </interrupt>
       <registers>
         <register>
           <name>FIFO</name>
@@ -68750,10 +68762,6 @@ protection is enabled.</description>
       <name>UART1</name>
       <baseAddress>0x60001000</baseAddress>
       <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 1</description>
-      <interrupt>
-        <name>UART1</name>
-        <value>34</value>
-      </interrupt>
     </peripheral>
     <peripheral>
       <name>UHCI0</name>
@@ -68765,10 +68773,6 @@ protection is enabled.</description>
         <size>0x84</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>UHCI0</name>
-        <value>32</value>
-      </interrupt>
       <registers>
         <register>
           <name>CONF0</name>
@@ -69812,10 +69816,6 @@ protection is enabled.</description>
         <size>0x78</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>USB_DEVICE</name>
-        <value>37</value>
-      </interrupt>
       <registers>
         <register>
           <name>USB_SERIAL_JTAG_EP1</name>
