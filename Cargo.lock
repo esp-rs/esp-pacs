@@ -141,7 +141,7 @@ dependencies = [
  "heck",
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.106",
 ]
 
 [[package]]
@@ -216,6 +216,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "csv"
+version = "1.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "52cd9d68cf7efc6ddfaaee42e7288d3a99d613d4b50f76ce9827ae0c6e14f938"
+dependencies = [
+ "csv-core",
+ "itoa",
+ "ryu",
+ "serde_core",
+]
+
+[[package]]
+name = "csv-core"
+version = "0.1.13"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "704a3c26996a80471189265814dbc2c257598b96b8a7feae2d31ace646bb9782"
+dependencies = [
+ "memchr",
+]
+
+[[package]]
 name = "deranged"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -242,7 +263,7 @@ checksum = "97369cbbc041bc366949bc74d34658d6cda5621039731c6310521892a3a20ae0"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.106",
 ]
 
 [[package]]
@@ -321,7 +342,7 @@ dependencies = [
  "prettyplease",
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.106",
 ]
 
 [[package]]
@@ -593,7 +614,7 @@ checksum = "03343451ff899767262ec32146f6d559dd759fdadf42ff0e227c7c48f72594b4"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.106",
 ]
 
 [[package]]
@@ -655,7 +676,7 @@ checksum = "de66c928222984aea59fcaed8ba627f388aaac3c1f57dcb05cc25495ef8faefe"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.106",
 ]
 
 [[package]]
@@ -754,7 +775,7 @@ dependencies = [
  "pest_meta",
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.106",
 ]
 
 [[package]]
@@ -797,7 +818,7 @@ dependencies = [
  "phf_shared",
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.106",
 ]
 
 [[package]]
@@ -846,7 +867,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ff24dfcda44452b9816fff4cd4227e1bb73ff5a2f1bc1105aa92fb8565ce44d2"
 dependencies = [
  "proc-macro2",
- "syn",
+ "syn 2.0.106",
 ]
 
 [[package]]
@@ -961,22 +982,32 @@ checksum = "56e6fa9c48d24d85fb3de5ad847117517440f6beceb7798af16b4a87d616b8d0"
 
 [[package]]
 name = "serde"
-version = "1.0.219"
+version = "1.0.229"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5f0e2c6ed6606019b4e29e69dbaba95b11854410e5347d525002456dbbb786b6"
+checksum = "4148590afebada386688f18773da617792bf2ef03ffc1e4cbd2b1d45b023e0ba"
+dependencies = [
+ "serde_core",
+ "serde_derive",
+]
+
+[[package]]
+name = "serde_core"
+version = "1.0.229"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "67dca2c9c51e58a4791a4b1ed58308b39c64224d349a935ab5039aa360942a48"
 dependencies = [
  "serde_derive",
 ]
 
 [[package]]
 name = "serde_derive"
-version = "1.0.219"
+version = "1.0.229"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5b0276cf7f2c73365f7157c8123c21cd9a50fbbd844757af28ca1f5925fc2a00"
+checksum = "e7a5d71263a5a7d47b41f6b3f06ba276f10cc18b0931f1799f710578e2309348"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 3.0.3",
 ]
 
 [[package]]
@@ -1076,7 +1107,7 @@ dependencies = [
  "heck",
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.106",
 ]
 
 [[package]]
@@ -1130,7 +1161,7 @@ dependencies = [
  "serde_yaml 0.9.34+deprecated",
  "svd-parser",
  "svd-rs",
- "syn",
+ "syn 2.0.106",
  "thiserror 2.0.15",
  "url",
 ]
@@ -1178,6 +1209,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "syn"
+version = "3.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "53e9bae58849f64dfa4f5d5ae372c8341f7305f82a3868709269343628b659a3"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "unicode-ident",
+]
+
+[[package]]
 name = "synstructure"
 version = "0.13.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1185,7 +1227,7 @@ checksum = "728a70f3dbaf5bab7f0c4b1ac8d7ae5ea60a4b5549c8a5914361c99147a709d2"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.106",
 ]
 
 [[package]]
@@ -1223,7 +1265,7 @@ checksum = "4fee6c4efc90059e10f81e6d42c60a18f76588c3d74cb83a0b242a2b6c7504c1"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.106",
 ]
 
 [[package]]
@@ -1234,7 +1276,7 @@ checksum = "44d29feb33e986b6ea906bd9c3559a856983f92371b3eaa5e83782a351623de0"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.106",
 ]
 
 [[package]]
@@ -1580,11 +1622,15 @@ version = "0.0.0"
 dependencies = [
  "anyhow",
  "clap",
+ "csv",
  "env_logger 0.11.8",
  "form",
  "log",
  "rayon",
+ "regex",
  "semver",
+ "serde",
+ "serde_yaml 0.9.34+deprecated",
  "strum",
  "svd2rust",
  "svdtools",
@@ -1631,7 +1677,7 @@ checksum = "38da3c9736e16c5d3c8c597a9aaa5d1fa565d0532ae05e27c24aa62fb32c0ab6"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.106",
  "synstructure",
 ]
 
@@ -1652,7 +1698,7 @@ checksum = "d71e5d6e06ab090c67b5e44993ec16b72dcbaabc526db883a360057678b48502"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.106",
  "synstructure",
 ]
 
@@ -1686,5 +1732,5 @@ checksum = "5b96237efa0c878c64bd89c436f661be4e46b2f3eff1ebb976f7ef2321d2f58f"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.106",
 ]

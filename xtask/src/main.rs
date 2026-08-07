@@ -19,6 +19,8 @@ use svd2rust::{
 use svdtools::{html::html_cli::svd2html, patch::Config as PatchConfig};
 use toml_edit::DocumentMut;
 
+mod regdesc;
+
 #[derive(Debug, Clone, Display, EnumIter, ValueEnum)]
 #[strum(serialize_all = "kebab-case")]
 enum Chip {
@@ -105,7 +107,7 @@ enum Commands {
         chips: Vec<Chip>,
     },
 
-    /// Published the specified package(s)
+    /// Publish the specified package(s)
     Publish {
         /// Perform all checks without uploading
         #[arg(long)]
@@ -114,6 +116,38 @@ enum Commands {
         /// Package(s) to publish
         #[arg(value_enum, default_values_t = Chip::iter())]
         chips: Vec<Chip>,
+    },
+
+    /// Generate a base CMSIS-SVD from GDVS register CSVs
+    ///
+    /// Requires `--chip`, `--csv-dir`, `--interrupts`, and `--reg-base`.
+    /// Peripheral bases come from `--reg-base` (IDF `reg_base.h`) and IRQs from
+    /// `--interrupts` (IDF `interrupts.h`). CSV files are discovered in
+    /// `--csv-dir`. Output defaults to `target/generated_svds/{chip}.svd`.
+    GenerateBaseSvd {
+        /// Chip to generate
+        #[arg(long, value_enum)]
+        chip: Chip,
+
+        /// Directory containing GDVS register CSV files
+        #[arg(long)]
+        csv_dir: PathBuf,
+
+        /// Path to IDF `soc/interrupts.h` (required)
+        #[arg(long)]
+        interrupts: PathBuf,
+
+        /// Path to IDF `register/soc/reg_base.h` (required)
+        #[arg(long = "reg-base", visible_alias = "reg_base")]
+        reg_base: PathBuf,
+
+        /// Output SVD file path
+        #[arg(long)]
+        output: Option<PathBuf>,
+
+        /// SVD version number
+        #[arg(long, default_value_t = 1)]
+        version: u32,
     },
 }
 
@@ -152,6 +186,23 @@ fn main() -> Result<()> {
         Commands::Publish { dry_run, chips } => chips
             .par_iter()
             .try_for_each(|chip| publish_package(&workspace, chip, dry_run)),
+
+        Commands::GenerateBaseSvd {
+            chip,
+            csv_dir,
+            interrupts,
+            reg_base,
+            output,
+            version,
+        } => {
+            let chip = chip.to_string();
+            let output = output.unwrap_or_else(|| regdesc::default_output_path(&workspace, &chip));
+            let sources = regdesc::GenerateSources {
+                interrupts,
+                reg_base,
+            };
+            regdesc::generate_base_svd(&chip, &csv_dir, &output, version, &sources)
+        }
     }
 }
 
