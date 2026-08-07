@@ -1,0 +1,35 @@
+INTERRUPT_CORE0:
+  _array:
+    INT_STATUS_REG_[012]:
+      name: CORE_0_INTR_STATUS%s
+      description: Status of interrupt sources within a 32-bit window
+    SRC_PASS_IN_SEC_STATUS_[012]:
+      name: CORE_0_SRC_PASS_IN_SEC_STATUS%s
+      description: PASS_IN_SEC status for interrupt sources
+
+  _modify:
+    INT_STATUS_REG_3:
+      name: CORE_0_INTR_STATUS3
+    SRC_PASS_IN_SEC_STATUS_3:
+      name: CORE_0_SRC_PASS_IN_SEC_STATUS3
+
+  _delete:
+    - "*_MAP"
+
+  _add:
+    CORE_0_INTR_MAP%s:
+      addressOffset: 0
+      dim: 98
+      dimIncrement: 4
+      access: read-write
+      size: 32
+      reset-value: 0
+      fields:
+        MAP:
+          bitOffset: 0
+          bitWidth: 6
+          access: read-write
+        PASS_IN_SEC:
+          bitOffset: 8
+          bitWidth: 1
+          access: read-write
