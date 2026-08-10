@@ -1130,6 +1130,8 @@ TWAI0:
         name: BUS_OFF_ST
       MISS:
         name: MISS_ST
+      ERR:
+        name: ERR_ST
 
   BUS_TIMING_1:
     _modify:
@@ -1157,6 +1159,10 @@ TWAI0:
         name: TX_INT_ENA
       ARBITRATION_LOST_INT_ENA:
         name: ARB_LOST_INT_ENA
+      EXT_ERR_WARNING_INT_ENA:
+        name: ERR_WARN_INT_ENA
+      EXT_DATA_OVERRUN_INT_ENA:
+        name: OVERRUN_INT_ENA
 
   INT_RAW:
     _modify:
@@ -1164,6 +1170,12 @@ TWAI0:
         name: TX_INT_ST
       RECEIVE_INT_ST:
         name: RX_INT_ST
+      ERR_WARNING_INT_ST:
+        name: ERR_WARN_INT_ST
+      DATA_OVERRUN_INT_ST:
+        name: OVERRUN_INT_ST
+      ARBITRATION_LOST_INT_ST:
+        name: ARB_LOST_INT_ST
 
 RSA:
   INT_CLR:
