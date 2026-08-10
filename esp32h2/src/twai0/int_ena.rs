@@ -10,14 +10,14 @@ pub type RX_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type TX_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_INT_ENA` writer - 1: enabled, when a message has been successfully transmitted or the transmit buffer is accessible again (e.g. after an abort transmission command), the TWAI controller requests the respective interrupt. 0: disable"]
 pub type TX_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EXT_ERR_WARNING_INT_ENA` reader - 1: enabled, if the error or bus status change (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
-pub type EXT_ERR_WARNING_INT_ENA_R = crate::BitReader;
-#[doc = "Field `EXT_ERR_WARNING_INT_ENA` writer - 1: enabled, if the error or bus status change (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
-pub type EXT_ERR_WARNING_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `EXT_DATA_OVERRUN_INT_ENA` reader - 1: enabled, if the data overrun status bit is set (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
-pub type EXT_DATA_OVERRUN_INT_ENA_R = crate::BitReader;
-#[doc = "Field `EXT_DATA_OVERRUN_INT_ENA` writer - 1: enabled, if the data overrun status bit is set (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
-pub type EXT_DATA_OVERRUN_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ERR_WARN_INT_ENA` reader - 1: enabled, if the error or bus status change (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
+pub type ERR_WARN_INT_ENA_R = crate::BitReader;
+#[doc = "Field `ERR_WARN_INT_ENA` writer - 1: enabled, if the error or bus status change (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
+pub type ERR_WARN_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OVERRUN_INT_ENA` reader - 1: enabled, if the data overrun status bit is set (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
+pub type OVERRUN_INT_ENA_R = crate::BitReader;
+#[doc = "Field `OVERRUN_INT_ENA` writer - 1: enabled, if the data overrun status bit is set (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
+pub type OVERRUN_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERR_PASSIVE_INT_ENA` reader - 1: enabled, if the error status of the TWAI controller changes from error active to error passive or vice versa, the respective interrupt is requested. 0: disable"]
 pub type ERR_PASSIVE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ERR_PASSIVE_INT_ENA` writer - 1: enabled, if the error status of the TWAI controller changes from error active to error passive or vice versa, the respective interrupt is requested. 0: disable"]
@@ -45,13 +45,13 @@ impl R {
     }
     #[doc = "Bit 2 - 1: enabled, if the error or bus status change (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
     #[inline(always)]
-    pub fn ext_err_warning_int_ena(&self) -> EXT_ERR_WARNING_INT_ENA_R {
-        EXT_ERR_WARNING_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn err_warn_int_ena(&self) -> ERR_WARN_INT_ENA_R {
+        ERR_WARN_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - 1: enabled, if the data overrun status bit is set (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
     #[inline(always)]
-    pub fn ext_data_overrun_int_ena(&self) -> EXT_DATA_OVERRUN_INT_ENA_R {
-        EXT_DATA_OVERRUN_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn overrun_int_ena(&self) -> OVERRUN_INT_ENA_R {
+        OVERRUN_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 5 - 1: enabled, if the error status of the TWAI controller changes from error active to error passive or vice versa, the respective interrupt is requested. 0: disable"]
     #[inline(always)]
@@ -80,8 +80,8 @@ impl core::fmt::Debug for R {
         f.debug_struct("INT_ENA")
             .field("rx_int_ena", &self.rx_int_ena())
             .field("tx_int_ena", &self.tx_int_ena())
-            .field("ext_err_warning_int_ena", &self.ext_err_warning_int_ena())
-            .field("ext_data_overrun_int_ena", &self.ext_data_overrun_int_ena())
+            .field("err_warn_int_ena", &self.err_warn_int_ena())
+            .field("overrun_int_ena", &self.overrun_int_ena())
             .field("err_passive_int_ena", &self.err_passive_int_ena())
             .field("arb_lost_int_ena", &self.arb_lost_int_ena())
             .field("bus_err_int_ena", &self.bus_err_int_ena())
@@ -102,13 +102,13 @@ impl W {
     }
     #[doc = "Bit 2 - 1: enabled, if the error or bus status change (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
     #[inline(always)]
-    pub fn ext_err_warning_int_ena(&mut self) -> EXT_ERR_WARNING_INT_ENA_W<'_, INT_ENA_SPEC> {
-        EXT_ERR_WARNING_INT_ENA_W::new(self, 2)
+    pub fn err_warn_int_ena(&mut self) -> ERR_WARN_INT_ENA_W<'_, INT_ENA_SPEC> {
+        ERR_WARN_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - 1: enabled, if the data overrun status bit is set (see status register. Table 14), the TWAI controllerrequests the respective interrupt. 0: disable"]
     #[inline(always)]
-    pub fn ext_data_overrun_int_ena(&mut self) -> EXT_DATA_OVERRUN_INT_ENA_W<'_, INT_ENA_SPEC> {
-        EXT_DATA_OVERRUN_INT_ENA_W::new(self, 3)
+    pub fn overrun_int_ena(&mut self) -> OVERRUN_INT_ENA_W<'_, INT_ENA_SPEC> {
+        OVERRUN_INT_ENA_W::new(self, 3)
     }
     #[doc = "Bit 5 - 1: enabled, if the error status of the TWAI controller changes from error active to error passive or vice versa, the respective interrupt is requested. 0: disable"]
     #[inline(always)]

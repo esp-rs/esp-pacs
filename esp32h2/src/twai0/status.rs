@@ -12,8 +12,8 @@ pub type TRANSMISSION_COMPLETE_R = crate::BitReader;
 pub type RECEIVE_R = crate::BitReader;
 #[doc = "Field `TRANSMIT` reader - 1: transmit, the TWAI controller is transmitting a message. 0: idle"]
 pub type TRANSMIT_R = crate::BitReader;
-#[doc = "Field `ERR` reader - 1: error, at least one of the error counters has reached or exceeded the CPU warning limit defined by the Error Warning Limit Register (EWLR). 0: ok, both error counters are below the warning limit"]
-pub type ERR_R = crate::BitReader;
+#[doc = "Field `ERR_ST` reader - 1: error, at least one of the error counters has reached or exceeded the CPU warning limit defined by the Error Warning Limit Register (EWLR). 0: ok, both error counters are below the warning limit"]
+pub type ERR_ST_R = crate::BitReader;
 #[doc = "Field `BUS_OFF_ST` reader - 1: bus-off, the TWAI controller is not involved in bus activities. 0: bus-on, the TWAI controller is involved in bus activities"]
 pub type BUS_OFF_ST_R = crate::BitReader;
 #[doc = "Field `MISS_ST` reader - 1: current message is destroyed because of FIFO overflow."]
@@ -51,8 +51,8 @@ impl R {
     }
     #[doc = "Bit 6 - 1: error, at least one of the error counters has reached or exceeded the CPU warning limit defined by the Error Warning Limit Register (EWLR). 0: ok, both error counters are below the warning limit"]
     #[inline(always)]
-    pub fn err(&self) -> ERR_R {
-        ERR_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn err_st(&self) -> ERR_ST_R {
+        ERR_ST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - 1: bus-off, the TWAI controller is not involved in bus activities. 0: bus-on, the TWAI controller is involved in bus activities"]
     #[inline(always)]
@@ -75,7 +75,7 @@ impl core::fmt::Debug for R {
             .field("transmission_complete", &self.transmission_complete())
             .field("receive", &self.receive())
             .field("transmit", &self.transmit())
-            .field("err", &self.err())
+            .field("err_st", &self.err_st())
             .field("bus_off_st", &self.bus_off_st())
             .field("miss_st", &self.miss_st())
             .finish()
