@@ -86,6 +86,10 @@ I2C0:
   _modify:
     INT_STATUS:
       name: INT_ST
+  DATA:
+    _modify:
+      FIFO_RDATA:
+        access: read-write
   _include:
     - ../../../common_patches/i2c_force_out.yaml
     - ../../../common_patches/int_strip.yaml
