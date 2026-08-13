@@ -45,3 +45,24 @@ I2C0:
     _modify:
       SCL_MAIN_ST_TO_I2C:
         name: SCL_MAIN_ST_TO
+
+LP_I2C0:
+  _strip: "I2C_"
+  "*":
+    _strip: "I2C_"
+  _modify:
+    INT_STATUS:
+      name: INT_ST
+  DATA:
+    _modify:
+      FIFO_RDATA:
+        access: read-write
+  COMD?:
+    _modify:
+      COMMAND?:
+        name: COMMAND
+      COMMAND?_DONE:
+        name: COMMAND_DONE
+  _array:
+    COMD?: {}
+  _include: ../../../common_patches/int_strip.yaml
