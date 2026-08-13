@@ -4,9 +4,10 @@ use std::{
     io::Write,
     path::{Path, PathBuf},
     process::{Command, Stdio},
+    time::Duration,
 };
 
-use anyhow::{bail, Error, Result};
+use anyhow::{bail, Context, Error, Result};
 use clap::{Parser, Subcommand, ValueEnum};
 use rayon::prelude::*;
 use strum::{Display, EnumIter, IntoEnumIterator};
@@ -449,6 +450,9 @@ fn extract_toml_value(path: &Path, keys: &[&str]) -> Result<String> {
     Ok(item)
 }
 
+const FORMAT_RETRIES: usize = 20;
+const FORMAT_RETRY_DELAY: Duration = Duration::from_millis(250);
+
 fn format(path: &Path, chip: &Chip) -> Result<()> {
     log::info!("running `form` and `rustfmt` on PAC for {chip}");
     let lib_file = path.join("lib.rs");
@@ -459,20 +463,100 @@ fn format(path: &Path, chip: &Chip) -> Result<()> {
 
     fs::remove_file(&lib_file)?;
 
-    let mut result = Ok(());
+    // Format each file with its own retry budget. A lock on one file must not
+    // exhaust retries for the rest of the crate (IDEs commonly lock files here).
+    let rustfmt = rustfmt_executable(path);
+    rust_source_files(path)?
+        .into_par_iter()
+        .try_for_each(|file| format_file(&rustfmt, &file))?;
 
-    // Retry a few times in case IDEs lock the files while formatting.
-    for _ in 0..5 {
-        let mut command = Command::new("cargo");
-        command.arg("fmt").current_dir(path);
-        result = run_command(&mut command);
-        if result.is_ok() {
-            break;
+    Ok(())
+}
+
+fn rustfmt_executable(crate_dir: &Path) -> PathBuf {
+    let output = Command::new("rustup")
+        .args(["which", "rustfmt"])
+        .current_dir(crate_dir)
+        .output();
+
+    if let Ok(output) = output {
+        if output.status.success() {
+            let resolved = String::from_utf8_lossy(&output.stdout).trim().to_string();
+            if !resolved.is_empty() {
+                return PathBuf::from(resolved);
+            }
         }
-        std::thread::sleep(std::time::Duration::from_millis(500));
     }
 
-    result
+    PathBuf::from("rustfmt")
+}
+
+fn rust_source_files(package: &Path) -> Result<Vec<PathBuf>> {
+    let mut files = Vec::new();
+    collect_rs_files(&package.join("src"), &mut files)?;
+
+    let build_rs = package.join("build.rs");
+    if build_rs.exists() {
+        files.push(build_rs);
+    }
+
+    Ok(files)
+}
+
+fn collect_rs_files(dir: &Path, out: &mut Vec<PathBuf>) -> Result<()> {
+    for entry in fs::read_dir(dir).with_context(|| format!("reading {}", dir.display()))? {
+        let entry = entry?;
+        let path = entry.path();
+        if entry.file_type()?.is_dir() {
+            collect_rs_files(&path, out)?;
+        } else if path.extension().is_some_and(|ext| ext == "rs") {
+            out.push(path);
+        }
+    }
+
+    Ok(())
+}
+
+fn format_file(rustfmt: &Path, file: &Path) -> Result<()> {
+    let mut last_error = None;
+
+    for attempt in 1..=FORMAT_RETRIES {
+        match run_rustfmt(rustfmt, file) {
+            Ok(()) => return Ok(()),
+            Err(err) => {
+                log::debug!(
+                    "retrying format of {} after file lock ({attempt}/{FORMAT_RETRIES})",
+                    file.display()
+                );
+                last_error = Some(err);
+                std::thread::sleep(FORMAT_RETRY_DELAY);
+            }
+        }
+    }
+
+    Err(last_error.unwrap()).with_context(|| {
+        format!(
+            "formatting {} after {FORMAT_RETRIES} retries",
+            file.display()
+        )
+    })
+}
+
+fn run_rustfmt(rustfmt: &Path, file: &Path) -> Result<()> {
+    let mut command = Command::new(rustfmt);
+    command
+        .args(["--edition", "2021", "--unstable-features"])
+        .arg(file);
+
+    let rendered = format_command(&command);
+    let output = command.output().with_context(|| rendered.clone())?;
+
+    if !output.status.success() {
+        let stderr = String::from_utf8_lossy(&output.stderr);
+        bail!("command failed: `{rendered}`: {stderr}");
+    }
+
+    Ok(())
 }
 
 fn clean(path: &Path) -> Result<()> {
