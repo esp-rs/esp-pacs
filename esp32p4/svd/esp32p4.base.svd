@@ -5873,6 +5873,1264 @@ Only valid for DMA-AES operation.</description>
       </registers>
     </peripheral>
     <peripheral>
+      <name>LP_I2C0</name>
+      <description>Low-power I2C (Inter-Integrated Circuit) Controller 0</description>
+      <groupName>LP_I2C</groupName>
+      <baseAddress>0x50122000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x88</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>LP_I2C</name>
+        <value>11</value>
+      </interrupt>
+      <registers>
+        <register>
+          <name>I2C_SCL_LOW_PERIOD</name>
+          <description>Configures the low level width of the SCL
+Clock</description>
+          <addressOffset>0x0</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_SCL_LOW_PERIOD</name>
+              <description>This register is used to configure for how long SCL remains low in master mode, in I2C module clock cycles.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>9</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_CTR</name>
+          <description>Transmission setting</description>
+          <addressOffset>0x4</addressOffset>
+          <size>32</size>
+          <resetValue>0x208</resetValue>
+          <fields>
+            <field>
+              <name>I2C_SAMPLE_SCL_LEVEL</name>
+              <description>This register is used to select the sample mode.1: sample SDA data on the SCL low level.0: sample SDA data on the SCL high level.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_RX_FULL_ACK_LEVEL</name>
+              <description>This register is used to configure the ACK value that need to sent by master when the rx_fifo_cnt has reached the threshold.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_TRANS_START</name>
+              <description>Set this bit to start sending the data in txfifo.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_TX_LSB_FIRST</name>
+              <description>This bit is used to control the sending mode for data needing to be sent. 1: send data from the least significant bit,0: send data from the most significant bit.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_RX_LSB_FIRST</name>
+              <description>This bit is used to control the storage mode for received data.1: receive data from the least significant bit,0: receive data from the most significant bit.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_CLK_EN</name>
+              <description>Reserved</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_ARBITRATION_EN</name>
+              <description>This is the enable bit for arbitration_lost.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_FSM_RST</name>
+              <description>This register is used to reset the scl FMS.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_CONF_UPGATE</name>
+              <description>synchronization bit</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_SR</name>
+          <description>Describe I2C work status.</description>
+          <addressOffset>0x8</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_RESP_REC</name>
+              <description>The received ACK value in master mode or slave mode. 0: ACK, 1: NACK.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_ARB_LOST</name>
+              <description>When the I2C controller loses control of SCL line, this register changes to 1.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_BUS_BUSY</name>
+              <description>1: the I2C bus is busy transferring data, 0: the I2C bus is in idle state.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_RXFIFO_CNT</name>
+              <description>This field represents the amount of data needed to be sent.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_TXFIFO_CNT</name>
+              <description>This field stores the amount of received data in RAM.</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_SCL_MAIN_STATE_LAST</name>
+              <description>This field indicates the states of the I2C module state machine. 0: Idle, 1: Address shift, 2: ACK address, 3: Rx data, 4: Tx data, 5: Send ACK, 6: Wait ACK</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_SCL_STATE_LAST</name>
+              <description>This field indicates the states of the state machine used to produce SCL.0: Idle, 1: Start, 2: Negative edge, 3: Low, 4: Positive edge, 5: High, 6: Stop</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_TO</name>
+          <description>Setting time out control for receiving data.</description>
+          <addressOffset>0xc</addressOffset>
+          <size>32</size>
+          <resetValue>0x10</resetValue>
+          <fields>
+            <field>
+              <name>I2C_TIME_OUT_VALUE</name>
+              <description>This register is used to configure the timeout for receiving a data bit in APBclock cycles.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_TIME_OUT_EN</name>
+              <description>This is the enable bit for time out control.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_FIFO_ST</name>
+          <description>FIFO status register.</description>
+          <addressOffset>0x14</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_RXFIFO_RADDR</name>
+              <description>This is the offset address of the APB reading from rxfifo</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_RXFIFO_WADDR</name>
+              <description>This is the offset address of i2c module receiving data and writing to rxfifo.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_TXFIFO_RADDR</name>
+              <description>This is the offset address of i2c module reading from txfifo.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_TXFIFO_WADDR</name>
+              <description>This is the offset address of APB bus writing to txfifo.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_FIFO_CONF</name>
+          <description>FIFO configuration register.</description>
+          <addressOffset>0x18</addressOffset>
+          <size>32</size>
+          <resetValue>0x4046</resetValue>
+          <fields>
+            <field>
+              <name>I2C_RXFIFO_WM_THRHD</name>
+              <description>The water mark threshold of rx FIFO in nonfifo access mode. When reg_reg_fifo_prt_en is 1 and rx FIFO counter is bigger than reg_rxfifo_wm_thrhd[3:0], reg_rxfifo_wm_int_raw bit will be valid.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_TXFIFO_WM_THRHD</name>
+              <description>The water mark threshold of tx FIFO in nonfifo access mode. When reg_reg_fifo_prt_en is 1 and tx FIFO counter is smaller than reg_txfifo_wm_thrhd[3:0], reg_txfifo_wm_int_raw bit will be valid.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_NONFIFO_EN</name>
+              <description>Set this bit to enable APB nonfifo access.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_RX_FIFO_RST</name>
+              <description>Set this bit to reset rx-fifo.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_TX_FIFO_RST</name>
+              <description>Set this bit to reset tx-fifo.</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_FIFO_PRT_EN</name>
+              <description>The control enable bit of FIFO pointer in non-fifo access mode. This bit controls the valid bits and the interrupts of tx/rx_fifo overflow, underflow, full and empty.</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_DATA</name>
+          <description>Rx FIFO read data.</description>
+          <addressOffset>0x1c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_FIFO_RDATA</name>
+              <description>The value of rx FIFO read data.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_INT_RAW</name>
+          <description>Raw interrupt status</description>
+          <addressOffset>0x20</addressOffset>
+          <size>32</size>
+          <resetValue>0x2</resetValue>
+          <fields>
+            <field>
+              <name>I2C_RXFIFO_WM_INT_RAW</name>
+              <description>The raw interrupt bit for I2C_RXFIFO_WM_INT interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_TXFIFO_WM_INT_RAW</name>
+              <description>The raw interrupt bit for I2C_TXFIFO_WM_INT interrupt.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_RXFIFO_OVF_INT_RAW</name>
+              <description>The raw interrupt bit for I2C_RXFIFO_OVF_INT interrupt.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_END_DETECT_INT_RAW</name>
+              <description>The raw interrupt bit for the I2C_END_DETECT_INT interrupt.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_BYTE_TRANS_DONE_INT_RAW</name>
+              <description>The raw interrupt bit for the I2C_END_DETECT_INT interrupt.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_ARBITRATION_LOST_INT_RAW</name>
+              <description>The raw interrupt bit for the I2C_ARBITRATION_LOST_INT interrupt.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_MST_TXFIFO_UDF_INT_RAW</name>
+              <description>The raw interrupt bit for I2C_TRANS_COMPLETE_INT interrupt.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_TRANS_COMPLETE_INT_RAW</name>
+              <description>The raw interrupt bit for the I2C_TRANS_COMPLETE_INT interrupt.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_TIME_OUT_INT_RAW</name>
+              <description>The raw interrupt bit for the I2C_TIME_OUT_INT interrupt.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_TRANS_START_INT_RAW</name>
+              <description>The raw interrupt bit for the I2C_TRANS_START_INT interrupt.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_NACK_INT_RAW</name>
+              <description>The raw interrupt bit for I2C_SLAVE_STRETCH_INT interrupt.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_TXFIFO_OVF_INT_RAW</name>
+              <description>The raw interrupt bit for I2C_TXFIFO_OVF_INT interrupt.</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_RXFIFO_UDF_INT_RAW</name>
+              <description>The raw interrupt bit for I2C_RXFIFO_UDF_INT  interrupt.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_SCL_ST_TO_INT_RAW</name>
+              <description>The raw interrupt bit for I2C_SCL_ST_TO_INT interrupt.</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_SCL_MAIN_ST_TO_INT_RAW</name>
+              <description>The raw interrupt bit for I2C_SCL_MAIN_ST_TO_INT interrupt.</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_DET_START_INT_RAW</name>
+              <description>The raw interrupt bit for I2C_DET_START_INT interrupt.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_INT_CLR</name>
+          <description>Interrupt clear bits</description>
+          <addressOffset>0x24</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_RXFIFO_WM_INT_CLR</name>
+              <description>Set this bit to clear I2C_RXFIFO_WM_INT interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_TXFIFO_WM_INT_CLR</name>
+              <description>Set this bit to clear I2C_TXFIFO_WM_INT interrupt.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_RXFIFO_OVF_INT_CLR</name>
+              <description>Set this bit to clear I2C_RXFIFO_OVF_INT interrupt.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_END_DETECT_INT_CLR</name>
+              <description>Set this bit to clear the I2C_END_DETECT_INT interrupt.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_BYTE_TRANS_DONE_INT_CLR</name>
+              <description>Set this bit to clear the I2C_END_DETECT_INT interrupt.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_ARBITRATION_LOST_INT_CLR</name>
+              <description>Set this bit to clear the I2C_ARBITRATION_LOST_INT interrupt.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_MST_TXFIFO_UDF_INT_CLR</name>
+              <description>Set this bit to clear I2C_TRANS_COMPLETE_INT interrupt.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_TRANS_COMPLETE_INT_CLR</name>
+              <description>Set this bit to clear the I2C_TRANS_COMPLETE_INT interrupt.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_TIME_OUT_INT_CLR</name>
+              <description>Set this bit to clear the I2C_TIME_OUT_INT interrupt.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_TRANS_START_INT_CLR</name>
+              <description>Set this bit to clear the I2C_TRANS_START_INT interrupt.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_NACK_INT_CLR</name>
+              <description>Set this bit to clear I2C_SLAVE_STRETCH_INT interrupt.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_TXFIFO_OVF_INT_CLR</name>
+              <description>Set this bit to clear I2C_TXFIFO_OVF_INT interrupt.</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_RXFIFO_UDF_INT_CLR</name>
+              <description>Set this bit to clear I2C_RXFIFO_UDF_INT  interrupt.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_SCL_ST_TO_INT_CLR</name>
+              <description>Set this bit to clear I2C_SCL_ST_TO_INT interrupt.</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_SCL_MAIN_ST_TO_INT_CLR</name>
+              <description>Set this bit to clear I2C_SCL_MAIN_ST_TO_INT interrupt.</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>I2C_DET_START_INT_CLR</name>
+              <description>Set this bit to clear I2C_DET_START_INT interrupt.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_INT_ENA</name>
+          <description>Interrupt enable bits</description>
+          <addressOffset>0x28</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_RXFIFO_WM_INT_ENA</name>
+              <description>The interrupt enable bit for I2C_RXFIFO_WM_INT interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_TXFIFO_WM_INT_ENA</name>
+              <description>The interrupt enable bit for I2C_TXFIFO_WM_INT interrupt.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_RXFIFO_OVF_INT_ENA</name>
+              <description>The interrupt enable bit for I2C_RXFIFO_OVF_INT interrupt.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_END_DETECT_INT_ENA</name>
+              <description>The interrupt enable bit for the I2C_END_DETECT_INT interrupt.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_BYTE_TRANS_DONE_INT_ENA</name>
+              <description>The interrupt enable bit for the I2C_END_DETECT_INT interrupt.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_ARBITRATION_LOST_INT_ENA</name>
+              <description>The interrupt enable bit for the I2C_ARBITRATION_LOST_INT interrupt.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_MST_TXFIFO_UDF_INT_ENA</name>
+              <description>The interrupt enable bit for I2C_TRANS_COMPLETE_INT interrupt.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_TRANS_COMPLETE_INT_ENA</name>
+              <description>The interrupt enable bit for the I2C_TRANS_COMPLETE_INT interrupt.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_TIME_OUT_INT_ENA</name>
+              <description>The interrupt enable bit for the I2C_TIME_OUT_INT interrupt.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_TRANS_START_INT_ENA</name>
+              <description>The interrupt enable bit for the I2C_TRANS_START_INT interrupt.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_NACK_INT_ENA</name>
+              <description>The interrupt enable bit for I2C_SLAVE_STRETCH_INT interrupt.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_TXFIFO_OVF_INT_ENA</name>
+              <description>The interrupt enable bit for I2C_TXFIFO_OVF_INT interrupt.</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_RXFIFO_UDF_INT_ENA</name>
+              <description>The interrupt enable bit for I2C_RXFIFO_UDF_INT  interrupt.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_SCL_ST_TO_INT_ENA</name>
+              <description>The interrupt enable bit for I2C_SCL_ST_TO_INT interrupt.</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_SCL_MAIN_ST_TO_INT_ENA</name>
+              <description>The interrupt enable bit for I2C_SCL_MAIN_ST_TO_INT interrupt.</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_DET_START_INT_ENA</name>
+              <description>The interrupt enable bit for I2C_DET_START_INT interrupt.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_INT_STATUS</name>
+          <description>Status of captured I2C communication events</description>
+          <addressOffset>0x2c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_RXFIFO_WM_INT_ST</name>
+              <description>The masked interrupt status bit for I2C_RXFIFO_WM_INT interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_TXFIFO_WM_INT_ST</name>
+              <description>The masked interrupt status bit for I2C_TXFIFO_WM_INT interrupt.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_RXFIFO_OVF_INT_ST</name>
+              <description>The masked interrupt status bit for I2C_RXFIFO_OVF_INT interrupt.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_END_DETECT_INT_ST</name>
+              <description>The masked interrupt status bit for the I2C_END_DETECT_INT interrupt.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_BYTE_TRANS_DONE_INT_ST</name>
+              <description>The masked interrupt status bit for the I2C_END_DETECT_INT interrupt.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_ARBITRATION_LOST_INT_ST</name>
+              <description>The masked interrupt status bit for the I2C_ARBITRATION_LOST_INT interrupt.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_MST_TXFIFO_UDF_INT_ST</name>
+              <description>The masked interrupt status bit for I2C_TRANS_COMPLETE_INT interrupt.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_TRANS_COMPLETE_INT_ST</name>
+              <description>The masked interrupt status bit for the I2C_TRANS_COMPLETE_INT interrupt.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_TIME_OUT_INT_ST</name>
+              <description>The masked interrupt status bit for the I2C_TIME_OUT_INT interrupt.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_TRANS_START_INT_ST</name>
+              <description>The masked interrupt status bit for the I2C_TRANS_START_INT interrupt.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_NACK_INT_ST</name>
+              <description>The masked interrupt status bit for I2C_SLAVE_STRETCH_INT interrupt.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_TXFIFO_OVF_INT_ST</name>
+              <description>The masked interrupt status bit for I2C_TXFIFO_OVF_INT interrupt.</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_RXFIFO_UDF_INT_ST</name>
+              <description>The masked interrupt status bit for I2C_RXFIFO_UDF_INT  interrupt.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_SCL_ST_TO_INT_ST</name>
+              <description>The masked interrupt status bit for I2C_SCL_ST_TO_INT interrupt.</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_SCL_MAIN_ST_TO_INT_ST</name>
+              <description>The masked interrupt status bit for I2C_SCL_MAIN_ST_TO_INT interrupt.</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>I2C_DET_START_INT_ST</name>
+              <description>The masked interrupt status bit for I2C_DET_START_INT interrupt.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_SDA_HOLD</name>
+          <description>Configures the hold time after a negative SCL edge.</description>
+          <addressOffset>0x30</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>TIME</name>
+              <description>This register is used to configure the time to hold the data after the negativeedge of SCL, in I2C module clock cycles.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>9</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_SDA_SAMPLE</name>
+          <description>Configures the sample time after a positive SCL edge.</description>
+          <addressOffset>0x34</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>TIME</name>
+              <description>This register is used to configure for how long SDA is sampled, in I2C module clock cycles.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>9</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_SCL_HIGH_PERIOD</name>
+          <description>Configures the high level width of SCL</description>
+          <addressOffset>0x38</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_SCL_HIGH_PERIOD</name>
+              <description>This register is used to configure for how long SCL setup to high level and remains high in master mode, in I2C module clock cycles.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>9</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_SCL_WAIT_HIGH_PERIOD</name>
+              <description>This register is used to configure for the SCL_FSM's waiting period for SCL high level in master mode, in I2C module clock cycles.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>7</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_SCL_START_HOLD</name>
+          <description>Configures the delay between the SDA and SCL negative edge for a start condition</description>
+          <addressOffset>0x40</addressOffset>
+          <size>32</size>
+          <resetValue>0x8</resetValue>
+          <fields>
+            <field>
+              <name>TIME</name>
+              <description>This register is used to configure the time between the negative edgeof SDA and the negative edge of SCL for a START condition, in I2C module clock cycles.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>9</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_SCL_RSTART_SETUP</name>
+          <description>Configures the delay between the positive
+edge of SCL and the negative edge of SDA</description>
+          <addressOffset>0x44</addressOffset>
+          <size>32</size>
+          <resetValue>0x8</resetValue>
+          <fields>
+            <field>
+              <name>TIME</name>
+              <description>This register is used to configure the time between the positiveedge of SCL and the negative edge of SDA for a RESTART condition, in I2C module clock cycles.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>9</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_SCL_STOP_HOLD</name>
+          <description>Configures the delay after the SCL clock
+edge for a stop condition</description>
+          <addressOffset>0x48</addressOffset>
+          <size>32</size>
+          <resetValue>0x8</resetValue>
+          <fields>
+            <field>
+              <name>TIME</name>
+              <description>This register is used to configure the delay after the STOP condition,in I2C module clock cycles.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>9</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_SCL_STOP_SETUP</name>
+          <description>Configures the delay between the SDA and
+SCL positive edge for a stop condition</description>
+          <addressOffset>0x4c</addressOffset>
+          <size>32</size>
+          <resetValue>0x8</resetValue>
+          <fields>
+            <field>
+              <name>TIME</name>
+              <description>This register is used to configure the time between the positive edgeof SCL and the positive edge of SDA, in I2C module clock cycles.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>9</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_FILTER_CFG</name>
+          <description>SCL and SDA filter configuration register</description>
+          <addressOffset>0x50</addressOffset>
+          <size>32</size>
+          <resetValue>0x300</resetValue>
+          <fields>
+            <field>
+              <name>I2C_SCL_FILTER_THRES</name>
+              <description>When a pulse on the SCL input has smaller width than this register valuein I2C module clock cycles, the I2C controller will ignore that pulse.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_SDA_FILTER_THRES</name>
+              <description>When a pulse on the SDA input has smaller width than this register valuein I2C module clock cycles, the I2C controller will ignore that pulse.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_SCL_FILTER_EN</name>
+              <description>This is the filter enable bit for SCL.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_SDA_FILTER_EN</name>
+              <description>This is the filter enable bit for SDA.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_CLK_CONF</name>
+          <description>I2C CLK configuration register</description>
+          <addressOffset>0x54</addressOffset>
+          <size>32</size>
+          <resetValue>0x200000</resetValue>
+          <fields>
+            <field>
+              <name>I2C_SCLK_DIV_NUM</name>
+              <description>the integral part of the fractional divisor for i2c module</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_SCLK_DIV_A</name>
+              <description>the numerator of the fractional part of the fractional divisor for i2c module</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_SCLK_DIV_B</name>
+              <description>the denominator of the fractional part of the fractional divisor for i2c module</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_SCLK_SEL</name>
+              <description>The clock selection for i2c module:0-XTAL,1-CLK_8MHz.</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_SCLK_ACTIVE</name>
+              <description>The clock switch for i2c module</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_COMD0</name>
+          <description>I2C command register 0</description>
+          <addressOffset>0x58</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_COMMAND0</name>
+              <description>This is the content of command 0. It consists of three parts: op_code is the command, 1: WRITE, 2: STOP, 3: READ, 4: END, 6: RSTART. Byte_num represents the number of bytes that need to be sent or received.ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for moreInformation.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>14</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_COMMAND0_DONE</name>
+              <description>When command 0 is done in I2C Master mode, this bit changes to highlevel.</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_COMD1</name>
+          <description>I2C command register 1</description>
+          <addressOffset>0x5c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_COMMAND1</name>
+              <description>This is the content of command 1. It consists of three parts: op_code is the command, 1: WRITE, 2: STOP, 3: READ, 4: END, 6: RSTART. Byte_num represents the number of bytes that need to be sent or received.ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for moreInformation.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>14</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_COMMAND1_DONE</name>
+              <description>When command 1 is done in I2C Master mode, this bit changes to highlevel.</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_COMD2</name>
+          <description>I2C command register 2</description>
+          <addressOffset>0x60</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_COMMAND2</name>
+              <description>This is the content of command 2. It consists of three parts: op_code is the command, 1: WRITE, 2: STOP, 3: READ, 4: END, 6: RSTART. Byte_num represents the number of bytes that need to be sent or received.ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for moreInformation.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>14</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_COMMAND2_DONE</name>
+              <description>When command 2 is done in I2C Master mode, this bit changes to highLevel.</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_COMD3</name>
+          <description>I2C command register 3</description>
+          <addressOffset>0x64</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_COMMAND3</name>
+              <description>This is the content of command 3. It consists of three parts: op_code is the command, 1: WRITE, 2: STOP, 3: READ, 4: END, 6: RSTART. Byte_num represents the number of bytes that need to be sent or received.ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for moreInformation.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>14</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_COMMAND3_DONE</name>
+              <description>When command 3 is done in I2C Master mode, this bit changes to highlevel.</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_COMD4</name>
+          <description>I2C command register 4</description>
+          <addressOffset>0x68</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_COMMAND4</name>
+              <description>This is the content of command 4. It consists of three parts: op_code is the command, 1: WRITE, 2: STOP, 3: READ, 4: END, 6: RSTART. Byte_num represents the number of bytes that need to be sent or received.ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for moreInformation.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>14</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_COMMAND4_DONE</name>
+              <description>When command 4 is done in I2C Master mode, this bit changes to highlevel.</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_COMD5</name>
+          <description>I2C command register 5</description>
+          <addressOffset>0x6c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_COMMAND5</name>
+              <description>This is the content of command 5. It consists of three parts:op_code is the command, 1: WRITE, 2: STOP, 3: READ, 4: END, 6: RSTART. Byte_num represents the number of bytes that need to be sent or received.ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for moreInformation.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>14</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_COMMAND5_DONE</name>
+              <description>When command 5 is done in I2C Master mode, this bit changes to high level.</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_COMD6</name>
+          <description>I2C command register 6</description>
+          <addressOffset>0x70</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_COMMAND6</name>
+              <description>This is the content of command 6. It consists of three parts: op_code is the command, 1: WRITE, 2: STOP, 3: READ, 4: END, 6: RSTART. Byte_num represents the number of bytes that need to be sent or received.ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for moreInformation.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>14</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_COMMAND6_DONE</name>
+              <description>When command 6 is done in I2C Master mode, this bit changes to high level.</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_COMD7</name>
+          <description>I2C command register 7</description>
+          <addressOffset>0x74</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_COMMAND7</name>
+              <description>This is the content of command 7. It consists of three parts: op_code is the command, 1: WRITE, 2: STOP, 3: READ, 4: END, 6: RSTART. Byte_num represents the number of bytes that need to be sent or received.ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for moreInformation.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>14</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_COMMAND7_DONE</name>
+              <description>When command 7 is done in I2C Master mode, this bit changes to high level.</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_SCL_ST_TIME_OUT</name>
+          <description>SCL status time out register</description>
+          <addressOffset>0x78</addressOffset>
+          <size>32</size>
+          <resetValue>0x10</resetValue>
+          <fields>
+            <field>
+              <name>I2C_SCL_ST_TO_I2C</name>
+              <description>The threshold value of SCL_FSM state unchanged period. It should be o more than 23</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_SCL_MAIN_ST_TIME_OUT</name>
+          <description>SCL main status time out register</description>
+          <addressOffset>0x7c</addressOffset>
+          <size>32</size>
+          <resetValue>0x10</resetValue>
+          <fields>
+            <field>
+              <name>I2C_SCL_MAIN_ST_TO_I2C</name>
+              <description>The threshold value of SCL_MAIN_FSM state unchanged period.nIt should be o more than 23</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_SCL_SP_CONF</name>
+          <description>Power configuration register</description>
+          <addressOffset>0x80</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_SCL_RST_SLV_EN</name>
+              <description>When I2C master is IDLE, set this bit to send out SCL pulses. The number of pulses equals to reg_scl_rst_slv_num[4:0].</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_SCL_RST_SLV_NUM</name>
+              <description>Configure the pulses of SCL generated in I2C master mode. Valid when reg_scl_rst_slv_en is 1.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_SCL_PD_EN</name>
+              <description>The power down enable bit for the I2C output SCL line. 1: Power down. 0: Not power down. Set reg_scl_force_out and reg_scl_pd_en to 1 to stretch SCL low.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_SDA_PD_EN</name>
+              <description>The power down enable bit for the I2C output SDA line. 1: Power down. 0: Not power down. Set reg_sda_force_out and reg_sda_pd_en to 1 to stretch SDA low.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_DATE</name>
+          <description>Version register</description>
+          <addressOffset>0xf8</addressOffset>
+          <size>32</size>
+          <resetValue>0x2401040</resetValue>
+          <fields>
+            <field>
+              <name>I2C_DATE</name>
+              <description>This is the the version register.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_TXFIFO_START_ADDR</name>
+          <description>I2C TXFIFO base address register</description>
+          <addressOffset>0x100</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_TXFIFO_START_ADDR</name>
+              <description>This is the I2C txfifo first address.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_RXFIFO_START_ADDR</name>
+          <description>I2C RXFIFO base address register</description>
+          <addressOffset>0x180</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_RXFIFO_START_ADDR</name>
+              <description>This is the I2C rxfifo first address.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
       <name>LP_I2C_ANA_MST</name>
       <description>LP_I2C_ANA_MST Peripheral</description>
       <groupName>ANA_I2C_MST</groupName>

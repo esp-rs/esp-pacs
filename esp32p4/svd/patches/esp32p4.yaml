@@ -15,6 +15,7 @@ _include:
   - "_ecdsa.yml"
   - "_gpio.yml"
   - "_hmac.yml"
+  - "_i2c.yml"
   - "_hp_sys_clkrst.yml"
   - "_hp_sys.yml"
   - "_io_mux.yml"
