@@ -2,6 +2,11 @@ GPIO:
   _delete:
     - FUNC*_IN_SEL_CFG
     - FUNC*_OUT_SEL_CFG
+    # These are phantom, IDF doesn't have them
+    - PIN40
+    - PIN41
+    - PIN42
+    - PIN43
   _add:
     FUNC%s_IN_SEL_CFG:
       dim: 256

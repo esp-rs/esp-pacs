@@ -21,6 +21,8 @@ pub struct RegisterBlock {
     ch_power_up_conf: CH_POWER_UP_CONF,
     timer_power_up_conf: TIMER_POWER_UP_CONF,
     date: DATE,
+    _reserved16: [u8; 0x0280],
+    ch_fade_param: (),
 }
 impl RegisterBlock {
     #[doc = "0x00..0xa0 - Cluster CH%s, containing CH?_CONF0, CH?_HPOINT, CH?_DUTY, CH?_CONF1, CH?_DUTY_R"]
@@ -213,6 +215,71 @@ impl RegisterBlock {
     pub const fn date(&self) -> &DATE {
         &self.date
     }
+    #[doc = "0x400..0x420 - LEDC channel %s fade parameter register"]
+    #[inline(always)]
+    pub const fn ch_fade_param(&self, n: usize) -> &CH_FADE_PARAM {
+        #[allow(clippy::no_effect)]
+        [(); 8][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(1024)
+                .add(64 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x400..0x420 - LEDC channel %s fade parameter register"]
+    #[inline(always)]
+    pub fn ch_fade_param_iter(&self) -> impl Iterator<Item = &CH_FADE_PARAM> {
+        (0..8).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(1024)
+                .add(64 * n)
+                .cast()
+        })
+    }
+    #[doc = "0x400 - LEDC channel 0 fade parameter register"]
+    #[inline(always)]
+    pub const fn ch0_fade_param(&self) -> &CH_FADE_PARAM {
+        self.ch_fade_param(0)
+    }
+    #[doc = "0x440 - LEDC channel 1 fade parameter register"]
+    #[inline(always)]
+    pub const fn ch1_fade_param(&self) -> &CH_FADE_PARAM {
+        self.ch_fade_param(1)
+    }
+    #[doc = "0x480 - LEDC channel 2 fade parameter register"]
+    #[inline(always)]
+    pub const fn ch2_fade_param(&self) -> &CH_FADE_PARAM {
+        self.ch_fade_param(2)
+    }
+    #[doc = "0x4c0 - LEDC channel 3 fade parameter register"]
+    #[inline(always)]
+    pub const fn ch3_fade_param(&self) -> &CH_FADE_PARAM {
+        self.ch_fade_param(3)
+    }
+    #[doc = "0x500 - LEDC channel 4 fade parameter register"]
+    #[inline(always)]
+    pub const fn ch4_fade_param(&self) -> &CH_FADE_PARAM {
+        self.ch_fade_param(4)
+    }
+    #[doc = "0x540 - LEDC channel 5 fade parameter register"]
+    #[inline(always)]
+    pub const fn ch5_fade_param(&self) -> &CH_FADE_PARAM {
+        self.ch_fade_param(5)
+    }
+    #[doc = "0x580 - LEDC channel 6 fade parameter register"]
+    #[inline(always)]
+    pub const fn ch6_fade_param(&self) -> &CH_FADE_PARAM {
+        self.ch_fade_param(6)
+    }
+    #[doc = "0x5c0 - LEDC channel 7 fade parameter register"]
+    #[inline(always)]
+    pub const fn ch7_fade_param(&self) -> &CH_FADE_PARAM {
+        self.ch_fade_param(7)
+    }
 }
 #[doc = "Cluster CH%s, containing CH?_CONF0, CH?_HPOINT, CH?_DUTY, CH?_CONF1, CH?_DUTY_R"]
 pub use self::ch::CH;
@@ -277,3 +344,7 @@ pub type TIMER_POWER_UP_CONF = crate::Reg<timer_power_up_conf::TIMER_POWER_UP_CO
 #[doc = "LEDC timer power up configuration register"]
 pub mod timer_power_up_conf;
 pub use crate::dma::{date, DATE};
+#[doc = "CH_FADE_PARAM (rw) register accessor: LEDC channel %s fade parameter register\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_fade_param::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_fade_param::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_fade_param`] module"]
+pub type CH_FADE_PARAM = crate::Reg<ch_fade_param::CH_FADE_PARAM_SPEC>;
+#[doc = "LEDC channel %s fade parameter register"]
+pub mod ch_fade_param;

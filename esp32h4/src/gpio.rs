@@ -36,15 +36,11 @@ pub struct RegisterBlock {
     status_next1: STATUS_NEXT1,
     _reserved27: [u8; 0x08],
     pin: [PIN; 40],
-    pin40: PIN40,
-    pin41: PIN41,
-    pin42: PIN42,
-    pin43: PIN43,
-    _reserved32: [u8; 0x0150],
+    _reserved28: [u8; 0x0160],
     func_in_sel_cfg: [FUNC_IN_SEL_CFG; 256],
-    _reserved33: [u8; 0x0400],
+    _reserved29: [u8; 0x0400],
     func_out_sel_cfg: [FUNC_OUT_SEL_CFG; 40],
-    _reserved34: [u8; 0x0284],
+    _reserved30: [u8; 0x0284],
     clock_gate: CLOCK_GATE,
     date: DATE,
 }
@@ -194,26 +190,6 @@ impl RegisterBlock {
     #[inline(always)]
     pub fn pin_iter(&self) -> impl Iterator<Item = &PIN> {
         self.pin.iter()
-    }
-    #[doc = "0x174 - GPIO$n configuration register"]
-    #[inline(always)]
-    pub const fn pin40(&self) -> &PIN40 {
-        &self.pin40
-    }
-    #[doc = "0x178 - GPIO$n configuration register"]
-    #[inline(always)]
-    pub const fn pin41(&self) -> &PIN41 {
-        &self.pin41
-    }
-    #[doc = "0x17c - GPIO$n configuration register"]
-    #[inline(always)]
-    pub const fn pin42(&self) -> &PIN42 {
-        &self.pin42
-    }
-    #[doc = "0x180 - GPIO$n configuration register"]
-    #[inline(always)]
-    pub const fn pin43(&self) -> &PIN43 {
-        &self.pin43
     }
     #[doc = "0x2d4..0x6d4 - GPIO input function configuration register"]
     #[inline(always)]
@@ -1840,14 +1816,6 @@ pub mod status_next1;
 pub type PIN = crate::Reg<pin::PIN_SPEC>;
 #[doc = "GPIO%s configuration register"]
 pub mod pin;
-pub use pin as pin40;
-pub use pin as pin41;
-pub use pin as pin42;
-pub use pin as pin43;
-pub use PIN as PIN40;
-pub use PIN as PIN41;
-pub use PIN as PIN42;
-pub use PIN as PIN43;
 #[doc = "FUNC_IN_SEL_CFG (rw) register accessor: GPIO input function configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`func_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func_in_sel_cfg`] module"]
 pub type FUNC_IN_SEL_CFG = crate::Reg<func_in_sel_cfg::FUNC_IN_SEL_CFG_SPEC>;
 #[doc = "GPIO input function configuration register"]
