@@ -607,14 +607,6 @@ LP_APM0:
 LP_TIMER:
   _include: ../../../common_patches/lptim_int_strip.yaml
 
-LP_I2C0:
-  _modify:
-    I2C_FIFO_CONF:
-      name: FIFO_CONF
-
-  FIFO_CONF:
-    _strip: "I2C_"
-
 PARL_IO:
   _include: ../../../common_patches/int_strip.yaml
 
