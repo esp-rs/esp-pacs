@@ -1,0 +1,138 @@
+_delete:
+  - "T%sCONFIG"
+  - "T%sLO"
+  - "T%sHI"
+  - "T%sUPDATE"
+  - "T%sALARMLO"
+  - "T%sALARMHI"
+  - "T%sLOADLO"
+  - "T%sLOADHI"
+  - "T%sLOAD"
+
+_add:
+  T0CONFIG:
+    description: "Timer 0 configuration register"
+    addressOffset: 0x0
+    size: 32
+    resetValue: 0x60002000
+    fields:
+      T_USE_XTAL:
+        description: "1: Use XTAL_CLK as the source clock of timer group. 0: Use APB_CLK as the source clock of timer group."
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      T_ALARM_EN:
+        description: "Configures whether or not to enable the timer 0 alarm function. This bit will be automatically cleared once an alarm occurs.\\\\ 0: Disable \\\\ 1: Enable \\\\"
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+      T_DIVCNT_RST:
+        description: "Configures whether or not to reset the timer 0 's clock divider counter. \\\\ 0: No effect \\\\ 1: Reset \\\\"
+        bitOffset: 12
+        bitWidth: 1
+        access: write-only
+      T_DIVIDER:
+        description: "Represents the timer 0 clock (T0_clk) prescaler value."
+        bitOffset: 13
+        bitWidth: 16
+        access: read-write
+      T_AUTORELOAD:
+        description: "Configures whether or not to enable the timer 0 auto-reload function at the time of alarm. \\\\ 0: No effect \\\\ 1: Enable \\\\"
+        bitOffset: 29
+        bitWidth: 1
+        access: read-write
+      T_INCREASE:
+        description: "Configures the counting direction of the timer 0 time-base counter. \\\\ 0: Decrement \\\\ 1: Increment \\\\"
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+      T_EN:
+        description: "Configures whether or not to enable the timer 0 time-base counter. \\\\ 0: Disable \\\\ 1: Enable \\\\"
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+  T0LO:
+    description: "Timer 0 current value, low 32 bits"
+    addressOffset: 0x4
+    size: 32
+    fields:
+      T_LO:
+        description: "Represents the low 32 bits of the time-base counter of timer 0. Valid only after writing to TIMG_T0UPDATE_REG. \\\\ Measurement unit: T0_clk \\\\"
+        bitOffset: 0
+        bitWidth: 32
+        access: read-only
+  T0HI:
+    description: "Timer 0 current value, high 22 bits"
+    addressOffset: 0x8
+    size: 32
+    fields:
+      T_HI:
+        description: "Represents the high 22 bits of the time-base counter of timer 0. Valid only after writing to TIMG_T0UPDATE_REG. \\\\ Measurement unit: T0_clk \\\\"
+        bitOffset: 0
+        bitWidth: 22
+        access: read-only
+  T0UPDATE:
+    description: "Write to copy current timer value to TIMGn_T0LO_REG or TIMGn_T0HI_REG"
+    addressOffset: 0xc
+    size: 32
+    fields:
+      T_UPDATE:
+        description: "Configures to latch the counter value. \\\\ 0: Latch \\\\ 1: Latch \\\\"
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+  T0ALARMLO:
+    description: "Timer 0 alarm value, low 32 bits"
+    addressOffset: 0x10
+    size: 32
+    fields:
+      T_ALARM_LO:
+        description: "Configures the low 32 bits of timer 0 alarm trigger time-base counter value. Valid only when TIMG_T0_ALARM_EN is 1. \\\\ Measurement unit: T0_clk \\\\"
+        bitOffset: 0
+        bitWidth: 32
+        access: read-write
+  T0ALARMHI:
+    description: "Timer 0 alarm value, high bits"
+    addressOffset: 0x14
+    size: 32
+    fields:
+      T_ALARM_HI:
+        description: "Configures the high 22 bits of timer 0 alarm trigger time-base counter value. Valid only when TIMG_T0_ALARM_EN is 1. \\\\ Measurement unit: T0_clk \\\\"
+        bitOffset: 0
+        bitWidth: 22
+        access: read-write
+  T0LOADLO:
+    description: "Timer 0 reload value, low 32 bits"
+    addressOffset: 0x18
+    size: 32
+    fields:
+      T_LOAD_LO:
+        description: "Configures low 32 bits of the value that a reload will load onto timer 0 time-base counter. \\\\ Measurement unit: T0_clk \\\\"
+        bitOffset: 0
+        bitWidth: 32
+        access: read-write
+  T0LOADHI:
+    description: "Timer 0 reload value, high 22 bits"
+    addressOffset: 0x1c
+    size: 32
+    fields:
+      T_LOAD_HI:
+        description: "Configures high 22 bits of the value that a reload will load onto timer 0 time-base counter. \\\\ Measurement unit: T0_clk \\\\"
+        bitOffset: 0
+        bitWidth: 22
+        access: read-write
+  T0LOAD:
+    description: "Write to reload timer from TIMG_T0LOADLO_REG or TIMG_T0LOADHI_REG"
+    addressOffset: 0x20
+    size: 32
+    fields:
+      T_LOAD:
+        description: "Write any value to trigger a timer 0 time-base counter reload."
+        bitOffset: 0
+        bitWidth: 32
+        access: write-only
+
+"*":
+  _strip: "T_"
+
+_include: ../../../common_patches/tim_collect.yaml

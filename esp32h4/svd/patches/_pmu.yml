@@ -1,0 +1,4 @@
+PMU:
+  _modify:
+    IMM_HP_CK_POWER:
+      access: read-write

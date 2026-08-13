@@ -1,0 +1,58 @@
+GPIO:
+  _delete:
+    - FUNC*_IN_SEL_CFG
+    - FUNC*_OUT_SEL_CFG
+    # These are phantom, IDF doesn't have them
+    - PIN40
+    - PIN41
+    - PIN42
+    - PIN43
+  _add:
+    FUNC%s_IN_SEL_CFG:
+      dim: 256
+      dimIncrement: 0x04
+      dimIndex: 0-255
+      description: GPIO input function configuration register
+      addressOffset: 0x2d4
+      access: read-write
+      resetValue: 0x60
+      size: 0x20
+      fields:
+        IN_SEL:
+          description: "Select a pin for input signal %s."
+          bitOffset: 0
+          bitWidth: 7
+        IN_INV_SEL:
+          description: "Invert the input value. 0: not invert. 1: invert."
+          bitOffset: 7
+          bitWidth: 1
+        SEL:
+          description: "Bypass GPIO matrix. 0: bypass. 1: route via GPIO matrix."
+          bitOffset: 8
+          bitWidth: 1
+    FUNC%s_OUT_SEL_CFG:
+      dim: 40
+      dimIncrement: 0x04
+      dimIndex: 0-39
+      description: GPIO output function configuration register
+      addressOffset: 0xad4
+      access: read-write
+      resetValue: 0x100
+      size: 0x20
+      fields:
+        OUT_SEL:
+          description: "Select a peripheral signal for GPIO%s output."
+          bitOffset: 0
+          bitWidth: 9
+        INV_SEL:
+          description: "Invert the output value."
+          bitOffset: 9
+          bitWidth: 1
+        OEN_SEL:
+          description: "Select output-enable source."
+          bitOffset: 10
+          bitWidth: 1
+        OEN_INV_SEL:
+          description: "Invert the output-enable signal."
+          bitOffset: 11
+          bitWidth: 1

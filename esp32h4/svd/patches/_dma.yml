@@ -1,0 +1,27 @@
+DMA:
+  _delete: OUT_CONF0_CH0
+
+  _modify:
+    "OUT_CONF0_CH%s":
+      dim: 5
+      dimIndex: "0,1,2,3,4"
+      addressOffset: 0x180
+      dimIncrement: 0x100
+
+  "IN_INT_ST_CH%s":
+    _strip_end: "_CH_INT_ST"
+  "IN_INT_ENA_CH%s":
+    _strip_end: "_CH_INT_ENA"
+  "IN_INT_CLR_CH%s":
+    _strip_end: "_CH_INT_CLR"
+  "OUT_INT_CLR_CH%s":
+    _strip_end: "_CH_INT_CLR"
+  "OUT_INT_RAW_CH%s":
+    _strip_end: "_CH_INT_RAW"
+  "OUT_INT_ST_CH%s":
+    _strip_end: "_CH_INT_ST"
+  "OUT_INT_ENA_CH%s":
+    _strip_end: "_CH_INT_ENA"
+
+  "IN_CONF0_CH%s,IN_CONF1_CH%s,INFIFO_STATUS_CH%s,IN_POP_CH%s,IN_LINK_CH%s,IN_LINK_ADDR_CH%s,IN_STATE_CH%s,IN_SUC_EOF_DES_ADDR_CH%s,IN_ERR_EOF_DES_ADDR_CH%s,IN_DSCR_CH%s,IN_DSCR_BF0_CH%s,IN_DSCR_BF1_CH%s,IN_PRI_CH%s,IN_PERI_SEL_CH%s,RX_CH_ARB_WEIGH_CH%s,RX_ARB_WEIGH_OPT_DIR_CH%s,OUT_CONF0_CH%s,OUT_CONF1_CH%s,OUTFIFO_STATUS_CH%s,OUT_PUSH_CH%s,OUT_LINK_CH%s,OUT_LINK_ADDR_CH%s,OUT_STATE_CH%s,OUT_EOF_DES_ADDR_CH%s,OUT_EOF_BFR_DES_ADDR_CH%s,OUT_DONE_DES_ADDR_CH%s,OUT_DSCR_CH%s,OUT_DSCR_BF0_CH%s,OUT_DSCR_BF1_CH%s,OUT_PRI_CH%s,OUT_PERI_SEL_CH%s,TX_CH_ARB_WEIGH_CH%s,TX_ARB_WEIGH_OPT_DIR_CH%s":
+    _strip_end: "_CH"

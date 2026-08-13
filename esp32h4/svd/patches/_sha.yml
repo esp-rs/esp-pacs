@@ -1,0 +1,32 @@
+SHA:
+  _modify:
+    "_2_SM_3_H_MEM*":
+      name: "H_MEM[%s]"
+      dim: 16
+      dimIncrement: 0x4
+      size: 0x20
+    "_2_SM_3_M_MEM*":
+      name: "M_MEM[%s]"
+      dim: 32
+      dimIncrement: 0x4
+      size: 0x20
+
+  START:
+    _delete:
+      START
+    _add:
+      START:
+        description: "Write 1 to start Typical SHA calculation."
+        bitOffset: 0
+        bitWidth: 1
+        access: write-only
+
+  CONTINUE:
+    _delete:
+      CONTINUE
+    _add:
+      CONTINUE:
+        description: "Write 1 to continue Typical SHA calculation."
+        bitOffset: 0
+        bitWidth: 1
+        access: write-only
