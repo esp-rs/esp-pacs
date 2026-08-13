@@ -1,0 +1,61 @@
+LP_CLKRST:
+  # Missing from CSV; present in IDF lp_clkrst_struct.h / lp_clkrst_reg.h.
+  _add:
+    CALI0:
+      description: LP clock calibration register 0
+      addressOffset: 0x38
+      size: 0x20
+      resetValue: 0x1
+      fields:
+        LP_CALI_DIV_CYCLE:
+          bitOffset: 0
+          bitWidth: 8
+          access: read-write
+        LP_CALI_FULL_CNT_DONE:
+          bitOffset: 8
+          bitWidth: 1
+          access: read-only
+        LP_CALI_DIV_CALI_CNT:
+          bitOffset: 9
+          bitWidth: 16
+          access: read-only
+        LP_CALI_DIV_NUMERATOR_TYPE:
+          bitOffset: 25
+          bitWidth: 1
+          access: read-only
+        LP_CALI_DIV_NUM:
+          bitOffset: 26
+          bitWidth: 6
+          access: read-only
+    CALI1:
+      description: LP clock calibration register 1
+      addressOffset: 0x3c
+      size: 0x20
+      access: read-only
+      fields:
+        LP_CALI_DIV_NUMERATOR:
+          bitOffset: 0
+          bitWidth: 16
+          access: read-only
+        LP_CALI_DIV_DENOMINATOR:
+          bitOffset: 16
+          bitWidth: 16
+          access: read-only
+    CALI2:
+      description: LP clock calibration register 2
+      addressOffset: 0x40
+      size: 0x20
+      resetValue: 0x8000ff
+      fields:
+        LP_CALI_DIV_WAIT_PWR_GOOD:
+          bitOffset: 0
+          bitWidth: 9
+          access: read-write
+        LP_CALI_DIV_SLP_VAL:
+          bitOffset: 15
+          bitWidth: 16
+          access: read-write
+        LP_CALI_DIV_TIMER_EN:
+          bitOffset: 31
+          bitWidth: 1
+          access: read-write

@@ -1,0 +1,135 @@
+# Applied in the same peripheral process as common hp_apm clustering so
+# REGION2/3 are present before REGION%s is collected.
+_modify:
+  INT_EN:
+    addressOffset: 0xd8
+  CLOCK_GATE:
+    addressOffset: 0xdc
+  DATE:
+    addressOffset: 0x7fc
+
+_add:
+  REGION2_ADDR_START:
+    description: Region address register
+    addressOffset: 0x1c
+    size: 0x20
+    access: read-write
+    fields:
+      REGION2_ADDR_START:
+        bitOffset: 0
+        bitWidth: 32
+        access: read-write
+  REGION2_ADDR_END:
+    description: Region address register
+    addressOffset: 0x20
+    size: 0x20
+    access: read-write
+    fields:
+      REGION2_ADDR_END:
+        bitOffset: 0
+        bitWidth: 32
+        access: read-write
+  REGION2_PMS_ATTR:
+    description: Region access authority attribute register
+    addressOffset: 0x24
+    size: 0x20
+    access: read-write
+    fields:
+      REGION2_R0_PMS_X:
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      REGION2_R0_PMS_W:
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      REGION2_R0_PMS_R:
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      REGION2_R1_PMS_X:
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      REGION2_R1_PMS_W:
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      REGION2_R1_PMS_R:
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      REGION2_R2_PMS_X:
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+      REGION2_R2_PMS_W:
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      REGION2_R2_PMS_R:
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+  REGION3_ADDR_START:
+    description: Region address register
+    addressOffset: 0x28
+    size: 0x20
+    access: read-write
+    fields:
+      REGION3_ADDR_START:
+        bitOffset: 0
+        bitWidth: 32
+        access: read-write
+  REGION3_ADDR_END:
+    description: Region address register
+    addressOffset: 0x2c
+    size: 0x20
+    access: read-write
+    fields:
+      REGION3_ADDR_END:
+        bitOffset: 0
+        bitWidth: 32
+        access: read-write
+  REGION3_PMS_ATTR:
+    description: Region access authority attribute register
+    addressOffset: 0x30
+    size: 0x20
+    access: read-write
+    fields:
+      REGION3_R0_PMS_X:
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      REGION3_R0_PMS_W:
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      REGION3_R0_PMS_R:
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      REGION3_R1_PMS_X:
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      REGION3_R1_PMS_W:
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      REGION3_R1_PMS_R:
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      REGION3_R2_PMS_X:
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+      REGION3_R2_PMS_W:
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      REGION3_R2_PMS_R:
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write

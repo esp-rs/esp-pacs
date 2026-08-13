@@ -1,0 +1,26 @@
+ECDSA:
+  _modify:
+    "MESSAGE_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "R_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "S_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "Z_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "QAX_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "QAY_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20

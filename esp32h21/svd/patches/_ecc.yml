@@ -1,0 +1,59 @@
+ECC:
+  # H21 CSV uses MULT_* names; rename MEMs to H2-style and fix CONF enums.
+  _modify:
+    "MULT_K_MEM*":
+      name: K_MEM%s
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "MULT_PX_MEM*":
+      name: PX_MEM%s
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "MULT_PY_MEM*":
+      name: PY_MEM%s
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "MULT_QX_MEM*":
+      name: QX_MEM%s
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "MULT_QY_MEM*":
+      name: QY_MEM%s
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "MULT_QZ_MEM*":
+      name: QZ_MEM%s
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    MULT_CONF:
+      name: CONF
+    MULT_DATE:
+      name: DATE
+
+  MULT_INT_RAW:
+    _strip_end: _INT_RAW
+    _strip: MULT_
+  MULT_INT_ST:
+    _strip_end: _INT_ST
+    _strip: MULT_
+  MULT_INT_ENA:
+    _strip_end: _INT_ENA
+    _strip: MULT_
+  MULT_INT_CLR:
+    _strip_end: _INT_CLR
+    _strip: MULT_
+    _modify:
+      "*":
+        modifiedWriteValues: oneToClear
+
+  CONF:
+    _strip: MULT_
+    KEY_LENGTH:
+      P192: [0, "P-192 elliptic curve"]
+      P256: [1, "P-256 elliptic curve"]
