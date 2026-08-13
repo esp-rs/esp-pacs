@@ -8,3 +8,5 @@ esp*/**/Cargo.lock
 target/
 
 html/
+
+.cursor/
