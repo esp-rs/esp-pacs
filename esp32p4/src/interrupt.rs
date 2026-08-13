@@ -19,6 +19,8 @@ pub enum Interrupt {
     LP_ADC                 = 9,
     #[doc = "10 - LP_GPIO"]
     LP_GPIO                = 10,
+    #[doc = "11 - LP_I2C"]
+    LP_I2C                 = 11,
     #[doc = "12 - LP_I2S0"]
     LP_I2S0                = 12,
     #[doc = "14 - LP_TOUCH"]
@@ -227,6 +229,7 @@ impl Interrupt {
             8 => Ok(Interrupt::LP_ANA),
             9 => Ok(Interrupt::LP_ADC),
             10 => Ok(Interrupt::LP_GPIO),
+            11 => Ok(Interrupt::LP_I2C),
             12 => Ok(Interrupt::LP_I2S0),
             14 => Ok(Interrupt::LP_TOUCH),
             15 => Ok(Interrupt::LP_TSENS),

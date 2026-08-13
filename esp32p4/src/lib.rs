@@ -20,6 +20,7 @@ extern "C" {
     fn LP_ANA();
     fn LP_ADC();
     fn LP_GPIO();
+    fn LP_I2C();
     fn LP_I2S0();
     fn LP_TOUCH();
     fn LP_TSENS();
@@ -142,7 +143,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 128] = [
     Vector { _handler: LP_ANA },
     Vector { _handler: LP_ADC },
     Vector { _handler: LP_GPIO },
-    Vector { _reserved: 0 },
+    Vector { _handler: LP_I2C },
     Vector { _handler: LP_I2S0 },
     Vector { _reserved: 0 },
     Vector { _handler: LP_TOUCH },
@@ -395,6 +396,15 @@ impl core::fmt::Debug for AHB_DMA {
 }
 #[doc = "AHB_DMA Peripheral"]
 pub mod ahb_dma;
+#[doc = "Low-power I2C (Inter-Integrated Circuit) Controller 0"]
+pub type LP_I2C0 = crate::Periph<lp_i2c0::RegisterBlock, 0x5012_2000>;
+impl core::fmt::Debug for LP_I2C0 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_I2C0").finish()
+    }
+}
+#[doc = "Low-power I2C (Inter-Integrated Circuit) Controller 0"]
+pub mod lp_i2c0;
 #[doc = "LP_I2C_ANA_MST Peripheral"]
 pub type LP_I2C_ANA_MST = crate::Periph<lp_i2c_ana_mst::RegisterBlock, 0x5012_4000>;
 impl core::fmt::Debug for LP_I2C_ANA_MST {
