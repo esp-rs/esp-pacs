@@ -1,0 +1,226 @@
+AHB_DMA:
+  # OUT_CONF0_CH0 is separate; fold it into the CH%s array (channels 0-4)
+  _delete: OUT_CONF0_CH0
+  _modify:
+    "OUT_CONF0_CH%s":
+      dim: 5
+      dimIndex: "0,1,2,3,4"
+      addressOffset: 0x180
+      dimIncrement: 0x100
+
+  IN_PRI_CH%s:
+    _modify:
+      RX_PRI_CH:
+        name: RX_PRI
+  IN_PERI_SEL_CH%s:
+    _modify:
+      PERI_IN_SEL_CH:
+        name: PERI_IN_SEL
+  OUT_PRI_CH%s:
+    _modify:
+      TX_PRI_CH:
+        name: TX_PRI
+  OUT_PERI_SEL_CH%s:
+    _modify:
+      PERI_OUT_SEL_CH:
+        name: PERI_OUT_SEL
+  RX_CH_ARB_WEIGH_CH%s:
+    _modify:
+      RX_CH_ARB_WEIGH_CH:
+        name: RX_CH_ARB_WEIGH
+  RX_ARB_WEIGH_OPT_DIR_CH%s:
+    _modify:
+      RX_ARB_WEIGH_OPT_DIR_CH:
+        name: RX_ARB_WEIGH_OPT_DIR
+  TX_CH_ARB_WEIGH_CH%s:
+    _modify:
+      TX_CH_ARB_WEIGH_CH:
+        name: TX_CH_ARB_WEIGH
+  TX_ARB_WEIGH_OPT_DIR_CH%s:
+    _modify:
+      TX_ARB_WEIGH_OPT_DIR_CH:
+        name: TX_ARB_WEIGH_OPT_DIR
+
+  _expand_array:
+    IN_INT_RAW_CH%s: {}
+    IN_INT_ST_CH%s: {}
+    IN_INT_ENA_CH%s: {}
+    IN_INT_CLR_CH%s: {}
+    IN_CONF0_CH%s: {}
+    IN_CONF1_CH%s: {}
+    INFIFO_STATUS_CH%s: {}
+    IN_POP_CH%s: {}
+    IN_LINK_CH%s: {}
+    IN_LINK_ADDR_CH%s: {}
+    IN_STATE_CH%s: {}
+    IN_SUC_EOF_DES_ADDR_CH%s: {}
+    IN_ERR_EOF_DES_ADDR_CH%s: {}
+    IN_DONE_DES_ADDR_CH%s: {}
+    IN_DSCR_CH%s: {}
+    IN_DSCR_BF0_CH%s: {}
+    IN_DSCR_BF1_CH%s: {}
+    IN_PRI_CH%s: {}
+    IN_PERI_SEL_CH%s: {}
+    RX_CH_ARB_WEIGH_CH%s: {}
+    RX_ARB_WEIGH_OPT_DIR_CH%s: {}
+    OUT_INT_RAW_CH%s: {}
+    OUT_INT_ST_CH%s: {}
+    OUT_INT_ENA_CH%s: {}
+    OUT_INT_CLR_CH%s: {}
+    OUT_CONF0_CH%s: {}
+    OUT_CONF1_CH%s: {}
+    OUTFIFO_STATUS_CH%s: {}
+    OUT_PUSH_CH%s: {}
+    OUT_LINK_CH%s: {}
+    OUT_LINK_ADDR_CH%s: {}
+    OUT_STATE_CH%s: {}
+    OUT_EOF_DES_ADDR_CH%s: {}
+    OUT_EOF_BFR_DES_ADDR_CH%s: {}
+    OUT_DONE_DES_ADDR_CH%s: {}
+    OUT_DSCR_CH%s: {}
+    OUT_DSCR_BF0_CH%s: {}
+    OUT_DSCR_BF1_CH%s: {}
+    OUT_PRI_CH%s: {}
+    OUT_PERI_SEL_CH%s: {}
+    TX_CH_ARB_WEIGH_CH%s: {}
+    TX_ARB_WEIGH_OPT_DIR_CH%s: {}
+
+  _cluster:
+    # Interrupt blocks use dimIncrement 0x10; keep them out of CH%s (0x100)
+    IN_INT_CH%s:
+      IN_INT_RAW_CH?:
+        name: RAW
+        _strip_end: [_CH_INT_RAW, _CH?_INT_RAW]
+      IN_INT_ST_CH?:
+        name: ST
+        _strip_end: [_CH_INT_ST, _CH?_INT_ST]
+      IN_INT_ENA_CH?:
+        name: ENA
+        _strip_end: [_CH_INT_ENA, _CH?_INT_ENA]
+      IN_INT_CLR_CH?:
+        name: CLR
+        _strip_end: [_CH_INT_CLR, _CH?_INT_CLR]
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
+
+    OUT_INT_CH%s:
+      OUT_INT_RAW_CH?:
+        name: RAW
+        _strip_end: [_CH_INT_RAW, _CH?_INT_RAW]
+      OUT_INT_ST_CH?:
+        name: ST
+        _strip_end: [_CH_INT_ST, _CH?_INT_ST]
+      OUT_INT_ENA_CH?:
+        name: ENA
+        _strip_end: [_CH_INT_ENA, _CH?_INT_ENA]
+      OUT_INT_CLR_CH?:
+        name: CLR
+        _strip_end: [_CH_INT_CLR, _CH?_INT_CLR]
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
+
+    CH%s:
+      IN_CONF0_CH?:
+        name: IN_CONF0
+        _strip_end: _CH
+      IN_CONF1_CH?:
+        name: IN_CONF1
+        _strip_end: _CH
+      INFIFO_STATUS_CH?:
+        name: INFIFO_STATUS
+        _strip_end: _CH
+      IN_POP_CH?:
+        name: IN_POP
+        _strip_end: _CH
+      IN_LINK_CH?:
+        name: IN_LINK
+        _strip_end: _CH
+      IN_LINK_ADDR_CH?:
+        name: IN_LINK_ADDR
+        _strip_end: _CH
+      IN_STATE_CH?:
+        name: IN_STATE
+        _strip_end: _CH
+      IN_SUC_EOF_DES_ADDR_CH?:
+        name: IN_SUC_EOF_DES_ADDR
+        _strip_end: _CH
+      IN_ERR_EOF_DES_ADDR_CH?:
+        name: IN_ERR_EOF_DES_ADDR
+        _strip_end: _CH
+      IN_DONE_DES_ADDR_CH?:
+        name: IN_DONE_DES_ADDR
+        _strip_end: _CH
+      IN_DSCR_CH?:
+        name: IN_DSCR
+        _strip_end: _CH
+      IN_DSCR_BF0_CH?:
+        name: IN_DSCR_BF0
+        _strip_end: _CH
+      IN_DSCR_BF1_CH?:
+        name: IN_DSCR_BF1
+        _strip_end: _CH
+      IN_PRI_CH?:
+        name: IN_PRI
+        _strip_end: _CH
+      IN_PERI_SEL_CH?:
+        name: IN_PERI_SEL
+        _strip_end: _CH
+      RX_CH_ARB_WEIGH_CH?:
+        name: RX_CH_ARB_WEIGH
+        _strip_end: _CH
+      RX_ARB_WEIGH_OPT_DIR_CH?:
+        name: RX_ARB_WEIGH_OPT_DIR
+        _strip_end: _CH
+      OUT_CONF0_CH?:
+        name: OUT_CONF0
+        _strip_end: _CH
+      OUT_CONF1_CH?:
+        name: OUT_CONF1
+        _strip_end: _CH
+      OUTFIFO_STATUS_CH?:
+        name: OUTFIFO_STATUS
+        _strip_end: _CH
+      OUT_PUSH_CH?:
+        name: OUT_PUSH
+        _strip_end: _CH
+      OUT_LINK_CH?:
+        name: OUT_LINK
+        _strip_end: _CH
+      OUT_LINK_ADDR_CH?:
+        name: OUT_LINK_ADDR
+        _strip_end: _CH
+      OUT_STATE_CH?:
+        name: OUT_STATE
+        _strip_end: _CH
+      OUT_EOF_DES_ADDR_CH?:
+        name: OUT_EOF_DES_ADDR
+        _strip_end: _CH
+      OUT_EOF_BFR_DES_ADDR_CH?:
+        name: OUT_EOF_BFR_DES_ADDR
+        _strip_end: _CH
+      OUT_DONE_DES_ADDR_CH?:
+        name: OUT_DONE_DES_ADDR
+        _strip_end: _CH
+      OUT_DSCR_CH?:
+        name: OUT_DSCR
+        _strip_end: _CH
+      OUT_DSCR_BF0_CH?:
+        name: OUT_DSCR_BF0
+        _strip_end: _CH
+      OUT_DSCR_BF1_CH?:
+        name: OUT_DSCR_BF1
+        _strip_end: _CH
+      OUT_PRI_CH?:
+        name: OUT_PRI
+        _strip_end: _CH
+      OUT_PERI_SEL_CH?:
+        name: OUT_PERI_SEL
+        _strip_end: _CH
+      TX_CH_ARB_WEIGH_CH?:
+        name: TX_CH_ARB_WEIGH
+        _strip_end: _CH
+      TX_ARB_WEIGH_OPT_DIR_CH?:
+        name: TX_ARB_WEIGH_OPT_DIR
+        _strip_end: _CH

@@ -22,6 +22,7 @@ _include:
   - "_modem_lpcon.yml"
   - "_i2c_ana_mst.yml"
   - "_ieee802154.yml"
+  - "_ahb_dma.yml"
   - "_axi_dma.yml"
   - "_aes.yml"
   - "_rsa.yml"
