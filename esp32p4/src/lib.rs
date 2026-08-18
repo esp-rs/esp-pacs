@@ -1026,6 +1026,24 @@ impl core::fmt::Debug for SPI1 {
 }
 #[doc = "SPI (Serial Peripheral Interface) Controller 1"]
 pub mod spi1;
+#[doc = "Memory SPI 2"]
+pub type MEMSPI2 = crate::Periph<memspi2::RegisterBlock, 0x5008_e000>;
+impl core::fmt::Debug for MEMSPI2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEMSPI2").finish()
+    }
+}
+#[doc = "Memory SPI 2"]
+pub mod memspi2;
+#[doc = "Memory SPI 3"]
+pub type MEMSPI3 = crate::Periph<memspi3::RegisterBlock, 0x5008_f000>;
+impl core::fmt::Debug for MEMSPI3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEMSPI3").finish()
+    }
+}
+#[doc = "Memory SPI 3"]
+pub mod memspi3;
 #[doc = "SPI (Serial Peripheral Interface) Controller 2"]
 pub type SPI2 = crate::Periph<spi2::RegisterBlock, 0x500d_0000>;
 impl core::fmt::Debug for SPI2 {
