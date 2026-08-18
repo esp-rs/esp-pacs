@@ -17,6 +17,7 @@ _include:
   - "_icm.yml"
   - "_efuse.yml"
   - "_pmu.yml"
+  - "_mmu_item_content.yml"
   - "_modem_syscon.yml"
   - "_modem_lpcon.yml"
   - "_i2c_ana_mst.yml"

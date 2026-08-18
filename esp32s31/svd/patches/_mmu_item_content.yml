@@ -1,6 +1,6 @@
-"SPI0,MEMSPI2":
+"MEMSPI2":
   MMU_ITEM_CONTENT:
-    _delete: [MMU_ITEM_CONTENT, SPI_MMU_ITEM_CONTENT]
+    _delete: MMU_ITEM_CONTENT
     _add:
       PADDR:
         description: Physical page number
