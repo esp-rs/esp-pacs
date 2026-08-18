@@ -435,23 +435,3 @@ _add:
         bitOffset: 10
         bitWidth: 1
         access: read-write
-
-SPI_MEM_MMU_ITEM_CONTENT:
-  _delete:
-    - SPI_MMU_ITEM_CONTENT
-  _add:
-    paddr:
-      description: Physical page number of the mapped flash page
-      bitOffset: 0
-      bitWidth: 11
-      access: read-write
-    valid:
-      description: Indicates this MMU entry maps a valid flash page
-      bitOffset: 12
-      bitWidth: 1
-      access: read-write
-    sensitive:
-      description: Indicates this MMU entry maps an encrypted flash page
-      bitOffset: 13
-      bitWidth: 1
-      access: read-write
