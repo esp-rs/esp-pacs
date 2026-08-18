@@ -1331,24 +1331,24 @@ impl core::fmt::Debug for SPI1 {
 }
 #[doc = "SPI (Serial Peripheral Interface) Controller 1"]
 pub mod spi1;
-#[doc = "PSRAM MSPI Controller 0"]
-pub type PSRAM_MSPI0 = crate::Periph<psram_mspi0::RegisterBlock, 0x2050_2000>;
-impl core::fmt::Debug for PSRAM_MSPI0 {
+#[doc = "Memory SPI 2"]
+pub type MEMSPI2 = crate::Periph<memspi2::RegisterBlock, 0x2050_2000>;
+impl core::fmt::Debug for MEMSPI2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("PSRAM_MSPI0").finish()
+        f.debug_struct("MEMSPI2").finish()
     }
 }
-#[doc = "PSRAM MSPI Controller 0"]
-pub mod psram_mspi0;
-#[doc = "PSRAM MSPI Controller 1"]
-pub type PSRAM_MSPI1 = crate::Periph<psram_mspi0::RegisterBlock, 0x2050_3000>;
-impl core::fmt::Debug for PSRAM_MSPI1 {
+#[doc = "Memory SPI 2"]
+pub mod memspi2;
+#[doc = "Memory SPI 3"]
+pub type MEMSPI3 = crate::Periph<memspi3::RegisterBlock, 0x2050_3000>;
+impl core::fmt::Debug for MEMSPI3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("PSRAM_MSPI1").finish()
+        f.debug_struct("MEMSPI3").finish()
     }
 }
-#[doc = "PSRAM MSPI Controller 1"]
-pub use self::psram_mspi0 as psram_mspi1;
+#[doc = "Memory SPI 3"]
+pub mod memspi3;
 #[doc = "SPI (Serial Peripheral Interface) Controller 2"]
 pub type SPI2 = crate::Periph<spi2::RegisterBlock, 0x2038_f000>;
 impl core::fmt::Debug for SPI2 {

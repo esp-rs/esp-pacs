@@ -15,7 +15,6 @@ _include:
   - "_lp_mailbox.yml"
   - "_cnnt_sys.yml"
   - "_icm.yml"
-  - "_psram.yml"
   - "_efuse.yml"
   - "_pmu.yml"
   - "_modem_syscon.yml"
