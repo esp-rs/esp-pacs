@@ -2205,9 +2205,25 @@ _add:
         size: 0x20
         resetValue: 0x37c
         fields:
-          SPI_MMU_ITEM_CONTENT:
+          PADDR:
+            description: Physical page number
             bitOffset: 0
-            bitWidth: 32
+            bitWidth: 9
+            access: read-write
+          ACCESS_SPIRAM:
+            description: Map to SPIRAM/PSRAM when set (flash when clear)
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+          VALID:
+            description: Entry is valid when set
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+          SENSITIVE:
+            description: Decrypt via flash encryption when set
+            bitOffset: 11
+            bitWidth: 1
             access: read-write
       MMU_ITEM_INDEX:
         addressOffset: 0x380
