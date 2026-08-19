@@ -15,6 +15,15 @@ pub struct RegisterBlock {
     psram_dqs_0_pin0: PSRAM_DQS_0_PIN0,
     psram_ck_pin0: PSRAM_CK_PIN0,
     psram_cs_pin0: PSRAM_CS_PIN0,
+    psram_dq8_pin0: PSRAM_DQ8_PIN0,
+    psram_dq9_pin0: PSRAM_DQ9_PIN0,
+    psram_dq10_pin0: PSRAM_DQ10_PIN0,
+    psram_dq11_pin0: PSRAM_DQ11_PIN0,
+    psram_dq12_pin0: PSRAM_DQ12_PIN0,
+    psram_dq13_pin0: PSRAM_DQ13_PIN0,
+    psram_dq14_pin0: PSRAM_DQ14_PIN0,
+    psram_dq15_pin0: PSRAM_DQ15_PIN0,
+    psram_dqs_1_pin0: PSRAM_DQS_1_PIN0,
 }
 impl RegisterBlock {
     #[doc = "0x00 - apb registers auto clock gating reg"]
@@ -77,6 +86,51 @@ impl RegisterBlock {
     pub const fn psram_cs_pin0(&self) -> &PSRAM_CS_PIN0 {
         &self.psram_cs_pin0
     }
+    #[doc = "0x48 - IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG"]
+    #[inline(always)]
+    pub const fn psram_dq8_pin0(&self) -> &PSRAM_DQ8_PIN0 {
+        &self.psram_dq8_pin0
+    }
+    #[doc = "0x4c - IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG"]
+    #[inline(always)]
+    pub const fn psram_dq9_pin0(&self) -> &PSRAM_DQ9_PIN0 {
+        &self.psram_dq9_pin0
+    }
+    #[doc = "0x50 - IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG"]
+    #[inline(always)]
+    pub const fn psram_dq10_pin0(&self) -> &PSRAM_DQ10_PIN0 {
+        &self.psram_dq10_pin0
+    }
+    #[doc = "0x54 - IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG"]
+    #[inline(always)]
+    pub const fn psram_dq11_pin0(&self) -> &PSRAM_DQ11_PIN0 {
+        &self.psram_dq11_pin0
+    }
+    #[doc = "0x58 - IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG"]
+    #[inline(always)]
+    pub const fn psram_dq12_pin0(&self) -> &PSRAM_DQ12_PIN0 {
+        &self.psram_dq12_pin0
+    }
+    #[doc = "0x5c - IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG"]
+    #[inline(always)]
+    pub const fn psram_dq13_pin0(&self) -> &PSRAM_DQ13_PIN0 {
+        &self.psram_dq13_pin0
+    }
+    #[doc = "0x60 - IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG"]
+    #[inline(always)]
+    pub const fn psram_dq14_pin0(&self) -> &PSRAM_DQ14_PIN0 {
+        &self.psram_dq14_pin0
+    }
+    #[doc = "0x64 - IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG"]
+    #[inline(always)]
+    pub const fn psram_dq15_pin0(&self) -> &PSRAM_DQ15_PIN0 {
+        &self.psram_dq15_pin0
+    }
+    #[doc = "0x68 - IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG"]
+    #[inline(always)]
+    pub const fn psram_dqs_1_pin0(&self) -> &PSRAM_DQS_1_PIN0 {
+        &self.psram_dqs_1_pin0
+    }
 }
 #[doc = "CLK_EN0 (rw) register accessor: apb registers auto clock gating reg\n\nYou can [`read`](crate::Reg::read) this register and get [`clk_en0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_en0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk_en0`] module"]
 pub type CLK_EN0 = crate::Reg<clk_en0::CLK_EN0_SPEC>;
@@ -106,5 +160,23 @@ pub type PSRAM_DQS_0_PIN0 = crate::Reg<psram_dqs_0_pin0::PSRAM_DQS_0_PIN0_SPEC>;
 pub mod psram_dqs_0_pin0;
 pub use psram_d_pin0 as psram_ck_pin0;
 pub use psram_d_pin0 as psram_cs_pin0;
+pub use psram_d_pin0 as psram_dq8_pin0;
+pub use psram_d_pin0 as psram_dq9_pin0;
+pub use psram_d_pin0 as psram_dq10_pin0;
+pub use psram_d_pin0 as psram_dq11_pin0;
+pub use psram_d_pin0 as psram_dq12_pin0;
+pub use psram_d_pin0 as psram_dq13_pin0;
+pub use psram_d_pin0 as psram_dq14_pin0;
+pub use psram_d_pin0 as psram_dq15_pin0;
+pub use psram_dqs_0_pin0 as psram_dqs_1_pin0;
+pub use PSRAM_DQS_0_PIN0 as PSRAM_DQS_1_PIN0;
 pub use PSRAM_D_PIN0 as PSRAM_CK_PIN0;
 pub use PSRAM_D_PIN0 as PSRAM_CS_PIN0;
+pub use PSRAM_D_PIN0 as PSRAM_DQ8_PIN0;
+pub use PSRAM_D_PIN0 as PSRAM_DQ9_PIN0;
+pub use PSRAM_D_PIN0 as PSRAM_DQ10_PIN0;
+pub use PSRAM_D_PIN0 as PSRAM_DQ11_PIN0;
+pub use PSRAM_D_PIN0 as PSRAM_DQ12_PIN0;
+pub use PSRAM_D_PIN0 as PSRAM_DQ13_PIN0;
+pub use PSRAM_D_PIN0 as PSRAM_DQ14_PIN0;
+pub use PSRAM_D_PIN0 as PSRAM_DQ15_PIN0;

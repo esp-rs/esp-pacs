@@ -468,6 +468,15 @@ impl core::fmt::Debug for USB_FS {
 }
 #[doc = "USB_FS"]
 pub mod usb_fs;
+#[doc = "IOMUX_MSPI_PIN Peripheral"]
+pub type IOMUX_MSPI_PIN = crate::Periph<iomux_mspi_pin::RegisterBlock, 0x500e_1200>;
+impl core::fmt::Debug for IOMUX_MSPI_PIN {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IOMUX_MSPI_PIN").finish()
+    }
+}
+#[doc = "IOMUX_MSPI_PIN Peripheral"]
+pub mod iomux_mspi_pin;
 #[doc = "Interrupt Controller (Core 0)"]
 pub type INTERRUPT_CORE0 = crate::Periph<interrupt_core0::RegisterBlock, 0x500d_6000>;
 impl core::fmt::Debug for INTERRUPT_CORE0 {
