@@ -19,6 +19,7 @@ _include:
   - "_hp_sys_clkrst.yml"
   - "_hp_sys.yml"
   - "_io_mux.yml"
+  - "_iomux_mspi.yml"
   - "_isp.yml"
   - "_lp_gpio.yml"
   - "_lp_io_mux.yml"

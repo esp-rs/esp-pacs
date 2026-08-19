@@ -19117,6 +19117,1378 @@ SCL positive edge for a stop condition</description>
       </registers>
     </peripheral>
     <peripheral>
+      <name>IOMUX_MSPI_PIN</name>
+      <description>IOMUX_MSPI_PIN Peripheral</description>
+      <groupName>IOMUX_MSPI_PIN</groupName>
+      <baseAddress>0x500E1200</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x30</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>CLK_EN0</name>
+          <description>apb registers auto clock gating reg</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000001</resetValue>
+          <fields>
+            <field>
+              <name>REG_CLK_EN</name>
+              <description>1: auto clock gating on
+0: auto clock gating off</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_D_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_D_DLI</name>
+              <description>psram d dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_D_DLC</name>
+              <description>psram d dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_D_HYS</name>
+              <description>psram d sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_D_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_D_WPU</name>
+              <description>psram d wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_D_WPD</name>
+              <description>psram d wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_D_DRV</name>
+              <description>psram d drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_D_HOLD</name>
+              <description>psram d hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_Q_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_Q_DLI</name>
+              <description>psram q dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_Q_DLC</name>
+              <description>psram q dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_Q_HYS</name>
+              <description>psram q sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_Q_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_Q_WPU</name>
+              <description>psram q wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_Q_WPD</name>
+              <description>psram q wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_Q_DRV</name>
+              <description>psram q drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_Q_HOLD</name>
+              <description>psram q hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_WP_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x24</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_WP_DLI</name>
+              <description>psram wp dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_WP_DLC</name>
+              <description>psram wp dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_WP_HYS</name>
+              <description>psram wp sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_WP_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_WP_WPU</name>
+              <description>psram wp wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_WP_WPD</name>
+              <description>psram wp wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_WP_DRV</name>
+              <description>psram wp drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_WP_HOLD</name>
+              <description>psram wp hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_HOLD_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_HOLD_DLI</name>
+              <description>psram hold dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_HOLD_DLC</name>
+              <description>psram hold dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_HOLD_HYS</name>
+              <description>psram hold sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_HOLD_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_HOLD_WPU</name>
+              <description>psram hold wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_HOLD_WPD</name>
+              <description>psram hold wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_HOLD_DRV</name>
+              <description>psram hold drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_HOLD_HOLD</name>
+              <description>psram hold hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_DQ4_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_DQ4_DLI</name>
+              <description>psram dq4 dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ4_DLC</name>
+              <description>psram dq4 dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ4_HYS</name>
+              <description>psram dq4 sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ4_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ4_WPU</name>
+              <description>psram dq4 wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ4_WPD</name>
+              <description>psram dq4 wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ4_DRV</name>
+              <description>psram dq4 drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ4_HOLD</name>
+              <description>psram dq4 hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_DQ5_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x30</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_DQ5_DLI</name>
+              <description>psram dq5 dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ5_DLC</name>
+              <description>psram dq5 dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ5_HYS</name>
+              <description>psram dq5 sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ5_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ5_WPU</name>
+              <description>psram dq5 wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ5_WPD</name>
+              <description>psram dq5 wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ5_DRV</name>
+              <description>psram dq5 drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ5_HOLD</name>
+              <description>psram dq5 hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_DQ6_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x34</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_DQ6_DLI</name>
+              <description>psram dq6 dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ6_DLC</name>
+              <description>psram dq6 dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ6_HYS</name>
+              <description>psram dq6 sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ6_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ6_WPU</name>
+              <description>psram dq6 wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ6_WPD</name>
+              <description>psram dq6 wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ6_DRV</name>
+              <description>psram dq6 drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ6_HOLD</name>
+              <description>psram dq6 hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_DQ7_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x38</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_DQ7_DLI</name>
+              <description>psram dq7 dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ7_DLC</name>
+              <description>psram dq7 dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ7_HYS</name>
+              <description>psram dq7 sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ7_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ7_WPU</name>
+              <description>psram dq7 wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ7_WPD</name>
+              <description>psram dq7 wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ7_DRV</name>
+              <description>psram dq7 drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ7_HOLD</name>
+              <description>psram dq7 hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_DQS_0_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x3C</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00020000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_DQS_0_XPD</name>
+              <description>psram xpd dqs0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_0_PHASE</name>
+              <description>psram dqs0 phase</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_0_DLI</name>
+              <description>psram dqs0 dli</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_0_DELAY_90</name>
+              <description>psram dqs0 delay 90</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_0_HYS</name>
+              <description>psram dqs0 sl</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_0_IE</name>
+              <description>Reserved</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_0_WPU</name>
+              <description>psram dqs0 wpu</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_0_WPD</name>
+              <description>psram dqs0 wpd</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_0_DRV</name>
+              <description>psram dqs0 drv</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_0_DELAY_270</name>
+              <description>psram dqs0 delay 270</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_HOLD</name>
+              <description>psram dqs hold</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_CK_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x40</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_CK_DLI</name>
+              <description>psram ck dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_CK_DLC</name>
+              <description>psram ck dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_CK_HYS</name>
+              <description>psram ck sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_CK_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_CK_WPU</name>
+              <description>psram ck wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_CK_WPD</name>
+              <description>psram ck wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_CK_DRV</name>
+              <description>psram ck drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_CK_HOLD</name>
+              <description>psram ck hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_CS_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x44</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_CS_DLI</name>
+              <description>psram cs dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_CS_DLC</name>
+              <description>psram cs dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_CS_HYS</name>
+              <description>psram cs sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_CS_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_CS_WPU</name>
+              <description>psram cs wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_CS_WPD</name>
+              <description>psram cs wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_CS_DRV</name>
+              <description>psram cs drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_CS_HOLD</name>
+              <description>psram cs hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_DQ8_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x48</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_DQ8_DLI</name>
+              <description>psram dq8 dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ8_DLC</name>
+              <description>psram dq8 dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ8_HYS</name>
+              <description>psram dq8 sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ8_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ8_WPU</name>
+              <description>psram dq8 wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ8_WPD</name>
+              <description>psram dq8 wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ8_DRV</name>
+              <description>psram dq8 drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ8_HOLD</name>
+              <description>psram dq8 hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_DQ9_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x4c</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_DQ9_DLI</name>
+              <description>psram dq9 dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ9_DLC</name>
+              <description>psram dq9 dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ9_HYS</name>
+              <description>psram dq9 sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ9_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ9_WPU</name>
+              <description>psram dq9 wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ9_WPD</name>
+              <description>psram dq9 wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ9_DRV</name>
+              <description>psram dq9 drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ9_HOLD</name>
+              <description>psram dq9 hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_DQ10_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x50</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_DQ10_DLI</name>
+              <description>psram dq10 dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ10_DLC</name>
+              <description>psram dq10 dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ10_HYS</name>
+              <description>psram dq10 sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ10_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ10_WPU</name>
+              <description>psram dq10 wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ10_WPD</name>
+              <description>psram dq10 wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ10_DRV</name>
+              <description>psram dq10 drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ10_HOLD</name>
+              <description>psram dq10 hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_DQ11_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x54</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_DQ11_DLI</name>
+              <description>psram dq11 dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ11_DLC</name>
+              <description>psram dq11 dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ11_HYS</name>
+              <description>psram dq11 sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ11_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ11_WPU</name>
+              <description>psram dq11 wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ11_WPD</name>
+              <description>psram dq11 wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ11_DRV</name>
+              <description>psram dq11 drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ11_HOLD</name>
+              <description>psram dq11 hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_DQ12_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x58</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_DQ12_DLI</name>
+              <description>psram dq12 dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ12_DLC</name>
+              <description>psram dq12 dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ12_HYS</name>
+              <description>psram dq12 sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ12_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ12_WPU</name>
+              <description>psram dq12 wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ12_WPD</name>
+              <description>psram dq12 wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ12_DRV</name>
+              <description>psram dq12 drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ12_HOLD</name>
+              <description>psram dq12 hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_DQ13_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x5c</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_DQ13_DLI</name>
+              <description>psram dq13 dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ13_DLC</name>
+              <description>psram dq13 dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ13_HYS</name>
+              <description>psram dq13 sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ13_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ13_WPU</name>
+              <description>psram dq13 wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ13_WPD</name>
+              <description>psram dq13 wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ13_DRV</name>
+              <description>psram dq13 drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ13_HOLD</name>
+              <description>psram dq13 hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_DQ14_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x60</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_DQ14_DLI</name>
+              <description>psram dq14 dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ14_DLC</name>
+              <description>psram dq14 dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ14_HYS</name>
+              <description>psram dq14 sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ14_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ14_WPU</name>
+              <description>psram dq14 wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ14_WPD</name>
+              <description>psram dq14 wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ14_DRV</name>
+              <description>psram dq14 drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ14_HOLD</name>
+              <description>psram dq14 hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_DQ15_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x64</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00004000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_DQ15_DLI</name>
+              <description>psram dq15 dli</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ15_DLC</name>
+              <description>psram dq15 dlc</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ15_HYS</name>
+              <description>psram dq15 sl</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ15_IE</name>
+              <description>Reserved</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ15_WPU</name>
+              <description>psram dq15 wpu</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ15_WPD</name>
+              <description>psram dq15 wpd</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ15_DRV</name>
+              <description>psram dq15 drv</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQ15_HOLD</name>
+              <description>psram dq15 hold</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PSRAM_DQS_1_PIN0</name>
+          <description>IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG</description>
+          <addressOffset>0x68</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00020000</resetValue>
+          <fields>
+            <field>
+              <name>REG_PSRAM_DQS_1_XPD</name>
+              <description>psram xpd dqs1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_1_PHASE</name>
+              <description>psram dqs1 phase</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_1_DLI</name>
+              <description>psram dqs1 dli</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_1_DELAY_90</name>
+              <description>psram dqs1 delay 90</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_1_HYS</name>
+              <description>psram dqs1 sl</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_1_IE</name>
+              <description>Reserved</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_1_WPU</name>
+              <description>psram dqs1 wpu</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_1_WPD</name>
+              <description>psram dqs1 wpd</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_1_DRV</name>
+              <description>psram dqs1 drv</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_1_DELAY_270</name>
+              <description>psram dqs1 delay 270</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REG_PSRAM_DQS_HOLD</name>
+              <description>psram dqs hold</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
       <name>INTERRUPT_CORE0</name>
       <description>Interrupt Controller (Core 0)</description>
       <groupName>CORE0</groupName>
