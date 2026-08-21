@@ -546,7 +546,15 @@ fn format_file(rustfmt: &Path, file: &Path) -> Result<()> {
 fn run_rustfmt(rustfmt: &Path, file: &Path) -> Result<()> {
     let mut command = Command::new(rustfmt);
     command
-        .args(["--edition", "2021", "--unstable-features"])
+        // `--skip-children` is essential here: without it rustfmt also rewrites every
+        // module reachable from `file`, so the parallel run in `format` would have
+        // several processes writing the same file at once and occasionally truncate it.
+        .args([
+            "--edition",
+            "2021",
+            "--unstable-features",
+            "--skip-children",
+        ])
         .arg(file);
 
     let rendered = format_command(&command);
