@@ -1169,24 +1169,24 @@ impl core::fmt::Debug for PAU {
 }
 #[doc = "PAU Peripheral"]
 pub mod pau;
-#[doc = "PCNT0 Peripheral"]
-pub type PCNT0 = crate::Periph<pcnt0::RegisterBlock, 0x2038_9000>;
-impl core::fmt::Debug for PCNT0 {
+#[doc = "Pulse Count Controller"]
+pub type PCNT = crate::Periph<pcnt::RegisterBlock, 0x2038_9000>;
+impl core::fmt::Debug for PCNT {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("PCNT0").finish()
+        f.debug_struct("PCNT").finish()
     }
 }
-#[doc = "PCNT0 Peripheral"]
-pub mod pcnt0;
-#[doc = "PCNT1 Peripheral"]
-pub type PCNT1 = crate::Periph<pcnt0::RegisterBlock, 0x2039_d000>;
+#[doc = "Pulse Count Controller"]
+pub mod pcnt;
+#[doc = "Pulse Count Controller"]
+pub type PCNT1 = crate::Periph<pcnt::RegisterBlock, 0x2039_d000>;
 impl core::fmt::Debug for PCNT1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PCNT1").finish()
     }
 }
-#[doc = "PCNT1 Peripheral"]
-pub use self::pcnt0 as pcnt1;
+#[doc = "Pulse Count Controller"]
+pub use self::pcnt as pcnt1;
 #[doc = "PMU Peripheral"]
 pub type PMU = crate::Periph<pmu::RegisterBlock, 0x2070_4000>;
 impl core::fmt::Debug for PMU {
