@@ -1225,20 +1225,20 @@ impl core::fmt::Debug for USB_WRAP {
 #[doc = "USB_WRAP Peripheral"]
 pub mod usb_wrap;
 #[doc = "Ethernet DMA configuration and control registers"]
-pub type EMAC_DMA = crate::Periph<emac_dma::RegisterBlock, 0x5009_9000>;
-impl core::fmt::Debug for EMAC_DMA {
+pub type GMAC_DMA = crate::Periph<gmac_dma::RegisterBlock, 0x5009_9000>;
+impl core::fmt::Debug for GMAC_DMA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("EMAC_DMA").finish()
+        f.debug_struct("GMAC_DMA").finish()
     }
 }
 #[doc = "Ethernet DMA configuration and control registers"]
-pub mod emac_dma;
+pub mod gmac_dma;
 #[doc = "Ethernet MAC configuration and control registers"]
-pub type EMAC_MAC = crate::Periph<emac_mac::RegisterBlock, 0x5009_8000>;
-impl core::fmt::Debug for EMAC_MAC {
+pub type GMAC = crate::Periph<gmac::RegisterBlock, 0x5009_8000>;
+impl core::fmt::Debug for GMAC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("EMAC_MAC").finish()
+        f.debug_struct("GMAC").finish()
     }
 }
 #[doc = "Ethernet MAC configuration and control registers"]
-pub mod emac_mac;
+pub mod gmac;

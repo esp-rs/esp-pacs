@@ -473,14 +473,14 @@ impl core::fmt::Debug for EFUSE {
 #[doc = "eFuse Controller"]
 pub mod efuse;
 #[doc = "Ethernet DMA configuration and control registers"]
-pub type EMAC_DMA = crate::Periph<emac_dma::RegisterBlock, 0x3ff6_9000>;
-impl core::fmt::Debug for EMAC_DMA {
+pub type GMAC_DMA = crate::Periph<gmac_dma::RegisterBlock, 0x3ff6_9000>;
+impl core::fmt::Debug for GMAC_DMA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("EMAC_DMA").finish()
+        f.debug_struct("GMAC_DMA").finish()
     }
 }
 #[doc = "Ethernet DMA configuration and control registers"]
-pub mod emac_dma;
+pub mod gmac_dma;
 #[doc = "Ethernet Clock, PHY type, and SRAM configuration registers"]
 pub type EMAC_EXT = crate::Periph<emac_ext::RegisterBlock, 0x3ff6_9800>;
 impl core::fmt::Debug for EMAC_EXT {
@@ -491,14 +491,14 @@ impl core::fmt::Debug for EMAC_EXT {
 #[doc = "Ethernet Clock, PHY type, and SRAM configuration registers"]
 pub mod emac_ext;
 #[doc = "Ethernet MAC configuration and control registers"]
-pub type EMAC_MAC = crate::Periph<emac_mac::RegisterBlock, 0x3ff6_a000>;
-impl core::fmt::Debug for EMAC_MAC {
+pub type GMAC = crate::Periph<gmac::RegisterBlock, 0x3ff6_a000>;
+impl core::fmt::Debug for GMAC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("EMAC_MAC").finish()
+        f.debug_struct("GMAC").finish()
     }
 }
 #[doc = "Ethernet MAC configuration and control registers"]
-pub mod emac_mac;
+pub mod gmac;
 #[doc = "FLASH_ENCRYPTION Peripheral"]
 pub type FLASH_ENCRYPTION = crate::Periph<flash_encryption::RegisterBlock, 0x3ff4_6000>;
 impl core::fmt::Debug for FLASH_ENCRYPTION {
