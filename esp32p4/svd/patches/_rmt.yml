@@ -1,0 +1,180 @@
+# Align ESP32-P4 RMT with the S3 PAC API used by the HAL driver.
+# Missing RX DATA / CONF0 / STATUS registers are present in esp-idf
+# components/soc/esp32p4/register/hw_ver{1,3}/soc/rmt_reg.h.
+
+RMT:
+  _modify:
+    "CH%sDATA":
+      dim: 8
+      description: The read and write data register for CHANNEL%s by apb fifo access.
+    "CH%sCONF0":
+      name: CH%s_TX_CONF0
+    "CH%sCONF1":
+      dimIndex: 4-7
+      name: CH%s_RX_CONF1
+    "CH%sSTATUS":
+      name: CH%s_TX_STATUS
+
+  _add:
+    "CH%s_RX_CONF0":
+      description: Channel %s configure register 0
+      addressOffset: 0x30
+      size: 32
+      dim: 4
+      dimIncrement: 8
+      dimIndex: 4-7
+      resetValue: 0x317fff02
+      fields:
+        DIV_CNT:
+          description: This register is used to configure the divider for clock of CHANNEL%s.
+          bitOffset: 0
+          bitWidth: 8
+          access: read-write
+        IDLE_THRES:
+          description: When no edge is detected on the input signal and continuous clock cycles is longer than this register value, received process is finished.
+          bitOffset: 8
+          bitWidth: 15
+          access: read-write
+        MEM_SIZE:
+          description: This register is used to configure the maximum size of memory allocated to CHANNEL%s.
+          bitOffset: 24
+          bitWidth: 4
+          access: read-write
+        CARRIER_EN:
+          description: This is the carrier modulation enable-control bit for CHANNEL%s.
+          bitOffset: 28
+          bitWidth: 1
+          access: read-write
+        CARRIER_OUT_LV:
+          description: This bit is used to configure the position of carrier wave for CHANNEL%s.
+          bitOffset: 29
+          bitWidth: 1
+          access: read-write
+    "CH%s_RX_STATUS":
+      description: Channel %s status register
+      addressOffset: 0x60
+      size: 32
+      dim: 4
+      dimIncrement: 4
+      dimIndex: 4-7
+      access: read-only
+      resetValue: 0x600c0
+      fields:
+        MEM_WADDR_EX:
+          description: This register records the memory address offset when receiver of CHANNEL%s is using the RAM.
+          bitOffset: 0
+          bitWidth: 10
+          access: read-only
+        APB_MEM_RADDR:
+          description: This register records the memory address offset when reads RAM over APB bus.
+          bitOffset: 11
+          bitWidth: 10
+          access: read-only
+        STATE:
+          description: This register records the FSM status of CHANNEL%s.
+          bitOffset: 22
+          bitWidth: 3
+          access: read-only
+        MEM_OWNER_ERR:
+          description: This status bit will be set when the ownership of memory block is wrong.
+          bitOffset: 25
+          bitWidth: 1
+          access: read-only
+        MEM_FULL:
+          description: This status bit will be set if the receiver receives more data than the memory size.
+          bitOffset: 26
+          bitWidth: 1
+          access: read-only
+        APB_MEM_RD_ERR:
+          description: This status bit will be set if the offset address out of memory size when reads via APB bus.
+          bitOffset: 27
+          bitWidth: 1
+          access: read-only
+
+  "*":
+    _strip_end: "_CH"
+
+  "CH%sDATA":
+    _modify:
+      CHDATA:
+        name: DATA
+
+  "CH*CONF0":
+    _strip_end:
+      - "_CH0"
+      - "_CH4"
+  "CH*CONF1":
+    _strip_end: "_CH4"
+
+  "CH*STATUS":
+    _strip_end:
+      - "_CH0"
+      - "_CH4"
+
+  "CH*CARRIER_DUTY":
+    _strip_end: "_CH"
+
+  "CH*_RX_CARRIER_RM":
+    _strip_end: "_CH"
+
+  "CH*_TX_LIM":
+    _strip_end: "_CH"
+
+  "CH*_RX_LIM":
+    _strip_end: "_CH4"
+
+  INT_RAW:
+    _strip_end: "_INT_RAW"
+    _array:
+      "CH?_TX_END": {}
+      "CH[0123]_ERR":
+        name: CH%s_TX_ERR
+      "CH?_TX_THR_EVENT": {}
+      "CH?_TX_LOOP": {}
+      "CH?_RX_END": {}
+      "CH[4567]_ERR":
+        name: CH%s_RX_ERR
+      "CH?_RX_THR_EVENT": {}
+
+  INT_ST:
+    _strip_end: "_INT_ST"
+    _array:
+      "CH?_TX_END": {}
+      "CH[0123]_ERR":
+        name: CH%s_TX_ERR
+      "CH?_TX_THR_EVENT": {}
+      "CH?_TX_LOOP": {}
+      "CH?_RX_END": {}
+      "CH[4567]_ERR":
+        name: CH%s_RX_ERR
+      "CH?_RX_THR_EVENT": {}
+
+  INT_ENA:
+    _strip_end: "_INT_ENA"
+    _array:
+      "CH?_TX_END": {}
+      "CH[0123]_ERR":
+        name: CH%s_TX_ERR
+      "CH?_TX_THR_EVENT": {}
+      "CH?_TX_LOOP": {}
+      "CH?_RX_END": {}
+      "CH[4567]_ERR":
+        name: CH%s_RX_ERR
+      "CH?_RX_THR_EVENT": {}
+
+  INT_CLR:
+    _strip_end: "_INT_CLR"
+    _array:
+      "CH?_TX_END": {}
+      "CH[0123]_ERR":
+        name: CH%s_TX_ERR
+      "CH?_TX_THR_EVENT": {}
+      "CH?_TX_LOOP": {}
+      "CH?_RX_END": {}
+      "CH[4567]_ERR":
+        name: CH%s_RX_ERR
+      "CH?_RX_THR_EVENT": {}
+
+  REF_CNT_RST:
+    _array:
+      "CH?": {}
