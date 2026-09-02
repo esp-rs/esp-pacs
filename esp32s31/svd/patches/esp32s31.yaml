@@ -28,6 +28,7 @@ _include:
   - "_aes.yml"
   - "_rsa.yml"
   - "_sha.yml"
+  - "_rmt.yml"
   - "../../../common_patches/ieee802154.yaml"
 
 _modify:
