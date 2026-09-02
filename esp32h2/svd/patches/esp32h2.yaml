@@ -16,6 +16,7 @@ _include:
   - "_interrupt.yml"
   - "_ledc.yml"
   - "_lp_wdt.yml"
+  - "_parl_io.yml"
   - "_pcnt.yml"
   - "_pcr.yml"
   - "_pmu.yml"
