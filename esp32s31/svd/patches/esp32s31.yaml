@@ -29,6 +29,7 @@ _include:
   - "_rsa.yml"
   - "_sha.yml"
   - "_rmt.yml"
+  - "_pcnt.yml"
   - "../../../common_patches/ieee802154.yaml"
 
 _modify:
@@ -46,6 +47,12 @@ _modify:
     groupName: ASSIST_DEBUG
   SPI?:
     groupName: SPI
+  PCNT0:
+    name: PCNT
+    description: Pulse Count Controller
+  PCNT1:
+    derivedFrom: PCNT
+    description: Pulse Count Controller
 
 ASSIST_DEBUG:
   _include: "_assist_debug.yml"
