@@ -6,6 +6,7 @@ _include:
   - ../../../common_patches/twai.yaml
   - "_aes.yml"
   - "_assist_debug.yml"
+  - "_cache.yml"
   - "_date.yml"
   - "_dma.yml"
   - "_ds.yml"
@@ -961,6 +962,9 @@ INTPRI:
 
 PCR:
   _include: ../../../common_patches/pcr.yaml
+
+SPI1:
+  _include: ../../../common_patches/spi1_mspi_shared.yaml
 
 MCPWM0:
   _include: ../../../common_patches/mcpwm_collect.yaml

@@ -764,3 +764,12 @@ impl core::fmt::Debug for USB_DEVICE {
 }
 #[doc = "Full-speed USB Serial/JTAG Controller"]
 pub mod usb_device;
+#[doc = "L1 Cache Controller"]
+pub type CACHE = crate::Periph<cache::RegisterBlock, 0x600c_8000>;
+impl core::fmt::Debug for CACHE {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE").finish()
+    }
+}
+#[doc = "L1 Cache Controller"]
+pub mod cache;

@@ -1,0 +1,95 @@
+_derive:
+  SPI_SMEM_DDR:
+    _from: SPI0.SPI_SMEM_DDR
+    addressOffset: 0xD8
+    description: MSPI external RAM DDR mode control register
+
+  SPI_FMEM_PMS%s_ATTR:
+    _from: SPI0.SPI_FMEM_PMS%s_ATTR
+    addressOffset: 0x100
+    dim: 4
+    dimIncrement: 0x4
+  SPI_FMEM_PMS%s_ADDR:
+    _from: SPI0.SPI_FMEM_PMS%s_ADDR
+    addressOffset: 0x110
+    dim: 4
+    dimIncrement: 0x4
+  SPI_FMEM_PMS%s_SIZE:
+    _from: SPI0.SPI_FMEM_PMS%s_SIZE
+    addressOffset: 0x120
+    dim: 4
+    dimIncrement: 0x4
+  SPI_SMEM_PMS%s_ATTR:
+    _from: SPI0.SPI_SMEM_PMS%s_ATTR
+    addressOffset: 0x130
+    dim: 4
+    dimIncrement: 0x4
+  SPI_SMEM_PMS%s_ADDR:
+    _from: SPI0.SPI_SMEM_PMS%s_ADDR
+    addressOffset: 0x140
+    dim: 4
+    dimIncrement: 0x4
+  SPI_SMEM_PMS%s_SIZE:
+    _from: SPI0.SPI_SMEM_PMS%s_SIZE
+    addressOffset: 0x150
+    dim: 4
+    dimIncrement: 0x4
+
+  PMS_REJECT:
+    _from: SPI0.PMS_REJECT
+    addressOffset: 0x164
+  ECC_CTRL:
+    _from: SPI0.ECC_CTRL
+    addressOffset: 0x168
+  ECC_ERR_ADDR:
+    _from: SPI0.ECC_ERR_ADDR
+    addressOffset: 0x16C
+  AXI_ERR_ADDR:
+    _from: SPI0.AXI_ERR_ADDR
+    addressOffset: 0x170
+    description: MSPI AXI request error address
+  SPI_SMEM_ECC_CTRL:
+    _from: SPI0.SPI_SMEM_ECC_CTRL
+    addressOffset: 0x174
+
+  DIN_MODE:
+    _from: SPI0.DIN_MODE
+    addressOffset: 0x184
+  DIN_NUM:
+    _from: SPI0.DIN_NUM
+    addressOffset: 0x188
+  DOUT_MODE:
+    _from: SPI0.DOUT_MODE
+    addressOffset: 0x18C
+  SPI_SMEM_TIMING_CALI:
+    _from: SPI0.SPI_SMEM_TIMING_CALI
+    addressOffset: 0x190
+  SPI_SMEM_DIN_MODE:
+    _from: SPI0.SPI_SMEM_DIN_MODE
+    addressOffset: 0x194
+  SPI_SMEM_DIN_NUM:
+    _from: SPI0.SPI_SMEM_DIN_NUM
+    addressOffset: 0x198
+  SPI_SMEM_DOUT_MODE:
+    _from: SPI0.SPI_SMEM_DOUT_MODE
+    addressOffset: 0x19C
+  SPI_SMEM_AC:
+    _from: SPI0.SPI_SMEM_AC
+    addressOffset: 0x1A0
+
+  MMU_ITEM_CONTENT:
+    _from: SPI0.MMU_ITEM_CONTENT
+    addressOffset: 0x37C
+  MMU_ITEM_INDEX:
+    _from: SPI0.MMU_ITEM_INDEX
+    addressOffset: 0x380
+  MMU_POWER_CTRL:
+    _from: SPI0.MMU_POWER_CTRL
+    addressOffset: 0x384
+
+  REGISTERRND_ECO_HIGH:
+    _from: SPI0.REGISTERRND_ECO_HIGH
+    addressOffset: 0x3F0
+  REGISTERRND_ECO_LOW:
+    _from: SPI0.REGISTERRND_ECO_LOW
+    addressOffset: 0x3F4
