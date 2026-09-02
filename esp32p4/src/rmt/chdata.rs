@@ -1,19 +1,19 @@
 #[doc = "Register `CH%sDATA` reader"]
 pub type R = crate::R<CHDATA_SPEC>;
-#[doc = "Field `CHDATA` reader - Read and write data for channel %s via APB FIFO."]
-pub type CHDATA_R = crate::FieldReader<u32>;
+#[doc = "Field `DATA` reader - Read and write data for channel %s via APB FIFO."]
+pub type DATA_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Read and write data for channel %s via APB FIFO."]
     #[inline(always)]
-    pub fn chdata(&self) -> CHDATA_R {
-        CHDATA_R::new(self.bits)
+    pub fn data(&self) -> DATA_R {
+        DATA_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHDATA")
-            .field("chdata", &self.chdata())
+            .field("data", &self.data())
             .finish()
     }
 }
