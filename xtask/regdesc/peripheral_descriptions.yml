@@ -21,12 +21,12 @@ peripheral_descriptions:
     description: ECDSA (Elliptic Curve Digital Signature Algorithm) Accelerator
   - peripheral: EFUSE
     description: eFuse Controller
-  - peripheral: EMAC_DMA
-    description: "Ethernet DMA configuration and control registers"
   - peripheral: EMAC_EXT
     description: "Ethernet Clock, PHY type, and SRAM configuration registers"
-  - peripheral: EMAC_MAC
+  - peripheral: GMAC
     description: "Ethernet MAC configuration and control registers"
+  - peripheral: GMAC_DMA
+    description: "Ethernet DMA configuration and control registers"
   - peripheral: EXTMEM
     description: External Memory
   - peripheral: GPIO

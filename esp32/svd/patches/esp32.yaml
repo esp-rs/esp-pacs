@@ -20,6 +20,14 @@ _include:
   - "btdm.yml"
   - "_mmu_table.yml"
 
+_modify:
+  EMAC_MAC:
+    name: GMAC
+    groupName: GMAC
+  EMAC_DMA:
+    name: GMAC_DMA
+    groupName: GMAC
+
 RNG:
   _modify:
     DATA:

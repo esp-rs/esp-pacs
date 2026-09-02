@@ -42,6 +42,12 @@ _include:
   - "_collect.yml"
 
 _modify:
+  EMAC_MAC:
+    name: GMAC
+    groupName: GMAC
+  EMAC_DMA:
+    name: GMAC_DMA
+    groupName: GMAC
   SPI?:
     groupName: SPI
   SPI3:
