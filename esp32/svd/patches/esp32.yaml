@@ -21,6 +21,9 @@ _include:
   - "_mmu_table.yml"
 
 _modify:
+  MCPWM0:
+    groupName: MCPWM
+    description: Motor Control Pulse Width Modulator (MCPWM) Peripheral
   EMAC_MAC:
     name: GMAC
     groupName: GMAC
@@ -180,7 +183,9 @@ UHCI0:
     ESC_CONF?: {}
 
 MCPWM0:
-  _include: ../../../common_patches/mcpwm_collect.yaml
+  _include:
+    - ../../../common_patches/mcpwm_collect.yaml
+    - ../../../common_patches/mcpwm.yaml
   INT_RAW:
     _modify:
       "*":

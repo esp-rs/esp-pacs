@@ -632,7 +632,35 @@ PCNT:
   _include: pcnt.yaml
 
 MCPWM0:
-  _include: ../../../common_patches/int_strip.yaml
+  _expand_array:
+    TIMER%s_CFG0: {}
+    TIMER%s_CFG1: {}
+    TIMER%s_SYNC: {}
+    TIMER%s_STATUS: {}
+
+    GEN%s_STMP_CFG: {}
+    GEN%s_TSTMP_A: {}
+    GEN%s_TSTMP_B: {}
+    GEN%s_CFG0: {}
+    GEN%s_FORCE: {}
+    GEN%s_A: {}
+    GEN%s_B: {}
+    DT%s_CFG: {}
+    DT%s_FED_CFG: {}
+    DT%s_RED_CFG: {}
+    CARRIER%s_CFG: {}
+    FH%s_CFG0: {}
+    FH%s_CFG1: {}
+    FH%s_STATUS: {}
+    
+    CAP_CH%s_CFG: {}
+    CAP_CH%s: {}
+    OP%s_TSTMP_E1: {}
+    OP%s_TSTMP_E2: {}
+
+  _include:
+    - ../../../common_patches/mcpwm_collect.yaml
+    - ../../../common_patches/mcpwm.yaml
 
 SOC_ETM:
   CH_ENA_AD?:
@@ -763,6 +791,10 @@ _modify:
 
   USB_DEVICE:
     groupName: USB_DEVICE
+
+  MCPWM0:
+    groupName: MCPWM
+    description: Motor Control Pulse Width Modulator (MCPWM) Peripheral
 
 LP_AON:
   # Make sure the STORE registers are the same type

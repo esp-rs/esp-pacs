@@ -38,6 +38,9 @@ _modify:
     groupName: SPI
   SLCHOST:
     baseAddress: 0x60018000
+  MCPWM0:
+    groupName: MCPWM
+    description: Motor Control Pulse Width Modulator (MCPWM) Peripheral
 
 AES:
   _include: ../../../common_patches/aes.yaml
@@ -187,7 +190,9 @@ SPI1:
   _include: ../../../common_patches/spi_w.yaml
 
 MCPWM0:
-  _include: ../../../common_patches/mcpwm_collect.yaml
+  _include:
+    - ../../../common_patches/mcpwm_collect.yaml
+    - ../../../common_patches/mcpwm.yaml
 
 SOC_ETM:
   _include: ../../../common_patches/etm_collect.yaml

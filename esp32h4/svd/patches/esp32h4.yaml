@@ -49,7 +49,10 @@ MCPWM0:
     CAP_CH%s: {}
     OP%s_TSTMP_E1: {}
     OP%s_TSTMP_E2: {}
-  _include: ../../../common_patches/mcpwm_collect.yaml
+  
+  _include:
+    - ../../../common_patches/mcpwm_collect.yaml
+    - ../../../common_patches/mcpwm.yaml
 
 SOC_ETM:
   _include: "_etm_collect.yml"
@@ -119,6 +122,11 @@ RNG:
   _modify:
     DATA:
       access: read-only
+
+_modify:
+  MCPWM0:
+    groupName: MCPWM
+    description: Motor Control Pulse Width Modulator (MCPWM) Peripheral
 
 _add:
   INTERRUPT_CORE1:

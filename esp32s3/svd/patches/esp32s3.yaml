@@ -497,15 +497,9 @@ MCPWM0:
       TZ?_STATUS:
         _strip: TZ?_
 
-  _array:
-    CAP_CH?_CFG:
-      description: Capture channel %s configuration and enable
-      _strip: CAP?_
-    CAP_CH?:
-      description: Value of last capture on channel %s
-      _strip: CAP?_
-
-  _include: ../../../common_patches/int_strip.yaml
+  _include: 
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/mcpwm.yaml
 
 USB_FS:
   _include: ../../../common_patches/usb0.yaml
