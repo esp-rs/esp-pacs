@@ -341,24 +341,15 @@ impl core::fmt::Debug for CLINT {
 }
 #[doc = "Core Local Interrupts"]
 pub mod clint;
-#[doc = "PLIC Peripheral"]
-pub type PLIC_MX = crate::Periph<plic_mx::RegisterBlock, 0x2000_1000>;
-impl core::fmt::Debug for PLIC_MX {
+#[doc = "Core Local Interrupt Controller"]
+pub type CLIC = crate::Periph<clic::RegisterBlock, 0x2080_0000>;
+impl core::fmt::Debug for CLIC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("PLIC_MX").finish()
+        f.debug_struct("CLIC").finish()
     }
 }
-#[doc = "PLIC Peripheral"]
-pub mod plic_mx;
-#[doc = "PLIC Peripheral"]
-pub type PLIC_UX = crate::Periph<plic_ux::RegisterBlock, 0x2000_1400>;
-impl core::fmt::Debug for PLIC_UX {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("PLIC_UX").finish()
-    }
-}
-#[doc = "PLIC Peripheral"]
-pub mod plic_ux;
+#[doc = "Core Local Interrupt Controller"]
+pub mod clic;
 #[doc = "AES (Advanced Encryption Standard) Accelerator"]
 pub type AES = crate::Periph<aes::RegisterBlock, 0x600a_6000>;
 impl core::fmt::Debug for AES {

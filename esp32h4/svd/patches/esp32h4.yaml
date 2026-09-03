@@ -1,7 +1,7 @@
 _svd: ../esp32h4.base.svd
 _include:
   - ../../../common_patches/clint.yaml
-  - ../../../common_patches/plic.yaml
+  - "_clic.yml"
   - "_aes.yml"
   - "_date.yml"
   - "_dma.yml"
