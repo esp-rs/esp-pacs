@@ -719,14 +719,14 @@ impl core::fmt::Debug for EFUSE {
 }
 #[doc = "eFuse Controller"]
 pub mod efuse;
-#[doc = "GMAC Peripheral"]
+#[doc = "Ethernet MAC"]
 pub type GMAC = crate::Periph<gmac::RegisterBlock, 0x2035_0000>;
 impl core::fmt::Debug for GMAC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GMAC").finish()
     }
 }
-#[doc = "GMAC Peripheral"]
+#[doc = "Ethernet MAC"]
 pub mod gmac;
 #[doc = "General Purpose Input/Output"]
 pub type GPIO = crate::Periph<gpio::RegisterBlock, 0x2058_3000>;
@@ -1556,3 +1556,12 @@ impl core::fmt::Debug for ZERO_DET {
 }
 #[doc = "ZERO_DET Peripheral"]
 pub mod zero_det;
+#[doc = "Ethernet DMA"]
+pub type GMAC_DMA = crate::Periph<gmac_dma::RegisterBlock, 0x2035_1000>;
+impl core::fmt::Debug for GMAC_DMA {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GMAC_DMA").finish()
+    }
+}
+#[doc = "Ethernet DMA"]
+pub mod gmac_dma;

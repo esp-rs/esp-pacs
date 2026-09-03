@@ -1,4 +1,4 @@
-EMAC_DMA:
+GMAC_DMA:
   _modify:
     DMABUSMODE:
       description: "Bus mode configuration"
@@ -25,22 +25,25 @@ EMAC_DMA:
     DMARXCURRADDR_BUF:
       access: read-only
 
-EMAC_MAC:
+GMAC:
   _modify:
     GMACCONFIG:
-      name: EMACCONFIG
+      name: CONFIG
       description: "MAC configuration"
     GMACFF:
-      name: "EMACFF"
+      name: FF
       description: "Frame filter settings"
     EMACGMIIADDR:
+      name: GMIIADDR
       description: "PHY configuration access"
     EMACMIIDATA:
+      name: MIIDATA
       description: "PHY data read write"
     GMACFC:
-      name: "EMACFC"
+      name: FC
       description: "Frame flow control"
     EMACDEBUG:
+      name: DEBUG
       description: "Status debugging bits"
       access: read-only
     PMT_RWUFFR:
@@ -49,36 +52,64 @@ EMAC_MAC:
       description: "PMT Control and Status"
       access: read-only
     GMACLPI_CRS:
-      name: "EMACLPI_CRS"
+      name: LPI_CRS
       description: "LPI Control and Status"
       access: read-only
     GMACLPITIMERSCONTROL:
-      name: "EMACLPITIMERSCONTROL"
+      name: LPITIMERSCONTROL
       description: "LPI Timers Control"
       access: read-only
     EMACINTS:
+      name: INTS
       description: "Interrupt status"
       access: read-only
     EMACINTMASK:
+      name: INTMASK
       description: "Interrupt mask"
     EMACADDR0HIGH:
+      name: ADDR0HIGH
       description: "Upper 16 bits of the first 6-byte MAC address"
+    EMACADDR0LOW:
+      name: ADDR0LOW
     EMACADDR1HIGH:
+      name: ADDR1HIGH
       description: "Upper 16 bits of the second 6-byte MAC address"
+    EMACADDR1LOW:
+      name: ADDR1LOW
     EMACADDR2HIGH:
+      name: ADDR2HIGH
       description: "Upper 16 bits of the third 6-byte MAC address"
+    EMACADDR2LOW:
+      name: ADDR2LOW
     EMACADDR3HIGH:
+      name: ADDR3HIGH
       description: "Upper 16 bits of the fourth 6-byte MAC address"
+    EMACADDR3LOW:
+      name: ADDR3LOW
     EMACADDR4HIGH:
+      name: ADDR4HIGH
       description: "Upper 16 bits of the fifth 6-byte MAC address"
+    EMACADDR4LOW:
+      name: ADDR4LOW
     EMACADDR5HIGH:
+      name: ADDR5HIGH
       description: "Upper 16 bits of the sixth 6-byte MAC address"
+    EMACADDR5LOW:
+      name: ADDR5LOW
     EMACADDR6HIGH:
+      name: ADDR6HIGH
       description: "Upper 16 bits of the seventh 6-byte MAC address"
+    EMACADDR6LOW:
+      name: ADDR6LOW
     EMACADDR7HIGH:
+      name: ADDR7HIGH
       description: "Upper 16 bits of the eighth 6-byte MAC address"
+    EMACADDR7LOW:
+      name: ADDR7LOW
     EMACCSTATUS:
+      name: CSTATUS
       description: "Link communication status"
       access: read-only
     EMACWDOGTO:
+      name: WDOGTO
       description: "Watchdog timeout control"

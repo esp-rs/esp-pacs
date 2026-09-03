@@ -67,7 +67,7 @@ impl RegisterBlock {
     pub const fn debug(&self) -> &DEBUG {
         &self.debug
     }
-    #[doc = "0x28 - Remote Wake-Up Frame Filter Register"]
+    #[doc = "0x28 - The MSB (31st bit) must be zero.Bit j\\[30:0\\] is the byte mask. If Bit 1/2/3/4 (byte number) of the byte mask is set the CRC block processes the Filter 1/2/3/4 Offset + j of the incoming packet(PWKPTR is 0/1/2/3).RWKPTR is 0:Filter 0 Byte Mask .RWKPTR is 1:Filter 1 Byte Mask RWKPTR is 2:Filter 2 Byte Mask RWKPTR is 3:Filter 3 Byte Mask RWKPTR is 4:Bit 3/11/19/27 specifies the address type defining the destination address type of the pattern.When the bit is set the pattern applies to only multicast packets"]
     #[inline(always)]
     pub const fn pmt_rwuffr(&self) -> &PMT_RWUFFR {
         &self.pmt_rwuffr
@@ -102,7 +102,7 @@ impl RegisterBlock {
     pub const fn addr0high(&self) -> &ADDR0HIGH {
         &self.addr0high
     }
-    #[doc = "0x44 - Contains the lower 32 bits of the first MAC address"]
+    #[doc = "0x44 - This field contains the lower 32 bits of the first 6-byte MAC address. This is used by the MAC for filtering the received frames and inserting the MAC address in the Transmit Flow Control (Pause) Frames."]
     #[inline(always)]
     pub const fn addr0low(&self) -> &ADDR0LOW {
         &self.addr0low
@@ -112,7 +112,7 @@ impl RegisterBlock {
     pub const fn addr1high(&self) -> &ADDR1HIGH {
         &self.addr1high
     }
-    #[doc = "0x4c - Contains the lower 32 bits of the second MAC address This register is present only when Enable MAC Address1 is selected in coreConsultant _See Table 78_"]
+    #[doc = "0x4c - This field contains the lower 32 bits of the second 6-byte MAC address.The content of this field is undefined so the register needs to be configured after the initialization Process."]
     #[inline(always)]
     pub const fn addr1low(&self) -> &ADDR1LOW {
         &self.addr1low
@@ -122,7 +122,7 @@ impl RegisterBlock {
     pub const fn addr2high(&self) -> &ADDR2HIGH {
         &self.addr2high
     }
-    #[doc = "0x54 - Reserved"]
+    #[doc = "0x54 - This field contains the lower 32 bits of the third 6-byte MAC address. The content of this field is undefined so the register needs to be configured after the initialization process."]
     #[inline(always)]
     pub const fn addr2low(&self) -> &ADDR2LOW {
         &self.addr2low
@@ -132,7 +132,7 @@ impl RegisterBlock {
     pub const fn addr3high(&self) -> &ADDR3HIGH {
         &self.addr3high
     }
-    #[doc = "0x5c - Reserved"]
+    #[doc = "0x5c - This field contains the lower 32 bits of the fourth 6-byte MAC address.The content of this field is undefined so the register needs to be configured after the initialization Process."]
     #[inline(always)]
     pub const fn addr3low(&self) -> &ADDR3LOW {
         &self.addr3low
@@ -142,7 +142,7 @@ impl RegisterBlock {
     pub const fn addr4high(&self) -> &ADDR4HIGH {
         &self.addr4high
     }
-    #[doc = "0x64 - Reserved"]
+    #[doc = "0x64 - This field contains the lower 32 bits of the fifth 6-byte MAC address. The content of this field is undefined so the register needs to be configured after the initialization process."]
     #[inline(always)]
     pub const fn addr4low(&self) -> &ADDR4LOW {
         &self.addr4low
@@ -152,7 +152,7 @@ impl RegisterBlock {
     pub const fn addr5high(&self) -> &ADDR5HIGH {
         &self.addr5high
     }
-    #[doc = "0x6c - Reserved"]
+    #[doc = "0x6c - This field contains the lower 32 bits of the sixth 6-byte MAC address. The content of this field is undefined so the register needs to be configured after the initialization process."]
     #[inline(always)]
     pub const fn addr5low(&self) -> &ADDR5LOW {
         &self.addr5low
@@ -162,7 +162,7 @@ impl RegisterBlock {
     pub const fn addr6high(&self) -> &ADDR6HIGH {
         &self.addr6high
     }
-    #[doc = "0x74 - Reserved"]
+    #[doc = "0x74 - This field contains the lower 32 bits of the seventh 6-byte MAC address.The content of this field is undefined so the register needs to be configured after the initialization Process."]
     #[inline(always)]
     pub const fn addr6low(&self) -> &ADDR6LOW {
         &self.addr6low
@@ -172,7 +172,7 @@ impl RegisterBlock {
     pub const fn addr7high(&self) -> &ADDR7HIGH {
         &self.addr7high
     }
-    #[doc = "0x7c - Reserved"]
+    #[doc = "0x7c - This field contains the lower 32 bits of the eighth 6-byte MAC address.The content of this field is undefined so the register needs to be configured after the initialization Process."]
     #[inline(always)]
     pub const fn addr7low(&self) -> &ADDR7LOW {
         &self.addr7low
@@ -212,9 +212,9 @@ pub mod fc;
 pub type DEBUG = crate::Reg<debug::DEBUG_SPEC>;
 #[doc = "Status debugging bits"]
 pub mod debug;
-#[doc = "PMT_RWUFFR (r) register accessor: Remote Wake-Up Frame Filter Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pmt_rwuffr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pmt_rwuffr`] module"]
+#[doc = "PMT_RWUFFR (r) register accessor: The MSB (31st bit) must be zero.Bit j\\[30:0\\] is the byte mask. If Bit 1/2/3/4 (byte number) of the byte mask is set the CRC block processes the Filter 1/2/3/4 Offset + j of the incoming packet(PWKPTR is 0/1/2/3).RWKPTR is 0:Filter 0 Byte Mask .RWKPTR is 1:Filter 1 Byte Mask RWKPTR is 2:Filter 2 Byte Mask RWKPTR is 3:Filter 3 Byte Mask RWKPTR is 4:Bit 3/11/19/27 specifies the address type defining the destination address type of the pattern.When the bit is set the pattern applies to only multicast packets\n\nYou can [`read`](crate::Reg::read) this register and get [`pmt_rwuffr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pmt_rwuffr`] module"]
 pub type PMT_RWUFFR = crate::Reg<pmt_rwuffr::PMT_RWUFFR_SPEC>;
-#[doc = "Remote Wake-Up Frame Filter Register"]
+#[doc = "The MSB (31st bit) must be zero.Bit j\\[30:0\\] is the byte mask. If Bit 1/2/3/4 (byte number) of the byte mask is set the CRC block processes the Filter 1/2/3/4 Offset + j of the incoming packet(PWKPTR is 0/1/2/3).RWKPTR is 0:Filter 0 Byte Mask .RWKPTR is 1:Filter 1 Byte Mask RWKPTR is 2:Filter 2 Byte Mask RWKPTR is 3:Filter 3 Byte Mask RWKPTR is 4:Bit 3/11/19/27 specifies the address type defining the destination address type of the pattern.When the bit is set the pattern applies to only multicast packets"]
 pub mod pmt_rwuffr;
 #[doc = "PMT_CSR (r) register accessor: PMT Control and Status\n\nYou can [`read`](crate::Reg::read) this register and get [`pmt_csr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pmt_csr`] module"]
 pub type PMT_CSR = crate::Reg<pmt_csr::PMT_CSR_SPEC>;
@@ -240,65 +240,65 @@ pub mod intmask;
 pub type ADDR0HIGH = crate::Reg<addr0high::ADDR0HIGH_SPEC>;
 #[doc = "Upper 16 bits of the first 6-byte MAC address"]
 pub mod addr0high;
-#[doc = "ADDR0LOW (rw) register accessor: Contains the lower 32 bits of the first MAC address\n\nYou can [`read`](crate::Reg::read) this register and get [`addr0low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr0low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr0low`] module"]
+#[doc = "ADDR0LOW (rw) register accessor: This field contains the lower 32 bits of the first 6-byte MAC address. This is used by the MAC for filtering the received frames and inserting the MAC address in the Transmit Flow Control (Pause) Frames.\n\nYou can [`read`](crate::Reg::read) this register and get [`addr0low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr0low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr0low`] module"]
 pub type ADDR0LOW = crate::Reg<addr0low::ADDR0LOW_SPEC>;
-#[doc = "Contains the lower 32 bits of the first MAC address"]
+#[doc = "This field contains the lower 32 bits of the first 6-byte MAC address. This is used by the MAC for filtering the received frames and inserting the MAC address in the Transmit Flow Control (Pause) Frames."]
 pub mod addr0low;
 #[doc = "ADDR1HIGH (rw) register accessor: Upper 16 bits of the second 6-byte MAC address\n\nYou can [`read`](crate::Reg::read) this register and get [`addr1high::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr1high::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr1high`] module"]
 pub type ADDR1HIGH = crate::Reg<addr1high::ADDR1HIGH_SPEC>;
 #[doc = "Upper 16 bits of the second 6-byte MAC address"]
 pub mod addr1high;
-#[doc = "ADDR1LOW (rw) register accessor: Contains the lower 32 bits of the second MAC address This register is present only when Enable MAC Address1 is selected in coreConsultant _See Table 78_\n\nYou can [`read`](crate::Reg::read) this register and get [`addr1low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr1low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr1low`] module"]
+#[doc = "ADDR1LOW (rw) register accessor: This field contains the lower 32 bits of the second 6-byte MAC address.The content of this field is undefined so the register needs to be configured after the initialization Process.\n\nYou can [`read`](crate::Reg::read) this register and get [`addr1low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr1low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr1low`] module"]
 pub type ADDR1LOW = crate::Reg<addr1low::ADDR1LOW_SPEC>;
-#[doc = "Contains the lower 32 bits of the second MAC address This register is present only when Enable MAC Address1 is selected in coreConsultant _See Table 78_"]
+#[doc = "This field contains the lower 32 bits of the second 6-byte MAC address.The content of this field is undefined so the register needs to be configured after the initialization Process."]
 pub mod addr1low;
 #[doc = "ADDR2HIGH (rw) register accessor: Upper 16 bits of the third 6-byte MAC address\n\nYou can [`read`](crate::Reg::read) this register and get [`addr2high::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr2high::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr2high`] module"]
 pub type ADDR2HIGH = crate::Reg<addr2high::ADDR2HIGH_SPEC>;
 #[doc = "Upper 16 bits of the third 6-byte MAC address"]
 pub mod addr2high;
-#[doc = "ADDR2LOW (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`addr2low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr2low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr2low`] module"]
+#[doc = "ADDR2LOW (rw) register accessor: This field contains the lower 32 bits of the third 6-byte MAC address. The content of this field is undefined so the register needs to be configured after the initialization process.\n\nYou can [`read`](crate::Reg::read) this register and get [`addr2low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr2low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr2low`] module"]
 pub type ADDR2LOW = crate::Reg<addr2low::ADDR2LOW_SPEC>;
-#[doc = "Reserved"]
+#[doc = "This field contains the lower 32 bits of the third 6-byte MAC address. The content of this field is undefined so the register needs to be configured after the initialization process."]
 pub mod addr2low;
 #[doc = "ADDR3HIGH (rw) register accessor: Upper 16 bits of the fourth 6-byte MAC address\n\nYou can [`read`](crate::Reg::read) this register and get [`addr3high::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr3high::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr3high`] module"]
 pub type ADDR3HIGH = crate::Reg<addr3high::ADDR3HIGH_SPEC>;
 #[doc = "Upper 16 bits of the fourth 6-byte MAC address"]
 pub mod addr3high;
-#[doc = "ADDR3LOW (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`addr3low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr3low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr3low`] module"]
+#[doc = "ADDR3LOW (rw) register accessor: This field contains the lower 32 bits of the fourth 6-byte MAC address.The content of this field is undefined so the register needs to be configured after the initialization Process.\n\nYou can [`read`](crate::Reg::read) this register and get [`addr3low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr3low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr3low`] module"]
 pub type ADDR3LOW = crate::Reg<addr3low::ADDR3LOW_SPEC>;
-#[doc = "Reserved"]
+#[doc = "This field contains the lower 32 bits of the fourth 6-byte MAC address.The content of this field is undefined so the register needs to be configured after the initialization Process."]
 pub mod addr3low;
 #[doc = "ADDR4HIGH (rw) register accessor: Upper 16 bits of the fifth 6-byte MAC address\n\nYou can [`read`](crate::Reg::read) this register and get [`addr4high::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr4high::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr4high`] module"]
 pub type ADDR4HIGH = crate::Reg<addr4high::ADDR4HIGH_SPEC>;
 #[doc = "Upper 16 bits of the fifth 6-byte MAC address"]
 pub mod addr4high;
-#[doc = "ADDR4LOW (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`addr4low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr4low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr4low`] module"]
+#[doc = "ADDR4LOW (rw) register accessor: This field contains the lower 32 bits of the fifth 6-byte MAC address. The content of this field is undefined so the register needs to be configured after the initialization process.\n\nYou can [`read`](crate::Reg::read) this register and get [`addr4low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr4low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr4low`] module"]
 pub type ADDR4LOW = crate::Reg<addr4low::ADDR4LOW_SPEC>;
-#[doc = "Reserved"]
+#[doc = "This field contains the lower 32 bits of the fifth 6-byte MAC address. The content of this field is undefined so the register needs to be configured after the initialization process."]
 pub mod addr4low;
 #[doc = "ADDR5HIGH (rw) register accessor: Upper 16 bits of the sixth 6-byte MAC address\n\nYou can [`read`](crate::Reg::read) this register and get [`addr5high::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr5high::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr5high`] module"]
 pub type ADDR5HIGH = crate::Reg<addr5high::ADDR5HIGH_SPEC>;
 #[doc = "Upper 16 bits of the sixth 6-byte MAC address"]
 pub mod addr5high;
-#[doc = "ADDR5LOW (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`addr5low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr5low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr5low`] module"]
+#[doc = "ADDR5LOW (rw) register accessor: This field contains the lower 32 bits of the sixth 6-byte MAC address. The content of this field is undefined so the register needs to be configured after the initialization process.\n\nYou can [`read`](crate::Reg::read) this register and get [`addr5low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr5low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr5low`] module"]
 pub type ADDR5LOW = crate::Reg<addr5low::ADDR5LOW_SPEC>;
-#[doc = "Reserved"]
+#[doc = "This field contains the lower 32 bits of the sixth 6-byte MAC address. The content of this field is undefined so the register needs to be configured after the initialization process."]
 pub mod addr5low;
 #[doc = "ADDR6HIGH (rw) register accessor: Upper 16 bits of the seventh 6-byte MAC address\n\nYou can [`read`](crate::Reg::read) this register and get [`addr6high::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr6high::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr6high`] module"]
 pub type ADDR6HIGH = crate::Reg<addr6high::ADDR6HIGH_SPEC>;
 #[doc = "Upper 16 bits of the seventh 6-byte MAC address"]
 pub mod addr6high;
-#[doc = "ADDR6LOW (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`addr6low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr6low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr6low`] module"]
+#[doc = "ADDR6LOW (rw) register accessor: This field contains the lower 32 bits of the seventh 6-byte MAC address.The content of this field is undefined so the register needs to be configured after the initialization Process.\n\nYou can [`read`](crate::Reg::read) this register and get [`addr6low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr6low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr6low`] module"]
 pub type ADDR6LOW = crate::Reg<addr6low::ADDR6LOW_SPEC>;
-#[doc = "Reserved"]
+#[doc = "This field contains the lower 32 bits of the seventh 6-byte MAC address.The content of this field is undefined so the register needs to be configured after the initialization Process."]
 pub mod addr6low;
 #[doc = "ADDR7HIGH (rw) register accessor: Upper 16 bits of the eighth 6-byte MAC address\n\nYou can [`read`](crate::Reg::read) this register and get [`addr7high::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr7high::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr7high`] module"]
 pub type ADDR7HIGH = crate::Reg<addr7high::ADDR7HIGH_SPEC>;
 #[doc = "Upper 16 bits of the eighth 6-byte MAC address"]
 pub mod addr7high;
-#[doc = "ADDR7LOW (rw) register accessor: Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`addr7low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr7low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr7low`] module"]
+#[doc = "ADDR7LOW (rw) register accessor: This field contains the lower 32 bits of the eighth 6-byte MAC address.The content of this field is undefined so the register needs to be configured after the initialization Process.\n\nYou can [`read`](crate::Reg::read) this register and get [`addr7low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr7low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr7low`] module"]
 pub type ADDR7LOW = crate::Reg<addr7low::ADDR7LOW_SPEC>;
-#[doc = "Reserved"]
+#[doc = "This field contains the lower 32 bits of the eighth 6-byte MAC address.The content of this field is undefined so the register needs to be configured after the initialization Process."]
 pub mod addr7low;
 #[doc = "CSTATUS (r) register accessor: Link communication status\n\nYou can [`read`](crate::Reg::read) this register and get [`cstatus::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cstatus`] module"]
 pub type CSTATUS = crate::Reg<cstatus::CSTATUS_SPEC>;

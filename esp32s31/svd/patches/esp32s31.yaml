@@ -30,9 +30,21 @@ _include:
   - "_sha.yml"
   - "_rmt.yml"
   - "_pcnt.yml"
+  - "_emac.yml"
   - "../../../common_patches/ieee802154.yaml"
 
+_copy:
+  GMAC_DMA:
+    from: GMAC
+
 _modify:
+  GMAC:
+    description: Ethernet MAC
+    groupName: GMAC
+  GMAC_DMA:
+    description: Ethernet DMA
+    groupName: GMAC
+    baseAddress: 0x20351000
   "AHB_DMA,AXI_DMA":
     groupName: DMA
   SPI3:
