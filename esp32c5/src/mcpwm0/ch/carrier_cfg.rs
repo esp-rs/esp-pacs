@@ -1,6 +1,6 @@
-#[doc = "Register `CARRIER%s_CFG` reader"]
+#[doc = "Register `CARRIER_CFG` reader"]
 pub type R = crate::R<CARRIER_CFG_SPEC>;
-#[doc = "Register `CARRIER%s_CFG` writer"]
+#[doc = "Register `CARRIER_CFG` writer"]
 pub type W = crate::W<CARRIER_CFG_SPEC>;
 #[doc = "Field `CHOPPER_EN` reader - Configures whether or not to enable carrier%s.\\\\0: Bypassed\\\\1: Enabled"]
 pub type CHOPPER_EN_R = crate::BitReader;
@@ -103,7 +103,7 @@ impl W {
         CHOPPER_IN_INVERT_W::new(self, 13)
     }
 }
-#[doc = "Carrier%s configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`carrier_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`carrier_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Carrier enable and configuratoin\n\nYou can [`read`](crate::Reg::read) this register and get [`carrier_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`carrier_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CARRIER_CFG_SPEC;
 impl crate::RegisterSpec for CARRIER_CFG_SPEC {
     type Ux = u32;
@@ -114,5 +114,5 @@ impl crate::Readable for CARRIER_CFG_SPEC {}
 impl crate::Writable for CARRIER_CFG_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets CARRIER%s_CFG to value 0"]
+#[doc = "`reset()` method sets CARRIER_CFG to value 0"]
 impl crate::Resettable for CARRIER_CFG_SPEC {}

@@ -1,7 +1,7 @@
-#[doc = "Register `TIMER%s_SYNC` reader"]
-pub type R = crate::R<TIMER_SYNC_SPEC>;
-#[doc = "Register `TIMER%s_SYNC` writer"]
-pub type W = crate::W<TIMER_SYNC_SPEC>;
+#[doc = "Register `SYNC` reader"]
+pub type R = crate::R<SYNC_SPEC>;
+#[doc = "Register `SYNC` writer"]
+pub type W = crate::W<SYNC_SPEC>;
 #[doc = "Field `TIMER_SYNCI_EN` reader - Configures whether or not to enable timer%s reloading with phase on sync input event is enabled.\\\\0: Disable\\\\1: Enable"]
 pub type TIMER_SYNCI_EN_R = crate::BitReader;
 #[doc = "Field `TIMER_SYNCI_EN` writer - Configures whether or not to enable timer%s reloading with phase on sync input event is enabled.\\\\0: Disable\\\\1: Enable"]
@@ -52,7 +52,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("TIMER_SYNC")
+        f.debug_struct("SYNC")
             .field("timer_synci_en", &self.timer_synci_en())
             .field("sw", &self.sw())
             .field("timer_synco_sel", &self.timer_synco_sel())
@@ -64,40 +64,40 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable timer%s reloading with phase on sync input event is enabled.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn timer_synci_en(&mut self) -> TIMER_SYNCI_EN_W<'_, TIMER_SYNC_SPEC> {
+    pub fn timer_synci_en(&mut self) -> TIMER_SYNCI_EN_W<'_, SYNC_SPEC> {
         TIMER_SYNCI_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures the generation of software sync. Toggling this bit will trigger a software sync."]
     #[inline(always)]
-    pub fn sw(&mut self) -> SW_W<'_, TIMER_SYNC_SPEC> {
+    pub fn sw(&mut self) -> SW_W<'_, SYNC_SPEC> {
         SW_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - Configures the selection of PWM timer%s sync_out.\\\\0: Sync_in\\\\1: TEZ\\\\2: TEP\\\\3: Invalid, sync_out selects noting"]
     #[inline(always)]
-    pub fn timer_synco_sel(&mut self) -> TIMER_SYNCO_SEL_W<'_, TIMER_SYNC_SPEC> {
+    pub fn timer_synco_sel(&mut self) -> TIMER_SYNCO_SEL_W<'_, SYNC_SPEC> {
         TIMER_SYNCO_SEL_W::new(self, 2)
     }
     #[doc = "Bits 4:19 - Configures the phase for timer%s reload on sync event."]
     #[inline(always)]
-    pub fn timer_phase(&mut self) -> TIMER_PHASE_W<'_, TIMER_SYNC_SPEC> {
+    pub fn timer_phase(&mut self) -> TIMER_PHASE_W<'_, SYNC_SPEC> {
         TIMER_PHASE_W::new(self, 4)
     }
     #[doc = "Bit 20 - Configures the PWM timer%s's direction when timer%s mode is up-down mode.\\\\0: Increase\\\\1: Decrease"]
     #[inline(always)]
-    pub fn timer_phase_direction(&mut self) -> TIMER_PHASE_DIRECTION_W<'_, TIMER_SYNC_SPEC> {
+    pub fn timer_phase_direction(&mut self) -> TIMER_PHASE_DIRECTION_W<'_, SYNC_SPEC> {
         TIMER_PHASE_DIRECTION_W::new(self, 20)
     }
 }
-#[doc = "PWM timer%s sync function configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`timer_sync::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timer_sync::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct TIMER_SYNC_SPEC;
-impl crate::RegisterSpec for TIMER_SYNC_SPEC {
+#[doc = "PWM TIMERx sync function configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`sync::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sync::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SYNC_SPEC;
+impl crate::RegisterSpec for SYNC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`timer_sync::R`](R) reader structure"]
-impl crate::Readable for TIMER_SYNC_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`timer_sync::W`](W) writer structure"]
-impl crate::Writable for TIMER_SYNC_SPEC {
+#[doc = "`read()` method returns [`sync::R`](R) reader structure"]
+impl crate::Readable for SYNC_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sync::W`](W) writer structure"]
+impl crate::Writable for SYNC_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets TIMER%s_SYNC to value 0"]
-impl crate::Resettable for TIMER_SYNC_SPEC {}
+#[doc = "`reset()` method sets SYNC to value 0"]
+impl crate::Resettable for SYNC_SPEC {}

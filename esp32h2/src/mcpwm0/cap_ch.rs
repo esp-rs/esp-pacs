@@ -1,9 +1,9 @@
 #[doc = "Register `CAP_CH%s` reader"]
 pub type R = crate::R<CAP_CH_SPEC>;
-#[doc = "Field `VALUE` reader - Value of last capture on channel 0"]
+#[doc = "Field `VALUE` reader - Value of last capture on channel %s"]
 pub type VALUE_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - Value of last capture on channel 0"]
+    #[doc = "Bits 0:31 - Value of last capture on channel %s"]
     #[inline(always)]
     pub fn value(&self) -> VALUE_R {
         VALUE_R::new(self.bits)

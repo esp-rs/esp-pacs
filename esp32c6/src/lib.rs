@@ -607,14 +607,14 @@ impl core::fmt::Debug for LP_WDT {
 }
 #[doc = "Low-power Watchdog Timer"]
 pub mod lp_wdt;
-#[doc = "Motor Control Pulse-Width Modulation 0"]
+#[doc = "Motor Control Pulse Width Modulator (MCPWM) Peripheral"]
 pub type MCPWM0 = crate::Periph<mcpwm0::RegisterBlock, 0x6001_4000>;
 impl core::fmt::Debug for MCPWM0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MCPWM0").finish()
     }
 }
-#[doc = "Motor Control Pulse-Width Modulation 0"]
+#[doc = "Motor Control Pulse Width Modulator (MCPWM) Peripheral"]
 pub mod mcpwm0;
 #[doc = "MEM_MONITOR Peripheral"]
 pub type MEM_MONITOR = crate::Periph<mem_monitor::RegisterBlock, 0x6009_2000>;

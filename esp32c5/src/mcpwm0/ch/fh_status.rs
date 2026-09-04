@@ -1,4 +1,4 @@
-#[doc = "Register `FH%s_STATUS` reader"]
+#[doc = "Register `FH_STATUS` reader"]
 pub type R = crate::R<FH_STATUS_SPEC>;
 #[doc = "Field `TZ_CBC_ON` reader - Represents whether or not an cycle-by-cycle mode action is on going.\\\\0:No action\\\\1: On going"]
 pub type TZ_CBC_ON_R = crate::BitReader;
@@ -25,12 +25,12 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Fault events status register\n\nYou can [`read`](crate::Reg::read) this register and get [`fh_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Status of fault events.\n\nYou can [`read`](crate::Reg::read) this register and get [`fh_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FH_STATUS_SPEC;
 impl crate::RegisterSpec for FH_STATUS_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`fh_status::R`](R) reader structure"]
 impl crate::Readable for FH_STATUS_SPEC {}
-#[doc = "`reset()` method sets FH%s_STATUS to value 0"]
+#[doc = "`reset()` method sets FH_STATUS to value 0"]
 impl crate::Resettable for FH_STATUS_SPEC {}

@@ -2,30 +2,14 @@
 pub type R = crate::R<FAULT_DETECT_SPEC>;
 #[doc = "Register `FAULT_DETECT` writer"]
 pub type W = crate::W<FAULT_DETECT_SPEC>;
-#[doc = "Field `F0_EN` reader - "]
-pub type F0_EN_R = crate::BitReader;
-#[doc = "Field `F0_EN` writer - "]
-pub type F0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `F1_EN` reader - "]
-pub type F1_EN_R = crate::BitReader;
-#[doc = "Field `F1_EN` writer - "]
-pub type F1_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `F2_EN` reader - "]
-pub type F2_EN_R = crate::BitReader;
-#[doc = "Field `F2_EN` writer - "]
-pub type F2_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `F0_POLE` reader - "]
-pub type F0_POLE_R = crate::BitReader;
-#[doc = "Field `F0_POLE` writer - "]
-pub type F0_POLE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `F1_POLE` reader - "]
-pub type F1_POLE_R = crate::BitReader;
-#[doc = "Field `F1_POLE` writer - "]
-pub type F1_POLE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `F2_POLE` reader - "]
-pub type F2_POLE_R = crate::BitReader;
-#[doc = "Field `F2_POLE` writer - "]
-pub type F2_POLE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `F_EN(0-2)` reader - "]
+pub type F_EN_R = crate::BitReader;
+#[doc = "Field `F_EN(0-2)` writer - "]
+pub type F_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `F_POLE(0-2)` reader - Configures the polarity of the fault trigger on FAULT%s source from GPIO matrix.\\0: Level low\\1: Level high"]
+pub type F_POLE_R = crate::BitReader;
+#[doc = "Field `F_POLE(0-2)` writer - Configures the polarity of the fault trigger on FAULT%s source from GPIO matrix.\\0: Level low\\1: Level high"]
+pub type F_POLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EVENT_F0` reader - "]
 pub type EVENT_F0_R = crate::BitReader;
 #[doc = "Field `EVENT_F1` reader - "]
@@ -33,35 +17,65 @@ pub type EVENT_F1_R = crate::BitReader;
 #[doc = "Field `EVENT_F2` reader - "]
 pub type EVENT_F2_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0"]
+    #[doc = ""]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `F0_EN` field.</div>"]
     #[inline(always)]
-    pub fn f0_en(&self) -> F0_EN_R {
-        F0_EN_R::new((self.bits & 1) != 0)
+    pub fn f_en(&self, n: u8) -> F_EN_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        F_EN_R::new(((self.bits >> n) & 1) != 0)
     }
-    #[doc = "Bit 1"]
+    #[doc = "Iterator for array of:"]
+    #[doc = ""]
     #[inline(always)]
-    pub fn f1_en(&self) -> F1_EN_R {
-        F1_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn f_en_iter(&self) -> impl Iterator<Item = F_EN_R> + '_ {
+        (0..3).map(move |n| F_EN_R::new(((self.bits >> n) & 1) != 0))
     }
-    #[doc = "Bit 2"]
+    #[doc = "Bit 0 - F0_EN"]
     #[inline(always)]
-    pub fn f2_en(&self) -> F2_EN_R {
-        F2_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn f0_en(&self) -> F_EN_R {
+        F_EN_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 3"]
+    #[doc = "Bit 1 - F1_EN"]
     #[inline(always)]
-    pub fn f0_pole(&self) -> F0_POLE_R {
-        F0_POLE_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn f1_en(&self) -> F_EN_R {
+        F_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 4"]
+    #[doc = "Bit 2 - F2_EN"]
     #[inline(always)]
-    pub fn f1_pole(&self) -> F1_POLE_R {
-        F1_POLE_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn f2_en(&self) -> F_EN_R {
+        F_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 5"]
+    #[doc = "Configures the polarity of the fault trigger on FAULT(0-2) source from GPIO matrix.\\0: Level low\\1: Level high"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `F0_POLE` field.</div>"]
     #[inline(always)]
-    pub fn f2_pole(&self) -> F2_POLE_R {
-        F2_POLE_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn f_pole(&self, n: u8) -> F_POLE_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        F_POLE_R::new(((self.bits >> (n + 3)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Configures the polarity of the fault trigger on FAULT(0-2) source from GPIO matrix.\\0: Level low\\1: Level high"]
+    #[inline(always)]
+    pub fn f_pole_iter(&self) -> impl Iterator<Item = F_POLE_R> + '_ {
+        (0..3).map(move |n| F_POLE_R::new(((self.bits >> (n + 3)) & 1) != 0))
+    }
+    #[doc = "Bit 3 - Configures the polarity of the fault trigger on FAULT0 source from GPIO matrix.\\0: Level low\\1: Level high"]
+    #[inline(always)]
+    pub fn f0_pole(&self) -> F_POLE_R {
+        F_POLE_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Configures the polarity of the fault trigger on FAULT1 source from GPIO matrix.\\0: Level low\\1: Level high"]
+    #[inline(always)]
+    pub fn f1_pole(&self) -> F_POLE_R {
+        F_POLE_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Configures the polarity of the fault trigger on FAULT2 source from GPIO matrix.\\0: Level low\\1: Level high"]
+    #[inline(always)]
+    pub fn f2_pole(&self) -> F_POLE_R {
+        F_POLE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
@@ -96,35 +110,53 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0"]
+    #[doc = ""]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `F0_EN` field.</div>"]
     #[inline(always)]
-    pub fn f0_en(&mut self) -> F0_EN_W<'_, FAULT_DETECT_SPEC> {
-        F0_EN_W::new(self, 0)
+    pub fn f_en(&mut self, n: u8) -> F_EN_W<'_, FAULT_DETECT_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        F_EN_W::new(self, n)
     }
-    #[doc = "Bit 1"]
+    #[doc = "Bit 0 - F0_EN"]
     #[inline(always)]
-    pub fn f1_en(&mut self) -> F1_EN_W<'_, FAULT_DETECT_SPEC> {
-        F1_EN_W::new(self, 1)
+    pub fn f0_en(&mut self) -> F_EN_W<'_, FAULT_DETECT_SPEC> {
+        F_EN_W::new(self, 0)
     }
-    #[doc = "Bit 2"]
+    #[doc = "Bit 1 - F1_EN"]
     #[inline(always)]
-    pub fn f2_en(&mut self) -> F2_EN_W<'_, FAULT_DETECT_SPEC> {
-        F2_EN_W::new(self, 2)
+    pub fn f1_en(&mut self) -> F_EN_W<'_, FAULT_DETECT_SPEC> {
+        F_EN_W::new(self, 1)
     }
-    #[doc = "Bit 3"]
+    #[doc = "Bit 2 - F2_EN"]
     #[inline(always)]
-    pub fn f0_pole(&mut self) -> F0_POLE_W<'_, FAULT_DETECT_SPEC> {
-        F0_POLE_W::new(self, 3)
+    pub fn f2_en(&mut self) -> F_EN_W<'_, FAULT_DETECT_SPEC> {
+        F_EN_W::new(self, 2)
     }
-    #[doc = "Bit 4"]
+    #[doc = "Configures the polarity of the fault trigger on FAULT(0-2) source from GPIO matrix.\\0: Level low\\1: Level high"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `F0_POLE` field.</div>"]
     #[inline(always)]
-    pub fn f1_pole(&mut self) -> F1_POLE_W<'_, FAULT_DETECT_SPEC> {
-        F1_POLE_W::new(self, 4)
+    pub fn f_pole(&mut self, n: u8) -> F_POLE_W<'_, FAULT_DETECT_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        F_POLE_W::new(self, n + 3)
     }
-    #[doc = "Bit 5"]
+    #[doc = "Bit 3 - Configures the polarity of the fault trigger on FAULT0 source from GPIO matrix.\\0: Level low\\1: Level high"]
     #[inline(always)]
-    pub fn f2_pole(&mut self) -> F2_POLE_W<'_, FAULT_DETECT_SPEC> {
-        F2_POLE_W::new(self, 5)
+    pub fn f0_pole(&mut self) -> F_POLE_W<'_, FAULT_DETECT_SPEC> {
+        F_POLE_W::new(self, 3)
+    }
+    #[doc = "Bit 4 - Configures the polarity of the fault trigger on FAULT1 source from GPIO matrix.\\0: Level low\\1: Level high"]
+    #[inline(always)]
+    pub fn f1_pole(&mut self) -> F_POLE_W<'_, FAULT_DETECT_SPEC> {
+        F_POLE_W::new(self, 4)
+    }
+    #[doc = "Bit 5 - Configures the polarity of the fault trigger on FAULT2 source from GPIO matrix.\\0: Level low\\1: Level high"]
+    #[inline(always)]
+    pub fn f2_pole(&mut self) -> F_POLE_W<'_, FAULT_DETECT_SPEC> {
+        F_POLE_W::new(self, 5)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`fault_detect::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fault_detect::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

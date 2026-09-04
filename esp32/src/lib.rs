@@ -598,14 +598,14 @@ impl core::fmt::Debug for LEDC {
 }
 #[doc = "LED Control PWM (Pulse Width Modulation)"]
 pub mod ledc;
-#[doc = "Motor Control Pulse-Width Modulation 0"]
+#[doc = "Motor Control Pulse Width Modulator (MCPWM) Peripheral"]
 pub type MCPWM0 = crate::Periph<mcpwm0::RegisterBlock, 0x3ff5_e000>;
 impl core::fmt::Debug for MCPWM0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MCPWM0").finish()
     }
 }
-#[doc = "Motor Control Pulse-Width Modulation 0"]
+#[doc = "Motor Control Pulse Width Modulator (MCPWM) Peripheral"]
 pub mod mcpwm0;
 #[doc = "Motor Control Pulse-Width Modulation 1"]
 pub type MCPWM1 = crate::Periph<mcpwm0::RegisterBlock, 0x3ff6_c000>;

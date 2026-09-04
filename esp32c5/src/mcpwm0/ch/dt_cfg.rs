@@ -1,6 +1,6 @@
-#[doc = "Register `DT%s_CFG` reader"]
+#[doc = "Register `DT_CFG` reader"]
 pub type R = crate::R<DT_CFG_SPEC>;
-#[doc = "Register `DT%s_CFG` writer"]
+#[doc = "Register `DT_CFG` writer"]
 pub type W = crate::W<DT_CFG_SPEC>;
 #[doc = "Field `DB_FED_UPMETHOD` reader - Configures update method for FED (Falling edge delay) active register.\\\\0: Immediate\\\\Bit0 is set to 1: TEZ\\\\Bit1 is set to 1: TEP\\\\Bit2 is set to 1: Sync\\\\Bit3 is set to 1: Disable the update"]
 pub type DB_FED_UPMETHOD_R = crate::FieldReader;
@@ -193,7 +193,7 @@ impl W {
         DB_CLK_SEL_W::new(self, 17)
     }
 }
-#[doc = "Dead time configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`dt_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dt_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Dead time type selection and configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`dt_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dt_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DT_CFG_SPEC;
 impl crate::RegisterSpec for DT_CFG_SPEC {
     type Ux = u32;
@@ -204,7 +204,7 @@ impl crate::Readable for DT_CFG_SPEC {}
 impl crate::Writable for DT_CFG_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets DT%s_CFG to value 0x0001_8000"]
+#[doc = "`reset()` method sets DT_CFG to value 0x0001_8000"]
 impl crate::Resettable for DT_CFG_SPEC {
     const RESET_VALUE: u32 = 0x0001_8000;
 }

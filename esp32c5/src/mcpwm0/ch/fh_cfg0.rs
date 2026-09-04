@@ -1,6 +1,6 @@
-#[doc = "Register `FH%s_CFG0` reader"]
+#[doc = "Register `FH_CFG0` reader"]
 pub type R = crate::R<FH_CFG0_SPEC>;
-#[doc = "Register `FH%s_CFG0` writer"]
+#[doc = "Register `FH_CFG0` writer"]
 pub type W = crate::W<FH_CFG0_SPEC>;
 #[doc = "Field `TZ_SW_CBC` reader - Configures whether or not to enable software force cycle-by-cycle mode action.\\\\0: Disable\\\\1: Enable"]
 pub type TZ_SW_CBC_R = crate::BitReader;
@@ -253,7 +253,7 @@ impl W {
         TZ_B_OST_U_W::new(self, 22)
     }
 }
-#[doc = "PWM%s A and PWM%s B trip events actions configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`fh_cfg0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fh_cfg0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Actions on PWM0A and PWM0B trip events\n\nYou can [`read`](crate::Reg::read) this register and get [`fh_cfg0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fh_cfg0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FH_CFG0_SPEC;
 impl crate::RegisterSpec for FH_CFG0_SPEC {
     type Ux = u32;
@@ -264,5 +264,5 @@ impl crate::Readable for FH_CFG0_SPEC {}
 impl crate::Writable for FH_CFG0_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets FH%s_CFG0 to value 0"]
+#[doc = "`reset()` method sets FH_CFG0 to value 0"]
 impl crate::Resettable for FH_CFG0_SPEC {}
