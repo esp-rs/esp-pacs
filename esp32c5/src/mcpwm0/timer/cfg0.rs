@@ -1,7 +1,7 @@
-#[doc = "Register `TIMER%s_CFG0` reader"]
-pub type R = crate::R<TIMER_CFG0_SPEC>;
-#[doc = "Register `TIMER%s_CFG0` writer"]
-pub type W = crate::W<TIMER_CFG0_SPEC>;
+#[doc = "Register `CFG0` reader"]
+pub type R = crate::R<CFG0_SPEC>;
+#[doc = "Register `CFG0` writer"]
+pub type W = crate::W<CFG0_SPEC>;
 #[doc = "Field `TIMER_PRESCALE` reader - Configures the prescaler value of timer%s, so that the period of PT0_clk = Period of PWM_clk * (PWM_TIMER%s_PRESCALE + 1)"]
 pub type TIMER_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `TIMER_PRESCALE` writer - Configures the prescaler value of timer%s, so that the period of PT0_clk = Period of PWM_clk * (PWM_TIMER%s_PRESCALE + 1)"]
@@ -34,7 +34,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("TIMER_CFG0")
+        f.debug_struct("CFG0")
             .field("timer_prescale", &self.timer_prescale())
             .field("timer_period", &self.timer_period())
             .field("timer_period_upmethod", &self.timer_period_upmethod())
@@ -44,32 +44,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures the prescaler value of timer%s, so that the period of PT0_clk = Period of PWM_clk * (PWM_TIMER%s_PRESCALE + 1)"]
     #[inline(always)]
-    pub fn timer_prescale(&mut self) -> TIMER_PRESCALE_W<'_, TIMER_CFG0_SPEC> {
+    pub fn timer_prescale(&mut self) -> TIMER_PRESCALE_W<'_, CFG0_SPEC> {
         TIMER_PRESCALE_W::new(self, 0)
     }
     #[doc = "Bits 8:23 - Configures the period shadow of PWM timer%s"]
     #[inline(always)]
-    pub fn timer_period(&mut self) -> TIMER_PERIOD_W<'_, TIMER_CFG0_SPEC> {
+    pub fn timer_period(&mut self) -> TIMER_PERIOD_W<'_, CFG0_SPEC> {
         TIMER_PERIOD_W::new(self, 8)
     }
     #[doc = "Bits 24:25 - Configures the update method for active register of PWM timer%s period.\\\\0: Immediate\\\\1: TEZ\\\\2: Sync\\\\3: TEZ or sync\\\\TEZ here and below means timer equal zero event"]
     #[inline(always)]
-    pub fn timer_period_upmethod(&mut self) -> TIMER_PERIOD_UPMETHOD_W<'_, TIMER_CFG0_SPEC> {
+    pub fn timer_period_upmethod(&mut self) -> TIMER_PERIOD_UPMETHOD_W<'_, CFG0_SPEC> {
         TIMER_PERIOD_UPMETHOD_W::new(self, 24)
     }
 }
-#[doc = "PWM timer%s period and update method configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`timer_cfg0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timer_cfg0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct TIMER_CFG0_SPEC;
-impl crate::RegisterSpec for TIMER_CFG0_SPEC {
+#[doc = "PWM TIMERx period and update method configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`cfg0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfg0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CFG0_SPEC;
+impl crate::RegisterSpec for CFG0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`timer_cfg0::R`](R) reader structure"]
-impl crate::Readable for TIMER_CFG0_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`timer_cfg0::W`](W) writer structure"]
-impl crate::Writable for TIMER_CFG0_SPEC {
+#[doc = "`read()` method returns [`cfg0::R`](R) reader structure"]
+impl crate::Readable for CFG0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`cfg0::W`](W) writer structure"]
+impl crate::Writable for CFG0_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets TIMER%s_CFG0 to value 0xff00"]
-impl crate::Resettable for TIMER_CFG0_SPEC {
+#[doc = "`reset()` method sets CFG0 to value 0xff00"]
+impl crate::Resettable for CFG0_SPEC {
     const RESET_VALUE: u32 = 0xff00;
 }

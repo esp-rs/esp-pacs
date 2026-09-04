@@ -1,6 +1,6 @@
-#[doc = "Register `GEN%s_FORCE` reader"]
+#[doc = "Register `GEN_FORCE` reader"]
 pub type R = crate::R<GEN_FORCE_SPEC>;
-#[doc = "Register `GEN%s_FORCE` writer"]
+#[doc = "Register `GEN_FORCE` writer"]
 pub type W = crate::W<GEN_FORCE_SPEC>;
 #[doc = "Field `GEN_CNTUFORCE_UPMETHOD` reader - Configures update method for continuous software force of PWM generator%s.\\\\0: Immediately\\\\Bit0 is set to 1: TEZ\\\\Bit1 is set to 1: TEP\\\\Bit2 is set to 1: TEA\\\\Bit3 is set to 1: TEB\\\\Bit4 is set to 1: Sync\\\\Bit5 is set to 1: Disable update. TEA/B here and below means an event generated when the timer's value equals to that of register A/B."]
 pub type GEN_CNTUFORCE_UPMETHOD_R = crate::FieldReader;
@@ -118,7 +118,7 @@ impl W {
         GEN_B_NCIFORCE_MODE_W::new(self, 14)
     }
 }
-#[doc = "Generator%s output signal force mode register.\n\nYou can [`read`](crate::Reg::read) this register and get [`gen_force::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gen_force::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Permissives to force PWMxA and PWMxB outputs by software\n\nYou can [`read`](crate::Reg::read) this register and get [`gen_force::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gen_force::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GEN_FORCE_SPEC;
 impl crate::RegisterSpec for GEN_FORCE_SPEC {
     type Ux = u32;
@@ -129,7 +129,7 @@ impl crate::Readable for GEN_FORCE_SPEC {}
 impl crate::Writable for GEN_FORCE_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets GEN%s_FORCE to value 0x20"]
+#[doc = "`reset()` method sets GEN_FORCE to value 0x20"]
 impl crate::Resettable for GEN_FORCE_SPEC {
     const RESET_VALUE: u32 = 0x20;
 }

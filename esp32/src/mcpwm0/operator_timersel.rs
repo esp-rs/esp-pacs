@@ -2,33 +2,40 @@
 pub type R = crate::R<OPERATOR_TIMERSEL_SPEC>;
 #[doc = "Register `OPERATOR_TIMERSEL` writer"]
 pub type W = crate::W<OPERATOR_TIMERSEL_SPEC>;
-#[doc = "Field `OPERATOR0_TIMERSEL` reader - "]
-pub type OPERATOR0_TIMERSEL_R = crate::FieldReader;
-#[doc = "Field `OPERATOR0_TIMERSEL` writer - "]
-pub type OPERATOR0_TIMERSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `OPERATOR1_TIMERSEL` reader - "]
-pub type OPERATOR1_TIMERSEL_R = crate::FieldReader;
-#[doc = "Field `OPERATOR1_TIMERSEL` writer - "]
-pub type OPERATOR1_TIMERSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `OPERATOR2_TIMERSEL` reader - "]
-pub type OPERATOR2_TIMERSEL_R = crate::FieldReader;
-#[doc = "Field `OPERATOR2_TIMERSEL` writer - "]
-pub type OPERATOR2_TIMERSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `OPERATOR_TIMERSEL(0-2)` reader - "]
+pub type OPERATOR_TIMERSEL_R = crate::FieldReader;
+#[doc = "Field `OPERATOR_TIMERSEL(0-2)` writer - "]
+pub type OPERATOR_TIMERSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
-    #[doc = "Bits 0:1"]
+    #[doc = ""]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OPERATOR0_TIMERSEL` field.</div>"]
     #[inline(always)]
-    pub fn operator0_timersel(&self) -> OPERATOR0_TIMERSEL_R {
-        OPERATOR0_TIMERSEL_R::new((self.bits & 3) as u8)
+    pub fn operator_timersel(&self, n: u8) -> OPERATOR_TIMERSEL_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        OPERATOR_TIMERSEL_R::new(((self.bits >> (n * 2)) & 3) as u8)
     }
-    #[doc = "Bits 2:3"]
+    #[doc = "Iterator for array of:"]
+    #[doc = ""]
     #[inline(always)]
-    pub fn operator1_timersel(&self) -> OPERATOR1_TIMERSEL_R {
-        OPERATOR1_TIMERSEL_R::new(((self.bits >> 2) & 3) as u8)
+    pub fn operator_timersel_iter(&self) -> impl Iterator<Item = OPERATOR_TIMERSEL_R> + '_ {
+        (0..3).map(move |n| OPERATOR_TIMERSEL_R::new(((self.bits >> (n * 2)) & 3) as u8))
     }
-    #[doc = "Bits 4:5"]
+    #[doc = "Bits 0:1 - OPERATOR0_TIMERSEL"]
     #[inline(always)]
-    pub fn operator2_timersel(&self) -> OPERATOR2_TIMERSEL_R {
-        OPERATOR2_TIMERSEL_R::new(((self.bits >> 4) & 3) as u8)
+    pub fn operator0_timersel(&self) -> OPERATOR_TIMERSEL_R {
+        OPERATOR_TIMERSEL_R::new((self.bits & 3) as u8)
+    }
+    #[doc = "Bits 2:3 - OPERATOR1_TIMERSEL"]
+    #[inline(always)]
+    pub fn operator1_timersel(&self) -> OPERATOR_TIMERSEL_R {
+        OPERATOR_TIMERSEL_R::new(((self.bits >> 2) & 3) as u8)
+    }
+    #[doc = "Bits 4:5 - OPERATOR2_TIMERSEL"]
+    #[inline(always)]
+    pub fn operator2_timersel(&self) -> OPERATOR_TIMERSEL_R {
+        OPERATOR_TIMERSEL_R::new(((self.bits >> 4) & 3) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -42,20 +49,29 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:1"]
+    #[doc = ""]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OPERATOR0_TIMERSEL` field.</div>"]
     #[inline(always)]
-    pub fn operator0_timersel(&mut self) -> OPERATOR0_TIMERSEL_W<'_, OPERATOR_TIMERSEL_SPEC> {
-        OPERATOR0_TIMERSEL_W::new(self, 0)
+    pub fn operator_timersel(&mut self, n: u8) -> OPERATOR_TIMERSEL_W<'_, OPERATOR_TIMERSEL_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        OPERATOR_TIMERSEL_W::new(self, n * 2)
     }
-    #[doc = "Bits 2:3"]
+    #[doc = "Bits 0:1 - OPERATOR0_TIMERSEL"]
     #[inline(always)]
-    pub fn operator1_timersel(&mut self) -> OPERATOR1_TIMERSEL_W<'_, OPERATOR_TIMERSEL_SPEC> {
-        OPERATOR1_TIMERSEL_W::new(self, 2)
+    pub fn operator0_timersel(&mut self) -> OPERATOR_TIMERSEL_W<'_, OPERATOR_TIMERSEL_SPEC> {
+        OPERATOR_TIMERSEL_W::new(self, 0)
     }
-    #[doc = "Bits 4:5"]
+    #[doc = "Bits 2:3 - OPERATOR1_TIMERSEL"]
     #[inline(always)]
-    pub fn operator2_timersel(&mut self) -> OPERATOR2_TIMERSEL_W<'_, OPERATOR_TIMERSEL_SPEC> {
-        OPERATOR2_TIMERSEL_W::new(self, 4)
+    pub fn operator1_timersel(&mut self) -> OPERATOR_TIMERSEL_W<'_, OPERATOR_TIMERSEL_SPEC> {
+        OPERATOR_TIMERSEL_W::new(self, 2)
+    }
+    #[doc = "Bits 4:5 - OPERATOR2_TIMERSEL"]
+    #[inline(always)]
+    pub fn operator2_timersel(&mut self) -> OPERATOR_TIMERSEL_W<'_, OPERATOR_TIMERSEL_SPEC> {
+        OPERATOR_TIMERSEL_W::new(self, 4)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`operator_timersel::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`operator_timersel::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

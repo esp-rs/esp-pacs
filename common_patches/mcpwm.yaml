@@ -1,0 +1,202 @@
+CAP_STATUS:
+  _array:
+    CAP?_EDGE:
+      description: Describes the last captured edge on channel%s.
+  CAP?_EDGE:
+    Rising: [0, "Rising edge"]
+    Falling: [1, "Falling edge"]
+
+FAULT_DETECT:
+  _array:
+    F?_EN: {}
+    F?_POLE:
+      description: "Configures the polarity of the fault trigger on FAULT%s source from GPIO matrix.\\0: Level low\\1: Level high"
+    ?~F?_EVENT: {} # Some chipsets have this register some do not
+
+_array: 
+  CAP_CH?_CFG:
+    _strip: ["CAP?_", "CAP_"]
+    description: Capture channel %s configuration and enable
+    _modify:
+      MODE:
+        description: Describes which edges to trigger a capture event
+    MODE:
+      None: [0, "Capture nothing"]
+      FallingEdge: [1, "Capture falling edges"]
+      RisingEdge: [2, "Capture rising edges"]
+      AnyEdge: [3, "Capture any edges"]
+
+  CAP_CH?:
+    _strip: ["CAP?_", "CAP_"]
+    description: Value of last capture on channel %s
+    _modify:
+      VALUE:
+        description: Value of last capture on channel %s
+
+CAP_TIMER_CFG:
+  _strip: CAP_
+
+CAP_TIMER_PHASE:
+  _strip: CAP_
+
+TIMER_SYNCI_CFG:
+  _array:
+    TIMER?_SYNCISEL: {}
+    EXTERNAL_SYNCI?_INVERT: {}
+
+OPERATOR_TIMERSEL:
+  _array:
+    OPERATOR?_TIMERSEL: {}
+
+UPDATE_CFG:
+  _array:
+    OP?_UP_EN: {}
+    OP?_FORCE_UP:
+      description: "A toggle (software invert its value) will trigger a forced update of active registers in PWM operator %s"
+
+# Some chipsets have this register some do not
+?~EVT_EN:
+  _strip: EVT_ # Redundant prefix
+  _array:
+    TIMER?_STOP_EN: {}
+    TIMER?_TEZ_EN: {}
+    TIMER?_TEP_EN: {}
+    OP?_TEA_EN: {}
+    OP?_TEB_EN: {}
+    F?_EN: {}
+    F?_CLR_EN: {}
+    TZ?_CBC_EN: {}
+    TZ?_OST_EN: {}
+    CAP?_EN: {}
+
+# Some chipsets have this register some do not
+?~TASK_EN:
+  _strip: TASK_ # Redundant prefix
+  _array:
+    CMPR?_A_UP_EN: {}
+    CMPR?_B_UP_EN: {}
+    TIMER?_SYNC_EN: {}
+    TIMER?_PERIOD_UP_EN: {}
+    TZ?_OST_EN: {}
+    CLR?_OST_EN: {}
+    CAP?_EN: {}
+
+# Note: Compared to every other chipset the ESP32
+# chip has its MCPWM interrupts named differently.
+# Their underlying functionality is the same.
+# For the sake of consistency, the ESP32 interrupts
+# are renamed to match the other chipsets.
+#
+# In particular (Other chipsets vs ESP32):
+# - CMPR?_TEA is named OP?_TEA
+# - CMPR?_TEB is named OP?_TEB
+# - TZ?_CBC is named FH?_CBC
+# - TZ?_OST is named FH?_OST
+
+INT_RAW:
+  _array:
+    TIMER?_STOP:
+      description: The interrupt raw bit for the timer%s stop event.
+    TIMER?_TEZ:
+      description: The interrupt raw bit for the timer%s zero event.
+    TIMER?_TEP:
+      description: The interrupt raw bit for the timer%s period event.
+    FAULT?:
+      description: The interrupt raw bit for the fault%s event.
+    FAULT?_CLR:
+      description: The interrupt raw bit for the fault%s clear event.
+    CAP?:
+      description: The interrupt raw bit for the capture%s event.
+    "?~OP?_TEA,CMPR?_TEA":
+      name: CMPR%s_TEA
+      description: The interrupt raw bit for the operator%s compare A event.
+    "?~OP?_TEB,CMPR?_TEB":
+      name: CMPR%s_TEB
+      description: The interrupt raw bit for the operator%s compare B event.
+    "?~FH?_CBC,TZ?_CBC":
+      name: TZ%s_CBC
+      description: The interrupt raw bit for the fault handler%s cycle-by-cycle mode action.
+    "?~FH?_OST,TZ?_OST":
+      name: TZ%s_OST
+      description: The interrupt raw bit for the fault handler%s one-shot mode action.
+
+INT_ST:
+  _array:
+    TIMER?_STOP:
+      description: The interrupt status bit for the timer%s stop event.
+    TIMER?_TEZ:
+      description: The interrupt status bit for the timer%s zero event.
+    TIMER?_TEP:
+      description: The interrupt status bit for the timer%s period event.
+    FAULT?:
+      description: The interrupt status bit for the fault%s event.
+    FAULT?_CLR:
+      description: The interrupt status bit for the fault%s clear event.
+    CAP?:
+      description: The interrupt status bit for the capture%s event.
+    "?~OP?_TEA,CMPR?_TEA":
+      name: CMPR%s_TEA
+      description: The interrupt status bit for the operator%s compare A event.
+    "?~OP?_TEB,CMPR?_TEB":
+      name: CMPR%s_TEB
+      description: The interrupt status bit for the operator%s compare B event.
+    "?~FH?_CBC,TZ?_CBC":
+      name: TZ%s_CBC
+      description: The interrupt status bit for the fault handler%s cycle-by-cycle mode action.
+    "?~FH?_OST,TZ?_OST":
+      name: TZ%s_OST
+      description: The interrupt status bit for the fault handler%s one-shot mode action.
+
+INT_ENA:
+  _array:
+    TIMER?_STOP:
+      description: The interrupt enable bit for the timer%s stop event.
+    TIMER?_TEZ:
+      description: The interrupt enable bit for the timer%s zero event.
+    TIMER?_TEP:
+      description: The interrupt enable bit for the timer%s period event.
+    FAULT?:
+      description: The interrupt enable bit for the fault%s event.
+    FAULT?_CLR:
+      description: The interrupt enable bit for the fault%s clear event.
+    CAP?:
+      description: The interrupt enable bit for the capture%s event.
+    "?~OP?_TEA,CMPR?_TEA":
+      name: CMPR%s_TEA
+      description: The interrupt enable bit for the operator%s compare A event.
+    "?~OP?_TEB,CMPR?_TEB":
+      name: CMPR%s_TEB
+      description: The interrupt enable bit for the operator%s compare B event.
+    "?~FH?_CBC,TZ?_CBC":
+      name: TZ%s_CBC
+      description: The interrupt enable bit for the fault handler%s cycle-by-cycle mode action.
+    "?~FH?_OST,TZ?_OST":
+      name: TZ%s_OST
+      description: The interrupt enable bit for the fault handler%s one-shot mode action.
+
+INT_CLR:
+  _array:
+    TIMER?_STOP:
+      description: The interrupt clear bit for the timer%s stop event.
+    TIMER?_TEZ:
+      description: The interrupt clear bit for the timer%s zero event.
+    TIMER?_TEP:
+      description: The interrupt clear bit for the timer%s period event.
+    FAULT?:
+      description: The interrupt clear bit for the fault%s event.
+    FAULT?_CLR:
+      description: The interrupt clear bit for the fault%s clear event.
+    CAP?:
+      description: The interrupt clear bit for the capture%s event.
+    "?~OP?_TEA,CMPR?_TEA":
+      name: CMPR%s_TEA
+      description: The interrupt clear bit for the operator%s compare A event.
+    "?~OP?_TEB,CMPR?_TEB":
+      name: CMPR%s_TEB
+      description: The interrupt clear bit for the operator%s compare B event.
+    "?~FH?_CBC,TZ?_CBC":
+      name: TZ%s_CBC
+      description: The interrupt clear bit for the fault handler%s cycle-by-cycle mode action.
+    "?~FH?_OST,TZ?_OST":
+      name: TZ%s_OST
+      description: The interrupt clear bit for the fault handler%s one-shot mode action.

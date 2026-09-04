@@ -1,6 +1,6 @@
-#[doc = "Register `FH%s_CFG1` reader"]
+#[doc = "Register `FH_CFG1` reader"]
 pub type R = crate::R<FH_CFG1_SPEC>;
-#[doc = "Register `FH%s_CFG1` writer"]
+#[doc = "Register `FH_CFG1` writer"]
 pub type W = crate::W<FH_CFG1_SPEC>;
 #[doc = "Field `TZ_CLR_OST` reader - Configures the generation of software one-shot mode action clear. A toggle (software negate its value) triggers a clear for on going one-shot mode action."]
 pub type TZ_CLR_OST_R = crate::BitReader;
@@ -73,7 +73,7 @@ impl W {
         TZ_FORCE_OST_W::new(self, 4)
     }
 }
-#[doc = "Software triggers for fault handler actions configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`fh_cfg1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fh_cfg1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Software triggers for fault handler actions\n\nYou can [`read`](crate::Reg::read) this register and get [`fh_cfg1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fh_cfg1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FH_CFG1_SPEC;
 impl crate::RegisterSpec for FH_CFG1_SPEC {
     type Ux = u32;
@@ -84,5 +84,5 @@ impl crate::Readable for FH_CFG1_SPEC {}
 impl crate::Writable for FH_CFG1_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets FH%s_CFG1 to value 0"]
+#[doc = "`reset()` method sets FH_CFG1 to value 0"]
 impl crate::Resettable for FH_CFG1_SPEC {}

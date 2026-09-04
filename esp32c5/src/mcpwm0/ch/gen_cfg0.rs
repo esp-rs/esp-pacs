@@ -1,6 +1,6 @@
-#[doc = "Register `GEN%s_CFG0` reader"]
+#[doc = "Register `GEN_CFG0` reader"]
 pub type R = crate::R<GEN_CFG0_SPEC>;
-#[doc = "Register `GEN%s_CFG0` writer"]
+#[doc = "Register `GEN_CFG0` writer"]
 pub type W = crate::W<GEN_CFG0_SPEC>;
 #[doc = "Field `GEN_CFG_UPMETHOD` reader - Configures update method for PWM generator %s's active register.\\\\0: Immediately\\\\Bit0 is set to 1: TEZ\\\\Bit1 is set to 1: TEP\\\\Bit2 is set to 1: Sync\\\\Bit3 is set to 1: Disable the update"]
 pub type GEN_CFG_UPMETHOD_R = crate::FieldReader;
@@ -58,7 +58,7 @@ impl W {
         GEN_T1_SEL_W::new(self, 7)
     }
 }
-#[doc = "Generator%s fault event T0 and T1 configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`gen_cfg0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gen_cfg0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Generator0 fault event T0 and T1 configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`gen_cfg0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gen_cfg0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GEN_CFG0_SPEC;
 impl crate::RegisterSpec for GEN_CFG0_SPEC {
     type Ux = u32;
@@ -69,5 +69,5 @@ impl crate::Readable for GEN_CFG0_SPEC {}
 impl crate::Writable for GEN_CFG0_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets GEN%s_CFG0 to value 0"]
+#[doc = "`reset()` method sets GEN_CFG0 to value 0"]
 impl crate::Resettable for GEN_CFG0_SPEC {}

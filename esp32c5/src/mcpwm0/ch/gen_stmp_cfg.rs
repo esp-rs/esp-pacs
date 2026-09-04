@@ -1,6 +1,6 @@
-#[doc = "Register `GEN%s_STMP_CFG` reader"]
+#[doc = "Register `GEN_STMP_CFG` reader"]
 pub type R = crate::R<GEN_STMP_CFG_SPEC>;
-#[doc = "Register `GEN%s_STMP_CFG` writer"]
+#[doc = "Register `GEN_STMP_CFG` writer"]
 pub type W = crate::W<GEN_STMP_CFG_SPEC>;
 #[doc = "Field `CMPR_A_UPMETHOD` reader - Configures the update method for PWM generator %s time stamp A's active register.\\\\0: Immediately\\\\Bit0 is set to 1: TEZ\\\\Bit1 is set to 1: TEP\\\\Bit2 is set to 1: Sync\\\\Bit3 is set to 1: Disable the update"]
 pub type CMPR_A_UPMETHOD_R = crate::FieldReader;
@@ -73,7 +73,7 @@ impl W {
         CMPR_B_SHDW_FULL_W::new(self, 9)
     }
 }
-#[doc = "Generator%s time stamp registers A and B transfer status and update method register\n\nYou can [`read`](crate::Reg::read) this register and get [`gen_stmp_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gen_stmp_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Transfer status and update method for time stamp registers A and B\n\nYou can [`read`](crate::Reg::read) this register and get [`gen_stmp_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gen_stmp_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GEN_STMP_CFG_SPEC;
 impl crate::RegisterSpec for GEN_STMP_CFG_SPEC {
     type Ux = u32;
@@ -84,5 +84,5 @@ impl crate::Readable for GEN_STMP_CFG_SPEC {}
 impl crate::Writable for GEN_STMP_CFG_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets GEN%s_STMP_CFG to value 0"]
+#[doc = "`reset()` method sets GEN_STMP_CFG to value 0"]
 impl crate::Resettable for GEN_STMP_CFG_SPEC {}

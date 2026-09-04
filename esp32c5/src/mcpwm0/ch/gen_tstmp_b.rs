@@ -1,6 +1,6 @@
-#[doc = "Register `GEN%s_TSTMP_B` reader"]
+#[doc = "Register `GEN_TSTMP_B` reader"]
 pub type R = crate::R<GEN_TSTMP_B_SPEC>;
-#[doc = "Register `GEN%s_TSTMP_B` writer"]
+#[doc = "Register `GEN_TSTMP_B` writer"]
 pub type W = crate::W<GEN_TSTMP_B_SPEC>;
 #[doc = "Field `CMPR_B` reader - Configures the value of PWM generator %s time stamp B's shadow register."]
 pub type CMPR_B_R = crate::FieldReader<u16>;
@@ -28,7 +28,7 @@ impl W {
         CMPR_B_W::new(self, 0)
     }
 }
-#[doc = "Generator%s time stamp B's shadow register\n\nYou can [`read`](crate::Reg::read) this register and get [`gen_tstmp_b::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gen_tstmp_b::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Shadow register for register B.\n\nYou can [`read`](crate::Reg::read) this register and get [`gen_tstmp_b::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gen_tstmp_b::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GEN_TSTMP_B_SPEC;
 impl crate::RegisterSpec for GEN_TSTMP_B_SPEC {
     type Ux = u32;
@@ -39,5 +39,5 @@ impl crate::Readable for GEN_TSTMP_B_SPEC {}
 impl crate::Writable for GEN_TSTMP_B_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets GEN%s_TSTMP_B to value 0"]
+#[doc = "`reset()` method sets GEN_TSTMP_B to value 0"]
 impl crate::Resettable for GEN_TSTMP_B_SPEC {}
