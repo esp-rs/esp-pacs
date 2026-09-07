@@ -360,6 +360,24 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 128] = [
 #[doc(hidden)]
 pub mod interrupt;
 pub use self::interrupt::Interrupt;
+#[doc = "Core Local Interrupts"]
+pub type CLINT = crate::Periph<clint::RegisterBlock, 0x2000_0000>;
+impl core::fmt::Debug for CLINT {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLINT").finish()
+    }
+}
+#[doc = "Core Local Interrupts"]
+pub mod clint;
+#[doc = "Core Local Interrupts of the other core"]
+pub type CLINT_OTHER_CORE = crate::Periph<clint::RegisterBlock, 0x2001_0000>;
+impl core::fmt::Debug for CLINT_OTHER_CORE {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLINT_OTHER_CORE").finish()
+    }
+}
+#[doc = "Core Local Interrupts of the other core"]
+pub use self::clint as clint_other_core;
 #[doc = "Core Local Interrupt Controller"]
 pub type CLIC = crate::Periph<clic::RegisterBlock, 0x2080_0000>;
 impl core::fmt::Debug for CLIC {
