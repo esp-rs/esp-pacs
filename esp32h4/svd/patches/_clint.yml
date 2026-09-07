@@ -1,0 +1,17 @@
+_add:
+  CLINT:
+    description: Core Local Interrupts
+    groupName: CLINT
+    baseAddress: 0x20000000
+    addressBlocks:
+      - offset: 0x0
+        size: 0xC000
+        usage: registers
+  CLINT_OTHER_CORE:
+    description: Core Local Interrupts of the other core
+    groupName: CLINT
+    derivedFrom: CLINT
+    baseAddress: 0x20010000
+
+CLINT:
+  _include: ../../../common_patches/clint_dualcore.yaml
