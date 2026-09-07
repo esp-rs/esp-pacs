@@ -41,7 +41,15 @@ pub struct RegisterBlock {
     yolo: YOLO,
     timestamp_low: TIMESTAMP_LOW,
     timestamp_high: TIMESTAMP_HIGH,
-    _reserved39: [u8; 0x0f38],
+    _reserved39: [u8; 0x64],
+    txtb1_data: [TXTB1_DATA; 20],
+    _reserved40: [u8; 0xb0],
+    txtb2_data: [TXTB2_DATA; 20],
+    _reserved41: [u8; 0xb0],
+    txtb3_data: [TXTB3_DATA; 20],
+    _reserved42: [u8; 0xb0],
+    txtb4_data: [TXTB4_DATA; 20],
+    _reserved43: [u8; 0x0b84],
     timer_clk_en: TIMER_CLK_EN,
     timer_int_raw: TIMER_INT_RAW,
     timer_int_st: TIMER_INT_ST,
@@ -249,6 +257,50 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn timestamp_high(&self) -> &TIMESTAMP_HIGH {
         &self.timestamp_high
+    }
+    #[doc = "0x100..0x150 - TX buffer 1 frame memory word"]
+    #[inline(always)]
+    pub const fn txtb1_data(&self, n: usize) -> &TXTB1_DATA {
+        &self.txtb1_data[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x100..0x150 - TX buffer 1 frame memory word"]
+    #[inline(always)]
+    pub fn txtb1_data_iter(&self) -> impl Iterator<Item = &TXTB1_DATA> {
+        self.txtb1_data.iter()
+    }
+    #[doc = "0x200..0x250 - TX buffer 2 frame memory word"]
+    #[inline(always)]
+    pub const fn txtb2_data(&self, n: usize) -> &TXTB2_DATA {
+        &self.txtb2_data[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x200..0x250 - TX buffer 2 frame memory word"]
+    #[inline(always)]
+    pub fn txtb2_data_iter(&self) -> impl Iterator<Item = &TXTB2_DATA> {
+        self.txtb2_data.iter()
+    }
+    #[doc = "0x300..0x350 - TX buffer 3 frame memory word"]
+    #[inline(always)]
+    pub const fn txtb3_data(&self, n: usize) -> &TXTB3_DATA {
+        &self.txtb3_data[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x300..0x350 - TX buffer 3 frame memory word"]
+    #[inline(always)]
+    pub fn txtb3_data_iter(&self) -> impl Iterator<Item = &TXTB3_DATA> {
+        self.txtb3_data.iter()
+    }
+    #[doc = "0x400..0x450 - TX buffer 4 frame memory word"]
+    #[inline(always)]
+    pub const fn txtb4_data(&self, n: usize) -> &TXTB4_DATA {
+        &self.txtb4_data[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x400..0x450 - TX buffer 4 frame memory word"]
+    #[inline(always)]
+    pub fn txtb4_data_iter(&self) -> impl Iterator<Item = &TXTB4_DATA> {
+        self.txtb4_data.iter()
     }
     #[doc = "0xfd4 - TWAIFD timer clock force enable register."]
     #[inline(always)]
@@ -464,6 +516,22 @@ pub mod timestamp_low;
 pub type TIMESTAMP_HIGH = crate::Reg<timestamp_high::TIMESTAMP_HIGH_SPEC>;
 #[doc = "TWAI FD transmitted frame counter register"]
 pub mod timestamp_high;
+#[doc = "TXTB1_DATA (w) register accessor: TX buffer 1 frame memory word\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`txtb1_data::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@txtb1_data`] module"]
+pub type TXTB1_DATA = crate::Reg<txtb1_data::TXTB1_DATA_SPEC>;
+#[doc = "TX buffer 1 frame memory word"]
+pub mod txtb1_data;
+#[doc = "TXTB2_DATA (w) register accessor: TX buffer 2 frame memory word\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`txtb2_data::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@txtb2_data`] module"]
+pub type TXTB2_DATA = crate::Reg<txtb2_data::TXTB2_DATA_SPEC>;
+#[doc = "TX buffer 2 frame memory word"]
+pub mod txtb2_data;
+#[doc = "TXTB3_DATA (w) register accessor: TX buffer 3 frame memory word\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`txtb3_data::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@txtb3_data`] module"]
+pub type TXTB3_DATA = crate::Reg<txtb3_data::TXTB3_DATA_SPEC>;
+#[doc = "TX buffer 3 frame memory word"]
+pub mod txtb3_data;
+#[doc = "TXTB4_DATA (w) register accessor: TX buffer 4 frame memory word\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`txtb4_data::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@txtb4_data`] module"]
+pub type TXTB4_DATA = crate::Reg<txtb4_data::TXTB4_DATA_SPEC>;
+#[doc = "TX buffer 4 frame memory word"]
+pub mod txtb4_data;
 #[doc = "TIMER_CLK_EN (rw) register accessor: TWAIFD timer clock force enable register.\n\nYou can [`read`](crate::Reg::read) this register and get [`timer_clk_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timer_clk_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@timer_clk_en`] module"]
 pub type TIMER_CLK_EN = crate::Reg<timer_clk_en::TIMER_CLK_EN_SPEC>;
 #[doc = "TWAIFD timer clock force enable register."]

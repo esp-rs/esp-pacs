@@ -23,6 +23,7 @@ _include:
   - _pcr.yml
   - _sha.yml
   - _rmt.yml
+  - _twai.yml
   - _uart.yml
   - _mmu_item_content.yml
 

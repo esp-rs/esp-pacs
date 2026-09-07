@@ -1,0 +1,74 @@
+# The TX buffer RAM is described in TRM 38.3.8 ("The CAN frame is stored to TX
+# buffers via TX buffer 1 - TX buffer 8 memory regions") but is absent from the
+# register summary in TRM 38.6, so it never made it into the base SVD. Without
+# it a driver cannot queue a frame at all.
+#
+# The ESP32-C5 implements 4 of the 8 buffers the CTU CAN FD core can be
+# synthesized with; TWAIFD_TX_COMMAND_TXTB_INFO_REG.TXT_BUFFER_COUNT reports the
+# actual number. Each buffer occupies a 0x100 region of which the first 20 words
+# are used: word 0 is the frame format, word 1 the identifier, words 2-3 the
+# timestamp, and words 4-19 the payload.
+#
+# TWAI1 is derivedFrom TWAI0, so this also applies there.
+TWAI0:
+  _add:
+    TXTB1_DATA%s:
+      description: TX buffer 1 frame memory word
+      addressOffset: 0x100
+      dim: 20
+      dimIndex: 0-19
+      dimIncrement: 0x4
+      size: 0x20
+      access: write-only
+      resetValue: 0x0
+      fields:
+        DATA:
+          description: Frame buffer word
+          bitOffset: 0
+          bitWidth: 32
+          access: write-only
+    TXTB2_DATA%s:
+      description: TX buffer 2 frame memory word
+      addressOffset: 0x200
+      dim: 20
+      dimIndex: 0-19
+      dimIncrement: 0x4
+      size: 0x20
+      access: write-only
+      resetValue: 0x0
+      fields:
+        DATA:
+          description: Frame buffer word
+          bitOffset: 0
+          bitWidth: 32
+          access: write-only
+    TXTB3_DATA%s:
+      description: TX buffer 3 frame memory word
+      addressOffset: 0x300
+      dim: 20
+      dimIndex: 0-19
+      dimIncrement: 0x4
+      size: 0x20
+      access: write-only
+      resetValue: 0x0
+      fields:
+        DATA:
+          description: Frame buffer word
+          bitOffset: 0
+          bitWidth: 32
+          access: write-only
+    TXTB4_DATA%s:
+      description: TX buffer 4 frame memory word
+      addressOffset: 0x400
+      dim: 20
+      dimIndex: 0-19
+      dimIncrement: 0x4
+      size: 0x20
+      access: write-only
+      resetValue: 0x0
+      fields:
+        DATA:
+          description: Frame buffer word
+          bitOffset: 0
+          bitWidth: 32
+          access: write-only
