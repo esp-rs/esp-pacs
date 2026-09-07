@@ -1,0 +1,72 @@
+_add:
+  MSIP:
+    description: Core-local machine software interrupt pending register
+    addressOffset: 0x0
+    size: 0x20
+    resetValue: 0x0
+    fields:
+      MSIP:
+        description: Configures the pending status of the machine software interrupt.
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+  MTIMECMP:
+    description: Core-local machine timer compare value
+    addressOffset: 0x4000
+    size: 0x40
+    fields:
+      MTIMECMP:
+        description: Represents the value to compare with the system counter.
+        bitOffset: 0
+        bitWidth: 64
+        access: read-write
+  MTIMELOAD:
+    description: Core-local machine timer load value
+    addressOffset: 0x4008
+    size: 0x40
+    resetValue: 0x0
+    fields:
+      MTIMELOAD:
+        description: Represents the value to be loaded to the system counter.
+        bitOffset: 0
+        bitWidth: 64
+        access: read-write
+  MTIMECTL:
+    description: Core-local machine timer interrupt control/status register
+    addressOffset: 0x4010
+    size: 0x20
+    resetValue: 0x1
+    fields:
+      MTIME_EN:
+        description: Configures whether to enable the system counter. This bit is implemented in the CLINT of core 0 only.
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      MTIME_OVF:
+        description: Set by hardware when the system counter reaches its maximum value. Software can clear this bit by writing 0 to it.
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      MTIME_SAM:
+        description: Configures the sampling mode of MTIME, to allow reading the 64-bit counter value consistently.
+        bitOffset: 2
+        bitWidth: 2
+        access: read-write
+  MTIME:
+    description: Core-local system counter value
+    addressOffset: 0xBFF8
+    size: 0x40
+    resetValue: 0x0
+    fields:
+      MTIME:
+        description: Represents the current value of the system counter.
+        bitOffset: 0
+        bitWidth: 64
+        access: read-only
+
+MTIMECTL:
+  MTIME_SAM:
+    NONE: [0, "No sampling"]
+    SAMPLE_HIGH: [1, "Sample the upper half of the system counter when the lower half of MTIME is read"]
+    SAMPLE_LOW: [2, "Sample the lower half of the system counter when the upper half of MTIME is read"]
+    SAMPLE_OTHER: [3, "Sample the other half of the system counter when either half of MTIME is read"]

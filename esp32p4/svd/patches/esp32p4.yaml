@@ -2,6 +2,7 @@ _svd: "../esp32p4.base.svd"
 
 _include:
   - ../../../common_patches/clic.yaml
+  - "_clint.yml"
   - ../../../common_patches/emac.yaml
   - ../../../common_patches/twai.yaml
   - "_axi_icm.yml"
