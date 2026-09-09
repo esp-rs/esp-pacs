@@ -2,6 +2,9 @@ _svd: ../esp32h4.base.svd
 _include:
   - "_clic.yml"
   - "_clint.yml"
+  - "_i2c_ana_mst.yml"
+  - "_modem_lpcon.yml"
+  - "_modem_syscon.yml"
   - "_aes.yml"
   - "_date.yml"
   - "_dma.yml"
@@ -21,6 +24,12 @@ _include:
   - "_uart.yml"
   - "_mmu_item_content.yml"
   - "_mmu_item_index.yml"
+
+_modify:
+  # SPI3 is a second instance of the general purpose SPI controller.
+  SPI3:
+    derivedFrom: SPI2
+    baseAddress: 0x60011000
 
 TIMG0:
   _include: "_timg.yml"
@@ -75,7 +84,9 @@ I2C0:
       FIFO_RDATA:
         access: read-write
   _include:
+    - ../../../common_patches/i2c0.yaml
     - ../../../common_patches/i2c_force_out.yaml
+    - ../../../common_patches/i2c_st_timeouts.yaml
     - ../../../common_patches/int_strip.yaml
 
 "EFUSE,I2S0,UART0,PARL_IO,PAU":
@@ -83,6 +94,13 @@ I2C0:
 
 GPIO_SD:
   _strip: GPIO_EXT_
+  # The field names carry the peripheral prefix, too.
+  "*":
+    _strip: GPIO_EXT_
+  SIGMADELTA_MISC:
+    _modify:
+      SIGMADELTA_CLK_EN:
+        name: FUNCTION_CLK_EN
   SIGMADELTA%s:
     _strip: ["SD0_", "SD_"]
   GLITCH_FILTER_CH%s:
@@ -99,6 +117,9 @@ GPIO_SD:
 
 USB_DEVICE:
   _strip: USB_SERIAL_JTAG_
+  # The field names carry the peripheral prefix, too.
+  "*":
+    _strip: USB_SERIAL_JTAG_
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -132,3 +153,9 @@ _add:
   INTERRUPT_CORE1:
     derivedFrom: INTERRUPT_CORE0
     baseAddress: 0x6009B000
+INTPRI:
+  _modify:
+    CPU_INTR_FROM_CPU_%s:
+      name: CPU_INTR_FROM_CPU%s
+  CPU_INTR_FROM_CPU%s:
+    _strip_end: _FROM_CPU

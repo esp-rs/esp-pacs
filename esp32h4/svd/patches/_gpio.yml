@@ -7,6 +7,30 @@ GPIO:
     - PIN41
     - PIN42
     - PIN43
+  # Name the per-core interrupt status registers `INTR<bank>_<cpu>`, like the other
+  # dual-core chips do. PROCPU_INT/INTERRUPT_2 are the CPU 0/CPU 1 status of GPIO0-31,
+  # PROCPU_INT1/INTERRUPT_21 the same for GPIO32-39.
+  _modify:
+    PROCPU_INT:
+      name: INTR_0
+    INTERRUPT_2:
+      name: INTR_1
+    PROCPU_INT1:
+      name: INTR1_0
+    INTERRUPT_21:
+      name: INTR1_1
+  INTR_0:
+    _modify:
+      PROCPU_INT: { name: INTR_0 }
+  INTR_1:
+    _modify:
+      INTERRUPT_2: { name: INTR_1 }
+  INTR1_0:
+    _modify:
+      PROCPU_INT1: { name: INTR1_0 }
+  INTR1_1:
+    _modify:
+      INTERRUPT_21: { name: INTR1_1 }
   _add:
     FUNC%s_IN_SEL_CFG:
       dim: 256

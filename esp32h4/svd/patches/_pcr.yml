@@ -1,4 +1,35 @@
 PCR:
+  # The UART and I2C clock registers are described per instance. Group them the same way as on
+  # the other PCR chips, so that esp-hal can index them.
+  UART?_CONF:
+    _strip: UART?_
+  UART?_SCLK_CONF:
+    _strip: UART?_
+  UART?_MEM_LP_CTRL:
+    _strip: UART?_
+  _cluster:
+    UART%s:
+      UART?_CONF:
+        name: CONF
+      UART?_SCLK_CONF:
+        name: CLK_CONF
+      UART?_MEM_LP_CTRL:
+        name: MEM_LP_CTRL
+  _array:
+    I2C*_SCLK_CONF:
+      name: I2C%s_SCLK_CONF
+  I2C*_SCLK_CONF:
+    _modify:
+      I2C*_SCLK_DIV_A:
+        name: I2C_SCLK_DIV_A
+      I2C*_SCLK_DIV_B:
+        name: I2C_SCLK_DIV_B
+      I2C*_SCLK_DIV_NUM:
+        name: I2C_SCLK_DIV_NUM
+      I2C*_SCLK_SEL:
+        name: I2C_SCLK_SEL
+      I2C*_SCLK_EN:
+        name: I2C_SCLK_EN
   RMT_SCLK_CONF:
     _strip: "RMT_"
   IOMUX_CLK_CONF:

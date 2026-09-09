@@ -1,44 +1,35 @@
 #[doc = "Register `IN_EP2_ST` reader"]
 pub type R = crate::R<IN_EP2_ST_SPEC>;
-#[doc = "Field `USB_SERIAL_JTAG_IN_EP2_STATE` reader - State of IN Endpoint 2."]
-pub type USB_SERIAL_JTAG_IN_EP2_STATE_R = crate::FieldReader;
-#[doc = "Field `USB_SERIAL_JTAG_IN_EP2_WR_ADDR` reader - Write data address of IN endpoint 2."]
-pub type USB_SERIAL_JTAG_IN_EP2_WR_ADDR_R = crate::FieldReader;
-#[doc = "Field `USB_SERIAL_JTAG_IN_EP2_RD_ADDR` reader - Read data address of IN endpoint 2."]
-pub type USB_SERIAL_JTAG_IN_EP2_RD_ADDR_R = crate::FieldReader;
+#[doc = "Field `IN_EP2_STATE` reader - State of IN Endpoint 2."]
+pub type IN_EP2_STATE_R = crate::FieldReader;
+#[doc = "Field `IN_EP2_WR_ADDR` reader - Write data address of IN endpoint 2."]
+pub type IN_EP2_WR_ADDR_R = crate::FieldReader;
+#[doc = "Field `IN_EP2_RD_ADDR` reader - Read data address of IN endpoint 2."]
+pub type IN_EP2_RD_ADDR_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:1 - State of IN Endpoint 2."]
     #[inline(always)]
-    pub fn usb_serial_jtag_in_ep2_state(&self) -> USB_SERIAL_JTAG_IN_EP2_STATE_R {
-        USB_SERIAL_JTAG_IN_EP2_STATE_R::new((self.bits & 3) as u8)
+    pub fn in_ep2_state(&self) -> IN_EP2_STATE_R {
+        IN_EP2_STATE_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:8 - Write data address of IN endpoint 2."]
     #[inline(always)]
-    pub fn usb_serial_jtag_in_ep2_wr_addr(&self) -> USB_SERIAL_JTAG_IN_EP2_WR_ADDR_R {
-        USB_SERIAL_JTAG_IN_EP2_WR_ADDR_R::new(((self.bits >> 2) & 0x7f) as u8)
+    pub fn in_ep2_wr_addr(&self) -> IN_EP2_WR_ADDR_R {
+        IN_EP2_WR_ADDR_R::new(((self.bits >> 2) & 0x7f) as u8)
     }
     #[doc = "Bits 9:15 - Read data address of IN endpoint 2."]
     #[inline(always)]
-    pub fn usb_serial_jtag_in_ep2_rd_addr(&self) -> USB_SERIAL_JTAG_IN_EP2_RD_ADDR_R {
-        USB_SERIAL_JTAG_IN_EP2_RD_ADDR_R::new(((self.bits >> 9) & 0x7f) as u8)
+    pub fn in_ep2_rd_addr(&self) -> IN_EP2_RD_ADDR_R {
+        IN_EP2_RD_ADDR_R::new(((self.bits >> 9) & 0x7f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_EP2_ST")
-            .field(
-                "usb_serial_jtag_in_ep2_state",
-                &self.usb_serial_jtag_in_ep2_state(),
-            )
-            .field(
-                "usb_serial_jtag_in_ep2_wr_addr",
-                &self.usb_serial_jtag_in_ep2_wr_addr(),
-            )
-            .field(
-                "usb_serial_jtag_in_ep2_rd_addr",
-                &self.usb_serial_jtag_in_ep2_rd_addr(),
-            )
+            .field("in_ep2_state", &self.in_ep2_state())
+            .field("in_ep2_wr_addr", &self.in_ep2_wr_addr())
+            .field("in_ep2_rd_addr", &self.in_ep2_rd_addr())
             .finish()
     }
 }

@@ -45,7 +45,7 @@ extern "C" {
     fn CACHE();
     fn CPU_PERI_TIMEOUT();
     fn GPIO();
-    fn GPIO_INTERRUPT_2();
+    fn GPIO_INT1();
     fn PAU();
     fn HP_PERI_TIMEOUT();
     fn HP_APM_M0();
@@ -76,10 +76,10 @@ extern "C" {
     fn RMT();
     fn I2C_EXT0();
     fn I2C_EXT1();
-    fn TG0_T0();
-    fn TG0_WDT();
-    fn TG1_T0();
-    fn TG1_WDT();
+    fn TG0_T0_LEVEL();
+    fn TG0_WDT_LEVEL();
+    fn TG1_T0_LEVEL();
+    fn TG1_WDT_LEVEL();
     fn SYSTIMER_TARGET0();
     fn SYSTIMER_TARGET1();
     fn SYSTIMER_TARGET2();
@@ -188,7 +188,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 98] = [
     },
     Vector { _handler: GPIO },
     Vector {
-        _handler: GPIO_INTERRUPT_2,
+        _handler: GPIO_INT1,
     },
     Vector { _handler: PAU },
     Vector {
@@ -258,10 +258,18 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 98] = [
     Vector { _handler: RMT },
     Vector { _handler: I2C_EXT0 },
     Vector { _handler: I2C_EXT1 },
-    Vector { _handler: TG0_T0 },
-    Vector { _handler: TG0_WDT },
-    Vector { _handler: TG1_T0 },
-    Vector { _handler: TG1_WDT },
+    Vector {
+        _handler: TG0_T0_LEVEL,
+    },
+    Vector {
+        _handler: TG0_WDT_LEVEL,
+    },
+    Vector {
+        _handler: TG1_T0_LEVEL,
+    },
+    Vector {
+        _handler: TG1_WDT_LEVEL,
+    },
     Vector {
         _handler: SYSTIMER_TARGET0,
     },
@@ -539,15 +547,15 @@ impl core::fmt::Debug for INTERRUPT_CORE0 {
 }
 #[doc = "Interrupt Controller (Core 0)"]
 pub mod interrupt_core0;
-#[doc = "Interrupt Controller (Core 0)"]
-pub type INTERRUPT_CORE1 = crate::Periph<interrupt_core0::RegisterBlock, 0x6009_b000>;
+#[doc = "Interrupt Controller for Core 1"]
+pub type INTERRUPT_CORE1 = crate::Periph<interrupt_core1::RegisterBlock, 0x6009_b000>;
 impl core::fmt::Debug for INTERRUPT_CORE1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTERRUPT_CORE1").finish()
     }
 }
-#[doc = "Interrupt Controller (Core 0)"]
-pub use self::interrupt_core0 as interrupt_core1;
+#[doc = "Interrupt Controller for Core 1"]
+pub mod interrupt_core1;
 #[doc = "INTPRI Peripheral"]
 pub type INTPRI = crate::Periph<intpri::RegisterBlock, 0x6000_5000>;
 impl core::fmt::Debug for INTPRI {
@@ -810,14 +818,14 @@ impl core::fmt::Debug for SPI2 {
 #[doc = "SPI (Serial Peripheral Interface) Controller 2"]
 pub mod spi2;
 #[doc = "SPI (Serial Peripheral Interface) Controller 3"]
-pub type SPI3 = crate::Periph<spi3::RegisterBlock, 0x6001_1000>;
+pub type SPI3 = crate::Periph<spi2::RegisterBlock, 0x6001_1000>;
 impl core::fmt::Debug for SPI3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI3").finish()
     }
 }
 #[doc = "SPI (Serial Peripheral Interface) Controller 3"]
-pub mod spi3;
+pub use self::spi2 as spi3;
 #[doc = "System Timer"]
 pub type SYSTIMER = crate::Periph<systimer::RegisterBlock, 0x6002_3000>;
 impl core::fmt::Debug for SYSTIMER {
@@ -872,6 +880,33 @@ impl core::fmt::Debug for TOUCH_AON {
 }
 #[doc = "TOUCH_AON Peripheral"]
 pub mod touch_aon;
+#[doc = "MODEM_SYSCON"]
+pub type MODEM_SYSCON = crate::Periph<modem_syscon::RegisterBlock, 0x600c_9c00>;
+impl core::fmt::Debug for MODEM_SYSCON {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MODEM_SYSCON").finish()
+    }
+}
+#[doc = "MODEM_SYSCON"]
+pub mod modem_syscon;
+#[doc = "MODEM_LPCON"]
+pub type MODEM_LPCON = crate::Periph<modem_lpcon::RegisterBlock, 0x600c_f000>;
+impl core::fmt::Debug for MODEM_LPCON {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MODEM_LPCON").finish()
+    }
+}
+#[doc = "MODEM_LPCON"]
+pub mod modem_lpcon;
+#[doc = "I2C_ANA_MST Peripheral"]
+pub type I2C_ANA_MST = crate::Periph<i2c_ana_mst::RegisterBlock, 0x600c_f800>;
+impl core::fmt::Debug for I2C_ANA_MST {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C_ANA_MST").finish()
+    }
+}
+#[doc = "I2C_ANA_MST Peripheral"]
+pub mod i2c_ana_mst;
 #[doc = "Two-Wire Automotive Interface"]
 pub type TWAI0 = crate::Periph<twai0::RegisterBlock, 0x6001_c000>;
 impl core::fmt::Debug for TWAI0 {
