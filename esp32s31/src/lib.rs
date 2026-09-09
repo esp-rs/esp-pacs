@@ -123,6 +123,20 @@ extern "C" {
     fn HP_PARLIO_RX();
     fn HP_PARLIO_TX();
     fn ASSIST_DEBUG();
+    fn MODEM_WIFI_MAC();
+    fn MODEM_WIFI_MAC_NMI();
+    fn MODEM_WIFI_PWR();
+    fn MODEM_WIFI_BB();
+    fn MODEM_BT_MAC();
+    fn MODEM_BT_BB();
+    fn MODEM_BT_BB_NMI();
+    fn MODEM_LP_TIMER();
+    fn MODEM_COEX();
+    fn MODEM_BLE_TIMER();
+    fn MODEM_BLE_SEC();
+    fn MODEM_I2C_MST();
+    fn MODEM_ZB_MAC();
+    fn MODEM_BT_MAC_INT1();
     fn CORDIC();
     fn ZERO_DET();
     fn LP_WDT();
@@ -427,20 +441,48 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 168] = [
     Vector {
         _handler: ASSIST_DEBUG,
     },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: MODEM_WIFI_MAC,
+    },
+    Vector {
+        _handler: MODEM_WIFI_MAC_NMI,
+    },
+    Vector {
+        _handler: MODEM_WIFI_PWR,
+    },
+    Vector {
+        _handler: MODEM_WIFI_BB,
+    },
+    Vector {
+        _handler: MODEM_BT_MAC,
+    },
+    Vector {
+        _handler: MODEM_BT_BB,
+    },
+    Vector {
+        _handler: MODEM_BT_BB_NMI,
+    },
+    Vector {
+        _handler: MODEM_LP_TIMER,
+    },
+    Vector {
+        _handler: MODEM_COEX,
+    },
+    Vector {
+        _handler: MODEM_BLE_TIMER,
+    },
+    Vector {
+        _handler: MODEM_BLE_SEC,
+    },
+    Vector {
+        _handler: MODEM_I2C_MST,
+    },
+    Vector {
+        _handler: MODEM_ZB_MAC,
+    },
+    Vector {
+        _handler: MODEM_BT_MAC_INT1,
+    },
     Vector { _handler: CORDIC },
     Vector { _handler: ZERO_DET },
     Vector { _handler: LP_WDT },

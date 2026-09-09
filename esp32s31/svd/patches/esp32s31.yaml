@@ -121,6 +121,40 @@ HP_SYS:
         value: 68
   _include: ../../../common_patches/sw_interrupts.yaml
 
+# Modem IRQs are absent from the CSV-derived SVD (no WIFI/BT peripherals).
+# Names match ESP-IDF `ETS_MODEM_*_INTR_SOURCE` in soc/interrupts.h.
+MODEM_LPCON:
+  _add:
+    _interrupts:
+      MODEM_WIFI_MAC:
+        value: 120
+      MODEM_WIFI_MAC_NMI:
+        value: 121
+      MODEM_WIFI_PWR:
+        value: 122
+      MODEM_WIFI_BB:
+        value: 123
+      MODEM_BT_MAC:
+        value: 124
+      MODEM_BT_BB:
+        value: 125
+      MODEM_BT_BB_NMI:
+        value: 126
+      MODEM_LP_TIMER:
+        value: 127
+      MODEM_COEX:
+        value: 128
+      MODEM_BLE_TIMER:
+        value: 129
+      MODEM_BLE_SEC:
+        value: 130
+      MODEM_I2C_MST:
+        value: 131
+      MODEM_ZB_MAC:
+        value: 132
+      MODEM_BT_MAC_INT1:
+        value: 133
+
 JPEG:
   _include: ../../../common_patches/int_strip.yaml
   _array:
