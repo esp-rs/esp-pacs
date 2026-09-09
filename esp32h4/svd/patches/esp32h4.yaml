@@ -30,6 +30,9 @@ _modify:
   SPI3:
     derivedFrom: SPI2
     baseAddress: 0x60011000
+  MCPWM0:
+    groupName: MCPWM
+    description: Motor Control Pulse Width Modulator (MCPWM) Peripheral
 
 TIMG0:
   _include: "_timg.yml"
@@ -144,15 +147,6 @@ RNG:
     DATA:
       access: read-only
 
-_modify:
-  MCPWM0:
-    groupName: MCPWM
-    description: Motor Control Pulse Width Modulator (MCPWM) Peripheral
-
-_add:
-  INTERRUPT_CORE1:
-    derivedFrom: INTERRUPT_CORE0
-    baseAddress: 0x6009B000
 INTPRI:
   _modify:
     CPU_INTR_FROM_CPU_%s:
