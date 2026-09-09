@@ -6,6 +6,10 @@ pub type W = crate::W<MMU_ITEM_CONTENT_SPEC>;
 pub type PADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `PADDR` writer - Physical page number"]
 pub type PADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
+#[doc = "Field `ACCESS_SPIRAM` reader - Entry maps PSRAM instead of flash when set"]
+pub type ACCESS_SPIRAM_R = crate::BitReader;
+#[doc = "Field `ACCESS_SPIRAM` writer - Entry maps PSRAM instead of flash when set"]
+pub type ACCESS_SPIRAM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VALID` reader - Entry is valid when set"]
 pub type VALID_R = crate::BitReader;
 #[doc = "Field `VALID` writer - Entry is valid when set"]
@@ -20,15 +24,20 @@ impl R {
     pub fn paddr(&self) -> PADDR_R {
         PADDR_R::new((self.bits & 0x01ff) as u16)
     }
-    #[doc = "Bit 9 - Entry is valid when set"]
+    #[doc = "Bit 9 - Entry maps PSRAM instead of flash when set"]
+    #[inline(always)]
+    pub fn access_spiram(&self) -> ACCESS_SPIRAM_R {
+        ACCESS_SPIRAM_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Entry is valid when set"]
     #[inline(always)]
     pub fn valid(&self) -> VALID_R {
-        VALID_R::new(((self.bits >> 9) & 1) != 0)
+        VALID_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bit 10 - Decrypt via flash encryption when set"]
+    #[doc = "Bit 11 - Decrypt via flash encryption when set"]
     #[inline(always)]
     pub fn sensitive(&self) -> SENSITIVE_R {
-        SENSITIVE_R::new(((self.bits >> 10) & 1) != 0)
+        SENSITIVE_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -36,6 +45,7 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MMU_ITEM_CONTENT")
             .field("paddr", &self.paddr())
+            .field("access_spiram", &self.access_spiram())
             .field("valid", &self.valid())
             .field("sensitive", &self.sensitive())
             .finish()
@@ -47,15 +57,20 @@ impl W {
     pub fn paddr(&mut self) -> PADDR_W<'_, MMU_ITEM_CONTENT_SPEC> {
         PADDR_W::new(self, 0)
     }
-    #[doc = "Bit 9 - Entry is valid when set"]
+    #[doc = "Bit 9 - Entry maps PSRAM instead of flash when set"]
+    #[inline(always)]
+    pub fn access_spiram(&mut self) -> ACCESS_SPIRAM_W<'_, MMU_ITEM_CONTENT_SPEC> {
+        ACCESS_SPIRAM_W::new(self, 9)
+    }
+    #[doc = "Bit 10 - Entry is valid when set"]
     #[inline(always)]
     pub fn valid(&mut self) -> VALID_W<'_, MMU_ITEM_CONTENT_SPEC> {
-        VALID_W::new(self, 9)
+        VALID_W::new(self, 10)
     }
-    #[doc = "Bit 10 - Decrypt via flash encryption when set"]
+    #[doc = "Bit 11 - Decrypt via flash encryption when set"]
     #[inline(always)]
     pub fn sensitive(&mut self) -> SENSITIVE_W<'_, MMU_ITEM_CONTENT_SPEC> {
-        SENSITIVE_W::new(self, 10)
+        SENSITIVE_W::new(self, 11)
     }
 }
 #[doc = "MSPI-MMU item content register\n\nYou can [`read`](crate::Reg::read) this register and get [`mmu_item_content::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mmu_item_content::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

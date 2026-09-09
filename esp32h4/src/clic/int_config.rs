@@ -6,10 +6,10 @@ pub type W = crate::W<INT_CONFIG_SPEC>;
 pub type NVBITS_R = crate::BitReader;
 #[doc = "Field `NVBITS` writer - Hardware vector interrupt implementation flag bit."]
 pub type NVBITS_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `NLBITS` reader - Interrupt priority effective digits, the maximum value is 8."]
-pub type NLBITS_R = crate::FieldReader;
-#[doc = "Field `NLBITS` writer - Interrupt priority effective digits, the maximum value is 8."]
-pub type NLBITS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
+#[doc = "Field `MNLBITS` reader - Machine mode interrupt priority effective digits, the maximum value is 8."]
+pub type MNLBITS_R = crate::FieldReader;
+#[doc = "Field `MNLBITS` writer - Machine mode interrupt priority effective digits, the maximum value is 8."]
+pub type MNLBITS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `NMBITS` reader - The effective number of bits in the privileged state."]
 pub type NMBITS_R = crate::FieldReader;
 #[doc = "Field `NMBITS` writer - The effective number of bits in the privileged state."]
@@ -20,10 +20,10 @@ impl R {
     pub fn nvbits(&self) -> NVBITS_R {
         NVBITS_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bits 1:4 - Interrupt priority effective digits, the maximum value is 8."]
+    #[doc = "Bits 1:4 - Machine mode interrupt priority effective digits, the maximum value is 8."]
     #[inline(always)]
-    pub fn nlbits(&self) -> NLBITS_R {
-        NLBITS_R::new(((self.bits >> 1) & 0x0f) as u8)
+    pub fn mnlbits(&self) -> MNLBITS_R {
+        MNLBITS_R::new(((self.bits >> 1) & 0x0f) as u8)
     }
     #[doc = "Bits 5:6 - The effective number of bits in the privileged state."]
     #[inline(always)]
@@ -36,7 +36,7 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_CONFIG")
             .field("nmbits", &self.nmbits())
-            .field("nlbits", &self.nlbits())
+            .field("mnlbits", &self.mnlbits())
             .field("nvbits", &self.nvbits())
             .finish()
     }
@@ -47,10 +47,10 @@ impl W {
     pub fn nvbits(&mut self) -> NVBITS_W<'_, INT_CONFIG_SPEC> {
         NVBITS_W::new(self, 0)
     }
-    #[doc = "Bits 1:4 - Interrupt priority effective digits, the maximum value is 8."]
+    #[doc = "Bits 1:4 - Machine mode interrupt priority effective digits, the maximum value is 8."]
     #[inline(always)]
-    pub fn nlbits(&mut self) -> NLBITS_W<'_, INT_CONFIG_SPEC> {
-        NLBITS_W::new(self, 1)
+    pub fn mnlbits(&mut self) -> MNLBITS_W<'_, INT_CONFIG_SPEC> {
+        MNLBITS_W::new(self, 1)
     }
     #[doc = "Bits 5:6 - The effective number of bits in the privileged state."]
     #[inline(always)]

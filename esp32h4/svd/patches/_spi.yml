@@ -5,7 +5,10 @@ SPI[01]:
 
   _include: ../../../common_patches/int_strip.yaml
 
-SPI[23]:
+SPI1:
+  _include: ../../../common_patches/spi_w.yaml
+
+SPI2:
   _strip: "SPI_"
 
   "*":

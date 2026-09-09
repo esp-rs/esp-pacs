@@ -1,4 +1,139 @@
+# The interrupt matrix is instantiated once per core (INTMTX0 and INTMTX1, see esp-idf's
+# `clic_reg.h`), but the SVD only describes the first instance. The second one is spelled out with
+# `CORE_1_`-prefixed register names to match the other dual-core chips.
+_add:
+  INTERRUPT_CORE1:
+    description: Interrupt Controller for Core 1
+    groupName: INTERRUPT_CORE1
+    baseAddress: 0x6009b000
+    addressBlocks:
+      - offset: 0x0
+        size: 0x800
+        usage: registers
+    registers:
+      CORE_1_INTR_MAP%s:
+        description: Interrupt-matrix destination and PASS_IN_SEC routing for source %s
+        dim: 98
+        dimIncrement: 0x4
+        dimIndex: 0-97
+        addressOffset: 0x0
+        size: 32
+        resetValue: 0x0
+        access: read-write
+        fields:
+          MAP:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+          PASS_IN_SEC:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+      CORE_1_INTR_STATUS%s:
+        description: Status of interrupt sources within a 32-bit window
+        dim: 3
+        dimIncrement: 0x4
+        dimIndex: 0-2
+        addressOffset: 0x188
+        size: 32
+        access: read-only
+        fields:
+          INT_STATUS:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+      CORE_1_INTR_STATUS3:
+        description: Status register for interrupt sources 96 ~ 97
+        addressOffset: 0x194
+        size: 32
+        access: read-only
+        fields:
+          INT_STATUS_3:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-only
+      CORE_1_SRC_PASS_IN_SEC_STATUS%s:
+        description: PASS_IN_SEC status for interrupt sources
+        dim: 3
+        dimIncrement: 0x4
+        dimIndex: 0-2
+        addressOffset: 0x198
+        size: 32
+        access: read-only
+        fields:
+          INT_SRC_PASS_IN_SEC_STATUS:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+      CORE_1_SRC_PASS_IN_SEC_STATUS3:
+        description: PASS_IN_SEC status register for interrupt sources 96 ~ 97
+        addressOffset: 0x1a4
+        size: 32
+        access: read-only
+        fields:
+          INT_SRC_PASS_IN_SEC_STATUS_3:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-only
+      SIG_IDX_ASSERT_IN_SEC:
+        description: reserved
+        addressOffset: 0x1a8
+        size: 32
+        fields:
+          INT_SIG_IDX_ASSERT_IN_SEC:
+            bitOffset: 0
+            bitWidth: 6
+            access: read-write
+      SECURE_STATUS:
+        description: reserved
+        addressOffset: 0x1ac
+        size: 32
+        access: read-only
+        fields:
+          INT_SECURE_STATUS:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+      CLOCK_GATE:
+        description: Interrupt clock gating configure register
+        addressOffset: 0x1b0
+        size: 32
+        fields:
+          REG_CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      INTERRUPT_DATE:
+        description: Version control register
+        addressOffset: 0x7fc
+        size: 32
+        resetValue: 0x2504040
+        fields:
+          INTERRUPT_DATE:
+            bitOffset: 0
+            bitWidth: 28
+            access: read-write
+
 INTERRUPT_CORE0:
+  _modify:
+    _interrupts:
+      TG0_T0:
+        name: TG0_T0_LEVEL
+      TG0_WDT:
+        name: TG0_WDT_LEVEL
+      TG1_T0:
+        name: TG1_T0_LEVEL
+      TG1_WDT:
+        name: TG1_WDT_LEVEL
+      # The GPIO peripheral raises one interrupt per core; the second one is called
+      # GPIO_INT1 on the other multi-core chips.
+      GPIO_INTERRUPT_2:
+        name: GPIO_INT1
+    INT_STATUS_REG_3:
+      name: CORE_0_INTR_STATUS3
+    SRC_PASS_IN_SEC_STATUS_3:
+      name: CORE_0_SRC_PASS_IN_SEC_STATUS3
+
   _array:
     INT_STATUS_REG_[012]:
       name: CORE_0_INTR_STATUS%s
@@ -6,12 +141,6 @@ INTERRUPT_CORE0:
     SRC_PASS_IN_SEC_STATUS_[012]:
       name: CORE_0_SRC_PASS_IN_SEC_STATUS%s
       description: PASS_IN_SEC status for interrupt sources
-
-  _modify:
-    INT_STATUS_REG_3:
-      name: CORE_0_INTR_STATUS3
-    SRC_PASS_IN_SEC_STATUS_3:
-      name: CORE_0_SRC_PASS_IN_SEC_STATUS3
 
   _delete:
     - "*_MAP"

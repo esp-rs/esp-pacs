@@ -18,8 +18,8 @@ _add:
             bitOffset: 5
             bitWidth: 2
             access: read-write
-          NLBITS:
-            description: Interrupt priority effective digits, the maximum value is 8.
+          MNLBITS:
+            description: Machine mode interrupt priority effective digits, the maximum value is 8.
             bitOffset: 1
             bitWidth: 4
             access: read-write

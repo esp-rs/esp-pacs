@@ -22,17 +22,23 @@ RMT:
         name: DATA
         access: read-write
 
+  # Arraying the per-channel registers collapses the channel index in the field names, so the
+  # remaining `_CH` suffix has to be stripped as well.
   "CH*CONF0":
     _strip_end:
       - "_CH0"
       - "_CH2"
+      - "_CH"
   "CH*CONF1":
-    _strip_end: "_CH2"
+    _strip_end:
+      - "_CH2"
+      - "_CH"
 
   "CH*STATUS":
     _strip_end:
       - "_CH0"
       - "_CH2"
+      - "_CH"
 
   "CH*CARRIER_DUTY":
     _strip_end:
@@ -51,6 +57,7 @@ RMT:
       - "RMT_"
     _strip_end:
       - "_CH2"
+      - "_CH"
 
   "REF_CNT_RST":
     _strip_end:

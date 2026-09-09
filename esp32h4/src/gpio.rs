@@ -27,10 +27,10 @@ pub struct RegisterBlock {
     status1_w1ts: STATUS1_W1TS,
     status1_w1tc: STATUS1_W1TC,
     _reserved21: [u8; 0x18],
-    procpu_int: PROCPU_INT,
-    interrupt_2: INTERRUPT_2,
-    procpu_int1: PROCPU_INT1,
-    interrupt_21: INTERRUPT_21,
+    intr_0: INTR_0,
+    intr_1: INTR_1,
+    intr1_0: INTR1_0,
+    intr1_1: INTR1_1,
     _reserved25: [u8; 0x10],
     status_next: STATUS_NEXT,
     status_next1: STATUS_NEXT1,
@@ -152,23 +152,23 @@ impl RegisterBlock {
     }
     #[doc = "0xa4 - GPIO_PROCPU_INT interrupt status register"]
     #[inline(always)]
-    pub const fn procpu_int(&self) -> &PROCPU_INT {
-        &self.procpu_int
+    pub const fn intr_0(&self) -> &INTR_0 {
+        &self.intr_0
     }
     #[doc = "0xa8 - GPIO_INTERRUPT_2 interrupt status register"]
     #[inline(always)]
-    pub const fn interrupt_2(&self) -> &INTERRUPT_2 {
-        &self.interrupt_2
+    pub const fn intr_1(&self) -> &INTR_1 {
+        &self.intr_1
     }
     #[doc = "0xac - GPIO_PROCPU_INT interrupt status register"]
     #[inline(always)]
-    pub const fn procpu_int1(&self) -> &PROCPU_INT1 {
-        &self.procpu_int1
+    pub const fn intr1_0(&self) -> &INTR1_0 {
+        &self.intr1_0
     }
     #[doc = "0xb0 - GPIO_INTERRUPT_2 interrupt status register"]
     #[inline(always)]
-    pub const fn interrupt_21(&self) -> &INTERRUPT_21 {
-        &self.interrupt_21
+    pub const fn intr1_1(&self) -> &INTR1_1 {
+        &self.intr1_1
     }
     #[doc = "0xc4 - GPIO interrupt source register"]
     #[inline(always)]
@@ -1788,22 +1788,22 @@ pub mod status1_w1ts;
 pub type STATUS1_W1TC = crate::Reg<status1_w1tc::STATUS1_W1TC_SPEC>;
 #[doc = "GPIO interrupt status clear register"]
 pub mod status1_w1tc;
-#[doc = "PROCPU_INT (r) register accessor: GPIO_PROCPU_INT interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`procpu_int::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@procpu_int`] module"]
-pub type PROCPU_INT = crate::Reg<procpu_int::PROCPU_INT_SPEC>;
+#[doc = "INTR_0 (r) register accessor: GPIO_PROCPU_INT interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_0`] module"]
+pub type INTR_0 = crate::Reg<intr_0::INTR_0_SPEC>;
 #[doc = "GPIO_PROCPU_INT interrupt status register"]
-pub mod procpu_int;
-#[doc = "INTERRUPT_2 (r) register accessor: GPIO_INTERRUPT_2 interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`interrupt_2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@interrupt_2`] module"]
-pub type INTERRUPT_2 = crate::Reg<interrupt_2::INTERRUPT_2_SPEC>;
+pub mod intr_0;
+#[doc = "INTR_1 (r) register accessor: GPIO_INTERRUPT_2 interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_1`] module"]
+pub type INTR_1 = crate::Reg<intr_1::INTR_1_SPEC>;
 #[doc = "GPIO_INTERRUPT_2 interrupt status register"]
-pub mod interrupt_2;
-#[doc = "PROCPU_INT1 (r) register accessor: GPIO_PROCPU_INT interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`procpu_int1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@procpu_int1`] module"]
-pub type PROCPU_INT1 = crate::Reg<procpu_int1::PROCPU_INT1_SPEC>;
+pub mod intr_1;
+#[doc = "INTR1_0 (r) register accessor: GPIO_PROCPU_INT interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`intr1_0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr1_0`] module"]
+pub type INTR1_0 = crate::Reg<intr1_0::INTR1_0_SPEC>;
 #[doc = "GPIO_PROCPU_INT interrupt status register"]
-pub mod procpu_int1;
-#[doc = "INTERRUPT_21 (r) register accessor: GPIO_INTERRUPT_2 interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`interrupt_21::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@interrupt_21`] module"]
-pub type INTERRUPT_21 = crate::Reg<interrupt_21::INTERRUPT_21_SPEC>;
+pub mod intr1_0;
+#[doc = "INTR1_1 (r) register accessor: GPIO_INTERRUPT_2 interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`intr1_1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr1_1`] module"]
+pub type INTR1_1 = crate::Reg<intr1_1::INTR1_1_SPEC>;
 #[doc = "GPIO_INTERRUPT_2 interrupt status register"]
-pub mod interrupt_21;
+pub mod intr1_1;
 #[doc = "STATUS_NEXT (r) register accessor: GPIO interrupt source register\n\nYou can [`read`](crate::Reg::read) this register and get [`status_next::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_next`] module"]
 pub type STATUS_NEXT = crate::Reg<status_next::STATUS_NEXT_SPEC>;
 #[doc = "GPIO interrupt source register"]
