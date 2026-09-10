@@ -1087,6 +1087,15 @@ impl core::fmt::Debug for UART2 {
 }
 #[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 2"]
 pub use self::uart0 as uart2;
+#[doc = "MAC controller for Wi-Fi peripheral"]
+pub type WIFI = crate::Periph<wifi::RegisterBlock, 0x6003_3000>;
+impl core::fmt::Debug for WIFI {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WIFI").finish()
+    }
+}
+#[doc = "MAC controller for Wi-Fi peripheral"]
+pub mod wifi;
 #[doc = "Universal Host Controller Interface 0"]
 pub type UHCI0 = crate::Periph<uhci0::RegisterBlock, 0x6001_4000>;
 impl core::fmt::Debug for UHCI0 {

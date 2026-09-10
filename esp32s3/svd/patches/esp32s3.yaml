@@ -1,6 +1,7 @@
 _svd: ../esp32s3.base.svd
 
 _include:
+  - wifi.yaml
   - ../../../common_patches/twai.yaml
   - _aes.yml
   - _apb_saradc.yml

@@ -1,0 +1,145 @@
+# ESP32-S3 MAC mapping, checked against the IDF v5.4 hal_mac/hal_mac_tx members.
+# Based on the ESP32-C3 mapping by okhsunrog (esp-pacs commit 9be190016260ef195c97f7aa5aa7c576a1646890).
+# Both use 0x4c TX strides; S3 TSF latch semantics are deliberately not inferred from C3.
+_add:
+    WIFI:
+        description: MAC controller for Wi-Fi peripheral
+        groupName: WIFI
+        baseAddress: 0x60033000
+        size: 32
+        addressBlock:
+            offset: 0x0
+            size: 0x2200
+            usage: registers
+        registers:
+            RX_CTRL:
+                addressOffset: 0x84
+            FILTER_CONTROL%s:
+                dim: 4
+                dimIncrement: 4
+                addressOffset: 0xd8
+            RX_CTRL_FILTER%s:
+                dim: 4
+                dimIncrement: 4
+                addressOffset: 0x100
+                access: read-write
+            CTRL:
+                description: Exact name and meaning unknown, used for initializing the MAC
+                addressOffset: 0xca0
+                access: read-write
+            PLCP1%s:
+                dim: 5
+                dimIncrement: 0x4c
+                addressOffset: 0x11c8
+            HT_SIG%s:
+                dim: 5
+                dimIncrement: 0x4c
+                addressOffset: 0x11d0
+            HT_UNKNOWN%s:
+                dim: 5
+                dimIncrement: 0x4c
+                addressOffset: 0x11e0
+            PLCP2%s:
+                description: "Misc TX slot control: bit 5 (PLCP2 of the S2), bits 6..13 expected response rate, bits 22..23 HT, bits 24..27 TXOP frame count, bits 28..29 interface"
+                dim: 5
+                dimIncrement: 0x4c
+                addressOffset: 0x11e4
+            DURATION%s:
+                dim: 5
+                dimIncrement: 0x4c
+                addressOffset: 0x11e8
+            PMD%s:
+                description: TX result of the slot, read by hal_mac_get_txq_pmd
+                dim: 5
+                dimIncrement: 0x4c
+                addressOffset: 0x11f0
+            TX_PTI%s:
+                description: Coexistence priorities of the TX slot, written by hal_set_tx_pti
+                dim: 5
+                dimIncrement: 0x4c
+                addressOffset: 0x11cc
+                access: read-write
+            MAC_TIME:
+                addressOffset: 0x2000
+                access: read
+                description: Current value of the MAC timer
+
+WIFI:
+    PLCP1%s:
+        _delete: [BANDWIDTH, INTERFACE_ID]
+    PLCP2%s:
+        _add:
+            RESPONSE_RATE:
+                description: Expected response PHY rate, written by mac_tx_set_plcp1
+                bitOffset: 6
+                bitWidth: 8
+            INTERFACE_ID:
+                description: Virtual interface for this transmit slot
+                bitOffset: 28
+                bitWidth: 2
+    _add:
+        _clusters:
+            FILTER_BANK%s:
+                dim: 2
+                dimIncrement: 0x40
+                addressOffset: 0x0
+                description: "
+                    Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA.
+                    Each filter bank has registers for four interfaces.
+                    "
+                registers:
+                    DUMMY:
+                        addressOffset: 0x0
+            RX_DMA_LIST:
+                addressOffset: 0x88
+                registers:
+                    DUMMY:
+                        addressOffset: 0x0
+            MAC_INTERRUPT:
+                addressOffset: 0xc3c
+                description: Status and clear for the WIFI_MAC interrupt
+                registers:
+                    DUMMY:
+                        addressOffset: 0x0
+            PWR_INTERRUPT:
+                addressOffset: 0x2118
+                description: Status and clear for the WIFI_PWR interrupt
+                registers:
+                    DUMMY:
+                        addressOffset: 0x0
+            TXQ_STATE:
+                addressOffset: 0xca4
+                description: State of transmission queues
+                registers:
+                    DUMMY:
+                        addressOffset: 0x0
+            TX_SLOT_CONFIG%s:
+                dim: 5
+                dimIncrement: 0x8
+                description: Used to configure the TX slot.
+                addressOffset: 0xce4
+                registers:
+                    DUMMY:
+                        addressOffset: 0x0
+            CRYPTO_KEY_SLOT%s:
+                dim: 25
+                dimIncrement: 40
+                addressOffset: 0x1400
+                description: Cryptographic keys for MPDU encapsulation and decapsulation
+                registers:
+                    DUMMY:
+                        addressOffset: 0x0
+            CRYPTO_CONTROL:
+                addressOffset: 0x800
+                description: Control registers for hardware crypto
+                registers:
+                    DUMMY:
+                        addressOffset: 0x0
+
+_include:
+    - "../../../common_patches/wifi/mac/rx.yaml"
+    - "../../../common_patches/wifi/mac/rx_filter_masked.yaml"
+    - "../../../common_patches/wifi/mac/tx.yaml"
+    - "../../../common_patches/wifi/mac/mac_interrupt.yaml"
+    - "../../../common_patches/wifi/mac/pwr_interrupt.yaml"
+    - "../../../common_patches/wifi/mac/crypto.yaml"
