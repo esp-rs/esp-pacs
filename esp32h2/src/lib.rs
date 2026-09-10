@@ -314,6 +314,15 @@ impl core::fmt::Debug for EFUSE {
 }
 #[doc = "eFuse Controller"]
 pub mod efuse;
+#[doc = "External Memory"]
+pub type EXTMEM = crate::Periph<extmem::RegisterBlock, 0x600c_8000>;
+impl core::fmt::Debug for EXTMEM {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXTMEM").finish()
+    }
+}
+#[doc = "External Memory"]
+pub mod extmem;
 #[doc = "General Purpose Input/Output"]
 pub type GPIO = crate::Periph<gpio::RegisterBlock, 0x6009_1000>;
 impl core::fmt::Debug for GPIO {
