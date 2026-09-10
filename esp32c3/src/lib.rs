@@ -359,6 +359,15 @@ impl core::fmt::Debug for I2S0 {
 }
 #[doc = "I2S (Inter-IC Sound) Controller 0"]
 pub mod i2s0;
+#[doc = "MAC controller for Wi-Fi peripheral"]
+pub type WIFI = crate::Periph<wifi::RegisterBlock, 0x6003_3000>;
+impl core::fmt::Debug for WIFI {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WIFI").finish()
+    }
+}
+#[doc = "MAC controller for Wi-Fi peripheral"]
+pub mod wifi;
 #[doc = "Interrupt Controller (Core 0)"]
 pub type INTERRUPT_CORE0 = crate::Periph<interrupt_core0::RegisterBlock, 0x600c_2000>;
 impl core::fmt::Debug for INTERRUPT_CORE0 {
