@@ -31,11 +31,40 @@ pub struct RegisterBlock {
     int_st: INT_ST,
     _reserved24: [u8; 0x04],
     ddr: DDR,
-    _reserved25: [u8; 0xa8],
+    spi_smem_ddr: SPI_SMEM_DDR,
+    _reserved26: [u8; 0x24],
+    spi_fmem_pms_attr: [SPI_FMEM_PMS_ATTR; 4],
+    spi_fmem_pms_addr: [SPI_FMEM_PMS_ADDR; 4],
+    spi_fmem_pms_size: [SPI_FMEM_PMS_SIZE; 4],
+    spi_smem_pms_attr: [SPI_SMEM_PMS_ATTR; 4],
+    spi_smem_pms_addr: [SPI_SMEM_PMS_ADDR; 4],
+    spi_smem_pms_size: [SPI_SMEM_PMS_SIZE; 4],
+    _reserved32: [u8; 0x04],
+    pms_reject: PMS_REJECT,
+    ecc_ctrl: ECC_CTRL,
+    ecc_err_addr: ECC_ERR_ADDR,
+    axi_err_addr: AXI_ERR_ADDR,
+    spi_smem_ecc_ctrl: SPI_SMEM_ECC_CTRL,
+    _reserved37: [u8; 0x08],
     timing_cali: TIMING_CALI,
-    _reserved26: [u8; 0x7c],
+    din_mode: DIN_MODE,
+    din_num: DIN_NUM,
+    dout_mode: DOUT_MODE,
+    spi_smem_timing_cali: SPI_SMEM_TIMING_CALI,
+    spi_smem_din_mode: SPI_SMEM_DIN_MODE,
+    spi_smem_din_num: SPI_SMEM_DIN_NUM,
+    spi_smem_dout_mode: SPI_SMEM_DOUT_MODE,
+    spi_smem_ac: SPI_SMEM_AC,
+    _reserved46: [u8; 0x5c],
     clock_gate: CLOCK_GATE,
-    _reserved27: [u8; 0x01f8],
+    _reserved47: [u8; 0x0178],
+    mmu_item_content: MMU_ITEM_CONTENT,
+    mmu_item_index: MMU_ITEM_INDEX,
+    mmu_power_ctrl: MMU_POWER_CTRL,
+    _reserved50: [u8; 0x68],
+    registerrnd_eco_high: REGISTERRND_ECO_HIGH,
+    registerrnd_eco_low: REGISTERRND_ECO_LOW,
+    _reserved52: [u8; 0x04],
     date: DATE,
 }
 impl RegisterBlock {
@@ -170,15 +199,296 @@ impl RegisterBlock {
     pub const fn ddr(&self) -> &DDR {
         &self.ddr
     }
+    #[doc = "0xd8 - MSPI external RAM DDR mode control register"]
+    #[inline(always)]
+    pub const fn spi_smem_ddr(&self) -> &SPI_SMEM_DDR {
+        &self.spi_smem_ddr
+    }
+    #[doc = "0x100..0x110 - MSPI flash ACE section %s attribute register"]
+    #[inline(always)]
+    pub const fn spi_fmem_pms_attr(&self, n: usize) -> &SPI_FMEM_PMS_ATTR {
+        &self.spi_fmem_pms_attr[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x100..0x110 - MSPI flash ACE section %s attribute register"]
+    #[inline(always)]
+    pub fn spi_fmem_pms_attr_iter(&self) -> impl Iterator<Item = &SPI_FMEM_PMS_ATTR> {
+        self.spi_fmem_pms_attr.iter()
+    }
+    #[doc = "0x100 - MSPI flash ACE section 0 attribute register"]
+    #[inline(always)]
+    pub const fn spi_fmem_pms0_attr(&self) -> &SPI_FMEM_PMS_ATTR {
+        self.spi_fmem_pms_attr(0)
+    }
+    #[doc = "0x104 - MSPI flash ACE section 1 attribute register"]
+    #[inline(always)]
+    pub const fn spi_fmem_pms1_attr(&self) -> &SPI_FMEM_PMS_ATTR {
+        self.spi_fmem_pms_attr(1)
+    }
+    #[doc = "0x108 - MSPI flash ACE section 2 attribute register"]
+    #[inline(always)]
+    pub const fn spi_fmem_pms2_attr(&self) -> &SPI_FMEM_PMS_ATTR {
+        self.spi_fmem_pms_attr(2)
+    }
+    #[doc = "0x10c - MSPI flash ACE section 3 attribute register"]
+    #[inline(always)]
+    pub const fn spi_fmem_pms3_attr(&self) -> &SPI_FMEM_PMS_ATTR {
+        self.spi_fmem_pms_attr(3)
+    }
+    #[doc = "0x110..0x120 - SPI1 flash ACE section %s start address register"]
+    #[inline(always)]
+    pub const fn spi_fmem_pms_addr(&self, n: usize) -> &SPI_FMEM_PMS_ADDR {
+        &self.spi_fmem_pms_addr[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x110..0x120 - SPI1 flash ACE section %s start address register"]
+    #[inline(always)]
+    pub fn spi_fmem_pms_addr_iter(&self) -> impl Iterator<Item = &SPI_FMEM_PMS_ADDR> {
+        self.spi_fmem_pms_addr.iter()
+    }
+    #[doc = "0x110 - SPI1 flash ACE section 0 start address register"]
+    #[inline(always)]
+    pub const fn spi_fmem_pms0_addr(&self) -> &SPI_FMEM_PMS_ADDR {
+        self.spi_fmem_pms_addr(0)
+    }
+    #[doc = "0x114 - SPI1 flash ACE section 1 start address register"]
+    #[inline(always)]
+    pub const fn spi_fmem_pms1_addr(&self) -> &SPI_FMEM_PMS_ADDR {
+        self.spi_fmem_pms_addr(1)
+    }
+    #[doc = "0x118 - SPI1 flash ACE section 2 start address register"]
+    #[inline(always)]
+    pub const fn spi_fmem_pms2_addr(&self) -> &SPI_FMEM_PMS_ADDR {
+        self.spi_fmem_pms_addr(2)
+    }
+    #[doc = "0x11c - SPI1 flash ACE section 3 start address register"]
+    #[inline(always)]
+    pub const fn spi_fmem_pms3_addr(&self) -> &SPI_FMEM_PMS_ADDR {
+        self.spi_fmem_pms_addr(3)
+    }
+    #[doc = "0x120..0x130 - SPI1 flash ACE section %s start address register"]
+    #[inline(always)]
+    pub const fn spi_fmem_pms_size(&self, n: usize) -> &SPI_FMEM_PMS_SIZE {
+        &self.spi_fmem_pms_size[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x120..0x130 - SPI1 flash ACE section %s start address register"]
+    #[inline(always)]
+    pub fn spi_fmem_pms_size_iter(&self) -> impl Iterator<Item = &SPI_FMEM_PMS_SIZE> {
+        self.spi_fmem_pms_size.iter()
+    }
+    #[doc = "0x120 - SPI1 flash ACE section 0 start address register"]
+    #[inline(always)]
+    pub const fn spi_fmem_pms0_size(&self) -> &SPI_FMEM_PMS_SIZE {
+        self.spi_fmem_pms_size(0)
+    }
+    #[doc = "0x124 - SPI1 flash ACE section 1 start address register"]
+    #[inline(always)]
+    pub const fn spi_fmem_pms1_size(&self) -> &SPI_FMEM_PMS_SIZE {
+        self.spi_fmem_pms_size(1)
+    }
+    #[doc = "0x128 - SPI1 flash ACE section 2 start address register"]
+    #[inline(always)]
+    pub const fn spi_fmem_pms2_size(&self) -> &SPI_FMEM_PMS_SIZE {
+        self.spi_fmem_pms_size(2)
+    }
+    #[doc = "0x12c - SPI1 flash ACE section 3 start address register"]
+    #[inline(always)]
+    pub const fn spi_fmem_pms3_size(&self) -> &SPI_FMEM_PMS_SIZE {
+        self.spi_fmem_pms_size(3)
+    }
+    #[doc = "0x130..0x140 - SPI1 flash ACE section %s start address register"]
+    #[inline(always)]
+    pub const fn spi_smem_pms_attr(&self, n: usize) -> &SPI_SMEM_PMS_ATTR {
+        &self.spi_smem_pms_attr[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x130..0x140 - SPI1 flash ACE section %s start address register"]
+    #[inline(always)]
+    pub fn spi_smem_pms_attr_iter(&self) -> impl Iterator<Item = &SPI_SMEM_PMS_ATTR> {
+        self.spi_smem_pms_attr.iter()
+    }
+    #[doc = "0x130 - SPI1 flash ACE section 0 start address register"]
+    #[inline(always)]
+    pub const fn spi_smem_pms0_attr(&self) -> &SPI_SMEM_PMS_ATTR {
+        self.spi_smem_pms_attr(0)
+    }
+    #[doc = "0x134 - SPI1 flash ACE section 1 start address register"]
+    #[inline(always)]
+    pub const fn spi_smem_pms1_attr(&self) -> &SPI_SMEM_PMS_ATTR {
+        self.spi_smem_pms_attr(1)
+    }
+    #[doc = "0x138 - SPI1 flash ACE section 2 start address register"]
+    #[inline(always)]
+    pub const fn spi_smem_pms2_attr(&self) -> &SPI_SMEM_PMS_ATTR {
+        self.spi_smem_pms_attr(2)
+    }
+    #[doc = "0x13c - SPI1 flash ACE section 3 start address register"]
+    #[inline(always)]
+    pub const fn spi_smem_pms3_attr(&self) -> &SPI_SMEM_PMS_ATTR {
+        self.spi_smem_pms_attr(3)
+    }
+    #[doc = "0x140..0x150 - SPI1 external RAM ACE section %s start address register"]
+    #[inline(always)]
+    pub const fn spi_smem_pms_addr(&self, n: usize) -> &SPI_SMEM_PMS_ADDR {
+        &self.spi_smem_pms_addr[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x140..0x150 - SPI1 external RAM ACE section %s start address register"]
+    #[inline(always)]
+    pub fn spi_smem_pms_addr_iter(&self) -> impl Iterator<Item = &SPI_SMEM_PMS_ADDR> {
+        self.spi_smem_pms_addr.iter()
+    }
+    #[doc = "0x140 - SPI1 external RAM ACE section 0 start address register"]
+    #[inline(always)]
+    pub const fn spi_smem_pms0_addr(&self) -> &SPI_SMEM_PMS_ADDR {
+        self.spi_smem_pms_addr(0)
+    }
+    #[doc = "0x144 - SPI1 external RAM ACE section 1 start address register"]
+    #[inline(always)]
+    pub const fn spi_smem_pms1_addr(&self) -> &SPI_SMEM_PMS_ADDR {
+        self.spi_smem_pms_addr(1)
+    }
+    #[doc = "0x148 - SPI1 external RAM ACE section 2 start address register"]
+    #[inline(always)]
+    pub const fn spi_smem_pms2_addr(&self) -> &SPI_SMEM_PMS_ADDR {
+        self.spi_smem_pms_addr(2)
+    }
+    #[doc = "0x14c - SPI1 external RAM ACE section 3 start address register"]
+    #[inline(always)]
+    pub const fn spi_smem_pms3_addr(&self) -> &SPI_SMEM_PMS_ADDR {
+        self.spi_smem_pms_addr(3)
+    }
+    #[doc = "0x150..0x160 - SPI1 external RAM ACE section %s start address register"]
+    #[inline(always)]
+    pub const fn spi_smem_pms_size(&self, n: usize) -> &SPI_SMEM_PMS_SIZE {
+        &self.spi_smem_pms_size[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x150..0x160 - SPI1 external RAM ACE section %s start address register"]
+    #[inline(always)]
+    pub fn spi_smem_pms_size_iter(&self) -> impl Iterator<Item = &SPI_SMEM_PMS_SIZE> {
+        self.spi_smem_pms_size.iter()
+    }
+    #[doc = "0x150 - SPI1 external RAM ACE section 0 start address register"]
+    #[inline(always)]
+    pub const fn spi_smem_pms0_size(&self) -> &SPI_SMEM_PMS_SIZE {
+        self.spi_smem_pms_size(0)
+    }
+    #[doc = "0x154 - SPI1 external RAM ACE section 1 start address register"]
+    #[inline(always)]
+    pub const fn spi_smem_pms1_size(&self) -> &SPI_SMEM_PMS_SIZE {
+        self.spi_smem_pms_size(1)
+    }
+    #[doc = "0x158 - SPI1 external RAM ACE section 2 start address register"]
+    #[inline(always)]
+    pub const fn spi_smem_pms2_size(&self) -> &SPI_SMEM_PMS_SIZE {
+        self.spi_smem_pms_size(2)
+    }
+    #[doc = "0x15c - SPI1 external RAM ACE section 3 start address register"]
+    #[inline(always)]
+    pub const fn spi_smem_pms3_size(&self) -> &SPI_SMEM_PMS_SIZE {
+        self.spi_smem_pms_size(3)
+    }
+    #[doc = "0x164 - SPI1 access reject register"]
+    #[inline(always)]
+    pub const fn pms_reject(&self) -> &PMS_REJECT {
+        &self.pms_reject
+    }
+    #[doc = "0x168 - MSPI ECC control register"]
+    #[inline(always)]
+    pub const fn ecc_ctrl(&self) -> &ECC_CTRL {
+        &self.ecc_ctrl
+    }
+    #[doc = "0x16c - MSPI ECC error address register"]
+    #[inline(always)]
+    pub const fn ecc_err_addr(&self) -> &ECC_ERR_ADDR {
+        &self.ecc_err_addr
+    }
+    #[doc = "0x170 - MSPI AXI request error address"]
+    #[inline(always)]
+    pub const fn axi_err_addr(&self) -> &AXI_ERR_ADDR {
+        &self.axi_err_addr
+    }
+    #[doc = "0x174 - MSPI ECC control register"]
+    #[inline(always)]
+    pub const fn spi_smem_ecc_ctrl(&self) -> &SPI_SMEM_ECC_CTRL {
+        &self.spi_smem_ecc_ctrl
+    }
     #[doc = "0x180 - SPI1 timing control register"]
     #[inline(always)]
     pub const fn timing_cali(&self) -> &TIMING_CALI {
         &self.timing_cali
     }
+    #[doc = "0x184 - MSPI flash input timing delay mode control register"]
+    #[inline(always)]
+    pub const fn din_mode(&self) -> &DIN_MODE {
+        &self.din_mode
+    }
+    #[doc = "0x188 - MSPI flash input timing delay number control register"]
+    #[inline(always)]
+    pub const fn din_num(&self) -> &DIN_NUM {
+        &self.din_num
+    }
+    #[doc = "0x18c - MSPI flash output timing adjustment control register"]
+    #[inline(always)]
+    pub const fn dout_mode(&self) -> &DOUT_MODE {
+        &self.dout_mode
+    }
+    #[doc = "0x190 - MSPI external RAM timing calibration register"]
+    #[inline(always)]
+    pub const fn spi_smem_timing_cali(&self) -> &SPI_SMEM_TIMING_CALI {
+        &self.spi_smem_timing_cali
+    }
+    #[doc = "0x194 - MSPI external RAM input timing delay mode control register"]
+    #[inline(always)]
+    pub const fn spi_smem_din_mode(&self) -> &SPI_SMEM_DIN_MODE {
+        &self.spi_smem_din_mode
+    }
+    #[doc = "0x198 - MSPI external RAM input timing delay number control register"]
+    #[inline(always)]
+    pub const fn spi_smem_din_num(&self) -> &SPI_SMEM_DIN_NUM {
+        &self.spi_smem_din_num
+    }
+    #[doc = "0x19c - MSPI external RAM output timing adjustment control register"]
+    #[inline(always)]
+    pub const fn spi_smem_dout_mode(&self) -> &SPI_SMEM_DOUT_MODE {
+        &self.spi_smem_dout_mode
+    }
+    #[doc = "0x1a0 - MSPI external RAM ECC and SPI CS timing control register"]
+    #[inline(always)]
+    pub const fn spi_smem_ac(&self) -> &SPI_SMEM_AC {
+        &self.spi_smem_ac
+    }
     #[doc = "0x200 - SPI1 clk_gate register"]
     #[inline(always)]
     pub const fn clock_gate(&self) -> &CLOCK_GATE {
         &self.clock_gate
+    }
+    #[doc = "0x37c - MSPI-MMU item content register"]
+    #[inline(always)]
+    pub const fn mmu_item_content(&self) -> &MMU_ITEM_CONTENT {
+        &self.mmu_item_content
+    }
+    #[doc = "0x380 - MSPI-MMU item index register"]
+    #[inline(always)]
+    pub const fn mmu_item_index(&self) -> &MMU_ITEM_INDEX {
+        &self.mmu_item_index
+    }
+    #[doc = "0x384 - MSPI MMU power control register"]
+    #[inline(always)]
+    pub const fn mmu_power_ctrl(&self) -> &MMU_POWER_CTRL {
+        &self.mmu_power_ctrl
+    }
+    #[doc = "0x3f0 - MSPI ECO high register"]
+    #[inline(always)]
+    pub const fn registerrnd_eco_high(&self) -> &REGISTERRND_ECO_HIGH {
+        &self.registerrnd_eco_high
+    }
+    #[doc = "0x3f4 - MSPI ECO low register"]
+    #[inline(always)]
+    pub const fn registerrnd_eco_low(&self) -> &REGISTERRND_ECO_LOW {
+        &self.registerrnd_eco_low
     }
     #[doc = "0x3fc - Version control register"]
     #[inline(always)]
@@ -294,4 +604,58 @@ pub mod timing_cali;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "SPI1 clk_gate register"]
 pub mod clock_gate;
-pub use crate::dma::{date, DATE};
+pub use crate::{
+    dma::{date, DATE},
+    spi0::{
+        axi_err_addr,
+        din_mode,
+        din_num,
+        dout_mode,
+        ecc_ctrl,
+        ecc_err_addr,
+        mmu_item_content,
+        mmu_item_index,
+        mmu_power_ctrl,
+        pms_reject,
+        registerrnd_eco_high,
+        registerrnd_eco_low,
+        spi_fmem_pms_addr,
+        spi_fmem_pms_attr,
+        spi_fmem_pms_size,
+        spi_smem_ac,
+        spi_smem_ddr,
+        spi_smem_din_mode,
+        spi_smem_din_num,
+        spi_smem_dout_mode,
+        spi_smem_ecc_ctrl,
+        spi_smem_pms_addr,
+        spi_smem_pms_attr,
+        spi_smem_pms_size,
+        spi_smem_timing_cali,
+        AXI_ERR_ADDR,
+        DIN_MODE,
+        DIN_NUM,
+        DOUT_MODE,
+        ECC_CTRL,
+        ECC_ERR_ADDR,
+        MMU_ITEM_CONTENT,
+        MMU_ITEM_INDEX,
+        MMU_POWER_CTRL,
+        PMS_REJECT,
+        REGISTERRND_ECO_HIGH,
+        REGISTERRND_ECO_LOW,
+        SPI_FMEM_PMS_ADDR,
+        SPI_FMEM_PMS_ATTR,
+        SPI_FMEM_PMS_SIZE,
+        SPI_SMEM_AC,
+        SPI_SMEM_DDR,
+        SPI_SMEM_DIN_MODE,
+        SPI_SMEM_DIN_NUM,
+        SPI_SMEM_DOUT_MODE,
+        SPI_SMEM_ECC_CTRL,
+        SPI_SMEM_PMS_ADDR,
+        SPI_SMEM_PMS_ATTR,
+        SPI_SMEM_PMS_SIZE,
+        SPI_SMEM_TIMING_CALI,
+    },
+};

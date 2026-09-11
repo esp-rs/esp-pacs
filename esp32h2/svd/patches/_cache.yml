@@ -1,0 +1,8 @@
+_copy:
+  CACHE:
+    from: ../../../esp32c6/svd/esp32c6.base.svd:EXTMEM
+
+_modify:
+  CACHE:
+    description: L1 Cache Controller
+    groupName: CACHE
