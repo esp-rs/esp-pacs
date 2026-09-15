@@ -2,12 +2,12 @@
 pub type R = crate::R<MTIMECMP_SPEC>;
 #[doc = "Register `MTIMECMP` writer"]
 pub type W = crate::W<MTIMECMP_SPEC>;
-#[doc = "Field `MTIMECMP` reader - Configures the 64-bit machine timer compare value."]
+#[doc = "Field `MTIMECMP` reader - Represents the value to compare with the system counter."]
 pub type MTIMECMP_R = crate::FieldReader<u64>;
-#[doc = "Field `MTIMECMP` writer - Configures the 64-bit machine timer compare value."]
+#[doc = "Field `MTIMECMP` writer - Represents the value to compare with the system counter."]
 pub type MTIMECMP_W<'a, REG> = crate::FieldWriter<'a, REG, 64, u64>;
 impl R {
-    #[doc = "Bits 0:63 - Configures the 64-bit machine timer compare value."]
+    #[doc = "Bits 0:63 - Represents the value to compare with the system counter."]
     #[inline(always)]
     pub fn mtimecmp(&self) -> MTIMECMP_R {
         MTIMECMP_R::new(self.bits)
@@ -22,13 +22,13 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:63 - Configures the 64-bit machine timer compare value."]
+    #[doc = "Bits 0:63 - Represents the value to compare with the system counter."]
     #[inline(always)]
     pub fn mtimecmp(&mut self) -> MTIMECMP_W<'_, MTIMECMP_SPEC> {
         MTIMECMP_W::new(self, 0)
     }
 }
-#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`mtimecmp::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mtimecmp::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Core-local machine timer compare value\n\nYou can [`read`](crate::Reg::read) this register and get [`mtimecmp::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mtimecmp::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MTIMECMP_SPEC;
 impl crate::RegisterSpec for MTIMECMP_SPEC {
     type Ux = u64;

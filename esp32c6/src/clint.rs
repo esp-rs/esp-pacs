@@ -2,88 +2,58 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    _reserved0: [u8; 0x1800],
     msip: MSIP,
-    mtimectl: MTIMECTL,
-    mtime: MTIME,
+    _reserved1: [u8; 0x3ffc],
     mtimecmp: MTIMECMP,
-    _reserved4: [u8; 0x03e8],
-    usip: USIP,
-    utimectl: UTIMECTL,
-    utime: UTIME,
-    utimecmp: UTIMECMP,
+    mtimeload: MTIMELOAD,
+    mtimectl: MTIMECTL,
+    _reserved4: [u8; 0x7fe4],
+    mtime: MTIME,
 }
 impl RegisterBlock {
-    #[doc = "0x1800 - "]
+    #[doc = "0x00 - Core-local machine software interrupt pending register"]
     #[inline(always)]
     pub const fn msip(&self) -> &MSIP {
         &self.msip
     }
-    #[doc = "0x1804 - "]
-    #[inline(always)]
-    pub const fn mtimectl(&self) -> &MTIMECTL {
-        &self.mtimectl
-    }
-    #[doc = "0x1808..0x1810 - "]
-    #[inline(always)]
-    pub const fn mtime(&self) -> &MTIME {
-        &self.mtime
-    }
-    #[doc = "0x1810..0x1818 - "]
+    #[doc = "0x4000..0x4008 - Core-local machine timer compare value"]
     #[inline(always)]
     pub const fn mtimecmp(&self) -> &MTIMECMP {
         &self.mtimecmp
     }
-    #[doc = "0x1c00 - "]
+    #[doc = "0x4008..0x4010 - Core-local machine timer load value"]
     #[inline(always)]
-    pub const fn usip(&self) -> &USIP {
-        &self.usip
+    pub const fn mtimeload(&self) -> &MTIMELOAD {
+        &self.mtimeload
     }
-    #[doc = "0x1c04 - "]
+    #[doc = "0x4010 - Core-local machine timer interrupt control/status register"]
     #[inline(always)]
-    pub const fn utimectl(&self) -> &UTIMECTL {
-        &self.utimectl
+    pub const fn mtimectl(&self) -> &MTIMECTL {
+        &self.mtimectl
     }
-    #[doc = "0x1c08..0x1c10 - "]
+    #[doc = "0xbff8..0xc000 - Core-local system counter value"]
     #[inline(always)]
-    pub const fn utime(&self) -> &UTIME {
-        &self.utime
-    }
-    #[doc = "0x1c10..0x1c18 - "]
-    #[inline(always)]
-    pub const fn utimecmp(&self) -> &UTIMECMP {
-        &self.utimecmp
+    pub const fn mtime(&self) -> &MTIME {
+        &self.mtime
     }
 }
-#[doc = "MSIP (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`msip::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`msip::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@msip`] module"]
+#[doc = "MSIP (rw) register accessor: Core-local machine software interrupt pending register\n\nYou can [`read`](crate::Reg::read) this register and get [`msip::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`msip::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@msip`] module"]
 pub type MSIP = crate::Reg<msip::MSIP_SPEC>;
-#[doc = ""]
+#[doc = "Core-local machine software interrupt pending register"]
 pub mod msip;
-#[doc = "MTIMECTL (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`mtimectl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mtimectl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mtimectl`] module"]
-pub type MTIMECTL = crate::Reg<mtimectl::MTIMECTL_SPEC>;
-#[doc = ""]
-pub mod mtimectl;
-#[doc = "MTIME (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`mtime::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mtime::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mtime`] module"]
-pub type MTIME = crate::Reg<mtime::MTIME_SPEC>;
-#[doc = ""]
-pub mod mtime;
-#[doc = "MTIMECMP (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`mtimecmp::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mtimecmp::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mtimecmp`] module"]
+#[doc = "MTIMECMP (rw) register accessor: Core-local machine timer compare value\n\nYou can [`read`](crate::Reg::read) this register and get [`mtimecmp::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mtimecmp::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mtimecmp`] module"]
 pub type MTIMECMP = crate::Reg<mtimecmp::MTIMECMP_SPEC>;
-#[doc = ""]
+#[doc = "Core-local machine timer compare value"]
 pub mod mtimecmp;
-#[doc = "USIP (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`usip::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`usip::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@usip`] module"]
-pub type USIP = crate::Reg<usip::USIP_SPEC>;
-#[doc = ""]
-pub mod usip;
-#[doc = "UTIMECTL (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`utimectl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`utimectl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@utimectl`] module"]
-pub type UTIMECTL = crate::Reg<utimectl::UTIMECTL_SPEC>;
-#[doc = ""]
-pub mod utimectl;
-#[doc = "UTIME (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`utime::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@utime`] module"]
-pub type UTIME = crate::Reg<utime::UTIME_SPEC>;
-#[doc = ""]
-pub mod utime;
-#[doc = "UTIMECMP (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`utimecmp::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`utimecmp::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@utimecmp`] module"]
-pub type UTIMECMP = crate::Reg<utimecmp::UTIMECMP_SPEC>;
-#[doc = ""]
-pub mod utimecmp;
+#[doc = "MTIMELOAD (rw) register accessor: Core-local machine timer load value\n\nYou can [`read`](crate::Reg::read) this register and get [`mtimeload::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mtimeload::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mtimeload`] module"]
+pub type MTIMELOAD = crate::Reg<mtimeload::MTIMELOAD_SPEC>;
+#[doc = "Core-local machine timer load value"]
+pub mod mtimeload;
+#[doc = "MTIMECTL (rw) register accessor: Core-local machine timer interrupt control/status register\n\nYou can [`read`](crate::Reg::read) this register and get [`mtimectl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mtimectl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mtimectl`] module"]
+pub type MTIMECTL = crate::Reg<mtimectl::MTIMECTL_SPEC>;
+#[doc = "Core-local machine timer interrupt control/status register"]
+pub mod mtimectl;
+#[doc = "MTIME (r) register accessor: Core-local system counter value\n\nYou can [`read`](crate::Reg::read) this register and get [`mtime::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mtime`] module"]
+pub type MTIME = crate::Reg<mtime::MTIME_SPEC>;
+#[doc = "Core-local system counter value"]
+pub mod mtime;
