@@ -1,7 +1,7 @@
 _svd: ../esp32c5.base.svd
 
 _include:
-  - ../../../common_patches/clint.yaml
+  - ../../../common_patches/clint_m_only.yaml
   - ../../../common_patches/clic.yaml
   - ../../../common_patches/i2c_ana_mst.yaml
   - ../../../common_patches/slc.yaml
@@ -653,7 +653,7 @@ MCPWM0:
     FH%s_CFG0: {}
     FH%s_CFG1: {}
     FH%s_STATUS: {}
-    
+
     CAP_CH%s_CFG: {}
     CAP_CH%s: {}
     OP%s_TSTMP_E1: {}

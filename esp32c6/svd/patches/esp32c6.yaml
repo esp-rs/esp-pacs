@@ -2,7 +2,7 @@ _svd: "../esp32c6.base.svd"
 
 _include:
   - ../../../common_patches/plic.yaml
-  - ../../../common_patches/clint.yaml
+  - ../../../common_patches/clint_m_and_u.yaml
   - ../../../common_patches/i2c_ana_mst.yaml
   - ../../../common_patches/ieee802154.yaml
   - ../../../common_patches/slc.yaml

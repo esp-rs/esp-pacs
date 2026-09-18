@@ -1,7 +1,7 @@
 _svd: "../esp32c61.base.svd"
 
 _include:
-  - ../../../common_patches/clint.yaml
+  - ../../../common_patches/clint_m_only.yaml
   - ../../../common_patches/clic.yaml
   - ../../../common_patches/i2c_ana_mst.yaml
   - ../../../common_patches/slc.yaml
