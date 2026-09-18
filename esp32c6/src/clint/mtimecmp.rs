@@ -2,12 +2,12 @@
 pub type R = crate::R<MTIMECMP_SPEC>;
 #[doc = "Register `MTIMECMP` writer"]
 pub type W = crate::W<MTIMECMP_SPEC>;
-#[doc = "Field `MTIMECMP` reader - Represents the value to compare with the system counter."]
+#[doc = "Field `MTIMECMP` reader - Configures the 64-bit machine timer compare value."]
 pub type MTIMECMP_R = crate::FieldReader<u64>;
-#[doc = "Field `MTIMECMP` writer - Represents the value to compare with the system counter."]
+#[doc = "Field `MTIMECMP` writer - Configures the 64-bit machine timer compare value."]
 pub type MTIMECMP_W<'a, REG> = crate::FieldWriter<'a, REG, 64, u64>;
 impl R {
-    #[doc = "Bits 0:63 - Represents the value to compare with the system counter."]
+    #[doc = "Bits 0:63 - Configures the 64-bit machine timer compare value."]
     #[inline(always)]
     pub fn mtimecmp(&self) -> MTIMECMP_R {
         MTIMECMP_R::new(self.bits)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:63 - Represents the value to compare with the system counter."]
+    #[doc = "Bits 0:63 - Configures the 64-bit machine timer compare value."]
     #[inline(always)]
     pub fn mtimecmp(&mut self) -> MTIMECMP_W<'_, MTIMECMP_SPEC> {
         MTIMECMP_W::new(self, 0)
