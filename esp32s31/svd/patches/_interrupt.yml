@@ -39,9 +39,9 @@ _add:
             bitWidth: 6
             access: read-write
       CORE_0_INTR_STATUS%s:
-        dim: 5
+        dim: 6
         dimIncrement: 0x4
-        dimIndex: 0-4
+        dimIndex: 0-5
         addressOffset: 0x2a8
         size: 0x20
         access: read-only
@@ -49,18 +49,10 @@ _add:
           INT_STATUS_0:
             bitOffset: 0
             bitWidth: 32
-      CORE_0_INTR_STATUS5:
-        addressOffset: 0x2bc
-        size: 0x20
-        access: read-only
-        fields:
-          INT_STATUS_5:
-            bitOffset: 0
-            bitWidth: 9
       SRC_PASS_IN_S_STATUS%s:
-        dim: 5
+        dim: 6
         dimIncrement: 0x4
-        dimIndex: 0-4
+        dimIndex: 0-5
         addressOffset: 0x2c0
         size: 0x20
         access: read-only
@@ -68,18 +60,10 @@ _add:
           INT_SRC_PASS_IN_S_STATUS_0:
             bitOffset: 0
             bitWidth: 32
-      SRC_PASS_IN_S_STATUS_5:
-        addressOffset: 0x2d4
-        size: 0x20
-        access: read-only
-        fields:
-          INT_SRC_PASS_IN_S_STATUS_5:
-            bitOffset: 0
-            bitWidth: 9
       SRC_PASS_IN_M_STATUS%s:
-        dim: 5
+        dim: 6
         dimIncrement: 0x4
-        dimIndex: 0-4
+        dimIndex: 0-5
         addressOffset: 0x2d8
         size: 0x20
         access: read-only
@@ -87,14 +71,6 @@ _add:
           INT_SRC_PASS_IN_M_STATUS_0:
             bitOffset: 0
             bitWidth: 32
-      SRC_PASS_IN_M_STATUS_5:
-        addressOffset: 0x2ec
-        size: 0x20
-        access: read-only
-        fields:
-          INT_SRC_PASS_IN_M_STATUS_5:
-            bitOffset: 0
-            bitWidth: 9
       CONFIG_STATE:
         addressOffset: 0x2f0
         size: 0x20
@@ -179,9 +155,9 @@ _add:
             bitWidth: 6
             access: read-write
       CORE_1_INTR_STATUS%s:
-        dim: 5
+        dim: 6
         dimIncrement: 0x4
-        dimIndex: 0-4
+        dimIndex: 0-5
         addressOffset: 0x2a8
         size: 0x20
         access: read-only
@@ -189,18 +165,10 @@ _add:
           INT_STATUS_0:
             bitOffset: 0
             bitWidth: 32
-      CORE_1_INTR_STATUS5:
-        addressOffset: 0x2bc
-        size: 0x20
-        access: read-only
-        fields:
-          INT_STATUS_5:
-            bitOffset: 0
-            bitWidth: 9
       SRC_PASS_IN_S_STATUS%s:
-        dim: 5
+        dim: 6
         dimIncrement: 0x4
-        dimIndex: 0-4
+        dimIndex: 0-5
         addressOffset: 0x2c0
         size: 0x20
         access: read-only
@@ -208,18 +176,10 @@ _add:
           INT_SRC_PASS_IN_S_STATUS_0:
             bitOffset: 0
             bitWidth: 32
-      SRC_PASS_IN_S_STATUS_5:
-        addressOffset: 0x2d4
-        size: 0x20
-        access: read-only
-        fields:
-          INT_SRC_PASS_IN_S_STATUS_5:
-            bitOffset: 0
-            bitWidth: 9
       SRC_PASS_IN_M_STATUS%s:
-        dim: 5
+        dim: 6
         dimIncrement: 0x4
-        dimIndex: 0-4
+        dimIndex: 0-5
         addressOffset: 0x2d8
         size: 0x20
         access: read-only
@@ -227,14 +187,6 @@ _add:
           INT_SRC_PASS_IN_M_STATUS_0:
             bitOffset: 0
             bitWidth: 32
-      SRC_PASS_IN_M_STATUS_5:
-        addressOffset: 0x2ec
-        size: 0x20
-        access: read-only
-        fields:
-          INT_SRC_PASS_IN_M_STATUS_5:
-            bitOffset: 0
-            bitWidth: 9
       CONFIG_STATE:
         addressOffset: 0x2f0
         size: 0x20
