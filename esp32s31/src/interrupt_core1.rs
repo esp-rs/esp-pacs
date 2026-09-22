@@ -4,17 +4,14 @@
 pub struct RegisterBlock {
     core_1_intr_map: [CORE_1_INTR_MAP; 169],
     sig_idx_assert_in_sec: SIG_IDX_ASSERT_IN_SEC,
-    core_1_intr_status: [CORE_1_INTR_STATUS; 5],
-    core_1_intr_status5: CORE_1_INTR_STATUS5,
-    src_pass_in_s_status: [SRC_PASS_IN_S_STATUS; 5],
-    src_pass_in_s_status_5: SRC_PASS_IN_S_STATUS_5,
-    src_pass_in_m_status: [SRC_PASS_IN_M_STATUS; 5],
-    src_pass_in_m_status_5: SRC_PASS_IN_M_STATUS_5,
+    core_1_intr_status: [CORE_1_INTR_STATUS; 6],
+    src_pass_in_s_status: [SRC_PASS_IN_S_STATUS; 6],
+    src_pass_in_m_status: [SRC_PASS_IN_M_STATUS; 6],
     config_state: CONFIG_STATE,
     s_status: S_STATUS,
     m_status: M_STATUS,
     clock_gate: CLOCK_GATE,
-    _reserved12: [u8; 0x04fc],
+    _reserved9: [u8; 0x04fc],
     interrupt_date: INTERRUPT_DATE,
 }
 impl RegisterBlock {
@@ -34,53 +31,38 @@ impl RegisterBlock {
     pub const fn sig_idx_assert_in_sec(&self) -> &SIG_IDX_ASSERT_IN_SEC {
         &self.sig_idx_assert_in_sec
     }
-    #[doc = "0x2a8..0x2bc - "]
+    #[doc = "0x2a8..0x2c0 - "]
     #[inline(always)]
     pub const fn core_1_intr_status(&self, n: usize) -> &CORE_1_INTR_STATUS {
         &self.core_1_intr_status[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x2a8..0x2bc - "]
+    #[doc = "0x2a8..0x2c0 - "]
     #[inline(always)]
     pub fn core_1_intr_status_iter(&self) -> impl Iterator<Item = &CORE_1_INTR_STATUS> {
         self.core_1_intr_status.iter()
     }
-    #[doc = "0x2bc - "]
-    #[inline(always)]
-    pub const fn core_1_intr_status5(&self) -> &CORE_1_INTR_STATUS5 {
-        &self.core_1_intr_status5
-    }
-    #[doc = "0x2c0..0x2d4 - "]
+    #[doc = "0x2c0..0x2d8 - "]
     #[inline(always)]
     pub const fn src_pass_in_s_status(&self, n: usize) -> &SRC_PASS_IN_S_STATUS {
         &self.src_pass_in_s_status[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x2c0..0x2d4 - "]
+    #[doc = "0x2c0..0x2d8 - "]
     #[inline(always)]
     pub fn src_pass_in_s_status_iter(&self) -> impl Iterator<Item = &SRC_PASS_IN_S_STATUS> {
         self.src_pass_in_s_status.iter()
     }
-    #[doc = "0x2d4 - "]
-    #[inline(always)]
-    pub const fn src_pass_in_s_status_5(&self) -> &SRC_PASS_IN_S_STATUS_5 {
-        &self.src_pass_in_s_status_5
-    }
-    #[doc = "0x2d8..0x2ec - "]
+    #[doc = "0x2d8..0x2f0 - "]
     #[inline(always)]
     pub const fn src_pass_in_m_status(&self, n: usize) -> &SRC_PASS_IN_M_STATUS {
         &self.src_pass_in_m_status[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x2d8..0x2ec - "]
+    #[doc = "0x2d8..0x2f0 - "]
     #[inline(always)]
     pub fn src_pass_in_m_status_iter(&self) -> impl Iterator<Item = &SRC_PASS_IN_M_STATUS> {
         self.src_pass_in_m_status.iter()
-    }
-    #[doc = "0x2ec - "]
-    #[inline(always)]
-    pub const fn src_pass_in_m_status_5(&self) -> &SRC_PASS_IN_M_STATUS_5 {
-        &self.src_pass_in_m_status_5
     }
     #[doc = "0x2f0 - "]
     #[inline(always)]
@@ -120,26 +102,14 @@ pub mod sig_idx_assert_in_sec;
 pub type CORE_1_INTR_STATUS = crate::Reg<core_1_intr_status::CORE_1_INTR_STATUS_SPEC>;
 #[doc = ""]
 pub mod core_1_intr_status;
-#[doc = "CORE_1_INTR_STATUS5 (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`core_1_intr_status5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_1_intr_status5`] module"]
-pub type CORE_1_INTR_STATUS5 = crate::Reg<core_1_intr_status5::CORE_1_INTR_STATUS5_SPEC>;
-#[doc = ""]
-pub mod core_1_intr_status5;
 #[doc = "SRC_PASS_IN_S_STATUS (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`src_pass_in_s_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@src_pass_in_s_status`] module"]
 pub type SRC_PASS_IN_S_STATUS = crate::Reg<src_pass_in_s_status::SRC_PASS_IN_S_STATUS_SPEC>;
 #[doc = ""]
 pub mod src_pass_in_s_status;
-#[doc = "SRC_PASS_IN_S_STATUS_5 (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`src_pass_in_s_status_5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@src_pass_in_s_status_5`] module"]
-pub type SRC_PASS_IN_S_STATUS_5 = crate::Reg<src_pass_in_s_status_5::SRC_PASS_IN_S_STATUS_5_SPEC>;
-#[doc = ""]
-pub mod src_pass_in_s_status_5;
 #[doc = "SRC_PASS_IN_M_STATUS (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`src_pass_in_m_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@src_pass_in_m_status`] module"]
 pub type SRC_PASS_IN_M_STATUS = crate::Reg<src_pass_in_m_status::SRC_PASS_IN_M_STATUS_SPEC>;
 #[doc = ""]
 pub mod src_pass_in_m_status;
-#[doc = "SRC_PASS_IN_M_STATUS_5 (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`src_pass_in_m_status_5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@src_pass_in_m_status_5`] module"]
-pub type SRC_PASS_IN_M_STATUS_5 = crate::Reg<src_pass_in_m_status_5::SRC_PASS_IN_M_STATUS_5_SPEC>;
-#[doc = ""]
-pub mod src_pass_in_m_status_5;
 #[doc = "CONFIG_STATE (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`config_state::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@config_state`] module"]
 pub type CONFIG_STATE = crate::Reg<config_state::CONFIG_STATE_SPEC>;
 #[doc = ""]

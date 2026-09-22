@@ -3,14 +3,12 @@
 #[doc = "Register block"]
 pub struct RegisterBlock {
     core_0_intr_map: [CORE_0_INTR_MAP; 98],
-    core_0_intr_status: [CORE_0_INTR_STATUS; 3],
-    core_0_intr_status3: CORE_0_INTR_STATUS3,
-    core_0_src_pass_in_sec_status: [CORE_0_SRC_PASS_IN_SEC_STATUS; 3],
-    core_0_src_pass_in_sec_status3: CORE_0_SRC_PASS_IN_SEC_STATUS3,
+    core_0_intr_status: [CORE_0_INTR_STATUS; 4],
+    core_0_src_pass_in_sec_status: [CORE_0_SRC_PASS_IN_SEC_STATUS; 4],
     sig_idx_assert_in_sec: SIG_IDX_ASSERT_IN_SEC,
     secure_status: SECURE_STATUS,
     clock_gate: CLOCK_GATE,
-    _reserved8: [u8; 0x0648],
+    _reserved6: [u8; 0x0648],
     interrupt_date: INTERRUPT_DATE,
 }
 impl RegisterBlock {
@@ -25,39 +23,29 @@ impl RegisterBlock {
     pub fn core_0_intr_map_iter(&self) -> impl Iterator<Item = &CORE_0_INTR_MAP> {
         self.core_0_intr_map.iter()
     }
-    #[doc = "0x188..0x194 - Status of interrupt sources within a 32-bit window"]
+    #[doc = "0x188..0x198 - Status of interrupt sources within a 32-bit window"]
     #[inline(always)]
     pub const fn core_0_intr_status(&self, n: usize) -> &CORE_0_INTR_STATUS {
         &self.core_0_intr_status[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x188..0x194 - Status of interrupt sources within a 32-bit window"]
+    #[doc = "0x188..0x198 - Status of interrupt sources within a 32-bit window"]
     #[inline(always)]
     pub fn core_0_intr_status_iter(&self) -> impl Iterator<Item = &CORE_0_INTR_STATUS> {
         self.core_0_intr_status.iter()
     }
-    #[doc = "0x194 - Status register for interrupt sources 96 ~ 97"]
-    #[inline(always)]
-    pub const fn core_0_intr_status3(&self) -> &CORE_0_INTR_STATUS3 {
-        &self.core_0_intr_status3
-    }
-    #[doc = "0x198..0x1a4 - PASS_IN_SEC status for interrupt sources"]
+    #[doc = "0x198..0x1a8 - PASS_IN_SEC status for interrupt sources"]
     #[inline(always)]
     pub const fn core_0_src_pass_in_sec_status(&self, n: usize) -> &CORE_0_SRC_PASS_IN_SEC_STATUS {
         &self.core_0_src_pass_in_sec_status[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x198..0x1a4 - PASS_IN_SEC status for interrupt sources"]
+    #[doc = "0x198..0x1a8 - PASS_IN_SEC status for interrupt sources"]
     #[inline(always)]
     pub fn core_0_src_pass_in_sec_status_iter(
         &self,
     ) -> impl Iterator<Item = &CORE_0_SRC_PASS_IN_SEC_STATUS> {
         self.core_0_src_pass_in_sec_status.iter()
-    }
-    #[doc = "0x1a4 - PASS_IN_SEC status register for interrupt sources 96 ~ 97"]
-    #[inline(always)]
-    pub const fn core_0_src_pass_in_sec_status3(&self) -> &CORE_0_SRC_PASS_IN_SEC_STATUS3 {
-        &self.core_0_src_pass_in_sec_status3
     }
     #[doc = "0x1a8 - reserved"]
     #[inline(always)]
@@ -88,20 +76,11 @@ pub mod core_0_intr_map;
 pub type CORE_0_INTR_STATUS = crate::Reg<core_0_intr_status::CORE_0_INTR_STATUS_SPEC>;
 #[doc = "Status of interrupt sources within a 32-bit window"]
 pub mod core_0_intr_status;
-#[doc = "CORE_0_INTR_STATUS3 (r) register accessor: Status register for interrupt sources 96 ~ 97\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_intr_status3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_intr_status3`] module"]
-pub type CORE_0_INTR_STATUS3 = crate::Reg<core_0_intr_status3::CORE_0_INTR_STATUS3_SPEC>;
-#[doc = "Status register for interrupt sources 96 ~ 97"]
-pub mod core_0_intr_status3;
 #[doc = "CORE_0_SRC_PASS_IN_SEC_STATUS (r) register accessor: PASS_IN_SEC status for interrupt sources\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_src_pass_in_sec_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_src_pass_in_sec_status`] module"]
 pub type CORE_0_SRC_PASS_IN_SEC_STATUS =
     crate::Reg<core_0_src_pass_in_sec_status::CORE_0_SRC_PASS_IN_SEC_STATUS_SPEC>;
 #[doc = "PASS_IN_SEC status for interrupt sources"]
 pub mod core_0_src_pass_in_sec_status;
-#[doc = "CORE_0_SRC_PASS_IN_SEC_STATUS3 (r) register accessor: PASS_IN_SEC status register for interrupt sources 96 ~ 97\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_src_pass_in_sec_status3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_src_pass_in_sec_status3`] module"]
-pub type CORE_0_SRC_PASS_IN_SEC_STATUS3 =
-    crate::Reg<core_0_src_pass_in_sec_status3::CORE_0_SRC_PASS_IN_SEC_STATUS3_SPEC>;
-#[doc = "PASS_IN_SEC status register for interrupt sources 96 ~ 97"]
-pub mod core_0_src_pass_in_sec_status3;
 #[doc = "SIG_IDX_ASSERT_IN_SEC (rw) register accessor: reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`sig_idx_assert_in_sec::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sig_idx_assert_in_sec::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sig_idx_assert_in_sec`] module"]
 pub type SIG_IDX_ASSERT_IN_SEC = crate::Reg<sig_idx_assert_in_sec::SIG_IDX_ASSERT_IN_SEC_SPEC>;
 #[doc = "reserved"]
