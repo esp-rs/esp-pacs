@@ -771,6 +771,7 @@ APB_SARADC:
   _include:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/adc.yaml
+    - ../../../common_patches/adc_patt_tab.yaml
 
 I2C0:
   _modify:
@@ -851,6 +852,12 @@ INTPRI:
 
 PCR:
   _include: ../../../common_patches/pcr.yaml
+
+  SARADC_CLKM_CONF:
+    SARADC_CLKM_SEL:
+      XTAL: [0, "ADC_DIGI_CLK_SRC_XTAL"]
+      PLL_F96M: [1, "ADC_DIGI_CLK_SRC_PLL_F96M"]
+      RC_FAST: [2, "ADC_DIGI_CLK_SRC_RC_FAST"]
 
 SPI1:
   _include: ../../../common_patches/spi1_mspi_shared.yaml

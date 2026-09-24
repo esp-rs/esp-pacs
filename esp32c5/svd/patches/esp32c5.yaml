@@ -45,6 +45,18 @@ PCR:
       I2C_RST_EN:
         name: I2C0_RST_EN
 
+  SARADC_CLKM_CONF:
+    SARADC_CLKM_SEL:
+      XTAL: [0, "XTAL_CLK"]
+      RC_FAST: [1, "RC_FAST_CLK"]
+      PLL_F80M: [2, "PLL_F80M_CLK"]
+
+LPPERI:
+  RNG_CFG:
+    RTC_TIMER_EN:
+      DISABLE: [0, "Disable rng xor rtc timer"]
+      ENABLE: [3, "Enable rng xor rtc timer"]
+
 AES:
   _include: ../../../common_patches/aes.yaml
 
@@ -59,6 +71,7 @@ APB_SARADC:
   _include:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/adc.yaml
+    - ../../../common_patches/adc_patt_tab.yaml
 
 DMA:
   _add:
