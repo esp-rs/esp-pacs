@@ -14,10 +14,67 @@ pub type RNG_TIMER_PSCALE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 pub type RNG_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `RNG_TIMER_EN` writer - enable rng xor async rng timer"]
 pub type RNG_TIMER_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "enable rng xor rtc timer: bit(0) : enable rtc timer before crc Bit(1): enable rtc timer after crc\n\nValue on reset: 3"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum RTC_TIMER_EN {
+    #[doc = "0: Disable rng xor rtc timer"]
+    Disable = 0,
+    #[doc = "3: Enable rng xor rtc timer"]
+    Enable  = 3,
+}
+impl From<RTC_TIMER_EN> for u8 {
+    #[inline(always)]
+    fn from(variant: RTC_TIMER_EN) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for RTC_TIMER_EN {
+    type Ux = u8;
+}
+impl crate::IsEnum for RTC_TIMER_EN {}
 #[doc = "Field `RTC_TIMER_EN` reader - enable rng xor rtc timer: bit(0) : enable rtc timer before crc Bit(1): enable rtc timer after crc"]
-pub type RTC_TIMER_EN_R = crate::FieldReader;
+pub type RTC_TIMER_EN_R = crate::FieldReader<RTC_TIMER_EN>;
+impl RTC_TIMER_EN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<RTC_TIMER_EN> {
+        match self.bits {
+            0 => Some(RTC_TIMER_EN::Disable),
+            3 => Some(RTC_TIMER_EN::Enable),
+            _ => None,
+        }
+    }
+    #[doc = "Disable rng xor rtc timer"]
+    #[inline(always)]
+    pub fn is_disable(&self) -> bool {
+        *self == RTC_TIMER_EN::Disable
+    }
+    #[doc = "Enable rng xor rtc timer"]
+    #[inline(always)]
+    pub fn is_enable(&self) -> bool {
+        *self == RTC_TIMER_EN::Enable
+    }
+}
 #[doc = "Field `RTC_TIMER_EN` writer - enable rng xor rtc timer: bit(0) : enable rtc timer before crc Bit(1): enable rtc timer after crc"]
-pub type RTC_TIMER_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type RTC_TIMER_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 2, RTC_TIMER_EN>;
+impl<'a, REG> RTC_TIMER_EN_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "Disable rng xor rtc timer"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(RTC_TIMER_EN::Disable)
+    }
+    #[doc = "Enable rng xor rtc timer"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(RTC_TIMER_EN::Enable)
+    }
+}
 #[doc = "Field `RNG_SAMPLE_CNT` reader - get rng RO sample cnt"]
 pub type RNG_SAMPLE_CNT_R = crate::FieldReader;
 impl R {

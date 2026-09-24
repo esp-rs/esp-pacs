@@ -864,6 +864,15 @@ impl core::fmt::Debug for LP_I2S0 {
 }
 #[doc = "Low-power I2S (Inter-IC Sound) Controller 0"]
 pub mod lp_i2s0;
+#[doc = "LP_TRNG"]
+pub type LP_TRNG = crate::Periph<lp_trng::RegisterBlock, 0x5012_6000>;
+impl core::fmt::Debug for LP_TRNG {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_TRNG").finish()
+    }
+}
+#[doc = "LP_TRNG"]
+pub mod lp_trng;
 #[doc = "Low-power Input/Output Multiplexer"]
 pub type LP_IO_MUX = crate::Periph<lp_io_mux::RegisterBlock, 0x5012_b000>;
 impl core::fmt::Debug for LP_IO_MUX {

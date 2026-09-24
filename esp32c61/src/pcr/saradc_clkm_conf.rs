@@ -14,10 +14,80 @@ pub type SARADC_CLKM_DIV_B_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 pub type SARADC_CLKM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `SARADC_CLKM_DIV_NUM` writer - The integral part of the frequency divider factor of the saradc function clock."]
 pub type SARADC_CLKM_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Configures the clock source of SAR ADC.\\\\ 0 (default): XTAL_CLK\\\\ 1: RC_FAST_CLK\\\\ 2: PLL_F80M_CLK\\\\\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum SARADC_CLKM_SEL {
+    #[doc = "0: XTAL_CLK"]
+    Xtal    = 0,
+    #[doc = "1: RC_FAST_CLK"]
+    RcFast  = 1,
+    #[doc = "2: PLL_F80M_CLK"]
+    PllF80m = 2,
+}
+impl From<SARADC_CLKM_SEL> for u8 {
+    #[inline(always)]
+    fn from(variant: SARADC_CLKM_SEL) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for SARADC_CLKM_SEL {
+    type Ux = u8;
+}
+impl crate::IsEnum for SARADC_CLKM_SEL {}
 #[doc = "Field `SARADC_CLKM_SEL` reader - Configures the clock source of SAR ADC.\\\\ 0 (default): XTAL_CLK\\\\ 1: RC_FAST_CLK\\\\ 2: PLL_F80M_CLK\\\\"]
-pub type SARADC_CLKM_SEL_R = crate::FieldReader;
+pub type SARADC_CLKM_SEL_R = crate::FieldReader<SARADC_CLKM_SEL>;
+impl SARADC_CLKM_SEL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<SARADC_CLKM_SEL> {
+        match self.bits {
+            0 => Some(SARADC_CLKM_SEL::Xtal),
+            1 => Some(SARADC_CLKM_SEL::RcFast),
+            2 => Some(SARADC_CLKM_SEL::PllF80m),
+            _ => None,
+        }
+    }
+    #[doc = "XTAL_CLK"]
+    #[inline(always)]
+    pub fn is_xtal(&self) -> bool {
+        *self == SARADC_CLKM_SEL::Xtal
+    }
+    #[doc = "RC_FAST_CLK"]
+    #[inline(always)]
+    pub fn is_rc_fast(&self) -> bool {
+        *self == SARADC_CLKM_SEL::RcFast
+    }
+    #[doc = "PLL_F80M_CLK"]
+    #[inline(always)]
+    pub fn is_pll_f80m(&self) -> bool {
+        *self == SARADC_CLKM_SEL::PllF80m
+    }
+}
 #[doc = "Field `SARADC_CLKM_SEL` writer - Configures the clock source of SAR ADC.\\\\ 0 (default): XTAL_CLK\\\\ 1: RC_FAST_CLK\\\\ 2: PLL_F80M_CLK\\\\"]
-pub type SARADC_CLKM_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type SARADC_CLKM_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2, SARADC_CLKM_SEL>;
+impl<'a, REG> SARADC_CLKM_SEL_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "XTAL_CLK"]
+    #[inline(always)]
+    pub fn xtal(self) -> &'a mut crate::W<REG> {
+        self.variant(SARADC_CLKM_SEL::Xtal)
+    }
+    #[doc = "RC_FAST_CLK"]
+    #[inline(always)]
+    pub fn rc_fast(self) -> &'a mut crate::W<REG> {
+        self.variant(SARADC_CLKM_SEL::RcFast)
+    }
+    #[doc = "PLL_F80M_CLK"]
+    #[inline(always)]
+    pub fn pll_f80m(self) -> &'a mut crate::W<REG> {
+        self.variant(SARADC_CLKM_SEL::PllF80m)
+    }
+}
 #[doc = "Field `SARADC_CLKM_EN` reader - Set 1 to enable saradc function clock"]
 pub type SARADC_CLKM_EN_R = crate::BitReader;
 #[doc = "Field `SARADC_CLKM_EN` writer - Set 1 to enable saradc function clock"]
