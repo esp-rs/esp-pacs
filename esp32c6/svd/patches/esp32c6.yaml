@@ -56,6 +56,7 @@ APB_SARADC:
   _include:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/adc.yaml
+    - ../../../common_patches/adc_patt_tab.yaml
 
 I2C0:
   _modify:
@@ -129,6 +130,12 @@ PARL_IO:
 
 PCR:
   _include: ../../../common_patches/pcr.yaml
+
+  SARADC_CLKM_CONF:
+    SARADC_CLKM_SEL:
+      XTAL: [0, "ADC_DIGI_CLK_SRC_XTAL"]
+      PLL_F80M: [1, "ADC_DIGI_CLK_SRC_PLL_F80M"]
+      RC_FAST: [2, "ADC_DIGI_CLK_SRC_RC_FAST"]
 
 "EFUSE,I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
   _include: ../../../common_patches/int_strip.yaml

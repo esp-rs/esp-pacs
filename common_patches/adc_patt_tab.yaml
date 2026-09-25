@@ -1,0 +1,119 @@
+SAR_PATT_TAB1:
+  _delete: "*SAR_PATT_TAB1"
+  _add:
+    ITEM0_ATTEN:
+      bitOffset: 18
+      bitWidth: 2
+      access: read-write
+    ITEM0_CHANNEL:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-write
+    ITEM0_UNIT:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    ITEM1_ATTEN:
+      bitOffset: 12
+      bitWidth: 2
+      access: read-write
+    ITEM1_CHANNEL:
+      bitOffset: 14
+      bitWidth: 3
+      access: read-write
+    ITEM1_UNIT:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    ITEM2_ATTEN:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-write
+    ITEM2_CHANNEL:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-write
+    ITEM2_UNIT:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    ITEM3_ATTEN:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    ITEM3_CHANNEL:
+      bitOffset: 2
+      bitWidth: 3
+      access: read-write
+    ITEM3_UNIT:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+  "ITEM?_ATTEN":
+    DB0: [0, "No input attenuation, ADC can measure up to approx."]
+    DB2_5: [1, "The input voltage of ADC will be attenuated extending the range of measurement by about 2.5 dB"]
+    DB6: [2, "The input voltage of ADC will be attenuated extending the range of measurement by about 6 dB"]
+    DB12: [3, "The input voltage of ADC will be attenuated extending the range of measurement by about 12 dB"]
+  "ITEM?_UNIT":
+    ADC1: [0, "SAR ADC 1"]
+    ADC2: [1, "SAR ADC 2"]
+
+SAR_PATT_TAB2:
+  _delete: "*SAR_PATT_TAB2"
+  _add:
+    ITEM4_ATTEN:
+      bitOffset: 18
+      bitWidth: 2
+      access: read-write
+    ITEM4_CHANNEL:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-write
+    ITEM4_UNIT:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    ITEM5_ATTEN:
+      bitOffset: 12
+      bitWidth: 2
+      access: read-write
+    ITEM5_CHANNEL:
+      bitOffset: 14
+      bitWidth: 3
+      access: read-write
+    ITEM5_UNIT:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    ITEM6_ATTEN:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-write
+    ITEM6_CHANNEL:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-write
+    ITEM6_UNIT:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    ITEM7_ATTEN:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    ITEM7_CHANNEL:
+      bitOffset: 2
+      bitWidth: 3
+      access: read-write
+    ITEM7_UNIT:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+  "ITEM?_ATTEN":
+    DB0: [0, "No input attenuation, ADC can measure up to approx."]
+    DB2_5: [1, "The input voltage of ADC will be attenuated extending the range of measurement by about 2.5 dB"]
+    DB6: [2, "The input voltage of ADC will be attenuated extending the range of measurement by about 6 dB"]
+    DB12: [3, "The input voltage of ADC will be attenuated extending the range of measurement by about 12 dB"]
+  "ITEM?_UNIT":
+    ADC1: [0, "SAR ADC 1"]
+    ADC2: [1, "SAR ADC 2"]

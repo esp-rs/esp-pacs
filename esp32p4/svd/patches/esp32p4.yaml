@@ -268,6 +268,75 @@ _add:
         value: 93
       USB_HS_ENDP_MULTI_PROC:
         value: 94
+  LP_TRNG:
+    baseAddress: 0x5012_6000
+    addressBlock:
+      - offset: 0x0
+        size: 0x10
+        usage: "Registers"
+    registers:
+      CFG:
+        description: configure rng register
+        addressOffset: 0x0
+        size: 0x20
+        resetValue: 0x3FE
+        fields:
+          SAMPLE_ENABLE:
+            description: enable rng RO
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          TIMER_PSCALE:
+            description: configure rng timer clk div
+            bitOffset: 1
+            bitWidth: 8
+            access: read-write
+          TIMER_EN:
+            description: enable rng xor async rng timer
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+          SAMPLE_CNT:
+            description: get rng RO sample cnt
+            bitOffset: 24
+            bitWidth: 8
+            access: read-only
+      DATA:
+        description: RNG result register
+        addressOffset: 0x4
+        size: 0x20
+        resetValue: 0x0
+        access: read-only
+        fields:
+          DATA:
+            description: get rng data
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+      RSTN:
+        description: rng rstn register
+        addressOffset: 0x8
+        size: 0x20
+        resetValue: 0x1
+        fields:
+          RSTN:
+            description: "enable rng system reset: 1: not reset, 0: reset"
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      DATE:
+        addressOffset: 0xC
+        size: 0x20
+        resetValue: 0x250103
+        fields:
+          DATE:
+            bitOffset: 0
+            bitWidth: 31
+            access: read-write
+          CLK_EN:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
 
 LP_WDT:
   _array:
