@@ -50,14 +50,84 @@ pub type DATA_SAR_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type DATA_TO_I2S_R = crate::BitReader;
 #[doc = "Field `DATA_TO_I2S` writer - 1: I2S input data is from SAR ADC (for DMA), 0: I2S input data is from GPIO matrix"]
 pub type DATA_TO_I2S_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "force option to xpd sar1 blocks\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum XPD_SAR1_FORCE {
+    #[doc = "0: Use FSM to control power down"]
+    Fsm = 0,
+    #[doc = "2: Force power down"]
+    Pd  = 2,
+    #[doc = "3: Force power up"]
+    Pu  = 3,
+}
+impl From<XPD_SAR1_FORCE> for u8 {
+    #[inline(always)]
+    fn from(variant: XPD_SAR1_FORCE) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for XPD_SAR1_FORCE {
+    type Ux = u8;
+}
+impl crate::IsEnum for XPD_SAR1_FORCE {}
 #[doc = "Field `XPD_SAR1_FORCE` reader - force option to xpd sar1 blocks"]
-pub type XPD_SAR1_FORCE_R = crate::FieldReader;
+pub type XPD_SAR1_FORCE_R = crate::FieldReader<XPD_SAR1_FORCE>;
+impl XPD_SAR1_FORCE_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<XPD_SAR1_FORCE> {
+        match self.bits {
+            0 => Some(XPD_SAR1_FORCE::Fsm),
+            2 => Some(XPD_SAR1_FORCE::Pd),
+            3 => Some(XPD_SAR1_FORCE::Pu),
+            _ => None,
+        }
+    }
+    #[doc = "Use FSM to control power down"]
+    #[inline(always)]
+    pub fn is_fsm(&self) -> bool {
+        *self == XPD_SAR1_FORCE::Fsm
+    }
+    #[doc = "Force power down"]
+    #[inline(always)]
+    pub fn is_pd(&self) -> bool {
+        *self == XPD_SAR1_FORCE::Pd
+    }
+    #[doc = "Force power up"]
+    #[inline(always)]
+    pub fn is_pu(&self) -> bool {
+        *self == XPD_SAR1_FORCE::Pu
+    }
+}
 #[doc = "Field `XPD_SAR1_FORCE` writer - force option to xpd sar1 blocks"]
-pub type XPD_SAR1_FORCE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type XPD_SAR1_FORCE_W<'a, REG> = crate::FieldWriter<'a, REG, 2, XPD_SAR1_FORCE>;
+impl<'a, REG> XPD_SAR1_FORCE_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "Use FSM to control power down"]
+    #[inline(always)]
+    pub fn fsm(self) -> &'a mut crate::W<REG> {
+        self.variant(XPD_SAR1_FORCE::Fsm)
+    }
+    #[doc = "Force power down"]
+    #[inline(always)]
+    pub fn pd(self) -> &'a mut crate::W<REG> {
+        self.variant(XPD_SAR1_FORCE::Pd)
+    }
+    #[doc = "Force power up"]
+    #[inline(always)]
+    pub fn pu(self) -> &'a mut crate::W<REG> {
+        self.variant(XPD_SAR1_FORCE::Pu)
+    }
+}
 #[doc = "Field `XPD_SAR2_FORCE` reader - force option to xpd sar2 blocks"]
-pub type XPD_SAR2_FORCE_R = crate::FieldReader;
+pub use XPD_SAR1_FORCE_R as XPD_SAR2_FORCE_R;
 #[doc = "Field `XPD_SAR2_FORCE` writer - force option to xpd sar2 blocks"]
-pub type XPD_SAR2_FORCE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub use XPD_SAR1_FORCE_W as XPD_SAR2_FORCE_W;
 #[doc = "Field `WAIT_ARB_CYCLE` reader - wait arbit signal stable after sar_done"]
 pub type WAIT_ARB_CYCLE_R = crate::FieldReader;
 #[doc = "Field `WAIT_ARB_CYCLE` writer - wait arbit signal stable after sar_done"]

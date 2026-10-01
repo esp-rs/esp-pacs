@@ -7,3 +7,9 @@ HP_SYS_CLKRST:
       SOC_CLK_DIV_UPDATE:
         access: read-write
 
+  PERI_CLK_CTRL22:
+    ADC_CLK_SRC_SEL:
+      XTAL: [0, "ADC_DIGI_CLK_SRC_XTAL"]
+      RC_FAST: [1, "ADC_DIGI_CLK_SRC_RC_FAST"]
+      PLL_F80M: [2, "ADC_DIGI_CLK_SRC_PLL_F80M"]
+

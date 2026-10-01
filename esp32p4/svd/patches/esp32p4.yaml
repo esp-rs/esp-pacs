@@ -77,6 +77,157 @@ ADC:
       "APB_SARADC2_DONE*,SAR2_DONE*":
         name: ADC2_DONE
   _include: ../../../common_patches/int_strip.yaml
+  CTRL:
+    "XPD_SAR?_FORCE":
+      FSM: [0, "Use FSM to control power down"]
+      PD: [2, "Force power down"]
+      PU: [3, "Force power up"]
+  "SAR?_PATT_TAB1":
+    _delete: "SAR?_PATT_TAB1"
+    _add:
+      ITEM0_ATTEN:
+        bitOffset: 18
+        bitWidth: 2
+        access: read-write
+      ITEM0_CHANNEL:
+        bitOffset: 20
+        bitWidth: 4
+        access: read-write
+      ITEM1_ATTEN:
+        bitOffset: 12
+        bitWidth: 2
+        access: read-write
+      ITEM1_CHANNEL:
+        bitOffset: 14
+        bitWidth: 4
+        access: read-write
+      ITEM2_ATTEN:
+        bitOffset: 6
+        bitWidth: 2
+        access: read-write
+      ITEM2_CHANNEL:
+        bitOffset: 8
+        bitWidth: 4
+        access: read-write
+      ITEM3_ATTEN:
+        bitOffset: 0
+        bitWidth: 2
+        access: read-write
+      ITEM3_CHANNEL:
+        bitOffset: 2
+        bitWidth: 4
+        access: read-write
+  "SAR?_PATT_TAB2":
+    _delete: "SAR?_PATT_TAB2"
+    _add:
+      ITEM4_ATTEN:
+        bitOffset: 18
+        bitWidth: 2
+        access: read-write
+      ITEM4_CHANNEL:
+        bitOffset: 20
+        bitWidth: 4
+        access: read-write
+      ITEM5_ATTEN:
+        bitOffset: 12
+        bitWidth: 2
+        access: read-write
+      ITEM5_CHANNEL:
+        bitOffset: 14
+        bitWidth: 4
+        access: read-write
+      ITEM6_ATTEN:
+        bitOffset: 6
+        bitWidth: 2
+        access: read-write
+      ITEM6_CHANNEL:
+        bitOffset: 8
+        bitWidth: 4
+        access: read-write
+      ITEM7_ATTEN:
+        bitOffset: 0
+        bitWidth: 2
+        access: read-write
+      ITEM7_CHANNEL:
+        bitOffset: 2
+        bitWidth: 4
+        access: read-write
+  "SAR?_PATT_TAB3":
+    _delete: "SAR?_PATT_TAB3"
+    _add:
+      ITEM8_ATTEN:
+        bitOffset: 18
+        bitWidth: 2
+        access: read-write
+      ITEM8_CHANNEL:
+        bitOffset: 20
+        bitWidth: 4
+        access: read-write
+      ITEM9_ATTEN:
+        bitOffset: 12
+        bitWidth: 2
+        access: read-write
+      ITEM9_CHANNEL:
+        bitOffset: 14
+        bitWidth: 4
+        access: read-write
+      ITEM10_ATTEN:
+        bitOffset: 6
+        bitWidth: 2
+        access: read-write
+      ITEM10_CHANNEL:
+        bitOffset: 8
+        bitWidth: 4
+        access: read-write
+      ITEM11_ATTEN:
+        bitOffset: 0
+        bitWidth: 2
+        access: read-write
+      ITEM11_CHANNEL:
+        bitOffset: 2
+        bitWidth: 4
+        access: read-write
+  "SAR?_PATT_TAB4":
+    _delete: "SAR?_PATT_TAB4"
+    _add:
+      ITEM12_ATTEN:
+        bitOffset: 18
+        bitWidth: 2
+        access: read-write
+      ITEM12_CHANNEL:
+        bitOffset: 20
+        bitWidth: 4
+        access: read-write
+      ITEM13_ATTEN:
+        bitOffset: 12
+        bitWidth: 2
+        access: read-write
+      ITEM13_CHANNEL:
+        bitOffset: 14
+        bitWidth: 4
+        access: read-write
+      ITEM14_ATTEN:
+        bitOffset: 6
+        bitWidth: 2
+        access: read-write
+      ITEM14_CHANNEL:
+        bitOffset: 8
+        bitWidth: 4
+        access: read-write
+      ITEM15_ATTEN:
+        bitOffset: 0
+        bitWidth: 2
+        access: read-write
+      ITEM15_CHANNEL:
+        bitOffset: 2
+        bitWidth: 4
+        access: read-write
+  "SAR?_PATT_TAB?":
+    "ITEM*_ATTEN":
+      DB0: [0, "No input attenuation, ADC can measure up to approx."]
+      DB2_5: [1, "The input voltage of ADC will be attenuated extending the range of measurement by about 2.5 dB"]
+      DB6: [2, "The input voltage of ADC will be attenuated extending the range of measurement by about 6 dB"]
+      DB12: [3, "The input voltage of ADC will be attenuated extending the range of measurement by about 12 dB"]
 
 BITSCRAMBLER:
   _modify:

@@ -30,10 +30,80 @@ pub type RMT_CLK_DIV_NUMERATOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 pub type RMT_CLK_DIV_DENOMINATOR_R = crate::FieldReader;
 #[doc = "Field `RMT_CLK_DIV_DENOMINATOR` writer - Reserved"]
 pub type RMT_CLK_DIV_DENOMINATOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Reserved\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum ADC_CLK_SRC_SEL {
+    #[doc = "0: ADC_DIGI_CLK_SRC_XTAL"]
+    Xtal    = 0,
+    #[doc = "1: ADC_DIGI_CLK_SRC_RC_FAST"]
+    RcFast  = 1,
+    #[doc = "2: ADC_DIGI_CLK_SRC_PLL_F80M"]
+    PllF80m = 2,
+}
+impl From<ADC_CLK_SRC_SEL> for u8 {
+    #[inline(always)]
+    fn from(variant: ADC_CLK_SRC_SEL) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for ADC_CLK_SRC_SEL {
+    type Ux = u8;
+}
+impl crate::IsEnum for ADC_CLK_SRC_SEL {}
 #[doc = "Field `ADC_CLK_SRC_SEL` reader - Reserved"]
-pub type ADC_CLK_SRC_SEL_R = crate::FieldReader;
+pub type ADC_CLK_SRC_SEL_R = crate::FieldReader<ADC_CLK_SRC_SEL>;
+impl ADC_CLK_SRC_SEL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<ADC_CLK_SRC_SEL> {
+        match self.bits {
+            0 => Some(ADC_CLK_SRC_SEL::Xtal),
+            1 => Some(ADC_CLK_SRC_SEL::RcFast),
+            2 => Some(ADC_CLK_SRC_SEL::PllF80m),
+            _ => None,
+        }
+    }
+    #[doc = "ADC_DIGI_CLK_SRC_XTAL"]
+    #[inline(always)]
+    pub fn is_xtal(&self) -> bool {
+        *self == ADC_CLK_SRC_SEL::Xtal
+    }
+    #[doc = "ADC_DIGI_CLK_SRC_RC_FAST"]
+    #[inline(always)]
+    pub fn is_rc_fast(&self) -> bool {
+        *self == ADC_CLK_SRC_SEL::RcFast
+    }
+    #[doc = "ADC_DIGI_CLK_SRC_PLL_F80M"]
+    #[inline(always)]
+    pub fn is_pll_f80m(&self) -> bool {
+        *self == ADC_CLK_SRC_SEL::PllF80m
+    }
+}
 #[doc = "Field `ADC_CLK_SRC_SEL` writer - Reserved"]
-pub type ADC_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type ADC_CLK_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2, ADC_CLK_SRC_SEL>;
+impl<'a, REG> ADC_CLK_SRC_SEL_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "ADC_DIGI_CLK_SRC_XTAL"]
+    #[inline(always)]
+    pub fn xtal(self) -> &'a mut crate::W<REG> {
+        self.variant(ADC_CLK_SRC_SEL::Xtal)
+    }
+    #[doc = "ADC_DIGI_CLK_SRC_RC_FAST"]
+    #[inline(always)]
+    pub fn rc_fast(self) -> &'a mut crate::W<REG> {
+        self.variant(ADC_CLK_SRC_SEL::RcFast)
+    }
+    #[doc = "ADC_DIGI_CLK_SRC_PLL_F80M"]
+    #[inline(always)]
+    pub fn pll_f80m(self) -> &'a mut crate::W<REG> {
+        self.variant(ADC_CLK_SRC_SEL::PllF80m)
+    }
+}
 impl R {
     #[doc = "Bits 0:1 - Reserved"]
     #[inline(always)]
