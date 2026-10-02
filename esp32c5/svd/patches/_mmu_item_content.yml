@@ -1,4 +1,8 @@
 SPI0:
+  # https://github.com/espressif/esp-idf/blob/188e3e55bb20505b5fa9dc49ee390bf42c58b4ee/components/esp_hal_cache/esp32c5/include/hal/mmu_ll.h#L285
+  _modify:
+    MMU_ITEM_CONTENT:
+      resetValue: 0
   MMU_ITEM_CONTENT:
     _delete: [MMU_ITEM_CONTENT]
     _add:
