@@ -69,7 +69,5 @@ impl crate::Readable for MMU_ITEM_CONTENT_SPEC {}
 impl crate::Writable for MMU_ITEM_CONTENT_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets MMU_ITEM_CONTENT to value 0x037c"]
-impl crate::Resettable for MMU_ITEM_CONTENT_SPEC {
-    const RESET_VALUE: u32 = 0x037c;
-}
+#[doc = "`reset()` method sets MMU_ITEM_CONTENT to value 0"]
+impl crate::Resettable for MMU_ITEM_CONTENT_SPEC {}
