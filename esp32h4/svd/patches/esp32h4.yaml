@@ -24,6 +24,8 @@ _include:
   - "_uart.yml"
   - "_mmu_item_content.yml"
   - "_mmu_item_index.yml"
+  - "_ieee802154.yml"
+  - "../../../common_patches/ieee802154.yaml"
 
 _modify:
   # SPI3 is a second instance of the general purpose SPI controller.
