@@ -880,6 +880,15 @@ impl core::fmt::Debug for TOUCH_AON {
 }
 #[doc = "TOUCH_AON Peripheral"]
 pub mod touch_aon;
+#[doc = "IEEE802154 Peripheral"]
+pub type IEEE802154 = crate::Periph<ieee802154::RegisterBlock, 0x600c_3000>;
+impl core::fmt::Debug for IEEE802154 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IEEE802154").finish()
+    }
+}
+#[doc = "IEEE802154 Peripheral"]
+pub mod ieee802154;
 #[doc = "MODEM_SYSCON"]
 pub type MODEM_SYSCON = crate::Periph<modem_syscon::RegisterBlock, 0x600c_9c00>;
 impl core::fmt::Debug for MODEM_SYSCON {
