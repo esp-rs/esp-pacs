@@ -16,6 +16,21 @@ ASSIST_DEBUG:
       name: CORE_1_INTR_RAW
     CORE_1_INTERRUPT_CLR:
       name: CORE_1_INTR_CLR
+    CORE_1_AREA_PC:
+      description: core1 area pc status register
+    CORE_1_AREA_SP:
+      description: core1 area sp status register
+  # CPU1 has AREA_PC and AREA_SP in the opposite order from CPU0.
+  CORE_0_AREA_PC:
+    _strip: CORE_0_
+  CORE_?_AREA_SP:
+    _strip: CORE_?_
+  _derive:
+    CORE_1_AREA_PC: CORE_0_AREA_PC
+  _copy:
+    CORE_1_AREA_SP:
+      _from: CORE_0_AREA_SP
+      resetValue: 0
   CORE_0_INTR_ENA:
     _modify:
       CORE_0_AREA_DRAM0_0_RD_RLS:
@@ -92,9 +107,6 @@ ASSIST_DEBUG:
       CORE_?_AREA_DRAM0_1_MIN:
         name: AREA_DRAM0_1_MIN
         _strip: CORE_?_
-      CORE_?_AREA_PC:
-        name: AREA_PC
-        _strip: CORE_?_
       CORE_?_AREA_PIF_0_MAX:
         name: AREA_PIF_0_MAX
         _strip: CORE_?_
@@ -106,9 +118,6 @@ ASSIST_DEBUG:
         _strip: CORE_?_
       CORE_?_AREA_PIF_1_MIN:
         name: AREA_PIF_1_MIN
-        _strip: CORE_?_
-      CORE_?_AREA_SP:
-        name: AREA_SP
         _strip: CORE_?_
       CORE_?_DRAM0_EXCEPTION_MONITOR_0:
         name: DRAM0_EXCEPTION_MONITOR_0
