@@ -4,6 +4,28 @@
     MMU_ITEM_CONTENT:
       resetValue: 0
 
+# The flash MMU (SPI0) and the PSRAM MMU (MEMSPI2) have different entry layouts:
+# https://github.com/espressif/esp-idf/blob/188e3e55bb20505b5fa9dc49ee390bf42c58b4ee/components/soc/esp32s31/include/soc/ext_mem_defs.h#L57-L76
+"SPI0":
+  MMU_ITEM_CONTENT:
+    _delete: [PADDR, ACCESS_SPIRAM, SPIRAM_VALID, VALID, SPIRAM_SENSITIVE, SENSITIVE]
+    _add:
+      PADDR:
+        description: Physical page number
+        bitOffset: 0
+        bitWidth: 11
+        access: read-write
+      VALID:
+        description: Entry is valid when set
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      SENSITIVE:
+        description: Decrypt via flash encryption when set
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+
 "MEMSPI2":
   MMU_ITEM_CONTENT:
     _delete: MMU_ITEM_CONTENT
@@ -18,23 +40,13 @@
         bitOffset: 10
         bitWidth: 1
         access: read-write
-      SPIRAM_VALID:
-        description: Entry is valid when set (SPIRAM MMU)
+      VALID:
+        description: Entry is valid when set
         bitOffset: 11
         bitWidth: 1
         access: read-write
-      VALID:
-        description: Entry is valid when set (flash MMU)
-        bitOffset: 12
-        bitWidth: 1
-        access: read-write
-      SPIRAM_SENSITIVE:
-        description: Decrypt via cache encryption when set (SPIRAM MMU)
-        bitOffset: 12
-        bitWidth: 1
-        access: read-write
       SENSITIVE:
-        description: Decrypt via flash encryption when set (flash MMU)
-        bitOffset: 13
+        description: Decrypt via cache encryption when set
+        bitOffset: 12
         bitWidth: 1
         access: read-write
