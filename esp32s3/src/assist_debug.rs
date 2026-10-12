@@ -2,7 +2,7 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    cpu: [CPU; 2],
+    _reserved_0_cpu: [u8; 0x0120],
     core_x_iram0_dram0_exception_monitor: [CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR; 2],
     log_setting: LOG_SETTING,
     log_data: [LOG_DATA; 4],
@@ -17,16 +17,38 @@ pub struct RegisterBlock {
     date: DATE,
 }
 impl RegisterBlock {
-    #[doc = "0x00..0x120 - Cluster CPU%s, containing CORE_?_AREA_DRAM0_0_MAX, CORE_?_AREA_DRAM0_0_MIN, CORE_?_AREA_DRAM0_1_MAX, CORE_?_AREA_DRAM0_1_MIN, CORE_?_AREA_PC, CORE_?_AREA_PIF_0_MAX, CORE_?_AREA_PIF_0_MIN, CORE_?_AREA_PIF_1_MAX, CORE_?_AREA_PIF_1_MIN, CORE_?_AREA_SP, CORE_?_DRAM0_EXCEPTION_MONITOR_0, CORE_?_DRAM0_EXCEPTION_MONITOR_1, CORE_?_DRAM0_EXCEPTION_MONITOR_2, CORE_?_DRAM0_EXCEPTION_MONITOR_3, CORE_?_DRAM0_EXCEPTION_MONITOR_4, CORE_?_DRAM0_EXCEPTION_MONITOR_5, CORE_?_INTR_CLR, CORE_?_INTR_ENA, CORE_?_INTR_RAW, CORE_?_IRAM0_EXCEPTION_MONITOR_0, CORE_?_IRAM0_EXCEPTION_MONITOR_1, CORE_?_MONTR_ENA, CORE_?_RCD_PDEBUGDATA, CORE_?_RCD_PDEBUGENABLE, CORE_?_RCD_PDEBUGINST, CORE_?_RCD_PDEBUGLS0ADDR, CORE_?_RCD_PDEBUGLS0DATA, CORE_?_RCD_PDEBUGLS0STAT, CORE_?_RCD_PDEBUGPC, CORE_?_RCD_PDEBUGSTATUS, CORE_?_RCD_RECORDING, CORE_?_RCD_SP, CORE_?_SP_MAX, CORE_?_SP_MIN, CORE_?_SP_PC, CORE_?_SP_UNSTABLE"]
+    #[doc = "0x00..0x120 - Cluster CPU%s, containing CORE_?_AREA_DRAM0_0_MAX, CORE_?_AREA_DRAM0_0_MIN, CORE_?_AREA_DRAM0_1_MAX, CORE_?_AREA_DRAM0_1_MIN, CORE_?_AREA_PIF_0_MAX, CORE_?_AREA_PIF_0_MIN, CORE_?_AREA_PIF_1_MAX, CORE_?_AREA_PIF_1_MIN, CORE_?_DRAM0_EXCEPTION_MONITOR_0, CORE_?_DRAM0_EXCEPTION_MONITOR_1, CORE_?_DRAM0_EXCEPTION_MONITOR_2, CORE_?_DRAM0_EXCEPTION_MONITOR_3, CORE_?_DRAM0_EXCEPTION_MONITOR_4, CORE_?_DRAM0_EXCEPTION_MONITOR_5, CORE_?_INTR_CLR, CORE_?_INTR_ENA, CORE_?_INTR_RAW, CORE_?_IRAM0_EXCEPTION_MONITOR_0, CORE_?_IRAM0_EXCEPTION_MONITOR_1, CORE_?_MONTR_ENA, CORE_?_RCD_PDEBUGDATA, CORE_?_RCD_PDEBUGENABLE, CORE_?_RCD_PDEBUGINST, CORE_?_RCD_PDEBUGLS0ADDR, CORE_?_RCD_PDEBUGLS0DATA, CORE_?_RCD_PDEBUGLS0STAT, CORE_?_RCD_PDEBUGPC, CORE_?_RCD_PDEBUGSTATUS, CORE_?_RCD_RECORDING, CORE_?_RCD_SP, CORE_?_SP_MAX, CORE_?_SP_MIN, CORE_?_SP_PC, CORE_?_SP_UNSTABLE"]
     #[inline(always)]
     pub const fn cpu(&self, n: usize) -> &CPU {
-        &self.cpu[n]
+        #[allow(clippy::no_effect)]
+        [(); 2][n];
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(144 * n).cast() }
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x00..0x120 - Cluster CPU%s, containing CORE_?_AREA_DRAM0_0_MAX, CORE_?_AREA_DRAM0_0_MIN, CORE_?_AREA_DRAM0_1_MAX, CORE_?_AREA_DRAM0_1_MIN, CORE_?_AREA_PC, CORE_?_AREA_PIF_0_MAX, CORE_?_AREA_PIF_0_MIN, CORE_?_AREA_PIF_1_MAX, CORE_?_AREA_PIF_1_MIN, CORE_?_AREA_SP, CORE_?_DRAM0_EXCEPTION_MONITOR_0, CORE_?_DRAM0_EXCEPTION_MONITOR_1, CORE_?_DRAM0_EXCEPTION_MONITOR_2, CORE_?_DRAM0_EXCEPTION_MONITOR_3, CORE_?_DRAM0_EXCEPTION_MONITOR_4, CORE_?_DRAM0_EXCEPTION_MONITOR_5, CORE_?_INTR_CLR, CORE_?_INTR_ENA, CORE_?_INTR_RAW, CORE_?_IRAM0_EXCEPTION_MONITOR_0, CORE_?_IRAM0_EXCEPTION_MONITOR_1, CORE_?_MONTR_ENA, CORE_?_RCD_PDEBUGDATA, CORE_?_RCD_PDEBUGENABLE, CORE_?_RCD_PDEBUGINST, CORE_?_RCD_PDEBUGLS0ADDR, CORE_?_RCD_PDEBUGLS0DATA, CORE_?_RCD_PDEBUGLS0STAT, CORE_?_RCD_PDEBUGPC, CORE_?_RCD_PDEBUGSTATUS, CORE_?_RCD_RECORDING, CORE_?_RCD_SP, CORE_?_SP_MAX, CORE_?_SP_MIN, CORE_?_SP_PC, CORE_?_SP_UNSTABLE"]
+    #[doc = "0x00..0x120 - Cluster CPU%s, containing CORE_?_AREA_DRAM0_0_MAX, CORE_?_AREA_DRAM0_0_MIN, CORE_?_AREA_DRAM0_1_MAX, CORE_?_AREA_DRAM0_1_MIN, CORE_?_AREA_PIF_0_MAX, CORE_?_AREA_PIF_0_MIN, CORE_?_AREA_PIF_1_MAX, CORE_?_AREA_PIF_1_MIN, CORE_?_DRAM0_EXCEPTION_MONITOR_0, CORE_?_DRAM0_EXCEPTION_MONITOR_1, CORE_?_DRAM0_EXCEPTION_MONITOR_2, CORE_?_DRAM0_EXCEPTION_MONITOR_3, CORE_?_DRAM0_EXCEPTION_MONITOR_4, CORE_?_DRAM0_EXCEPTION_MONITOR_5, CORE_?_INTR_CLR, CORE_?_INTR_ENA, CORE_?_INTR_RAW, CORE_?_IRAM0_EXCEPTION_MONITOR_0, CORE_?_IRAM0_EXCEPTION_MONITOR_1, CORE_?_MONTR_ENA, CORE_?_RCD_PDEBUGDATA, CORE_?_RCD_PDEBUGENABLE, CORE_?_RCD_PDEBUGINST, CORE_?_RCD_PDEBUGLS0ADDR, CORE_?_RCD_PDEBUGLS0DATA, CORE_?_RCD_PDEBUGLS0STAT, CORE_?_RCD_PDEBUGPC, CORE_?_RCD_PDEBUGSTATUS, CORE_?_RCD_RECORDING, CORE_?_RCD_SP, CORE_?_SP_MAX, CORE_?_SP_MIN, CORE_?_SP_PC, CORE_?_SP_UNSTABLE"]
     #[inline(always)]
     pub fn cpu_iter(&self) -> impl Iterator<Item = &CPU> {
-        self.cpu.iter()
+        (0..2).map(move |n| unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(144 * n).cast() })
+    }
+    #[doc = "0x30 - core0 area sp status register"]
+    #[inline(always)]
+    pub const fn core_0_area_sp(&self) -> &CORE_0_AREA_SP {
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(48).cast() }
+    }
+    #[doc = "0x34 - core0 area pc status register"]
+    #[inline(always)]
+    pub const fn core_0_area_pc(&self) -> &CORE_0_AREA_PC {
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(52).cast() }
+    }
+    #[doc = "0xc0 - core1 area pc status register"]
+    #[inline(always)]
+    pub const fn core_1_area_pc(&self) -> &CORE_1_AREA_PC {
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(192).cast() }
+    }
+    #[doc = "0xc4 - core1 area sp status register"]
+    #[inline(always)]
+    pub const fn core_1_area_sp(&self) -> &CORE_1_AREA_SP {
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(196).cast() }
     }
     #[doc = "0x120..0x128 - `¯\\_(ツ)_/¯`"]
     #[inline(always)]
@@ -101,11 +123,25 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "Cluster CPU%s, containing CORE_?_AREA_DRAM0_0_MAX, CORE_?_AREA_DRAM0_0_MIN, CORE_?_AREA_DRAM0_1_MAX, CORE_?_AREA_DRAM0_1_MIN, CORE_?_AREA_PC, CORE_?_AREA_PIF_0_MAX, CORE_?_AREA_PIF_0_MIN, CORE_?_AREA_PIF_1_MAX, CORE_?_AREA_PIF_1_MIN, CORE_?_AREA_SP, CORE_?_DRAM0_EXCEPTION_MONITOR_0, CORE_?_DRAM0_EXCEPTION_MONITOR_1, CORE_?_DRAM0_EXCEPTION_MONITOR_2, CORE_?_DRAM0_EXCEPTION_MONITOR_3, CORE_?_DRAM0_EXCEPTION_MONITOR_4, CORE_?_DRAM0_EXCEPTION_MONITOR_5, CORE_?_INTR_CLR, CORE_?_INTR_ENA, CORE_?_INTR_RAW, CORE_?_IRAM0_EXCEPTION_MONITOR_0, CORE_?_IRAM0_EXCEPTION_MONITOR_1, CORE_?_MONTR_ENA, CORE_?_RCD_PDEBUGDATA, CORE_?_RCD_PDEBUGENABLE, CORE_?_RCD_PDEBUGINST, CORE_?_RCD_PDEBUGLS0ADDR, CORE_?_RCD_PDEBUGLS0DATA, CORE_?_RCD_PDEBUGLS0STAT, CORE_?_RCD_PDEBUGPC, CORE_?_RCD_PDEBUGSTATUS, CORE_?_RCD_RECORDING, CORE_?_RCD_SP, CORE_?_SP_MAX, CORE_?_SP_MIN, CORE_?_SP_PC, CORE_?_SP_UNSTABLE"]
+#[doc = "Cluster CPU%s, containing CORE_?_AREA_DRAM0_0_MAX, CORE_?_AREA_DRAM0_0_MIN, CORE_?_AREA_DRAM0_1_MAX, CORE_?_AREA_DRAM0_1_MIN, CORE_?_AREA_PIF_0_MAX, CORE_?_AREA_PIF_0_MIN, CORE_?_AREA_PIF_1_MAX, CORE_?_AREA_PIF_1_MIN, CORE_?_DRAM0_EXCEPTION_MONITOR_0, CORE_?_DRAM0_EXCEPTION_MONITOR_1, CORE_?_DRAM0_EXCEPTION_MONITOR_2, CORE_?_DRAM0_EXCEPTION_MONITOR_3, CORE_?_DRAM0_EXCEPTION_MONITOR_4, CORE_?_DRAM0_EXCEPTION_MONITOR_5, CORE_?_INTR_CLR, CORE_?_INTR_ENA, CORE_?_INTR_RAW, CORE_?_IRAM0_EXCEPTION_MONITOR_0, CORE_?_IRAM0_EXCEPTION_MONITOR_1, CORE_?_MONTR_ENA, CORE_?_RCD_PDEBUGDATA, CORE_?_RCD_PDEBUGENABLE, CORE_?_RCD_PDEBUGINST, CORE_?_RCD_PDEBUGLS0ADDR, CORE_?_RCD_PDEBUGLS0DATA, CORE_?_RCD_PDEBUGLS0STAT, CORE_?_RCD_PDEBUGPC, CORE_?_RCD_PDEBUGSTATUS, CORE_?_RCD_RECORDING, CORE_?_RCD_SP, CORE_?_SP_MAX, CORE_?_SP_MIN, CORE_?_SP_PC, CORE_?_SP_UNSTABLE"]
 pub use self::cpu::CPU;
 #[doc = r"Cluster"]
-#[doc = "Cluster CPU%s, containing CORE_?_AREA_DRAM0_0_MAX, CORE_?_AREA_DRAM0_0_MIN, CORE_?_AREA_DRAM0_1_MAX, CORE_?_AREA_DRAM0_1_MIN, CORE_?_AREA_PC, CORE_?_AREA_PIF_0_MAX, CORE_?_AREA_PIF_0_MIN, CORE_?_AREA_PIF_1_MAX, CORE_?_AREA_PIF_1_MIN, CORE_?_AREA_SP, CORE_?_DRAM0_EXCEPTION_MONITOR_0, CORE_?_DRAM0_EXCEPTION_MONITOR_1, CORE_?_DRAM0_EXCEPTION_MONITOR_2, CORE_?_DRAM0_EXCEPTION_MONITOR_3, CORE_?_DRAM0_EXCEPTION_MONITOR_4, CORE_?_DRAM0_EXCEPTION_MONITOR_5, CORE_?_INTR_CLR, CORE_?_INTR_ENA, CORE_?_INTR_RAW, CORE_?_IRAM0_EXCEPTION_MONITOR_0, CORE_?_IRAM0_EXCEPTION_MONITOR_1, CORE_?_MONTR_ENA, CORE_?_RCD_PDEBUGDATA, CORE_?_RCD_PDEBUGENABLE, CORE_?_RCD_PDEBUGINST, CORE_?_RCD_PDEBUGLS0ADDR, CORE_?_RCD_PDEBUGLS0DATA, CORE_?_RCD_PDEBUGLS0STAT, CORE_?_RCD_PDEBUGPC, CORE_?_RCD_PDEBUGSTATUS, CORE_?_RCD_RECORDING, CORE_?_RCD_SP, CORE_?_SP_MAX, CORE_?_SP_MIN, CORE_?_SP_PC, CORE_?_SP_UNSTABLE"]
+#[doc = "Cluster CPU%s, containing CORE_?_AREA_DRAM0_0_MAX, CORE_?_AREA_DRAM0_0_MIN, CORE_?_AREA_DRAM0_1_MAX, CORE_?_AREA_DRAM0_1_MIN, CORE_?_AREA_PIF_0_MAX, CORE_?_AREA_PIF_0_MIN, CORE_?_AREA_PIF_1_MAX, CORE_?_AREA_PIF_1_MIN, CORE_?_DRAM0_EXCEPTION_MONITOR_0, CORE_?_DRAM0_EXCEPTION_MONITOR_1, CORE_?_DRAM0_EXCEPTION_MONITOR_2, CORE_?_DRAM0_EXCEPTION_MONITOR_3, CORE_?_DRAM0_EXCEPTION_MONITOR_4, CORE_?_DRAM0_EXCEPTION_MONITOR_5, CORE_?_INTR_CLR, CORE_?_INTR_ENA, CORE_?_INTR_RAW, CORE_?_IRAM0_EXCEPTION_MONITOR_0, CORE_?_IRAM0_EXCEPTION_MONITOR_1, CORE_?_MONTR_ENA, CORE_?_RCD_PDEBUGDATA, CORE_?_RCD_PDEBUGENABLE, CORE_?_RCD_PDEBUGINST, CORE_?_RCD_PDEBUGLS0ADDR, CORE_?_RCD_PDEBUGLS0DATA, CORE_?_RCD_PDEBUGLS0STAT, CORE_?_RCD_PDEBUGPC, CORE_?_RCD_PDEBUGSTATUS, CORE_?_RCD_RECORDING, CORE_?_RCD_SP, CORE_?_SP_MAX, CORE_?_SP_MIN, CORE_?_SP_PC, CORE_?_SP_UNSTABLE"]
 pub mod cpu;
+#[doc = "CORE_0_AREA_SP (r) register accessor: core0 area sp status register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_area_sp::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_area_sp`] module"]
+pub type CORE_0_AREA_SP = crate::Reg<core_0_area_sp::CORE_0_AREA_SP_SPEC>;
+#[doc = "core0 area sp status register"]
+pub mod core_0_area_sp;
+#[doc = "CORE_0_AREA_PC (r) register accessor: core0 area pc status register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_area_pc::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_area_pc`] module"]
+pub type CORE_0_AREA_PC = crate::Reg<core_0_area_pc::CORE_0_AREA_PC_SPEC>;
+#[doc = "core0 area pc status register"]
+pub mod core_0_area_pc;
+pub use core_0_area_pc as core_1_area_pc;
+pub use CORE_0_AREA_PC as CORE_1_AREA_PC;
+#[doc = "CORE_1_AREA_SP (r) register accessor: core1 area sp status register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_1_area_sp::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_1_area_sp`] module"]
+pub type CORE_1_AREA_SP = crate::Reg<core_1_area_sp::CORE_1_AREA_SP_SPEC>;
+#[doc = "core1 area sp status register"]
+pub mod core_1_area_sp;
 #[doc = "CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR (rw) register accessor: `¯\\_(ツ)_/¯`\n\nYou can [`read`](crate::Reg::read) this register and get [`core_x_iram0_dram0_exception_monitor::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_x_iram0_dram0_exception_monitor::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_x_iram0_dram0_exception_monitor`] module"]
 pub type CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR =
     crate::Reg<core_x_iram0_dram0_exception_monitor::CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_SPEC>;

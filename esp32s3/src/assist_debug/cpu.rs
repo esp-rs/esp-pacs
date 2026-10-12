@@ -1,6 +1,6 @@
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
-#[doc = "Cluster CPU%s, containing CORE_?_AREA_DRAM0_0_MAX, CORE_?_AREA_DRAM0_0_MIN, CORE_?_AREA_DRAM0_1_MAX, CORE_?_AREA_DRAM0_1_MIN, CORE_?_AREA_PC, CORE_?_AREA_PIF_0_MAX, CORE_?_AREA_PIF_0_MIN, CORE_?_AREA_PIF_1_MAX, CORE_?_AREA_PIF_1_MIN, CORE_?_AREA_SP, CORE_?_DRAM0_EXCEPTION_MONITOR_0, CORE_?_DRAM0_EXCEPTION_MONITOR_1, CORE_?_DRAM0_EXCEPTION_MONITOR_2, CORE_?_DRAM0_EXCEPTION_MONITOR_3, CORE_?_DRAM0_EXCEPTION_MONITOR_4, CORE_?_DRAM0_EXCEPTION_MONITOR_5, CORE_?_INTR_CLR, CORE_?_INTR_ENA, CORE_?_INTR_RAW, CORE_?_IRAM0_EXCEPTION_MONITOR_0, CORE_?_IRAM0_EXCEPTION_MONITOR_1, CORE_?_MONTR_ENA, CORE_?_RCD_PDEBUGDATA, CORE_?_RCD_PDEBUGENABLE, CORE_?_RCD_PDEBUGINST, CORE_?_RCD_PDEBUGLS0ADDR, CORE_?_RCD_PDEBUGLS0DATA, CORE_?_RCD_PDEBUGLS0STAT, CORE_?_RCD_PDEBUGPC, CORE_?_RCD_PDEBUGSTATUS, CORE_?_RCD_RECORDING, CORE_?_RCD_SP, CORE_?_SP_MAX, CORE_?_SP_MIN, CORE_?_SP_PC, CORE_?_SP_UNSTABLE"]
+#[doc = "Cluster CPU%s, containing CORE_?_AREA_DRAM0_0_MAX, CORE_?_AREA_DRAM0_0_MIN, CORE_?_AREA_DRAM0_1_MAX, CORE_?_AREA_DRAM0_1_MIN, CORE_?_AREA_PIF_0_MAX, CORE_?_AREA_PIF_0_MIN, CORE_?_AREA_PIF_1_MAX, CORE_?_AREA_PIF_1_MIN, CORE_?_DRAM0_EXCEPTION_MONITOR_0, CORE_?_DRAM0_EXCEPTION_MONITOR_1, CORE_?_DRAM0_EXCEPTION_MONITOR_2, CORE_?_DRAM0_EXCEPTION_MONITOR_3, CORE_?_DRAM0_EXCEPTION_MONITOR_4, CORE_?_DRAM0_EXCEPTION_MONITOR_5, CORE_?_INTR_CLR, CORE_?_INTR_ENA, CORE_?_INTR_RAW, CORE_?_IRAM0_EXCEPTION_MONITOR_0, CORE_?_IRAM0_EXCEPTION_MONITOR_1, CORE_?_MONTR_ENA, CORE_?_RCD_PDEBUGDATA, CORE_?_RCD_PDEBUGENABLE, CORE_?_RCD_PDEBUGINST, CORE_?_RCD_PDEBUGLS0ADDR, CORE_?_RCD_PDEBUGLS0DATA, CORE_?_RCD_PDEBUGLS0STAT, CORE_?_RCD_PDEBUGPC, CORE_?_RCD_PDEBUGSTATUS, CORE_?_RCD_RECORDING, CORE_?_RCD_SP, CORE_?_SP_MAX, CORE_?_SP_MIN, CORE_?_SP_PC, CORE_?_SP_UNSTABLE"]
 pub struct CPU {
     montr_ena: MONTR_ENA,
     intr_raw: INTR_RAW,
@@ -14,8 +14,7 @@ pub struct CPU {
     area_pif_0_max: AREA_PIF_0_MAX,
     area_pif_1_min: AREA_PIF_1_MIN,
     area_pif_1_max: AREA_PIF_1_MAX,
-    area_sp: AREA_SP,
-    area_pc: AREA_PC,
+    _reserved12: [u8; 0x08],
     sp_unstable: SP_UNSTABLE,
     sp_min: SP_MIN,
     sp_max: SP_MAX,
@@ -99,16 +98,6 @@ impl CPU {
     #[inline(always)]
     pub const fn area_pif_1_max(&self) -> &AREA_PIF_1_MAX {
         &self.area_pif_1_max
-    }
-    #[doc = "0x30 - core0 area sp status register"]
-    #[inline(always)]
-    pub const fn area_sp(&self) -> &AREA_SP {
-        &self.area_sp
-    }
-    #[doc = "0x34 - core0 area pc status register"]
-    #[inline(always)]
-    pub const fn area_pc(&self) -> &AREA_PC {
-        &self.area_pc
     }
     #[doc = "0x38 - core0 sp unstable configuration register"]
     #[inline(always)]
@@ -237,10 +226,6 @@ pub mod area_dram0_1_max;
 pub type AREA_DRAM0_1_MIN = crate::Reg<area_dram0_1_min::AREA_DRAM0_1_MIN_SPEC>;
 #[doc = "core0 dram0 region1 addr configuration register"]
 pub mod area_dram0_1_min;
-#[doc = "AREA_PC (r) register accessor: core0 area pc status register\n\nYou can [`read`](crate::Reg::read) this register and get [`area_pc::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@area_pc`] module"]
-pub type AREA_PC = crate::Reg<area_pc::AREA_PC_SPEC>;
-#[doc = "core0 area pc status register"]
-pub mod area_pc;
 #[doc = "AREA_PIF_0_MAX (rw) register accessor: core0 PIF region0 addr configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`area_pif_0_max::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`area_pif_0_max::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@area_pif_0_max`] module"]
 pub type AREA_PIF_0_MAX = crate::Reg<area_pif_0_max::AREA_PIF_0_MAX_SPEC>;
 #[doc = "core0 PIF region0 addr configuration register"]
@@ -257,10 +242,6 @@ pub mod area_pif_1_max;
 pub type AREA_PIF_1_MIN = crate::Reg<area_pif_1_min::AREA_PIF_1_MIN_SPEC>;
 #[doc = "core0 PIF region1 addr configuration register"]
 pub mod area_pif_1_min;
-#[doc = "AREA_SP (r) register accessor: core0 area sp status register\n\nYou can [`read`](crate::Reg::read) this register and get [`area_sp::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@area_sp`] module"]
-pub type AREA_SP = crate::Reg<area_sp::AREA_SP_SPEC>;
-#[doc = "core0 area sp status register"]
-pub mod area_sp;
 #[doc = "DRAM0_EXCEPTION_MONITOR_0 (r) register accessor: core0 bus busy status regsiter\n\nYou can [`read`](crate::Reg::read) this register and get [`dram0_exception_monitor_0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dram0_exception_monitor_0`] module"]
 pub type DRAM0_EXCEPTION_MONITOR_0 =
     crate::Reg<dram0_exception_monitor_0::DRAM0_EXCEPTION_MONITOR_0_SPEC>;
