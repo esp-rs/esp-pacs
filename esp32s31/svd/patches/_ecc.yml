@@ -37,6 +37,7 @@ ECC:
       P192: [0, "P-192 elliptic curve"]
       P256: [1, "P-256 elliptic curve"]
       P384: [2, "P-384 elliptic curve"]
+      SM2: [3, "SM2 elliptic curve"]
 
   MULT_INT_*:
     _strip:

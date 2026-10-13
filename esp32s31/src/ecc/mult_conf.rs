@@ -19,6 +19,8 @@ pub enum KEY_LENGTH {
     P256 = 1,
     #[doc = "2: P-384 elliptic curve"]
     P384 = 2,
+    #[doc = "3: SM2 elliptic curve"]
+    Sm2  = 3,
 }
 impl From<KEY_LENGTH> for u8 {
     #[inline(always)]
@@ -35,12 +37,13 @@ pub type KEY_LENGTH_R = crate::FieldReader<KEY_LENGTH>;
 impl KEY_LENGTH_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<KEY_LENGTH> {
+    pub const fn variant(&self) -> KEY_LENGTH {
         match self.bits {
-            0 => Some(KEY_LENGTH::P192),
-            1 => Some(KEY_LENGTH::P256),
-            2 => Some(KEY_LENGTH::P384),
-            _ => None,
+            0 => KEY_LENGTH::P192,
+            1 => KEY_LENGTH::P256,
+            2 => KEY_LENGTH::P384,
+            3 => KEY_LENGTH::Sm2,
+            _ => unreachable!(),
         }
     }
     #[doc = "P-192 elliptic curve"]
@@ -58,9 +61,14 @@ impl KEY_LENGTH_R {
     pub fn is_p384(&self) -> bool {
         *self == KEY_LENGTH::P384
     }
+    #[doc = "SM2 elliptic curve"]
+    #[inline(always)]
+    pub fn is_sm2(&self) -> bool {
+        *self == KEY_LENGTH::Sm2
+    }
 }
 #[doc = "Field `KEY_LENGTH` writer - Configures the key length mode bit of ECC Accelerator. \\\\ 0: P-192\\\\ 1: P-256\\\\ 2: P-384\\\\ 3: SM2.\\\\"]
-pub type KEY_LENGTH_W<'a, REG> = crate::FieldWriter<'a, REG, 2, KEY_LENGTH>;
+pub type KEY_LENGTH_W<'a, REG> = crate::FieldWriter<'a, REG, 2, KEY_LENGTH, crate::Safe>;
 impl<'a, REG> KEY_LENGTH_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -80,6 +88,11 @@ where
     #[inline(always)]
     pub fn p384(self) -> &'a mut crate::W<REG> {
         self.variant(KEY_LENGTH::P384)
+    }
+    #[doc = "SM2 elliptic curve"]
+    #[inline(always)]
+    pub fn sm2(self) -> &'a mut crate::W<REG> {
+        self.variant(KEY_LENGTH::Sm2)
     }
 }
 #[doc = "Field `MOD_BASE` reader - Configures the mod base of mod operation, only valid in work_mode 8-11. \\\\ 0: n(order of curve)\\\\ 1: p(mod base of curve)\\\\"]
