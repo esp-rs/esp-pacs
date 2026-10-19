@@ -1,19 +1,19 @@
 #[doc = "Register `RNG_DATA` reader"]
 pub type R = crate::R<RNG_DATA_SPEC>;
-#[doc = "Field `RND_DATA` reader - need_des"]
-pub type RND_DATA_R = crate::FieldReader<u32>;
+#[doc = "Field `RND_SYNC_DATA` reader - need_des"]
+pub type RND_SYNC_DATA_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    pub fn rnd_data(&self) -> RND_DATA_R {
-        RND_DATA_R::new(self.bits)
+    pub fn rnd_sync_data(&self) -> RND_SYNC_DATA_R {
+        RND_SYNC_DATA_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RNG_DATA")
-            .field("rnd_data", &self.rnd_data())
+            .field("rnd_sync_data", &self.rnd_sync_data())
             .finish()
     }
 }
