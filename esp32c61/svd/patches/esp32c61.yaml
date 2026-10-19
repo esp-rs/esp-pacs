@@ -56,6 +56,11 @@ APB_SARADC:
     - ../../../common_patches/adc_patt_tab.yaml
 
 LPPERI:
+  _delete:
+    - RNG_DATA
+  _modify:
+    RNG_DATA_SYNC:
+      name: RNG_DATA
   RNG_CFG:
     RTC_TIMER_EN:
       DISABLE: [0, "Disable rng xor rtc timer"]

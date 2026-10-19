@@ -145,9 +145,11 @@ PMU:
   _include: ../../../common_patches/pmu_int_strip.yaml
 
 RNG:
+  _delete:
+    - DATA
   _modify:
-    DATA:
-      access: read-only
+    DATA_SYNC:
+      name: DATA
 
 INTPRI:
   _modify:

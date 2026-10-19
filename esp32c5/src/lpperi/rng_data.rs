@@ -1,23 +1,23 @@
 #[doc = "Register `RNG_DATA` reader"]
 pub type R = crate::R<RNG_DATA_SPEC>;
-#[doc = "Field `RND_DATA` reader - get rng data"]
-pub type RND_DATA_R = crate::FieldReader<u32>;
+#[doc = "Field `RND_SYNC_DATA` reader - get rng sync result"]
+pub type RND_SYNC_DATA_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - get rng data"]
+    #[doc = "Bits 0:31 - get rng sync result"]
     #[inline(always)]
-    pub fn rnd_data(&self) -> RND_DATA_R {
-        RND_DATA_R::new(self.bits)
+    pub fn rnd_sync_data(&self) -> RND_SYNC_DATA_R {
+        RND_SYNC_DATA_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RNG_DATA")
-            .field("rnd_data", &self.rnd_data())
+            .field("rnd_sync_data", &self.rnd_sync_data())
             .finish()
     }
 }
-#[doc = "RNG result register\n\nYou can [`read`](crate::Reg::read) this register and get [`rng_data::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "rng result sync register\n\nYou can [`read`](crate::Reg::read) this register and get [`rng_data::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RNG_DATA_SPEC;
 impl crate::RegisterSpec for RNG_DATA_SPEC {
     type Ux = u32;
