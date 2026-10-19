@@ -52,6 +52,11 @@ PCR:
       PLL_F80M: [2, "PLL_F80M_CLK"]
 
 LPPERI:
+  _delete:
+    - RNG_DATA
+  _modify:
+    RNG_DATA_SYNC:
+      name: RNG_DATA
   RNG_CFG:
     RTC_TIMER_EN:
       DISABLE: [0, "Disable rng xor rtc timer"]
