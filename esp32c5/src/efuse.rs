@@ -36,6 +36,7 @@ pub struct RegisterBlock {
     _reserved31: [u8; 0x2c],
     clk: CLK,
     conf: CONF,
+    ecdsa: ECDSA,
     status: STATUS,
     cmd: CMD,
     int_raw: INT_RAW,
@@ -47,7 +48,7 @@ pub struct RegisterBlock {
     wr_tim_conf1: WR_TIM_CONF1,
     wr_tim_conf2: WR_TIM_CONF2,
     wr_tim_conf0_rs_bypass: WR_TIM_CONF0_RS_BYPASS,
-    _reserved44: [u8; 0x0304],
+    _reserved45: [u8; 0x0300],
     wr_dis: WR_DIS,
     blk0_backup1_w1: BLK0_BACKUP1_W1,
     blk0_backup1_w2: BLK0_BACKUP1_W2,
@@ -177,7 +178,7 @@ pub struct RegisterBlock {
     blk10_w9: BLK10_W9,
     blk10_w10: BLK10_W10,
     blk10_w11: BLK10_W11,
-    _reserved173: [u8; 0x04],
+    _reserved174: [u8; 0x04],
     en: EN,
 }
 impl RegisterBlock {
@@ -412,57 +413,62 @@ impl RegisterBlock {
     pub const fn conf(&self) -> &CONF {
         &self.conf
     }
-    #[doc = "0x1d0 - eFuse status register."]
+    #[doc = "0x1d0 - eFuse ECDSA key configuration register."]
+    #[inline(always)]
+    pub const fn ecdsa(&self) -> &ECDSA {
+        &self.ecdsa
+    }
+    #[doc = "0x1d4 - eFuse status register."]
     #[inline(always)]
     pub const fn status(&self) -> &STATUS {
         &self.status
     }
-    #[doc = "0x1d4 - eFuse command register."]
+    #[doc = "0x1d8 - eFuse command register."]
     #[inline(always)]
     pub const fn cmd(&self) -> &CMD {
         &self.cmd
     }
-    #[doc = "0x1d8 - eFuse raw interrupt register."]
+    #[doc = "0x1dc - eFuse raw interrupt register."]
     #[inline(always)]
     pub const fn int_raw(&self) -> &INT_RAW {
         &self.int_raw
     }
-    #[doc = "0x1dc - eFuse interrupt status register."]
+    #[doc = "0x1e0 - eFuse interrupt status register."]
     #[inline(always)]
     pub const fn int_st(&self) -> &INT_ST {
         &self.int_st
     }
-    #[doc = "0x1e0 - eFuse interrupt enable register."]
+    #[doc = "0x1e4 - eFuse interrupt enable register."]
     #[inline(always)]
     pub const fn int_ena(&self) -> &INT_ENA {
         &self.int_ena
     }
-    #[doc = "0x1e4 - eFuse interrupt clear register."]
+    #[doc = "0x1e8 - eFuse interrupt clear register."]
     #[inline(always)]
     pub const fn int_clr(&self) -> &INT_CLR {
         &self.int_clr
     }
-    #[doc = "0x1e8 - Controls the eFuse programming voltage."]
+    #[doc = "0x1ec - Controls the eFuse programming voltage."]
     #[inline(always)]
     pub const fn dac_conf(&self) -> &DAC_CONF {
         &self.dac_conf
     }
-    #[doc = "0x1ec - Configures read timing parameters."]
+    #[doc = "0x1f0 - Configures read timing parameters."]
     #[inline(always)]
     pub const fn rd_tim_conf(&self) -> &RD_TIM_CONF {
         &self.rd_tim_conf
     }
-    #[doc = "0x1f0 - Configurarion register 1 of eFuse programming timing parameters."]
+    #[doc = "0x1f4 - Configurarion register 1 of eFuse programming timing parameters."]
     #[inline(always)]
     pub const fn wr_tim_conf1(&self) -> &WR_TIM_CONF1 {
         &self.wr_tim_conf1
     }
-    #[doc = "0x1f4 - Configurarion register 2 of eFuse programming timing parameters."]
+    #[doc = "0x1f8 - Configurarion register 2 of eFuse programming timing parameters."]
     #[inline(always)]
     pub const fn wr_tim_conf2(&self) -> &WR_TIM_CONF2 {
         &self.wr_tim_conf2
     }
-    #[doc = "0x1f8 - Configurarion register0 of eFuse programming time parameters and rs bypass operation."]
+    #[doc = "0x1fc - Configurarion register0 of eFuse programming time parameters and rs bypass operation."]
     #[inline(always)]
     pub const fn wr_tim_conf0_rs_bypass(&self) -> &WR_TIM_CONF0_RS_BYPASS {
         &self.wr_tim_conf0_rs_bypass
@@ -1247,6 +1253,10 @@ pub mod clk;
 pub type CONF = crate::Reg<conf::CONF_SPEC>;
 #[doc = "eFuse operation mode configuraiton register"]
 pub mod conf;
+#[doc = "ECDSA (rw) register accessor: eFuse ECDSA key configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`ecdsa::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ecdsa::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ecdsa`] module"]
+pub type ECDSA = crate::Reg<ecdsa::ECDSA_SPEC>;
+#[doc = "eFuse ECDSA key configuration register."]
+pub mod ecdsa;
 #[doc = "STATUS (r) register accessor: eFuse status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status`] module"]
 pub type STATUS = crate::Reg<status::STATUS_SPEC>;
 #[doc = "eFuse status register."]
