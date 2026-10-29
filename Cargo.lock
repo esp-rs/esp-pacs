@@ -1149,7 +1149,7 @@ dependencies = [
 [[package]]
 name = "svd2rust"
 version = "0.37.1"
-source = "git+https://github.com/MabezDev/svd2rust?branch=skip-peripherals-struct-0.37.1#f74f0b32f87e7d079499e0d0be5d9cbc4ea07f75"
+source = "git+https://github.com/MabezDev/svd2rust?branch=skip-peripherals-struct-0.37.1#11769126b4284f77d87bda9000d450fb73721912"
 dependencies = [
  "anyhow",
  "inflections",

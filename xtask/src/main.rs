@@ -476,7 +476,7 @@ fn format(path: &Path, chip: &Chip) -> Result<()> {
 
 fn rustfmt_executable(crate_dir: &Path) -> PathBuf {
     let output = Command::new("rustup")
-        .args(["which", "rustfmt"])
+        .args(["which", "--toolchain", "nightly", "rustfmt"])
         .current_dir(crate_dir)
         .output();
 
