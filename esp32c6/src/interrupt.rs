@@ -163,6 +163,10 @@ pub enum Interrupt {
 #[derive(Debug, Copy, Clone)]
 pub struct TryFromInterruptError(());
 impl Interrupt {
+    #[doc = r" Bitmask of the interrupt numbers that name a variant."]
+    #[doc = r""]
+    #[doc = r" Bit `n % 32` of word `n / 32` is set if interrupt number `n` is a variant of [`Interrupt`]."]
+    pub const MASK: [u32; 3] = [0xffff_ffff, 0xffff_ffff, 0x1fff];
     #[doc = r" Attempt to convert a given value into an `Interrupt`"]
     #[inline]
     pub fn try_from(value: u8) -> Result<Self, TryFromInterruptError> {
