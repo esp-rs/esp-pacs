@@ -16,8 +16,6 @@ pub type OTP_PGENB_SW_R = crate::BitReader;
 pub type OTP_VDDQ_IS_SW_R = crate::BitReader;
 #[doc = "Field `BLK0_VALID_BIT_CNT` reader - Indicates the number of block valid bit."]
 pub type BLK0_VALID_BIT_CNT_R = crate::FieldReader<u16>;
-#[doc = "Field `CUR_ECDSA_BLK` reader - Indicates which block is used for ECDSA key output."]
-pub type CUR_ECDSA_BLK_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:3 - Indicates the state of the eFuse state machine."]
     #[inline(always)]
@@ -59,11 +57,6 @@ impl R {
     pub fn blk0_valid_bit_cnt(&self) -> BLK0_VALID_BIT_CNT_R {
         BLK0_VALID_BIT_CNT_R::new(((self.bits >> 10) & 0x03ff) as u16)
     }
-    #[doc = "Bits 20:23 - Indicates which block is used for ECDSA key output."]
-    #[inline(always)]
-    pub fn cur_ecdsa_blk(&self) -> CUR_ECDSA_BLK_R {
-        CUR_ECDSA_BLK_R::new(((self.bits >> 20) & 0x0f) as u8)
-    }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -77,7 +70,6 @@ impl core::fmt::Debug for R {
             .field("otp_pgenb_sw", &self.otp_pgenb_sw())
             .field("otp_vddq_is_sw", &self.otp_vddq_is_sw())
             .field("blk0_valid_bit_cnt", &self.blk0_valid_bit_cnt())
-            .field("cur_ecdsa_blk", &self.cur_ecdsa_blk())
             .finish()
     }
 }
