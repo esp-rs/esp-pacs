@@ -38,12 +38,12 @@ pub type FDOUT_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type FADDR_QUAD_R = crate::BitReader;
 #[doc = "Field `FADDR_QUAD` writer - For SPI0 flash, address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
 pub type FADDR_QUAD_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SPI_SAME_AW_AR_ADDR_CHK_EN` reader - Set this bit to check AXI read/write the same address region."]
-pub type SPI_SAME_AW_AR_ADDR_CHK_EN_R = crate::BitReader;
-#[doc = "Field `SPI_CLOSE_AXI_INF_EN` reader - Set this bit to close AXI read/write transfer to MSPI, which means that only SLV_ERR will be replied to BRESP/RRESP."]
-pub type SPI_CLOSE_AXI_INF_EN_R = crate::BitReader;
-#[doc = "Field `SPI_CLOSE_AXI_INF_EN` writer - Set this bit to close AXI read/write transfer to MSPI, which means that only SLV_ERR will be replied to BRESP/RRESP."]
-pub type SPI_CLOSE_AXI_INF_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SAME_AW_AR_ADDR_CHK_EN` reader - Set this bit to check AXI read/write the same address region."]
+pub type SAME_AW_AR_ADDR_CHK_EN_R = crate::BitReader;
+#[doc = "Field `CLOSE_AXI_INF_EN` reader - Set this bit to close AXI read/write transfer to MSPI, which means that only SLV_ERR will be replied to BRESP/RRESP."]
+pub type CLOSE_AXI_INF_EN_R = crate::BitReader;
+#[doc = "Field `CLOSE_AXI_INF_EN` writer - Set this bit to close AXI read/write transfer to MSPI, which means that only SLV_ERR will be replied to BRESP/RRESP."]
+pub type CLOSE_AXI_INF_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - For SPI0, AXI master access enable, 1: enable, 0:disable."]
     #[inline(always)]
@@ -92,13 +92,13 @@ impl R {
     }
     #[doc = "Bit 30 - Set this bit to check AXI read/write the same address region."]
     #[inline(always)]
-    pub fn spi_same_aw_ar_addr_chk_en(&self) -> SPI_SAME_AW_AR_ADDR_CHK_EN_R {
-        SPI_SAME_AW_AR_ADDR_CHK_EN_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn same_aw_ar_addr_chk_en(&self) -> SAME_AW_AR_ADDR_CHK_EN_R {
+        SAME_AW_AR_ADDR_CHK_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Set this bit to close AXI read/write transfer to MSPI, which means that only SLV_ERR will be replied to BRESP/RRESP."]
     #[inline(always)]
-    pub fn spi_close_axi_inf_en(&self) -> SPI_CLOSE_AXI_INF_EN_R {
-        SPI_CLOSE_AXI_INF_EN_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn close_axi_inf_en(&self) -> CLOSE_AXI_INF_EN_R {
+        CLOSE_AXI_INF_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -114,11 +114,8 @@ impl core::fmt::Debug for R {
             .field("fdin_quad", &self.fdin_quad())
             .field("fdout_quad", &self.fdout_quad())
             .field("faddr_quad", &self.faddr_quad())
-            .field(
-                "spi_same_aw_ar_addr_chk_en",
-                &self.spi_same_aw_ar_addr_chk_en(),
-            )
-            .field("spi_close_axi_inf_en", &self.spi_close_axi_inf_en())
+            .field("same_aw_ar_addr_chk_en", &self.same_aw_ar_addr_chk_en())
+            .field("close_axi_inf_en", &self.close_axi_inf_en())
             .finish()
     }
 }
@@ -170,8 +167,8 @@ impl W {
     }
     #[doc = "Bit 31 - Set this bit to close AXI read/write transfer to MSPI, which means that only SLV_ERR will be replied to BRESP/RRESP."]
     #[inline(always)]
-    pub fn spi_close_axi_inf_en(&mut self) -> SPI_CLOSE_AXI_INF_EN_W<'_, CACHE_FCTRL_SPEC> {
-        SPI_CLOSE_AXI_INF_EN_W::new(self, 31)
+    pub fn close_axi_inf_en(&mut self) -> CLOSE_AXI_INF_EN_W<'_, CACHE_FCTRL_SPEC> {
+        CLOSE_AXI_INF_EN_W::new(self, 31)
     }
 }
 #[doc = "SPI0 bit mode control register.\n\nYou can [`read`](crate::Reg::read) this register and get [`cache_fctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cache_fctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

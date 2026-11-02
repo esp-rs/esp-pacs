@@ -23,7 +23,6 @@ _include:
   - "_spi.yml"
   - "_uart.yml"
   - "_mmu_item_content.yml"
-  - "_mmu_item_index.yml"
   - "_ieee802154.yml"
   - "../../../common_patches/ieee802154.yaml"
 
