@@ -378,6 +378,79 @@ EFUSE:
   _strip: APB2OTP_
   "*":
     _strip: APB2OTP_
+  CONF:
+    _delete: CFG_ECDSA_BLK
+  STATUS:
+    _delete: CUR_ECDSA_BLK
+  _add:
+    ECDSA:
+      description: eFuse ECDSA key configuration register.
+      addressOffset: 0x1d0
+      size: 32
+      fields:
+        CFG_ECDSA_P192_BLK:
+          description: Configures which block to use for ECDSA P192 key output.
+          bitOffset: 0
+          bitWidth: 4
+          access: read-write
+        CFG_ECDSA_P256_BLK:
+          description: Configures which block to use for ECDSA P256 key output.
+          bitOffset: 4
+          bitWidth: 4
+          access: read-write
+        CFG_ECDSA_P384_L_BLK:
+          description: Configures which block to use for ECDSA P384 key low part output.
+          bitOffset: 8
+          bitWidth: 4
+          access: read-write
+        CFG_ECDSA_P384_H_BLK:
+          description: Configures which block to use for ECDSA P384 key high part output.
+          bitOffset: 12
+          bitWidth: 4
+          access: read-write
+        CUR_ECDSA_P192_BLK:
+          description: Represents which block is used for ECDSA P192 key output.
+          bitOffset: 16
+          bitWidth: 4
+          access: read-only
+        CUR_ECDSA_P256_BLK:
+          description: Represents which block is used for ECDSA P256 key output.
+          bitOffset: 20
+          bitWidth: 4
+          access: read-only
+        CUR_ECDSA_P384_L_BLK:
+          description: Represents which block is used for ECDSA P384 key low part output.
+          bitOffset: 24
+          bitWidth: 4
+          access: read-only
+        CUR_ECDSA_P384_H_BLK:
+          description: Represents which block is used for ECDSA P384 key high part output.
+          bitOffset: 28
+          bitWidth: 4
+          access: read-only
+  _modify:
+    STATUS:
+      addressOffset: 0x1d4
+    CMD:
+      addressOffset: 0x1d8
+    INT_RAW:
+      addressOffset: 0x1dc
+    INT_ST:
+      addressOffset: 0x1e0
+    INT_ENA:
+      addressOffset: 0x1e4
+    INT_CLR:
+      addressOffset: 0x1e8
+    DAC_CONF:
+      addressOffset: 0x1ec
+    RD_TIM_CONF:
+      addressOffset: 0x1f0
+    WR_TIM_CONF1:
+      addressOffset: 0x1f4
+    WR_TIM_CONF2:
+      addressOffset: 0x1f8
+    WR_TIM_CONF0_RS_BYPASS:
+      addressOffset: 0x1fc
 
 GPIO:
   FUNC*_IN_SEL_CFG:
