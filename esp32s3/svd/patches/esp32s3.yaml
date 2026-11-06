@@ -539,6 +539,25 @@ APB_CTRL:
         description: "Set this bit to reset MAC module. Clear the bit to release MAC module."
         bitOffset: 2
         bitWidth: 1
+  WIFI_CLK_EN:
+    _delete: WIFI_CLK_EN
+    _add:
+      I2C_CLK_EN:
+        description: "Set this bit to enable the I2C clock. Clear the bit to disable it."
+        bitOffset: 5
+        bitWidth: 1
+      UNUSED_BIT12:
+        description: "Unused clock enable bit. ESP-IDF clears it during peripheral clock initialization."
+        bitOffset: 12
+        bitWidth: 1
+      SDIO_HOST_CLK_EN:
+        description: "Set this bit to enable the SD/MMC host clock. Clear the bit to disable it."
+        bitOffset: 13
+        bitWidth: 1
+      RNG_CLK_EN:
+        description: "Set this bit to enable the RNG clock. Clear the bit to disable it."
+        bitOffset: 15
+        bitWidth: 1
   _derive:
     FLASH_ACE[1-3]_ADDR:
       _from: FLASH_ACE0_ADDR
