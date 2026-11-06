@@ -2880,8 +2880,40 @@ SYSCON:
         bitOffset: 2
         bitWidth: 1
   WIFI_CLK_EN:
-     _delete: WIFI_CLK_EN
-     _add:
+    _delete: WIFI_CLK_EN
+    _add:
+      SDIOSLAVE_CLK_EN:
+        description: "Set this bit to enable the SDIO slave clock. Clear the bit to disable it."
+        bitOffset: 4
+        bitWidth: 1
+      UNUSED_BIT5:
+        description: "Unused clock enable bit. ESP-IDF clears it during peripheral clock initialization."
+        bitOffset: 5
+        bitWidth: 1
+      BT_BASEBAND_CLK_EN:
+        description: "Set this bit to enable the Bluetooth baseband clock. Clear the bit to disable it."
+        bitOffset: 11
+        bitWidth: 1
+      UNUSED_BIT12:
+        description: "Unused clock enable bit. ESP-IDF clears it during peripheral clock initialization."
+        bitOffset: 12
+        bitWidth: 1
+      SDIO_HOST_CLK_EN:
+        description: "Set this bit to enable the SD/MMC host clock. Clear the bit to disable it."
+        bitOffset: 13
+        bitWidth: 1
+      EMAC_CLK_EN:
+        description: "Set this bit to enable the Ethernet MAC clock. Clear the bit to disable it."
+        bitOffset: 14
+        bitWidth: 1
+      RNG_CLK_EN:
+        description: "Set this bit to enable the RNG clock. Clear the bit to disable it."
+        bitOffset: 15
+        bitWidth: 1
+      BT_LC_CLK_EN:
+        description: "Set these bits to enable the Bluetooth link controller clocks. Clear the bits to disable them."
+        bitOffset: 16
+        bitWidth: 2
       MAC_CLK_EN:
         description: "Set this bit to enable MAC module clock. Clear the bit to disable MAC module clock."
         bitOffset: 18
