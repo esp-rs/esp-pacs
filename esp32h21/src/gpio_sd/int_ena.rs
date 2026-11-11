@@ -2,60 +2,60 @@
 pub type R = crate::R<INT_ENA_SPEC>;
 #[doc = "Register `INT_ENA` writer"]
 pub type W = crate::W<INT_ENA_SPEC>;
-#[doc = "Field `GPIO_EXT_COMP_NEG_0` reader - analog comparator pos edge interrupt enable"]
-pub type GPIO_EXT_COMP_NEG_0_R = crate::BitReader;
-#[doc = "Field `GPIO_EXT_COMP_NEG_0` writer - analog comparator pos edge interrupt enable"]
-pub type GPIO_EXT_COMP_NEG_0_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `GPIO_EXT_COMP_POS_0` reader - analog comparator neg edge interrupt enable"]
-pub type GPIO_EXT_COMP_POS_0_R = crate::BitReader;
-#[doc = "Field `GPIO_EXT_COMP_POS_0` writer - analog comparator neg edge interrupt enable"]
-pub type GPIO_EXT_COMP_POS_0_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `GPIO_EXT_COMP_ALL_0` reader - analog comparator neg or pos edge interrupt enable"]
-pub type GPIO_EXT_COMP_ALL_0_R = crate::BitReader;
-#[doc = "Field `GPIO_EXT_COMP_ALL_0` writer - analog comparator neg or pos edge interrupt enable"]
-pub type GPIO_EXT_COMP_ALL_0_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COMP_NEG_0` reader - analog comparator pos edge interrupt enable"]
+pub type COMP_NEG_0_R = crate::BitReader;
+#[doc = "Field `COMP_NEG_0` writer - analog comparator pos edge interrupt enable"]
+pub type COMP_NEG_0_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COMP_POS_0` reader - analog comparator neg edge interrupt enable"]
+pub type COMP_POS_0_R = crate::BitReader;
+#[doc = "Field `COMP_POS_0` writer - analog comparator neg edge interrupt enable"]
+pub type COMP_POS_0_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `COMP_ALL_0` reader - analog comparator neg or pos edge interrupt enable"]
+pub type COMP_ALL_0_R = crate::BitReader;
+#[doc = "Field `COMP_ALL_0` writer - analog comparator neg or pos edge interrupt enable"]
+pub type COMP_ALL_0_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - analog comparator pos edge interrupt enable"]
     #[inline(always)]
-    pub fn gpio_ext_comp_neg_0(&self) -> GPIO_EXT_COMP_NEG_0_R {
-        GPIO_EXT_COMP_NEG_0_R::new((self.bits & 1) != 0)
+    pub fn comp_neg_0(&self) -> COMP_NEG_0_R {
+        COMP_NEG_0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - analog comparator neg edge interrupt enable"]
     #[inline(always)]
-    pub fn gpio_ext_comp_pos_0(&self) -> GPIO_EXT_COMP_POS_0_R {
-        GPIO_EXT_COMP_POS_0_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn comp_pos_0(&self) -> COMP_POS_0_R {
+        COMP_POS_0_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - analog comparator neg or pos edge interrupt enable"]
     #[inline(always)]
-    pub fn gpio_ext_comp_all_0(&self) -> GPIO_EXT_COMP_ALL_0_R {
-        GPIO_EXT_COMP_ALL_0_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn comp_all_0(&self) -> COMP_ALL_0_R {
+        COMP_ALL_0_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field("gpio_ext_comp_neg_0", &self.gpio_ext_comp_neg_0())
-            .field("gpio_ext_comp_pos_0", &self.gpio_ext_comp_pos_0())
-            .field("gpio_ext_comp_all_0", &self.gpio_ext_comp_all_0())
+            .field("comp_neg_0", &self.comp_neg_0())
+            .field("comp_pos_0", &self.comp_pos_0())
+            .field("comp_all_0", &self.comp_all_0())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - analog comparator pos edge interrupt enable"]
     #[inline(always)]
-    pub fn gpio_ext_comp_neg_0(&mut self) -> GPIO_EXT_COMP_NEG_0_W<'_, INT_ENA_SPEC> {
-        GPIO_EXT_COMP_NEG_0_W::new(self, 0)
+    pub fn comp_neg_0(&mut self) -> COMP_NEG_0_W<'_, INT_ENA_SPEC> {
+        COMP_NEG_0_W::new(self, 0)
     }
     #[doc = "Bit 1 - analog comparator neg edge interrupt enable"]
     #[inline(always)]
-    pub fn gpio_ext_comp_pos_0(&mut self) -> GPIO_EXT_COMP_POS_0_W<'_, INT_ENA_SPEC> {
-        GPIO_EXT_COMP_POS_0_W::new(self, 1)
+    pub fn comp_pos_0(&mut self) -> COMP_POS_0_W<'_, INT_ENA_SPEC> {
+        COMP_POS_0_W::new(self, 1)
     }
     #[doc = "Bit 2 - analog comparator neg or pos edge interrupt enable"]
     #[inline(always)]
-    pub fn gpio_ext_comp_all_0(&mut self) -> GPIO_EXT_COMP_ALL_0_W<'_, INT_ENA_SPEC> {
-        GPIO_EXT_COMP_ALL_0_W::new(self, 2)
+    pub fn comp_all_0(&mut self) -> COMP_ALL_0_W<'_, INT_ENA_SPEC> {
+        COMP_ALL_0_W::new(self, 2)
     }
 }
 #[doc = "GPIO_EXT interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

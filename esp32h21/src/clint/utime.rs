@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`utime::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Read-only 64-bit core local timer counter value\n\nYou can [`read`](crate::Reg::read) this register and get [`utime::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UTIME_SPEC;
 impl crate::RegisterSpec for UTIME_SPEC {
     type Ux = u64;

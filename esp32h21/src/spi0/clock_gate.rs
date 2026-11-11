@@ -2,45 +2,45 @@
 pub type R = crate::R<CLOCK_GATE_SPEC>;
 #[doc = "Register `CLOCK_GATE` writer"]
 pub type W = crate::W<CLOCK_GATE_SPEC>;
-#[doc = "Field `SPI_CLK_EN` reader - Register clock gate enable signal. 1: Enable. 0: Disable."]
-pub type SPI_CLK_EN_R = crate::BitReader;
-#[doc = "Field `SPI_CLK_EN` writer - Register clock gate enable signal. 1: Enable. 0: Disable."]
-pub type SPI_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SPI_MSPI_CLK_FORCE_ON` reader - MSPI lowpower function clock gate force on signal. 1: Enable. 0: Disable."]
-pub type SPI_MSPI_CLK_FORCE_ON_R = crate::BitReader;
-#[doc = "Field `SPI_MSPI_CLK_FORCE_ON` writer - MSPI lowpower function clock gate force on signal. 1: Enable. 0: Disable."]
-pub type SPI_MSPI_CLK_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLK_EN` reader - Register clock gate enable signal. 1: Enable. 0: Disable."]
+pub type CLK_EN_R = crate::BitReader;
+#[doc = "Field `CLK_EN` writer - Register clock gate enable signal. 1: Enable. 0: Disable."]
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `MSPI_CLK_FORCE_ON` reader - MSPI lowpower function clock gate force on signal. 1: Enable. 0: Disable."]
+pub type MSPI_CLK_FORCE_ON_R = crate::BitReader;
+#[doc = "Field `MSPI_CLK_FORCE_ON` writer - MSPI lowpower function clock gate force on signal. 1: Enable. 0: Disable."]
+pub type MSPI_CLK_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Register clock gate enable signal. 1: Enable. 0: Disable."]
     #[inline(always)]
-    pub fn spi_clk_en(&self) -> SPI_CLK_EN_R {
-        SPI_CLK_EN_R::new((self.bits & 1) != 0)
+    pub fn clk_en(&self) -> CLK_EN_R {
+        CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - MSPI lowpower function clock gate force on signal. 1: Enable. 0: Disable."]
     #[inline(always)]
-    pub fn spi_mspi_clk_force_on(&self) -> SPI_MSPI_CLK_FORCE_ON_R {
-        SPI_MSPI_CLK_FORCE_ON_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn mspi_clk_force_on(&self) -> MSPI_CLK_FORCE_ON_R {
+        MSPI_CLK_FORCE_ON_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLOCK_GATE")
-            .field("spi_clk_en", &self.spi_clk_en())
-            .field("spi_mspi_clk_force_on", &self.spi_mspi_clk_force_on())
+            .field("clk_en", &self.clk_en())
+            .field("mspi_clk_force_on", &self.mspi_clk_force_on())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - Register clock gate enable signal. 1: Enable. 0: Disable."]
     #[inline(always)]
-    pub fn spi_clk_en(&mut self) -> SPI_CLK_EN_W<'_, CLOCK_GATE_SPEC> {
-        SPI_CLK_EN_W::new(self, 0)
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CLOCK_GATE_SPEC> {
+        CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - MSPI lowpower function clock gate force on signal. 1: Enable. 0: Disable."]
     #[inline(always)]
-    pub fn spi_mspi_clk_force_on(&mut self) -> SPI_MSPI_CLK_FORCE_ON_W<'_, CLOCK_GATE_SPEC> {
-        SPI_MSPI_CLK_FORCE_ON_W::new(self, 1)
+    pub fn mspi_clk_force_on(&mut self) -> MSPI_CLK_FORCE_ON_W<'_, CLOCK_GATE_SPEC> {
+        MSPI_CLK_FORCE_ON_W::new(self, 1)
     }
 }
 #[doc = "SPI0 clock gate register\n\nYou can [`read`](crate::Reg::read) this register and get [`clock_gate::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clock_gate::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

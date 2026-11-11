@@ -15,7 +15,8 @@ pub struct RegisterBlock {
     irq_ena: IRQ_ENA,
     date: DATE,
     _reserved12: [u8; 0x10],
-    h_mem: [H_MEM; 16],
+    h_mem: [H_MEM; 8],
+    _reserved13: [u8; 0x20],
     m_mem: [M_MEM; 16],
 }
 impl RegisterBlock {
@@ -79,13 +80,13 @@ impl RegisterBlock {
     pub const fn date(&self) -> &DATE {
         &self.date
     }
-    #[doc = "0x40..0x80 - Sha H memory which contains intermediate hash or finial hash."]
+    #[doc = "0x40..0x60 - Sha H memory which contains intermediate hash or finial hash."]
     #[inline(always)]
     pub const fn h_mem(&self, n: usize) -> &H_MEM {
         &self.h_mem[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x40..0x80 - Sha H memory which contains intermediate hash or finial hash."]
+    #[doc = "0x40..0x60 - Sha H memory which contains intermediate hash or finial hash."]
     #[inline(always)]
     pub fn h_mem_iter(&self) -> impl Iterator<Item = &H_MEM> {
         self.h_mem.iter()

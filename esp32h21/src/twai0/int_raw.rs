@@ -4,14 +4,14 @@ pub type R = crate::R<INT_RAW_SPEC>;
 pub type RX_INT_ST_R = crate::BitReader;
 #[doc = "Field `TX_INT_ST` reader - 1: this bit is set whenever the transmit buffer status changes from '0-to-1' (released) and the TIE bit is set within the interrupt enable register. 0: reset"]
 pub type TX_INT_ST_R = crate::BitReader;
-#[doc = "Field `ERR_WARNING_INT_ST` reader - 1: this bit is set on every change (set and clear) of either the error status or bus status bits and the EIE bit is set within the interrupt enable register. 0: reset"]
-pub type ERR_WARNING_INT_ST_R = crate::BitReader;
-#[doc = "Field `DATA_OVERRUN_INT_ST` reader - 1: this bit is set on a '0-to-1' transition of the data overrun status bit and the DOIE bit is set within the interrupt enable register. 0: reset"]
-pub type DATA_OVERRUN_INT_ST_R = crate::BitReader;
+#[doc = "Field `ERR_WARN_INT_ST` reader - 1: this bit is set on every change (set and clear) of either the error status or bus status bits and the EIE bit is set within the interrupt enable register. 0: reset"]
+pub type ERR_WARN_INT_ST_R = crate::BitReader;
+#[doc = "Field `OVERRUN_INT_ST` reader - 1: this bit is set on a '0-to-1' transition of the data overrun status bit and the DOIE bit is set within the interrupt enable register. 0: reset"]
+pub type OVERRUN_INT_ST_R = crate::BitReader;
 #[doc = "Field `ERR_PASSIVE_INT_ST` reader - 1: this bit is set whenever the TWAI controller has reached the error passive status (at least one error counter exceeds the protocol-defined level of 127) or if the TWAI controller is in the error passive status and enters the error active status again and the EPIE bit is set within the interrupt enable register. 0: reset"]
 pub type ERR_PASSIVE_INT_ST_R = crate::BitReader;
-#[doc = "Field `ARBITRATION_LOST_INT_ST` reader - 1: this bit is set when the TWAI controller lost the arbitration and becomes a receiver and the ALIE bit is set within the interrupt enable register. 0: reset"]
-pub type ARBITRATION_LOST_INT_ST_R = crate::BitReader;
+#[doc = "Field `ARB_LOST_INT_ST` reader - 1: this bit is set when the TWAI controller lost the arbitration and becomes a receiver and the ALIE bit is set within the interrupt enable register. 0: reset"]
+pub type ARB_LOST_INT_ST_R = crate::BitReader;
 #[doc = "Field `BUS_ERR_INT_ST` reader - 1: this bit is set when the TWAI controller detects an error on the TWAI-bus and the BEIE bit is set within the interrupt enable register. 0: reset"]
 pub type BUS_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `IDLE_INT_ST` reader - 1: this bit is set when the TWAI controller detects state of TWAI become IDLE and this interrupt enable bit is set within the interrupt enable register. 0: reset"]
@@ -29,13 +29,13 @@ impl R {
     }
     #[doc = "Bit 2 - 1: this bit is set on every change (set and clear) of either the error status or bus status bits and the EIE bit is set within the interrupt enable register. 0: reset"]
     #[inline(always)]
-    pub fn err_warning_int_st(&self) -> ERR_WARNING_INT_ST_R {
-        ERR_WARNING_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn err_warn_int_st(&self) -> ERR_WARN_INT_ST_R {
+        ERR_WARN_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - 1: this bit is set on a '0-to-1' transition of the data overrun status bit and the DOIE bit is set within the interrupt enable register. 0: reset"]
     #[inline(always)]
-    pub fn data_overrun_int_st(&self) -> DATA_OVERRUN_INT_ST_R {
-        DATA_OVERRUN_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn overrun_int_st(&self) -> OVERRUN_INT_ST_R {
+        OVERRUN_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 5 - 1: this bit is set whenever the TWAI controller has reached the error passive status (at least one error counter exceeds the protocol-defined level of 127) or if the TWAI controller is in the error passive status and enters the error active status again and the EPIE bit is set within the interrupt enable register. 0: reset"]
     #[inline(always)]
@@ -44,8 +44,8 @@ impl R {
     }
     #[doc = "Bit 6 - 1: this bit is set when the TWAI controller lost the arbitration and becomes a receiver and the ALIE bit is set within the interrupt enable register. 0: reset"]
     #[inline(always)]
-    pub fn arbitration_lost_int_st(&self) -> ARBITRATION_LOST_INT_ST_R {
-        ARBITRATION_LOST_INT_ST_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn arb_lost_int_st(&self) -> ARB_LOST_INT_ST_R {
+        ARB_LOST_INT_ST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - 1: this bit is set when the TWAI controller detects an error on the TWAI-bus and the BEIE bit is set within the interrupt enable register. 0: reset"]
     #[inline(always)]
@@ -64,10 +64,10 @@ impl core::fmt::Debug for R {
         f.debug_struct("INT_RAW")
             .field("rx_int_st", &self.rx_int_st())
             .field("tx_int_st", &self.tx_int_st())
-            .field("err_warning_int_st", &self.err_warning_int_st())
-            .field("data_overrun_int_st", &self.data_overrun_int_st())
+            .field("err_warn_int_st", &self.err_warn_int_st())
+            .field("overrun_int_st", &self.overrun_int_st())
             .field("err_passive_int_st", &self.err_passive_int_st())
-            .field("arbitration_lost_int_st", &self.arbitration_lost_int_st())
+            .field("arb_lost_int_st", &self.arb_lost_int_st())
             .field("bus_err_int_st", &self.bus_err_int_st())
             .field("idle_int_st", &self.idle_int_st())
             .finish()

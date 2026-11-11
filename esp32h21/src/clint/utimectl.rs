@@ -51,7 +51,7 @@ impl W {
         UTOF_W::new(self, 3)
     }
 }
-#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`utimectl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`utimectl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Core-local user timer interrupt control/status register\n\nYou can [`read`](crate::Reg::read) this register and get [`utimectl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`utimectl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UTIMECTL_SPEC;
 impl crate::RegisterSpec for UTIMECTL_SPEC {
     type Ux = u32;

@@ -2,345 +2,457 @@
 pub type R = crate::R<TASK_EN_SPEC>;
 #[doc = "Register `TASK_EN` writer"]
 pub type W = crate::W<TASK_EN_SPEC>;
-#[doc = "Field `TASK_CMPR0_A_UP_EN` reader - set this bit high to enable PWM generator0 timer stamp A's shadow register update task receive"]
-pub type TASK_CMPR0_A_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CMPR0_A_UP_EN` writer - set this bit high to enable PWM generator0 timer stamp A's shadow register update task receive"]
-pub type TASK_CMPR0_A_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CMPR1_A_UP_EN` reader - set this bit high to enable PWM generator1 timer stamp A's shadow register update task receive"]
-pub type TASK_CMPR1_A_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CMPR1_A_UP_EN` writer - set this bit high to enable PWM generator1 timer stamp A's shadow register update task receive"]
-pub type TASK_CMPR1_A_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CMPR2_A_UP_EN` reader - set this bit high to enable PWM generator2 timer stamp A's shadow register update task receive"]
-pub type TASK_CMPR2_A_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CMPR2_A_UP_EN` writer - set this bit high to enable PWM generator2 timer stamp A's shadow register update task receive"]
-pub type TASK_CMPR2_A_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CMPR0_B_UP_EN` reader - set this bit high to enable PWM generator0 timer stamp B's shadow register update task receive"]
-pub type TASK_CMPR0_B_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CMPR0_B_UP_EN` writer - set this bit high to enable PWM generator0 timer stamp B's shadow register update task receive"]
-pub type TASK_CMPR0_B_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CMPR1_B_UP_EN` reader - set this bit high to enable PWM generator1 timer stamp B's shadow register update task receive"]
-pub type TASK_CMPR1_B_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CMPR1_B_UP_EN` writer - set this bit high to enable PWM generator1 timer stamp B's shadow register update task receive"]
-pub type TASK_CMPR1_B_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CMPR2_B_UP_EN` reader - set this bit high to enable PWM generator2 timer stamp B's shadow register update task receive"]
-pub type TASK_CMPR2_B_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CMPR2_B_UP_EN` writer - set this bit high to enable PWM generator2 timer stamp B's shadow register update task receive"]
-pub type TASK_CMPR2_B_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_GEN_STOP_EN` reader - set this bit high to enable all PWM generate stop task receive"]
-pub type TASK_GEN_STOP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_GEN_STOP_EN` writer - set this bit high to enable all PWM generate stop task receive"]
-pub type TASK_GEN_STOP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TIMER0_SYNC_EN` reader - set this bit high to enable timer0 sync task receive"]
-pub type TASK_TIMER0_SYNC_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TIMER0_SYNC_EN` writer - set this bit high to enable timer0 sync task receive"]
-pub type TASK_TIMER0_SYNC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TIMER1_SYNC_EN` reader - set this bit high to enable timer1 sync task receive"]
-pub type TASK_TIMER1_SYNC_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TIMER1_SYNC_EN` writer - set this bit high to enable timer1 sync task receive"]
-pub type TASK_TIMER1_SYNC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TIMER2_SYNC_EN` reader - set this bit high to enable timer2 sync task receive"]
-pub type TASK_TIMER2_SYNC_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TIMER2_SYNC_EN` writer - set this bit high to enable timer2 sync task receive"]
-pub type TASK_TIMER2_SYNC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TIMER0_PERIOD_UP_EN` reader - set this bit high to enable timer0 period update task receive"]
-pub type TASK_TIMER0_PERIOD_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TIMER0_PERIOD_UP_EN` writer - set this bit high to enable timer0 period update task receive"]
-pub type TASK_TIMER0_PERIOD_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TIMER1_PERIOD_UP_EN` reader - set this bit high to enable timer1 period update task receive"]
-pub type TASK_TIMER1_PERIOD_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TIMER1_PERIOD_UP_EN` writer - set this bit high to enable timer1 period update task receive"]
-pub type TASK_TIMER1_PERIOD_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TIMER2_PERIOD_UP_EN` reader - set this bit high to enable timer2 period update task receive"]
-pub type TASK_TIMER2_PERIOD_UP_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TIMER2_PERIOD_UP_EN` writer - set this bit high to enable timer2 period update task receive"]
-pub type TASK_TIMER2_PERIOD_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TZ0_OST_EN` reader - set this bit high to enable one shot trip0 task receive"]
-pub type TASK_TZ0_OST_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TZ0_OST_EN` writer - set this bit high to enable one shot trip0 task receive"]
-pub type TASK_TZ0_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TZ1_OST_EN` reader - set this bit high to enable one shot trip1 task receive"]
-pub type TASK_TZ1_OST_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TZ1_OST_EN` writer - set this bit high to enable one shot trip1 task receive"]
-pub type TASK_TZ1_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_TZ2_OST_EN` reader - set this bit high to enable one shot trip2 task receive"]
-pub type TASK_TZ2_OST_EN_R = crate::BitReader;
-#[doc = "Field `TASK_TZ2_OST_EN` writer - set this bit high to enable one shot trip2 task receive"]
-pub type TASK_TZ2_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CLR0_OST_EN` reader - set this bit high to enable one shot trip0 clear task receive"]
-pub type TASK_CLR0_OST_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CLR0_OST_EN` writer - set this bit high to enable one shot trip0 clear task receive"]
-pub type TASK_CLR0_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CLR1_OST_EN` reader - set this bit high to enable one shot trip1 clear task receive"]
-pub type TASK_CLR1_OST_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CLR1_OST_EN` writer - set this bit high to enable one shot trip1 clear task receive"]
-pub type TASK_CLR1_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CLR2_OST_EN` reader - set this bit high to enable one shot trip2 clear task receive"]
-pub type TASK_CLR2_OST_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CLR2_OST_EN` writer - set this bit high to enable one shot trip2 clear task receive"]
-pub type TASK_CLR2_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CAP0_EN` reader - set this bit high to enable capture0 task receive"]
-pub type TASK_CAP0_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CAP0_EN` writer - set this bit high to enable capture0 task receive"]
-pub type TASK_CAP0_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CAP1_EN` reader - set this bit high to enable capture1 task receive"]
-pub type TASK_CAP1_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CAP1_EN` writer - set this bit high to enable capture1 task receive"]
-pub type TASK_CAP1_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TASK_CAP2_EN` reader - set this bit high to enable capture2 task receive"]
-pub type TASK_CAP2_EN_R = crate::BitReader;
-#[doc = "Field `TASK_CAP2_EN` writer - set this bit high to enable capture2 task receive"]
-pub type TASK_CAP2_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CMPR_A_UP_EN(0-2)` reader - set this bit high to enable PWM generator%s timer stamp A's shadow register update task receive"]
+pub type CMPR_A_UP_EN_R = crate::BitReader;
+#[doc = "Field `CMPR_A_UP_EN(0-2)` writer - set this bit high to enable PWM generator%s timer stamp A's shadow register update task receive"]
+pub type CMPR_A_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CMPR_B_UP_EN(0-2)` reader - set this bit high to enable PWM generator%s timer stamp B's shadow register update task receive"]
+pub type CMPR_B_UP_EN_R = crate::BitReader;
+#[doc = "Field `CMPR_B_UP_EN(0-2)` writer - set this bit high to enable PWM generator%s timer stamp B's shadow register update task receive"]
+pub type CMPR_B_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GEN_STOP_EN` reader - set this bit high to enable all PWM generate stop task receive"]
+pub type GEN_STOP_EN_R = crate::BitReader;
+#[doc = "Field `GEN_STOP_EN` writer - set this bit high to enable all PWM generate stop task receive"]
+pub type GEN_STOP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER_SYNC_EN(0-2)` reader - set this bit high to enable timer%s sync task receive"]
+pub type TIMER_SYNC_EN_R = crate::BitReader;
+#[doc = "Field `TIMER_SYNC_EN(0-2)` writer - set this bit high to enable timer%s sync task receive"]
+pub type TIMER_SYNC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TIMER_PERIOD_UP_EN(0-2)` reader - set this bit high to enable timer%s period update task receive"]
+pub type TIMER_PERIOD_UP_EN_R = crate::BitReader;
+#[doc = "Field `TIMER_PERIOD_UP_EN(0-2)` writer - set this bit high to enable timer%s period update task receive"]
+pub type TIMER_PERIOD_UP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TZ_OST_EN(0-2)` reader - set this bit high to enable one shot trip%s task receive"]
+pub type TZ_OST_EN_R = crate::BitReader;
+#[doc = "Field `TZ_OST_EN(0-2)` writer - set this bit high to enable one shot trip%s task receive"]
+pub type TZ_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLR_OST_EN(0-2)` reader - set this bit high to enable one shot trip%s clear task receive"]
+pub type CLR_OST_EN_R = crate::BitReader;
+#[doc = "Field `CLR_OST_EN(0-2)` writer - set this bit high to enable one shot trip%s clear task receive"]
+pub type CLR_OST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CAP_EN(0-2)` reader - set this bit high to enable capture%s task receive"]
+pub type CAP_EN_R = crate::BitReader;
+#[doc = "Field `CAP_EN(0-2)` writer - set this bit high to enable capture%s task receive"]
+pub type CAP_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
+    #[doc = "set this bit high to enable PWM generator(0-2) timer stamp A's shadow register update task receive"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CMPR0_A_UP_EN` field.</div>"]
+    #[inline(always)]
+    pub fn cmpr_a_up_en(&self, n: u8) -> CMPR_A_UP_EN_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        CMPR_A_UP_EN_R::new(((self.bits >> n) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "set this bit high to enable PWM generator(0-2) timer stamp A's shadow register update task receive"]
+    #[inline(always)]
+    pub fn cmpr_a_up_en_iter(&self) -> impl Iterator<Item = CMPR_A_UP_EN_R> + '_ {
+        (0..3).map(move |n| CMPR_A_UP_EN_R::new(((self.bits >> n) & 1) != 0))
+    }
     #[doc = "Bit 0 - set this bit high to enable PWM generator0 timer stamp A's shadow register update task receive"]
     #[inline(always)]
-    pub fn task_cmpr0_a_up_en(&self) -> TASK_CMPR0_A_UP_EN_R {
-        TASK_CMPR0_A_UP_EN_R::new((self.bits & 1) != 0)
+    pub fn cmpr0_a_up_en(&self) -> CMPR_A_UP_EN_R {
+        CMPR_A_UP_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - set this bit high to enable PWM generator1 timer stamp A's shadow register update task receive"]
     #[inline(always)]
-    pub fn task_cmpr1_a_up_en(&self) -> TASK_CMPR1_A_UP_EN_R {
-        TASK_CMPR1_A_UP_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn cmpr1_a_up_en(&self) -> CMPR_A_UP_EN_R {
+        CMPR_A_UP_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - set this bit high to enable PWM generator2 timer stamp A's shadow register update task receive"]
     #[inline(always)]
-    pub fn task_cmpr2_a_up_en(&self) -> TASK_CMPR2_A_UP_EN_R {
-        TASK_CMPR2_A_UP_EN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn cmpr2_a_up_en(&self) -> CMPR_A_UP_EN_R {
+        CMPR_A_UP_EN_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "set this bit high to enable PWM generator(0-2) timer stamp B's shadow register update task receive"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CMPR0_B_UP_EN` field.</div>"]
+    #[inline(always)]
+    pub fn cmpr_b_up_en(&self, n: u8) -> CMPR_B_UP_EN_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        CMPR_B_UP_EN_R::new(((self.bits >> (n + 3)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "set this bit high to enable PWM generator(0-2) timer stamp B's shadow register update task receive"]
+    #[inline(always)]
+    pub fn cmpr_b_up_en_iter(&self) -> impl Iterator<Item = CMPR_B_UP_EN_R> + '_ {
+        (0..3).map(move |n| CMPR_B_UP_EN_R::new(((self.bits >> (n + 3)) & 1) != 0))
     }
     #[doc = "Bit 3 - set this bit high to enable PWM generator0 timer stamp B's shadow register update task receive"]
     #[inline(always)]
-    pub fn task_cmpr0_b_up_en(&self) -> TASK_CMPR0_B_UP_EN_R {
-        TASK_CMPR0_B_UP_EN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn cmpr0_b_up_en(&self) -> CMPR_B_UP_EN_R {
+        CMPR_B_UP_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - set this bit high to enable PWM generator1 timer stamp B's shadow register update task receive"]
     #[inline(always)]
-    pub fn task_cmpr1_b_up_en(&self) -> TASK_CMPR1_B_UP_EN_R {
-        TASK_CMPR1_B_UP_EN_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn cmpr1_b_up_en(&self) -> CMPR_B_UP_EN_R {
+        CMPR_B_UP_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - set this bit high to enable PWM generator2 timer stamp B's shadow register update task receive"]
     #[inline(always)]
-    pub fn task_cmpr2_b_up_en(&self) -> TASK_CMPR2_B_UP_EN_R {
-        TASK_CMPR2_B_UP_EN_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn cmpr2_b_up_en(&self) -> CMPR_B_UP_EN_R {
+        CMPR_B_UP_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - set this bit high to enable all PWM generate stop task receive"]
     #[inline(always)]
-    pub fn task_gen_stop_en(&self) -> TASK_GEN_STOP_EN_R {
-        TASK_GEN_STOP_EN_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn gen_stop_en(&self) -> GEN_STOP_EN_R {
+        GEN_STOP_EN_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "set this bit high to enable timer(0-2) sync task receive"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_SYNC_EN` field.</div>"]
+    #[inline(always)]
+    pub fn timer_sync_en(&self, n: u8) -> TIMER_SYNC_EN_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TIMER_SYNC_EN_R::new(((self.bits >> (n + 7)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "set this bit high to enable timer(0-2) sync task receive"]
+    #[inline(always)]
+    pub fn timer_sync_en_iter(&self) -> impl Iterator<Item = TIMER_SYNC_EN_R> + '_ {
+        (0..3).map(move |n| TIMER_SYNC_EN_R::new(((self.bits >> (n + 7)) & 1) != 0))
     }
     #[doc = "Bit 7 - set this bit high to enable timer0 sync task receive"]
     #[inline(always)]
-    pub fn task_timer0_sync_en(&self) -> TASK_TIMER0_SYNC_EN_R {
-        TASK_TIMER0_SYNC_EN_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn timer0_sync_en(&self) -> TIMER_SYNC_EN_R {
+        TIMER_SYNC_EN_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - set this bit high to enable timer1 sync task receive"]
     #[inline(always)]
-    pub fn task_timer1_sync_en(&self) -> TASK_TIMER1_SYNC_EN_R {
-        TASK_TIMER1_SYNC_EN_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn timer1_sync_en(&self) -> TIMER_SYNC_EN_R {
+        TIMER_SYNC_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - set this bit high to enable timer2 sync task receive"]
     #[inline(always)]
-    pub fn task_timer2_sync_en(&self) -> TASK_TIMER2_SYNC_EN_R {
-        TASK_TIMER2_SYNC_EN_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn timer2_sync_en(&self) -> TIMER_SYNC_EN_R {
+        TIMER_SYNC_EN_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "set this bit high to enable timer(0-2) period update task receive"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_PERIOD_UP_EN` field.</div>"]
+    #[inline(always)]
+    pub fn timer_period_up_en(&self, n: u8) -> TIMER_PERIOD_UP_EN_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TIMER_PERIOD_UP_EN_R::new(((self.bits >> (n + 10)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "set this bit high to enable timer(0-2) period update task receive"]
+    #[inline(always)]
+    pub fn timer_period_up_en_iter(&self) -> impl Iterator<Item = TIMER_PERIOD_UP_EN_R> + '_ {
+        (0..3).map(move |n| TIMER_PERIOD_UP_EN_R::new(((self.bits >> (n + 10)) & 1) != 0))
     }
     #[doc = "Bit 10 - set this bit high to enable timer0 period update task receive"]
     #[inline(always)]
-    pub fn task_timer0_period_up_en(&self) -> TASK_TIMER0_PERIOD_UP_EN_R {
-        TASK_TIMER0_PERIOD_UP_EN_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn timer0_period_up_en(&self) -> TIMER_PERIOD_UP_EN_R {
+        TIMER_PERIOD_UP_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - set this bit high to enable timer1 period update task receive"]
     #[inline(always)]
-    pub fn task_timer1_period_up_en(&self) -> TASK_TIMER1_PERIOD_UP_EN_R {
-        TASK_TIMER1_PERIOD_UP_EN_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn timer1_period_up_en(&self) -> TIMER_PERIOD_UP_EN_R {
+        TIMER_PERIOD_UP_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - set this bit high to enable timer2 period update task receive"]
     #[inline(always)]
-    pub fn task_timer2_period_up_en(&self) -> TASK_TIMER2_PERIOD_UP_EN_R {
-        TASK_TIMER2_PERIOD_UP_EN_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn timer2_period_up_en(&self) -> TIMER_PERIOD_UP_EN_R {
+        TIMER_PERIOD_UP_EN_R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "set this bit high to enable one shot trip(0-2) task receive"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TZ0_OST_EN` field.</div>"]
+    #[inline(always)]
+    pub fn tz_ost_en(&self, n: u8) -> TZ_OST_EN_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TZ_OST_EN_R::new(((self.bits >> (n + 13)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "set this bit high to enable one shot trip(0-2) task receive"]
+    #[inline(always)]
+    pub fn tz_ost_en_iter(&self) -> impl Iterator<Item = TZ_OST_EN_R> + '_ {
+        (0..3).map(move |n| TZ_OST_EN_R::new(((self.bits >> (n + 13)) & 1) != 0))
     }
     #[doc = "Bit 13 - set this bit high to enable one shot trip0 task receive"]
     #[inline(always)]
-    pub fn task_tz0_ost_en(&self) -> TASK_TZ0_OST_EN_R {
-        TASK_TZ0_OST_EN_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn tz0_ost_en(&self) -> TZ_OST_EN_R {
+        TZ_OST_EN_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - set this bit high to enable one shot trip1 task receive"]
     #[inline(always)]
-    pub fn task_tz1_ost_en(&self) -> TASK_TZ1_OST_EN_R {
-        TASK_TZ1_OST_EN_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn tz1_ost_en(&self) -> TZ_OST_EN_R {
+        TZ_OST_EN_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - set this bit high to enable one shot trip2 task receive"]
     #[inline(always)]
-    pub fn task_tz2_ost_en(&self) -> TASK_TZ2_OST_EN_R {
-        TASK_TZ2_OST_EN_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn tz2_ost_en(&self) -> TZ_OST_EN_R {
+        TZ_OST_EN_R::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "set this bit high to enable one shot trip(0-2) clear task receive"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CLR0_OST_EN` field.</div>"]
+    #[inline(always)]
+    pub fn clr_ost_en(&self, n: u8) -> CLR_OST_EN_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        CLR_OST_EN_R::new(((self.bits >> (n + 16)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "set this bit high to enable one shot trip(0-2) clear task receive"]
+    #[inline(always)]
+    pub fn clr_ost_en_iter(&self) -> impl Iterator<Item = CLR_OST_EN_R> + '_ {
+        (0..3).map(move |n| CLR_OST_EN_R::new(((self.bits >> (n + 16)) & 1) != 0))
     }
     #[doc = "Bit 16 - set this bit high to enable one shot trip0 clear task receive"]
     #[inline(always)]
-    pub fn task_clr0_ost_en(&self) -> TASK_CLR0_OST_EN_R {
-        TASK_CLR0_OST_EN_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn clr0_ost_en(&self) -> CLR_OST_EN_R {
+        CLR_OST_EN_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - set this bit high to enable one shot trip1 clear task receive"]
     #[inline(always)]
-    pub fn task_clr1_ost_en(&self) -> TASK_CLR1_OST_EN_R {
-        TASK_CLR1_OST_EN_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn clr1_ost_en(&self) -> CLR_OST_EN_R {
+        CLR_OST_EN_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - set this bit high to enable one shot trip2 clear task receive"]
     #[inline(always)]
-    pub fn task_clr2_ost_en(&self) -> TASK_CLR2_OST_EN_R {
-        TASK_CLR2_OST_EN_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn clr2_ost_en(&self) -> CLR_OST_EN_R {
+        CLR_OST_EN_R::new(((self.bits >> 18) & 1) != 0)
+    }
+    #[doc = "set this bit high to enable capture(0-2) task receive"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CAP0_EN` field.</div>"]
+    #[inline(always)]
+    pub fn cap_en(&self, n: u8) -> CAP_EN_R {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        CAP_EN_R::new(((self.bits >> (n + 19)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "set this bit high to enable capture(0-2) task receive"]
+    #[inline(always)]
+    pub fn cap_en_iter(&self) -> impl Iterator<Item = CAP_EN_R> + '_ {
+        (0..3).map(move |n| CAP_EN_R::new(((self.bits >> (n + 19)) & 1) != 0))
     }
     #[doc = "Bit 19 - set this bit high to enable capture0 task receive"]
     #[inline(always)]
-    pub fn task_cap0_en(&self) -> TASK_CAP0_EN_R {
-        TASK_CAP0_EN_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn cap0_en(&self) -> CAP_EN_R {
+        CAP_EN_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - set this bit high to enable capture1 task receive"]
     #[inline(always)]
-    pub fn task_cap1_en(&self) -> TASK_CAP1_EN_R {
-        TASK_CAP1_EN_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn cap1_en(&self) -> CAP_EN_R {
+        CAP_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - set this bit high to enable capture2 task receive"]
     #[inline(always)]
-    pub fn task_cap2_en(&self) -> TASK_CAP2_EN_R {
-        TASK_CAP2_EN_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn cap2_en(&self) -> CAP_EN_R {
+        CAP_EN_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TASK_EN")
-            .field("task_cmpr0_a_up_en", &self.task_cmpr0_a_up_en())
-            .field("task_cmpr1_a_up_en", &self.task_cmpr1_a_up_en())
-            .field("task_cmpr2_a_up_en", &self.task_cmpr2_a_up_en())
-            .field("task_cmpr0_b_up_en", &self.task_cmpr0_b_up_en())
-            .field("task_cmpr1_b_up_en", &self.task_cmpr1_b_up_en())
-            .field("task_cmpr2_b_up_en", &self.task_cmpr2_b_up_en())
-            .field("task_gen_stop_en", &self.task_gen_stop_en())
-            .field("task_timer0_sync_en", &self.task_timer0_sync_en())
-            .field("task_timer1_sync_en", &self.task_timer1_sync_en())
-            .field("task_timer2_sync_en", &self.task_timer2_sync_en())
-            .field("task_timer0_period_up_en", &self.task_timer0_period_up_en())
-            .field("task_timer1_period_up_en", &self.task_timer1_period_up_en())
-            .field("task_timer2_period_up_en", &self.task_timer2_period_up_en())
-            .field("task_tz0_ost_en", &self.task_tz0_ost_en())
-            .field("task_tz1_ost_en", &self.task_tz1_ost_en())
-            .field("task_tz2_ost_en", &self.task_tz2_ost_en())
-            .field("task_clr0_ost_en", &self.task_clr0_ost_en())
-            .field("task_clr1_ost_en", &self.task_clr1_ost_en())
-            .field("task_clr2_ost_en", &self.task_clr2_ost_en())
-            .field("task_cap0_en", &self.task_cap0_en())
-            .field("task_cap1_en", &self.task_cap1_en())
-            .field("task_cap2_en", &self.task_cap2_en())
+            .field("cmpr0_a_up_en", &self.cmpr0_a_up_en())
+            .field("cmpr1_a_up_en", &self.cmpr1_a_up_en())
+            .field("cmpr2_a_up_en", &self.cmpr2_a_up_en())
+            .field("cmpr0_b_up_en", &self.cmpr0_b_up_en())
+            .field("cmpr1_b_up_en", &self.cmpr1_b_up_en())
+            .field("cmpr2_b_up_en", &self.cmpr2_b_up_en())
+            .field("gen_stop_en", &self.gen_stop_en())
+            .field("timer0_sync_en", &self.timer0_sync_en())
+            .field("timer1_sync_en", &self.timer1_sync_en())
+            .field("timer2_sync_en", &self.timer2_sync_en())
+            .field("timer0_period_up_en", &self.timer0_period_up_en())
+            .field("timer1_period_up_en", &self.timer1_period_up_en())
+            .field("timer2_period_up_en", &self.timer2_period_up_en())
+            .field("tz0_ost_en", &self.tz0_ost_en())
+            .field("tz1_ost_en", &self.tz1_ost_en())
+            .field("tz2_ost_en", &self.tz2_ost_en())
+            .field("clr0_ost_en", &self.clr0_ost_en())
+            .field("clr1_ost_en", &self.clr1_ost_en())
+            .field("clr2_ost_en", &self.clr2_ost_en())
+            .field("cap0_en", &self.cap0_en())
+            .field("cap1_en", &self.cap1_en())
+            .field("cap2_en", &self.cap2_en())
             .finish()
     }
 }
 impl W {
+    #[doc = "set this bit high to enable PWM generator(0-2) timer stamp A's shadow register update task receive"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CMPR0_A_UP_EN` field.</div>"]
+    #[inline(always)]
+    pub fn cmpr_a_up_en(&mut self, n: u8) -> CMPR_A_UP_EN_W<'_, TASK_EN_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        CMPR_A_UP_EN_W::new(self, n)
+    }
     #[doc = "Bit 0 - set this bit high to enable PWM generator0 timer stamp A's shadow register update task receive"]
     #[inline(always)]
-    pub fn task_cmpr0_a_up_en(&mut self) -> TASK_CMPR0_A_UP_EN_W<'_, TASK_EN_SPEC> {
-        TASK_CMPR0_A_UP_EN_W::new(self, 0)
+    pub fn cmpr0_a_up_en(&mut self) -> CMPR_A_UP_EN_W<'_, TASK_EN_SPEC> {
+        CMPR_A_UP_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - set this bit high to enable PWM generator1 timer stamp A's shadow register update task receive"]
     #[inline(always)]
-    pub fn task_cmpr1_a_up_en(&mut self) -> TASK_CMPR1_A_UP_EN_W<'_, TASK_EN_SPEC> {
-        TASK_CMPR1_A_UP_EN_W::new(self, 1)
+    pub fn cmpr1_a_up_en(&mut self) -> CMPR_A_UP_EN_W<'_, TASK_EN_SPEC> {
+        CMPR_A_UP_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - set this bit high to enable PWM generator2 timer stamp A's shadow register update task receive"]
     #[inline(always)]
-    pub fn task_cmpr2_a_up_en(&mut self) -> TASK_CMPR2_A_UP_EN_W<'_, TASK_EN_SPEC> {
-        TASK_CMPR2_A_UP_EN_W::new(self, 2)
+    pub fn cmpr2_a_up_en(&mut self) -> CMPR_A_UP_EN_W<'_, TASK_EN_SPEC> {
+        CMPR_A_UP_EN_W::new(self, 2)
+    }
+    #[doc = "set this bit high to enable PWM generator(0-2) timer stamp B's shadow register update task receive"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CMPR0_B_UP_EN` field.</div>"]
+    #[inline(always)]
+    pub fn cmpr_b_up_en(&mut self, n: u8) -> CMPR_B_UP_EN_W<'_, TASK_EN_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        CMPR_B_UP_EN_W::new(self, n + 3)
     }
     #[doc = "Bit 3 - set this bit high to enable PWM generator0 timer stamp B's shadow register update task receive"]
     #[inline(always)]
-    pub fn task_cmpr0_b_up_en(&mut self) -> TASK_CMPR0_B_UP_EN_W<'_, TASK_EN_SPEC> {
-        TASK_CMPR0_B_UP_EN_W::new(self, 3)
+    pub fn cmpr0_b_up_en(&mut self) -> CMPR_B_UP_EN_W<'_, TASK_EN_SPEC> {
+        CMPR_B_UP_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - set this bit high to enable PWM generator1 timer stamp B's shadow register update task receive"]
     #[inline(always)]
-    pub fn task_cmpr1_b_up_en(&mut self) -> TASK_CMPR1_B_UP_EN_W<'_, TASK_EN_SPEC> {
-        TASK_CMPR1_B_UP_EN_W::new(self, 4)
+    pub fn cmpr1_b_up_en(&mut self) -> CMPR_B_UP_EN_W<'_, TASK_EN_SPEC> {
+        CMPR_B_UP_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - set this bit high to enable PWM generator2 timer stamp B's shadow register update task receive"]
     #[inline(always)]
-    pub fn task_cmpr2_b_up_en(&mut self) -> TASK_CMPR2_B_UP_EN_W<'_, TASK_EN_SPEC> {
-        TASK_CMPR2_B_UP_EN_W::new(self, 5)
+    pub fn cmpr2_b_up_en(&mut self) -> CMPR_B_UP_EN_W<'_, TASK_EN_SPEC> {
+        CMPR_B_UP_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - set this bit high to enable all PWM generate stop task receive"]
     #[inline(always)]
-    pub fn task_gen_stop_en(&mut self) -> TASK_GEN_STOP_EN_W<'_, TASK_EN_SPEC> {
-        TASK_GEN_STOP_EN_W::new(self, 6)
+    pub fn gen_stop_en(&mut self) -> GEN_STOP_EN_W<'_, TASK_EN_SPEC> {
+        GEN_STOP_EN_W::new(self, 6)
+    }
+    #[doc = "set this bit high to enable timer(0-2) sync task receive"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_SYNC_EN` field.</div>"]
+    #[inline(always)]
+    pub fn timer_sync_en(&mut self, n: u8) -> TIMER_SYNC_EN_W<'_, TASK_EN_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TIMER_SYNC_EN_W::new(self, n + 7)
     }
     #[doc = "Bit 7 - set this bit high to enable timer0 sync task receive"]
     #[inline(always)]
-    pub fn task_timer0_sync_en(&mut self) -> TASK_TIMER0_SYNC_EN_W<'_, TASK_EN_SPEC> {
-        TASK_TIMER0_SYNC_EN_W::new(self, 7)
+    pub fn timer0_sync_en(&mut self) -> TIMER_SYNC_EN_W<'_, TASK_EN_SPEC> {
+        TIMER_SYNC_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - set this bit high to enable timer1 sync task receive"]
     #[inline(always)]
-    pub fn task_timer1_sync_en(&mut self) -> TASK_TIMER1_SYNC_EN_W<'_, TASK_EN_SPEC> {
-        TASK_TIMER1_SYNC_EN_W::new(self, 8)
+    pub fn timer1_sync_en(&mut self) -> TIMER_SYNC_EN_W<'_, TASK_EN_SPEC> {
+        TIMER_SYNC_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - set this bit high to enable timer2 sync task receive"]
     #[inline(always)]
-    pub fn task_timer2_sync_en(&mut self) -> TASK_TIMER2_SYNC_EN_W<'_, TASK_EN_SPEC> {
-        TASK_TIMER2_SYNC_EN_W::new(self, 9)
+    pub fn timer2_sync_en(&mut self) -> TIMER_SYNC_EN_W<'_, TASK_EN_SPEC> {
+        TIMER_SYNC_EN_W::new(self, 9)
+    }
+    #[doc = "set this bit high to enable timer(0-2) period update task receive"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_PERIOD_UP_EN` field.</div>"]
+    #[inline(always)]
+    pub fn timer_period_up_en(&mut self, n: u8) -> TIMER_PERIOD_UP_EN_W<'_, TASK_EN_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TIMER_PERIOD_UP_EN_W::new(self, n + 10)
     }
     #[doc = "Bit 10 - set this bit high to enable timer0 period update task receive"]
     #[inline(always)]
-    pub fn task_timer0_period_up_en(&mut self) -> TASK_TIMER0_PERIOD_UP_EN_W<'_, TASK_EN_SPEC> {
-        TASK_TIMER0_PERIOD_UP_EN_W::new(self, 10)
+    pub fn timer0_period_up_en(&mut self) -> TIMER_PERIOD_UP_EN_W<'_, TASK_EN_SPEC> {
+        TIMER_PERIOD_UP_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - set this bit high to enable timer1 period update task receive"]
     #[inline(always)]
-    pub fn task_timer1_period_up_en(&mut self) -> TASK_TIMER1_PERIOD_UP_EN_W<'_, TASK_EN_SPEC> {
-        TASK_TIMER1_PERIOD_UP_EN_W::new(self, 11)
+    pub fn timer1_period_up_en(&mut self) -> TIMER_PERIOD_UP_EN_W<'_, TASK_EN_SPEC> {
+        TIMER_PERIOD_UP_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - set this bit high to enable timer2 period update task receive"]
     #[inline(always)]
-    pub fn task_timer2_period_up_en(&mut self) -> TASK_TIMER2_PERIOD_UP_EN_W<'_, TASK_EN_SPEC> {
-        TASK_TIMER2_PERIOD_UP_EN_W::new(self, 12)
+    pub fn timer2_period_up_en(&mut self) -> TIMER_PERIOD_UP_EN_W<'_, TASK_EN_SPEC> {
+        TIMER_PERIOD_UP_EN_W::new(self, 12)
+    }
+    #[doc = "set this bit high to enable one shot trip(0-2) task receive"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TZ0_OST_EN` field.</div>"]
+    #[inline(always)]
+    pub fn tz_ost_en(&mut self, n: u8) -> TZ_OST_EN_W<'_, TASK_EN_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        TZ_OST_EN_W::new(self, n + 13)
     }
     #[doc = "Bit 13 - set this bit high to enable one shot trip0 task receive"]
     #[inline(always)]
-    pub fn task_tz0_ost_en(&mut self) -> TASK_TZ0_OST_EN_W<'_, TASK_EN_SPEC> {
-        TASK_TZ0_OST_EN_W::new(self, 13)
+    pub fn tz0_ost_en(&mut self) -> TZ_OST_EN_W<'_, TASK_EN_SPEC> {
+        TZ_OST_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - set this bit high to enable one shot trip1 task receive"]
     #[inline(always)]
-    pub fn task_tz1_ost_en(&mut self) -> TASK_TZ1_OST_EN_W<'_, TASK_EN_SPEC> {
-        TASK_TZ1_OST_EN_W::new(self, 14)
+    pub fn tz1_ost_en(&mut self) -> TZ_OST_EN_W<'_, TASK_EN_SPEC> {
+        TZ_OST_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - set this bit high to enable one shot trip2 task receive"]
     #[inline(always)]
-    pub fn task_tz2_ost_en(&mut self) -> TASK_TZ2_OST_EN_W<'_, TASK_EN_SPEC> {
-        TASK_TZ2_OST_EN_W::new(self, 15)
+    pub fn tz2_ost_en(&mut self) -> TZ_OST_EN_W<'_, TASK_EN_SPEC> {
+        TZ_OST_EN_W::new(self, 15)
+    }
+    #[doc = "set this bit high to enable one shot trip(0-2) clear task receive"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CLR0_OST_EN` field.</div>"]
+    #[inline(always)]
+    pub fn clr_ost_en(&mut self, n: u8) -> CLR_OST_EN_W<'_, TASK_EN_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        CLR_OST_EN_W::new(self, n + 16)
     }
     #[doc = "Bit 16 - set this bit high to enable one shot trip0 clear task receive"]
     #[inline(always)]
-    pub fn task_clr0_ost_en(&mut self) -> TASK_CLR0_OST_EN_W<'_, TASK_EN_SPEC> {
-        TASK_CLR0_OST_EN_W::new(self, 16)
+    pub fn clr0_ost_en(&mut self) -> CLR_OST_EN_W<'_, TASK_EN_SPEC> {
+        CLR_OST_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - set this bit high to enable one shot trip1 clear task receive"]
     #[inline(always)]
-    pub fn task_clr1_ost_en(&mut self) -> TASK_CLR1_OST_EN_W<'_, TASK_EN_SPEC> {
-        TASK_CLR1_OST_EN_W::new(self, 17)
+    pub fn clr1_ost_en(&mut self) -> CLR_OST_EN_W<'_, TASK_EN_SPEC> {
+        CLR_OST_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - set this bit high to enable one shot trip2 clear task receive"]
     #[inline(always)]
-    pub fn task_clr2_ost_en(&mut self) -> TASK_CLR2_OST_EN_W<'_, TASK_EN_SPEC> {
-        TASK_CLR2_OST_EN_W::new(self, 18)
+    pub fn clr2_ost_en(&mut self) -> CLR_OST_EN_W<'_, TASK_EN_SPEC> {
+        CLR_OST_EN_W::new(self, 18)
+    }
+    #[doc = "set this bit high to enable capture(0-2) task receive"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CAP0_EN` field.</div>"]
+    #[inline(always)]
+    pub fn cap_en(&mut self, n: u8) -> CAP_EN_W<'_, TASK_EN_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
+        CAP_EN_W::new(self, n + 19)
     }
     #[doc = "Bit 19 - set this bit high to enable capture0 task receive"]
     #[inline(always)]
-    pub fn task_cap0_en(&mut self) -> TASK_CAP0_EN_W<'_, TASK_EN_SPEC> {
-        TASK_CAP0_EN_W::new(self, 19)
+    pub fn cap0_en(&mut self) -> CAP_EN_W<'_, TASK_EN_SPEC> {
+        CAP_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - set this bit high to enable capture1 task receive"]
     #[inline(always)]
-    pub fn task_cap1_en(&mut self) -> TASK_CAP1_EN_W<'_, TASK_EN_SPEC> {
-        TASK_CAP1_EN_W::new(self, 20)
+    pub fn cap1_en(&mut self) -> CAP_EN_W<'_, TASK_EN_SPEC> {
+        CAP_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - set this bit high to enable capture2 task receive"]
     #[inline(always)]
-    pub fn task_cap2_en(&mut self) -> TASK_CAP2_EN_W<'_, TASK_EN_SPEC> {
-        TASK_CAP2_EN_W::new(self, 21)
+    pub fn cap2_en(&mut self) -> CAP_EN_W<'_, TASK_EN_SPEC> {
+        CAP_EN_W::new(self, 21)
     }
 }
 #[doc = "MCPWM task enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`task_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -9,6 +9,8 @@ pub struct RegisterBlock {
     mxint_pri: [MXINT_PRI; 32],
     mxint_thresh: MXINT_THRESH,
     mxint_claim: MXINT_CLAIM,
+    _reserved7: [u8; 0x0364],
+    mxint_conf: MXINT_CONF,
 }
 impl RegisterBlock {
     #[doc = "0x00 - PLIC MX Interrupt Enable Register"]
@@ -212,6 +214,11 @@ impl RegisterBlock {
     pub const fn mxint_claim(&self) -> &MXINT_CLAIM {
         &self.mxint_claim
     }
+    #[doc = "0x3fc - PLIC MX Interrupt Configuration Register (PLIC_MXINT_CONF_REG)"]
+    #[inline(always)]
+    pub const fn mxint_conf(&self) -> &MXINT_CONF {
+        &self.mxint_conf
+    }
 }
 #[doc = "MXINT_ENABLE (rw) register accessor: PLIC MX Interrupt Enable Register\n\nYou can [`read`](crate::Reg::read) this register and get [`mxint_enable::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mxint_enable::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mxint_enable`] module"]
 pub type MXINT_ENABLE = crate::Reg<mxint_enable::MXINT_ENABLE_SPEC>;
@@ -241,3 +248,7 @@ pub mod mxint_thresh;
 pub type MXINT_CLAIM = crate::Reg<mxint_claim::MXINT_CLAIM_SPEC>;
 #[doc = "PLIC MX Interrupt Claim Register"]
 pub mod mxint_claim;
+#[doc = "MXINT_CONF (rw) register accessor: PLIC MX Interrupt Configuration Register (PLIC_MXINT_CONF_REG)\n\nYou can [`read`](crate::Reg::read) this register and get [`mxint_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mxint_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mxint_conf`] module"]
+pub type MXINT_CONF = crate::Reg<mxint_conf::MXINT_CONF_SPEC>;
+#[doc = "PLIC MX Interrupt Configuration Register (PLIC_MXINT_CONF_REG)"]
+pub mod mxint_conf;

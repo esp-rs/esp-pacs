@@ -2,18 +2,18 @@
 pub type R = crate::R<ETM_TASK_P5_CFG_SPEC>;
 #[doc = "Register `ETM_TASK_P5_CFG` writer"]
 pub type W = crate::W<ETM_TASK_P5_CFG_SPEC>;
-#[doc = "Field `GPIO_SEL(_EXT_ETM_TASK_GPIO25)` reader - GPIO choose a etm task channel."]
+#[doc = "Field `GPIO_SEL(25-25)` reader - GPIO choose a etm task channel."]
 pub type GPIO_SEL_R = crate::FieldReader;
-#[doc = "Field `GPIO_SEL(_EXT_ETM_TASK_GPIO25)` writer - GPIO choose a etm task channel."]
+#[doc = "Field `GPIO_SEL(25-25)` writer - GPIO choose a etm task channel."]
 pub type GPIO_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Field `GPIO_EN(_EXT_ETM_TASK_GPIO25)` reader - Enable bit of GPIO response etm task."]
+#[doc = "Field `GPIO_EN(25-25)` reader - Enable bit of GPIO response etm task."]
 pub type GPIO_EN_R = crate::BitReader;
-#[doc = "Field `GPIO_EN(_EXT_ETM_TASK_GPIO25)` writer - Enable bit of GPIO response etm task."]
+#[doc = "Field `GPIO_EN(25-25)` writer - Enable bit of GPIO response etm task."]
 pub type GPIO_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "GPIO choose a etm task channel."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO_EXT_ETM_TASK_GPIO25_SEL` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO25_SEL` field.</div>"]
     #[inline(always)]
     pub fn gpio_sel(&self, n: u8) -> GPIO_SEL_R {
         #[allow(clippy::no_effect)]
@@ -28,12 +28,12 @@ impl R {
     }
     #[doc = "Bits 0:2 - GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio25_sel(&self) -> GPIO_SEL_R {
+    pub fn gpio25_sel(&self) -> GPIO_SEL_R {
         GPIO_SEL_R::new((self.bits & 7) as u8)
     }
     #[doc = "Enable bit of GPIO response etm task."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO_EXT_ETM_TASK_GPIO25_EN` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO25_EN` field.</div>"]
     #[inline(always)]
     pub fn gpio_en(&self, n: u8) -> GPIO_EN_R {
         #[allow(clippy::no_effect)]
@@ -48,7 +48,7 @@ impl R {
     }
     #[doc = "Bit 5 - Enable bit of GPIO response etm task."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio25_en(&self) -> GPIO_EN_R {
+    pub fn gpio25_en(&self) -> GPIO_EN_R {
         GPIO_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
@@ -56,21 +56,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ETM_TASK_P5_CFG")
-            .field(
-                "gpio_ext_etm_task_gpio25_sel",
-                &self.gpio_ext_etm_task_gpio25_sel(),
-            )
-            .field(
-                "gpio_ext_etm_task_gpio25_en",
-                &self.gpio_ext_etm_task_gpio25_en(),
-            )
+            .field("gpio25_sel", &self.gpio25_sel())
+            .field("gpio25_en", &self.gpio25_en())
             .finish()
     }
 }
 impl W {
     #[doc = "GPIO choose a etm task channel."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO_EXT_ETM_TASK_GPIO25_SEL` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO25_SEL` field.</div>"]
     #[inline(always)]
     pub fn gpio_sel(&mut self, n: u8) -> GPIO_SEL_W<'_, ETM_TASK_P5_CFG_SPEC> {
         #[allow(clippy::no_effect)]
@@ -79,12 +73,12 @@ impl W {
     }
     #[doc = "Bits 0:2 - GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio25_sel(&mut self) -> GPIO_SEL_W<'_, ETM_TASK_P5_CFG_SPEC> {
+    pub fn gpio25_sel(&mut self) -> GPIO_SEL_W<'_, ETM_TASK_P5_CFG_SPEC> {
         GPIO_SEL_W::new(self, 0)
     }
     #[doc = "Enable bit of GPIO response etm task."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO_EXT_ETM_TASK_GPIO25_EN` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO25_EN` field.</div>"]
     #[inline(always)]
     pub fn gpio_en(&mut self, n: u8) -> GPIO_EN_W<'_, ETM_TASK_P5_CFG_SPEC> {
         #[allow(clippy::no_effect)]
@@ -93,7 +87,7 @@ impl W {
     }
     #[doc = "Bit 5 - Enable bit of GPIO response etm task."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio25_en(&mut self) -> GPIO_EN_W<'_, ETM_TASK_P5_CFG_SPEC> {
+    pub fn gpio25_en(&mut self) -> GPIO_EN_W<'_, ETM_TASK_P5_CFG_SPEC> {
         GPIO_EN_W::new(self, 5)
     }
 }

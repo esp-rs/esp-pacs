@@ -1,10 +1,18 @@
 INTERRUPT_CORE0:
+  _strip: INTMTX_CORE0_
+  "*":
+    _strip: INTMTX_CORE0_
+
   _array:
     INT_STATUS_REG_*:
       name: CORE_0_INTR_STATUS%s
 
   _delete:
-    - "*_MAP"
+    _registers:
+      - "*_MAP"
+    # esp-idf defines this source as an alias of APB_ADC, the generator gives it the next number.
+    _interrupts:
+      - TEMPERATURE_SENSOR
 
   _add:
     CORE_0_INTR_MAP%s:

@@ -21198,7 +21198,7 @@ Others: invalid\\</description>
     <peripheral>
       <name>HP_SYS</name>
       <description>High-Power System</description>
-      <groupName>HP_SYS</groupName>
+      <groupName>HP_SYSTEM</groupName>
       <baseAddress>0x60095000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -21207,34 +21207,34 @@ Others: invalid\\</description>
       </addressBlock>
       <registers>
         <register>
-          <name>EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL</name>
+          <name>HP_SYS_EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL</name>
           <description>EXTERNAL DEVICE ENCRYPTION/DECRYPTION configuration register</description>
           <addressOffset>0x0</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>ENABLE_SPI_MANUAL_ENCRYPT</name>
+              <name>HP_SYS_ENABLE_SPI_MANUAL_ENCRYPT</name>
               <description>Set this bit as 1 to enable mspi xts manual encrypt in spi boot mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>ENABLE_DOWNLOAD_DB_ENCRYPT</name>
+              <name>HP_SYS_ENABLE_DOWNLOAD_DB_ENCRYPT</name>
               <description>reserved</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>ENABLE_DOWNLOAD_G0CB_DECRYPT</name>
+              <name>HP_SYS_ENABLE_DOWNLOAD_G0CB_DECRYPT</name>
               <description>Set this bit as 1 to enable mspi xts auto decrypt in download boot mode.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>ENABLE_DOWNLOAD_MANUAL_ENCRYPT</name>
+              <name>HP_SYS_ENABLE_DOWNLOAD_MANUAL_ENCRYPT</name>
               <description>Set this bit as 1 to enable mspi xts manual encrypt in download boot mode.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21243,27 +21243,27 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>SRAM_USAGE_CONF</name>
+          <name>HP_SYS_SRAM_USAGE_CONF</name>
           <description>HP memory usage configuration register</description>
           <addressOffset>0x4</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>SRAM_USAGE</name>
+              <name>HP_SYS_SRAM_USAGE</name>
               <description>0: cpu use hp-memory. 1: mac-dump accessing hp-memory.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>MAC_DUMP_ALLOC</name>
+              <name>HP_SYS_MAC_DUMP_ALLOC</name>
               <description>reserved.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CACHE_USAGE</name>
+              <name>HP_SYS_CACHE_USAGE</name>
               <description>reserved</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21272,20 +21272,20 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>SEC_DPA_CONF</name>
+          <name>HP_SYS_SEC_DPA_CONF</name>
           <description>HP anti-DPA security configuration register</description>
           <addressOffset>0x8</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>SEC_DPA_LEVEL</name>
+              <name>HP_SYS_SEC_DPA_LEVEL</name>
               <description>0: anti-DPA disable. 1~3: anti-DPA enable with different security level. The larger the number, the stronger the ability to resist DPA attacks and the higher the security level, but it will increase the computational overhead of the hardware crypto-accelerators. Only avaliable if HP_SYS_SEC_DPA_CFG_SEL is 0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SEC_DPA_CFG_SEL</name>
+              <name>HP_SYS_SEC_DPA_CFG_SEL</name>
               <description>This field is used to select either HP_SYS_SEC_DPA_LEVEL or EFUSE_SEC_DPA_LEVEL (from efuse) to control dpa_level. 0: EFUSE_SEC_DPA_LEVEL, 1: HP_SYS_SEC_DPA_LEVEL.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21294,28 +21294,28 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>CPU_PERI_TIMEOUT_CONF</name>
+          <name>HP_SYS_CPU_PERI_TIMEOUT_CONF</name>
           <description>CPU_PERI_TIMEOUT configuration register</description>
           <addressOffset>0xc</addressOffset>
           <size>32</size>
           <resetValue>0x2ffff</resetValue>
           <fields>
             <field>
-              <name>CPU_PERI_TIMEOUT_THRES</name>
+              <name>HP_SYS_CPU_PERI_TIMEOUT_THRES</name>
               <description>Set the timeout threshold for bus access, corresponding to the number of clock cycles of the clock domain.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CPU_PERI_TIMEOUT_INT_CLEAR</name>
+              <name>HP_SYS_CPU_PERI_TIMEOUT_INT_CLEAR</name>
               <description>Set this bit as 1 to clear timeout interrupt</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>CPU_PERI_TIMEOUT_PROTECT_EN</name>
+              <name>HP_SYS_CPU_PERI_TIMEOUT_PROTECT_EN</name>
               <description>Set this bit as 1 to enable timeout protection for accessing cpu peripheral registers</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21324,13 +21324,13 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>CPU_PERI_TIMEOUT_ADDR</name>
+          <name>HP_SYS_CPU_PERI_TIMEOUT_ADDR</name>
           <description>CPU_PERI_TIMEOUT_ADDR register</description>
           <addressOffset>0x10</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>CPU_PERI_TIMEOUT_ADDR</name>
+              <name>HP_SYS_CPU_PERI_TIMEOUT_ADDR</name>
               <description>Record the address information of abnormal access</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -21339,13 +21339,13 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>CPU_PERI_TIMEOUT_UID</name>
+          <name>HP_SYS_CPU_PERI_TIMEOUT_UID</name>
           <description>CPU_PERI_TIMEOUT_UID register</description>
           <addressOffset>0x14</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>CPU_PERI_TIMEOUT_UID</name>
+              <name>HP_SYS_CPU_PERI_TIMEOUT_UID</name>
               <description>Record master id[4:0] &amp; master permission[6:5] when trigger timeout. This register will be cleared after the interrupt is cleared.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>7</bitWidth>
@@ -21354,28 +21354,28 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>HP_PERI_TIMEOUT_CONF</name>
+          <name>HP_SYS_HP_PERI_TIMEOUT_CONF</name>
           <description>HP_PERI_TIMEOUT configuration register</description>
           <addressOffset>0x18</addressOffset>
           <size>32</size>
           <resetValue>0x2ffff</resetValue>
           <fields>
             <field>
-              <name>HP_PERI_TIMEOUT_THRES</name>
+              <name>HP_SYS_HP_PERI_TIMEOUT_THRES</name>
               <description>Set the timeout threshold for bus access, corresponding to the number of clock cycles of the clock domain.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>HP_PERI_TIMEOUT_INT_CLEAR</name>
+              <name>HP_SYS_HP_PERI_TIMEOUT_INT_CLEAR</name>
               <description>Set this bit as 1 to clear timeout interrupt</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>HP_PERI_TIMEOUT_PROTECT_EN</name>
+              <name>HP_SYS_HP_PERI_TIMEOUT_PROTECT_EN</name>
               <description>Set this bit as 1 to enable timeout protection for accessing hp peripheral registers</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21384,13 +21384,13 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>HP_PERI_TIMEOUT_ADDR</name>
+          <name>HP_SYS_HP_PERI_TIMEOUT_ADDR</name>
           <description>HP_PERI_TIMEOUT_ADDR register</description>
           <addressOffset>0x1c</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>HP_PERI_TIMEOUT_ADDR</name>
+              <name>HP_SYS_HP_PERI_TIMEOUT_ADDR</name>
               <description>Record the address information of abnormal access</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -21399,13 +21399,13 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>HP_PERI_TIMEOUT_UID</name>
+          <name>HP_SYS_HP_PERI_TIMEOUT_UID</name>
           <description>HP_PERI_TIMEOUT_UID register</description>
           <addressOffset>0x20</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>HP_PERI_TIMEOUT_UID</name>
+              <name>HP_SYS_HP_PERI_TIMEOUT_UID</name>
               <description>Record master id[4:0] &amp; master permission[6:5] when trigger timeout. This register will be cleared after the interrupt is cleared.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>7</bitWidth>
@@ -21414,13 +21414,13 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>ROM_TABLE_LOCK</name>
+          <name>HP_SYS_ROM_TABLE_LOCK</name>
           <description>Rom-Table lock register</description>
           <addressOffset>0x24</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>ROM_TABLE_LOCK</name>
+              <name>HP_SYS_ROM_TABLE_LOCK</name>
               <description>XXXX</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21429,13 +21429,13 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>ROM_TABLE</name>
+          <name>HP_SYS_ROM_TABLE</name>
           <description>Rom-Table register</description>
           <addressOffset>0x28</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>ROM_TABLE</name>
+              <name>HP_SYS_ROM_TABLE</name>
               <description>XXXX</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -21444,42 +21444,42 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>MEM_TEST_CONF</name>
+          <name>HP_SYS_MEM_TEST_CONF</name>
           <description>MEM_TEST configuration register</description>
           <addressOffset>0x2c</addressOffset>
           <size>32</size>
           <resetValue>0x2228</resetValue>
           <fields>
             <field>
-              <name>HP_MEM_WPULSE</name>
+              <name>HP_SYS_HP_MEM_WPULSE</name>
               <description>This field controls hp system memory WPULSE parameter. 0b000 for 1.1V/1.0V/0.9V operating Voltage.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>HP_MEM_WA</name>
+              <name>HP_SYS_HP_MEM_WA</name>
               <description>This field controls hp system memory WA parameter. 0b100 for 1.1V operating Voltage, 0b101 for 1.0V, 0b110 for 0.9V.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>HP_MEM_RA</name>
+              <name>HP_SYS_HP_MEM_RA</name>
               <description>This field controls hp system memory RA parameter. 0b00 for 1.1V/1.0V operating Voltage, 0b01 for 0.9V.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>HP_MEM_RM</name>
+              <name>HP_SYS_HP_MEM_RM</name>
               <description>This field controls hp system memory RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0000 for 0.9V.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>ROM_RM</name>
+              <name>HP_SYS_ROM_RM</name>
               <description>This field controls rom RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0010(default) or 0b0001(slow) for 0.9V.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>4</bitWidth>
@@ -21488,20 +21488,20 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>RNG_LOOP</name>
+          <name>HP_SYS_RNG_LOOP</name>
           <description>configure rng_ring</description>
           <addressOffset>0x30</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>RNG_SAMPLE_ENABLE</name>
+              <name>HP_SYS_RNG_SAMPLE_ENABLE</name>
               <description>enable rng digital ring count</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAMPLE_CNT</name>
+              <name>HP_SYS_SAMPLE_CNT</name>
               <description>This field get rng ring count</description>
               <bitOffset>24</bitOffset>
               <bitWidth>8</bitWidth>
@@ -21510,13 +21510,13 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>CACHE_MEM_CLK_FO</name>
+          <name>HP_SYS_CACHE_MEM_CLK_FO</name>
           <description>debug</description>
           <addressOffset>0x34</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>HP_SYSTEM_CACHE_MEM_CLK_FO</name>
+              <name>CACHE_MEM_CLK_FO</name>
               <description>debug</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21525,20 +21525,20 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>RND_ECO</name>
+          <name>HP_SYS_RND_ECO</name>
           <description>redcy eco register.</description>
           <addressOffset>0x3e0</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>REDCY_ENA</name>
+              <name>HP_SYS_REDCY_ENA</name>
               <description>Only reserved for ECO.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>REDCY_RESULT</name>
+              <name>HP_SYS_REDCY_RESULT</name>
               <description>Only reserved for ECO.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21547,13 +21547,13 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>RND_ECO_LOW</name>
+          <name>HP_SYS_RND_ECO_LOW</name>
           <description>redcy eco low register.</description>
           <addressOffset>0x3e4</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>REDCY_LOW</name>
+              <name>HP_SYS_REDCY_LOW</name>
               <description>Only reserved for ECO.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -21562,14 +21562,14 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>RND_ECO_HIGH</name>
+          <name>HP_SYS_RND_ECO_HIGH</name>
           <description>redcy eco high register.</description>
           <addressOffset>0x3e8</addressOffset>
           <size>32</size>
           <resetValue>0xffffffff</resetValue>
           <fields>
             <field>
-              <name>REDCY_HIGH</name>
+              <name>HP_SYS_REDCY_HIGH</name>
               <description>Only reserved for ECO.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -21578,14 +21578,14 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>DEBUG</name>
+          <name>HP_SYS_DEBUG</name>
           <description>HP-SYSTEM debug register</description>
           <addressOffset>0x3f4</addressOffset>
           <size>32</size>
           <resetValue>0x1</resetValue>
           <fields>
             <field>
-              <name>FPGA_DEBUG</name>
+              <name>HP_SYS_FPGA_DEBUG</name>
               <description>Reserved</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21594,13 +21594,13 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>CLOCK_GATE</name>
+          <name>HP_SYS_CLOCK_GATE</name>
           <description>HP-SYSTEM clock gating configure register</description>
           <addressOffset>0x3f8</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>CLK_EN</name>
+              <name>HP_SYS_CLK_EN</name>
               <description>Set this bit as 1 to force on clock gating.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21609,14 +21609,14 @@ Others: invalid\\</description>
           </fields>
         </register>
         <register>
-          <name>DATE</name>
+          <name>HP_SYS_DATE</name>
           <description>Date register.</description>
           <addressOffset>0x3fc</addressOffset>
           <size>32</size>
           <resetValue>0x2408270</resetValue>
           <fields>
             <field>
-              <name>DATE</name>
+              <name>HP_SYS_DATE</name>
               <description>HP-SYSTEM date information/ HP-SYSTEM version information.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>28</bitWidth>
@@ -24483,7 +24483,7 @@ Measurement unit: I2C_SCLK \\</description>
     <peripheral>
       <name>INTERRUPT_CORE0</name>
       <description>Interrupt Controller (Core 0)</description>
-      <groupName>INTMTX_CORE0</groupName>
+      <groupName>INTERRUPT_CORE0</groupName>
       <baseAddress>0x60010000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -24687,6 +24687,10 @@ Measurement unit: I2C_SCLK \\</description>
         <value>48</value>
       </interrupt>
       <interrupt>
+        <name>TEMPERATURE_SENSOR</name>
+        <value>49</value>
+      </interrupt>
+      <interrupt>
         <name>MCPWM0</name>
         <value>49</value>
       </interrupt>
@@ -24752,13 +24756,13 @@ Measurement unit: I2C_SCLK \\</description>
       </interrupt>
       <registers>
         <register>
-          <name>PMU_INTR_MAP</name>
+          <name>INTMTX_CORE0_PMU_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x0</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>PMU_INTR_MAP</name>
+              <name>INTMTX_CORE0_PMU_INTR_MAP</name>
               <description>CORE0_PMU_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -24767,13 +24771,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>EFUSE_INTR_MAP</name>
+          <name>INTMTX_CORE0_EFUSE_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x4</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>EFUSE_INTR_MAP</name>
+              <name>INTMTX_CORE0_EFUSE_INTR_MAP</name>
               <description>CORE0_EFUSE_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -24782,13 +24786,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>LP_RTC_TIMER_INTR_MAP</name>
+          <name>INTMTX_CORE0_LP_RTC_TIMER_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x8</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>LP_RTC_TIMER_INTR_MAP</name>
+              <name>INTMTX_CORE0_LP_RTC_TIMER_INTR_MAP</name>
               <description>CORE0_LP_RTC_TIMER_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -24797,13 +24801,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>LP_BLE_TIMER_INTR_MAP</name>
+          <name>INTMTX_CORE0_LP_BLE_TIMER_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xc</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>LP_BLE_TIMER_INTR_MAP</name>
+              <name>INTMTX_CORE0_LP_BLE_TIMER_INTR_MAP</name>
               <description>CORE0_LP_BLE_TIMER_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -24812,13 +24816,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>LP_WDT_INTR_MAP</name>
+          <name>INTMTX_CORE0_LP_WDT_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x10</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>LP_WDT_INTR_MAP</name>
+              <name>INTMTX_CORE0_LP_WDT_INTR_MAP</name>
               <description>CORE0_LP_WDT_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -24827,13 +24831,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>LP_PERI_TIMEOUT_INTR_MAP</name>
+          <name>INTMTX_CORE0_LP_PERI_TIMEOUT_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x14</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>LP_PERI_TIMEOUT_INTR_MAP</name>
+              <name>INTMTX_CORE0_LP_PERI_TIMEOUT_INTR_MAP</name>
               <description>CORE0_LP_PERI_TIMEOUT_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -24842,13 +24846,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>LP_APM_M0_INTR_MAP</name>
+          <name>INTMTX_CORE0_LP_APM_M0_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x18</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>LP_APM_M0_INTR_MAP</name>
+              <name>INTMTX_CORE0_LP_APM_M0_INTR_MAP</name>
               <description>CORE0_LP_APM_M0_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -24857,13 +24861,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>CPU_INTR_FROM_CPU_0_MAP</name>
+          <name>INTMTX_CORE0_CPU_INTR_FROM_CPU_0_MAP</name>
           <description>register description</description>
           <addressOffset>0x1c</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>CPU_INTR_FROM_CPU_0_MAP</name>
+              <name>INTMTX_CORE0_CPU_INTR_FROM_CPU_0_MAP</name>
               <description>CORE0_CPU_INTR_FROM_CPU_0 mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -24872,13 +24876,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>CPU_INTR_FROM_CPU_1_MAP</name>
+          <name>INTMTX_CORE0_CPU_INTR_FROM_CPU_1_MAP</name>
           <description>register description</description>
           <addressOffset>0x20</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>CPU_INTR_FROM_CPU_1_MAP</name>
+              <name>INTMTX_CORE0_CPU_INTR_FROM_CPU_1_MAP</name>
               <description>CORE0_CPU_INTR_FROM_CPU_1 mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -24887,13 +24891,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>CPU_INTR_FROM_CPU_2_MAP</name>
+          <name>INTMTX_CORE0_CPU_INTR_FROM_CPU_2_MAP</name>
           <description>register description</description>
           <addressOffset>0x24</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>CPU_INTR_FROM_CPU_2_MAP</name>
+              <name>INTMTX_CORE0_CPU_INTR_FROM_CPU_2_MAP</name>
               <description>CORE0_CPU_INTR_FROM_CPU_2 mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -24902,13 +24906,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>CPU_INTR_FROM_CPU_3_MAP</name>
+          <name>INTMTX_CORE0_CPU_INTR_FROM_CPU_3_MAP</name>
           <description>register description</description>
           <addressOffset>0x28</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>CPU_INTR_FROM_CPU_3_MAP</name>
+              <name>INTMTX_CORE0_CPU_INTR_FROM_CPU_3_MAP</name>
               <description>CORE0_CPU_INTR_FROM_CPU_3 mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -24917,13 +24921,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>ASSIST_DEBUG_INTR_MAP</name>
+          <name>INTMTX_CORE0_ASSIST_DEBUG_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x2c</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>ASSIST_DEBUG_INTR_MAP</name>
+              <name>INTMTX_CORE0_ASSIST_DEBUG_INTR_MAP</name>
               <description>CORE0_ASSIST_DEBUG_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -24932,13 +24936,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>TRACE_INTR_MAP</name>
+          <name>INTMTX_CORE0_TRACE_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x30</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>TRACE_INTR_MAP</name>
+              <name>INTMTX_CORE0_TRACE_INTR_MAP</name>
               <description>CORE0_TRACE_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -24947,13 +24951,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>CACHE_INTR_MAP</name>
+          <name>INTMTX_CORE0_CACHE_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x34</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>CACHE_INTR_MAP</name>
+              <name>INTMTX_CORE0_CACHE_INTR_MAP</name>
               <description>CORE0_CACHE_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -24962,13 +24966,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>CPU_PERI_TIMEOUT_INTR_MAP</name>
+          <name>INTMTX_CORE0_CPU_PERI_TIMEOUT_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x38</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>CPU_PERI_TIMEOUT_INTR_MAP</name>
+              <name>INTMTX_CORE0_CPU_PERI_TIMEOUT_INTR_MAP</name>
               <description>CORE0_CPU_PERI_TIMEOUT_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -24977,13 +24981,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>BT_MAC_INTR_MAP</name>
+          <name>INTMTX_CORE0_BT_MAC_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x3c</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>BT_MAC_INTR_MAP</name>
+              <name>INTMTX_CORE0_BT_MAC_INTR_MAP</name>
               <description>CORE0_BT_MAC_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -24992,13 +24996,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>BT_BB_INTR_MAP</name>
+          <name>INTMTX_CORE0_BT_BB_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x40</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>BT_BB_INTR_MAP</name>
+              <name>INTMTX_CORE0_BT_BB_INTR_MAP</name>
               <description>CORE0_BT_BB_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25007,13 +25011,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>BT_BB_NMI_MAP</name>
+          <name>INTMTX_CORE0_BT_BB_NMI_MAP</name>
           <description>register description</description>
           <addressOffset>0x44</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>BT_BB_NMI_MAP</name>
+              <name>INTMTX_CORE0_BT_BB_NMI_MAP</name>
               <description>CORE0_BT_BB_NMI mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25022,13 +25026,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>COEX_INTR_MAP</name>
+          <name>INTMTX_CORE0_COEX_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x48</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>COEX_INTR_MAP</name>
+              <name>INTMTX_CORE0_COEX_INTR_MAP</name>
               <description>CORE0_COEX_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25037,13 +25041,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>BLE_TIMER_INTR_MAP</name>
+          <name>INTMTX_CORE0_BLE_TIMER_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x4c</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>BLE_TIMER_INTR_MAP</name>
+              <name>INTMTX_CORE0_BLE_TIMER_INTR_MAP</name>
               <description>CORE0_BLE_TIMER_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25052,13 +25056,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>BLE_SEC_INTR_MAP</name>
+          <name>INTMTX_CORE0_BLE_SEC_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x50</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>BLE_SEC_INTR_MAP</name>
+              <name>INTMTX_CORE0_BLE_SEC_INTR_MAP</name>
               <description>CORE0_BLE_SEC_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25067,13 +25071,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>ZB_MAC_INTR_MAP</name>
+          <name>INTMTX_CORE0_ZB_MAC_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x54</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>ZB_MAC_INTR_MAP</name>
+              <name>INTMTX_CORE0_ZB_MAC_INTR_MAP</name>
               <description>CORE0_ZB_MAC_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25082,13 +25086,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>GPIO_INTERRUPT_PRO_MAP</name>
+          <name>INTMTX_CORE0_GPIO_INTERRUPT_PRO_MAP</name>
           <description>register description</description>
           <addressOffset>0x58</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>GPIO_INTERRUPT_PRO_MAP</name>
+              <name>INTMTX_CORE0_GPIO_INTERRUPT_PRO_MAP</name>
               <description>CORE0_GPIO_INTERRUPT_PRO mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25097,13 +25101,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>GPIO_INTERRUPT_PRO_NMI_MAP</name>
+          <name>INTMTX_CORE0_GPIO_INTERRUPT_PRO_NMI_MAP</name>
           <description>register description</description>
           <addressOffset>0x5c</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>GPIO_INTERRUPT_PRO_NMI_MAP</name>
+              <name>INTMTX_CORE0_GPIO_INTERRUPT_PRO_NMI_MAP</name>
               <description>CORE0_GPIO_INTERRUPT_PRO_NMI mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25112,13 +25116,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>PAU_INTR_MAP</name>
+          <name>INTMTX_CORE0_PAU_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x60</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>PAU_INTR_MAP</name>
+              <name>INTMTX_CORE0_PAU_INTR_MAP</name>
               <description>CORE0_PAU_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25127,13 +25131,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>HP_PERI_TIMEOUT_INTR_MAP</name>
+          <name>INTMTX_CORE0_HP_PERI_TIMEOUT_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x64</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>HP_PERI_TIMEOUT_INTR_MAP</name>
+              <name>INTMTX_CORE0_HP_PERI_TIMEOUT_INTR_MAP</name>
               <description>CORE0_HP_PERI_TIMEOUT_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25142,13 +25146,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>HP_APM_M0_INTR_MAP</name>
+          <name>INTMTX_CORE0_HP_APM_M0_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x68</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>HP_APM_M0_INTR_MAP</name>
+              <name>INTMTX_CORE0_HP_APM_M0_INTR_MAP</name>
               <description>CORE0_HP_APM_M0_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25157,13 +25161,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>HP_APM_M1_INTR_MAP</name>
+          <name>INTMTX_CORE0_HP_APM_M1_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x6c</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>HP_APM_M1_INTR_MAP</name>
+              <name>INTMTX_CORE0_HP_APM_M1_INTR_MAP</name>
               <description>CORE0_HP_APM_M1_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25172,13 +25176,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>HP_APM_M2_INTR_MAP</name>
+          <name>INTMTX_CORE0_HP_APM_M2_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x70</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>HP_APM_M2_INTR_MAP</name>
+              <name>INTMTX_CORE0_HP_APM_M2_INTR_MAP</name>
               <description>CORE0_HP_APM_M2_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25187,13 +25191,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>HP_APM_M3_INTR_MAP</name>
+          <name>INTMTX_CORE0_HP_APM_M3_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x74</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>HP_APM_M3_INTR_MAP</name>
+              <name>INTMTX_CORE0_HP_APM_M3_INTR_MAP</name>
               <description>CORE0_HP_APM_M3_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25202,13 +25206,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>MSPI_INTR_MAP</name>
+          <name>INTMTX_CORE0_MSPI_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x78</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>MSPI_INTR_MAP</name>
+              <name>INTMTX_CORE0_MSPI_INTR_MAP</name>
               <description>CORE0_MSPI_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25217,13 +25221,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>I2S1_INTR_MAP</name>
+          <name>INTMTX_CORE0_I2S1_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x7c</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>I2S1_INTR_MAP</name>
+              <name>INTMTX_CORE0_I2S1_INTR_MAP</name>
               <description>CORE0_I2S1_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25232,13 +25236,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>UHCI0_INTR_MAP</name>
+          <name>INTMTX_CORE0_UHCI0_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x80</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>UHCI0_INTR_MAP</name>
+              <name>INTMTX_CORE0_UHCI0_INTR_MAP</name>
               <description>CORE0_UHCI0_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25247,13 +25251,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>UART0_INTR_MAP</name>
+          <name>INTMTX_CORE0_UART0_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x84</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>UART0_INTR_MAP</name>
+              <name>INTMTX_CORE0_UART0_INTR_MAP</name>
               <description>CORE0_UART0_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25262,13 +25266,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>UART1_INTR_MAP</name>
+          <name>INTMTX_CORE0_UART1_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x88</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>UART1_INTR_MAP</name>
+              <name>INTMTX_CORE0_UART1_INTR_MAP</name>
               <description>CORE0_UART1_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25277,13 +25281,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>LEDC_INTR_MAP</name>
+          <name>INTMTX_CORE0_LEDC_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x8c</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>LEDC_INTR_MAP</name>
+              <name>INTMTX_CORE0_LEDC_INTR_MAP</name>
               <description>CORE0_LEDC_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25292,13 +25296,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>CAN0_INTR_MAP</name>
+          <name>INTMTX_CORE0_CAN0_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x90</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>CAN0_INTR_MAP</name>
+              <name>INTMTX_CORE0_CAN0_INTR_MAP</name>
               <description>CORE0_CAN0_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25307,13 +25311,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>USB_INTR_MAP</name>
+          <name>INTMTX_CORE0_USB_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x94</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>USB_INTR_MAP</name>
+              <name>INTMTX_CORE0_USB_INTR_MAP</name>
               <description>CORE0_USB_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25322,13 +25326,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>RMT_INTR_MAP</name>
+          <name>INTMTX_CORE0_RMT_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x98</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>RMT_INTR_MAP</name>
+              <name>INTMTX_CORE0_RMT_INTR_MAP</name>
               <description>CORE0_RMT_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25337,13 +25341,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>I2C_EXT0_INTR_MAP</name>
+          <name>INTMTX_CORE0_I2C_EXT0_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x9c</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>I2C_EXT0_INTR_MAP</name>
+              <name>INTMTX_CORE0_I2C_EXT0_INTR_MAP</name>
               <description>CORE0_I2C_EXT0_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25352,13 +25356,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>I2C_EXT1_INTR_MAP</name>
+          <name>INTMTX_CORE0_I2C_EXT1_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xa0</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>I2C_EXT1_INTR_MAP</name>
+              <name>INTMTX_CORE0_I2C_EXT1_INTR_MAP</name>
               <description>CORE0_I2C_EXT1_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25367,13 +25371,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>TG0_T0_INTR_MAP</name>
+          <name>INTMTX_CORE0_TG0_T0_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xa4</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>TG0_T0_INTR_MAP</name>
+              <name>INTMTX_CORE0_TG0_T0_INTR_MAP</name>
               <description>CORE0_TG0_T0_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25382,13 +25386,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>TG0_WDT_INTR_MAP</name>
+          <name>INTMTX_CORE0_TG0_WDT_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xa8</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>TG0_WDT_INTR_MAP</name>
+              <name>INTMTX_CORE0_TG0_WDT_INTR_MAP</name>
               <description>CORE0_TG0_WDT_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25397,13 +25401,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>TG1_T0_INTR_MAP</name>
+          <name>INTMTX_CORE0_TG1_T0_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xac</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>TG1_T0_INTR_MAP</name>
+              <name>INTMTX_CORE0_TG1_T0_INTR_MAP</name>
               <description>CORE0_TG1_T0_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25412,13 +25416,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>TG1_WDT_INTR_MAP</name>
+          <name>INTMTX_CORE0_TG1_WDT_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xb0</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>TG1_WDT_INTR_MAP</name>
+              <name>INTMTX_CORE0_TG1_WDT_INTR_MAP</name>
               <description>CORE0_TG1_WDT_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25427,13 +25431,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>SYSTIMER_TARGET0_INTR_MAP</name>
+          <name>INTMTX_CORE0_SYSTIMER_TARGET0_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xb4</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>SYSTIMER_TARGET0_INTR_MAP</name>
+              <name>INTMTX_CORE0_SYSTIMER_TARGET0_INTR_MAP</name>
               <description>CORE0_SYSTIMER_TARGET0_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25442,13 +25446,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>SYSTIMER_TARGET1_INTR_MAP</name>
+          <name>INTMTX_CORE0_SYSTIMER_TARGET1_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xb8</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>SYSTIMER_TARGET1_INTR_MAP</name>
+              <name>INTMTX_CORE0_SYSTIMER_TARGET1_INTR_MAP</name>
               <description>CORE0_SYSTIMER_TARGET1_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25457,13 +25461,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>SYSTIMER_TARGET2_INTR_MAP</name>
+          <name>INTMTX_CORE0_SYSTIMER_TARGET2_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xbc</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>SYSTIMER_TARGET2_INTR_MAP</name>
+              <name>INTMTX_CORE0_SYSTIMER_TARGET2_INTR_MAP</name>
               <description>CORE0_SYSTIMER_TARGET2_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25472,13 +25476,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>APB_ADC_INTR_MAP</name>
+          <name>INTMTX_CORE0_APB_ADC_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xc0</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>APB_ADC_INTR_MAP</name>
+              <name>INTMTX_CORE0_APB_ADC_INTR_MAP</name>
               <description>CORE0_APB_ADC_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25487,13 +25491,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>PWM_INTR_MAP</name>
+          <name>INTMTX_CORE0_PWM_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xc4</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>PWM_INTR_MAP</name>
+              <name>INTMTX_CORE0_PWM_INTR_MAP</name>
               <description>CORE0_PWM_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25502,13 +25506,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>PCNT_INTR_MAP</name>
+          <name>INTMTX_CORE0_PCNT_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xc8</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>PCNT_INTR_MAP</name>
+              <name>INTMTX_CORE0_PCNT_INTR_MAP</name>
               <description>CORE0_PCNT_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25517,13 +25521,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>PARL_IO_TX_INTR_MAP</name>
+          <name>INTMTX_CORE0_PARL_IO_TX_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xcc</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>PARL_IO_TX_INTR_MAP</name>
+              <name>INTMTX_CORE0_PARL_IO_TX_INTR_MAP</name>
               <description>CORE0_PARL_IO_TX_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25532,13 +25536,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>PARL_IO_RX_INTR_MAP</name>
+          <name>INTMTX_CORE0_PARL_IO_RX_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xd0</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>PARL_IO_RX_INTR_MAP</name>
+              <name>INTMTX_CORE0_PARL_IO_RX_INTR_MAP</name>
               <description>CORE0_PARL_IO_RX_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25547,13 +25551,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>DMA_IN_CH0_INTR_MAP</name>
+          <name>INTMTX_CORE0_DMA_IN_CH0_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xd4</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>DMA_IN_CH0_INTR_MAP</name>
+              <name>INTMTX_CORE0_DMA_IN_CH0_INTR_MAP</name>
               <description>CORE0_DMA_IN_CH0_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25562,13 +25566,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>DMA_IN_CH1_INTR_MAP</name>
+          <name>INTMTX_CORE0_DMA_IN_CH1_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xd8</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>DMA_IN_CH1_INTR_MAP</name>
+              <name>INTMTX_CORE0_DMA_IN_CH1_INTR_MAP</name>
               <description>CORE0_DMA_IN_CH1_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25577,13 +25581,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>DMA_IN_CH2_INTR_MAP</name>
+          <name>INTMTX_CORE0_DMA_IN_CH2_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xdc</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>DMA_IN_CH2_INTR_MAP</name>
+              <name>INTMTX_CORE0_DMA_IN_CH2_INTR_MAP</name>
               <description>CORE0_DMA_IN_CH2_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25592,13 +25596,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>DMA_OUT_CH0_INTR_MAP</name>
+          <name>INTMTX_CORE0_DMA_OUT_CH0_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xe0</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>DMA_OUT_CH0_INTR_MAP</name>
+              <name>INTMTX_CORE0_DMA_OUT_CH0_INTR_MAP</name>
               <description>CORE0_DMA_OUT_CH0_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25607,13 +25611,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>DMA_OUT_CH1_INTR_MAP</name>
+          <name>INTMTX_CORE0_DMA_OUT_CH1_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xe4</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>DMA_OUT_CH1_INTR_MAP</name>
+              <name>INTMTX_CORE0_DMA_OUT_CH1_INTR_MAP</name>
               <description>CORE0_DMA_OUT_CH1_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25622,13 +25626,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>DMA_OUT_CH2_INTR_MAP</name>
+          <name>INTMTX_CORE0_DMA_OUT_CH2_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xe8</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>DMA_OUT_CH2_INTR_MAP</name>
+              <name>INTMTX_CORE0_DMA_OUT_CH2_INTR_MAP</name>
               <description>CORE0_DMA_OUT_CH2_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25637,13 +25641,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>GPSPI2_INTR_MAP</name>
+          <name>INTMTX_CORE0_GPSPI2_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xec</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>GPSPI2_INTR_MAP</name>
+              <name>INTMTX_CORE0_GPSPI2_INTR_MAP</name>
               <description>CORE0_GPSPI2_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25652,13 +25656,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>AES_INTR_MAP</name>
+          <name>INTMTX_CORE0_AES_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xf0</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>AES_INTR_MAP</name>
+              <name>INTMTX_CORE0_AES_INTR_MAP</name>
               <description>CORE0_AES_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25667,13 +25671,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>SHA_INTR_MAP</name>
+          <name>INTMTX_CORE0_SHA_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xf4</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>SHA_INTR_MAP</name>
+              <name>INTMTX_CORE0_SHA_INTR_MAP</name>
               <description>CORE0_SHA_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25682,13 +25686,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>RSA_INTR_MAP</name>
+          <name>INTMTX_CORE0_RSA_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xf8</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>RSA_INTR_MAP</name>
+              <name>INTMTX_CORE0_RSA_INTR_MAP</name>
               <description>CORE0_RSA_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25697,13 +25701,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>ECC_INTR_MAP</name>
+          <name>INTMTX_CORE0_ECC_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0xfc</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>ECC_INTR_MAP</name>
+              <name>INTMTX_CORE0_ECC_INTR_MAP</name>
               <description>CORE0_ECC_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25712,13 +25716,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>ECDSA_INTR_MAP</name>
+          <name>INTMTX_CORE0_ECDSA_INTR_MAP</name>
           <description>register description</description>
           <addressOffset>0x100</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>ECDSA_INTR_MAP</name>
+              <name>INTMTX_CORE0_ECDSA_INTR_MAP</name>
               <description>CORE0_ECDSA_INTR mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -25727,13 +25731,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>INT_STATUS_REG_0</name>
+          <name>INTMTX_CORE0_INT_STATUS_REG_0</name>
           <description>register description</description>
           <addressOffset>0x104</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>INT_STATUS_0</name>
+              <name>INTMTX_CORE0_INT_STATUS_0</name>
               <description>Status register for interrupt sources 0~31 mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -25742,13 +25746,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>INT_STATUS_REG_1</name>
+          <name>INTMTX_CORE0_INT_STATUS_REG_1</name>
           <description>register description</description>
           <addressOffset>0x108</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>INT_STATUS_1</name>
+              <name>INTMTX_CORE0_INT_STATUS_1</name>
               <description>Status register for interrupt sources 32~63 mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -25757,13 +25761,13 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>INT_STATUS_REG_2</name>
+          <name>INTMTX_CORE0_INT_STATUS_REG_2</name>
           <description>register description</description>
           <addressOffset>0x10c</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>INT_STATUS_2</name>
+              <name>INTMTX_CORE0_INT_STATUS_2</name>
               <description>Status register for interrupt sources 64~95 mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -25772,14 +25776,14 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>CLOCK_GATE</name>
+          <name>INTMTX_CORE0_CLOCK_GATE</name>
           <description>register description</description>
           <addressOffset>0x110</addressOffset>
           <size>32</size>
           <resetValue>0x1</resetValue>
           <fields>
             <field>
-              <name>REG_CLK_EN</name>
+              <name>INTMTX_CORE0_REG_CLK_EN</name>
               <description>Clock register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -25788,14 +25792,14 @@ Measurement unit: I2C_SCLK \\</description>
           </fields>
         </register>
         <register>
-          <name>INTERRUPT_REG_DATE</name>
+          <name>INTMTX_CORE0_INTERRUPT_REG_DATE</name>
           <description>register description</description>
           <addressOffset>0x7fc</addressOffset>
           <size>32</size>
           <resetValue>0x2209150</resetValue>
           <fields>
             <field>
-              <name>INTERRUPT_REG_DATE</name>
+              <name>INTMTX_CORE0_INTERRUPT_REG_DATE</name>
               <description>Version control register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>28</bitWidth>

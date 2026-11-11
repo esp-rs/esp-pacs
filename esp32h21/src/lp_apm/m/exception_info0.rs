@@ -7,10 +7,10 @@ pub type EXCEPTION_MODE_R = crate::FieldReader;
 #[doc = "Field `EXCEPTION_ID` reader - Exception id information"]
 pub type EXCEPTION_ID_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:1 - Exception region"]
+    #[doc = "Bits 0:3 - Exception region"]
     #[inline(always)]
     pub fn exception_region(&self) -> EXCEPTION_REGION_R {
-        EXCEPTION_REGION_R::new((self.bits & 3) as u8)
+        EXCEPTION_REGION_R::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bits 16:17 - Exception mode"]
     #[inline(always)]

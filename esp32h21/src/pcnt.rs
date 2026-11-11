@@ -2,7 +2,7 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    _reserved_0_unit: [u8; 0x40],
+    unit: [UNIT; 4],
     u_cnt: [U_CNT; 4],
     int_raw: INT_RAW,
     int_st: INT_ST,
@@ -14,38 +14,16 @@ pub struct RegisterBlock {
     date: DATE,
 }
 impl RegisterBlock {
-    #[doc = "0x00..0x40 - Cluster UNIT%s, containing U?_CONF0, U?_CONF1, U?_CONF2"]
+    #[doc = "0x00..0x40 - Cluster UNIT%s, containing U?_CONF3, U?_CONF0, U?_CONF1, U?_CONF2"]
     #[inline(always)]
     pub const fn unit(&self, n: usize) -> &UNIT {
-        #[allow(clippy::no_effect)]
-        [(); 4][n];
-        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(16 * n).cast() }
+        &self.unit[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x00..0x40 - Cluster UNIT%s, containing U?_CONF0, U?_CONF1, U?_CONF2"]
+    #[doc = "0x00..0x40 - Cluster UNIT%s, containing U?_CONF3, U?_CONF0, U?_CONF1, U?_CONF2"]
     #[inline(always)]
     pub fn unit_iter(&self) -> impl Iterator<Item = &UNIT> {
-        (0..4).map(move |n| unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(16 * n).cast() })
-    }
-    #[doc = "0x0c - Configuration register for unit $n's step value."]
-    #[inline(always)]
-    pub const fn u0_conf3(&self) -> &U0_CONF3 {
-        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(12).cast() }
-    }
-    #[doc = "0x1c - Configuration register for unit $n's step value."]
-    #[inline(always)]
-    pub const fn u1_conf3(&self) -> &U1_CONF3 {
-        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(28).cast() }
-    }
-    #[doc = "0x2c - Configuration register for unit $n's step value."]
-    #[inline(always)]
-    pub const fn u2_conf3(&self) -> &U2_CONF3 {
-        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(44).cast() }
-    }
-    #[doc = "0x3c - Configuration register for unit $n's step value."]
-    #[inline(always)]
-    pub const fn u3_conf3(&self) -> &U3_CONF3 {
-        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(60).cast() }
+        self.unit.iter()
     }
     #[doc = "0x40..0x50 - Counter value for unit %s"]
     #[inline(always)]
@@ -140,27 +118,11 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "Cluster UNIT%s, containing U?_CONF0, U?_CONF1, U?_CONF2"]
+#[doc = "Cluster UNIT%s, containing U?_CONF3, U?_CONF0, U?_CONF1, U?_CONF2"]
 pub use self::unit::UNIT;
 #[doc = r"Cluster"]
-#[doc = "Cluster UNIT%s, containing U?_CONF0, U?_CONF1, U?_CONF2"]
+#[doc = "Cluster UNIT%s, containing U?_CONF3, U?_CONF0, U?_CONF1, U?_CONF2"]
 pub mod unit;
-#[doc = "U0_CONF3 (rw) register accessor: Configuration register for unit $n's step value.\n\nYou can [`read`](crate::Reg::read) this register and get [`u0_conf3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`u0_conf3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@u0_conf3`] module"]
-pub type U0_CONF3 = crate::Reg<u0_conf3::U0_CONF3_SPEC>;
-#[doc = "Configuration register for unit $n's step value."]
-pub mod u0_conf3;
-#[doc = "U1_CONF3 (rw) register accessor: Configuration register for unit $n's step value.\n\nYou can [`read`](crate::Reg::read) this register and get [`u1_conf3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`u1_conf3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@u1_conf3`] module"]
-pub type U1_CONF3 = crate::Reg<u1_conf3::U1_CONF3_SPEC>;
-#[doc = "Configuration register for unit $n's step value."]
-pub mod u1_conf3;
-#[doc = "U2_CONF3 (rw) register accessor: Configuration register for unit $n's step value.\n\nYou can [`read`](crate::Reg::read) this register and get [`u2_conf3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`u2_conf3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@u2_conf3`] module"]
-pub type U2_CONF3 = crate::Reg<u2_conf3::U2_CONF3_SPEC>;
-#[doc = "Configuration register for unit $n's step value."]
-pub mod u2_conf3;
-#[doc = "U3_CONF3 (rw) register accessor: Configuration register for unit $n's step value.\n\nYou can [`read`](crate::Reg::read) this register and get [`u3_conf3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`u3_conf3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@u3_conf3`] module"]
-pub type U3_CONF3 = crate::Reg<u3_conf3::U3_CONF3_SPEC>;
-#[doc = "Configuration register for unit $n's step value."]
-pub mod u3_conf3;
 #[doc = "U_CNT (r) register accessor: Counter value for unit %s\n\nYou can [`read`](crate::Reg::read) this register and get [`u_cnt::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@u_cnt`] module"]
 pub type U_CNT = crate::Reg<u_cnt::U_CNT_SPEC>;
 #[doc = "Counter value for unit %s"]

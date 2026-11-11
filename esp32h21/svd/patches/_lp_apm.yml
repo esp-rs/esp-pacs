@@ -1,3 +1,5 @@
+# The CSV describes the beta1 LP_APM. The MP layout (IDF register/hw_ver_mp/soc/lp_apm_reg.h)
+# has 4 regions and moves INT_EN, CLOCK_GATE and DATE.
 # Applied in the same peripheral process as common hp_apm clustering so
 # REGION2/3 are present before REGION%s is collected.
 _modify:
@@ -133,3 +135,13 @@ _add:
         bitOffset: 10
         bitWidth: 1
         access: read-write
+
+REGION_FILTER_EN:
+  _modify:
+    REGION_FILTER_EN:
+      bitWidth: 4
+
+M0_EXCEPTION_INFO0:
+  _modify:
+    M0_EXCEPTION_REGION:
+      bitWidth: 4

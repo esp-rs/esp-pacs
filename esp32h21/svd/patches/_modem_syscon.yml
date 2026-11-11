@@ -1,0 +1,214 @@
+_add:
+  MODEM_SYSCON:
+    description: MODEM_SYSCON
+    baseAddress: 0x600A5400
+    addressBlock:
+      - offset: 0x0
+        size: 0x20
+        usage: Registers
+    registers:
+
+      TEST_CONF:
+        description: TEST_CONF
+        addressOffset: 0x0
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+
+      CLK_CONF:
+        description: CLK_CONF
+        addressOffset: 0x4
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          CLK_ETM_EN:
+            bitOffset: 20
+            bitWidth: 1
+          CLK_ZB_APB_EN:
+            bitOffset: 21
+            bitWidth: 1
+          CLK_ZB_MAC_SYS_EN:
+            bitOffset: 22
+            bitWidth: 1
+          CLK_ZB_MAC_EN:
+            bitOffset: 23
+            bitWidth: 1
+          CLK_MODEM_SEC_ECB_EN:
+            bitOffset: 24
+            bitWidth: 1
+          CLK_MODEM_SEC_CCM_EN:
+            bitOffset: 25
+            bitWidth: 1
+          CLK_MODEM_SEC_BAH_EN:
+            bitOffset: 26
+            bitWidth: 1
+          CLK_MODEM_SEC_APB_EN:
+            bitOffset: 27
+            bitWidth: 1
+          CLK_MODEM_SEC_EN:
+            bitOffset: 28
+            bitWidth: 1
+          CLK_BLE_TIMER_APB_EN:
+            bitOffset: 29
+            bitWidth: 1
+          CLK_BLE_TIMER_EN:
+            bitOffset: 30
+            bitWidth: 1
+          CLK_DATA_DUMP_EN:
+            bitOffset: 31
+            bitWidth: 1
+
+      CLK_CONF_FORCE_ON:
+        description: CLK_CONF_FORCE_ON
+        addressOffset: 0x8
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          CLK_ETM_FO:
+            bitOffset: 22
+            bitWidth: 1
+          CLK_ZB_FO:
+            bitOffset: 24
+            bitWidth: 1
+          CLK_MODEM_SEC_FO:
+            bitOffset: 29
+            bitWidth: 1
+          CLK_BLE_TIMER_FO:
+            bitOffset: 30
+            bitWidth: 1
+          CLK_DATA_DUMP_FO:
+            bitOffset: 31
+            bitWidth: 1
+
+      MODEM_RST_CONF:
+        description: MODEM_RST_CONF
+        addressOffset: 0xC
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          RST_FE:
+            bitOffset: 14
+            bitWidth: 1
+          RST_BTMAC_APB:
+            bitOffset: 15
+            bitWidth: 1
+          RST_BTMAC:
+            bitOffset: 16
+            bitWidth: 1
+          RST_BTBB_APB:
+            bitOffset: 17
+            bitWidth: 1
+          RST_BTBB:
+            bitOffset: 18
+            bitWidth: 1
+          RST_ETM:
+            bitOffset: 22
+            bitWidth: 1
+          RST_ZBMAC_APB:
+            bitOffset: 23
+            bitWidth: 1
+          RST_ZBMAC:
+            bitOffset: 24
+            bitWidth: 1
+          RST_MODEM_ECB:
+            bitOffset: 25
+            bitWidth: 1
+          RST_MODEM_CCM:
+            bitOffset: 26
+            bitWidth: 1
+          RST_MODEM_BAH:
+            bitOffset: 27
+            bitWidth: 1
+          RST_MODEM_SEC:
+            bitOffset: 29
+            bitWidth: 1
+          RST_BLE_TIMER:
+            bitOffset: 30
+            bitWidth: 1
+          RST_DATA_DUMP:
+            bitOffset: 31
+            bitWidth: 1
+
+      CLK_CONF1:
+        description: CLK_CONF1
+        addressOffset: 0x10
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          CLK_FE_TXLOGAIN_EN:
+            bitOffset: 11
+            bitWidth: 1
+          CLK_FE_16M_EN:
+            bitOffset: 12
+            bitWidth: 1
+          CLK_FE_32M_EN:
+            bitOffset: 13
+            bitWidth: 1
+          CLK_FE_SDM_EN:
+            bitOffset: 14
+            bitWidth: 1
+          CLK_FE_ADC_EN:
+            bitOffset: 15
+            bitWidth: 1
+          CLK_FE_APB_EN:
+            bitOffset: 16
+            bitWidth: 1
+          CLK_BT_APB_EN:
+            bitOffset: 17
+            bitWidth: 1
+          CLK_BT_EN:
+            bitOffset: 18
+            bitWidth: 1
+
+      CLK_CONF1_FORCE_ON:
+        description: CLK_CONF1_FORCE_ON
+        addressOffset: 0x14
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          CLK_FE_FO:
+            bitOffset: 16
+            bitWidth: 1
+          CLK_BT_FO:
+            bitOffset: 18
+            bitWidth: 1
+
+      MEM_CONF:
+        description: MEM_CONF
+        addressOffset: 0x18
+        size: 32
+        access: read-write
+        resetValue: 0x00000228
+        fields:
+          MODEM_MEM_WP:
+            bitOffset: 0
+            bitWidth: 3
+          MODEM_MEM_WA:
+            bitOffset: 3
+            bitWidth: 3
+          MODEM_MEM_RA:
+            bitOffset: 6
+            bitWidth: 2
+          MODEM_MEM_RM:
+            bitOffset: 8
+            bitWidth: 4
+
+      DATE:
+        description: DATE
+        addressOffset: 0x1C
+        size: 32
+        access: read-write
+        resetValue: 0x02409130
+        fields:
+          DATE:
+            bitOffset: 0
+            bitWidth: 28

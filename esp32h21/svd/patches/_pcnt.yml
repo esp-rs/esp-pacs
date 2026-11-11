@@ -36,4 +36,10 @@ PCNT:
       RST_U3:
         name: CNT_RST_U3
 
+  _cluster:
+    UNIT%s:
+      U?_CONF3:
+        name: CONF3
+        _strip_end: "_U0"
+
   _include: ../../../common_patches/pcnt.yaml

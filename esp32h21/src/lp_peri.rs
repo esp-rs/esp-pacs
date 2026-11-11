@@ -5,7 +5,7 @@ pub struct RegisterBlock {
     clk_en: CLK_EN,
     reset_en: RESET_EN,
     rng_cfg: RNG_CFG,
-    rng_data: RNG_DATA,
+    _reserved3: [u8; 0x04],
     cpu: CPU,
     bus_timeout: BUS_TIMEOUT,
     bus_timeout_addr: BUS_TIMEOUT_ADDR,
@@ -14,8 +14,8 @@ pub struct RegisterBlock {
     interrupt_source: INTERRUPT_SOURCE,
     debug_sel0: DEBUG_SEL0,
     debug_sel1: DEBUG_SEL1,
-    rng_data_sync: RNG_DATA_SYNC,
-    _reserved13: [u8; 0x03c8],
+    rng_data: RNG_DATA,
+    _reserved12: [u8; 0x03c8],
     date: DATE,
 }
 impl RegisterBlock {
@@ -33,11 +33,6 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn rng_cfg(&self) -> &RNG_CFG {
         &self.rng_cfg
-    }
-    #[doc = "0x0c - need_des"]
-    #[inline(always)]
-    pub const fn rng_data(&self) -> &RNG_DATA {
-        &self.rng_data
     }
     #[doc = "0x10 - need_des"]
     #[inline(always)]
@@ -81,8 +76,8 @@ impl RegisterBlock {
     }
     #[doc = "0x30 - rng result sync register"]
     #[inline(always)]
-    pub const fn rng_data_sync(&self) -> &RNG_DATA_SYNC {
-        &self.rng_data_sync
+    pub const fn rng_data(&self) -> &RNG_DATA {
+        &self.rng_data
     }
     #[doc = "0x3fc - need_des"]
     #[inline(always)]
@@ -102,10 +97,6 @@ pub mod reset_en;
 pub type RNG_CFG = crate::Reg<rng_cfg::RNG_CFG_SPEC>;
 #[doc = "need_des"]
 pub mod rng_cfg;
-#[doc = "RNG_DATA (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`rng_data::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rng_data`] module"]
-pub type RNG_DATA = crate::Reg<rng_data::RNG_DATA_SPEC>;
-#[doc = "need_des"]
-pub mod rng_data;
 #[doc = "CPU (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu`] module"]
 pub type CPU = crate::Reg<cpu::CPU_SPEC>;
 #[doc = "need_des"]
@@ -138,8 +129,8 @@ pub mod debug_sel0;
 pub type DEBUG_SEL1 = crate::Reg<debug_sel1::DEBUG_SEL1_SPEC>;
 #[doc = "need des"]
 pub mod debug_sel1;
-#[doc = "RNG_DATA_SYNC (r) register accessor: rng result sync register\n\nYou can [`read`](crate::Reg::read) this register and get [`rng_data_sync::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rng_data_sync`] module"]
-pub type RNG_DATA_SYNC = crate::Reg<rng_data_sync::RNG_DATA_SYNC_SPEC>;
+#[doc = "RNG_DATA (r) register accessor: rng result sync register\n\nYou can [`read`](crate::Reg::read) this register and get [`rng_data::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rng_data`] module"]
+pub type RNG_DATA = crate::Reg<rng_data::RNG_DATA_SPEC>;
 #[doc = "rng result sync register"]
-pub mod rng_data_sync;
+pub mod rng_data;
 pub use crate::dma::{date, DATE};

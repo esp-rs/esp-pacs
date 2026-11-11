@@ -34,14 +34,14 @@ pub type SDUMMY_RIN_R = crate::BitReader;
 pub type SDUMMY_RIN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDUMMY_WOUT` reader - In the dummy phase of a MSPI write data transfer when accesses to external RAM, the signal level of SPI bus is output by the MSPI controller."]
 pub type SDUMMY_WOUT_R = crate::BitReader;
-#[doc = "Field `SPI_SMEM_WDUMMY_DQS_ALWAYS_OUT` reader - In the dummy phase of an MSPI write data transfer when accesses to external RAM, the level of SPI_DQS is output by the MSPI controller."]
-pub type SPI_SMEM_WDUMMY_DQS_ALWAYS_OUT_R = crate::BitReader;
-#[doc = "Field `SPI_SMEM_WDUMMY_ALWAYS_OUT` reader - In the dummy phase of an MSPI write data transfer when accesses to external RAM, the level of SPI_IO\\[7:0\\] is output by the MSPI controller."]
-pub type SPI_SMEM_WDUMMY_ALWAYS_OUT_R = crate::BitReader;
-#[doc = "Field `SPI_SMEM_DQS_IE_ALWAYS_ON` reader - When accesses to external RAM, 1: the IE signals of pads connected to SPI_DQS are always 1. 0: Others."]
-pub type SPI_SMEM_DQS_IE_ALWAYS_ON_R = crate::BitReader;
-#[doc = "Field `SPI_SMEM_DATA_IE_ALWAYS_ON` reader - When accesses to external RAM, 1: the IE signals of pads connected to SPI_IO\\[7:0\\] are always 1. 0: Others."]
-pub type SPI_SMEM_DATA_IE_ALWAYS_ON_R = crate::BitReader;
+#[doc = "Field `SMEM_WDUMMY_DQS_ALWAYS_OUT` reader - In the dummy phase of an MSPI write data transfer when accesses to external RAM, the level of SPI_DQS is output by the MSPI controller."]
+pub type SMEM_WDUMMY_DQS_ALWAYS_OUT_R = crate::BitReader;
+#[doc = "Field `SMEM_WDUMMY_ALWAYS_OUT` reader - In the dummy phase of an MSPI write data transfer when accesses to external RAM, the level of SPI_IO\\[7:0\\] is output by the MSPI controller."]
+pub type SMEM_WDUMMY_ALWAYS_OUT_R = crate::BitReader;
+#[doc = "Field `SMEM_DQS_IE_ALWAYS_ON` reader - When accesses to external RAM, 1: the IE signals of pads connected to SPI_DQS are always 1. 0: Others."]
+pub type SMEM_DQS_IE_ALWAYS_ON_R = crate::BitReader;
+#[doc = "Field `SMEM_DATA_IE_ALWAYS_ON` reader - When accesses to external RAM, 1: the IE signals of pads connected to SPI_IO\\[7:0\\] are always 1. 0: Others."]
+pub type SMEM_DATA_IE_ALWAYS_ON_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:1 - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is always on."]
     #[inline(always)]
@@ -120,23 +120,23 @@ impl R {
     }
     #[doc = "Bit 24 - In the dummy phase of an MSPI write data transfer when accesses to external RAM, the level of SPI_DQS is output by the MSPI controller."]
     #[inline(always)]
-    pub fn spi_smem_wdummy_dqs_always_out(&self) -> SPI_SMEM_WDUMMY_DQS_ALWAYS_OUT_R {
-        SPI_SMEM_WDUMMY_DQS_ALWAYS_OUT_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn smem_wdummy_dqs_always_out(&self) -> SMEM_WDUMMY_DQS_ALWAYS_OUT_R {
+        SMEM_WDUMMY_DQS_ALWAYS_OUT_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - In the dummy phase of an MSPI write data transfer when accesses to external RAM, the level of SPI_IO\\[7:0\\] is output by the MSPI controller."]
     #[inline(always)]
-    pub fn spi_smem_wdummy_always_out(&self) -> SPI_SMEM_WDUMMY_ALWAYS_OUT_R {
-        SPI_SMEM_WDUMMY_ALWAYS_OUT_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn smem_wdummy_always_out(&self) -> SMEM_WDUMMY_ALWAYS_OUT_R {
+        SMEM_WDUMMY_ALWAYS_OUT_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 30 - When accesses to external RAM, 1: the IE signals of pads connected to SPI_DQS are always 1. 0: Others."]
     #[inline(always)]
-    pub fn spi_smem_dqs_ie_always_on(&self) -> SPI_SMEM_DQS_IE_ALWAYS_ON_R {
-        SPI_SMEM_DQS_IE_ALWAYS_ON_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn smem_dqs_ie_always_on(&self) -> SMEM_DQS_IE_ALWAYS_ON_R {
+        SMEM_DQS_IE_ALWAYS_ON_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - When accesses to external RAM, 1: the IE signals of pads connected to SPI_IO\\[7:0\\] are always 1. 0: Others."]
     #[inline(always)]
-    pub fn spi_smem_data_ie_always_on(&self) -> SPI_SMEM_DATA_IE_ALWAYS_ON_R {
-        SPI_SMEM_DATA_IE_ALWAYS_ON_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn smem_data_ie_always_on(&self) -> SMEM_DATA_IE_ALWAYS_ON_R {
+        SMEM_DATA_IE_ALWAYS_ON_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -159,21 +159,12 @@ impl core::fmt::Debug for R {
             .field("sdummy_rin", &self.sdummy_rin())
             .field("sdummy_wout", &self.sdummy_wout())
             .field(
-                "spi_smem_wdummy_dqs_always_out",
-                &self.spi_smem_wdummy_dqs_always_out(),
+                "smem_wdummy_dqs_always_out",
+                &self.smem_wdummy_dqs_always_out(),
             )
-            .field(
-                "spi_smem_wdummy_always_out",
-                &self.spi_smem_wdummy_always_out(),
-            )
-            .field(
-                "spi_smem_dqs_ie_always_on",
-                &self.spi_smem_dqs_ie_always_on(),
-            )
-            .field(
-                "spi_smem_data_ie_always_on",
-                &self.spi_smem_data_ie_always_on(),
-            )
+            .field("smem_wdummy_always_out", &self.smem_wdummy_always_out())
+            .field("smem_dqs_ie_always_on", &self.smem_dqs_ie_always_on())
+            .field("smem_data_ie_always_on", &self.smem_data_ie_always_on())
             .finish()
     }
 }

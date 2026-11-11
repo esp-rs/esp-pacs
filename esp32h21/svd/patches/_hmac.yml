@@ -8,3 +8,8 @@ HMAC:
       dim: 8
       dimIncrement: 0x4
       size: 0x20
+
+  QUERY_ERROR:
+    _modify:
+      QUREY_CHECK:
+        name: QUERY_CHECK

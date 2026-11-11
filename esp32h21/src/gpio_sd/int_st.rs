@@ -1,35 +1,35 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `GPIO_EXT_COMP_NEG_0` reader - analog comparator pos edge interrupt status"]
-pub type GPIO_EXT_COMP_NEG_0_R = crate::BitReader;
-#[doc = "Field `GPIO_EXT_COMP_POS_0` reader - analog comparator neg edge interrupt status"]
-pub type GPIO_EXT_COMP_POS_0_R = crate::BitReader;
-#[doc = "Field `GPIO_EXT_COMP_ALL_0` reader - analog comparator neg or pos edge interrupt status"]
-pub type GPIO_EXT_COMP_ALL_0_R = crate::BitReader;
+#[doc = "Field `COMP_NEG_0` reader - analog comparator pos edge interrupt status"]
+pub type COMP_NEG_0_R = crate::BitReader;
+#[doc = "Field `COMP_POS_0` reader - analog comparator neg edge interrupt status"]
+pub type COMP_POS_0_R = crate::BitReader;
+#[doc = "Field `COMP_ALL_0` reader - analog comparator neg or pos edge interrupt status"]
+pub type COMP_ALL_0_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - analog comparator pos edge interrupt status"]
     #[inline(always)]
-    pub fn gpio_ext_comp_neg_0(&self) -> GPIO_EXT_COMP_NEG_0_R {
-        GPIO_EXT_COMP_NEG_0_R::new((self.bits & 1) != 0)
+    pub fn comp_neg_0(&self) -> COMP_NEG_0_R {
+        COMP_NEG_0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - analog comparator neg edge interrupt status"]
     #[inline(always)]
-    pub fn gpio_ext_comp_pos_0(&self) -> GPIO_EXT_COMP_POS_0_R {
-        GPIO_EXT_COMP_POS_0_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn comp_pos_0(&self) -> COMP_POS_0_R {
+        COMP_POS_0_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - analog comparator neg or pos edge interrupt status"]
     #[inline(always)]
-    pub fn gpio_ext_comp_all_0(&self) -> GPIO_EXT_COMP_ALL_0_R {
-        GPIO_EXT_COMP_ALL_0_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn comp_all_0(&self) -> COMP_ALL_0_R {
+        COMP_ALL_0_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("gpio_ext_comp_neg_0", &self.gpio_ext_comp_neg_0())
-            .field("gpio_ext_comp_pos_0", &self.gpio_ext_comp_pos_0())
-            .field("gpio_ext_comp_all_0", &self.gpio_ext_comp_all_0())
+            .field("comp_neg_0", &self.comp_neg_0())
+            .field("comp_pos_0", &self.comp_pos_0())
+            .field("comp_all_0", &self.comp_all_0())
             .finish()
     }
 }

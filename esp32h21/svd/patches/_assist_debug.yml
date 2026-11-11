@@ -6,6 +6,10 @@ ASSIST_DEBUG:
     CORE_0_INTR_RLS:
       name: CORE_0_INTR_ENA
 
+  CORE_0_INTR_ENA:
+    _strip_end: _RLS
+    _suffix: _INTR_ENA
+
   _array:
     CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_?:
       name: CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR%s

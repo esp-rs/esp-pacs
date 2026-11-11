@@ -2,18 +2,18 @@
 pub type R = crate::R<ETM_TASK_P2_CFG_SPEC>;
 #[doc = "Register `ETM_TASK_P2_CFG` writer"]
 pub type W = crate::W<ETM_TASK_P2_CFG_SPEC>;
-#[doc = "Field `GPIO_SEL(_EXT_ETM_TASK_GPIO10,_EXT_ETM_TASK_GPIO11,_EXT_ETM_TASK_GPIO12,_EXT_ETM_TASK_GPIO13,_EXT_ETM_TASK_GPIO14)` reader - GPIO choose a etm task channel."]
+#[doc = "Field `GPIO_SEL(10-14)` reader - GPIO choose a etm task channel."]
 pub type GPIO_SEL_R = crate::FieldReader;
-#[doc = "Field `GPIO_SEL(_EXT_ETM_TASK_GPIO10,_EXT_ETM_TASK_GPIO11,_EXT_ETM_TASK_GPIO12,_EXT_ETM_TASK_GPIO13,_EXT_ETM_TASK_GPIO14)` writer - GPIO choose a etm task channel."]
+#[doc = "Field `GPIO_SEL(10-14)` writer - GPIO choose a etm task channel."]
 pub type GPIO_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Field `GPIO_EN(_EXT_ETM_TASK_GPIO10,_EXT_ETM_TASK_GPIO11,_EXT_ETM_TASK_GPIO12,_EXT_ETM_TASK_GPIO13,_EXT_ETM_TASK_GPIO14)` reader - Enable bit of GPIO response etm task."]
+#[doc = "Field `GPIO_EN(10-14)` reader - Enable bit of GPIO response etm task."]
 pub type GPIO_EN_R = crate::BitReader;
-#[doc = "Field `GPIO_EN(_EXT_ETM_TASK_GPIO10,_EXT_ETM_TASK_GPIO11,_EXT_ETM_TASK_GPIO12,_EXT_ETM_TASK_GPIO13,_EXT_ETM_TASK_GPIO14)` writer - Enable bit of GPIO response etm task."]
+#[doc = "Field `GPIO_EN(10-14)` writer - Enable bit of GPIO response etm task."]
 pub type GPIO_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "GPIO choose a etm task channel."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO_EXT_ETM_TASK_GPIO10_SEL` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO10_SEL` field.</div>"]
     #[inline(always)]
     pub fn gpio_sel(&self, n: u8) -> GPIO_SEL_R {
         #[allow(clippy::no_effect)]
@@ -28,32 +28,32 @@ impl R {
     }
     #[doc = "Bits 0:2 - GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio10_sel(&self) -> GPIO_SEL_R {
+    pub fn gpio10_sel(&self) -> GPIO_SEL_R {
         GPIO_SEL_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 6:8 - GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio11_sel(&self) -> GPIO_SEL_R {
+    pub fn gpio11_sel(&self) -> GPIO_SEL_R {
         GPIO_SEL_R::new(((self.bits >> 6) & 7) as u8)
     }
     #[doc = "Bits 12:14 - GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio12_sel(&self) -> GPIO_SEL_R {
+    pub fn gpio12_sel(&self) -> GPIO_SEL_R {
         GPIO_SEL_R::new(((self.bits >> 12) & 7) as u8)
     }
     #[doc = "Bits 18:20 - GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio13_sel(&self) -> GPIO_SEL_R {
+    pub fn gpio13_sel(&self) -> GPIO_SEL_R {
         GPIO_SEL_R::new(((self.bits >> 18) & 7) as u8)
     }
     #[doc = "Bits 24:26 - GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio14_sel(&self) -> GPIO_SEL_R {
+    pub fn gpio14_sel(&self) -> GPIO_SEL_R {
         GPIO_SEL_R::new(((self.bits >> 24) & 7) as u8)
     }
     #[doc = "Enable bit of GPIO response etm task."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO_EXT_ETM_TASK_GPIO10_EN` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO10_EN` field.</div>"]
     #[inline(always)]
     pub fn gpio_en(&self, n: u8) -> GPIO_EN_R {
         #[allow(clippy::no_effect)]
@@ -68,27 +68,27 @@ impl R {
     }
     #[doc = "Bit 5 - Enable bit of GPIO response etm task."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio10_en(&self) -> GPIO_EN_R {
+    pub fn gpio10_en(&self) -> GPIO_EN_R {
         GPIO_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 11 - Enable bit of GPIO response etm task."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio11_en(&self) -> GPIO_EN_R {
+    pub fn gpio11_en(&self) -> GPIO_EN_R {
         GPIO_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 17 - Enable bit of GPIO response etm task."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio12_en(&self) -> GPIO_EN_R {
+    pub fn gpio12_en(&self) -> GPIO_EN_R {
         GPIO_EN_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 23 - Enable bit of GPIO response etm task."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio13_en(&self) -> GPIO_EN_R {
+    pub fn gpio13_en(&self) -> GPIO_EN_R {
         GPIO_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 29 - Enable bit of GPIO response etm task."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio14_en(&self) -> GPIO_EN_R {
+    pub fn gpio14_en(&self) -> GPIO_EN_R {
         GPIO_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
@@ -96,53 +96,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ETM_TASK_P2_CFG")
-            .field(
-                "gpio_ext_etm_task_gpio10_sel",
-                &self.gpio_ext_etm_task_gpio10_sel(),
-            )
-            .field(
-                "gpio_ext_etm_task_gpio11_sel",
-                &self.gpio_ext_etm_task_gpio11_sel(),
-            )
-            .field(
-                "gpio_ext_etm_task_gpio12_sel",
-                &self.gpio_ext_etm_task_gpio12_sel(),
-            )
-            .field(
-                "gpio_ext_etm_task_gpio13_sel",
-                &self.gpio_ext_etm_task_gpio13_sel(),
-            )
-            .field(
-                "gpio_ext_etm_task_gpio14_sel",
-                &self.gpio_ext_etm_task_gpio14_sel(),
-            )
-            .field(
-                "gpio_ext_etm_task_gpio10_en",
-                &self.gpio_ext_etm_task_gpio10_en(),
-            )
-            .field(
-                "gpio_ext_etm_task_gpio11_en",
-                &self.gpio_ext_etm_task_gpio11_en(),
-            )
-            .field(
-                "gpio_ext_etm_task_gpio12_en",
-                &self.gpio_ext_etm_task_gpio12_en(),
-            )
-            .field(
-                "gpio_ext_etm_task_gpio13_en",
-                &self.gpio_ext_etm_task_gpio13_en(),
-            )
-            .field(
-                "gpio_ext_etm_task_gpio14_en",
-                &self.gpio_ext_etm_task_gpio14_en(),
-            )
+            .field("gpio10_sel", &self.gpio10_sel())
+            .field("gpio11_sel", &self.gpio11_sel())
+            .field("gpio12_sel", &self.gpio12_sel())
+            .field("gpio13_sel", &self.gpio13_sel())
+            .field("gpio14_sel", &self.gpio14_sel())
+            .field("gpio10_en", &self.gpio10_en())
+            .field("gpio11_en", &self.gpio11_en())
+            .field("gpio12_en", &self.gpio12_en())
+            .field("gpio13_en", &self.gpio13_en())
+            .field("gpio14_en", &self.gpio14_en())
             .finish()
     }
 }
 impl W {
     #[doc = "GPIO choose a etm task channel."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO_EXT_ETM_TASK_GPIO10_SEL` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO10_SEL` field.</div>"]
     #[inline(always)]
     pub fn gpio_sel(&mut self, n: u8) -> GPIO_SEL_W<'_, ETM_TASK_P2_CFG_SPEC> {
         #[allow(clippy::no_effect)]
@@ -151,32 +121,32 @@ impl W {
     }
     #[doc = "Bits 0:2 - GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio10_sel(&mut self) -> GPIO_SEL_W<'_, ETM_TASK_P2_CFG_SPEC> {
+    pub fn gpio10_sel(&mut self) -> GPIO_SEL_W<'_, ETM_TASK_P2_CFG_SPEC> {
         GPIO_SEL_W::new(self, 0)
     }
     #[doc = "Bits 6:8 - GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio11_sel(&mut self) -> GPIO_SEL_W<'_, ETM_TASK_P2_CFG_SPEC> {
+    pub fn gpio11_sel(&mut self) -> GPIO_SEL_W<'_, ETM_TASK_P2_CFG_SPEC> {
         GPIO_SEL_W::new(self, 6)
     }
     #[doc = "Bits 12:14 - GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio12_sel(&mut self) -> GPIO_SEL_W<'_, ETM_TASK_P2_CFG_SPEC> {
+    pub fn gpio12_sel(&mut self) -> GPIO_SEL_W<'_, ETM_TASK_P2_CFG_SPEC> {
         GPIO_SEL_W::new(self, 12)
     }
     #[doc = "Bits 18:20 - GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio13_sel(&mut self) -> GPIO_SEL_W<'_, ETM_TASK_P2_CFG_SPEC> {
+    pub fn gpio13_sel(&mut self) -> GPIO_SEL_W<'_, ETM_TASK_P2_CFG_SPEC> {
         GPIO_SEL_W::new(self, 18)
     }
     #[doc = "Bits 24:26 - GPIO choose a etm task channel."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio14_sel(&mut self) -> GPIO_SEL_W<'_, ETM_TASK_P2_CFG_SPEC> {
+    pub fn gpio14_sel(&mut self) -> GPIO_SEL_W<'_, ETM_TASK_P2_CFG_SPEC> {
         GPIO_SEL_W::new(self, 24)
     }
     #[doc = "Enable bit of GPIO response etm task."]
     #[doc = ""]
-    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO_EXT_ETM_TASK_GPIO10_EN` field.</div>"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO10_EN` field.</div>"]
     #[inline(always)]
     pub fn gpio_en(&mut self, n: u8) -> GPIO_EN_W<'_, ETM_TASK_P2_CFG_SPEC> {
         #[allow(clippy::no_effect)]
@@ -185,27 +155,27 @@ impl W {
     }
     #[doc = "Bit 5 - Enable bit of GPIO response etm task."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio10_en(&mut self) -> GPIO_EN_W<'_, ETM_TASK_P2_CFG_SPEC> {
+    pub fn gpio10_en(&mut self) -> GPIO_EN_W<'_, ETM_TASK_P2_CFG_SPEC> {
         GPIO_EN_W::new(self, 5)
     }
     #[doc = "Bit 11 - Enable bit of GPIO response etm task."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio11_en(&mut self) -> GPIO_EN_W<'_, ETM_TASK_P2_CFG_SPEC> {
+    pub fn gpio11_en(&mut self) -> GPIO_EN_W<'_, ETM_TASK_P2_CFG_SPEC> {
         GPIO_EN_W::new(self, 11)
     }
     #[doc = "Bit 17 - Enable bit of GPIO response etm task."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio12_en(&mut self) -> GPIO_EN_W<'_, ETM_TASK_P2_CFG_SPEC> {
+    pub fn gpio12_en(&mut self) -> GPIO_EN_W<'_, ETM_TASK_P2_CFG_SPEC> {
         GPIO_EN_W::new(self, 17)
     }
     #[doc = "Bit 23 - Enable bit of GPIO response etm task."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio13_en(&mut self) -> GPIO_EN_W<'_, ETM_TASK_P2_CFG_SPEC> {
+    pub fn gpio13_en(&mut self) -> GPIO_EN_W<'_, ETM_TASK_P2_CFG_SPEC> {
         GPIO_EN_W::new(self, 23)
     }
     #[doc = "Bit 29 - Enable bit of GPIO response etm task."]
     #[inline(always)]
-    pub fn gpio_ext_etm_task_gpio14_en(&mut self) -> GPIO_EN_W<'_, ETM_TASK_P2_CFG_SPEC> {
+    pub fn gpio14_en(&mut self) -> GPIO_EN_W<'_, ETM_TASK_P2_CFG_SPEC> {
         GPIO_EN_W::new(self, 29)
     }
 }

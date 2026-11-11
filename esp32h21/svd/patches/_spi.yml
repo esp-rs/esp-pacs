@@ -1,7 +1,11 @@
 SPI[01]:
-  _strip: SPI_MEM_
+  _strip:
+    - SPI_MEM_
+    - SPI_
   "*":
-    _strip: SPI_MEM_
+    _strip:
+      - SPI_MEM_
+      - SPI_
 
   _include: ../../../common_patches/int_strip.yaml
 

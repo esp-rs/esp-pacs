@@ -1,0 +1,157 @@
+_add:
+  MODEM_LPCON:
+    description: MODEM_LPCON
+    baseAddress: 0x600AD000
+    addressBlock:
+      - offset: 0x0
+        size: 0x20
+        usage: Registers
+    registers:
+
+      TEST_CONF:
+        description: TEST_CONF
+        addressOffset: 0x0
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+
+      COEX_LP_CLK_CONF:
+        description: COEX_LP_CLK_CONF
+        addressOffset: 0x4
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          CLK_COEX_LP_SEL_OSC_SLOW:
+            bitOffset: 0
+            bitWidth: 1
+          CLK_COEX_LP_SEL_OSC_FAST:
+            bitOffset: 1
+            bitWidth: 1
+          CLK_COEX_LP_SEL_XTAL:
+            bitOffset: 2
+            bitWidth: 1
+          CLK_COEX_LP_SEL_XTAL32K:
+            bitOffset: 3
+            bitWidth: 1
+          CLK_COEX_LP_DIV_NUM:
+            bitOffset: 4
+            bitWidth: 12
+
+      CLK_CONF:
+        description: CLK_CONF
+        addressOffset: 0x8
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          CLK_COEX_EN:
+            bitOffset: 1
+            bitWidth: 1
+          CLK_I2C_MST_EN:
+            bitOffset: 2
+            bitWidth: 1
+          CLK_FE_MEM_EN:
+            bitOffset: 5
+            bitWidth: 1
+
+      CLK_CONF_FORCE_ON:
+        description: CLK_CONF_FORCE_ON
+        addressOffset: 0xC
+        size: 32
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          CLK_COEX_FO:
+            bitOffset: 1
+            bitWidth: 1
+          CLK_I2C_MST_FO:
+            bitOffset: 2
+            bitWidth: 1
+          CLK_FE_MEM_FO:
+            bitOffset: 5
+            bitWidth: 1
+
+      TICK_CONF:
+        description: TICK_CONF
+        addressOffset: 0x10
+        size: 32
+        access: read-only
+        resetValue: 0x00000000
+        fields:
+          PWR_TICK_TARGET:
+            bitOffset: 6
+            bitWidth: 26
+
+      RST_CONF:
+        description: RST_CONF
+        addressOffset: 0x14
+        size: 32
+        access: write-only
+        resetValue: 0x00000000
+        fields:
+          RST_COEX:
+            bitOffset: 1
+            bitWidth: 1
+          RST_I2C_MST:
+            bitOffset: 2
+            bitWidth: 1
+
+      MEM_CONF:
+        description: MEM_CONF
+        addressOffset: 0x18
+        size: 32
+        access: read-write
+        resetValue: 0x00228014
+        fields:
+          AGC_MEM_FORCE_PU:
+            bitOffset: 2
+            bitWidth: 1
+          AGC_MEM_FORCE_PD:
+            bitOffset: 3
+            bitWidth: 1
+          PBUS_MEM_FORCE_PU:
+            bitOffset: 4
+            bitWidth: 1
+          PBUS_MEM_FORCE_PD:
+            bitOffset: 5
+            bitWidth: 1
+          I2C_MST_MEM_FORCE_PU:
+            bitOffset: 8
+            bitWidth: 1
+          I2C_MST_MEM_FORCE_PD:
+            bitOffset: 9
+            bitWidth: 1
+          CHAN_FREQ_MEM_FORCE_PU:
+            bitOffset: 10
+            bitWidth: 1
+          CHAN_FREQ_MEM_FORCE_PD:
+            bitOffset: 11
+            bitWidth: 1
+          MODEM_PWR_MEM_WP:
+            bitOffset: 12
+            bitWidth: 3
+          MODEM_PWR_MEM_WA:
+            bitOffset: 15
+            bitWidth: 3
+          MODEM_PWR_MEM_RA:
+            bitOffset: 18
+            bitWidth: 2
+          MODEM_PWR_MEM_RM:
+            bitOffset: 20
+            bitWidth: 4
+
+      DATE:
+        description: DATE
+        addressOffset: 0x1C
+        size: 32
+        access: read-write
+        resetValue: 0x02209280
+        fields:
+          DATE:
+            bitOffset: 0
+            bitWidth: 28

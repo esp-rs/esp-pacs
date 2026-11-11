@@ -5,12 +5,12 @@ pub type W = crate::W<REGION_FILTER_EN_SPEC>;
 #[doc = "Field `REGION_FILTER_EN` reader - Region filter enable"]
 pub type REGION_FILTER_EN_R = crate::FieldReader;
 #[doc = "Field `REGION_FILTER_EN` writer - Region filter enable"]
-pub type REGION_FILTER_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type REGION_FILTER_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
-    #[doc = "Bits 0:1 - Region filter enable"]
+    #[doc = "Bits 0:3 - Region filter enable"]
     #[inline(always)]
     pub fn region_filter_en(&self) -> REGION_FILTER_EN_R {
-        REGION_FILTER_EN_R::new((self.bits & 3) as u8)
+        REGION_FILTER_EN_R::new((self.bits & 0x0f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:1 - Region filter enable"]
+    #[doc = "Bits 0:3 - Region filter enable"]
     #[inline(always)]
     pub fn region_filter_en(&mut self) -> REGION_FILTER_EN_W<'_, REGION_FILTER_EN_SPEC> {
         REGION_FILTER_EN_W::new(self, 0)
