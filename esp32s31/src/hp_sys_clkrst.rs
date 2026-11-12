@@ -40,7 +40,7 @@ pub struct RegisterBlock {
     parlio_ctrl0: PARLIO_CTRL0,
     parlio_rx_ctrl0: PARLIO_RX_CTRL0,
     parlio_tx_ctrl0: PARLIO_TX_CTRL0,
-    bitsrambler_ctrl0: BITSRAMBLER_CTRL0,
+    bitscrambler_ctrl0: BITSCRAMBLER_CTRL0,
     etm_ctrl0: ETM_CTRL0,
     usb_otghs_ctrl0: USB_OTGHS_CTRL0,
     dma2d_ctrl0: DMA2D_CTRL0,
@@ -324,8 +324,8 @@ impl RegisterBlock {
     }
     #[doc = "0xa4 - need_des"]
     #[inline(always)]
-    pub const fn bitsrambler_ctrl0(&self) -> &BITSRAMBLER_CTRL0 {
-        &self.bitsrambler_ctrl0
+    pub const fn bitscrambler_ctrl0(&self) -> &BITSCRAMBLER_CTRL0 {
+        &self.bitscrambler_ctrl0
     }
     #[doc = "0xa8 - need_des"]
     #[inline(always)]
@@ -891,10 +891,10 @@ pub mod parlio_rx_ctrl0;
 pub type PARLIO_TX_CTRL0 = crate::Reg<parlio_tx_ctrl0::PARLIO_TX_CTRL0_SPEC>;
 #[doc = "need_des"]
 pub mod parlio_tx_ctrl0;
-#[doc = "BITSRAMBLER_CTRL0 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`bitsrambler_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bitsrambler_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@bitsrambler_ctrl0`] module"]
-pub type BITSRAMBLER_CTRL0 = crate::Reg<bitsrambler_ctrl0::BITSRAMBLER_CTRL0_SPEC>;
+#[doc = "BITSCRAMBLER_CTRL0 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`bitscrambler_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bitscrambler_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@bitscrambler_ctrl0`] module"]
+pub type BITSCRAMBLER_CTRL0 = crate::Reg<bitscrambler_ctrl0::BITSCRAMBLER_CTRL0_SPEC>;
 #[doc = "need_des"]
-pub mod bitsrambler_ctrl0;
+pub mod bitscrambler_ctrl0;
 #[doc = "ETM_CTRL0 (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_ctrl0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_ctrl0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_ctrl0`] module"]
 pub type ETM_CTRL0 = crate::Reg<etm_ctrl0::ETM_CTRL0_SPEC>;
 #[doc = "need_des"]

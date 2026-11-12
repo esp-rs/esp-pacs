@@ -94,18 +94,18 @@ pub type FORCE_NORST_LCDCAM_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type FORCE_NORST_ADC_R = crate::BitReader;
 #[doc = "Field `FORCE_NORST_ADC` writer - Reserved"]
 pub type FORCE_NORST_ADC_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_NORST_BITSRAMBLER` reader - Reserved"]
-pub type FORCE_NORST_BITSRAMBLER_R = crate::BitReader;
-#[doc = "Field `FORCE_NORST_BITSRAMBLER` writer - Reserved"]
-pub type FORCE_NORST_BITSRAMBLER_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_NORST_BITSRAMBLER_RX` reader - Reserved"]
-pub type FORCE_NORST_BITSRAMBLER_RX_R = crate::BitReader;
-#[doc = "Field `FORCE_NORST_BITSRAMBLER_RX` writer - Reserved"]
-pub type FORCE_NORST_BITSRAMBLER_RX_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_NORST_BITSRAMBLER_TX` reader - Reserved"]
-pub type FORCE_NORST_BITSRAMBLER_TX_R = crate::BitReader;
-#[doc = "Field `FORCE_NORST_BITSRAMBLER_TX` writer - Reserved"]
-pub type FORCE_NORST_BITSRAMBLER_TX_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_NORST_BITSCRAMBLER` reader - Reserved"]
+pub type FORCE_NORST_BITSCRAMBLER_R = crate::BitReader;
+#[doc = "Field `FORCE_NORST_BITSCRAMBLER` writer - Reserved"]
+pub type FORCE_NORST_BITSCRAMBLER_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_NORST_BITSCRAMBLER_RX` reader - Reserved"]
+pub type FORCE_NORST_BITSCRAMBLER_RX_R = crate::BitReader;
+#[doc = "Field `FORCE_NORST_BITSCRAMBLER_RX` writer - Reserved"]
+pub type FORCE_NORST_BITSCRAMBLER_RX_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `FORCE_NORST_BITSCRAMBLER_TX` reader - Reserved"]
+pub type FORCE_NORST_BITSCRAMBLER_TX_R = crate::BitReader;
+#[doc = "Field `FORCE_NORST_BITSCRAMBLER_TX` writer - Reserved"]
+pub type FORCE_NORST_BITSCRAMBLER_TX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_NORST_H264` reader - Reserved"]
 pub type FORCE_NORST_H264_R = crate::BitReader;
 #[doc = "Field `FORCE_NORST_H264` writer - Reserved"]
@@ -228,18 +228,18 @@ impl R {
     }
     #[doc = "Bit 23 - Reserved"]
     #[inline(always)]
-    pub fn force_norst_bitsrambler(&self) -> FORCE_NORST_BITSRAMBLER_R {
-        FORCE_NORST_BITSRAMBLER_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn force_norst_bitscrambler(&self) -> FORCE_NORST_BITSCRAMBLER_R {
+        FORCE_NORST_BITSCRAMBLER_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    pub fn force_norst_bitsrambler_rx(&self) -> FORCE_NORST_BITSRAMBLER_RX_R {
-        FORCE_NORST_BITSRAMBLER_RX_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn force_norst_bitscrambler_rx(&self) -> FORCE_NORST_BITSCRAMBLER_RX_R {
+        FORCE_NORST_BITSCRAMBLER_RX_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Reserved"]
     #[inline(always)]
-    pub fn force_norst_bitsrambler_tx(&self) -> FORCE_NORST_BITSRAMBLER_TX_R {
-        FORCE_NORST_BITSRAMBLER_TX_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn force_norst_bitscrambler_tx(&self) -> FORCE_NORST_BITSCRAMBLER_TX_R {
+        FORCE_NORST_BITSCRAMBLER_TX_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Reserved"]
     #[inline(always)]
@@ -274,14 +274,14 @@ impl core::fmt::Debug for R {
             .field("force_norst_spi3", &self.force_norst_spi3())
             .field("force_norst_lcdcam", &self.force_norst_lcdcam())
             .field("force_norst_adc", &self.force_norst_adc())
-            .field("force_norst_bitsrambler", &self.force_norst_bitsrambler())
+            .field("force_norst_bitscrambler", &self.force_norst_bitscrambler())
             .field(
-                "force_norst_bitsrambler_rx",
-                &self.force_norst_bitsrambler_rx(),
+                "force_norst_bitscrambler_rx",
+                &self.force_norst_bitscrambler_rx(),
             )
             .field(
-                "force_norst_bitsrambler_tx",
-                &self.force_norst_bitsrambler_tx(),
+                "force_norst_bitscrambler_tx",
+                &self.force_norst_bitscrambler_tx(),
             )
             .field("force_norst_h264", &self.force_norst_h264())
             .finish()
@@ -405,24 +405,24 @@ impl W {
     }
     #[doc = "Bit 23 - Reserved"]
     #[inline(always)]
-    pub fn force_norst_bitsrambler(
+    pub fn force_norst_bitscrambler(
         &mut self,
-    ) -> FORCE_NORST_BITSRAMBLER_W<'_, HP_FORCE_NORST1_SPEC> {
-        FORCE_NORST_BITSRAMBLER_W::new(self, 23)
+    ) -> FORCE_NORST_BITSCRAMBLER_W<'_, HP_FORCE_NORST1_SPEC> {
+        FORCE_NORST_BITSCRAMBLER_W::new(self, 23)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    pub fn force_norst_bitsrambler_rx(
+    pub fn force_norst_bitscrambler_rx(
         &mut self,
-    ) -> FORCE_NORST_BITSRAMBLER_RX_W<'_, HP_FORCE_NORST1_SPEC> {
-        FORCE_NORST_BITSRAMBLER_RX_W::new(self, 24)
+    ) -> FORCE_NORST_BITSCRAMBLER_RX_W<'_, HP_FORCE_NORST1_SPEC> {
+        FORCE_NORST_BITSCRAMBLER_RX_W::new(self, 24)
     }
     #[doc = "Bit 25 - Reserved"]
     #[inline(always)]
-    pub fn force_norst_bitsrambler_tx(
+    pub fn force_norst_bitscrambler_tx(
         &mut self,
-    ) -> FORCE_NORST_BITSRAMBLER_TX_W<'_, HP_FORCE_NORST1_SPEC> {
-        FORCE_NORST_BITSRAMBLER_TX_W::new(self, 25)
+    ) -> FORCE_NORST_BITSCRAMBLER_TX_W<'_, HP_FORCE_NORST1_SPEC> {
+        FORCE_NORST_BITSCRAMBLER_TX_W::new(self, 25)
     }
     #[doc = "Bit 26 - Reserved"]
     #[inline(always)]

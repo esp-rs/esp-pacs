@@ -230,6 +230,7 @@ ADC:
       DB12: [3, "The input voltage of ADC will be attenuated extending the range of measurement by about 12 dB"]
 
 BITSCRAMBLER:
+  _include: ../../../common_patches/bitscrambler.yaml
   _modify:
     TX_STATE:
       resetValue: 0x01

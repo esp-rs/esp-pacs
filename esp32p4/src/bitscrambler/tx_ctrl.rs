@@ -14,9 +14,9 @@ pub type TX_PAUSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type TX_HALT_R = crate::BitReader;
 #[doc = "Field `TX_HALT` writer - write this bit to halt the bitscrambler tx core"]
 pub type TX_HALT_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TX_EOF_MODE` reader - write this bit to ser the bitscrambler tx core EOF signal generating mode which is combined with reg_bitscrambler_tx_tailing_bits, 0: counter by read dma fifo, 0 counter by write peripheral buffer"]
+#[doc = "Field `TX_EOF_MODE` reader - Selects how TX counts trailing bits after input EOF. 0: count bits read from the DMA FIFO. 1: count bits written to the peripheral buffer."]
 pub type TX_EOF_MODE_R = crate::BitReader;
-#[doc = "Field `TX_EOF_MODE` writer - write this bit to ser the bitscrambler tx core EOF signal generating mode which is combined with reg_bitscrambler_tx_tailing_bits, 0: counter by read dma fifo, 0 counter by write peripheral buffer"]
+#[doc = "Field `TX_EOF_MODE` writer - Selects how TX counts trailing bits after input EOF. 0: count bits read from the DMA FIFO. 1: count bits written to the peripheral buffer."]
 pub type TX_EOF_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_COND_MODE` reader - write this bit to specify the LOOP instruction condition mode of bitscrambler tx core, 0: use the little than operator to get the condition, 1: use not equal operator to get the condition"]
 pub type TX_COND_MODE_R = crate::BitReader;
@@ -52,7 +52,7 @@ impl R {
     pub fn tx_halt(&self) -> TX_HALT_R {
         TX_HALT_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - write this bit to ser the bitscrambler tx core EOF signal generating mode which is combined with reg_bitscrambler_tx_tailing_bits, 0: counter by read dma fifo, 0 counter by write peripheral buffer"]
+    #[doc = "Bit 3 - Selects how TX counts trailing bits after input EOF. 0: count bits read from the DMA FIFO. 1: count bits written to the peripheral buffer."]
     #[inline(always)]
     pub fn tx_eof_mode(&self) -> TX_EOF_MODE_R {
         TX_EOF_MODE_R::new(((self.bits >> 3) & 1) != 0)
@@ -109,7 +109,7 @@ impl W {
     pub fn tx_halt(&mut self) -> TX_HALT_W<'_, TX_CTRL_SPEC> {
         TX_HALT_W::new(self, 2)
     }
-    #[doc = "Bit 3 - write this bit to ser the bitscrambler tx core EOF signal generating mode which is combined with reg_bitscrambler_tx_tailing_bits, 0: counter by read dma fifo, 0 counter by write peripheral buffer"]
+    #[doc = "Bit 3 - Selects how TX counts trailing bits after input EOF. 0: count bits read from the DMA FIFO. 1: count bits written to the peripheral buffer."]
     #[inline(always)]
     pub fn tx_eof_mode(&mut self) -> TX_EOF_MODE_W<'_, TX_CTRL_SPEC> {
         TX_EOF_MODE_W::new(self, 3)

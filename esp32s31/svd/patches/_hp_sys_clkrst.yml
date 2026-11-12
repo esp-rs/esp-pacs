@@ -47,7 +47,10 @@ HP_SYS_CLKRST:
     _strip: PARLIO_RX_
   PARLIO_TX_CTRL0:
     _strip: PARLIO_TX_
-  BITSRAMBLER_CTRL0:
+  _modify:
+    BITSRAMBLER_CTRL0:
+      name: BITSCRAMBLER_CTRL0
+  BITSCRAMBLER_CTRL0:
     _strip: BITSRAMBLER_
 
   # Misc peripherals

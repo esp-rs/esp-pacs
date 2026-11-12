@@ -19,7 +19,7 @@ pub struct RegisterBlock {
     hp_gmac_ctrl: HP_GMAC_CTRL,
     hp_pvt0_ctrl: HP_PVT0_CTRL,
     hp_rmt_ctrl: HP_RMT_CTRL,
-    hp_bitsrambler_ctrl: HP_BITSRAMBLER_CTRL,
+    hp_bitscrambler_ctrl: HP_BITSCRAMBLER_CTRL,
     hp_asrc_ctrl: HP_ASRC_CTRL,
     cnnt_sys_reg_ctrl: CNNT_SYS_REG_CTRL,
     hp_flash_ctrl: HP_FLASH_CTRL,
@@ -134,10 +134,10 @@ impl RegisterBlock {
     pub const fn hp_rmt_ctrl(&self) -> &HP_RMT_CTRL {
         &self.hp_rmt_ctrl
     }
-    #[doc = "0x44 - hp_bitsrambler read/write control register"]
+    #[doc = "0x44 - hp_bitscrambler read/write control register"]
     #[inline(always)]
-    pub const fn hp_bitsrambler_ctrl(&self) -> &HP_BITSRAMBLER_CTRL {
-        &self.hp_bitsrambler_ctrl
+    pub const fn hp_bitscrambler_ctrl(&self) -> &HP_BITSCRAMBLER_CTRL {
+        &self.hp_bitscrambler_ctrl
     }
     #[doc = "0x48 - hp_asrc read/write control register"]
     #[inline(always)]
@@ -323,10 +323,10 @@ pub mod hp_pvt0_ctrl;
 pub type HP_RMT_CTRL = crate::Reg<hp_rmt_ctrl::HP_RMT_CTRL_SPEC>;
 #[doc = "hp_rmt read/write control register"]
 pub mod hp_rmt_ctrl;
-#[doc = "HP_BITSRAMBLER_CTRL (rw) register accessor: hp_bitsrambler read/write control register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_bitsrambler_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_bitsrambler_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_bitsrambler_ctrl`] module"]
-pub type HP_BITSRAMBLER_CTRL = crate::Reg<hp_bitsrambler_ctrl::HP_BITSRAMBLER_CTRL_SPEC>;
-#[doc = "hp_bitsrambler read/write control register"]
-pub mod hp_bitsrambler_ctrl;
+#[doc = "HP_BITSCRAMBLER_CTRL (rw) register accessor: hp_bitscrambler read/write control register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_bitscrambler_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_bitscrambler_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_bitscrambler_ctrl`] module"]
+pub type HP_BITSCRAMBLER_CTRL = crate::Reg<hp_bitscrambler_ctrl::HP_BITSCRAMBLER_CTRL_SPEC>;
+#[doc = "hp_bitscrambler read/write control register"]
+pub mod hp_bitscrambler_ctrl;
 #[doc = "HP_ASRC_CTRL (rw) register accessor: hp_asrc read/write control register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_asrc_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_asrc_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_asrc_ctrl`] module"]
 pub type HP_ASRC_CTRL = crate::Reg<hp_asrc_ctrl::HP_ASRC_CTRL_SPEC>;
 #[doc = "hp_asrc read/write control register"]
