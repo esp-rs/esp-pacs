@@ -897,3 +897,6 @@ LP_AON:
   _derive:
     STORE[1-9]:
       _from: STORE0
+
+BITSCRAMBLER:
+  _include: ../../../common_patches/bitscrambler.yaml

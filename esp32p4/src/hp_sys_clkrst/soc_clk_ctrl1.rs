@@ -114,18 +114,18 @@ pub type CRYPTO_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type KEY_MANAGER_SYS_CLK_EN_R = crate::BitReader;
 #[doc = "Field `KEY_MANAGER_SYS_CLK_EN` writer - Reserved"]
 pub type KEY_MANAGER_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `BITSRAMBLER_SYS_CLK_EN` reader - Reserved"]
-pub type BITSRAMBLER_SYS_CLK_EN_R = crate::BitReader;
-#[doc = "Field `BITSRAMBLER_SYS_CLK_EN` writer - Reserved"]
-pub type BITSRAMBLER_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `BITSRAMBLER_RX_SYS_CLK_EN` reader - Reserved"]
-pub type BITSRAMBLER_RX_SYS_CLK_EN_R = crate::BitReader;
-#[doc = "Field `BITSRAMBLER_RX_SYS_CLK_EN` writer - Reserved"]
-pub type BITSRAMBLER_RX_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `BITSRAMBLER_TX_SYS_CLK_EN` reader - Reserved"]
-pub type BITSRAMBLER_TX_SYS_CLK_EN_R = crate::BitReader;
-#[doc = "Field `BITSRAMBLER_TX_SYS_CLK_EN` writer - Reserved"]
-pub type BITSRAMBLER_TX_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BITSCRAMBLER_SYS_CLK_EN` reader - Reserved"]
+pub type BITSCRAMBLER_SYS_CLK_EN_R = crate::BitReader;
+#[doc = "Field `BITSCRAMBLER_SYS_CLK_EN` writer - Reserved"]
+pub type BITSCRAMBLER_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BITSCRAMBLER_RX_SYS_CLK_EN` reader - Reserved"]
+pub type BITSCRAMBLER_RX_SYS_CLK_EN_R = crate::BitReader;
+#[doc = "Field `BITSCRAMBLER_RX_SYS_CLK_EN` writer - Reserved"]
+pub type BITSCRAMBLER_RX_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BITSCRAMBLER_TX_SYS_CLK_EN` reader - Reserved"]
+pub type BITSCRAMBLER_TX_SYS_CLK_EN_R = crate::BitReader;
+#[doc = "Field `BITSCRAMBLER_TX_SYS_CLK_EN` writer - Reserved"]
+pub type BITSCRAMBLER_TX_SYS_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `H264_SYS_CLK_EN` reader - Reserved"]
 pub type H264_SYS_CLK_EN_R = crate::BitReader;
 #[doc = "Field `H264_SYS_CLK_EN` writer - Reserved"]
@@ -273,18 +273,18 @@ impl R {
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
-    pub fn bitsrambler_sys_clk_en(&self) -> BITSRAMBLER_SYS_CLK_EN_R {
-        BITSRAMBLER_SYS_CLK_EN_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn bitscrambler_sys_clk_en(&self) -> BITSCRAMBLER_SYS_CLK_EN_R {
+        BITSCRAMBLER_SYS_CLK_EN_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
-    pub fn bitsrambler_rx_sys_clk_en(&self) -> BITSRAMBLER_RX_SYS_CLK_EN_R {
-        BITSRAMBLER_RX_SYS_CLK_EN_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn bitscrambler_rx_sys_clk_en(&self) -> BITSCRAMBLER_RX_SYS_CLK_EN_R {
+        BITSCRAMBLER_RX_SYS_CLK_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Reserved"]
     #[inline(always)]
-    pub fn bitsrambler_tx_sys_clk_en(&self) -> BITSRAMBLER_TX_SYS_CLK_EN_R {
-        BITSRAMBLER_TX_SYS_CLK_EN_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn bitscrambler_tx_sys_clk_en(&self) -> BITSCRAMBLER_TX_SYS_CLK_EN_R {
+        BITSCRAMBLER_TX_SYS_CLK_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Reserved"]
     #[inline(always)]
@@ -324,14 +324,14 @@ impl core::fmt::Debug for R {
             .field("pvt_sys_clk_en", &self.pvt_sys_clk_en())
             .field("crypto_sys_clk_en", &self.crypto_sys_clk_en())
             .field("key_manager_sys_clk_en", &self.key_manager_sys_clk_en())
-            .field("bitsrambler_sys_clk_en", &self.bitsrambler_sys_clk_en())
+            .field("bitscrambler_sys_clk_en", &self.bitscrambler_sys_clk_en())
             .field(
-                "bitsrambler_rx_sys_clk_en",
-                &self.bitsrambler_rx_sys_clk_en(),
+                "bitscrambler_rx_sys_clk_en",
+                &self.bitscrambler_rx_sys_clk_en(),
             )
             .field(
-                "bitsrambler_tx_sys_clk_en",
-                &self.bitsrambler_tx_sys_clk_en(),
+                "bitscrambler_tx_sys_clk_en",
+                &self.bitscrambler_tx_sys_clk_en(),
             )
             .field("h264_sys_clk_en", &self.h264_sys_clk_en())
             .finish()
@@ -480,22 +480,22 @@ impl W {
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
-    pub fn bitsrambler_sys_clk_en(&mut self) -> BITSRAMBLER_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
-        BITSRAMBLER_SYS_CLK_EN_W::new(self, 28)
+    pub fn bitscrambler_sys_clk_en(&mut self) -> BITSCRAMBLER_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
+        BITSCRAMBLER_SYS_CLK_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
-    pub fn bitsrambler_rx_sys_clk_en(
+    pub fn bitscrambler_rx_sys_clk_en(
         &mut self,
-    ) -> BITSRAMBLER_RX_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
-        BITSRAMBLER_RX_SYS_CLK_EN_W::new(self, 29)
+    ) -> BITSCRAMBLER_RX_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
+        BITSCRAMBLER_RX_SYS_CLK_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - Reserved"]
     #[inline(always)]
-    pub fn bitsrambler_tx_sys_clk_en(
+    pub fn bitscrambler_tx_sys_clk_en(
         &mut self,
-    ) -> BITSRAMBLER_TX_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
-        BITSRAMBLER_TX_SYS_CLK_EN_W::new(self, 30)
+    ) -> BITSCRAMBLER_TX_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
+        BITSCRAMBLER_TX_SYS_CLK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Reserved"]
     #[inline(always)]

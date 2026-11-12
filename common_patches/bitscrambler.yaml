@@ -1,0 +1,9 @@
+TX_CTRL:
+  _modify:
+    TX_EOF_MODE:
+      description: "Selects how TX counts trailing bits after input EOF. 0: count bits read from the DMA FIFO. 1: count bits written to the peripheral buffer."
+
+RX_CTRL:
+  _modify:
+    RX_EOF_MODE:
+      description: "Selects how RX counts trailing bits after input EOF. 0: count bits read from the peripheral buffer. 1: count bits written to the DMA FIFO."

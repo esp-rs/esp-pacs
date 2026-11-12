@@ -1,7 +1,7 @@
-#[doc = "Register `BITSRAMBLER_CTRL0` reader"]
-pub type R = crate::R<BITSRAMBLER_CTRL0_SPEC>;
-#[doc = "Register `BITSRAMBLER_CTRL0` writer"]
-pub type W = crate::W<BITSRAMBLER_CTRL0_SPEC>;
+#[doc = "Register `BITSCRAMBLER_CTRL0` reader"]
+pub type R = crate::R<BITSCRAMBLER_CTRL0_SPEC>;
+#[doc = "Register `BITSCRAMBLER_CTRL0` writer"]
+pub type W = crate::W<BITSCRAMBLER_CTRL0_SPEC>;
 #[doc = "Field `SYS_CLK_EN` reader - need_des"]
 pub type SYS_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SYS_CLK_EN` writer - need_des"]
@@ -88,7 +88,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("BITSRAMBLER_CTRL0")
+        f.debug_struct("BITSCRAMBLER_CTRL0")
             .field("sys_clk_en", &self.sys_clk_en())
             .field("rst_en", &self.rst_en())
             .field("force_norst", &self.force_norst())
@@ -104,60 +104,60 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn sys_clk_en(&mut self) -> SYS_CLK_EN_W<'_, BITSRAMBLER_CTRL0_SPEC> {
+    pub fn sys_clk_en(&mut self) -> SYS_CLK_EN_W<'_, BITSCRAMBLER_CTRL0_SPEC> {
         SYS_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn rst_en(&mut self) -> RST_EN_W<'_, BITSRAMBLER_CTRL0_SPEC> {
+    pub fn rst_en(&mut self) -> RST_EN_W<'_, BITSCRAMBLER_CTRL0_SPEC> {
         RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn force_norst(&mut self) -> FORCE_NORST_W<'_, BITSRAMBLER_CTRL0_SPEC> {
+    pub fn force_norst(&mut self) -> FORCE_NORST_W<'_, BITSCRAMBLER_CTRL0_SPEC> {
         FORCE_NORST_W::new(self, 2)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
-    pub fn rx_sys_clk_en(&mut self) -> RX_SYS_CLK_EN_W<'_, BITSRAMBLER_CTRL0_SPEC> {
+    pub fn rx_sys_clk_en(&mut self) -> RX_SYS_CLK_EN_W<'_, BITSCRAMBLER_CTRL0_SPEC> {
         RX_SYS_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
-    pub fn rx_rst_en(&mut self) -> RX_RST_EN_W<'_, BITSRAMBLER_CTRL0_SPEC> {
+    pub fn rx_rst_en(&mut self) -> RX_RST_EN_W<'_, BITSCRAMBLER_CTRL0_SPEC> {
         RX_RST_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    pub fn rx_force_norst(&mut self) -> RX_FORCE_NORST_W<'_, BITSRAMBLER_CTRL0_SPEC> {
+    pub fn rx_force_norst(&mut self) -> RX_FORCE_NORST_W<'_, BITSCRAMBLER_CTRL0_SPEC> {
         RX_FORCE_NORST_W::new(self, 5)
     }
     #[doc = "Bit 6 - need_des"]
     #[inline(always)]
-    pub fn tx_sys_clk_en(&mut self) -> TX_SYS_CLK_EN_W<'_, BITSRAMBLER_CTRL0_SPEC> {
+    pub fn tx_sys_clk_en(&mut self) -> TX_SYS_CLK_EN_W<'_, BITSCRAMBLER_CTRL0_SPEC> {
         TX_SYS_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - need_des"]
     #[inline(always)]
-    pub fn tx_rst_en(&mut self) -> TX_RST_EN_W<'_, BITSRAMBLER_CTRL0_SPEC> {
+    pub fn tx_rst_en(&mut self) -> TX_RST_EN_W<'_, BITSCRAMBLER_CTRL0_SPEC> {
         TX_RST_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - need_des"]
     #[inline(always)]
-    pub fn tx_force_norst(&mut self) -> TX_FORCE_NORST_W<'_, BITSRAMBLER_CTRL0_SPEC> {
+    pub fn tx_force_norst(&mut self) -> TX_FORCE_NORST_W<'_, BITSCRAMBLER_CTRL0_SPEC> {
         TX_FORCE_NORST_W::new(self, 8)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`bitsrambler_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bitsrambler_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct BITSRAMBLER_CTRL0_SPEC;
-impl crate::RegisterSpec for BITSRAMBLER_CTRL0_SPEC {
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`bitscrambler_ctrl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bitscrambler_ctrl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct BITSCRAMBLER_CTRL0_SPEC;
+impl crate::RegisterSpec for BITSCRAMBLER_CTRL0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`bitsrambler_ctrl0::R`](R) reader structure"]
-impl crate::Readable for BITSRAMBLER_CTRL0_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`bitsrambler_ctrl0::W`](W) writer structure"]
-impl crate::Writable for BITSRAMBLER_CTRL0_SPEC {
+#[doc = "`read()` method returns [`bitscrambler_ctrl0::R`](R) reader structure"]
+impl crate::Readable for BITSCRAMBLER_CTRL0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`bitscrambler_ctrl0::W`](W) writer structure"]
+impl crate::Writable for BITSCRAMBLER_CTRL0_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets BITSRAMBLER_CTRL0 to value 0"]
-impl crate::Resettable for BITSRAMBLER_CTRL0_SPEC {}
+#[doc = "`reset()` method sets BITSCRAMBLER_CTRL0 to value 0"]
+impl crate::Resettable for BITSCRAMBLER_CTRL0_SPEC {}

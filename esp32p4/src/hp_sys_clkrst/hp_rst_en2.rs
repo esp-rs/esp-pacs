@@ -46,18 +46,18 @@ pub type RST_EN_LCDCAM_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type RST_EN_ADC_R = crate::BitReader;
 #[doc = "Field `RST_EN_ADC` writer - Reserved"]
 pub type RST_EN_ADC_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RST_EN_BITSRAMBLER` reader - Reserved"]
-pub type RST_EN_BITSRAMBLER_R = crate::BitReader;
-#[doc = "Field `RST_EN_BITSRAMBLER` writer - Reserved"]
-pub type RST_EN_BITSRAMBLER_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RST_EN_BITSRAMBLER_RX` reader - Reserved"]
-pub type RST_EN_BITSRAMBLER_RX_R = crate::BitReader;
-#[doc = "Field `RST_EN_BITSRAMBLER_RX` writer - Reserved"]
-pub type RST_EN_BITSRAMBLER_RX_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RST_EN_BITSRAMBLER_TX` reader - Reserved"]
-pub type RST_EN_BITSRAMBLER_TX_R = crate::BitReader;
-#[doc = "Field `RST_EN_BITSRAMBLER_TX` writer - Reserved"]
-pub type RST_EN_BITSRAMBLER_TX_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RST_EN_BITSCRAMBLER` reader - Reserved"]
+pub type RST_EN_BITSCRAMBLER_R = crate::BitReader;
+#[doc = "Field `RST_EN_BITSCRAMBLER` writer - Reserved"]
+pub type RST_EN_BITSCRAMBLER_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RST_EN_BITSCRAMBLER_RX` reader - Reserved"]
+pub type RST_EN_BITSCRAMBLER_RX_R = crate::BitReader;
+#[doc = "Field `RST_EN_BITSCRAMBLER_RX` writer - Reserved"]
+pub type RST_EN_BITSCRAMBLER_RX_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RST_EN_BITSCRAMBLER_TX` reader - Reserved"]
+pub type RST_EN_BITSCRAMBLER_TX_R = crate::BitReader;
+#[doc = "Field `RST_EN_BITSCRAMBLER_TX` writer - Reserved"]
+pub type RST_EN_BITSCRAMBLER_TX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST_EN_CRYPTO` reader - Reserved"]
 pub type RST_EN_CRYPTO_R = crate::BitReader;
 #[doc = "Field `RST_EN_CRYPTO` writer - Reserved"]
@@ -160,18 +160,18 @@ impl R {
     }
     #[doc = "Bit 11 - Reserved"]
     #[inline(always)]
-    pub fn rst_en_bitsrambler(&self) -> RST_EN_BITSRAMBLER_R {
-        RST_EN_BITSRAMBLER_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn rst_en_bitscrambler(&self) -> RST_EN_BITSCRAMBLER_R {
+        RST_EN_BITSCRAMBLER_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Reserved"]
     #[inline(always)]
-    pub fn rst_en_bitsrambler_rx(&self) -> RST_EN_BITSRAMBLER_RX_R {
-        RST_EN_BITSRAMBLER_RX_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn rst_en_bitscrambler_rx(&self) -> RST_EN_BITSCRAMBLER_RX_R {
+        RST_EN_BITSCRAMBLER_RX_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Reserved"]
     #[inline(always)]
-    pub fn rst_en_bitsrambler_tx(&self) -> RST_EN_BITSRAMBLER_TX_R {
-        RST_EN_BITSRAMBLER_TX_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn rst_en_bitscrambler_tx(&self) -> RST_EN_BITSCRAMBLER_TX_R {
+        RST_EN_BITSCRAMBLER_TX_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Reserved"]
     #[inline(always)]
@@ -244,9 +244,9 @@ impl core::fmt::Debug for R {
             .field("rst_en_spi3", &self.rst_en_spi3())
             .field("rst_en_lcdcam", &self.rst_en_lcdcam())
             .field("rst_en_adc", &self.rst_en_adc())
-            .field("rst_en_bitsrambler", &self.rst_en_bitsrambler())
-            .field("rst_en_bitsrambler_rx", &self.rst_en_bitsrambler_rx())
-            .field("rst_en_bitsrambler_tx", &self.rst_en_bitsrambler_tx())
+            .field("rst_en_bitscrambler", &self.rst_en_bitscrambler())
+            .field("rst_en_bitscrambler_rx", &self.rst_en_bitscrambler_rx())
+            .field("rst_en_bitscrambler_tx", &self.rst_en_bitscrambler_tx())
             .field("rst_en_crypto", &self.rst_en_crypto())
             .field("rst_en_sec", &self.rst_en_sec())
             .field("rst_en_aes", &self.rst_en_aes())
@@ -319,18 +319,18 @@ impl W {
     }
     #[doc = "Bit 11 - Reserved"]
     #[inline(always)]
-    pub fn rst_en_bitsrambler(&mut self) -> RST_EN_BITSRAMBLER_W<'_, HP_RST_EN2_SPEC> {
-        RST_EN_BITSRAMBLER_W::new(self, 11)
+    pub fn rst_en_bitscrambler(&mut self) -> RST_EN_BITSCRAMBLER_W<'_, HP_RST_EN2_SPEC> {
+        RST_EN_BITSCRAMBLER_W::new(self, 11)
     }
     #[doc = "Bit 12 - Reserved"]
     #[inline(always)]
-    pub fn rst_en_bitsrambler_rx(&mut self) -> RST_EN_BITSRAMBLER_RX_W<'_, HP_RST_EN2_SPEC> {
-        RST_EN_BITSRAMBLER_RX_W::new(self, 12)
+    pub fn rst_en_bitscrambler_rx(&mut self) -> RST_EN_BITSCRAMBLER_RX_W<'_, HP_RST_EN2_SPEC> {
+        RST_EN_BITSCRAMBLER_RX_W::new(self, 12)
     }
     #[doc = "Bit 13 - Reserved"]
     #[inline(always)]
-    pub fn rst_en_bitsrambler_tx(&mut self) -> RST_EN_BITSRAMBLER_TX_W<'_, HP_RST_EN2_SPEC> {
-        RST_EN_BITSRAMBLER_TX_W::new(self, 13)
+    pub fn rst_en_bitscrambler_tx(&mut self) -> RST_EN_BITSCRAMBLER_TX_W<'_, HP_RST_EN2_SPEC> {
+        RST_EN_BITSCRAMBLER_TX_W::new(self, 13)
     }
     #[doc = "Bit 14 - Reserved"]
     #[inline(always)]

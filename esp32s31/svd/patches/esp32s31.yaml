@@ -77,6 +77,41 @@ LP_ANA:
 
   _include: "../../../common_patches/lpana_int_strip.yaml"
 
+HP_PERI0_PMS:
+  _modify:
+    HP_BITSRAMBLER_CTRL:
+      name: HP_BITSCRAMBLER_CTRL
+      description: "hp_bitscrambler read/write control register"
+  HP_BITSCRAMBLER_CTRL:
+    _modify:
+      READ_TEE_HP_BITSRAMBLER:
+        name: READ_TEE_HP_BITSCRAMBLER
+        description: "Configures hp_bitscrambler registers read permission in tee mode.\\\\\n0: can not be read \\\\\n1: can be read \\\\"
+      READ_REE0_HP_BITSRAMBLER:
+        name: READ_REE0_HP_BITSCRAMBLER
+        description: "Configures hp_bitscrambler registers read permission in ree0 mode.\\\\\n0: can not be read \\\\\n1: can be read \\\\"
+      READ_REE1_HP_BITSRAMBLER:
+        name: READ_REE1_HP_BITSCRAMBLER
+        description: "Configures hp_bitscrambler registers read permission in ree1 mode.\\\\\n0: can not be read \\\\\n1: can be read \\\\"
+      READ_REE2_HP_BITSRAMBLER:
+        name: READ_REE2_HP_BITSCRAMBLER
+        description: "Configures hp_bitscrambler registers read permission in ree2 mode.\\\\\n0: can not be read \\\\\n1: can be read \\\\"
+      WRITE_TEE_HP_BITSRAMBLER:
+        name: WRITE_TEE_HP_BITSCRAMBLER
+        description: "Configures hp_bitscrambler registers write permission in tee mode.\\\\\n0: can not be write \\\\\n1: can be write \\\\"
+      WRITE_REE0_HP_BITSRAMBLER:
+        name: WRITE_REE0_HP_BITSCRAMBLER
+        description: "Configures hp_bitscrambler registers write permission in ree0 mode.\\\\\n0: can not be write \\\\\n1: can be write \\\\"
+      WRITE_REE1_HP_BITSRAMBLER:
+        name: WRITE_REE1_HP_BITSCRAMBLER
+        description: "Configures hp_bitscrambler registers write permission in ree1 mode.\\\\\n0: can not be write \\\\\n1: can be write \\\\"
+      WRITE_REE2_HP_BITSRAMBLER:
+        name: WRITE_REE2_HP_BITSCRAMBLER
+        description: "Configures hp_bitscrambler registers write permission in ree2 mode.\\\\\n0: can not be write \\\\\n1: can be write \\\\"
+      HP_BITSRAMBLER_LOCK:
+        name: HP_BITSCRAMBLER_LOCK
+        description: "Set 1 to lock hp_bitscrambler peri_apm configuration"
+
 SYSTIMER:
   _include:
     - ../../../common_patches/int_strip.yaml
@@ -344,3 +379,6 @@ TIMG1:
 
 "EFUSE,I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU,MCPWM0":
   _include: ../../../common_patches/int_strip.yaml
+
+BITSCRAMBLER:
+  _include: ../../../common_patches/bitscrambler.yaml
