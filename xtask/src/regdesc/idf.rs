@@ -23,6 +23,8 @@ pub fn csv_type_overrides() -> &'static [(&'static str, &'static str)] {
         ("ecc_mult_reg.csv", "ECC"),
         ("efuse_mem_reg.csv", "EFUSE"),
         ("gpio_ext_reg.csv", "GPIOSD"),
+        ("hp_system_reg.csv", "HP_SYSTEM"),
+        ("interrupt_matrix_reg.csv", "INTERRUPT_CORE0"),
         ("spi_mem_reg.csv", "SPI0"),
         ("spi1_mem_reg.csv", "SPI1"),
         ("spi2_reg.csv", "SPI2"),

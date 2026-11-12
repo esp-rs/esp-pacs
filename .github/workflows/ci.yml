@@ -45,7 +45,7 @@ jobs:
           - name: riscv32imac
             arch: riscv
             target: riscv32imac-unknown-none-elf
-            packages: "esp32c5 esp32c6 esp32c61 esp32h2 esp32c6-lp"
+            packages: "esp32c5 esp32c6 esp32c61 esp32h2 esp32h21 esp32c6-lp"
 
           - name: riscv32imafc
             arch: riscv

@@ -1,0 +1,54 @@
+PMU:
+  _modify:
+    IMM_HP_CK_POWER:
+      access: read-write
+    # CSV placed TOUCH_PWR_CTRL at 0x1bc; IDF has DCM_BOOST_CTRL there and
+    # TOUCH_PWR_CTRL at 0x1c0.
+    TOUCH_PWR_CTRL:
+      addressOffset: 0x1c0
+
+  _add:
+    DCM_BOOST_CTRL:
+      description: DCM boost control register
+      addressOffset: 0x1bc
+      size: 0x20
+      resetValue: 0x3b800000
+      access: read-write
+      fields:
+        DCDC_BOOST_CCM_CTRLEN:
+          description: need_des
+          bitOffset: 24
+          bitWidth: 1
+          access: read-write
+        DCDC_BOOST_CCM_ENB:
+          description: need_des
+          bitOffset: 25
+          bitWidth: 1
+          access: read-write
+        DCDC_BOOST_EN:
+          description: need_des
+          bitOffset: 26
+          bitWidth: 1
+          access: read-write
+        DCDC_BOOST_DREG:
+          description: need_des
+          bitOffset: 27
+          bitWidth: 5
+          access: read-write
+    BLE_BANDGAP_CTRL:
+      description: BLE bandgap control register
+      addressOffset: 0x1c4
+      size: 0x20
+      resetValue: 0x3c000000
+      access: read-write
+      fields:
+        EXT_OCODE:
+          description: need_des
+          bitOffset: 23
+          bitWidth: 8
+          access: read-write
+        EXT_FORCE_OCODE:
+          description: need_des
+          bitOffset: 31
+          bitWidth: 1
+          access: read-write

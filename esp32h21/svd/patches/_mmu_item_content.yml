@@ -1,0 +1,23 @@
+SPI0:
+  # https://github.com/espressif/esp-idf/blob/188e3e55bb20505b5fa9dc49ee390bf42c58b4ee/components/esp_hal_cache/esp32h21/include/hal/mmu_ll.h#L257
+  _modify:
+    MMU_ITEM_CONTENT:
+      resetValue: 0
+  MMU_ITEM_CONTENT:
+    _delete: [MMU_ITEM_CONTENT]
+    _add:
+      PADDR:
+        description: Physical page number
+        bitOffset: 0
+        bitWidth: 9
+        access: read-write
+      VALID:
+        description: Entry is valid when set
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      SENSITIVE:
+        description: Decrypt via flash encryption when set
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write

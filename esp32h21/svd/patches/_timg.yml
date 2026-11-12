@@ -1,0 +1,23 @@
+TIMG0:
+  _modify:
+    "T%sCONFIG":
+      name: "T0CONFIG"
+    "T%sLO":
+      name: "T0LO"
+    "T%sHI":
+      name: "T0HI"
+    "T%sUPDATE":
+      name: "T0UPDATE"
+    "T%sALARMLO":
+      name: "T0ALARMLO"
+    "T%sALARMHI":
+      name: "T0ALARMHI"
+    "T%sLOADLO":
+      name: "T0LOADLO"
+    "T%sLOADHI":
+      name: "T0LOADHI"
+    "T%sLOAD":
+      name: "T0LOAD"
+
+  "*":
+    _strip: "T_"
