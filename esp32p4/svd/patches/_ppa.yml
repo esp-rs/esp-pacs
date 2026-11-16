@@ -1,1 +1,50 @@
-PPA: {}
+PPA:
+  _modify:
+    SR_BYTE_ORDER:
+      name: SRM_BYTE_ORDER
+    SR_COLOR_MODE:
+      name: SRM_COLOR_MODE
+    SR_FIX_ALPHA:
+      name: SRM_FIX_ALPHA
+    SR_MEM_PD:
+      name: SRM_MEM_PD
+    SR_PARAM_ERR_ST:
+      name: SRM_PARAM_ERR_ST
+    SR_SCAL_ROTATE:
+      name: SRM_SCAL_ROTATE
+    SR_STATUS:
+      name: SRM_STATUS
+
+  SRM_BYTE_ORDER,SRM_FIX_ALPHA,SRM_MEM_PD,SRM_STATUS:
+    _strip: SR_
+    _prefix: SRM_
+  INT_RAW,INT_ST,INT_ENA,INT_CLR:
+    _modify:
+      SR_EOF:
+        name: SRM_EOF
+      SR_PARAM_CFG_ERR:
+        name: SRM_PARAM_CFG_ERR
+  SRM_COLOR_MODE:
+    _modify:
+      SR_RX_CM:
+        name: SRM_RX_CM
+      SR_TX_CM:
+        name: SRM_TX_CM
+  SRM_SCAL_ROTATE:
+    _strip: SR_
+    _prefix: SRM_
+    _modify:
+      SRM_SCAL_ROTATE_RST:
+        name: SCAL_ROTATE_RST
+      SRM_SCAL_ROTATE_START:
+        name: SCAL_ROTATE_START
+  SRM_PARAM_ERR_ST:
+    _modify:
+      X_YUV420_RX_SCALE_ERR_ST:
+        name: X_YUV_RX_SCALE_ERR_ST
+      Y_YUV420_RX_SCALE_ERR_ST:
+        name: Y_YUV_RX_SCALE_ERR_ST
+      X_YUV420_TX_SCALE_ERR_ST:
+        name: X_YUV_TX_SCALE_ERR_ST
+      Y_YUV420_TX_SCALE_ERR_ST:
+        name: Y_YUV_TX_SCALE_ERR_ST
