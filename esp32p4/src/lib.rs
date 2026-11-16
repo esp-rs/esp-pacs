@@ -98,6 +98,11 @@ extern "C" {
     fn I3C();
     fn I3C_SLV();
     fn USB_FS();
+    fn DMA2D_IN_CH0();
+    fn DMA2D_IN_CH1();
+    fn DMA2D_OUT_CH0();
+    fn DMA2D_OUT_CH1();
+    fn DMA2D_OUT_CH2();
     fn HP_SYS();
     fn PCNT();
     fn PAU();
@@ -116,6 +121,8 @@ extern "C" {
     fn H264_DMA2D_IN_CH5();
     fn H264_REG();
     fn ASSIST_DEBUG();
+    fn DMA2D_IN_CH2();
+    fn DMA2D_OUT_CH3();
 }
 #[doc(hidden)]
 #[repr(C)]
@@ -127,7 +134,7 @@ pub union Vector {
 #[doc(hidden)]
 #[link_section = ".rwtext.interrupt"]
 #[no_mangle]
-pub static __EXTERNAL_INTERRUPTS: [Vector; 128] = [
+pub static __EXTERNAL_INTERRUPTS: [Vector; 135] = [
     Vector { _reserved: 0 },
     Vector { _handler: LP_WDT },
     Vector {
@@ -304,11 +311,21 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 128] = [
     Vector { _handler: I3C },
     Vector { _handler: I3C_SLV },
     Vector { _handler: USB_FS },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: DMA2D_IN_CH0,
+    },
+    Vector {
+        _handler: DMA2D_IN_CH1,
+    },
+    Vector {
+        _handler: DMA2D_OUT_CH0,
+    },
+    Vector {
+        _handler: DMA2D_OUT_CH1,
+    },
+    Vector {
+        _handler: DMA2D_OUT_CH2,
+    },
     Vector { _reserved: 0 },
     Vector { _handler: HP_SYS },
     Vector { _handler: PCNT },
@@ -355,6 +372,17 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 128] = [
     Vector { _handler: H264_REG },
     Vector {
         _handler: ASSIST_DEBUG,
+    },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector {
+        _handler: DMA2D_IN_CH2,
+    },
+    Vector {
+        _handler: DMA2D_OUT_CH3,
     },
 ];
 #[doc(hidden)]
@@ -1269,3 +1297,12 @@ impl core::fmt::Debug for GMAC {
 }
 #[doc = "Ethernet MAC configuration and control registers"]
 pub mod gmac;
+#[doc = "DMA2D Peripheral"]
+pub type DMA2D = crate::Periph<dma2d::RegisterBlock, 0x5008_8000>;
+impl core::fmt::Debug for DMA2D {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA2D").finish()
+    }
+}
+#[doc = "DMA2D Peripheral"]
+pub mod dma2d;

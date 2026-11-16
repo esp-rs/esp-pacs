@@ -10,13 +10,13 @@ pub struct RegisterBlock {
     int_st: INT_ST,
     int_ena: INT_ENA,
     int_clr: INT_CLR,
-    sr_color_mode: SR_COLOR_MODE,
+    srm_color_mode: SRM_COLOR_MODE,
     blend_color_mode: BLEND_COLOR_MODE,
-    sr_byte_order: SR_BYTE_ORDER,
+    srm_byte_order: SRM_BYTE_ORDER,
     blend_byte_order: BLEND_BYTE_ORDER,
     _reserved11: [u8; 0x04],
     blend_trans_mode: BLEND_TRANS_MODE,
-    sr_fix_alpha: SR_FIX_ALPHA,
+    srm_fix_alpha: SRM_FIX_ALPHA,
     blend_tx_size: BLEND_TX_SIZE,
     blend_fix_alpha: BLEND_FIX_ALPHA,
     _reserved15: [u8; 0x04],
@@ -27,13 +27,13 @@ pub struct RegisterBlock {
     ck_bg_low: CK_BG_LOW,
     ck_bg_high: CK_BG_HIGH,
     ck_default: CK_DEFAULT,
-    sr_scal_rotate: SR_SCAL_ROTATE,
-    sr_mem_pd: SR_MEM_PD,
+    srm_scal_rotate: SRM_SCAL_ROTATE,
+    srm_mem_pd: SRM_MEM_PD,
     reg_conf: REG_CONF,
     clut_cnt: CLUT_CNT,
     blend_st: BLEND_ST,
-    sr_param_err_st: SR_PARAM_ERR_ST,
-    sr_status: SR_STATUS,
+    srm_param_err_st: SRM_PARAM_ERR_ST,
+    srm_status: SRM_STATUS,
     eco_low: ECO_LOW,
     eco_high: ECO_HIGH,
     eco_cell_ctrl: ECO_CELL_CTRL,
@@ -82,8 +82,8 @@ impl RegisterBlock {
     }
     #[doc = "0x20 - Scaling and rotating engine color mode register"]
     #[inline(always)]
-    pub const fn sr_color_mode(&self) -> &SR_COLOR_MODE {
-        &self.sr_color_mode
+    pub const fn srm_color_mode(&self) -> &SRM_COLOR_MODE {
+        &self.srm_color_mode
     }
     #[doc = "0x24 - blending engine color mode register"]
     #[inline(always)]
@@ -92,8 +92,8 @@ impl RegisterBlock {
     }
     #[doc = "0x28 - Scaling and rotating engine byte order register"]
     #[inline(always)]
-    pub const fn sr_byte_order(&self) -> &SR_BYTE_ORDER {
-        &self.sr_byte_order
+    pub const fn srm_byte_order(&self) -> &SRM_BYTE_ORDER {
+        &self.srm_byte_order
     }
     #[doc = "0x2c - Blending engine byte order register"]
     #[inline(always)]
@@ -107,8 +107,8 @@ impl RegisterBlock {
     }
     #[doc = "0x38 - Scaling and rotating engine alpha override register"]
     #[inline(always)]
-    pub const fn sr_fix_alpha(&self) -> &SR_FIX_ALPHA {
-        &self.sr_fix_alpha
+    pub const fn srm_fix_alpha(&self) -> &SRM_FIX_ALPHA {
+        &self.srm_fix_alpha
     }
     #[doc = "0x3c - Fix pixel filling mode image size register"]
     #[inline(always)]
@@ -157,13 +157,13 @@ impl RegisterBlock {
     }
     #[doc = "0x64 - Scaling and rotating coefficient register"]
     #[inline(always)]
-    pub const fn sr_scal_rotate(&self) -> &SR_SCAL_ROTATE {
-        &self.sr_scal_rotate
+    pub const fn srm_scal_rotate(&self) -> &SRM_SCAL_ROTATE {
+        &self.srm_scal_rotate
     }
     #[doc = "0x68 - SR memory power done register"]
     #[inline(always)]
-    pub const fn sr_mem_pd(&self) -> &SR_MEM_PD {
-        &self.sr_mem_pd
+    pub const fn srm_mem_pd(&self) -> &SRM_MEM_PD {
+        &self.srm_mem_pd
     }
     #[doc = "0x6c - Register clock enable register"]
     #[inline(always)]
@@ -182,13 +182,13 @@ impl RegisterBlock {
     }
     #[doc = "0x78 - Scaling and rotating coefficient error register"]
     #[inline(always)]
-    pub const fn sr_param_err_st(&self) -> &SR_PARAM_ERR_ST {
-        &self.sr_param_err_st
+    pub const fn srm_param_err_st(&self) -> &SRM_PARAM_ERR_ST {
+        &self.srm_param_err_st
     }
     #[doc = "0x7c - SR FSM register"]
     #[inline(always)]
-    pub const fn sr_status(&self) -> &SR_STATUS {
-        &self.sr_status
+    pub const fn srm_status(&self) -> &SRM_STATUS {
+        &self.srm_status
     }
     #[doc = "0x80 - Reserved."]
     #[inline(always)]
@@ -259,18 +259,18 @@ pub mod int_ena;
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "Interrupt clear bits"]
 pub mod int_clr;
-#[doc = "SR_COLOR_MODE (rw) register accessor: Scaling and rotating engine color mode register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr_color_mode::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sr_color_mode::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sr_color_mode`] module"]
-pub type SR_COLOR_MODE = crate::Reg<sr_color_mode::SR_COLOR_MODE_SPEC>;
+#[doc = "SRM_COLOR_MODE (rw) register accessor: Scaling and rotating engine color mode register\n\nYou can [`read`](crate::Reg::read) this register and get [`srm_color_mode::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`srm_color_mode::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@srm_color_mode`] module"]
+pub type SRM_COLOR_MODE = crate::Reg<srm_color_mode::SRM_COLOR_MODE_SPEC>;
 #[doc = "Scaling and rotating engine color mode register"]
-pub mod sr_color_mode;
+pub mod srm_color_mode;
 #[doc = "BLEND_COLOR_MODE (rw) register accessor: blending engine color mode register\n\nYou can [`read`](crate::Reg::read) this register and get [`blend_color_mode::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`blend_color_mode::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blend_color_mode`] module"]
 pub type BLEND_COLOR_MODE = crate::Reg<blend_color_mode::BLEND_COLOR_MODE_SPEC>;
 #[doc = "blending engine color mode register"]
 pub mod blend_color_mode;
-#[doc = "SR_BYTE_ORDER (rw) register accessor: Scaling and rotating engine byte order register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr_byte_order::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sr_byte_order::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sr_byte_order`] module"]
-pub type SR_BYTE_ORDER = crate::Reg<sr_byte_order::SR_BYTE_ORDER_SPEC>;
+#[doc = "SRM_BYTE_ORDER (rw) register accessor: Scaling and rotating engine byte order register\n\nYou can [`read`](crate::Reg::read) this register and get [`srm_byte_order::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`srm_byte_order::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@srm_byte_order`] module"]
+pub type SRM_BYTE_ORDER = crate::Reg<srm_byte_order::SRM_BYTE_ORDER_SPEC>;
 #[doc = "Scaling and rotating engine byte order register"]
-pub mod sr_byte_order;
+pub mod srm_byte_order;
 #[doc = "BLEND_BYTE_ORDER (rw) register accessor: Blending engine byte order register\n\nYou can [`read`](crate::Reg::read) this register and get [`blend_byte_order::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`blend_byte_order::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blend_byte_order`] module"]
 pub type BLEND_BYTE_ORDER = crate::Reg<blend_byte_order::BLEND_BYTE_ORDER_SPEC>;
 #[doc = "Blending engine byte order register"]
@@ -279,10 +279,10 @@ pub mod blend_byte_order;
 pub type BLEND_TRANS_MODE = crate::Reg<blend_trans_mode::BLEND_TRANS_MODE_SPEC>;
 #[doc = "Blending engine mode configure register"]
 pub mod blend_trans_mode;
-#[doc = "SR_FIX_ALPHA (rw) register accessor: Scaling and rotating engine alpha override register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr_fix_alpha::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sr_fix_alpha::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sr_fix_alpha`] module"]
-pub type SR_FIX_ALPHA = crate::Reg<sr_fix_alpha::SR_FIX_ALPHA_SPEC>;
+#[doc = "SRM_FIX_ALPHA (rw) register accessor: Scaling and rotating engine alpha override register\n\nYou can [`read`](crate::Reg::read) this register and get [`srm_fix_alpha::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`srm_fix_alpha::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@srm_fix_alpha`] module"]
+pub type SRM_FIX_ALPHA = crate::Reg<srm_fix_alpha::SRM_FIX_ALPHA_SPEC>;
 #[doc = "Scaling and rotating engine alpha override register"]
-pub mod sr_fix_alpha;
+pub mod srm_fix_alpha;
 #[doc = "BLEND_TX_SIZE (rw) register accessor: Fix pixel filling mode image size register\n\nYou can [`read`](crate::Reg::read) this register and get [`blend_tx_size::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`blend_tx_size::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blend_tx_size`] module"]
 pub type BLEND_TX_SIZE = crate::Reg<blend_tx_size::BLEND_TX_SIZE_SPEC>;
 #[doc = "Fix pixel filling mode image size register"]
@@ -319,14 +319,14 @@ pub mod ck_bg_high;
 pub type CK_DEFAULT = crate::Reg<ck_default::CK_DEFAULT_SPEC>;
 #[doc = "default value when foreground and background both in color key range"]
 pub mod ck_default;
-#[doc = "SR_SCAL_ROTATE (rw) register accessor: Scaling and rotating coefficient register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr_scal_rotate::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sr_scal_rotate::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sr_scal_rotate`] module"]
-pub type SR_SCAL_ROTATE = crate::Reg<sr_scal_rotate::SR_SCAL_ROTATE_SPEC>;
+#[doc = "SRM_SCAL_ROTATE (rw) register accessor: Scaling and rotating coefficient register\n\nYou can [`read`](crate::Reg::read) this register and get [`srm_scal_rotate::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`srm_scal_rotate::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@srm_scal_rotate`] module"]
+pub type SRM_SCAL_ROTATE = crate::Reg<srm_scal_rotate::SRM_SCAL_ROTATE_SPEC>;
 #[doc = "Scaling and rotating coefficient register"]
-pub mod sr_scal_rotate;
-#[doc = "SR_MEM_PD (rw) register accessor: SR memory power done register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr_mem_pd::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sr_mem_pd::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sr_mem_pd`] module"]
-pub type SR_MEM_PD = crate::Reg<sr_mem_pd::SR_MEM_PD_SPEC>;
+pub mod srm_scal_rotate;
+#[doc = "SRM_MEM_PD (rw) register accessor: SR memory power done register\n\nYou can [`read`](crate::Reg::read) this register and get [`srm_mem_pd::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`srm_mem_pd::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@srm_mem_pd`] module"]
+pub type SRM_MEM_PD = crate::Reg<srm_mem_pd::SRM_MEM_PD_SPEC>;
 #[doc = "SR memory power done register"]
-pub mod sr_mem_pd;
+pub mod srm_mem_pd;
 #[doc = "REG_CONF (rw) register accessor: Register clock enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`reg_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`reg_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_conf`] module"]
 pub type REG_CONF = crate::Reg<reg_conf::REG_CONF_SPEC>;
 #[doc = "Register clock enable register"]
@@ -339,14 +339,14 @@ pub mod clut_cnt;
 pub type BLEND_ST = crate::Reg<blend_st::BLEND_ST_SPEC>;
 #[doc = "Blending engine status register"]
 pub mod blend_st;
-#[doc = "SR_PARAM_ERR_ST (r) register accessor: Scaling and rotating coefficient error register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr_param_err_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sr_param_err_st`] module"]
-pub type SR_PARAM_ERR_ST = crate::Reg<sr_param_err_st::SR_PARAM_ERR_ST_SPEC>;
+#[doc = "SRM_PARAM_ERR_ST (r) register accessor: Scaling and rotating coefficient error register\n\nYou can [`read`](crate::Reg::read) this register and get [`srm_param_err_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@srm_param_err_st`] module"]
+pub type SRM_PARAM_ERR_ST = crate::Reg<srm_param_err_st::SRM_PARAM_ERR_ST_SPEC>;
 #[doc = "Scaling and rotating coefficient error register"]
-pub mod sr_param_err_st;
-#[doc = "SR_STATUS (r) register accessor: SR FSM register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sr_status`] module"]
-pub type SR_STATUS = crate::Reg<sr_status::SR_STATUS_SPEC>;
+pub mod srm_param_err_st;
+#[doc = "SRM_STATUS (r) register accessor: SR FSM register\n\nYou can [`read`](crate::Reg::read) this register and get [`srm_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@srm_status`] module"]
+pub type SRM_STATUS = crate::Reg<srm_status::SRM_STATUS_SPEC>;
 #[doc = "SR FSM register"]
-pub mod sr_status;
+pub mod srm_status;
 #[doc = "ECO_LOW (rw) register accessor: Reserved.\n\nYou can [`read`](crate::Reg::read) this register and get [`eco_low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`eco_low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@eco_low`] module"]
 pub type ECO_LOW = crate::Reg<eco_low::ECO_LOW_SPEC>;
 #[doc = "Reserved."]

@@ -1,18 +1,18 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `SR_EOF` reader - The raw interrupt status bit for the PPA_SR_EOF_INT interrupt."]
-pub type SR_EOF_R = crate::BitReader;
+#[doc = "Field `SRM_EOF` reader - The raw interrupt status bit for the PPA_SR_EOF_INT interrupt."]
+pub type SRM_EOF_R = crate::BitReader;
 #[doc = "Field `BLEND_EOF` reader - The raw interrupt status bit for the PPA_BLEND_EOF_INT interrupt."]
 pub type BLEND_EOF_R = crate::BitReader;
-#[doc = "Field `SR_PARAM_CFG_ERR` reader - The raw interrupt status bit for the PPA_SR_PARAM_CFG_ERR_INT interrupt."]
-pub type SR_PARAM_CFG_ERR_R = crate::BitReader;
+#[doc = "Field `SRM_PARAM_CFG_ERR` reader - The raw interrupt status bit for the PPA_SR_PARAM_CFG_ERR_INT interrupt."]
+pub type SRM_PARAM_CFG_ERR_R = crate::BitReader;
 #[doc = "Field `BLEND_PARAM_CFG_ERR` reader - The raw interrupt status bit for the PPA_BLEND_PARAM_CFG_ERR_INT interrupt."]
 pub type BLEND_PARAM_CFG_ERR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the PPA_SR_EOF_INT interrupt."]
     #[inline(always)]
-    pub fn sr_eof(&self) -> SR_EOF_R {
-        SR_EOF_R::new((self.bits & 1) != 0)
+    pub fn srm_eof(&self) -> SRM_EOF_R {
+        SRM_EOF_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The raw interrupt status bit for the PPA_BLEND_EOF_INT interrupt."]
     #[inline(always)]
@@ -21,8 +21,8 @@ impl R {
     }
     #[doc = "Bit 2 - The raw interrupt status bit for the PPA_SR_PARAM_CFG_ERR_INT interrupt."]
     #[inline(always)]
-    pub fn sr_param_cfg_err(&self) -> SR_PARAM_CFG_ERR_R {
-        SR_PARAM_CFG_ERR_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn srm_param_cfg_err(&self) -> SRM_PARAM_CFG_ERR_R {
+        SRM_PARAM_CFG_ERR_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The raw interrupt status bit for the PPA_BLEND_PARAM_CFG_ERR_INT interrupt."]
     #[inline(always)]
@@ -34,9 +34,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("sr_eof", &self.sr_eof())
+            .field("srm_eof", &self.srm_eof())
             .field("blend_eof", &self.blend_eof())
-            .field("sr_param_cfg_err", &self.sr_param_cfg_err())
+            .field("srm_param_cfg_err", &self.srm_param_cfg_err())
             .field("blend_param_cfg_err", &self.blend_param_cfg_err())
             .finish()
     }
