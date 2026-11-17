@@ -15,17 +15,16 @@ pub struct RegisterBlock {
     icm_mst_arqos: ICM_MST_ARQOS,
     _reserved10: [u8; 0x04],
     icm_mst_awqos: ICM_MST_AWQOS,
-    _reserved11: [u8; 0x08],
+    _reserved11: [u8; 0x04],
+    icm_sys_addrhole_addr: ICM_SYS_ADDRHOLE_ADDR,
     icm_sys_addrhole_info: ICM_SYS_ADDRHOLE_INFO,
     icm_cpu_addrhole_addr: ICM_CPU_ADDRHOLE_ADDR,
     icm_cpu_addrhole_info: ICM_CPU_ADDRHOLE_INFO,
     icm_dlock_timeout: ICM_DLOCK_TIMEOUT,
-    _reserved15: [u8; 0x04],
+    _reserved16: [u8; 0x04],
     icm_rdn_eco_cs: ICM_RDN_ECO_CS,
     icm_rdn_eco_low: ICM_RDN_ECO_LOW,
     icm_rdn_eco_high: ICM_RDN_ECO_HIGH,
-    _reserved18: [u8; 0x0333],
-    icm_sys_addrhole_addr: ICM_SYS_ADDRHOLE_ADDR,
 }
 impl RegisterBlock {
     #[doc = "0x00 - ICM version / date"]
@@ -83,6 +82,11 @@ impl RegisterBlock {
     pub const fn icm_mst_awqos(&self) -> &ICM_MST_AWQOS {
         &self.icm_mst_awqos
     }
+    #[doc = "0x38 - SYS address hole address"]
+    #[inline(always)]
+    pub const fn icm_sys_addrhole_addr(&self) -> &ICM_SYS_ADDRHOLE_ADDR {
+        &self.icm_sys_addrhole_addr
+    }
     #[doc = "0x3c - SYS address hole info"]
     #[inline(always)]
     pub const fn icm_sys_addrhole_info(&self) -> &ICM_SYS_ADDRHOLE_INFO {
@@ -117,11 +121,6 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn icm_rdn_eco_high(&self) -> &ICM_RDN_ECO_HIGH {
         &self.icm_rdn_eco_high
-    }
-    #[doc = "0x38f - SYS address hole address"]
-    #[inline(always)]
-    pub const fn icm_sys_addrhole_addr(&self) -> &ICM_SYS_ADDRHOLE_ADDR {
-        &self.icm_sys_addrhole_addr
     }
 }
 #[doc = "ICM_VER_DATE (rw) register accessor: ICM version / date\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_ver_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icm_ver_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_ver_date`] module"]
@@ -168,6 +167,10 @@ pub mod icm_mst_arqos;
 pub type ICM_MST_AWQOS = crate::Reg<icm_mst_awqos::ICM_MST_AWQOS_SPEC>;
 #[doc = "Master write QoS"]
 pub mod icm_mst_awqos;
+#[doc = "ICM_SYS_ADDRHOLE_ADDR (r) register accessor: SYS address hole address\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_sys_addrhole_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_sys_addrhole_addr`] module"]
+pub type ICM_SYS_ADDRHOLE_ADDR = crate::Reg<icm_sys_addrhole_addr::ICM_SYS_ADDRHOLE_ADDR_SPEC>;
+#[doc = "SYS address hole address"]
+pub mod icm_sys_addrhole_addr;
 #[doc = "ICM_SYS_ADDRHOLE_INFO (r) register accessor: SYS address hole info\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_sys_addrhole_info::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_sys_addrhole_info`] module"]
 pub type ICM_SYS_ADDRHOLE_INFO = crate::Reg<icm_sys_addrhole_info::ICM_SYS_ADDRHOLE_INFO_SPEC>;
 #[doc = "SYS address hole info"]
@@ -196,7 +199,3 @@ pub mod icm_rdn_eco_low;
 pub type ICM_RDN_ECO_HIGH = crate::Reg<icm_rdn_eco_high::ICM_RDN_ECO_HIGH_SPEC>;
 #[doc = "RDN ECO high"]
 pub mod icm_rdn_eco_high;
-#[doc = "ICM_SYS_ADDRHOLE_ADDR (r) register accessor: SYS address hole address\n\nYou can [`read`](crate::Reg::read) this register and get [`icm_sys_addrhole_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@icm_sys_addrhole_addr`] module"]
-pub type ICM_SYS_ADDRHOLE_ADDR = crate::Reg<icm_sys_addrhole_addr::ICM_SYS_ADDRHOLE_ADDR_SPEC>;
-#[doc = "SYS address hole address"]
-pub mod icm_sys_addrhole_addr;

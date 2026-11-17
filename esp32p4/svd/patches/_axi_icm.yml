@@ -264,7 +264,7 @@ AXI_ICM:
           access: read-write
     ICM_SYS_ADDRHOLE_ADDR:
       description: SYS address hole address
-      addressOffset: 0x38f
+      addressOffset: 0x38
       size: 0x20
       access: read-only
       fields:
