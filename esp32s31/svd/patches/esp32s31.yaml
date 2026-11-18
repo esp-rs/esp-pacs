@@ -32,6 +32,7 @@ _include:
   - "_rmt.yml"
   - "_pcnt.yml"
   - "_emac.yml"
+  - "_twai.yml"
   - "../../../common_patches/ieee802154.yaml"
 
 _copy:
