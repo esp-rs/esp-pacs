@@ -1,0 +1,69 @@
+TWAI0:
+  _modify:
+    INTERRUPT:
+      name: INT_RAW
+    INTERRUPT_ENABLE:
+      name: INT_ENA
+    RX_MESSAGE_COUNTER:
+      name: RX_MESSAGE_CNT
+
+  MODE:
+    _modify:
+      ACCEPTANCE_FILTER_MODE:
+        name: RX_FILTER_MODE
+  CMD:
+    _modify:
+      TX_REQUEST:
+        name: TX_REQ
+      RELEASE_BUFFER:
+        name: RELEASE_BUF
+      SELF_RX_REQUEST:
+        name: SELF_RX_REQ
+  STATUS:
+    _modify:
+      RECEIVE_BUFFER:
+        name: RX_BUF_ST
+      TRANSMIT_BUFFER:
+        name: TX_BUF_ST
+      ERR:
+        name: ERR_ST
+      NODE_BUS_OFF:
+        name: BUS_OFF_ST
+      MISS:
+        name: MISS_ST
+  INT_RAW:
+    _modify:
+      RECEIVE_INT_ST:
+        name: RX_INT_ST
+      TRANSMIT_INT_ST:
+        name: TX_INT_ST
+      ERR_WARNING_INT_ST:
+        name: ERR_WARN_INT_ST
+      DATA_OVERRUN_INT_ST:
+        name: OVERRUN_INT_ST
+      ARBITRATION_LOST_INT_ST:
+        name: ARB_LOST_INT_ST
+  INT_ENA:
+    _modify:
+      EXT_RECEIVE_INT_ENA:
+        name: RX_INT_ENA
+      EXT_TRANSMIT_INT_ENA:
+        name: TX_INT_ENA
+      EXT_ERR_WARNING_INT_ENA:
+        name: ERR_WARN_INT_ENA
+      EXT_DATA_OVERRUN_INT_ENA:
+        name: OVERRUN_INT_ENA
+      ARBITRATION_LOST_INT_ENA:
+        name: ARB_LOST_INT_ENA
+  BUS_TIMING_1:
+    _modify:
+      TIME_SEGMENT1:
+        name: TIME_SEG1
+      TIME_SEGMENT2:
+        name: TIME_SEG2
+      TIME_SAMPLING:
+        name: TIME_SAMP
+  ERR_CODE_CAP:
+    _modify:
+      ERR_CAPTURE_CODE_DIRECTION:
+        name: ECC_DIRECTION
