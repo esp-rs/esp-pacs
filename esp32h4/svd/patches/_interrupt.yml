@@ -131,7 +131,11 @@ INTERRUPT_CORE0:
       description: PASS_IN_SEC status for interrupt sources
 
   _delete:
-    - "*_MAP"
+    _registers:
+      - "*_MAP"
+    # esp-idf defines this source as an alias of APB_ADC, the generator gives it the next number.
+    _interrupts:
+      - TEMPERATURE_SENSOR
 
   _add:
     CORE_0_INTR_MAP%s:
