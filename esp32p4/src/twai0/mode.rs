@@ -14,10 +14,10 @@ pub type LISTEN_ONLY_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type SELF_TEST_MODE_R = crate::BitReader;
 #[doc = "Field `SELF_TEST_MODE` writer - 1: self test, in this mode a full node test is possible without any other active node on the bus using the self reception request command. The TWAI controller will perform a successful transmission, even if there is no acknowledge received. 0: normal, an acknowledge is required for successful transmission."]
 pub type SELF_TEST_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `ACCEPTANCE_FILTER_MODE` reader - 1:single, the single acceptance filter option is enabled (one filter with the length of 32 bit is active). 0:dual, the dual acceptance filter option is enabled (two filters, each with the length of 16 bit are active)."]
-pub type ACCEPTANCE_FILTER_MODE_R = crate::BitReader;
-#[doc = "Field `ACCEPTANCE_FILTER_MODE` writer - 1:single, the single acceptance filter option is enabled (one filter with the length of 32 bit is active). 0:dual, the dual acceptance filter option is enabled (two filters, each with the length of 16 bit are active)."]
-pub type ACCEPTANCE_FILTER_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RX_FILTER_MODE` reader - 1:single, the single acceptance filter option is enabled (one filter with the length of 32 bit is active). 0:dual, the dual acceptance filter option is enabled (two filters, each with the length of 16 bit are active)."]
+pub type RX_FILTER_MODE_R = crate::BitReader;
+#[doc = "Field `RX_FILTER_MODE` writer - 1:single, the single acceptance filter option is enabled (one filter with the length of 32 bit is active). 0:dual, the dual acceptance filter option is enabled (two filters, each with the length of 16 bit are active)."]
+pub type RX_FILTER_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - 1: reset, detection of a set reset mode bit results in aborting the current transmission/reception of a message and entering the reset mode. 0: normal, on the '1-to-0' transition of the reset mode bit, the TWAI controller returns to the operating mode."]
     #[inline(always)]
@@ -36,8 +36,8 @@ impl R {
     }
     #[doc = "Bit 3 - 1:single, the single acceptance filter option is enabled (one filter with the length of 32 bit is active). 0:dual, the dual acceptance filter option is enabled (two filters, each with the length of 16 bit are active)."]
     #[inline(always)]
-    pub fn acceptance_filter_mode(&self) -> ACCEPTANCE_FILTER_MODE_R {
-        ACCEPTANCE_FILTER_MODE_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn rx_filter_mode(&self) -> RX_FILTER_MODE_R {
+        RX_FILTER_MODE_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -47,7 +47,7 @@ impl core::fmt::Debug for R {
             .field("reset_mode", &self.reset_mode())
             .field("listen_only_mode", &self.listen_only_mode())
             .field("self_test_mode", &self.self_test_mode())
-            .field("acceptance_filter_mode", &self.acceptance_filter_mode())
+            .field("rx_filter_mode", &self.rx_filter_mode())
             .finish()
     }
 }
@@ -69,8 +69,8 @@ impl W {
     }
     #[doc = "Bit 3 - 1:single, the single acceptance filter option is enabled (one filter with the length of 32 bit is active). 0:dual, the dual acceptance filter option is enabled (two filters, each with the length of 16 bit are active)."]
     #[inline(always)]
-    pub fn acceptance_filter_mode(&mut self) -> ACCEPTANCE_FILTER_MODE_W<'_, MODE_SPEC> {
-        ACCEPTANCE_FILTER_MODE_W::new(self, 3)
+    pub fn rx_filter_mode(&mut self) -> RX_FILTER_MODE_W<'_, MODE_SPEC> {
+        RX_FILTER_MODE_W::new(self, 3)
     }
 }
 #[doc = "TWAI mode register.\n\nYou can [`read`](crate::Reg::read) this register and get [`mode::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mode::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

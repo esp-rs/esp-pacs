@@ -36,6 +36,7 @@ _include:
   - "_mmu_item_content.yml"
   - "_mmu_item_index.yml"
   - "_timg.yml"
+  - "_twai.yml"
   - "_uart.yml"
   - "_usb_device.yml"
   - "_dma.yml"
