@@ -2,18 +2,18 @@
 pub type R = crate::R<INT_RAW_SPEC>;
 #[doc = "Register `INT_RAW` writer"]
 pub type W = crate::W<INT_RAW_SPEC>;
-#[doc = "Field `SR_EOF` reader - The raw interrupt bit turns to high level when scaling and rotating engine calculate one frame image."]
-pub type SR_EOF_R = crate::BitReader;
-#[doc = "Field `SR_EOF` writer - The raw interrupt bit turns to high level when scaling and rotating engine calculate one frame image."]
-pub type SR_EOF_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SRM_EOF` reader - The raw interrupt bit turns to high level when scaling and rotating engine calculate one frame image."]
+pub type SRM_EOF_R = crate::BitReader;
+#[doc = "Field `SRM_EOF` writer - The raw interrupt bit turns to high level when scaling and rotating engine calculate one frame image."]
+pub type SRM_EOF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BLEND_EOF` reader - The raw interrupt bit turns to high level when blending engine calculate one frame image."]
 pub type BLEND_EOF_R = crate::BitReader;
 #[doc = "Field `BLEND_EOF` writer - The raw interrupt bit turns to high level when blending engine calculate one frame image."]
 pub type BLEND_EOF_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SR_PARAM_CFG_ERR` reader - The raw interrupt bit turns to high level when the configured scaling and rotating coefficient is wrong. User can check the reasons through register PPA_SR_PARAM_ERR_ST_REG."]
-pub type SR_PARAM_CFG_ERR_R = crate::BitReader;
-#[doc = "Field `SR_PARAM_CFG_ERR` writer - The raw interrupt bit turns to high level when the configured scaling and rotating coefficient is wrong. User can check the reasons through register PPA_SR_PARAM_ERR_ST_REG."]
-pub type SR_PARAM_CFG_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SRM_PARAM_CFG_ERR` reader - The raw interrupt bit turns to high level when the configured scaling and rotating coefficient is wrong. User can check the reasons through register PPA_SR_PARAM_ERR_ST_REG."]
+pub type SRM_PARAM_CFG_ERR_R = crate::BitReader;
+#[doc = "Field `SRM_PARAM_CFG_ERR` writer - The raw interrupt bit turns to high level when the configured scaling and rotating coefficient is wrong. User can check the reasons through register PPA_SR_PARAM_ERR_ST_REG."]
+pub type SRM_PARAM_CFG_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BLEND_PARAM_CFG_ERR` reader - The raw interrupt bit turns to high level when the configured blending coefficient is wrong. User can check the reasons through register PPA_BLEND_ST_REG."]
 pub type BLEND_PARAM_CFG_ERR_R = crate::BitReader;
 #[doc = "Field `BLEND_PARAM_CFG_ERR` writer - The raw interrupt bit turns to high level when the configured blending coefficient is wrong. User can check the reasons through register PPA_BLEND_ST_REG."]
@@ -21,8 +21,8 @@ pub type BLEND_PARAM_CFG_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when scaling and rotating engine calculate one frame image."]
     #[inline(always)]
-    pub fn sr_eof(&self) -> SR_EOF_R {
-        SR_EOF_R::new((self.bits & 1) != 0)
+    pub fn srm_eof(&self) -> SRM_EOF_R {
+        SRM_EOF_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The raw interrupt bit turns to high level when blending engine calculate one frame image."]
     #[inline(always)]
@@ -31,8 +31,8 @@ impl R {
     }
     #[doc = "Bit 2 - The raw interrupt bit turns to high level when the configured scaling and rotating coefficient is wrong. User can check the reasons through register PPA_SR_PARAM_ERR_ST_REG."]
     #[inline(always)]
-    pub fn sr_param_cfg_err(&self) -> SR_PARAM_CFG_ERR_R {
-        SR_PARAM_CFG_ERR_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn srm_param_cfg_err(&self) -> SRM_PARAM_CFG_ERR_R {
+        SRM_PARAM_CFG_ERR_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The raw interrupt bit turns to high level when the configured blending coefficient is wrong. User can check the reasons through register PPA_BLEND_ST_REG."]
     #[inline(always)]
@@ -44,9 +44,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("sr_eof", &self.sr_eof())
+            .field("srm_eof", &self.srm_eof())
             .field("blend_eof", &self.blend_eof())
-            .field("sr_param_cfg_err", &self.sr_param_cfg_err())
+            .field("srm_param_cfg_err", &self.srm_param_cfg_err())
             .field("blend_param_cfg_err", &self.blend_param_cfg_err())
             .finish()
     }
@@ -54,8 +54,8 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when scaling and rotating engine calculate one frame image."]
     #[inline(always)]
-    pub fn sr_eof(&mut self) -> SR_EOF_W<'_, INT_RAW_SPEC> {
-        SR_EOF_W::new(self, 0)
+    pub fn srm_eof(&mut self) -> SRM_EOF_W<'_, INT_RAW_SPEC> {
+        SRM_EOF_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw interrupt bit turns to high level when blending engine calculate one frame image."]
     #[inline(always)]
@@ -64,8 +64,8 @@ impl W {
     }
     #[doc = "Bit 2 - The raw interrupt bit turns to high level when the configured scaling and rotating coefficient is wrong. User can check the reasons through register PPA_SR_PARAM_ERR_ST_REG."]
     #[inline(always)]
-    pub fn sr_param_cfg_err(&mut self) -> SR_PARAM_CFG_ERR_W<'_, INT_RAW_SPEC> {
-        SR_PARAM_CFG_ERR_W::new(self, 2)
+    pub fn srm_param_cfg_err(&mut self) -> SRM_PARAM_CFG_ERR_W<'_, INT_RAW_SPEC> {
+        SRM_PARAM_CFG_ERR_W::new(self, 2)
     }
     #[doc = "Bit 3 - The raw interrupt bit turns to high level when the configured blending coefficient is wrong. User can check the reasons through register PPA_BLEND_ST_REG."]
     #[inline(always)]

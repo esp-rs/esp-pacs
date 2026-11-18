@@ -175,6 +175,16 @@ pub enum Interrupt {
     I3C_SLV                = 102,
     #[doc = "103 - USB_FS"]
     USB_FS                 = 103,
+    #[doc = "104 - DMA2D_IN_CH0"]
+    DMA2D_IN_CH0           = 104,
+    #[doc = "105 - DMA2D_IN_CH1"]
+    DMA2D_IN_CH1           = 105,
+    #[doc = "106 - DMA2D_OUT_CH0"]
+    DMA2D_OUT_CH0          = 106,
+    #[doc = "107 - DMA2D_OUT_CH1"]
+    DMA2D_OUT_CH1          = 107,
+    #[doc = "108 - DMA2D_OUT_CH2"]
+    DMA2D_OUT_CH2          = 108,
     #[doc = "110 - HP_SYS"]
     HP_SYS                 = 110,
     #[doc = "111 - PCNT"]
@@ -211,6 +221,10 @@ pub enum Interrupt {
     H264_REG               = 126,
     #[doc = "127 - ASSIST_DEBUG"]
     ASSIST_DEBUG           = 127,
+    #[doc = "133 - DMA2D_IN_CH2"]
+    DMA2D_IN_CH2           = 133,
+    #[doc = "134 - DMA2D_OUT_CH3"]
+    DMA2D_OUT_CH3          = 134,
 }
 #[doc = r" TryFromInterruptError"]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
@@ -220,7 +234,7 @@ impl Interrupt {
     #[doc = r" Bitmask of the interrupt numbers that name a variant."]
     #[doc = r""]
     #[doc = r" Bit `n % 32` of word `n / 32` is set if interrupt number `n` is a variant of [`Interrupt`]."]
-    pub const MASK: [u32; 4] = [0xffd9_dfce, 0xffff_ffcf, 0xf1ef_fcff, 0xffff_c0f1];
+    pub const MASK: [u32; 5] = [0xffd9_dfce, 0xffff_ffcf, 0xf1ef_fcff, 0xffff_dff1, 0x60];
     #[doc = r" Attempt to convert a given value into an `Interrupt`"]
     #[inline]
     pub fn try_from(value: u8) -> Result<Self, TryFromInterruptError> {
@@ -311,6 +325,11 @@ impl Interrupt {
             101 => Ok(Interrupt::I3C),
             102 => Ok(Interrupt::I3C_SLV),
             103 => Ok(Interrupt::USB_FS),
+            104 => Ok(Interrupt::DMA2D_IN_CH0),
+            105 => Ok(Interrupt::DMA2D_IN_CH1),
+            106 => Ok(Interrupt::DMA2D_OUT_CH0),
+            107 => Ok(Interrupt::DMA2D_OUT_CH1),
+            108 => Ok(Interrupt::DMA2D_OUT_CH2),
             110 => Ok(Interrupt::HP_SYS),
             111 => Ok(Interrupt::PCNT),
             112 => Ok(Interrupt::PAU),
@@ -329,6 +348,8 @@ impl Interrupt {
             125 => Ok(Interrupt::H264_DMA2D_IN_CH5),
             126 => Ok(Interrupt::H264_REG),
             127 => Ok(Interrupt::ASSIST_DEBUG),
+            133 => Ok(Interrupt::DMA2D_IN_CH2),
+            134 => Ok(Interrupt::DMA2D_OUT_CH3),
             _ => Err(TryFromInterruptError(())),
         }
     }

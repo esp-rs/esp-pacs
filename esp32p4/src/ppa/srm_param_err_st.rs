@@ -1,5 +1,5 @@
-#[doc = "Register `SR_PARAM_ERR_ST` reader"]
-pub type R = crate::R<SR_PARAM_ERR_ST_SPEC>;
+#[doc = "Register `SRM_PARAM_ERR_ST` reader"]
+pub type R = crate::R<SRM_PARAM_ERR_ST_SPEC>;
 #[doc = "Field `TX_DSCR_VB_ERR_ST` reader - The error is that the scaled VB plus the offset of Y coordinate in 2DDMA receive descriptor is larger than VA in 2DDMA receive descriptor."]
 pub type TX_DSCR_VB_ERR_ST_R = crate::BitReader;
 #[doc = "Field `TX_DSCR_HB_ERR_ST` reader - The error is that the scaled HB plus the offset of X coordinate in 2DDMA receive descriptor is larger than HA in 2DDMA receive descriptor."]
@@ -20,14 +20,14 @@ pub type RX_DSCR_HB_ERR_ST_R = crate::BitReader;
 pub type XDST_LEN_TOO_SAMLL_ERR_ST_R = crate::BitReader;
 #[doc = "Field `XDST_LEN_TOO_LARGE_ERR_ST` reader - The error is that the scaled image height is larger than (2^13 - 1)."]
 pub type XDST_LEN_TOO_LARGE_ERR_ST_R = crate::BitReader;
-#[doc = "Field `X_YUV420_RX_SCALE_ERR_ST` reader - The error is that the ha/hb/x param in dma2d descriptor is an odd num when enable yuv422 or yuv420 rx"]
-pub type X_YUV420_RX_SCALE_ERR_ST_R = crate::BitReader;
-#[doc = "Field `Y_YUV420_RX_SCALE_ERR_ST` reader - The error is that the va/vb/y param in dma2d descriptor is an odd num when enable yuv420 rx"]
-pub type Y_YUV420_RX_SCALE_ERR_ST_R = crate::BitReader;
-#[doc = "Field `X_YUV420_TX_SCALE_ERR_ST` reader - The error is that the ha/hb/x param in dma2d descriptor is an odd num when enable yuv422 or yuv420 tx"]
-pub type X_YUV420_TX_SCALE_ERR_ST_R = crate::BitReader;
-#[doc = "Field `Y_YUV420_TX_SCALE_ERR_ST` reader - The error is that the va/vb/y param in dma2d descriptor is an odd num when enable yuv420 tx"]
-pub type Y_YUV420_TX_SCALE_ERR_ST_R = crate::BitReader;
+#[doc = "Field `X_YUV_RX_SCALE_ERR_ST` reader - The error is that the ha/hb/x param in dma2d descriptor is an odd num when enable yuv422 or yuv420 rx"]
+pub type X_YUV_RX_SCALE_ERR_ST_R = crate::BitReader;
+#[doc = "Field `Y_YUV_RX_SCALE_ERR_ST` reader - The error is that the va/vb/y param in dma2d descriptor is an odd num when enable yuv420 rx"]
+pub type Y_YUV_RX_SCALE_ERR_ST_R = crate::BitReader;
+#[doc = "Field `X_YUV_TX_SCALE_ERR_ST` reader - The error is that the ha/hb/x param in dma2d descriptor is an odd num when enable yuv422 or yuv420 tx"]
+pub type X_YUV_TX_SCALE_ERR_ST_R = crate::BitReader;
+#[doc = "Field `Y_YUV_TX_SCALE_ERR_ST` reader - The error is that the va/vb/y param in dma2d descriptor is an odd num when enable yuv420 tx"]
+pub type Y_YUV_TX_SCALE_ERR_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The error is that the scaled VB plus the offset of Y coordinate in 2DDMA receive descriptor is larger than VA in 2DDMA receive descriptor."]
     #[inline(always)]
@@ -81,29 +81,29 @@ impl R {
     }
     #[doc = "Bit 10 - The error is that the ha/hb/x param in dma2d descriptor is an odd num when enable yuv422 or yuv420 rx"]
     #[inline(always)]
-    pub fn x_yuv420_rx_scale_err_st(&self) -> X_YUV420_RX_SCALE_ERR_ST_R {
-        X_YUV420_RX_SCALE_ERR_ST_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn x_yuv_rx_scale_err_st(&self) -> X_YUV_RX_SCALE_ERR_ST_R {
+        X_YUV_RX_SCALE_ERR_ST_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - The error is that the va/vb/y param in dma2d descriptor is an odd num when enable yuv420 rx"]
     #[inline(always)]
-    pub fn y_yuv420_rx_scale_err_st(&self) -> Y_YUV420_RX_SCALE_ERR_ST_R {
-        Y_YUV420_RX_SCALE_ERR_ST_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn y_yuv_rx_scale_err_st(&self) -> Y_YUV_RX_SCALE_ERR_ST_R {
+        Y_YUV_RX_SCALE_ERR_ST_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - The error is that the ha/hb/x param in dma2d descriptor is an odd num when enable yuv422 or yuv420 tx"]
     #[inline(always)]
-    pub fn x_yuv420_tx_scale_err_st(&self) -> X_YUV420_TX_SCALE_ERR_ST_R {
-        X_YUV420_TX_SCALE_ERR_ST_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn x_yuv_tx_scale_err_st(&self) -> X_YUV_TX_SCALE_ERR_ST_R {
+        X_YUV_TX_SCALE_ERR_ST_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - The error is that the va/vb/y param in dma2d descriptor is an odd num when enable yuv420 tx"]
     #[inline(always)]
-    pub fn y_yuv420_tx_scale_err_st(&self) -> Y_YUV420_TX_SCALE_ERR_ST_R {
-        Y_YUV420_TX_SCALE_ERR_ST_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn y_yuv_tx_scale_err_st(&self) -> Y_YUV_TX_SCALE_ERR_ST_R {
+        Y_YUV_TX_SCALE_ERR_ST_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SR_PARAM_ERR_ST")
+        f.debug_struct("SRM_PARAM_ERR_ST")
             .field("tx_dscr_vb_err_st", &self.tx_dscr_vb_err_st())
             .field("tx_dscr_hb_err_st", &self.tx_dscr_hb_err_st())
             .field("y_rx_scal_equal_0_err_st", &self.y_rx_scal_equal_0_err_st())
@@ -126,19 +126,19 @@ impl core::fmt::Debug for R {
                 "xdst_len_too_large_err_st",
                 &self.xdst_len_too_large_err_st(),
             )
-            .field("x_yuv420_rx_scale_err_st", &self.x_yuv420_rx_scale_err_st())
-            .field("y_yuv420_rx_scale_err_st", &self.y_yuv420_rx_scale_err_st())
-            .field("x_yuv420_tx_scale_err_st", &self.x_yuv420_tx_scale_err_st())
-            .field("y_yuv420_tx_scale_err_st", &self.y_yuv420_tx_scale_err_st())
+            .field("x_yuv_rx_scale_err_st", &self.x_yuv_rx_scale_err_st())
+            .field("y_yuv_rx_scale_err_st", &self.y_yuv_rx_scale_err_st())
+            .field("x_yuv_tx_scale_err_st", &self.x_yuv_tx_scale_err_st())
+            .field("y_yuv_tx_scale_err_st", &self.y_yuv_tx_scale_err_st())
             .finish()
     }
 }
-#[doc = "Scaling and rotating coefficient error register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr_param_err_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct SR_PARAM_ERR_ST_SPEC;
-impl crate::RegisterSpec for SR_PARAM_ERR_ST_SPEC {
+#[doc = "Scaling and rotating coefficient error register\n\nYou can [`read`](crate::Reg::read) this register and get [`srm_param_err_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SRM_PARAM_ERR_ST_SPEC;
+impl crate::RegisterSpec for SRM_PARAM_ERR_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`sr_param_err_st::R`](R) reader structure"]
-impl crate::Readable for SR_PARAM_ERR_ST_SPEC {}
-#[doc = "`reset()` method sets SR_PARAM_ERR_ST to value 0"]
-impl crate::Resettable for SR_PARAM_ERR_ST_SPEC {}
+#[doc = "`read()` method returns [`srm_param_err_st::R`](R) reader structure"]
+impl crate::Readable for SRM_PARAM_ERR_ST_SPEC {}
+#[doc = "`reset()` method sets SRM_PARAM_ERR_ST to value 0"]
+impl crate::Resettable for SRM_PARAM_ERR_ST_SPEC {}

@@ -6,6 +6,7 @@ _include:
   - ../../../common_patches/emac.yaml
   - ../../../common_patches/twai.yaml
   - "_axi_icm.yml"
+  - "_dma2d.yml"
   - "_icm_axi_qos.yml"
   - "_interrupt.yml"
   - "_ecc.yml"

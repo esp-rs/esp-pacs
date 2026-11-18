@@ -1,11 +1,11 @@
 #[doc = "Register `INT_CLR` writer"]
 pub type W = crate::W<INT_CLR_SPEC>;
-#[doc = "Field `SR_EOF` writer - Set this bit to clear the PPA_SR_EOF_INT interrupt."]
-pub type SR_EOF_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `SRM_EOF` writer - Set this bit to clear the PPA_SR_EOF_INT interrupt."]
+pub type SRM_EOF_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `BLEND_EOF` writer - Set this bit to clear the PPA_BLEND_EOF_INT interrupt."]
 pub type BLEND_EOF_W<'a, REG> = crate::BitWriter1C<'a, REG>;
-#[doc = "Field `SR_PARAM_CFG_ERR` writer - Set this bit to clear the PPA_SR_RX_YSCAL_ERR_INT interrupt."]
-pub type SR_PARAM_CFG_ERR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `SRM_PARAM_CFG_ERR` writer - Set this bit to clear the PPA_SR_RX_YSCAL_ERR_INT interrupt."]
+pub type SRM_PARAM_CFG_ERR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `BLEND_PARAM_CFG_ERR` writer - Set this bit to clear the PPA_BLEND_PARAM_CFG_ERR_INT interrupt."]
 pub type BLEND_PARAM_CFG_ERR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
@@ -17,8 +17,8 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the PPA_SR_EOF_INT interrupt."]
     #[inline(always)]
-    pub fn sr_eof(&mut self) -> SR_EOF_W<'_, INT_CLR_SPEC> {
-        SR_EOF_W::new(self, 0)
+    pub fn srm_eof(&mut self) -> SRM_EOF_W<'_, INT_CLR_SPEC> {
+        SRM_EOF_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to clear the PPA_BLEND_EOF_INT interrupt."]
     #[inline(always)]
@@ -27,8 +27,8 @@ impl W {
     }
     #[doc = "Bit 2 - Set this bit to clear the PPA_SR_RX_YSCAL_ERR_INT interrupt."]
     #[inline(always)]
-    pub fn sr_param_cfg_err(&mut self) -> SR_PARAM_CFG_ERR_W<'_, INT_CLR_SPEC> {
-        SR_PARAM_CFG_ERR_W::new(self, 2)
+    pub fn srm_param_cfg_err(&mut self) -> SRM_PARAM_CFG_ERR_W<'_, INT_CLR_SPEC> {
+        SRM_PARAM_CFG_ERR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to clear the PPA_BLEND_PARAM_CFG_ERR_INT interrupt."]
     #[inline(always)]

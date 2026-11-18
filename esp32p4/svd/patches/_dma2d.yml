@@ -1,0 +1,25 @@
+_copy:
+  DMA2D:
+    from: ../../../esp32s31/svd/esp32s31.base.svd:DMA2D
+
+_modify:
+  DMA2D:
+    baseAddress: 0x50088000
+
+DMA2D:
+  _modify:
+    _interrupts:
+      DMA2D_IN_CH0:
+        value: 104
+      DMA2D_IN_CH1:
+        value: 105
+      DMA2D_IN_CH2:
+        value: 133
+      DMA2D_OUT_CH0:
+        value: 106
+      DMA2D_OUT_CH1:
+        value: 107
+      DMA2D_OUT_CH2:
+        value: 108
+      DMA2D_OUT_CH3:
+        value: 134

@@ -9,10 +9,12 @@ INTERRUPT_CORE0:
   _delete:
     - "*_MAP"
 
+  # Sources 133 to 135 have their map registers at 4 * source, after the status and clock gate
+  # registers. Indices 128 to 132 are not map registers.
   _add:
     CORE_0_INTR_MAP%s:
       addressOffset: 0
-      dim: 131
+      dim: 136
       dimIncrement: 4
       access: read-write
       size: 32
@@ -43,10 +45,12 @@ INTERRUPT_CORE1:
   _delete:
     - "*_MAP"
 
+  # Sources 133 to 135 have their map registers at 4 * source, after the status and clock gate
+  # registers. Indices 128 to 132 are not map registers.
   _add:
     CORE_1_INTR_MAP%s:
       addressOffset: 0
-      dim: 131
+      dim: 136
       dimIncrement: 4
       access: read-write
       size: 32

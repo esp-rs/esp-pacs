@@ -2,11 +2,9 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    _reserved_0_core_0_intr: [u8; 0x0210],
-    clock_gate: CLOCK_GATE,
-    _reserved2: [u8; 0x0c],
+    _reserved_0_clock_gate: [u8; 0x0220],
     core_0_intr_status4: CORE_0_INTR_STATUS4,
-    _reserved3: [u8; 0x04],
+    _reserved2: [u8; 0x04],
     intr_sig_idx_assert_in_sec: INTR_SIG_IDX_ASSERT_IN_SEC,
     intr_sec_status: INTR_SEC_STATUS,
     intr_src_pass_in_sec_status_0: INTR_SRC_PASS_IN_SEC_STATUS_0,
@@ -14,22 +12,22 @@ pub struct RegisterBlock {
     intr_src_pass_in_sec_status_2: INTR_SRC_PASS_IN_SEC_STATUS_2,
     intr_src_pass_in_sec_status_3: INTR_SRC_PASS_IN_SEC_STATUS_3,
     intr_src_pass_in_sec_status_4: INTR_SRC_PASS_IN_SEC_STATUS_4,
-    _reserved10: [u8; 0x01b8],
+    _reserved9: [u8; 0x01b8],
     interrupt_reg_date: INTERRUPT_REG_DATE,
 }
 impl RegisterBlock {
-    #[doc = "0x00..0x20c - "]
+    #[doc = "0x00..0x220 - "]
     #[inline(always)]
     pub const fn core_0_intr_map(&self, n: usize) -> &CORE_0_INTR_MAP {
         #[allow(clippy::no_effect)]
-        [(); 131][n];
+        [(); 136][n];
         unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(4 * n).cast() }
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x00..0x20c - "]
+    #[doc = "0x00..0x220 - "]
     #[inline(always)]
     pub fn core_0_intr_map_iter(&self) -> impl Iterator<Item = &CORE_0_INTR_MAP> {
-        (0..131).map(move |n| unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(4 * n).cast() })
+        (0..136).map(move |n| unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(4 * n).cast() })
     }
     #[doc = "0x200..0x210 - NA"]
     #[inline(always)]
@@ -59,7 +57,7 @@ impl RegisterBlock {
     #[doc = "0x210 - NA"]
     #[inline(always)]
     pub const fn clock_gate(&self) -> &CLOCK_GATE {
-        &self.clock_gate
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(528).cast() }
     }
     #[doc = "0x220 - NA"]
     #[inline(always)]
