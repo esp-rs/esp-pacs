@@ -21,6 +21,7 @@ _include:
   - "_rmt.yml"
   - "_sha.yml"
   - "_spi.yml"
+  - "_twai.yml"
   - "_uart.yml"
   - "_mmu_item_content.yml"
   - "_ieee802154.yml"
