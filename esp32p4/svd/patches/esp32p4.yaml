@@ -23,6 +23,7 @@ _include:
   - "_io_mux.yml"
   - "_iomux_mspi.yml"
   - "_isp.yml"
+  - ../../../common_patches/jpeg.yaml
   - "_lp_gpio.yml"
   - "_lp_io_mux.yml"
   - "_lp_huk.yml"

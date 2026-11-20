@@ -277,19 +277,19 @@ pub mod dqt_info;
 pub type PIC_SIZE = crate::Reg<pic_size::PIC_SIZE_SPEC>;
 #[doc = "Control and configuration registers"]
 pub mod pic_size;
-#[doc = "T0QNR (r) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`t0qnr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0qnr`] module"]
+#[doc = "T0QNR (w) register accessor: Control and configuration registers\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t0qnr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t0qnr`] module"]
 pub type T0QNR = crate::Reg<t0qnr::T0QNR_SPEC>;
 #[doc = "Control and configuration registers"]
 pub mod t0qnr;
-#[doc = "T1QNR (r) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`t1qnr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1qnr`] module"]
+#[doc = "T1QNR (w) register accessor: Control and configuration registers\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t1qnr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t1qnr`] module"]
 pub type T1QNR = crate::Reg<t1qnr::T1QNR_SPEC>;
 #[doc = "Control and configuration registers"]
 pub mod t1qnr;
-#[doc = "T2QNR (r) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`t2qnr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t2qnr`] module"]
+#[doc = "T2QNR (w) register accessor: Control and configuration registers\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t2qnr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t2qnr`] module"]
 pub type T2QNR = crate::Reg<t2qnr::T2QNR_SPEC>;
 #[doc = "Control and configuration registers"]
 pub mod t2qnr;
-#[doc = "T3QNR (r) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`t3qnr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t3qnr`] module"]
+#[doc = "T3QNR (w) register accessor: Control and configuration registers\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t3qnr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@t3qnr`] module"]
 pub type T3QNR = crate::Reg<t3qnr::T3QNR_SPEC>;
 #[doc = "Control and configuration registers"]
 pub mod t3qnr;

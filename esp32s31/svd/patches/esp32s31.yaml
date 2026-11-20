@@ -34,6 +34,7 @@ _include:
   - "_emac.yml"
   - "_twai.yml"
   - "../../../common_patches/ieee802154.yaml"
+  - "../../../common_patches/jpeg.yaml"
 
 _copy:
   GMAC_DMA:
