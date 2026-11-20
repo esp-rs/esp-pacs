@@ -1,0 +1,5 @@
+JPEG:
+  "T[0-3]QNR":
+    _modify:
+      "T[0-3]_QNR_VAL":
+        access: write-only
