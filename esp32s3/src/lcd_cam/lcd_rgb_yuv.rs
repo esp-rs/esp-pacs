@@ -34,10 +34,10 @@ pub type LCD_CONV_MODE_8BITS_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type LCD_CONV_TRANS_MODE_R = crate::BitReader;
 #[doc = "Field `LCD_CONV_TRANS_MODE` writer - 0: converted to RGB format. 1: converted to YUV format."]
 pub type LCD_CONV_TRANS_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LCD_CONV_BYPASS` reader - 0: Bypass converter. 1: Enable converter."]
-pub type LCD_CONV_BYPASS_R = crate::BitReader;
-#[doc = "Field `LCD_CONV_BYPASS` writer - 0: Bypass converter. 1: Enable converter."]
-pub type LCD_CONV_BYPASS_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `LCD_CONV_ENABLE` reader - 0: Bypass converter. 1: Enable converter."]
+pub type LCD_CONV_ENABLE_R = crate::BitReader;
+#[doc = "Field `LCD_CONV_ENABLE` writer - 0: Bypass converter. 1: Enable converter."]
+pub type LCD_CONV_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 20 - Swap every two 8-bit input data. 1: Enabled. 0: Disabled."]
     #[inline(always)]
@@ -81,8 +81,8 @@ impl R {
     }
     #[doc = "Bit 31 - 0: Bypass converter. 1: Enable converter."]
     #[inline(always)]
-    pub fn lcd_conv_bypass(&self) -> LCD_CONV_BYPASS_R {
-        LCD_CONV_BYPASS_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn lcd_conv_enable(&self) -> LCD_CONV_ENABLE_R {
+        LCD_CONV_ENABLE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -97,7 +97,7 @@ impl core::fmt::Debug for R {
             .field("lcd_conv_data_in_mode", &self.lcd_conv_data_in_mode())
             .field("lcd_conv_mode_8bits_on", &self.lcd_conv_mode_8bits_on())
             .field("lcd_conv_trans_mode", &self.lcd_conv_trans_mode())
-            .field("lcd_conv_bypass", &self.lcd_conv_bypass())
+            .field("lcd_conv_enable", &self.lcd_conv_enable())
             .finish()
     }
 }
@@ -144,8 +144,8 @@ impl W {
     }
     #[doc = "Bit 31 - 0: Bypass converter. 1: Enable converter."]
     #[inline(always)]
-    pub fn lcd_conv_bypass(&mut self) -> LCD_CONV_BYPASS_W<'_, LCD_RGB_YUV_SPEC> {
-        LCD_CONV_BYPASS_W::new(self, 31)
+    pub fn lcd_conv_enable(&mut self) -> LCD_CONV_ENABLE_W<'_, LCD_RGB_YUV_SPEC> {
+        LCD_CONV_ENABLE_W::new(self, 31)
     }
 }
 #[doc = "LCD data format conversion register\n\nYou can [`read`](crate::Reg::read) this register and get [`lcd_rgb_yuv::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lcd_rgb_yuv::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
