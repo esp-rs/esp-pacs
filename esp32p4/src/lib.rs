@@ -25,8 +25,10 @@ extern "C" {
     fn LP_TOUCH();
     fn LP_TSENS();
     fn LP_UART();
+    fn LP_EFUSE();
     fn LP_SYS();
     fn LP_HUK();
+    fn SYS_ICM();
     fn USB_DEVICE();
     fn SDIO_HOST();
     fn DMA();
@@ -41,6 +43,8 @@ extern "C" {
     fn UART2();
     fn UART3();
     fn UART4();
+    fn LCD_CAM();
+    fn ADC();
     fn PWM0();
     fn PWM1();
     fn TWAI0();
@@ -75,6 +79,7 @@ extern "C" {
     fn AES();
     fn SHA();
     fn ECC();
+    fn ECDSA();
     fn GPIO();
     fn GPIO_INT1();
     fn GPIO_INT2();
@@ -85,15 +90,21 @@ extern "C" {
     fn FROM_CPU_INTR2();
     fn FROM_CPU_INTR3();
     fn CACHE();
+    fn MSPI();
     fn CSI_BRIDGE();
     fn DSI_BRIDGE();
     fn CSI();
     fn DSI();
+    fn GMII_PHY();
+    fn LPI();
+    fn PMT();
     fn ETH_MAC();
     fn USB_HS();
     fn USB_HS_ENDP_MULTI_PROC();
     fn JPEG();
     fn PPA();
+    fn CORE0_TRACE();
+    fn CORE1_TRACE();
     fn ISP();
     fn I3C();
     fn I3C_SLV();
@@ -103,6 +114,7 @@ extern "C" {
     fn DMA2D_OUT_CH0();
     fn DMA2D_OUT_CH1();
     fn DMA2D_OUT_CH2();
+    fn PSRAM_MSPI();
     fn HP_SYS();
     fn PCNT();
     fn PAU();
@@ -156,11 +168,11 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 135] = [
     Vector { _handler: LP_TOUCH },
     Vector { _handler: LP_TSENS },
     Vector { _handler: LP_UART },
-    Vector { _reserved: 0 },
+    Vector { _handler: LP_EFUSE },
     Vector { _reserved: 0 },
     Vector { _handler: LP_SYS },
     Vector { _handler: LP_HUK },
-    Vector { _reserved: 0 },
+    Vector { _handler: SYS_ICM },
     Vector {
         _handler: USB_DEVICE,
     },
@@ -179,8 +191,8 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 135] = [
     Vector { _handler: UART2 },
     Vector { _handler: UART3 },
     Vector { _handler: UART4 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: LCD_CAM },
+    Vector { _handler: ADC },
     Vector { _handler: PWM0 },
     Vector { _handler: PWM1 },
     Vector { _handler: TWAI0 },
@@ -257,7 +269,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 135] = [
     Vector { _handler: AES },
     Vector { _handler: SHA },
     Vector { _handler: ECC },
-    Vector { _reserved: 0 },
+    Vector { _handler: ECDSA },
     Vector { _reserved: 0 },
     Vector { _handler: GPIO },
     Vector {
@@ -285,7 +297,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 135] = [
         _handler: FROM_CPU_INTR3,
     },
     Vector { _handler: CACHE },
-    Vector { _reserved: 0 },
+    Vector { _handler: MSPI },
     Vector {
         _handler: CSI_BRIDGE,
     },
@@ -294,9 +306,9 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 135] = [
     },
     Vector { _handler: CSI },
     Vector { _handler: DSI },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: GMII_PHY },
+    Vector { _handler: LPI },
+    Vector { _handler: PMT },
     Vector { _handler: ETH_MAC },
     Vector { _handler: USB_HS },
     Vector {
@@ -304,8 +316,12 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 135] = [
     },
     Vector { _handler: JPEG },
     Vector { _handler: PPA },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: CORE0_TRACE,
+    },
+    Vector {
+        _handler: CORE1_TRACE,
+    },
     Vector { _reserved: 0 },
     Vector { _handler: ISP },
     Vector { _handler: I3C },
@@ -326,7 +342,9 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 135] = [
     Vector {
         _handler: DMA2D_OUT_CH2,
     },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: PSRAM_MSPI,
+    },
     Vector { _handler: HP_SYS },
     Vector { _handler: PCNT },
     Vector { _handler: PAU },
