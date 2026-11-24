@@ -29,10 +29,14 @@ pub enum Interrupt {
     LP_TSENS               = 15,
     #[doc = "16 - LP_UART"]
     LP_UART                = 16,
+    #[doc = "17 - LP_EFUSE"]
+    LP_EFUSE               = 17,
     #[doc = "19 - LP_SYS"]
     LP_SYS                 = 19,
     #[doc = "20 - LP_HUK"]
     LP_HUK                 = 20,
+    #[doc = "21 - SYS_ICM"]
+    SYS_ICM                = 21,
     #[doc = "22 - USB_DEVICE"]
     USB_DEVICE             = 22,
     #[doc = "23 - SDIO_HOST"]
@@ -61,6 +65,10 @@ pub enum Interrupt {
     UART3                  = 34,
     #[doc = "35 - UART4"]
     UART4                  = 35,
+    #[doc = "36 - LCD_CAM"]
+    LCD_CAM                = 36,
+    #[doc = "37 - ADC"]
+    ADC                    = 37,
     #[doc = "38 - PWM0"]
     PWM0                   = 38,
     #[doc = "39 - PWM1"]
@@ -129,6 +137,8 @@ pub enum Interrupt {
     SHA                    = 70,
     #[doc = "71 - ECC"]
     ECC                    = 71,
+    #[doc = "72 - ECDSA"]
+    ECDSA                  = 72,
     #[doc = "74 - GPIO"]
     GPIO                   = 74,
     #[doc = "75 - GPIO_INT1"]
@@ -149,6 +159,8 @@ pub enum Interrupt {
     FROM_CPU_INTR3         = 82,
     #[doc = "83 - CACHE"]
     CACHE                  = 83,
+    #[doc = "84 - MSPI"]
+    MSPI                   = 84,
     #[doc = "85 - CSI_BRIDGE"]
     CSI_BRIDGE             = 85,
     #[doc = "86 - DSI_BRIDGE"]
@@ -157,6 +169,12 @@ pub enum Interrupt {
     CSI                    = 87,
     #[doc = "88 - DSI"]
     DSI                    = 88,
+    #[doc = "89 - GMII_PHY"]
+    GMII_PHY               = 89,
+    #[doc = "90 - LPI"]
+    LPI                    = 90,
+    #[doc = "91 - PMT"]
+    PMT                    = 91,
     #[doc = "92 - ETH_MAC"]
     ETH_MAC                = 92,
     #[doc = "93 - USB_HS"]
@@ -167,6 +185,10 @@ pub enum Interrupt {
     JPEG                   = 95,
     #[doc = "96 - PPA"]
     PPA                    = 96,
+    #[doc = "97 - CORE0_TRACE"]
+    CORE0_TRACE            = 97,
+    #[doc = "98 - CORE1_TRACE"]
+    CORE1_TRACE            = 98,
     #[doc = "100 - ISP"]
     ISP                    = 100,
     #[doc = "101 - I3C"]
@@ -185,6 +207,8 @@ pub enum Interrupt {
     DMA2D_OUT_CH1          = 107,
     #[doc = "108 - DMA2D_OUT_CH2"]
     DMA2D_OUT_CH2          = 108,
+    #[doc = "109 - PSRAM_MSPI"]
+    PSRAM_MSPI             = 109,
     #[doc = "110 - HP_SYS"]
     HP_SYS                 = 110,
     #[doc = "111 - PCNT"]
@@ -234,7 +258,7 @@ impl Interrupt {
     #[doc = r" Bitmask of the interrupt numbers that name a variant."]
     #[doc = r""]
     #[doc = r" Bit `n % 32` of word `n / 32` is set if interrupt number `n` is a variant of [`Interrupt`]."]
-    pub const MASK: [u32; 5] = [0xffd9_dfce, 0xffff_ffcf, 0xf1ef_fcff, 0xffff_dff1, 0x60];
+    pub const MASK: [u32; 5] = [0xfffb_dfce, 0xffff_ffff, 0xffff_fdff, 0xffff_fff7, 0x60];
     #[doc = r" Attempt to convert a given value into an `Interrupt`"]
     #[inline]
     pub fn try_from(value: u8) -> Result<Self, TryFromInterruptError> {
@@ -252,8 +276,10 @@ impl Interrupt {
             14 => Ok(Interrupt::LP_TOUCH),
             15 => Ok(Interrupt::LP_TSENS),
             16 => Ok(Interrupt::LP_UART),
+            17 => Ok(Interrupt::LP_EFUSE),
             19 => Ok(Interrupt::LP_SYS),
             20 => Ok(Interrupt::LP_HUK),
+            21 => Ok(Interrupt::SYS_ICM),
             22 => Ok(Interrupt::USB_DEVICE),
             23 => Ok(Interrupt::SDIO_HOST),
             24 => Ok(Interrupt::DMA),
@@ -268,6 +294,8 @@ impl Interrupt {
             33 => Ok(Interrupt::UART2),
             34 => Ok(Interrupt::UART3),
             35 => Ok(Interrupt::UART4),
+            36 => Ok(Interrupt::LCD_CAM),
+            37 => Ok(Interrupt::ADC),
             38 => Ok(Interrupt::PWM0),
             39 => Ok(Interrupt::PWM1),
             40 => Ok(Interrupt::TWAI0),
@@ -302,6 +330,7 @@ impl Interrupt {
             69 => Ok(Interrupt::AES),
             70 => Ok(Interrupt::SHA),
             71 => Ok(Interrupt::ECC),
+            72 => Ok(Interrupt::ECDSA),
             74 => Ok(Interrupt::GPIO),
             75 => Ok(Interrupt::GPIO_INT1),
             76 => Ok(Interrupt::GPIO_INT2),
@@ -312,15 +341,21 @@ impl Interrupt {
             81 => Ok(Interrupt::FROM_CPU_INTR2),
             82 => Ok(Interrupt::FROM_CPU_INTR3),
             83 => Ok(Interrupt::CACHE),
+            84 => Ok(Interrupt::MSPI),
             85 => Ok(Interrupt::CSI_BRIDGE),
             86 => Ok(Interrupt::DSI_BRIDGE),
             87 => Ok(Interrupt::CSI),
             88 => Ok(Interrupt::DSI),
+            89 => Ok(Interrupt::GMII_PHY),
+            90 => Ok(Interrupt::LPI),
+            91 => Ok(Interrupt::PMT),
             92 => Ok(Interrupt::ETH_MAC),
             93 => Ok(Interrupt::USB_HS),
             94 => Ok(Interrupt::USB_HS_ENDP_MULTI_PROC),
             95 => Ok(Interrupt::JPEG),
             96 => Ok(Interrupt::PPA),
+            97 => Ok(Interrupt::CORE0_TRACE),
+            98 => Ok(Interrupt::CORE1_TRACE),
             100 => Ok(Interrupt::ISP),
             101 => Ok(Interrupt::I3C),
             102 => Ok(Interrupt::I3C_SLV),
@@ -330,6 +365,7 @@ impl Interrupt {
             106 => Ok(Interrupt::DMA2D_OUT_CH0),
             107 => Ok(Interrupt::DMA2D_OUT_CH1),
             108 => Ok(Interrupt::DMA2D_OUT_CH2),
+            109 => Ok(Interrupt::PSRAM_MSPI),
             110 => Ok(Interrupt::HP_SYS),
             111 => Ok(Interrupt::PCNT),
             112 => Ok(Interrupt::PAU),

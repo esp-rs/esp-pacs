@@ -68,6 +68,10 @@ _modify:
     groupName: LCD_CAM
 
 ADC:
+  _add:
+    _interrupts:
+      ADC:
+        value: 37
   ARB_CTRL:
     _strip: ARB_
   DMA_CONF:
@@ -361,6 +365,10 @@ SYSTIMER:
     - ../../../common_patches/systimer_real_target.yaml
 
 LCD_CAM:
+  _add:
+    _interrupts:
+      LCD_CAM:
+        value: 36
   LCD_DLY_MODE_CFG1:
     DOUT*_MODE:
       _name: DelayMode
@@ -390,6 +398,58 @@ HP_SYS:
       FROM_CPU_INTR3:
         value: 82
   _include: ../../../common_patches/sw_interrupts.yaml
+
+EFUSE:
+  _add:
+    _interrupts:
+      LP_EFUSE:
+        value: 17
+
+AXI_ICM:
+  _add:
+    _interrupts:
+      SYS_ICM:
+        value: 21
+
+ECDSA:
+  _add:
+    _interrupts:
+      ECDSA:
+        value: 72
+
+SPI0:
+  _add:
+    _interrupts:
+      MSPI:
+        value: 84
+
+MEMSPI2:
+  _add:
+    _interrupts:
+      PSRAM_MSPI:
+        value: 109
+
+GMAC:
+  _add:
+    _interrupts:
+      GMII_PHY:
+        value: 89
+      LPI:
+        value: 90
+      PMT:
+        value: 91
+
+TRACE0:
+  _add:
+    _interrupts:
+      CORE0_TRACE:
+        value: 97
+
+TRACE1:
+  _add:
+    _interrupts:
+      CORE1_TRACE:
+        value: 98
 
 _add:
   USB_FS:
