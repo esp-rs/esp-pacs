@@ -14,10 +14,6 @@ pub type IN_LOOP_TEST_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type INDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `INDSCR_BURST_EN` writer - Configures whether or not to enable INCR burst transfer for RX channel %s to read descriptors.\\\\0: Disable\\\\1: Enable\\\\"]
 pub type INDSCR_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `IN_DATA_BURST_EN` reader - Configures whether or not to enable INCR burst transfer for RX channel %s"]
-pub type IN_DATA_BURST_EN_R = crate::BitReader;
-#[doc = "Field `IN_DATA_BURST_EN` writer - Configures whether or not to enable INCR burst transfer for RX channel %s"]
-pub type IN_DATA_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MEM_TRANS_EN` reader - Configures whether or not to enable memory-to-memory data transfer.\\\\0: Disable\\\\1: Enable\\\\"]
 pub type MEM_TRANS_EN_R = crate::BitReader;
 #[doc = "Field `MEM_TRANS_EN` writer - Configures whether or not to enable memory-to-memory data transfer.\\\\0: Disable\\\\1: Enable\\\\"]
@@ -46,11 +42,6 @@ impl R {
     pub fn indscr_burst_en(&self) -> INDSCR_BURST_EN_R {
         INDSCR_BURST_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - Configures whether or not to enable INCR burst transfer for RX channel %s"]
-    #[inline(always)]
-    pub fn in_data_burst_en(&self) -> IN_DATA_BURST_EN_R {
-        IN_DATA_BURST_EN_R::new(((self.bits >> 3) & 1) != 0)
-    }
     #[doc = "Bit 4 - Configures whether or not to enable memory-to-memory data transfer.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
     pub fn mem_trans_en(&self) -> MEM_TRANS_EN_R {
@@ -77,7 +68,6 @@ impl core::fmt::Debug for R {
             .field("mem_trans_en", &self.mem_trans_en())
             .field("in_etm_en", &self.in_etm_en())
             .field("in_data_burst_mode_sel", &self.in_data_burst_mode_sel())
-            .field("in_data_burst_en", &self.in_data_burst_en())
             .finish()
     }
 }
@@ -96,11 +86,6 @@ impl W {
     #[inline(always)]
     pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<'_, IN_CONF0_SPEC> {
         INDSCR_BURST_EN_W::new(self, 2)
-    }
-    #[doc = "Bit 3 - Configures whether or not to enable INCR burst transfer for RX channel %s"]
-    #[inline(always)]
-    pub fn in_data_burst_en(&mut self) -> IN_DATA_BURST_EN_W<'_, IN_CONF0_SPEC> {
-        IN_DATA_BURST_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to enable memory-to-memory data transfer.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]

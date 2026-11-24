@@ -22,10 +22,6 @@ pub type OUT_EOF_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type OUTDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `OUTDSCR_BURST_EN` writer - Configures whether or not to enable INCR burst transfer for TX channel %s reading descriptors.\\\\0: Disable\\\\1: Enable\\\\"]
 pub type OUTDSCR_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OUT_DATA_BURST_EN` reader - Configures whether or not to enable INCR burst transfer for TX channel %s"]
-pub type OUT_DATA_BURST_EN_R = crate::BitReader;
-#[doc = "Field `OUT_DATA_BURST_EN` writer - Configures whether or not to enable INCR burst transfer for TX channel %s"]
-pub type OUT_DATA_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_ETM_EN` reader - Configures whether or not to enable ETM control for TX channel %s.\\\\0: Disable\\\\1: Enable\\\\"]
 pub type OUT_ETM_EN_R = crate::BitReader;
 #[doc = "Field `OUT_ETM_EN` writer - Configures whether or not to enable ETM control for TX channel %s.\\\\0: Disable\\\\1: Enable\\\\"]
@@ -60,11 +56,6 @@ impl R {
     pub fn outdscr_burst_en(&self) -> OUTDSCR_BURST_EN_R {
         OUTDSCR_BURST_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 5 - Configures whether or not to enable INCR burst transfer for TX channel %s"]
-    #[inline(always)]
-    pub fn out_data_burst_en(&self) -> OUT_DATA_BURST_EN_R {
-        OUT_DATA_BURST_EN_R::new(((self.bits >> 5) & 1) != 0)
-    }
     #[doc = "Bit 6 - Configures whether or not to enable ETM control for TX channel %s.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
     pub fn out_etm_en(&self) -> OUT_ETM_EN_R {
@@ -87,7 +78,6 @@ impl core::fmt::Debug for R {
             .field("outdscr_burst_en", &self.outdscr_burst_en())
             .field("out_etm_en", &self.out_etm_en())
             .field("out_data_burst_mode_sel", &self.out_data_burst_mode_sel())
-            .field("out_data_burst_en", &self.out_data_burst_en())
             .finish()
     }
 }
@@ -116,11 +106,6 @@ impl W {
     #[inline(always)]
     pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<'_, OUT_CONF0_SPEC> {
         OUTDSCR_BURST_EN_W::new(self, 4)
-    }
-    #[doc = "Bit 5 - Configures whether or not to enable INCR burst transfer for TX channel %s"]
-    #[inline(always)]
-    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<'_, OUT_CONF0_SPEC> {
-        OUT_DATA_BURST_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or not to enable ETM control for TX channel %s.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
