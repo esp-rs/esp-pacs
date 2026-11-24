@@ -14,6 +14,18 @@ INTERRUPT_CORE0:
     _interrupts:
       - TEMPERATURE_SENSOR
 
+  # Match the timer group interrupt names of the other chips.
+  _modify:
+    _interrupts:
+      TG0_T0:
+        name: TG0_T0_LEVEL
+      TG0_WDT:
+        name: TG0_WDT_LEVEL
+      TG1_T0:
+        name: TG1_T0_LEVEL
+      TG1_WDT:
+        name: TG1_WDT_LEVEL
+
   _add:
     CORE_0_INTR_MAP%s:
       addressOffset: 0
