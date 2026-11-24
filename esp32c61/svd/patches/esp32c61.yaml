@@ -381,11 +381,6 @@ DMA:
 
   IN_CONF0_CH?:
     _strip_end: _CH?
-    _add:
-      IN_DATA_BURST_EN:
-        bitOffset: 3
-        bitWidth: 1
-        description: Configures whether or not to enable INCR burst transfer for RX channel %s
   IN_CONF1_CH?:
     _strip_end: _CH?
   INFIFO_STATUS_CH?:
@@ -412,12 +407,6 @@ DMA:
     _strip_end: _CH?
   OUT_CONF0_CH?:
     _strip_end: _CH?
-    _add:
-      OUT_DATA_BURST_EN:
-        bitOffset: 5
-        bitWidth: 1
-        description: Configures whether or not to enable INCR burst transfer for TX channel %s
-
   OUT_CONF1_CH?:
     _strip_end: _CH?
   OUTFIFO_STATUS_CH?:
