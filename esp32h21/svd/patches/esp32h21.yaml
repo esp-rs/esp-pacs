@@ -196,15 +196,8 @@ SOC_ETM:
   _include: "_etm_collect.yml"
 
 SYSTIMER:
-  INT_ENA:
-    _strip_end: _INT_ENA
-  INT_RAW:
-    _strip_end: _INT_RAW
-  INT_CLR:
-    _strip_end: _INT_CLR
-  INT_ST:
-    _strip_end: _INT_ST
   _include:
+    - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/systimer.yaml
     - ../../../common_patches/systimer_real_target.yaml
 
