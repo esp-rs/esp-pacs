@@ -1,19 +1,19 @@
 #[doc = "Register `QUERY_ERROR` reader"]
 pub type R = crate::R<QUERY_ERROR_SPEC>;
-#[doc = "Field `QUREY_CHECK` reader - Represents whether or not an HMAC key matches the purpose. \\\\0: Match \\\\1: Error"]
-pub type QUREY_CHECK_R = crate::BitReader;
+#[doc = "Field `QUERY_CHECK` reader - Represents whether or not an HMAC key matches the purpose. \\\\0: Match \\\\1: Error"]
+pub type QUERY_CHECK_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Represents whether or not an HMAC key matches the purpose. \\\\0: Match \\\\1: Error"]
     #[inline(always)]
-    pub fn qurey_check(&self) -> QUREY_CHECK_R {
-        QUREY_CHECK_R::new((self.bits & 1) != 0)
+    pub fn query_check(&self) -> QUERY_CHECK_R {
+        QUERY_CHECK_R::new((self.bits & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("QUERY_ERROR")
-            .field("qurey_check", &self.qurey_check())
+            .field("query_check", &self.query_check())
             .finish()
     }
 }
