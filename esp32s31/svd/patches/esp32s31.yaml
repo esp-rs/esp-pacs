@@ -29,6 +29,7 @@ _include:
   - "_aes.yml"
   - "_rsa.yml"
   - "_sha.yml"
+  - "_hmac.yml"
   - "_rmt.yml"
   - "_pcnt.yml"
   - "_emac.yml"
